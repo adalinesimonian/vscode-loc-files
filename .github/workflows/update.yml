@@ -49,6 +49,6 @@ jobs:
       with:
         commit_message: "chore: Update localization files"
         repo: ${{ github.repository }}
-        branch: ${{ github.head_ref || github.ref_name }}
+        branch: main
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
