@@ -37,6 +37,9 @@ jobs:
       run: yarn install
       working-directory: vscode
 
+    - name: Clean up
+      run: rm -rf vscode-translations-export
+
     - name: Run vscode-translations-export
       run: yarn gulp vscode-translations-export
       working-directory: vscode
