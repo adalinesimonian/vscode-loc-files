@@ -45,7 +45,7 @@ jobs:
       working-directory: vscode
 
     - name: Commit and push changes
-      uses: planetscale/ghcommit-action@v0.1.6
+      uses: planetscale/ghcommit-action@v0.1.29
       with:
         commit_message: "chore: Update localization files"
         repo: ${{ github.repository }}
