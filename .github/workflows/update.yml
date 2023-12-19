@@ -1,0 +1,48 @@
+name: Update Localization Files
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight
+  workflow_dispatch: # Allows running manually from the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Checkout vscode repository
+      uses: actions/checkout@v4
+      with:
+        repository: microsoft/vscode
+        path: vscode
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        cache: 'yarn'
+        cache-dependency-path: 'vscode/yarn.lock'
+        node-version-file: 'vscode/.nvmrc'
+
+    - name: Install Yarn
+      run: npm install -g yarn@1.x
+
+    - name: Install dependencies
+      run: yarn install
+      working-directory: vscode
+
+    - name: Run vscode-translations-export
+      run: yarn gulp vscode-translations-export
+      working-directory: vscode
+
+    - name: Commit and push changes
+      uses: planetscale/ghcommit-action@v0.1.6
+      with:
+        commit_message: "chore: Update localization files"
+        repo: ${{ github.repository }}
+        branch: ${{ github.head_ref || github.ref_name }}
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
