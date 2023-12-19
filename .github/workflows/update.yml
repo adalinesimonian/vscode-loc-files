@@ -44,6 +44,11 @@ jobs:
       run: yarn gulp vscode-translations-export
       working-directory: vscode
 
+    - name: Git info
+      run: |
+        git status
+        ls -hlaF
+
     - name: Commit and push changes
       uses: planetscale/ghcommit-action@v0.1.29
       with:
