@@ -26,22 +26,19 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        cache: 'yarn'
-        cache-dependency-path: 'vscode/yarn.lock'
+        cache: 'npm'
+        cache-dependency-path: 'vscode/package-lock.json'
         node-version-file: 'vscode/.nvmrc'
 
-    - name: Install Yarn
-      run: npm install -g yarn@1.x
-
     - name: Install dependencies
-      run: yarn install
+      run: npm install
       working-directory: vscode
 
     - name: Clean up
       run: rm -rf vscode-translations-export
 
     - name: Run vscode-translations-export
-      run: yarn gulp vscode-translations-export
+      run: node ./node_modules/gulp/bin/gulp.js vscode-translations-export
       working-directory: vscode
 
     - name: Git info
