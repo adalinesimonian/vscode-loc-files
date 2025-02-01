@@ -43,6 +43,7 @@ jobs:
 
     - name: Git info
       run: |
+        git add vscode-translations-export
         git status
         ls -hlaF
 
