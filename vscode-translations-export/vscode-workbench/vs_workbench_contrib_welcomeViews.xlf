@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/welcomeViews/common/newFile.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="Built-In">
+      <source xml:lang="en">Built-In</source>
+    </trans-unit>
+    <trans-unit id="Create">
+      <source xml:lang="en">Create</source>
+    </trans-unit>
+    <trans-unit id="change keybinding">
+      <source xml:lang="en">Configure Keybinding</source>
+    </trans-unit>
+    <trans-unit id="file">
+      <source xml:lang="en">File</source>
+    </trans-unit>
+    <trans-unit id="miNewFile2">
+      <source xml:lang="en">Text File</source>
+    </trans-unit>
+    <trans-unit id="miNewFileWithName">
+      <source xml:lang="en">Create New File ({0})</source>
+    </trans-unit>
+    <trans-unit id="newFilePlaceholder">
+      <source xml:lang="en">Select File Type or Enter File Name...</source>
+    </trans-unit>
+    <trans-unit id="newFileTitle">
+      <source xml:lang="en">New File...</source>
+    </trans-unit>
+    <trans-unit id="notebook">
+      <source xml:lang="en">Notebook</source>
+    </trans-unit>
+    <trans-unit id="welcome.newFile">
+      <source xml:lang="en">New File...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeViews/common/viewsWelcomeContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="ViewsWelcomeExtensionPoint.proposedAPI">
+      <source xml:lang="en">The viewsWelcome contribution in '{0}' requires 'enabledApiProposals: ["contribViewsWelcome"]' in order to use the 'group' proposed property.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeViews/common/viewsWelcomeExtensionPoint" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="contributes.viewsWelcome">
+      <source xml:lang="en">Contributed views welcome content. Welcome content will be rendered in tree based views whenever they have no meaningful content to display, ie. the File Explorer when no folder is open. Such content is useful as in-product documentation to drive users to use certain features before they are available. A good example would be a `Clone Repository` button in the File Explorer welcome view.</source>
+    </trans-unit>
+    <trans-unit id="contributes.viewsWelcome.view">
+      <source xml:lang="en">Contributed welcome content for a specific view.</source>
+    </trans-unit>
+    <trans-unit id="contributes.viewsWelcome.view.contents">
+      <source xml:lang="en">Welcome content to be displayed. The format of the contents is a subset of Markdown, with support for links only.</source>
+    </trans-unit>
+    <trans-unit id="contributes.viewsWelcome.view.enablement">
+      <source xml:lang="en">Condition when the welcome content buttons and command links should be enabled.</source>
+    </trans-unit>
+    <trans-unit id="contributes.viewsWelcome.view.group">
+      <source xml:lang="en">Group to which this welcome content belongs. Proposed API.</source>
+    </trans-unit>
+    <trans-unit id="contributes.viewsWelcome.view.view">
+      <source xml:lang="en">Target view identifier for this welcome content. Only tree based views are supported.</source>
+    </trans-unit>
+    <trans-unit id="contributes.viewsWelcome.view.when">
+      <source xml:lang="en">Condition when the welcome content should be displayed.</source>
+    </trans-unit>
+</body></file>
+</xliff>

@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/welcomeGettingStarted/browser/gettingStarted" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="acessibleViewHint">
+      <source xml:lang="en">Inspect this in the accessible view ({0}).
+</source>
+    </trans-unit>
+    <trans-unit id="acessibleViewHintNoKbOpen">
+      <source xml:lang="en">Inspect this in the accessible view via the command Open Accessible View which is currently not triggerable via keybinding.
+</source>
+    </trans-unit>
+    <trans-unit id="allDone">
+      <source xml:lang="en">Mark Done</source>
+    </trans-unit>
+    <trans-unit id="checkboxTitle">
+      <source xml:lang="en">When checked, this page will be shown on startup.</source>
+    </trans-unit>
+    <trans-unit id="close">
+      <source xml:lang="en">Hide</source>
+    </trans-unit>
+    <trans-unit id="closeAriaLabel">
+      <source xml:lang="en">Hide</source>
+    </trans-unit>
+    <trans-unit id="footer">
+      <source xml:lang="en">{0} collects usage data. Read our {1} and learn how to {2}.</source>
+      <note>fist substitution is "vs code", second is "privacy statement", third is "opt out".</note>
+    </trans-unit>
+    <trans-unit id="gettingStarted.allStepsComplete">
+      <source xml:lang="en">All {0} steps complete!</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.editingEvolved">
+      <source xml:lang="en">Editing evolved</source>
+      <note>Shown as subtitle on the Welcome page.</note>
+    </trans-unit>
+    <trans-unit id="gettingStarted.keyboardTip">
+      <source xml:lang="en">Tip: Use keyboard shortcut </source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.someStepsComplete">
+      <source xml:lang="en">{0} of {1} steps complete</source>
+    </trans-unit>
+    <trans-unit id="goBack">
+      <source xml:lang="en">Go Back</source>
+    </trans-unit>
+    <trans-unit id="imageShowing">
+      <source xml:lang="en">Image showing {0}</source>
+    </trans-unit>
+    <trans-unit id="new">
+      <source xml:lang="en">New</source>
+    </trans-unit>
+    <trans-unit id="newItems">
+      <source xml:lang="en">Updated</source>
+      <note>Shown when a list of items has changed based on an update from a remote source</note>
+    </trans-unit>
+    <trans-unit id="nextOne">
+      <source xml:lang="en">Next Section</source>
+    </trans-unit>
+    <trans-unit id="noRecents">
+      <source xml:lang="en">You have no recent folders,</source>
+    </trans-unit>
+    <trans-unit id="openFolder">
+      <source xml:lang="en">open a folder</source>
+    </trans-unit>
+    <trans-unit id="optOut">
+      <source xml:lang="en">opt out</source>
+    </trans-unit>
+    <trans-unit id="pickWalkthroughs">
+      <source xml:lang="en">Open Walkthrough...</source>
+    </trans-unit>
+    <trans-unit id="privacy statement">
+      <source xml:lang="en">privacy statement</source>
+    </trans-unit>
+    <trans-unit id="recent">
+      <source xml:lang="en">Recent</source>
+    </trans-unit>
+    <trans-unit id="show more recents">
+      <source xml:lang="en">Show All Recent Folders {0}</source>
+    </trans-unit>
+    <trans-unit id="showAll">
+      <source xml:lang="en">More...</source>
+    </trans-unit>
+    <trans-unit id="start">
+      <source xml:lang="en">Start</source>
+    </trans-unit>
+    <trans-unit id="toStart">
+      <source xml:lang="en">to start.</source>
+    </trans-unit>
+    <trans-unit id="videoShowing">
+      <source xml:lang="en">Video showing {0}</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs">
+      <source xml:lang="en">Walkthroughs</source>
+    </trans-unit>
+    <trans-unit id="welcome">
+      <source xml:lang="en">Welcome</source>
+    </trans-unit>
+    <trans-unit id="welcomeAriaLabel">
+      <source xml:lang="en">Overview of how to get up to speed with your editor.</source>
+    </trans-unit>
+    <trans-unit id="welcomePage.openFolderWithPath">
+      <source xml:lang="en">Open folder {0} with path {1}</source>
+    </trans-unit>
+    <trans-unit id="welcomePage.showOnStartup">
+      <source xml:lang="en">Show welcome page on startup</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeGettingStarted/browser/gettingStarted.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="deprecationMessage">
+      <source xml:lang="en">Deprecated, use the global `workbench.reduceMotion`.</source>
+    </trans-unit>
+    <trans-unit id="miWelcome">
+      <source xml:lang="en">Welcome</source>
+    </trans-unit>
+    <trans-unit id="minWelcomeDescription">
+      <source xml:lang="en">Opens a Walkthrough to help you get started in VS Code.</source>
+    </trans-unit>
+    <trans-unit id="pickWalkthroughs">
+      <source xml:lang="en">Select a walkthrough to open</source>
+    </trans-unit>
+    <trans-unit id="welcome">
+      <source xml:lang="en">Welcome</source>
+    </trans-unit>
+    <trans-unit id="welcome.goBack">
+      <source xml:lang="en">Go Back</source>
+    </trans-unit>
+    <trans-unit id="welcome.markStepComplete">
+      <source xml:lang="en">Mark Step Complete</source>
+    </trans-unit>
+    <trans-unit id="welcome.markStepInomplete">
+      <source xml:lang="en">Mark Step Incomplete</source>
+    </trans-unit>
+    <trans-unit id="welcome.showAllWalkthroughs">
+      <source xml:lang="en">Open Walkthrough...</source>
+    </trans-unit>
+    <trans-unit id="workbench.startupEditor">
+      <source xml:lang="en">Controls which editor is shown at startup, if none are restored from the previous session.</source>
+    </trans-unit>
+    <trans-unit id="workbench.startupEditor.newUntitledFile">
+      <source xml:lang="en">Open a new untitled text file (only applies when opening an empty window).</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="workbench.startupEditor.none">
+      <source xml:lang="en">Start without an editor.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="workbench.startupEditor.readme">
+      <source xml:lang="en">Open the README when opening a folder that contains one, fallback to 'welcomePage' otherwise. Note: This is only observed as a global configuration, it will be ignored if set in a workspace or folder configuration.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="workbench.startupEditor.terminal">
+      <source xml:lang="en">Open a new terminal in the editor area.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="workbench.startupEditor.welcomePage">
+      <source xml:lang="en">Open the Welcome page, with content to aid in getting started with VS Code and extensions.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="workbench.startupEditor.welcomePageInEmptyWorkbench">
+      <source xml:lang="en">Open the Welcome page when opening an empty workbench.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="workbench.welcomePage.preferReducedMotion">
+      <source xml:lang="en">When enabled, reduce motion in welcome page.</source>
+    </trans-unit>
+    <trans-unit id="workbench.welcomePage.walkthroughs.openOnInstall">
+      <source xml:lang="en">When enabled, an extension's walkthrough will open upon install of the extension.</source>
+    </trans-unit>
+    <trans-unit id="workspacePlatform">
+      <source xml:lang="en">The platform of the current workspace, which in remote or serverless contexts may be different from the platform of the UI</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeGettingStarted/browser/gettingStartedAccessibleView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="gettingStarted.description">
+      <source xml:lang="en">Description: {0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.step">
+      <source xml:lang="en">{0}
+{1}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.title">
+      <source xml:lang="en">Title: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeGettingStarted/browser/gettingStartedColors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="walkthrough.stepTitle.foreground">
+      <source xml:lang="en">Foreground color of the heading of each walkthrough step</source>
+    </trans-unit>
+    <trans-unit id="welcomePage.background">
+      <source xml:lang="en">Background color for the Welcome page.</source>
+    </trans-unit>
+    <trans-unit id="welcomePage.progress.background">
+      <source xml:lang="en">Foreground color for the Welcome page progress bars.</source>
+    </trans-unit>
+    <trans-unit id="welcomePage.progress.foreground">
+      <source xml:lang="en">Background color for the Welcome page progress bars.</source>
+    </trans-unit>
+    <trans-unit id="welcomePage.tileBackground">
+      <source xml:lang="en">Background color for the tiles on the Welcome page.</source>
+    </trans-unit>
+    <trans-unit id="welcomePage.tileBorder">
+      <source xml:lang="en">Border color for the tiles on the Welcome page.</source>
+    </trans-unit>
+    <trans-unit id="welcomePage.tileHoverBackground">
+      <source xml:lang="en">Hover background color for the tiles on the Welcome.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeGettingStarted/browser/gettingStartedExtensionPoint" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="pathDeprecated">
+      <source xml:lang="en">Deprecated. Please use `image` or `markdown` instead</source>
+    </trans-unit>
+    <trans-unit id="title">
+      <source xml:lang="en">Title</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs">
+      <source xml:lang="en">Contribute walkthroughs to help users getting started with your extension.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.description">
+      <source xml:lang="en">Description of walkthrough.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.featuredFor">
+      <source xml:lang="en">Walkthroughs that match one of these glob patterns appear as 'featured' in workspaces with the specified files. For example, a walkthrough for TypeScript projects might specify `tsconfig.json` here.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.icon">
+      <source xml:lang="en">Relative path to the icon of the walkthrough. The path is relative to the extension location. If not specified, the icon defaults to the extension icon if available.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.id">
+      <source xml:lang="en">Unique identifier for this walkthrough.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps">
+      <source xml:lang="en">Steps to complete as part of this walkthrough.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.button.deprecated.interpolated">
+      <source xml:lang="en">Deprecated. Use markdown links in the description instead, i.e. {0}, {1}, or {2}</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.completionEvents">
+      <source xml:lang="en">Events that should trigger this step to become checked off. If empty or not defined, the step will check off when any of the step's buttons or links are clicked; if the step has no buttons or links it will check on when it is selected.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.completionEvents.extensionInstalled">
+      <source xml:lang="en">Check off step when an extension with the given id is installed. If the extension is already installed, the step will start off checked.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.completionEvents.onCommand">
+      <source xml:lang="en">Check off step when a given command is executed anywhere in VS Code.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.completionEvents.onContext">
+      <source xml:lang="en">Check off step when a context key expression is true.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.completionEvents.onLink">
+      <source xml:lang="en">Check off step when a given link is opened via a walkthrough step.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.completionEvents.onSettingChanged">
+      <source xml:lang="en">Check off step when a given setting is changed</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.completionEvents.onView">
+      <source xml:lang="en">Check off step when a given view is opened</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.completionEvents.stepSelected">
+      <source xml:lang="en">Check off step as soon as it is selected.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.description.interpolated">
+      <source xml:lang="en">Description of step. Supports ``preformatted``, __italic__, and **bold** text. Use markdown-style links for commands or external links: {0}, {1}, or {2}. Links on their own line will be rendered as buttons.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.doneOn">
+      <source xml:lang="en">Signal to mark step as complete.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.doneOn.deprecation">
+      <source xml:lang="en">doneOn is deprecated. By default steps will be checked off when their buttons are clicked, to configure further use completionEvents</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.id">
+      <source xml:lang="en">Unique identifier for this step. This is used to keep track of which steps have been completed.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.media">
+      <source xml:lang="en">Media to show alongside this step, either an image or markdown content.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.media.altText">
+      <source xml:lang="en">Alternate text to display when the image cannot be loaded or in screen readers.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.media.image.path.dark.string">
+      <source xml:lang="en">Path to the image for dark themes, relative to extension directory.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.media.image.path.hc.string">
+      <source xml:lang="en">Path to the image for hc themes, relative to extension directory.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.media.image.path.hcLight.string">
+      <source xml:lang="en">Path to the image for hc light themes, relative to extension directory.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.media.image.path.light.string">
+      <source xml:lang="en">Path to the image for light themes, relative to extension directory.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.media.image.path.string">
+      <source xml:lang="en">Path to an image - or object consisting of paths to light, dark, and hc images - relative to extension directory. Depending on context, the image will be displayed from 400px to 800px wide, with similar bounds on height. To support HIDPI displays, the image will be rendered at 1.5x scaling, for example a 900 physical pixels wide image will be displayed as 600 logical pixels wide.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.media.image.path.svg">
+      <source xml:lang="en">Path to an svg, color tokens are supported in variables to support theming to match the workbench.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.media.markdown.path">
+      <source xml:lang="en">Path to the markdown document, relative to extension directory.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.oneOn.command">
+      <source xml:lang="en">Mark step done when the specified command is executed.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.title">
+      <source xml:lang="en">Title of step.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.steps.when">
+      <source xml:lang="en">Context key expression to control the visibility of this step.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.title">
+      <source xml:lang="en">Title of walkthrough.</source>
+    </trans-unit>
+    <trans-unit id="walkthroughs.when">
+      <source xml:lang="en">Context key expression to control the visibility of this walkthrough.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeGettingStarted/browser/gettingStartedIcons" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="gettingStartedChecked">
+      <source xml:lang="en">Used to represent walkthrough steps which have been completed</source>
+    </trans-unit>
+    <trans-unit id="gettingStartedUnchecked">
+      <source xml:lang="en">Used to represent walkthrough steps which have not been completed</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeGettingStarted/browser/gettingStartedInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="getStarted">
+      <source xml:lang="en">Welcome</source>
+    </trans-unit>
+    <trans-unit id="walkthroughPageTitle">
+      <source xml:lang="en">Walkthrough: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeGettingStarted/browser/gettingStartedService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="builtin">
+      <source xml:lang="en">Built-In</source>
+    </trans-unit>
+    <trans-unit id="developer">
+      <source xml:lang="en">Developer</source>
+    </trans-unit>
+    <trans-unit id="resetGettingStartedProgressDescription">
+      <source xml:lang="en">Reset the progress of all Walkthrough steps on the Welcome Page to make them appear as if they are being viewed for the first time, providing a fresh start to the getting started experience.</source>
+    </trans-unit>
+    <trans-unit id="resetWelcomePageWalkthroughProgress">
+      <source xml:lang="en">Reset Welcome Page Walkthrough Progress</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeGettingStarted/browser/startupPage" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="startupPage.markdownPreviewError">
+      <source xml:lang="en">Could not open markdown preview: {0}.
+
+Please make sure the markdown extension is enabled.</source>
+    </trans-unit>
+    <trans-unit id="welcome.displayName">
+      <source xml:lang="en">Welcome Page</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeGettingStarted/common/gettingStartedContent" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browseLangExts">
+      <source xml:lang="en">Browse Language Extensions</source>
+    </trans-unit>
+    <trans-unit id="browsePopular">
+      <source xml:lang="en">Browse Popular Extensions</source>
+    </trans-unit>
+    <trans-unit id="browsePopularWeb">
+      <source xml:lang="en">Browse Popular Web Extensions</source>
+    </trans-unit>
+    <trans-unit id="cloneRepo">
+      <source xml:lang="en">Clone Repository</source>
+    </trans-unit>
+    <trans-unit id="commandPalette">
+      <source xml:lang="en">Open Command Palette</source>
+    </trans-unit>
+    <trans-unit id="enableSync">
+      <source xml:lang="en">Backup and Sync Settings</source>
+    </trans-unit>
+    <trans-unit id="enableTrust">
+      <source xml:lang="en">enable trust</source>
+    </trans-unit>
+    <trans-unit id="getting-started-beginner-icon">
+      <source xml:lang="en">Icon used for the beginner category of welcome page</source>
+    </trans-unit>
+    <trans-unit id="getting-started-setup-icon">
+      <source xml:lang="en">Icon used for the setup category of welcome page</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.accessibilityHelp.description.interpolated">
+      <source xml:lang="en">The accessibility help dialog provides information about what to expect from a feature and the commands/keybindings to operate them.
+ With focus in an editor, terminal, notebook, chat response, comment, or debug console, the relevant dialog can be opened with the Open Accessibility Help command.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.accessibilityHelp.title">
+      <source xml:lang="en">Use the accessibility help dialog to learn about features</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.accessibilitySettings.description.interpolated">
+      <source xml:lang="en">Accessibility settings can be configured by running the Open Accessibility Settings command.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.accessibilitySettings.title">
+      <source xml:lang="en">Configure accessibility settings</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.accessibilitySignals.description.interpolated">
+      <source xml:lang="en">Accessibility sounds and announcements are played around the workbench for different events.
+ These can be discovered and configured using the List Signal Sounds and List Signal Announcements commands.
+{0}
+{1}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.accessibilitySignals.title">
+      <source xml:lang="en">Fine tune which accessibility signals you want to receive via audio or a braille device</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.accessibleView.description.interpolated">
+      <source xml:lang="en">The accessible view is available for the terminal, hovers, notifications, comments, notebook output, chat responses, inline completions, and debug console output.
+ With focus in any of those features, it can be opened with the Open Accessible View command.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.accessibleView.title">
+      <source xml:lang="en">Screen reader users can inspect content line by line, character by character in the accessible view.</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.beginner.description">
+      <source xml:lang="en">Get an overview of the most essential features</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.beginner.title">
+      <source xml:lang="en">Learn the Fundamentals</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.beginner.walkthroughPageTitle">
+      <source xml:lang="en">Essential Features</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.codeFolding.description.interpolated">
+      <source xml:lang="en">Fold or unfold a code section with the Toggle Fold command.
+{0}
+ Fold or unfold recursively with the Toggle Fold Recursively Command
+{1}
+</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.codeFolding.title">
+      <source xml:lang="en">Use code folding to collapse blocks of code and focus on the code you're interested in.</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.commandPalette.description.interpolated">
+      <source xml:lang="en">Run commands without reaching for your mouse to accomplish any task in VS Code.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.commandPalette.title">
+      <source xml:lang="en">Unlock productivity with the Command Palette </source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.commandPaletteAccessibility.description.interpolated">
+      <source xml:lang="en">Run commands without reaching for your mouse to accomplish any task in VS Code.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.commandPaletteAccessibility.title">
+      <source xml:lang="en">Unlock productivity with the Command Palette </source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.copilotSetup.description">
+      <source xml:lang="en">You can use [Copilot]({0}) to generate code across multiple files, fix errors, ask questions about your code and much more using natural language.</source>
+      <note>{Locked="["}
+{Locked="]({0})"}</note>
+    </trans-unit>
+    <trans-unit id="gettingStarted.copilotSetup.title">
+      <source xml:lang="en">Use AI features with Copilot for free</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.debug.description.interpolated">
+      <source xml:lang="en">Accelerate your edit, build, test, and debug loop by setting up a launch configuration.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.debug.title">
+      <source xml:lang="en">Watch your code in action</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.extensions.description.interpolated">
+      <source xml:lang="en">Extensions are VS Code's power-ups. They range from handy productivity hacks, expanding out-of-the-box features, to adding completely new capabilities.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.extensions.title">
+      <source xml:lang="en">Code with extensions</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.extensionsWeb.description.interpolated">
+      <source xml:lang="en">Extensions are VS Code's power-ups. A growing number are becoming available in the web.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.findLanguageExts.description.interpolated">
+      <source xml:lang="en">Code smarter with syntax highlighting, code completion, linting and debugging. While many languages are built-in, many more can be added as extensions.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.findLanguageExts.title">
+      <source xml:lang="en">Rich support for all your languages</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.goToSymbol.description.interpolated">
+      <source xml:lang="en">The Go to Symbol command is useful for navigating between important landmarks in a document.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.goToSymbol.title">
+      <source xml:lang="en">Navigate to symbols in a file</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.hover.description.interpolated">
+      <source xml:lang="en">While focus is in the editor on a variable or symbol, a hover can be can be focused with the Show or Open Hover command.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.hover.title">
+      <source xml:lang="en">Access the hover in the editor to get more information on a variable or symbol</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.installGit.description.interpolated">
+      <source xml:lang="en">Install Git to track changes in your projects.
+{0}
+{1}Reload window{2} after installation to complete Git setup.</source>
+      <note>The placeholders are command link items should not be translated</note>
+    </trans-unit>
+    <trans-unit id="gettingStarted.installGit.title">
+      <source xml:lang="en">Install Git</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.intellisense.description.interpolated">
+      <source xml:lang="en">Intellisense suggestions can be opened with the Trigger Intellisense command.
+{0}
+ Inline intellisense suggestions can be triggered with Trigger Inline Suggestion
+{1}
+ Useful settings include editor.inlineCompletionsAccessibilityVerbose and editor.screenReaderAnnounceInlineSuggestion.</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.intellisense.title">
+      <source xml:lang="en">Use Intellisense to improve coding efficiency</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.keyboardShortcuts.description.interpolated">
+      <source xml:lang="en">Once you have discovered your favorite commands, create custom keyboard shortcuts for instant access.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.keyboardShortcuts.title">
+      <source xml:lang="en">Customize your keyboard shortcuts</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.menuBar.description.interpolated">
+      <source xml:lang="en">The full menu bar is available in the dropdown menu to make room for your code. Toggle its appearance for faster access. 
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.menuBar.title">
+      <source xml:lang="en">Just the right amount of UI</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.newFile.description">
+      <source xml:lang="en">Open a new untitled text file, notebook, or custom editor.</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.newFile.title">
+      <source xml:lang="en">New File...</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.notebook.title">
+      <source xml:lang="en">Customize Notebooks</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.notebook.walkthroughPageTitle">
+      <source xml:lang="en">Notebooks</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.notebookProfile.description">
+      <source xml:lang="en">Get notebooks to feel just the way you prefer</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.notebookProfile.title">
+      <source xml:lang="en">Select the layout for your notebooks</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.openFile.description">
+      <source xml:lang="en">Open a file to start working</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.openFile.title">
+      <source xml:lang="en">Open File...</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.openFolder.description">
+      <source xml:lang="en">Open a folder to start working</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.openFolder.title">
+      <source xml:lang="en">Open Folder...</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.openMac.description">
+      <source xml:lang="en">Open a file or folder to start working</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.openMac.title">
+      <source xml:lang="en">Open...</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.pickColor.description.interpolated">
+      <source xml:lang="en">The right theme helps you focus on your code, is easy on your eyes, and is simply more fun to use.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.pickColor.title">
+      <source xml:lang="en">Choose your theme</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.quickOpen.description.interpolated">
+      <source xml:lang="en">Navigate between files in an instant with one keystroke. Tip: Open multiple files by pressing the right arrow key.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.quickOpen.title">
+      <source xml:lang="en">Quickly navigate between your files</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.scm.description.interpolated">
+      <source xml:lang="en">No more looking up Git commands! Git and GitHub workflows are seamlessly integrated.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.scm.title">
+      <source xml:lang="en">Track your code with Git</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.scmClone.description.interpolated">
+      <source xml:lang="en">Set up the built-in version control for your project to track your changes and collaborate with others.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.scmSetup.description.interpolated">
+      <source xml:lang="en">Set up the built-in version control for your project to track your changes and collaborate with others.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.settings.title">
+      <source xml:lang="en">Tune your settings</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.settingsAndSync.description.interpolated">
+      <source xml:lang="en">Customize every aspect of VS Code and your extensions to your liking. [Back up and sync](command:workbench.userDataSync.actions.turnOn) your essential customizations across all your devices.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.settingsSync.description.interpolated">
+      <source xml:lang="en">Keep your essential customizations backed up and updated across all your devices.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.settingsSync.title">
+      <source xml:lang="en">Sync settings across devices</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.setup.OpenFolder.title">
+      <source xml:lang="en">Open up your code</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.setup.OpenFolderWeb.description.interpolated">
+      <source xml:lang="en">You're all set to start coding. You can open a local project or a remote repository to get your files into VS Code.
+{0}
+{1}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.setup.description">
+      <source xml:lang="en">Customize your editor, learn the basics, and start coding</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.setup.title">
+      <source xml:lang="en">Get Started with VS Code</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.setup.walkthroughPageTitle">
+      <source xml:lang="en">Setup VS Code</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.setupAccessibility.description">
+      <source xml:lang="en">Learn the tools and shortcuts that make VS Code accessible. Note that some actions are not actionable from within the context of the walkthrough.</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.setupAccessibility.title">
+      <source xml:lang="en">Get Started with Accessibility Features</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.setupAccessibility.walkthroughPageTitle">
+      <source xml:lang="en">Setup VS Code Accessibility</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.setupWeb.description">
+      <source xml:lang="en">Customize your editor, learn the basics, and start coding</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.setupWeb.title">
+      <source xml:lang="en">Get Started with VS Code for the Web</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.setupWeb.walkthroughPageTitle">
+      <source xml:lang="en">Setup VS Code Web</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.shortcuts.description.interpolated">
+      <source xml:lang="en">Once you have discovered your favorite commands, create custom keyboard shortcuts for instant access.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.shortcuts.title">
+      <source xml:lang="en">Customize your shortcuts</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.tasks.description.interpolated">
+      <source xml:lang="en">Create tasks for your common workflows and enjoy the integrated experience of running scripts and automatically checking results.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.tasks.title">
+      <source xml:lang="en">Automate your project tasks</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.terminal.description.interpolated">
+      <source xml:lang="en">Quickly run shell commands and monitor build output, right next to your code.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.terminal.title">
+      <source xml:lang="en">Built-in terminal</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.topLevelGitClone.description">
+      <source xml:lang="en">Clone a remote repository to a local folder</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.topLevelGitClone.title">
+      <source xml:lang="en">Clone Git Repository...</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.topLevelGitOpen.description">
+      <source xml:lang="en">Connect to a remote repository or pull request to browse, search, edit, and commit</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.topLevelGitOpen.title">
+      <source xml:lang="en">Open Repository...</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.topLevelOpenTunnel.description">
+      <source xml:lang="en">Connect to a remote machine through a Tunnel</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.topLevelOpenTunnel.title">
+      <source xml:lang="en">Open Tunnel...</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.topLevelRemoteOpen.description">
+      <source xml:lang="en">Connect to remote development workspaces.</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.topLevelRemoteOpen.title">
+      <source xml:lang="en">Connect to...</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.topLevelShowWalkthroughs.description">
+      <source xml:lang="en">View a walkthrough on the editor or an extension</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.topLevelShowWalkthroughs.title">
+      <source xml:lang="en">Open a Walkthrough...</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.verbositySettings.description.interpolated">
+      <source xml:lang="en">Screen reader verbosity settings exist for features around the workbench so that once a user is familiar with a feature, they can avoid hearing hints about how to operate it. For example, features for which an accessibility help dialog exists will indicate how to open the dialog until the verbosity setting for that feature has been disabled.
+ These and other accessibility settings can be configured by running the Open Accessibility Settings command.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.verbositySettings.title">
+      <source xml:lang="en">Control the verbosity of aria labels</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.videoTutorial.description.interpolated">
+      <source xml:lang="en">Watch the first in a series of short &amp; practical video tutorials for VS Code's key features.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.videoTutorial.title">
+      <source xml:lang="en">Watch video tutorials</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.workspaceTrust.description.interpolated">
+      <source xml:lang="en">{0} lets you decide whether your project folders should **allow or restrict** automatic code execution __(required for extensions, debugging, etc)__.
+Opening a file/folder will prompt to grant trust. You can always {1} later.</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.workspaceTrust.title">
+      <source xml:lang="en">Safely browse and edit code</source>
+    </trans-unit>
+    <trans-unit id="initRepo">
+      <source xml:lang="en">Initialize Git Repository</source>
+    </trans-unit>
+    <trans-unit id="installGit">
+      <source xml:lang="en">Install Git</source>
+    </trans-unit>
+    <trans-unit id="keyboardShortcuts">
+      <source xml:lang="en">Keyboard Shortcuts</source>
+    </trans-unit>
+    <trans-unit id="listSignalAnnouncements">
+      <source xml:lang="en">List Signal Announcements</source>
+    </trans-unit>
+    <trans-unit id="listSignalSounds">
+      <source xml:lang="en">List Signal Sounds</source>
+    </trans-unit>
+    <trans-unit id="openAccessibilityHelp">
+      <source xml:lang="en">Open Accessibility Help</source>
+    </trans-unit>
+    <trans-unit id="openAccessibilitySettings">
+      <source xml:lang="en">Open Accessibility Settings</source>
+    </trans-unit>
+    <trans-unit id="openAccessibleView">
+      <source xml:lang="en">Open Accessible View</source>
+    </trans-unit>
+    <trans-unit id="openFolder">
+      <source xml:lang="en">Open Folder</source>
+    </trans-unit>
+    <trans-unit id="openGoToSymbol">
+      <source xml:lang="en">Go to Symbol</source>
+    </trans-unit>
+    <trans-unit id="openRepository">
+      <source xml:lang="en">Open Repository</source>
+    </trans-unit>
+    <trans-unit id="openSCM">
+      <source xml:lang="en">Open Source Control</source>
+    </trans-unit>
+    <trans-unit id="openVerbositySettings">
+      <source xml:lang="en">Open Accessibility Settings</source>
+    </trans-unit>
+    <trans-unit id="quickOpen">
+      <source xml:lang="en">Quick Open a File</source>
+    </trans-unit>
+    <trans-unit id="runProject">
+      <source xml:lang="en">Run your Project</source>
+    </trans-unit>
+    <trans-unit id="runTasks">
+      <source xml:lang="en">Run Auto-detected Tasks</source>
+    </trans-unit>
+    <trans-unit id="setupCopilotButton.chatWithCopilot">
+      <source xml:lang="en">Chat with Copilot</source>
+    </trans-unit>
+    <trans-unit id="setupCopilotButton.setup">
+      <source xml:lang="en">Set Up Copilot for Free</source>
+    </trans-unit>
+    <trans-unit id="setupCopilotButton.signIn">
+      <source xml:lang="en">Set Up Copilot for Free</source>
+    </trans-unit>
+    <trans-unit id="showOrFocusHover">
+      <source xml:lang="en">Show or Focus Hover</source>
+    </trans-unit>
+    <trans-unit id="showTerminal">
+      <source xml:lang="en">Open Terminal</source>
+    </trans-unit>
+    <trans-unit id="titleID">
+      <source xml:lang="en">Browse Color Themes</source>
+    </trans-unit>
+    <trans-unit id="toggleFold">
+      <source xml:lang="en">Toggle Fold</source>
+    </trans-unit>
+    <trans-unit id="toggleFoldRecursively">
+      <source xml:lang="en">Toggle Fold Recursively</source>
+    </trans-unit>
+    <trans-unit id="toggleMenuBar">
+      <source xml:lang="en">Toggle Menu Bar</source>
+    </trans-unit>
+    <trans-unit id="triggerInlineSuggestion">
+      <source xml:lang="en">Trigger Inline Suggestion</source>
+    </trans-unit>
+    <trans-unit id="triggerIntellisense">
+      <source xml:lang="en">Trigger Intellisense</source>
+    </trans-unit>
+    <trans-unit id="tweakSettings">
+      <source xml:lang="en">Open Settings</source>
+    </trans-unit>
+    <trans-unit id="watch">
+      <source xml:lang="en">Watch Tutorial</source>
+    </trans-unit>
+    <trans-unit id="workspaceTrust">
+      <source xml:lang="en">Workspace Trust</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeGettingStarted/common/media/notebookProfile" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="colab">
+      <source xml:lang="en">Colab</source>
+    </trans-unit>
+    <trans-unit id="default">
+      <source xml:lang="en">Default</source>
+    </trans-unit>
+    <trans-unit id="jupyter">
+      <source xml:lang="en">Jupyter</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/welcomeGettingStarted/common/media/theme_picker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="HighContrast">
+      <source xml:lang="en">Dark High Contrast</source>
+    </trans-unit>
+    <trans-unit id="HighContrastLight">
+      <source xml:lang="en">Light High Contrast</source>
+    </trans-unit>
+    <trans-unit id="dark">
+      <source xml:lang="en">Dark Modern</source>
+    </trans-unit>
+    <trans-unit id="light">
+      <source xml:lang="en">Light Modern</source>
+    </trans-unit>
+    <trans-unit id="seeMore">
+      <source xml:lang="en">See More Themes...</source>
+    </trans-unit>
+</body></file>
+</xliff>

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/codeEditor/browser/accessibility/accessibility" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="toggleScreenReaderMode">
+      <source xml:lang="en">Toggle Screen Reader Accessibility Mode</source>
+    </trans-unit>
+    <trans-unit id="toggleScreenReaderModeDescription">
+      <source xml:lang="en">Toggles an optimized mode for usage with screen readers, braille devices, and other assistive technologies.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/dictation/editorDictation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="startDictation">
+      <source xml:lang="en">Start Dictation in Editor</source>
+    </trans-unit>
+    <trans-unit id="stopDictation">
+      <source xml:lang="en">Stop Dictation in Editor</source>
+    </trans-unit>
+    <trans-unit id="stopDictationShort1">
+      <source xml:lang="en">Stop Dictation ({0})</source>
+    </trans-unit>
+    <trans-unit id="stopDictationShort2">
+      <source xml:lang="en">Stop Dictation</source>
+    </trans-unit>
+    <trans-unit id="voiceCategory">
+      <source xml:lang="en">Voice</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/diffEditorAccessibilityHelp" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="msg1">
+      <source xml:lang="en">You are in a diff editor.</source>
+    </trans-unit>
+    <trans-unit id="msg2">
+      <source xml:lang="en">View the next{0} or previous{1} diff in diff review mode, which is optimized for screen readers.</source>
+    </trans-unit>
+    <trans-unit id="msg3">
+      <source xml:lang="en">Run the command Diff Editor: Switch Side{0} to toggle between the original and modified editors.</source>
+    </trans-unit>
+    <trans-unit id="msg4">
+      <source xml:lang="en">To control which accessibility signals should be played, the following settings can be configured: {0}.</source>
+    </trans-unit>
+    <trans-unit id="msg5">
+      <source xml:lang="en">The setting, accessibility.verbosity.diffEditorActive, controls if a diff editor announcement is made when it becomes the active editor.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/diffEditorHelper" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="hintTimeout">
+      <source xml:lang="en">The diff algorithm was stopped early (after {0} ms.)</source>
+    </trans-unit>
+    <trans-unit id="hintWhitespace">
+      <source xml:lang="en">Show Whitespace Differences</source>
+    </trans-unit>
+    <trans-unit id="removeTimeout">
+      <source xml:lang="en">Remove Limit</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/emptyTextEditorHint/emptyTextEditorHint" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="defaultHintAriaLabel">
+      <source xml:lang="en">Execute {0} to select a language, execute {1} to fill with template, or execute {2} to open a different editor and get started. Start typing to dismiss.</source>
+    </trans-unit>
+    <trans-unit id="disableEditorEmptyHint">
+      <source xml:lang="en">Disable Empty Editor Hint</source>
+    </trans-unit>
+    <trans-unit id="disableHint">
+      <source xml:lang="en"> Toggle {0} in settings to disable this hint.</source>
+    </trans-unit>
+    <trans-unit id="emptyHintText">
+      <source xml:lang="en">Press {0} to ask {1} to do something. </source>
+    </trans-unit>
+    <trans-unit id="emptyHintTextDismiss">
+      <source xml:lang="en">Start typing to dismiss.</source>
+    </trans-unit>
+    <trans-unit id="inlineChatHint">
+      <source xml:lang="en">[[Ask {0} to do something]] or start typing to dismiss.</source>
+      <note>Preserve double-square brackets and their order</note>
+    </trans-unit>
+    <trans-unit id="message">
+      <source xml:lang="en">[[Select a language]], or [[fill with template]], or [[open a different editor]] to get started.
+Start typing to dismiss or [[don't show]] this again.</source>
+      <note>Preserve double-square brackets and their order
+language refers to a programming language</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/find/simpleFindWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="ariaSearchNoInput">
+      <source xml:lang="en">Enter search input</source>
+    </trans-unit>
+    <trans-unit id="ariaSearchNoResult">
+      <source xml:lang="en">{0} found for '{1}'</source>
+    </trans-unit>
+    <trans-unit id="ariaSearchNoResultEmpty">
+      <source xml:lang="en">{0} found</source>
+    </trans-unit>
+    <trans-unit id="ariaSearchNoResultWithLineNumNoCurrentMatch">
+      <source xml:lang="en">{0} found for '{1}'</source>
+    </trans-unit>
+    <trans-unit id="label.closeButton">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="label.find">
+      <source xml:lang="en">Find</source>
+    </trans-unit>
+    <trans-unit id="label.nextMatchButton">
+      <source xml:lang="en">Next Match</source>
+    </trans-unit>
+    <trans-unit id="label.previousMatchButton">
+      <source xml:lang="en">Previous Match</source>
+    </trans-unit>
+    <trans-unit id="placeholder.find">
+      <source xml:lang="en">Find</source>
+    </trans-unit>
+    <trans-unit id="simpleFindWidget.sashBorder">
+      <source xml:lang="en">Border color of the sash border.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/inspectEditorTokens/inspectEditorTokens" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inspectEditorTokens">
+      <source xml:lang="en">Developer: Inspect Editor Tokens and Scopes</source>
+    </trans-unit>
+    <trans-unit id="inspectTMScopesWidget.loading">
+      <source xml:lang="en">Loading...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/inspectKeybindings" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="workbench.action.inspectKeyMap">
+      <source xml:lang="en">Inspect Key Mappings</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.inspectKeyMapJSON">
+      <source xml:lang="en">Inspect Key Mappings (JSON)</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/largeFileOptimizations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="largeFile">
+      <source xml:lang="en">{0}: tokenization, wrapping, folding, codelens, word highlighting and sticky scroll have been turned off for this large file in order to reduce memory usage and avoid freezing or crashing.</source>
+      <note>Variable 0 will be a file name.</note>
+    </trans-unit>
+    <trans-unit id="removeOptimizations">
+      <source xml:lang="en">Forcefully Enable Features</source>
+    </trans-unit>
+    <trans-unit id="reopenFilePrompt">
+      <source xml:lang="en">Please reopen file in order for this setting to take effect.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/outline/documentSymbolsOutline" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="document">
+      <source xml:lang="en">Document Symbols</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/outline/documentSymbolsTree" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="1.problem">
+      <source xml:lang="en">1 problem in this element</source>
+    </trans-unit>
+    <trans-unit id="N.problem">
+      <source xml:lang="en">{0} problems in this element</source>
+    </trans-unit>
+    <trans-unit id="deep.problem">
+      <source xml:lang="en">Contains elements with problems</source>
+    </trans-unit>
+    <trans-unit id="title.template">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/quickaccess/gotoLineQuickAccess" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="gotoLine">
+      <source xml:lang="en">Go to Line/Column...</source>
+    </trans-unit>
+    <trans-unit id="gotoLineQuickAccess">
+      <source xml:lang="en">Go to Line/Column</source>
+    </trans-unit>
+    <trans-unit id="gotoLineQuickAccessPlaceholder">
+      <source xml:lang="en">Type the line number and optional column to go to (e.g. 42:5 for line 42 and column 5).</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/quickaccess/gotoSymbolQuickAccess" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="empty">
+      <source xml:lang="en">No matching entries</source>
+    </trans-unit>
+    <trans-unit id="gotoSymbol">
+      <source xml:lang="en">Go to Symbol in Editor...</source>
+    </trans-unit>
+    <trans-unit id="gotoSymbolByCategoryQuickAccess">
+      <source xml:lang="en">Go to Symbol in Editor by Category</source>
+    </trans-unit>
+    <trans-unit id="gotoSymbolQuickAccess">
+      <source xml:lang="en">Go to Symbol in Editor</source>
+    </trans-unit>
+    <trans-unit id="gotoSymbolQuickAccessPlaceholder">
+      <source xml:lang="en">Type the name of a symbol to go to.</source>
+    </trans-unit>
+    <trans-unit id="miGotoSymbolInEditor">
+      <source xml:lang="en">Go to &amp;&amp;Symbol in Editor...</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/saveParticipants" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codeAction.apply">
+      <source xml:lang="en">Applying code action '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="codeaction">
+      <source xml:lang="en">Quick Fixes</source>
+    </trans-unit>
+    <trans-unit id="codeaction.get2">
+      <source xml:lang="en">Getting code actions from {0} ([configure]({1})).</source>
+      <note>[configure]({1}) is a link. Only translate `configure`. Do not change brackets and parentheses or {1}</note>
+    </trans-unit>
+    <trans-unit id="formatting2">
+      <source xml:lang="en">Running '{0}' Formatter ([configure]({1})).</source>
+      <note>[configure]({1}) is a link. Only translate `configure`. Do not change brackets and parentheses or {1}</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/toggleColumnSelection" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="miColumnSelection">
+      <source xml:lang="en">Column &amp;&amp;Selection Mode</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="toggleColumnSelection">
+      <source xml:lang="en">Toggle Column Selection Mode</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/toggleMinimap" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="miMinimap">
+      <source xml:lang="en">&amp;&amp;Minimap</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="toggleMinimap">
+      <source xml:lang="en">Toggle Minimap</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/toggleMultiCursorModifier" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="miMultiCursorAlt">
+      <source xml:lang="en">Switch to Alt+Click for Multi-Cursor</source>
+    </trans-unit>
+    <trans-unit id="miMultiCursorCmd">
+      <source xml:lang="en">Switch to Cmd+Click for Multi-Cursor</source>
+    </trans-unit>
+    <trans-unit id="miMultiCursorCtrl">
+      <source xml:lang="en">Switch to Ctrl+Click for Multi-Cursor</source>
+    </trans-unit>
+    <trans-unit id="toggleLocation">
+      <source xml:lang="en">Toggle Multi-Cursor Modifier</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/toggleRenderControlCharacter" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="miToggleRenderControlCharacters">
+      <source xml:lang="en">Render &amp;&amp;Control Characters</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="toggleRenderControlCharacters">
+      <source xml:lang="en">Toggle Control Characters</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/toggleRenderWhitespace" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="miToggleRenderWhitespace">
+      <source xml:lang="en">&amp;&amp;Render Whitespace</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="toggleRenderWhitespace">
+      <source xml:lang="en">Toggle Render Whitespace</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/toggleWordWrap" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="editorWordWrap">
+      <source xml:lang="en">Whether the editor is currently using word wrapping.</source>
+    </trans-unit>
+    <trans-unit id="miToggleWordWrap">
+      <source xml:lang="en">&amp;&amp;Word Wrap</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="toggle.wordwrap">
+      <source xml:lang="en">View: Toggle Word Wrap</source>
+    </trans-unit>
+    <trans-unit id="unwrapMinified">
+      <source xml:lang="en">Disable wrapping for this file</source>
+    </trans-unit>
+    <trans-unit id="wrapMinified">
+      <source xml:lang="en">Enable wrapping for this file</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/common/languageConfigurationExtensionPoint" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="formatError">
+      <source xml:lang="en">{0}: Invalid format, JSON object expected.</source>
+    </trans-unit>
+    <trans-unit id="parseErrors">
+      <source xml:lang="en">Errors parsing {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="schema.autoCloseBefore">
+      <source xml:lang="en">Defines what characters must be after the cursor in order for bracket or quote autoclosing to occur when using the 'languageDefined' autoclosing setting. This is typically the set of characters which can not start an expression.</source>
+    </trans-unit>
+    <trans-unit id="schema.autoClosingPairs">
+      <source xml:lang="en">Defines the bracket pairs. When a opening bracket is entered, the closing bracket is inserted automatically.</source>
+    </trans-unit>
+    <trans-unit id="schema.autoClosingPairs.notIn">
+      <source xml:lang="en">Defines a list of scopes where the auto pairs are disabled.</source>
+    </trans-unit>
+    <trans-unit id="schema.blockComment.begin">
+      <source xml:lang="en">The character sequence that starts a block comment.</source>
+    </trans-unit>
+    <trans-unit id="schema.blockComment.end">
+      <source xml:lang="en">The character sequence that ends a block comment.</source>
+    </trans-unit>
+    <trans-unit id="schema.blockComments">
+      <source xml:lang="en">Defines how block comments are marked.</source>
+    </trans-unit>
+    <trans-unit id="schema.brackets">
+      <source xml:lang="en">Defines the bracket symbols that increase or decrease the indentation. When bracket pair colorization is enabled and {0} is not defined, this also defines the bracket pairs that are colorized by their nesting level.</source>
+    </trans-unit>
+    <trans-unit id="schema.closeBracket">
+      <source xml:lang="en">The closing bracket character or string sequence.</source>
+    </trans-unit>
+    <trans-unit id="schema.colorizedBracketPairs">
+      <source xml:lang="en">Defines the bracket pairs that are colorized by their nesting level if bracket pair colorization is enabled. Any brackets included here that are not included in {0} will be automatically included in {0}.</source>
+    </trans-unit>
+    <trans-unit id="schema.comments">
+      <source xml:lang="en">Defines the comment symbols</source>
+    </trans-unit>
+    <trans-unit id="schema.folding">
+      <source xml:lang="en">The language's folding settings.</source>
+    </trans-unit>
+    <trans-unit id="schema.folding.markers">
+      <source xml:lang="en">Language specific folding markers such as '#region' and '#endregion'. The start and end regexes will be tested against the contents of all lines and must be designed efficiently</source>
+    </trans-unit>
+    <trans-unit id="schema.folding.markers.end">
+      <source xml:lang="en">The RegExp pattern for the end marker. The regexp must start with '^'.</source>
+    </trans-unit>
+    <trans-unit id="schema.folding.markers.start">
+      <source xml:lang="en">The RegExp pattern for the start marker. The regexp must start with '^'.</source>
+    </trans-unit>
+    <trans-unit id="schema.folding.offSide">
+      <source xml:lang="en">A language adheres to the off-side rule if blocks in that language are expressed by their indentation. If set, empty lines belong to the subsequent block.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules">
+      <source xml:lang="en">The language's indentation settings.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.decreaseIndentPattern">
+      <source xml:lang="en">If a line matches this pattern, then all the lines after it should be unindented once (until another rule matches).</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.decreaseIndentPattern.errorMessage">
+      <source xml:lang="en">Must match the pattern `/^([gimuy]+)$/`.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.decreaseIndentPattern.flags">
+      <source xml:lang="en">The RegExp flags for decreaseIndentPattern.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.decreaseIndentPattern.pattern">
+      <source xml:lang="en">The RegExp pattern for decreaseIndentPattern.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.increaseIndentPattern">
+      <source xml:lang="en">If a line matches this pattern, then all the lines after it should be indented once (until another rule matches).</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.increaseIndentPattern.errorMessage">
+      <source xml:lang="en">Must match the pattern `/^([gimuy]+)$/`.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.increaseIndentPattern.flags">
+      <source xml:lang="en">The RegExp flags for increaseIndentPattern.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.increaseIndentPattern.pattern">
+      <source xml:lang="en">The RegExp pattern for increaseIndentPattern.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.indentNextLinePattern">
+      <source xml:lang="en">If a line matches this pattern, then **only the next line** after it should be indented once.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.indentNextLinePattern.errorMessage">
+      <source xml:lang="en">Must match the pattern `/^([gimuy]+)$/`.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.indentNextLinePattern.flags">
+      <source xml:lang="en">The RegExp flags for indentNextLinePattern.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.indentNextLinePattern.pattern">
+      <source xml:lang="en">The RegExp pattern for indentNextLinePattern.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.unIndentedLinePattern">
+      <source xml:lang="en">If a line matches this pattern, then its indentation should not be changed and it should not be evaluated against the other rules.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.unIndentedLinePattern.errorMessage">
+      <source xml:lang="en">Must match the pattern `/^([gimuy]+)$/`.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.unIndentedLinePattern.flags">
+      <source xml:lang="en">The RegExp flags for unIndentedLinePattern.</source>
+    </trans-unit>
+    <trans-unit id="schema.indentationRules.unIndentedLinePattern.pattern">
+      <source xml:lang="en">The RegExp pattern for unIndentedLinePattern.</source>
+    </trans-unit>
+    <trans-unit id="schema.lineComment">
+      <source xml:lang="en">The character sequence that starts a line comment.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules">
+      <source xml:lang="en">The language's rules to be evaluated when pressing Enter.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.action">
+      <source xml:lang="en">The action to execute.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.action.appendText">
+      <source xml:lang="en">Describes text to be appended after the new line and after the indentation.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.action.indent">
+      <source xml:lang="en">Describe what to do with the indentation</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.action.indent.indent">
+      <source xml:lang="en">Insert new line and indent once (relative to the previous line's indentation).</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.action.indent.indentOutdent">
+      <source xml:lang="en">Insert two new lines:
+ - the first one indented which will hold the cursor
+ - the second one at the same indentation level</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.action.indent.none">
+      <source xml:lang="en">Insert new line and copy the previous line's indentation.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.action.indent.outdent">
+      <source xml:lang="en">Insert new line and outdent once (relative to the previous line's indentation).</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.action.removeText">
+      <source xml:lang="en">Describes the number of characters to remove from the new line's indentation.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.afterText">
+      <source xml:lang="en">This rule will only execute if the text after the cursor matches this regular expression.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.afterText.errorMessage">
+      <source xml:lang="en">Must match the pattern `/^([gimuy]+)$/`.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.afterText.flags">
+      <source xml:lang="en">The RegExp flags for afterText.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.afterText.pattern">
+      <source xml:lang="en">The RegExp pattern for afterText.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.beforeText">
+      <source xml:lang="en">This rule will only execute if the text before the cursor matches this regular expression.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.beforeText.errorMessage">
+      <source xml:lang="en">Must match the pattern `/^([gimuy]+)$/`.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.beforeText.flags">
+      <source xml:lang="en">The RegExp flags for beforeText.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.beforeText.pattern">
+      <source xml:lang="en">The RegExp pattern for beforeText.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.previousLineText">
+      <source xml:lang="en">This rule will only execute if the text above the line matches this regular expression.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.previousLineText.errorMessage">
+      <source xml:lang="en">Must match the pattern `/^([gimuy]+)$/`.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.previousLineText.flags">
+      <source xml:lang="en">The RegExp flags for previousLineText.</source>
+    </trans-unit>
+    <trans-unit id="schema.onEnterRules.previousLineText.pattern">
+      <source xml:lang="en">The RegExp pattern for previousLineText.</source>
+    </trans-unit>
+    <trans-unit id="schema.openBracket">
+      <source xml:lang="en">The opening bracket character or string sequence.</source>
+    </trans-unit>
+    <trans-unit id="schema.surroundingPairs">
+      <source xml:lang="en">Defines the bracket pairs that can be used to surround a selected string.</source>
+    </trans-unit>
+    <trans-unit id="schema.wordPattern">
+      <source xml:lang="en">Defines what is considered to be a word in the programming language.</source>
+    </trans-unit>
+    <trans-unit id="schema.wordPattern.flags">
+      <source xml:lang="en">The RegExp flags used to match words.</source>
+    </trans-unit>
+    <trans-unit id="schema.wordPattern.flags.errorMessage">
+      <source xml:lang="en">Must match the pattern `/^([gimuy]+)$/`.</source>
+    </trans-unit>
+    <trans-unit id="schema.wordPattern.pattern">
+      <source xml:lang="en">The RegExp pattern used to match words.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/electron-sandbox/selectionClipboard" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="actions.pasteSelectionClipboard">
+      <source xml:lang="en">Paste Selection Clipboard</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/codeEditor/electron-sandbox/startDebugTextMate" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="startDebugTextMate">
+      <source xml:lang="en">Start TextMate Syntax Grammar Logging</source>
+    </trans-unit>
+</body></file>
+</xliff>

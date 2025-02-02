@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/testing/browser/codeCoverageDecorations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="coverage.branchCovered">
+      <source xml:lang="en">Branch {0} in {1} was executed {2} time(s).</source>
+    </trans-unit>
+    <trans-unit id="coverage.branchCoveredYes">
+      <source xml:lang="en">Branch {0} in {1} was executed.</source>
+    </trans-unit>
+    <trans-unit id="coverage.branchNotCovered">
+      <source xml:lang="en">Branch {0} in {1} was not covered.</source>
+    </trans-unit>
+    <trans-unit id="coverage.branches">
+      <source xml:lang="en">{0} of {1} of branches in {2} were covered.</source>
+    </trans-unit>
+    <trans-unit id="coverage.declExecutedCount">
+      <source xml:lang="en">`{0}` was executed {1} time(s).</source>
+    </trans-unit>
+    <trans-unit id="coverage.declExecutedNo">
+      <source xml:lang="en">`{0}` was not executed.</source>
+    </trans-unit>
+    <trans-unit id="coverage.declExecutedYes">
+      <source xml:lang="en">`{0}` was executed.</source>
+    </trans-unit>
+    <trans-unit id="coverage.hideInline">
+      <source xml:lang="en">Hide Inline Coverage</source>
+    </trans-unit>
+    <trans-unit id="coverage.toggleInline">
+      <source xml:lang="en">Toggle Inline Coverage</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageForTestAvailable">
+      <source xml:lang="en">{0} test(s) ran code in this file</source>
+    </trans-unit>
+    <trans-unit id="testing.filterActionLabel">
+      <source xml:lang="en">Filter Coverage to Test</source>
+    </trans-unit>
+    <trans-unit id="testing.hideInlineCoverage">
+      <source xml:lang="en">Hide Inline Coverage</source>
+    </trans-unit>
+    <trans-unit id="testing.rerun">
+      <source xml:lang="en">Rerun</source>
+    </trans-unit>
+    <trans-unit id="testing.showInlineCoverage">
+      <source xml:lang="en">Show Inline Coverage</source>
+    </trans-unit>
+    <trans-unit id="testing.toggleInlineCoverage">
+      <source xml:lang="en">Toggle Inline</source>
+    </trans-unit>
+    <trans-unit id="testing.toggleToolbarDesc">
+      <source xml:lang="en">Toggle the sticky coverage bar in the editor.</source>
+    </trans-unit>
+    <trans-unit id="testing.toggleToolbarTitle">
+      <source xml:lang="en">Test Coverage Toolbar</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/codeCoverageDisplayUtils" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="changePerTestFilter">
+      <source xml:lang="en">Click to view coverage for a single test</source>
+    </trans-unit>
+    <trans-unit id="testing.allTests">
+      <source xml:lang="en">All tests</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageForTest">
+      <source xml:lang="en">Showing "{0}"</source>
+    </trans-unit>
+    <trans-unit id="testing.percentCoverage">
+      <source xml:lang="en">{0} Coverage</source>
+    </trans-unit>
+    <trans-unit id="testing.pickTest">
+      <source xml:lang="en">Pick a test to show coverage for</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/icons" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="filterIcon">
+      <source xml:lang="en">Icon for the 'Filter' action in the testing view.</source>
+    </trans-unit>
+    <trans-unit id="hiddenIcon">
+      <source xml:lang="en">Icon shown beside hidden tests, when they've been shown.</source>
+    </trans-unit>
+    <trans-unit id="testViewIcon">
+      <source xml:lang="en">View icon of the test view.</source>
+    </trans-unit>
+    <trans-unit id="testingCancelIcon">
+      <source xml:lang="en">Icon to cancel ongoing test runs.</source>
+    </trans-unit>
+    <trans-unit id="testingCancelRefreshTests">
+      <source xml:lang="en">Icon on the button to cancel refreshing tests.</source>
+    </trans-unit>
+    <trans-unit id="testingCoverage">
+      <source xml:lang="en">Icon representing test coverage</source>
+    </trans-unit>
+    <trans-unit id="testingCoverageIcon">
+      <source xml:lang="en">Icon of the "run test with coverage" action.</source>
+    </trans-unit>
+    <trans-unit id="testingDebugAllIcon">
+      <source xml:lang="en">Icon of the "debug all tests" action.</source>
+    </trans-unit>
+    <trans-unit id="testingDebugIcon">
+      <source xml:lang="en">Icon of the "debug test" action.</source>
+    </trans-unit>
+    <trans-unit id="testingErrorIcon">
+      <source xml:lang="en">Icon shown for tests that have an error.</source>
+    </trans-unit>
+    <trans-unit id="testingFailedIcon">
+      <source xml:lang="en">Icon shown for tests that failed.</source>
+    </trans-unit>
+    <trans-unit id="testingMissingBranch">
+      <source xml:lang="en">Icon representing a uncovered block without a range</source>
+    </trans-unit>
+    <trans-unit id="testingPassedIcon">
+      <source xml:lang="en">Icon shown for tests that passed.</source>
+    </trans-unit>
+    <trans-unit id="testingQueuedIcon">
+      <source xml:lang="en">Icon shown for tests that are queued.</source>
+    </trans-unit>
+    <trans-unit id="testingRefreshTests">
+      <source xml:lang="en">Icon on the button to refresh tests.</source>
+    </trans-unit>
+    <trans-unit id="testingRerunIcon">
+      <source xml:lang="en">Icon of the "rerun tests" action.</source>
+    </trans-unit>
+    <trans-unit id="testingResultsIcon">
+      <source xml:lang="en">Icons for test results.</source>
+    </trans-unit>
+    <trans-unit id="testingRunAllIcon">
+      <source xml:lang="en">Icon of the "run all tests" action.</source>
+    </trans-unit>
+    <trans-unit id="testingRunAllWithCoverageIcon">
+      <source xml:lang="en">Icon of the "run all tests with coverage" action.</source>
+    </trans-unit>
+    <trans-unit id="testingRunIcon">
+      <source xml:lang="en">Icon of the "run test" action.</source>
+    </trans-unit>
+    <trans-unit id="testingShowAsList">
+      <source xml:lang="en">Icon shown when the test explorer is disabled as a tree.</source>
+    </trans-unit>
+    <trans-unit id="testingShowAsTree">
+      <source xml:lang="en">Icon shown when the test explorer is disabled as a list.</source>
+    </trans-unit>
+    <trans-unit id="testingSkippedIcon">
+      <source xml:lang="en">Icon shown for tests that are skipped.</source>
+    </trans-unit>
+    <trans-unit id="testingTurnContinuousRunIsOn">
+      <source xml:lang="en">Icon when continuous run is on for a test ite,.</source>
+    </trans-unit>
+    <trans-unit id="testingTurnContinuousRunOff">
+      <source xml:lang="en">Icon to turn continuous test runs off.</source>
+    </trans-unit>
+    <trans-unit id="testingTurnContinuousRunOn">
+      <source xml:lang="en">Icon to turn continuous test runs on.</source>
+    </trans-unit>
+    <trans-unit id="testingUnsetIcon">
+      <source xml:lang="en">Icon shown for tests that are in an unset state.</source>
+    </trans-unit>
+    <trans-unit id="testingUpdateProfiles">
+      <source xml:lang="en">Icon shown to update test profiles.</source>
+    </trans-unit>
+    <trans-unit id="testingWasCovered">
+      <source xml:lang="en">Icon representing that an element was covered</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testCoverageBars" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="branchCoverage">
+      <source xml:lang="en">{0}/{1} branches covered ({2})</source>
+    </trans-unit>
+    <trans-unit id="functionCoverage">
+      <source xml:lang="en">{0}/{1} functions covered ({2})</source>
+    </trans-unit>
+    <trans-unit id="statementCoverage">
+      <source xml:lang="en">{0}/{1} statements covered ({2})</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testCoverageView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="filteredToTest">
+      <source xml:lang="en">Showing coverage for "{0}"</source>
+    </trans-unit>
+    <trans-unit id="functionsWithoutCoverage">
+      <source xml:lang="en">{0} declarations without coverage...</source>
+    </trans-unit>
+    <trans-unit id="loadingCoverageDetails">
+      <source xml:lang="en">Loading Coverage Details...</source>
+    </trans-unit>
+    <trans-unit id="testCoverageItemLabel">
+      <source xml:lang="en">{0} coverage: {0}%</source>
+    </trans-unit>
+    <trans-unit id="testCoverageTreeLabel">
+      <source xml:lang="en">Test Coverage Explorer</source>
+    </trans-unit>
+    <trans-unit id="testing.changeCoverageFilter">
+      <source xml:lang="en">Filter Coverage by Test</source>
+    </trans-unit>
+    <trans-unit id="testing.changeCoverageSort">
+      <source xml:lang="en">Change Sort Order</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageSortByCoverage">
+      <source xml:lang="en">Sort by Coverage</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageSortByCoverageDescription">
+      <source xml:lang="en">Files and declarations are sorted by total coverage</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageSortByLocation">
+      <source xml:lang="en">Sort by Location</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageSortByLocationDescription">
+      <source xml:lang="en">Files are sorted alphabetically, declarations are sorted by position</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageSortByName">
+      <source xml:lang="en">Sort by Name</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageSortByNameDescription">
+      <source xml:lang="en">Files and declarations are sorted alphabetically</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageSortPlaceholder">
+      <source xml:lang="en">Sort the Test Coverage view...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testExplorerActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="configureProfile">
+      <source xml:lang="en">Select a profile to update</source>
+    </trans-unit>
+    <trans-unit id="coverageSelectedTests">
+      <source xml:lang="en">Run Tests with Coverage</source>
+    </trans-unit>
+    <trans-unit id="debug test">
+      <source xml:lang="en">Debug Test</source>
+    </trans-unit>
+    <trans-unit id="debugAllTests">
+      <source xml:lang="en">Debug All Tests</source>
+    </trans-unit>
+    <trans-unit id="debugSelectedTests">
+      <source xml:lang="en">Debug Tests</source>
+    </trans-unit>
+    <trans-unit id="discoveringTests">
+      <source xml:lang="en">Discovering Tests</source>
+    </trans-unit>
+    <trans-unit id="getExplorerSelection">
+      <source xml:lang="en">Get Explorer Selection</source>
+    </trans-unit>
+    <trans-unit id="getSelectedProfiles">
+      <source xml:lang="en">Get Selected Profiles</source>
+    </trans-unit>
+    <trans-unit id="hideTest">
+      <source xml:lang="en">Hide Test</source>
+    </trans-unit>
+    <trans-unit id="noCoverageTestProvider">
+      <source xml:lang="en">No tests with coverage runners found in this workspace. You may need to install a test provider extension</source>
+    </trans-unit>
+    <trans-unit id="noDebugTestProvider">
+      <source xml:lang="en">No debuggable tests found in this workspace. You may need to install a test provider extension</source>
+    </trans-unit>
+    <trans-unit id="noRelatedCode">
+      <source xml:lang="en">No related code found.</source>
+    </trans-unit>
+    <trans-unit id="noTestFound">
+      <source xml:lang="en">No related tests found.</source>
+    </trans-unit>
+    <trans-unit id="noTestProvider">
+      <source xml:lang="en">No tests found in this workspace. You may need to install a test provider extension</source>
+    </trans-unit>
+    <trans-unit id="noTests">
+      <source xml:lang="en">No tests found in the selected file or folder</source>
+    </trans-unit>
+    <trans-unit id="noTestsAtCursor">
+      <source xml:lang="en">No tests found here</source>
+    </trans-unit>
+    <trans-unit id="noTestsInFile">
+      <source xml:lang="en">No tests found in this file</source>
+    </trans-unit>
+    <trans-unit id="relatedCode">
+      <source xml:lang="en">Related Code</source>
+    </trans-unit>
+    <trans-unit id="relatedTests">
+      <source xml:lang="en">Related Tests</source>
+    </trans-unit>
+    <trans-unit id="run test">
+      <source xml:lang="en">Run Test</source>
+    </trans-unit>
+    <trans-unit id="run with cover test">
+      <source xml:lang="en">Run Test with Coverage</source>
+    </trans-unit>
+    <trans-unit id="runAllTests">
+      <source xml:lang="en">Run All Tests</source>
+    </trans-unit>
+    <trans-unit id="runAllWithCoverage">
+      <source xml:lang="en">Run All Tests with Coverage</source>
+    </trans-unit>
+    <trans-unit id="runSelectedTests">
+      <source xml:lang="en">Run Tests</source>
+    </trans-unit>
+    <trans-unit id="testing.cancelRun">
+      <source xml:lang="en">Cancel Test Run</source>
+    </trans-unit>
+    <trans-unit id="testing.cancelTestRefresh">
+      <source xml:lang="en">Cancel Test Refresh</source>
+    </trans-unit>
+    <trans-unit id="testing.clearCoverage">
+      <source xml:lang="en">Clear Coverage</source>
+    </trans-unit>
+    <trans-unit id="testing.clearResults">
+      <source xml:lang="en">Clear All Results</source>
+    </trans-unit>
+    <trans-unit id="testing.collapseAll">
+      <source xml:lang="en">Collapse All Tests</source>
+    </trans-unit>
+    <trans-unit id="testing.configureProfile">
+      <source xml:lang="en">Configure Test Profiles</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageAtCursor">
+      <source xml:lang="en">Run Test at Cursor with Coverage</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageCurrentFile">
+      <source xml:lang="en">Run Tests with Coverage in Current File</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageLastRun">
+      <source xml:lang="en">Rerun Last Run with Coverage</source>
+    </trans-unit>
+    <trans-unit id="testing.debugAtCursor">
+      <source xml:lang="en">Debug Test at Cursor</source>
+    </trans-unit>
+    <trans-unit id="testing.debugCurrentFile">
+      <source xml:lang="en">Debug Tests in Current File</source>
+    </trans-unit>
+    <trans-unit id="testing.debugFailTests">
+      <source xml:lang="en">Debug Failed Tests</source>
+    </trans-unit>
+    <trans-unit id="testing.debugLastRun">
+      <source xml:lang="en">Debug Last Run</source>
+    </trans-unit>
+    <trans-unit id="testing.editFocusedTest">
+      <source xml:lang="en">Go to Test</source>
+    </trans-unit>
+    <trans-unit id="testing.goToRelatedCode">
+      <source xml:lang="en">Go to Related Code</source>
+    </trans-unit>
+    <trans-unit id="testing.goToRelatedTest">
+      <source xml:lang="en">Go to Related Test</source>
+    </trans-unit>
+    <trans-unit id="testing.noCoverage">
+      <source xml:lang="en">No coverage information available on the last test run.</source>
+    </trans-unit>
+    <trans-unit id="testing.noProfiles">
+      <source xml:lang="en">No test continuous run-enabled profiles were found</source>
+    </trans-unit>
+    <trans-unit id="testing.openCoverage">
+      <source xml:lang="en">Open Coverage</source>
+    </trans-unit>
+    <trans-unit id="testing.openOutputPeek">
+      <source xml:lang="en">Peek Output</source>
+    </trans-unit>
+    <trans-unit id="testing.peekToRelatedCode">
+      <source xml:lang="en">Peek Related Code</source>
+    </trans-unit>
+    <trans-unit id="testing.peekToRelatedTest">
+      <source xml:lang="en">Peek Related Test</source>
+    </trans-unit>
+    <trans-unit id="testing.reRunFailTests">
+      <source xml:lang="en">Rerun Failed Tests</source>
+    </trans-unit>
+    <trans-unit id="testing.reRunLastRun">
+      <source xml:lang="en">Rerun Last Run</source>
+    </trans-unit>
+    <trans-unit id="testing.refreshTests">
+      <source xml:lang="en">Refresh Tests</source>
+    </trans-unit>
+    <trans-unit id="testing.runAtCursor">
+      <source xml:lang="en">Run Test at Cursor</source>
+    </trans-unit>
+    <trans-unit id="testing.runCurrentFile">
+      <source xml:lang="en">Run Tests in Current File</source>
+    </trans-unit>
+    <trans-unit id="testing.runUsing">
+      <source xml:lang="en">Execute Using Profile...</source>
+    </trans-unit>
+    <trans-unit id="testing.searchForTestExtension">
+      <source xml:lang="en">Search for Test Extension</source>
+    </trans-unit>
+    <trans-unit id="testing.selectContinuousProfiles">
+      <source xml:lang="en">Select profiles to run when files change:</source>
+    </trans-unit>
+    <trans-unit id="testing.selectDefaultTestProfiles">
+      <source xml:lang="en">Select Default Profile</source>
+    </trans-unit>
+    <trans-unit id="testing.showMostRecentOutput">
+      <source xml:lang="en">Show Output</source>
+    </trans-unit>
+    <trans-unit id="testing.sortByDuration">
+      <source xml:lang="en">Sort by Duration</source>
+    </trans-unit>
+    <trans-unit id="testing.sortByLocation">
+      <source xml:lang="en">Sort by Location</source>
+    </trans-unit>
+    <trans-unit id="testing.sortByStatus">
+      <source xml:lang="en">Sort by Status</source>
+    </trans-unit>
+    <trans-unit id="testing.startContinuous">
+      <source xml:lang="en">Start Continuous Run</source>
+    </trans-unit>
+    <trans-unit id="testing.startContinuousRunUsing">
+      <source xml:lang="en">Start Continous Run Using...</source>
+    </trans-unit>
+    <trans-unit id="testing.stopContinuous">
+      <source xml:lang="en">Stop Continuous Run</source>
+    </trans-unit>
+    <trans-unit id="testing.toggleContinuousRunOff">
+      <source xml:lang="en">Turn off Continuous Run</source>
+    </trans-unit>
+    <trans-unit id="testing.toggleContinuousRunOn">
+      <source xml:lang="en">Turn on Continuous Run</source>
+    </trans-unit>
+    <trans-unit id="testing.toggleInlineTestOutput">
+      <source xml:lang="en">Toggle Inline Test Output</source>
+    </trans-unit>
+    <trans-unit id="testing.viewAsList">
+      <source xml:lang="en">View as List</source>
+    </trans-unit>
+    <trans-unit id="testing.viewAsTree">
+      <source xml:lang="en">View as Tree</source>
+    </trans-unit>
+    <trans-unit id="unhideAllTests">
+      <source xml:lang="en">Unhide All Tests</source>
+    </trans-unit>
+    <trans-unit id="unhideTest">
+      <source xml:lang="en">Unhide Test</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testResultsView/testResultsOutput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="caseNoOutput">
+      <source xml:lang="en">The test case did not report any output.</source>
+    </trans-unit>
+    <trans-unit id="runNoOutput">
+      <source xml:lang="en">The test run did not record any output.</source>
+    </trans-unit>
+    <trans-unit id="runNoOutputForPast">
+      <source xml:lang="en">Test output is only available for new test runs.</source>
+    </trans-unit>
+    <trans-unit id="testingOutputActual">
+      <source xml:lang="en">Actual result</source>
+    </trans-unit>
+    <trans-unit id="testingOutputExpected">
+      <source xml:lang="en">Expected result</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testResultsView/testResultsTree" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="closeTestCoverage">
+      <source xml:lang="en">Close Test Coverage</source>
+    </trans-unit>
+    <trans-unit id="debug test">
+      <source xml:lang="en">Debug Test</source>
+    </trans-unit>
+    <trans-unit id="messageMoreLines1">
+      <source xml:lang="en">+ 1 more line</source>
+    </trans-unit>
+    <trans-unit id="messageMoreLinesN">
+      <source xml:lang="en">+ {0} more lines</source>
+    </trans-unit>
+    <trans-unit id="nOlderResults">
+      <source xml:lang="en">{0} older results</source>
+    </trans-unit>
+    <trans-unit id="openTestCoverage">
+      <source xml:lang="en">View Test Coverage</source>
+    </trans-unit>
+    <trans-unit id="run test">
+      <source xml:lang="en">Run Test</source>
+    </trans-unit>
+    <trans-unit id="testing.cancelRun">
+      <source xml:lang="en">Cancel Test Run</source>
+    </trans-unit>
+    <trans-unit id="testing.debugLastRun">
+      <source xml:lang="en">Debug Last Run</source>
+    </trans-unit>
+    <trans-unit id="testing.debugTest">
+      <source xml:lang="en">Debug Test</source>
+    </trans-unit>
+    <trans-unit id="testing.goToError">
+      <source xml:lang="en">Go to Error</source>
+    </trans-unit>
+    <trans-unit id="testing.goToTest">
+      <source xml:lang="en">Go to Test</source>
+    </trans-unit>
+    <trans-unit id="testing.reRunLastRun">
+      <source xml:lang="en">Rerun Last Run</source>
+    </trans-unit>
+    <trans-unit id="testing.reRunTest">
+      <source xml:lang="en">Rerun Test</source>
+    </trans-unit>
+    <trans-unit id="testing.revealInExplorer">
+      <source xml:lang="en">Reveal in Test Explorer</source>
+    </trans-unit>
+    <trans-unit id="testing.showResultOutput">
+      <source xml:lang="en">Show Result Output</source>
+    </trans-unit>
+    <trans-unit id="testingPeekLabel">
+      <source xml:lang="en">Test Result Messages</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testResultsView/testResultsViewContent" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="testFollowup.more">
+      <source xml:lang="en">+{0} More...</source>
+    </trans-unit>
+    <trans-unit id="testing.callStack.debug">
+      <source xml:lang="en">Debug Test</source>
+    </trans-unit>
+    <trans-unit id="testing.callStack.run">
+      <source xml:lang="en">Rerun Test</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testing.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="miViewTesting">
+      <source xml:lang="en">T&amp;&amp;esting</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="noTestProvidersRegistered">
+      <source xml:lang="en">No tests have been found in this workspace yet.</source>
+    </trans-unit>
+    <trans-unit id="searchForAdditionalTestExtensions">
+      <source xml:lang="en">Install Additional Test Extensions...</source>
+    </trans-unit>
+    <trans-unit id="test">
+      <source xml:lang="en">Testing</source>
+    </trans-unit>
+    <trans-unit id="testCoverage">
+      <source xml:lang="en">Test Coverage</source>
+    </trans-unit>
+    <trans-unit id="testExplorer">
+      <source xml:lang="en">Test Explorer</source>
+    </trans-unit>
+    <trans-unit id="testResultsPanelName">
+      <source xml:lang="en">Test Results</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingConfigurationUi" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="testConfigurationUi.pick">
+      <source xml:lang="en">Pick a test profile to use</source>
+    </trans-unit>
+    <trans-unit id="updateTestConfiguration">
+      <source xml:lang="en">Update Test Configuration</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingDecorations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="actual.title">
+      <source xml:lang="en">Actual</source>
+    </trans-unit>
+    <trans-unit id="coverage test">
+      <source xml:lang="en">Run with Coverage</source>
+    </trans-unit>
+    <trans-unit id="debug all test">
+      <source xml:lang="en">Debug All Tests</source>
+    </trans-unit>
+    <trans-unit id="debug test">
+      <source xml:lang="en">Debug Test</source>
+    </trans-unit>
+    <trans-unit id="expected.title">
+      <source xml:lang="en">Expected</source>
+    </trans-unit>
+    <trans-unit id="peek failure">
+      <source xml:lang="en">Peek Error</source>
+    </trans-unit>
+    <trans-unit id="peekTestOutout">
+      <source xml:lang="en">Peek Test Output</source>
+    </trans-unit>
+    <trans-unit id="reveal test">
+      <source xml:lang="en">Reveal in Test Explorer</source>
+    </trans-unit>
+    <trans-unit id="run all test">
+      <source xml:lang="en">Run All Tests</source>
+    </trans-unit>
+    <trans-unit id="run all test with coverage">
+      <source xml:lang="en">Run All Tests with Coverage</source>
+    </trans-unit>
+    <trans-unit id="run test">
+      <source xml:lang="en">Run Test</source>
+    </trans-unit>
+    <trans-unit id="selectTestToRun">
+      <source xml:lang="en">Select a test to run</source>
+    </trans-unit>
+    <trans-unit id="testOverflowItems">
+      <source xml:lang="en">{0} more tests...</source>
+    </trans-unit>
+    <trans-unit id="testing.gutterMsg.contextMenu">
+      <source xml:lang="en">Click for test options</source>
+    </trans-unit>
+    <trans-unit id="testing.gutterMsg.coverage">
+      <source xml:lang="en">Click to run tests with coverage, right click for more options</source>
+    </trans-unit>
+    <trans-unit id="testing.gutterMsg.debug">
+      <source xml:lang="en">Click to debug tests, right click for more options</source>
+    </trans-unit>
+    <trans-unit id="testing.gutterMsg.run">
+      <source xml:lang="en">Click to run tests, right click for more options</source>
+    </trans-unit>
+    <trans-unit id="testing.runUsing">
+      <source xml:lang="en">Execute Using Profile...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingExplorerFilter" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="testExplorerFilter">
+      <source xml:lang="en">Filter (e.g. text, !exclude, @tag)</source>
+    </trans-unit>
+    <trans-unit id="testExplorerFilterLabel">
+      <source xml:lang="en">Filter text for tests in the explorer</source>
+    </trans-unit>
+    <trans-unit id="testing.filters.currentFile">
+      <source xml:lang="en">Show in Active File Only</source>
+    </trans-unit>
+    <trans-unit id="testing.filters.fuzzyMatch">
+      <source xml:lang="en">Fuzzy Match</source>
+    </trans-unit>
+    <trans-unit id="testing.filters.menu">
+      <source xml:lang="en">More Filters...</source>
+    </trans-unit>
+    <trans-unit id="testing.filters.openedFiles">
+      <source xml:lang="en">Show in Opened Files Only</source>
+    </trans-unit>
+    <trans-unit id="testing.filters.removeTestExclusions">
+      <source xml:lang="en">Unhide All Tests</source>
+    </trans-unit>
+    <trans-unit id="testing.filters.showExcludedTests">
+      <source xml:lang="en">Show Hidden Tests</source>
+    </trans-unit>
+    <trans-unit id="testing.filters.showOnlyExecuted">
+      <source xml:lang="en">Show Only Executed Tests</source>
+    </trans-unit>
+    <trans-unit id="testing.filters.showOnlyFailed">
+      <source xml:lang="en">Show Only Failed Tests</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingExplorerView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="configureTestProfiles">
+      <source xml:lang="en">Configure Test Profiles</source>
+    </trans-unit>
+    <trans-unit id="defaultTestProfile">
+      <source xml:lang="en">{0} (Default)</source>
+    </trans-unit>
+    <trans-unit id="noResults">
+      <source xml:lang="en">No test results yet.</source>
+    </trans-unit>
+    <trans-unit id="selectDefaultConfigs">
+      <source xml:lang="en">Select Default Profile</source>
+    </trans-unit>
+    <trans-unit id="testExplorer">
+      <source xml:lang="en">Test Explorer</source>
+    </trans-unit>
+    <trans-unit id="testing.treeElementLabelDuration">
+      <source xml:lang="en">{0}, in {1}</source>
+      <note>{0} is the original label in testing.treeElementLabel, {1} is a duration</note>
+    </trans-unit>
+    <trans-unit id="testing.treeElementLabelOutdated">
+      <source xml:lang="en">{0}, outdated result</source>
+      <note>{0} is the original label in testing.treeElementLabel</note>
+    </trans-unit>
+    <trans-unit id="testingContinuousBadge">
+      <source xml:lang="en">Tests are being watched for changes</source>
+    </trans-unit>
+    <trans-unit id="testingCountBadgeFailed">
+      <source xml:lang="en">{0} failed tests</source>
+    </trans-unit>
+    <trans-unit id="testingCountBadgePassed">
+      <source xml:lang="en">{0} passed tests</source>
+    </trans-unit>
+    <trans-unit id="testingCountBadgeSkipped">
+      <source xml:lang="en">{0} skipped tests</source>
+    </trans-unit>
+    <trans-unit id="testingFindExtension">
+      <source xml:lang="en">Show Workspace Tests</source>
+    </trans-unit>
+    <trans-unit id="testingNoTest">
+      <source xml:lang="en">No tests were found in this file.</source>
+    </trans-unit>
+    <trans-unit id="testingSelectConfig">
+      <source xml:lang="en">Select Configuration...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingOutputPeek" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="testOutputTitle">
+      <source xml:lang="en">Test Output</source>
+    </trans-unit>
+    <trans-unit id="testing.collapsePeekStack">
+      <source xml:lang="en">Collapse Stack Frames</source>
+    </trans-unit>
+    <trans-unit id="testing.goToNextMessage">
+      <source xml:lang="en">Go to Next Test Failure</source>
+    </trans-unit>
+    <trans-unit id="testing.goToNextMessage.description">
+      <source xml:lang="en">Shows the next failure message in your file</source>
+    </trans-unit>
+    <trans-unit id="testing.goToPreviousMessage">
+      <source xml:lang="en">Go to Previous Test Failure</source>
+    </trans-unit>
+    <trans-unit id="testing.goToPreviousMessage.description">
+      <source xml:lang="en">Shows the previous failure message in your file</source>
+    </trans-unit>
+    <trans-unit id="testing.markdownPeekError">
+      <source xml:lang="en">Could not open markdown preview: {0}.
+
+Please make sure the markdown extension is enabled.</source>
+    </trans-unit>
+    <trans-unit id="testing.openMessageInEditor">
+      <source xml:lang="en">Open in Editor</source>
+    </trans-unit>
+    <trans-unit id="testing.toggleTestingPeekHistory">
+      <source xml:lang="en">Toggle Test History in Peek</source>
+    </trans-unit>
+    <trans-unit id="testing.toggleTestingPeekHistory.description">
+      <source xml:lang="en">Shows or hides the history of test runs in the peek view</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingProgressUiService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="testProgress.completed">
+      <source xml:lang="en">{0}/{1} tests passed ({2}%)</source>
+    </trans-unit>
+    <trans-unit id="testProgress.running">
+      <source xml:lang="en">Running tests, {0}/{1} passed ({2}%)</source>
+    </trans-unit>
+    <trans-unit id="testProgress.runningInitial">
+      <source xml:lang="en">Running tests...</source>
+    </trans-unit>
+    <trans-unit id="testProgressWithSkip.completed">
+      <source xml:lang="en">{0}/{1} tests passed ({2}%, {3} skipped)</source>
+    </trans-unit>
+    <trans-unit id="testProgressWithSkip.running">
+      <source xml:lang="en">Running tests, {0}/{1} tests passed ({2}%, {3} skipped)</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingViewPaneContainer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="testing">
+      <source xml:lang="en">Testing</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/browser/theme" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="testing.coverCountBadgeBackground">
+      <source xml:lang="en">Background for the badge indicating execution count</source>
+    </trans-unit>
+    <trans-unit id="testing.coverCountBadgeForeground">
+      <source xml:lang="en">Foreground for the badge indicating execution count</source>
+    </trans-unit>
+    <trans-unit id="testing.coveredBackground">
+      <source xml:lang="en">Background color of text that was covered.</source>
+    </trans-unit>
+    <trans-unit id="testing.coveredBorder">
+      <source xml:lang="en">Border color of text that was covered.</source>
+    </trans-unit>
+    <trans-unit id="testing.coveredGutterBackground">
+      <source xml:lang="en">Gutter color of regions where code was covered.</source>
+    </trans-unit>
+    <trans-unit id="testing.iconErrored">
+      <source xml:lang="en">Color for the 'Errored' icon in the test explorer.</source>
+    </trans-unit>
+    <trans-unit id="testing.iconErrored.retired">
+      <source xml:lang="en">Retired color for the 'Errored' icon in the test explorer.</source>
+    </trans-unit>
+    <trans-unit id="testing.iconFailed">
+      <source xml:lang="en">Color for the 'failed' icon in the test explorer.</source>
+    </trans-unit>
+    <trans-unit id="testing.iconFailed.retired">
+      <source xml:lang="en">Retired color for the 'failed' icon in the test explorer.</source>
+    </trans-unit>
+    <trans-unit id="testing.iconPassed">
+      <source xml:lang="en">Color for the 'passed' icon in the test explorer.</source>
+    </trans-unit>
+    <trans-unit id="testing.iconPassed.retired">
+      <source xml:lang="en">Retired color for the 'passed' icon in the test explorer.</source>
+    </trans-unit>
+    <trans-unit id="testing.iconQueued">
+      <source xml:lang="en">Color for the 'Queued' icon in the test explorer.</source>
+    </trans-unit>
+    <trans-unit id="testing.iconQueued.retired">
+      <source xml:lang="en">Retired color for the 'Queued' icon in the test explorer.</source>
+    </trans-unit>
+    <trans-unit id="testing.iconSkipped">
+      <source xml:lang="en">Color for the 'Skipped' icon in the test explorer.</source>
+    </trans-unit>
+    <trans-unit id="testing.iconSkipped.retired">
+      <source xml:lang="en">Retired color for the 'Skipped' icon in the test explorer.</source>
+    </trans-unit>
+    <trans-unit id="testing.iconUnset">
+      <source xml:lang="en">Color for the 'Unset' icon in the test explorer.</source>
+    </trans-unit>
+    <trans-unit id="testing.iconUnset.retired">
+      <source xml:lang="en">Retired color for the 'Unset' icon in the test explorer.</source>
+    </trans-unit>
+    <trans-unit id="testing.message.error.badgeBackground">
+      <source xml:lang="en">Background color of test error messages shown inline in the editor.</source>
+    </trans-unit>
+    <trans-unit id="testing.message.error.badgeBorder">
+      <source xml:lang="en">Border color of test error messages shown inline in the editor.</source>
+    </trans-unit>
+    <trans-unit id="testing.message.error.badgeForeground">
+      <source xml:lang="en">Text color of test error messages shown inline in the editor.</source>
+    </trans-unit>
+    <trans-unit id="testing.message.error.marginBackground">
+      <source xml:lang="en">Margin color beside error messages shown inline in the editor.</source>
+    </trans-unit>
+    <trans-unit id="testing.message.info.decorationForeground">
+      <source xml:lang="en">Text color of test info messages shown inline in the editor.</source>
+    </trans-unit>
+    <trans-unit id="testing.message.info.marginBackground">
+      <source xml:lang="en">Margin color beside info messages shown inline in the editor.</source>
+    </trans-unit>
+    <trans-unit id="testing.messagePeekBorder">
+      <source xml:lang="en">Color of the peek view borders and arrow when peeking a logged message.</source>
+    </trans-unit>
+    <trans-unit id="testing.messagePeekHeaderBackground">
+      <source xml:lang="en">Color of the peek view borders and arrow when peeking a logged message.</source>
+    </trans-unit>
+    <trans-unit id="testing.peekBorder">
+      <source xml:lang="en">Color of the peek view borders and arrow.</source>
+    </trans-unit>
+    <trans-unit id="testing.runAction">
+      <source xml:lang="en">Color for 'run' icons in the editor.</source>
+    </trans-unit>
+    <trans-unit id="testing.uncoveredBackground">
+      <source xml:lang="en">Background color of text that was not covered.</source>
+    </trans-unit>
+    <trans-unit id="testing.uncoveredBorder">
+      <source xml:lang="en">Border color of text that was not covered.</source>
+    </trans-unit>
+    <trans-unit id="testing.uncoveredBranchBackground">
+      <source xml:lang="en">Background of the widget shown for an uncovered branch.</source>
+    </trans-unit>
+    <trans-unit id="testing.uncoveredGutterBackground">
+      <source xml:lang="en">Gutter color of regions where code not covered.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/common/configuration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="testConfigurationTitle">
+      <source xml:lang="en">Testing</source>
+    </trans-unit>
+    <trans-unit id="testing.ShowCoverageInExplorer">
+      <source xml:lang="en">Whether test coverage should be down in the File Explorer view.</source>
+    </trans-unit>
+    <trans-unit id="testing.alwaysRevealTestOnStateChange">
+      <source xml:lang="en">Always reveal the executed test when {0} is on. If this setting is turned off, only failed tests will be revealed.</source>
+    </trans-unit>
+    <trans-unit id="testing.automaticallyOpenPeekView">
+      <source xml:lang="en">Configures when the error Peek view is automatically opened.</source>
+    </trans-unit>
+    <trans-unit id="testing.automaticallyOpenPeekView.failureAnywhere">
+      <source xml:lang="en">Open automatically no matter where the failure is.</source>
+    </trans-unit>
+    <trans-unit id="testing.automaticallyOpenPeekView.failureInVisibleDocument">
+      <source xml:lang="en">Open automatically when a test fails in a visible document.</source>
+    </trans-unit>
+    <trans-unit id="testing.automaticallyOpenPeekView.never">
+      <source xml:lang="en">Never automatically open.</source>
+    </trans-unit>
+    <trans-unit id="testing.automaticallyOpenPeekViewDuringContinuousRun">
+      <source xml:lang="en">Controls whether to automatically open the Peek view during continuous run mode.</source>
+    </trans-unit>
+    <trans-unit id="testing.countBadge">
+      <source xml:lang="en">Controls the count badge on the Testing icon on the Activity Bar.</source>
+    </trans-unit>
+    <trans-unit id="testing.countBadge.failed">
+      <source xml:lang="en">Show the number of failed tests</source>
+    </trans-unit>
+    <trans-unit id="testing.countBadge.off">
+      <source xml:lang="en">Disable the testing count badge</source>
+    </trans-unit>
+    <trans-unit id="testing.countBadge.passed">
+      <source xml:lang="en">Show the number of passed tests</source>
+    </trans-unit>
+    <trans-unit id="testing.countBadge.skipped">
+      <source xml:lang="en">Show the number of skipped tests</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageBarThresholds">
+      <source xml:lang="en">Configures the colors used for percentages in test coverage bars.</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageToolbarEnabled">
+      <source xml:lang="en">Controls whether the coverage toolbar is shown in the editor.</source>
+    </trans-unit>
+    <trans-unit id="testing.defaultGutterClickAction">
+      <source xml:lang="en">Controls the action to take when left-clicking on a test decoration in the gutter.</source>
+    </trans-unit>
+    <trans-unit id="testing.defaultGutterClickAction.contextMenu">
+      <source xml:lang="en">Open the context menu for more options.</source>
+    </trans-unit>
+    <trans-unit id="testing.defaultGutterClickAction.coverage">
+      <source xml:lang="en">Run the test with coverage.</source>
+    </trans-unit>
+    <trans-unit id="testing.defaultGutterClickAction.debug">
+      <source xml:lang="en">Debug the test.</source>
+    </trans-unit>
+    <trans-unit id="testing.defaultGutterClickAction.run">
+      <source xml:lang="en">Run the test.</source>
+    </trans-unit>
+    <trans-unit id="testing.displayedCoveragePercent">
+      <source xml:lang="en">Configures what percentage is displayed by default for test coverage.</source>
+    </trans-unit>
+    <trans-unit id="testing.displayedCoveragePercent.minimum">
+      <source xml:lang="en">The minimum of statement, function, and branch coverage.</source>
+    </trans-unit>
+    <trans-unit id="testing.displayedCoveragePercent.statement">
+      <source xml:lang="en">The statement coverage.</source>
+    </trans-unit>
+    <trans-unit id="testing.displayedCoveragePercent.totalCoverage">
+      <source xml:lang="en">A calculation of the combined statement, function, and branch coverage.</source>
+    </trans-unit>
+    <trans-unit id="testing.followRunningTest">
+      <source xml:lang="en">Controls whether the running test should be followed in the Test Explorer view.</source>
+    </trans-unit>
+    <trans-unit id="testing.gutterEnabled">
+      <source xml:lang="en">Controls whether test decorations are shown in the editor gutter.</source>
+    </trans-unit>
+    <trans-unit id="testing.openTesting">
+      <source xml:lang="en">Controls when the testing view should open.</source>
+    </trans-unit>
+    <trans-unit id="testing.openTesting.neverOpen">
+      <source xml:lang="en">Never automatically open the testing views</source>
+    </trans-unit>
+    <trans-unit id="testing.openTesting.openExplorerOnTestStart">
+      <source xml:lang="en">Open the test explorer when tests start</source>
+    </trans-unit>
+    <trans-unit id="testing.openTesting.openOnTestFailure">
+      <source xml:lang="en">Open the test result view on any test failure</source>
+    </trans-unit>
+    <trans-unit id="testing.openTesting.openOnTestStart">
+      <source xml:lang="en">Open the test results view when tests start</source>
+    </trans-unit>
+    <trans-unit id="testing.saveBeforeTest">
+      <source xml:lang="en">Control whether save all dirty editors before running a test.</source>
+    </trans-unit>
+    <trans-unit id="testing.showAllMessages">
+      <source xml:lang="en">Controls whether to show messages from all test runs.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/common/constants" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="testGroup.coverage">
+      <source xml:lang="en">Coverage</source>
+    </trans-unit>
+    <trans-unit id="testGroup.debug">
+      <source xml:lang="en">Debug</source>
+    </trans-unit>
+    <trans-unit id="testGroup.run">
+      <source xml:lang="en">Run</source>
+    </trans-unit>
+    <trans-unit id="testState.errored">
+      <source xml:lang="en">Errored</source>
+    </trans-unit>
+    <trans-unit id="testState.failed">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="testState.passed">
+      <source xml:lang="en">Passed</source>
+    </trans-unit>
+    <trans-unit id="testState.queued">
+      <source xml:lang="en">Queued</source>
+    </trans-unit>
+    <trans-unit id="testState.running">
+      <source xml:lang="en">Running</source>
+    </trans-unit>
+    <trans-unit id="testState.skipped">
+      <source xml:lang="en">Skipped</source>
+    </trans-unit>
+    <trans-unit id="testState.unset">
+      <source xml:lang="en">Not yet run</source>
+    </trans-unit>
+    <trans-unit id="testing.treeElementLabel">
+      <source xml:lang="en">{0} ({1})</source>
+      <note>label then the unit tests state, for example "Addition Tests (Running)"</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/common/testResult" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="runFinished">
+      <source xml:lang="en">Test run at {0}</source>
+    </trans-unit>
+    <trans-unit id="testUnnamedTask">
+      <source xml:lang="en">Unnamed Task</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/common/testServiceImpl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="testError">
+      <source xml:lang="en">An error occurred attempting to run tests: {0}</source>
+    </trans-unit>
+    <trans-unit id="testTrust">
+      <source xml:lang="en">Running tests may execute code in your workspace.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/common/testTypes" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="testing.runProfileBitset.coverage">
+      <source xml:lang="en">Coverage</source>
+    </trans-unit>
+    <trans-unit id="testing.runProfileBitset.debug">
+      <source xml:lang="en">Debug</source>
+    </trans-unit>
+    <trans-unit id="testing.runProfileBitset.run">
+      <source xml:lang="en">Run</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/common/testingContentProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="runNoOutout">
+      <source xml:lang="en">The test run did not record any output.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/common/testingContextKeys" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="testing.activeEditorHasTests">
+      <source xml:lang="en">Indicates whether any tests are present in the current editor</source>
+    </trans-unit>
+    <trans-unit id="testing.canGoToRelatedCode">
+      <source xml:lang="en">Whether a controller implements a capability to find code related to a test</source>
+    </trans-unit>
+    <trans-unit id="testing.canGoToRelatedTest">
+      <source xml:lang="en">Whether a controller implements a capability to find tests related to code</source>
+    </trans-unit>
+    <trans-unit id="testing.canRefresh">
+      <source xml:lang="en">Indicates whether any test controller has an attached refresh handler.</source>
+    </trans-unit>
+    <trans-unit id="testing.controllerId">
+      <source xml:lang="en">Controller ID of the current test item</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageToolbarEnabled">
+      <source xml:lang="en">Indicates whether the coverage toolbar is enabled</source>
+    </trans-unit>
+    <trans-unit id="testing.cursorInsideTestRange">
+      <source xml:lang="en">Whether the cursor is currently inside a test range</source>
+    </trans-unit>
+    <trans-unit id="testing.hasConfigurableConfig">
+      <source xml:lang="en">Indicates whether any test configuration can be configured</source>
+    </trans-unit>
+    <trans-unit id="testing.hasCoverableTests">
+      <source xml:lang="en">Indicates whether any test controller has registered a coverage configuration</source>
+    </trans-unit>
+    <trans-unit id="testing.hasDebuggableTests">
+      <source xml:lang="en">Indicates whether any test controller has registered a debug configuration</source>
+    </trans-unit>
+    <trans-unit id="testing.hasNonDefaultConfig">
+      <source xml:lang="en">Indicates whether any test controller has registered a non-default configuration</source>
+    </trans-unit>
+    <trans-unit id="testing.hasPerTestCoverage">
+      <source xml:lang="en">Indicates whether per-test coverage is available</source>
+    </trans-unit>
+    <trans-unit id="testing.hasRunnableTests">
+      <source xml:lang="en">Indicates whether any test controller has registered a run configuration</source>
+    </trans-unit>
+    <trans-unit id="testing.inlineCoverageEnabled">
+      <source xml:lang="en">Indicates whether inline coverage is shown</source>
+    </trans-unit>
+    <trans-unit id="testing.isContinuousModeOn">
+      <source xml:lang="en">Indicates whether continuous test mode is on.</source>
+    </trans-unit>
+    <trans-unit id="testing.isCoverageFilteredToTest">
+      <source xml:lang="en">Indicates whether coverage has been filterd to a single test</source>
+    </trans-unit>
+    <trans-unit id="testing.isParentRunningContinuously">
+      <source xml:lang="en">Indicates whether the parent of a test is continuously running, set in the menu context of test items</source>
+    </trans-unit>
+    <trans-unit id="testing.isRefreshing">
+      <source xml:lang="en">Indicates whether any test controller is currently refreshing tests.</source>
+    </trans-unit>
+    <trans-unit id="testing.isTestCoverageOpen">
+      <source xml:lang="en">Indicates whether a test coverage report is open</source>
+    </trans-unit>
+    <trans-unit id="testing.peekHasStack">
+      <source xml:lang="en">Whether the message shown in a peek view has a stack trace</source>
+    </trans-unit>
+    <trans-unit id="testing.peekItemType">
+      <source xml:lang="en">Type of the item in the output peek view. Either a "test", "message", "task", or "result".</source>
+    </trans-unit>
+    <trans-unit id="testing.profile.context.group">
+      <source xml:lang="en">Type of menu where the configure testing profile submenu exists. Either "run", "debug", or "coverage"</source>
+    </trans-unit>
+    <trans-unit id="testing.supportsContinuousRun">
+      <source xml:lang="en">Indicates whether continous test running is supported</source>
+    </trans-unit>
+    <trans-unit id="testing.testId">
+      <source xml:lang="en">ID of the current test item, set when creating or opening menus on test items</source>
+    </trans-unit>
+    <trans-unit id="testing.testItemHasUri">
+      <source xml:lang="en">Boolean indicating whether the test item has a URI defined</source>
+    </trans-unit>
+    <trans-unit id="testing.testItemIsHidden">
+      <source xml:lang="en">Boolean indicating whether the test item is hidden</source>
+    </trans-unit>
+    <trans-unit id="testing.testMessage">
+      <source xml:lang="en">Value set in `testMessage.contextValue`, available in editor/content and testing/message/context</source>
+    </trans-unit>
+    <trans-unit id="testing.testResultOutdated">
+      <source xml:lang="en">Value available in editor/content and testing/message/context when the result is outdated</source>
+    </trans-unit>
+    <trans-unit id="testing.testResultState">
+      <source xml:lang="en">Value available testing/item/result indicating the state of the item.</source>
+    </trans-unit>
+</body></file>
+</xliff>

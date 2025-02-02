@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/scm/browser/activity" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="scmActiveResourceHasChanges">
+      <source xml:lang="en">Whether the active resource has changes</source>
+    </trans-unit>
+    <trans-unit id="scmActiveResourceRepository">
+      <source xml:lang="en">The active resource's repository</source>
+    </trans-unit>
+    <trans-unit id="scmPendingChangesBadge">
+      <source xml:lang="en">{0} pending changes</source>
+    </trans-unit>
+    <trans-unit id="status.scm">
+      <source xml:lang="en">Source Control</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/menus" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="miShare">
+      <source xml:lang="en">Share</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/quickDiffDecorator" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="diffAdded">
+      <source xml:lang="en">Added lines</source>
+    </trans-unit>
+    <trans-unit id="diffDeleted">
+      <source xml:lang="en">Removed lines</source>
+    </trans-unit>
+    <trans-unit id="diffModified">
+      <source xml:lang="en">Changed lines</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/quickDiffWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="change">
+      <source xml:lang="en">{0} - {1} of {2} change</source>
+    </trans-unit>
+    <trans-unit id="changes">
+      <source xml:lang="en">{0} - {1} of {2} changes</source>
+    </trans-unit>
+    <trans-unit id="label.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="miGotoNextChange">
+      <source xml:lang="en">Next &amp;&amp;Change</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="miGotoPreviousChange">
+      <source xml:lang="en">Previous &amp;&amp;Change</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="move to next change">
+      <source xml:lang="en">Go to Next Change</source>
+    </trans-unit>
+    <trans-unit id="move to previous change">
+      <source xml:lang="en">Go to Previous Change</source>
+    </trans-unit>
+    <trans-unit id="multiChange">
+      <source xml:lang="en">{0} of {1} change</source>
+    </trans-unit>
+    <trans-unit id="multiChanges">
+      <source xml:lang="en">{0} of {1} changes</source>
+    </trans-unit>
+    <trans-unit id="quickDiff.base.switch">
+      <source xml:lang="en">Switch Quick Diff Base</source>
+    </trans-unit>
+    <trans-unit id="remotes">
+      <source xml:lang="en">Switch quick diff base</source>
+    </trans-unit>
+    <trans-unit id="show next change">
+      <source xml:lang="en">Show Next Change</source>
+    </trans-unit>
+    <trans-unit id="show previous change">
+      <source xml:lang="en">Show Previous Change</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/scm.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="alwaysShowActions">
+      <source xml:lang="en">Controls whether inline actions are always visible in the Source Control view.</source>
+    </trans-unit>
+    <trans-unit id="alwaysShowRepository">
+      <source xml:lang="en">Controls whether repositories should always be visible in the Source Control view.</source>
+    </trans-unit>
+    <trans-unit id="autoReveal">
+      <source xml:lang="en">Controls whether the Source Control view should automatically reveal and select files when opening them.</source>
+    </trans-unit>
+    <trans-unit id="diffDecorations">
+      <source xml:lang="en">Controls diff decorations in the editor.</source>
+    </trans-unit>
+    <trans-unit id="diffDecorationsIgnoreTrimWhitespace">
+      <source xml:lang="en">Controls whether leading and trailing whitespace is ignored in Source Control diff gutter decorations.</source>
+    </trans-unit>
+    <trans-unit id="diffGutterPattern">
+      <source xml:lang="en">Controls whether a pattern is used for the diff decorations in gutter.</source>
+    </trans-unit>
+    <trans-unit id="diffGutterPatternAdded">
+      <source xml:lang="en">Use pattern for the diff decorations in gutter for added lines.</source>
+    </trans-unit>
+    <trans-unit id="diffGutterPatternModifed">
+      <source xml:lang="en">Use pattern for the diff decorations in gutter for modified lines.</source>
+    </trans-unit>
+    <trans-unit id="diffGutterWidth">
+      <source xml:lang="en">Controls the width(px) of diff decorations in gutter (added &amp; modified).</source>
+    </trans-unit>
+    <trans-unit id="inputFontFamily">
+      <source xml:lang="en">Controls the font for the input message. Use `default` for the workbench user interface font family, `editor` for the `#editor.fontFamily#`'s value, or a custom font family.</source>
+    </trans-unit>
+    <trans-unit id="inputFontSize">
+      <source xml:lang="en">Controls the font size for the input message in pixels.</source>
+    </trans-unit>
+    <trans-unit id="inputMaxLines">
+      <source xml:lang="en">Controls the maximum number of lines that the input will auto-grow to.</source>
+    </trans-unit>
+    <trans-unit id="inputMinLines">
+      <source xml:lang="en">Controls the minimum number of lines that the input will auto-grow from.</source>
+    </trans-unit>
+    <trans-unit id="manageWorkspaceTrustAction">
+      <source xml:lang="en">Manage Workspace Trust</source>
+    </trans-unit>
+    <trans-unit id="miViewSCM">
+      <source xml:lang="en">Source &amp;&amp;Control</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="no history items">
+      <source xml:lang="en">The selected source control provider does not have any source control history items.</source>
+    </trans-unit>
+    <trans-unit id="no open repo">
+      <source xml:lang="en">No source control providers registered.</source>
+    </trans-unit>
+    <trans-unit id="no open repo in an untrusted workspace">
+      <source xml:lang="en">None of the registered source control providers work in Restricted Mode.</source>
+    </trans-unit>
+    <trans-unit id="open in external terminal">
+      <source xml:lang="en">Open in External Terminal</source>
+    </trans-unit>
+    <trans-unit id="open in integrated terminal">
+      <source xml:lang="en">Open in Integrated Terminal</source>
+    </trans-unit>
+    <trans-unit id="providersVisible">
+      <source xml:lang="en">Controls how many repositories are visible in the Source Control Repositories section. Set to 0, to be able to manually resize the view.</source>
+    </trans-unit>
+    <trans-unit id="repositoriesSortOrder">
+      <source xml:lang="en">Controls the sort order of the repositories in the source control repositories view.</source>
+    </trans-unit>
+    <trans-unit id="scm accept">
+      <source xml:lang="en">Source Control: Accept Input</source>
+    </trans-unit>
+    <trans-unit id="scm view next commit">
+      <source xml:lang="en">Source Control: View Next Commit</source>
+    </trans-unit>
+    <trans-unit id="scm view previous commit">
+      <source xml:lang="en">Source Control: View Previous Commit</source>
+    </trans-unit>
+    <trans-unit id="scm.compactFolders">
+      <source xml:lang="en">Controls whether the Source Control view should render folders in a compact form. In such a form, single child folders will be compressed in a combined tree element.</source>
+    </trans-unit>
+    <trans-unit id="scm.countBadge">
+      <source xml:lang="en">Controls the count badge on the Source Control icon on the Activity Bar.</source>
+    </trans-unit>
+    <trans-unit id="scm.countBadge.all">
+      <source xml:lang="en">Show the sum of all Source Control Provider count badges.</source>
+    </trans-unit>
+    <trans-unit id="scm.countBadge.focused">
+      <source xml:lang="en">Show the count badge of the focused Source Control Provider.</source>
+    </trans-unit>
+    <trans-unit id="scm.countBadge.off">
+      <source xml:lang="en">Disable the Source Control count badge.</source>
+    </trans-unit>
+    <trans-unit id="scm.defaultViewMode">
+      <source xml:lang="en">Controls the default Source Control repository view mode.</source>
+    </trans-unit>
+    <trans-unit id="scm.defaultViewMode.list">
+      <source xml:lang="en">Show the repository changes as a list.</source>
+    </trans-unit>
+    <trans-unit id="scm.defaultViewMode.tree">
+      <source xml:lang="en">Show the repository changes as a tree.</source>
+    </trans-unit>
+    <trans-unit id="scm.defaultViewSortKey">
+      <source xml:lang="en">Controls the default Source Control repository changes sort order when viewed as a list.</source>
+    </trans-unit>
+    <trans-unit id="scm.defaultViewSortKey.name">
+      <source xml:lang="en">Sort the repository changes by file name.</source>
+    </trans-unit>
+    <trans-unit id="scm.defaultViewSortKey.path">
+      <source xml:lang="en">Sort the repository changes by path.</source>
+    </trans-unit>
+    <trans-unit id="scm.defaultViewSortKey.status">
+      <source xml:lang="en">Sort the repository changes by Source Control status.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorations.all">
+      <source xml:lang="en">Show the diff decorations in all available locations.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorations.gutter">
+      <source xml:lang="en">Show the diff decorations only in the editor gutter.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorations.minimap">
+      <source xml:lang="en">Show the diff decorations only in the minimap.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorations.none">
+      <source xml:lang="en">Do not show the diff decorations.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorations.overviewRuler">
+      <source xml:lang="en">Show the diff decorations only in the overview ruler.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsGutterAction">
+      <source xml:lang="en">Controls the behavior of Source Control diff gutter decorations.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsGutterAction.diff">
+      <source xml:lang="en">Show the inline diff Peek view on click.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsGutterAction.none">
+      <source xml:lang="en">Do nothing.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsGutterVisibility">
+      <source xml:lang="en">Controls the visibility of the Source Control diff decorator in the gutter.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsGutterVisibility.always">
+      <source xml:lang="en">Show the diff decorator in the gutter at all times.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsGutterVisibility.hover">
+      <source xml:lang="en">Show the diff decorator in the gutter only on hover.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsIgnoreTrimWhitespace.false">
+      <source xml:lang="en">Do not ignore leading and trailing whitespace.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsIgnoreTrimWhitespace.inherit">
+      <source xml:lang="en">Inherit from `diffEditor.ignoreTrimWhitespace`.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsIgnoreTrimWhitespace.true">
+      <source xml:lang="en">Ignore leading and trailing whitespace.</source>
+    </trans-unit>
+    <trans-unit id="scm.graph.badges">
+      <source xml:lang="en">Controls which badges are shown in the Source Control Graph view. The badges are shown on the right side of the graph indicating the names of history item groups.</source>
+    </trans-unit>
+    <trans-unit id="scm.graph.badges.all">
+      <source xml:lang="en">Show badges of all history item groups in the Source Control Graph view.</source>
+    </trans-unit>
+    <trans-unit id="scm.graph.badges.filter">
+      <source xml:lang="en">Show only the badges of history item groups used as a filter in the Source Control Graph view.</source>
+    </trans-unit>
+    <trans-unit id="scm.graph.pageOnScroll">
+      <source xml:lang="en">Controls whether the Source Control Graph view will load the next page of items when you scroll to the end of the list.</source>
+    </trans-unit>
+    <trans-unit id="scm.graph.pageSize">
+      <source xml:lang="en">The number of items to show in the Source Control Graph view by default and when loading more items.</source>
+    </trans-unit>
+    <trans-unit id="scm.providerCountBadge">
+      <source xml:lang="en">Controls the count badges on Source Control Provider headers. These headers appear in the Source Control view when there is more than one provider or when the {0} setting is enabled, and in the Source Control Repositories view.</source>
+    </trans-unit>
+    <trans-unit id="scm.providerCountBadge.auto">
+      <source xml:lang="en">Only show count badge for Source Control Provider when non-zero.</source>
+    </trans-unit>
+    <trans-unit id="scm.providerCountBadge.hidden">
+      <source xml:lang="en">Hide Source Control Provider count badges.</source>
+    </trans-unit>
+    <trans-unit id="scm.providerCountBadge.visible">
+      <source xml:lang="en">Show Source Control Provider count badges.</source>
+    </trans-unit>
+    <trans-unit id="scm.repositoriesSortOrder.discoveryTime">
+      <source xml:lang="en">Repositories in the Source Control Repositories view are sorted by discovery time. Repositories in the Source Control view are sorted in the order that they were selected.</source>
+    </trans-unit>
+    <trans-unit id="scm.repositoriesSortOrder.name">
+      <source xml:lang="en">Repositories in the Source Control Repositories and Source Control views are sorted by repository name.</source>
+    </trans-unit>
+    <trans-unit id="scm.repositoriesSortOrder.path">
+      <source xml:lang="en">Repositories in the Source Control Repositories and Source Control views are sorted by repository path.</source>
+    </trans-unit>
+    <trans-unit id="scm.workingSets.default">
+      <source xml:lang="en">Controls the default working set to use when switching to a source control history item group that does not have a working set.</source>
+    </trans-unit>
+    <trans-unit id="scm.workingSets.default.current">
+      <source xml:lang="en">Use the current working set when switching to a source control history item group that does not have a working set.</source>
+    </trans-unit>
+    <trans-unit id="scm.workingSets.default.empty">
+      <source xml:lang="en">Use an empty working set when switching to a source control history item group that does not have a working set.</source>
+    </trans-unit>
+    <trans-unit id="scm.workingSets.enabled">
+      <source xml:lang="en">Controls whether to store editor working sets when switching between source control history item groups.</source>
+    </trans-unit>
+    <trans-unit id="scmConfigurationTitle">
+      <source xml:lang="en">Source Control</source>
+    </trans-unit>
+    <trans-unit id="showActionButton">
+      <source xml:lang="en">Controls whether an action button can be shown in the Source Control view.</source>
+    </trans-unit>
+    <trans-unit id="showInputActionButton">
+      <source xml:lang="en">Controls whether an action button can be shown in the Source Control input.</source>
+    </trans-unit>
+    <trans-unit id="source control">
+      <source xml:lang="en">Source Control</source>
+    </trans-unit>
+    <trans-unit id="source control history">
+      <source xml:lang="en">Source Control Graph</source>
+    </trans-unit>
+    <trans-unit id="source control repositories">
+      <source xml:lang="en">Source Control Repositories</source>
+    </trans-unit>
+    <trans-unit id="sourceControlViewIcon">
+      <source xml:lang="en">View icon of the Source Control view.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/scmAccessibilityHelp" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="disabled">
+      <source xml:lang="en">disabled</source>
+    </trans-unit>
+    <trans-unit id="enabled">
+      <source xml:lang="en">enabled</source>
+    </trans-unit>
+    <trans-unit id="scm-graph-msg1">
+      <source xml:lang="en">Use the "Source Control: Focus on Source Control Graph View" command to open the Source Control Graph view.</source>
+    </trans-unit>
+    <trans-unit id="scm-graph-msg2">
+      <source xml:lang="en">The Source Control Graph view displays a graph history items of the repository. If the workspace contains more than one repository it will list the history items of the active repository.</source>
+    </trans-unit>
+    <trans-unit id="scm-graph-msg3">
+      <source xml:lang="en">Once the Source Control Graph view is opened you can:</source>
+    </trans-unit>
+    <trans-unit id="scm-graph-msg4">
+      <source xml:lang="en"> - Use the up/down arrow keys to navigate the list of history items.</source>
+    </trans-unit>
+    <trans-unit id="scm-graph-msg5">
+      <source xml:lang="en"> - Use the Space key to open the history item details in the multi-file diff editor.</source>
+    </trans-unit>
+    <trans-unit id="scm-msg1">
+      <source xml:lang="en">Use the "Source Control: Focus on Source Control View" command to open the Source Control view.</source>
+    </trans-unit>
+    <trans-unit id="scm-msg2">
+      <source xml:lang="en">The Source Control view displays the resource groups and resources of the repository. If the workspace contains more than one repository it will list the resource groups and resources of the repositories selected in the Source Control Repositories view.</source>
+    </trans-unit>
+    <trans-unit id="scm-msg3">
+      <source xml:lang="en">Once the Source Control view is opened you can:</source>
+    </trans-unit>
+    <trans-unit id="scm-msg4">
+      <source xml:lang="en"> - Use the up/down arrow keys to navigate the list of repositories, resource groups and resources.</source>
+    </trans-unit>
+    <trans-unit id="scm-msg5">
+      <source xml:lang="en"> - Use the Space key to expand or collapse a resource group.</source>
+    </trans-unit>
+    <trans-unit id="scm-repositories-msg1">
+      <source xml:lang="en">Use the "Source Control: Focus on Source Control Repositories View" command to open the Source Control Repositories view.</source>
+    </trans-unit>
+    <trans-unit id="scm-repositories-msg2">
+      <source xml:lang="en">The Source Control Repositories view lists all repositories from the workspace and is only shown when the workspace contains more than one repository.</source>
+    </trans-unit>
+    <trans-unit id="scm-repositories-msg3">
+      <source xml:lang="en">Once the Source Control Repositories view is opened you can:</source>
+    </trans-unit>
+    <trans-unit id="scm-repositories-msg4">
+      <source xml:lang="en"> - Use the up/down arrow keys to navigate the list of repositories.</source>
+    </trans-unit>
+    <trans-unit id="scm-repositories-msg5">
+      <source xml:lang="en"> - Use the Enter or Space keys to select a repository.</source>
+    </trans-unit>
+    <trans-unit id="scm-repositories-msg6">
+      <source xml:lang="en"> - Use Shift + up/down keys to select multiple repositories.</source>
+    </trans-unit>
+    <trans-unit id="state-msg1">
+      <source xml:lang="en">Visible repositories: {0}</source>
+    </trans-unit>
+    <trans-unit id="state-msg2">
+      <source xml:lang="en">Repository: {0}</source>
+    </trans-unit>
+    <trans-unit id="state-msg3">
+      <source xml:lang="en">History item reference: {0}</source>
+    </trans-unit>
+    <trans-unit id="state-msg4">
+      <source xml:lang="en">Commit message: {0}</source>
+    </trans-unit>
+    <trans-unit id="state-msg5">
+      <source xml:lang="en">Action button: {0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="state-msg6">
+      <source xml:lang="en">Resource groups: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/scmHistory" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="scmGraph.HistoryItemHoverAdditionsForeground">
+      <source xml:lang="en">History item hover additions foreground color.</source>
+    </trans-unit>
+    <trans-unit id="scmGraph.HistoryItemHoverDeletionsForeground">
+      <source xml:lang="en">History item hover deletions foreground color.</source>
+    </trans-unit>
+    <trans-unit id="scmGraphForeground1">
+      <source xml:lang="en">Source control graph foreground color (1).</source>
+    </trans-unit>
+    <trans-unit id="scmGraphForeground2">
+      <source xml:lang="en">Source control graph foreground color (2).</source>
+    </trans-unit>
+    <trans-unit id="scmGraphForeground3">
+      <source xml:lang="en">Source control graph foreground color (3).</source>
+    </trans-unit>
+    <trans-unit id="scmGraphForeground4">
+      <source xml:lang="en">Source control graph foreground color (4).</source>
+    </trans-unit>
+    <trans-unit id="scmGraphForeground5">
+      <source xml:lang="en">Source control graph foreground color (5).</source>
+    </trans-unit>
+    <trans-unit id="scmGraphHistoryItemBaseRefColor">
+      <source xml:lang="en">History item base reference color.</source>
+    </trans-unit>
+    <trans-unit id="scmGraphHistoryItemHoverDefaultLabelBackground">
+      <source xml:lang="en">History item hover default label background color.</source>
+    </trans-unit>
+    <trans-unit id="scmGraphHistoryItemHoverDefaultLabelForeground">
+      <source xml:lang="en">History item hover default label foreground color.</source>
+    </trans-unit>
+    <trans-unit id="scmGraphHistoryItemHoverLabelForeground">
+      <source xml:lang="en">History item hover label foreground color.</source>
+    </trans-unit>
+    <trans-unit id="scmGraphHistoryItemRefColor">
+      <source xml:lang="en">History item reference color.</source>
+    </trans-unit>
+    <trans-unit id="scmGraphHistoryItemRemoteRefColor">
+      <source xml:lang="en">History item remote reference color.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/scmHistoryViewPane" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="activeRepository">
+      <source xml:lang="en">Show the source control graph for the active repository</source>
+    </trans-unit>
+    <trans-unit id="all">
+      <source xml:lang="en">All</source>
+    </trans-unit>
+    <trans-unit id="allHistoryItemRefs">
+      <source xml:lang="en">All history item references</source>
+    </trans-unit>
+    <trans-unit id="auto">
+      <source xml:lang="en">Auto</source>
+    </trans-unit>
+    <trans-unit id="currentHistoryItemRef">
+      <source xml:lang="en">Current history item reference(s)</source>
+    </trans-unit>
+    <trans-unit id="deletion">
+      <source xml:lang="en">{0} deletion{1}</source>
+    </trans-unit>
+    <trans-unit id="deletions">
+      <source xml:lang="en">{0} deletions{1}</source>
+    </trans-unit>
+    <trans-unit id="emailLinkTitle">
+      <source xml:lang="en">Email</source>
+    </trans-unit>
+    <trans-unit id="fileChanged">
+      <source xml:lang="en">{0} file changed</source>
+    </trans-unit>
+    <trans-unit id="filesChanged">
+      <source xml:lang="en">{0} files changed</source>
+    </trans-unit>
+    <trans-unit id="goToCurrentHistoryItem">
+      <source xml:lang="en">Go to Current History Item</source>
+    </trans-unit>
+    <trans-unit id="historyItemChangesEditorTitle">
+      <source xml:lang="en">All Changes ({0} ↔ {1})</source>
+    </trans-unit>
+    <trans-unit id="insertion">
+      <source xml:lang="en">{0} insertion{1}</source>
+    </trans-unit>
+    <trans-unit id="insertions">
+      <source xml:lang="en">{0} insertions{1}</source>
+    </trans-unit>
+    <trans-unit id="items">
+      <source xml:lang="en">{0} Items</source>
+    </trans-unit>
+    <trans-unit id="loadMore">
+      <source xml:lang="en">{0} Load More...</source>
+    </trans-unit>
+    <trans-unit id="openChanges">
+      <source xml:lang="en">Open Changes</source>
+    </trans-unit>
+    <trans-unit id="referencePicker">
+      <source xml:lang="en">History Item Reference Picker</source>
+    </trans-unit>
+    <trans-unit id="refreshGraph">
+      <source xml:lang="en">Refresh</source>
+    </trans-unit>
+    <trans-unit id="repositoryPicker">
+      <source xml:lang="en">Repository Picker</source>
+    </trans-unit>
+    <trans-unit id="scm history">
+      <source xml:lang="en">Source Control History</source>
+    </trans-unit>
+    <trans-unit id="scmGraphHistoryItemRef">
+      <source xml:lang="en">Select one/more history item references to view, type to filter</source>
+    </trans-unit>
+    <trans-unit id="scmGraphRepository">
+      <source xml:lang="en">Select the repository to view, type to filter all repositories</source>
+    </trans-unit>
+    <trans-unit id="scmGraphViewOutdated">
+      <source xml:lang="en">Please refresh the graph using the refresh action ($(refresh)).</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/scmRepositoriesViewPane" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="scm">
+      <source xml:lang="en">Source Control Repositories</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/scmViewPane" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="collapse all">
+      <source xml:lang="en">Collapse All Repositories</source>
+    </trans-unit>
+    <trans-unit id="expand all">
+      <source xml:lang="en">Expand All Repositories</source>
+    </trans-unit>
+    <trans-unit id="label.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="repositories">
+      <source xml:lang="en">Repositories</source>
+    </trans-unit>
+    <trans-unit id="repositorySortByDiscoveryTime">
+      <source xml:lang="en">Sort by Discovery Time</source>
+    </trans-unit>
+    <trans-unit id="repositorySortByName">
+      <source xml:lang="en">Sort by Name</source>
+    </trans-unit>
+    <trans-unit id="repositorySortByPath">
+      <source xml:lang="en">Sort by Path</source>
+    </trans-unit>
+    <trans-unit id="scm">
+      <source xml:lang="en">Source Control Management</source>
+    </trans-unit>
+    <trans-unit id="scmInput">
+      <source xml:lang="en">Source Control Input</source>
+    </trans-unit>
+    <trans-unit id="scmInput.accessibilityHelp">
+      <source xml:lang="en">{0}, Use {1} to open Source Control Accessibility Help.</source>
+    </trans-unit>
+    <trans-unit id="scmInput.accessibilityHelpNoKb">
+      <source xml:lang="en">{0}, Run the Open Accessibility Help command for more information.</source>
+    </trans-unit>
+    <trans-unit id="scmInputCancelAction">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="scmInputMoreActions">
+      <source xml:lang="en">More Actions...</source>
+    </trans-unit>
+    <trans-unit id="scmInputRow.accessibilityHelp">
+      <source xml:lang="en">Source Control Input, Use {0} to open Source Control Accessibility Help.</source>
+    </trans-unit>
+    <trans-unit id="scmInputRow.accessibilityHelpNoKb">
+      <source xml:lang="en">Source Control Input, Run the Open Accessibility Help command for more information.</source>
+    </trans-unit>
+    <trans-unit id="setListViewMode">
+      <source xml:lang="en">View as List</source>
+    </trans-unit>
+    <trans-unit id="setTreeViewMode">
+      <source xml:lang="en">View as Tree</source>
+    </trans-unit>
+    <trans-unit id="sortAction">
+      <source xml:lang="en">View &amp; Sort</source>
+    </trans-unit>
+    <trans-unit id="sortChangesByName">
+      <source xml:lang="en">Sort Changes by Name</source>
+    </trans-unit>
+    <trans-unit id="sortChangesByPath">
+      <source xml:lang="en">Sort Changes by Path</source>
+    </trans-unit>
+    <trans-unit id="sortChangesByStatus">
+      <source xml:lang="en">Sort Changes by Status</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/scmViewPaneContainer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="source control">
+      <source xml:lang="en">Source Control</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/common/quickDiff" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="editorGutterAddedBackground">
+      <source xml:lang="en">Editor gutter background color for lines that are added.</source>
+    </trans-unit>
+    <trans-unit id="editorGutterDeletedBackground">
+      <source xml:lang="en">Editor gutter background color for lines that are deleted.</source>
+    </trans-unit>
+    <trans-unit id="editorGutterModifiedBackground">
+      <source xml:lang="en">Editor gutter background color for lines that are modified.</source>
+    </trans-unit>
+    <trans-unit id="minimapGutterAddedBackground">
+      <source xml:lang="en">Minimap gutter background color for lines that are added.</source>
+    </trans-unit>
+    <trans-unit id="minimapGutterDeletedBackground">
+      <source xml:lang="en">Minimap gutter background color for lines that are deleted.</source>
+    </trans-unit>
+    <trans-unit id="minimapGutterModifiedBackground">
+      <source xml:lang="en">Minimap gutter background color for lines that are modified.</source>
+    </trans-unit>
+    <trans-unit id="overviewRulerAddedForeground">
+      <source xml:lang="en">Overview ruler marker color for added content.</source>
+    </trans-unit>
+    <trans-unit id="overviewRulerDeletedForeground">
+      <source xml:lang="en">Overview ruler marker color for deleted content.</source>
+    </trans-unit>
+    <trans-unit id="overviewRulerModifiedForeground">
+      <source xml:lang="en">Overview ruler marker color for modified content.</source>
+    </trans-unit>
+</body></file>
+</xliff>

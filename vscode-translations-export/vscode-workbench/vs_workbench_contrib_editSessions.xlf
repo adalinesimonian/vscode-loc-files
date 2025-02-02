@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/editSessions/browser/editSessions.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="autoResumeWorkingChanges">
+      <source xml:lang="en">Controls whether to automatically resume available working changes stored in the cloud for the current workspace.</source>
+    </trans-unit>
+    <trans-unit id="autoResumeWorkingChanges.off">
+      <source xml:lang="en">Never attempt to resume working changes from the cloud.</source>
+    </trans-unit>
+    <trans-unit id="autoResumeWorkingChanges.onReload">
+      <source xml:lang="en">Automatically resume available working changes from the cloud on window reload.</source>
+    </trans-unit>
+    <trans-unit id="autoStoreWorkingChanges">
+      <source xml:lang="en">Storing current working changes...</source>
+    </trans-unit>
+    <trans-unit id="autoStoreWorkingChanges.off">
+      <source xml:lang="en">Never attempt to automatically store working changes in the cloud.</source>
+    </trans-unit>
+    <trans-unit id="autoStoreWorkingChanges.onShutdown">
+      <source xml:lang="en">Automatically store current working changes in the cloud on window close.</source>
+    </trans-unit>
+    <trans-unit id="autoStoreWorkingChangesDescription">
+      <source xml:lang="en">Controls whether to automatically store available working changes in the cloud for the current workspace. This setting has no effect in the web.</source>
+    </trans-unit>
+    <trans-unit id="check for pending cloud changes">
+      <source xml:lang="en">Check for pending cloud changes</source>
+    </trans-unit>
+    <trans-unit id="checkingForWorkingChanges">
+      <source xml:lang="en">Checking for pending cloud changes...</source>
+    </trans-unit>
+    <trans-unit id="client too old">
+      <source xml:lang="en">Please upgrade to a newer version of {0} to resume your working changes from the cloud.</source>
+    </trans-unit>
+    <trans-unit id="cloudChangesPartialMatchesEnabled">
+      <source xml:lang="en">Controls whether to surface cloud changes which partially match the current session.</source>
+    </trans-unit>
+    <trans-unit id="continue edit session in local folder">
+      <source xml:lang="en">Open In Local Folder</source>
+    </trans-unit>
+    <trans-unit id="continue with cloud changes">
+      <source xml:lang="en">Select whether to bring your working changes with you</source>
+    </trans-unit>
+    <trans-unit id="continue working on">
+      <source xml:lang="en">Continue Working On...</source>
+    </trans-unit>
+    <trans-unit id="continueEditSession.openLocalFolder.title.v2">
+      <source xml:lang="en">Select a local folder to continue working in</source>
+    </trans-unit>
+    <trans-unit id="continueEditSessionExtPoint">
+      <source xml:lang="en">Contributes options for continuing the current edit session in a different environment</source>
+    </trans-unit>
+    <trans-unit id="continueEditSessionExtPoint.command">
+      <source xml:lang="en">Identifier of the command to execute. The command must be declared in the 'commands'-section and return a URI representing a different environment where the current edit session can be continued.</source>
+    </trans-unit>
+    <trans-unit id="continueEditSessionExtPoint.description">
+      <source xml:lang="en">The url, or a command that returns the url, to the option's documentation page.</source>
+    </trans-unit>
+    <trans-unit id="continueEditSessionExtPoint.group">
+      <source xml:lang="en">Group into which this item belongs.</source>
+    </trans-unit>
+    <trans-unit id="continueEditSessionExtPoint.qualifiedName">
+      <source xml:lang="en">A fully qualified name for this item which is used for display in menus.</source>
+    </trans-unit>
+    <trans-unit id="continueEditSessionExtPoint.remoteGroup">
+      <source xml:lang="en">Group into which this item belongs in the remote indicator.</source>
+    </trans-unit>
+    <trans-unit id="continueEditSessionExtPoint.when">
+      <source xml:lang="en">Condition which must be true to show this item.</source>
+    </trans-unit>
+    <trans-unit id="continueEditSessionItem.builtin">
+      <source xml:lang="en">Built-in</source>
+    </trans-unit>
+    <trans-unit id="continueEditSessionItem.openInLocalFolder.v2">
+      <source xml:lang="en">Open in Local Folder</source>
+    </trans-unit>
+    <trans-unit id="continueEditSessionPick.title.v2">
+      <source xml:lang="en">Select a development environment to continue working on {0} in</source>
+    </trans-unit>
+    <trans-unit id="continueOn.installAdditional">
+      <source xml:lang="en">Install additional development environment options</source>
+    </trans-unit>
+    <trans-unit id="continueOnCloudChanges">
+      <source xml:lang="en">Controls whether to prompt the user to store working changes in the cloud when using Continue Working On.</source>
+    </trans-unit>
+    <trans-unit id="continueOnCloudChanges.off">
+      <source xml:lang="en">Do not store working changes in the cloud with Continue Working On unless the user has already turned on Cloud Changes.</source>
+    </trans-unit>
+    <trans-unit id="continueOnCloudChanges.promptForAuth">
+      <source xml:lang="en">Prompt the user to sign in to store working changes in the cloud with Continue Working On.</source>
+    </trans-unit>
+    <trans-unit id="continueWorkingOn.existingLocalFolder">
+      <source xml:lang="en">Continue Working in Existing Local Folder</source>
+    </trans-unit>
+    <trans-unit id="editSessionPartialMatch">
+      <source xml:lang="en">You have pending working changes in the cloud for this workspace. Would you like to resume them?</source>
+    </trans-unit>
+    <trans-unit id="learnMoreTooltip">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
+    <trans-unit id="no cloud changes">
+      <source xml:lang="en">There are no changes to resume from the cloud.</source>
+    </trans-unit>
+    <trans-unit id="no cloud changes for ref">
+      <source xml:lang="en">Could not resume changes from the cloud for ID {0}.</source>
+    </trans-unit>
+    <trans-unit id="no working changes to store">
+      <source xml:lang="en">Skipped storing working changes in the cloud as there are no edits to store.</source>
+    </trans-unit>
+    <trans-unit id="payload failed">
+      <source xml:lang="en">Your working changes cannot be stored.</source>
+    </trans-unit>
+    <trans-unit id="payload too large">
+      <source xml:lang="en">Your working changes exceed the size limit and cannot be stored.</source>
+    </trans-unit>
+    <trans-unit id="resume">
+      <source xml:lang="en">Resume</source>
+    </trans-unit>
+    <trans-unit id="resume cloud changes">
+      <source xml:lang="en">Resume Changes from Serialized Data</source>
+    </trans-unit>
+    <trans-unit id="resume edit session warning 1">
+      <source xml:lang="en">Resuming your working changes from the cloud will overwrite {0}. Do you want to proceed?</source>
+    </trans-unit>
+    <trans-unit id="resume edit session warning many">
+      <source xml:lang="en">Resuming your working changes from the cloud will overwrite the following {0} files. Do you want to proceed?</source>
+    </trans-unit>
+    <trans-unit id="resume failed">
+      <source xml:lang="en">Failed to resume your working changes from the cloud.</source>
+    </trans-unit>
+    <trans-unit id="resume latest cloud changes">
+      <source xml:lang="en">Resume Latest Changes from Cloud</source>
+    </trans-unit>
+    <trans-unit id="resuming working changes window">
+      <source xml:lang="en">Resuming working changes...</source>
+    </trans-unit>
+    <trans-unit id="show cloud changes">
+      <source xml:lang="en">Show Cloud Changes</source>
+    </trans-unit>
+    <trans-unit id="show log">
+      <source xml:lang="en">Show Log</source>
+    </trans-unit>
+    <trans-unit id="store working changes">
+      <source xml:lang="en">Storing working changes...</source>
+    </trans-unit>
+    <trans-unit id="store working changes in cloud">
+      <source xml:lang="en">Store Working Changes in Cloud</source>
+    </trans-unit>
+    <trans-unit id="store your working changes">
+      <source xml:lang="en">Storing your working changes...</source>
+    </trans-unit>
+    <trans-unit id="storing working changes">
+      <source xml:lang="en">Storing working changes...</source>
+    </trans-unit>
+    <trans-unit id="with cloud changes">
+      <source xml:lang="en">Yes, continue with my working changes</source>
+    </trans-unit>
+    <trans-unit id="without cloud changes">
+      <source xml:lang="en">No, continue without my working changes</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/editSessions/browser/editSessionsStorageService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="choose account placeholder">
+      <source xml:lang="en">Select an account to store your working changes in the cloud</source>
+    </trans-unit>
+    <trans-unit id="choose account read placeholder">
+      <source xml:lang="en">Select an account to restore your working changes from the cloud</source>
+    </trans-unit>
+    <trans-unit id="delete all cloud changes">
+      <source xml:lang="en">Delete all stored data from the cloud.</source>
+    </trans-unit>
+    <trans-unit id="others">
+      <source xml:lang="en">Others</source>
+    </trans-unit>
+    <trans-unit id="reset auth.v3">
+      <source xml:lang="en">Turn off Cloud Changes...</source>
+    </trans-unit>
+    <trans-unit id="sign in">
+      <source xml:lang="en">Turn on Cloud Changes...</source>
+    </trans-unit>
+    <trans-unit id="sign in badge">
+      <source xml:lang="en">Turn on Cloud Changes... (1)</source>
+    </trans-unit>
+    <trans-unit id="sign in using account">
+      <source xml:lang="en">Sign in with {0}</source>
+    </trans-unit>
+    <trans-unit id="sign out of cloud changes clear data prompt">
+      <source xml:lang="en">Do you want to disable storing working changes in the cloud?</source>
+    </trans-unit>
+    <trans-unit id="signed in">
+      <source xml:lang="en">Signed In</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/editSessions/browser/editSessionsViews" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloud changes">
+      <source xml:lang="en">Cloud Changes</source>
+    </trans-unit>
+    <trans-unit id="compare changes">
+      <source xml:lang="en">Compare Changes</source>
+    </trans-unit>
+    <trans-unit id="confirm delete all">
+      <source xml:lang="en">Are you sure you want to permanently delete all stored changes from the cloud?</source>
+    </trans-unit>
+    <trans-unit id="confirm delete all detail">
+      <source xml:lang="en"> You cannot undo this action.</source>
+    </trans-unit>
+    <trans-unit id="confirm delete detail.v2">
+      <source xml:lang="en"> You cannot undo this action.</source>
+    </trans-unit>
+    <trans-unit id="confirm delete.v2">
+      <source xml:lang="en">Are you sure you want to permanently delete your working changes with ref {0}?</source>
+    </trans-unit>
+    <trans-unit id="local copy">
+      <source xml:lang="en">Local Copy</source>
+    </trans-unit>
+    <trans-unit id="noStoredChanges">
+      <source xml:lang="en">You have no stored changes in the cloud to display.
+{0}</source>
+    </trans-unit>
+    <trans-unit id="open file">
+      <source xml:lang="en">Open File</source>
+    </trans-unit>
+    <trans-unit id="storeWorkingChangesTitle">
+      <source xml:lang="en">Store Working Changes</source>
+    </trans-unit>
+    <trans-unit id="workbench.editSessions.actions.delete.v2">
+      <source xml:lang="en">Delete Working Changes</source>
+    </trans-unit>
+    <trans-unit id="workbench.editSessions.actions.deleteAll">
+      <source xml:lang="en">Delete All Working Changes from Cloud</source>
+    </trans-unit>
+    <trans-unit id="workbench.editSessions.actions.resume.v2">
+      <source xml:lang="en">Resume Working Changes</source>
+    </trans-unit>
+    <trans-unit id="workbench.editSessions.actions.store.v2">
+      <source xml:lang="en">Store Working Changes</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/editSessions/common/editSessions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloud changes">
+      <source xml:lang="en">Cloud Changes</source>
+    </trans-unit>
+    <trans-unit id="editSessionViewIcon">
+      <source xml:lang="en">View icon of the cloud changes view.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/editSessions/common/editSessionsLogService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudChangesLog">
+      <source xml:lang="en">Cloud Changes</source>
+    </trans-unit>
+</body></file>
+</xliff>

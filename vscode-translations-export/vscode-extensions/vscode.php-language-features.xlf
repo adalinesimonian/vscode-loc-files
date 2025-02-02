@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="extensions/vscode.php-language-features/bundle" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="++CODE++a672d54b87df71bf836b86ddeb97b023cc1e4c471aa5bb40106151f91d221760">
+      <source xml:lang="en">Cannot validate since a PHP installation could not be found. Use the setting &apos;php.validate.executablePath&apos; to configure the PHP executable.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++440e4d34486580e60277cd8a924216c3d7f72bb4803257c8f75dd013201cc474">
+      <source xml:lang="en">Cannot validate since no PHP executable is set. Use the setting &apos;php.validate.executablePath&apos; to configure the PHP executable.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++a2b0c138e62e546b529a12d0e6148999c8dd88b53789493dcbf99b9a2f1abcf1">
+      <source xml:lang="en">Cannot validate since {0} is not a valid php executable. Use the setting &apos;php.validate.executablePath&apos; to configure the PHP executable.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++6c2541aae942abc4c387918fdc47f1f20fa9f21a05e5702deb62dc96b241cf56">
+      <source xml:lang="en">Failed to run php using path: {0}. Reason is unknown.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++3f940108cb1ecd9c0090da0b51b45f9fe673f00b22c7ffe3d013319b97456674">
+      <source xml:lang="en">Open Settings</source>
+    </trans-unit>
+  </body></file>
+  <file original="extensions/vscode.php-language-features/package" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="configuration.suggest.basic">
+      <source xml:lang="en">Controls whether the built-in PHP language suggestions are enabled. The support suggests PHP globals and variables.</source>
+    </trans-unit>
+    <trans-unit id="command.untrustValidationExecutable">
+      <source xml:lang="en">Disallow PHP validation executable (defined as workspace setting)</source>
+    </trans-unit>
+    <trans-unit id="configuration.validate.enable">
+      <source xml:lang="en">Enable/disable built-in PHP validation.</source>
+    </trans-unit>
+    <trans-unit id="commands.categroy.php">
+      <source xml:lang="en">PHP</source>
+    </trans-unit>
+    <trans-unit id="configuration.title">
+      <source xml:lang="en">PHP</source>
+    </trans-unit>
+    <trans-unit id="displayName">
+      <source xml:lang="en">PHP Language Features</source>
+    </trans-unit>
+    <trans-unit id="configuration.validate.executablePath">
+      <source xml:lang="en">Points to the PHP executable.</source>
+    </trans-unit>
+    <trans-unit id="description">
+      <source xml:lang="en">Provides rich language support for PHP files.</source>
+    </trans-unit>
+    <trans-unit id="workspaceTrust">
+      <source xml:lang="en">The extension requires workspace trust when the `php.validate.executablePath` setting will load a version of PHP in the workspace.</source>
+    </trans-unit>
+    <trans-unit id="configuration.validate.run">
+      <source xml:lang="en">Whether the linter is run on save or on type.</source>
+    </trans-unit>
+  </body></file>
+</xliff>

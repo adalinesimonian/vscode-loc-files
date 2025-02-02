@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/server/node/remoteExtensionHostAgentCli" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="remotecli">
+      <source xml:lang="en">Remote CLI</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/server/node/serverEnvironmentService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="acceptLicenseTerms">
+      <source xml:lang="en">If set, the user accepts the server license terms and the server will be started without a user prompt.</source>
+    </trans-unit>
+    <trans-unit id="connection-token">
+      <source xml:lang="en">A secret that must be included with all requests.</source>
+    </trans-unit>
+    <trans-unit id="connection-token-file">
+      <source xml:lang="en">Path to a file that contains the connection token.</source>
+    </trans-unit>
+    <trans-unit id="default-folder">
+      <source xml:lang="en">The workspace folder to open when no input is specified in the browser URL. A relative or absolute path resolved against the current working directory.</source>
+    </trans-unit>
+    <trans-unit id="default-workspace">
+      <source xml:lang="en">The workspace to open when no input is specified in the browser URL. A relative or absolute path resolved against the current working directory.</source>
+    </trans-unit>
+    <trans-unit id="host">
+      <source xml:lang="en">The host name or IP address the server should listen to. If not set, defaults to 'localhost'.</source>
+    </trans-unit>
+    <trans-unit id="port">
+      <source xml:lang="en">The port the server should listen to. If 0 is passed a random free port is picked. If a range in the format num-num is passed, a free port from the range (end inclusive) is selected.</source>
+    </trans-unit>
+    <trans-unit id="server-base-path">
+      <source xml:lang="en">The path under which the web UI and the code server is provided. Defaults to '/'.`</source>
+    </trans-unit>
+    <trans-unit id="serverDataDir">
+      <source xml:lang="en">Specifies the directory that server data is kept in.</source>
+    </trans-unit>
+    <trans-unit id="socket-path">
+      <source xml:lang="en">The path to a socket file for the server to listen to.</source>
+    </trans-unit>
+    <trans-unit id="start-server">
+      <source xml:lang="en">Start the server when installing or uninstalling extensions. To be used in combination with 'install-extension', 'install-builtin-extension' and 'uninstall-extension'.</source>
+    </trans-unit>
+    <trans-unit id="telemetry-level">
+      <source xml:lang="en">Sets the initial telemetry level. Valid levels are: 'off', 'crash', 'error' and 'all'. If not specified, the server will send telemetry until a client connects, it will then use the clients telemetry setting. Setting this to 'off' is equivalent to --disable-telemetry</source>
+    </trans-unit>
+    <trans-unit id="without-connection-token">
+      <source xml:lang="en">Run without a connection token. Only use this if the connection is secured by other means.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/server/node/serverServices" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="remoteExtensionLog">
+      <source xml:lang="en">Server</source>
+    </trans-unit>
+</body></file>
+</xliff>

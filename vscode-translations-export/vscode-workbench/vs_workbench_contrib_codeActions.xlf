@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/codeActions/browser/codeActionsContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="alwaysSave">
+      <source xml:lang="en">Triggers Code Actions on explicit saves and auto saves triggered by window or focus changes.</source>
+    </trans-unit>
+    <trans-unit id="codeActionsOnSave.generic">
+      <source xml:lang="en">Controls whether '{0}' actions should be run on file save.</source>
+    </trans-unit>
+    <trans-unit id="editor.codeActionsOnSave">
+      <source xml:lang="en">Run Code Actions for the editor on save. Code Actions must be specified and the editor must not be shutting down. When {0} is set to `afterDelay`, Code Actions will only be run when the file is saved explicitly. Example: `"source.organizeImports": "explicit" `</source>
+    </trans-unit>
+    <trans-unit id="explicit">
+      <source xml:lang="en">Triggers Code Actions only when explicitly saved.</source>
+    </trans-unit>
+    <trans-unit id="explicitBoolean">
+      <source xml:lang="en">Triggers Code Actions only when explicitly saved. This value will be deprecated in favor of "explicit".</source>
+    </trans-unit>
+    <trans-unit id="explicitSave">
+      <source xml:lang="en">Triggers Code Actions only when explicitly saved</source>
+    </trans-unit>
+    <trans-unit id="explicitSaveBoolean">
+      <source xml:lang="en">Triggers Code Actions only when explicitly saved. This value will be deprecated in favor of "explicit".</source>
+    </trans-unit>
+    <trans-unit id="never">
+      <source xml:lang="en">Never triggers Code Actions on save.</source>
+    </trans-unit>
+    <trans-unit id="neverBoolean">
+      <source xml:lang="en">Triggers Code Actions only when explicitly saved. This value will be deprecated in favor of "never".</source>
+    </trans-unit>
+    <trans-unit id="neverSave">
+      <source xml:lang="en">Never triggers Code Actions on save</source>
+    </trans-unit>
+    <trans-unit id="neverSaveBoolean">
+      <source xml:lang="en">Never triggers Code Actions on save. This value will be deprecated in favor of "never".</source>
+    </trans-unit>
+    <trans-unit id="notebook.codeActionsOnSave">
+      <source xml:lang="en">Run a series of Code Actions for a notebook on save. Code Actions must be specified and the editor must not be shutting down. When {0} is set to `afterDelay`, Code Actions will only be run when the file is saved explicitly. Example: `"notebook.source.organizeImports": "explicit"`</source>
+    </trans-unit>
+</body></file>
+</xliff>

@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/accessibility/browser/accessibilityConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accessibility.debugWatchVariableAnnouncements">
+      <source xml:lang="en">Controls whether variable changes should be announced in the debug watch view.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.hideAccessibleView">
+      <source xml:lang="en">Controls whether the Accessible View is hidden.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.replEditor.readLastExecutedOutput">
+      <source xml:lang="en">Controls whether the output from an execution in the native REPL will be announced.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signalOptions.debouncePositionChanges">
+      <source xml:lang="en">Whether or not position changes should be debounced</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signalOptions.delays.errorAtPosition.announcement">
+      <source xml:lang="en">The delay in milliseconds before an announcement is made when there's an error at the position.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signalOptions.delays.errorAtPosition.sound">
+      <source xml:lang="en">The delay in milliseconds before a sound is played when there's an error at the position.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signalOptions.delays.general.announcement">
+      <source xml:lang="en">The delay in milliseconds before an announcement is made.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signalOptions.delays.general.sound">
+      <source xml:lang="en">The delay in milliseconds before a sound is played.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signalOptions.delays.warningAtPosition.announcement">
+      <source xml:lang="en">The delay in milliseconds before an announcement is made when there's a warning at the position.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signalOptions.delays.warningAtPosition.sound">
+      <source xml:lang="en">The delay in milliseconds before a sound is played when there's a warning at the position.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signalOptions.volume">
+      <source xml:lang="en">The volume of the sounds in percent (0-100).</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.chatRequestSent">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when a chat request is made.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.chatRequestSent.announcement">
+      <source xml:lang="en">Announces when a chat request is made.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.chatRequestSent.sound">
+      <source xml:lang="en">Plays a sound when a chat request is made.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.chatResponseReceived">
+      <source xml:lang="en">Plays a sound / audio cue when the response has been received.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.chatResponseReceived.sound">
+      <source xml:lang="en">Plays a sound on when the response has been received.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.clear">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when a feature is cleared (for example, the terminal, Debug Console, or Output channel).</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.clear.announcement">
+      <source xml:lang="en">Announces when a feature is cleared.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.clear.sound">
+      <source xml:lang="en">Plays a sound when a feature is cleared.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.codeActionApplied">
+      <source xml:lang="en">Plays a sound / audio cue when the code action has been applied.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.codeActionApplied.sound">
+      <source xml:lang="en">Plays a sound when the code action has been applied.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.codeActionTriggered">
+      <source xml:lang="en">Plays a sound / audio cue - when a code action has been triggered.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.codeActionTriggered.sound">
+      <source xml:lang="en">Plays a sound when a code action has been triggered.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.diffLineDeleted">
+      <source xml:lang="en">Plays a sound / audio cue when the focus moves to an deleted line in Accessible Diff Viewer mode or to the next/previous change.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.diffLineDeleted.sound">
+      <source xml:lang="en">Plays a sound when the focus moves to an deleted line in Accessible Diff Viewer mode or to the next/previous change.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.diffLineInserted">
+      <source xml:lang="en">Plays a sound / audio cue when the focus moves to an inserted line in Accessible Diff Viewer mode or to the next/previous change.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.diffLineModified">
+      <source xml:lang="en">Plays a sound / audio cue when the focus moves to an modified line in Accessible Diff Viewer mode or to the next/previous change.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.diffLineModified.sound">
+      <source xml:lang="en">Plays a sound when the focus moves to a modified line in Accessible Diff Viewer mode or to the next/previous change.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.format">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when a file or notebook is formatted.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.format.always">
+      <source xml:lang="en">Plays the sound whenever a file is formatted, including if it is set to format on save, type, or, paste, or run of a cell.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.format.announcement">
+      <source xml:lang="en">Announces when a file or notebook is formatted.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.format.announcement.always">
+      <source xml:lang="en">Announces whenever a file is formatted, including if it is set to format on save, type, or, paste, or run of a cell.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.format.announcement.never">
+      <source xml:lang="en">Never announces.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.format.announcement.userGesture">
+      <source xml:lang="en">Announces when a user explicitly formats a file.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.format.never">
+      <source xml:lang="en">Never plays the sound.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.format.sound">
+      <source xml:lang="en">Plays a sound when a file or notebook is formatted.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.format.userGesture">
+      <source xml:lang="en">Plays the sound when a user explicitly formats a file.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasBreakpoint">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when the active line has a breakpoint.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasBreakpoint.announcement">
+      <source xml:lang="en">Announces when the active line has a breakpoint.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasBreakpoint.sound">
+      <source xml:lang="en">Plays a sound when the active line has a breakpoint.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasError">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when the active line has an error.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasError.announcement">
+      <source xml:lang="en">Announces when the active line has an error.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasError.sound">
+      <source xml:lang="en">Plays a sound when the active line has an error.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasFoldedArea">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - the active line has a folded area that can be unfolded.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasFoldedArea.announcement">
+      <source xml:lang="en">Announces when the active line has a folded area that can be unfolded.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasFoldedArea.sound">
+      <source xml:lang="en">Plays a sound when the active line has a folded area that can be unfolded.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasInlineSuggestion">
+      <source xml:lang="en">Plays a sound / audio cue when the active line has an inline suggestion.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasInlineSuggestion.sound">
+      <source xml:lang="en">Plays a sound when the active line has an inline suggestion.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasWarning">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when the active line has a warning.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasWarning.announcement">
+      <source xml:lang="en">Announces when the active line has a warning.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.lineHasWarning.sound">
+      <source xml:lang="en">Plays a sound when the active line has a warning.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.noInlayHints">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when trying to read a line with inlay hints that has no inlay hints.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.noInlayHints.announcement">
+      <source xml:lang="en">Announces when trying to read a line with inlay hints that has no inlay hints.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.noInlayHints.sound">
+      <source xml:lang="en">Plays a sound when trying to read a line with inlay hints that has no inlay hints.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.notebookCellCompleted">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when a notebook cell execution is successfully completed.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.notebookCellCompleted.announcement">
+      <source xml:lang="en">Announces when a notebook cell execution is successfully completed.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.notebookCellCompleted.sound">
+      <source xml:lang="en">Plays a sound when a notebook cell execution is successfully completed.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.notebookCellFailed">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when a notebook cell execution fails.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.notebookCellFailed.announcement">
+      <source xml:lang="en">Announces when a notebook cell execution fails.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.notebookCellFailed.sound">
+      <source xml:lang="en">Plays a sound when a notebook cell execution fails.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.onDebugBreak">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when the debugger stopped on a breakpoint.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.onDebugBreak.announcement">
+      <source xml:lang="en">Announces when the debugger stopped on a breakpoint.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.onDebugBreak.sound">
+      <source xml:lang="en">Plays a sound when the debugger stopped on a breakpoint.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.positionHasError">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when the active line has a warning.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.positionHasError.announcement">
+      <source xml:lang="en">Announces when the active line has a warning.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.positionHasError.sound">
+      <source xml:lang="en">Plays a sound when the active line has a warning.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.positionHasWarning">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when the active line has a warning.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.positionHasWarning.announcement">
+      <source xml:lang="en">Announces when the active line has a warning.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.positionHasWarning.sound">
+      <source xml:lang="en">Plays a sound when the active line has a warning.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.progress">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - on loop while progress is occurring.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.progress.announcement">
+      <source xml:lang="en">Alerts on loop while progress is occurring.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.progress.sound">
+      <source xml:lang="en">Plays a sound on loop while progress is occurring.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.save">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when a file is saved.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.save.announcement">
+      <source xml:lang="en">Announces when a file is saved.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.save.announcement.always">
+      <source xml:lang="en">Announces whenever a file is saved, including auto save.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.save.announcement.never">
+      <source xml:lang="en">Never plays the announcement.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.save.announcement.userGesture">
+      <source xml:lang="en">Announces when a user explicitly saves a file.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.save.sound">
+      <source xml:lang="en">Plays a sound when a file is saved.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.save.sound.always">
+      <source xml:lang="en">Plays the sound whenever a file is saved, including auto save.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.save.sound.never">
+      <source xml:lang="en">Never plays the sound.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.save.sound.userGesture">
+      <source xml:lang="en">Plays the sound when a user explicitly saves a file.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.sound">
+      <source xml:lang="en">Plays a sound when the focus moves to an inserted line in Accessible Diff Viewer mode or to the next/previous change.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.taskCompleted">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when a task is completed.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.taskCompleted.announcement">
+      <source xml:lang="en">Announces when a task is completed.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.taskCompleted.sound">
+      <source xml:lang="en">Plays a sound when a task is completed.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.taskFailed">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when a task fails (non-zero exit code).</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.taskFailed.announcement">
+      <source xml:lang="en">Announces when a task fails (non-zero exit code).</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.taskFailed.sound">
+      <source xml:lang="en">Plays a sound when a task fails (non-zero exit code).</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.terminalBell">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when the terminal bell is ringing.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.terminalBell.announcement">
+      <source xml:lang="en">Announces when the terminal bell is ringing.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.terminalBell.sound">
+      <source xml:lang="en">Plays a sound when the terminal bell is ringing.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.terminalCommandFailed">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when a terminal command fails (non-zero exit code) or when a command with such an exit code is navigated to in the accessible view.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.terminalCommandFailed.announcement">
+      <source xml:lang="en">Announces when a terminal command fails (non-zero exit code) or when a command with such an exit code is navigated to in the accessible view.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.terminalCommandFailed.sound">
+      <source xml:lang="en">Plays a sound when a terminal command fails (non-zero exit code) or when a command with such an exit code is navigated to in the accessible view.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.terminalCommandSucceeded">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when a terminal command succeeds (zero exit code) or when a command with such an exit code is navigated to in the accessible view.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.terminalCommandSucceeded.announcement">
+      <source xml:lang="en">Announces when a terminal command succeeds (zero exit code) or when a command with such an exit code is navigated to in the accessible view.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.terminalCommandSucceeded.sound">
+      <source xml:lang="en">Plays a sound when a terminal command succeeds (zero exit code) or when a command with such an exit code is navigated to in the accessible view.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.terminalQuickFix">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when terminal Quick Fixes are available.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.terminalQuickFix.announcement">
+      <source xml:lang="en">Announces when terminal Quick Fixes are available.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.terminalQuickFix.sound">
+      <source xml:lang="en">Plays a sound when terminal Quick Fixes are available.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.voiceRecordingStarted">
+      <source xml:lang="en">Plays a sound / audio cue when the voice recording has started.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.voiceRecordingStarted.sound">
+      <source xml:lang="en">Plays a sound when the voice recording has started.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.voiceRecordingStopped">
+      <source xml:lang="en">Plays a sound / audio cue when the voice recording has stopped.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.voiceRecordingStopped.sound">
+      <source xml:lang="en">Plays a sound when the voice recording has stopped.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.underlineLinks">
+      <source xml:lang="en">Controls whether links should be underlined in the workbench.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.voice.autoSynthesize.off">
+      <source xml:lang="en">Disable the feature.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.voice.autoSynthesize.on">
+      <source xml:lang="en">Enable the feature. When a screen reader is enabled, note that this will disable aria updates.</source>
+    </trans-unit>
+    <trans-unit id="accessibilityConfigurationTitle">
+      <source xml:lang="en">Accessibility</source>
+    </trans-unit>
+    <trans-unit id="announcement.enabled.auto">
+      <source xml:lang="en">Enable announcement, will only play when in screen reader optimized mode.</source>
+    </trans-unit>
+    <trans-unit id="announcement.enabled.off">
+      <source xml:lang="en">Disable announcement.</source>
+    </trans-unit>
+    <trans-unit id="autoSynthesize">
+      <source xml:lang="en">Whether a textual response should automatically be read out aloud when speech was used as input. For example in a chat session, a response is automatically synthesized when voice was used as chat request.</source>
+    </trans-unit>
+    <trans-unit id="dimUnfocusedEnabled">
+      <source xml:lang="en">Whether to dim unfocused editors and terminals, which makes it more clear where typed input will go to. This works with the majority of editors with the notable exceptions of those that utilize iframes like notebooks and extension webview editors.</source>
+    </trans-unit>
+    <trans-unit id="dimUnfocusedOpacity">
+      <source xml:lang="en">The opacity fraction (0.2 to 1.0) to use for unfocused editors and terminals. This will only take effect when {0} is enabled.</source>
+    </trans-unit>
+    <trans-unit id="replEditor.autoFocusAppendedCell">
+      <source xml:lang="en">Control whether focus should automatically be sent to the REPL when code is executed.</source>
+    </trans-unit>
+    <trans-unit id="sound.enabled.auto">
+      <source xml:lang="en">Enable sound when a screen reader is attached.</source>
+    </trans-unit>
+    <trans-unit id="sound.enabled.off">
+      <source xml:lang="en">Disable sound.</source>
+    </trans-unit>
+    <trans-unit id="sound.enabled.on">
+      <source xml:lang="en">Enable sound.</source>
+    </trans-unit>
+    <trans-unit id="speechLanguage.auto">
+      <source xml:lang="en">Auto (Use Display Language)</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.accessibleView.closeOnKeyPress">
+      <source xml:lang="en">On keypress, close the Accessible View and focus the element from which it was invoked.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.chat.description">
+      <source xml:lang="en">Provide information about how to access the chat help menu when the chat input is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.comments">
+      <source xml:lang="en">Provide information about actions that can be taken in the comment widget or in a file which contains comments.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.debug">
+      <source xml:lang="en">Provide information about how to access the debug console accessibility help dialog when the debug console or run and debug viewlet is focused. Note that a reload of the window is required for this to take effect.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.diffEditor.description">
+      <source xml:lang="en">Provide information about how to navigate changes in the diff editor when it is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.diffEditorActive">
+      <source xml:lang="en">Indicate when a diff editor becomes the active editor.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.emptyEditorHint">
+      <source xml:lang="en">Provide information about relevant actions in an empty text editor.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.hover">
+      <source xml:lang="en">Provide information about how to open the hover in an Accessible View.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.inlineCompletions.description">
+      <source xml:lang="en">Provide information about how to access the inline completions hover and Accessible View.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.interactiveEditor.description">
+      <source xml:lang="en">Provide information about how to access the inline editor chat accessibility help menu and alert with hints that describe how to use the feature when the input is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.keybindingsEditor.description">
+      <source xml:lang="en">Provide information about how to change a keybinding in the keybindings editor when a row is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.notebook">
+      <source xml:lang="en">Provide information about how to focus the cell container or inner editor when a notebook cell is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.notification">
+      <source xml:lang="en">Provide information about how to open the notification in an Accessible View.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.replEditor.description">
+      <source xml:lang="en">Provide information about how to access the REPL editor accessibility help menu when the REPL editor is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.scm">
+      <source xml:lang="en">Provide information about how to access the source control accessibility help menu when the input is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.terminal.description">
+      <source xml:lang="en">Provide information about how to access the terminal accessibility help menu when the terminal is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.walkthrough">
+      <source xml:lang="en">Provide information about how to open the walkthrough in an Accessible View.</source>
+    </trans-unit>
+    <trans-unit id="voice.ignoreCodeBlocks">
+      <source xml:lang="en">Whether to ignore code snippets in text-to-speech synthesis.</source>
+    </trans-unit>
+    <trans-unit id="voice.speechLanguage">
+      <source xml:lang="en">The language that text-to-speech and speech-to-text should use. Select `auto` to use the configured display language if possible. Note that not all display languages maybe supported by speech recognition and synthesizers.</source>
+    </trans-unit>
+    <trans-unit id="voice.speechTimeout">
+      <source xml:lang="en">The duration in milliseconds that voice speech recognition remains active after you stop speaking. For example in a chat session, the transcribed text is submitted automatically after the timeout is met. Set to `0` to disable this feature.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/accessibility/browser/accessibilityStatus" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="screenReaderDetected">
+      <source xml:lang="en">Screen Reader Optimized</source>
+    </trans-unit>
+    <trans-unit id="screenReaderDetectedExplanation.answerLearnMore">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
+    <trans-unit id="screenReaderDetectedExplanation.answerNo">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="screenReaderDetectedExplanation.answerYes">
+      <source xml:lang="en">Yes</source>
+    </trans-unit>
+    <trans-unit id="screenReaderDetectedExplanation.question">
+      <source xml:lang="en">Screen reader usage detected. Do you want to enable {0} to optimize the editor for screen reader usage?</source>
+    </trans-unit>
+    <trans-unit id="status.editor.screenReaderMode">
+      <source xml:lang="en">Screen Reader Mode</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/accessibility/browser/accessibleView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accessibility-help">
+      <source xml:lang="en">Accessibility Help</source>
+    </trans-unit>
+    <trans-unit id="accessibility-help-hint">
+      <source xml:lang="en">Accessibility Help, {0}</source>
+    </trans-unit>
+    <trans-unit id="accessible-view">
+      <source xml:lang="en">Accessible View</source>
+    </trans-unit>
+    <trans-unit id="accessible-view-hint">
+      <source xml:lang="en">Accessible View, {0}</source>
+    </trans-unit>
+    <trans-unit id="accessibleHelpToolbar">
+      <source xml:lang="en">Accessibility Help</source>
+    </trans-unit>
+    <trans-unit id="accessibleViewNextPreviousHint">
+      <source xml:lang="en">Show the next item{0} or previous item{1}.</source>
+    </trans-unit>
+    <trans-unit id="accessibleViewSymbolQuickPickPlaceholder">
+      <source xml:lang="en">Type to search symbols</source>
+    </trans-unit>
+    <trans-unit id="accessibleViewSymbolQuickPickTitle">
+      <source xml:lang="en">Go to Symbol Accessible View</source>
+    </trans-unit>
+    <trans-unit id="accessibleViewToolbar">
+      <source xml:lang="en">Accessible View</source>
+    </trans-unit>
+    <trans-unit id="acessibleViewDisableHint">
+      <source xml:lang="en">
+Disable accessibility verbosity for this feature{0}.</source>
+    </trans-unit>
+    <trans-unit id="acessibleViewHint">
+      <source xml:lang="en">Inspect this in the accessible view with {0}</source>
+    </trans-unit>
+    <trans-unit id="acessibleViewHintNoKbEither">
+      <source xml:lang="en">Inspect this in the accessible view via the command Open Accessible View which is currently not triggerable via keybinding.</source>
+    </trans-unit>
+    <trans-unit id="ariaAccessibleViewActions">
+      <source xml:lang="en">Explore actions such as disabling this hint (Shift+Tab).</source>
+    </trans-unit>
+    <trans-unit id="ariaAccessibleViewActionsBottom">
+      <source xml:lang="en">Explore actions such as disabling this hint (Shift+Tab), use Escape to exit this dialog.</source>
+    </trans-unit>
+    <trans-unit id="configureKb">
+      <source xml:lang="en">
+Configure keybindings for commands that lack them {0}.</source>
+    </trans-unit>
+    <trans-unit id="configureKbAssigned">
+      <source xml:lang="en">
+Configure keybindings for commands that already have assignments {0}.</source>
+    </trans-unit>
+    <trans-unit id="disableAccessibilityHelp">
+      <source xml:lang="en">{0} accessibility verbosity is now disabled</source>
+    </trans-unit>
+    <trans-unit id="exit">
+      <source xml:lang="en">
+Exit this dialog (Escape).</source>
+    </trans-unit>
+    <trans-unit id="goToSymbolHint">
+      <source xml:lang="en">Go to a symbol{0}.</source>
+    </trans-unit>
+    <trans-unit id="insertAtCursor">
+      <source xml:lang="en"> - Insert the code block at the cursor{0}.</source>
+    </trans-unit>
+    <trans-unit id="insertIntoNewFile">
+      <source xml:lang="en"> - Insert the code block into a new file{0}.</source>
+    </trans-unit>
+    <trans-unit id="intro">
+      <source xml:lang="en">In the accessible view, you can:
+</source>
+    </trans-unit>
+    <trans-unit id="keybindings">
+      <source xml:lang="en">Configure keybindings</source>
+    </trans-unit>
+    <trans-unit id="openDoc">
+      <source xml:lang="en">
+Open a browser window with more information related to accessibility{0}.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal">
+      <source xml:lang="en"> - Run the code block in the terminal{0}.
+</source>
+    </trans-unit>
+    <trans-unit id="selectKeybinding">
+      <source xml:lang="en">Select a command ID to configure a keybinding for it</source>
+    </trans-unit>
+    <trans-unit id="symbolLabel">
+      <source xml:lang="en">({0}) {1}</source>
+    </trans-unit>
+    <trans-unit id="symbolLabelAria">
+      <source xml:lang="en">({0}) {1}</source>
+    </trans-unit>
+    <trans-unit id="toolbar">
+      <source xml:lang="en">Navigate to the toolbar (Shift+Tab).</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/accessibility/browser/accessibleViewActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="editor.action.accessibilityHelp">
+      <source xml:lang="en">Open Accessibility Help</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibilityHelpConfigureAssignedKeybindings">
+      <source xml:lang="en">Accessibility Help Configure Assigned Keybindings</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibilityHelpConfigureUnassignedKeybindings">
+      <source xml:lang="en">Accessibility Help Configure Unassigned Keybindings</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibilityHelpOpenHelpLink">
+      <source xml:lang="en">Accessibility Help Open Help Link</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibleView">
+      <source xml:lang="en">Open Accessible View</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibleViewAcceptInlineCompletionAction">
+      <source xml:lang="en">Accept Inline Completion</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibleViewDisableHint">
+      <source xml:lang="en">Disable Accessible View Hint</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibleViewGoToSymbol">
+      <source xml:lang="en">Go To Symbol in Accessible View</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibleViewNext">
+      <source xml:lang="en">Show Next in Accessible View</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibleViewNextCodeBlock">
+      <source xml:lang="en">Accessible View: Next Code Block</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibleViewPrevious">
+      <source xml:lang="en">Show Previous in Accessible View</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibleViewPreviousCodeBlock">
+      <source xml:lang="en">Accessible View: Previous Code Block</source>
+    </trans-unit>
+</body></file>
+</xliff>

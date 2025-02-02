@@ -1,0 +1,2008 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/extensions/browser/abstractRuntimeExtensionsEditor" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copy id">
+      <source xml:lang="en">Copy id ({0})</source>
+    </trans-unit>
+    <trans-unit id="disable">
+      <source xml:lang="en">Disable</source>
+    </trans-unit>
+    <trans-unit id="disable workspace">
+      <source xml:lang="en">Disable (Workspace)</source>
+    </trans-unit>
+    <trans-unit id="errors">
+      <source xml:lang="en">{0} uncaught errors</source>
+    </trans-unit>
+    <trans-unit id="extensionActivating">
+      <source xml:lang="en">Extension is activating...</source>
+    </trans-unit>
+    <trans-unit id="languageActivation">
+      <source xml:lang="en">Activated by {1} because you opened a {0} file</source>
+    </trans-unit>
+    <trans-unit id="requests count">
+      <source xml:lang="en">{0} Usage: {1} Requests</source>
+    </trans-unit>
+    <trans-unit id="requests count title">
+      <source xml:lang="en">Last request was {0}.</source>
+    </trans-unit>
+    <trans-unit id="runtimeExtensions">
+      <source xml:lang="en">Runtime Extensions</source>
+    </trans-unit>
+    <trans-unit id="session requests count">
+      <source xml:lang="en">, {0} Requests (Session)</source>
+    </trans-unit>
+    <trans-unit id="showRuntimeExtensions">
+      <source xml:lang="en">Show Running Extensions</source>
+    </trans-unit>
+    <trans-unit id="starActivation">
+      <source xml:lang="en">Activated by {0} on start-up</source>
+      <note>{0} will be an extension identifier</note>
+    </trans-unit>
+    <trans-unit id="startupFinishedActivation">
+      <source xml:lang="en">Activated by {0} after start-up finished</source>
+      <note>This refers to an extension. {0} will be an activation event.</note>
+    </trans-unit>
+    <trans-unit id="unresponsive.title">
+      <source xml:lang="en">Extension has caused the extension host to freeze.</source>
+    </trans-unit>
+    <trans-unit id="workspaceContainsFileActivation">
+      <source xml:lang="en">Activated by {1} because file {0} exists in your workspace</source>
+      <note>{0} will be a file name
+{1} will be an extension identifier</note>
+    </trans-unit>
+    <trans-unit id="workspaceContainsGlobActivation">
+      <source xml:lang="en">Activated by {1} because a file matching {0} exists in your workspace</source>
+      <note>{0} will be a glob pattern
+{1} will be an extension identifier</note>
+    </trans-unit>
+    <trans-unit id="workspaceContainsTimeout">
+      <source xml:lang="en">Activated by {1} because searching for {0} took too long</source>
+      <note>{0} will be a glob pattern
+{1} will be an extension identifier</note>
+    </trans-unit>
+    <trans-unit id="workspaceGenericActivation">
+      <source xml:lang="en">Activated by {1} on {0}</source>
+      <note>{0} will be an activation event, like e.g. 'language:typescript', 'debug', etc.
+{1} will be an extension identifier</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/configBasedRecommendations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="exeBasedRecommendation">
+      <source xml:lang="en">This extension is recommended because of the current workspace configuration</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/exeBasedRecommendations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="exeBasedRecommendation">
+      <source xml:lang="en">This extension is recommended because you have {0} installed.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionEditor" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="Changelog title">
+      <source xml:lang="en">Changelog</source>
+    </trans-unit>
+    <trans-unit id="Install Info">
+      <source xml:lang="en">Installation</source>
+    </trans-unit>
+    <trans-unit id="Marketplace">
+      <source xml:lang="en">Marketplace</source>
+    </trans-unit>
+    <trans-unit id="Marketplace Info">
+      <source xml:lang="en">Marketplace</source>
+    </trans-unit>
+    <trans-unit id="Readme title">
+      <source xml:lang="en">Readme</source>
+    </trans-unit>
+    <trans-unit id="Version">
+      <source xml:lang="en">Version</source>
+    </trans-unit>
+    <trans-unit id="builtin">
+      <source xml:lang="en">Built-in</source>
+    </trans-unit>
+    <trans-unit id="cache size">
+      <source xml:lang="en">Cache</source>
+    </trans-unit>
+    <trans-unit id="categories">
+      <source xml:lang="en">Categories</source>
+    </trans-unit>
+    <trans-unit id="changelog">
+      <source xml:lang="en">Changelog</source>
+    </trans-unit>
+    <trans-unit id="changelogtooltip">
+      <source xml:lang="en">Extension update history, rendered from the extension's 'CHANGELOG.md' file</source>
+    </trans-unit>
+    <trans-unit id="dependencies">
+      <source xml:lang="en">Dependencies</source>
+    </trans-unit>
+    <trans-unit id="dependenciestooltip">
+      <source xml:lang="en">Lists extensions this extension depends on</source>
+    </trans-unit>
+    <trans-unit id="details">
+      <source xml:lang="en">Details</source>
+    </trans-unit>
+    <trans-unit id="detailstooltip">
+      <source xml:lang="en">Extension details, rendered from the extension's 'README.md' file</source>
+    </trans-unit>
+    <trans-unit id="disk space used">
+      <source xml:lang="en">Cache size</source>
+    </trans-unit>
+    <trans-unit id="extension pack">
+      <source xml:lang="en">Extension Pack ({0})</source>
+    </trans-unit>
+    <trans-unit id="extension version">
+      <source xml:lang="en">Extension Version</source>
+    </trans-unit>
+    <trans-unit id="extensionpack">
+      <source xml:lang="en">Extension Pack</source>
+    </trans-unit>
+    <trans-unit id="extensionpacktooltip">
+      <source xml:lang="en">Lists extensions those will be installed together with this extension</source>
+    </trans-unit>
+    <trans-unit id="features">
+      <source xml:lang="en">Features</source>
+    </trans-unit>
+    <trans-unit id="featurestooltip">
+      <source xml:lang="en">Lists features contributed by this extension</source>
+    </trans-unit>
+    <trans-unit id="find">
+      <source xml:lang="en">Find</source>
+    </trans-unit>
+    <trans-unit id="find next">
+      <source xml:lang="en">Find Next</source>
+    </trans-unit>
+    <trans-unit id="find previous">
+      <source xml:lang="en">Find Previous</source>
+    </trans-unit>
+    <trans-unit id="id">
+      <source xml:lang="en">Identifier</source>
+    </trans-unit>
+    <trans-unit id="install count">
+      <source xml:lang="en">Install count</source>
+    </trans-unit>
+    <trans-unit id="issues">
+      <source xml:lang="en">Issues</source>
+    </trans-unit>
+    <trans-unit id="last released">
+      <source xml:lang="en">Last Released</source>
+    </trans-unit>
+    <trans-unit id="last updated">
+      <source xml:lang="en">Last Updated</source>
+    </trans-unit>
+    <trans-unit id="license">
+      <source xml:lang="en">License</source>
+    </trans-unit>
+    <trans-unit id="local extension">
+      <source xml:lang="en">Local Extension</source>
+    </trans-unit>
+    <trans-unit id="name">
+      <source xml:lang="en">Extension name</source>
+    </trans-unit>
+    <trans-unit id="noChangelog">
+      <source xml:lang="en">No Changelog available.</source>
+    </trans-unit>
+    <trans-unit id="noDependencies">
+      <source xml:lang="en">No Dependencies</source>
+    </trans-unit>
+    <trans-unit id="noReadme">
+      <source xml:lang="en">No README available.</source>
+    </trans-unit>
+    <trans-unit id="other">
+      <source xml:lang="en">Local</source>
+    </trans-unit>
+    <trans-unit id="preview">
+      <source xml:lang="en">Preview</source>
+    </trans-unit>
+    <trans-unit id="published">
+      <source xml:lang="en">Published</source>
+    </trans-unit>
+    <trans-unit id="publisher">
+      <source xml:lang="en">Publisher ({0})</source>
+    </trans-unit>
+    <trans-unit id="rating">
+      <source xml:lang="en">Rating</source>
+    </trans-unit>
+    <trans-unit id="repository">
+      <source xml:lang="en">Repository</source>
+    </trans-unit>
+    <trans-unit id="resources">
+      <source xml:lang="en">Resources</source>
+    </trans-unit>
+    <trans-unit id="size">
+      <source xml:lang="en">Size</source>
+    </trans-unit>
+    <trans-unit id="size when installed">
+      <source xml:lang="en">Size when installed</source>
+    </trans-unit>
+    <trans-unit id="source">
+      <source xml:lang="en">Source</source>
+    </trans-unit>
+    <trans-unit id="vsix">
+      <source xml:lang="en">VSIX</source>
+    </trans-unit>
+    <trans-unit id="workspace extension">
+      <source xml:lang="en">Workspace Extension</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionEnablementWorkspaceTrustTransitionParticipant" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="restartExtensionHost.reason">
+      <source xml:lang="en">Changing workspace trust</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionFeaturesTab" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accessExtensionFeature">
+      <source xml:lang="en">Enable '{0}' Feature</source>
+    </trans-unit>
+    <trans-unit id="activation">
+      <source xml:lang="en">Activation</source>
+    </trans-unit>
+    <trans-unit id="cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="chartDescription">
+      <source xml:lang="en">There were {0} {1} requests from this extension in the last 30 days.</source>
+    </trans-unit>
+    <trans-unit id="disableAccessExtensionFeatureMessage">
+      <source xml:lang="en">Would you like to revoke '{0}' extension to access '{1}' feature?</source>
+    </trans-unit>
+    <trans-unit id="enable">
+      <source xml:lang="en">Allow Access</source>
+    </trans-unit>
+    <trans-unit id="enableAccessExtensionFeatureMessage">
+      <source xml:lang="en">Would you like to allow '{0}' extension to access '{1}' feature?</source>
+    </trans-unit>
+    <trans-unit id="extension features list">
+      <source xml:lang="en">Extension Features</source>
+    </trans-unit>
+    <trans-unit id="grant">
+      <source xml:lang="en">Allow Access</source>
+    </trans-unit>
+    <trans-unit id="label">
+      <source xml:lang="en">{0} Usage</source>
+    </trans-unit>
+    <trans-unit id="messaages">
+      <source xml:lang="en">Messages ({0})</source>
+    </trans-unit>
+    <trans-unit id="noFeatures">
+      <source xml:lang="en">No features contributed.</source>
+    </trans-unit>
+    <trans-unit id="revoke">
+      <source xml:lang="en">Revoke Access</source>
+    </trans-unit>
+    <trans-unit id="revoked">
+      <source xml:lang="en">No Access</source>
+    </trans-unit>
+    <trans-unit id="runtime">
+      <source xml:lang="en">Runtime Status</source>
+    </trans-unit>
+    <trans-unit id="uncaught errors">
+      <source xml:lang="en">Uncaught Errors ({0})</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionRecommendationNotificationService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="donotShowAgain">
+      <source xml:lang="en">Don't Show Again for this Repository</source>
+    </trans-unit>
+    <trans-unit id="donotShowAgainExtension">
+      <source xml:lang="en">Don't Show Again for these Extensions</source>
+    </trans-unit>
+    <trans-unit id="donotShowAgainExtensionSingle">
+      <source xml:lang="en">Don't Show Again for this Extension</source>
+    </trans-unit>
+    <trans-unit id="exeRecommended">
+      <source xml:lang="en">You have {0} installed on your system. Do you want to install the recommended {1} for it?</source>
+      <note>Placeholder string is the name of the software that is installed.</note>
+    </trans-unit>
+    <trans-unit id="extensionFromPublisher">
+      <source xml:lang="en">'{0}' extension from {1}</source>
+    </trans-unit>
+    <trans-unit id="extensionsFromMultiplePublishers">
+      <source xml:lang="en">extensions from {0}, {1} and others</source>
+    </trans-unit>
+    <trans-unit id="extensionsFromPublisher">
+      <source xml:lang="en">extensions from {0}</source>
+    </trans-unit>
+    <trans-unit id="extensionsFromPublishers">
+      <source xml:lang="en">extensions from {0} and {1}</source>
+    </trans-unit>
+    <trans-unit id="ignoreAll">
+      <source xml:lang="en">Yes, Ignore All</source>
+    </trans-unit>
+    <trans-unit id="ignoreExtensionRecommendations">
+      <source xml:lang="en">Do you want to ignore all extension recommendations?</source>
+    </trans-unit>
+    <trans-unit id="install">
+      <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="install and do no sync">
+      <source xml:lang="en">Install (Do not sync)</source>
+    </trans-unit>
+    <trans-unit id="no">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="recommended">
+      <source xml:lang="en">Do you want to install the recommended {0} for {1}?</source>
+    </trans-unit>
+    <trans-unit id="show recommendations">
+      <source xml:lang="en">Show Recommendations</source>
+    </trans-unit>
+    <trans-unit id="this repository">
+      <source xml:lang="en">this repository</source>
+      <note>this repository means the current repository that is opened</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensions.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="InstallFromVSIX">
+      <source xml:lang="en">Install from VSIX...</source>
+    </trans-unit>
+    <trans-unit id="InstallVSIXAction.reloadNow">
+      <source xml:lang="en">Reload Now</source>
+    </trans-unit>
+    <trans-unit id="InstallVSIXAction.restartExtensions">
+      <source xml:lang="en">Restart Extensions</source>
+    </trans-unit>
+    <trans-unit id="InstallVSIXAction.successNoReload">
+      <source xml:lang="en">Completed installing extension.</source>
+    </trans-unit>
+    <trans-unit id="InstallVSIXAction.successReload">
+      <source xml:lang="en">Completed installing extension from VSIX. Please reload Visual Studio Code to enable it.</source>
+    </trans-unit>
+    <trans-unit id="InstallVSIXAction.successRestart">
+      <source xml:lang="en">Completed installing extension from VSIX. Please restart extensions to enable it.</source>
+    </trans-unit>
+    <trans-unit id="all">
+      <source xml:lang="en">All Extensions</source>
+    </trans-unit>
+    <trans-unit id="builtin">
+      <source xml:lang="en">Extension '{0}' is a Built-in extension and cannot be installed</source>
+    </trans-unit>
+    <trans-unit id="builtin filter">
+      <source xml:lang="en">Built-in</source>
+    </trans-unit>
+    <trans-unit id="checkForUpdates">
+      <source xml:lang="en">Check for Extension Updates</source>
+    </trans-unit>
+    <trans-unit id="clearExtensionsSearchResults">
+      <source xml:lang="en">Clear Extensions Search Results</source>
+    </trans-unit>
+    <trans-unit id="disableAll">
+      <source xml:lang="en">Disable All Installed Extensions</source>
+    </trans-unit>
+    <trans-unit id="disableAllWorkspace">
+      <source xml:lang="en">Disable All Installed Extensions for this Workspace</source>
+    </trans-unit>
+    <trans-unit id="disableAutoUpdate">
+      <source xml:lang="en">Disable Auto Update for All Extensions</source>
+    </trans-unit>
+    <trans-unit id="disablePreRleaseLabel">
+      <source xml:lang="en">Switch to Release Version</source>
+    </trans-unit>
+    <trans-unit id="disabled filter">
+      <source xml:lang="en">Disabled</source>
+    </trans-unit>
+    <trans-unit id="download VSIX">
+      <source xml:lang="en">Download VSIX</source>
+    </trans-unit>
+    <trans-unit id="download pre-release">
+      <source xml:lang="en">Download Pre-Release VSIX</source>
+    </trans-unit>
+    <trans-unit id="enableAll">
+      <source xml:lang="en">Enable All Extensions</source>
+    </trans-unit>
+    <trans-unit id="enableAllWorkspace">
+      <source xml:lang="en">Enable All Extensions for this Workspace</source>
+    </trans-unit>
+    <trans-unit id="enableAutoUpdate">
+      <source xml:lang="en">Enable Auto Update for All Extensions</source>
+    </trans-unit>
+    <trans-unit id="enablePreRleaseLabel">
+      <source xml:lang="en">Switch to Pre-Release Version</source>
+    </trans-unit>
+    <trans-unit id="enabled">
+      <source xml:lang="en">Only Enabled Extensions</source>
+    </trans-unit>
+    <trans-unit id="enabled filter">
+      <source xml:lang="en">Enabled</source>
+    </trans-unit>
+    <trans-unit id="extension">
+      <source xml:lang="en">Extension</source>
+    </trans-unit>
+    <trans-unit id="extension updates filter">
+      <source xml:lang="en">Updates</source>
+    </trans-unit>
+    <trans-unit id="extension.publisher.allow.description">
+      <source xml:lang="en">Allow or disallow all extensions from the publisher.</source>
+    </trans-unit>
+    <trans-unit id="extensionInfoDescription">
+      <source xml:lang="en">Description: {0}</source>
+    </trans-unit>
+    <trans-unit id="extensionInfoId">
+      <source xml:lang="en">Id: {0}</source>
+    </trans-unit>
+    <trans-unit id="extensionInfoName">
+      <source xml:lang="en">Name: {0}</source>
+    </trans-unit>
+    <trans-unit id="extensionInfoPublisher">
+      <source xml:lang="en">Publisher: {0}</source>
+    </trans-unit>
+    <trans-unit id="extensionInfoVSMarketplaceLink">
+      <source xml:lang="en">VS Marketplace Link: {0}</source>
+    </trans-unit>
+    <trans-unit id="extensionInfoVersion">
+      <source xml:lang="en">Version: {0}</source>
+    </trans-unit>
+    <trans-unit id="extensionUpdates">
+      <source xml:lang="en">Show Extension Updates</source>
+    </trans-unit>
+    <trans-unit id="extensions">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="extensions.affinity">
+      <source xml:lang="en">Configure an extension to execute in a different extension host process.</source>
+    </trans-unit>
+    <trans-unit id="extensions.allow.all.description">
+      <source xml:lang="en">Allow or disallow all extensions.</source>
+    </trans-unit>
+    <trans-unit id="extensions.allow.all.disable">
+      <source xml:lang="en">Disallow all extensions.</source>
+    </trans-unit>
+    <trans-unit id="extensions.allow.all.enable">
+      <source xml:lang="en">Allow all extensions.</source>
+    </trans-unit>
+    <trans-unit id="extensions.allow.description">
+      <source xml:lang="en">Allow or disallow the extension.</source>
+    </trans-unit>
+    <trans-unit id="extensions.allow.version.description">
+      <source xml:lang="en">Allow or disallow specific versions of the extension. To specifcy a platform specific version, use the format `platform@1.2.3`, e.g. `win32-x64@1.2.3`. Supported platforms are `win32-x64`, `win32-arm64`, `linux-x64`, `linux-arm64`, `linux-armhf`, `alpine-x64`, `alpine-arm64`, `darwin-x64`, `darwin-arm64`</source>
+    </trans-unit>
+    <trans-unit id="extensions.allowed">
+      <source xml:lang="en">Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. For more information on how to configure this setting, please visit the [Configure Allowed Extensions](https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions) section.</source>
+    </trans-unit>
+    <trans-unit id="extensions.allowed.all">
+      <source xml:lang="en">All extensions are allowed.</source>
+    </trans-unit>
+    <trans-unit id="extensions.allowed.disable.desc">
+      <source xml:lang="en">Extension is not allowed.</source>
+    </trans-unit>
+    <trans-unit id="extensions.allowed.disable.stable.desc">
+      <source xml:lang="en">Allow only stable versions of the extension.</source>
+    </trans-unit>
+    <trans-unit id="extensions.allowed.enable.desc">
+      <source xml:lang="en">Extension is allowed.</source>
+    </trans-unit>
+    <trans-unit id="extensions.allowed.none">
+      <source xml:lang="en">No extensions are allowed.</source>
+    </trans-unit>
+    <trans-unit id="extensions.autoUpdate">
+      <source xml:lang="en">Controls the automatic update behavior of extensions. The updates are fetched from a Microsoft online service.</source>
+    </trans-unit>
+    <trans-unit id="extensions.autoUpdate.enabled">
+      <source xml:lang="en">Download and install updates automatically only for enabled extensions.</source>
+    </trans-unit>
+    <trans-unit id="extensions.autoUpdate.false">
+      <source xml:lang="en">Extensions are not automatically updated.</source>
+    </trans-unit>
+    <trans-unit id="extensions.autoUpdate.true">
+      <source xml:lang="en">Download and install updates automatically for all extensions.</source>
+    </trans-unit>
+    <trans-unit id="extensions.gallery.useUnpkgResourceApi">
+      <source xml:lang="en">When enabled, extensions to update are fetched from Unpkg service.</source>
+    </trans-unit>
+    <trans-unit id="extensions.publisher.allowed.disable.desc">
+      <source xml:lang="en">All extensions from the publisher are not allowed.</source>
+    </trans-unit>
+    <trans-unit id="extensions.publisher.allowed.disable.stable.desc">
+      <source xml:lang="en">Allow only stable versions of the extensions from the publisher.</source>
+    </trans-unit>
+    <trans-unit id="extensions.publisher.allowed.enable.desc">
+      <source xml:lang="en">All extensions from the publisher are allowed.</source>
+    </trans-unit>
+    <trans-unit id="extensions.supportUntrustedWorkspaces">
+      <source xml:lang="en">Override the untrusted workspace support of an extension. Extensions using `true` will always be enabled. Extensions using `limited` will always be enabled, and the extension will hide functionality that requires trust. Extensions using `false` will only be enabled only when the workspace is trusted.</source>
+    </trans-unit>
+    <trans-unit id="extensions.supportUntrustedWorkspaces.false">
+      <source xml:lang="en">Extension will only be enabled only when the workspace is trusted.</source>
+    </trans-unit>
+    <trans-unit id="extensions.supportUntrustedWorkspaces.limited">
+      <source xml:lang="en">Extension will always be enabled, and the extension will hide functionality requiring trust.</source>
+    </trans-unit>
+    <trans-unit id="extensions.supportUntrustedWorkspaces.supported">
+      <source xml:lang="en">Defines the untrusted workspace support setting for the extension.</source>
+    </trans-unit>
+    <trans-unit id="extensions.supportUntrustedWorkspaces.true">
+      <source xml:lang="en">Extension will always be enabled.</source>
+    </trans-unit>
+    <trans-unit id="extensions.supportUntrustedWorkspaces.version">
+      <source xml:lang="en">Defines the version of the extension for which the override should be applied. If not specified, the override will be applied independent of the extension version.</source>
+    </trans-unit>
+    <trans-unit id="extensions.supportVirtualWorkspaces">
+      <source xml:lang="en">Override the virtual workspaces support of an extension.</source>
+    </trans-unit>
+    <trans-unit id="extensions.verifySignature">
+      <source xml:lang="en">When enabled, extensions are verified to be signed before getting installed.</source>
+    </trans-unit>
+    <trans-unit id="extensionsCheckUpdates">
+      <source xml:lang="en">When enabled, automatically checks extensions for updates. If an extension has an update, it is marked as outdated in the Extensions view. The updates are fetched from a Microsoft online service.</source>
+    </trans-unit>
+    <trans-unit id="extensionsCloseExtensionDetailsOnViewChange">
+      <source xml:lang="en">When enabled, editors with extension details will be automatically closed upon navigating away from the Extensions View.</source>
+    </trans-unit>
+    <trans-unit id="extensionsConfigurationTitle">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="extensionsDeferredStartupFinishedActivation">
+      <source xml:lang="en">When enabled, extensions which declare the `onStartupFinished` activation event will be activated after a timeout.</source>
+    </trans-unit>
+    <trans-unit id="extensionsIgnoreRecommendations">
+      <source xml:lang="en">When enabled, the notifications for extension recommendations will not be shown.</source>
+    </trans-unit>
+    <trans-unit id="extensionsInQuickAccess">
+      <source xml:lang="en">When enabled, extensions can be searched for via Quick Access and report issues from there.</source>
+    </trans-unit>
+    <trans-unit id="extensionsShowRecommendationsOnlyOnDemand_Deprecated">
+      <source xml:lang="en">This setting is deprecated. Use extensions.ignoreRecommendations setting to control recommendation notifications. Use Extensions view's visibility actions to hide Recommended view by default.</source>
+    </trans-unit>
+    <trans-unit id="extensionsWebWorker">
+      <source xml:lang="en">Enable web worker extension host.</source>
+    </trans-unit>
+    <trans-unit id="extensionsWebWorker.auto">
+      <source xml:lang="en">The Web Worker Extension Host will be launched when a web extension needs it.</source>
+    </trans-unit>
+    <trans-unit id="extensionsWebWorker.false">
+      <source xml:lang="en">The Web Worker Extension Host will never be launched.</source>
+    </trans-unit>
+    <trans-unit id="extensionsWebWorker.true">
+      <source xml:lang="en">The Web Worker Extension Host will always be launched.</source>
+    </trans-unit>
+    <trans-unit id="featured filter">
+      <source xml:lang="en">Featured</source>
+    </trans-unit>
+    <trans-unit id="filter by category">
+      <source xml:lang="en">Category</source>
+    </trans-unit>
+    <trans-unit id="filterExtensions">
+      <source xml:lang="en">Filter Extensions...</source>
+    </trans-unit>
+    <trans-unit id="focusExtensions">
+      <source xml:lang="en">Focus on Extensions View</source>
+    </trans-unit>
+    <trans-unit id="handleUriConfirmedExtensions">
+      <source xml:lang="en">When an extension is listed here, a confirmation prompt will not be shown when that extension handles a URI.</source>
+    </trans-unit>
+    <trans-unit id="id required">
+      <source xml:lang="en">Extension id required.</source>
+    </trans-unit>
+    <trans-unit id="importKeyboardShortcutsFroms">
+      <source xml:lang="en">Migrate Keyboard Shortcuts from...</source>
+    </trans-unit>
+    <trans-unit id="install">
+      <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="install button">
+      <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="install installAndDonotSync">
+      <source xml:lang="en">Install (Do not Sync)</source>
+    </trans-unit>
+    <trans-unit id="installButton">
+      <source xml:lang="en">&amp;&amp;Install</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="installExtensionFromLocation">
+      <source xml:lang="en">Install Extension from Location...</source>
+    </trans-unit>
+    <trans-unit id="installExtensionQuickAccessHelp">
+      <source xml:lang="en">Install or Search Extensions</source>
+    </trans-unit>
+    <trans-unit id="installExtensionQuickAccessPlaceholder">
+      <source xml:lang="en">Type the name of an extension to install or search.</source>
+    </trans-unit>
+    <trans-unit id="installExtensions">
+      <source xml:lang="en">Install Extensions</source>
+    </trans-unit>
+    <trans-unit id="installFromLocation">
+      <source xml:lang="en">Install Extension from Location</source>
+    </trans-unit>
+    <trans-unit id="installFromLocationPlaceHolder">
+      <source xml:lang="en">Location of the web extension</source>
+    </trans-unit>
+    <trans-unit id="installFromVSIX">
+      <source xml:lang="en">Install from VSIX</source>
+    </trans-unit>
+    <trans-unit id="installPrereleaseAndDonotSync">
+      <source xml:lang="en">Install Pre-Release (Do not Sync)</source>
+    </trans-unit>
+    <trans-unit id="installVSIX">
+      <source xml:lang="en">Install Extension VSIX</source>
+    </trans-unit>
+    <trans-unit id="installWorkspaceRecommendedExtensions">
+      <source xml:lang="en">Install Workspace Recommended Extensions</source>
+    </trans-unit>
+    <trans-unit id="manageExtensionsHelp">
+      <source xml:lang="en">Manage Extensions</source>
+    </trans-unit>
+    <trans-unit id="manageExtensionsQuickAccessPlaceholder">
+      <source xml:lang="en">Press Enter to manage extensions.</source>
+    </trans-unit>
+    <trans-unit id="miPreferencesExtensions">
+      <source xml:lang="en">&amp;&amp;Extensions</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="miViewExtensions">
+      <source xml:lang="en">E&amp;&amp;xtensions</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="most popular filter">
+      <source xml:lang="en">Most Popular</source>
+    </trans-unit>
+    <trans-unit id="most popular recommended">
+      <source xml:lang="en">Recommended</source>
+    </trans-unit>
+    <trans-unit id="noUpdatesAvailable">
+      <source xml:lang="en">All extensions are up to date.</source>
+    </trans-unit>
+    <trans-unit id="none">
+      <source xml:lang="en">None</source>
+    </trans-unit>
+    <trans-unit id="notFound">
+      <source xml:lang="en">Extension '{0}' not found.</source>
+    </trans-unit>
+    <trans-unit id="notInstalled">
+      <source xml:lang="en">Extension '{0}' is not installed. Make sure you use the full extension ID, including the publisher, e.g.: ms-dotnettools.csharp.</source>
+    </trans-unit>
+    <trans-unit id="recently published filter">
+      <source xml:lang="en">Recently Published</source>
+    </trans-unit>
+    <trans-unit id="recentlyPublishedExtensions">
+      <source xml:lang="en">Show Recently Published Extensions</source>
+    </trans-unit>
+    <trans-unit id="refreshExtension">
+      <source xml:lang="en">Refresh</source>
+    </trans-unit>
+    <trans-unit id="show pre-release version">
+      <source xml:lang="en">Show Pre-Release Version</source>
+    </trans-unit>
+    <trans-unit id="show released version">
+      <source xml:lang="en">Show Release Version</source>
+    </trans-unit>
+    <trans-unit id="showBuiltInExtensions">
+      <source xml:lang="en">Show Built-in Extensions</source>
+    </trans-unit>
+    <trans-unit id="showDisabledExtensions">
+      <source xml:lang="en">Show Disabled Extensions</source>
+    </trans-unit>
+    <trans-unit id="showEnabledExtensions">
+      <source xml:lang="en">Show Enabled Extensions</source>
+    </trans-unit>
+    <trans-unit id="showExtensions">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="showFeaturedExtensions">
+      <source xml:lang="en">Show Featured Extensions</source>
+    </trans-unit>
+    <trans-unit id="showLanguageExtensionsShort">
+      <source xml:lang="en">Language Extensions</source>
+    </trans-unit>
+    <trans-unit id="showPopularExtensions">
+      <source xml:lang="en">Show Popular Extensions</source>
+    </trans-unit>
+    <trans-unit id="showRecommendedExtensions">
+      <source xml:lang="en">Show Recommended Extensions</source>
+    </trans-unit>
+    <trans-unit id="showRecommendedKeymapExtensionsShort">
+      <source xml:lang="en">Keymaps</source>
+    </trans-unit>
+    <trans-unit id="showWorkspaceUnsupportedExtensions">
+      <source xml:lang="en">Show Extensions Unsupported By Workspace</source>
+    </trans-unit>
+    <trans-unit id="sort by installs">
+      <source xml:lang="en">Install Count</source>
+    </trans-unit>
+    <trans-unit id="sort by name">
+      <source xml:lang="en">Name</source>
+    </trans-unit>
+    <trans-unit id="sort by published date">
+      <source xml:lang="en">Published Date</source>
+    </trans-unit>
+    <trans-unit id="sort by rating">
+      <source xml:lang="en">Rating</source>
+    </trans-unit>
+    <trans-unit id="sort by update date">
+      <source xml:lang="en">Updated Date</source>
+    </trans-unit>
+    <trans-unit id="sorty by">
+      <source xml:lang="en">Sort By</source>
+    </trans-unit>
+    <trans-unit id="trustedPublishers">
+      <source xml:lang="en">Manage Trusted Extensions Publishers</source>
+    </trans-unit>
+    <trans-unit id="trustedPublishersPlaceholder">
+      <source xml:lang="en">Choose which publishers to trust</source>
+    </trans-unit>
+    <trans-unit id="updateAll">
+      <source xml:lang="en">Update All Extensions</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.addExtensionToWorkspaceRecommendations">
+      <source xml:lang="en">Add to Workspace Recommendations</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.addToWorkspaceFolderIgnoredRecommendations">
+      <source xml:lang="en">Add Extension to Workspace Folder Ignored Recommendations</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.addToWorkspaceFolderRecommendations">
+      <source xml:lang="en">Add Extension to Workspace Folder Recommendations</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.addToWorkspaceIgnoredRecommendations">
+      <source xml:lang="en">Add Extension to Workspace Ignored Recommendations</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.addToWorkspaceRecommendations">
+      <source xml:lang="en">Add Extension to Workspace Recommendations</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.changeAccountPreference">
+      <source xml:lang="en">Account Preferences</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.configure">
+      <source xml:lang="en">Settings</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.configureKeybindings">
+      <source xml:lang="en">Keyboard Shortcuts</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.copyExtension">
+      <source xml:lang="en">Copy</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.copyExtensionId">
+      <source xml:lang="en">Copy Extension ID</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.copyLink">
+      <source xml:lang="en">Copy Link</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.ignoreRecommendation">
+      <source xml:lang="en">Ignore Recommendation</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.manageTrustedPublishers">
+      <source xml:lang="en">Manage Trusted Extensions Publishers</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.removeExtensionFromWorkspaceRecommendations">
+      <source xml:lang="en">Remove from Workspace Recommendations</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.toggleApplyToAllProfiles">
+      <source xml:lang="en">Apply Extension to all Profiles</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.toggleIgnoreExtension">
+      <source xml:lang="en">Sync This Extension</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.undoIgnoredRecommendation">
+      <source xml:lang="en">Undo Ignored Recommendation</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.installExtension.arg.decription">
+      <source xml:lang="en">Extension id or VSIX resource uri</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.installExtension.description">
+      <source xml:lang="en">Install the given extension</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.installExtension.option.context">
+      <source xml:lang="en">Context for the installation. This is a JSON object that can be used to pass any information to the installation handlers. i.e. `{skipWalkthrough: true}` will skip opening the walkthrough upon install.</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.installExtension.option.donotSync">
+      <source xml:lang="en">When enabled, VS Code do not sync this extension when Settings Sync is on.</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.installExtension.option.enable">
+      <source xml:lang="en">When enabled, the extension will be enabled if it is installed but disabled. If the extension is already enabled, this has no effect.</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.installExtension.option.installOnlyNewlyAddedFromExtensionPackVSIX">
+      <source xml:lang="en">When enabled, VS Code installs only newly added extensions from the extension pack VSIX. This option is considered only while installing a VSIX.</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.installExtension.option.installPreReleaseVersion">
+      <source xml:lang="en">When enabled, VS Code installs the pre-release version of the extension if available.</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.installExtension.option.justification">
+      <source xml:lang="en">Justification for installing the extension. This is a string or an object that can be used to pass any information to the installation handlers. i.e. `{reason: 'This extension wants to open a URI', action: 'Open URI'}` will show a message box with the reason and action upon install.</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.search.arg.name">
+      <source xml:lang="en">Query to use in search</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.search.description">
+      <source xml:lang="en">Search for a specific extension</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.uninstallExtension.arg.name">
+      <source xml:lang="en">Id of the extension to uninstall</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.uninstallExtension.description">
+      <source xml:lang="en">Uninstall the given extension</source>
+    </trans-unit>
+    <trans-unit id="workspace unsupported filter">
+      <source xml:lang="en">Workspace Unsupported</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensions.web.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="runtimeExtension">
+      <source xml:lang="en">Running Extensions</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionsActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="Cannot be enabled">
+      <source xml:lang="en">This extension is disabled because it is not supported in {0} for the Web.</source>
+    </trans-unit>
+    <trans-unit id="Defined to run in desktop">
+      <source xml:lang="en">This extension is disabled because it is defined to run only in {0} for the Desktop.</source>
+    </trans-unit>
+    <trans-unit id="Install in local server to enable">
+      <source xml:lang="en">This extension is disabled in this workspace because it is defined to run in the Local Extension Host. Please install the extension locally to enable.</source>
+    </trans-unit>
+    <trans-unit id="Install in remote server to enable">
+      <source xml:lang="en">This extension is disabled in this workspace because it is defined to run in the Remote Extension Host. Please install the extension in '{0}' to enable.</source>
+    </trans-unit>
+    <trans-unit id="Install language pack also in remote server">
+      <source xml:lang="en">Install the language pack extension on '{0}' to enable it there also.</source>
+    </trans-unit>
+    <trans-unit id="Install language pack also locally">
+      <source xml:lang="en">Install the language pack extension locally to enable it there also.</source>
+    </trans-unit>
+    <trans-unit id="OpenExtensionsFile.failed">
+      <source xml:lang="en">Unable to create 'extensions.json' file inside the '.vscode' folder ({0}).</source>
+    </trans-unit>
+    <trans-unit id="Show alternate extension">
+      <source xml:lang="en">&amp;&amp;Open {0}</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="Uninstalling">
+      <source xml:lang="en">Uninstalling</source>
+    </trans-unit>
+    <trans-unit id="VS Code for Web">
+      <source xml:lang="en">{0} for the Web</source>
+    </trans-unit>
+    <trans-unit id="auto update message">
+      <source xml:lang="en">Please [review the extension]({0}) and update it manually.</source>
+    </trans-unit>
+    <trans-unit id="cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="cannot be installed">
+      <source xml:lang="en">The '{0}' extension is not available in {1}. Click 'More Information' to learn more.</source>
+    </trans-unit>
+    <trans-unit id="check logs">
+      <source xml:lang="en">Please check the [log]({0}) for more details.</source>
+    </trans-unit>
+    <trans-unit id="close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="configure in settings">
+      <source xml:lang="en">&amp;&amp;Configure Settings</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="configureWorkspaceFolderRecommendedExtensions">
+      <source xml:lang="en">Configure Recommended Extensions (Workspace Folder)</source>
+    </trans-unit>
+    <trans-unit id="configureWorkspaceRecommendedExtensions">
+      <source xml:lang="en">Configure Recommended Extensions (Workspace)</source>
+    </trans-unit>
+    <trans-unit id="current">
+      <source xml:lang="en">current</source>
+    </trans-unit>
+    <trans-unit id="dependencies">
+      <source xml:lang="en">Show Dependencies</source>
+    </trans-unit>
+    <trans-unit id="deprecated message">
+      <source xml:lang="en">This extension is deprecated as it is no longer being maintained.</source>
+    </trans-unit>
+    <trans-unit id="deprecated tooltip">
+      <source xml:lang="en">This extension is deprecated as it is no longer being maintained.</source>
+    </trans-unit>
+    <trans-unit id="deprecated with alternate extension message">
+      <source xml:lang="en">This extension is deprecated. Use the {0} extension instead.</source>
+    </trans-unit>
+    <trans-unit id="deprecated with alternate extension tooltip">
+      <source xml:lang="en">This extension is deprecated. Use the {0} extension instead.</source>
+    </trans-unit>
+    <trans-unit id="deprecated with alternate settings message">
+      <source xml:lang="en">This extension is deprecated as this functionality is now built-in to VS Code.</source>
+    </trans-unit>
+    <trans-unit id="deprecated with alternate settings tooltip">
+      <source xml:lang="en">This extension is deprecated as this functionality is now built-in to VS Code. Configure these {0} to use this functionality.</source>
+    </trans-unit>
+    <trans-unit id="disableAutoUpdate">
+      <source xml:lang="en">Disabled auto updates for</source>
+    </trans-unit>
+    <trans-unit id="disableForWorkspaceAction">
+      <source xml:lang="en">Disable (Workspace)</source>
+    </trans-unit>
+    <trans-unit id="disableForWorkspaceActionToolTip">
+      <source xml:lang="en">Disable this extension only in this workspace</source>
+    </trans-unit>
+    <trans-unit id="disableGloballyAction">
+      <source xml:lang="en">Disable</source>
+    </trans-unit>
+    <trans-unit id="disableGloballyActionToolTip">
+      <source xml:lang="en">Disable this extension</source>
+    </trans-unit>
+    <trans-unit id="disabled">
+      <source xml:lang="en">Disabled</source>
+    </trans-unit>
+    <trans-unit id="disabled - not allowed">
+      <source xml:lang="en">This extension is disabled because {0}</source>
+    </trans-unit>
+    <trans-unit id="disabled because of virtual workspace">
+      <source xml:lang="en">This extension has been disabled because it does not support virtual workspaces.</source>
+    </trans-unit>
+    <trans-unit id="disabled by environment">
+      <source xml:lang="en">This extension is disabled by the environment.</source>
+    </trans-unit>
+    <trans-unit id="do not sync">
+      <source xml:lang="en">Do not sync this extension</source>
+    </trans-unit>
+    <trans-unit id="download">
+      <source xml:lang="en">Try Downloading Manually...</source>
+    </trans-unit>
+    <trans-unit id="enableAutoUpdate">
+      <source xml:lang="en">Enabled auto updates for</source>
+    </trans-unit>
+    <trans-unit id="enableAutoUpdateLabel">
+      <source xml:lang="en">Auto Update</source>
+    </trans-unit>
+    <trans-unit id="enableForWorkspaceAction">
+      <source xml:lang="en">Enable (Workspace)</source>
+    </trans-unit>
+    <trans-unit id="enableForWorkspaceActionToolTip">
+      <source xml:lang="en">Enable this extension only in this workspace</source>
+    </trans-unit>
+    <trans-unit id="enableGloballyAction">
+      <source xml:lang="en">Enable</source>
+    </trans-unit>
+    <trans-unit id="enableGloballyActionToolTip">
+      <source xml:lang="en">Enable this extension</source>
+    </trans-unit>
+    <trans-unit id="enabled">
+      <source xml:lang="en">Enabled</source>
+    </trans-unit>
+    <trans-unit id="enabled by environment">
+      <source xml:lang="en">This extension is enabled because it is required in the current environment.</source>
+    </trans-unit>
+    <trans-unit id="enabled in web worker">
+      <source xml:lang="en">This extension is enabled in the Web Worker Extension Host because it prefers to run there.</source>
+    </trans-unit>
+    <trans-unit id="enabled locally">
+      <source xml:lang="en">This extension is enabled in the Local Extension Host because it prefers to run there.</source>
+    </trans-unit>
+    <trans-unit id="enabled remotely">
+      <source xml:lang="en">This extension is enabled in the Remote Extension Host because it prefers to run there.</source>
+    </trans-unit>
+    <trans-unit id="extension disabled because of dependency">
+      <source xml:lang="en">This extension depends on an extension that is disabled.</source>
+    </trans-unit>
+    <trans-unit id="extension disabled because of trust requirement">
+      <source xml:lang="en">This extension has been disabled because the current workspace is not trusted.</source>
+    </trans-unit>
+    <trans-unit id="extension enabled on remote">
+      <source xml:lang="en">Extension is enabled on '{0}'</source>
+    </trans-unit>
+    <trans-unit id="extension limited because of trust requirement">
+      <source xml:lang="en">This extension has limited features because the current workspace is not trusted.</source>
+    </trans-unit>
+    <trans-unit id="extension limited because of virtual workspace">
+      <source xml:lang="en">This extension has limited features because the current workspace is virtual.</source>
+    </trans-unit>
+    <trans-unit id="extensionButtonBackground">
+      <source xml:lang="en">Button background color for extension actions.</source>
+    </trans-unit>
+    <trans-unit id="extensionButtonForeground">
+      <source xml:lang="en">Button foreground color for extension actions.</source>
+    </trans-unit>
+    <trans-unit id="extensionButtonHoverBackground">
+      <source xml:lang="en">Button background hover color for extension actions.</source>
+    </trans-unit>
+    <trans-unit id="extensionButtonProminentBackground">
+      <source xml:lang="en">Button background color for extension actions that stand out (e.g. install button).</source>
+    </trans-unit>
+    <trans-unit id="extensionButtonProminentForeground">
+      <source xml:lang="en">Button foreground color for extension actions that stand out (e.g. install button).</source>
+    </trans-unit>
+    <trans-unit id="extensionButtonProminentHoverBackground">
+      <source xml:lang="en">Button background hover color for extension actions that stand out (e.g. install button).</source>
+    </trans-unit>
+    <trans-unit id="extensionButtonSeparator">
+      <source xml:lang="en">Button separator color for extension actions</source>
+    </trans-unit>
+    <trans-unit id="finished installing">
+      <source xml:lang="en">Successfully installed extensions.</source>
+    </trans-unit>
+    <trans-unit id="globally disabled">
+      <source xml:lang="en">This extension is disabled globally by the user.</source>
+    </trans-unit>
+    <trans-unit id="ignoreExtensionRecommendation">
+      <source xml:lang="en">Do not recommend this extension again</source>
+    </trans-unit>
+    <trans-unit id="ignoreExtensionUpdatePublisher">
+      <source xml:lang="en">Ignoring updates published by {0}.</source>
+    </trans-unit>
+    <trans-unit id="ignored">
+      <source xml:lang="en">This extension is ignored during sync</source>
+    </trans-unit>
+    <trans-unit id="install">
+      <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="install another version">
+      <source xml:lang="en">Install Specific Version...</source>
+    </trans-unit>
+    <trans-unit id="install anyway">
+      <source xml:lang="en">Install Anyway</source>
+    </trans-unit>
+    <trans-unit id="install browser">
+      <source xml:lang="en">Install in Browser</source>
+    </trans-unit>
+    <trans-unit id="install confirmation">
+      <source xml:lang="en">Are you sure you want to install '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="install donot verify">
+      <source xml:lang="en">Install Anyway (Don't Verify Signature)</source>
+    </trans-unit>
+    <trans-unit id="install in remote">
+      <source xml:lang="en">Install in {0}</source>
+      <note>This is the name of the action to install an extension in remote server. Placeholder is for the name of remote server.</note>
+    </trans-unit>
+    <trans-unit id="install local extensions title">
+      <source xml:lang="en">Install Local Extensions in '{0}'</source>
+    </trans-unit>
+    <trans-unit id="install locally">
+      <source xml:lang="en">Install Locally</source>
+    </trans-unit>
+    <trans-unit id="install operation">
+      <source xml:lang="en">Error while installing '{0}' extension.</source>
+    </trans-unit>
+    <trans-unit id="install pre-release">
+      <source xml:lang="en">Install Pre-Release</source>
+    </trans-unit>
+    <trans-unit id="install pre-release version">
+      <source xml:lang="en">Install Pre-Release Version</source>
+    </trans-unit>
+    <trans-unit id="install prerelease">
+      <source xml:lang="en">Install Pre-Release</source>
+    </trans-unit>
+    <trans-unit id="install previous version">
+      <source xml:lang="en">Install Specific Version of Extension...</source>
+    </trans-unit>
+    <trans-unit id="install release version">
+      <source xml:lang="en">Install Release Version</source>
+    </trans-unit>
+    <trans-unit id="install remote extensions">
+      <source xml:lang="en">Install Remote Extensions Locally</source>
+    </trans-unit>
+    <trans-unit id="install vsix">
+      <source xml:lang="en">Once downloaded, please manually install the downloaded VSIX of '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="install workspace version">
+      <source xml:lang="en">Install Workspace Extension</source>
+    </trans-unit>
+    <trans-unit id="installExtensionComplete">
+      <source xml:lang="en">Installing extension {0} is completed.</source>
+    </trans-unit>
+    <trans-unit id="installExtensionStart">
+      <source xml:lang="en">Installing extension {0} started. An editor is now open with more details on this extension</source>
+    </trans-unit>
+    <trans-unit id="installRecommendedExtension">
+      <source xml:lang="en">Install Recommended Extension</source>
+    </trans-unit>
+    <trans-unit id="installVSIX">
+      <source xml:lang="en">Install from VSIX...</source>
+    </trans-unit>
+    <trans-unit id="installed">
+      <source xml:lang="en">Installed</source>
+    </trans-unit>
+    <trans-unit id="installing">
+      <source xml:lang="en">Installing</source>
+    </trans-unit>
+    <trans-unit id="installing extensions">
+      <source xml:lang="en">Installing Extensions...</source>
+    </trans-unit>
+    <trans-unit id="learn more">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
+    <trans-unit id="malicious tooltip">
+      <source xml:lang="en">This extension was reported to be problematic.</source>
+    </trans-unit>
+    <trans-unit id="manage">
+      <source xml:lang="en">Manage</source>
+    </trans-unit>
+    <trans-unit id="manage access">
+      <source xml:lang="en">Manage Access</source>
+    </trans-unit>
+    <trans-unit id="migrate">
+      <source xml:lang="en">Migrate</source>
+    </trans-unit>
+    <trans-unit id="migrate to">
+      <source xml:lang="en">Migrate to {0}</source>
+    </trans-unit>
+    <trans-unit id="migrateExtension">
+      <source xml:lang="en">Migrate</source>
+    </trans-unit>
+    <trans-unit id="more information">
+      <source xml:lang="en">&amp;&amp;More Information</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="no local extensions">
+      <source xml:lang="en">There are no extensions to install.</source>
+    </trans-unit>
+    <trans-unit id="no versions">
+      <source xml:lang="en">This extension has no other versions.</source>
+    </trans-unit>
+    <trans-unit id="not signed">
+      <source xml:lang="en">'{0}' is an extension from an unknown source. Are you sure you want to install?</source>
+    </trans-unit>
+    <trans-unit id="not signed detail">
+      <source xml:lang="en">Extension is not signed.</source>
+    </trans-unit>
+    <trans-unit id="not signed tooltip">
+      <source xml:lang="en">This extension is not signed by the Extension Marketplace.</source>
+    </trans-unit>
+    <trans-unit id="pre-release">
+      <source xml:lang="en">pre-release</source>
+    </trans-unit>
+    <trans-unit id="reload window">
+      <source xml:lang="en">Reload Window</source>
+    </trans-unit>
+    <trans-unit id="restart extensions">
+      <source xml:lang="en">Restart Extensions</source>
+    </trans-unit>
+    <trans-unit id="restart product">
+      <source xml:lang="en">Restart to Update</source>
+    </trans-unit>
+    <trans-unit id="review">
+      <source xml:lang="en">Review</source>
+    </trans-unit>
+    <trans-unit id="select and install local extensions">
+      <source xml:lang="en">Install Local Extensions in '{0}'...</source>
+    </trans-unit>
+    <trans-unit id="select and install remote extensions">
+      <source xml:lang="en">Install Remote Extensions Locally...</source>
+    </trans-unit>
+    <trans-unit id="select color theme">
+      <source xml:lang="en">Select Color Theme</source>
+    </trans-unit>
+    <trans-unit id="select extensions to install">
+      <source xml:lang="en">Select extensions to install</source>
+    </trans-unit>
+    <trans-unit id="select file icon theme">
+      <source xml:lang="en">Select File Icon Theme</source>
+    </trans-unit>
+    <trans-unit id="select product icon theme">
+      <source xml:lang="en">Select Product Icon Theme</source>
+    </trans-unit>
+    <trans-unit id="selectExtension">
+      <source xml:lang="en">Select Extension</source>
+    </trans-unit>
+    <trans-unit id="selectVersion">
+      <source xml:lang="en">Select Version to Install</source>
+    </trans-unit>
+    <trans-unit id="settings">
+      <source xml:lang="en">settings</source>
+    </trans-unit>
+    <trans-unit id="showRecommendedExtension">
+      <source xml:lang="en">Show Recommended Extension</source>
+    </trans-unit>
+    <trans-unit id="switchToPreReleaseLabel">
+      <source xml:lang="en">Switch to Pre-Release Version</source>
+    </trans-unit>
+    <trans-unit id="switchToPreReleaseTooltip">
+      <source xml:lang="en">This will switch to pre-release version and enable updates to latest version always</source>
+    </trans-unit>
+    <trans-unit id="sync">
+      <source xml:lang="en">Sync this extension</source>
+    </trans-unit>
+    <trans-unit id="synced">
+      <source xml:lang="en">This extension is synced</source>
+    </trans-unit>
+    <trans-unit id="toggleAutoUpdatesForPublisherLabel">
+      <source xml:lang="en">Auto Update All (From Publisher)</source>
+    </trans-unit>
+    <trans-unit id="togglePreRleaseDisableLabel">
+      <source xml:lang="en">Switch to Release Version</source>
+    </trans-unit>
+    <trans-unit id="togglePreRleaseDisableTooltip">
+      <source xml:lang="en">This will switch and enable updates to release versions</source>
+    </trans-unit>
+    <trans-unit id="togglePreRleaseLabel">
+      <source xml:lang="en">Pre-Release</source>
+    </trans-unit>
+    <trans-unit id="undo">
+      <source xml:lang="en">Undo</source>
+    </trans-unit>
+    <trans-unit id="uninstallAction">
+      <source xml:lang="en">Uninstall</source>
+    </trans-unit>
+    <trans-unit id="uninstallExtensionComplete">
+      <source xml:lang="en">Please reload Visual Studio Code to complete the uninstallation of the extension {0}.</source>
+    </trans-unit>
+    <trans-unit id="uninstallExtensionStart">
+      <source xml:lang="en">Uninstalling extension {0} started.</source>
+    </trans-unit>
+    <trans-unit id="uninstalled">
+      <source xml:lang="en">Uninstalled</source>
+    </trans-unit>
+    <trans-unit id="update">
+      <source xml:lang="en">Update</source>
+    </trans-unit>
+    <trans-unit id="update operation">
+      <source xml:lang="en">Error while updating '{0}' extension.</source>
+    </trans-unit>
+    <trans-unit id="update product">
+      <source xml:lang="en">Update {0}</source>
+    </trans-unit>
+    <trans-unit id="update to">
+      <source xml:lang="en">Update to v{0}</source>
+    </trans-unit>
+    <trans-unit id="updateExtensionComplete">
+      <source xml:lang="en">Updating extension {0} to version {1} completed.</source>
+    </trans-unit>
+    <trans-unit id="updateExtensionConsent">
+      <source xml:lang="en">{0}
+
+Would you like to update the extension?</source>
+    </trans-unit>
+    <trans-unit id="updateExtensionConsentTitle">
+      <source xml:lang="en">Update {0} Extension</source>
+    </trans-unit>
+    <trans-unit id="updateExtensionStart">
+      <source xml:lang="en">Updating extension {0} to version {1} started.</source>
+    </trans-unit>
+    <trans-unit id="updated">
+      <source xml:lang="en">Updated</source>
+    </trans-unit>
+    <trans-unit id="verification failed">
+      <source xml:lang="en">Cannot install '{0}' extension because {1} cannot verify the extension signature</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.clearLanguage">
+      <source xml:lang="en">Clear Display Language</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.setColorTheme">
+      <source xml:lang="en">Set Color Theme</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.setDisplayLanguage">
+      <source xml:lang="en">Set Display Language</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.setFileIconTheme">
+      <source xml:lang="en">Set File Icon Theme</source>
+    </trans-unit>
+    <trans-unit id="workbench.extensions.action.setProductIconTheme">
+      <source xml:lang="en">Set Product Icon Theme</source>
+    </trans-unit>
+    <trans-unit id="workspace disabled">
+      <source xml:lang="en">This extension is disabled for this workspace by the user.</source>
+    </trans-unit>
+    <trans-unit id="workspace enabled">
+      <source xml:lang="en">This extension is enabled for this workspace by the user.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionsActivationProgress" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="activation">
+      <source xml:lang="en">Activating Extensions...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionsCompletionItemsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="exampleExtension">
+      <source xml:lang="en">Example</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionsDependencyChecker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="auto install missing deps">
+      <source xml:lang="en">Install Missing Dependencies</source>
+    </trans-unit>
+    <trans-unit id="extensions">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="finished installing missing deps">
+      <source xml:lang="en">Finished installing missing dependencies. Please reload the window now.</source>
+    </trans-unit>
+    <trans-unit id="no missing deps">
+      <source xml:lang="en">There are no missing dependencies to install.</source>
+    </trans-unit>
+    <trans-unit id="reload">
+      <source xml:lang="en">Reload Window</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionsIcons" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="activationtimeIcon">
+      <source xml:lang="en">Icon shown with a activation time message in the extension editor.</source>
+    </trans-unit>
+    <trans-unit id="clearSearchResultsIcon">
+      <source xml:lang="en">Icon for the 'Clear Search Result' action in the extensions view.</source>
+    </trans-unit>
+    <trans-unit id="configureRecommendedIcon">
+      <source xml:lang="en">Icon for the 'Configure Recommended Extensions' action in the extensions view.</source>
+    </trans-unit>
+    <trans-unit id="errorIcon">
+      <source xml:lang="en">Icon shown with a error message in the extensions editor.</source>
+    </trans-unit>
+    <trans-unit id="extensionsViewIcon">
+      <source xml:lang="en">View icon of the extensions view.</source>
+    </trans-unit>
+    <trans-unit id="filterIcon">
+      <source xml:lang="en">Icon for the 'Filter' action in the extensions view.</source>
+    </trans-unit>
+    <trans-unit id="infoIcon">
+      <source xml:lang="en">Icon shown with an info message in the extensions editor.</source>
+    </trans-unit>
+    <trans-unit id="installCountIcon">
+      <source xml:lang="en">Icon shown along with the install count in the extensions view and editor.</source>
+    </trans-unit>
+    <trans-unit id="installLocalInRemoteIcon">
+      <source xml:lang="en">Icon for the 'Install Local Extension in Remote' action in the extensions view.</source>
+    </trans-unit>
+    <trans-unit id="installWorkspaceRecommendedIcon">
+      <source xml:lang="en">Icon for the 'Install Workspace Recommended Extensions' action in the extensions view.</source>
+    </trans-unit>
+    <trans-unit id="manageExtensionIcon">
+      <source xml:lang="en">Icon for the 'Manage' action in the extensions view.</source>
+    </trans-unit>
+    <trans-unit id="preReleaseIcon">
+      <source xml:lang="en">Icon shown for extensions having pre-release versions in extensions view and editor.</source>
+    </trans-unit>
+    <trans-unit id="ratingIcon">
+      <source xml:lang="en">Icon shown along with the rating in the extensions view and editor.</source>
+    </trans-unit>
+    <trans-unit id="refreshIcon">
+      <source xml:lang="en">Icon for the 'Refresh' action in the extensions view.</source>
+    </trans-unit>
+    <trans-unit id="remoteIcon">
+      <source xml:lang="en">Icon to indicate that an extension is remote in the extensions view and editor.</source>
+    </trans-unit>
+    <trans-unit id="sponsorIcon">
+      <source xml:lang="en">Icon used for sponsoring extensions in the extensions view and editor.</source>
+    </trans-unit>
+    <trans-unit id="starEmptyIcon">
+      <source xml:lang="en">Empty star icon used for the rating in the extensions editor.</source>
+    </trans-unit>
+    <trans-unit id="starFullIcon">
+      <source xml:lang="en">Full star icon used for the rating in the extensions editor.</source>
+    </trans-unit>
+    <trans-unit id="starHalfIcon">
+      <source xml:lang="en">Half star icon used for the rating in the extensions editor.</source>
+    </trans-unit>
+    <trans-unit id="syncEnabledIcon">
+      <source xml:lang="en">Icon to indicate that an extension is synced.</source>
+    </trans-unit>
+    <trans-unit id="syncIgnoredIcon">
+      <source xml:lang="en">Icon to indicate that an extension is ignored when syncing.</source>
+    </trans-unit>
+    <trans-unit id="trustIcon">
+      <source xml:lang="en">Icon shown with a workspace trust message in the extension editor.</source>
+    </trans-unit>
+    <trans-unit id="warningIcon">
+      <source xml:lang="en">Icon shown with a warning message in the extensions editor.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionsQuickAccess" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="install">
+      <source xml:lang="en">Press Enter to install extension '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="manage">
+      <source xml:lang="en">Press Enter to manage your extensions.</source>
+    </trans-unit>
+    <trans-unit id="searchFor">
+      <source xml:lang="en">Press Enter to search for extension '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="type">
+      <source xml:lang="en">Type an extension name to install or search.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionsViewer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="Unknown Extension">
+      <source xml:lang="en">Unknown Extension:</source>
+    </trans-unit>
+    <trans-unit id="error">
+      <source xml:lang="en">Error</source>
+    </trans-unit>
+    <trans-unit id="extensions">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionsViewlet" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="availableUpdates">
+      <source xml:lang="en">Available Updates</source>
+    </trans-unit>
+    <trans-unit id="builtInThemesExtensions">
+      <source xml:lang="en">Themes</source>
+    </trans-unit>
+    <trans-unit id="builtin">
+      <source xml:lang="en">Builtin</source>
+    </trans-unit>
+    <trans-unit id="builtinFeatureExtensions">
+      <source xml:lang="en">Features</source>
+    </trans-unit>
+    <trans-unit id="builtinProgrammingLanguageExtensions">
+      <source xml:lang="en">Programming Languages</source>
+    </trans-unit>
+    <trans-unit id="click show">
+      <source xml:lang="en">Click to Show</source>
+    </trans-unit>
+    <trans-unit id="deprecated">
+      <source xml:lang="en">Deprecated</source>
+    </trans-unit>
+    <trans-unit id="disabled">
+      <source xml:lang="en">Disabled</source>
+    </trans-unit>
+    <trans-unit id="disabledExtensions">
+      <source xml:lang="en">Disabled</source>
+    </trans-unit>
+    <trans-unit id="dismiss">
+      <source xml:lang="en">Dismiss</source>
+    </trans-unit>
+    <trans-unit id="enabled">
+      <source xml:lang="en">Enabled</source>
+    </trans-unit>
+    <trans-unit id="enabledExtensions">
+      <source xml:lang="en">Enabled</source>
+    </trans-unit>
+    <trans-unit id="extensionFound">
+      <source xml:lang="en">1 extension found.</source>
+    </trans-unit>
+    <trans-unit id="extensionFoundInSection">
+      <source xml:lang="en">1 extension found in the {0} section.</source>
+    </trans-unit>
+    <trans-unit id="extensionToReload">
+      <source xml:lang="en">{0} requires restart</source>
+    </trans-unit>
+    <trans-unit id="extensionToUpdate">
+      <source xml:lang="en">{0} requires update</source>
+    </trans-unit>
+    <trans-unit id="extensionsFound">
+      <source xml:lang="en">{0} extensions found.</source>
+    </trans-unit>
+    <trans-unit id="extensionsFoundInSection">
+      <source xml:lang="en">{0} extensions found in the {1} section.</source>
+    </trans-unit>
+    <trans-unit id="extensionsToReload">
+      <source xml:lang="en">{0} require restart</source>
+    </trans-unit>
+    <trans-unit id="extensionsToUpdate">
+      <source xml:lang="en">{0} require update</source>
+    </trans-unit>
+    <trans-unit id="install remote in local">
+      <source xml:lang="en">Install Remote Extensions Locally...</source>
+    </trans-unit>
+    <trans-unit id="installed">
+      <source xml:lang="en">Installed</source>
+    </trans-unit>
+    <trans-unit id="malicious warning">
+      <source xml:lang="en">We have uninstalled '{0}' which was reported to be problematic.</source>
+    </trans-unit>
+    <trans-unit id="marketPlace">
+      <source xml:lang="en">Marketplace</source>
+    </trans-unit>
+    <trans-unit id="open user settings">
+      <source xml:lang="en">Open User Settings</source>
+    </trans-unit>
+    <trans-unit id="otherRecommendedExtensions">
+      <source xml:lang="en">Other Recommendations</source>
+    </trans-unit>
+    <trans-unit id="popularExtensions">
+      <source xml:lang="en">Popular</source>
+    </trans-unit>
+    <trans-unit id="recently updated">
+      <source xml:lang="en">Recently Updated</source>
+    </trans-unit>
+    <trans-unit id="recommendedExtensions">
+      <source xml:lang="en">Recommended</source>
+    </trans-unit>
+    <trans-unit id="reloadNow">
+      <source xml:lang="en">Reload Now</source>
+    </trans-unit>
+    <trans-unit id="remote">
+      <source xml:lang="en">Remote</source>
+      <note>Remote as in remote machine</note>
+    </trans-unit>
+    <trans-unit id="searchExtensions">
+      <source xml:lang="en">Search Extensions in Marketplace</source>
+    </trans-unit>
+    <trans-unit id="select and install local extensions">
+      <source xml:lang="en">Install Local Extensions in '{0}'...</source>
+    </trans-unit>
+    <trans-unit id="show">
+      <source xml:lang="en">Show</source>
+    </trans-unit>
+    <trans-unit id="suggestProxyError">
+      <source xml:lang="en">Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting.</source>
+    </trans-unit>
+    <trans-unit id="untrustedPartiallySupportedExtensions">
+      <source xml:lang="en">Limited in Restricted Mode</source>
+    </trans-unit>
+    <trans-unit id="untrustedUnsupportedExtensions">
+      <source xml:lang="en">Disabled in Restricted Mode</source>
+    </trans-unit>
+    <trans-unit id="virtualPartiallySupportedExtensions">
+      <source xml:lang="en">Limited in Virtual Workspaces</source>
+    </trans-unit>
+    <trans-unit id="virtualUnsupportedExtensions">
+      <source xml:lang="en">Disabled in Virtual Workspaces</source>
+    </trans-unit>
+    <trans-unit id="workspaceRecommendedExtensions">
+      <source xml:lang="en">Workspace Recommendations</source>
+    </trans-unit>
+    <trans-unit id="workspaceUnsupported">
+      <source xml:lang="en">Workspace Unsupported</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionsViews" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="error">
+      <source xml:lang="en">Error while fetching extensions. {0}</source>
+    </trans-unit>
+    <trans-unit id="extension.arialabel.deprecated">
+      <source xml:lang="en">Deprecated</source>
+    </trans-unit>
+    <trans-unit id="extension.arialabel.publisher">
+      <source xml:lang="en">Publisher {0}</source>
+    </trans-unit>
+    <trans-unit id="extension.arialabel.rating">
+      <source xml:lang="en">Rated {0} out of 5 stars by {1} users</source>
+    </trans-unit>
+    <trans-unit id="extension.arialabel.verifiedPublisher">
+      <source xml:lang="en">Verified Publisher {0}</source>
+    </trans-unit>
+    <trans-unit id="extensions">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="no extensions found">
+      <source xml:lang="en">No extensions found.</source>
+    </trans-unit>
+    <trans-unit id="no local extensions">
+      <source xml:lang="en">There are no extensions to install.</source>
+    </trans-unit>
+    <trans-unit id="offline error">
+      <source xml:lang="en">Unable to search the Marketplace when offline, please check your network connection.</source>
+    </trans-unit>
+    <trans-unit id="open user settings">
+      <source xml:lang="en">Open User Settings</source>
+    </trans-unit>
+    <trans-unit id="showingExtensionsForFeature">
+      <source xml:lang="en">Extensions using {0} in the last 30 days</source>
+    </trans-unit>
+    <trans-unit id="suggestProxyError">
+      <source xml:lang="en">Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionsWidgets" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="Show prerelease version">
+      <source xml:lang="en">Pre-Release version</source>
+    </trans-unit>
+    <trans-unit id="activation">
+      <source xml:lang="en">Activation time</source>
+    </trans-unit>
+    <trans-unit id="extensionIcon.sponsorForeground">
+      <source xml:lang="en">The icon color for extension sponsor.</source>
+    </trans-unit>
+    <trans-unit id="extensionIconStarForeground">
+      <source xml:lang="en">The icon color for extension ratings.</source>
+    </trans-unit>
+    <trans-unit id="extensionPreReleaseForeground">
+      <source xml:lang="en">The icon color for pre-release extension.</source>
+    </trans-unit>
+    <trans-unit id="feature access label">
+      <source xml:lang="en">{0} reqs</source>
+    </trans-unit>
+    <trans-unit id="feature usage label">
+      <source xml:lang="en">{0} usage</source>
+    </trans-unit>
+    <trans-unit id="has prerelease">
+      <source xml:lang="en">This extension has a {0} available</source>
+    </trans-unit>
+    <trans-unit id="local extension">
+      <source xml:lang="en">Local Extension</source>
+    </trans-unit>
+    <trans-unit id="message">
+      <source xml:lang="en">1 message</source>
+    </trans-unit>
+    <trans-unit id="messages">
+      <source xml:lang="en">{0} messages</source>
+    </trans-unit>
+    <trans-unit id="publisher verified tooltip">
+      <source xml:lang="en">This publisher has verified ownership of {0}</source>
+    </trans-unit>
+    <trans-unit id="ratedLabel">
+      <source xml:lang="en">Average rating: {0} out of 5</source>
+    </trans-unit>
+    <trans-unit id="recommendationHasBeenIgnored">
+      <source xml:lang="en">You have chosen not to receive recommendations for this extension.</source>
+    </trans-unit>
+    <trans-unit id="remote extension title">
+      <source xml:lang="en">Extension in {0}</source>
+    </trans-unit>
+    <trans-unit id="sponsor">
+      <source xml:lang="en">Sponsor</source>
+    </trans-unit>
+    <trans-unit id="startup">
+      <source xml:lang="en">Startup</source>
+    </trans-unit>
+    <trans-unit id="syncingore.label">
+      <source xml:lang="en">This extension is ignored during sync.</source>
+    </trans-unit>
+    <trans-unit id="total">
+      <source xml:lang="en">{0} {1} requests in last 30 days</source>
+    </trans-unit>
+    <trans-unit id="uncaught error">
+      <source xml:lang="en">1 uncaught error</source>
+    </trans-unit>
+    <trans-unit id="uncaught errors">
+      <source xml:lang="en">{0} uncaught errors</source>
+    </trans-unit>
+    <trans-unit id="updateRequired">
+      <source xml:lang="en">Latest version:</source>
+    </trans-unit>
+    <trans-unit id="workspace extension">
+      <source xml:lang="en">Workspace Extension</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/extensionsWorkbenchService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="Manifest is not found">
+      <source xml:lang="en">Manifest is not found</source>
+    </trans-unit>
+    <trans-unit id="allplatforms">
+      <source xml:lang="en">All Platforms</source>
+    </trans-unit>
+    <trans-unit id="autoRestart">
+      <source xml:lang="en">If activated, extensions will automatically restart following an update if the window is not in focus. There can be a data loss if you have open Notebooks or Custom Editors.</source>
+    </trans-unit>
+    <trans-unit id="cannot be installed">
+      <source xml:lang="en">Cannot install the '{0}' extension because it is not available in this setup.</source>
+    </trans-unit>
+    <trans-unit id="confirmDisableAutoUpdate">
+      <source xml:lang="en">Do you want to disable auto update for all extensions?</source>
+    </trans-unit>
+    <trans-unit id="confirmEnableAutoUpdate">
+      <source xml:lang="en">Do you want to enable auto update for all extensions?</source>
+    </trans-unit>
+    <trans-unit id="confirmEnableDisableAutoUpdate">
+      <source xml:lang="en">Auto Update Extensions</source>
+    </trans-unit>
+    <trans-unit id="confirmEnableDisableAutoUpdateDetail">
+      <source xml:lang="en">This will reset any auto update settings you have set for individual extensions.</source>
+    </trans-unit>
+    <trans-unit id="consentRequiredToUpdate">
+      <source xml:lang="en">The update for {0} extension introduces executable code, which is not present in the currently installed version.</source>
+    </trans-unit>
+    <trans-unit id="deprecated extensions">
+      <source xml:lang="en">Deprecated extensions detected. Review them and migrate to alternatives.</source>
+    </trans-unit>
+    <trans-unit id="disable all">
+      <source xml:lang="en">Disable All</source>
+    </trans-unit>
+    <trans-unit id="disableDependents">
+      <source xml:lang="en">Disable Extension with Dependents</source>
+    </trans-unit>
+    <trans-unit id="disallowed">
+      <source xml:lang="en">This extension is disallowed to be installed.</source>
+    </trans-unit>
+    <trans-unit id="disallowed extensions">
+      <source xml:lang="en">Some extensions are disabled because they are configured not to be allowed.</source>
+    </trans-unit>
+    <trans-unit id="disallowed extensions by policy">
+      <source xml:lang="en">Some extensions are disabled because they are not allowed by your system administrator.</source>
+    </trans-unit>
+    <trans-unit id="download">
+      <source xml:lang="en">Download</source>
+    </trans-unit>
+    <trans-unit id="download title">
+      <source xml:lang="en">Select folder to download the VSIX</source>
+    </trans-unit>
+    <trans-unit id="download.completed">
+      <source xml:lang="en">Successfully downloaded the VSIX</source>
+    </trans-unit>
+    <trans-unit id="downloading...">
+      <source xml:lang="en">Downloading VSIX...</source>
+    </trans-unit>
+    <trans-unit id="enable locally">
+      <source xml:lang="en">Please {0} to enable this extension locally.</source>
+    </trans-unit>
+    <trans-unit id="enable remote">
+      <source xml:lang="en">Please {0} to enable this extension in {1}.</source>
+    </trans-unit>
+    <trans-unit id="enableButtonLabel">
+      <source xml:lang="en">&amp;&amp;Enable Extension</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="enableButtonLabelWithAction">
+      <source xml:lang="en">&amp;&amp;Enable Extension and {0}</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="enableExtensionMessage">
+      <source xml:lang="en">Would you like to enable '{0}' extension?</source>
+    </trans-unit>
+    <trans-unit id="enableExtensionTitle">
+      <source xml:lang="en">Enable Extension</source>
+    </trans-unit>
+    <trans-unit id="extension not found">
+      <source xml:lang="en">Extension '{0}' not found.</source>
+    </trans-unit>
+    <trans-unit id="extensionsAutoRestart">
+      <source xml:lang="en">Extensions were auto restarted to enable updates.</source>
+    </trans-unit>
+    <trans-unit id="extensionsConfigurationTitle">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="incompatible">
+      <source xml:lang="en">Can't install '{0}' extension because it is not compatible.</source>
+    </trans-unit>
+    <trans-unit id="incompatibleExtensions">
+      <source xml:lang="en">Some extensions are disabled due to version incompatibility. Review and update them.</source>
+    </trans-unit>
+    <trans-unit id="installButtonLabel">
+      <source xml:lang="en">&amp;&amp;Install Extension</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="installButtonLabelWithAction">
+      <source xml:lang="en">&amp;&amp;Install Extension and {0}</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="installExtensionMessage">
+      <source xml:lang="en">Would you like to install '{0}' extension from '{1}'?</source>
+    </trans-unit>
+    <trans-unit id="installExtensionTitle">
+      <source xml:lang="en">Install Extension</source>
+    </trans-unit>
+    <trans-unit id="installVSIXMessage">
+      <source xml:lang="en">Would you like to install the extension?</source>
+    </trans-unit>
+    <trans-unit id="installing extension">
+      <source xml:lang="en">Installing extension....</source>
+    </trans-unit>
+    <trans-unit id="installing named extension">
+      <source xml:lang="en">Installing '{0}' extension....</source>
+    </trans-unit>
+    <trans-unit id="invalidExtensions">
+      <source xml:lang="en">Invalid extensions detected. Review them.</source>
+    </trans-unit>
+    <trans-unit id="malicious">
+      <source xml:lang="en">This extension is reported to be problematic.</source>
+    </trans-unit>
+    <trans-unit id="multipleDependentsError">
+      <source xml:lang="en">Cannot disable '{0}' extension alone. '{1}', '{2}' and other extensions depend on this. Do you want to disable all these extensions?</source>
+    </trans-unit>
+    <trans-unit id="multipleDependentsUninstallError">
+      <source xml:lang="en">Cannot uninstall '{0}' extension alone. '{1}', '{2}' and other extensions depend on this. Do you want to uninstall all these extensions?</source>
+    </trans-unit>
+    <trans-unit id="not an extension">
+      <source xml:lang="en">The provided object is not an extension.</source>
+    </trans-unit>
+    <trans-unit id="not found">
+      <source xml:lang="en">Unable to install extension '{0}' because it is not found.</source>
+    </trans-unit>
+    <trans-unit id="not found version">
+      <source xml:lang="en">Unable to install extension '{0}' because the requested version '{1}' is not found.</source>
+    </trans-unit>
+    <trans-unit id="not signed">
+      <source xml:lang="en">This extension is not signed.</source>
+    </trans-unit>
+    <trans-unit id="open">
+      <source xml:lang="en">Open Extension</source>
+    </trans-unit>
+    <trans-unit id="platform placeholder">
+      <source xml:lang="en">Please select the platform for which you want to download the VSIX</source>
+    </trans-unit>
+    <trans-unit id="postDisableTooltip">
+      <source xml:lang="en">Please {0} to disable this extension.</source>
+    </trans-unit>
+    <trans-unit id="postEnableTooltip">
+      <source xml:lang="en">Please {0} to enable this extension.</source>
+    </trans-unit>
+    <trans-unit id="postUninstallTooltip">
+      <source xml:lang="en">Please {0} to complete the uninstallation of this extension.</source>
+    </trans-unit>
+    <trans-unit id="postUpdateDownloadTooltip">
+      <source xml:lang="en">Please update {0} to enable the updated extension.</source>
+    </trans-unit>
+    <trans-unit id="postUpdateRestartTooltip">
+      <source xml:lang="en">Please restart {0} to enable the updated extension.</source>
+    </trans-unit>
+    <trans-unit id="postUpdateTooltip">
+      <source xml:lang="en">Please {0} to enable the updated extension.</source>
+    </trans-unit>
+    <trans-unit id="postUpdateUpdateTooltip">
+      <source xml:lang="en">Please update {0} to enable the updated extension.</source>
+    </trans-unit>
+    <trans-unit id="reload">
+      <source xml:lang="en">reload window</source>
+    </trans-unit>
+    <trans-unit id="restart">
+      <source xml:lang="en">Changing extension enablement</source>
+    </trans-unit>
+    <trans-unit id="restart extensions">
+      <source xml:lang="en">restart extensions</source>
+    </trans-unit>
+    <trans-unit id="singleDependentError">
+      <source xml:lang="en">Cannot disable '{0}' extension alone. '{1}' extension depends on this. Do you want to disable all these extensions?</source>
+    </trans-unit>
+    <trans-unit id="singleDependentUninstallError">
+      <source xml:lang="en">Cannot uninstall '{0}' extension alone. '{1}' extension depends on this. Do you want to uninstall all these extensions?</source>
+    </trans-unit>
+    <trans-unit id="sync extension">
+      <source xml:lang="en">Sync this extension</source>
+    </trans-unit>
+    <trans-unit id="twoDependentsError">
+      <source xml:lang="en">Cannot disable '{0}' extension alone. '{1}' and '{2}' extensions depend on this. Do you want to disable all these extensions?</source>
+    </trans-unit>
+    <trans-unit id="twoDependentsUninstallError">
+      <source xml:lang="en">Cannot uninstall '{0}' extension alone. '{1}' and '{2}' extensions depend on this. Do you want to uninstall all these extensions?</source>
+    </trans-unit>
+    <trans-unit id="uninstallAll">
+      <source xml:lang="en">Uninstall All</source>
+    </trans-unit>
+    <trans-unit id="uninstallDependents">
+      <source xml:lang="en">Uninstall Extension with Dependents</source>
+    </trans-unit>
+    <trans-unit id="uninstallingExtension">
+      <source xml:lang="en">Uninstalling extension....</source>
+    </trans-unit>
+    <trans-unit id="unknown">
+      <source xml:lang="en">Unable to install extension</source>
+    </trans-unit>
+    <trans-unit id="updatingExtensions">
+      <source xml:lang="en">Updating Extensions Auto Update State</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/fileBasedRecommendations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="fileBasedRecommendation">
+      <source xml:lang="en">This extension is recommended based on the files you recently opened.</source>
+    </trans-unit>
+    <trans-unit id="languageName">
+      <source xml:lang="en">the {0} language</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/webRecommendations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="reason">
+      <source xml:lang="en">This extension is recommended for {0} for the Web</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/browser/workspaceRecommendations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="workspaceRecommendation">
+      <source xml:lang="en">This extension is recommended by users of the current workspace.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/common/extensions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="extensions">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/common/extensionsFileTemplate" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="app.extension.identifier.errorMessage">
+      <source xml:lang="en">Expected format '${publisher}.${name}'. Example: 'vscode.csharp'.</source>
+    </trans-unit>
+    <trans-unit id="app.extensions.json.recommendations">
+      <source xml:lang="en">List of extensions which should be recommended for users of this workspace. The identifier of an extension is always '${publisher}.${name}'. For example: 'vscode.csharp'.</source>
+    </trans-unit>
+    <trans-unit id="app.extensions.json.title">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="app.extensions.json.unwantedRecommendations">
+      <source xml:lang="en">List of extensions recommended by VS Code that should not be recommended for users of this workspace. The identifier of an extension is always '${publisher}.${name}'. For example: 'vscode.csharp'.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/common/extensionsInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="extensionsEditorLabelIcon">
+      <source xml:lang="en">Icon of the extensions editor label.</source>
+    </trans-unit>
+    <trans-unit id="extensionsInputName">
+      <source xml:lang="en">Extension: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/common/extensionsUtils" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="disableOtherKeymapsConfirmation">
+      <source xml:lang="en">Disable other keymaps ({0}) to avoid conflicts between keybindings?</source>
+    </trans-unit>
+    <trans-unit id="no">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="yes">
+      <source xml:lang="en">Yes</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/common/reportExtensionIssueAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="reportExtensionIssue">
+      <source xml:lang="en">Report Issue</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/common/runtimeExtensionsInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="extensionsInputName">
+      <source xml:lang="en">Running Extensions</source>
+    </trans-unit>
+    <trans-unit id="runtimeExtensionEditorLabelIcon">
+      <source xml:lang="en">Icon of the runtime extensions editor label.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/debugExtensionHostAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="debugExtensionHost">
+      <source xml:lang="en">Start Debugging Extension Host In New Window</source>
+    </trans-unit>
+    <trans-unit id="debugExtensionHost.launch.name">
+      <source xml:lang="en">Attach Extension Host</source>
+    </trans-unit>
+    <trans-unit id="debugExtensionHost.progress">
+      <source xml:lang="en">Attaching Debugger To Extension Host</source>
+    </trans-unit>
+    <trans-unit id="restart1">
+      <source xml:lang="en">Debug Extensions</source>
+    </trans-unit>
+    <trans-unit id="restart2">
+      <source xml:lang="en">In order to debug extensions a restart is required. Do you want to restart '{0}' now?</source>
+    </trans-unit>
+    <trans-unit id="restart3">
+      <source xml:lang="en">&amp;&amp;Restart</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/extensionProfileService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="profilingExtensionHost">
+      <source xml:lang="en">Profiling Extension Host</source>
+    </trans-unit>
+    <trans-unit id="profilingExtensionHostTime">
+      <source xml:lang="en">Profiling Extension Host ({0} sec)</source>
+    </trans-unit>
+    <trans-unit id="restart1">
+      <source xml:lang="en">Profile Extensions</source>
+    </trans-unit>
+    <trans-unit id="restart2">
+      <source xml:lang="en">In order to profile extensions a restart is required. Do you want to restart '{0}' now?</source>
+    </trans-unit>
+    <trans-unit id="restart3">
+      <source xml:lang="en">&amp;&amp;Restart</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="selectAndStartDebug">
+      <source xml:lang="en">Click to stop profiling.</source>
+    </trans-unit>
+    <trans-unit id="status.profiler">
+      <source xml:lang="en">Extension Profiler</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/extensions.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="runtimeExtension">
+      <source xml:lang="en">Running Extensions</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/extensionsActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cleanUpExtensionsFolder">
+      <source xml:lang="en">Cleanup Extensions Folder</source>
+    </trans-unit>
+    <trans-unit id="openExtensionsFolder">
+      <source xml:lang="en">Open Extensions Folder</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/extensionsAutoProfiler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="show">
+      <source xml:lang="en">Show Extensions</source>
+    </trans-unit>
+    <trans-unit id="unresponsive-exthost">
+      <source xml:lang="en">The extension '{0}' took a very long time to complete its last operation and it has prevented other extensions from running.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/extensionsSlowActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="attach.msg">
+      <source xml:lang="en">This is a reminder to make sure that you have not forgotten to attach '{0}' to the issue you have just created.</source>
+    </trans-unit>
+    <trans-unit id="attach.msg2">
+      <source xml:lang="en">This is a reminder to make sure that you have not forgotten to attach '{0}' to an existing performance issue.</source>
+    </trans-unit>
+    <trans-unit id="attach.title">
+      <source xml:lang="en">Did you attach the CPU-Profile?</source>
+    </trans-unit>
+    <trans-unit id="cmd.report">
+      <source xml:lang="en">Report Issue</source>
+    </trans-unit>
+    <trans-unit id="cmd.reportOrShow">
+      <source xml:lang="en">Performance Issue</source>
+    </trans-unit>
+    <trans-unit id="cmd.show">
+      <source xml:lang="en">Show Issues</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/runtimeExtensionsEditor" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="extensionHostProfileStart">
+      <source xml:lang="en">Start Extension Host Profile</source>
+    </trans-unit>
+    <trans-unit id="openExtensionHostProfile">
+      <source xml:lang="en">Open Extension Host Profile</source>
+    </trans-unit>
+    <trans-unit id="saveExtensionHostProfile">
+      <source xml:lang="en">Save Extension Host Profile</source>
+    </trans-unit>
+    <trans-unit id="saveprofile.dialogTitle">
+      <source xml:lang="en">Save Extension Host Profile</source>
+    </trans-unit>
+    <trans-unit id="stopExtensionHostProfileStart">
+      <source xml:lang="en">Stop Extension Host Profile</source>
+    </trans-unit>
+</body></file>
+</xliff>

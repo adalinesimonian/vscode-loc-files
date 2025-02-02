@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/services/auxiliaryWindow/browser/auxiliaryWindowService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="lifecycleVeto">
+      <source xml:lang="en">Changes that you made may not be saved. Please check press 'Cancel' and try again.</source>
+    </trans-unit>
+    <trans-unit id="retry">
+      <source xml:lang="en">&amp;&amp;Retry</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="unableToOpenWindow">
+      <source xml:lang="en">The browser interrupted the opening of a new window. Press 'Retry' to try again.</source>
+    </trans-unit>
+    <trans-unit id="unableToOpenWindowDetail">
+      <source xml:lang="en">To avoid this problem in the future, please ensure to allow popups for this website.</source>
+    </trans-unit>
+    <trans-unit id="unableToOpenWindowError">
+      <source xml:lang="en">Unable to open a new window.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/services/auxiliaryWindow/electron-sandbox/auxiliaryWindowService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="backupErrorDetails">
+      <source xml:lang="en">Try saving or reverting the editors with unsaved changes first and then try again.</source>
+    </trans-unit>
+</body></file>
+</xliff>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/localHistory/browser/localHistory" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localHistoryIcon">
+      <source xml:lang="en">Icon for a local history entry in the timeline view.</source>
+    </trans-unit>
+    <trans-unit id="localHistoryRestore">
+      <source xml:lang="en">Icon for restoring contents of a local history entry.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/localHistory/browser/localHistoryCommands" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="confirmDeleteAllDetail">
+      <source xml:lang="en">This action is irreversible!</source>
+    </trans-unit>
+    <trans-unit id="confirmDeleteAllMessage">
+      <source xml:lang="en">Do you want to delete all entries of all files in local history?</source>
+    </trans-unit>
+    <trans-unit id="confirmDeleteDetail">
+      <source xml:lang="en">This action is irreversible!</source>
+    </trans-unit>
+    <trans-unit id="confirmDeleteMessage">
+      <source xml:lang="en">Do you want to delete the local history entry of '{0}' from {1}?</source>
+    </trans-unit>
+    <trans-unit id="confirmRestoreDetail">
+      <source xml:lang="en">Restoring will discard any unsaved changes.</source>
+    </trans-unit>
+    <trans-unit id="confirmRestoreMessage">
+      <source xml:lang="en">Do you want to restore the contents of '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="createLocalHistoryEntryTitle">
+      <source xml:lang="en">Create Local History Entry</source>
+    </trans-unit>
+    <trans-unit id="createLocalHistoryPlaceholder">
+      <source xml:lang="en">Enter the new name of the local history entry for '{0}'</source>
+    </trans-unit>
+    <trans-unit id="deleteAllButtonLabel">
+      <source xml:lang="en">&amp;&amp;Delete All</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="deleteButtonLabel">
+      <source xml:lang="en">&amp;&amp;Delete</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="localHistory.category">
+      <source xml:lang="en">Local History</source>
+    </trans-unit>
+    <trans-unit id="localHistory.compareWithFile">
+      <source xml:lang="en">Compare with File</source>
+    </trans-unit>
+    <trans-unit id="localHistory.compareWithPrevious">
+      <source xml:lang="en">Compare with Previous</source>
+    </trans-unit>
+    <trans-unit id="localHistory.compareWithSelected">
+      <source xml:lang="en">Compare with Selected</source>
+    </trans-unit>
+    <trans-unit id="localHistory.create">
+      <source xml:lang="en">Create Entry</source>
+    </trans-unit>
+    <trans-unit id="localHistory.delete">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="localHistory.deleteAll">
+      <source xml:lang="en">Delete All</source>
+    </trans-unit>
+    <trans-unit id="localHistory.open">
+      <source xml:lang="en">Show Contents</source>
+    </trans-unit>
+    <trans-unit id="localHistory.rename">
+      <source xml:lang="en">Rename</source>
+    </trans-unit>
+    <trans-unit id="localHistory.restore">
+      <source xml:lang="en">Restore Contents</source>
+    </trans-unit>
+    <trans-unit id="localHistory.restoreViaPicker">
+      <source xml:lang="en">Find Entry to Restore</source>
+    </trans-unit>
+    <trans-unit id="localHistory.restoreViaPickerMenu">
+      <source xml:lang="en">Local History: Find Entry to Restore...</source>
+    </trans-unit>
+    <trans-unit id="localHistory.selectForCompare">
+      <source xml:lang="en">Select for Compare</source>
+    </trans-unit>
+    <trans-unit id="localHistoryCompareToFileEditorLabel">
+      <source xml:lang="en">{0} ({1} • {2}) ↔ {3}</source>
+    </trans-unit>
+    <trans-unit id="localHistoryCompareToPreviousEditorLabel">
+      <source xml:lang="en">{0} ({1} • {2}) ↔ {3} ({4} • {5})</source>
+    </trans-unit>
+    <trans-unit id="localHistoryEditorLabel">
+      <source xml:lang="en">{0} ({1} • {2})</source>
+    </trans-unit>
+    <trans-unit id="localHistoryRestore.source">
+      <source xml:lang="en">File Restored</source>
+    </trans-unit>
+    <trans-unit id="renameLocalHistoryEntryTitle">
+      <source xml:lang="en">Rename Local History Entry</source>
+    </trans-unit>
+    <trans-unit id="renameLocalHistoryPlaceholder">
+      <source xml:lang="en">Enter the new name of the local history entry</source>
+    </trans-unit>
+    <trans-unit id="restoreButtonLabel">
+      <source xml:lang="en">&amp;&amp;Restore</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="restoreViaPicker.entryPlaceholder">
+      <source xml:lang="en">Select the local history entry to open</source>
+    </trans-unit>
+    <trans-unit id="restoreViaPicker.filePlaceholder">
+      <source xml:lang="en">Select the file to show local history for</source>
+    </trans-unit>
+    <trans-unit id="unableToRestore">
+      <source xml:lang="en">Unable to restore '{0}'.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/localHistory/browser/localHistoryTimeline" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localHistory">
+      <source xml:lang="en">Local History</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/localHistory/electron-sandbox/localHistoryCommands" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="openContainer">
+      <source xml:lang="en">Open Containing Folder</source>
+    </trans-unit>
+    <trans-unit id="revealInMac">
+      <source xml:lang="en">Reveal in Finder</source>
+    </trans-unit>
+    <trans-unit id="revealInWindows">
+      <source xml:lang="en">Reveal in File Explorer</source>
+    </trans-unit>
+</body></file>
+</xliff>

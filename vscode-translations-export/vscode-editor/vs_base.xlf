@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/base/browser/ui/actionbar/actionViewItems" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="titleLabel">
+      <source xml:lang="en">{0} ({1})</source>
+      <note>action title
+action keybinding</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/button/button" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="button dropdown more actions">
+      <source xml:lang="en">More Actions...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/dialog/dialog" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="dialogClose">
+      <source xml:lang="en">Close Dialog</source>
+    </trans-unit>
+    <trans-unit id="dialogErrorMessage">
+      <source xml:lang="en">Error</source>
+    </trans-unit>
+    <trans-unit id="dialogInfoMessage">
+      <source xml:lang="en">Info</source>
+    </trans-unit>
+    <trans-unit id="dialogPendingMessage">
+      <source xml:lang="en">In Progress</source>
+    </trans-unit>
+    <trans-unit id="dialogWarningMessage">
+      <source xml:lang="en">Warning</source>
+    </trans-unit>
+    <trans-unit id="ok">
+      <source xml:lang="en">OK</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/dropdown/dropdownActionViewItem" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="moreActions">
+      <source xml:lang="en">More Actions...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/findinput/findInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="defaultLabel">
+      <source xml:lang="en">input</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/findinput/findInputToggles" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="caseDescription">
+      <source xml:lang="en">Match Case</source>
+    </trans-unit>
+    <trans-unit id="regexDescription">
+      <source xml:lang="en">Use Regular Expression</source>
+    </trans-unit>
+    <trans-unit id="wordsDescription">
+      <source xml:lang="en">Match Whole Word</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/findinput/replaceInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="defaultLabel">
+      <source xml:lang="en">input</source>
+    </trans-unit>
+    <trans-unit id="label.preserveCaseToggle">
+      <source xml:lang="en">Preserve Case</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/hover/hoverWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="acessibleViewHint">
+      <source xml:lang="en">Inspect this in the accessible view with {0}.</source>
+    </trans-unit>
+    <trans-unit id="acessibleViewHintNoKbOpen">
+      <source xml:lang="en">Inspect this in the accessible view via the command Open Accessible View which is currently not triggerable via keybinding.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/icons/iconSelectBox" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="iconSelect.noResults">
+      <source xml:lang="en">No results</source>
+    </trans-unit>
+    <trans-unit id="iconSelect.placeholder">
+      <source xml:lang="en">Search icons</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/inputbox/inputBox" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="alertErrorMessage">
+      <source xml:lang="en">Error: {0}</source>
+    </trans-unit>
+    <trans-unit id="alertInfoMessage">
+      <source xml:lang="en">Info: {0}</source>
+    </trans-unit>
+    <trans-unit id="alertWarningMessage">
+      <source xml:lang="en">Warning: {0}</source>
+    </trans-unit>
+    <trans-unit id="clearedInput">
+      <source xml:lang="en">Cleared Input</source>
+    </trans-unit>
+    <trans-unit id="history.inputbox.hint.suffix.inparens">
+      <source xml:lang="en"> ({0} for history)</source>
+      <note>Text is the suffix of an input field placeholder coming after the action the input field performs, this will be used when the input field does NOT end in a closing parenthesis (eg. "Find"). The character inserted into the final string is ⇅ to represent the up and down arrow keys.</note>
+    </trans-unit>
+    <trans-unit id="history.inputbox.hint.suffix.noparens">
+      <source xml:lang="en"> or {0} for history</source>
+      <note>Text is the suffix of an input field placeholder coming after the action the input field performs, this will be used when the input field ends in a closing parenthesis ")", for example "Filter (e.g. text, !exclude)". The character inserted into the final string is ⇅ to represent the up and down arrow keys.</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/keybindingLabel/keybindingLabel" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="unbound">
+      <source xml:lang="en">Unbound</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/menu/menubar" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mAppMenu">
+      <source xml:lang="en">Application Menu</source>
+    </trans-unit>
+    <trans-unit id="mMore">
+      <source xml:lang="en">More</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/selectBox/selectBoxCustom" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="selectBox">
+      <source xml:lang="en">Select Box</source>
+      <note>Behave like native select dropdown element.</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/splitview/paneview" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="viewSection">
+      <source xml:lang="en">{0} Section</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/toolbar/toolbar" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="moreActions">
+      <source xml:lang="en">More Actions...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/tree/abstractTree" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="filter">
+      <source xml:lang="en">Filter</source>
+    </trans-unit>
+    <trans-unit id="foundResults">
+      <source xml:lang="en">{0} results</source>
+    </trans-unit>
+    <trans-unit id="fuzzySearch">
+      <source xml:lang="en">Fuzzy Match</source>
+    </trans-unit>
+    <trans-unit id="not found">
+      <source xml:lang="en">No results found.</source>
+    </trans-unit>
+    <trans-unit id="replFindNoResults">
+      <source xml:lang="en">No results</source>
+    </trans-unit>
+    <trans-unit id="type to filter">
+      <source xml:lang="en">Type to filter</source>
+    </trans-unit>
+    <trans-unit id="type to search">
+      <source xml:lang="en">Type to search</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/tree/asyncDataTree" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="type to filter">
+      <source xml:lang="en">Type to filter</source>
+    </trans-unit>
+    <trans-unit id="type to search">
+      <source xml:lang="en">Type to search</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/browser/ui/tree/treeDefaults" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="collapse all">
+      <source xml:lang="en">Collapse All</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/common/actions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="submenu.empty">
+      <source xml:lang="en">(empty)</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/common/date" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="date.fromNow.days.plural">
+      <source xml:lang="en">{0} days</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.days.plural.ago">
+      <source xml:lang="en">{0} days ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.days.singular">
+      <source xml:lang="en">{0} day</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.days.singular.ago">
+      <source xml:lang="en">{0} day ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.hours.plural">
+      <source xml:lang="en">{0} hrs</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.hours.plural.ago">
+      <source xml:lang="en">{0} hrs ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.hours.plural.ago.fullWord">
+      <source xml:lang="en">{0} hours ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.hours.plural.fullWord">
+      <source xml:lang="en">{0} hours</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.hours.singular">
+      <source xml:lang="en">{0} hr</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.hours.singular.ago">
+      <source xml:lang="en">{0} hr ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.hours.singular.ago.fullWord">
+      <source xml:lang="en">{0} hour ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.hours.singular.fullWord">
+      <source xml:lang="en">{0} hour</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.in">
+      <source xml:lang="en">in {0}</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.minutes.plural">
+      <source xml:lang="en">{0} mins</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.minutes.plural.ago">
+      <source xml:lang="en">{0} mins ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.minutes.plural.ago.fullWord">
+      <source xml:lang="en">{0} minutes ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.minutes.plural.fullWord">
+      <source xml:lang="en">{0} minutes</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.minutes.singular">
+      <source xml:lang="en">{0} min</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.minutes.singular.ago">
+      <source xml:lang="en">{0} min ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.minutes.singular.ago.fullWord">
+      <source xml:lang="en">{0} minute ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.minutes.singular.fullWord">
+      <source xml:lang="en">{0} minute</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.months.plural">
+      <source xml:lang="en">{0} mos</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.months.plural.ago">
+      <source xml:lang="en">{0} mos ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.months.plural.ago.fullWord">
+      <source xml:lang="en">{0} months ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.months.plural.fullWord">
+      <source xml:lang="en">{0} months</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.months.singular">
+      <source xml:lang="en">{0} mo</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.months.singular.ago">
+      <source xml:lang="en">{0} mo ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.months.singular.ago.fullWord">
+      <source xml:lang="en">{0} month ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.months.singular.fullWord">
+      <source xml:lang="en">{0} month</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.now">
+      <source xml:lang="en">now</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.seconds.plural">
+      <source xml:lang="en">{0} secs</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.seconds.plural.ago">
+      <source xml:lang="en">{0} secs ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.seconds.plural.ago.fullWord">
+      <source xml:lang="en">{0} seconds ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.seconds.plural.fullWord">
+      <source xml:lang="en">{0} seconds</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.seconds.singular">
+      <source xml:lang="en">{0} sec</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.seconds.singular.ago">
+      <source xml:lang="en">{0} sec ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.seconds.singular.ago.fullWord">
+      <source xml:lang="en">{0} second ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.seconds.singular.fullWord">
+      <source xml:lang="en">{0} second</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.weeks.plural">
+      <source xml:lang="en">{0} wks</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.weeks.plural.ago">
+      <source xml:lang="en">{0} wks ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.weeks.plural.ago.fullWord">
+      <source xml:lang="en">{0} weeks ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.weeks.plural.fullWord">
+      <source xml:lang="en">{0} weeks</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.weeks.singular">
+      <source xml:lang="en">{0} wk</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.weeks.singular.ago">
+      <source xml:lang="en">{0} wk ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.weeks.singular.ago.fullWord">
+      <source xml:lang="en">{0} week ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.weeks.singular.fullWord">
+      <source xml:lang="en">{0} week</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.years.plural">
+      <source xml:lang="en">{0} yrs</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.years.plural.ago">
+      <source xml:lang="en">{0} yrs ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.years.plural.ago.fullWord">
+      <source xml:lang="en">{0} years ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.years.plural.fullWord">
+      <source xml:lang="en">{0} years</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.years.singular">
+      <source xml:lang="en">{0} yr</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.years.singular.ago">
+      <source xml:lang="en">{0} yr ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.years.singular.ago.fullWord">
+      <source xml:lang="en">{0} year ago</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.years.singular.fullWord">
+      <source xml:lang="en">{0} year</source>
+    </trans-unit>
+    <trans-unit id="duration.d">
+      <source xml:lang="en">{0} days</source>
+    </trans-unit>
+    <trans-unit id="duration.h">
+      <source xml:lang="en">{0} hrs</source>
+    </trans-unit>
+    <trans-unit id="duration.h.full">
+      <source xml:lang="en">{0} hours</source>
+    </trans-unit>
+    <trans-unit id="duration.m">
+      <source xml:lang="en">{0} mins</source>
+    </trans-unit>
+    <trans-unit id="duration.m.full">
+      <source xml:lang="en">{0} minutes</source>
+    </trans-unit>
+    <trans-unit id="duration.ms">
+      <source xml:lang="en">{0}ms</source>
+    </trans-unit>
+    <trans-unit id="duration.ms.full">
+      <source xml:lang="en">{0} milliseconds</source>
+    </trans-unit>
+    <trans-unit id="duration.s">
+      <source xml:lang="en">{0}s</source>
+    </trans-unit>
+    <trans-unit id="duration.s.full">
+      <source xml:lang="en">{0} seconds</source>
+    </trans-unit>
+    <trans-unit id="today">
+      <source xml:lang="en">Today</source>
+    </trans-unit>
+    <trans-unit id="yesterday">
+      <source xml:lang="en">Yesterday</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/common/errorMessage" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="error.defaultMessage">
+      <source xml:lang="en">An unknown error occurred. Please consult the log for more details.</source>
+    </trans-unit>
+    <trans-unit id="error.moreErrors">
+      <source xml:lang="en">{0} ({1} errors in total)</source>
+    </trans-unit>
+    <trans-unit id="nodeExceptionMessage">
+      <source xml:lang="en">A system error occurred ({0})</source>
+    </trans-unit>
+    <trans-unit id="stackTrace.format">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/common/jsonErrorMessages" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="error.closeBraceExpected">
+      <source xml:lang="en">Closing brace expected</source>
+    </trans-unit>
+    <trans-unit id="error.closeBracketExpected">
+      <source xml:lang="en">Closing bracket expected</source>
+    </trans-unit>
+    <trans-unit id="error.colonExpected">
+      <source xml:lang="en">Colon expected</source>
+    </trans-unit>
+    <trans-unit id="error.commaExpected">
+      <source xml:lang="en">Comma expected</source>
+    </trans-unit>
+    <trans-unit id="error.endOfFileExpected">
+      <source xml:lang="en">End of file expected</source>
+    </trans-unit>
+    <trans-unit id="error.invalidNumberFormat">
+      <source xml:lang="en">Invalid number format</source>
+    </trans-unit>
+    <trans-unit id="error.invalidSymbol">
+      <source xml:lang="en">Invalid symbol</source>
+    </trans-unit>
+    <trans-unit id="error.propertyNameExpected">
+      <source xml:lang="en">Property name expected</source>
+    </trans-unit>
+    <trans-unit id="error.valueExpected">
+      <source xml:lang="en">Value expected</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/common/keybindingLabels" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="altKey">
+      <source xml:lang="en">Alt</source>
+      <note>This is the short form for the Alt key on the keyboard</note>
+    </trans-unit>
+    <trans-unit id="altKey.long">
+      <source xml:lang="en">Alt</source>
+      <note>This is the long form for the Alt key on the keyboard</note>
+    </trans-unit>
+    <trans-unit id="cmdKey.long">
+      <source xml:lang="en">Command</source>
+      <note>This is the long form for the Command key on the keyboard</note>
+    </trans-unit>
+    <trans-unit id="ctrlKey">
+      <source xml:lang="en">Ctrl</source>
+      <note>This is the short form for the Control key on the keyboard</note>
+    </trans-unit>
+    <trans-unit id="ctrlKey.long">
+      <source xml:lang="en">Control</source>
+      <note>This is the long form for the Control key on the keyboard</note>
+    </trans-unit>
+    <trans-unit id="optKey.long">
+      <source xml:lang="en">Option</source>
+      <note>This is the long form for the Alt/Option key on the keyboard</note>
+    </trans-unit>
+    <trans-unit id="shiftKey">
+      <source xml:lang="en">Shift</source>
+      <note>This is the short form for the Shift key on the keyboard</note>
+    </trans-unit>
+    <trans-unit id="shiftKey.long">
+      <source xml:lang="en">Shift</source>
+      <note>This is the long form for the Shift key on the keyboard</note>
+    </trans-unit>
+    <trans-unit id="superKey">
+      <source xml:lang="en">Super</source>
+      <note>This is the short form for the Super key on the keyboard</note>
+    </trans-unit>
+    <trans-unit id="superKey.long">
+      <source xml:lang="en">Super</source>
+      <note>This is the long form for the Super key on the keyboard</note>
+    </trans-unit>
+    <trans-unit id="windowsKey">
+      <source xml:lang="en">Windows</source>
+      <note>This is the short form for the Windows key on the keyboard</note>
+    </trans-unit>
+    <trans-unit id="windowsKey.long">
+      <source xml:lang="en">Windows</source>
+      <note>This is the long form for the Windows key on the keyboard</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/node/zip" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="incompleteExtract">
+      <source xml:lang="en">Incomplete. Found {0} of {1} entries</source>
+    </trans-unit>
+    <trans-unit id="invalid file">
+      <source xml:lang="en">Error extracting {0}. Invalid file.</source>
+    </trans-unit>
+    <trans-unit id="notFound">
+      <source xml:lang="en">{0} not found inside zip.</source>
+    </trans-unit>
+</body></file>
+</xliff>

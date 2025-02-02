@@ -1,0 +1,2183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/editor/browser/controller/editContext/native/screenReaderSupport" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="editor">
+      <source xml:lang="en">editor</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/controller/editContext/screenReaderUtils" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accessibilityModeOff">
+      <source xml:lang="en">The editor is not accessible at this time.</source>
+    </trans-unit>
+    <trans-unit id="accessibilityOffAriaLabel">
+      <source xml:lang="en">{0} To enable screen reader optimized mode, use {1}</source>
+    </trans-unit>
+    <trans-unit id="accessibilityOffAriaLabelNoKb">
+      <source xml:lang="en">{0} To enable screen reader optimized mode, open the quick pick with {1} and run the command Toggle Screen Reader Accessibility Mode, which is currently not triggerable via keyboard.</source>
+    </trans-unit>
+    <trans-unit id="accessibilityOffAriaLabelNoKbs">
+      <source xml:lang="en">{0} Please assign a keybinding for the command Toggle Screen Reader Accessibility Mode by accessing the keybindings editor with {1} and run it.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/controller/editContext/textArea/textAreaEditContext" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="editor">
+      <source xml:lang="en">editor</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/coreCommands" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="removedCursor">
+      <source xml:lang="en">Removed secondary cursors</source>
+    </trans-unit>
+    <trans-unit id="stickydesc">
+      <source xml:lang="en">Stick to the end even when going to longer lines</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/editorExtensions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="miRedo">
+      <source xml:lang="en">&amp;&amp;Redo</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="miSelectAll">
+      <source xml:lang="en">&amp;&amp;Select All</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="miUndo">
+      <source xml:lang="en">&amp;&amp;Undo</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="redo">
+      <source xml:lang="en">Redo</source>
+    </trans-unit>
+    <trans-unit id="selectAll">
+      <source xml:lang="en">Select All</source>
+    </trans-unit>
+    <trans-unit id="undo">
+      <source xml:lang="en">Undo</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/gpu/viewGpuContext" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="editor.dom.render">
+      <source xml:lang="en">Use DOM-based rendering</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/services/hoverService/hoverWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="hoverhint">
+      <source xml:lang="en">Hold {0} key to mouse over</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/services/hoverService/updatableHoverWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="iconLabel.loading">
+      <source xml:lang="en">Loading...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/widget/codeEditor/codeEditorWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cursors.maximum">
+      <source xml:lang="en">The number of cursors has been limited to {0}. Consider using [find and replace](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace) for larger changes or increase the editor multi cursor limit setting.</source>
+    </trans-unit>
+    <trans-unit id="goToSetting">
+      <source xml:lang="en">Increase Multi Cursor Limit</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/widget/diffEditor/commands" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accessibleDiffViewer">
+      <source xml:lang="en">Accessible Diff Viewer</source>
+    </trans-unit>
+    <trans-unit id="collapseAllUnchangedRegions">
+      <source xml:lang="en">Collapse All Unchanged Regions</source>
+    </trans-unit>
+    <trans-unit id="diffEditor">
+      <source xml:lang="en">Diff Editor</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibleDiffViewer.next">
+      <source xml:lang="en">Go to Next Difference</source>
+    </trans-unit>
+    <trans-unit id="editor.action.accessibleDiffViewer.prev">
+      <source xml:lang="en">Go to Previous Difference</source>
+    </trans-unit>
+    <trans-unit id="exitCompareMove">
+      <source xml:lang="en">Exit Compare Move</source>
+    </trans-unit>
+    <trans-unit id="revert">
+      <source xml:lang="en">Revert</source>
+    </trans-unit>
+    <trans-unit id="showAllUnchangedRegions">
+      <source xml:lang="en">Show All Unchanged Regions</source>
+    </trans-unit>
+    <trans-unit id="switchSide">
+      <source xml:lang="en">Switch Side</source>
+    </trans-unit>
+    <trans-unit id="toggleCollapseUnchangedRegions">
+      <source xml:lang="en">Toggle Collapse Unchanged Regions</source>
+    </trans-unit>
+    <trans-unit id="toggleShowMovedCodeBlocks">
+      <source xml:lang="en">Toggle Show Moved Code Blocks</source>
+    </trans-unit>
+    <trans-unit id="toggleUseInlineViewWhenSpaceIsLimited">
+      <source xml:lang="en">Toggle Use Inline View When Space Is Limited</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/widget/diffEditor/components/accessibleDiffViewer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accessibleDiffViewerCloseIcon">
+      <source xml:lang="en">Icon for 'Close' in accessible diff viewer.</source>
+    </trans-unit>
+    <trans-unit id="accessibleDiffViewerInsertIcon">
+      <source xml:lang="en">Icon for 'Insert' in accessible diff viewer.</source>
+    </trans-unit>
+    <trans-unit id="accessibleDiffViewerRemoveIcon">
+      <source xml:lang="en">Icon for 'Remove' in accessible diff viewer.</source>
+    </trans-unit>
+    <trans-unit id="ariaLabel">
+      <source xml:lang="en">Accessible Diff Viewer. Use arrow up and down to navigate.</source>
+    </trans-unit>
+    <trans-unit id="blankLine">
+      <source xml:lang="en">blank</source>
+    </trans-unit>
+    <trans-unit id="deleteLine">
+      <source xml:lang="en">- {0} original line {1}</source>
+    </trans-unit>
+    <trans-unit id="equalLine">
+      <source xml:lang="en">{0} original line {1} modified line {2}</source>
+    </trans-unit>
+    <trans-unit id="header">
+      <source xml:lang="en">Difference {0} of {1}: original line {2}, {3}, modified line {4}, {5}</source>
+      <note>This is the ARIA label for a git diff header.
+A git diff header looks like this: @@ -154,12 +159,39 @@.
+That encodes that at original line 154 (which is now line 159), 12 lines were removed/changed with 39 lines.
+Variables 0 and 1 refer to the diff index out of total number of diffs.
+Variables 2 and 4 will be numbers (a line number).
+Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines changed", localized separately.</note>
+    </trans-unit>
+    <trans-unit id="insertLine">
+      <source xml:lang="en">+ {0} modified line {1}</source>
+    </trans-unit>
+    <trans-unit id="label.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="more_lines_changed">
+      <source xml:lang="en">{0} lines changed</source>
+    </trans-unit>
+    <trans-unit id="no_lines_changed">
+      <source xml:lang="en">no lines changed</source>
+    </trans-unit>
+    <trans-unit id="one_line_changed">
+      <source xml:lang="en">1 line changed</source>
+    </trans-unit>
+    <trans-unit id="unchangedLine">
+      <source xml:lang="en">{0} unchanged line {1}</source>
+      <note>The placeholders are contents of the line and should not be translated.</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/widget/diffEditor/components/diffEditorEditors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="diff-aria-navigation-tip">
+      <source xml:lang="en"> use {0} to open the accessibility help.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/widget/diffEditor/components/diffEditorViewZones/inlineDiffDeletedCodeMargin" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="diff.clipboard.copyChangedLineContent.label">
+      <source xml:lang="en">Copy changed line ({0})</source>
+    </trans-unit>
+    <trans-unit id="diff.clipboard.copyChangedLinesContent.label">
+      <source xml:lang="en">Copy changed lines</source>
+    </trans-unit>
+    <trans-unit id="diff.clipboard.copyChangedLinesContent.single.label">
+      <source xml:lang="en">Copy changed line</source>
+    </trans-unit>
+    <trans-unit id="diff.clipboard.copyDeletedLineContent.label">
+      <source xml:lang="en">Copy deleted line ({0})</source>
+    </trans-unit>
+    <trans-unit id="diff.clipboard.copyDeletedLinesContent.label">
+      <source xml:lang="en">Copy deleted lines</source>
+    </trans-unit>
+    <trans-unit id="diff.clipboard.copyDeletedLinesContent.single.label">
+      <source xml:lang="en">Copy deleted line</source>
+    </trans-unit>
+    <trans-unit id="diff.inline.revertChange.label">
+      <source xml:lang="en">Revert this change</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/widget/diffEditor/diffEditor.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="Open Accessible Diff Viewer">
+      <source xml:lang="en">Open Accessible Diff Viewer</source>
+    </trans-unit>
+    <trans-unit id="revertHunk">
+      <source xml:lang="en">Revert Block</source>
+    </trans-unit>
+    <trans-unit id="revertSelection">
+      <source xml:lang="en">Revert Selection</source>
+    </trans-unit>
+    <trans-unit id="showMoves">
+      <source xml:lang="en">Show Moved Code Blocks</source>
+    </trans-unit>
+    <trans-unit id="useInlineViewWhenSpaceIsLimited">
+      <source xml:lang="en">Use Inline View When Space Is Limited</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/widget/diffEditor/features/hideUnchangedRegionsFeature" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="diff.bottom">
+      <source xml:lang="en">Click or drag to show more below</source>
+    </trans-unit>
+    <trans-unit id="diff.hiddenLines.expandAll">
+      <source xml:lang="en">Double click to unfold</source>
+    </trans-unit>
+    <trans-unit id="diff.hiddenLines.top">
+      <source xml:lang="en">Click or drag to show more above</source>
+    </trans-unit>
+    <trans-unit id="foldUnchanged">
+      <source xml:lang="en">Fold Unchanged Region</source>
+    </trans-unit>
+    <trans-unit id="hiddenLines">
+      <source xml:lang="en">{0} hidden lines</source>
+    </trans-unit>
+    <trans-unit id="showUnchangedRegion">
+      <source xml:lang="en">Show Unchanged Region</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/widget/diffEditor/features/movedBlocksLinesFeature" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codeMovedFrom">
+      <source xml:lang="en">Code moved from line {0}-{1}</source>
+    </trans-unit>
+    <trans-unit id="codeMovedFromWithChanges">
+      <source xml:lang="en">Code moved with changes from line {0}-{1}</source>
+    </trans-unit>
+    <trans-unit id="codeMovedTo">
+      <source xml:lang="en">Code moved to line {0}-{1}</source>
+    </trans-unit>
+    <trans-unit id="codeMovedToWithChanges">
+      <source xml:lang="en">Code moved with changes to line {0}-{1}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/widget/diffEditor/features/revertButtonsFeature" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="revertChange">
+      <source xml:lang="en">Revert Change</source>
+    </trans-unit>
+    <trans-unit id="revertSelectedChanges">
+      <source xml:lang="en">Revert Selected Changes</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/widget/diffEditor/registrations.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="diffEditor.move.border">
+      <source xml:lang="en">The border color for text that got moved in the diff editor.</source>
+    </trans-unit>
+    <trans-unit id="diffEditor.moveActive.border">
+      <source xml:lang="en">The active border color for text that got moved in the diff editor.</source>
+    </trans-unit>
+    <trans-unit id="diffEditor.unchangedRegionShadow">
+      <source xml:lang="en">The color of the shadow around unchanged region widgets.</source>
+    </trans-unit>
+    <trans-unit id="diffInsertIcon">
+      <source xml:lang="en">Line decoration for inserts in the diff editor.</source>
+    </trans-unit>
+    <trans-unit id="diffRemoveIcon">
+      <source xml:lang="en">Line decoration for removals in the diff editor.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/widget/multiDiffEditor/colors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="multiDiffEditor.background">
+      <source xml:lang="en">The background color of the multi file diff editor</source>
+    </trans-unit>
+    <trans-unit id="multiDiffEditor.border">
+      <source xml:lang="en">The border color of the multi file diff editor</source>
+    </trans-unit>
+    <trans-unit id="multiDiffEditor.headerBackground">
+      <source xml:lang="en">The background color of the diff editor's header</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/browser/widget/multiDiffEditor/multiDiffEditorWidgetImpl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="loading">
+      <source xml:lang="en">Loading...</source>
+    </trans-unit>
+    <trans-unit id="noChangedFiles">
+      <source xml:lang="en">No Changed Files</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/common/config/editorConfigurationSchema" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codeLens">
+      <source xml:lang="en">Controls whether the editor shows CodeLens.</source>
+    </trans-unit>
+    <trans-unit id="detectIndentation">
+      <source xml:lang="en">Controls whether {0} and {1} will be automatically detected when a file is opened based on the file contents.</source>
+    </trans-unit>
+    <trans-unit id="diffAlgorithm.advanced">
+      <source xml:lang="en">Uses the advanced diffing algorithm.</source>
+    </trans-unit>
+    <trans-unit id="diffAlgorithm.legacy">
+      <source xml:lang="en">Uses the legacy diffing algorithm.</source>
+    </trans-unit>
+    <trans-unit id="editor.experimental.asyncTokenization">
+      <source xml:lang="en">Controls whether the tokenization should happen asynchronously on a web worker.</source>
+    </trans-unit>
+    <trans-unit id="editor.experimental.asyncTokenizationLogging">
+      <source xml:lang="en">Controls whether async tokenization should be logged. For debugging only.</source>
+    </trans-unit>
+    <trans-unit id="editor.experimental.asyncTokenizationVerification">
+      <source xml:lang="en">Controls whether async tokenization should be verified against legacy background tokenization. Might slow down tokenization. For debugging only.</source>
+    </trans-unit>
+    <trans-unit id="editor.experimental.preferTreeSitter">
+      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for specific languages. This will take precedence over `editor.experimental.treeSitterTelemetry` for the specified languages.</source>
+    </trans-unit>
+    <trans-unit id="editor.experimental.treeSitterTelemetry">
+      <source xml:lang="en">Controls whether tree sitter parsing should be turned on and telemetry collected. Setting `editor.experimental.preferTreeSitter` for specific languages will take precedence.</source>
+    </trans-unit>
+    <trans-unit id="editorConfigurationTitle">
+      <source xml:lang="en">Editor</source>
+    </trans-unit>
+    <trans-unit id="hideUnchangedRegions.contextLineCount">
+      <source xml:lang="en">Controls how many lines are used as context when comparing unchanged regions.</source>
+    </trans-unit>
+    <trans-unit id="hideUnchangedRegions.enabled">
+      <source xml:lang="en">Controls whether the diff editor shows unchanged regions.</source>
+    </trans-unit>
+    <trans-unit id="hideUnchangedRegions.minimumLineCount">
+      <source xml:lang="en">Controls how many lines are used as a minimum for unchanged regions.</source>
+    </trans-unit>
+    <trans-unit id="hideUnchangedRegions.revealLineCount">
+      <source xml:lang="en">Controls how many lines are used for unchanged regions.</source>
+    </trans-unit>
+    <trans-unit id="ignoreTrimWhitespace">
+      <source xml:lang="en">When enabled, the diff editor ignores changes in leading or trailing whitespace.</source>
+    </trans-unit>
+    <trans-unit id="indentSize">
+      <source xml:lang="en">The number of spaces used for indentation or `"tabSize"` to use the value from `#editor.tabSize#`. This setting is overridden based on the file contents when `#editor.detectIndentation#` is on.</source>
+    </trans-unit>
+    <trans-unit id="insertSpaces">
+      <source xml:lang="en">Insert spaces when pressing `Tab`. This setting is overridden based on the file contents when {0} is on.</source>
+    </trans-unit>
+    <trans-unit id="largeFileOptimizations">
+      <source xml:lang="en">Special handling for large files to disable certain memory intensive features.</source>
+    </trans-unit>
+    <trans-unit id="maxComputationTime">
+      <source xml:lang="en">Timeout in milliseconds after which diff computation is cancelled. Use 0 for no timeout.</source>
+    </trans-unit>
+    <trans-unit id="maxFileSize">
+      <source xml:lang="en">Maximum file size in MB for which to compute diffs. Use 0 for no limit.</source>
+    </trans-unit>
+    <trans-unit id="maxTokenizationLineLength">
+      <source xml:lang="en">Lines above this length will not be tokenized for performance reasons</source>
+    </trans-unit>
+    <trans-unit id="renderGutterMenu">
+      <source xml:lang="en">When enabled, the diff editor shows a special gutter for revert and stage actions.</source>
+    </trans-unit>
+    <trans-unit id="renderIndicators">
+      <source xml:lang="en">Controls whether the diff editor shows +/- indicators for added/removed changes.</source>
+    </trans-unit>
+    <trans-unit id="renderMarginRevertIcon">
+      <source xml:lang="en">When enabled, the diff editor shows arrows in its glyph margin to revert changes.</source>
+    </trans-unit>
+    <trans-unit id="renderSideBySideInlineBreakpoint">
+      <source xml:lang="en">If the diff editor width is smaller than this value, the inline view is used.</source>
+    </trans-unit>
+    <trans-unit id="schema.brackets">
+      <source xml:lang="en">Defines the bracket symbols that increase or decrease the indentation.</source>
+    </trans-unit>
+    <trans-unit id="schema.closeBracket">
+      <source xml:lang="en">The closing bracket character or string sequence.</source>
+    </trans-unit>
+    <trans-unit id="schema.colorizedBracketPairs">
+      <source xml:lang="en">Defines the bracket pairs that are colorized by their nesting level if bracket pair colorization is enabled.</source>
+    </trans-unit>
+    <trans-unit id="schema.openBracket">
+      <source xml:lang="en">The opening bracket character or string sequence.</source>
+    </trans-unit>
+    <trans-unit id="semanticHighlighting.configuredByTheme">
+      <source xml:lang="en">Semantic highlighting is configured by the current color theme's `semanticHighlighting` setting.</source>
+    </trans-unit>
+    <trans-unit id="semanticHighlighting.enabled">
+      <source xml:lang="en">Controls whether the semanticHighlighting is shown for the languages that support it.</source>
+    </trans-unit>
+    <trans-unit id="semanticHighlighting.false">
+      <source xml:lang="en">Semantic highlighting disabled for all color themes.</source>
+    </trans-unit>
+    <trans-unit id="semanticHighlighting.true">
+      <source xml:lang="en">Semantic highlighting enabled for all color themes.</source>
+    </trans-unit>
+    <trans-unit id="showEmptyDecorations">
+      <source xml:lang="en">Controls whether the diff editor shows empty decorations to see where characters got inserted or deleted.</source>
+    </trans-unit>
+    <trans-unit id="showMoves">
+      <source xml:lang="en">Controls whether the diff editor should show detected code moves.</source>
+    </trans-unit>
+    <trans-unit id="sideBySide">
+      <source xml:lang="en">Controls whether the diff editor shows the diff side by side or inline.</source>
+    </trans-unit>
+    <trans-unit id="stablePeek">
+      <source xml:lang="en">Keep peek editors open even when double-clicking their content or when hitting `Escape`.</source>
+    </trans-unit>
+    <trans-unit id="tabSize">
+      <source xml:lang="en">The number of spaces a tab is equal to. This setting is overridden based on the file contents when {0} is on.</source>
+    </trans-unit>
+    <trans-unit id="trimAutoWhitespace">
+      <source xml:lang="en">Remove trailing auto inserted whitespace.</source>
+    </trans-unit>
+    <trans-unit id="useInlineViewWhenSpaceIsLimited">
+      <source xml:lang="en">If enabled and the editor width is too small, the inline view is used.</source>
+    </trans-unit>
+    <trans-unit id="useTrueInlineView">
+      <source xml:lang="en">If enabled and the editor uses the inline view, word changes are rendered inline.</source>
+    </trans-unit>
+    <trans-unit id="wordBasedSuggestions">
+      <source xml:lang="en">Controls whether completions should be computed based on words in the document and from which documents they are computed.</source>
+    </trans-unit>
+    <trans-unit id="wordBasedSuggestions.allDocuments">
+      <source xml:lang="en">Suggest words from all open documents.</source>
+    </trans-unit>
+    <trans-unit id="wordBasedSuggestions.currentDocument">
+      <source xml:lang="en">Only suggest words from the active document.</source>
+    </trans-unit>
+    <trans-unit id="wordBasedSuggestions.matchingDocuments">
+      <source xml:lang="en">Suggest words from all open documents of the same language.</source>
+    </trans-unit>
+    <trans-unit id="wordBasedSuggestions.off">
+      <source xml:lang="en">Turn off Word Based Suggestions.</source>
+    </trans-unit>
+    <trans-unit id="wordWrap.inherit">
+      <source xml:lang="en">Lines will wrap according to the {0} setting.</source>
+    </trans-unit>
+    <trans-unit id="wordWrap.off">
+      <source xml:lang="en">Lines will never wrap.</source>
+    </trans-unit>
+    <trans-unit id="wordWrap.on">
+      <source xml:lang="en">Lines will wrap at the viewport width.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/common/config/editorOptions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="acceptSuggestionOnCommitCharacter">
+      <source xml:lang="en">Controls whether suggestions should be accepted on commit characters. For example, in JavaScript, the semi-colon (`;`) can be a commit character that accepts a suggestion and types that character.</source>
+    </trans-unit>
+    <trans-unit id="acceptSuggestionOnEnter">
+      <source xml:lang="en">Controls whether suggestions should be accepted on `Enter`, in addition to `Tab`. Helps to avoid ambiguity between inserting new lines or accepting suggestions.</source>
+    </trans-unit>
+    <trans-unit id="acceptSuggestionOnEnterSmart">
+      <source xml:lang="en">Only accept a suggestion with `Enter` when it makes a textual change.</source>
+    </trans-unit>
+    <trans-unit id="accessibilityPageSize">
+      <source xml:lang="en">Controls the number of lines in the editor that can be read out by a screen reader at once. When we detect a screen reader we automatically set the default to be 500. Warning: this has a performance implication for numbers larger than the default.</source>
+    </trans-unit>
+    <trans-unit id="accessibilitySupport">
+      <source xml:lang="en">Controls if the UI should run in a mode where it is optimized for screen readers.</source>
+    </trans-unit>
+    <trans-unit id="accessibilitySupport.auto">
+      <source xml:lang="en">Use platform APIs to detect when a Screen Reader is attached.</source>
+    </trans-unit>
+    <trans-unit id="accessibilitySupport.off">
+      <source xml:lang="en">Assume a screen reader is not attached.</source>
+    </trans-unit>
+    <trans-unit id="accessibilitySupport.on">
+      <source xml:lang="en">Optimize for usage with a Screen Reader.</source>
+    </trans-unit>
+    <trans-unit id="alternativeDeclarationCommand">
+      <source xml:lang="en">Alternative command id that is being executed when the result of 'Go to Declaration' is the current location.</source>
+    </trans-unit>
+    <trans-unit id="alternativeDefinitionCommand">
+      <source xml:lang="en">Alternative command id that is being executed when the result of 'Go to Definition' is the current location.</source>
+    </trans-unit>
+    <trans-unit id="alternativeImplementationCommand">
+      <source xml:lang="en">Alternative command id that is being executed when the result of 'Go to Implementation' is the current location.</source>
+    </trans-unit>
+    <trans-unit id="alternativeReferenceCommand">
+      <source xml:lang="en">Alternative command id that is being executed when the result of 'Go to Reference' is the current location.</source>
+    </trans-unit>
+    <trans-unit id="alternativeTypeDefinitionCommand">
+      <source xml:lang="en">Alternative command id that is being executed when the result of 'Go to Type Definition' is the current location.</source>
+    </trans-unit>
+    <trans-unit id="autoClosingBrackets">
+      <source xml:lang="en">Controls whether the editor should automatically close brackets after the user adds an opening bracket.</source>
+    </trans-unit>
+    <trans-unit id="autoClosingComments">
+      <source xml:lang="en">Controls whether the editor should automatically close comments after the user adds an opening comment.</source>
+    </trans-unit>
+    <trans-unit id="autoClosingDelete">
+      <source xml:lang="en">Controls whether the editor should remove adjacent closing quotes or brackets when deleting.</source>
+    </trans-unit>
+    <trans-unit id="autoClosingOvertype">
+      <source xml:lang="en">Controls whether the editor should type over closing quotes or brackets.</source>
+    </trans-unit>
+    <trans-unit id="autoClosingQuotes">
+      <source xml:lang="en">Controls whether the editor should automatically close quotes after the user adds an opening quote.</source>
+    </trans-unit>
+    <trans-unit id="autoIndent">
+      <source xml:lang="en">Controls whether the editor should automatically adjust the indentation when users type, paste, move or indent lines.</source>
+    </trans-unit>
+    <trans-unit id="autoSurround">
+      <source xml:lang="en">Controls whether the editor should automatically surround selections when typing quotes or brackets.</source>
+    </trans-unit>
+    <trans-unit id="bracketPairColorization.enabled">
+      <source xml:lang="en">Controls whether bracket pair colorization is enabled or not. Use {0} to override the bracket highlight colors.</source>
+    </trans-unit>
+    <trans-unit id="bracketPairColorization.independentColorPoolPerBracketType">
+      <source xml:lang="en">Controls whether each bracket type has its own independent color pool.</source>
+    </trans-unit>
+    <trans-unit id="codeLens">
+      <source xml:lang="en">Controls whether the editor shows CodeLens.</source>
+    </trans-unit>
+    <trans-unit id="codeLensFontFamily">
+      <source xml:lang="en">Controls the font family for CodeLens.</source>
+    </trans-unit>
+    <trans-unit id="codeLensFontSize">
+      <source xml:lang="en">Controls the font size in pixels for CodeLens. When set to 0, 90% of `#editor.fontSize#` is used.</source>
+    </trans-unit>
+    <trans-unit id="colorDecoratorActivatedOn">
+      <source xml:lang="en">Controls the condition to make a color picker appear from a color decorator.</source>
+    </trans-unit>
+    <trans-unit id="colorDecorators">
+      <source xml:lang="en">Controls whether the editor should render the inline color decorators and color picker.</source>
+    </trans-unit>
+    <trans-unit id="colorDecoratorsLimit">
+      <source xml:lang="en">Controls the max number of color decorators that can be rendered in an editor at once.</source>
+    </trans-unit>
+    <trans-unit id="columnSelection">
+      <source xml:lang="en">Enable that the selection with the mouse and keys is doing column selection.</source>
+    </trans-unit>
+    <trans-unit id="comments.ignoreEmptyLines">
+      <source xml:lang="en">Controls if empty lines should be ignored with toggle, add or remove actions for line comments.</source>
+    </trans-unit>
+    <trans-unit id="comments.insertSpace">
+      <source xml:lang="en">Controls whether a space character is inserted when commenting.</source>
+    </trans-unit>
+    <trans-unit id="copyWithSyntaxHighlighting">
+      <source xml:lang="en">Controls whether syntax highlighting should be copied into the clipboard.</source>
+    </trans-unit>
+    <trans-unit id="cursorBlinking">
+      <source xml:lang="en">Control the cursor animation style.</source>
+    </trans-unit>
+    <trans-unit id="cursorSmoothCaretAnimation">
+      <source xml:lang="en">Controls whether the smooth caret animation should be enabled.</source>
+    </trans-unit>
+    <trans-unit id="cursorSmoothCaretAnimation.explicit">
+      <source xml:lang="en">Smooth caret animation is enabled only when the user moves the cursor with an explicit gesture.</source>
+    </trans-unit>
+    <trans-unit id="cursorSmoothCaretAnimation.off">
+      <source xml:lang="en">Smooth caret animation is disabled.</source>
+    </trans-unit>
+    <trans-unit id="cursorSmoothCaretAnimation.on">
+      <source xml:lang="en">Smooth caret animation is always enabled.</source>
+    </trans-unit>
+    <trans-unit id="cursorStyle">
+      <source xml:lang="en">Controls the cursor style in insert input mode.</source>
+    </trans-unit>
+    <trans-unit id="cursorSurroundingLines">
+      <source xml:lang="en">Controls the minimal number of visible leading lines (minimum 0) and trailing lines (minimum 1) surrounding the cursor. Known as 'scrollOff' or 'scrollOffset' in some other editors.</source>
+    </trans-unit>
+    <trans-unit id="cursorSurroundingLinesStyle">
+      <source xml:lang="en">Controls when `#editor.cursorSurroundingLines#` should be enforced.</source>
+    </trans-unit>
+    <trans-unit id="cursorSurroundingLinesStyle.all">
+      <source xml:lang="en">`cursorSurroundingLines` is enforced always.</source>
+    </trans-unit>
+    <trans-unit id="cursorSurroundingLinesStyle.default">
+      <source xml:lang="en">`cursorSurroundingLines` is enforced only when triggered via the keyboard or API.</source>
+    </trans-unit>
+    <trans-unit id="cursorWidth">
+      <source xml:lang="en">Controls the width of the cursor when `#editor.cursorStyle#` is set to `line`.</source>
+    </trans-unit>
+    <trans-unit id="defaultColorDecorators">
+      <source xml:lang="en">Controls whether inline color decorations should be shown using the default document color provider.</source>
+    </trans-unit>
+    <trans-unit id="definitionLinkOpensInPeek">
+      <source xml:lang="en">Controls whether the Go to Definition mouse gesture always opens the peek widget.</source>
+    </trans-unit>
+    <trans-unit id="deprecated">
+      <source xml:lang="en">This setting is deprecated, please use separate settings like 'editor.suggest.showKeywords' or 'editor.suggest.showSnippets' instead.</source>
+    </trans-unit>
+    <trans-unit id="dragAndDrop">
+      <source xml:lang="en">Controls whether the editor should allow moving selections via drag and drop.</source>
+    </trans-unit>
+    <trans-unit id="dropIntoEditor.enabled">
+      <source xml:lang="en">Controls whether you can drag and drop a file into a text editor by holding down the `Shift` key (instead of opening the file in an editor).</source>
+    </trans-unit>
+    <trans-unit id="dropIntoEditor.showDropSelector">
+      <source xml:lang="en">Controls if a widget is shown when dropping files into the editor. This widget lets you control how the file is dropped.</source>
+    </trans-unit>
+    <trans-unit id="dropIntoEditor.showDropSelector.afterDrop">
+      <source xml:lang="en">Show the drop selector widget after a file is dropped into the editor.</source>
+    </trans-unit>
+    <trans-unit id="dropIntoEditor.showDropSelector.never">
+      <source xml:lang="en">Never show the drop selector widget. Instead the default drop provider is always used.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoClosingBrackets.beforeWhitespace">
+      <source xml:lang="en">Autoclose brackets only when the cursor is to the left of whitespace.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoClosingBrackets.languageDefined">
+      <source xml:lang="en">Use language configurations to determine when to autoclose brackets.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoClosingComments.beforeWhitespace">
+      <source xml:lang="en">Autoclose comments only when the cursor is to the left of whitespace.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoClosingComments.languageDefined">
+      <source xml:lang="en">Use language configurations to determine when to autoclose comments.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoClosingDelete.auto">
+      <source xml:lang="en">Remove adjacent closing quotes or brackets only if they were automatically inserted.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoClosingOvertype.auto">
+      <source xml:lang="en">Type over closing quotes or brackets only if they were automatically inserted.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoClosingQuotes.beforeWhitespace">
+      <source xml:lang="en">Autoclose quotes only when the cursor is to the left of whitespace.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoClosingQuotes.languageDefined">
+      <source xml:lang="en">Use language configurations to determine when to autoclose quotes.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoIndent.advanced">
+      <source xml:lang="en">The editor will keep the current line's indentation, honor language defined brackets and invoke special onEnterRules defined by languages.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoIndent.brackets">
+      <source xml:lang="en">The editor will keep the current line's indentation and honor language defined brackets.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoIndent.full">
+      <source xml:lang="en">The editor will keep the current line's indentation, honor language defined brackets, invoke special onEnterRules defined by languages, and honor indentationRules defined by languages.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoIndent.keep">
+      <source xml:lang="en">The editor will keep the current line's indentation.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoIndent.none">
+      <source xml:lang="en">The editor will not insert indentation automatically.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoSurround.brackets">
+      <source xml:lang="en">Surround with brackets but not quotes.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoSurround.languageDefined">
+      <source xml:lang="en">Use language configurations to determine when to automatically surround selections.</source>
+    </trans-unit>
+    <trans-unit id="editor.autoSurround.quotes">
+      <source xml:lang="en">Surround with quotes but not brackets.</source>
+    </trans-unit>
+    <trans-unit id="editor.colorDecoratorActivatedOn.click">
+      <source xml:lang="en">Make the color picker appear on click of the color decorator</source>
+    </trans-unit>
+    <trans-unit id="editor.colorDecoratorActivatedOn.clickAndHover">
+      <source xml:lang="en">Make the color picker appear both on click and hover of the color decorator</source>
+    </trans-unit>
+    <trans-unit id="editor.colorDecoratorActivatedOn.hover">
+      <source xml:lang="en">Make the color picker appear on hover of the color decorator</source>
+    </trans-unit>
+    <trans-unit id="editor.defaultColorDecorators.always">
+      <source xml:lang="en">Always show default color decorators.</source>
+    </trans-unit>
+    <trans-unit id="editor.defaultColorDecorators.auto">
+      <source xml:lang="en">Show default color decorators only when no extension provides colors decorators.</source>
+    </trans-unit>
+    <trans-unit id="editor.defaultColorDecorators.never">
+      <source xml:lang="en">Never show default color decorators.</source>
+    </trans-unit>
+    <trans-unit id="editor.editor.gotoLocation.multipleDeclarations">
+      <source xml:lang="en">Controls the behavior the 'Go to Declaration'-command when multiple target locations exist.</source>
+    </trans-unit>
+    <trans-unit id="editor.editor.gotoLocation.multipleDefinitions">
+      <source xml:lang="en">Controls the behavior the 'Go to Definition'-command when multiple target locations exist.</source>
+    </trans-unit>
+    <trans-unit id="editor.editor.gotoLocation.multipleImplemenattions">
+      <source xml:lang="en">Controls the behavior the 'Go to Implementations'-command when multiple target locations exist.</source>
+    </trans-unit>
+    <trans-unit id="editor.editor.gotoLocation.multipleReferences">
+      <source xml:lang="en">Controls the behavior the 'Go to References'-command when multiple target locations exist.</source>
+    </trans-unit>
+    <trans-unit id="editor.editor.gotoLocation.multipleTypeDefinitions">
+      <source xml:lang="en">Controls the behavior the 'Go to Type Definition'-command when multiple target locations exist.</source>
+    </trans-unit>
+    <trans-unit id="editor.find.autoFindInSelection.always">
+      <source xml:lang="en">Always turn on Find in Selection automatically.</source>
+    </trans-unit>
+    <trans-unit id="editor.find.autoFindInSelection.multiline">
+      <source xml:lang="en">Turn on Find in Selection automatically when multiple lines of content are selected.</source>
+    </trans-unit>
+    <trans-unit id="editor.find.autoFindInSelection.never">
+      <source xml:lang="en">Never turn on Find in Selection automatically (default).</source>
+    </trans-unit>
+    <trans-unit id="editor.find.history.never">
+      <source xml:lang="en">Do not store search history from the find widget.</source>
+    </trans-unit>
+    <trans-unit id="editor.find.history.workspace">
+      <source xml:lang="en">Store search history across the active workspace</source>
+    </trans-unit>
+    <trans-unit id="editor.find.replaceHistory.never">
+      <source xml:lang="en">Do not store history from the replace widget.</source>
+    </trans-unit>
+    <trans-unit id="editor.find.replaceHistory.workspace">
+      <source xml:lang="en">Store replace history across the active workspace</source>
+    </trans-unit>
+    <trans-unit id="editor.find.seedSearchStringFromSelection.always">
+      <source xml:lang="en">Always seed search string from the editor selection, including word at cursor position.</source>
+    </trans-unit>
+    <trans-unit id="editor.find.seedSearchStringFromSelection.never">
+      <source xml:lang="en">Never seed search string from the editor selection.</source>
+    </trans-unit>
+    <trans-unit id="editor.find.seedSearchStringFromSelection.selection">
+      <source xml:lang="en">Only seed search string from the editor selection.</source>
+    </trans-unit>
+    <trans-unit id="editor.gotoLocation.multiple.deprecated">
+      <source xml:lang="en">This setting is deprecated, please use separate settings like 'editor.editor.gotoLocation.multipleDefinitions' or 'editor.editor.gotoLocation.multipleImplementations' instead.</source>
+    </trans-unit>
+    <trans-unit id="editor.gotoLocation.multiple.goto">
+      <source xml:lang="en">Go to the primary result and enable Peek-less navigation to others</source>
+    </trans-unit>
+    <trans-unit id="editor.gotoLocation.multiple.gotoAndPeek">
+      <source xml:lang="en">Go to the primary result and show a Peek view</source>
+    </trans-unit>
+    <trans-unit id="editor.gotoLocation.multiple.peek">
+      <source xml:lang="en">Show Peek view of the results (default)</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.bracketPairs">
+      <source xml:lang="en">Controls whether bracket pair guides are enabled or not.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.bracketPairs.active">
+      <source xml:lang="en">Enables bracket pair guides only for the active bracket pair.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.bracketPairs.false">
+      <source xml:lang="en">Disables bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.bracketPairs.true">
+      <source xml:lang="en">Enables bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.bracketPairsHorizontal">
+      <source xml:lang="en">Controls whether horizontal bracket pair guides are enabled or not.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.bracketPairsHorizontal.active">
+      <source xml:lang="en">Enables horizontal guides only for the active bracket pair.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.bracketPairsHorizontal.false">
+      <source xml:lang="en">Disables horizontal bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.bracketPairsHorizontal.true">
+      <source xml:lang="en">Enables horizontal guides as addition to vertical bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.highlightActiveBracketPair">
+      <source xml:lang="en">Controls whether the editor should highlight the active bracket pair.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.highlightActiveIndentation">
+      <source xml:lang="en">Controls whether the editor should highlight the active indent guide.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.highlightActiveIndentation.always">
+      <source xml:lang="en">Highlights the active indent guide even if bracket guides are highlighted.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.highlightActiveIndentation.false">
+      <source xml:lang="en">Do not highlight the active indent guide.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.highlightActiveIndentation.true">
+      <source xml:lang="en">Highlights the active indent guide.</source>
+    </trans-unit>
+    <trans-unit id="editor.guides.indentation">
+      <source xml:lang="en">Controls whether the editor should render indent guides.</source>
+    </trans-unit>
+    <trans-unit id="editor.inlayHints.off">
+      <source xml:lang="en">Inlay hints are disabled</source>
+    </trans-unit>
+    <trans-unit id="editor.inlayHints.offUnlessPressed">
+      <source xml:lang="en">Inlay hints are hidden by default and show when holding {0}</source>
+    </trans-unit>
+    <trans-unit id="editor.inlayHints.on">
+      <source xml:lang="en">Inlay hints are enabled</source>
+    </trans-unit>
+    <trans-unit id="editor.inlayHints.onUnlessPressed">
+      <source xml:lang="en">Inlay hints are showing by default and hide when holding {0}</source>
+    </trans-unit>
+    <trans-unit id="editor.inlineSuggest.edits.renderSideBySide.auto">
+      <source xml:lang="en">Larger suggestions will show side by side if there is enough space, otherwise they will be shown bellow.</source>
+    </trans-unit>
+    <trans-unit id="editor.inlineSuggest.edits.renderSideBySide.never">
+      <source xml:lang="en">Larger suggestions are never shown side by side and will always be shown bellow.</source>
+    </trans-unit>
+    <trans-unit id="editor.lightbulb.enabled.off">
+      <source xml:lang="en">Disable the code action menu.</source>
+    </trans-unit>
+    <trans-unit id="editor.lightbulb.enabled.on">
+      <source xml:lang="en">Show the code action menu when the cursor is on lines with code or on empty lines.</source>
+    </trans-unit>
+    <trans-unit id="editor.lightbulb.enabled.onCode">
+      <source xml:lang="en">Show the code action menu when the cursor is on lines with code.</source>
+    </trans-unit>
+    <trans-unit id="editor.stickyScroll.defaultModel">
+      <source xml:lang="en">Defines the model to use for determining which lines to stick. If the outline model does not exist, it will fall back on the folding provider model which falls back on the indentation model. This order is respected in all three cases.</source>
+    </trans-unit>
+    <trans-unit id="editor.stickyScroll.enabled">
+      <source xml:lang="en">Shows the nested current scopes during the scroll at the top of the editor.</source>
+    </trans-unit>
+    <trans-unit id="editor.stickyScroll.maxLineCount">
+      <source xml:lang="en">Defines the maximum number of sticky lines to show.</source>
+    </trans-unit>
+    <trans-unit id="editor.stickyScroll.scrollWithEditor">
+      <source xml:lang="en">Enable scrolling of Sticky Scroll with the editor's horizontal scrollbar.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.matchOnWordStartOnly">
+      <source xml:lang="en">When enabled IntelliSense filtering requires that the first character matches on a word start. For example, `c` on `Console` or `WebContext` but _not_ on `description`. When disabled IntelliSense will show more results but still sorts them by match quality.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showClasss">
+      <source xml:lang="en">When enabled IntelliSense shows `class`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showColors">
+      <source xml:lang="en">When enabled IntelliSense shows `color`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showConstants">
+      <source xml:lang="en">When enabled IntelliSense shows `constant`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showConstructors">
+      <source xml:lang="en">When enabled IntelliSense shows `constructor`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showCustomcolors">
+      <source xml:lang="en">When enabled IntelliSense shows `customcolor`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showDeprecated">
+      <source xml:lang="en">When enabled IntelliSense shows `deprecated`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showEnumMembers">
+      <source xml:lang="en">When enabled IntelliSense shows `enumMember`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showEnums">
+      <source xml:lang="en">When enabled IntelliSense shows `enum`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showEvents">
+      <source xml:lang="en">When enabled IntelliSense shows `event`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showFields">
+      <source xml:lang="en">When enabled IntelliSense shows `field`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showFiles">
+      <source xml:lang="en">When enabled IntelliSense shows `file`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showFolders">
+      <source xml:lang="en">When enabled IntelliSense shows `folder`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showFunctions">
+      <source xml:lang="en">When enabled IntelliSense shows `function`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showInterfaces">
+      <source xml:lang="en">When enabled IntelliSense shows `interface`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showIssues">
+      <source xml:lang="en">When enabled IntelliSense shows `issues`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showKeywords">
+      <source xml:lang="en">When enabled IntelliSense shows `keyword`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showMethods">
+      <source xml:lang="en">When enabled IntelliSense shows `method`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showModules">
+      <source xml:lang="en">When enabled IntelliSense shows `module`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showOperators">
+      <source xml:lang="en">When enabled IntelliSense shows `operator`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showPropertys">
+      <source xml:lang="en">When enabled IntelliSense shows `property`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showReferences">
+      <source xml:lang="en">When enabled IntelliSense shows `reference`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showSnippets">
+      <source xml:lang="en">When enabled IntelliSense shows `snippet`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showStructs">
+      <source xml:lang="en">When enabled IntelliSense shows `struct`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showTexts">
+      <source xml:lang="en">When enabled IntelliSense shows `text`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showTypeParameters">
+      <source xml:lang="en">When enabled IntelliSense shows `typeParameter`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showUnits">
+      <source xml:lang="en">When enabled IntelliSense shows `unit`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showUsers">
+      <source xml:lang="en">When enabled IntelliSense shows `user`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showValues">
+      <source xml:lang="en">When enabled IntelliSense shows `value`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editor.suggest.showVariables">
+      <source xml:lang="en">When enabled IntelliSense shows `variable`-suggestions.</source>
+    </trans-unit>
+    <trans-unit id="editorViewAccessibleLabel">
+      <source xml:lang="en">Editor content</source>
+    </trans-unit>
+    <trans-unit id="emptySelectionClipboard">
+      <source xml:lang="en">Controls whether copying without a selection copies the current line.</source>
+    </trans-unit>
+    <trans-unit id="enabled">
+      <source xml:lang="en">Enables the Code Action lightbulb in the editor.</source>
+    </trans-unit>
+    <trans-unit id="experimentalEditContextEnabled">
+      <source xml:lang="en">Sets whether the new experimental edit context should be used instead of the text area.</source>
+    </trans-unit>
+    <trans-unit id="experimentalGpuAcceleration">
+      <source xml:lang="en">Controls whether to use the experimental GPU acceleration to render the editor.</source>
+    </trans-unit>
+    <trans-unit id="experimentalGpuAcceleration.off">
+      <source xml:lang="en">Use regular DOM-based rendering.</source>
+    </trans-unit>
+    <trans-unit id="experimentalGpuAcceleration.on">
+      <source xml:lang="en">Use GPU acceleration.</source>
+    </trans-unit>
+    <trans-unit id="experimentalWhitespaceRendering">
+      <source xml:lang="en">Controls whether whitespace is rendered with a new, experimental method.</source>
+    </trans-unit>
+    <trans-unit id="experimentalWhitespaceRendering.font">
+      <source xml:lang="en">Use a new rendering method with font characters.</source>
+    </trans-unit>
+    <trans-unit id="experimentalWhitespaceRendering.off">
+      <source xml:lang="en">Use the stable rendering method.</source>
+    </trans-unit>
+    <trans-unit id="experimentalWhitespaceRendering.svg">
+      <source xml:lang="en">Use a new rendering method with svgs.</source>
+    </trans-unit>
+    <trans-unit id="fastScrollSensitivity">
+      <source xml:lang="en">Scrolling speed multiplier when pressing `Alt`.</source>
+    </trans-unit>
+    <trans-unit id="find.addExtraSpaceOnTop">
+      <source xml:lang="en">Controls whether the Find Widget should add extra lines on top of the editor. When true, you can scroll beyond the first line when the Find Widget is visible.</source>
+    </trans-unit>
+    <trans-unit id="find.autoFindInSelection">
+      <source xml:lang="en">Controls the condition for turning on Find in Selection automatically.</source>
+    </trans-unit>
+    <trans-unit id="find.cursorMoveOnType">
+      <source xml:lang="en">Controls whether the cursor should jump to find matches while typing.</source>
+    </trans-unit>
+    <trans-unit id="find.globalFindClipboard">
+      <source xml:lang="en">Controls whether the Find Widget should read or modify the shared find clipboard on macOS.</source>
+    </trans-unit>
+    <trans-unit id="find.history">
+      <source xml:lang="en">Controls how the find widget history should be stored</source>
+    </trans-unit>
+    <trans-unit id="find.loop">
+      <source xml:lang="en">Controls whether the search automatically restarts from the beginning (or the end) when no further matches can be found.</source>
+    </trans-unit>
+    <trans-unit id="find.replaceHistory">
+      <source xml:lang="en">Controls how the replace widget history should be stored</source>
+    </trans-unit>
+    <trans-unit id="find.seedSearchStringFromSelection">
+      <source xml:lang="en">Controls whether the search string in the Find Widget is seeded from the editor selection.</source>
+    </trans-unit>
+    <trans-unit id="folding">
+      <source xml:lang="en">Controls whether the editor has code folding enabled.</source>
+    </trans-unit>
+    <trans-unit id="foldingHighlight">
+      <source xml:lang="en">Controls whether the editor should highlight folded ranges.</source>
+    </trans-unit>
+    <trans-unit id="foldingImportsByDefault">
+      <source xml:lang="en">Controls whether the editor automatically collapses import ranges.</source>
+    </trans-unit>
+    <trans-unit id="foldingMaximumRegions">
+      <source xml:lang="en">The maximum number of foldable regions. Increasing this value may result in the editor becoming less responsive when the current source has a large number of foldable regions.</source>
+    </trans-unit>
+    <trans-unit id="foldingStrategy">
+      <source xml:lang="en">Controls the strategy for computing folding ranges.</source>
+    </trans-unit>
+    <trans-unit id="foldingStrategy.auto">
+      <source xml:lang="en">Use a language-specific folding strategy if available, else the indentation-based one.</source>
+    </trans-unit>
+    <trans-unit id="foldingStrategy.indentation">
+      <source xml:lang="en">Use the indentation-based folding strategy.</source>
+    </trans-unit>
+    <trans-unit id="fontFamily">
+      <source xml:lang="en">Controls the font family.</source>
+    </trans-unit>
+    <trans-unit id="fontFeatureSettings">
+      <source xml:lang="en">Explicit 'font-feature-settings' CSS property. A boolean can be passed instead if one only needs to turn on/off ligatures.</source>
+    </trans-unit>
+    <trans-unit id="fontLigatures">
+      <source xml:lang="en">Enables/Disables font ligatures ('calt' and 'liga' font features). Change this to a string for fine-grained control of the 'font-feature-settings' CSS property.</source>
+    </trans-unit>
+    <trans-unit id="fontLigaturesGeneral">
+      <source xml:lang="en">Configures font ligatures or font features. Can be either a boolean to enable/disable ligatures or a string for the value of the CSS 'font-feature-settings' property.</source>
+    </trans-unit>
+    <trans-unit id="fontSize">
+      <source xml:lang="en">Controls the font size in pixels.</source>
+    </trans-unit>
+    <trans-unit id="fontVariationSettings">
+      <source xml:lang="en">Explicit 'font-variation-settings' CSS property. A boolean can be passed instead if one only needs to translate font-weight to font-variation-settings.</source>
+    </trans-unit>
+    <trans-unit id="fontVariations">
+      <source xml:lang="en">Enables/Disables the translation from font-weight to font-variation-settings. Change this to a string for fine-grained control of the 'font-variation-settings' CSS property.</source>
+    </trans-unit>
+    <trans-unit id="fontVariationsGeneral">
+      <source xml:lang="en">Configures font variations. Can be either a boolean to enable/disable the translation from font-weight to font-variation-settings or a string for the value of the CSS 'font-variation-settings' property.</source>
+    </trans-unit>
+    <trans-unit id="fontWeight">
+      <source xml:lang="en">Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.</source>
+    </trans-unit>
+    <trans-unit id="fontWeightErrorMessage">
+      <source xml:lang="en">Only "normal" and "bold" keywords or numbers between 1 and 1000 are allowed.</source>
+    </trans-unit>
+    <trans-unit id="formatOnPaste">
+      <source xml:lang="en">Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.</source>
+    </trans-unit>
+    <trans-unit id="formatOnType">
+      <source xml:lang="en">Controls whether the editor should automatically format the line after typing.</source>
+    </trans-unit>
+    <trans-unit id="glyphMargin">
+      <source xml:lang="en">Controls whether the editor should render the vertical glyph margin. Glyph margin is mostly used for debugging.</source>
+    </trans-unit>
+    <trans-unit id="hideCursorInOverviewRuler">
+      <source xml:lang="en">Controls whether the cursor should be hidden in the overview ruler.</source>
+    </trans-unit>
+    <trans-unit id="hover.above">
+      <source xml:lang="en">Prefer showing hovers above the line, if there's space.</source>
+    </trans-unit>
+    <trans-unit id="hover.delay">
+      <source xml:lang="en">Controls the delay in milliseconds after which the hover is shown.</source>
+    </trans-unit>
+    <trans-unit id="hover.enabled">
+      <source xml:lang="en">Controls whether the hover is shown.</source>
+    </trans-unit>
+    <trans-unit id="hover.hidingDelay">
+      <source xml:lang="en">Controls the delay in milliseconds after which the hover is hidden. Requires `editor.hover.sticky` to be enabled.</source>
+    </trans-unit>
+    <trans-unit id="hover.sticky">
+      <source xml:lang="en">Controls whether the hover should remain visible when mouse is moved over it.</source>
+    </trans-unit>
+    <trans-unit id="inlayHints.enable">
+      <source xml:lang="en">Enables the inlay hints in the editor.</source>
+    </trans-unit>
+    <trans-unit id="inlayHints.fontFamily">
+      <source xml:lang="en">Controls font family of inlay hints in the editor. When set to empty, the {0} is used.</source>
+    </trans-unit>
+    <trans-unit id="inlayHints.fontSize">
+      <source xml:lang="en">Controls font size of inlay hints in the editor. As default the {0} is used when the configured value is less than {1} or greater than the editor font size.</source>
+    </trans-unit>
+    <trans-unit id="inlayHints.maximumLength">
+      <source xml:lang="en">Maximum overall length of inlay hints, for a single line, before they get truncated by the editor. Set to `0` to never truncate</source>
+    </trans-unit>
+    <trans-unit id="inlayHints.padding">
+      <source xml:lang="en">Enables the padding around the inlay hints in the editor.</source>
+    </trans-unit>
+    <trans-unit id="inline">
+      <source xml:lang="en">Quick suggestions show as ghost text</source>
+    </trans-unit>
+    <trans-unit id="inlineCompletionsAccessibilityVerbose">
+      <source xml:lang="en">Controls whether the accessibility hint should be provided to screen reader users when an inline completion is shown.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.edits.codeShifting">
+      <source xml:lang="en">Controls whether showing a suggestion will shift the code to make space for the suggestion inline.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.edits.renderSideBySide">
+      <source xml:lang="en">Controls whether larger suggestions can be shown side by side.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.enabled">
+      <source xml:lang="en">Controls whether to automatically show inline suggestions in the editor.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.fontFamily">
+      <source xml:lang="en">Controls the font family of the inline suggestions.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.showToolbar">
+      <source xml:lang="en">Controls when to show the inline suggestion toolbar.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.showToolbar.always">
+      <source xml:lang="en">Show the inline suggestion toolbar whenever an inline suggestion is shown.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.showToolbar.never">
+      <source xml:lang="en">Never show the inline suggestion toolbar.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.showToolbar.onHover">
+      <source xml:lang="en">Show the inline suggestion toolbar when hovering over an inline suggestion.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.suppressSuggestions">
+      <source xml:lang="en">Controls how inline suggestions interact with the suggest widget. If enabled, the suggest widget is not shown automatically when inline suggestions are available.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.syntaxHighlightingEnabled">
+      <source xml:lang="en">Controls whether to show syntax highlighting for inline suggestions in the editor.</source>
+    </trans-unit>
+    <trans-unit id="letterSpacing">
+      <source xml:lang="en">Controls the letter spacing in pixels.</source>
+    </trans-unit>
+    <trans-unit id="lineHeight">
+      <source xml:lang="en">Controls the line height. 
+ - Use 0 to automatically compute the line height from the font size.
+ - Values between 0 and 8 will be used as a multiplier with the font size.
+ - Values greater than or equal to 8 will be used as effective values.</source>
+    </trans-unit>
+    <trans-unit id="lineNumbers">
+      <source xml:lang="en">Controls the display of line numbers.</source>
+    </trans-unit>
+    <trans-unit id="lineNumbers.interval">
+      <source xml:lang="en">Line numbers are rendered every 10 lines.</source>
+    </trans-unit>
+    <trans-unit id="lineNumbers.off">
+      <source xml:lang="en">Line numbers are not rendered.</source>
+    </trans-unit>
+    <trans-unit id="lineNumbers.on">
+      <source xml:lang="en">Line numbers are rendered as absolute number.</source>
+    </trans-unit>
+    <trans-unit id="lineNumbers.relative">
+      <source xml:lang="en">Line numbers are rendered as distance in lines to cursor position.</source>
+    </trans-unit>
+    <trans-unit id="linkedEditing">
+      <source xml:lang="en">Controls whether the editor has linked editing enabled. Depending on the language, related symbols such as HTML tags, are updated while editing.</source>
+    </trans-unit>
+    <trans-unit id="links">
+      <source xml:lang="en">Controls whether the editor should detect links and make them clickable.</source>
+    </trans-unit>
+    <trans-unit id="matchBrackets">
+      <source xml:lang="en">Highlight matching brackets.</source>
+    </trans-unit>
+    <trans-unit id="minimap.autohide">
+      <source xml:lang="en">Controls whether the minimap is hidden automatically.</source>
+    </trans-unit>
+    <trans-unit id="minimap.enabled">
+      <source xml:lang="en">Controls whether the minimap is shown.</source>
+    </trans-unit>
+    <trans-unit id="minimap.maxColumn">
+      <source xml:lang="en">Limit the width of the minimap to render at most a certain number of columns.</source>
+    </trans-unit>
+    <trans-unit id="minimap.renderCharacters">
+      <source xml:lang="en">Render the actual characters on a line as opposed to color blocks.</source>
+    </trans-unit>
+    <trans-unit id="minimap.scale">
+      <source xml:lang="en">Scale of content drawn in the minimap: 1, 2 or 3.</source>
+    </trans-unit>
+    <trans-unit id="minimap.sectionHeaderFontSize">
+      <source xml:lang="en">Controls the font size of section headers in the minimap.</source>
+    </trans-unit>
+    <trans-unit id="minimap.sectionHeaderLetterSpacing">
+      <source xml:lang="en">Controls the amount of space (in pixels) between characters of section header. This helps the readability of the header in small font sizes.</source>
+    </trans-unit>
+    <trans-unit id="minimap.showMarkSectionHeaders">
+      <source xml:lang="en">Controls whether MARK: comments are shown as section headers in the minimap.</source>
+    </trans-unit>
+    <trans-unit id="minimap.showRegionSectionHeaders">
+      <source xml:lang="en">Controls whether named regions are shown as section headers in the minimap.</source>
+    </trans-unit>
+    <trans-unit id="minimap.showSlider">
+      <source xml:lang="en">Controls when the minimap slider is shown.</source>
+    </trans-unit>
+    <trans-unit id="minimap.side">
+      <source xml:lang="en">Controls the side where to render the minimap.</source>
+    </trans-unit>
+    <trans-unit id="minimap.size">
+      <source xml:lang="en">Controls the size of the minimap.</source>
+    </trans-unit>
+    <trans-unit id="minimap.size.fill">
+      <source xml:lang="en">The minimap will stretch or shrink as necessary to fill the height of the editor (no scrolling).</source>
+    </trans-unit>
+    <trans-unit id="minimap.size.fit">
+      <source xml:lang="en">The minimap will shrink as necessary to never be larger than the editor (no scrolling).</source>
+    </trans-unit>
+    <trans-unit id="minimap.size.proportional">
+      <source xml:lang="en">The minimap has the same size as the editor contents (and might scroll).</source>
+    </trans-unit>
+    <trans-unit id="mouseWheelScrollSensitivity">
+      <source xml:lang="en">A multiplier to be used on the `deltaX` and `deltaY` of mouse wheel scroll events.</source>
+    </trans-unit>
+    <trans-unit id="mouseWheelZoom">
+      <source xml:lang="en">Zoom the font of the editor when using mouse wheel and holding `Ctrl`.</source>
+    </trans-unit>
+    <trans-unit id="mouseWheelZoom.mac">
+      <source xml:lang="en">Zoom the font of the editor when using mouse wheel and holding `Cmd`.</source>
+    </trans-unit>
+    <trans-unit id="multiCursorLimit">
+      <source xml:lang="en">Controls the max number of cursors that can be in an active editor at once.</source>
+    </trans-unit>
+    <trans-unit id="multiCursorMergeOverlapping">
+      <source xml:lang="en">Merge multiple cursors when they are overlapping.</source>
+    </trans-unit>
+    <trans-unit id="multiCursorModifier">
+      <source xml:lang="en">The modifier to be used to add multiple cursors with the mouse. The Go to Definition and Open Link mouse gestures will adapt such that they do not conflict with the [multicursor modifier](https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier).</source>
+      <note>- `ctrlCmd` refers to a value the setting can take and should not be localized.
+- `Control` and `Command` refer to the modifier keys Ctrl or Cmd on the keyboard and can be localized.</note>
+    </trans-unit>
+    <trans-unit id="multiCursorModifier.alt">
+      <source xml:lang="en">Maps to `Alt` on Windows and Linux and to `Option` on macOS.</source>
+    </trans-unit>
+    <trans-unit id="multiCursorModifier.ctrlCmd">
+      <source xml:lang="en">Maps to `Control` on Windows and Linux and to `Command` on macOS.</source>
+    </trans-unit>
+    <trans-unit id="multiCursorPaste">
+      <source xml:lang="en">Controls pasting when the line count of the pasted text matches the cursor count.</source>
+    </trans-unit>
+    <trans-unit id="multiCursorPaste.full">
+      <source xml:lang="en">Each cursor pastes the full text.</source>
+    </trans-unit>
+    <trans-unit id="multiCursorPaste.spread">
+      <source xml:lang="en">Each cursor pastes a single line of the text.</source>
+    </trans-unit>
+    <trans-unit id="occurrencesHighlight">
+      <source xml:lang="en">Controls whether occurrences should be highlighted across open files.</source>
+    </trans-unit>
+    <trans-unit id="occurrencesHighlight.multiFile">
+      <source xml:lang="en">Experimental: Highlights occurrences across all valid open files.</source>
+    </trans-unit>
+    <trans-unit id="occurrencesHighlight.off">
+      <source xml:lang="en">Does not highlight occurrences.</source>
+    </trans-unit>
+    <trans-unit id="occurrencesHighlight.singleFile">
+      <source xml:lang="en">Highlights occurrences only in the current file.</source>
+    </trans-unit>
+    <trans-unit id="occurrencesHighlightDelay">
+      <source xml:lang="en">Controls the delay in milliseconds after which occurrences are highlighted.</source>
+    </trans-unit>
+    <trans-unit id="off">
+      <source xml:lang="en">Quick suggestions are disabled</source>
+    </trans-unit>
+    <trans-unit id="on">
+      <source xml:lang="en">Quick suggestions show inside the suggest widget</source>
+    </trans-unit>
+    <trans-unit id="overtypeCursorStyle">
+      <source xml:lang="en">Controls the cursor style in overtype input mode.</source>
+    </trans-unit>
+    <trans-unit id="overtypeOnPaste">
+      <source xml:lang="en">Controls whether pasting should overtype.</source>
+    </trans-unit>
+    <trans-unit id="overviewRulerBorder">
+      <source xml:lang="en">Controls whether a border should be drawn around the overview ruler.</source>
+    </trans-unit>
+    <trans-unit id="padding.bottom">
+      <source xml:lang="en">Controls the amount of space between the bottom edge of the editor and the last line.</source>
+    </trans-unit>
+    <trans-unit id="padding.top">
+      <source xml:lang="en">Controls the amount of space between the top edge of the editor and the first line.</source>
+    </trans-unit>
+    <trans-unit id="parameterHints.cycle">
+      <source xml:lang="en">Controls whether the parameter hints menu cycles or closes when reaching the end of the list.</source>
+    </trans-unit>
+    <trans-unit id="parameterHints.enabled">
+      <source xml:lang="en">Enables a pop-up that shows parameter documentation and type information as you type.</source>
+    </trans-unit>
+    <trans-unit id="pasteAs.enabled">
+      <source xml:lang="en">Controls whether you can paste content in different ways.</source>
+    </trans-unit>
+    <trans-unit id="pasteAs.showPasteSelector">
+      <source xml:lang="en">Controls if a widget is shown when pasting content in to the editor. This widget lets you control how the file is pasted.</source>
+    </trans-unit>
+    <trans-unit id="pasteAs.showPasteSelector.afterPaste">
+      <source xml:lang="en">Show the paste selector widget after content is pasted into the editor.</source>
+    </trans-unit>
+    <trans-unit id="pasteAs.showPasteSelector.never">
+      <source xml:lang="en">Never show the paste selector widget. Instead the default pasting behavior is always used.</source>
+    </trans-unit>
+    <trans-unit id="peekWidgetDefaultFocus">
+      <source xml:lang="en">Controls whether to focus the inline editor or the tree in the peek widget.</source>
+    </trans-unit>
+    <trans-unit id="peekWidgetDefaultFocus.editor">
+      <source xml:lang="en">Focus the editor when opening peek</source>
+    </trans-unit>
+    <trans-unit id="peekWidgetDefaultFocus.tree">
+      <source xml:lang="en">Focus the tree when opening peek</source>
+    </trans-unit>
+    <trans-unit id="quickSuggestions">
+      <source xml:lang="en">Controls whether suggestions should automatically show up while typing. This can be controlled for typing in comments, strings, and other code. Quick suggestion can be configured to show as ghost text or with the suggest widget. Also be aware of the {0}-setting which controls if suggestions are triggered by special characters.</source>
+    </trans-unit>
+    <trans-unit id="quickSuggestions.comments">
+      <source xml:lang="en">Enable quick suggestions inside comments.</source>
+    </trans-unit>
+    <trans-unit id="quickSuggestions.other">
+      <source xml:lang="en">Enable quick suggestions outside of strings and comments.</source>
+    </trans-unit>
+    <trans-unit id="quickSuggestions.strings">
+      <source xml:lang="en">Enable quick suggestions inside strings.</source>
+    </trans-unit>
+    <trans-unit id="quickSuggestionsDelay">
+      <source xml:lang="en">Controls the delay in milliseconds after which quick suggestions will show up.</source>
+    </trans-unit>
+    <trans-unit id="renameOnType">
+      <source xml:lang="en">Controls whether the editor auto renames on type.</source>
+    </trans-unit>
+    <trans-unit id="renameOnTypeDeprecate">
+      <source xml:lang="en">Deprecated, use `editor.linkedEditing` instead.</source>
+    </trans-unit>
+    <trans-unit id="renderControlCharacters">
+      <source xml:lang="en">Controls whether the editor should render control characters.</source>
+    </trans-unit>
+    <trans-unit id="renderFinalNewline">
+      <source xml:lang="en">Render last line number when the file ends with a newline.</source>
+    </trans-unit>
+    <trans-unit id="renderLineHighlight">
+      <source xml:lang="en">Controls how the editor should render the current line highlight.</source>
+    </trans-unit>
+    <trans-unit id="renderLineHighlight.all">
+      <source xml:lang="en">Highlights both the gutter and the current line.</source>
+    </trans-unit>
+    <trans-unit id="renderLineHighlightOnlyWhenFocus">
+      <source xml:lang="en">Controls if the editor should render the current line highlight only when the editor is focused.</source>
+    </trans-unit>
+    <trans-unit id="renderWhitespace">
+      <source xml:lang="en">Controls how the editor should render whitespace characters.</source>
+    </trans-unit>
+    <trans-unit id="renderWhitespace.boundary">
+      <source xml:lang="en">Render whitespace characters except for single spaces between words.</source>
+    </trans-unit>
+    <trans-unit id="renderWhitespace.selection">
+      <source xml:lang="en">Render whitespace characters only on selected text.</source>
+    </trans-unit>
+    <trans-unit id="renderWhitespace.trailing">
+      <source xml:lang="en">Render only trailing whitespace characters.</source>
+    </trans-unit>
+    <trans-unit id="roundedSelection">
+      <source xml:lang="en">Controls whether selections should have rounded corners.</source>
+    </trans-unit>
+    <trans-unit id="rulers">
+      <source xml:lang="en">Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty.</source>
+    </trans-unit>
+    <trans-unit id="rulers.color">
+      <source xml:lang="en">Color of this editor ruler.</source>
+    </trans-unit>
+    <trans-unit id="rulers.size">
+      <source xml:lang="en">Number of monospace characters at which this editor ruler will render.</source>
+    </trans-unit>
+    <trans-unit id="screenReaderAnnounceInlineSuggestion">
+      <source xml:lang="en">Control whether inline suggestions are announced by a screen reader.</source>
+    </trans-unit>
+    <trans-unit id="scrollBeyondLastColumn">
+      <source xml:lang="en">Controls the number of extra characters beyond which the editor will scroll horizontally.</source>
+    </trans-unit>
+    <trans-unit id="scrollBeyondLastLine">
+      <source xml:lang="en">Controls whether the editor will scroll beyond the last line.</source>
+    </trans-unit>
+    <trans-unit id="scrollPredominantAxis">
+      <source xml:lang="en">Scroll only along the predominant axis when scrolling both vertically and horizontally at the same time. Prevents horizontal drift when scrolling vertically on a trackpad.</source>
+    </trans-unit>
+    <trans-unit id="scrollbar.horizontal">
+      <source xml:lang="en">Controls the visibility of the horizontal scrollbar.</source>
+    </trans-unit>
+    <trans-unit id="scrollbar.horizontal.auto">
+      <source xml:lang="en">The horizontal scrollbar will be visible only when necessary.</source>
+    </trans-unit>
+    <trans-unit id="scrollbar.horizontal.fit">
+      <source xml:lang="en">The horizontal scrollbar will always be hidden.</source>
+    </trans-unit>
+    <trans-unit id="scrollbar.horizontal.visible">
+      <source xml:lang="en">The horizontal scrollbar will always be visible.</source>
+    </trans-unit>
+    <trans-unit id="scrollbar.horizontalScrollbarSize">
+      <source xml:lang="en">The height of the horizontal scrollbar.</source>
+    </trans-unit>
+    <trans-unit id="scrollbar.ignoreHorizontalScrollbarInContentHeight">
+      <source xml:lang="en">When set, the horizontal scrollbar will not increase the size of the editor's content.</source>
+    </trans-unit>
+    <trans-unit id="scrollbar.scrollByPage">
+      <source xml:lang="en">Controls whether clicks scroll by page or jump to click position.</source>
+    </trans-unit>
+    <trans-unit id="scrollbar.vertical">
+      <source xml:lang="en">Controls the visibility of the vertical scrollbar.</source>
+    </trans-unit>
+    <trans-unit id="scrollbar.vertical.auto">
+      <source xml:lang="en">The vertical scrollbar will be visible only when necessary.</source>
+    </trans-unit>
+    <trans-unit id="scrollbar.vertical.fit">
+      <source xml:lang="en">The vertical scrollbar will always be hidden.</source>
+    </trans-unit>
+    <trans-unit id="scrollbar.vertical.visible">
+      <source xml:lang="en">The vertical scrollbar will always be visible.</source>
+    </trans-unit>
+    <trans-unit id="scrollbar.verticalScrollbarSize">
+      <source xml:lang="en">The width of the vertical scrollbar.</source>
+    </trans-unit>
+    <trans-unit id="selectLeadingAndTrailingWhitespace">
+      <source xml:lang="en">Whether leading and trailing whitespace should always be selected.</source>
+    </trans-unit>
+    <trans-unit id="selectSubwords">
+      <source xml:lang="en">Whether subwords (like 'foo' in 'fooBar' or 'foo_bar') should be selected.</source>
+    </trans-unit>
+    <trans-unit id="selectionClipboard">
+      <source xml:lang="en">Controls whether the Linux primary clipboard should be supported.</source>
+    </trans-unit>
+    <trans-unit id="selectionHighlight">
+      <source xml:lang="en">Controls whether the editor should highlight matches similar to the selection.</source>
+    </trans-unit>
+    <trans-unit id="showDeprecated">
+      <source xml:lang="en">Controls strikethrough deprecated variables.</source>
+    </trans-unit>
+    <trans-unit id="showFoldingControls">
+      <source xml:lang="en">Controls when the folding controls on the gutter are shown.</source>
+    </trans-unit>
+    <trans-unit id="showFoldingControls.always">
+      <source xml:lang="en">Always show the folding controls.</source>
+    </trans-unit>
+    <trans-unit id="showFoldingControls.mouseover">
+      <source xml:lang="en">Only show the folding controls when the mouse is over the gutter.</source>
+    </trans-unit>
+    <trans-unit id="showFoldingControls.never">
+      <source xml:lang="en">Never show the folding controls and reduce the gutter size.</source>
+    </trans-unit>
+    <trans-unit id="showUnused">
+      <source xml:lang="en">Controls fading out of unused code.</source>
+    </trans-unit>
+    <trans-unit id="smoothScrolling">
+      <source xml:lang="en">Controls whether the editor will scroll using an animation.</source>
+    </trans-unit>
+    <trans-unit id="snippetSuggestions">
+      <source xml:lang="en">Controls whether snippets are shown with other suggestions and how they are sorted.</source>
+    </trans-unit>
+    <trans-unit id="snippetSuggestions.bottom">
+      <source xml:lang="en">Show snippet suggestions below other suggestions.</source>
+    </trans-unit>
+    <trans-unit id="snippetSuggestions.inline">
+      <source xml:lang="en">Show snippets suggestions with other suggestions.</source>
+    </trans-unit>
+    <trans-unit id="snippetSuggestions.none">
+      <source xml:lang="en">Do not show snippet suggestions.</source>
+    </trans-unit>
+    <trans-unit id="snippetSuggestions.top">
+      <source xml:lang="en">Show snippet suggestions on top of other suggestions.</source>
+    </trans-unit>
+    <trans-unit id="stickyTabStops">
+      <source xml:lang="en">Emulate selection behavior of tab characters when using spaces for indentation. Selection will stick to tab stops.</source>
+    </trans-unit>
+    <trans-unit id="suggest.filterGraceful">
+      <source xml:lang="en">Controls whether filtering and sorting suggestions accounts for small typos.</source>
+    </trans-unit>
+    <trans-unit id="suggest.insertMode">
+      <source xml:lang="en">Controls whether words are overwritten when accepting completions. Note that this depends on extensions opting into this feature.</source>
+    </trans-unit>
+    <trans-unit id="suggest.insertMode.always">
+      <source xml:lang="en">Always select a suggestion when automatically triggering IntelliSense.</source>
+    </trans-unit>
+    <trans-unit id="suggest.insertMode.insert">
+      <source xml:lang="en">Insert suggestion without overwriting text right of the cursor.</source>
+    </trans-unit>
+    <trans-unit id="suggest.insertMode.never">
+      <source xml:lang="en">Never select a suggestion when automatically triggering IntelliSense.</source>
+    </trans-unit>
+    <trans-unit id="suggest.insertMode.replace">
+      <source xml:lang="en">Insert suggestion and overwrite text right of the cursor.</source>
+    </trans-unit>
+    <trans-unit id="suggest.insertMode.whenQuickSuggestion">
+      <source xml:lang="en">Select a suggestion only when triggering IntelliSense as you type.</source>
+    </trans-unit>
+    <trans-unit id="suggest.insertMode.whenTriggerCharacter">
+      <source xml:lang="en">Select a suggestion only when triggering IntelliSense from a trigger character.</source>
+    </trans-unit>
+    <trans-unit id="suggest.localityBonus">
+      <source xml:lang="en">Controls whether sorting favors words that appear close to the cursor.</source>
+    </trans-unit>
+    <trans-unit id="suggest.maxVisibleSuggestions.dep">
+      <source xml:lang="en">This setting is deprecated. The suggest widget can now be resized.</source>
+    </trans-unit>
+    <trans-unit id="suggest.preview">
+      <source xml:lang="en">Controls whether to preview the suggestion outcome in the editor.</source>
+    </trans-unit>
+    <trans-unit id="suggest.selectionMode">
+      <source xml:lang="en">Controls whether a suggestion is selected when the widget shows. Note that this only applies to automatically triggered suggestions ({0} and {1}) and that a suggestion is always selected when explicitly invoked, e.g via `Ctrl+Space`.</source>
+    </trans-unit>
+    <trans-unit id="suggest.shareSuggestSelections">
+      <source xml:lang="en">Controls whether remembered suggestion selections are shared between multiple workspaces and windows (needs `#editor.suggestSelection#`).</source>
+    </trans-unit>
+    <trans-unit id="suggest.showIcons">
+      <source xml:lang="en">Controls whether to show or hide icons in suggestions.</source>
+    </trans-unit>
+    <trans-unit id="suggest.showInlineDetails">
+      <source xml:lang="en">Controls whether suggest details show inline with the label or only in the details widget.</source>
+    </trans-unit>
+    <trans-unit id="suggest.showStatusBar">
+      <source xml:lang="en">Controls the visibility of the status bar at the bottom of the suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="suggest.snippetsPreventQuickSuggestions">
+      <source xml:lang="en">Controls whether an active snippet prevents quick suggestions.</source>
+    </trans-unit>
+    <trans-unit id="suggestFontSize">
+      <source xml:lang="en">Font size for the suggest widget. When set to {0}, the value of {1} is used.</source>
+    </trans-unit>
+    <trans-unit id="suggestLineHeight">
+      <source xml:lang="en">Line height for the suggest widget. When set to {0}, the value of {1} is used. The minimum value is 8.</source>
+    </trans-unit>
+    <trans-unit id="suggestOnTriggerCharacters">
+      <source xml:lang="en">Controls whether suggestions should automatically show up when typing trigger characters.</source>
+    </trans-unit>
+    <trans-unit id="suggestSelection">
+      <source xml:lang="en">Controls how suggestions are pre-selected when showing the suggest list.</source>
+    </trans-unit>
+    <trans-unit id="suggestSelection.first">
+      <source xml:lang="en">Always select the first suggestion.</source>
+    </trans-unit>
+    <trans-unit id="suggestSelection.recentlyUsed">
+      <source xml:lang="en">Select recent suggestions unless further typing selects one, e.g. `console.| -&gt; console.log` because `log` has been completed recently.</source>
+    </trans-unit>
+    <trans-unit id="suggestSelection.recentlyUsedByPrefix">
+      <source xml:lang="en">Select suggestions based on previous prefixes that have completed those suggestions, e.g. `co -&gt; console` and `con -&gt; const`.</source>
+    </trans-unit>
+    <trans-unit id="tabCompletion">
+      <source xml:lang="en">Enables tab completions.</source>
+    </trans-unit>
+    <trans-unit id="tabCompletion.off">
+      <source xml:lang="en">Disable tab completions.</source>
+    </trans-unit>
+    <trans-unit id="tabCompletion.on">
+      <source xml:lang="en">Tab complete will insert the best matching suggestion when pressing tab.</source>
+    </trans-unit>
+    <trans-unit id="tabCompletion.onlySnippets">
+      <source xml:lang="en">Tab complete snippets when their prefix match. Works best when 'quickSuggestions' aren't enabled.</source>
+    </trans-unit>
+    <trans-unit id="tabFocusMode">
+      <source xml:lang="en">Controls whether the editor receives tabs or defers them to the workbench for navigation.</source>
+    </trans-unit>
+    <trans-unit id="unfoldOnClickAfterEndOfLine">
+      <source xml:lang="en">Controls whether clicking on the empty content after a folded line will unfold the line.</source>
+    </trans-unit>
+    <trans-unit id="unicodeHighlight.allowedCharacters">
+      <source xml:lang="en">Defines allowed characters that are not being highlighted.</source>
+    </trans-unit>
+    <trans-unit id="unicodeHighlight.allowedLocales">
+      <source xml:lang="en">Unicode characters that are common in allowed locales are not being highlighted.</source>
+    </trans-unit>
+    <trans-unit id="unicodeHighlight.ambiguousCharacters">
+      <source xml:lang="en">Controls whether characters are highlighted that can be confused with basic ASCII characters, except those that are common in the current user locale.</source>
+    </trans-unit>
+    <trans-unit id="unicodeHighlight.includeComments">
+      <source xml:lang="en">Controls whether characters in comments should also be subject to Unicode highlighting.</source>
+    </trans-unit>
+    <trans-unit id="unicodeHighlight.includeStrings">
+      <source xml:lang="en">Controls whether characters in strings should also be subject to Unicode highlighting.</source>
+    </trans-unit>
+    <trans-unit id="unicodeHighlight.invisibleCharacters">
+      <source xml:lang="en">Controls whether characters that just reserve space or have no width at all are highlighted.</source>
+    </trans-unit>
+    <trans-unit id="unicodeHighlight.nonBasicASCII">
+      <source xml:lang="en">Controls whether all non-basic ASCII characters are highlighted. Only characters between U+0020 and U+007E, tab, line-feed and carriage-return are considered basic ASCII.</source>
+    </trans-unit>
+    <trans-unit id="unusualLineTerminators">
+      <source xml:lang="en">Remove unusual line terminators that might cause problems.</source>
+    </trans-unit>
+    <trans-unit id="unusualLineTerminators.auto">
+      <source xml:lang="en">Unusual line terminators are automatically removed.</source>
+    </trans-unit>
+    <trans-unit id="unusualLineTerminators.off">
+      <source xml:lang="en">Unusual line terminators are ignored.</source>
+    </trans-unit>
+    <trans-unit id="unusualLineTerminators.prompt">
+      <source xml:lang="en">Unusual line terminators prompt to be removed.</source>
+    </trans-unit>
+    <trans-unit id="useTabStops">
+      <source xml:lang="en">Spaces and tabs are inserted and deleted in alignment with tab stops.</source>
+    </trans-unit>
+    <trans-unit id="wordBreak">
+      <source xml:lang="en">Controls the word break rules used for Chinese/Japanese/Korean (CJK) text.</source>
+    </trans-unit>
+    <trans-unit id="wordBreak.keepAll">
+      <source xml:lang="en">Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior is the same as for normal.</source>
+    </trans-unit>
+    <trans-unit id="wordBreak.normal">
+      <source xml:lang="en">Use the default line break rule.</source>
+    </trans-unit>
+    <trans-unit id="wordSegmenterLocales">
+      <source xml:lang="en">Locales to be used for word segmentation when doing word related navigations or operations. Specify the BCP 47 language tag of the word you wish to recognize (e.g., ja, zh-CN, zh-Hant-TW, etc.).</source>
+    </trans-unit>
+    <trans-unit id="wordSeparators">
+      <source xml:lang="en">Characters that will be used as word separators when doing word related navigations or operations.</source>
+    </trans-unit>
+    <trans-unit id="wordWrap">
+      <source xml:lang="en">Controls how lines should wrap.</source>
+      <note>- 'off', 'on', 'wordWrapColumn' and 'bounded' refer to values the setting can take and should not be localized.
+- `editor.wordWrapColumn` refers to a different setting and should not be localized.</note>
+    </trans-unit>
+    <trans-unit id="wordWrap.bounded">
+      <source xml:lang="en">Lines will wrap at the minimum of viewport and `#editor.wordWrapColumn#`.</source>
+      <note>- viewport means the edge of the visible window size.
+- `editor.wordWrapColumn` refers to a different setting and should not be localized.</note>
+    </trans-unit>
+    <trans-unit id="wordWrap.off">
+      <source xml:lang="en">Lines will never wrap.</source>
+    </trans-unit>
+    <trans-unit id="wordWrap.on">
+      <source xml:lang="en">Lines will wrap at the viewport width.</source>
+    </trans-unit>
+    <trans-unit id="wordWrap.wordWrapColumn">
+      <source xml:lang="en">Lines will wrap at `#editor.wordWrapColumn#`.</source>
+      <note>- `editor.wordWrapColumn` refers to a different setting and should not be localized.</note>
+    </trans-unit>
+    <trans-unit id="wordWrapColumn">
+      <source xml:lang="en">Controls the wrapping column of the editor when `#editor.wordWrap#` is `wordWrapColumn` or `bounded`.</source>
+      <note>- `editor.wordWrap` refers to a different setting and should not be localized.
+- 'wordWrapColumn' and 'bounded' refer to values the different setting can take and should not be localized.</note>
+    </trans-unit>
+    <trans-unit id="wrappingIndent">
+      <source xml:lang="en">Controls the indentation of wrapped lines.</source>
+    </trans-unit>
+    <trans-unit id="wrappingIndent.deepIndent">
+      <source xml:lang="en">Wrapped lines get +2 indentation toward the parent.</source>
+    </trans-unit>
+    <trans-unit id="wrappingIndent.indent">
+      <source xml:lang="en">Wrapped lines get +1 indentation toward the parent.</source>
+    </trans-unit>
+    <trans-unit id="wrappingIndent.none">
+      <source xml:lang="en">No indentation. Wrapped lines begin at column 1.</source>
+    </trans-unit>
+    <trans-unit id="wrappingIndent.same">
+      <source xml:lang="en">Wrapped lines get the same indentation as the parent.</source>
+    </trans-unit>
+    <trans-unit id="wrappingStrategy">
+      <source xml:lang="en">Controls the algorithm that computes wrapping points. Note that when in accessibility mode, advanced will be used for the best experience.</source>
+    </trans-unit>
+    <trans-unit id="wrappingStrategy.advanced">
+      <source xml:lang="en">Delegates wrapping points computation to the browser. This is a slow algorithm, that might cause freezes for large files, but it works correctly in all cases.</source>
+    </trans-unit>
+    <trans-unit id="wrappingStrategy.simple">
+      <source xml:lang="en">Assumes that all characters are of the same width. This is a fast algorithm that works correctly for monospace fonts and certain scripts (like Latin characters) where glyphs are of equal width.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/common/core/editorColorRegistry" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="caret">
+      <source xml:lang="en">Color of the editor cursor.</source>
+    </trans-unit>
+    <trans-unit id="deprecatedEditorActiveIndentGuide">
+      <source xml:lang="en">'editorIndentGuide.activeBackground' is deprecated. Use 'editorIndentGuide.activeBackground1' instead.</source>
+    </trans-unit>
+    <trans-unit id="deprecatedEditorActiveLineNumber">
+      <source xml:lang="en">Id is deprecated. Use 'editorLineNumber.activeForeground' instead.</source>
+    </trans-unit>
+    <trans-unit id="deprecatedEditorIndentGuides">
+      <source xml:lang="en">'editorIndentGuide.background' is deprecated. Use 'editorIndentGuide.background1' instead.</source>
+    </trans-unit>
+    <trans-unit id="editorActiveIndentGuide">
+      <source xml:lang="en">Color of the active editor indentation guides.</source>
+    </trans-unit>
+    <trans-unit id="editorActiveIndentGuide1">
+      <source xml:lang="en">Color of the active editor indentation guides (1).</source>
+    </trans-unit>
+    <trans-unit id="editorActiveIndentGuide2">
+      <source xml:lang="en">Color of the active editor indentation guides (2).</source>
+    </trans-unit>
+    <trans-unit id="editorActiveIndentGuide3">
+      <source xml:lang="en">Color of the active editor indentation guides (3).</source>
+    </trans-unit>
+    <trans-unit id="editorActiveIndentGuide4">
+      <source xml:lang="en">Color of the active editor indentation guides (4).</source>
+    </trans-unit>
+    <trans-unit id="editorActiveIndentGuide5">
+      <source xml:lang="en">Color of the active editor indentation guides (5).</source>
+    </trans-unit>
+    <trans-unit id="editorActiveIndentGuide6">
+      <source xml:lang="en">Color of the active editor indentation guides (6).</source>
+    </trans-unit>
+    <trans-unit id="editorActiveLineNumber">
+      <source xml:lang="en">Color of editor active line number</source>
+    </trans-unit>
+    <trans-unit id="editorBracketHighlightForeground1">
+      <source xml:lang="en">Foreground color of brackets (1). Requires enabling bracket pair colorization.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketHighlightForeground2">
+      <source xml:lang="en">Foreground color of brackets (2). Requires enabling bracket pair colorization.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketHighlightForeground3">
+      <source xml:lang="en">Foreground color of brackets (3). Requires enabling bracket pair colorization.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketHighlightForeground4">
+      <source xml:lang="en">Foreground color of brackets (4). Requires enabling bracket pair colorization.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketHighlightForeground5">
+      <source xml:lang="en">Foreground color of brackets (5). Requires enabling bracket pair colorization.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketHighlightForeground6">
+      <source xml:lang="en">Foreground color of brackets (6). Requires enabling bracket pair colorization.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketHighlightUnexpectedBracketForeground">
+      <source xml:lang="en">Foreground color of unexpected brackets.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketMatchBackground">
+      <source xml:lang="en">Background color behind matching brackets</source>
+    </trans-unit>
+    <trans-unit id="editorBracketMatchBorder">
+      <source xml:lang="en">Color for matching brackets boxes</source>
+    </trans-unit>
+    <trans-unit id="editorBracketPairGuide.activeBackground1">
+      <source xml:lang="en">Background color of active bracket pair guides (1). Requires enabling bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketPairGuide.activeBackground2">
+      <source xml:lang="en">Background color of active bracket pair guides (2). Requires enabling bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketPairGuide.activeBackground3">
+      <source xml:lang="en">Background color of active bracket pair guides (3). Requires enabling bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketPairGuide.activeBackground4">
+      <source xml:lang="en">Background color of active bracket pair guides (4). Requires enabling bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketPairGuide.activeBackground5">
+      <source xml:lang="en">Background color of active bracket pair guides (5). Requires enabling bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketPairGuide.activeBackground6">
+      <source xml:lang="en">Background color of active bracket pair guides (6). Requires enabling bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketPairGuide.background1">
+      <source xml:lang="en">Background color of inactive bracket pair guides (1). Requires enabling bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketPairGuide.background2">
+      <source xml:lang="en">Background color of inactive bracket pair guides (2). Requires enabling bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketPairGuide.background3">
+      <source xml:lang="en">Background color of inactive bracket pair guides (3). Requires enabling bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketPairGuide.background4">
+      <source xml:lang="en">Background color of inactive bracket pair guides (4). Requires enabling bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketPairGuide.background5">
+      <source xml:lang="en">Background color of inactive bracket pair guides (5). Requires enabling bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editorBracketPairGuide.background6">
+      <source xml:lang="en">Background color of inactive bracket pair guides (6). Requires enabling bracket pair guides.</source>
+    </trans-unit>
+    <trans-unit id="editorCodeLensForeground">
+      <source xml:lang="en">Foreground color of editor CodeLens</source>
+    </trans-unit>
+    <trans-unit id="editorCursorBackground">
+      <source xml:lang="en">The background color of the editor cursor. Allows customizing the color of a character overlapped by a block cursor.</source>
+    </trans-unit>
+    <trans-unit id="editorDimmedLineNumber">
+      <source xml:lang="en">Color of the final editor line when editor.renderFinalNewline is set to dimmed.</source>
+    </trans-unit>
+    <trans-unit id="editorGhostTextBackground">
+      <source xml:lang="en">Background color of the ghost text in the editor.</source>
+    </trans-unit>
+    <trans-unit id="editorGhostTextBorder">
+      <source xml:lang="en">Border color of ghost text in the editor.</source>
+    </trans-unit>
+    <trans-unit id="editorGhostTextForeground">
+      <source xml:lang="en">Foreground color of the ghost text in the editor.</source>
+    </trans-unit>
+    <trans-unit id="editorGutter">
+      <source xml:lang="en">Background color of the editor gutter. The gutter contains the glyph margins and the line numbers.</source>
+    </trans-unit>
+    <trans-unit id="editorIndentGuides">
+      <source xml:lang="en">Color of the editor indentation guides.</source>
+    </trans-unit>
+    <trans-unit id="editorIndentGuides1">
+      <source xml:lang="en">Color of the editor indentation guides (1).</source>
+    </trans-unit>
+    <trans-unit id="editorIndentGuides2">
+      <source xml:lang="en">Color of the editor indentation guides (2).</source>
+    </trans-unit>
+    <trans-unit id="editorIndentGuides3">
+      <source xml:lang="en">Color of the editor indentation guides (3).</source>
+    </trans-unit>
+    <trans-unit id="editorIndentGuides4">
+      <source xml:lang="en">Color of the editor indentation guides (4).</source>
+    </trans-unit>
+    <trans-unit id="editorIndentGuides5">
+      <source xml:lang="en">Color of the editor indentation guides (5).</source>
+    </trans-unit>
+    <trans-unit id="editorIndentGuides6">
+      <source xml:lang="en">Color of the editor indentation guides (6).</source>
+    </trans-unit>
+    <trans-unit id="editorLineNumbers">
+      <source xml:lang="en">Color of editor line numbers.</source>
+    </trans-unit>
+    <trans-unit id="editorMultiCursorPrimaryBackground">
+      <source xml:lang="en">The background color of the primary editor cursor when multiple cursors are present. Allows customizing the color of a character overlapped by a block cursor.</source>
+    </trans-unit>
+    <trans-unit id="editorMultiCursorPrimaryForeground">
+      <source xml:lang="en">Color of the primary editor cursor when multiple cursors are present.</source>
+    </trans-unit>
+    <trans-unit id="editorMultiCursorSecondaryBackground">
+      <source xml:lang="en">The background color of secondary editor cursors when multiple cursors are present. Allows customizing the color of a character overlapped by a block cursor.</source>
+    </trans-unit>
+    <trans-unit id="editorMultiCursorSecondaryForeground">
+      <source xml:lang="en">Color of secondary editor cursors when multiple cursors are present.</source>
+    </trans-unit>
+    <trans-unit id="editorOverviewRulerBackground">
+      <source xml:lang="en">Background color of the editor overview ruler.</source>
+    </trans-unit>
+    <trans-unit id="editorOverviewRulerBorder">
+      <source xml:lang="en">Color of the overview ruler border.</source>
+    </trans-unit>
+    <trans-unit id="editorRuler">
+      <source xml:lang="en">Color of the editor rulers.</source>
+    </trans-unit>
+    <trans-unit id="editorUnicodeHighlight.background">
+      <source xml:lang="en">Background color used to highlight unicode characters.</source>
+    </trans-unit>
+    <trans-unit id="editorUnicodeHighlight.border">
+      <source xml:lang="en">Border color used to highlight unicode characters.</source>
+    </trans-unit>
+    <trans-unit id="editorWhitespaces">
+      <source xml:lang="en">Color of whitespace characters in the editor.</source>
+    </trans-unit>
+    <trans-unit id="lineHighlight">
+      <source xml:lang="en">Background color for the highlight of line at the cursor position.</source>
+    </trans-unit>
+    <trans-unit id="lineHighlightBorderBox">
+      <source xml:lang="en">Background color for the border around the line at the cursor position.</source>
+    </trans-unit>
+    <trans-unit id="overviewRuleError">
+      <source xml:lang="en">Overview ruler marker color for errors.</source>
+    </trans-unit>
+    <trans-unit id="overviewRuleInfo">
+      <source xml:lang="en">Overview ruler marker color for infos.</source>
+    </trans-unit>
+    <trans-unit id="overviewRuleWarning">
+      <source xml:lang="en">Overview ruler marker color for warnings.</source>
+    </trans-unit>
+    <trans-unit id="overviewRulerRangeHighlight">
+      <source xml:lang="en">Overview ruler marker color for range highlights. The color must not be opaque so as not to hide underlying decorations.</source>
+    </trans-unit>
+    <trans-unit id="rangeHighlight">
+      <source xml:lang="en">Background color of highlighted ranges, like by quick open and find features. The color must not be opaque so as not to hide underlying decorations.</source>
+    </trans-unit>
+    <trans-unit id="rangeHighlightBorder">
+      <source xml:lang="en">Background color of the border around highlighted ranges.</source>
+    </trans-unit>
+    <trans-unit id="symbolHighlight">
+      <source xml:lang="en">Background color of highlighted symbol, like for go to definition or go next/previous symbol. The color must not be opaque so as not to hide underlying decorations.</source>
+    </trans-unit>
+    <trans-unit id="symbolHighlightBorder">
+      <source xml:lang="en">Background color of the border around highlighted symbols.</source>
+    </trans-unit>
+    <trans-unit id="unnecessaryCodeBorder">
+      <source xml:lang="en">Border color of unnecessary (unused) source code in the editor.</source>
+    </trans-unit>
+    <trans-unit id="unnecessaryCodeOpacity">
+      <source xml:lang="en">Opacity of unnecessary (unused) source code in the editor. For example, "#000000c0" will render the code with 75% opacity. For high contrast themes, use the  'editorUnnecessaryCode.border' theme color to underline unnecessary code instead of fading it out.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/common/editorContextKeys" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accessibleDiffViewerVisible">
+      <source xml:lang="en">Whether the accessible diff viewer is visible</source>
+    </trans-unit>
+    <trans-unit id="comparingMovedCode">
+      <source xml:lang="en">Whether a moved code block is selected for comparison</source>
+    </trans-unit>
+    <trans-unit id="diffEditorHasChanges">
+      <source xml:lang="en">Whether the diff editor has changes</source>
+    </trans-unit>
+    <trans-unit id="diffEditorInlineMode">
+      <source xml:lang="en">Whether inline mode is active</source>
+    </trans-unit>
+    <trans-unit id="diffEditorModifiedUri">
+      <source xml:lang="en">The uri of the modified document</source>
+    </trans-unit>
+    <trans-unit id="diffEditorModifiedWritable">
+      <source xml:lang="en">Whether modified is writable in the diff editor</source>
+    </trans-unit>
+    <trans-unit id="diffEditorOriginalUri">
+      <source xml:lang="en">The uri of the original document</source>
+    </trans-unit>
+    <trans-unit id="diffEditorOriginalWritable">
+      <source xml:lang="en">Whether modified is writable in the diff editor</source>
+    </trans-unit>
+    <trans-unit id="diffEditorRenderSideBySideInlineBreakpointReached">
+      <source xml:lang="en">Whether the diff editor render side by side inline breakpoint is reached</source>
+    </trans-unit>
+    <trans-unit id="editorColumnSelection">
+      <source xml:lang="en">Whether `editor.columnSelection` is enabled</source>
+    </trans-unit>
+    <trans-unit id="editorFocus">
+      <source xml:lang="en">Whether the editor or an editor widget has focus (e.g. focus is in the find widget)</source>
+    </trans-unit>
+    <trans-unit id="editorHasCodeActionsProvider">
+      <source xml:lang="en">Whether the editor has a code actions provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasCodeLensProvider">
+      <source xml:lang="en">Whether the editor has a code lens provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasCompletionItemProvider">
+      <source xml:lang="en">Whether the editor has a completion item provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasDeclarationProvider">
+      <source xml:lang="en">Whether the editor has a declaration provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasDefinitionProvider">
+      <source xml:lang="en">Whether the editor has a definition provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasDocumentFormattingProvider">
+      <source xml:lang="en">Whether the editor has a document formatting provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasDocumentHighlightProvider">
+      <source xml:lang="en">Whether the editor has a document highlight provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasDocumentSelectionFormattingProvider">
+      <source xml:lang="en">Whether the editor has a document selection formatting provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasDocumentSymbolProvider">
+      <source xml:lang="en">Whether the editor has a document symbol provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasHoverProvider">
+      <source xml:lang="en">Whether the editor has a hover provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasImplementationProvider">
+      <source xml:lang="en">Whether the editor has an implementation provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasInlayHintsProvider">
+      <source xml:lang="en">Whether the editor has an inline hints provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasMultipleDocumentFormattingProvider">
+      <source xml:lang="en">Whether the editor has multiple document formatting providers</source>
+    </trans-unit>
+    <trans-unit id="editorHasMultipleDocumentSelectionFormattingProvider">
+      <source xml:lang="en">Whether the editor has multiple document selection formatting providers</source>
+    </trans-unit>
+    <trans-unit id="editorHasMultipleSelections">
+      <source xml:lang="en">Whether the editor has multiple selections</source>
+    </trans-unit>
+    <trans-unit id="editorHasReferenceProvider">
+      <source xml:lang="en">Whether the editor has a reference provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasRenameProvider">
+      <source xml:lang="en">Whether the editor has a rename provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasSelection">
+      <source xml:lang="en">Whether the editor has text selected</source>
+    </trans-unit>
+    <trans-unit id="editorHasSignatureHelpProvider">
+      <source xml:lang="en">Whether the editor has a signature help provider</source>
+    </trans-unit>
+    <trans-unit id="editorHasTypeDefinitionProvider">
+      <source xml:lang="en">Whether the editor has a type definition provider</source>
+    </trans-unit>
+    <trans-unit id="editorHoverFocused">
+      <source xml:lang="en">Whether the editor hover is focused</source>
+    </trans-unit>
+    <trans-unit id="editorHoverVisible">
+      <source xml:lang="en">Whether the editor hover is visible</source>
+    </trans-unit>
+    <trans-unit id="editorLangId">
+      <source xml:lang="en">The language identifier of the editor</source>
+    </trans-unit>
+    <trans-unit id="editorReadonly">
+      <source xml:lang="en">Whether the editor is read-only</source>
+    </trans-unit>
+    <trans-unit id="editorTabMovesFocus">
+      <source xml:lang="en">Whether `Tab` will move focus out of the editor</source>
+    </trans-unit>
+    <trans-unit id="editorTextFocus">
+      <source xml:lang="en">Whether the editor text has focus (cursor is blinking)</source>
+    </trans-unit>
+    <trans-unit id="inCompositeEditor">
+      <source xml:lang="en">Whether the editor is part of a larger editor (e.g. notebooks)</source>
+    </trans-unit>
+    <trans-unit id="inDiffEditor">
+      <source xml:lang="en">Whether the context is a diff editor</source>
+    </trans-unit>
+    <trans-unit id="isEmbeddedDiffEditor">
+      <source xml:lang="en">Whether the context is an embedded diff editor</source>
+    </trans-unit>
+    <trans-unit id="multiDiffEditorAllCollapsed">
+      <source xml:lang="en">Whether all files in multi diff editor are collapsed</source>
+    </trans-unit>
+    <trans-unit id="standaloneColorPickerFocused">
+      <source xml:lang="en">Whether the standalone color picker is focused</source>
+    </trans-unit>
+    <trans-unit id="standaloneColorPickerVisible">
+      <source xml:lang="en">Whether the standalone color picker is visible</source>
+    </trans-unit>
+    <trans-unit id="stickyScrollFocused">
+      <source xml:lang="en">Whether the sticky scroll is focused</source>
+    </trans-unit>
+    <trans-unit id="stickyScrollVisible">
+      <source xml:lang="en">Whether the sticky scroll is visible</source>
+    </trans-unit>
+    <trans-unit id="textInputFocus">
+      <source xml:lang="en">Whether an editor or a rich text input has focus (cursor is blinking)</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/common/languages" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="Array">
+      <source xml:lang="en">array</source>
+    </trans-unit>
+    <trans-unit id="Boolean">
+      <source xml:lang="en">boolean</source>
+    </trans-unit>
+    <trans-unit id="Class">
+      <source xml:lang="en">class</source>
+    </trans-unit>
+    <trans-unit id="Constant">
+      <source xml:lang="en">constant</source>
+    </trans-unit>
+    <trans-unit id="Constructor">
+      <source xml:lang="en">constructor</source>
+    </trans-unit>
+    <trans-unit id="Enum">
+      <source xml:lang="en">enumeration</source>
+    </trans-unit>
+    <trans-unit id="EnumMember">
+      <source xml:lang="en">enumeration member</source>
+    </trans-unit>
+    <trans-unit id="Event">
+      <source xml:lang="en">event</source>
+    </trans-unit>
+    <trans-unit id="Field">
+      <source xml:lang="en">field</source>
+    </trans-unit>
+    <trans-unit id="File">
+      <source xml:lang="en">file</source>
+    </trans-unit>
+    <trans-unit id="Function">
+      <source xml:lang="en">function</source>
+    </trans-unit>
+    <trans-unit id="Interface">
+      <source xml:lang="en">interface</source>
+    </trans-unit>
+    <trans-unit id="Key">
+      <source xml:lang="en">key</source>
+    </trans-unit>
+    <trans-unit id="Method">
+      <source xml:lang="en">method</source>
+    </trans-unit>
+    <trans-unit id="Module">
+      <source xml:lang="en">module</source>
+    </trans-unit>
+    <trans-unit id="Namespace">
+      <source xml:lang="en">namespace</source>
+    </trans-unit>
+    <trans-unit id="Null">
+      <source xml:lang="en">null</source>
+    </trans-unit>
+    <trans-unit id="Number">
+      <source xml:lang="en">number</source>
+    </trans-unit>
+    <trans-unit id="Object">
+      <source xml:lang="en">object</source>
+    </trans-unit>
+    <trans-unit id="Operator">
+      <source xml:lang="en">operator</source>
+    </trans-unit>
+    <trans-unit id="Package">
+      <source xml:lang="en">package</source>
+    </trans-unit>
+    <trans-unit id="Property">
+      <source xml:lang="en">property</source>
+    </trans-unit>
+    <trans-unit id="String">
+      <source xml:lang="en">string</source>
+    </trans-unit>
+    <trans-unit id="Struct">
+      <source xml:lang="en">struct</source>
+    </trans-unit>
+    <trans-unit id="TypeParameter">
+      <source xml:lang="en">type parameter</source>
+    </trans-unit>
+    <trans-unit id="Variable">
+      <source xml:lang="en">variable</source>
+    </trans-unit>
+    <trans-unit id="symbolAriaLabel">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/common/languages/modesRegistry" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="plainText.alias">
+      <source xml:lang="en">Plain Text</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/common/model/editStack" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="edit">
+      <source xml:lang="en">Typing</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/common/standaloneStrings" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accessibilityHelpTitle">
+      <source xml:lang="en">Accessibility Help</source>
+    </trans-unit>
+    <trans-unit id="auto_off">
+      <source xml:lang="en">The application is configured to never be optimized for usage with a Screen Reader.</source>
+    </trans-unit>
+    <trans-unit id="auto_on">
+      <source xml:lang="en">The application is configured to be optimized for usage with a Screen Reader.</source>
+    </trans-unit>
+    <trans-unit id="bulkEditServiceSummary">
+      <source xml:lang="en">Made {0} edits in {1} files</source>
+    </trans-unit>
+    <trans-unit id="changeConfigToOnMac">
+      <source xml:lang="en">Configure the application to be optimized for usage with a Screen Reader (Command+E).</source>
+    </trans-unit>
+    <trans-unit id="changeConfigToOnWinLinux">
+      <source xml:lang="en">Configure the application to be optimized for usage with a Screen Reader (Control+E).</source>
+    </trans-unit>
+    <trans-unit id="chatEditing.navigation">
+      <source xml:lang="en">Navigate between edits in the editor with navigate previous{0} and next{1} and accept{2}, reject{3} or view the diff{4} for the current change.</source>
+    </trans-unit>
+    <trans-unit id="chatEditorModification">
+      <source xml:lang="en">The editor contains pending modifications that have been made by chat.</source>
+    </trans-unit>
+    <trans-unit id="chatEditorRequestInProgress">
+      <source xml:lang="en">The editor is currently waiting for modifications to be made by chat.</source>
+    </trans-unit>
+    <trans-unit id="codeFolding">
+      <source xml:lang="en">Use code folding to collapse blocks of code and focus on the code you're interested in via the Toggle Folding Command{0}.</source>
+    </trans-unit>
+    <trans-unit id="debug.startDebugging">
+      <source xml:lang="en">The Debug: Start Debugging command{0} will start a debug session.</source>
+    </trans-unit>
+    <trans-unit id="debugConsole.addToWatch">
+      <source xml:lang="en">The Debug: Add to Watch command{0} will add the selected text to the watch view.</source>
+    </trans-unit>
+    <trans-unit id="debugConsole.executeSelection">
+      <source xml:lang="en">The Debug: Execute Selection command{0} will execute the selected text in the debug console.</source>
+    </trans-unit>
+    <trans-unit id="debugConsole.setBreakpoint">
+      <source xml:lang="en">The Debug: Inline Breakpoint command{0} will set or unset a breakpoint at the current cursor position in the active editor.</source>
+    </trans-unit>
+    <trans-unit id="editableDiffEditor">
+      <source xml:lang="en">You are in a pane of a diff editor.</source>
+    </trans-unit>
+    <trans-unit id="editableEditor">
+      <source xml:lang="en">You are in a code editor.</source>
+    </trans-unit>
+    <trans-unit id="editorViewAccessibleLabel">
+      <source xml:lang="en">Editor content</source>
+    </trans-unit>
+    <trans-unit id="goToSymbol">
+      <source xml:lang="en">Go to Symbol{0} to quickly navigate between symbols in the current file.</source>
+    </trans-unit>
+    <trans-unit id="gotoLineActionLabel">
+      <source xml:lang="en">Go to Line/Column...</source>
+    </trans-unit>
+    <trans-unit id="helpQuickAccess">
+      <source xml:lang="en">Show all Quick Access Providers</source>
+    </trans-unit>
+    <trans-unit id="inspectTokens">
+      <source xml:lang="en">Developer: Inspect Tokens</source>
+    </trans-unit>
+    <trans-unit id="intellisense">
+      <source xml:lang="en">Use Intellisense to improve coding efficiency and reduce errors. Trigger suggestions{0}.</source>
+    </trans-unit>
+    <trans-unit id="listAnnouncementsCommand">
+      <source xml:lang="en">Run the command: List Signal Announcements for an overview of announcements and their current status.</source>
+    </trans-unit>
+    <trans-unit id="listSignalSoundsCommand">
+      <source xml:lang="en">Run the command: List Signal Sounds for an overview of all sounds and their current status.</source>
+    </trans-unit>
+    <trans-unit id="openingDocs">
+      <source xml:lang="en">Opening the Accessibility documentation page.</source>
+    </trans-unit>
+    <trans-unit id="quickChatCommand">
+      <source xml:lang="en">Toggle quick chat{0} to open or close a chat session.</source>
+    </trans-unit>
+    <trans-unit id="quickCommandActionHelp">
+      <source xml:lang="en">Show And Run Commands</source>
+    </trans-unit>
+    <trans-unit id="quickCommandActionLabel">
+      <source xml:lang="en">Command Palette</source>
+    </trans-unit>
+    <trans-unit id="quickOutlineActionLabel">
+      <source xml:lang="en">Go to Symbol...</source>
+    </trans-unit>
+    <trans-unit id="quickOutlineByCategoryActionLabel">
+      <source xml:lang="en">Go to Symbol by Category...</source>
+    </trans-unit>
+    <trans-unit id="readonlyDiffEditor">
+      <source xml:lang="en">You are in a read-only pane of a diff editor.</source>
+    </trans-unit>
+    <trans-unit id="readonlyEditor">
+      <source xml:lang="en">You are in a read-only code editor.</source>
+    </trans-unit>
+    <trans-unit id="screenReaderModeDisabled">
+      <source xml:lang="en">Screen Reader Optimized Mode disabled.</source>
+    </trans-unit>
+    <trans-unit id="screenReaderModeEnabled">
+      <source xml:lang="en">Screen Reader Optimized Mode enabled.</source>
+    </trans-unit>
+    <trans-unit id="showAccessibilityHelpAction">
+      <source xml:lang="en">Show Accessibility Help</source>
+    </trans-unit>
+    <trans-unit id="showOrFocusHover">
+      <source xml:lang="en">Show or focus the hover{0} to read information about the current symbol.</source>
+    </trans-unit>
+    <trans-unit id="startInlineChatCommand">
+      <source xml:lang="en">Start inline chat{0} to create an in editor chat session.</source>
+    </trans-unit>
+    <trans-unit id="stickScrollKb">
+      <source xml:lang="en">Focus Sticky Scroll{0} to focus the currently nested scopes.</source>
+    </trans-unit>
+    <trans-unit id="tabFocusModeOffMsg">
+      <source xml:lang="en">Pressing Tab in the current editor will insert the tab character. Toggle this behavior{0}.</source>
+    </trans-unit>
+    <trans-unit id="tabFocusModeOnMsg">
+      <source xml:lang="en">Pressing Tab in the current editor will move focus to the next focusable element. Toggle this behavior{0}.</source>
+    </trans-unit>
+    <trans-unit id="toggleHighContrast">
+      <source xml:lang="en">Toggle High Contrast Theme</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/common/viewLayout/viewLineRenderer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="overflow.chars">
+      <source xml:lang="en">{0} chars</source>
+    </trans-unit>
+    <trans-unit id="showMore">
+      <source xml:lang="en">Show more ({0})</source>
+    </trans-unit>
+</body></file>
+</xliff>

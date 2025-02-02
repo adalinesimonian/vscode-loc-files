@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="extensions/vscode.debug-server-ready/bundle" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="++CODE++504c07cf2208f8907b6a1d7673c2dfe1bd946277461131afb3064b9e93c6af3f">
+      <source xml:lang="en">Format uri (&apos;{0}&apos;) must contain exactly one substitution placeholder.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++e4bdbedd7a7ce59b10b2285112be6dc791c5859e857f3924f9bedb92bd3aa424">
+      <source xml:lang="en">Format uri (&apos;{0}&apos;) uses a substitution placeholder but pattern did not capture anything.</source>
+    </trans-unit>
+  </body></file>
+  <file original="extensions/vscode.debug-server-ready/package" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="debug.server.ready.uriFormat.description">
+      <source xml:lang="en">A format string used when constructing the URI from a port number. The first &apos;%s&apos; is substituted with the port number.</source>
+    </trans-unit>
+    <trans-unit id="debug.server.ready.serverReadyAction.description">
+      <source xml:lang="en">Act upon a URI when a server program under debugging is ready (indicated by sending output of the form &apos;listening on port 3000&apos; or &apos;Now listening on: https://localhost:5001&apos; to the debug console.)</source>
+    </trans-unit>
+    <trans-unit id="debug.server.ready.debugConfigName.description">
+      <source xml:lang="en">Name of the launch configuration to run.</source>
+    </trans-unit>
+    <trans-unit id="debug.server.ready.action.openExternally.description">
+      <source xml:lang="en">Open URI externally with the default application.</source>
+    </trans-unit>
+    <trans-unit id="description">
+      <source xml:lang="en">Open URI in browser if server under debugging is ready.</source>
+    </trans-unit>
+    <trans-unit id="debug.server.ready.action.startDebugging.description">
+      <source xml:lang="en">Run another launch configuration.</source>
+    </trans-unit>
+    <trans-unit id="displayName">
+      <source xml:lang="en">Server Ready Action</source>
+    </trans-unit>
+    <trans-unit id="debug.server.ready.pattern.description">
+      <source xml:lang="en">Server is ready if this pattern appears on the debug console. The first capture group must include a URI or a port number.</source>
+    </trans-unit>
+    <trans-unit id="debug.server.ready.action.debugWithChrome.description">
+      <source xml:lang="en">Start debugging with the &apos;Debugger for Chrome&apos;.</source>
+    </trans-unit>
+    <trans-unit id="debug.server.ready.killOnServerStop.description">
+      <source xml:lang="en">Stop the child session when the parent session stopped.</source>
+    </trans-unit>
+    <trans-unit id="debug.server.ready.debugConfig.description">
+      <source xml:lang="en">The debug configuration to run.</source>
+    </trans-unit>
+    <trans-unit id="debug.server.ready.webRoot.description">
+      <source xml:lang="en">Value passed to the debug configuration for the &apos;Debugger for Chrome&apos;.</source>
+    </trans-unit>
+    <trans-unit id="debug.server.ready.action.description">
+      <source xml:lang="en">What to do with the URI when the server is ready.</source>
+    </trans-unit>
+  </body></file>
+</xliff>

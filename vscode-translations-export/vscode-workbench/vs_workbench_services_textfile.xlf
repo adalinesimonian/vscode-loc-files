@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/services/textfile/browser/textFileService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="confirmMakeWriteable">
+      <source xml:lang="en">'{0}' is marked as read-only. Do you want to save anyway?</source>
+    </trans-unit>
+    <trans-unit id="confirmMakeWriteableDetail">
+      <source xml:lang="en">Paths can be configured as read-only via settings.</source>
+    </trans-unit>
+    <trans-unit id="confirmOverwrite">
+      <source xml:lang="en">'{0}' already exists. Do you want to replace it?</source>
+    </trans-unit>
+    <trans-unit id="deleted">
+      <source xml:lang="en">Deleted</source>
+    </trans-unit>
+    <trans-unit id="fileBinaryError">
+      <source xml:lang="en">File seems to be binary and cannot be opened as text</source>
+    </trans-unit>
+    <trans-unit id="makeWriteableButtonLabel">
+      <source xml:lang="en">&amp;&amp;Save Anyway</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="overwriteIrreversible">
+      <source xml:lang="en">A file or folder with the name '{0}' already exists in the folder '{1}'. Replacing it will overwrite its current contents.</source>
+    </trans-unit>
+    <trans-unit id="readonly">
+      <source xml:lang="en">Read-only</source>
+    </trans-unit>
+    <trans-unit id="readonlyAndDeleted">
+      <source xml:lang="en">Deleted, Read-only</source>
+    </trans-unit>
+    <trans-unit id="replaceButtonLabel">
+      <source xml:lang="en">&amp;&amp;Replace</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="textFileCreate.source">
+      <source xml:lang="en">File Created</source>
+    </trans-unit>
+    <trans-unit id="textFileModelDecorations">
+      <source xml:lang="en">Text File Model Decorations</source>
+    </trans-unit>
+    <trans-unit id="textFileOverwrite.source">
+      <source xml:lang="en">File Replaced</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/services/textfile/common/textFileEditorModel" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="saveParticipants">
+      <source xml:lang="en">Saving '{0}'</source>
+    </trans-unit>
+    <trans-unit id="saveTextFile">
+      <source xml:lang="en">Writing into file...</source>
+    </trans-unit>
+    <trans-unit id="textFileCreate.source">
+      <source xml:lang="en">File Encoding Changed</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/services/textfile/common/textFileEditorModelManager" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="genericSaveError">
+      <source xml:lang="en">Failed to save '{0}': {1}</source>
+      <note>{0} is the resource that failed to save and {1} the error message</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/services/textfile/common/textFileSaveParticipant" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="saveParticipants1">
+      <source xml:lang="en">Running Code Actions and Formatters...</source>
+    </trans-unit>
+    <trans-unit id="skip">
+      <source xml:lang="en">Skip</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/services/textfile/electron-sandbox/nativeTextFileService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="join.textFiles">
+      <source xml:lang="en">Saving text files</source>
+    </trans-unit>
+</body></file>
+</xliff>
