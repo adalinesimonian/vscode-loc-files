@@ -601,6 +601,9 @@
     <trans-unit id="chat">
       <source xml:lang="en">Chat</source>
     </trans-unit>
+    <trans-unit id="chat.agent.enabled.description">
+      <source xml:lang="en">Enable agent mode for {0}. When this is enabled, a dropdown appears in the {0} view to toggle agent mode.</source>
+    </trans-unit>
     <trans-unit id="chat.commandCenter.enabled">
       <source xml:lang="en">Controls whether the command center shows a menu for actions to control Copilot (requires {0}).</source>
     </trans-unit>
@@ -1706,6 +1709,9 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatContextKeys" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatAgentModeDisallowed">
+      <source xml:lang="en">True when agent mode is not allowed.</source>
+    </trans-unit>
     <trans-unit id="chatCanRequestBePaused">
       <source xml:lang="en">True when the current request can be paused.</source>
     </trans-unit>
