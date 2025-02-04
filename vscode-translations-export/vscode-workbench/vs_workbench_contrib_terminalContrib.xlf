@@ -643,6 +643,18 @@ For example:
     <trans-unit id="suggest.builtinCompletions.pwshGit">
       <source xml:lang="en">Custom PowerShell argument completers will be registered for the `git` CLI.</source>
     </trans-unit>
+    <trans-unit id="suggest.cdPath">
+      <source xml:lang="en">Controls whether to enable $CDPATH support which exposes children of the folders in the $CDPATH variable regardless of the current working directory. $CDPATH is expected to be semi colon-separated on Windows and colon-separated on other platforms.</source>
+    </trans-unit>
+    <trans-unit id="suggest.cdPath.absolute">
+      <source xml:lang="en">Enable the feature and use absolute paths. This is useful when the shell doesn't natively support `$CDPATH`.</source>
+    </trans-unit>
+    <trans-unit id="suggest.cdPath.off">
+      <source xml:lang="en">Disable the feature.</source>
+    </trans-unit>
+    <trans-unit id="suggest.cdPath.relative">
+      <source xml:lang="en">Enable the feature and use relative paths.</source>
+    </trans-unit>
     <trans-unit id="suggest.enabled">
       <source xml:lang="en">Enables experimental terminal Intellisense suggestions for supported shells ({0}) when {1} is set to {2}.
 
