@@ -441,9 +441,6 @@
     <trans-unit id="chat.closeQuickChat.label">
       <source xml:lang="en">Close Quick Chat</source>
     </trans-unit>
-    <trans-unit id="chat.launchInlineChat.label">
-      <source xml:lang="en">Launch Inline Chat</source>
-    </trans-unit>
     <trans-unit id="chat.openInChatView.label">
       <source xml:lang="en">Open in Chat View</source>
     </trans-unit>
@@ -959,37 +956,7 @@
       <source xml:lang="en">Add Selected Files to Working Set</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingModifiedFileEntry" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatEditing1">
-      <source xml:lang="en">Chat Edit: '{0}'</source>
-    </trans-unit>
-    <trans-unit id="chatEditing2">
-      <source xml:lang="en">Chat Edit</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingServiceImpl" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat">
-      <source xml:lang="en">Chat Editing</source>
-    </trans-unit>
-    <trans-unit id="chatEditing.modified">
-      <source xml:lang="en">Pending changes from {0}</source>
-    </trans-unit>
-    <trans-unit id="chatEditing.modified2">
-      <source xml:lang="en">Pending changes from chat</source>
-    </trans-unit>
-    <trans-unit id="join.chatEditingSession">
-      <source xml:lang="en">Saving chat edits history</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingSession" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatEditing.transient">
-      <source xml:lang="en">Open Editor</source>
-    </trans-unit>
-    <trans-unit id="multiDiffEditorInput.name">
-      <source xml:lang="en">Suggested Edits</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatEditorActions" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="accept">
       <source xml:lang="en">Accept Chat Edit</source>
     </trans-unit>
@@ -1024,7 +991,7 @@
       <source xml:lang="en">Discard this Change</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatEditorController" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorController" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.ctxEditSessionIsGlobal">
       <source xml:lang="en">The current editor is part of the global edit session</source>
     </trans-unit>
@@ -1044,15 +1011,7 @@
       <source xml:lang="en">{0} (changes from chat)</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatEditorInput" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatEditorLabelIcon">
-      <source xml:lang="en">Icon of the chat editor label.</source>
-    </trans-unit>
-    <trans-unit id="chatEditorName">
-      <source xml:lang="en">Chat</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatEditorOverlay" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorOverlay" source-language="en" datatype="plaintext"><body>
     <trans-unit id="applyingPercentage">
       <source xml:lang="en">{0}% Applying Edits</source>
     </trans-unit>
@@ -1073,6 +1032,44 @@
     </trans-unit>
     <trans-unit id="tooltip_nm">
       <source xml:lang="en">{0} changes in {1} files</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingModifiedFileEntry" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatEditing1">
+      <source xml:lang="en">Chat Edit: '{0}'</source>
+    </trans-unit>
+    <trans-unit id="chatEditing2">
+      <source xml:lang="en">Chat Edit</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingServiceImpl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat">
+      <source xml:lang="en">Chat Editing</source>
+    </trans-unit>
+    <trans-unit id="chatEditing.modified">
+      <source xml:lang="en">Pending changes from {0}</source>
+    </trans-unit>
+    <trans-unit id="chatEditing.modified2">
+      <source xml:lang="en">Pending changes from chat</source>
+    </trans-unit>
+    <trans-unit id="join.chatEditingSession">
+      <source xml:lang="en">Saving chat edits history</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingSession" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatEditing.transient">
+      <source xml:lang="en">Open Editor</source>
+    </trans-unit>
+    <trans-unit id="multiDiffEditorInput.name">
+      <source xml:lang="en">Suggested Edits</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditorInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatEditorLabelIcon">
+      <source xml:lang="en">Icon of the chat editor label.</source>
+    </trans-unit>
+    <trans-unit id="chatEditorName">
+      <source xml:lang="en">Chat</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatFollowups" source-language="en" datatype="plaintext"><body>
