@@ -663,6 +663,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++34412b9ae0d9a8f1243ae6c065eacf2f2d3febce0e38f5df0b6e8d8cdbed0c20">
       <source xml:lang="en">Select a ref to create the branch from</source>
     </trans-unit>
+    <trans-unit id="++CODE++bdfd5e5c7e18e36a027605c4230990bab64012b8cd03f0535613896a1778d346">
+      <source xml:lang="en">Select a remote branch to delete</source>
+    </trans-unit>
     <trans-unit id="++CODE++182b084671376e02bc8ce747dd0d39362acd63980762adabb9e91cd4331c787f">
       <source xml:lang="en">Select a remote tag to delete</source>
     </trans-unit>
@@ -720,6 +723,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++f5c58a33df8fc9fe24b592f358a2796949c7d2b83e28306be28c8ba0454dbadf">
       <source xml:lang="en">The &quot;{0}&quot; repository has {1} submodules which won&apos;t be opened automatically. You can still open each one individually by opening a file within.</source>
     </trans-unit>
+    <trans-unit id="++CODE++8d1325663e5e67d11bb0e5e78eaa966671dfb0b6b3e1fc25b59427d0d7d2713e">
+      <source xml:lang="en">The active branch cannot be deleted.</source>
+    </trans-unit>
     <trans-unit id="++CODE++a19a357466e3cc3926579645f74ec7860df52578196b7b4147b221046f946d8d">
       <source xml:lang="en">The branch &quot;{0}&quot; has no remote branch. Would you like to publish this branch?</source>
     </trans-unit>
@@ -755,6 +761,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++b45f0ffa9a6ab73edb905b626d6fe3ed00854ca7abf7303b919cf686315b9f99">
       <source xml:lang="en">The new branch will be &quot;{0}&quot;</source>
+    </trans-unit>
+    <trans-unit id="++CODE++4168b0869d785d04f6352100231164eae8fd06f0dbc7ac603d90ab9594a96129">
+      <source xml:lang="en">The remote branch of the active branch cannot be deleted.</source>
     </trans-unit>
     <trans-unit id="++CODE++37ef81ba71eba9f9eff994fceb877f912ef4a6c4d6d4998ed550a243f35b36e8">
       <source xml:lang="en">The repository does not have any changes.</source>
@@ -1654,6 +1663,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="command.deleteBranch">
       <source xml:lang="en">Delete Branch...</source>
+    </trans-unit>
+    <trans-unit id="command.deleteRemoteBranch">
+      <source xml:lang="en">Delete Remote Branch...</source>
     </trans-unit>
     <trans-unit id="command.deleteRemoteTag">
       <source xml:lang="en">Delete Remote Tag...</source>

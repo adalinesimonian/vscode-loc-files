@@ -963,6 +963,9 @@
     <trans-unit id="accept2">
       <source xml:lang="en">Accept</source>
     </trans-unit>
+    <trans-unit id="accept3">
+      <source xml:lang="en">Accept All Edits</source>
+    </trans-unit>
     <trans-unit id="acceptHunk">
       <source xml:lang="en">Accept this Change</source>
     </trans-unit>
@@ -974,6 +977,9 @@
     </trans-unit>
     <trans-unit id="discard2">
       <source xml:lang="en">Discard</source>
+    </trans-unit>
+    <trans-unit id="discard3">
+      <source xml:lang="en">Discard All Edits</source>
     </trans-unit>
     <trans-unit id="label">
       <source xml:lang="en">Navigation Status</source>
@@ -1648,6 +1654,20 @@ Type {3} to use commands</source>
   <file original="src/vs/workbench/contrib/chat/browser/languageModelToolsService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="toolInvocationMessage">
       <source xml:lang="en">Using {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/variables/variables" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="termLastCommandDesc">
+      <source xml:lang="en">The active terminal's last run command</source>
+    </trans-unit>
+    <trans-unit id="termSelection">
+      <source xml:lang="en">Terminal Selection</source>
+    </trans-unit>
+    <trans-unit id="termSelectionDescription">
+      <source xml:lang="en">The active terminal's selection</source>
+    </trans-unit>
+    <trans-unit id="terminalLastCommand">
+      <source xml:lang="en">Terminal Last Command</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewWelcomeController" source-language="en" datatype="plaintext"><body>
