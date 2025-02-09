@@ -1150,9 +1150,6 @@
     <trans-unit id="chat.imageAttachmentHover">
       <source xml:lang="en">{0} does not support images.</source>
     </trans-unit>
-    <trans-unit id="chat.moreModels">
-      <source xml:lang="en">Add More Models...</source>
-    </trans-unit>
     <trans-unit id="chat.normalMode">
       <source xml:lang="en">Edit</source>
     </trans-unit>
@@ -1583,6 +1580,9 @@ Type {3} to use commands</source>
     <trans-unit id="chat.codeBlockLabel">
       <source xml:lang="en">Code block {0}</source>
     </trans-unit>
+    <trans-unit id="chat.codeBlockToolbarLabel">
+      <source xml:lang="en">Toolbar for code block {0}</source>
+    </trans-unit>
     <trans-unit id="chat.compareCodeBlockLabel">
       <source xml:lang="en">Code Edits</source>
     </trans-unit>
@@ -1654,20 +1654,6 @@ Type {3} to use commands</source>
   <file original="src/vs/workbench/contrib/chat/browser/languageModelToolsService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="toolInvocationMessage">
       <source xml:lang="en">Using {0}</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/variables/variables" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="termLastCommandDesc">
-      <source xml:lang="en">The active terminal's last run command</source>
-    </trans-unit>
-    <trans-unit id="termSelection">
-      <source xml:lang="en">Terminal Selection</source>
-    </trans-unit>
-    <trans-unit id="termSelectionDescription">
-      <source xml:lang="en">The active terminal's selection</source>
-    </trans-unit>
-    <trans-unit id="terminalLastCommand">
-      <source xml:lang="en">Terminal Last Command</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewWelcomeController" source-language="en" datatype="plaintext"><body>
@@ -1882,17 +1868,17 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
     <trans-unit id="chat.promptFiles.config.description">
       <source xml:lang="en">Enable support for attaching reusable prompt files (`*{0}`) for Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
 
-Set to `true` or use the `{ "/path/to/folder": boolean }` notation to specify a different path (or a couple of them). Relative paths are resolved from the root folder(s) of your workspace, and the default value of `{2}` is used if no other paths provided.
+Set to `true` or use the `{ "/path/to/folder": boolean }` notation to specify a different path (or multiple). Relative paths are resolved from the root folder(s) of your workspace, and the default value of `{2}` is used if no other paths provided.
 #### Examples
 {3}
 {4}</source>
     </trans-unit>
     <trans-unit id="chat.promptFiles.config.description.example1">
-      <source xml:lang="en">Enable with the default location of the prompt files (`{0}`):
+      <source xml:lang="en">Enable with the default location of prompt files (`{0}`):
 {1}</source>
     </trans-unit>
     <trans-unit id="chat.promptFiles.config.description.example2">
-      <source xml:lang="en">Specify custom location(s) of the prompt files:
+      <source xml:lang="en">Specify custom location(s) of prompt files:
 {0}</source>
     </trans-unit>
     <trans-unit id="chat.promptFiles.config.title">

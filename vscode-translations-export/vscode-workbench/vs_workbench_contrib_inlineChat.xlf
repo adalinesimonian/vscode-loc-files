@@ -54,6 +54,9 @@
     <trans-unit id="rerun">
       <source xml:lang="en">Rerun</source>
     </trans-unit>
+    <trans-unit id="reveal">
+      <source xml:lang="en">Toggle Inline Chat</source>
+    </trans-unit>
     <trans-unit id="run">
       <source xml:lang="en">Editor Inline Chat</source>
     </trans-unit>
@@ -62,6 +65,9 @@
     </trans-unit>
     <trans-unit id="startInlineChat">
       <source xml:lang="en">Icon which spawns the inline chat from the editor toolbar.</source>
+    </trans-unit>
+    <trans-unit id="stop">
+      <source xml:lang="en">Stop</source>
     </trans-unit>
     <trans-unit id="unstash">
       <source xml:lang="en">Resume Last Dismissed Inline Chat</source>
@@ -85,23 +91,6 @@
     </trans-unit>
     <trans-unit id="welcome.2">
       <source xml:lang="en">Getting ready...</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatController2" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="cat">
-      <source xml:lang="en">Inline Chat</source>
-    </trans-unit>
-    <trans-unit id="chat.hasInlineChatSession">
-      <source xml:lang="en">The current editor has an active inline chat session</source>
-    </trans-unit>
-    <trans-unit id="reveal">
-      <source xml:lang="en">Toggle Inline Chat</source>
-    </trans-unit>
-    <trans-unit id="start">
-      <source xml:lang="en">Inline Chat</source>
-    </trans-unit>
-    <trans-unit id="stop">
-      <source xml:lang="en">Stop</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatCurrentLine" source-language="en" datatype="plaintext"><body>
@@ -158,6 +147,9 @@
     </trans-unit>
     <trans-unit id="accessibleDiffView.on">
       <source xml:lang="en">The accessible diff viewer is always enabled.</source>
+    </trans-unit>
+    <trans-unit id="chat.hasInlineChatSession">
+      <source xml:lang="en">The current editor has an active inline chat session</source>
     </trans-unit>
     <trans-unit id="editorMinimap.inlineChatInserted">
       <source xml:lang="en">Minimap marker color for inline chat inserted content.</source>

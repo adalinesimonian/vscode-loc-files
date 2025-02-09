@@ -3920,6 +3920,9 @@ If {1} did not launch, try again below.</source>
     <trans-unit id="activeEditorShort">
       <source xml:lang="en">`${activeEditorShort}`: the file name (e.g. myFile.txt).</source>
     </trans-unit>
+    <trans-unit id="activeEditorState">
+      <source xml:lang="en">`${activeEditorState}`: provides information about the state of the active editor (e.g. modified).</source>
+    </trans-unit>
     <trans-unit id="activeFolderLong">
       <source xml:lang="en">`${activeFolderLong}`: the full path of the folder the file is contained in (e.g. /Users/Development/myFolder/myFileFolder).</source>
     </trans-unit>
@@ -5580,9 +5583,6 @@ This option requires restart to take effect.</source>
     </trans-unit>
     <trans-unit id="window.doubleClickIconToClose">
       <source xml:lang="en">If enabled, this setting will close the window when the application icon in the title bar is double-clicked. The window will not be able to be dragged by the icon. This setting is effective only if {0} is set to `custom`.</source>
-    </trans-unit>
-    <trans-unit id="window.experimentalControlOverlay">
-      <source xml:lang="en">Show the native window controls when {0} is set to `custom` (Linux only).</source>
     </trans-unit>
     <trans-unit id="window.nativeFullScreen">
       <source xml:lang="en">Controls if native full-screen should be used on macOS. Disable this option to prevent macOS from creating a new space when going full-screen.</source>
