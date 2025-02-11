@@ -382,6 +382,9 @@ The task will be ignored.</source>
     <trans-unit id="numberOfRunningTasks">
       <source xml:lang="en">{0} running tasks</source>
     </trans-unit>
+    <trans-unit id="rerunTaskIcon">
+      <source xml:lang="en">View icon of the rerun task.</source>
+    </trans-unit>
     <trans-unit id="runningTasks">
       <source xml:lang="en">Show Running Tasks</source>
     </trans-unit>
@@ -465,6 +468,9 @@ The task will be ignored.</source>
     </trans-unit>
     <trans-unit id="workbench.action.tasks.openWorkspaceFileTasks">
       <source xml:lang="en">Open Workspace Tasks</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.tasks.rerunForActiveTerminal">
+      <source xml:lang="en">Rerun Task</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/tasks/browser/taskQuickPick" source-language="en" datatype="plaintext"><body>
@@ -585,6 +591,9 @@ The task will be ignored.</source>
     </trans-unit>
     <trans-unit id="dependencyFailed">
       <source xml:lang="en">Couldn't resolve dependent task '{0}' in workspace folder '{1}'</source>
+    </trans-unit>
+    <trans-unit id="rerunTask">
+      <source xml:lang="en">Rerun Task</source>
     </trans-unit>
     <trans-unit id="reuseTerminal">
       <source xml:lang="en">Terminal will be reused by tasks, press any key to close it.</source>
@@ -1297,6 +1306,9 @@ The task command line or label</note>
   <file original="src/vs/workbench/contrib/tasks/common/tasks" source-language="en" datatype="plaintext"><body>
     <trans-unit id="TaskDefinition.missingRequiredProperty">
       <source xml:lang="en">Error: the task identifier '{0}' is missing the required property '{1}'. The task identifier will be ignored.</source>
+    </trans-unit>
+    <trans-unit id="taskTerminalActive">
+      <source xml:lang="en">Whether the active terminal is a task terminal.</source>
     </trans-unit>
     <trans-unit id="tasks.taskRunningContext">
       <source xml:lang="en">Whether a task is currently running.</source>

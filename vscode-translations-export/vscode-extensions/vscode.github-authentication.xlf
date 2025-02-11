@@ -64,11 +64,17 @@
     </trans-unit>
   </body></file>
   <file original="extensions/vscode.github-authentication/package" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="config.github-enterprise.title">
+      <source xml:lang="en">GHE.com &amp; GitHub Enterprise Server Authentication</source>
+    </trans-unit>
     <trans-unit id="displayName">
       <source xml:lang="en">GitHub Authentication</source>
     </trans-unit>
     <trans-unit id="description">
       <source xml:lang="en">GitHub Authentication Provider</source>
+    </trans-unit>
+    <trans-unit id="config.github-enterprise.uri.description">
+      <source xml:lang="en">The URI for your GHE.com or GitHub Enterprise Server instance.&#10;&#10;Examples:&#10;* GHE.com: `https://octocat.ghe.com`&#10;* GitHub Enterprise Server: `https://github.octocat.com`&#10;&#10;&gt; **Note:** This should _not_ be set to a GitHub.com URI. If your account exists on GitHub.com or is a GitHub Enterprise Managed User, you do not need any additional configuration and can simply log in to GitHub.</source>
     </trans-unit>
   </body></file>
 </xliff>

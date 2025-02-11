@@ -135,6 +135,9 @@
     <trans-unit id="chatWith">
       <source xml:lang="en">Chat with Extension</source>
     </trans-unit>
+    <trans-unit id="configureCompletions">
+      <source xml:lang="en">Configure Code Completions...</source>
+    </trans-unit>
     <trans-unit id="currentChatLabel">
       <source xml:lang="en">current</source>
     </trans-unit>
@@ -1412,7 +1415,9 @@
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.agent.maxRequests">
-      <source xml:lang="en">The maximum number of requests to allow Copilot Edits to use in agent mode.</source>
+      <source xml:lang="en">The maximum number of requests to allow Copilot Edits to use per-turn in agent mode. When the limit is reached, Copilot will ask the user to confirm that it should keep working. 
+
+&gt; **Note**: For users on the Copilot Free plan, note that each agent mode request currently uses one chat request.</source>
     </trans-unit>
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>

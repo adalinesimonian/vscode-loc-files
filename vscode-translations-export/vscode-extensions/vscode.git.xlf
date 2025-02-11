@@ -738,6 +738,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++96bbc2b6d0b5fa5726a6c8930a2bbcd4cfb8a4b95edd9f2a6666260ec402564d">
       <source xml:lang="en">The current branch is not published to the remote. Would you like to publish it to access your changes elsewhere?</source>
     </trans-unit>
+    <trans-unit id="++CODE++14ca9e1eb6d57d7d211cba7943d9f7a352780e823f6f7935a9deeeb68d0dcdb7">
+      <source xml:lang="en">The following file has unresolved diagnostic information: {0}.&#10;&#10;How would you like to proceed?</source>
+    </trans-unit>
     <trans-unit id="++CODE++3362cb8501f59d8c5e21a58875c8feb5020043dda58553dccbd8b3fd80357c50">
       <source xml:lang="en">The following file has unsaved changes which won&apos;t be included in the commit if you proceed: {0}.&#10;&#10;Would you like to save it before committing?</source>
     </trans-unit>
@@ -807,6 +810,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++46031808b597269632b77fb15757e8f4e0f56b9028ddf7b5889e68f5753668c9">
       <source xml:lang="en">There are no stashes in the repository.</source>
     </trans-unit>
+    <trans-unit id="++CODE++4f73c63eeee2b22d34c4c9b18ca9fee718f365e323c6313342b4fe4c12197ed2">
+      <source xml:lang="en">There are {0} files that have unresolved diagnostic information.&#10;&#10;How would you like to proceed?</source>
+    </trans-unit>
     <trans-unit id="++CODE++2ea13fa0d2df0cc2514d3685714c978c33344aa102e1d2397585bada616247c9">
       <source xml:lang="en">There are {0} unsaved files.&#10;&#10;Would you like to save them before committing?</source>
     </trans-unit>
@@ -854,6 +860,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++034e16a7430ebedfd237d80c76b3589cfa03e8bd1193ac24be41bd1fda112715">
       <source xml:lang="en">Update Git</source>
+    </trans-unit>
+    <trans-unit id="++CODE++2dc8b13386dff158637242fd41c300a614a188df36546d65f9efde8953c68e3b">
+      <source xml:lang="en">View Problems</source>
     </trans-unit>
     <trans-unit id="++CODE++7f1d79b89e7e2a73fb77da103a8f48ff6a1d82d197245b96a00bd0bb1b807301">
       <source xml:lang="en">Would you like to add &quot;{0}&quot; to .gitignore?</source>
@@ -1511,6 +1520,12 @@ Please make sure there is no space between the right bracket and left parenthesi
     <trans-unit id="config.detectSubmodulesLimit">
       <source xml:lang="en">Controls the limit of Git submodules detected.</source>
     </trans-unit>
+    <trans-unit id="config.diagnosticsCommitHook.Source">
+      <source xml:lang="en">Controls the list of diagnostics sources for which Git should check before committing.</source>
+    </trans-unit>
+    <trans-unit id="config.diagnosticsCommitHook.Severity">
+      <source xml:lang="en">Controls the minimum diagnostics severity for which Git should check before committing.</source>
+    </trans-unit>
     <trans-unit id="config.alwaysSignOff">
       <source xml:lang="en">Controls the signoff flag for all commits.</source>
     </trans-unit>
@@ -1720,6 +1735,18 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="config.enableCommitSigning">
       <source xml:lang="en">Enables commit signing with GPG, X.509, or SSH.</source>
+    </trans-unit>
+    <trans-unit id="config.diagnosticsCommitHook.Severity.warning">
+      <source xml:lang="en">Errors and warnings</source>
+    </trans-unit>
+    <trans-unit id="config.diagnosticsCommitHook.Severity.error">
+      <source xml:lang="en">Errors only</source>
+    </trans-unit>
+    <trans-unit id="config.diagnosticsCommitHook.Severity.information">
+      <source xml:lang="en">Errors, warnings, and information</source>
+    </trans-unit>
+    <trans-unit id="config.diagnosticsCommitHook.Severity.hint">
+      <source xml:lang="en">Errors, warnings, information, and hints</source>
     </trans-unit>
     <trans-unit id="config.experimental.installGuide">
       <source xml:lang="en">Experimental improvements for the Git setup flow.</source>
