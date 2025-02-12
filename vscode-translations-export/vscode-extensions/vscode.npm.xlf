@@ -235,10 +235,7 @@
       <source xml:lang="en">An array of regular expressions that indicate which scripts should be excluded from the NPM Scripts view.</source>
     </trans-unit>
     <trans-unit id="config.npm.packageManager.auto">
-      <source xml:lang="en">Auto-detect which package manager to use based on lock files and installed package managers.</source>
-    </trans-unit>
-    <trans-unit id="config.npm.scriptRunner.auto">
-      <source xml:lang="en">Auto-detect which script runner to use based on lock files and installed package managers.</source>
+      <source xml:lang="en">Auto-detect which package manager to use for running scripts based on lock files and installed package managers.</source>
     </trans-unit>
     <trans-unit id="config.npm.exclude">
       <source xml:lang="en">Configure glob patterns for folders that should be excluded from automatic script detection.</source>
@@ -307,43 +304,25 @@
       <source xml:lang="en">The npm script to customize.</source>
     </trans-unit>
     <trans-unit id="config.npm.packageManager">
-      <source xml:lang="en">The package manager used to install dependencies.</source>
+      <source xml:lang="en">The package manager used to run scripts.</source>
     </trans-unit>
     <trans-unit id="taskdef.path">
       <source xml:lang="en">The path to the folder of the package.json file that provides the script. Can be omitted.</source>
     </trans-unit>
-    <trans-unit id="config.npm.scriptRunner">
-      <source xml:lang="en">The script runner used to run scripts.</source>
-    </trans-unit>
     <trans-unit id="workspaceTrust">
       <source xml:lang="en">This extension executes tasks, which require trust to run.</source>
     </trans-unit>
-    <trans-unit id="config.npm.scriptRunner.node">
-      <source xml:lang="en">Use Node.js as the script runner.</source>
-    </trans-unit>
     <trans-unit id="config.npm.packageManager.bun">
-      <source xml:lang="en">Use bun as the package manager.</source>
-    </trans-unit>
-    <trans-unit id="config.npm.scriptRunner.bun">
-      <source xml:lang="en">Use bun as the script runner.</source>
+      <source xml:lang="en">Use bun as the package manager for running scripts.</source>
     </trans-unit>
     <trans-unit id="config.npm.packageManager.npm">
-      <source xml:lang="en">Use npm as the package manager.</source>
-    </trans-unit>
-    <trans-unit id="config.npm.scriptRunner.npm">
-      <source xml:lang="en">Use npm as the script runner.</source>
+      <source xml:lang="en">Use npm as the package manager for running scripts.</source>
     </trans-unit>
     <trans-unit id="config.npm.packageManager.pnpm">
-      <source xml:lang="en">Use pnpm as the package manager.</source>
-    </trans-unit>
-    <trans-unit id="config.npm.scriptRunner.pnpm">
-      <source xml:lang="en">Use pnpm as the script runner.</source>
+      <source xml:lang="en">Use pnpm as the package manager for running scripts.</source>
     </trans-unit>
     <trans-unit id="config.npm.packageManager.yarn">
-      <source xml:lang="en">Use yarn as the package manager.</source>
-    </trans-unit>
-    <trans-unit id="config.npm.scriptRunner.yarn">
-      <source xml:lang="en">Use yarn as the script runner.</source>
+      <source xml:lang="en">Use yarn as the package manager for running scripts.</source>
     </trans-unit>
   </body></file>
 </xliff>

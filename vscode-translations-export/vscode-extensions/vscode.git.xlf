@@ -1577,6 +1577,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     <trans-unit id="config.allowNoVerifyCommit">
       <source xml:lang="en">Controls whether commits without running pre-commit and commit-msg hooks are allowed.</source>
     </trans-unit>
+    <trans-unit id="config.untrackedChangesSoftDelete">
+      <source xml:lang="en">Controls whether discarding untracked changes moves the file(s) to the Recycle Bin (Windows), Trash (macOS, Linux) instead of deleting them.</source>
+    </trans-unit>
     <trans-unit id="config.allowForcePush">
       <source xml:lang="en">Controls whether force push (with or without lease) is enabled.</source>
     </trans-unit>

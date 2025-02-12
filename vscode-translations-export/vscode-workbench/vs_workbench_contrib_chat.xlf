@@ -196,6 +196,25 @@
       <source xml:lang="en">Use AI Features with Copilot for Free...</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="workbench.action.chat.attach.prompt.label">
+      <source xml:lang="en">Use Prompt</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/showPromptSelectionDialog" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="noPromptFilesFoundLabel">
+      <source xml:lang="en">No prompts found.</source>
+    </trans-unit>
+    <trans-unit id="noPromptFilesFoundTooltipLabel">
+      <source xml:lang="en">Learn how to create reusable prompts</source>
+    </trans-unit>
+    <trans-unit id="selectPromptPlaceholder">
+      <source xml:lang="en">Select a prompt to use</source>
+    </trans-unit>
+    <trans-unit id="selectPromptPlaceholder.holdAltOption">
+      <source xml:lang="en">(hold `{0}` to use in Edits)</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatClearActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.done.label">
       <source xml:lang="en">Done</source>
@@ -294,12 +313,6 @@
     <trans-unit id="imageFromClipboard">
       <source xml:lang="en">Image from Clipboard</source>
     </trans-unit>
-    <trans-unit id="noPromptFilesFoundLabel">
-      <source xml:lang="en">No prompt files found.</source>
-    </trans-unit>
-    <trans-unit id="noPromptFilesFoundTooltipLabel">
-      <source xml:lang="en">Learn how to create reusable prompts</source>
-    </trans-unit>
     <trans-unit id="pastedImage">
       <source xml:lang="en">Pasted Image</source>
     </trans-unit>
@@ -308,9 +321,6 @@
     </trans-unit>
     <trans-unit id="relatedFiles">
       <source xml:lang="en">Add related files to your working set</source>
-    </trans-unit>
-    <trans-unit id="selectPromptFile">
-      <source xml:lang="en">Select a prompt file</source>
     </trans-unit>
     <trans-unit id="workbench.action.chat.attachContext.label">
       <source xml:lang="en">Attach Context</source>
@@ -854,6 +864,12 @@
     <trans-unit id="image">
       <source xml:lang="en">Image</source>
     </trans-unit>
+    <trans-unit id="imageTooLarge">
+      <source xml:lang="en">Image is too large</source>
+    </trans-unit>
+    <trans-unit id="imageTooLargeMessage">
+      <source xml:lang="en">The image {0} is too large to be attached.</source>
+    </trans-unit>
     <trans-unit id="symbol">
       <source xml:lang="en">Symbol</source>
     </trans-unit>
@@ -972,6 +988,9 @@
     <trans-unit id="acceptHunk">
       <source xml:lang="en">Accept this Change</source>
     </trans-unit>
+    <trans-unit id="accessibleDiff">
+      <source xml:lang="en">Show Accessible Diff View</source>
+    </trans-unit>
     <trans-unit id="diff">
       <source xml:lang="en">Toggle Diff Editor</source>
     </trans-unit>
@@ -1029,6 +1048,9 @@
     </trans-unit>
     <trans-unit id="nOfM">
       <source xml:lang="en">{0} of {1}</source>
+    </trans-unit>
+    <trans-unit id="paused">
+      <source xml:lang="en">Edits Paused</source>
     </trans-unit>
     <trans-unit id="tooltip_11">
       <source xml:lang="en">1 change in 1 file</source>
@@ -1229,6 +1251,9 @@
     </trans-unit>
     <trans-unit id="other">
       <source xml:lang="en">Other</source>
+    </trans-unit>
+    <trans-unit id="paused">
+      <source xml:lang="en">Paused</source>
     </trans-unit>
     <trans-unit id="poorlyWrittenOrFormatted">
       <source xml:lang="en">Poorly written or formatted</source>
@@ -1659,6 +1684,11 @@ Type {3} to use commands</source>
   <file original="src/vs/workbench/contrib/chat/browser/languageModelToolsService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="toolInvocationMessage">
       <source xml:lang="en">Using {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/usePromptCommand" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompts.use-prompt">
+      <source xml:lang="en">Use Prompt</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewWelcomeController" source-language="en" datatype="plaintext"><body>
