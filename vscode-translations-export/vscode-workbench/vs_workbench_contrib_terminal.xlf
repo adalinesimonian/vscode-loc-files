@@ -1116,6 +1116,9 @@ This setting applies only when terminals are created, so you will need to restar
 
  Note that the script injection may not work if you have custom arguments defined in the terminal profile, have enabled {1}, have a [complex bash `PROMPT_COMMAND`](https://code.visualstudio.com/docs/editor/integrated-terminal#_complex-bash-promptcommand), or other unsupported setup. To disable decorations, see {0}</source>
     </trans-unit>
+    <trans-unit id="terminal.integrated.shellIntegration.environmentReporting">
+      <source xml:lang="en">Controls whether to report the shell environment, enabling its use in features such as {0}. This may cause a slowdown when printing your shell's prompt.</source>
+    </trans-unit>
     <trans-unit id="terminal.integrated.showExitAlert">
       <source xml:lang="en">Controls whether to show the alert "The terminal process terminated with exit code" when exit code is non-zero.</source>
     </trans-unit>

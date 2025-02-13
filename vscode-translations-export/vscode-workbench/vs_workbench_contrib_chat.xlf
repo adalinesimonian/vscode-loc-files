@@ -1184,18 +1184,6 @@
     <trans-unit id="chatAddFiles">
       <source xml:lang="en">{0} Add Files...</source>
     </trans-unit>
-    <trans-unit id="chatEditingSession.excludedFile">
-      <source xml:lang="en">The Working Set file limit has ben reached. {0} is excluded from the Woking Set. Remove other files to make space for {0}.</source>
-    </trans-unit>
-    <trans-unit id="chatEditingSession.excludedFiles">
-      <source xml:lang="en">({0}/{1} files)</source>
-    </trans-unit>
-    <trans-unit id="chatEditingSession.excludedOneFile">
-      <source xml:lang="en">1 file is excluded from the Working Set.</source>
-    </trans-unit>
-    <trans-unit id="chatEditingSession.excludedSomeFiles">
-      <source xml:lang="en">{0} files are excluded from the Working Set.</source>
-    </trans-unit>
     <trans-unit id="chatEditingSession.fileLimitReached">
       <source xml:lang="en">You have reached the maximum number of files that can be added to the working set.</source>
     </trans-unit>
@@ -1901,20 +1889,9 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/config" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.promptFiles.config.description">
-      <source xml:lang="en">Enable support for attaching reusable prompt files (`*{0}`) for Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
+      <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be attached in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
 
-Set to `true` or use the `{ "/path/to/folder": boolean }` notation to specify a different path (or multiple). Relative paths are resolved from the root folder(s) of your workspace, and the default value of `{2}` is used if no other paths provided.
-#### Examples
-{3}
-{4}</source>
-    </trans-unit>
-    <trans-unit id="chat.promptFiles.config.description.example1">
-      <source xml:lang="en">Enable with the default location of prompt files (`{0}`):
-{1}</source>
-    </trans-unit>
-    <trans-unit id="chat.promptFiles.config.description.example2">
-      <source xml:lang="en">Specify custom location(s) of prompt files:
-{0}</source>
+Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.promptFiles.config.title">
       <source xml:lang="en">Prompt Files</source>
