@@ -1512,7 +1512,7 @@ Please make sure there is no space between the right bracket and left parenthesi
       <source xml:lang="en">Controls the limit of Git submodules detected.</source>
     </trans-unit>
     <trans-unit id="config.diagnosticsCommitHook.Sources">
-      <source xml:lang="en">Controls the list of diagnostic information sources (**Item**) and the minimum diagnostic information severity (**Value**) to be considered before committing.</source>
+      <source xml:lang="en">Controls the list of sources (**Item**) and the minimum severity (**Value**) to be considered before committing. **Note:** To ignore diagnostics from a particular source, add the source to the list and set the minimum severity to `none`.</source>
     </trans-unit>
     <trans-unit id="config.alwaysSignOff">
       <source xml:lang="en">Controls the signoff flag for all commits.</source>
@@ -1537,9 +1537,6 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="config.decorations.enabled">
       <source xml:lang="en">Controls whether Git contributes colors and badges to the Explorer and the Open Editors view.</source>
-    </trans-unit>
-    <trans-unit id="config.diagnosticsCommitHook.Enabled">
-      <source xml:lang="en">Controls whether Git should check for unresolved diagnostic information before committing.</source>
     </trans-unit>
     <trans-unit id="config.promptToSaveFilesBeforeCommit">
       <source xml:lang="en">Controls whether Git should check for unsaved files before committing.</source>
@@ -1597,6 +1594,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="config.detectSubmodules">
       <source xml:lang="en">Controls whether to automatically detect Git submodules.</source>
+    </trans-unit>
+    <trans-unit id="config.diagnosticsCommitHook.Enabled">
+      <source xml:lang="en">Controls whether to check for unresolved diagnostics before committing.</source>
     </trans-unit>
     <trans-unit id="config.terminalGitEditor">
       <source xml:lang="en">Controls whether to enable VS Code to be the Git editor for Git processes spawned in the integrated terminal. Note: Terminals need to be restarted to pick up a change in this setting.</source>
@@ -1819,9 +1819,6 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="config.ignoredRepositories">
       <source xml:lang="en">List of Git repositories to ignore.</source>
-    </trans-unit>
-    <trans-unit id="config.diagnosticsCommitHook.IgnoredSources">
-      <source xml:lang="en">List of diagnostic information sources that should be ignored. **Note:** Ignored diagnostic information sources take precedence over the diagnostic information sources listed in `#git.diagnosticsCommitHook.Sources#`.</source>
     </trans-unit>
     <trans-unit id="config.branchRandomNameDictionary">
       <source xml:lang="en">List of dictionaries used for the randomly generated branch name. Each value represents the dictionary used to generate the segment of the branch name. Supported dictionaries: `adjectives`, `animals`, `colors` and `numbers`.</source>

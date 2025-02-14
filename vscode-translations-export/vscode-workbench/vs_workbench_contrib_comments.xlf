@@ -314,13 +314,13 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/comments/browser/commentsView" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="acessibleViewHint">
-      <source xml:lang="en">Inspect this in the accessible view ({0}).
-</source>
+    <trans-unit id="accessibleViewHint">
+      <source xml:lang="en">
+Inspect this in the accessible view ({0}).</source>
     </trans-unit>
     <trans-unit id="acessibleViewHintNoKbOpen">
-      <source xml:lang="en">Inspect this in the accessible view via the command Open Accessible View which is currently not triggerable via keybinding.
-</source>
+      <source xml:lang="en">
+Inspect this in the accessible view via the command Open Accessible View which is currently not triggerable via keybinding.</source>
     </trans-unit>
     <trans-unit id="comments.filter.ariaLabel">
       <source xml:lang="en">Filter comments</source>
@@ -328,24 +328,29 @@
     <trans-unit id="comments.filter.placeholder">
       <source xml:lang="en">Filter (e.g. text, author)</source>
     </trans-unit>
+    <trans-unit id="fileCommentLabel">
+      <source xml:lang="en">in {0}</source>
+    </trans-unit>
+    <trans-unit id="multiLineCommentLabel">
+      <source xml:lang="en">from line {0} to line {1} in {2}</source>
+    </trans-unit>
+    <trans-unit id="oneLineCommentLabel">
+      <source xml:lang="en">at line {0} column {1} in {2}</source>
+    </trans-unit>
     <trans-unit id="replyCount">
       <source xml:lang="en"> {0} replies,</source>
     </trans-unit>
     <trans-unit id="resourceWithCommentLabel">
-      <source xml:lang="en">{0} at line {1} column {2} in {3} {4}
-Comment: {5}{6}</source>
-    </trans-unit>
-    <trans-unit id="resourceWithCommentLabelFile">
-      <source xml:lang="en">{0} in {1} {2}
-Comment: {3}{4}</source>
-    </trans-unit>
-    <trans-unit id="resourceWithCommentLabelFileOutdated">
-      <source xml:lang="en">Outdated from {0} in {1} {2}
-Comment: {3}{4}{5}</source>
+      <source xml:lang="en">{0}: {1}
+{2}
+{3}
+{4}</source>
     </trans-unit>
     <trans-unit id="resourceWithCommentLabelOutdated">
-      <source xml:lang="en">Outdated from {0} at line {1} column {2} in {3}{4}
-Comment: {5}{6}</source>
+      <source xml:lang="en">Outdated from {0}: {1}
+{2}
+{3}
+{4}</source>
     </trans-unit>
     <trans-unit id="resourceWithCommentThreadsLabel">
       <source xml:lang="en">Comments in {0}, full path {1}</source>

@@ -60,6 +60,15 @@
     <trans-unit id="shellIntegration">
       <source xml:lang="en">The terminal has a feature called shell integration that offers an enhanced experience and provides useful commands for screen readers such as:</source>
     </trans-unit>
+    <trans-unit id="suggestCommands">
+      <source xml:lang="en">When the terminal suggest widget is focused, accept the suggestion&lt;keybinding:{0}&gt; and configure suggest settings&lt;keybinding:{1}&gt;.</source>
+    </trans-unit>
+    <trans-unit id="suggestCommandsMore">
+      <source xml:lang="en">Also, when the suggest widget is focused, toggle between the widget and terminal&lt;keybinding:{0}&gt; and toggle details focus&lt;keybinding:{1}&gt; to learn more about the suggestion.</source>
+    </trans-unit>
+    <trans-unit id="suggestTrigger">
+      <source xml:lang="en">The terminal request completions command can be invoked manually&lt;keybinding:{0}&gt;, but also appears while typing.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/accessibility/common/terminalAccessibilityConfiguration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="terminal.integrated.accessibleViewFocusOnCommandExecution">
@@ -650,6 +659,18 @@ For example:
       <source xml:lang="en">Enables terminal intellisense suggestions (preview) for supported shells ({0}) when {1} is set to {2}.
 
 If shell integration is installed manually, {3} needs to be set to {4} before calling the shell integration script.</source>
+    </trans-unit>
+    <trans-unit id="suggest.inlineSuggestion">
+      <source xml:lang="en">Controls whether the shell's inline suggestion should be detected and how it is scored.</source>
+    </trans-unit>
+    <trans-unit id="suggest.inlineSuggestion.alwaysOnTop">
+      <source xml:lang="en">Enable the feature and always put the inline suggestion on top.</source>
+    </trans-unit>
+    <trans-unit id="suggest.inlineSuggestion.alwaysOnTopExceptExactMatch">
+      <source xml:lang="en">Enable the feature and sort the inline suggestion without forcing it to be on top. This means that exact matches will be will be above the inline suggestion.</source>
+    </trans-unit>
+    <trans-unit id="suggest.inlineSuggestion.off">
+      <source xml:lang="en">Disable the feature.</source>
     </trans-unit>
     <trans-unit id="suggest.providers">
       <source xml:lang="en">Providers are enabled by default. Omit them by setting the id of the provider to `false`.</source>

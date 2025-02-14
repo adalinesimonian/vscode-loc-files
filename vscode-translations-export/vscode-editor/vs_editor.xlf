@@ -312,8 +312,11 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="editor.experimental.asyncTokenizationVerification">
       <source xml:lang="en">Controls whether async tokenization should be verified against legacy background tokenization. Might slow down tokenization. For debugging only.</source>
     </trans-unit>
-    <trans-unit id="editor.experimental.preferTreeSitter">
-      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for specific languages. This will take precedence over `editor.experimental.treeSitterTelemetry` for the specified languages.</source>
+    <trans-unit id="editor.experimental.preferTreeSitter.ini">
+      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for ini. This will take precedence over `editor.experimental.treeSitterTelemetry` for ini.</source>
+    </trans-unit>
+    <trans-unit id="editor.experimental.preferTreeSitter.typescript">
+      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for typescript. This will take precedence over `editor.experimental.treeSitterTelemetry` for typescript.</source>
     </trans-unit>
     <trans-unit id="editor.experimental.treeSitterTelemetry">
       <source xml:lang="en">Controls whether tree sitter parsing should be turned on and telemetry collected. Setting `editor.experimental.preferTreeSitter` for specific languages will take precedence.</source>
@@ -2048,8 +2051,14 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/common/standaloneStrings" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="acceptSuggestAction">
+      <source xml:lang="en">Accept suggestion{0} to accept the currently selected suggestion.</source>
+    </trans-unit>
     <trans-unit id="accessibilityHelpTitle">
       <source xml:lang="en">Accessibility Help</source>
+    </trans-unit>
+    <trans-unit id="activeEditorState">
+      <source xml:lang="en">Get information about the active editor such as Modified, Problems, and more by setting activeEditorState as a part of the window.title setting.</source>
     </trans-unit>
     <trans-unit id="auto_off">
       <source xml:lang="en">The application is configured to never be optimized for usage with a Screen Reader.</source>
@@ -2162,6 +2171,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="stickScrollKb">
       <source xml:lang="en">Focus Sticky Scroll{0} to focus the currently nested scopes.</source>
     </trans-unit>
+    <trans-unit id="suggestActionsKb">
+      <source xml:lang="en">Trigger the suggest widget{0} to show possible code completions.</source>
+    </trans-unit>
     <trans-unit id="tabFocusModeOffMsg">
       <source xml:lang="en">Pressing Tab in the current editor will insert the tab character. Toggle this behavior{0}.</source>
     </trans-unit>
@@ -2170,6 +2182,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="toggleHighContrast">
       <source xml:lang="en">Toggle High Contrast Theme</source>
+    </trans-unit>
+    <trans-unit id="toggleSuggestionFocus">
+      <source xml:lang="en">Toggle focus between the suggest widget and the editor{0} and toggle details focus with{1} to learn more about the suggestion.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/common/viewLayout/viewLineRenderer" source-language="en" datatype="plaintext"><body>

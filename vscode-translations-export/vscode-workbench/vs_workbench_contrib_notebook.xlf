@@ -1102,8 +1102,17 @@
     <trans-unit id="notebook.globalToolbarShowLabel">
       <source xml:lang="en">Control whether the actions on the notebook toolbar should render label or not.</source>
     </trans-unit>
+    <trans-unit id="notebook.inlineValues.auto">
+      <source xml:lang="en">Show inline values only when an inline value provider is registered.</source>
+    </trans-unit>
     <trans-unit id="notebook.inlineValues.description">
-      <source xml:lang="en">Enable the showing of inline values within notebook code cells after cell execution. Values will remain until the cell is edited, re-executed, or explicitly cleared via the Clear All Outputs toolbar button or the `Notebook: Clear Inline Values` command. </source>
+      <source xml:lang="en">Control whether to show inline values within notebook code cells after cell execution. Values will remain until the cell is edited, re-executed, or explicitly cleared via the Clear All Outputs toolbar button or the `Notebook: Clear Inline Values` command.</source>
+    </trans-unit>
+    <trans-unit id="notebook.inlineValues.off">
+      <source xml:lang="en">Never show inline values.</source>
+    </trans-unit>
+    <trans-unit id="notebook.inlineValues.on">
+      <source xml:lang="en">Always show inline values, with a regex fallback if no inline value provider is registered. Note: There may be a performance impact in larger cells if the fallback is used.</source>
     </trans-unit>
     <trans-unit id="notebook.insertFinalNewline">
       <source xml:lang="en">When enabled, insert a final new line into the end of code cells when saving a notebook.</source>

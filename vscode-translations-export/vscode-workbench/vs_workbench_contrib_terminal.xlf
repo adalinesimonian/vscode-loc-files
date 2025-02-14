@@ -823,7 +823,7 @@ Default Skipped Commands:
 {0}</source>
     </trans-unit>
     <trans-unit id="terminal.integrated.confirmOnExit">
-      <source xml:lang="en">Controls whether to confirm when the window closes if there are active terminal sessions.</source>
+      <source xml:lang="en">Controls whether to confirm when the window closes if there are active terminal sessions. Background terminals like those launched by some extensions will not trigger the confirmation.</source>
     </trans-unit>
     <trans-unit id="terminal.integrated.confirmOnExit.always">
       <source xml:lang="en">Always confirm if there are terminals.</source>
