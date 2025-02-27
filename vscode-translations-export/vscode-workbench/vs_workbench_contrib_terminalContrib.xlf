@@ -678,6 +678,15 @@ If shell integration is installed manually, {3} needs to be set to {4} before ca
     <trans-unit id="suggest.quickSuggestions">
       <source xml:lang="en">Controls whether suggestions should automatically show up while typing. Also be aware of the {0}-setting which controls if suggestions are triggered by special characters.</source>
     </trans-unit>
+    <trans-unit id="suggest.quickSuggestions.arguments">
+      <source xml:lang="en">Enable quick suggestions for arguments, anything after the first word in a command line input.</source>
+    </trans-unit>
+    <trans-unit id="suggest.quickSuggestions.commands">
+      <source xml:lang="en">Enable quick suggestions for commands, the first word in a command line input.</source>
+    </trans-unit>
+    <trans-unit id="suggest.quickSuggestions.unknown">
+      <source xml:lang="en">Enable quick suggestions when it's unclear what the best suggestion is, if this is on files and folders will be suggested as a fallback.</source>
+    </trans-unit>
     <trans-unit id="suggest.runOnEnter">
       <source xml:lang="en">Controls whether suggestions should run immediately when `Enter` (not `Tab`) is used to accept the result.</source>
     </trans-unit>

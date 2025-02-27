@@ -417,6 +417,9 @@
     <trans-unit id="configuration.tsserver.watchOptions.watchFile.useFsEventsOnParentDirectory">
       <source xml:lang="en">Attempt to use the operating system/file system&apos;s native events to listen for changes on a file&apos;s containing directories. This can use fewer file watchers, but might be less accurate.</source>
     </trans-unit>
+    <trans-unit id="configuration.updateImportsOnPaste">
+      <source xml:lang="en">Automatically update imports when pasting code. Requires TypeScript 5.6+.</source>
+    </trans-unit>
     <trans-unit id="configuration.tsserver.watchOptions.watchDirectory.fixedPollingInterval">
       <source xml:lang="en">Check every directory for changes several times a second at a fixed interval.</source>
     </trans-unit>
@@ -543,17 +546,11 @@
     <trans-unit id="typescript.tsserver.pluginPaths.item">
       <source xml:lang="en">Either an absolute or relative path. Relative path will be resolved against workspace folder(s).</source>
     </trans-unit>
-    <trans-unit id="configuration.expandableHover">
-      <source xml:lang="en">Enable expanding/contracting the hover to reveal more/less information from the TS server.</source>
-    </trans-unit>
     <trans-unit id="inlayHints.parameterNames.all">
       <source xml:lang="en">Enable parameter name hints for literal and non-literal arguments.</source>
     </trans-unit>
     <trans-unit id="inlayHints.parameterNames.literals">
       <source xml:lang="en">Enable parameter name hints only for literal arguments.</source>
-    </trans-unit>
-    <trans-unit id="configuration.updateImportsOnPaste">
-      <source xml:lang="en">Enable updating imports when pasting code. Requires TypeScript 5.7+.&#10;&#10;By default this shows a option to update imports after pasting. You can use the `#editor.pasteAs.preferences#` setting to update imports automatically when pasting: `&quot;editor.pasteAs.preferences&quot;: [ &quot;text.updateImports.jsts&quot; ]`.</source>
     </trans-unit>
     <trans-unit id="javascript.validate.enable">
       <source xml:lang="en">Enable/disable JavaScript validation.</source>

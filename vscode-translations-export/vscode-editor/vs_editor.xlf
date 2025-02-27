@@ -774,10 +774,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <source xml:lang="en">Inlay hints are showing by default and hide when holding {0}</source>
     </trans-unit>
     <trans-unit id="editor.inlineSuggest.edits.renderSideBySide.auto">
-      <source xml:lang="en">Larger suggestions will show side by side if there is enough space, otherwise they will be shown bellow.</source>
+      <source xml:lang="en">Larger suggestions will show side by side if there is enough space, otherwise they will be shown below.</source>
     </trans-unit>
     <trans-unit id="editor.inlineSuggest.edits.renderSideBySide.never">
-      <source xml:lang="en">Larger suggestions are never shown side by side and will always be shown bellow.</source>
+      <source xml:lang="en">Larger suggestions are never shown side by side and will always be shown below.</source>
     </trans-unit>
     <trans-unit id="editor.lightbulb.enabled.off">
       <source xml:lang="en">Disable the code action menu.</source>
@@ -1055,6 +1055,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="inlineSuggest.edits.renderSideBySide">
       <source xml:lang="en">Controls whether larger suggestions can be shown side by side.</source>
     </trans-unit>
+    <trans-unit id="inlineSuggest.edits.showCollapsed">
+      <source xml:lang="en">Controls whether the suggestion will show as collapsed until jumping to it.</source>
+    </trans-unit>
     <trans-unit id="inlineSuggest.enabled">
       <source xml:lang="en">Controls whether to automatically show inline suggestions in the editor.</source>
     </trans-unit>
@@ -1117,6 +1120,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="minimap.enabled">
       <source xml:lang="en">Controls whether the minimap is shown.</source>
+    </trans-unit>
+    <trans-unit id="minimap.markSectionHeaderRegex">
+      <source xml:lang="en">Defines the regular expression used to find section headers in comments. The regex must contain a named match group `label` (written as `(?&lt;label&gt;.+)`) that encapsulates the section header, otherwise it will not work. Optionally you can include another match group named `separator`. Use \n in the pattern to match multi-line headers.</source>
     </trans-unit>
     <trans-unit id="minimap.maxColumn">
       <source xml:lang="en">Limit the width of the minimap to render at most a certain number of columns.</source>
@@ -2185,6 +2191,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="toggleSuggestionFocus">
       <source xml:lang="en">Toggle focus between the suggest widget and the editor{0} and toggle details focus with{1} to learn more about the suggestion.</source>
+    </trans-unit>
+    <trans-unit id="toolbar">
+      <source xml:lang="en">Around the workbench, when the screen reader announces you've landed in a toolbar, use narrow keys to navigate between the toolbar's actions.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/common/viewLayout/viewLineRenderer" source-language="en" datatype="plaintext"><body>

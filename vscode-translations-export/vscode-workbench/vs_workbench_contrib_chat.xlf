@@ -59,7 +59,7 @@
       <source xml:lang="en">- Remove File from Working Set{0}.</source>
     </trans-unit>
     <trans-unit id="chatEditing.review">
-      <source xml:lang="en">Once the edits are applied, focus the editor(s) to review, accept, and discard changes.</source>
+      <source xml:lang="en">Once the edits are applied, a sound will play to indicate the document has been opened and is ready for review. The sound can be disabled with accessibility.signals.chatEditModifiedFile.</source>
     </trans-unit>
     <trans-unit id="chatEditing.saveAllFiles">
       <source xml:lang="en">- Save All Files{0}.</source>
@@ -132,14 +132,38 @@
     <trans-unit id="chat.releaseNotes.label">
       <source xml:lang="en">Show Release Notes</source>
     </trans-unit>
+    <trans-unit id="chatAndCompletionsQuotaExceeded">
+      <source xml:lang="en">You've reached the limit of the Copilot Free plan. These limits will reset on {0}.</source>
+    </trans-unit>
+    <trans-unit id="chatAndCompletionsQuotaExceededButton">
+      <source xml:lang="en">Copilot Free plan limit reached. Click for details.</source>
+    </trans-unit>
+    <trans-unit id="chatQuotaExceeded">
+      <source xml:lang="en">You've run out of free chat messages. You still have free code completions available in the Copilot Free plan. These limits will reset on {0}.</source>
+    </trans-unit>
+    <trans-unit id="chatQuotaExceededButton">
+      <source xml:lang="en">Monthly chat messages limit reached. Click for details.</source>
+    </trans-unit>
     <trans-unit id="chatWith">
       <source xml:lang="en">Chat with Extension</source>
+    </trans-unit>
+    <trans-unit id="completionsQuotaExceeded">
+      <source xml:lang="en">You've run out of free code completions. You still have free chat messages available in the Copilot Free plan. These limits will reset on {0}.</source>
+    </trans-unit>
+    <trans-unit id="completionsQuotaExceededButton">
+      <source xml:lang="en">Monthly code completions limit reached. Click for details.</source>
     </trans-unit>
     <trans-unit id="configureCompletions">
       <source xml:lang="en">Configure Code Completions...</source>
     </trans-unit>
+    <trans-unit id="copilotFree">
+      <source xml:lang="en">Copilot Limit Reached</source>
+    </trans-unit>
     <trans-unit id="currentChatLabel">
       <source xml:lang="en">current</source>
+    </trans-unit>
+    <trans-unit id="dismiss">
+      <source xml:lang="en">Dismiss</source>
     </trans-unit>
     <trans-unit id="interactiveSession.clearHistory.label">
       <source xml:lang="en">Clear Input History</source>
@@ -159,14 +183,8 @@
     <trans-unit id="interactiveSession.open">
       <source xml:lang="en">Open Editor</source>
     </trans-unit>
-    <trans-unit id="learnMore">
-      <source xml:lang="en">Learn More</source>
-    </trans-unit>
-    <trans-unit id="managePlan">
-      <source xml:lang="en">Manage Copilot Plan</source>
-    </trans-unit>
-    <trans-unit id="manageSettings">
-      <source xml:lang="en">Manage Copilot Settings</source>
+    <trans-unit id="manageCopilot">
+      <source xml:lang="en">Manage Copilot</source>
     </trans-unit>
     <trans-unit id="more">
       <source xml:lang="en">More...</source>
@@ -184,7 +202,7 @@
       <source xml:lang="en">Sign in to Use Copilot...</source>
     </trans-unit>
     <trans-unit id="title4">
-      <source xml:lang="en">Chat</source>
+      <source xml:lang="en">Copilot</source>
     </trans-unit>
     <trans-unit id="toggle.chatControl">
       <source xml:lang="en">Copilot Controls</source>
@@ -192,27 +210,44 @@
     <trans-unit id="toggle.chatControlsDescription">
       <source xml:lang="en">Toggle visibility of the Copilot Controls in title bar</source>
     </trans-unit>
+    <trans-unit id="toggleChat">
+      <source xml:lang="en">Toggle Chat</source>
+    </trans-unit>
     <trans-unit id="triggerChatSetup">
       <source xml:lang="en">Use AI Features with Copilot for Free...</source>
     </trans-unit>
+    <trans-unit id="upgradeChat">
+      <source xml:lang="en">Upgrade to Copilot Pro</source>
+    </trans-unit>
+    <trans-unit id="upgradePro">
+      <source xml:lang="en">Upgrade to Copilot Pro</source>
+    </trans-unit>
+    <trans-unit id="upgradeToPro">
+      <source xml:lang="en">Upgrade to Copilot Pro (your first 30 days are free) for:
+- Unlimited code completions
+- Unlimited chat messages
+- Access to additional models</source>
+    </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/chatAttachPromptAction" source-language="en" datatype="plaintext"><body>
     <trans-unit id="workbench.action.chat.attach.prompt.label">
       <source xml:lang="en">Use Prompt</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/showPromptSelectionDialog" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="noPromptFilesFoundLabel">
-      <source xml:lang="en">No prompts found.</source>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompts.use.select-dialog.alt-modifier-note">
+      <source xml:lang="en">(hold `{0}` to use in Edits)</source>
     </trans-unit>
-    <trans-unit id="noPromptFilesFoundTooltipLabel">
-      <source xml:lang="en">Learn how to create reusable prompts</source>
-    </trans-unit>
-    <trans-unit id="selectPromptPlaceholder">
+    <trans-unit id="commands.prompts.use.select-dialog.placeholder">
       <source xml:lang="en">Select a prompt to use</source>
     </trans-unit>
-    <trans-unit id="selectPromptPlaceholder.holdAltOption">
-      <source xml:lang="en">(hold `{0}` to use in Edits)</source>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/showHowToCreate" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompts.use.select-dialog.empty.docs-label">
+      <source xml:lang="en">Learn how to create reusable prompts</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.use.select-dialog.empty.placeholder">
+      <source xml:lang="en">No prompts found.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatClearActions" source-language="en" datatype="plaintext"><body>
@@ -280,11 +315,11 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatContextActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatAttachFiles">
-      <source xml:lang="en">Search for files to add to your working set</source>
-    </trans-unit>
     <trans-unit id="chatContext.attach.placeholder">
       <source xml:lang="en">Search attachments</source>
+    </trans-unit>
+    <trans-unit id="chatContext.attach.prompt.label">
+      <source xml:lang="en">Prompt...</source>
     </trans-unit>
     <trans-unit id="chatContext.attachScreenshot.labelElectron.Window">
       <source xml:lang="en">Screenshot Window</source>
@@ -292,8 +327,14 @@
     <trans-unit id="chatContext.attachScreenshot.labelWeb">
       <source xml:lang="en">Screenshot</source>
     </trans-unit>
+    <trans-unit id="chatContext.diagnstic">
+      <source xml:lang="en">Problem...</source>
+    </trans-unit>
     <trans-unit id="chatContext.editors">
       <source xml:lang="en">Open Editors</source>
+    </trans-unit>
+    <trans-unit id="chatContext.folder">
+      <source xml:lang="en">Folder...</source>
     </trans-unit>
     <trans-unit id="chatContext.notebook.kernelVariable">
       <source xml:lang="en">Kernel Variable...</source>
@@ -316,9 +357,6 @@
     <trans-unit id="pastedImage">
       <source xml:lang="en">Pasted Image</source>
     </trans-unit>
-    <trans-unit id="promptWithEllipsis">
-      <source xml:lang="en">Prompt...</source>
-    </trans-unit>
     <trans-unit id="relatedFiles">
       <source xml:lang="en">Add related files to your working set</source>
     </trans-unit>
@@ -332,7 +370,10 @@
       <source xml:lang="en">Add Selection to Chat</source>
     </trans-unit>
     <trans-unit id="workbench.action.chat.editing.attachFiles.label">
-      <source xml:lang="en">Add Files to Working Set</source>
+      <source xml:lang="en">Add Files to Copilot Edits</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.chat.editing.attachFiles.shortLabel">
+      <source xml:lang="en">Add Files...</source>
     </trans-unit>
     <trans-unit id="workbench.action.edits.attachFile.label">
       <source xml:lang="en">Add File to {0}</source>
@@ -523,6 +564,11 @@
       <source xml:lang="en">Unhelpful</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatToolActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.accept">
+      <source xml:lang="en">Accept</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/codeBlockOperations" source-language="en" datatype="plaintext"><body>
     <trans-unit id="activeEditor">
       <source xml:lang="en">Active editor '{0}'</source>
@@ -590,7 +636,7 @@
       <source xml:lang="en">Current file context</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/attachments/instructionsAttachment/instructionsAttachment" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/attachments/promptAttachments/promptAttachmentWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.promptAttachment">
       <source xml:lang="en">Prompt attachment, {0}</source>
     </trans-unit>
@@ -634,6 +680,35 @@
     </trans-unit>
     <trans-unit id="chat.experimental.detectParticipant.enabled.deprecated">
       <source xml:lang="en">This setting is deprecated. Please use `chat.detectParticipant.enabled` instead.</source>
+    </trans-unit>
+    <trans-unit id="chat.implicitContext.enabled.1">
+      <source xml:lang="en">Enables automatically using the active editor as chat context for specified chat locations.</source>
+    </trans-unit>
+    <trans-unit id="chat.implicitContext.value">
+      <source xml:lang="en">The value for the implicit context.</source>
+    </trans-unit>
+    <trans-unit id="chat.implicitContext.value.always">
+      <source xml:lang="en">Implicit context is always enabled.</source>
+    </trans-unit>
+    <trans-unit id="chat.implicitContext.value.first">
+      <source xml:lang="en">Implicit context is enabled for the first interaction.</source>
+    </trans-unit>
+    <trans-unit id="chat.implicitContext.value.never">
+      <source xml:lang="en">Implicit context is never enabled.</source>
+    </trans-unit>
+    <trans-unit id="chat.promptFiles.config.description">
+      <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be attached in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
+
+Relative paths are resolved from the root folder(s) of your workspace.</source>
+    </trans-unit>
+    <trans-unit id="chat.promptFiles.config.title">
+      <source xml:lang="en">Prompt Files</source>
+    </trans-unit>
+    <trans-unit id="chat.renderRelatedFiles">
+      <source xml:lang="en">Controls whether related files should be rendered in the chat input.</source>
+    </trans-unit>
+    <trans-unit id="chat.statusIndicator">
+      <source xml:lang="en">Controls whether a Copilot related status indicator appears in the lower right corner.</source>
     </trans-unit>
     <trans-unit id="clear">
       <source xml:lang="en">Start a new chat</source>
@@ -724,6 +799,9 @@
     <trans-unit id="chat.imageAttachment">
       <source xml:lang="en">Attached image, {0}</source>
     </trans-unit>
+    <trans-unit id="chat.imageAttachmentHover">
+      <source xml:lang="en">{0}</source>
+    </trans-unit>
     <trans-unit id="chat.omittedFileAttachment">
       <source xml:lang="en">Omitted: {0}.</source>
     </trans-unit>
@@ -759,9 +837,6 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatMarkdownContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.codeblock.applying">
-      <source xml:lang="en">Applying edits...</source>
-    </trans-unit>
     <trans-unit id="chat.codeblock.applyingPercentage">
       <source xml:lang="en">Applying edits ({0}%)...</source>
     </trans-unit>
@@ -784,6 +859,14 @@
       <source xml:lang="en">Edited {0}, {1}, {2}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatProgressContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="pausedMessage">
+      <source xml:lang="en">Paused</source>
+    </trans-unit>
+    <trans-unit id="workingMessage">
+      <source xml:lang="en">Working</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatQuotaExceededPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="signedUpClickToContinue">
       <source xml:lang="en">Signed up? Click to retry.</source>
@@ -798,9 +881,6 @@
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatReferencesContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="addToChat">
       <source xml:lang="en">Add File to Chat</source>
-    </trans-unit>
-    <trans-unit id="chat.openEditor">
-      <source xml:lang="en">Open Editor</source>
     </trans-unit>
     <trans-unit id="chatCollapsibleList">
       <source xml:lang="en">Collapsible Chat List</source>
@@ -870,19 +950,25 @@
     <trans-unit id="imageTooLargeMessage">
       <source xml:lang="en">The image {0} is too large to be attached.</source>
     </trans-unit>
+    <trans-unit id="problem">
+      <source xml:lang="en">Problem</source>
+    </trans-unit>
     <trans-unit id="symbol">
       <source xml:lang="en">Symbol</source>
+    </trans-unit>
+    <trans-unit id="url">
+      <source xml:lang="en">URL</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="accept">
-      <source xml:lang="en">Accept</source>
+      <source xml:lang="en">Keep</source>
     </trans-unit>
     <trans-unit id="accept.file">
-      <source xml:lang="en">Accept</source>
+      <source xml:lang="en">Keep</source>
     </trans-unit>
     <trans-unit id="acceptAllEdits">
-      <source xml:lang="en">Accept All Edits</source>
+      <source xml:lang="en">Keep All Edits</source>
     </trans-unit>
     <trans-unit id="addFileToWorkingSet">
       <source xml:lang="en">Add File</source>
@@ -900,7 +986,7 @@
       <source xml:lang="en">Yes</source>
     </trans-unit>
     <trans-unit id="chat.editing.discardAll.confirmation.title">
-      <source xml:lang="en">Discard all edits?</source>
+      <source xml:lang="en">Undo all edits?</source>
     </trans-unit>
     <trans-unit id="chat.editing.removeFile.confirmation.message">
       <source xml:lang="en">This will remove {0} from your working set and undo the edits made to it. Do you want to proceed?</source>
@@ -913,6 +999,9 @@
     </trans-unit>
     <trans-unit id="chat.editing.removeFile.confirmationmanyFiles">
       <source xml:lang="en">{0} files</source>
+    </trans-unit>
+    <trans-unit id="chat.openFileUpdatedBySnapshot.label">
+      <source xml:lang="en">Open File</source>
     </trans-unit>
     <trans-unit id="chat.openSnapshot.label">
       <source xml:lang="en">Open File Snapshot</source>
@@ -945,7 +1034,7 @@
       <source xml:lang="en">Undo Edits</source>
     </trans-unit>
     <trans-unit id="chatEditing.snapshot">
-      <source xml:lang="en">{0} (Snapshot {1})</source>
+      <source xml:lang="en">{0} (Snapshot)</source>
     </trans-unit>
     <trans-unit id="chatEditing.viewChanges">
       <source xml:lang="en">View All Edits</source>
@@ -954,13 +1043,13 @@
       <source xml:lang="en">Clear Working Set</source>
     </trans-unit>
     <trans-unit id="discard">
-      <source xml:lang="en">Discard</source>
+      <source xml:lang="en">Undo</source>
     </trans-unit>
     <trans-unit id="discard.file">
-      <source xml:lang="en">Discard</source>
+      <source xml:lang="en">Undo</source>
     </trans-unit>
     <trans-unit id="discardAllEdits">
-      <source xml:lang="en">Discard All Edits</source>
+      <source xml:lang="en">Undo All Edits</source>
     </trans-unit>
     <trans-unit id="markFileAsReadonly">
       <source xml:lang="en">Mark as read-only</source>
@@ -975,18 +1064,29 @@
       <source xml:lang="en">Add Selected Files to Working Set</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingCodeEditorIntegration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="diff.agent">
+      <source xml:lang="en">{0} (changes from {1})</source>
+    </trans-unit>
+    <trans-unit id="diff.generic">
+      <source xml:lang="en">{0} (changes from chat)</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="accept">
-      <source xml:lang="en">Accept Chat Edit</source>
+      <source xml:lang="en">Keep Chat Edits</source>
     </trans-unit>
     <trans-unit id="accept2">
-      <source xml:lang="en">Accept</source>
+      <source xml:lang="en">Keep</source>
     </trans-unit>
     <trans-unit id="accept3">
-      <source xml:lang="en">Accept All Edits</source>
+      <source xml:lang="en">Keep Chat Edits in this File</source>
+    </trans-unit>
+    <trans-unit id="accept4">
+      <source xml:lang="en">Keep All Edits</source>
     </trans-unit>
     <trans-unit id="acceptHunk">
-      <source xml:lang="en">Accept this Change</source>
+      <source xml:lang="en">Keep this Change</source>
     </trans-unit>
     <trans-unit id="accessibleDiff">
       <source xml:lang="en">Show Accessible Diff View</source>
@@ -995,13 +1095,16 @@
       <source xml:lang="en">Toggle Diff Editor</source>
     </trans-unit>
     <trans-unit id="discard">
-      <source xml:lang="en">Discard Chat Edit</source>
+      <source xml:lang="en">Undo Chat Edits</source>
     </trans-unit>
     <trans-unit id="discard2">
-      <source xml:lang="en">Discard</source>
+      <source xml:lang="en">Undo</source>
     </trans-unit>
     <trans-unit id="discard3">
-      <source xml:lang="en">Discard All Edits</source>
+      <source xml:lang="en">Undo Chat Edits in this File</source>
+    </trans-unit>
+    <trans-unit id="discard4">
+      <source xml:lang="en">Undo All Edits</source>
     </trans-unit>
     <trans-unit id="label">
       <source xml:lang="en">Navigation Status</source>
@@ -1016,10 +1119,10 @@
       <source xml:lang="en">Review</source>
     </trans-unit>
     <trans-unit id="undo">
-      <source xml:lang="en">Discard this Change</source>
+      <source xml:lang="en">Undo this Change</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorController" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorContextKeys" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.ctxEditSessionIsGlobal">
       <source xml:lang="en">The current editor is part of the global edit session</source>
     </trans-unit>
@@ -1032,14 +1135,14 @@
     <trans-unit id="chat.hasEditorModifications">
       <source xml:lang="en">The current editor contains chat modifications</source>
     </trans-unit>
-    <trans-unit id="diff.agent">
-      <source xml:lang="en">{0} (changes from {1})</source>
-    </trans-unit>
-    <trans-unit id="diff.generic">
-      <source xml:lang="en">{0} (changes from chat)</source>
+    <trans-unit id="chatEdits.requestCount">
+      <source xml:lang="en">The number of turns the editing session in this editor has</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorOverlay" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="0Of0">
+      <source xml:lang="en">0 of 0</source>
+    </trans-unit>
     <trans-unit id="applyingPercentage">
       <source xml:lang="en">{0}% Applying Edits</source>
     </trans-unit>
@@ -1065,12 +1168,33 @@
       <source xml:lang="en">{0} changes in {1} files</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingModifiedFileEntry" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingModifiedDocumentEntry" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatEditing1">
       <source xml:lang="en">Chat Edit: '{0}'</source>
     </trans-unit>
     <trans-unit id="chatEditing2">
       <source xml:lang="en">Chat Edit</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingModifiedFileEntry" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="editorSelectionBackground">
+      <source xml:lang="en">Color of pending edit regions in the minimap</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingModifiedNotebookEntry" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatEditing1">
+      <source xml:lang="en">Chat Edit: '{0}'</source>
+    </trans-unit>
+    <trans-unit id="chatEditing2">
+      <source xml:lang="en">Chat Edit</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingNotebookEditorIntegration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="diff.agent">
+      <source xml:lang="en">{0} (changes from {1})</source>
+    </trans-unit>
+    <trans-unit id="diff.generic">
+      <source xml:lang="en">{0} (changes from chat)</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingServiceImpl" source-language="en" datatype="plaintext"><body>
@@ -1088,9 +1212,6 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingSession" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatEditing.transient">
-      <source xml:lang="en">Open Editor</source>
-    </trans-unit>
     <trans-unit id="multiDiffEditorInput.name">
       <source xml:lang="en">Suggested Edits</source>
     </trans-unit>
@@ -1151,9 +1272,6 @@
     <trans-unit id="actions.chat.accessibiltyHelp">
       <source xml:lang="en">Chat Input,  Type to ask questions or type / for topics, press enter to send out the request. Use {0} for Chat Accessibility Help.</source>
     </trans-unit>
-    <trans-unit id="addFiles.label">
-      <source xml:lang="en">Add files to your working set</source>
-    </trans-unit>
     <trans-unit id="chat.agentMode">
       <source xml:lang="en">Agent</source>
     </trans-unit>
@@ -1162,6 +1280,9 @@
     </trans-unit>
     <trans-unit id="chat.attachment.clearButton">
       <source xml:lang="en">Remove from context</source>
+    </trans-unit>
+    <trans-unit id="chat.attachment.link">
+      <source xml:lang="en">Attached link, {0}</source>
     </trans-unit>
     <trans-unit id="chat.fileAttachment">
       <source xml:lang="en">Attached file, {0}</source>
@@ -1175,32 +1296,32 @@
     <trans-unit id="chat.imageAttachment">
       <source xml:lang="en">Attached image, {0}</source>
     </trans-unit>
+    <trans-unit id="chat.imageAttachmentHover">
+      <source xml:lang="en">{0}</source>
+    </trans-unit>
+    <trans-unit id="chat.moreModels">
+      <source xml:lang="en">Add More Models...</source>
+    </trans-unit>
     <trans-unit id="chat.normalMode">
       <source xml:lang="en">Edit</source>
     </trans-unit>
     <trans-unit id="chat.submitToSecondaryAgent">
       <source xml:lang="en">Send to @{0}</source>
     </trans-unit>
-    <trans-unit id="chatAddFiles">
-      <source xml:lang="en">{0} Add Files...</source>
+    <trans-unit id="chatAttachFiles">
+      <source xml:lang="en">Search for files and context to add to your request</source>
     </trans-unit>
-    <trans-unit id="chatEditingSession.fileLimitReached">
-      <source xml:lang="en">You have reached the maximum number of files that can be added to the working set.</source>
+    <trans-unit id="chatEditingSession.addSuggested">
+      <source xml:lang="en">Add suggestion</source>
     </trans-unit>
-    <trans-unit id="chatEditingSession.manyFiles">
-      <source xml:lang="en">({0} files)</source>
+    <trans-unit id="chatEditingSession.addSuggestion">
+      <source xml:lang="en">Add suggestion {0}</source>
     </trans-unit>
-    <trans-unit id="chatEditingSession.oneFile">
-      <source xml:lang="en">(1 file)</source>
+    <trans-unit id="chatEditingSession.manyFiles.1">
+      <source xml:lang="en">{0} files changed</source>
     </trans-unit>
-    <trans-unit id="chatEditingSession.removeSuggested">
-      <source xml:lang="en">Remove suggestion</source>
-    </trans-unit>
-    <trans-unit id="chatEditingSession.removeSuggestion">
-      <source xml:lang="en">Remove suggestion {0}</source>
-    </trans-unit>
-    <trans-unit id="chatEditingSession.workingSet">
-      <source xml:lang="en">Working Set</source>
+    <trans-unit id="chatEditingSession.oneFile.1">
+      <source xml:lang="en">1 file changed</source>
     </trans-unit>
     <trans-unit id="chatInput">
       <source xml:lang="en">Chat Input</source>
@@ -1221,9 +1342,6 @@
     </trans-unit>
     <trans-unit id="didNotFollowInstructions">
       <source xml:lang="en">Didn't follow instructions</source>
-    </trans-unit>
-    <trans-unit id="generating">
-      <source xml:lang="en">Generating</source>
     </trans-unit>
     <trans-unit id="incompleteCode">
       <source xml:lang="en">Incomplete code</source>
@@ -1257,6 +1375,9 @@
     </trans-unit>
     <trans-unit id="usedAgentSlashCommand">
       <source xml:lang="en">used {0} [[(rerun without)]]</source>
+    </trans-unit>
+    <trans-unit id="working">
+      <source xml:lang="en">Working</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatParticipant.contribution" source-language="en" datatype="plaintext"><body>
@@ -1374,56 +1495,6 @@
     </trans-unit>
     <trans-unit id="pastedImageName">
       <source xml:lang="en">Pasted Image</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatQuotasService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatAndCompletionsQuotaExceeded">
-      <source xml:lang="en">You've reached the limit of the Copilot Free plan. These limits will reset on {0}.</source>
-    </trans-unit>
-    <trans-unit id="chatAndCompletionsQuotaExceededButton">
-      <source xml:lang="en">Copilot Free plan limit reached. Click for details.</source>
-    </trans-unit>
-    <trans-unit id="chatAndCompletionsQuotaExceededStatus">
-      <source xml:lang="en">Copilot limit reached</source>
-    </trans-unit>
-    <trans-unit id="chatQuotaExceeded">
-      <source xml:lang="en">You've run out of free chat messages. You still have free code completions available in the Copilot Free plan. These limits will reset on {0}.</source>
-    </trans-unit>
-    <trans-unit id="chatQuotaExceededButton">
-      <source xml:lang="en">Monthly chat messages limit reached. Click for details.</source>
-    </trans-unit>
-    <trans-unit id="chatQuotaExceededStatus">
-      <source xml:lang="en">Chat limit reached</source>
-    </trans-unit>
-    <trans-unit id="completionsQuotaExceeded">
-      <source xml:lang="en">You've run out of free code completions. You still have free chat messages available in the Copilot Free plan. These limits will reset on {0}.</source>
-    </trans-unit>
-    <trans-unit id="completionsQuotaExceededButton">
-      <source xml:lang="en">Monthly code completions limit reached. Click for details.</source>
-    </trans-unit>
-    <trans-unit id="completionsQuotaExceededStatus">
-      <source xml:lang="en">Completions limit reached</source>
-    </trans-unit>
-    <trans-unit id="copilotFree">
-      <source xml:lang="en">Copilot Limit Reached</source>
-    </trans-unit>
-    <trans-unit id="dismiss">
-      <source xml:lang="en">Dismiss</source>
-    </trans-unit>
-    <trans-unit id="indicator">
-      <source xml:lang="en">Copilot Limit Indicator</source>
-    </trans-unit>
-    <trans-unit id="managePlan">
-      <source xml:lang="en">Upgrade to Copilot Pro</source>
-    </trans-unit>
-    <trans-unit id="upgradeChat">
-      <source xml:lang="en">Upgrade to Copilot Pro</source>
-    </trans-unit>
-    <trans-unit id="upgradeToPro">
-      <source xml:lang="en">Upgrade to Copilot Pro (your first 30 days are free) for:
-- Unlimited code completions
-- Unlimited chat messages
-- Access to additional models</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
@@ -1545,9 +1616,6 @@
 {Locked="]({0})"}
 {Locked="]({1})"}</note>
     </trans-unit>
-    <trans-unit id="triggerChatSetup">
-      <source xml:lang="en">Use AI Features with Copilot for Free...</source>
-    </trans-unit>
     <trans-unit id="unknownSetupError">
       <source xml:lang="en">An error occurred while setting up Copilot. Would you like to try again?</source>
     </trans-unit>
@@ -1568,6 +1636,83 @@
     </trans-unit>
     <trans-unit id="willResolveTo">
       <source xml:lang="en">Will resolve to {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatStatus" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatAndCompletionsQuotaExceededStatus">
+      <source xml:lang="en">Limit reached</source>
+    </trans-unit>
+    <trans-unit id="chatQuotaExceededStatus">
+      <source xml:lang="en">Chat limit reached</source>
+    </trans-unit>
+    <trans-unit id="chatStatus">
+      <source xml:lang="en">Copilot Status</source>
+    </trans-unit>
+    <trans-unit id="chatsLabel">
+      <source xml:lang="en">Chats messages</source>
+    </trans-unit>
+    <trans-unit id="completionsLabel">
+      <source xml:lang="en">Code completions</source>
+    </trans-unit>
+    <trans-unit id="completionsQuotaExceededStatus">
+      <source xml:lang="en">Completions limit reached</source>
+    </trans-unit>
+    <trans-unit id="gaugeBackground">
+      <source xml:lang="en">Gauge background color.</source>
+    </trans-unit>
+    <trans-unit id="gaugeBorder">
+      <source xml:lang="en">Gauge border color.</source>
+    </trans-unit>
+    <trans-unit id="gaugeErrorBackground">
+      <source xml:lang="en">Gauge error background color.</source>
+    </trans-unit>
+    <trans-unit id="gaugeErrorForeground">
+      <source xml:lang="en">Gauge error foreground color.</source>
+    </trans-unit>
+    <trans-unit id="gaugeForeground">
+      <source xml:lang="en">Gauge foreground color.</source>
+    </trans-unit>
+    <trans-unit id="gaugeWarningBackground">
+      <source xml:lang="en">Gauge warning background color.</source>
+    </trans-unit>
+    <trans-unit id="gaugeWarningForeground">
+      <source xml:lang="en">Gauge warning foreground color.</source>
+    </trans-unit>
+    <trans-unit id="keybindingsTitle">
+      <source xml:lang="en">Keybindings</source>
+    </trans-unit>
+    <trans-unit id="limitQuota">
+      <source xml:lang="en">Limits will reset on {0}.</source>
+    </trans-unit>
+    <trans-unit id="openChat">
+      <source xml:lang="en">Open Chat ({0})</source>
+    </trans-unit>
+    <trans-unit id="quotaDisplay">
+      <source xml:lang="en">{0}%</source>
+    </trans-unit>
+    <trans-unit id="settings.codeCompletions">
+      <source xml:lang="en">Code completions (all)</source>
+    </trans-unit>
+    <trans-unit id="settings.codeCompletionsLanguage">
+      <source xml:lang="en">Code completions ({0})</source>
+    </trans-unit>
+    <trans-unit id="settingsTitle">
+      <source xml:lang="en">Settings</source>
+    </trans-unit>
+    <trans-unit id="shortcuts.chat">
+      <source xml:lang="en">Chat</source>
+    </trans-unit>
+    <trans-unit id="shortcuts.copilotEdits">
+      <source xml:lang="en">Copilot Edits</source>
+    </trans-unit>
+    <trans-unit id="shortcuts.inlineChat">
+      <source xml:lang="en">Inline Chat</source>
+    </trans-unit>
+    <trans-unit id="signInToUseCopilot">
+      <source xml:lang="en">Sign in to Use Copilot...</source>
+    </trans-unit>
+    <trans-unit id="usageTitle">
+      <source xml:lang="en">Copilot Free Usage</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext"><body>
@@ -1639,9 +1784,33 @@ Type {3} to use commands</source>
     <trans-unit id="allFilesDescription">
       <source xml:lang="en">Search for relevant files in the workspace and provide context from them</source>
     </trans-unit>
+    <trans-unit id="markers.panel.allErrors">
+      <source xml:lang="en">All Errors</source>
+    </trans-unit>
+    <trans-unit id="markers.panel.allInfos">
+      <source xml:lang="en">All Infos</source>
+    </trans-unit>
+    <trans-unit id="markers.panel.allWarnings">
+      <source xml:lang="en">All Warnings</source>
+    </trans-unit>
+    <trans-unit id="markers.panel.at.ln.col.number">
+      <source xml:lang="en">[Ln {0}, Col {1}]</source>
+    </trans-unit>
+    <trans-unit id="markers.panel.files">
+      <source xml:lang="en">Files</source>
+    </trans-unit>
+    <trans-unit id="pickAProblem">
+      <source xml:lang="en">Pick a problem to attach...</source>
+    </trans-unit>
+    <trans-unit id="problemsMore">
+      <source xml:lang="en">+ {0} more</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputCompletions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="fileEntryDescription">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="folderEntryDescription">
       <source xml:lang="en">{0} ({1})</source>
     </trans-unit>
     <trans-unit id="installLabel">
@@ -1649,6 +1818,12 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="pickFileLabel">
       <source xml:lang="en">Pick a file</source>
+    </trans-unit>
+    <trans-unit id="pickFolderLabel">
+      <source xml:lang="en">Pick a folder</source>
+    </trans-unit>
+    <trans-unit id="pickProblemsLabel">
+      <source xml:lang="en">Problems in your workspace</source>
     </trans-unit>
     <trans-unit id="pickSymbolLabel">
       <source xml:lang="en">Pick a symbol</source>
@@ -1669,13 +1844,46 @@ Type {3} to use commands</source>
       <source xml:lang="en">Screenshot</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/languageModelToolsService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="toolInvocationMessage">
-      <source xml:lang="en">Using {0}</source>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/createPromptCommand" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompts.create.title.global">
+      <source xml:lang="en">Create Global Prompt</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.create.title.local">
+      <source xml:lang="en">Create Prompt</source>
+    </trans-unit>
+    <trans-unit id="workbench.command.prompts.create.initial-content">
+      <source xml:lang="en">Add prompt contents..</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptName" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompts.create.ask-name.placeholder">
+      <source xml:lang="en">Provide a prompt name</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptSourceFolder" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompts.create.ask-folder.empty.docs-label">
+      <source xml:lang="en">Learn how to configure reusable prompts</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.create.ask-folder.empty.placeholder">
+      <source xml:lang="en">No prompt source folders found.</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.create.ask-folder.placeholder">
+      <source xml:lang="en">Select a prompt source folder</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.create.source-folder.current-workspace">
+      <source xml:lang="en">Current Workspace</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/errors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="workbench.command.prompts.create.error.folder-exists">
+      <source xml:lang="en">Folder already exists at '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="workbench.command.prompts.create.error.invalid-prompt-name">
+      <source xml:lang="en">Invalid prompt file name '{0}'.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/usePromptCommand" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.use-prompt">
+    <trans-unit id="commands.prompts.use.title">
       <source xml:lang="en">Use Prompt</source>
     </trans-unit>
 </body></file>
@@ -1838,6 +2046,12 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatModel" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.attachment.problems.all">
+      <source xml:lang="en">All Problems</source>
+    </trans-unit>
+    <trans-unit id="chat.attachment.problems.inFile">
+      <source xml:lang="en">Problems in {0}</source>
+    </trans-unit>
     <trans-unit id="codeCitation">
       <source xml:lang="en">Similar code found with 1 license type</source>
     </trans-unit>
@@ -1846,6 +2060,11 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
     </trans-unit>
     <trans-unit id="editsSummary">
       <source xml:lang="en">Made changes.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/chatProgressTypes/chatToolInvocation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="toolInvocationMessage">
+      <source xml:lang="en">Using {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatServiceImpl" source-language="en" datatype="plaintext"><body>
@@ -1885,16 +2104,6 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.languageModels.whitespaceVendor">
       <source xml:lang="en">The vendor field cannot start or end with whitespace.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/config" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.promptFiles.config.description">
-      <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be attached in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
-
-Relative paths are resolved from the root folder(s) of your workspace.</source>
-    </trans-unit>
-    <trans-unit id="chat.promptFiles.config.title">
-      <source xml:lang="en">Prompt Files</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/basePromptParser" source-language="en" datatype="plaintext"><body>

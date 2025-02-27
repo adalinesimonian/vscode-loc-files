@@ -1251,6 +1251,9 @@ This allows for users to show the hover without using the mouse.</note>
     <trans-unit id="action.inlineSuggest.accept">
       <source xml:lang="en">Accept Inline Suggestion</source>
     </trans-unit>
+    <trans-unit id="action.inlineSuggest.acceptNextInlineEditPart">
+      <source xml:lang="en">Accept Next Inline Edit Part</source>
+    </trans-unit>
     <trans-unit id="action.inlineSuggest.acceptNextLine">
       <source xml:lang="en">Accept Next Line Of Inline Suggestion</source>
     </trans-unit>
@@ -1274,6 +1277,9 @@ This allows for users to show the hover without using the mouse.</note>
     </trans-unit>
     <trans-unit id="action.inlineSuggest.showPrevious">
       <source xml:lang="en">Show Previous Inline Suggestion</source>
+    </trans-unit>
+    <trans-unit id="action.inlineSuggest.toggleShowCollapsed">
+      <source xml:lang="en">Toggle Inline Suggestions Show Collapsed</source>
     </trans-unit>
     <trans-unit id="action.inlineSuggest.trigger">
       <source xml:lang="en">Trigger Inline Suggestion</source>
@@ -1358,7 +1364,7 @@ A keybinding</note>
       <source xml:lang="en">Previous</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/gutterIndicatorMenu" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/gutterIndicatorMenu" source-language="en" datatype="plaintext"><body>
     <trans-unit id="accept">
       <source xml:lang="en">Accept</source>
     </trans-unit>
@@ -1371,13 +1377,14 @@ A keybinding</note>
     <trans-unit id="settings">
       <source xml:lang="en">Settings</source>
     </trans-unit>
-</body></file>
-  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/gutterIndicatorView" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="inlineEdit">
-      <source xml:lang="en">Inline Edit</source>
+    <trans-unit id="showCollapsed">
+      <source xml:lang="en">Show Collapsed</source>
+    </trans-unit>
+    <trans-unit id="showExpanded">
+      <source xml:lang="en">Show Expanded</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/indicatorView" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/indicatorView" source-language="en" datatype="plaintext"><body>
     <trans-unit id="inlineEdit.indicator.background">
       <source xml:lang="en">Background color for the inline edit indicator.</source>
     </trans-unit>
@@ -1386,6 +1393,11 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="inlineEdit.indicator.foreground">
       <source xml:lang="en">Foreground color for the inline edit indicator.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/inlineEditsView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inlineEdit">
+      <source xml:lang="en">Inline Edit</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/theme" source-language="en" datatype="plaintext"><body>
@@ -1442,6 +1454,11 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="inlineEdit.wordReplacementView.background">
       <source xml:lang="en">Background color for the inline edit word replacement view.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/editor/contrib/insertFinalNewLine/browser/insertFinalNewLine" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="insertFinalNewLine">
+      <source xml:lang="en">Insert Final New Line</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/lineSelection/browser/lineSelection" source-language="en" datatype="plaintext"><body>
@@ -2279,6 +2296,9 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="symbolIcon.keywordForeground">
       <source xml:lang="en">The foreground color for keyword symbols. These symbols appear in the outline, breadcrumb, and suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="symbolIcon.methodArrowForeground">
+      <source xml:lang="en">The foreground color for method with an arrow symbols. These symbols appear in the suggest widget.</source>
     </trans-unit>
     <trans-unit id="symbolIcon.methodForeground">
       <source xml:lang="en">The foreground color for method symbols. These symbols appear in the outline, breadcrumb, and suggest widget.</source>

@@ -741,8 +741,8 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++96bbc2b6d0b5fa5726a6c8930a2bbcd4cfb8a4b95edd9f2a6666260ec402564d">
       <source xml:lang="en">The current branch is not published to the remote. Would you like to publish it to access your changes elsewhere?</source>
     </trans-unit>
-    <trans-unit id="++CODE++ecbcb07eed4ddfac5e2df6f1a5ee9d776e442b2f9a2f0ef30c67eb3c93ad0e7d">
-      <source xml:lang="en">The following file has unresolved diagnostic information: &apos;{0}&apos;.&#10;&#10;How would you like to proceed?</source>
+    <trans-unit id="++CODE++c4f7bdfd5afa9a29d61948b60c23118eb9020493d6265ce1917200dbb33ee381">
+      <source xml:lang="en">The following file has unresolved diagnostics: &apos;{0}&apos;.&#10;&#10;How would you like to proceed?</source>
     </trans-unit>
     <trans-unit id="++CODE++3362cb8501f59d8c5e21a58875c8feb5020043dda58553dccbd8b3fd80357c50">
       <source xml:lang="en">The following file has unsaved changes which won&apos;t be included in the commit if you proceed: {0}.&#10;&#10;Would you like to save it before committing?</source>
@@ -810,8 +810,8 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++46031808b597269632b77fb15757e8f4e0f56b9028ddf7b5889e68f5753668c9">
       <source xml:lang="en">There are no stashes in the repository.</source>
     </trans-unit>
-    <trans-unit id="++CODE++4f73c63eeee2b22d34c4c9b18ca9fee718f365e323c6313342b4fe4c12197ed2">
-      <source xml:lang="en">There are {0} files that have unresolved diagnostic information.&#10;&#10;How would you like to proceed?</source>
+    <trans-unit id="++CODE++d1d24b63c277663d53785f4e08545f88e55cf19a45955833e5afce47d455526c">
+      <source xml:lang="en">There are {0} files that have unresolved diagnostics.&#10;&#10;How would you like to proceed?</source>
     </trans-unit>
     <trans-unit id="++CODE++2ea13fa0d2df0cc2514d3685714c978c33344aa102e1d2397585bada616247c9">
       <source xml:lang="en">There are {0} unsaved files.&#10;&#10;Would you like to save them before committing?</source>
@@ -1565,8 +1565,8 @@ Please make sure there is no space between the right bracket and left parenthesi
     <trans-unit id="config.allowNoVerifyCommit">
       <source xml:lang="en">Controls whether commits without running pre-commit and commit-msg hooks are allowed.</source>
     </trans-unit>
-    <trans-unit id="config.untrackedChangesSoftDelete">
-      <source xml:lang="en">Controls whether discarding untracked changes moves the file(s) to the Recycle Bin (Windows), Trash (macOS, Linux) instead of deleting them.</source>
+    <trans-unit id="config.untrackedChangesEnableTrash">
+      <source xml:lang="en">Controls whether discarding untracked changes moves the file(s) to the Recycle Bin (Windows), Trash (macOS, Linux) instead of deleting them permanently. **Note:** This setting has no effect when connected to a remote.</source>
     </trans-unit>
     <trans-unit id="config.allowForcePush">
       <source xml:lang="en">Controls whether force push (with or without lease) is enabled.</source>

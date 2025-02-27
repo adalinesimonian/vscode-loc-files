@@ -948,9 +948,6 @@ Default Skipped Commands:
     <trans-unit id="terminal.integrated.environmentChangesRelaunch">
       <source xml:lang="en">Whether to relaunch terminals automatically if extensions want to contribute to their environment and have not been interacted with yet.</source>
     </trans-unit>
-    <trans-unit id="terminal.integrated.experimentalWindowsUseConptyDll">
-      <source xml:lang="en">Whether to use the experimental conpty.dll (v1.20.240626001) shipped with VS Code, instead of the one bundled with Windows.</source>
-    </trans-unit>
     <trans-unit id="terminal.integrated.fastScrollSensitivity">
       <source xml:lang="en">Scrolling speed multiplier when pressing `Alt`.</source>
     </trans-unit>
@@ -1226,6 +1223,9 @@ This setting applies only when terminals are created, so you will need to restar
     </trans-unit>
     <trans-unit id="terminal.integrated.windowsEnableConpty">
       <source xml:lang="en">Whether to use ConPTY for Windows terminal process communication (requires Windows 10 build number 18309+). Winpty will be used if this is false.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.windowsUseConptyDll">
+      <source xml:lang="en">Whether to use the experimental conpty.dll (v1.22.250204002) shipped with VS Code, instead of the one bundled with Windows.</source>
     </trans-unit>
     <trans-unit id="terminal.integrated.wordSeparators">
       <source xml:lang="en">A string containing all characters to be considered word separators when double-clicking to select word and in the fallback 'word' link detection. Since this is used for link detection, including characters such as `:` that are used when detecting links will cause the line and column part of links like `file:10:5` to be ignored.</source>

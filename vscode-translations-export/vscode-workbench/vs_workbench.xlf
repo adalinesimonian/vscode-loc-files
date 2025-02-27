@@ -816,6 +816,9 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="getStartedWithAccessibilityFeatures">
       <source xml:lang="en">Get Started with Accessibility Features</source>
     </trans-unit>
+    <trans-unit id="getStartedWithCopilot">
+      <source xml:lang="en">Get Started with Copilot</source>
+    </trans-unit>
     <trans-unit id="keybindingsReference">
       <source xml:lang="en">Keyboard Shortcuts Reference</source>
     </trans-unit>
@@ -1647,6 +1650,12 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="move second side bar right">
       <source xml:lang="en">Move Secondary Side Bar Right</source>
+    </trans-unit>
+    <trans-unit id="showIcons">
+      <source xml:lang="en">Show Icons</source>
+    </trans-unit>
+    <trans-unit id="showLabels">
+      <source xml:lang="en">Show Labels</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/banner/bannerPart" source-language="en" datatype="plaintext"><body>
@@ -3921,7 +3930,7 @@ If {1} did not launch, try again below.</source>
       <source xml:lang="en">`${activeEditorShort}`: the file name (e.g. myFile.txt).</source>
     </trans-unit>
     <trans-unit id="activeEditorState">
-      <source xml:lang="en">`${activeEditorState}`: provides information about the state of the active editor (e.g. modified).</source>
+      <source xml:lang="en">`${activeEditorState}`: provides information about the state of the active editor (e.g. modified). This will be appended by default when in screen reader mode with {0} enabled.</source>
     </trans-unit>
     <trans-unit id="activeFolderLong">
       <source xml:lang="en">`${activeFolderLong}`: the full path of the folder the file is contained in (e.g. /Users/Development/myFolder/myFileFolder).</source>
@@ -4179,6 +4188,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="scrollToSwitchTabs">
       <source xml:lang="en">Controls whether scrolling over tabs will open them or not. By default tabs will only reveal upon scrolling, but not open. You can press and hold the Shift-key while scrolling to change this behavior for that duration. This value is ignored when {0} is not set to {1}.</source>
       <note>{0}, {1} will be a setting name rendered as a link</note>
+    </trans-unit>
+    <trans-unit id="secondarySideBarShowLabels">
+      <source xml:lang="en">Controls whether activity items in the secondary sidebar title are shown as label or icon. This setting only has an effect when {0} is not set to {1}.</source>
     </trans-unit>
     <trans-unit id="separator">
       <source xml:lang="en">`${separator}`: a conditional separator (" - ") that only shows when surrounded by variables with values or static text.</source>
@@ -5090,6 +5102,12 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="panelStickyScrollShadow">
       <source xml:lang="en">Shadow color of sticky scroll in the panel.</source>
     </trans-unit>
+    <trans-unit id="panelTitleBadgeBackground">
+      <source xml:lang="en">Panel title badge background color. Panels are shown below the editor area and contain views like output and integrated terminal.</source>
+    </trans-unit>
+    <trans-unit id="panelTitleBadgeForeground">
+      <source xml:lang="en">Panel title badge foreground color. Panels are shown below the editor area and contain views like output and integrated terminal.</source>
+    </trans-unit>
     <trans-unit id="panelTitleBorder">
       <source xml:lang="en">Panel title border color on the bottom, separating the title from the views. Panels are shown below the editor area and contain views like output and integrated terminal.</source>
     </trans-unit>
@@ -5147,11 +5165,17 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="sideBySideEditor.verticalBorder">
       <source xml:lang="en">Color to separate two editors from each other when shown side by side in an editor group from left to right.</source>
     </trans-unit>
+    <trans-unit id="statusBarAiItemHoverBackground">
+      <source xml:lang="en">Background color for the Copilot indicator on the status bar when hovering.</source>
+    </trans-unit>
     <trans-unit id="statusBarBackground">
       <source xml:lang="en">Status bar background color when a workspace or folder is opened. The status bar is shown in the bottom of the window.</source>
     </trans-unit>
     <trans-unit id="statusBarBorder">
       <source xml:lang="en">Status bar border color separating to the sidebar and editor. The status bar is shown in the bottom of the window.</source>
+    </trans-unit>
+    <trans-unit id="statusBarCopilotItemHoverForeground">
+      <source xml:lang="en">Foreground color for the Copilot indicator on the status bar when hovering.</source>
     </trans-unit>
     <trans-unit id="statusBarErrorItemBackground">
       <source xml:lang="en">Status bar error items background color. Error items stand out from other status bar entries to indicate error conditions. The status bar is shown in the bottom of the window.</source>
@@ -5177,14 +5201,14 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="statusBarItemCompactHoverBackground">
       <source xml:lang="en">Status bar item background color when hovering an item that contains two hovers. The status bar is shown in the bottom of the window.</source>
     </trans-unit>
+    <trans-unit id="statusBarItemCopilotBackground">
+      <source xml:lang="en">Background color for the Copilot indicator on the status bar.</source>
+    </trans-unit>
+    <trans-unit id="statusBarItemCopilotForeground">
+      <source xml:lang="en">Foreground color for the Copilot indicator on the status bar.</source>
+    </trans-unit>
     <trans-unit id="statusBarItemFocusBorder">
       <source xml:lang="en">Status bar item border color when focused on keyboard navigation. The status bar is shown in the bottom of the window.</source>
-    </trans-unit>
-    <trans-unit id="statusBarItemHostBackground">
-      <source xml:lang="en">Background color for the remote indicator on the status bar.</source>
-    </trans-unit>
-    <trans-unit id="statusBarItemHostForeground">
-      <source xml:lang="en">Foreground color for the remote indicator on the status bar.</source>
     </trans-unit>
     <trans-unit id="statusBarItemHoverBackground">
       <source xml:lang="en">Status bar item background color when hovering. The status bar is shown in the bottom of the window.</source>
@@ -5197,6 +5221,12 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="statusBarItemOfflineForeground">
       <source xml:lang="en">Status bar item foreground color when the workbench is offline.</source>
+    </trans-unit>
+    <trans-unit id="statusBarItemRemoteBackground">
+      <source xml:lang="en">Background color for the remote indicator on the status bar.</source>
+    </trans-unit>
+    <trans-unit id="statusBarItemRemoteForeground">
+      <source xml:lang="en">Foreground color for the remote indicator on the status bar.</source>
     </trans-unit>
     <trans-unit id="statusBarNoFolderBackground">
       <source xml:lang="en">Status bar background color when no folder is opened. The status bar is shown in the bottom of the window.</source>
