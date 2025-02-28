@@ -351,6 +351,9 @@
     <trans-unit id="all">
       <source xml:lang="en">All Extensions</source>
     </trans-unit>
+    <trans-unit id="autoRestart">
+      <source xml:lang="en">If activated, extensions will automatically restart following an update if the window is not in focus. There can be a data loss if you have open Notebooks or Custom Editors.</source>
+    </trans-unit>
     <trans-unit id="builtin">
       <source xml:lang="en">Extension '{0}' is a Built-in extension and cannot be installed</source>
     </trans-unit>
@@ -1633,9 +1636,6 @@ Would you like to update the extension?</source>
     <trans-unit id="allplatforms">
       <source xml:lang="en">All Platforms</source>
     </trans-unit>
-    <trans-unit id="autoRestart">
-      <source xml:lang="en">If activated, extensions will automatically restart following an update if the window is not in focus. There can be a data loss if you have open Notebooks or Custom Editors.</source>
-    </trans-unit>
     <trans-unit id="cannot be installed">
       <source xml:lang="en">Cannot install the '{0}' extension because it is not available in this setup.</source>
     </trans-unit>
@@ -1709,9 +1709,6 @@ Would you like to update the extension?</source>
     </trans-unit>
     <trans-unit id="extensionsAutoRestart">
       <source xml:lang="en">Extensions were auto restarted to enable updates.</source>
-    </trans-unit>
-    <trans-unit id="extensionsConfigurationTitle">
-      <source xml:lang="en">Extensions</source>
     </trans-unit>
     <trans-unit id="incompatible">
       <source xml:lang="en">Can't install '{0}' extension because it is not compatible.</source>

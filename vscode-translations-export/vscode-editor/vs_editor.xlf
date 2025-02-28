@@ -2063,9 +2063,6 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="accessibilityHelpTitle">
       <source xml:lang="en">Accessibility Help</source>
     </trans-unit>
-    <trans-unit id="activeEditorState">
-      <source xml:lang="en">Get information about the active editor such as Modified, Problems, and more by setting activeEditorState as a part of the window.title setting.</source>
-    </trans-unit>
     <trans-unit id="auto_off">
       <source xml:lang="en">The application is configured to never be optimized for usage with a Screen Reader.</source>
     </trans-unit>
@@ -2104,6 +2101,12 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="debugConsole.setBreakpoint">
       <source xml:lang="en">The Debug: Inline Breakpoint command{0} will set or unset a breakpoint at the current cursor position in the active editor.</source>
+    </trans-unit>
+    <trans-unit id="defaultWindowTitleExcludingEditorState">
+      <source xml:lang="en">activeEditorState - such as modified, problems, and more, is currently not included as a part of the window.title setting by default. Enable it with accessibility.windowTitleOptimized.</source>
+    </trans-unit>
+    <trans-unit id="defaultWindowTitleIncludesEditorState">
+      <source xml:lang="en">activeEditorState - such as modified, problems, and more, is included as a part of the window.title setting by default. Disable it with accessibility.windowTitleOptimized.</source>
     </trans-unit>
     <trans-unit id="editableDiffEditor">
       <source xml:lang="en">You are in a pane of a diff editor.</source>

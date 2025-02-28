@@ -236,10 +236,16 @@
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commands.prompts.use.select-dialog.alt-modifier-note">
-      <source xml:lang="en">(hold `{0}` to use in Edits)</source>
+      <source xml:lang="en">{0}-key to use in Edits</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.use.select-dialog.modifier-notes">
+      <source xml:lang="en"> (hold {0} or {1})</source>
     </trans-unit>
     <trans-unit id="commands.prompts.use.select-dialog.placeholder">
       <source xml:lang="en">Select a prompt to use</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.use.select-dialog.super-modifier-note">
+      <source xml:lang="en">{0}-key to open in editor</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/showHowToCreate" source-language="en" datatype="plaintext"><body>
@@ -926,17 +932,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatDragAndDrop" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="addToWorkingSet">
-      <source xml:lang="en">Add {0} to Working Set</source>
-    </trans-unit>
     <trans-unit id="attacAsContext">
       <source xml:lang="en">Attach {0} as Context</source>
     </trans-unit>
     <trans-unit id="file">
       <source xml:lang="en">File</source>
-    </trans-unit>
-    <trans-unit id="files">
-      <source xml:lang="en">Files</source>
     </trans-unit>
     <trans-unit id="folder">
       <source xml:lang="en">Folder</source>
@@ -1649,7 +1649,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Copilot Status</source>
     </trans-unit>
     <trans-unit id="chatsLabel">
-      <source xml:lang="en">Chats messages</source>
+      <source xml:lang="en">Chat messages</source>
     </trans-unit>
     <trans-unit id="completionsLabel">
       <source xml:lang="en">Code completions</source>
@@ -1684,14 +1684,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="limitQuota">
       <source xml:lang="en">Limits will reset on {0}.</source>
     </trans-unit>
-    <trans-unit id="openChat">
-      <source xml:lang="en">Open Chat ({0})</source>
-    </trans-unit>
     <trans-unit id="quotaDisplay">
       <source xml:lang="en">{0}%</source>
     </trans-unit>
     <trans-unit id="settings.codeCompletions">
-      <source xml:lang="en">Code completions (all)</source>
+      <source xml:lang="en">Code completions (all files)</source>
     </trans-unit>
     <trans-unit id="settings.codeCompletionsLanguage">
       <source xml:lang="en">Code completions ({0})</source>
@@ -1707,6 +1704,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="shortcuts.inlineChat">
       <source xml:lang="en">Inline Chat</source>
+    </trans-unit>
+    <trans-unit id="shortcuts.quickChat">
+      <source xml:lang="en">Quick Chat</source>
     </trans-unit>
     <trans-unit id="signInToUseCopilot">
       <source xml:lang="en">Sign in to Use Copilot...</source>
