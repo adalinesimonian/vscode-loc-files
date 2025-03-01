@@ -238,6 +238,9 @@
     <trans-unit id="commands.prompts.use.select-dialog.alt-modifier-note">
       <source xml:lang="en">{0}-key to use in Edits</source>
     </trans-unit>
+    <trans-unit id="commands.prompts.use.select-dialog.docs-label">
+      <source xml:lang="en">Learn how to create reusable prompts</source>
+    </trans-unit>
     <trans-unit id="commands.prompts.use.select-dialog.modifier-notes">
       <source xml:lang="en"> (hold {0} or {1})</source>
     </trans-unit>
@@ -247,13 +250,8 @@
     <trans-unit id="commands.prompts.use.select-dialog.super-modifier-note">
       <source xml:lang="en">{0}-key to open in editor</source>
     </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/showHowToCreate" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.use.select-dialog.empty.docs-label">
-      <source xml:lang="en">Learn how to create reusable prompts</source>
-    </trans-unit>
-    <trans-unit id="commands.prompts.use.select-dialog.empty.placeholder">
-      <source xml:lang="en">No prompts found.</source>
+    <trans-unit id="user-prompt.capitalized">
+      <source xml:lang="en">User prompt</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatClearActions" source-language="en" datatype="plaintext"><body>
@@ -702,16 +700,22 @@
     <trans-unit id="chat.implicitContext.value.never">
       <source xml:lang="en">Implicit context is never enabled.</source>
     </trans-unit>
-    <trans-unit id="chat.promptFiles.config.description">
+    <trans-unit id="chat.renderRelatedFiles">
+      <source xml:lang="en">Controls whether related files should be rendered in the chat input.</source>
+    </trans-unit>
+    <trans-unit id="chat.reusablePrompts.config.enabled.description">
+      <source xml:lang="en">Enable reusable prompt files (`*{0}`) in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).</source>
+    </trans-unit>
+    <trans-unit id="chat.reusablePrompts.config.enabled.title">
+      <source xml:lang="en">Prompt Files</source>
+    </trans-unit>
+    <trans-unit id="chat.reusablePrompts.config.locations.description">
       <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be attached in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
 
 Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
-    <trans-unit id="chat.promptFiles.config.title">
-      <source xml:lang="en">Prompt Files</source>
-    </trans-unit>
-    <trans-unit id="chat.renderRelatedFiles">
-      <source xml:lang="en">Controls whether related files should be rendered in the chat input.</source>
+    <trans-unit id="chat.reusablePrompts.config.locations.title">
+      <source xml:lang="en">Prompt File Locations</source>
     </trans-unit>
     <trans-unit id="chat.statusIndicator">
       <source xml:lang="en">Controls whether a Copilot related status indicator appears in the lower right corner.</source>
@@ -1785,13 +1789,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Search for relevant files in the workspace and provide context from them</source>
     </trans-unit>
     <trans-unit id="markers.panel.allErrors">
-      <source xml:lang="en">All Errors</source>
-    </trans-unit>
-    <trans-unit id="markers.panel.allInfos">
-      <source xml:lang="en">All Infos</source>
-    </trans-unit>
-    <trans-unit id="markers.panel.allWarnings">
-      <source xml:lang="en">All Warnings</source>
+      <source xml:lang="en">All Problems</source>
     </trans-unit>
     <trans-unit id="markers.panel.at.ln.col.number">
       <source xml:lang="en">[Ln {0}, Col {1}]</source>
@@ -1845,11 +1843,11 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/createPromptCommand" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.create.title.global">
-      <source xml:lang="en">Create Global Prompt</source>
-    </trans-unit>
     <trans-unit id="commands.prompts.create.title.local">
       <source xml:lang="en">Create Prompt</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.create.title.user">
+      <source xml:lang="en">Create User Prompt</source>
     </trans-unit>
     <trans-unit id="workbench.command.prompts.create.initial-content">
       <source xml:lang="en">Add prompt contents..</source>
@@ -1960,6 +1958,9 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
     </trans-unit>
     <trans-unit id="chatEditingCanUndo">
       <source xml:lang="en">True when it is possible to undo an interaction in the editing panel.</source>
+    </trans-unit>
+    <trans-unit id="chatEditingHasToolConfirmation">
+      <source xml:lang="en">True when a tool confirmation is present.</source>
     </trans-unit>
     <trans-unit id="chatEditingHasToolsAgent">
       <source xml:lang="en">True when a tools agent is registered.</source>
