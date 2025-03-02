@@ -373,11 +373,11 @@
     <trans-unit id="workbench.action.chat.attachSelection.label">
       <source xml:lang="en">Add Selection to Chat</source>
     </trans-unit>
-    <trans-unit id="workbench.action.chat.editing.attachFiles.label">
-      <source xml:lang="en">Add Files to Copilot Edits</source>
+    <trans-unit id="workbench.action.chat.editing.attachContext.label">
+      <source xml:lang="en">Add Context to Copilot Edits</source>
     </trans-unit>
-    <trans-unit id="workbench.action.chat.editing.attachFiles.shortLabel">
-      <source xml:lang="en">Add Files...</source>
+    <trans-unit id="workbench.action.chat.editing.attachContext.shortLabel">
+      <source xml:lang="en">Add Context...</source>
     </trans-unit>
     <trans-unit id="workbench.action.edits.attachFile.label">
       <source xml:lang="en">Add File to {0}</source>
@@ -663,6 +663,11 @@
     </trans-unit>
     <trans-unit id="chat.agent.enabled.description">
       <source xml:lang="en">Enable agent mode for {0}. When this is enabled, a dropdown appears in the {0} view to toggle agent mode.</source>
+    </trans-unit>
+    <trans-unit id="chat.agent.maxRequests">
+      <source xml:lang="en">The maximum number of requests to allow Copilot Edits to use per-turn in agent mode. When the limit is reached, Copilot will ask the user to confirm that it should keep working. 
+
+&gt; **Note**: For users on the Copilot Free plan, note that each agent mode request currently uses one chat request.</source>
     </trans-unit>
     <trans-unit id="chat.commandCenter.enabled">
       <source xml:lang="en">Controls whether the command center shows a menu for actions to control Copilot (requires {0}).</source>
@@ -1502,11 +1507,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.agent.maxRequests">
-      <source xml:lang="en">The maximum number of requests to allow Copilot Edits to use per-turn in agent mode. When the limit is reached, Copilot will ask the user to confirm that it should keep working. 
-
-&gt; **Note**: For users on the Copilot Free plan, note that each agent mode request currently uses one chat request.</source>
-    </trans-unit>
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
     </trans-unit>
@@ -1550,9 +1550,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="hideChatSetupDetail">
       <source xml:lang="en">You can restore Copilot by running the '{0}' command.</source>
-    </trans-unit>
-    <trans-unit id="interactiveSessionConfigurationTitle">
-      <source xml:lang="en">Chat</source>
     </trans-unit>
     <trans-unit id="invalidEnterpriseInstance">
       <source xml:lang="en">Please enter a valid {0} instance (i.e. "octocat" or "https://octocat.ghe.com")</source>
