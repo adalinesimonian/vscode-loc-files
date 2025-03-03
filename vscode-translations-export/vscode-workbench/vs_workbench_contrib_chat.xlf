@@ -1554,14 +1554,8 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="invalidEnterpriseInstance">
       <source xml:lang="en">Please enter a valid {0} instance (i.e. "octocat" or "https://octocat.ghe.com")</source>
     </trans-unit>
-    <trans-unit id="learnMore">
-      <source xml:lang="en">Learn More</source>
-    </trans-unit>
     <trans-unit id="managePlan">
       <source xml:lang="en">Upgrade to Copilot Pro</source>
-    </trans-unit>
-    <trans-unit id="ok">
-      <source xml:lang="en">OK</source>
     </trans-unit>
     <trans-unit id="retry">
       <source xml:lang="en">Retry</source>
@@ -1593,18 +1587,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="signUpFree">
       <source xml:lang="en">Sign in to Use Copilot for Free</source>
     </trans-unit>
-    <trans-unit id="signUpInvalidResponseError">
-      <source xml:lang="en">Invalid response contents.</source>
-    </trans-unit>
-    <trans-unit id="signUpNoResponseContentsError">
-      <source xml:lang="en">Response has no contents.</source>
-    </trans-unit>
-    <trans-unit id="signUpNoResponseError">
-      <source xml:lang="en">No response received.</source>
-    </trans-unit>
-    <trans-unit id="signUpUnexpectedStatusError">
-      <source xml:lang="en">Unexpected status code {0}.</source>
-    </trans-unit>
     <trans-unit id="startUp">
       <source xml:lang="en">Use Copilot</source>
     </trans-unit>
@@ -1625,12 +1607,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="unknownSignInErrorDetail">
       <source xml:lang="en">You must be signed in to use Copilot.</source>
-    </trans-unit>
-    <trans-unit id="unknownSignUpError">
-      <source xml:lang="en">An error occurred while signing up for Copilot Free. Would you like to try again?</source>
-    </trans-unit>
-    <trans-unit id="unprocessableSignUpError">
-      <source xml:lang="en">An error occurred while signing up for Copilot Free.</source>
     </trans-unit>
     <trans-unit id="welcomeChat">
       <source xml:lang="en">Welcome to Copilot</source>
@@ -2041,6 +2017,35 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
     </trans-unit>
     <trans-unit id="chatEditingWidgetFileState">
       <source xml:lang="en">The current state of the file in the chat editing widget</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/chatEntitlementService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="learnMore">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
+    <trans-unit id="ok">
+      <source xml:lang="en">OK</source>
+    </trans-unit>
+    <trans-unit id="retry">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="signUpInvalidResponseError">
+      <source xml:lang="en">Invalid response contents.</source>
+    </trans-unit>
+    <trans-unit id="signUpNoResponseContentsError">
+      <source xml:lang="en">Response has no contents.</source>
+    </trans-unit>
+    <trans-unit id="signUpNoResponseError">
+      <source xml:lang="en">No response received.</source>
+    </trans-unit>
+    <trans-unit id="signUpUnexpectedStatusError">
+      <source xml:lang="en">Unexpected status code {0}.</source>
+    </trans-unit>
+    <trans-unit id="unknownSignUpError">
+      <source xml:lang="en">An error occurred while signing up for Copilot Free. Would you like to try again?</source>
+    </trans-unit>
+    <trans-unit id="unprocessableSignUpError">
+      <source xml:lang="en">An error occurred while signing up for Copilot Free.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatModel" source-language="en" datatype="plaintext"><body>
