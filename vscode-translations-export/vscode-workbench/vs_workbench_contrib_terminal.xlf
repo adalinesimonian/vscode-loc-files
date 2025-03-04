@@ -734,7 +734,7 @@ The terminal's title</note>
 </body></file>
   <file original="src/vs/workbench/contrib/terminal/common/terminalConfiguration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cwd">
-      <source xml:lang="en">the terminal's current working directory</source>
+      <source xml:lang="en">the terminal's current working directory.</source>
     </trans-unit>
     <trans-unit id="cwdFolder">
       <source xml:lang="en">the terminal's current working directory, displayed for multi-root workspaces or in a single root workspace when the value differs from the initial working directory. On Windows, this will only be displayed when shell integration is enabled.</source>
@@ -758,7 +758,7 @@ The terminal's title</note>
       <source xml:lang="en">Only hide the terminal when there are no persistent sessions restored.</source>
     </trans-unit>
     <trans-unit id="local">
-      <source xml:lang="en">indicates a local terminal in a remote workspace</source>
+      <source xml:lang="en">indicates a local terminal in a remote workspace.</source>
     </trans-unit>
     <trans-unit id="openDefaultSettingsJson">
       <source xml:lang="en">open the default settings JSON</source>
@@ -767,28 +767,28 @@ The terminal's title</note>
       <source xml:lang="en">Open Default Settings (JSON)</source>
     </trans-unit>
     <trans-unit id="process">
-      <source xml:lang="en">the name of the terminal process</source>
+      <source xml:lang="en">the name of the terminal process.</source>
     </trans-unit>
     <trans-unit id="progress">
-      <source xml:lang="en">the progress state as reported by the `OSC 9;4` sequence</source>
+      <source xml:lang="en">the progress state as reported by the `OSC 9;4` sequence.</source>
     </trans-unit>
     <trans-unit id="separator">
-      <source xml:lang="en">a conditional separator {0} that only shows when surrounded by variables with values or static text.</source>
+      <source xml:lang="en">a conditional separator {0} that only shows when it's surrounded by variables with values or static text.</source>
     </trans-unit>
     <trans-unit id="sequence">
-      <source xml:lang="en">the name provided to the terminal by the process</source>
+      <source xml:lang="en">the name provided to the terminal by the process.</source>
     </trans-unit>
     <trans-unit id="shellCommand">
-      <source xml:lang="en">the command being executed according to shell integration. This also requires high confidence in the detected command line which may not work in some prompt frameworks.</source>
+      <source xml:lang="en">the command being executed according to shell integration. This also requires high confidence in the detected command line, which may not work in some prompt frameworks.</source>
     </trans-unit>
     <trans-unit id="shellPromptInput">
-      <source xml:lang="en">the shell's full prompt input according to shell integration</source>
+      <source xml:lang="en">the shell's full prompt input according to shell integration.</source>
     </trans-unit>
     <trans-unit id="shellType">
-      <source xml:lang="en">the detected shell type</source>
+      <source xml:lang="en">the detected shell type.</source>
     </trans-unit>
     <trans-unit id="task">
-      <source xml:lang="en">indicates this terminal is associated with a task</source>
+      <source xml:lang="en">indicates this terminal is associated with a task.</source>
     </trans-unit>
     <trans-unit id="terminal.integrated.allowChords">
       <source xml:lang="en">Whether or not to allow chord keybindings in the terminal. Note that when this is true and the keystroke results in a chord it will bypass {0}, setting this to false is particularly useful when you want ctrl+k to go to your shell (not VS Code).</source>
@@ -1240,10 +1240,10 @@ This setting applies only when terminals are created, so you will need to restar
       <source xml:lang="en">Controls the terminal title. Variables are substituted based on the context:</source>
     </trans-unit>
     <trans-unit id="workspaceFolder">
-      <source xml:lang="en">the workspace in which the terminal was launched</source>
+      <source xml:lang="en">the workspace in which the terminal was launched.</source>
     </trans-unit>
     <trans-unit id="workspaceFolderName">
-      <source xml:lang="en">the `name` of the workspace in which the terminal was launched</source>
+      <source xml:lang="en">the `name` of the workspace in which the terminal was launched.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminal/common/terminalContextKey" source-language="en" datatype="plaintext"><body>
