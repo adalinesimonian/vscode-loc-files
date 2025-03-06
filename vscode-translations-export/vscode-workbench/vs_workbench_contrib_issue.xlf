@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/issue/browser/baseIssueReporterService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="acknowledge">
+      <source xml:lang="en">Confirm Version Acknowledgement</source>
+    </trans-unit>
     <trans-unit id="bugDescription">
       <source xml:lang="en">Share the steps needed to reliably reproduce the problem. Please include actual and expected results. We support GitHub-flavored Markdown. You will be able to edit your issue and add screenshots when we preview it on GitHub.</source>
     </trans-unit>
@@ -140,6 +143,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/browser/issueReporterPage" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="acknowledgements">
+      <source xml:lang="en">I acknowledge that my VS Code version is not updated and this issue may be closed.</source>
+    </trans-unit>
     <trans-unit id="chooseExtension">
       <source xml:lang="en">Extension</source>
     </trans-unit>
@@ -189,7 +195,7 @@
       <source xml:lang="en">This is a</source>
     </trans-unit>
     <trans-unit id="reviewGuidanceLabel">
-      <source xml:lang="en">Before you report an issue here please &lt;a href="https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions" target="_blank"&gt;review the guidance we provide&lt;/a&gt;.</source>
+      <source xml:lang="en">Before you report an issue here please &lt;a href="https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions" target="_blank"&gt;review the guidance we provide&lt;/a&gt;. Please complete the form in English.</source>
       <note>{Locked="&lt;a href="https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions" target="_blank"&gt;"}
 {Locked="&lt;/a&gt;"}</note>
     </trans-unit>
@@ -326,6 +332,9 @@ Translate this to "Report Issue in English" in all languages please!</note>
     </trans-unit>
     <trans-unit id="undefinedPlaceholder">
       <source xml:lang="en">Please enter a title</source>
+    </trans-unit>
+    <trans-unit id="updateAvailable">
+      <source xml:lang="en">A new version of {0} is available.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/electron-sandbox/process.contribution" source-language="en" datatype="plaintext"><body>

@@ -599,6 +599,9 @@ For example:
     <trans-unit id="workbench.action.terminal.hideSuggestWidget">
       <source xml:lang="en">Hide Suggest Widget</source>
     </trans-unit>
+    <trans-unit id="workbench.action.terminal.hideSuggestWidgetAndNavigateHistory">
+      <source xml:lang="en">Hide Suggest Widget and Navigate History</source>
+    </trans-unit>
     <trans-unit id="workbench.action.terminal.requestCompletions">
       <source xml:lang="en">Request Completions</source>
     </trans-unit>
@@ -703,6 +706,9 @@ If shell integration is installed manually, {3} needs to be set to {4} before ca
     </trans-unit>
     <trans-unit id="suggest.suggestOnTriggerCharacters">
       <source xml:lang="en">Controls whether suggestions should automatically show up when typing trigger characters.</source>
+    </trans-unit>
+    <trans-unit id="suggest.upArrowNavigatesHistory">
+      <source xml:lang="en">Determines whether the up arrow key navigates the command history when focus is on the first suggestion and navigation has not yet occurred. When set to false, the up arrow will move focus to the last suggestion instead.</source>
     </trans-unit>
     <trans-unit id="terminalWindowsExecutableSuggestionSetting">
       <source xml:lang="en">A set of windows command executable extensions that will be included as suggestions in the terminal.

@@ -1066,9 +1066,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="discardAllEdits">
       <source xml:lang="en">Undo All Edits</source>
     </trans-unit>
-    <trans-unit id="markFileAsReadonly">
-      <source xml:lang="en">Mark as read-only</source>
-    </trans-unit>
     <trans-unit id="open.fileInDiff">
       <source xml:lang="en">Open Changes in Diff Editor</source>
     </trans-unit>
@@ -1197,14 +1194,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingModifiedFileEntry" source-language="en" datatype="plaintext"><body>
     <trans-unit id="editorSelectionBackground">
       <source xml:lang="en">Color of pending edit regions in the minimap</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingModifiedNotebookEntry" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatEditing1">
-      <source xml:lang="en">Chat Edit: '{0}'</source>
-    </trans-unit>
-    <trans-unit id="chatEditing2">
-      <source xml:lang="en">Chat Edit</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingNotebookEditorIntegration" source-language="en" datatype="plaintext"><body>
@@ -1643,6 +1632,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="completionsQuotaExceededStatus">
       <source xml:lang="en">Completions limit reached</source>
     </trans-unit>
+    <trans-unit id="featureChat">
+      <source xml:lang="en">Code faster with Completions</source>
+    </trans-unit>
+    <trans-unit id="featureEdits">
+      <source xml:lang="en">Build features with Copilot Edits</source>
+    </trans-unit>
+    <trans-unit id="featureExplore">
+      <source xml:lang="en">Explore your codebase with Chat</source>
+    </trans-unit>
     <trans-unit id="gaugeBackground">
       <source xml:lang="en">Gauge background color.</source>
     </trans-unit>
@@ -1682,6 +1680,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="settingsTitle">
       <source xml:lang="en">Settings</source>
     </trans-unit>
+    <trans-unit id="setupCopilotForFreeButton">
+      <source xml:lang="en">Setup Copilot for Free</source>
+    </trans-unit>
+    <trans-unit id="setupCopilotForFreeHeader">
+      <source xml:lang="en">Use AI Features with Copilot</source>
+    </trans-unit>
     <trans-unit id="shortcuts.chat">
       <source xml:lang="en">Chat</source>
     </trans-unit>
@@ -1696,6 +1700,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="signInToUseCopilot">
       <source xml:lang="en">Sign in to Use Copilot...</source>
+    </trans-unit>
+    <trans-unit id="upgradeToCopilotPro">
+      <source xml:lang="en">Upgrade to Copilot Pro</source>
     </trans-unit>
     <trans-unit id="usageTitle">
       <source xml:lang="en">Copilot Free Usage</source>
@@ -2020,9 +2027,6 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
   <file original="src/vs/workbench/contrib/chat/common/chatEditingService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatEditingAgentSupportsReadonlyReferences">
       <source xml:lang="en">Whether the chat editing agent supports readonly references (temporary)</source>
-    </trans-unit>
-    <trans-unit id="chatEditingWidgetFileReadonly">
-      <source xml:lang="en">Whether the file has been marked as read-only in the chat editing widget</source>
     </trans-unit>
     <trans-unit id="chatEditingWidgetFileState">
       <source xml:lang="en">The current state of the file in the chat editing widget</source>
