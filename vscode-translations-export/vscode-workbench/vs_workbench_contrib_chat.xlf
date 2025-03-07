@@ -1196,14 +1196,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Color of pending edit regions in the minimap</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingNotebookEditorIntegration" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="diff.agent">
-      <source xml:lang="en">{0} (changes from {1})</source>
-    </trans-unit>
-    <trans-unit id="diff.generic">
-      <source xml:lang="en">{0} (changes from chat)</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingServiceImpl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat">
       <source xml:lang="en">Chat Editing</source>
@@ -1221,6 +1213,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingSession" source-language="en" datatype="plaintext"><body>
     <trans-unit id="multiDiffEditorInput.name">
       <source xml:lang="en">Suggested Edits</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/notebook/chatEditingNotebookEditorIntegration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="diff.agent">
+      <source xml:lang="en">{0} (changes from {1})</source>
+    </trans-unit>
+    <trans-unit id="diff.generic">
+      <source xml:lang="en">{0} (changes from chat)</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditorInput" source-language="en" datatype="plaintext"><body>
