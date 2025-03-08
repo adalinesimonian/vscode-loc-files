@@ -535,14 +535,20 @@ The terminal's title</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminal/browser/terminalTooltip" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="launchFailed.exitCodeOnlyShellIntegration">
-      <source xml:lang="en">The terminal process failed to launch. Disabling shell integration with terminal.integrated.shellIntegration.enabled might help.</source>
+    <trans-unit id="shellIntegration">
+      <source xml:lang="en">Shell integration</source>
     </trans-unit>
-    <trans-unit id="shellIntegration.activationFailed">
-      <source xml:lang="en">Shell integration failed to activate</source>
+    <trans-unit id="shellIntegration.basic">
+      <source xml:lang="en">Basic</source>
     </trans-unit>
-    <trans-unit id="shellIntegration.enabled">
-      <source xml:lang="en">Shell integration activated</source>
+    <trans-unit id="shellIntegration.injectionFailed">
+      <source xml:lang="en">Injection failed to activate</source>
+    </trans-unit>
+    <trans-unit id="shellIntegration.no">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="shellIntegration.rich">
+      <source xml:lang="en">Rich</source>
     </trans-unit>
     <trans-unit id="shellProcessTooltip.commandLine">
       <source xml:lang="en">Command line: {0}</source>
