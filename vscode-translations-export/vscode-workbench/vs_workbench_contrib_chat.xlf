@@ -425,9 +425,6 @@
     <trans-unit id="chat.newChat.label">
       <source xml:lang="en">Send to New Chat</source>
     </trans-unit>
-    <trans-unit id="chat.pickModel.label">
-      <source xml:lang="en">Pick Model</source>
-    </trans-unit>
     <trans-unit id="chat.sendToChatEditing.label">
       <source xml:lang="en">Send to Copilot Edits</source>
     </trans-unit>
@@ -454,6 +451,9 @@
     </trans-unit>
     <trans-unit id="interactive.submitWithoutDispatch.label">
       <source xml:lang="en">Send</source>
+    </trans-unit>
+    <trans-unit id="interactive.switchToNextModel.label">
+      <source xml:lang="en">Switch to Next Model</source>
     </trans-unit>
     <trans-unit id="interactive.toggleAgent.label">
       <source xml:lang="en">Toggle Agent Mode (Experimental)</source>
@@ -788,6 +788,32 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="viewExtensionLabel">
       <source xml:lang="en">View Extension</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatAttachmentWidgets" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.attachment">
+      <source xml:lang="en">Attached context, {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.attachment.clearButton">
+      <source xml:lang="en">Remove from context</source>
+    </trans-unit>
+    <trans-unit id="chat.attachment.link">
+      <source xml:lang="en">Attached link, {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.fileAttachment">
+      <source xml:lang="en">Attached file, {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.fileAttachmentHover">
+      <source xml:lang="en">{0} does not support this {1} type.</source>
+    </trans-unit>
+    <trans-unit id="chat.fileAttachmentWithRange">
+      <source xml:lang="en">Attached file, {0}, line {1} to line {2}</source>
+    </trans-unit>
+    <trans-unit id="chat.imageAttachment">
+      <source xml:lang="en">Attached image, {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.imageAttachmentHover">
+      <source xml:lang="en">{0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatAgentCommandContentPart" source-language="en" datatype="plaintext"><body>
@@ -1276,29 +1302,8 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.agentMode">
       <source xml:lang="en">Agent</source>
     </trans-unit>
-    <trans-unit id="chat.attachment">
-      <source xml:lang="en">Attached context, {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.attachment.clearButton">
-      <source xml:lang="en">Remove from context</source>
-    </trans-unit>
-    <trans-unit id="chat.attachment.link">
-      <source xml:lang="en">Attached link, {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.fileAttachment">
-      <source xml:lang="en">Attached file, {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.fileAttachmentHover">
-      <source xml:lang="en">{0} does not support this {1} type.</source>
-    </trans-unit>
-    <trans-unit id="chat.fileAttachmentWithRange">
-      <source xml:lang="en">Attached file, {0}, line {1} to line {2}</source>
-    </trans-unit>
-    <trans-unit id="chat.imageAttachment">
-      <source xml:lang="en">Attached image, {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.imageAttachmentHover">
-      <source xml:lang="en">{0}</source>
+    <trans-unit id="chat.modelPicker.label">
+      <source xml:lang="en">Pick Model</source>
     </trans-unit>
     <trans-unit id="chat.moreModels">
       <source xml:lang="en">Add More Models...</source>
