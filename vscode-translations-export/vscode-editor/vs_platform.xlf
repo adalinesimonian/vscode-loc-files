@@ -497,6 +497,9 @@ Received: '{1}'.</source>
     <trans-unit id="locale">
       <source xml:lang="en">The locale to use (e.g. en-US or zh-TW).</source>
     </trans-unit>
+    <trans-unit id="locateShellIntegrationPath">
+      <source xml:lang="en">Print the path to a terminal shell integration script. Allowed values are 'bash', 'pwsh', 'zsh' or 'fish'.</source>
+    </trans-unit>
     <trans-unit id="log">
       <source xml:lang="en">Log level to use. Default is 'info'. Allowed values are 'critical', 'error', 'warn', 'info', 'debug', 'trace', 'off'. You can also configure the log level of an extension by passing extension id and log level in the following format: '${publisher}.${name}:${logLevel}'. For example: 'vscode.csharp:trace'. Can receive one or more such entries.</source>
     </trans-unit>

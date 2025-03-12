@@ -126,9 +126,6 @@
     <trans-unit id="chat.history.rename">
       <source xml:lang="en">Rename</source>
     </trans-unit>
-    <trans-unit id="chat.releaseNotes.label">
-      <source xml:lang="en">Show Release Notes</source>
-    </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
       <source xml:lang="en">You've reached the limit of the Copilot Free plan. These limits will reset on {0}.</source>
     </trans-unit>
@@ -416,12 +413,6 @@
     <trans-unit id="agent.newSessionMessage">
       <source xml:lang="en">Toggling agent mode will start a new session. Would you like to continue?</source>
     </trans-unit>
-    <trans-unit id="agentDisabled">
-      <source xml:lang="en">Agent Mode Disabled</source>
-    </trans-unit>
-    <trans-unit id="agentEnabled">
-      <source xml:lang="en">Agent Mode Enabled (Experimental)</source>
-    </trans-unit>
     <trans-unit id="chat.newChat.label">
       <source xml:lang="en">Send to New Chat</source>
     </trans-unit>
@@ -455,8 +446,8 @@
     <trans-unit id="interactive.switchToNextModel.label">
       <source xml:lang="en">Switch to Next Model</source>
     </trans-unit>
-    <trans-unit id="interactive.toggleAgent.label">
-      <source xml:lang="en">Toggle Agent Mode (Experimental)</source>
+    <trans-unit id="interactive.toggleMode.label">
+      <source xml:lang="en">Toggle Chat Mode (Experimental)</source>
     </trans-unit>
     <trans-unit id="interactive.toggleRequestPausd.label">
       <source xml:lang="en">Toggle Request Paused</source>
@@ -466,6 +457,9 @@
     </trans-unit>
     <trans-unit id="requestNotPaused">
       <source xml:lang="en">Pause Request</source>
+    </trans-unit>
+    <trans-unit id="setChatMode">
+      <source xml:lang="en">Set Mode (Experimental)</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatFileTreeActions" source-language="en" datatype="plaintext"><body>
@@ -751,6 +745,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="interactiveSessionConfigurationTitle">
       <source xml:lang="en">Chat</source>
+    </trans-unit>
+    <trans-unit id="workspaceConfig.mcp.description">
+      <source xml:lang="en">Model Context Protocol server configurations</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatAccessibilityProvider" source-language="en" datatype="plaintext"><body>
@@ -1302,6 +1299,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.agentMode">
       <source xml:lang="en">Agent</source>
     </trans-unit>
+    <trans-unit id="chat.chatMode">
+      <source xml:lang="en">Chat</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.label">
       <source xml:lang="en">Pick Model</source>
     </trans-unit>
@@ -1625,6 +1625,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatsLabel">
       <source xml:lang="en">Chat messages</source>
     </trans-unit>
+    <trans-unit id="codeCompletionsStatus">
+      <source xml:lang="en">Copilot Code Completions</source>
+    </trans-unit>
+    <trans-unit id="codeCompletionsStatusText">
+      <source xml:lang="en">$(copilot) Completions</source>
+    </trans-unit>
     <trans-unit id="completionsLabel">
       <source xml:lang="en">Code completions</source>
     </trans-unit>
@@ -1661,9 +1667,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="gaugeWarningForeground">
       <source xml:lang="en">Gauge warning foreground color.</source>
     </trans-unit>
-    <trans-unit id="keybindingsTitle">
-      <source xml:lang="en">Keybindings</source>
-    </trans-unit>
     <trans-unit id="limitQuota">
       <source xml:lang="en">Limits will reset on {0}.</source>
     </trans-unit>
@@ -1676,6 +1679,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="settings.codeCompletionsLanguage">
       <source xml:lang="en">Code completions ({0})</source>
     </trans-unit>
+    <trans-unit id="settings.nextEditSuggestions">
+      <source xml:lang="en">Next Edit Suggestions</source>
+    </trans-unit>
     <trans-unit id="settingsTitle">
       <source xml:lang="en">Settings</source>
     </trans-unit>
@@ -1684,18 +1690,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="setupCopilotForFreeHeader">
       <source xml:lang="en">Use AI Features with Copilot</source>
-    </trans-unit>
-    <trans-unit id="shortcuts.chat">
-      <source xml:lang="en">Chat</source>
-    </trans-unit>
-    <trans-unit id="shortcuts.copilotEdits">
-      <source xml:lang="en">Copilot Edits</source>
-    </trans-unit>
-    <trans-unit id="shortcuts.inlineChat">
-      <source xml:lang="en">Inline Chat</source>
-    </trans-unit>
-    <trans-unit id="shortcuts.quickChat">
-      <source xml:lang="en">Quick Chat</source>
     </trans-unit>
     <trans-unit id="signInToUseCopilot">
       <source xml:lang="en">Sign in to Use Copilot...</source>
