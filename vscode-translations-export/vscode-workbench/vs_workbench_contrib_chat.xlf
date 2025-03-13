@@ -411,7 +411,7 @@
       <source xml:lang="en">Yes</source>
     </trans-unit>
     <trans-unit id="agent.newSessionMessage">
-      <source xml:lang="en">Toggling agent mode will start a new session. Would you like to continue?</source>
+      <source xml:lang="en">Changing the chat mode will start a new session. Would you like to continue?</source>
     </trans-unit>
     <trans-unit id="chat.newChat.label">
       <source xml:lang="en">Send to New Chat</source>
@@ -446,8 +446,8 @@
     <trans-unit id="interactive.switchToNextModel.label">
       <source xml:lang="en">Switch to Next Model</source>
     </trans-unit>
-    <trans-unit id="interactive.toggleMode.label">
-      <source xml:lang="en">Toggle Chat Mode (Experimental)</source>
+    <trans-unit id="interactive.toggleAgent.label">
+      <source xml:lang="en">Set Chat Mode (Experimental)</source>
     </trans-unit>
     <trans-unit id="interactive.toggleRequestPausd.label">
       <source xml:lang="en">Toggle Request Paused</source>
@@ -745,6 +745,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="interactiveSessionConfigurationTitle">
       <source xml:lang="en">Chat</source>
+    </trans-unit>
+    <trans-unit id="mpc.discovery.enabled">
+      <source xml:lang="en">Enable discovery of Model Context Protocol servers on the machine.</source>
     </trans-unit>
     <trans-unit id="workspaceConfig.mcp.description">
       <source xml:lang="en">Model Context Protocol server configurations</source>
@@ -1670,14 +1673,17 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="limitQuota">
       <source xml:lang="en">Limits will reset on {0}.</source>
     </trans-unit>
+    <trans-unit id="notSignedIntoCopilot">
+      <source xml:lang="en">Signed out</source>
+    </trans-unit>
     <trans-unit id="quotaDisplay">
       <source xml:lang="en">{0}%</source>
     </trans-unit>
     <trans-unit id="settings.codeCompletions">
-      <source xml:lang="en">Code completions (all files)</source>
+      <source xml:lang="en">Code Completions (all files)</source>
     </trans-unit>
     <trans-unit id="settings.codeCompletionsLanguage">
-      <source xml:lang="en">Code completions ({0})</source>
+      <source xml:lang="en">Code Completions ({0})</source>
     </trans-unit>
     <trans-unit id="settings.nextEditSuggestions">
       <source xml:lang="en">Next Edit Suggestions</source>
@@ -1685,14 +1691,17 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="settingsTitle">
       <source xml:lang="en">Settings</source>
     </trans-unit>
+    <trans-unit id="setupCopilot">
+      <source xml:lang="en">Use AI Features with Copilot</source>
+    </trans-unit>
     <trans-unit id="setupCopilotForFreeButton">
       <source xml:lang="en">Setup Copilot for Free</source>
     </trans-unit>
-    <trans-unit id="setupCopilotForFreeHeader">
-      <source xml:lang="en">Use AI Features with Copilot</source>
+    <trans-unit id="signInToUseCopilotButton">
+      <source xml:lang="en">Sign In to Use Copilot</source>
     </trans-unit>
-    <trans-unit id="signInToUseCopilot">
-      <source xml:lang="en">Sign in to Use Copilot...</source>
+    <trans-unit id="triggerChatSetup">
+      <source xml:lang="en">Use AI Features with Copilot for Free</source>
     </trans-unit>
     <trans-unit id="upgradeToCopilotPro">
       <source xml:lang="en">Upgrade to Copilot Pro</source>
@@ -1932,9 +1941,6 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
     <trans-unit id="chatEditApplied">
       <source xml:lang="en">True when the chat text edits have been applied.</source>
     </trans-unit>
-    <trans-unit id="chatEditingAgentMode">
-      <source xml:lang="en">True when edits is in agent mode.</source>
-    </trans-unit>
     <trans-unit id="chatEditingCanRedo">
       <source xml:lang="en">True when it is possible to redo an interaction in the editing panel.</source>
     </trans-unit>
@@ -1967,6 +1973,9 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
     </trans-unit>
     <trans-unit id="chatLastItemId">
       <source xml:lang="en">The id of the last chat item.</source>
+    </trans-unit>
+    <trans-unit id="chatMode">
+      <source xml:lang="en">The current chat mode.</source>
     </trans-unit>
     <trans-unit id="chatModelsAreUserSelectable">
       <source xml:lang="en">True when the chat model can be selected manually by the user.</source>
@@ -2003,6 +2012,9 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
     </trans-unit>
     <trans-unit id="inQuickChat">
       <source xml:lang="en">True when the quick chat UI has focus, false otherwise.</source>
+    </trans-unit>
+    <trans-unit id="inUnifiedChat">
+      <source xml:lang="en">True when focus is in the unified chat widget, false otherwise.</source>
     </trans-unit>
     <trans-unit id="interactiveInputHasFocus">
       <source xml:lang="en">True when the chat input has focus.</source>
@@ -2115,18 +2127,34 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
       <source xml:lang="en">The vendor field cannot start or end with whitespace.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/basePromptParser" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatPromptInstructionsBrokenReference">
-      <source xml:lang="en">Contains a broken reference that will be ignored</source>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/topError" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="broken">
+      <source xml:lang="en">broken</source>
     </trans-unit>
-    <trans-unit id="chatPromptInstructionsFileOpenFailed">
-      <source xml:lang="en">Failed to open file</source>
+    <trans-unit id="recursive">
+      <source xml:lang="en">recursive</source>
     </trans-unit>
-    <trans-unit id="chatPromptInstructionsRecursiveReference">
-      <source xml:lang="en">Recursive reference found</source>
+    <trans-unit id="workbench.reusable-prompts.top-error.cannot-read">
+      <source xml:lang="en">Cannot read '{0}'.{1}</source>
     </trans-unit>
-    <trans-unit id="chatPromptInstructionsStreamOpenFailed">
-      <source xml:lang="en">Failed to open contents stream</source>
+    <trans-unit id="workbench.reusable-prompts.top-error.child.direct">
+      <source xml:lang="en">Contains</source>
+    </trans-unit>
+    <trans-unit id="workbench.reusable-prompts.top-error.child.final-message">
+      <source xml:lang="en">{0} a {1} link to '{2}' that will be ignored.{3}</source>
+    </trans-unit>
+    <trans-unit id="workbench.reusable-prompts.top-error.child.indirect">
+      <source xml:lang="en">Indirectly referenced prompt '{0}' contains</source>
+    </trans-unit>
+    <trans-unit id="workbench.reusable-prompts.top-error.more-issues-label">
+      <source xml:lang="en">
+(+{0} more issues)</source>
+    </trans-unit>
+    <trans-unit id="workbench.reusable-prompts.top-error.open-failed">
+      <source xml:lang="en">Cannot open '{0}'.{1}</source>
+    </trans-unit>
+    <trans-unit id="workbench.reusable-prompts.top-error.recursive-reference">
+      <source xml:lang="en">Recursion to itself.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/tools/editFileTool" source-language="en" datatype="plaintext"><body>

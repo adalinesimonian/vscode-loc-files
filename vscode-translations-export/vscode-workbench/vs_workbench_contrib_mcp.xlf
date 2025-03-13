@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/mcp/browser/mcpCommands" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="desc">
+      <source xml:lang="en">MCP Server - {0}</source>
+    </trans-unit>
     <trans-unit id="mcp.list">
       <source xml:lang="en">List Servers</source>
+    </trans-unit>
+    <trans-unit id="mcp.newTools">
+      <source xml:lang="en">New tools available ({0})</source>
     </trans-unit>
     <trans-unit id="mcp.options">
       <source xml:lang="en">Server Options</source>
@@ -21,6 +27,12 @@
     </trans-unit>
     <trans-unit id="mcp.stop">
       <source xml:lang="en">Stop Server</source>
+    </trans-unit>
+    <trans-unit id="mcp.toolError">
+      <source xml:lang="en">Error loading {0} tool(s)</source>
+    </trans-unit>
+    <trans-unit id="mcp.toolRefresh">
+      <source xml:lang="en">Discovering tools...</source>
     </trans-unit>
     <trans-unit id="placeholder">
       <source xml:lang="en">Select tools that are available to chat</source>
@@ -69,6 +81,22 @@
     <trans-unit id="mcp.serverCount.description">
       <source xml:lang="en">Context key that has the number of registered MCP servers</source>
     </trans-unit>
+    <trans-unit id="mcp.toolsCount.description">
+      <source xml:lang="en">Context key that has the number of registered MCP tools</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/common/mcpRegistry" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.trust.details">
+      <source xml:lang="en">The Model Context Protocol server `{0}` was found from {1}.
+
+Do you want to allow running MCP servers from {1}?</source>
+    </trans-unit>
+    <trans-unit id="mcp.trust.no">
+      <source xml:lang="en">Do not trust</source>
+    </trans-unit>
+    <trans-unit id="mcp.trust.yes">
+      <source xml:lang="en">Trust</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpServerConnection" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcpServer.starting">
@@ -82,11 +110,28 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="aaa">
-      <source xml:lang="en">Run tool from {0}</source>
+    <trans-unit id="mcp.tool.warning">
+      <source xml:lang="en">MCP servers or malicious conversation content may attempt to misuse '{0}' through the installed tools. Please carefully review any requested actions.</source>
     </trans-unit>
-    <trans-unit id="ddd">
-      <source xml:lang="en">Do you allow to run `{0}` from `{1}`?</source>
+    <trans-unit id="msg.msg">
+      <source xml:lang="en">{0}
+
+Input:
+
+```json
+{1}
+```
+
+$(warning) {2}</source>
+    </trans-unit>
+    <trans-unit id="msg.ran">
+      <source xml:lang="en">Ran `{0}` </source>
+    </trans-unit>
+    <trans-unit id="msg.run">
+      <source xml:lang="en">Running `{0}`</source>
+    </trans-unit>
+    <trans-unit id="msg.title">
+      <source xml:lang="en">Run `{0}` from $(server) `{1}` (MCP server)</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpTypes" source-language="en" datatype="plaintext"><body>

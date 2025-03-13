@@ -201,16 +201,16 @@
       <source xml:lang="en">Select Default Profile</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.selectToNextCommand">
-      <source xml:lang="en">Select To Next Command</source>
+      <source xml:lang="en">Select to Next Command</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.selectToNextLine">
-      <source xml:lang="en">Select To Next Line</source>
+      <source xml:lang="en">Select to Next Line</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.selectToPreviousCommand">
-      <source xml:lang="en">Select To Previous Command</source>
+      <source xml:lang="en">Select to Previous Command</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.selectToPreviousLine">
-      <source xml:lang="en">Select To Previous Line</source>
+      <source xml:lang="en">Select to Previous Line</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.setFixedDimensions">
       <source xml:lang="en">Set Fixed Dimensions</source>
@@ -535,6 +535,9 @@ The terminal's title</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminal/browser/terminalTooltip" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="hideDetails">
+      <source xml:lang="en">Hide Details</source>
+    </trans-unit>
     <trans-unit id="shellIntegration">
       <source xml:lang="en">Shell integration</source>
     </trans-unit>
@@ -556,6 +559,9 @@ The terminal's title</note>
     <trans-unit id="shellProcessTooltip.processId">
       <source xml:lang="en">Process ID ({0}): {1}</source>
       <note>The first arg is "PID" which shouldn't be translated</note>
+    </trans-unit>
+    <trans-unit id="showDetails">
+      <source xml:lang="en">Show Details</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminal/browser/terminalView" source-language="en" datatype="plaintext"><body>
@@ -1376,13 +1382,13 @@ This setting applies only when terminals are created, so you will need to restar
       <source xml:lang="en">Rename the Currently Active Terminal</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.scrollToNextCommand">
-      <source xml:lang="en">Scroll To Next Command</source>
+      <source xml:lang="en">Scroll to Next Command</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.scrollToPreviousCommand">
-      <source xml:lang="en">Scroll To Previous Command</source>
+      <source xml:lang="en">Scroll to Previous Command</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.sendSequence">
-      <source xml:lang="en">Send Custom Sequence To Terminal</source>
+      <source xml:lang="en">Send Custom Sequence to Terminal</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.sizeToContentWidthInstance">
       <source xml:lang="en">Toggle Size to Content Width</source>
