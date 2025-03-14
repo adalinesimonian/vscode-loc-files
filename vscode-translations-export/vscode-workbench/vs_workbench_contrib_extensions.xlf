@@ -155,9 +155,6 @@
     <trans-unit id="id">
       <source xml:lang="en">Identifier</source>
     </trans-unit>
-    <trans-unit id="install count">
-      <source xml:lang="en">Install count</source>
-    </trans-unit>
     <trans-unit id="issues">
       <source xml:lang="en">Issues</source>
     </trans-unit>
@@ -169,9 +166,6 @@
     </trans-unit>
     <trans-unit id="license">
       <source xml:lang="en">License</source>
-    </trans-unit>
-    <trans-unit id="local extension">
-      <source xml:lang="en">Local Extension</source>
     </trans-unit>
     <trans-unit id="name">
       <source xml:lang="en">Extension name</source>
@@ -194,12 +188,6 @@
     <trans-unit id="published">
       <source xml:lang="en">Published</source>
     </trans-unit>
-    <trans-unit id="publisher">
-      <source xml:lang="en">Publisher ({0})</source>
-    </trans-unit>
-    <trans-unit id="rating">
-      <source xml:lang="en">Rating</source>
-    </trans-unit>
     <trans-unit id="repository">
       <source xml:lang="en">Repository</source>
     </trans-unit>
@@ -217,9 +205,6 @@
     </trans-unit>
     <trans-unit id="vsix">
       <source xml:lang="en">VSIX</source>
-    </trans-unit>
-    <trans-unit id="workspace extension">
-      <source xml:lang="en">Workspace Extension</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/extensions/browser/extensionEnablementWorkspaceTrustTransitionParticipant" source-language="en" datatype="plaintext"><body>
@@ -1338,6 +1323,9 @@ Would you like to update the extension?</source>
     <trans-unit id="installWorkspaceRecommendedIcon">
       <source xml:lang="en">Icon for the 'Install Workspace Recommended Extensions' action in the extensions view.</source>
     </trans-unit>
+    <trans-unit id="lockIcon">
+      <source xml:lang="en">Icon shown for private extensions in the extensions view and editor.</source>
+    </trans-unit>
     <trans-unit id="manageExtensionIcon">
       <source xml:lang="en">Icon for the 'Manage' action in the extensions view.</source>
     </trans-unit>
@@ -1577,6 +1565,9 @@ Would you like to update the extension?</source>
     <trans-unit id="activation">
       <source xml:lang="en">Activation time</source>
     </trans-unit>
+    <trans-unit id="extensionIcon.private">
+      <source xml:lang="en">The icon color for private extensions.</source>
+    </trans-unit>
     <trans-unit id="extensionIcon.sponsorForeground">
       <source xml:lang="en">The icon color for extension sponsor.</source>
     </trans-unit>
@@ -1595,6 +1586,9 @@ Would you like to update the extension?</source>
     <trans-unit id="has prerelease">
       <source xml:lang="en">This extension has a {0} available</source>
     </trans-unit>
+    <trans-unit id="install count">
+      <source xml:lang="en">Install count</source>
+    </trans-unit>
     <trans-unit id="local extension">
       <source xml:lang="en">Local Extension</source>
     </trans-unit>
@@ -1603,6 +1597,12 @@ Would you like to update the extension?</source>
     </trans-unit>
     <trans-unit id="messages">
       <source xml:lang="en">{0} messages</source>
+    </trans-unit>
+    <trans-unit id="privateExtension">
+      <source xml:lang="en">Private Extension</source>
+    </trans-unit>
+    <trans-unit id="publisher">
+      <source xml:lang="en">Publisher ({0})</source>
     </trans-unit>
     <trans-unit id="publisher verified tooltip">
       <source xml:lang="en">This publisher has verified ownership of {0}</source>
@@ -1636,6 +1636,9 @@ Would you like to update the extension?</source>
     </trans-unit>
     <trans-unit id="updateRequired">
       <source xml:lang="en">Latest version:</source>
+    </trans-unit>
+    <trans-unit id="verified publisher">
+      <source xml:lang="en">This publisher has verified ownership of {0}</source>
     </trans-unit>
     <trans-unit id="workspace extension">
       <source xml:lang="en">Workspace Extension</source>

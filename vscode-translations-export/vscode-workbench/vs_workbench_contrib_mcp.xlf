@@ -13,6 +13,9 @@
     <trans-unit id="mcp.options">
       <source xml:lang="en">Server Options</source>
     </trans-unit>
+    <trans-unit id="mcp.resetTrust">
+      <source xml:lang="en">Reset MCP Trust</source>
+    </trans-unit>
     <trans-unit id="mcp.restart">
       <source xml:lang="en">Restart Server</source>
     </trans-unit>
@@ -78,6 +81,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpContextKeys" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.hasUnknownTools.description">
+      <source xml:lang="en">Indicates whether there are MCP servers with unknown tools.</source>
+    </trans-unit>
     <trans-unit id="mcp.serverCount.description">
       <source xml:lang="en">Context key that has the number of registered MCP servers</source>
     </trans-unit>
