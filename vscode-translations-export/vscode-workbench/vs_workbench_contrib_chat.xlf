@@ -569,6 +569,18 @@
     <trans-unit id="chat.accept">
       <source xml:lang="en">Accept</source>
     </trans-unit>
+    <trans-unit id="defaultBucketLabel">
+      <source xml:lang="en">Other Tools</source>
+    </trans-unit>
+    <trans-unit id="desc">
+      <source xml:lang="en">MCP - {0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="label">
+      <source xml:lang="en">Select Tools...</source>
+    </trans-unit>
+    <trans-unit id="placeholder">
+      <source xml:lang="en">Select tools that are available to chat</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/codeBlockOperations" source-language="en" datatype="plaintext"><body>
     <trans-unit id="activeEditor">
@@ -718,6 +730,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.reusablePrompts.config.locations.title">
       <source xml:lang="en">Prompt File Locations</source>
+    </trans-unit>
+    <trans-unit id="chat.setupFromChat">
+      <source xml:lang="en">Controls whether Copilot setup starts from a dialog or from the welcome view.</source>
     </trans-unit>
     <trans-unit id="chat.statusIndicator">
       <source xml:lang="en">Controls whether a Copilot related status indicator appears in the lower right corner.</source>
@@ -1506,12 +1521,50 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Pasted Image</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSelectedTools" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="tool.0">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+    <trans-unit id="tool.1">
+      <source xml:lang="en">{0} {1} of {2}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
     </trans-unit>
+    <trans-unit id="chatDescription">
+      <source xml:lang="en">Ask Copilot</source>
+    </trans-unit>
+    <trans-unit id="chatMessage">
+      <source xml:lang="en">Copilot is powered by AI, so mistakes are possible. Review output carefully before use.</source>
+    </trans-unit>
+    <trans-unit id="chatTitle">
+      <source xml:lang="en">Ask Copilot</source>
+    </trans-unit>
+    <trans-unit id="copilotFree">
+      <source xml:lang="en">Use AI Features with Copilot for Free</source>
+    </trans-unit>
+    <trans-unit id="copilotReady">
+      <source xml:lang="en">Copilot is ready to use.</source>
+    </trans-unit>
+    <trans-unit id="copilotSetupError">
+      <source xml:lang="en">Copilot setup failed. [Try again]({0} "Retry").</source>
+    </trans-unit>
     <trans-unit id="copilotWorkspaceTrust">
       <source xml:lang="en">Copilot is currently only supported in trusted workspaces.</source>
+    </trans-unit>
+    <trans-unit id="editsDescription">
+      <source xml:lang="en">Edit files in your workspace</source>
+    </trans-unit>
+    <trans-unit id="editsMessage">
+      <source xml:lang="en">Start your editing session by defining a set of files that you want to work with. Then ask Copilot for the changes you want to make.</source>
+    </trans-unit>
+    <trans-unit id="editsTitle">
+      <source xml:lang="en">Edit with Copilot</source>
     </trans-unit>
     <trans-unit id="enterpriseInstance">
       <source xml:lang="en">What is your {0} instance?</source>
@@ -1551,6 +1604,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="hideChatSetupDetail">
       <source xml:lang="en">You can restore Copilot by running the '{0}' command.</source>
     </trans-unit>
+    <trans-unit id="installingCopilot">
+      <source xml:lang="en">Getting Copilot Ready...</source>
+    </trans-unit>
     <trans-unit id="invalidEnterpriseInstance">
       <source xml:lang="en">Please enter a valid {0} instance (i.e. "octocat" or "https://octocat.ghe.com")</source>
     </trans-unit>
@@ -1559,6 +1615,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="retry">
       <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="settingUpCopilotWarning">
+      <source xml:lang="en">You need to [set up Copilot]({0} "Set up Copilot") to use Chat.</source>
     </trans-unit>
     <trans-unit id="settings">
       <source xml:lang="en">Copilot Free and Pro may show [public code]({0}) suggestions and we may use your data for product improvement. You can change these [settings]({1}) at any time.</source>
@@ -1574,6 +1633,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="setupChatSignIn">
       <source xml:lang="en">$(loading~spin) Signing in to {0}...</source>
+    </trans-unit>
+    <trans-unit id="setupChatSignIn2">
+      <source xml:lang="en">Signing in to {0}...</source>
+    </trans-unit>
+    <trans-unit id="setupError">
+      <source xml:lang="en">Error during setup: {0}</source>
+    </trans-unit>
+    <trans-unit id="setupErrorDialog">
+      <source xml:lang="en">Copilot setup failed. Would you like to try again?</source>
     </trans-unit>
     <trans-unit id="setupWithEnterpriseProvider">
       <source xml:lang="en">Sign in with a {0} Account</source>
@@ -1598,6 +1666,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <note>{Locked="["}
 {Locked="]({0})"}
 {Locked="]({1})"}</note>
+    </trans-unit>
+    <trans-unit id="triggerChatSetup">
+      <source xml:lang="en">Use AI Features with Copilot for Free...</source>
     </trans-unit>
     <trans-unit id="unknownSetupError">
       <source xml:lang="en">An error occurred while setting up Copilot. Would you like to try again?</source>
@@ -1695,7 +1766,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Use AI Features with Copilot</source>
     </trans-unit>
     <trans-unit id="setupCopilotForFreeButton">
-      <source xml:lang="en">Setup Copilot for Free</source>
+      <source xml:lang="en">Set up Copilot for Free</source>
     </trans-unit>
     <trans-unit id="signInToUseCopilotButton">
       <source xml:lang="en">Sign In to Use Copilot</source>
@@ -2028,6 +2099,9 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
     <trans-unit id="interactiveSessionResponseVote">
       <source xml:lang="en">When the response has been voted up, is set to 'up'. When voted down, is set to 'down'. Otherwise an empty string.</source>
     </trans-unit>
+    <trans-unit id="toolsCount">
+      <source xml:lang="en">The count of tools available in the chat.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatEditingService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatEditingAgentSupportsReadonlyReferences">
@@ -2295,6 +2369,60 @@ Copilot is powered by AI, so mistakes are possible. Review output carefully befo
     </trans-unit>
     <trans-unit id="workbench.action.speech.stopReadAloud">
       <source xml:lang="en">Stop Reading Aloud</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/electron-sandbox/tools/fetchPageTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="fetchWebPage.confirmationMessageManageTrustedDomains">
+      <source xml:lang="en">You can [manage your trusted domains]({0}) to skip this confirmation in the future.</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.confirmationTitle.plural">
+      <source xml:lang="en">Fetch untrusted web pages?</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.confirmationTitle.singular">
+      <source xml:lang="en">Fetch untrusted web page?</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.invocationMessage.plural">
+      <source xml:lang="en">Fetching {0} web pages</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.invocationMessage.singular">
+      <source xml:lang="en">Fetching [web page]({0})</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.modelDescription">
+      <source xml:lang="en">Fetches the main content from a web page. This tool is useful for summarizing or analyzing the content of a webpage.</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.noValidUrls">
+      <source xml:lang="en">No valid URLs provided.</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.pastTenseMessage.plural">
+      <source xml:lang="en">Fetched {0} web pages, but the following were invalid URLs:
+
+{1}
+
+</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.pastTenseMessage.singular">
+      <source xml:lang="en">Fetched web page, but the following was an invalid URL:
+
+{0}
+
+</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.pastTenseMessageResult.plural">
+      <source xml:lang="en">Fetched {0} web pages</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.pastTenseMessageResult.singular">
+      <source xml:lang="en">Fetched [web page]({0})</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.promptPart">
+      <source xml:lang="en">Below is the main content extracted from the webpage ({0}). Please read and analyze this content to assist with any follow-up questions:
+
+{1}</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.urlsDescription">
+      <source xml:lang="en">An array of URLs to fetch content from.</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.userDescription">
+      <source xml:lang="en">Fetch the main content from a web page. This tool is useful for summarizing or analyzing the content of a webpage.</source>
     </trans-unit>
 </body></file>
 </xliff>

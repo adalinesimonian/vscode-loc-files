@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/mcp/browser/mcpCommands" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="desc">
-      <source xml:lang="en">MCP Server - {0}</source>
-    </trans-unit>
     <trans-unit id="mcp.list">
       <source xml:lang="en">List Servers</source>
     </trans-unit>
@@ -13,14 +10,20 @@
     <trans-unit id="mcp.options">
       <source xml:lang="en">Server Options</source>
     </trans-unit>
+    <trans-unit id="mcp.resetCachedTools">
+      <source xml:lang="en">Reset Cached Tools</source>
+    </trans-unit>
     <trans-unit id="mcp.resetTrust">
-      <source xml:lang="en">Reset MCP Trust</source>
+      <source xml:lang="en">Reset Trust</source>
     </trans-unit>
     <trans-unit id="mcp.restart">
       <source xml:lang="en">Restart Server</source>
     </trans-unit>
     <trans-unit id="mcp.selectAction">
       <source xml:lang="en">Select Server Action</source>
+    </trans-unit>
+    <trans-unit id="mcp.selectServer">
+      <source xml:lang="en">Select an MCP Server</source>
     </trans-unit>
     <trans-unit id="mcp.showOutput">
       <source xml:lang="en">Show Output</source>
@@ -36,18 +39,6 @@
     </trans-unit>
     <trans-unit id="mcp.toolRefresh">
       <source xml:lang="en">Discovering tools...</source>
-    </trans-unit>
-    <trans-unit id="placeholder">
-      <source xml:lang="en">Select tools that are available to chat</source>
-    </trans-unit>
-    <trans-unit id="tool.0">
-      <source xml:lang="en">{0} {1}</source>
-    </trans-unit>
-    <trans-unit id="tool.1">
-      <source xml:lang="en">{0} {1} of {2}</source>
-    </trans-unit>
-    <trans-unit id="workbench.action.chat.editing.attachContext.shortLabel">
-      <source xml:lang="en">Select Tools...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/discovery/configMcpDiscovery" source-language="en" datatype="plaintext"><body>
@@ -79,6 +70,15 @@
     <trans-unit id="app.mcp.json.title">
       <source xml:lang="en">Model Context Protocol Servers</source>
     </trans-unit>
+    <trans-unit id="vscode.extension.contributes.mcp">
+      <source xml:lang="en">Contributes Model Context Protocol servers. Users of this should also use `vscode.lm.registerMcpConfigurationProvider`.</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.contributes.mcp.id">
+      <source xml:lang="en">Unique ID for the collection.</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.contributes.mcp.label">
+      <source xml:lang="en">Display name for the collection.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpContextKeys" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcp.hasUnknownTools.description">
@@ -93,15 +93,18 @@
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpRegistry" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcp.trust.details">
-      <source xml:lang="en">The Model Context Protocol server `{0}` was found from {1}.
+      <source xml:lang="en">{0} discovered Model Context Protocol servers from {1} (`{2}`). {0} can use their capabilities in Chat.
 
-Do you want to allow running MCP servers from {1}?</source>
+Do you want to allow running MCP servers from {3}?</source>
     </trans-unit>
     <trans-unit id="mcp.trust.no">
       <source xml:lang="en">Do not trust</source>
     </trans-unit>
     <trans-unit id="mcp.trust.yes">
       <source xml:lang="en">Trust</source>
+    </trans-unit>
+    <trans-unit id="trustTitleWithOrigin">
+      <source xml:lang="en">Trust MCP servers from {0}?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpServerConnection" source-language="en" datatype="plaintext"><body>
