@@ -67,8 +67,17 @@
     <trans-unit id="app.mcp.json.command">
       <source xml:lang="en">The command to run the server.</source>
     </trans-unit>
+    <trans-unit id="app.mcp.json.headers">
+      <source xml:lang="en">Additional headers sent to the server.</source>
+    </trans-unit>
     <trans-unit id="app.mcp.json.title">
       <source xml:lang="en">Model Context Protocol Servers</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.type">
+      <source xml:lang="en">The type of the server.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.url">
+      <source xml:lang="en">The URL of the server-sent-event (SSE) server.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.mcp">
       <source xml:lang="en">Contributes Model Context Protocol servers. Users of this should also use `vscode.lm.registerMcpConfigurationProvider`.</source>
@@ -81,6 +90,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpContextKeys" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.hasServersWithErrors.description">
+      <source xml:lang="en">Indicates whether there are any MCP servers with errors.</source>
+    </trans-unit>
     <trans-unit id="mcp.hasUnknownTools.description">
       <source xml:lang="en">Indicates whether there are MCP servers with unknown tools.</source>
     </trans-unit>
