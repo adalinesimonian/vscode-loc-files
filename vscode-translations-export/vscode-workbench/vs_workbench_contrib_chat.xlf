@@ -1405,9 +1405,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatParticipant.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.viewContainer.label">
-      <source xml:lang="en">Chat</source>
-    </trans-unit>
     <trans-unit id="chatCommand">
       <source xml:lang="en">A short name by which this command is referred to in the UI, e.g. `fix` or * `explain` for commands that fix an issue or explain code. The name should be unique among the commands provided by this participant.</source>
     </trans-unit>
@@ -1530,6 +1527,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentDescription">
+      <source xml:lang="en">Edit files in your workspace in agent mode (Experimental)</source>
+    </trans-unit>
+    <trans-unit id="agentMessage">
+      <source xml:lang="en">Ask Copilot to edit your files in agent mode. Copilot will automatically use multiple requests to pick files to edit, run terminal commands, and iterate on errors.</source>
+    </trans-unit>
     <trans-unit id="cancel">
       <source xml:lang="en">Cancel</source>
     </trans-unit>
@@ -1546,7 +1549,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Ask Copilot</source>
     </trans-unit>
     <trans-unit id="copilotFree">
-      <source xml:lang="en">Use AI Features with Copilot for Free</source>
+      <source xml:lang="en">Welcome to Copilot</source>
     </trans-unit>
     <trans-unit id="copilotReady">
       <source xml:lang="en">Copilot is ready to use.</source>
@@ -1605,7 +1608,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">You can restore Copilot by running the '{0}' command.</source>
     </trans-unit>
     <trans-unit id="installingCopilot">
-      <source xml:lang="en">Getting Copilot Ready...</source>
+      <source xml:lang="en">Getting Copilot ready.</source>
     </trans-unit>
     <trans-unit id="invalidEnterpriseInstance">
       <source xml:lang="en">Please enter a valid {0} instance (i.e. "octocat" or "https://octocat.ghe.com")</source>
@@ -1635,7 +1638,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">$(loading~spin) Signing in to {0}...</source>
     </trans-unit>
     <trans-unit id="setupChatSignIn2">
-      <source xml:lang="en">Signing in to {0}...</source>
+      <source xml:lang="en">Signing in to {0}.</source>
     </trans-unit>
     <trans-unit id="setupError">
       <source xml:lang="en">Error during setup: {0}</source>
@@ -1687,6 +1690,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatStatus" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="activateCopilotButton">
+      <source xml:lang="en">Set Up Copilot</source>
+    </trans-unit>
+    <trans-unit id="activateDescription">
+      <source xml:lang="en">You need to set up Copilot.</source>
+    </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceededStatus">
       <source xml:lang="en">Limit reached</source>
     </trans-unit>
@@ -1710,15 +1719,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="completionsQuotaExceededStatus">
       <source xml:lang="en">Completions limit reached</source>
-    </trans-unit>
-    <trans-unit id="featureChat">
-      <source xml:lang="en">Code faster with Completions</source>
-    </trans-unit>
-    <trans-unit id="featureEdits">
-      <source xml:lang="en">Build features with Copilot Edits</source>
-    </trans-unit>
-    <trans-unit id="featureExplore">
-      <source xml:lang="en">Explore your codebase with Chat</source>
     </trans-unit>
     <trans-unit id="gaugeBackground">
       <source xml:lang="en">Gauge background color.</source>
@@ -1762,17 +1762,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="settingsTitle">
       <source xml:lang="en">Settings</source>
     </trans-unit>
-    <trans-unit id="setupCopilot">
-      <source xml:lang="en">Use AI Features with Copilot</source>
-    </trans-unit>
-    <trans-unit id="setupCopilotForFreeButton">
-      <source xml:lang="en">Set up Copilot for Free</source>
+    <trans-unit id="signInDescription">
+      <source xml:lang="en">You need to sign in to use Copilot.</source>
     </trans-unit>
     <trans-unit id="signInToUseCopilotButton">
-      <source xml:lang="en">Sign In to Use Copilot</source>
-    </trans-unit>
-    <trans-unit id="triggerChatSetup">
-      <source xml:lang="en">Use AI Features with Copilot for Free</source>
+      <source xml:lang="en">Sign In</source>
     </trans-unit>
     <trans-unit id="upgradeToCopilotPro">
       <source xml:lang="en">Upgrade to Copilot Pro</source>

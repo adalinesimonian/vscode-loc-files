@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/mcp/browser/mcpCommands" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.addConfiguration">
+      <source xml:lang="en">Add Server...</source>
+    </trans-unit>
+    <trans-unit id="mcp.addConfiguration.description">
+      <source xml:lang="en">Installs a new Model Context protocol to the mcp.json settings</source>
+    </trans-unit>
+    <trans-unit id="mcp.command.placeholder">
+      <source xml:lang="en">Command to run (with optional arguments)</source>
+    </trans-unit>
+    <trans-unit id="mcp.command.title">
+      <source xml:lang="en">Enter Command</source>
+    </trans-unit>
     <trans-unit id="mcp.list">
       <source xml:lang="en">List Servers</source>
     </trans-unit>
@@ -25,6 +37,30 @@
     <trans-unit id="mcp.selectServer">
       <source xml:lang="en">Select an MCP Server</source>
     </trans-unit>
+    <trans-unit id="mcp.serverId.placeholder">
+      <source xml:lang="en">Unique identifier for this server</source>
+    </trans-unit>
+    <trans-unit id="mcp.serverId.title">
+      <source xml:lang="en">Enter Server ID</source>
+    </trans-unit>
+    <trans-unit id="mcp.serverType.command">
+      <source xml:lang="en">Command (stdio)</source>
+    </trans-unit>
+    <trans-unit id="mcp.serverType.command.description">
+      <source xml:lang="en">Run a local command that implements the MCP protocol</source>
+    </trans-unit>
+    <trans-unit id="mcp.serverType.http">
+      <source xml:lang="en">HTTP (server-sent events)</source>
+    </trans-unit>
+    <trans-unit id="mcp.serverType.http.description">
+      <source xml:lang="en">Connect to a remote HTTP server that implements the MCP protocol</source>
+    </trans-unit>
+    <trans-unit id="mcp.serverType.placeholder">
+      <source xml:lang="en">Choose the type of MCP server to add</source>
+    </trans-unit>
+    <trans-unit id="mcp.serverType.title">
+      <source xml:lang="en">Select Server Type</source>
+    </trans-unit>
     <trans-unit id="mcp.showOutput">
       <source xml:lang="en">Show Output</source>
     </trans-unit>
@@ -34,11 +70,38 @@
     <trans-unit id="mcp.stop">
       <source xml:lang="en">Stop Server</source>
     </trans-unit>
+    <trans-unit id="mcp.target..remote.description">
+      <source xml:lang="en">Available on this remote machine</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.remote">
+      <source xml:lang="en">Remote Settings</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.title">
+      <source xml:lang="en">Choose where to save the configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.user">
+      <source xml:lang="en">User Settings</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.user.description">
+      <source xml:lang="en">Available in all workspaces</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.workspace">
+      <source xml:lang="en">Workspace Settings</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.workspace.description">
+      <source xml:lang="en">Available in this workspace</source>
+    </trans-unit>
     <trans-unit id="mcp.toolError">
       <source xml:lang="en">Error loading {0} tool(s)</source>
     </trans-unit>
     <trans-unit id="mcp.toolRefresh">
       <source xml:lang="en">Discovering tools...</source>
+    </trans-unit>
+    <trans-unit id="mcp.url.placeholder">
+      <source xml:lang="en">URL of the MCP server (e.g., http://localhost:3000)</source>
+    </trans-unit>
+    <trans-unit id="mcp.url.title">
+      <source xml:lang="en">Enter Server URL</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/discovery/configMcpDiscovery" source-language="en" datatype="plaintext"><body>
