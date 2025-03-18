@@ -440,6 +440,9 @@
     <trans-unit id="RefreshAction.label">
       <source xml:lang="en">Refresh</source>
     </trans-unit>
+    <trans-unit id="SearchWithAIAction.label">
+      <source xml:lang="en">Search with AI</source>
+    </trans-unit>
     <trans-unit id="ViewAsListAction.label">
       <source xml:lang="en">View as List</source>
     </trans-unit>
@@ -607,6 +610,9 @@
     <trans-unit id="noResultsExcludes">
       <source xml:lang="en">No results found excluding '{0}' - </source>
     </trans-unit>
+    <trans-unit id="noResultsFallback">
+      <source xml:lang="en">No results found. </source>
+    </trans-unit>
     <trans-unit id="noResultsFound">
       <source xml:lang="en">No results found. Review your settings for configured exclusions and check your gitignore files - </source>
     </trans-unit>
@@ -731,8 +737,17 @@
     <trans-unit id="searchScope.includes">
       <source xml:lang="en">files to include</source>
     </trans-unit>
+    <trans-unit id="searchWithAIButtonTooltip">
+      <source xml:lang="en">Search</source>
+    </trans-unit>
+    <trans-unit id="searchWithAIButtonTooltipWithKB">
+      <source xml:lang="en">{0} to search</source>
+    </trans-unit>
     <trans-unit id="searchWithoutFolder">
       <source xml:lang="en">You have not opened or specified a folder. Only open files are currently searched - </source>
+    </trans-unit>
+    <trans-unit id="triggerAISearch">
+      <source xml:lang="en"> with {0}.</source>
     </trans-unit>
     <trans-unit id="useExcludesAndIgnoreFilesDescription">
       <source xml:lang="en">Use Exclude Settings and Ignore Files</source>
