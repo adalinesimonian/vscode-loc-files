@@ -208,7 +208,7 @@
       <source xml:lang="en">Toggle Chat</source>
     </trans-unit>
     <trans-unit id="triggerChatSetup">
-      <source xml:lang="en">Use AI Features with Copilot Free...</source>
+      <source xml:lang="en">Use AI Features with Copilot for free...</source>
     </trans-unit>
     <trans-unit id="upgradeChat">
       <source xml:lang="en">Upgrade to Copilot Pro</source>
@@ -395,6 +395,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatDeveloperActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="workbench.action.chat.logChatIndex.label">
+      <source xml:lang="en">Log Chat Index</source>
+    </trans-unit>
     <trans-unit id="workbench.action.chat.logInputHistory.label">
       <source xml:lang="en">Log Chat Input History</source>
     </trans-unit>
@@ -812,9 +815,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.attachment.clearButton">
       <source xml:lang="en">Remove from context</source>
     </trans-unit>
-    <trans-unit id="chat.attachment.link">
-      <source xml:lang="en">Attached link, {0}</source>
-    </trans-unit>
     <trans-unit id="chat.fileAttachment">
       <source xml:lang="en">Attached file, {0}</source>
     </trans-unit>
@@ -839,9 +839,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatAttachmentsContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.attachment">
       <source xml:lang="en">Attached context, {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.attachment.link">
-      <source xml:lang="en">Attached link, {0}</source>
     </trans-unit>
     <trans-unit id="chat.attachment3">
       <source xml:lang="en">Attached context: {0}.</source>
@@ -977,6 +974,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="continue">
       <source xml:lang="en">Continue</source>
+    </trans-unit>
+    <trans-unit id="hide">
+      <source xml:lang="en">Hide Tool Input &amp; Output</source>
+    </trans-unit>
+    <trans-unit id="show">
+      <source xml:lang="en">Show Tool Input &amp; Output</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTreeContentPart" source-language="en" datatype="plaintext"><body>
@@ -1545,11 +1548,8 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatMessage">
       <source xml:lang="en">Copilot is powered by AI, so mistakes are possible. Review output carefully before use.</source>
     </trans-unit>
-    <trans-unit id="chatTitle">
-      <source xml:lang="en">Ask Copilot</source>
-    </trans-unit>
     <trans-unit id="copilotFree">
-      <source xml:lang="en">Set up Copilot Free</source>
+      <source xml:lang="en">Set up Copilot for free</source>
     </trans-unit>
     <trans-unit id="copilotSetupError">
       <source xml:lang="en">Copilot setup failed. [Try again]({0} "Retry").</source>
@@ -1585,7 +1585,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Explore your codebase with Chat</source>
     </trans-unit>
     <trans-unit id="free">
-      <source xml:lang="en">$(sparkle-filled) We now offer [Copilot Free]({0}).</source>
+      <source xml:lang="en">$(sparkle-filled) We now offer [Copilot for free]({0}).</source>
       <note>{Locked="[]({0})"}</note>
     </trans-unit>
     <trans-unit id="header">
@@ -1608,7 +1608,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Getting Copilot ready.</source>
     </trans-unit>
     <trans-unit id="invalidEnterpriseInstance">
-      <source xml:lang="en">Please enter a valid {0} instance (i.e. "octocat" or "https://octocat.ghe.com")</source>
+      <source xml:lang="en">You must enter a valid {0} instance (i.e. "octocat" or "https://octocat.ghe.com")</source>
     </trans-unit>
     <trans-unit id="managePlan">
       <source xml:lang="en">Upgrade to Copilot Pro</source>
@@ -1619,7 +1619,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="retry">
       <source xml:lang="en">Retry</source>
     </trans-unit>
-    <trans-unit id="settingUpCopilotWarning">
+    <trans-unit id="settingUpCopilotNeeded">
       <source xml:lang="en">You need to [set up Copilot]({0} "Set up Copilot") to use Chat.</source>
     </trans-unit>
     <trans-unit id="settings">
@@ -1652,17 +1652,20 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="setupWithProvider">
       <source xml:lang="en">Sign in with a {0} Account</source>
     </trans-unit>
+    <trans-unit id="signIn">
+      <source xml:lang="en">Sign in</source>
+    </trans-unit>
     <trans-unit id="signUp">
       <source xml:lang="en">Sign in to use Copilot</source>
     </trans-unit>
     <trans-unit id="signUpFree">
-      <source xml:lang="en">Sign in to use Copilot Free</source>
+      <source xml:lang="en">Sign in to use Copilot for free</source>
     </trans-unit>
     <trans-unit id="startUp">
       <source xml:lang="en">Use Copilot</source>
     </trans-unit>
     <trans-unit id="startUpLimited">
-      <source xml:lang="en">Use Copilot Free</source>
+      <source xml:lang="en">Use Copilot for free</source>
     </trans-unit>
     <trans-unit id="terms">
       <source xml:lang="en">By continuing, you agree to the [Terms]({0}) and [Privacy Policy]({1}).</source>
@@ -1671,7 +1674,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
 {Locked="]({1})"}</note>
     </trans-unit>
     <trans-unit id="triggerChatSetup">
-      <source xml:lang="en">Use AI Features with Copilot Free...</source>
+      <source xml:lang="en">Use AI Features with Copilot for free...</source>
     </trans-unit>
     <trans-unit id="unknownSetupError">
       <source xml:lang="en">An error occurred while setting up Copilot. Would you like to try again?</source>
@@ -1681,6 +1684,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="unknownSignInErrorDetail">
       <source xml:lang="en">You must be signed in to use Copilot.</source>
+    </trans-unit>
+    <trans-unit id="useCopilot">
+      <source xml:lang="en">Use Copilot</source>
     </trans-unit>
     <trans-unit id="welcomeChat">
       <source xml:lang="en">Welcome to Copilot</source>
@@ -1692,9 +1698,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
   <file original="src/vs/workbench/contrib/chat/browser/chatStatus" source-language="en" datatype="plaintext"><body>
     <trans-unit id="activateCopilotButton">
       <source xml:lang="en">Set up Copilot</source>
-    </trans-unit>
-    <trans-unit id="activateCopilotFreeButton">
-      <source xml:lang="en">Set up Copilot Free</source>
     </trans-unit>
     <trans-unit id="activateDescription">
       <source xml:lang="en">Set up Copilot to use AI features.</source>
@@ -1775,7 +1778,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Upgrade to Copilot Pro</source>
     </trans-unit>
     <trans-unit id="usageTitle">
-      <source xml:lang="en">Copilot Free Usage</source>
+      <source xml:lang="en">Copilot Free Plan Usage</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext"><body>
@@ -2124,10 +2127,10 @@ Type {3} to use commands</source>
       <source xml:lang="en">Unexpected status code {0}.</source>
     </trans-unit>
     <trans-unit id="unknownSignUpError">
-      <source xml:lang="en">An error occurred while signing up for Copilot Free. Would you like to try again?</source>
+      <source xml:lang="en">An error occurred while signing up for the Copilot Free plan. Would you like to try again?</source>
     </trans-unit>
     <trans-unit id="unprocessableSignUpError">
-      <source xml:lang="en">An error occurred while signing up for Copilot Free.</source>
+      <source xml:lang="en">An error occurred while signing up for the Copilot Free plan.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatModel" source-language="en" datatype="plaintext"><body>
@@ -2155,6 +2158,14 @@ Type {3} to use commands</source>
   <file original="src/vs/workbench/contrib/chat/common/chatServiceImpl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="emptyResponse">
       <source xml:lang="en">Provider returned null response</source>
+    </trans-unit>
+    <trans-unit id="newChat">
+      <source xml:lang="en">New Chat</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/chatSessionStore" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="join.chatSessionStore">
+      <source xml:lang="en">Saving chat history</source>
     </trans-unit>
     <trans-unit id="newChat">
       <source xml:lang="en">New Chat</source>
@@ -2284,6 +2295,11 @@ Type {3} to use commands</source>
       <source xml:lang="en">A speech-to-text session is in progress for chat.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/electron-sandbox/actions/chatDeveloperActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="workbench.action.chat.openStorageFolder.label">
+      <source xml:lang="en">Open Chat Storage Folder</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/electron-sandbox/actions/voiceChatActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="installProviderForVoiceChat.justification">
       <source xml:lang="en">Microphone support requires this extension.</source>
@@ -2403,16 +2419,8 @@ Type {3} to use commands</source>
     <trans-unit id="fetchWebPage.pastTenseMessageResult.singular">
       <source xml:lang="en">Fetched [web page]({0})</source>
     </trans-unit>
-    <trans-unit id="fetchWebPage.promptPart">
-      <source xml:lang="en">Below is the main content extracted from the webpage ({0}). Please read and analyze this content to assist with any follow-up questions:
-
-{1}</source>
-    </trans-unit>
     <trans-unit id="fetchWebPage.urlsDescription">
       <source xml:lang="en">An array of URLs to fetch content from.</source>
-    </trans-unit>
-    <trans-unit id="fetchWebPage.userDescription">
-      <source xml:lang="en">Fetch the main content from a web page. This tool is useful for summarizing or analyzing the content of a webpage.</source>
     </trans-unit>
 </body></file>
 </xliff>
