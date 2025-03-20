@@ -26,16 +26,16 @@
       <source xml:lang="en">Accessibility Signals can be changed via settings with a prefix of signals.chat. By default, if a request takes more than 4 seconds, you will hear a sound indicating that progress is still occurring.</source>
     </trans-unit>
     <trans-unit id="chatEditing.acceptAllFiles">
-      <source xml:lang="en">- Accept All Edits{0}.</source>
+      <source xml:lang="en">- Keep All Edits{0}.</source>
     </trans-unit>
     <trans-unit id="chatEditing.acceptFile">
-      <source xml:lang="en">- Accept{0} and Discard File{1}.</source>
+      <source xml:lang="en">- Keep{0} and Undo File{1}.</source>
     </trans-unit>
     <trans-unit id="chatEditing.acceptHunk">
-      <source xml:lang="en">In the editor, Accept{0}, Reject{1}, or Toggle the Diff{2} for the current Change.</source>
+      <source xml:lang="en">In the editor, Keep{0}, Undo{1}, or Toggle the Diff{2} for the current Change.</source>
     </trans-unit>
     <trans-unit id="chatEditing.discardAllFiles">
-      <source xml:lang="en">- Discard All Edits{0}.</source>
+      <source xml:lang="en">- Undo All Edits{0}.</source>
     </trans-unit>
     <trans-unit id="chatEditing.expectation">
       <source xml:lang="en">When a request is made, a progress indicator will play while the edits are being applied.</source>
@@ -63,6 +63,9 @@
     </trans-unit>
     <trans-unit id="chatEditing.sections">
       <source xml:lang="en">Navigate between edits in the editor with navigate previous{0} and next{1}</source>
+    </trans-unit>
+    <trans-unit id="chatEditing.undoKeepSounds">
+      <source xml:lang="en">Sounds will play when a change is accepted or undone. The sounds can be disabled with accessibility.signals.editsKept and accessibility.signals.editsUndone.</source>
     </trans-unit>
     <trans-unit id="chatEditing.viewChanges">
       <source xml:lang="en">- View Changes{0}.</source>
@@ -125,6 +128,21 @@
     </trans-unit>
     <trans-unit id="chat.history.rename">
       <source xml:lang="en">Rename</source>
+    </trans-unit>
+    <trans-unit id="chat.startEditing.confirmation.acceptEdits">
+      <source xml:lang="en">Accept &amp; Continue</source>
+    </trans-unit>
+    <trans-unit id="chat.startEditing.confirmation.discardEdits">
+      <source xml:lang="en">Discard &amp; Continue</source>
+    </trans-unit>
+    <trans-unit id="chat.startEditing.confirmation.pending.message.2">
+      <source xml:lang="en">Do you want to accept pending edits to {0} files?</source>
+    </trans-unit>
+    <trans-unit id="chat.startEditing.confirmation.pending.message.default">
+      <source xml:lang="en">Starting a new chat will end your current edit session.</source>
+    </trans-unit>
+    <trans-unit id="chat.startEditing.confirmation.title">
+      <source xml:lang="en">Start new chat?</source>
     </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
       <source xml:lang="en">You've reached the limit of the Copilot Free plan. These limits will reset on {0}.</source>
@@ -189,11 +207,20 @@
     <trans-unit id="openChat">
       <source xml:lang="en">Open Chat</source>
     </trans-unit>
+    <trans-unit id="resetTrustedTools">
+      <source xml:lang="en">Reset Tool Confirmations</source>
+    </trans-unit>
+    <trans-unit id="resetTrustedToolsSuccess">
+      <source xml:lang="en">Tool confirmation preferences have been reset.</source>
+    </trans-unit>
     <trans-unit id="showCopilotUsageExtensions">
       <source xml:lang="en">Show Extensions using Copilot</source>
     </trans-unit>
     <trans-unit id="signInToChatSetup">
       <source xml:lang="en">Sign in to use Copilot...</source>
+    </trans-unit>
+    <trans-unit id="switchChat.confirmPhrase">
+      <source xml:lang="en">Switching chats will end your current edit session.</source>
     </trans-unit>
     <trans-unit id="title4">
       <source xml:lang="en">Copilot</source>
@@ -256,25 +283,13 @@
       <source xml:lang="en">New Chat</source>
     </trans-unit>
     <trans-unit id="chat.newEdits.label">
-      <source xml:lang="en">New Edit Session</source>
+      <source xml:lang="en">New Chat</source>
     </trans-unit>
     <trans-unit id="chat.openEdits.label">
       <source xml:lang="en">Open {0}</source>
     </trans-unit>
     <trans-unit id="chat.redoEdit.label">
       <source xml:lang="en">Redo Last Edit</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.acceptEdits">
-      <source xml:lang="en">Accept &amp; Continue</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.discardEdits">
-      <source xml:lang="en">Discard &amp; Continue</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.pending.message.2">
-      <source xml:lang="en">Starting a new editing session will end your current session. Do you want to accept pending edits to {0} files?</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.title">
-      <source xml:lang="en">Start new editing session?</source>
     </trans-unit>
     <trans-unit id="chat.undoEdit.label">
       <source xml:lang="en">Undo Last Edit</source>
@@ -403,9 +418,8 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatExecuteActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="actions.chat.submitSecondaryAgent">
-      <source xml:lang="en">Submit to Secondary Agent</source>
-      <note>Send input from the chat input box to the secondary agent</note>
+    <trans-unit id="actions.chat.submitWithCodebase">
+      <source xml:lang="en">Send with {0}</source>
     </trans-unit>
     <trans-unit id="agent.newSession">
       <source xml:lang="en">Start new session?</source>
@@ -740,6 +754,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.statusIndicator">
       <source xml:lang="en">Controls whether a Copilot related status indicator appears in the lower right corner.</source>
     </trans-unit>
+    <trans-unit id="chat.useFileStorage">
+      <source xml:lang="en">Enables storing chat sessions on disk instead of in the storage service. Enabling this does a one-time per-workspace migration of existing sessions to the new format.</source>
+    </trans-unit>
     <trans-unit id="clear">
       <source xml:lang="en">Start a new chat</source>
     </trans-unit>
@@ -969,6 +986,24 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatToolInvocationPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="allowGloballTooltip">
+      <source xml:lang="en">Always allow this tool to run without confirmation.</source>
+    </trans-unit>
+    <trans-unit id="allowGlobally">
+      <source xml:lang="en">Always Allow</source>
+    </trans-unit>
+    <trans-unit id="allowSession">
+      <source xml:lang="en">Allow in this Session</source>
+    </trans-unit>
+    <trans-unit id="allowSesssionTooltip">
+      <source xml:lang="en">Allow this tool to run in this session without confirmation.</source>
+    </trans-unit>
+    <trans-unit id="allowWorkspace">
+      <source xml:lang="en">Allow in this Workspace</source>
+    </trans-unit>
+    <trans-unit id="allowWorkspaceTooltip">
+      <source xml:lang="en">Allow this tool to run in this workspace without confirmation.</source>
+    </trans-unit>
     <trans-unit id="cancel">
       <source xml:lang="en">Cancel</source>
     </trans-unit>
@@ -1234,6 +1269,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Color of pending edit regions in the minimap</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingModifiedNotebookEntry" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatNotebookEdit1">
+      <source xml:lang="en">Chat Edit: '{0}'</source>
+    </trans-unit>
+    <trans-unit id="chatNotebookEdit2">
+      <source xml:lang="en">Chat Edit</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingServiceImpl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat">
       <source xml:lang="en">Chat Editing</source>
@@ -1331,9 +1374,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.normalMode">
       <source xml:lang="en">Edit</source>
-    </trans-unit>
-    <trans-unit id="chat.submitToSecondaryAgent">
-      <source xml:lang="en">Send to @{0}</source>
     </trans-unit>
     <trans-unit id="chatAttachFiles">
       <source xml:lang="en">Search for files and context to add to your request</source>
@@ -1548,11 +1588,20 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatMessage">
       <source xml:lang="en">Copilot is powered by AI, so mistakes are possible. Review output carefully before use.</source>
     </trans-unit>
-    <trans-unit id="copilotFree">
-      <source xml:lang="en">Set up Copilot for free</source>
+    <trans-unit id="copilotFreeTitle">
+      <source xml:lang="en">Start using Copilot for free</source>
+    </trans-unit>
+    <trans-unit id="copilotProTitle">
+      <source xml:lang="en">Start using Copilot Pro</source>
     </trans-unit>
     <trans-unit id="copilotSetupError">
-      <source xml:lang="en">Copilot setup failed. [Try again]({0} "Retry").</source>
+      <source xml:lang="en">Copilot setup failed.</source>
+    </trans-unit>
+    <trans-unit id="copilotTitle">
+      <source xml:lang="en">Start using Copilot</source>
+    </trans-unit>
+    <trans-unit id="copilotTookLongWarning">
+      <source xml:lang="en">Copilot took too long to get ready. Please try again later.</source>
     </trans-unit>
     <trans-unit id="copilotWorkspaceTrust">
       <source xml:lang="en">Copilot is currently only supported in trusted workspaces.</source>
@@ -1592,6 +1641,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">[Copilot]({0}) is your AI pair programmer.</source>
       <note>{Locked="[Copilot]({0})"}</note>
     </trans-unit>
+    <trans-unit id="headerDialog">
+      <source xml:lang="en">[Copilot]({0}) is your AI pair programmer. It helps you code faster with Completions, build features with Copilot Edits, and explore your codebase with Chat.</source>
+      <note>{Locked="[Copilot]({0})"}</note>
+    </trans-unit>
     <trans-unit id="hideChatSetup">
       <source xml:lang="en">Hide Copilot</source>
     </trans-unit>
@@ -1620,7 +1673,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Retry</source>
     </trans-unit>
     <trans-unit id="settingUpCopilotNeeded">
-      <source xml:lang="en">You need to [set up Copilot]({0} "Set up Copilot") to use Chat.</source>
+      <source xml:lang="en">You need to set up Copilot to use Chat.</source>
     </trans-unit>
     <trans-unit id="settings">
       <source xml:lang="en">Copilot Free and Pro may show [public code]({0}) suggestions and we may use your data for product improvement. You can change these [settings]({1}) at any time.</source>
@@ -1640,9 +1693,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="setupChatSignIn2">
       <source xml:lang="en">Signing in to {0}.</source>
     </trans-unit>
-    <trans-unit id="setupError">
-      <source xml:lang="en">Error during setup: {0}</source>
-    </trans-unit>
     <trans-unit id="setupErrorDialog">
       <source xml:lang="en">Copilot setup failed. Would you like to try again?</source>
     </trans-unit>
@@ -1652,7 +1702,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="setupWithProvider">
       <source xml:lang="en">Sign in with a {0} Account</source>
     </trans-unit>
-    <trans-unit id="signIn">
+    <trans-unit id="signInButton">
       <source xml:lang="en">Sign in</source>
     </trans-unit>
     <trans-unit id="signUp">
@@ -1685,8 +1735,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="unknownSignInErrorDetail">
       <source xml:lang="en">You must be signed in to use Copilot.</source>
     </trans-unit>
-    <trans-unit id="useCopilot">
+    <trans-unit id="useCopilotButton">
       <source xml:lang="en">Use Copilot</source>
+    </trans-unit>
+    <trans-unit id="waitingCopilot">
+      <source xml:lang="en">Getting Copilot ready.</source>
     </trans-unit>
     <trans-unit id="welcomeChat">
       <source xml:lang="en">Welcome to Copilot</source>
@@ -2386,6 +2439,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.confirmationTitle.singular">
       <source xml:lang="en">Fetch untrusted web page?</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.invalidUrl">
+      <source xml:lang="en">Invalid URL</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.invocationMessage.plural">
       <source xml:lang="en">Fetching {0} web pages</source>

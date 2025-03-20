@@ -312,6 +312,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="editor.experimental.asyncTokenizationVerification">
       <source xml:lang="en">Controls whether async tokenization should be verified against legacy background tokenization. Might slow down tokenization. For debugging only.</source>
     </trans-unit>
+    <trans-unit id="editor.experimental.preferTreeSitter.css">
+      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for css. This will take precedence over `editor.experimental.treeSitterTelemetry` for css.</source>
+    </trans-unit>
     <trans-unit id="editor.experimental.preferTreeSitter.ini">
       <source xml:lang="en">Controls whether tree sitter parsing should be turned on for ini. This will take precedence over `editor.experimental.treeSitterTelemetry` for ini.</source>
     </trans-unit>
