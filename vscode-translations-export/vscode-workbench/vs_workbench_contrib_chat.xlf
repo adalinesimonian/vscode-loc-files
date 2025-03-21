@@ -289,10 +289,10 @@
       <source xml:lang="en">Open {0}</source>
     </trans-unit>
     <trans-unit id="chat.redoEdit.label">
-      <source xml:lang="en">Redo Last Edit</source>
+      <source xml:lang="en">Redo Last Request</source>
     </trans-unit>
     <trans-unit id="chat.undoEdit.label">
-      <source xml:lang="en">Undo Last Edit</source>
+      <source xml:lang="en">Undo Last Request</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatCodeblockActions" source-language="en" datatype="plaintext"><body>
@@ -589,11 +589,14 @@
     <trans-unit id="defaultBucketLabel">
       <source xml:lang="en">Other Tools</source>
     </trans-unit>
-    <trans-unit id="desc">
-      <source xml:lang="en">MCP - {0} ({1})</source>
-    </trans-unit>
     <trans-unit id="label">
       <source xml:lang="en">Select Tools...</source>
+    </trans-unit>
+    <trans-unit id="mcplabel">
+      <source xml:lang="en">MCP Server: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcpstatus">
+      <source xml:lang="en">From {0} ({1})</source>
     </trans-unit>
     <trans-unit id="placeholder">
       <source xml:lang="en">Select tools that are available to chat</source>
@@ -716,6 +719,9 @@
     <trans-unit id="chat.experimental.detectParticipant.enabled.deprecated">
       <source xml:lang="en">This setting is deprecated. Please use `chat.detectParticipant.enabled` instead.</source>
     </trans-unit>
+    <trans-unit id="chat.focusWindowOnConfirmation">
+      <source xml:lang="en">Controls whether the Copilot window should be focused when a confirmation is needed.</source>
+    </trans-unit>
     <trans-unit id="chat.implicitContext.enabled.1">
       <source xml:lang="en">Enables automatically using the active editor as chat context for specified chat locations.</source>
     </trans-unit>
@@ -753,6 +759,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.statusIndicator">
       <source xml:lang="en">Controls whether a Copilot related status indicator appears in the lower right corner.</source>
+    </trans-unit>
+    <trans-unit id="chat.tools.autoApprove">
+      <source xml:lang="en">Controls whether tool use should be automatically approved ('YOLO mode'). Can be set to `true`, or an array of tool names to automatically approve.</source>
+    </trans-unit>
+    <trans-unit id="chat.unifiedChatView">
+      <source xml:lang="en">Enables the unified view with Ask, Edit, and Agent modes in one view.</source>
     </trans-unit>
     <trans-unit id="chat.useFileStorage">
       <source xml:lang="en">Enables storing chat sessions on disk instead of in the storage service. Enabling this does a one-time per-workspace migration of existing sessions to the new format.</source>
@@ -1119,7 +1131,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Do you want to undo your last edit?</source>
     </trans-unit>
     <trans-unit id="chat.undoEdits.label">
-      <source xml:lang="en">Undo Edits</source>
+      <source xml:lang="en">Undo Requests</source>
     </trans-unit>
     <trans-unit id="chatEditing.snapshot">
       <source xml:lang="en">{0} (Snapshot)</source>
@@ -1642,7 +1654,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <note>{Locked="[Copilot]({0})"}</note>
     </trans-unit>
     <trans-unit id="headerDialog">
-      <source xml:lang="en">[Copilot]({0}) is your AI pair programmer. It helps you code faster with Completions, build features with Copilot Edits, and explore your codebase with Chat.</source>
+      <source xml:lang="en">[Copilot]({0}) is your AI pair programmer. Write code faster with completions, fix bugs and build new features across multiple files, and learn about your codebase through chat.</source>
       <note>{Locked="[Copilot]({0})"}</note>
     </trans-unit>
     <trans-unit id="hideChatSetup">
@@ -1863,7 +1875,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Code block {0}</source>
     </trans-unit>
     <trans-unit id="chat.codeBlockToolbarLabel">
-      <source xml:lang="en">Toolbar for code block {0}</source>
+      <source xml:lang="en">Code block {0}</source>
     </trans-unit>
     <trans-unit id="chat.compareCodeBlockLabel">
       <source xml:lang="en">Code Edits</source>
@@ -2290,6 +2302,11 @@ Type {3} to use commands</source>
       <source xml:lang="en">Edit File</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/common/tools/insertNotebookCellsTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.tools.editFile">
+      <source xml:lang="en">Edit File</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/common/tools/languageModelToolsContribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="canBeReferencedInPrompt">
       <source xml:lang="en">If true, this tool shows up as an attachment that the user can add manually to their request. Chat participants will receive the tool in {0}.</source>
@@ -2369,6 +2386,9 @@ Type {3} to use commands</source>
     <trans-unit id="listening">
       <source xml:lang="en">I'm listening</source>
     </trans-unit>
+    <trans-unit id="retry">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
     <trans-unit id="scopedChatSynthesisInProgress">
       <source xml:lang="en">Defined as a location where voice recording from microphone is in progress for voice chat. This key is only defined scoped, per chat context.</source>
     </trans-unit>
@@ -2377,6 +2397,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="scopedVoiceChatInProgress">
       <source xml:lang="en">Defined as a location where voice recording from microphone is in progress for voice chat. This key is only defined scoped, per chat context.</source>
+    </trans-unit>
+    <trans-unit id="unknownSetupError">
+      <source xml:lang="en">An error occurred while setting up voice chat. Would you like to try again?</source>
     </trans-unit>
     <trans-unit id="voice.keywordActivation">
       <source xml:lang="en">Controls whether the keyword phrase 'Hey Code' is recognized to start a voice chat session. Enabling this will start recording from the microphone but the audio is processed locally and never sent to a server.</source>

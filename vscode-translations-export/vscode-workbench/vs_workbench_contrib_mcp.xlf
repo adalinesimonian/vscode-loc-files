@@ -10,6 +10,9 @@
     <trans-unit id="mcp.command.installFromActivation">
       <source xml:lang="en">Install...</source>
     </trans-unit>
+    <trans-unit id="mcp.command.restartServer">
+      <source xml:lang="en">Restart Server</source>
+    </trans-unit>
     <trans-unit id="mcp.command.showOutput">
       <source xml:lang="en">Show Output</source>
     </trans-unit>
@@ -75,6 +78,9 @@
     <trans-unit id="install.description">
       <source xml:lang="en">Install in your user settings</source>
     </trans-unit>
+    <trans-unit id="install.error">
+      <source xml:lang="en">Error installing MCP server {0}: {1}</source>
+    </trans-unit>
     <trans-unit id="install.newName">
       <source xml:lang="en">Enter new name</source>
     </trans-unit>
@@ -98,6 +104,12 @@
     </trans-unit>
     <trans-unit id="mcp.confirmPublish">
       <source xml:lang="en">Install {0} from {1}?</source>
+    </trans-unit>
+    <trans-unit id="mcp.docker.placeholder">
+      <source xml:lang="en">Image name (e.g., mcp/imagename)</source>
+    </trans-unit>
+    <trans-unit id="mcp.docker.title">
+      <source xml:lang="en">Enter Docker Image Name</source>
     </trans-unit>
     <trans-unit id="mcp.error.retry">
       <source xml:lang="en">Try a different package</source>
@@ -131,6 +143,12 @@
     </trans-unit>
     <trans-unit id="mcp.serverType.copilot">
       <source xml:lang="en">Model-Assisted</source>
+    </trans-unit>
+    <trans-unit id="mcp.serverType.docker">
+      <source xml:lang="en">Docker Image</source>
+    </trans-unit>
+    <trans-unit id="mcp.serverType.docker.description">
+      <source xml:lang="en">Install from a Docker image</source>
     </trans-unit>
     <trans-unit id="mcp.serverType.http">
       <source xml:lang="en">HTTP (server-sent events)</source>
@@ -194,9 +212,6 @@
     <trans-unit id="edit">
       <source xml:lang="en">Edit</source>
     </trans-unit>
-    <trans-unit id="input">
-      <source xml:lang="en">Value</source>
-    </trans-unit>
     <trans-unit id="mcp.restart">
       <source xml:lang="en">Restart</source>
     </trans-unit>
@@ -217,6 +232,9 @@
     </trans-unit>
     <trans-unit id="server.toolCount">
       <source xml:lang="en">{0} tools</source>
+    </trans-unit>
+    <trans-unit id="server.toolCountCached">
+      <source xml:lang="en">{0} cached tools</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/discovery/extensionMcpDiscovery" source-language="en" datatype="plaintext"><body>

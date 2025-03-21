@@ -13,6 +13,9 @@
     <trans-unit id="status.scm">
       <source xml:lang="en">Source Control</source>
     </trans-unit>
+    <trans-unit id="status.scm.provider">
+      <source xml:lang="en">Source Control Provider</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/scm/browser/menus" source-language="en" datatype="plaintext"><body>
     <trans-unit id="miShare">
@@ -275,6 +278,12 @@
     </trans-unit>
     <trans-unit id="scm.workingSets.enabled">
       <source xml:lang="en">Controls whether to store editor working sets when switching between source control history item groups.</source>
+    </trans-unit>
+    <trans-unit id="scmActiveRepositoryAutoDescription">
+      <source xml:lang="en">The active repository is updated based on focused repository/active editor</source>
+    </trans-unit>
+    <trans-unit id="scmActiveRepositoryPlaceHolder">
+      <source xml:lang="en">Select the active repository, type to filter all repositories</source>
     </trans-unit>
     <trans-unit id="scmChanges">
       <source xml:lang="en">Changes</source>
@@ -567,6 +576,11 @@
     </trans-unit>
     <trans-unit id="sortChangesByStatus">
       <source xml:lang="en">Sort Changes by Status</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/scmViewService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="auto">
+      <source xml:lang="en">Auto</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/scm/common/quickDiff" source-language="en" datatype="plaintext"><body>
