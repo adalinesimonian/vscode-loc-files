@@ -328,6 +328,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatContextActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.insertSearchResults">
+      <source xml:lang="en">Add Search Results to Chat</source>
+    </trans-unit>
     <trans-unit id="chatContext.attach.placeholder">
       <source xml:lang="en">Search attachments</source>
     </trans-unit>
@@ -757,9 +760,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.setupFromChat">
       <source xml:lang="en">Controls whether Copilot setup starts from a dialog or from the welcome view.</source>
     </trans-unit>
-    <trans-unit id="chat.statusIndicator">
-      <source xml:lang="en">Controls whether a Copilot related status indicator appears in the lower right corner.</source>
-    </trans-unit>
     <trans-unit id="chat.tools.autoApprove">
       <source xml:lang="en">Controls whether tool use should be automatically approved ('YOLO mode'). Can be set to `true`, or an array of tool names to automatically approve.</source>
     </trans-unit>
@@ -794,7 +794,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Chat</source>
     </trans-unit>
     <trans-unit id="mpc.discovery.enabled">
-      <source xml:lang="en">Enable discovery of Model Context Protocol servers on the machine.</source>
+      <source xml:lang="en">Configures discovery of Model Context Protocol servers on the machine. It may be set to `true` or `false` to disable or enable all sources, and an array of sources you wish to enable.</source>
     </trans-unit>
     <trans-unit id="workspaceConfig.mcp.description">
       <source xml:lang="en">Model Context Protocol server configurations</source>
@@ -808,25 +808,28 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">{0} {1} code blocks</source>
     </trans-unit>
     <trans-unit id="multiCodeBlockHint">
-      <source xml:lang="en">{0} {1} code blocks: {2}</source>
+      <source xml:lang="en">{0}{1}{2} code blocks: {3}</source>
     </trans-unit>
     <trans-unit id="multiFileTreeHint">
-      <source xml:lang="en">{0} file trees</source>
+      <source xml:lang="en">{0} file trees </source>
     </trans-unit>
     <trans-unit id="noCodeBlocks">
       <source xml:lang="en">{0} {1}</source>
     </trans-unit>
     <trans-unit id="noCodeBlocksHint">
-      <source xml:lang="en">{0} {1} {2}</source>
+      <source xml:lang="en">{0}{1}{2} {3}</source>
     </trans-unit>
     <trans-unit id="singleCodeBlock">
       <source xml:lang="en">{0} 1 code block: {1}</source>
     </trans-unit>
     <trans-unit id="singleCodeBlockHint">
-      <source xml:lang="en">{0} 1 code block: {1} {2}</source>
+      <source xml:lang="en">{0}{1}1 code block: {2} {3}</source>
     </trans-unit>
     <trans-unit id="singleFileTreeHint">
-      <source xml:lang="en">1 file tree</source>
+      <source xml:lang="en">1 file tree </source>
+    </trans-unit>
+    <trans-unit id="toolInvocationsHint">
+      <source xml:lang="en">Action required: {0} </source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatAgentHover" source-language="en" datatype="plaintext"><body>
@@ -908,6 +911,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">View matches</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatCollapsibleContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="usedReferencesCollapsed">
+      <source xml:lang="en">{0}, collapsed</source>
+    </trans-unit>
+    <trans-unit id="usedReferencesExpanded">
+      <source xml:lang="en">{0}, expanded</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatCommandContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commandButtonDisabled">
       <source xml:lang="en">Button not available in restored chat</source>
@@ -976,12 +987,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="setting.hover">
       <source xml:lang="en">Open setting '{0}'</source>
     </trans-unit>
-    <trans-unit id="usedReferencesCollapsed">
-      <source xml:lang="en">{0}, collapsed</source>
-    </trans-unit>
-    <trans-unit id="usedReferencesExpanded">
-      <source xml:lang="en">{0}, expanded</source>
-    </trans-unit>
     <trans-unit id="usedReferencesPlural">
       <source xml:lang="en">Used {0} references</source>
     </trans-unit>
@@ -1021,12 +1026,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="continue">
       <source xml:lang="en">Continue</source>
-    </trans-unit>
-    <trans-unit id="hide">
-      <source xml:lang="en">Hide Tool Input &amp; Output</source>
-    </trans-unit>
-    <trans-unit id="show">
-      <source xml:lang="en">Show Tool Input &amp; Output</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTreeContentPart" source-language="en" datatype="plaintext"><body>
@@ -1613,7 +1612,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Start using Copilot</source>
     </trans-unit>
     <trans-unit id="copilotTookLongWarning">
-      <source xml:lang="en">Copilot took too long to get ready. Please try again later.</source>
+      <source xml:lang="en">Copilot took too long to get ready. Please try again.</source>
     </trans-unit>
     <trans-unit id="copilotWorkspaceTrust">
       <source xml:lang="en">Copilot is currently only supported in trusted workspaces.</source>
@@ -1752,6 +1751,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="waitingCopilot">
       <source xml:lang="en">Getting Copilot ready.</source>
+    </trans-unit>
+    <trans-unit id="waitingCopilot2">
+      <source xml:lang="en">Copilot is almost ready.</source>
     </trans-unit>
     <trans-unit id="welcomeChat">
       <source xml:lang="en">Welcome to Copilot</source>
@@ -1976,8 +1978,14 @@ Type {3} to use commands</source>
     <trans-unit id="commands.prompts.create.title.user">
       <source xml:lang="en">Create User Prompt</source>
     </trans-unit>
+    <trans-unit id="enable.capitalized">
+      <source xml:lang="en">Enable</source>
+    </trans-unit>
     <trans-unit id="workbench.command.prompts.create.initial-content">
-      <source xml:lang="en">Add prompt contents..</source>
+      <source xml:lang="en">Add prompt contents...</source>
+    </trans-unit>
+    <trans-unit id="workbench.command.prompts.create.user.enable-sync-notification">
+      <source xml:lang="en">User prompts are not currently synchronized. Do you want to enable synchronization of the user prompts?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptName" source-language="en" datatype="plaintext"><body>

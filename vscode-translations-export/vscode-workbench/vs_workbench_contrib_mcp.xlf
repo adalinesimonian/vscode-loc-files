@@ -166,10 +166,10 @@
       <source xml:lang="en">Install from an NPM package name</source>
     </trans-unit>
     <trans-unit id="mcp.serverType.pip">
-      <source xml:lang="en">PIP Package</source>
+      <source xml:lang="en">Pip Package</source>
     </trans-unit>
     <trans-unit id="mcp.serverType.pip.description">
-      <source xml:lang="en">Install from a PIP package name</source>
+      <source xml:lang="en">Install from a Pip package name</source>
     </trans-unit>
     <trans-unit id="mcp.serverType.placeholder">
       <source xml:lang="en">Choose the type of MCP server to add</source>
@@ -288,6 +288,18 @@
     </trans-unit>
     <trans-unit id="app.mcp.json.url">
       <source xml:lang="en">The URL of the server-sent-event (SSE) server.</source>
+    </trans-unit>
+    <trans-unit id="mcp.discovery.source.claude-desktop">
+      <source xml:lang="en">Claude Desktop</source>
+    </trans-unit>
+    <trans-unit id="mcp.discovery.source.cursor-global">
+      <source xml:lang="en">Cursor (Global)</source>
+    </trans-unit>
+    <trans-unit id="mcp.discovery.source.cursor-workspace">
+      <source xml:lang="en">Cursor (Workspace)</source>
+    </trans-unit>
+    <trans-unit id="mcp.discovery.source.windsurf">
+      <source xml:lang="en">Windsurf</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.mcp">
       <source xml:lang="en">Contributes Model Context Protocol servers. Users of this should also use `vscode.lm.registerMcpConfigurationProvider`.</source>

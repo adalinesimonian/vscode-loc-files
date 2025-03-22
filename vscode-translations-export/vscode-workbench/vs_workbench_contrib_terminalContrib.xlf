@@ -590,9 +590,6 @@ For example:
     <trans-unit id="workbench.action.terminal.acceptSelectedSuggestionEnter">
       <source xml:lang="en">Accept Selected Suggestion (Enter)</source>
     </trans-unit>
-    <trans-unit id="workbench.action.terminal.clearSuggestCache">
-      <source xml:lang="en">Clear Suggest Cache</source>
-    </trans-unit>
     <trans-unit id="workbench.action.terminal.configureSuggestSettings">
       <source xml:lang="en">Configure</source>
     </trans-unit>
@@ -663,11 +660,59 @@ For example:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/suggest/browser/terminalSymbolIcons" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="terminalSymbolAliasIcon">
+      <source xml:lang="en">Icon for aliases in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolArgumentIcon">
+      <source xml:lang="en">Icon for arguments in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolFileIcon">
+      <source xml:lang="en">Icon for files in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolFlagIcon">
+      <source xml:lang="en">Icon for flags in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolFolderIcon">
+      <source xml:lang="en">Icon for folders in the terminal suggest widget.</source>
+    </trans-unit>
     <trans-unit id="terminalSymbolIcon.aliasForeground">
       <source xml:lang="en">The foreground color for an alias icon. These icons will appear in the terminal suggest widget.</source>
     </trans-unit>
+    <trans-unit id="terminalSymbolIcon.argumentForeground">
+      <source xml:lang="en">The foreground color for an argument icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolIcon.enumMemberForeground">
+      <source xml:lang="en">The foreground color for an enum member icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolIcon.fileForeground">
+      <source xml:lang="en">The foreground color for a file icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
     <trans-unit id="terminalSymbolIcon.flagForeground">
       <source xml:lang="en">The foreground color for an flag icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolIcon.folderForeground">
+      <source xml:lang="en">The foreground color for a folder icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolIcon.inlineSuggestionForeground">
+      <source xml:lang="en">The foreground color for an inline suggestion icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolIcon.methodForeground">
+      <source xml:lang="en">The foreground color for a method icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolIcon.optionForeground">
+      <source xml:lang="en">The foreground color for an option icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolInlineSuggestionIcon">
+      <source xml:lang="en">Icon for inline suggestions in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolMethodIcon">
+      <source xml:lang="en">Icon for methods in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolOptionIcon">
+      <source xml:lang="en">Icon for options in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolOptionValue">
+      <source xml:lang="en">Icon for enum members in the terminal suggest widget.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/suggest/common/terminalSuggestConfiguration" source-language="en" datatype="plaintext"><body>
