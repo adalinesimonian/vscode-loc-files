@@ -130,13 +130,13 @@
       <source xml:lang="en">Rename</source>
     </trans-unit>
     <trans-unit id="chat.startEditing.confirmation.acceptEdits">
-      <source xml:lang="en">Accept &amp; Continue</source>
+      <source xml:lang="en">Keep &amp; Continue</source>
     </trans-unit>
     <trans-unit id="chat.startEditing.confirmation.discardEdits">
-      <source xml:lang="en">Discard &amp; Continue</source>
+      <source xml:lang="en">Undo &amp; Continue</source>
     </trans-unit>
     <trans-unit id="chat.startEditing.confirmation.pending.message.2">
-      <source xml:lang="en">Do you want to accept pending edits to {0} files?</source>
+      <source xml:lang="en">Do you want to keep pending edits to {0} files?</source>
     </trans-unit>
     <trans-unit id="chat.startEditing.confirmation.pending.message.default">
       <source xml:lang="en">Starting a new chat will end your current edit session.</source>
@@ -431,7 +431,7 @@
       <source xml:lang="en">Yes</source>
     </trans-unit>
     <trans-unit id="agent.newSessionMessage">
-      <source xml:lang="en">Changing the chat mode will start a new session. Would you like to continue?</source>
+      <source xml:lang="en">Changing the chat mode will end your current edit session. Would you like to continue?</source>
     </trans-unit>
     <trans-unit id="chat.newChat.label">
       <source xml:lang="en">Send to New Chat</source>
@@ -480,6 +480,9 @@
     </trans-unit>
     <trans-unit id="setChatMode">
       <source xml:lang="en">Set Mode (Experimental)</source>
+    </trans-unit>
+    <trans-unit id="switchMode.confirmPhrase">
+      <source xml:lang="en">Switching chat modes will end your current edit session.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatFileTreeActions" source-language="en" datatype="plaintext"><body>
@@ -797,7 +800,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Enables discovery of {0} servers</source>
     </trans-unit>
     <trans-unit id="mpc.discovery.enabled">
-      <source xml:lang="en">Configures discovery of Model Context Protocol servers on the machine. It may be set to `true` or `false` to disable or enable all sources, and an array of sources you wish to enable.</source>
+      <source xml:lang="en">Configures discovery of Model Context Protocol servers on the machine. It may be set to `true` or `false` to disable or enable all sources, and an mapping sources you wish to enable.</source>
     </trans-unit>
     <trans-unit id="workspaceConfig.mcp.description">
       <source xml:lang="en">Model Context Protocol server configurations</source>
