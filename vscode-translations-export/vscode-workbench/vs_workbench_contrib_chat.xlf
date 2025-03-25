@@ -719,6 +719,9 @@
     <trans-unit id="chat.editing.confirmEditRequestRetry">
       <source xml:lang="en">Whether to show a confirmation before retrying a request and its associated edits.</source>
     </trans-unit>
+    <trans-unit id="chat.edits2Enabled">
+      <source xml:lang="en">Enable the new Edits mode that is based on tool-calling. When this is enabled, models that don't support tool-calling are unavailable for Edits mode.</source>
+    </trans-unit>
     <trans-unit id="chat.experimental.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
     </trans-unit>
@@ -742,6 +745,9 @@
     </trans-unit>
     <trans-unit id="chat.implicitContext.value.never">
       <source xml:lang="en">Implicit context is never enabled.</source>
+    </trans-unit>
+    <trans-unit id="chat.mcp.enabled">
+      <source xml:lang="en">Enables integration with Model Context Protocol servers to provide additional tools and functionality.</source>
     </trans-unit>
     <trans-unit id="chat.renderRelatedFiles">
       <source xml:lang="en">Controls whether related files should be rendered in the chat input.</source>
@@ -846,6 +852,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">View Extension</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatAttachmentModel" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="imageTooLarge">
+      <source xml:lang="en">Image is too large</source>
+    </trans-unit>
+    <trans-unit id="imageTooLargeMessage">
+      <source xml:lang="en">The image {0} is too large to be attached.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatAttachmentWidgets" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.attachment">
       <source xml:lang="en">Attached context, {0}</source>
@@ -864,9 +878,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.imageAttachment">
       <source xml:lang="en">Attached image, {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.imageAttachmentHover">
-      <source xml:lang="en">{0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatAgentCommandContentPart" source-language="en" datatype="plaintext"><body>
@@ -940,7 +951,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatMarkdownContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.codeblock.applyingPercentage">
-      <source xml:lang="en">Applying edits ({0}%)...</source>
+      <source xml:lang="en">Applying Edits ({0}%)...</source>
     </trans-unit>
     <trans-unit id="chat.codeblock.deletions">
       <source xml:lang="en">{0} deletions</source>
@@ -949,7 +960,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">1 deletion</source>
     </trans-unit>
     <trans-unit id="chat.codeblock.generating">
-      <source xml:lang="en">Generating edits...</source>
+      <source xml:lang="en">Generating Edits...</source>
     </trans-unit>
     <trans-unit id="chat.codeblock.insertions">
       <source xml:lang="en">{0} insertions</source>
@@ -1042,6 +1053,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
   <file original="src/vs/workbench/contrib/chat/browser/chatDragAndDrop" source-language="en" datatype="plaintext"><body>
     <trans-unit id="attacAsContext">
       <source xml:lang="en">Attach {0} as Context</source>
+    </trans-unit>
+    <trans-unit id="dragAndDroppedImageName">
+      <source xml:lang="en">Image from URL</source>
+    </trans-unit>
+    <trans-unit id="fetchFailed">
+      <source xml:lang="en">Failed to fetch image from URL: {0}</source>
     </trans-unit>
     <trans-unit id="file">
       <source xml:lang="en">File</source>
@@ -1387,7 +1404,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Pick Model</source>
     </trans-unit>
     <trans-unit id="chat.moreModels">
-      <source xml:lang="en">Add More Models...</source>
+      <source xml:lang="en">Add more Models</source>
     </trans-unit>
     <trans-unit id="chat.normalMode">
       <source xml:lang="en">Edit</source>
@@ -1977,6 +1994,17 @@ Type {3} to use commands</source>
       <source xml:lang="en">Screenshot</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/languageModelToolsService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="msg.title">
+      <source xml:lang="en">Run {0}</source>
+    </trans-unit>
+    <trans-unit id="tool.warning">
+      <source xml:lang="en">{0} This tool is from the extension `{1}`. Please carefully review any requested actions.</source>
+    </trans-unit>
+    <trans-unit id="toolConfirmationMessage">
+      <source xml:lang="en">Action required: {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/createPromptCommand" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commands.prompts.create.title.local">
       <source xml:lang="en">Create Prompt</source>
@@ -2484,7 +2512,11 @@ Type {3} to use commands</source>
       <source xml:lang="en">Fetching {0} web pages</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.invocationMessage.singular">
+      <source xml:lang="en">Fetching {0}</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.invocationMessage.singularAsLink">
       <source xml:lang="en">Fetching [web page]({0})</source>
+      <note>{Locked="]({0})"}</note>
     </trans-unit>
     <trans-unit id="fetchWebPage.modelDescription">
       <source xml:lang="en">Fetches the main content from a web page. This tool is useful for summarizing or analyzing the content of a webpage.</source>
@@ -2510,7 +2542,11 @@ Type {3} to use commands</source>
       <source xml:lang="en">Fetched {0} web pages</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.pastTenseMessageResult.singular">
+      <source xml:lang="en">Fetched {0}</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.pastTenseMessageResult.singularAsLink">
       <source xml:lang="en">Fetched [web page]({0})</source>
+      <note>{Locked="]({0})"}</note>
     </trans-unit>
     <trans-unit id="fetchWebPage.urlsDescription">
       <source xml:lang="en">An array of URLs to fetch content from.</source>
