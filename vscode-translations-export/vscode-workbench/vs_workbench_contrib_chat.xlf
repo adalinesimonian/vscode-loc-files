@@ -255,12 +255,20 @@
       <source xml:lang="en">Use Prompt</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.use.select-dialog.alt-modifier-note">
-      <source xml:lang="en">{0}-key to use in Edits</source>
-    </trans-unit>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/constants" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commands.prompts.use.select-dialog.docs-label">
       <source xml:lang="en">Learn how to create reusable prompts</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.use.select-dialog.open-button.tooltip">
+      <source xml:lang="en">edit ({0}-key + enter)</source>
+    </trans-unit>
+    <trans-unit id="delete">
+      <source xml:lang="en">delete</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/utils/createPlaceholderText" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompts.use.select-dialog.alt-modifier-note">
+      <source xml:lang="en">{0}-key to use in Copilot Edits</source>
     </trans-unit>
     <trans-unit id="commands.prompts.use.select-dialog.modifier-notes">
       <source xml:lang="en"> (hold {0} or {1})</source>
@@ -269,10 +277,17 @@
       <source xml:lang="en">Select a prompt to use</source>
     </trans-unit>
     <trans-unit id="commands.prompts.use.select-dialog.super-modifier-note">
-      <source xml:lang="en">{0}-key to open in editor</source>
+      <source xml:lang="en">{0}-key to edit</source>
     </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/utils/createPromptPickItem" source-language="en" datatype="plaintext"><body>
     <trans-unit id="user-prompt.capitalized">
       <source xml:lang="en">User prompt</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/utils/handleButtonClick" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompts.use.select-dialog.delete-prompt.confirm.message">
+      <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatClearActions" source-language="en" datatype="plaintext"><body>
@@ -749,6 +764,9 @@
     <trans-unit id="chat.mcp.enabled">
       <source xml:lang="en">Enables integration with Model Context Protocol servers to provide additional tools and functionality.</source>
     </trans-unit>
+    <trans-unit id="chat.promptFiles.policy">
+      <source xml:lang="en">Enables reusable prompt files in Chat, Edits, and Inline Chat sessions.</source>
+    </trans-unit>
     <trans-unit id="chat.renderRelatedFiles">
       <source xml:lang="en">Controls whether related files should be rendered in the chat input.</source>
     </trans-unit>
@@ -1057,9 +1075,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="dragAndDroppedImageName">
       <source xml:lang="en">Image from URL</source>
     </trans-unit>
-    <trans-unit id="fetchFailed">
-      <source xml:lang="en">Failed to fetch image from URL: {0}</source>
-    </trans-unit>
     <trans-unit id="file">
       <source xml:lang="en">File</source>
     </trans-unit>
@@ -1339,6 +1354,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditorInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.startEditing.confirmation.pending.message.default">
+      <source xml:lang="en">Closing the chat editor will end your current edit session.</source>
+    </trans-unit>
+    <trans-unit id="chatEditorConfirmTitle">
+      <source xml:lang="en">Close Chat Editor</source>
+    </trans-unit>
     <trans-unit id="chatEditorLabelIcon">
       <source xml:lang="en">Icon of the chat editor label.</source>
     </trans-unit>

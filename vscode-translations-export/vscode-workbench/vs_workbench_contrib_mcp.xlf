@@ -7,6 +7,12 @@
     <trans-unit id="mcp.addConfiguration.description">
       <source xml:lang="en">Installs a new Model Context protocol to the mcp.json settings</source>
     </trans-unit>
+    <trans-unit id="mcp.addServer">
+      <source xml:lang="en">Add Server</source>
+    </trans-unit>
+    <trans-unit id="mcp.addServer.description">
+      <source xml:lang="en">Add a new server configuration</source>
+    </trans-unit>
     <trans-unit id="mcp.command.installFromActivation">
       <source xml:lang="en">Install...</source>
     </trans-unit>
@@ -262,12 +268,6 @@
   <file original="src/vs/workbench/contrib/mcp/common/mcpConfigPathsService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcp.configuration.userLocalValue">
       <source xml:lang="en">Global in {0}</source>
-    </trans-unit>
-    <trans-unit id="mcp.configuration.userRemoteValue">
-      <source xml:lang="en">From {0}</source>
-    </trans-unit>
-    <trans-unit id="mcp.configuration.workspaceValue">
-      <source xml:lang="en">From your workspace</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpConfiguration" source-language="en" datatype="plaintext"><body>
