@@ -25,6 +25,15 @@
     <trans-unit id="chat.signals">
       <source xml:lang="en">Accessibility Signals can be changed via settings with a prefix of signals.chat. By default, if a request takes more than 4 seconds, you will hear a sound indicating that progress is still occurring.</source>
     </trans-unit>
+    <trans-unit id="chatAgent.overview">
+      <source xml:lang="en">The chat agent view is used to apply edits across files in your workspace, enable running commands in the terminal, and more.</source>
+    </trans-unit>
+    <trans-unit id="chatAgent.runCommand">
+      <source xml:lang="en">To take the action, use the accept tool command{0}.</source>
+    </trans-unit>
+    <trans-unit id="chatAgent.userActionRequired">
+      <source xml:lang="en">An alert will indicate when user action is required. For example, if the agent wants to run something in the terminal, you will hear Action Required: Run Command in Terminal.</source>
+    </trans-unit>
     <trans-unit id="chatEditing.acceptAllFiles">
       <source xml:lang="en">- Keep All Edits{0}.</source>
     </trans-unit>
@@ -44,7 +53,7 @@
       <source xml:lang="en">It is comprised of an input box and a file working set (Shift+Tab).</source>
     </trans-unit>
     <trans-unit id="chatEditing.helpfulCommands">
-      <source xml:lang="en">When in the edits view, some helpful commands include:</source>
+      <source xml:lang="en">Some helpful commands include:</source>
     </trans-unit>
     <trans-unit id="chatEditing.openFileInDiff">
       <source xml:lang="en">- Open File in Diff{0}.</source>
@@ -604,6 +613,12 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatToolActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="addExtension">
+      <source xml:lang="en">Install Extension...</source>
+    </trans-unit>
+    <trans-unit id="addServer">
+      <source xml:lang="en">Add MCP Server...</source>
+    </trans-unit>
     <trans-unit id="chat.accept">
       <source xml:lang="en">Accept</source>
     </trans-unit>
@@ -712,7 +727,7 @@
       <source xml:lang="en">Chat</source>
     </trans-unit>
     <trans-unit id="chat.agent.enabled.description">
-      <source xml:lang="en">Enable agent mode for {0}. When this is enabled, a dropdown appears in the {0} view to toggle agent mode.</source>
+      <source xml:lang="en">Enable agent mode for {0}. When this is enabled, a dropdown appears in the view to toggle agent mode.</source>
     </trans-unit>
     <trans-unit id="chat.agent.maxRequests">
       <source xml:lang="en">The maximum number of requests to allow Copilot Edits to use per-turn in agent mode. When the limit is reached, Copilot will ask the user to confirm that it should keep working. 
@@ -969,7 +984,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatMarkdownContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.codeblock.applyingPercentage">
-      <source xml:lang="en">Applying Edits ({0}%)...</source>
+      <source xml:lang="en">Applying edits ({0}%)...</source>
     </trans-unit>
     <trans-unit id="chat.codeblock.deletions">
       <source xml:lang="en">{0} deletions</source>
@@ -978,7 +993,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">1 deletion</source>
     </trans-unit>
     <trans-unit id="chat.codeblock.generating">
-      <source xml:lang="en">Generating Edits...</source>
+      <source xml:lang="en">Generating edits...</source>
     </trans-unit>
     <trans-unit id="chat.codeblock.insertions">
       <source xml:lang="en">{0} insertions</source>
@@ -995,7 +1010,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Paused</source>
     </trans-unit>
     <trans-unit id="workingMessage">
-      <source xml:lang="en">Working</source>
+      <source xml:lang="en">Working...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatQuotaExceededPart" source-language="en" datatype="plaintext"><body>
@@ -1278,10 +1293,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">0 of 0</source>
     </trans-unit>
     <trans-unit id="applyingPercentage">
-      <source xml:lang="en">{0}% Applying Edits</source>
+      <source xml:lang="en">{0}% Applying edits</source>
     </trans-unit>
     <trans-unit id="generating">
-      <source xml:lang="en">Generating Edits</source>
+      <source xml:lang="en">Generating edits</source>
     </trans-unit>
     <trans-unit id="nOfM">
       <source xml:lang="en">{0} of {1}</source>
@@ -1831,6 +1846,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="codeCompletionsStatusText">
       <source xml:lang="en">$(copilot) Completions</source>
     </trans-unit>
+    <trans-unit id="completionsDisabledStatus">
+      <source xml:lang="en">Code Completions Disabled</source>
+    </trans-unit>
     <trans-unit id="completionsLabel">
       <source xml:lang="en">Code completions</source>
     </trans-unit>
@@ -2219,6 +2237,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="interactiveSessionResponseVote">
       <source xml:lang="en">When the response has been voted up, is set to 'up'. When voted down, is set to 'down'. Otherwise an empty string.</source>
+    </trans-unit>
+    <trans-unit id="pickableToolsCount">
+      <source xml:lang="en">The count of tools available in the chat tools picker.</source>
     </trans-unit>
     <trans-unit id="toolsCount">
       <source xml:lang="en">The count of tools available in the chat.</source>
