@@ -353,6 +353,17 @@ Do you want to allow running MCP servers from {3}?</source>
       <source xml:lang="en">Trust MCP servers from {0}?</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/mcp/common/mcpServer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcpBadSchema">
+      <source xml:lang="en">MCP server `{0}` has tools with invalid parameters which will be omitted.</source>
+    </trans-unit>
+    <trans-unit id="mcpBadSchema.show">
+      <source xml:lang="en">Show</source>
+    </trans-unit>
+    <trans-unit id="mcpBadSchema.tool">
+      <source xml:lang="en">Tool `{0}` has invalid JSON parameters:</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpServerConnection" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcpServer.starting">
       <source xml:lang="en">Starting server {0}</source>

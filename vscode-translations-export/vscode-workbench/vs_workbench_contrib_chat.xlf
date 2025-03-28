@@ -277,16 +277,16 @@
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/utils/createPlaceholderText" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commands.prompts.use.select-dialog.alt-modifier-note">
-      <source xml:lang="en">{0}-key to use in Copilot Edits</source>
+      <source xml:lang="en"> or {0}-key to use in Copilot Edits</source>
     </trans-unit>
     <trans-unit id="commands.prompts.use.select-dialog.modifier-notes">
-      <source xml:lang="en"> (hold {0} or {1})</source>
+      <source xml:lang="en"> (hold {0}{1})</source>
     </trans-unit>
     <trans-unit id="commands.prompts.use.select-dialog.placeholder">
       <source xml:lang="en">Select a prompt to use</source>
     </trans-unit>
     <trans-unit id="commands.prompts.use.select-dialog.super-modifier-note">
-      <source xml:lang="en">{0}-key to edit</source>
+      <source xml:lang="en">{0}-key to use in new chat</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/utils/createPromptPickItem" source-language="en" datatype="plaintext"><body>
@@ -491,7 +491,7 @@
       <source xml:lang="en">Switch to Next Model</source>
     </trans-unit>
     <trans-unit id="interactive.toggleAgent.label">
-      <source xml:lang="en">Set Chat Mode (Experimental)</source>
+      <source xml:lang="en">Set Chat Mode</source>
     </trans-unit>
     <trans-unit id="interactive.toggleRequestPausd.label">
       <source xml:lang="en">Toggle Request Paused</source>
@@ -503,7 +503,7 @@
       <source xml:lang="en">Pause Request</source>
     </trans-unit>
     <trans-unit id="setChatMode">
-      <source xml:lang="en">Set Mode (Experimental)</source>
+      <source xml:lang="en">Set Mode</source>
     </trans-unit>
     <trans-unit id="switchMode.confirmPhrase">
       <source xml:lang="en">Switching chat modes will end your current edit session.</source>
@@ -613,6 +613,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatToolActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="addAny">
+      <source xml:lang="en">Add More Tools...</source>
+    </trans-unit>
     <trans-unit id="addExtension">
       <source xml:lang="en">Install Extension...</source>
     </trans-unit>
@@ -633,6 +636,9 @@
     </trans-unit>
     <trans-unit id="mcpstatus">
       <source xml:lang="en">From {0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="noTools">
+      <source xml:lang="en">Add tools to chat</source>
     </trans-unit>
     <trans-unit id="placeholder">
       <source xml:lang="en">Select tools that are available to chat</source>
@@ -758,6 +764,12 @@
     <trans-unit id="chat.experimental.detectParticipant.enabled.deprecated">
       <source xml:lang="en">This setting is deprecated. Please use `chat.detectParticipant.enabled` instead.</source>
     </trans-unit>
+    <trans-unit id="chat.extensionToolsEnabled">
+      <source xml:lang="en">Enable using tools contributed by third-party extensions in Copilot Chat agent mode.</source>
+    </trans-unit>
+    <trans-unit id="chat.extensionToolsPolicy">
+      <source xml:lang="en">Enable using tools contributed by third-party extensions in Copilot Chat agent mode.</source>
+    </trans-unit>
     <trans-unit id="chat.focusWindowOnConfirmation">
       <source xml:lang="en">Controls whether the Copilot window should be focused when a confirmation is needed.</source>
     </trans-unit>
@@ -803,7 +815,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Controls whether Copilot setup starts from a dialog or from the welcome view.</source>
     </trans-unit>
     <trans-unit id="chat.tools.autoApprove">
-      <source xml:lang="en">Controls whether tool use should be automatically approved ('YOLO mode'). Can be set to `true`, or an array of tool names to automatically approve.</source>
+      <source xml:lang="en">Controls whether tool use should be automatically approved ('YOLO mode').</source>
     </trans-unit>
     <trans-unit id="chat.unifiedChatView">
       <source xml:lang="en">Enables the unified view with Ask, Edit, and Agent modes in one view.</source>
@@ -853,25 +865,31 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">{0} {1} code blocks</source>
     </trans-unit>
     <trans-unit id="multiCodeBlockHint">
-      <source xml:lang="en">{0}{1}{2} code blocks: {3}</source>
+      <source xml:lang="en">{0}{1}{2} code blocks: {3}{4}</source>
     </trans-unit>
     <trans-unit id="multiFileTreeHint">
       <source xml:lang="en">{0} file trees </source>
+    </trans-unit>
+    <trans-unit id="multiTableHint">
+      <source xml:lang="en">{0} tables </source>
     </trans-unit>
     <trans-unit id="noCodeBlocks">
       <source xml:lang="en">{0} {1}</source>
     </trans-unit>
     <trans-unit id="noCodeBlocksHint">
-      <source xml:lang="en">{0}{1}{2} {3}</source>
+      <source xml:lang="en">{0}{1}{2}{3} {4}</source>
     </trans-unit>
     <trans-unit id="singleCodeBlock">
       <source xml:lang="en">{0} 1 code block: {1}</source>
     </trans-unit>
     <trans-unit id="singleCodeBlockHint">
-      <source xml:lang="en">{0}{1}1 code block: {2} {3}</source>
+      <source xml:lang="en">{0}{1}1 code block: {2} {3}{4}</source>
     </trans-unit>
     <trans-unit id="singleFileTreeHint">
       <source xml:lang="en">1 file tree </source>
+    </trans-unit>
+    <trans-unit id="singleTableHint">
+      <source xml:lang="en">1 table </source>
     </trans-unit>
     <trans-unit id="toolInvocationsHint">
       <source xml:lang="en">Action required: {0} </source>
@@ -1644,7 +1662,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentDescription">
-      <source xml:lang="en">Edit files in your workspace in agent mode (Experimental)</source>
+      <source xml:lang="en">Edit files in your workspace in agent mode</source>
     </trans-unit>
     <trans-unit id="agentMessage">
       <source xml:lang="en">Ask Copilot to edit your files in agent mode. Copilot will automatically use multiple requests to pick files to edit, run terminal commands, and iterate on errors.</source>
@@ -2097,9 +2115,6 @@ Type {3} to use commands</source>
     <trans-unit id="agentModeSubtitle">
       <source xml:lang="en">Agent Mode</source>
     </trans-unit>
-    <trans-unit id="experimental">
-      <source xml:lang="en">EXPERIMENTAL</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewsWelcomeHandler" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatViewsWelcome.content">
@@ -2237,9 +2252,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="interactiveSessionResponseVote">
       <source xml:lang="en">When the response has been voted up, is set to 'up'. When voted down, is set to 'down'. Otherwise an empty string.</source>
-    </trans-unit>
-    <trans-unit id="pickableToolsCount">
-      <source xml:lang="en">The count of tools available in the chat tools picker.</source>
     </trans-unit>
     <trans-unit id="toolsCount">
       <source xml:lang="en">The count of tools available in the chat.</source>
