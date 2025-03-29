@@ -1608,6 +1608,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatSampleRequest">
       <source xml:lang="en">When the user clicks this participant in `/help`, this text will be submitted to the participant.</source>
     </trans-unit>
+    <trans-unit id="editsMovedFooterMessage">
+      <source xml:lang="en">[Learn more](command:_movedEditsView.learnMore) about the Chat view.</source>
+    </trans-unit>
+    <trans-unit id="editsMovedMainMessage">
+      <source xml:lang="en">Copilot Edits has been moved to the [main Chat view](command:workbench.action.chat.open). You can switch between modes by using the dropdown in the Chat input box.</source>
+    </trans-unit>
+    <trans-unit id="hideMovedChatEditsView">
+      <source xml:lang="en">True when the moved chat edits view should be hidden.</source>
+    </trans-unit>
     <trans-unit id="miToggleChat">
       <source xml:lang="en">&amp;&amp;Chat</source>
       <note>&amp;&amp; denotes a mnemonic</note>
@@ -1615,6 +1624,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="miToggleEdits">
       <source xml:lang="en">Copilot Ed&amp;&amp;its</source>
       <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="ok">
+      <source xml:lang="en">Got it</source>
     </trans-unit>
     <trans-unit id="participantCommands">
       <source xml:lang="en">Commands</source>
@@ -1665,7 +1677,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Edit files in your workspace in agent mode</source>
     </trans-unit>
     <trans-unit id="agentMessage">
-      <source xml:lang="en">Ask Copilot to edit your files in agent mode. Copilot will automatically use multiple requests to pick files to edit, run terminal commands, and iterate on errors.</source>
+      <source xml:lang="en">Ask Copilot to edit your files in [agent mode]({0}). Copilot will automatically use multiple requests to pick files to edit, run terminal commands, and iterate on errors.</source>
     </trans-unit>
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
