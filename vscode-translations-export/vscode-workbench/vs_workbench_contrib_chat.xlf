@@ -584,21 +584,6 @@
     <trans-unit id="chat.retryLast.confirmation.title2">
       <source xml:lang="en">Do you want to retry your last request?</source>
     </trans-unit>
-    <trans-unit id="chat.startEditing.label2">
-      <source xml:lang="en">Edit with Copilot</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.last">
-      <source xml:lang="en">The last {0} requests</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.pickAll">
-      <source xml:lang="en">All requests from the conversation</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.pickCustom">
-      <source xml:lang="en">Manually select requests...</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.pickRequest">
-      <source xml:lang="en">Select requests that you want to use for editing</source>
-    </trans-unit>
     <trans-unit id="interactive.helpful.label">
       <source xml:lang="en">Helpful</source>
     </trans-unit>
@@ -1210,6 +1195,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chatEditing.viewChanges">
       <source xml:lang="en">View All Edits</source>
+    </trans-unit>
+    <trans-unit id="chatEditing.viewPreviousEdits">
+      <source xml:lang="en">View Previous Edits</source>
     </trans-unit>
     <trans-unit id="clearWorkingSet">
       <source xml:lang="en">Clear Working Set</source>
@@ -1917,6 +1905,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="quotaDisplay">
       <source xml:lang="en">{0}%</source>
     </trans-unit>
+    <trans-unit id="quotaLabel">
+      <source xml:lang="en">Manage Copilot</source>
+    </trans-unit>
+    <trans-unit id="quotaTooltip">
+      <source xml:lang="en">Manage Copilot</source>
+    </trans-unit>
     <trans-unit id="settings.codeCompletions">
       <source xml:lang="en">Code Completions (all files)</source>
     </trans-unit>
@@ -1926,8 +1920,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="settings.nextEditSuggestions">
       <source xml:lang="en">Next Edit Suggestions</source>
     </trans-unit>
+    <trans-unit id="settingsLabel">
+      <source xml:lang="en">Settings</source>
+    </trans-unit>
     <trans-unit id="settingsTitle">
       <source xml:lang="en">Settings</source>
+    </trans-unit>
+    <trans-unit id="settingsTooltip">
+      <source xml:lang="en">Open Settings</source>
     </trans-unit>
     <trans-unit id="signInDescription">
       <source xml:lang="en">Sign in to use Copilot AI features.</source>
