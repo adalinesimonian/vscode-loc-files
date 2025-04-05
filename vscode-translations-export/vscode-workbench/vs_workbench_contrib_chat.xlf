@@ -276,11 +276,8 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/utils/createPlaceholderText" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.use.select-dialog.alt-modifier-note">
-      <source xml:lang="en"> or {0}-key to use in Copilot Edits</source>
-    </trans-unit>
     <trans-unit id="commands.prompts.use.select-dialog.modifier-notes">
-      <source xml:lang="en"> (hold {0}{1})</source>
+      <source xml:lang="en"> (hold {0})</source>
     </trans-unit>
     <trans-unit id="commands.prompts.use.select-dialog.placeholder">
       <source xml:lang="en">Select a prompt to use</source>
@@ -308,9 +305,6 @@
     </trans-unit>
     <trans-unit id="chat.newEdits.label">
       <source xml:lang="en">New Chat</source>
-    </trans-unit>
-    <trans-unit id="chat.openEdits.label">
-      <source xml:lang="en">Open {0}</source>
     </trans-unit>
     <trans-unit id="chat.redoEdit.label">
       <source xml:lang="en">Redo Last Request</source>
@@ -412,21 +406,6 @@
     <trans-unit id="workbench.action.chat.attachSelection.label">
       <source xml:lang="en">Add Selection to Chat</source>
     </trans-unit>
-    <trans-unit id="workbench.action.chat.editing.attachContext.label">
-      <source xml:lang="en">Add Context to Copilot Edits</source>
-    </trans-unit>
-    <trans-unit id="workbench.action.chat.editing.attachContext.shortLabel">
-      <source xml:lang="en">Add Context...</source>
-    </trans-unit>
-    <trans-unit id="workbench.action.edits.attachFile.label">
-      <source xml:lang="en">Add File to {0}</source>
-    </trans-unit>
-    <trans-unit id="workbench.action.edits.attachFolder.label">
-      <source xml:lang="en">Add Folder to {0}</source>
-    </trans-unit>
-    <trans-unit id="workbench.action.edits.attachSelection.label">
-      <source xml:lang="en">Add Selection to {0}</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatCopyActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="interactive.copyAll.label">
@@ -459,21 +438,6 @@
     </trans-unit>
     <trans-unit id="chat.newChat.label">
       <source xml:lang="en">Send to New Chat</source>
-    </trans-unit>
-    <trans-unit id="chat.sendToChatEditing.label">
-      <source xml:lang="en">Send to Copilot Edits</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.message.many">
-      <source xml:lang="en">Starting a new editing session will end your current editing session containing {0} files. Do you wish to proceed?</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.message.one">
-      <source xml:lang="en">Starting a new editing session will end your current editing session containing {0} file. Do you wish to proceed?</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.primaryButton">
-      <source xml:lang="en">Yes</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.title">
-      <source xml:lang="en">Start new editing session?</source>
     </trans-unit>
     <trans-unit id="edits.submit.label">
       <source xml:lang="en">Send</source>
@@ -563,9 +527,6 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatTitleActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.removeRequest.label">
-      <source xml:lang="en">Remove Request</source>
-    </trans-unit>
     <trans-unit id="chat.retry.confirmation.checkbox">
       <source xml:lang="en">Don't ask again</source>
     </trans-unit>
@@ -802,9 +763,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.tools.autoApprove">
       <source xml:lang="en">Controls whether tool use should be automatically approved ('YOLO mode').</source>
     </trans-unit>
-    <trans-unit id="chat.unifiedChatView">
-      <source xml:lang="en">Enables the unified view with Ask, Edit, and Agent modes in one view.</source>
-    </trans-unit>
     <trans-unit id="chat.useFileStorage">
       <source xml:lang="en">Enables storing chat sessions on disk instead of in the storage service. Enabling this does a one-time per-workspace migration of existing sessions to the new format.</source>
     </trans-unit>
@@ -923,6 +881,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.imageAttachment">
       <source xml:lang="en">Attached image, {0}</source>
     </trans-unit>
+    <trans-unit id="chat.imageAttachmentWarning">
+      <source xml:lang="en">This GIF was partially omitted - current frame will be sent.</source>
+    </trans-unit>
+    <trans-unit id="chat.omittedImageAttachment">
+      <source xml:lang="en">Omitted this image: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.partiallyOmittedImageAttachment">
+      <source xml:lang="en">Partially omitted this image: {0}</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatAgentCommandContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="rerun">
@@ -951,17 +918,26 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.imageAttachmentHover">
       <source xml:lang="en">{0}</source>
     </trans-unit>
+    <trans-unit id="chat.imageAttachmentWarning">
+      <source xml:lang="en">This GIF was partially omitted - current frame was be sent.</source>
+    </trans-unit>
     <trans-unit id="chat.omittedFileAttachment">
       <source xml:lang="en">Omitted: {0}.</source>
     </trans-unit>
     <trans-unit id="chat.omittedFileAttachmentWithRange">
       <source xml:lang="en">Omitted: {0}, line {1} to line {2}.</source>
     </trans-unit>
+    <trans-unit id="chat.omittedImageAttachment">
+      <source xml:lang="en">Omitted this image: {0}</source>
+    </trans-unit>
     <trans-unit id="chat.partialFileAttachment">
       <source xml:lang="en">Partially attached: {0}.</source>
     </trans-unit>
     <trans-unit id="chat.partialFileAttachmentWithRange">
       <source xml:lang="en">Partially attached: {0}, line {1} to line {2}.</source>
+    </trans-unit>
+    <trans-unit id="chat.partiallyOmittedImageAttachment">
+      <source xml:lang="en">Partially omitted this image: {0}</source>
     </trans-unit>
     <trans-unit id="resource">
       <source xml:lang="en">The full value of the chat attachment resource, including scheme and path</source>
@@ -1216,9 +1192,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="removeFileFromWorkingSet">
       <source xml:lang="en">Remove File</source>
-    </trans-unit>
-    <trans-unit id="workbench.action.chat.addSelectedFilesToWorkingSet.label">
-      <source xml:lang="en">Add Selected Files to Working Set</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingCodeEditorIntegration" source-language="en" datatype="plaintext"><body>
@@ -1559,9 +1532,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatCommandsDescription">
       <source xml:lang="en">Commands available for this chat participant, which the user can invoke with a `/`.</source>
     </trans-unit>
-    <trans-unit id="chatEditing.viewContainer.label">
-      <source xml:lang="en">Copilot Edits</source>
-    </trans-unit>
     <trans-unit id="chatFailErrorMessage">
       <source xml:lang="en">Chat failed to load because the installed version of the Copilot Chat extension is not compatible with this version of {0}. Please ensure that the Copilot Chat extension is up to date.</source>
     </trans-unit>
@@ -1598,25 +1568,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatSampleRequest">
       <source xml:lang="en">When the user clicks this participant in `/help`, this text will be submitted to the participant.</source>
     </trans-unit>
-    <trans-unit id="editsMovedFooterMessage">
-      <source xml:lang="en">[Learn more](command:_movedEditsView.learnMore) about the Chat view.</source>
-    </trans-unit>
-    <trans-unit id="editsMovedMainMessage">
-      <source xml:lang="en">Copilot Edits has been moved to the [main Chat view](command:workbench.action.chat.open). You can switch between modes by using the dropdown in the Chat input box.</source>
-    </trans-unit>
-    <trans-unit id="hideMovedChatEditsView">
-      <source xml:lang="en">True when the moved chat edits view should be hidden.</source>
-    </trans-unit>
     <trans-unit id="miToggleChat">
       <source xml:lang="en">&amp;&amp;Chat</source>
       <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="miToggleEdits">
-      <source xml:lang="en">Copilot Ed&amp;&amp;its</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="ok">
-      <source xml:lang="en">Got it</source>
     </trans-unit>
     <trans-unit id="participantCommands">
       <source xml:lang="en">Commands</source>
@@ -2257,9 +2211,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="inQuickChat">
       <source xml:lang="en">True when the quick chat UI has focus, false otherwise.</source>
-    </trans-unit>
-    <trans-unit id="inUnifiedChat">
-      <source xml:lang="en">True when focus is in the unified chat widget, false otherwise.</source>
     </trans-unit>
     <trans-unit id="interactiveInputHasFocus">
       <source xml:lang="en">True when the chat input has focus.</source>
