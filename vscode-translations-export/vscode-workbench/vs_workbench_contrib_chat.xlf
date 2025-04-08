@@ -259,43 +259,6 @@
 - Access to additional models</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/chatAttachPromptAction" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="workbench.action.chat.attach.prompt.label">
-      <source xml:lang="en">Use Prompt</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/constants" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.use.select-dialog.docs-label">
-      <source xml:lang="en">Learn how to create reusable prompts</source>
-    </trans-unit>
-    <trans-unit id="commands.prompts.use.select-dialog.open-button.tooltip">
-      <source xml:lang="en">edit ({0}-key + enter)</source>
-    </trans-unit>
-    <trans-unit id="delete">
-      <source xml:lang="en">delete</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/utils/createPlaceholderText" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.use.select-dialog.modifier-notes">
-      <source xml:lang="en"> (hold {0})</source>
-    </trans-unit>
-    <trans-unit id="commands.prompts.use.select-dialog.placeholder">
-      <source xml:lang="en">Select a prompt to use</source>
-    </trans-unit>
-    <trans-unit id="commands.prompts.use.select-dialog.super-modifier-note">
-      <source xml:lang="en">{0}-key to use in new chat</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/utils/createPromptPickItem" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="user-prompt.capitalized">
-      <source xml:lang="en">User prompt</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/utils/handleButtonClick" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.use.select-dialog.delete-prompt.confirm.message">
-      <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatClearActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.done.label">
       <source xml:lang="en">Done</source>
@@ -635,6 +598,51 @@
     </trans-unit>
     <trans-unit id="selectOption">
       <source xml:lang="en">Select where to apply the code block</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/chatAttachPromptAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="workbench.action.chat.attach.prompt.label">
+      <source xml:lang="en">Use Prompt</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/chatRunPromptAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="run-prompt-in-new-chat.capitalized">
+      <source xml:lang="en">Run Prompt In New Chat</source>
+    </trans-unit>
+    <trans-unit id="run-prompt.capitalized">
+      <source xml:lang="en">Run Prompt</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/dialogs/askToSelectPrompt/constants" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompts.use.select-dialog.docs-label">
+      <source xml:lang="en">Learn how to create reusable prompts</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.use.select-dialog.open-button.tooltip">
+      <source xml:lang="en">edit ({0}-key + enter)</source>
+    </trans-unit>
+    <trans-unit id="delete">
+      <source xml:lang="en">delete</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/dialogs/askToSelectPrompt/utils/createPlaceholderText" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompts.use.select-dialog.modifier-notes">
+      <source xml:lang="en"> (hold {0})</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.use.select-dialog.placeholder">
+      <source xml:lang="en">Select a prompt to use</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.use.select-dialog.super-modifier-note">
+      <source xml:lang="en">{0}-key to use in new chat</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/dialogs/askToSelectPrompt/utils/createPromptPickItem" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="user-prompt.capitalized">
+      <source xml:lang="en">User prompt</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/dialogs/askToSelectPrompt/utils/handleButtonClick" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompts.use.select-dialog.delete-prompt.confirm.message">
+      <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext"><body>
@@ -1620,17 +1628,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="agentDescription">
       <source xml:lang="en">Edit files in your workspace in agent mode</source>
     </trans-unit>
-    <trans-unit id="agentMessage">
-      <source xml:lang="en">Ask Copilot to edit your files in [agent mode]({0}). Copilot will automatically use multiple requests to pick files to edit, run terminal commands, and iterate on errors.</source>
-    </trans-unit>
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
     </trans-unit>
     <trans-unit id="chatDescription">
       <source xml:lang="en">Ask Copilot</source>
-    </trans-unit>
-    <trans-unit id="chatMessage">
-      <source xml:lang="en">Copilot is powered by AI, so mistakes are possible. Review output carefully before use.</source>
     </trans-unit>
     <trans-unit id="copilotFailedWarning">
       <source xml:lang="en">Copilot failed to get ready. Please try again.</source>
@@ -1658,12 +1660,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="editsDescription">
       <source xml:lang="en">Edit files in your workspace</source>
-    </trans-unit>
-    <trans-unit id="editsMessage">
-      <source xml:lang="en">Start your editing session by defining a set of files that you want to work with. Then ask Copilot for the changes you want to make.</source>
-    </trans-unit>
-    <trans-unit id="editsTitle">
-      <source xml:lang="en">Edit with Copilot</source>
     </trans-unit>
     <trans-unit id="enterpriseInstance">
       <source xml:lang="en">What is your {0} instance?</source>
@@ -1903,6 +1899,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentMessage">
+      <source xml:lang="en">Ask Copilot to edit your files in [agent mode]({0}). Copilot will automatically use multiple requests to pick files to edit, run terminal commands, and iterate on errors.</source>
+    </trans-unit>
+    <trans-unit id="chatDescription">
+      <source xml:lang="en">Ask Copilot</source>
+    </trans-unit>
+    <trans-unit id="chatMessage">
+      <source xml:lang="en">Copilot is powered by AI, so mistakes are possible. Review output carefully before use.</source>
+    </trans-unit>
     <trans-unit id="chatWidget.tips">
       <source xml:lang="en">{0} or type {1} to attach context
 
@@ -1912,6 +1917,12 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatWidget.tips.withoutParticipants">
       <source xml:lang="en">{0} or type {1} to attach context</source>
+    </trans-unit>
+    <trans-unit id="editsMessage">
+      <source xml:lang="en">Start your editing session by defining a set of files that you want to work with. Then ask Copilot for the changes you want to make.</source>
+    </trans-unit>
+    <trans-unit id="editsTitle">
+      <source xml:lang="en">Edit with Copilot</source>
     </trans-unit>
     <trans-unit id="scrollDownButtonLabel">
       <source xml:lang="en">Scroll down</source>
@@ -2148,9 +2159,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatEditingHasToolConfirmation">
       <source xml:lang="en">True when a tool confirmation is present.</source>
-    </trans-unit>
-    <trans-unit id="chatEditingHasToolsAgent">
-      <source xml:lang="en">True when a tools agent is registered.</source>
     </trans-unit>
     <trans-unit id="chatEditingParticipantRegistered">
       <source xml:lang="en">True when a default chat participant is registered for editing.</source>
