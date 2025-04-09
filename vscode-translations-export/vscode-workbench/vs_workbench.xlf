@@ -816,6 +816,15 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/actions/helpActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="askVScode">
+      <source xml:lang="en">Ask @vscode</source>
+    </trans-unit>
+    <trans-unit id="askVscodePlaceholder">
+      <source xml:lang="en">@vscode can help you with settings, commands, or how to do something in VS Code.</source>
+    </trans-unit>
+    <trans-unit id="askVscodeTitle">
+      <source xml:lang="en">Ask @vscode</source>
+    </trans-unit>
     <trans-unit id="getStartedWithAccessibilityFeatures">
       <source xml:lang="en">Get Started with Accessibility Features</source>
     </trans-unit>
@@ -4192,8 +4201,11 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <source xml:lang="en">Controls whether scrolling over tabs will open them or not. By default tabs will only reveal upon scrolling, but not open. You can press and hold the Shift-key while scrolling to change this behavior for that duration. This value is ignored when {0} is not set to {1}.</source>
       <note>{0}, {1} will be a setting name rendered as a link</note>
     </trans-unit>
+    <trans-unit id="secondarySideBarDefaultVisibility">
+      <source xml:lang="en">Controls the default visibility of the secondary side bar in workspaces or empty windows opened for the first time.</source>
+    </trans-unit>
     <trans-unit id="secondarySideBarShowLabels">
-      <source xml:lang="en">Controls whether activity items in the secondary sidebar title are shown as label or icon. This setting only has an effect when {0} is not set to {1}.</source>
+      <source xml:lang="en">Controls whether activity items in the secondary side bar title are shown as label or icon. This setting only has an effect when {0} is not set to {1}.</source>
     </trans-unit>
     <trans-unit id="separator">
       <source xml:lang="en">`${separator}`: a conditional separator (" - ") that only shows when surrounded by variables with values or static text.</source>
@@ -4573,6 +4585,15 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="workbench.reduceMotion.on">
       <source xml:lang="en">Always render with reduced motion.</source>
+    </trans-unit>
+    <trans-unit id="workbench.secondarySideBar.defaultVisibility.hidden">
+      <source xml:lang="en">The secondary side bar is hidden by default.</source>
+    </trans-unit>
+    <trans-unit id="workbench.secondarySideBar.defaultVisibility.visible">
+      <source xml:lang="en">The secondary side bar is visible by default.</source>
+    </trans-unit>
+    <trans-unit id="workbench.secondarySideBar.defaultVisibility.visibleInWorkspace">
+      <source xml:lang="en">The secondary side bar is visible by default if a workspace is opened.</source>
     </trans-unit>
     <trans-unit id="workbench.view.showQuietly">
       <source xml:lang="en">If an extension requests a hidden view to be shown, display a clickable status bar indicator instead.</source>
