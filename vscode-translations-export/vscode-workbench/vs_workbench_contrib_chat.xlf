@@ -644,22 +644,31 @@
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.fileAttachment">
-      <source xml:lang="en">Attached file, {0}</source>
+      <source xml:lang="en">Attached {0}, {1}</source>
     </trans-unit>
     <trans-unit id="chat.fileAttachmentWithRange">
-      <source xml:lang="en">Attached file, {0}, line {1} to line {2}</source>
+      <source xml:lang="en">Attached {0}, {1}, line {2} to line {3}</source>
     </trans-unit>
     <trans-unit id="disable">
-      <source xml:lang="en">Disable current file context</source>
+      <source xml:lang="en">Disable current {0} context</source>
     </trans-unit>
     <trans-unit id="enable">
-      <source xml:lang="en">Enable current file context</source>
+      <source xml:lang="en">Enable current {0} context</source>
     </trans-unit>
     <trans-unit id="enableHint">
       <source xml:lang="en">disabled</source>
     </trans-unit>
+    <trans-unit id="file.lowercase">
+      <source xml:lang="en">file</source>
+    </trans-unit>
+    <trans-unit id="hint.label.current">
+      <source xml:lang="en">Current {0}</source>
+    </trans-unit>
     <trans-unit id="openEditor">
-      <source xml:lang="en">Current file context</source>
+      <source xml:lang="en">Current {0} context</source>
+    </trans-unit>
+    <trans-unit id="prompt.lowercase">
+      <source xml:lang="en">prompt</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/promptAttachments/promptAttachmentWidget" source-language="en" datatype="plaintext"><body>
@@ -857,6 +866,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatAttachmentWidgets" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.NotebookImageAttachment">
+      <source xml:lang="en">Attached Notebook output, {0}</source>
+    </trans-unit>
     <trans-unit id="chat.attachment">
       <source xml:lang="en">Attached context, {0}</source>
     </trans-unit>
@@ -881,8 +893,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.omittedImageAttachment">
       <source xml:lang="en">Omitted this image: {0}</source>
     </trans-unit>
+    <trans-unit id="chat.omittedNotebookImageAttachment">
+      <source xml:lang="en">Omitted this Notebook ouput: {0}</source>
+    </trans-unit>
     <trans-unit id="chat.partiallyOmittedImageAttachment">
       <source xml:lang="en">Partially omitted this image: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.partiallyOmittedNotebookImageAttachment">
+      <source xml:lang="en">Partially omitted this Notebook output: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatAgentCommandContentPart" source-language="en" datatype="plaintext"><body>
@@ -914,6 +932,24 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.imageAttachmentWarning">
       <source xml:lang="en">This GIF was partially omitted - current frame was be sent.</source>
+    </trans-unit>
+    <trans-unit id="chat.notebookOutputFileAttachment3">
+      <source xml:lang="en">Attached: {0}.</source>
+    </trans-unit>
+    <trans-unit id="chat.notebookOutputImageAttachment">
+      <source xml:lang="en">Attached: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.notebookOutputOmittedFileAttachment">
+      <source xml:lang="en">Omitted: {0}.</source>
+    </trans-unit>
+    <trans-unit id="chat.notebookOutputOmittedImageAttachment">
+      <source xml:lang="en">Omitted: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.notebookOutputPartialFileAttachment">
+      <source xml:lang="en">Partially attached: {0}.</source>
+    </trans-unit>
+    <trans-unit id="chat.notebookOutputPartiallyOmittedImageAttachment">
+      <source xml:lang="en">Partially omitted: {0}</source>
     </trans-unit>
     <trans-unit id="chat.omittedFileAttachment">
       <source xml:lang="en">Omitted: {0}.</source>
@@ -1079,6 +1115,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="image">
       <source xml:lang="en">Image</source>
+    </trans-unit>
+    <trans-unit id="notebookOutput">
+      <source xml:lang="en">Output</source>
     </trans-unit>
     <trans-unit id="problem">
       <source xml:lang="en">Problem</source>
