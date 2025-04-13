@@ -828,9 +828,6 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="getStartedWithAccessibilityFeatures">
       <source xml:lang="en">Get Started with Accessibility Features</source>
     </trans-unit>
-    <trans-unit id="getStartedWithCopilot">
-      <source xml:lang="en">Get Started with Copilot</source>
-    </trans-unit>
     <trans-unit id="keybindingsReference">
       <source xml:lang="en">Keyboard Shortcuts Reference</source>
     </trans-unit>
@@ -1742,6 +1739,14 @@ Browser: {3}</source>
     </trans-unit>
     <trans-unit id="ok">
       <source xml:lang="en">OK</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/browser/parts/editor/auxiliaryEditorPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="disableCompactAuxiliaryWindow">
+      <source xml:lang="en">Leave Compact Mode</source>
+    </trans-unit>
+    <trans-unit id="enableCompactAuxiliaryWindow">
+      <source xml:lang="en">Enter Compact Mode</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/editor/binaryDiffEditor" source-language="en" datatype="plaintext"><body>
@@ -4773,6 +4778,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="isAuxiliaryWindowFocusedContext">
       <source xml:lang="en">Whether an auxiliary window is focused</source>
+    </trans-unit>
+    <trans-unit id="isCompactTitleBar">
+      <source xml:lang="en">Title bar is in compact mode</source>
     </trans-unit>
     <trans-unit id="isFileSystemResource">
       <source xml:lang="en">Whether the resource is backed by a file system provider</source>
