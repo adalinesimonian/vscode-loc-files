@@ -394,7 +394,7 @@
       <source xml:lang="en">Yes</source>
     </trans-unit>
     <trans-unit id="agent.newSessionMessage">
-      <source xml:lang="en">Changing the chat mode will end your current edit session. Would you like to continue?</source>
+      <source xml:lang="en">Changing the chat mode will end your current edit session. Would you like to change the chat mode?</source>
     </trans-unit>
     <trans-unit id="chat.newChat.label">
       <source xml:lang="en">Send to New Chat</source>
@@ -1768,6 +1768,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="triggerChatSetup">
       <source xml:lang="en">Use AI Features with Copilot for free...</source>
     </trans-unit>
+    <trans-unit id="triggerChatSetupFromAccounts">
+      <source xml:lang="en">Sign in to use Copilot...</source>
+    </trans-unit>
     <trans-unit id="unknownSetupError">
       <source xml:lang="en">An error occurred while setting up Copilot. Would you like to try again?</source>
     </trans-unit>
@@ -1983,6 +1986,9 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputCompletions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="desc">
+      <source xml:lang="en">MCP Server: {0}</source>
+    </trans-unit>
     <trans-unit id="fileEntryDescription">
       <source xml:lang="en">{0} ({1})</source>
     </trans-unit>
@@ -1991,9 +1997,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="installLabel">
       <source xml:lang="en">Install Chat Extensions...</source>
-    </trans-unit>
-    <trans-unit id="pickProblemsLabel">
-      <source xml:lang="en">Problems in your workspace</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputEditorHover" source-language="en" datatype="plaintext"><body>
@@ -2161,6 +2164,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatModelsAreUserSelectable">
       <source xml:lang="en">True when the chat model can be selected manually by the user.</source>
+    </trans-unit>
+    <trans-unit id="chatPanelExtensionParticipantRegistered">
+      <source xml:lang="en">True when a default chat participant is registered for the panel from an extension.</source>
     </trans-unit>
     <trans-unit id="chatParticipantRegistered">
       <source xml:lang="en">True when a default chat participant is registered for the panel.</source>
@@ -2353,16 +2359,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="workbench.reusable-prompts.top-error.recursive-reference">
       <source xml:lang="en">Recursion to itself.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/tools/editFileTool" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.tools.editFile">
-      <source xml:lang="en">Edit File</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/tools/insertNotebookCellsTool" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.tools.editFile">
-      <source xml:lang="en">Edit File</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/tools/languageModelToolsContribution" source-language="en" datatype="plaintext"><body>

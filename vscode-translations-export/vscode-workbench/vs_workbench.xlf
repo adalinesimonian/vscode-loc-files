@@ -819,12 +819,6 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="askVScode">
       <source xml:lang="en">Ask @vscode</source>
     </trans-unit>
-    <trans-unit id="askVscodePlaceholder">
-      <source xml:lang="en">@vscode can help you with settings, commands, or how to do something in VS Code.</source>
-    </trans-unit>
-    <trans-unit id="askVscodeTitle">
-      <source xml:lang="en">Ask @vscode</source>
-    </trans-unit>
     <trans-unit id="getStartedWithAccessibilityFeatures">
       <source xml:lang="en">Get Started with Accessibility Features</source>
     </trans-unit>
@@ -1743,10 +1737,13 @@ Browser: {3}</source>
 </body></file>
   <file original="src/vs/workbench/browser/parts/editor/auxiliaryEditorPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="disableCompactAuxiliaryWindow">
-      <source xml:lang="en">Leave Compact Mode</source>
+      <source xml:lang="en">Unset Compact Mode</source>
     </trans-unit>
     <trans-unit id="enableCompactAuxiliaryWindow">
-      <source xml:lang="en">Enter Compact Mode</source>
+      <source xml:lang="en">Set Compact Mode</source>
+    </trans-unit>
+    <trans-unit id="toggleCompactAuxiliaryWindow">
+      <source xml:lang="en">Toggle Window Compact Mode</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/editor/binaryDiffEditor" source-language="en" datatype="plaintext"><body>
@@ -5465,6 +5462,12 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="current">
       <source xml:lang="en">Current Window</source>
+    </trans-unit>
+    <trans-unit id="disableWindowAlwaysOnTop">
+      <source xml:lang="en">Unset Always on Top</source>
+    </trans-unit>
+    <trans-unit id="enableWindowAlwaysOnTop">
+      <source xml:lang="en">Set Always on Top</source>
     </trans-unit>
     <trans-unit id="miCloseWindow">
       <source xml:lang="en">Clos&amp;&amp;e Window</source>
