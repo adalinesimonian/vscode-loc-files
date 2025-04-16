@@ -154,25 +154,25 @@
       <source xml:lang="en">Start new chat?</source>
     </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
-      <source xml:lang="en">You've reached the limit of the Copilot Free plan. These limits will reset on {0}.</source>
+      <source xml:lang="en">You've reached the limit of the Copilot Free plan. The free allowance resets {0}.</source>
     </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceededButton">
       <source xml:lang="en">Copilot Free plan limit reached. Click for details.</source>
     </trans-unit>
     <trans-unit id="chatQuotaExceeded">
-      <source xml:lang="en">You've run out of free chat messages. You still have free code completions available in the Copilot Free plan. These limits will reset on {0}.</source>
+      <source xml:lang="en">You've run out of free chat messages. You still have free code completions available in the Copilot Free plan. The free allowance resets {0}.</source>
     </trans-unit>
     <trans-unit id="chatQuotaExceededButton">
-      <source xml:lang="en">Monthly chat messages limit reached. Click for details.</source>
+      <source xml:lang="en">Copilot Free plan chat messages limit reached. Click for details.</source>
     </trans-unit>
     <trans-unit id="chatWith">
       <source xml:lang="en">Chat with Extension</source>
     </trans-unit>
     <trans-unit id="completionsQuotaExceeded">
-      <source xml:lang="en">You've run out of free code completions. You still have free chat messages available in the Copilot Free plan. These limits will reset on {0}.</source>
+      <source xml:lang="en">You've run out of free code completions. You still have free chat messages available in the Copilot Free plan. The free allowance resets {0}.</source>
     </trans-unit>
     <trans-unit id="completionsQuotaExceededButton">
-      <source xml:lang="en">Monthly code completions limit reached. Click for details.</source>
+      <source xml:lang="en">Copilot Free plan code completions limit reached. Click for details.</source>
     </trans-unit>
     <trans-unit id="configureCompletions">
       <source xml:lang="en">Configure Code Completions...</source>
@@ -1671,6 +1671,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="copilotSetupError">
       <source xml:lang="en">Copilot setup failed.</source>
     </trans-unit>
+    <trans-unit id="copilotSetupSuccess">
+      <source xml:lang="en">Copilot setup finished successfully.</source>
+    </trans-unit>
     <trans-unit id="copilotTitle">
       <source xml:lang="en">Start using Copilot</source>
     </trans-unit>
@@ -1741,6 +1744,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="setupChatSignIn2">
       <source xml:lang="en">Signing in to {0}.</source>
     </trans-unit>
+    <trans-unit id="setupCopilot">
+      <source xml:lang="en">Set up Copilot.</source>
+    </trans-unit>
     <trans-unit id="setupErrorDialog">
       <source xml:lang="en">Copilot setup failed. Would you like to try again?</source>
     </trans-unit>
@@ -1800,6 +1806,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="activateDescription">
       <source xml:lang="en">Set up Copilot to use AI features.</source>
     </trans-unit>
+    <trans-unit id="additionalUsageDisabled">
+      <source xml:lang="en">Additional usage is disabled.</source>
+    </trans-unit>
+    <trans-unit id="additionalUsageEnabled">
+      <source xml:lang="en">Additional usage is enabled.</source>
+    </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceededStatus">
       <source xml:lang="en">Limit reached</source>
     </trans-unit>
@@ -1810,7 +1822,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Copilot Status</source>
     </trans-unit>
     <trans-unit id="chatsLabel">
-      <source xml:lang="en">Chat messages</source>
+      <source xml:lang="en">Chat</source>
     </trans-unit>
     <trans-unit id="completionsDisabledStatus">
       <source xml:lang="en">Code Completions Disabled</source>
@@ -1820,6 +1832,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="completionsQuotaExceededStatus">
       <source xml:lang="en">Completions limit reached</source>
+    </trans-unit>
+    <trans-unit id="enableAdditionalUsage">
+      <source xml:lang="en">Enable Additional Usage</source>
     </trans-unit>
     <trans-unit id="gaugeBackground">
       <source xml:lang="en">Gauge background color.</source>
@@ -1846,10 +1861,22 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Learn More</source>
     </trans-unit>
     <trans-unit id="limitQuota">
-      <source xml:lang="en">Limits will reset on {0}.</source>
+      <source xml:lang="en">Allowance resets {0}.</source>
+    </trans-unit>
+    <trans-unit id="limitedUsageTitle">
+      <source xml:lang="en">Copilot Free Plan Usage</source>
     </trans-unit>
     <trans-unit id="notSignedIntoCopilot">
       <source xml:lang="en">Signed out</source>
+    </trans-unit>
+    <trans-unit id="overrageDisplay">
+      <source xml:lang="en">{0} additional requests used.</source>
+    </trans-unit>
+    <trans-unit id="premiumChatsLabel">
+      <source xml:lang="en">Premium requests</source>
+    </trans-unit>
+    <trans-unit id="proUsageTitle">
+      <source xml:lang="en">Copilot Usage</source>
     </trans-unit>
     <trans-unit id="quotaDisplay">
       <source xml:lang="en">{0}%</source>
@@ -1886,9 +1913,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="upgradeToCopilotPro">
       <source xml:lang="en">Upgrade to Copilot Pro</source>
-    </trans-unit>
-    <trans-unit id="usageTitle">
-      <source xml:lang="en">Copilot Free Plan Usage</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext"><body>
@@ -2329,6 +2353,34 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chat.prompt.frontMatter.inactiveBackground.description">
       <source xml:lang="en">Background color of an inactive Front Matter header block.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/header" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="prompt.header.diagnostics.parsing-error">
+      <source xml:lang="en">Failed to parse prompt header: {0}</source>
+    </trans-unit>
+    <trans-unit id="prompt.header.diagnostics.unexpected-token">
+      <source xml:lang="en">Unexpected token '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="prompt.header.metadata.diagnostics.duplicate-record">
+      <source xml:lang="en">Duplicate metadata record '{0}' will be ignored.</source>
+    </trans-unit>
+    <trans-unit id="prompt.header.metadata.diagnostics.unknown-record">
+      <source xml:lang="en">Unknown metadata record '{0}' will be ignored.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/tools" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="prompt.header.metadata.tools.diagnostics.duplicate-tool-name">
+      <source xml:lang="en">Duplicate tool name {0}.</source>
+    </trans-unit>
+    <trans-unit id="prompt.header.metadata.tools.diagnostics.empty-tool-name">
+      <source xml:lang="en">Tool name cannot be empty.</source>
+    </trans-unit>
+    <trans-unit id="prompt.header.metadata.tools.diagnostics.invalid-tool-name-type">
+      <source xml:lang="en">Expected a tool name ({0}), got '{2}'.</source>
+    </trans-unit>
+    <trans-unit id="prompt.header.metadata.tools.diagnostics.invalid-value-type">
+      <source xml:lang="en">Value of the '{0}' metadata must be '{1}', got '{2}.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/topError" source-language="en" datatype="plaintext"><body>
