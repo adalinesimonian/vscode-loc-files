@@ -154,13 +154,10 @@
       <source xml:lang="en">Start new chat?</source>
     </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
-      <source xml:lang="en">You've reached the limit of the Copilot Free plan. The free allowance resets {0}.</source>
-    </trans-unit>
-    <trans-unit id="chatAndCompletionsQuotaExceededButton">
-      <source xml:lang="en">Copilot Free plan limit reached. Click for details.</source>
+      <source xml:lang="en">You've reached the limit of the Copilot Free plan. These limits will reset on {0}.</source>
     </trans-unit>
     <trans-unit id="chatQuotaExceeded">
-      <source xml:lang="en">You've run out of free chat messages. You still have free code completions available in the Copilot Free plan. The free allowance resets {0}.</source>
+      <source xml:lang="en">You've run out of free chat messages. You still have free code completions available in the Copilot Free plan. These limits will reset on {0}.</source>
     </trans-unit>
     <trans-unit id="chatQuotaExceededButton">
       <source xml:lang="en">Copilot Free plan chat messages limit reached. Click for details.</source>
@@ -169,10 +166,7 @@
       <source xml:lang="en">Chat with Extension</source>
     </trans-unit>
     <trans-unit id="completionsQuotaExceeded">
-      <source xml:lang="en">You've run out of free code completions. You still have free chat messages available in the Copilot Free plan. The free allowance resets {0}.</source>
-    </trans-unit>
-    <trans-unit id="completionsQuotaExceededButton">
-      <source xml:lang="en">Copilot Free plan code completions limit reached. Click for details.</source>
+      <source xml:lang="en">You've run out of free code completions. You still have free chat messages available in the Copilot Free plan. These limits will reset on {0}.</source>
     </trans-unit>
     <trans-unit id="configureCompletions">
       <source xml:lang="en">Configure Code Completions...</source>
@@ -309,11 +303,11 @@
     <trans-unit id="chat.insertSearchResults">
       <source xml:lang="en">Add Search Results to Chat</source>
     </trans-unit>
+    <trans-unit id="chatContext.attach.instructions.label">
+      <source xml:lang="en">Instructions...</source>
+    </trans-unit>
     <trans-unit id="chatContext.attach.placeholder">
       <source xml:lang="en">Search attachments</source>
-    </trans-unit>
-    <trans-unit id="chatContext.attach.prompt.label">
-      <source xml:lang="en">Prompt...</source>
     </trans-unit>
     <trans-unit id="chatContext.attachScreenshot.labelElectron.Window">
       <source xml:lang="en">Screenshot Window</source>
@@ -597,20 +591,35 @@
       <source xml:lang="en">Select where to apply the code block</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/chatAttachPromptAction" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="workbench.action.chat.attach.prompt.label">
-      <source xml:lang="en">Use Prompt</source>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/chatAttachInstructionsAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="attach-instructions.capitalized.ellipses">
+      <source xml:lang="en">Attach Instructions...</source>
+    </trans-unit>
+    <trans-unit id="commands.instructions.select-dialog.placeholder">
+      <source xml:lang="en">Select instructions files to attach</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/chatRunPromptAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompt.select-dialog.placeholder">
+      <source xml:lang="en">Select the prompt file to run (hold {0}-key to use in new chat)</source>
+    </trans-unit>
     <trans-unit id="run-prompt-in-new-chat.capitalized">
       <source xml:lang="en">Run Prompt In New Chat</source>
     </trans-unit>
     <trans-unit id="run-prompt.capitalized">
       <source xml:lang="en">Run Prompt</source>
     </trans-unit>
+    <trans-unit id="run-prompt.capitalized.ellipses">
+      <source xml:lang="en">Run Prompt...</source>
+    </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/dialogs/askToSelectPrompt/constants" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/dialogs/askToSelectPrompt/promptFilePickers" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.instructions.use.select-dialog.docs-label">
+      <source xml:lang="en">Learn how to create custom instructions</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.use.select-dialog.delete-prompt.confirm.message">
+      <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
+    </trans-unit>
     <trans-unit id="commands.prompts.use.select-dialog.docs-label">
       <source xml:lang="en">Learn how to create reusable prompts</source>
     </trans-unit>
@@ -620,26 +629,8 @@
     <trans-unit id="delete">
       <source xml:lang="en">delete</source>
     </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/dialogs/askToSelectPrompt/utils/createPlaceholderText" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.use.select-dialog.modifier-notes">
-      <source xml:lang="en"> (hold {0})</source>
-    </trans-unit>
-    <trans-unit id="commands.prompts.use.select-dialog.placeholder">
-      <source xml:lang="en">Select a prompt to use</source>
-    </trans-unit>
-    <trans-unit id="commands.prompts.use.select-dialog.super-modifier-note">
-      <source xml:lang="en">{0}-key to use in new chat</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/dialogs/askToSelectPrompt/utils/createPromptPickItem" source-language="en" datatype="plaintext"><body>
     <trans-unit id="user-prompt.capitalized">
       <source xml:lang="en">User prompt</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/dialogs/askToSelectPrompt/utils/handleButtonClick" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.use.select-dialog.delete-prompt.confirm.message">
-      <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext"><body>
@@ -671,15 +662,15 @@
       <source xml:lang="en">prompt</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/attachments/promptAttachments/promptAttachmentWidget" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.promptAttachment">
-      <source xml:lang="en">Prompt attachment, {0}</source>
+  <file original="src/vs/workbench/contrib/chat/browser/attachments/promptInstructions/promptInstructionsWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.instructionsAttachment">
+      <source xml:lang="en">Instructions attachment, {0}</source>
     </trans-unit>
     <trans-unit id="error">
       <source xml:lang="en">Error</source>
     </trans-unit>
-    <trans-unit id="prompt">
-      <source xml:lang="en">Prompt</source>
+    <trans-unit id="instructions">
+      <source xml:lang="en">Instructions</source>
     </trans-unit>
     <trans-unit id="remove">
       <source xml:lang="en">Remove</source>
@@ -999,6 +990,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Dismiss</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatExtensionsContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.extensions.loading">
+      <source xml:lang="en">Loading extensions...</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatMarkdownContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.codeblock.applyingPercentage">
       <source xml:lang="en">Applying edits ({0}%)...</source>
@@ -1025,6 +1021,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatProgressContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="pausedMessage">
       <source xml:lang="en">Paused</source>
+    </trans-unit>
+    <trans-unit id="resume">
+      <source xml:lang="en">Click to resume</source>
     </trans-unit>
     <trans-unit id="workingMessage">
       <source xml:lang="en">Working...</source>
@@ -1822,7 +1821,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Copilot Status</source>
     </trans-unit>
     <trans-unit id="chatsLabel">
-      <source xml:lang="en">Chat</source>
+      <source xml:lang="en">Chat messages</source>
     </trans-unit>
     <trans-unit id="completionsDisabledStatus">
       <source xml:lang="en">Code Completions Disabled</source>
@@ -1861,7 +1860,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Learn More</source>
     </trans-unit>
     <trans-unit id="limitQuota">
-      <source xml:lang="en">Allowance resets {0}.</source>
+      <source xml:lang="en">Limits reset {0}.</source>
     </trans-unit>
     <trans-unit id="limitedUsageTitle">
       <source xml:lang="en">Copilot Free Plan Usage</source>
@@ -1870,10 +1869,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Signed out</source>
     </trans-unit>
     <trans-unit id="overrageDisplay">
-      <source xml:lang="en">{0} additional requests used.</source>
+      <source xml:lang="en">{0} additional messages used.</source>
     </trans-unit>
     <trans-unit id="premiumChatsLabel">
-      <source xml:lang="en">Premium requests</source>
+      <source xml:lang="en">Premium chat messages</source>
     </trans-unit>
     <trans-unit id="proUsageTitle">
       <source xml:lang="en">Copilot Usage</source>
@@ -2049,17 +2048,31 @@ Type {3} to use commands</source>
       <source xml:lang="en">Action required: {0}</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/createPromptCommand" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.create.title.local">
-      <source xml:lang="en">Create Prompt</source>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/attachInstructionsCommand" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="attach-instructions.capitalized.ellipses">
+      <source xml:lang="en">Attach Instructions...</source>
     </trans-unit>
-    <trans-unit id="commands.prompts.create.title.user">
-      <source xml:lang="en">Create User Prompt</source>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/createPromptCommand" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.new.instructions.local.title">
+      <source xml:lang="en">New Instructions File...</source>
+    </trans-unit>
+    <trans-unit id="commands.new.instructions.user.title">
+      <source xml:lang="en">New User Instructions File...</source>
+    </trans-unit>
+    <trans-unit id="commands.new.prompt.local.title">
+      <source xml:lang="en">New Prompt File...</source>
+    </trans-unit>
+    <trans-unit id="commands.new.prompt.user.title">
+      <source xml:lang="en">New User Prompt File...</source>
     </trans-unit>
     <trans-unit id="enable.capitalized">
       <source xml:lang="en">Enable</source>
     </trans-unit>
-    <trans-unit id="workbench.command.prompts.create.initial-content">
+    <trans-unit id="workbench.command.instructions.create.initial-content">
+      <source xml:lang="en">Add instructions...</source>
+    </trans-unit>
+    <trans-unit id="workbench.command.prompt.create.initial-content">
       <source xml:lang="en">Add prompt contents...</source>
     </trans-unit>
     <trans-unit id="workbench.command.prompts.create.user.enable-sync-notification">
@@ -2067,8 +2080,11 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptName" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.create.ask-name.placeholder">
-      <source xml:lang="en">Provide a prompt name</source>
+    <trans-unit id="askForInstructionsFileName.placeholder">
+      <source xml:lang="en">Enter the name of the instructions file</source>
+    </trans-unit>
+    <trans-unit id="askForPromptFileName.placeholder">
+      <source xml:lang="en">Enter the name of the prompt file</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptSourceFolder" source-language="en" datatype="plaintext"><body>
@@ -2091,11 +2107,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="workbench.command.prompts.create.error.invalid-prompt-name">
       <source xml:lang="en">Invalid prompt file name '{0}'.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/usePromptCommand" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompts.use.title">
-      <source xml:lang="en">Use Prompt</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewWelcomeController" source-language="en" datatype="plaintext"><body>
@@ -2171,9 +2182,6 @@ Type {3} to use commands</source>
     <trans-unit id="chatHasFileAttachments">
       <source xml:lang="en">True when the chat has file attachments.</source>
     </trans-unit>
-    <trans-unit id="chatInstructionsAttachedContextDescription">
-      <source xml:lang="en">True when the chat has a prompt instructions attached.</source>
-    </trans-unit>
     <trans-unit id="chatIsEnabled">
       <source xml:lang="en">True when chat is enabled because a default chat participant is activated with an implementation.</source>
     </trans-unit>
@@ -2194,6 +2202,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatParticipantRegistered">
       <source xml:lang="en">True when a default chat participant is registered for the panel.</source>
+    </trans-unit>
+    <trans-unit id="chatPromptFileAttachedContextDescription">
+      <source xml:lang="en">True when the chat has a prompt file attached.</source>
     </trans-unit>
     <trans-unit id="chatRequest">
       <source xml:lang="en">The chat item is a request</source>
@@ -2371,13 +2382,13 @@ Type {3} to use commands</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/tools" source-language="en" datatype="plaintext"><body>
     <trans-unit id="prompt.header.metadata.tools.diagnostics.duplicate-tool-name">
-      <source xml:lang="en">Duplicate tool name {0}.</source>
+      <source xml:lang="en">Duplicate tool name '{0}'.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.tools.diagnostics.empty-tool-name">
       <source xml:lang="en">Tool name cannot be empty.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.tools.diagnostics.invalid-tool-name-type">
-      <source xml:lang="en">Expected a tool name ({0}), got '{2}'.</source>
+      <source xml:lang="en">Expected a tool name ({0}), got '{1}'.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.tools.diagnostics.invalid-value-type">
       <source xml:lang="en">Value of the '{0}' metadata must be '{1}', got '{2}.</source>
