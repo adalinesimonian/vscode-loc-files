@@ -154,25 +154,25 @@
       <source xml:lang="en">Start new chat?</source>
     </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
-      <source xml:lang="en">You've reached the limit of the Copilot Free plan. These limits will reset on {0}.</source>
+      <source xml:lang="en">You've reached your monthly chat messages and code completions quota.</source>
     </trans-unit>
     <trans-unit id="chatQuotaExceeded">
-      <source xml:lang="en">You've run out of free chat messages. You still have free code completions available in the Copilot Free plan. These limits will reset on {0}.</source>
+      <source xml:lang="en">You've reached your monthly chat messages quota. You still have free code completions available.</source>
     </trans-unit>
     <trans-unit id="chatQuotaExceededButton">
-      <source xml:lang="en">Copilot Free plan chat messages limit reached. Click for details.</source>
+      <source xml:lang="en">Copilot Free plan chat messages quota reached. Click for details.</source>
     </trans-unit>
     <trans-unit id="chatWith">
       <source xml:lang="en">Chat with Extension</source>
     </trans-unit>
     <trans-unit id="completionsQuotaExceeded">
-      <source xml:lang="en">You've run out of free code completions. You still have free chat messages available in the Copilot Free plan. These limits will reset on {0}.</source>
+      <source xml:lang="en">You've reached your monthly code completions quota. You still have free chat messages available.</source>
     </trans-unit>
     <trans-unit id="configureCompletions">
       <source xml:lang="en">Configure Code Completions...</source>
     </trans-unit>
-    <trans-unit id="copilotFree">
-      <source xml:lang="en">Copilot Limit Reached</source>
+    <trans-unit id="copilotQuotaReached">
+      <source xml:lang="en">Copilot Quota Reached</source>
     </trans-unit>
     <trans-unit id="currentChatLabel">
       <source xml:lang="en">current</source>
@@ -210,6 +210,9 @@
     <trans-unit id="openChat">
       <source xml:lang="en">Open Chat</source>
     </trans-unit>
+    <trans-unit id="quotaResetDate">
+      <source xml:lang="en">The allowance will renew on {0}.</source>
+    </trans-unit>
     <trans-unit id="resetTrustedTools">
       <source xml:lang="en">Reset Tool Confirmations</source>
     </trans-unit>
@@ -238,7 +241,10 @@
       <source xml:lang="en">Toggle Chat</source>
     </trans-unit>
     <trans-unit id="upgradeChat">
-      <source xml:lang="en">Upgrade to Copilot Pro</source>
+      <source xml:lang="en">Upgrade Copilot Plan</source>
+    </trans-unit>
+    <trans-unit id="upgradePlan">
+      <source xml:lang="en">Upgrade Copilot Plan</source>
     </trans-unit>
     <trans-unit id="upgradePro">
       <source xml:lang="en">Upgrade to Copilot Pro</source>
@@ -246,8 +252,8 @@
     <trans-unit id="upgradeToPro">
       <source xml:lang="en">Upgrade to Copilot Pro (your first 30 days are free) for:
 - Unlimited code completions
-- Unlimited chat messages
-- Access to additional models</source>
+- Unlimited basic chat messages
+- Access to premium models</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatClearActions" source-language="en" datatype="plaintext"><body>
@@ -316,13 +322,13 @@
       <source xml:lang="en">Screenshot</source>
     </trans-unit>
     <trans-unit id="chatContext.diagnstic">
-      <source xml:lang="en">Problem...</source>
+      <source xml:lang="en">Problems...</source>
     </trans-unit>
     <trans-unit id="chatContext.editors">
       <source xml:lang="en">Open Editors</source>
     </trans-unit>
     <trans-unit id="chatContext.folder">
-      <source xml:lang="en">Folder...</source>
+      <source xml:lang="en">Folders...</source>
     </trans-unit>
     <trans-unit id="chatContext.notebook.kernelVariable">
       <source xml:lang="en">Kernel Variable...</source>
@@ -337,13 +343,37 @@
       <source xml:lang="en">Search Results</source>
     </trans-unit>
     <trans-unit id="chatContext.symbol">
-      <source xml:lang="en">Symbol...</source>
+      <source xml:lang="en">Symbols...</source>
+    </trans-unit>
+    <trans-unit id="chatContext.tools">
+      <source xml:lang="en">Tools...</source>
+    </trans-unit>
+    <trans-unit id="chatContext.tools.extension">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="chatContext.tools.internal">
+      <source xml:lang="en">Built-In</source>
+    </trans-unit>
+    <trans-unit id="chatContext.tools.mcp">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="chatContext.tools.placeholder">
+      <source xml:lang="en">Select a tool</source>
     </trans-unit>
     <trans-unit id="imageFromClipboard">
       <source xml:lang="en">Image from Clipboard</source>
     </trans-unit>
+    <trans-unit id="markers.panel.allErrors">
+      <source xml:lang="en">All Problems</source>
+    </trans-unit>
+    <trans-unit id="markers.panel.at.ln.col.number">
+      <source xml:lang="en">[Ln {0}, Col {1}]</source>
+    </trans-unit>
     <trans-unit id="pastedImage">
       <source xml:lang="en">Pasted Image</source>
+    </trans-unit>
+    <trans-unit id="pickAProblem">
+      <source xml:lang="en">Pick a problem to attach...</source>
     </trans-unit>
     <trans-unit id="relatedFiles">
       <source xml:lang="en">Add related files to your working set</source>
@@ -591,7 +621,7 @@
       <source xml:lang="en">Select where to apply the code block</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/chatAttachInstructionsAction" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatAttachInstructionsAction" source-language="en" datatype="plaintext"><body>
     <trans-unit id="attach-instructions.capitalized.ellipses">
       <source xml:lang="en">Attach Instructions...</source>
     </trans-unit>
@@ -599,7 +629,7 @@
       <source xml:lang="en">Select instructions files to attach</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/chatRunPromptAction" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatRunPromptAction" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commands.prompt.select-dialog.placeholder">
       <source xml:lang="en">Select the prompt file to run (hold {0}-key to use in new chat)</source>
     </trans-unit>
@@ -613,7 +643,12 @@
       <source xml:lang="en">Run Prompt...</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/reusablePromptActions/dialogs/askToSelectPrompt/promptFilePickers" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatSaveToPromptAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="workbench.actions.save-to-prompt.label">
+      <source xml:lang="en">Save chat session to a prompt file</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/dialogs/askToSelectPrompt/promptFilePickers" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commands.instructions.use.select-dialog.docs-label">
       <source xml:lang="en">Learn how to create custom instructions</source>
     </trans-unit>
@@ -797,6 +832,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="mpc.discovery.enabled">
       <source xml:lang="en">Configures discovery of Model Context Protocol servers on the machine. It may be set to `true` or `false` to disable or enable all sources, and an mapping sources you wish to enable.</source>
+    </trans-unit>
+    <trans-unit id="save-chat-to-prompt-file">
+      <source xml:lang="en">Save chat to a prompt file</source>
     </trans-unit>
     <trans-unit id="workspaceConfig.mcp.description">
       <source xml:lang="en">Model Context Protocol server configurations</source>
@@ -1449,12 +1487,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.askMode">
       <source xml:lang="en">Ask</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.label">
-      <source xml:lang="en">Pick Model</source>
-    </trans-unit>
-    <trans-unit id="chat.moreModels">
-      <source xml:lang="en">Add more Models</source>
-    </trans-unit>
     <trans-unit id="chat.normalMode">
       <source xml:lang="en">Edit</source>
     </trans-unit>
@@ -1812,10 +1844,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Additional usage is enabled.</source>
     </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceededStatus">
-      <source xml:lang="en">Limit reached</source>
+      <source xml:lang="en">Quota reached</source>
     </trans-unit>
     <trans-unit id="chatQuotaExceededStatus">
-      <source xml:lang="en">Chat limit reached</source>
+      <source xml:lang="en">Chat quota reached</source>
     </trans-unit>
     <trans-unit id="chatStatus">
       <source xml:lang="en">Copilot Status</source>
@@ -1830,7 +1862,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Code completions</source>
     </trans-unit>
     <trans-unit id="completionsQuotaExceededStatus">
-      <source xml:lang="en">Completions limit reached</source>
+      <source xml:lang="en">Completions quota reached</source>
     </trans-unit>
     <trans-unit id="enableAdditionalUsage">
       <source xml:lang="en">Enable Additional Usage</source>
@@ -1860,10 +1892,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Learn More</source>
     </trans-unit>
     <trans-unit id="limitQuota">
-      <source xml:lang="en">Limits reset {0}.</source>
-    </trans-unit>
-    <trans-unit id="limitedUsageTitle">
-      <source xml:lang="en">Copilot Free Plan Usage</source>
+      <source xml:lang="en">Allowance renews on {0}.</source>
     </trans-unit>
     <trans-unit id="notSignedIntoCopilot">
       <source xml:lang="en">Signed out</source>
@@ -1874,9 +1903,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="premiumChatsLabel">
       <source xml:lang="en">Premium chat messages</source>
     </trans-unit>
-    <trans-unit id="proUsageTitle">
-      <source xml:lang="en">Copilot Usage</source>
-    </trans-unit>
     <trans-unit id="quotaDisplay">
       <source xml:lang="en">{0}%</source>
     </trans-unit>
@@ -1885,6 +1911,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="quotaTooltip">
       <source xml:lang="en">Manage Copilot</source>
+    </trans-unit>
+    <trans-unit id="quotaUnlimited">
+      <source xml:lang="en">Included</source>
     </trans-unit>
     <trans-unit id="settings.codeCompletions">
       <source xml:lang="en">Code Completions (all files)</source>
@@ -1912,6 +1941,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="upgradeToCopilotPro">
       <source xml:lang="en">Upgrade to Copilot Pro</source>
+    </trans-unit>
+    <trans-unit id="usageTitle">
+      <source xml:lang="en">Copilot Usage</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext"><body>
@@ -1991,23 +2023,6 @@ Type {3} to use commands</source>
       <source xml:lang="en">{0} vulnerability</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/contrib/chatDynamicVariables" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="markers.panel.allErrors">
-      <source xml:lang="en">All Problems</source>
-    </trans-unit>
-    <trans-unit id="markers.panel.at.ln.col.number">
-      <source xml:lang="en">[Ln {0}, Col {1}]</source>
-    </trans-unit>
-    <trans-unit id="markers.panel.files">
-      <source xml:lang="en">Files</source>
-    </trans-unit>
-    <trans-unit id="pickAProblem">
-      <source xml:lang="en">Pick a problem to attach...</source>
-    </trans-unit>
-    <trans-unit id="problemsMore">
-      <source xml:lang="en">+ {0} more</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputCompletions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="desc">
       <source xml:lang="en">MCP Server: {0}</source>
@@ -2046,6 +2061,25 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="toolConfirmationMessage">
       <source xml:lang="en">Action required: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modelPickerActionItem" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.modelPicker.label">
+      <source xml:lang="en">Pick Model</source>
+    </trans-unit>
+    <trans-unit id="chatModelPicker">
+      <source xml:lang="en">Chat Model: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modelPickerWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.moreModels">
+      <source xml:lang="en">Add Premium Models</source>
+    </trans-unit>
+    <trans-unit id="chat.moreModels.tooltip">
+      <source xml:lang="en">Add premium models</source>
+    </trans-unit>
+    <trans-unit id="modelPicker">
+      <source xml:lang="en">Model Picker</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/attachInstructionsCommand" source-language="en" datatype="plaintext"><body>
@@ -2422,6 +2456,11 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="workbench.reusable-prompts.top-error.recursive-reference">
       <source xml:lang="en">Recursion to itself.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="prompt.file.detail">
+      <source xml:lang="en">Prompt file: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/tools/languageModelToolsContribution" source-language="en" datatype="plaintext"><body>
