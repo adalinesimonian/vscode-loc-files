@@ -154,19 +154,19 @@
       <source xml:lang="en">Start new chat?</source>
     </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
-      <source xml:lang="en">You've reached your monthly chat messages and code completions quota.</source>
+      <source xml:lang="en">You've reached your monthly chat requests and code completions quota.</source>
     </trans-unit>
     <trans-unit id="chatQuotaExceeded">
-      <source xml:lang="en">You've reached your monthly chat messages quota. You still have free code completions available.</source>
+      <source xml:lang="en">You've reached your monthly chat requests quota. You still have free code completions available.</source>
     </trans-unit>
     <trans-unit id="chatQuotaExceededButton">
-      <source xml:lang="en">Copilot Free plan chat messages quota reached. Click for details.</source>
+      <source xml:lang="en">Copilot Free plan chat requests quota reached. Click for details.</source>
     </trans-unit>
     <trans-unit id="chatWith">
       <source xml:lang="en">Chat with Extension</source>
     </trans-unit>
     <trans-unit id="completionsQuotaExceeded">
-      <source xml:lang="en">You've reached your monthly code completions quota. You still have free chat messages available.</source>
+      <source xml:lang="en">You've reached your monthly code completions quota. You still have free chat requests available.</source>
     </trans-unit>
     <trans-unit id="configureCompletions">
       <source xml:lang="en">Configure Code Completions...</source>
@@ -252,7 +252,7 @@
     <trans-unit id="upgradeToPro">
       <source xml:lang="en">Upgrade to Copilot Pro (your first 30 days are free) for:
 - Unlimited code completions
-- Unlimited basic chat messages
+- Unlimited basic chat requests
 - Access to premium models</source>
     </trans-unit>
 </body></file>
@@ -1781,6 +1781,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="setupErrorDialog">
       <source xml:lang="en">Copilot setup failed. Would you like to try again?</source>
     </trans-unit>
+    <trans-unit id="setupToolDisplayName">
+      <source xml:lang="en">New Workspace</source>
+    </trans-unit>
+    <trans-unit id="setupToolsDescription">
+      <source xml:lang="en">Scaffold a new workspace in VS Code</source>
+    </trans-unit>
     <trans-unit id="setupWithEnterpriseProvider">
       <source xml:lang="en">Sign in with a {0} Account</source>
     </trans-unit>
@@ -1820,6 +1826,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="useCopilotButton">
       <source xml:lang="en">Use Copilot</source>
     </trans-unit>
+    <trans-unit id="vscodeAgentDescription">
+      <source xml:lang="en">Ask questions about VS Code</source>
+    </trans-unit>
     <trans-unit id="waitingCopilot">
       <source xml:lang="en">Getting Copilot ready.</source>
     </trans-unit>
@@ -1838,10 +1847,13 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Set up Copilot to use AI features.</source>
     </trans-unit>
     <trans-unit id="additionalUsageDisabled">
-      <source xml:lang="en">Additional usage is disabled.</source>
+      <source xml:lang="en">Pay per additional requests is disabled.</source>
     </trans-unit>
     <trans-unit id="additionalUsageEnabled">
-      <source xml:lang="en">Additional usage is enabled.</source>
+      <source xml:lang="en">Pay per additional requests is enabled.</source>
+    </trans-unit>
+    <trans-unit id="basicChatsLabel">
+      <source xml:lang="en">Basic chat requests</source>
     </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceededStatus">
       <source xml:lang="en">Quota reached</source>
@@ -1853,7 +1865,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Copilot Status</source>
     </trans-unit>
     <trans-unit id="chatsLabel">
-      <source xml:lang="en">Chat messages</source>
+      <source xml:lang="en">Chat requests</source>
     </trans-unit>
     <trans-unit id="completionsDisabledStatus">
       <source xml:lang="en">Code Completions Disabled</source>
@@ -1865,7 +1877,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Completions quota reached</source>
     </trans-unit>
     <trans-unit id="enableAdditionalUsage">
-      <source xml:lang="en">Enable Additional Usage</source>
+      <source xml:lang="en">Enable Pay for Additional Requests</source>
     </trans-unit>
     <trans-unit id="gaugeBackground">
       <source xml:lang="en">Gauge background color.</source>
@@ -1897,14 +1909,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="notSignedIntoCopilot">
       <source xml:lang="en">Signed out</source>
     </trans-unit>
-    <trans-unit id="overrageDisplay">
-      <source xml:lang="en">{0} additional messages used.</source>
-    </trans-unit>
     <trans-unit id="premiumChatsLabel">
-      <source xml:lang="en">Premium chat messages</source>
+      <source xml:lang="en">Premium chat requests</source>
     </trans-unit>
     <trans-unit id="quotaDisplay">
       <source xml:lang="en">{0}%</source>
+    </trans-unit>
+    <trans-unit id="quotaDisplayWithOverage">
+      <source xml:lang="en">{0}% +{1}</source>
     </trans-unit>
     <trans-unit id="quotaLabel">
       <source xml:lang="en">Manage Copilot</source>
