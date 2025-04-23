@@ -1888,10 +1888,10 @@ Would you like to update the extension?</source>
       <source xml:lang="en">Search Extensions</source>
     </trans-unit>
     <trans-unit id="searchExtensionsTool.modelDescription">
-      <source xml:lang="en">This tool helps the model search for VS Code extensions from the Marketplace. The model should specify the category of extensions and keywords to search for. Note that the results may include false positives, so further filtering by reviewing the results is recommended.</source>
+      <source xml:lang="en">This is a tool for browsing Visual Studio Code Extensions Marketplace. It allows the model to search for extensions and retrieve detailed information about them. The model should use this tool whenever it needs to discover extensions or resolve information about known ones. To use the tool, the model has to provide the category of the extensions, relevant search keywords, or known extension IDs. Note that search results may include false positives, so reviewing and filtering is recommended.</source>
     </trans-unit>
     <trans-unit id="searchExtensionsTool.noInput">
-      <source xml:lang="en">Please provide a category or keyword to search for.</source>
+      <source xml:lang="en">Please provide a category or keywords or ids to search for.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/extensions/electron-sandbox/debugExtensionHostAction" source-language="en" datatype="plaintext"><body>

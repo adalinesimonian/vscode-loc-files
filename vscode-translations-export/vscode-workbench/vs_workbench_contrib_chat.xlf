@@ -328,7 +328,7 @@
       <source xml:lang="en">Open Editors</source>
     </trans-unit>
     <trans-unit id="chatContext.folder">
-      <source xml:lang="en">Folders...</source>
+      <source xml:lang="en">Files &amp; Folders...</source>
     </trans-unit>
     <trans-unit id="chatContext.notebook.kernelVariable">
       <source xml:lang="en">Kernel Variable...</source>
@@ -2091,9 +2091,6 @@ Type {3} to use commands</source>
     <trans-unit id="chat.modelPicker.label">
       <source xml:lang="en">Pick Model</source>
     </trans-unit>
-    <trans-unit id="chatModelPicker">
-      <source xml:lang="en">Chat Model: {0}</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modelPickerWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.moreModels">
@@ -2416,20 +2413,9 @@ Type {3} to use commands</source>
       <source xml:lang="en">The vendor field cannot start or end with whitespace.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/common/modelPicker/chatModelCategoryService" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/common/modelPicker/modelPickerWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.modelPicker.other">
       <source xml:lang="en">Other Models</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/modelPicker/chatModelPickerCategory.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatModelPickerCategoryId">
-      <source xml:lang="en">A unique identifier for this category.</source>
-    </trans-unit>
-    <trans-unit id="chatModelPickerCategoryName">
-      <source xml:lang="en">User-facing name for this category.</source>
-    </trans-unit>
-    <trans-unit id="vscode.extension.contributes.chatModelPickerCategories">
-      <source xml:lang="en">Contributes categories for organizing models in the chat model picker</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageFeatures/providers/decorationsProvider/decorations/frontMatterDecoration" source-language="en" datatype="plaintext"><body>
