@@ -17,10 +17,10 @@
       <source xml:lang="en">Show Base Top</source>
     </trans-unit>
     <trans-unit id="merge.acceptAllInput1">
-      <source xml:lang="en">Accept All Changes from Left</source>
+      <source xml:lang="en">Accept All Incoming Changes from Left</source>
     </trans-unit>
     <trans-unit id="merge.acceptAllInput2">
-      <source xml:lang="en">Accept All Changes from Right</source>
+      <source xml:lang="en">Accept All Current Changes from Right</source>
     </trans-unit>
     <trans-unit id="merge.goToNextUnhandledConflict">
       <source xml:lang="en">Go to Next Unhandled Conflict</source>
@@ -73,6 +73,9 @@
     </trans-unit>
     <trans-unit id="mergeEditor.resetResultToBaseAndAutoMerge.short">
       <source xml:lang="en">Reset</source>
+    </trans-unit>
+    <trans-unit id="mergeEditor.toggleBetweenInputs">
+      <source xml:lang="en">Toggle Between Merge Editor Inputs</source>
     </trans-unit>
     <trans-unit id="openfile">
       <source xml:lang="en">Open File</source>
@@ -132,10 +135,25 @@
       <source xml:lang="en">Navigate between merge conflicts using the commands Go to Next Unhandled Conflict{0} and Go to Previous Unhandled Conflict{1}.</source>
     </trans-unit>
     <trans-unit id="msg3">
-      <source xml:lang="en">Run the command Merge Editor: Accept All Changes from the Left{0} and Merge Editor: Accept All Changes from the Right{1}</source>
+      <source xml:lang="en">Run the command Merge Editor: Accept All Incoming Changes from the Left{0} and Merge Editor: Accept All Current Changes from the Right{1}</source>
+    </trans-unit>
+    <trans-unit id="msg4">
+      <source xml:lang="en">Complete the Merge{0}.</source>
+    </trans-unit>
+    <trans-unit id="msg5">
+      <source xml:lang="en">Toggle between merge editor inputs, incoming and current changes {0}.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mergeEditor/browser/mergeEditorInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mergeEditor.input1">
+      <source xml:lang="en">Incoming, Left Input</source>
+    </trans-unit>
+    <trans-unit id="mergeEditor.input2">
+      <source xml:lang="en">Current, Right Input</source>
+    </trans-unit>
+    <trans-unit id="mergeEditor.result">
+      <source xml:lang="en">Merge Result</source>
+    </trans-unit>
     <trans-unit id="name">
       <source xml:lang="en">Merging: {0}</source>
     </trans-unit>

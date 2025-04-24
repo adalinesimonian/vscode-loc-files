@@ -429,6 +429,9 @@
     <trans-unit id="interactive.cancel.label">
       <source xml:lang="en">Cancel</source>
     </trans-unit>
+    <trans-unit id="interactive.changeModel.label">
+      <source xml:lang="en">Change Model</source>
+    </trans-unit>
     <trans-unit id="interactive.openModelPicker.label">
       <source xml:lang="en">Open Model Picker</source>
     </trans-unit>
@@ -670,8 +673,8 @@
     <trans-unit id="help">
       <source xml:lang="en">help</source>
     </trans-unit>
-    <trans-unit id="user-prompt.capitalized">
-      <source xml:lang="en">User prompt</source>
+    <trans-unit id="user-data-dir.capitalized">
+      <source xml:lang="en">User data folder</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext"><body>
@@ -707,11 +710,17 @@
     <trans-unit id="chat.instructionsAttachment">
       <source xml:lang="en">Instructions attachment, {0}</source>
     </trans-unit>
+    <trans-unit id="chat.promptAttachment">
+      <source xml:lang="en">Prompt file, {0}</source>
+    </trans-unit>
     <trans-unit id="error">
       <source xml:lang="en">Error</source>
     </trans-unit>
     <trans-unit id="instructions">
       <source xml:lang="en">Instructions</source>
+    </trans-unit>
+    <trans-unit id="prompt">
+      <source xml:lang="en">Prompt</source>
     </trans-unit>
     <trans-unit id="remove">
       <source xml:lang="en">Remove</source>
@@ -780,23 +789,31 @@
     <trans-unit id="chat.implicitContext.value.never">
       <source xml:lang="en">Implicit context is never enabled.</source>
     </trans-unit>
+    <trans-unit id="chat.instructions.config.locations.description">
+      <source xml:lang="en">Specify location(s) of instructions files (`*{0}`) that can be attached in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
+
+Relative paths are resolved from the root folder(s) of your workspace.</source>
+    </trans-unit>
+    <trans-unit id="chat.instructions.config.locations.title">
+      <source xml:lang="en">Instructions File Locations</source>
+    </trans-unit>
     <trans-unit id="chat.mcp.enabled">
       <source xml:lang="en">Enables integration with Model Context Protocol servers to provide additional tools and functionality.</source>
     </trans-unit>
     <trans-unit id="chat.promptFiles.policy">
-      <source xml:lang="en">Enables reusable prompt files in Chat, Edits, and Inline Chat sessions.</source>
+      <source xml:lang="en">Enables reusable prompt and instruction files in Chat, Edits, and Inline Chat sessions.</source>
     </trans-unit>
     <trans-unit id="chat.renderRelatedFiles">
       <source xml:lang="en">Controls whether related files should be rendered in the chat input.</source>
     </trans-unit>
     <trans-unit id="chat.reusablePrompts.config.enabled.description">
-      <source xml:lang="en">Enable reusable prompt files (`*{0}`) in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).</source>
+      <source xml:lang="en">Enable reusable prompt (`*{0}`) and instruction files in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).</source>
     </trans-unit>
     <trans-unit id="chat.reusablePrompts.config.enabled.title">
       <source xml:lang="en">Prompt Files</source>
     </trans-unit>
     <trans-unit id="chat.reusablePrompts.config.locations.description">
-      <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be attached in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
+      <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be run in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
 
 Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
@@ -1347,13 +1364,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorOverlay" source-language="en" datatype="plaintext"><body>
     <trans-unit id="0Of0">
-      <source xml:lang="en">0 of 0</source>
-    </trans-unit>
-    <trans-unit id="applyingPercentage">
-      <source xml:lang="en">{0}% Applying edits</source>
-    </trans-unit>
-    <trans-unit id="generating">
-      <source xml:lang="en">Generating edits</source>
+      <source xml:lang="en">—</source>
     </trans-unit>
     <trans-unit id="nOfM">
       <source xml:lang="en">{0} of {1}</source>
@@ -1367,11 +1378,17 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="tooltip_1n">
       <source xml:lang="en">1 change in {0} files</source>
     </trans-unit>
+    <trans-unit id="tooltip_busy">
+      <source xml:lang="en">{0} - Working...</source>
+    </trans-unit>
     <trans-unit id="tooltip_n1">
       <source xml:lang="en">{0} changes in 1 file</source>
     </trans-unit>
     <trans-unit id="tooltip_nm">
       <source xml:lang="en">{0} changes in {1} files</source>
+    </trans-unit>
+    <trans-unit id="working">
+      <source xml:lang="en">Working...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingModifiedDocumentEntry" source-language="en" datatype="plaintext"><body>
@@ -2048,9 +2065,6 @@ Type {3} to use commands</source>
     <trans-unit id="fileEntryDescription">
       <source xml:lang="en">{0} ({1})</source>
     </trans-unit>
-    <trans-unit id="folderEntryDescription">
-      <source xml:lang="en">{0} ({1})</source>
-    </trans-unit>
     <trans-unit id="installLabel">
       <source xml:lang="en">Install Chat Extensions...</source>
     </trans-unit>
@@ -2131,7 +2145,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Select a location to create the prompt file in...</source>
     </trans-unit>
     <trans-unit id="workbench.command.prompts.create.user.enable-sync-notification">
-      <source xml:lang="en">User prompts are not currently synchronized. Do you want to enable synchronization of the user prompts?</source>
+      <source xml:lang="en">User prompts and instructions are not currently synchronized. Do you want to enable synchronization of the user prompts and instructions?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptName" source-language="en" datatype="plaintext"><body>

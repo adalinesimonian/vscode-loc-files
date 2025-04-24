@@ -354,6 +354,9 @@ Do you want to allow running MCP servers from {3}?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpServer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.command.showOutput">
+      <source xml:lang="en">Show Output</source>
+    </trans-unit>
     <trans-unit id="mcpBadSchema">
       <source xml:lang="en">MCP server `{0}` has tools with invalid parameters which will be omitted.</source>
     </trans-unit>
@@ -362,6 +365,15 @@ Do you want to allow running MCP servers from {3}?</source>
     </trans-unit>
     <trans-unit id="mcpBadSchema.tool">
       <source xml:lang="en">Tool `{0}` has invalid JSON parameters:</source>
+    </trans-unit>
+    <trans-unit id="mcpServerError">
+      <source xml:lang="en">The MCP server {0} could not be started: {1}</source>
+    </trans-unit>
+    <trans-unit id="mcpServerInstall">
+      <source xml:lang="en">Install {0}</source>
+    </trans-unit>
+    <trans-unit id="mcpServerNotFound">
+      <source xml:lang="en">The command "{0}" needed to run {1} was not found.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpServerConnection" source-language="en" datatype="plaintext"><body>
