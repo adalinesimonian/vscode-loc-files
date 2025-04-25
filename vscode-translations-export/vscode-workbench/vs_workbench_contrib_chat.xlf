@@ -257,9 +257,6 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatClearActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.done.label">
-      <source xml:lang="en">Done</source>
-    </trans-unit>
     <trans-unit id="chat.newChat.label">
       <source xml:lang="en">New Chat</source>
     </trans-unit>
@@ -561,17 +558,23 @@
     <trans-unit id="chat.accept">
       <source xml:lang="en">Accept</source>
     </trans-unit>
+    <trans-unit id="configMcpCol">
+      <source xml:lang="en">Configure {0}</source>
+    </trans-unit>
     <trans-unit id="defaultBucketLabel">
       <source xml:lang="en">Other Tools</source>
     </trans-unit>
     <trans-unit id="label">
       <source xml:lang="en">Select Tools...</source>
     </trans-unit>
+    <trans-unit id="mcpShowOutput">
+      <source xml:lang="en">Show Output</source>
+    </trans-unit>
     <trans-unit id="mcplabel">
       <source xml:lang="en">MCP Server: {0}</source>
     </trans-unit>
     <trans-unit id="mcpstatus">
-      <source xml:lang="en">From {0} ({1})</source>
+      <source xml:lang="en">from {0}</source>
     </trans-unit>
     <trans-unit id="noTools">
       <source xml:lang="en">Add tools to chat</source>
@@ -1312,10 +1315,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Keep this Change</source>
     </trans-unit>
     <trans-unit id="accessibleDiff">
-      <source xml:lang="en">Show Accessible Diff View</source>
+      <source xml:lang="en">Show Accessible Diff View for Chat Edits</source>
     </trans-unit>
     <trans-unit id="diff">
-      <source xml:lang="en">Toggle Diff Editor</source>
+      <source xml:lang="en">Toggle Diff Editor for Chat Edits</source>
     </trans-unit>
     <trans-unit id="discard">
       <source xml:lang="en">Undo Chat Edits</source>
@@ -2100,21 +2103,19 @@ Type {3} to use commands</source>
     <trans-unit id="toolConfirmationMessage">
       <source xml:lang="en">Action required: {0}</source>
     </trans-unit>
+    <trans-unit id="toolResultData">
+      <source xml:lang="en">Tool result data of type {0} ({1} bytes)</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modelPickerActionItem" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.modelPicker.label">
       <source xml:lang="en">Pick Model</source>
     </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modelPickerWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.moreModels">
       <source xml:lang="en">Add Premium Models</source>
     </trans-unit>
     <trans-unit id="chat.moreModels.tooltip">
       <source xml:lang="en">Add premium models</source>
-    </trans-unit>
-    <trans-unit id="modelPicker">
-      <source xml:lang="en">Model Picker</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/attachInstructionsCommand" source-language="en" datatype="plaintext"><body>
@@ -2132,14 +2133,8 @@ Type {3} to use commands</source>
     <trans-unit id="enable.capitalized">
       <source xml:lang="en">Enable</source>
     </trans-unit>
-    <trans-unit id="workbench.command.instructions.create.initial-content">
-      <source xml:lang="en">Add instructions...</source>
-    </trans-unit>
     <trans-unit id="workbench.command.instructions.create.location.placeholder">
       <source xml:lang="en">Select a location to create the instructions file in...</source>
-    </trans-unit>
-    <trans-unit id="workbench.command.prompt.create.initial-content">
-      <source xml:lang="en">Add prompt contents...</source>
     </trans-unit>
     <trans-unit id="workbench.command.prompt.create.location.placeholder">
       <source xml:lang="en">Select a location to create the prompt file in...</source>
