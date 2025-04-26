@@ -646,7 +646,7 @@
       <source xml:lang="en">Run Prompt In New Chat</source>
     </trans-unit>
     <trans-unit id="run-prompt.capitalized">
-      <source xml:lang="en">Run Prompt</source>
+      <source xml:lang="en">Run Prompt in Current Chat</source>
     </trans-unit>
     <trans-unit id="run-prompt.capitalized.ellipses">
       <source xml:lang="en">Run Prompt...</source>
@@ -769,10 +769,10 @@
       <source xml:lang="en">This setting is deprecated. Please use `chat.detectParticipant.enabled` instead.</source>
     </trans-unit>
     <trans-unit id="chat.extensionToolsEnabled">
-      <source xml:lang="en">Enable using tools contributed by third-party extensions in Copilot Chat agent mode.</source>
+      <source xml:lang="en">Enable using tools contributed by third-party extensions.</source>
     </trans-unit>
     <trans-unit id="chat.extensionToolsPolicy">
-      <source xml:lang="en">Enable using tools contributed by third-party extensions in Copilot Chat agent mode.</source>
+      <source xml:lang="en">Enable using tools contributed by third-party extensions.</source>
     </trans-unit>
     <trans-unit id="chat.focusWindowOnConfirmation">
       <source xml:lang="en">Controls whether the Copilot window should be focused when a confirmation is needed.</source>
@@ -822,6 +822,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.reusablePrompts.config.locations.title">
       <source xml:lang="en">Prompt File Locations</source>
+    </trans-unit>
+    <trans-unit id="chat.sendElementsToChat.enabled">
+      <source xml:lang="en">Controls whether elements can be sent to chat from the Simple Browser.</source>
     </trans-unit>
     <trans-unit id="chat.tools.autoApprove">
       <source xml:lang="en">Controls whether tool use should be automatically approved.</source>
@@ -930,6 +933,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.attachment.clearButton">
       <source xml:lang="en">Remove from context</source>
     </trans-unit>
+    <trans-unit id="chat.clickToViewContents">
+      <source xml:lang="en">Click to view the contents of: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.elementAttachment">
+      <source xml:lang="en">Attached element, {0}</source>
+    </trans-unit>
     <trans-unit id="chat.fileAttachment">
       <source xml:lang="en">Attached file, {0}</source>
     </trans-unit>
@@ -969,6 +978,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.attachment3">
       <source xml:lang="en">Attached context: {0}.</source>
+    </trans-unit>
+    <trans-unit id="chat.clickToViewContents">
+      <source xml:lang="en">Click to view the contents of: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.elementAttachment">
+      <source xml:lang="en">Attached element, {0}</source>
     </trans-unit>
     <trans-unit id="chat.fileAttachment3">
       <source xml:lang="en">Attached: {0}.</source>
@@ -1132,6 +1147,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Made changes.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatToolInputOutputContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.input">
+      <source xml:lang="en">Input</source>
+    </trans-unit>
+    <trans-unit id="chat.output">
+      <source xml:lang="en">Output</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatToolInvocationPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="allowGloballTooltip">
       <source xml:lang="en">Always allow this tool to run without confirmation.</source>
@@ -1156,6 +1179,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="continue">
       <source xml:lang="en">Continue</source>
+    </trans-unit>
+    <trans-unit id="seeMore">
+      <source xml:lang="en">See more</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTreeContentPart" source-language="en" datatype="plaintext"><body>
@@ -1373,7 +1399,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">{0} of {1}</source>
     </trans-unit>
     <trans-unit id="paused">
-      <source xml:lang="en">Edits Paused</source>
+      <source xml:lang="en">Paused</source>
     </trans-unit>
     <trans-unit id="tooltip_11">
       <source xml:lang="en">1 change in 1 file</source>
@@ -1445,6 +1471,32 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">{0} (changes from chat)</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/simpleBrowserEditorOverlay" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="cancelSelection">
+      <source xml:lang="en">Click to cancel selection.</source>
+    </trans-unit>
+    <trans-unit id="elementCancelMessage">
+      <source xml:lang="en">Selection canceled</source>
+    </trans-unit>
+    <trans-unit id="elementSelectionComplete">
+      <source xml:lang="en">Element added to chat.</source>
+    </trans-unit>
+    <trans-unit id="elementSelectionInProgress">
+      <source xml:lang="en">Selection in progress...</source>
+    </trans-unit>
+    <trans-unit id="elementSelectionMessage">
+      <source xml:lang="en">Add UI element to chat.</source>
+    </trans-unit>
+    <trans-unit id="selectAnElement">
+      <source xml:lang="en">Click to select an element.</source>
+    </trans-unit>
+    <trans-unit id="startSelection">
+      <source xml:lang="en">Start Selection</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditorInput" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.startEditing.confirmation.pending.message.default">
       <source xml:lang="en">Closing the chat editor will end your current edit session.</source>
@@ -1506,15 +1558,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
   <file original="src/vs/workbench/contrib/chat/browser/chatInputPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="actions.chat.accessibiltyHelp">
       <source xml:lang="en">Chat Input,  Type to ask questions or type / for topics, press enter to send out the request. Use {0} for Chat Accessibility Help.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentMode">
-      <source xml:lang="en">Agent</source>
-    </trans-unit>
-    <trans-unit id="chat.askMode">
-      <source xml:lang="en">Ask</source>
-    </trans-unit>
-    <trans-unit id="chat.normalMode">
-      <source xml:lang="en">Edit</source>
     </trans-unit>
     <trans-unit id="chatAttachFiles">
       <source xml:lang="en">Search for files and context to add to your request</source>
@@ -2107,6 +2150,17 @@ Type {3} to use commands</source>
       <source xml:lang="en">Tool result data of type {0} ({1} bytes)</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modePickerActionItem" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.agentMode">
+      <source xml:lang="en">Agent</source>
+    </trans-unit>
+    <trans-unit id="chat.askMode">
+      <source xml:lang="en">Ask</source>
+    </trans-unit>
+    <trans-unit id="chat.normalMode">
+      <source xml:lang="en">Edit</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modelPickerActionItem" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.modelPicker.label">
       <source xml:lang="en">Pick Model</source>
@@ -2452,16 +2506,21 @@ Type {3} to use commands</source>
       <source xml:lang="en">Record '{0}' is implied to have the '{1}' value if '{2}' record is present so the specified value will be ignored.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/description" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="prompt.header.metadata.description.diagnostics.invalid-value-type">
-      <source xml:lang="en">Value of the '{0}' metadata must be '{1}', got '{2}'.</source>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/include" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="prompt.header.metadata.include.diagnostics.non-valid-glob">
+      <source xml:lang="en">Invalid glob pattern '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="prompt.header.metadata.string.diagnostics.invalid-language">
+      <source xml:lang="en">The '{0}' metadata record is only valid in instruction files.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/mode" source-language="en" datatype="plaintext"><body>
     <trans-unit id="prompt.header.metadata.mode.diagnostics.invalid-value">
       <source xml:lang="en">Value of the '{0}' metadata must be one of ({1}), got '{2}'.</source>
     </trans-unit>
-    <trans-unit id="prompt.header.metadata.mode.diagnostics.invalid-value-type">
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/record" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="prompt.header.metadata.string.diagnostics.invalid-value-type">
       <source xml:lang="en">Value of the '{0}' metadata must be '{1}', got '{2}'.</source>
     </trans-unit>
 </body></file>

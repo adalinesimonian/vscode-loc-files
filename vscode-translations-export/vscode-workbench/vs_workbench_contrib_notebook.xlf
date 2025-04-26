@@ -463,6 +463,9 @@
     <trans-unit id="notebookActions.openOutputInEditor">
       <source xml:lang="en">Open Cell Output in Text Editor</source>
     </trans-unit>
+    <trans-unit id="notebookActions.openOutputInNotebookOutputEditor">
+      <source xml:lang="en">Open in Output Preview</source>
+    </trans-unit>
     <trans-unit id="notebookActions.showAllOutput">
       <source xml:lang="en">Show Empty Outputs</source>
     </trans-unit>
@@ -1135,6 +1138,9 @@
     <trans-unit id="notebook.multiCursor.enabled">
       <source xml:lang="en">Experimental. Enables a limited set of multi cursor controls across multiple cells in the notebook editor. Currently supported are core editor actions (typing/cut/copy/paste/composition) and a limited subset of editor commands.</source>
     </trans-unit>
+    <trans-unit id="notebook.output.openInPreviewEditor.description">
+      <source xml:lang="en">Controls whether or not the action to open a cell output in a preview editor is enabled. This action can be used via the cell output menu.</source>
+    </trans-unit>
     <trans-unit id="notebook.outputFontFamily">
       <source xml:lang="en">The font family of the output text within notebook cells. When set to empty, the {0} is used.</source>
     </trans-unit>
@@ -1544,6 +1550,22 @@ Run the Open Accessibility Help command for more information</source>
     </trans-unit>
     <trans-unit id="variablesViewIcon">
       <source xml:lang="en">View icon of the variables view.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/notebook/browser/outputEditor/notebookOutputEditor" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="empty">
+      <source xml:lang="en">Cell has no output</source>
+    </trans-unit>
+    <trans-unit id="noRenderer.2">
+      <source xml:lang="en">No renderer could be found for output. It has the following mimetypes: {0}</source>
+    </trans-unit>
+    <trans-unit id="notebookOutputEditor">
+      <source xml:lang="en">Notebook Output Editor</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/notebook/browser/outputEditor/notebookOutputEditorInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="notebookOutputEditorInput">
+      <source xml:lang="en">Notebook Output Preview</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/notebook/browser/services/notebookExecutionServiceImpl" source-language="en" datatype="plaintext"><body>

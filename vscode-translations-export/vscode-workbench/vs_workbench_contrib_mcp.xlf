@@ -19,6 +19,9 @@
     <trans-unit id="mcp.command.restartServer">
       <source xml:lang="en">Restart Server</source>
     </trans-unit>
+    <trans-unit id="mcp.command.showConfiguration">
+      <source xml:lang="en">Show Configuration</source>
+    </trans-unit>
     <trans-unit id="mcp.command.showOutput">
       <source xml:lang="en">Show Output</source>
     </trans-unit>
@@ -389,7 +392,7 @@ Do you want to allow running MCP servers from {3}?</source>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcp.tool.warning">
-      <source xml:lang="en">{0} This tool is from '{1}' (MCP Server). Note that MCP servers or malicious conversation content may attempt to misuse '{2}' through tools. Please carefully review any requested actions.</source>
+      <source xml:lang="en">{0} Note that MCP servers or malicious conversation content may attempt to misuse '{1}' through tools.</source>
     </trans-unit>
     <trans-unit id="msg.msg">
       <source xml:lang="en">{0}
@@ -401,6 +404,9 @@ Do you want to allow running MCP servers from {3}?</source>
     </trans-unit>
     <trans-unit id="msg.run">
       <source xml:lang="en">Running {0}</source>
+    </trans-unit>
+    <trans-unit id="msg.subtitle">
+      <source xml:lang="en">{0} (MCP Server)</source>
     </trans-unit>
     <trans-unit id="msg.title">
       <source xml:lang="en">Run {0}</source>
