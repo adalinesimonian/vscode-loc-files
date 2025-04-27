@@ -2137,12 +2137,6 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/languageModelToolsService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="msg.title">
-      <source xml:lang="en">Run {0}</source>
-    </trans-unit>
-    <trans-unit id="tool.warning">
-      <source xml:lang="en">{0} This tool is from the extension `{1}`. Please carefully review any requested actions.</source>
-    </trans-unit>
     <trans-unit id="toolConfirmationMessage">
       <source xml:lang="en">Action required: {0}</source>
     </trans-unit>
@@ -2506,8 +2500,8 @@ Type {3} to use commands</source>
       <source xml:lang="en">Record '{0}' is implied to have the '{1}' value if '{2}' record is present so the specified value will be ignored.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/include" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="prompt.header.metadata.include.diagnostics.non-valid-glob">
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/applyTo" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="prompt.header.metadata.applyTo.diagnostics.non-valid-glob">
       <source xml:lang="en">Invalid glob pattern '{0}'.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.string.diagnostics.invalid-language">
