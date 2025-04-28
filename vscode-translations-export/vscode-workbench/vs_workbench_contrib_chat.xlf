@@ -210,6 +210,9 @@
     <trans-unit id="openChat">
       <source xml:lang="en">Open Chat</source>
     </trans-unit>
+    <trans-unit id="openChatMode">
+      <source xml:lang="en">Open Chat ({0})</source>
+    </trans-unit>
     <trans-unit id="quotaResetDate">
       <source xml:lang="en">The allowance will renew on {0}.</source>
     </trans-unit>
@@ -1916,10 +1919,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Set up Copilot to use AI features.</source>
     </trans-unit>
     <trans-unit id="additionalUsageDisabled">
-      <source xml:lang="en">Pay per additional requests is disabled.</source>
+      <source xml:lang="en">Additional paid premium requests are disabled.</source>
     </trans-unit>
     <trans-unit id="additionalUsageEnabled">
-      <source xml:lang="en">Pay per additional requests is enabled.</source>
+      <source xml:lang="en">Additional paid premium requests are enabled.</source>
     </trans-unit>
     <trans-unit id="basicChatsLabel">
       <source xml:lang="en">Basic chat requests</source>
@@ -1946,7 +1949,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Completions quota reached</source>
     </trans-unit>
     <trans-unit id="enableAdditionalUsage">
-      <source xml:lang="en">Enable Pay for Additional Requests</source>
+      <source xml:lang="en">Enable Additional Premium Requests</source>
     </trans-unit>
     <trans-unit id="gaugeBackground">
       <source xml:lang="en">Gauge background color.</source>
@@ -2142,17 +2145,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="toolResultData">
       <source xml:lang="en">Tool result data of type {0} ({1} bytes)</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modePickerActionItem" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.agentMode">
-      <source xml:lang="en">Agent</source>
-    </trans-unit>
-    <trans-unit id="chat.askMode">
-      <source xml:lang="en">Ask</source>
-    </trans-unit>
-    <trans-unit id="chat.normalMode">
-      <source xml:lang="en">Edit</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modelPickerActionItem" source-language="en" datatype="plaintext"><body>
