@@ -826,6 +826,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.reusablePrompts.config.locations.title">
       <source xml:lang="en">Prompt File Locations</source>
     </trans-unit>
+    <trans-unit id="chat.sendElementsToChat.attachImages">
+      <source xml:lang="en">Controls whether a screenshot of the attached element will be added to the chat.</source>
+    </trans-unit>
     <trans-unit id="chat.sendElementsToChat.enabled">
       <source xml:lang="en">Controls whether elements can be sent to chat from the Simple Browser.</source>
     </trans-unit>
@@ -906,8 +909,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="singleTableHint">
       <source xml:lang="en">1 table </source>
     </trans-unit>
+    <trans-unit id="toolCompletedHint">
+      <source xml:lang="en">Tool {0} completed.</source>
+    </trans-unit>
     <trans-unit id="toolInvocationsHint">
-      <source xml:lang="en">Action required: {0} </source>
+      <source xml:lang="en">Action required to confirm tool action: {0}</source>
+    </trans-unit>
+    <trans-unit id="toolInvocationsHintKb">
+      <source xml:lang="en">Action required to confirm tool action: {0}. Press {1} to accept or {2} to cancel.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatAgentHover" source-language="en" datatype="plaintext"><body>
@@ -956,6 +965,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.imageAttachmentWarning">
       <source xml:lang="en">This GIF was partially omitted - current frame will be sent.</source>
+    </trans-unit>
+    <trans-unit id="chat.omittedFileAttachment">
+      <source xml:lang="en">Omitted this file: {0}</source>
     </trans-unit>
     <trans-unit id="chat.omittedImageAttachment">
       <source xml:lang="en">Omitted this image: {0}</source>
@@ -1481,17 +1493,26 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="cancelSelection">
       <source xml:lang="en">Click to cancel selection.</source>
     </trans-unit>
+    <trans-unit id="chat.expandOverlay">
+      <source xml:lang="en">Expand Overlay</source>
+    </trans-unit>
+    <trans-unit id="chat.hideOverlay">
+      <source xml:lang="en">Collapse Overlay</source>
+    </trans-unit>
+    <trans-unit id="chat.nextSelection">
+      <source xml:lang="en">Select Again</source>
+    </trans-unit>
     <trans-unit id="elementCancelMessage">
       <source xml:lang="en">Selection canceled</source>
     </trans-unit>
     <trans-unit id="elementSelectionComplete">
-      <source xml:lang="en">Element added to chat.</source>
+      <source xml:lang="en">Element added to chat</source>
     </trans-unit>
     <trans-unit id="elementSelectionInProgress">
       <source xml:lang="en">Selection in progress...</source>
     </trans-unit>
     <trans-unit id="elementSelectionMessage">
-      <source xml:lang="en">Add UI element to chat.</source>
+      <source xml:lang="en">Add element to chat</source>
     </trans-unit>
     <trans-unit id="selectAnElement">
       <source xml:lang="en">Click to select an element.</source>
@@ -1988,7 +2009,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">{0}%</source>
     </trans-unit>
     <trans-unit id="quotaDisplayWithOverage">
-      <source xml:lang="en">{0}% +{1}</source>
+      <source xml:lang="en">+{0} paid</source>
     </trans-unit>
     <trans-unit id="quotaLabel">
       <source xml:lang="en">Manage Copilot</source>
@@ -2140,9 +2161,6 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/languageModelToolsService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="toolConfirmationMessage">
-      <source xml:lang="en">Action required: {0}</source>
-    </trans-unit>
     <trans-unit id="toolResultData">
       <source xml:lang="en">Tool result data of type {0} ({1} bytes)</source>
     </trans-unit>
