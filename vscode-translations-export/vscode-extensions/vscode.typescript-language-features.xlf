@@ -217,6 +217,9 @@
     <trans-unit id="++CODE++f76ba63dc61ef2c6d26415763270531dcbc46803ae43acfa1804148aa22a83de">
       <source xml:lang="en">Open Config File</source>
     </trans-unit>
+    <trans-unit id="++CODE++03f69885814b5b7aa5e4758e46733da443a237e2ec63488bddd230f501ff166a">
+      <source xml:lang="en">Open on GitHub</source>
+    </trans-unit>
     <trans-unit id="++CODE++5d40b1f86b7c14ffbe79c4e326d1ca14ad35225cce6bef125f243202a3ac00d1">
       <source xml:lang="en">Organize Imports</source>
     </trans-unit>
@@ -300,6 +303,9 @@
     </trans-unit>
     <trans-unit id="++CODE++1bee642f6b81661485922334f80ec8755bedd6b1fb8cc88fd15c3fd04a1172f4">
       <source xml:lang="en">The JS/TS language service immediately crashed 5 times. The service will not be restarted.&#10;This may be caused by a plugin contributed by one of these extensions: {0}.&#10;Please try disabling these extensions before filing an issue against VS Code.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++f042c53a9eee9047d6f2d807ed1266c13253a6848e195a9fd2a5f23bd3e24660">
+      <source xml:lang="en">The TypeScript Go extension is not installed.</source>
     </trans-unit>
     <trans-unit id="++CODE++db560cf2114ff87b85623ee5375a8f83059098968a27572f492b18a9c494ba46">
       <source xml:lang="en">The current selection cannot be extracted</source>
@@ -533,6 +539,9 @@
     </trans-unit>
     <trans-unit id="typescript.tsc.autoDetect.off">
       <source xml:lang="en">Disable this feature.</source>
+    </trans-unit>
+    <trans-unit id="typescript.useTsgo">
+      <source xml:lang="en">Disables TypeScript and JavaScript language features to allow usage of the TypeScript Go experimental extension. Requires TypeScript Go to be installed and configured. Requires reloading extensions after changing this setting.</source>
     </trans-unit>
     <trans-unit id="typescript.disableAutomaticTypeAcquisition">
       <source xml:lang="en">Disables [automatic type acquisition](https://code.visualstudio.com/docs/nodejs/working-with-javascript#_typings-and-automatic-type-acquisition). Automatic type acquisition fetches `@types` packages from npm to improve IntelliSense for external libraries.</source>
