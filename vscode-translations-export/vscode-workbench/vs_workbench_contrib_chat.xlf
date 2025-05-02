@@ -740,7 +740,7 @@
       <source xml:lang="en">Chat</source>
     </trans-unit>
     <trans-unit id="chat.agent.enabled.description">
-      <source xml:lang="en">Enable agent mode for {0}. When this is enabled, a dropdown appears in the view to toggle agent mode.</source>
+      <source xml:lang="en">Enable agent mode for {0}. When this is enabled, agent mode can be activated via the dropdown in the view.</source>
     </trans-unit>
     <trans-unit id="chat.agent.maxRequests">
       <source xml:lang="en">The maximum number of requests to allow Copilot Edits to use per-turn in agent mode. When the limit is reached, Copilot will ask the user to confirm that it should keep working. 
@@ -1127,14 +1127,17 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatQuotaExceededPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="signedUpClickToContinue">
-      <source xml:lang="en">Signed up? Click to retry.</source>
+    <trans-unit id="clickToContinue">
+      <source xml:lang="en">Click to retry.</source>
+    </trans-unit>
+    <trans-unit id="enableAdditionalUsage">
+      <source xml:lang="en">Manage paid premium requests</source>
     </trans-unit>
     <trans-unit id="upgradeToCopilotPro">
       <source xml:lang="en">Upgrade to Copilot Pro</source>
     </trans-unit>
     <trans-unit id="waitWarning">
-      <source xml:lang="en">Signing up may take a few minutes to take effect.</source>
+      <source xml:lang="en">Changes may take a few minutes to take effect.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatReferencesContentPart" source-language="en" datatype="plaintext"><body>
@@ -1852,6 +1855,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="invalidEnterpriseInstance">
       <source xml:lang="en">You must enter a valid {0} instance (i.e. "octocat" or "https://octocat.ghe.com")</source>
+    </trans-unit>
+    <trans-unit id="manageOverages">
+      <source xml:lang="en">Manage Copilot Overages</source>
     </trans-unit>
     <trans-unit id="managePlan">
       <source xml:lang="en">Upgrade to Copilot Pro</source>
