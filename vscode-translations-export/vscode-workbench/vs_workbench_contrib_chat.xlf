@@ -684,6 +684,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cell.lowercase">
+      <source xml:lang="en">cell</source>
+    </trans-unit>
     <trans-unit id="chat.fileAttachment">
       <source xml:lang="en">Attached {0}, {1}</source>
     </trans-unit>
@@ -989,72 +992,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatAttachmentsContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.attachment">
-      <source xml:lang="en">Attached context, {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.attachment3">
-      <source xml:lang="en">Attached context: {0}.</source>
-    </trans-unit>
-    <trans-unit id="chat.clickToViewContents">
-      <source xml:lang="en">Click to view the contents of: {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.elementAttachment">
-      <source xml:lang="en">Attached element, {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.fileAttachment3">
-      <source xml:lang="en">Attached: {0}.</source>
-    </trans-unit>
-    <trans-unit id="chat.fileAttachmentHover">
-      <source xml:lang="en">Selected model does not support this {0} type.</source>
-    </trans-unit>
-    <trans-unit id="chat.fileAttachmentWithRange3">
-      <source xml:lang="en">Attached: {0}, line {1} to line {2}.</source>
-    </trans-unit>
-    <trans-unit id="chat.imageAttachment">
-      <source xml:lang="en">Attached image, {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.imageAttachmentHover">
-      <source xml:lang="en">{0}</source>
-    </trans-unit>
-    <trans-unit id="chat.imageAttachmentWarning">
-      <source xml:lang="en">This GIF was partially omitted - current frame was be sent.</source>
-    </trans-unit>
-    <trans-unit id="chat.notebookOutputFileAttachment3">
-      <source xml:lang="en">Attached: {0}.</source>
-    </trans-unit>
-    <trans-unit id="chat.notebookOutputImageAttachment">
-      <source xml:lang="en">Attached: {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.notebookOutputOmittedFileAttachment">
-      <source xml:lang="en">Omitted: {0}.</source>
-    </trans-unit>
-    <trans-unit id="chat.notebookOutputOmittedImageAttachment">
-      <source xml:lang="en">Omitted: {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.notebookOutputPartialFileAttachment">
-      <source xml:lang="en">Partially attached: {0}.</source>
-    </trans-unit>
-    <trans-unit id="chat.notebookOutputPartiallyOmittedImageAttachment">
-      <source xml:lang="en">Partially omitted: {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.omittedFileAttachment">
-      <source xml:lang="en">Omitted: {0}.</source>
-    </trans-unit>
-    <trans-unit id="chat.omittedFileAttachmentWithRange">
-      <source xml:lang="en">Omitted: {0}, line {1} to line {2}.</source>
-    </trans-unit>
-    <trans-unit id="chat.omittedImageAttachment">
-      <source xml:lang="en">Omitted this image: {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.partialFileAttachment">
-      <source xml:lang="en">Partially attached: {0}.</source>
-    </trans-unit>
-    <trans-unit id="chat.partialFileAttachmentWithRange">
-      <source xml:lang="en">Partially attached: {0}, line {1} to line {2}.</source>
-    </trans-unit>
-    <trans-unit id="chat.partiallyOmittedImageAttachment">
-      <source xml:lang="en">Partially omitted this image: {0}</source>
-    </trans-unit>
     <trans-unit id="resource">
       <source xml:lang="en">The full value of the chat attachment resource, including scheme and path</source>
     </trans-unit>
