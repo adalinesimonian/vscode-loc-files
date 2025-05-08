@@ -813,9 +813,6 @@
     <trans-unit id="typescript.openTsServerLog.title">
       <source xml:lang="en">Open TS Server log</source>
     </trans-unit>
-    <trans-unit id="configuration.tsserver.useVsCodeWatcher.deprecation">
-      <source xml:lang="en">Please use the `#typescript.tsserver.watchOptions#` setting instead.</source>
-    </trans-unit>
     <trans-unit id="configuration.tsserver.watchOptions.watchDirectory.fixedChunkSizePolling">
       <source xml:lang="en">Polls directories in chunks at regular interval.</source>
     </trans-unit>
@@ -978,20 +975,8 @@
     <trans-unit id="configuration.tsserver.maxTsServerMemory">
       <source xml:lang="en">The maximum amount of memory (in MB) to allocate to the TypeScript server process. To use a memory limit greater than 4 GB, use `#typescript.tsserver.nodePath#` to run TS Server with a custom Node installation.</source>
     </trans-unit>
-    <trans-unit id="typescript.preferences.renameShorthandProperties.deprecationMessage">
-      <source xml:lang="en">The setting &apos;typescript.preferences.renameShorthandProperties&apos; has been deprecated in favor of &apos;typescript.preferences.useAliasesForRenames&apos;</source>
-    </trans-unit>
     <trans-unit id="taskDefinition.tsconfig.description">
       <source xml:lang="en">The tsconfig file that defines the TS build.</source>
-    </trans-unit>
-    <trans-unit id="configuration.javascript.checkJs.checkJs.deprecation">
-      <source xml:lang="en">This setting has been deprecated in favor of `js/ts.implicitProjectConfig.checkJs`.</source>
-    </trans-unit>
-    <trans-unit id="configuration.javascript.checkJs.experimentalDecorators.deprecation">
-      <source xml:lang="en">This setting has been deprecated in favor of `js/ts.implicitProjectConfig.experimentalDecorators`.</source>
-    </trans-unit>
-    <trans-unit id="configuration.tsserver.useSeparateSyntaxServer.deprecation">
-      <source xml:lang="en">This setting has been deprecated in favor of `typescript.tsserver.useSyntaxServer`.</source>
     </trans-unit>
     <trans-unit id="typescript.preferences.organizeImports.typeOrder.first">
       <source xml:lang="en">Type only named imports are sorted to the beginning of the import list. E.g. `import { type A, type Y, B, Z } from &apos;module&apos;;`</source>

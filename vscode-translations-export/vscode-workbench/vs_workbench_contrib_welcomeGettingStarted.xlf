@@ -827,6 +827,12 @@ Opening a file/folder will prompt to grant trust. You can always {1} later.</sou
     <trans-unit id="runTasks">
       <source xml:lang="en">Run Auto-detected Tasks</source>
     </trans-unit>
+    <trans-unit id="settings">
+      <source xml:lang="en">GitHub Copilot Free, Pro and Pro+ may show [public code]({0}) suggestions and we may use your data for product improvement. You can change these [settings]({1}) at any time.</source>
+      <note>{Locked="["}
+{Locked="]({0})"}
+{Locked="]({1})"}</note>
+    </trans-unit>
     <trans-unit id="setupCopilotButton.chatWithCopilot">
       <source xml:lang="en">Chat with Copilot</source>
     </trans-unit>

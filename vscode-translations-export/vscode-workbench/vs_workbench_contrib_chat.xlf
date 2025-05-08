@@ -126,6 +126,15 @@
     <trans-unit id="actions.interactiveSession.focus">
       <source xml:lang="en">Focus Chat List</source>
     </trans-unit>
+    <trans-unit id="agent.newSession">
+      <source xml:lang="en">Start new session?</source>
+    </trans-unit>
+    <trans-unit id="agent.newSession.confirm">
+      <source xml:lang="en">Yes</source>
+    </trans-unit>
+    <trans-unit id="agent.newSessionMessage">
+      <source xml:lang="en">Changing the chat mode will end your current edit session. Would you like to change the chat mode?</source>
+    </trans-unit>
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
     </trans-unit>
@@ -230,6 +239,9 @@
     </trans-unit>
     <trans-unit id="switchChat.confirmPhrase">
       <source xml:lang="en">Switching chats will end your current edit session.</source>
+    </trans-unit>
+    <trans-unit id="switchMode.confirmPhrase">
+      <source xml:lang="en">Switching chat modes will end your current edit session.</source>
     </trans-unit>
     <trans-unit id="title4">
       <source xml:lang="en">Copilot</source>
@@ -411,15 +423,6 @@
     <trans-unit id="actions.chat.submitWithCodebase">
       <source xml:lang="en">Send with {0}</source>
     </trans-unit>
-    <trans-unit id="agent.newSession">
-      <source xml:lang="en">Start new session?</source>
-    </trans-unit>
-    <trans-unit id="agent.newSession.confirm">
-      <source xml:lang="en">Yes</source>
-    </trans-unit>
-    <trans-unit id="agent.newSessionMessage">
-      <source xml:lang="en">Changing the chat mode will end your current edit session. Would you like to change the chat mode?</source>
-    </trans-unit>
     <trans-unit id="chat.newChat.label">
       <source xml:lang="en">Send to New Chat</source>
     </trans-unit>
@@ -458,9 +461,6 @@
     </trans-unit>
     <trans-unit id="setChatMode">
       <source xml:lang="en">Set Mode</source>
-    </trans-unit>
-    <trans-unit id="switchMode.confirmPhrase">
-      <source xml:lang="en">Switching chat modes will end your current edit session.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatFileTreeActions" source-language="en" datatype="plaintext"><body>
@@ -1807,7 +1807,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">You need to set up Copilot to use Chat.</source>
     </trans-unit>
     <trans-unit id="settings">
-      <source xml:lang="en">Copilot Free and Pro may show [public code]({0}) suggestions and we may use your data for product improvement. You can change these [settings]({1}) at any time.</source>
+      <source xml:lang="en">GitHub Copilot Free, Pro and Pro+ may show [public code]({0}) suggestions and we may use your data for product improvement. You can change these [settings]({1}) at any time.</source>
       <note>{Locked="["}
 {Locked="]({0})"}
 {Locked="]({1})"}</note>
@@ -1847,12 +1847,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="signUpFree">
       <source xml:lang="en">Sign in to use Copilot for free</source>
-    </trans-unit>
-    <trans-unit id="terms">
-      <source xml:lang="en">By continuing, you agree to the [Terms]({0}) and [Privacy Policy]({1}).</source>
-      <note>{Locked="["}
-{Locked="]({0})"}
-{Locked="]({1})"}</note>
     </trans-unit>
     <trans-unit id="triggerChatSetup">
       <source xml:lang="en">Use AI Features with Copilot for free...</source>
