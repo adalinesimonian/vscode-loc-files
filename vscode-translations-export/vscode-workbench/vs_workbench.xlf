@@ -5435,6 +5435,22 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="showGPUInfo">
       <source xml:lang="en">Show GPU Info</source>
     </trans-unit>
+    <trans-unit id="stopTracing">
+      <source xml:lang="en">Stop Tracing</source>
+    </trans-unit>
+    <trans-unit id="stopTracing.button">
+      <source xml:lang="en">&amp;&amp;Relaunch and Enable Tracing</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="stopTracing.detail">
+      <source xml:lang="en">This can take up to one minute to complete.</source>
+    </trans-unit>
+    <trans-unit id="stopTracing.message">
+      <source xml:lang="en">Tracing requires to launch with a '--trace' argument</source>
+    </trans-unit>
+    <trans-unit id="stopTracing.title">
+      <source xml:lang="en">Creating trace file...</source>
+    </trans-unit>
     <trans-unit id="toggleDevTools">
       <source xml:lang="en">Toggle Developer Tools</source>
     </trans-unit>
@@ -5633,9 +5649,6 @@ This option requires restart to take effect.</source>
     </trans-unit>
     <trans-unit id="touchbar.ignored">
       <source xml:lang="en">A set of identifiers for entries in the touchbar that should not show up (for example `workbench.action.navigateBack`).</source>
-    </trans-unit>
-    <trans-unit id="useNewProcessExplorer">
-      <source xml:lang="en">Controls whether a the process explorer opens in a floating window.</source>
     </trans-unit>
     <trans-unit id="window.clickThroughInactive">
       <source xml:lang="en">If enabled, clicking on an inactive window will both activate the window and trigger the element under the mouse if it is clickable. If disabled, clicking anywhere on an inactive window will activate it only and a second click is required on the element.</source>

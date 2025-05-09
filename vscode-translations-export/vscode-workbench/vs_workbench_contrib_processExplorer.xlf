@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file original="src/vs/workbench/contrib/processExplorer/electron-sandbox/processExplorer.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="processExplorer">
-      <source xml:lang="en">Process Explorer</source>
+  <file original="src/vs/workbench/contrib/processExplorer/browser/processExplorer.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="miOpenProcessExplorerer">
+      <source xml:lang="en">Open &amp;&amp;Process Explorer</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="openProcessExplorer">
+      <source xml:lang="en">Open Process Explorer</source>
     </trans-unit>
     <trans-unit id="promptOpenWith.processExplorer.displayName">
       <source xml:lang="en">Process Explorer</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/processExplorer/electron-sandbox/processExplorerControl" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/processExplorer/browser/processExplorer.web.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="processExplorer">
+      <source xml:lang="en">Process Explorer</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/processExplorer/browser/processExplorerControl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copy">
       <source xml:lang="en">Copy</source>
     </trans-unit>
@@ -40,11 +49,16 @@
       <source xml:lang="en">PID</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/processExplorer/electron-sandbox/processExplorerEditorInput" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/processExplorer/browser/processExplorerEditorInput" source-language="en" datatype="plaintext"><body>
     <trans-unit id="processExplorerEditorLabelIcon">
       <source xml:lang="en">Icon of the process explorer editor label.</source>
     </trans-unit>
     <trans-unit id="processExplorerInputName">
+      <source xml:lang="en">Process Explorer</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/processExplorer/electron-sandbox/processExplorer.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="processExplorer">
       <source xml:lang="en">Process Explorer</source>
     </trans-unit>
 </body></file>

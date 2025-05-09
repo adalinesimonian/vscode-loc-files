@@ -1457,20 +1457,6 @@ Received: '{1}'.</source>
     <trans-unit id="sourceMissing">
       <source xml:lang="en">Unable to find shell script in '{0}'</source>
     </trans-unit>
-    <trans-unit id="warnEscalation">
-      <source xml:lang="en">{0} will now prompt with 'osascript' for Administrator privileges to install the shell command.</source>
-    </trans-unit>
-    <trans-unit id="warnEscalationUninstall">
-      <source xml:lang="en">{0} will now prompt with 'osascript' for Administrator privileges to uninstall the shell command.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/platform/process/electron-main/processMainService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="local">
-      <source xml:lang="en">Local</source>
-    </trans-unit>
-    <trans-unit id="processExplorer">
-      <source xml:lang="en">Process Explorer</source>
-    </trans-unit>
     <trans-unit id="trace.detail">
       <source xml:lang="en">Please create an issue and manually attach the following file:
 {0}</source>
@@ -1481,6 +1467,17 @@ Received: '{1}'.</source>
     <trans-unit id="trace.ok">
       <source xml:lang="en">&amp;&amp;OK</source>
       <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="warnEscalation">
+      <source xml:lang="en">{0} will now prompt with 'osascript' for Administrator privileges to install the shell command.</source>
+    </trans-unit>
+    <trans-unit id="warnEscalationUninstall">
+      <source xml:lang="en">{0} will now prompt with 'osascript' for Administrator privileges to uninstall the shell command.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/process/electron-main/processMainService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="local">
+      <source xml:lang="en">Local</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/quickinput/browser/commandsQuickAccess" source-language="en" datatype="plaintext"><body>
