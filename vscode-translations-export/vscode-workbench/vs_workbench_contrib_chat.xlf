@@ -317,45 +317,18 @@
       <source xml:lang="en">Insert into Terminal</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatContextActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.insertSearchResults">
-      <source xml:lang="en">Add Search Results to Chat</source>
-    </trans-unit>
-    <trans-unit id="chatContext.attach.instructions.label">
-      <source xml:lang="en">Instructions...</source>
-    </trans-unit>
-    <trans-unit id="chatContext.attach.placeholder">
-      <source xml:lang="en">Search attachments</source>
-    </trans-unit>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatContext" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatContext.attachScreenshot.labelElectron.Window">
       <source xml:lang="en">Screenshot Window</source>
     </trans-unit>
     <trans-unit id="chatContext.attachScreenshot.labelWeb">
       <source xml:lang="en">Screenshot</source>
     </trans-unit>
-    <trans-unit id="chatContext.diagnstic">
-      <source xml:lang="en">Problems...</source>
-    </trans-unit>
     <trans-unit id="chatContext.editors">
       <source xml:lang="en">Open Editors</source>
     </trans-unit>
-    <trans-unit id="chatContext.folder">
-      <source xml:lang="en">Files &amp; Folders...</source>
-    </trans-unit>
-    <trans-unit id="chatContext.notebook.kernelVariable">
-      <source xml:lang="en">Kernel Variable...</source>
-    </trans-unit>
-    <trans-unit id="chatContext.notebook.selectkernelVariable">
-      <source xml:lang="en">Select and Insert Kernel Variable</source>
-    </trans-unit>
     <trans-unit id="chatContext.relatedFiles">
       <source xml:lang="en">Related Files</source>
-    </trans-unit>
-    <trans-unit id="chatContext.searchResults">
-      <source xml:lang="en">Search Results</source>
-    </trans-unit>
-    <trans-unit id="chatContext.symbol">
-      <source xml:lang="en">Symbols...</source>
     </trans-unit>
     <trans-unit id="chatContext.tools">
       <source xml:lang="en">Tools...</source>
@@ -375,20 +348,22 @@
     <trans-unit id="imageFromClipboard">
       <source xml:lang="en">Image from Clipboard</source>
     </trans-unit>
-    <trans-unit id="markers.panel.allErrors">
-      <source xml:lang="en">All Problems</source>
-    </trans-unit>
-    <trans-unit id="markers.panel.at.ln.col.number">
-      <source xml:lang="en">[Ln {0}, Col {1}]</source>
-    </trans-unit>
     <trans-unit id="pastedImage">
       <source xml:lang="en">Pasted Image</source>
     </trans-unit>
-    <trans-unit id="pickAProblem">
-      <source xml:lang="en">Select a problem to attach</source>
-    </trans-unit>
     <trans-unit id="relatedFiles">
       <source xml:lang="en">Add related files to your working set</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatContextActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.insertSearchResults">
+      <source xml:lang="en">Add Search Results to Chat</source>
+    </trans-unit>
+    <trans-unit id="chatContext.attach.placeholder">
+      <source xml:lang="en">Search attachments</source>
+    </trans-unit>
+    <trans-unit id="goBack">
+      <source xml:lang="en">Go back ↩</source>
     </trans-unit>
     <trans-unit id="workbench.action.chat.attachContext.label.2">
       <source xml:lang="en">Add Context...</source>
@@ -637,8 +612,17 @@
     <trans-unit id="attach-instructions.capitalized.ellipses">
       <source xml:lang="en">Attach Instructions...</source>
     </trans-unit>
+    <trans-unit id="chatContext.attach.instructions.label">
+      <source xml:lang="en">Instructions...</source>
+    </trans-unit>
     <trans-unit id="commands.instructions.select-dialog.placeholder">
       <source xml:lang="en">Select instructions files to attach</source>
+    </trans-unit>
+    <trans-unit id="placeholder">
+      <source xml:lang="en">Select instructions files to attach</source>
+    </trans-unit>
+    <trans-unit id="user-data-dir.capitalized">
+      <source xml:lang="en">User data folder</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatRunPromptAction" source-language="en" datatype="plaintext"><body>
@@ -1111,7 +1095,25 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Output</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatToolInvocationPart" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTreeContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="treeAriaLabel">
+      <source xml:lang="en">File Tree</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatInputOutputMarkdownProgressPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="toolResultData">
+      <source xml:lang="en">Data of type {0} ({1} bytes)</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatTerminalToolSubPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="continue">
+      <source xml:lang="en">Continue</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolConfirmationSubPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="allowGloballTooltip">
       <source xml:lang="en">Always allow this tool to run without confirmation.</source>
     </trans-unit>
@@ -1138,14 +1140,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="seeMore">
       <source xml:lang="en">See more</source>
-    </trans-unit>
-    <trans-unit id="toolResultData">
-      <source xml:lang="en">Data of type {0} ({1} bytes)</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTreeContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="treeAriaLabel">
-      <source xml:lang="en">File Tree</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatDragAndDrop" source-language="en" datatype="plaintext"><body>
@@ -1915,6 +1909,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="enableAdditionalUsage">
       <source xml:lang="en">Manage paid premium requests</source>
+    </trans-unit>
+    <trans-unit id="enableCopilotButton">
+      <source xml:lang="en">Enable Copilot</source>
+    </trans-unit>
+    <trans-unit id="enableDescription">
+      <source xml:lang="en">Enable Copilot to use AI features.</source>
     </trans-unit>
     <trans-unit id="gaugeBackground">
       <source xml:lang="en">Gauge background color.</source>
