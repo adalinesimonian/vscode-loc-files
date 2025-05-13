@@ -1425,11 +1425,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/simpleBrowserEditorOverlay" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="cancel">
-      <source xml:lang="en">Cancel</source>
-    </trans-unit>
     <trans-unit id="cancelSelection">
       <source xml:lang="en">Click to cancel selection.</source>
+    </trans-unit>
+    <trans-unit id="cancelSelectionLabel">
+      <source xml:lang="en">Cancel</source>
     </trans-unit>
     <trans-unit id="chat.configureElements">
       <source xml:lang="en">Configure Attachments Sent</source>
@@ -1443,6 +1443,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.nextSelection">
       <source xml:lang="en">Select Again</source>
     </trans-unit>
+    <trans-unit id="continuousSelectionDropdown">
+      <source xml:lang="en">Continuous Selection</source>
+    </trans-unit>
     <trans-unit id="elementCancelMessage">
       <source xml:lang="en">Selection canceled</source>
     </trans-unit>
@@ -1455,8 +1458,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="elementSelectionMessage">
       <source xml:lang="en">Add element to chat</source>
     </trans-unit>
+    <trans-unit id="finishSelectionLabel">
+      <source xml:lang="en">Done</source>
+    </trans-unit>
     <trans-unit id="selectAnElement">
       <source xml:lang="en">Click to select an element.</source>
+    </trans-unit>
+    <trans-unit id="selectElementDropdown">
+      <source xml:lang="en">Select an Element</source>
     </trans-unit>
     <trans-unit id="startSelection">
       <source xml:lang="en">Start</source>

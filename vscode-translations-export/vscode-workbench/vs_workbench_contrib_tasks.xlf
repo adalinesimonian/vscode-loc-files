@@ -43,6 +43,9 @@
     <trans-unit id="TaskService.ignoredFolder">
       <source xml:lang="en">The following workspace folders are ignored since they use task version 0.1.0: {0}</source>
     </trans-unit>
+    <trans-unit id="TaskService.instanceToTerminate">
+      <source xml:lang="en">Select an instance to terminate</source>
+    </trans-unit>
     <trans-unit id="TaskService.noBuildTask">
       <source xml:lang="en">No build task to run found. Configure Build Task...</source>
     </trans-unit>
@@ -59,6 +62,9 @@ The task will be ignored.</source>
     </trans-unit>
     <trans-unit id="TaskService.noEntryToRun">
       <source xml:lang="en">Configure a Task</source>
+    </trans-unit>
+    <trans-unit id="TaskService.noInstanceRunning">
+      <source xml:lang="en">No instance is currently running</source>
     </trans-unit>
     <trans-unit id="TaskService.noTaskIsRunning">
       <source xml:lang="en">No task is running</source>
@@ -144,11 +150,11 @@ The task will be ignored.</source>
     <trans-unit id="TaskService.terminateAllRunningTasks">
       <source xml:lang="en">All Running Tasks</source>
     </trans-unit>
+    <trans-unit id="TaskSystem.InstancePolicy.warn">
+      <source xml:lang="en">The instance limit for this task has been reached.</source>
+    </trans-unit>
     <trans-unit id="TaskSystem.active">
       <source xml:lang="en">There is already a task running. Terminate it first before executing another task.</source>
-    </trans-unit>
-    <trans-unit id="TaskSystem.activeSame.noBackground">
-      <source xml:lang="en">The task '{0}' is already active.</source>
     </trans-unit>
     <trans-unit id="TaskSystem.configurationErrors">
       <source xml:lang="en">Error: the provided task configuration has validation errors and can't not be used. Please correct the errors first.</source>
@@ -210,9 +216,6 @@ The task will be ignored.</source>
     </trans-unit>
     <trans-unit id="recentlyUsed">
       <source xml:lang="en">recently used tasks</source>
-    </trans-unit>
-    <trans-unit id="restartTask">
-      <source xml:lang="en">Restart Task</source>
     </trans-unit>
     <trans-unit id="runTask.arg">
       <source xml:lang="en">Filters the tasks shown in the quickpick</source>
@@ -297,9 +300,6 @@ The task will be ignored.</source>
     <trans-unit id="tasksJsonComment">
       <source xml:lang="en">	// See https://go.microsoft.com/fwlink/?LinkId=733558 
 	// for the documentation about the tasks.json format</source>
-    </trans-unit>
-    <trans-unit id="terminateTask">
-      <source xml:lang="en">Terminate Task</source>
     </trans-unit>
     <trans-unit id="unexpectedTaskType">
       <source xml:lang="en">The task provider for "{0}" tasks unexpectedly provided a task of type "{1}".
@@ -857,6 +857,24 @@ The task command line or label</note>
     </trans-unit>
     <trans-unit id="JsonSchema.tasks.instanceLimit">
       <source xml:lang="en">The number of instances of the task that are allowed to run simultaneously.</source>
+    </trans-unit>
+    <trans-unit id="JsonSchema.tasks.instancePolicy">
+      <source xml:lang="en">Policy to apply when instance limit is reached.</source>
+    </trans-unit>
+    <trans-unit id="JsonSchema.tasks.instancePolicy.prompt">
+      <source xml:lang="en">Asks which instance to terminate.</source>
+    </trans-unit>
+    <trans-unit id="JsonSchema.tasks.instancePolicy.silent">
+      <source xml:lang="en">Does nothing.</source>
+    </trans-unit>
+    <trans-unit id="JsonSchema.tasks.instancePolicy.terminateNewest">
+      <source xml:lang="en">Terminates the newest instance.</source>
+    </trans-unit>
+    <trans-unit id="JsonSchema.tasks.instancePolicy.terminateOldest">
+      <source xml:lang="en">Terminates the oldest instance.</source>
+    </trans-unit>
+    <trans-unit id="JsonSchema.tasks.instancePolicy.warn">
+      <source xml:lang="en">Does nothing but warns that the instance limit has been reached.</source>
     </trans-unit>
     <trans-unit id="JsonSchema.tasks.isBuildCommand.deprecated">
       <source xml:lang="en">The property isBuildCommand is deprecated. Use the group property instead. See also the 1.14 release notes.</source>
