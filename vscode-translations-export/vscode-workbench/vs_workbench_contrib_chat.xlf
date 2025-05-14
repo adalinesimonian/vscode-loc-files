@@ -1715,14 +1715,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Pasted Image</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatSelectedTools" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="tool.0">
-      <source xml:lang="en">{0} {1}</source>
-    </trans-unit>
-    <trans-unit id="tool.1">
-      <source xml:lang="en">{0} {1} of {2}</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentDescription">
       <source xml:lang="en">Edit files in your workspace in agent mode</source>
@@ -2033,6 +2025,12 @@ Type {3} to use commands</source>
     <trans-unit id="editsTitle">
       <source xml:lang="en">Edit with Copilot</source>
     </trans-unit>
+    <trans-unit id="input.1">
+      <source xml:lang="en">Follow instructions from ${0}.</source>
+    </trans-unit>
+    <trans-unit id="input.N">
+      <source xml:lang="en">Follow instructions from the prompt files.</source>
+    </trans-unit>
     <trans-unit id="scrollDownButtonLabel">
       <source xml:lang="en">Scroll down</source>
     </trans-unit>
@@ -2125,11 +2123,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chat.moreModels.tooltip">
       <source xml:lang="en">Add premium models</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/attachInstructionsCommand" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="attach-instructions.capitalized.ellipses">
-      <source xml:lang="en">Attach Instructions...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/createPromptCommand" source-language="en" datatype="plaintext"><body>
@@ -2687,9 +2680,6 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/electron-sandbox/tools/fetchPageTool" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="fetchWebPage.confirmationMessageManageTrustedDomains">
-      <source xml:lang="en">You can [manage your trusted domains]({0}) to skip this confirmation in the future.</source>
-    </trans-unit>
     <trans-unit id="fetchWebPage.confirmationTitle.plural">
       <source xml:lang="en">Fetch untrusted web pages?</source>
     </trans-unit>
