@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/mcp/browser/mcp.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="mcp-installed">
+      <source xml:lang="en">MCP Servers - Installed</source>
+    </trans-unit>
+    <trans-unit id="mcpServer">
+      <source xml:lang="en">MCP Server</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpCommands" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcp.addConfiguration">
       <source xml:lang="en">Add Server...</source>
@@ -12,6 +23,9 @@
     </trans-unit>
     <trans-unit id="mcp.addServer.description">
       <source xml:lang="en">Add a new server configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.command.browse">
+      <source xml:lang="en">MCP Servers</source>
     </trans-unit>
     <trans-unit id="mcp.command.installFromActivation">
       <source xml:lang="en">Install...</source>
@@ -183,6 +197,9 @@
     <trans-unit id="mcp.serverType.placeholder">
       <source xml:lang="en">Choose the type of MCP server to add</source>
     </trans-unit>
+    <trans-unit id="mcp.servers.browse">
+      <source xml:lang="en">Browse MCP Servers...</source>
+    </trans-unit>
     <trans-unit id="mcp.target..remote.description">
       <source xml:lang="en">Available on this remote machine</source>
     </trans-unit>
@@ -250,6 +267,97 @@
     </trans-unit>
     <trans-unit id="server.toolCountCached">
       <source xml:lang="en">{0} cached tools</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpServerActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="config">
+      <source xml:lang="en">Show Configuration</source>
+    </trans-unit>
+    <trans-unit id="install">
+      <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="manage">
+      <source xml:lang="en">Manage</source>
+    </trans-unit>
+    <trans-unit id="output">
+      <source xml:lang="en">Show Output</source>
+    </trans-unit>
+    <trans-unit id="restart">
+      <source xml:lang="en">Restart Server</source>
+    </trans-unit>
+    <trans-unit id="start">
+      <source xml:lang="en">Start Server</source>
+    </trans-unit>
+    <trans-unit id="stop">
+      <source xml:lang="en">Stop Server</source>
+    </trans-unit>
+    <trans-unit id="uninstall">
+      <source xml:lang="en">Uninstall</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpServerEditor" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="Install Info">
+      <source xml:lang="en">Installation</source>
+    </trans-unit>
+    <trans-unit id="Marketplace Info">
+      <source xml:lang="en">Marketplace</source>
+    </trans-unit>
+    <trans-unit id="Readme title">
+      <source xml:lang="en">Readme</source>
+    </trans-unit>
+    <trans-unit id="Version">
+      <source xml:lang="en">Version</source>
+    </trans-unit>
+    <trans-unit id="details">
+      <source xml:lang="en">Details</source>
+    </trans-unit>
+    <trans-unit id="detailstooltip">
+      <source xml:lang="en">Extension details, rendered from the extension's 'README.md' file</source>
+    </trans-unit>
+    <trans-unit id="id">
+      <source xml:lang="en">Identifier</source>
+    </trans-unit>
+    <trans-unit id="last released">
+      <source xml:lang="en">Last Released</source>
+    </trans-unit>
+    <trans-unit id="name">
+      <source xml:lang="en">Extension name</source>
+    </trans-unit>
+    <trans-unit id="noReadme">
+      <source xml:lang="en">No README available.</source>
+    </trans-unit>
+    <trans-unit id="repository">
+      <source xml:lang="en">Repository</source>
+    </trans-unit>
+    <trans-unit id="resources">
+      <source xml:lang="en">Resources</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpServerEditorInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="extensionsEditorLabelIcon">
+      <source xml:lang="en">Icon of the extensions editor label.</source>
+    </trans-unit>
+    <trans-unit id="extensionsInputName">
+      <source xml:lang="en">Extension: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpServerWidgets" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="install count">
+      <source xml:lang="en">Install count</source>
+    </trans-unit>
+    <trans-unit id="publisher">
+      <source xml:lang="en">Publisher ({0})</source>
+    </trans-unit>
+    <trans-unit id="ratedLabel">
+      <source xml:lang="en">Average rating: {0} out of 5</source>
+    </trans-unit>
+    <trans-unit id="verified publisher">
+      <source xml:lang="en">This publisher has verified ownership of {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpServersView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp servers">
+      <source xml:lang="en">MCP Servers</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/discovery/extensionMcpDiscovery" source-language="en" datatype="plaintext"><body>

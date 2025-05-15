@@ -248,6 +248,9 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
     <trans-unit id="preferences">
       <source xml:lang="en">Preferences</source>
     </trans-unit>
+    <trans-unit id="preferencesEditor">
+      <source xml:lang="en">Preferences Editor</source>
+    </trans-unit>
     <trans-unit id="settings">
       <source xml:lang="en">Settings</source>
     </trans-unit>
@@ -302,6 +305,14 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
       <source xml:lang="en">Select Language</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/preferences/browser/preferencesEditor" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="FullTextSearchPlaceholder">
+      <source xml:lang="en">Search {0}</source>
+    </trans-unit>
+    <trans-unit id="preferencesTabSwitcherBarAriaLabel">
+      <source xml:lang="en">Preferences Tab Switcher</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/preferences/browser/preferencesIcons" source-language="en" datatype="plaintext"><body>
     <trans-unit id="keybindingsAddIcon">
       <source xml:lang="en">Icon for the add action in the keybinding UI.</source>
@@ -323,6 +334,9 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
     </trans-unit>
     <trans-unit id="preferencesOpenSettings">
       <source xml:lang="en">Icon for open settings commands.</source>
+    </trans-unit>
+    <trans-unit id="preferencesSashBorder">
+      <source xml:lang="en">The color of the Preferences editor splitview sash border.</source>
     </trans-unit>
     <trans-unit id="settingsEditIcon">
       <source xml:lang="en">Icon for the edit action in the Settings UI.</source>

@@ -159,9 +159,6 @@
     <trans-unit id="search.defaultViewMode">
       <source xml:lang="en">Controls the default search result view mode.</source>
     </trans-unit>
-    <trans-unit id="search.experimental.autoAISearchResults">
-      <source xml:lang="en">Automatically request search results from the AI search provider</source>
-    </trans-unit>
     <trans-unit id="search.experimental.closedNotebookResults">
       <source xml:lang="en">Show notebook editor rich content results for closed notebooks. Please refresh your search results after changing this setting.</source>
     </trans-unit>
@@ -243,6 +240,21 @@
     </trans-unit>
     <trans-unit id="search.searchOnTypeDebouncePeriod">
       <source xml:lang="en">When {0} is enabled, controls the timeout in milliseconds between a character being typed and the search starting. Has no effect when {0} is disabled.</source>
+    </trans-unit>
+    <trans-unit id="search.searchView.keywordSuggestions">
+      <source xml:lang="en">Enable keyword suggestions in the search view.</source>
+    </trans-unit>
+    <trans-unit id="search.searchView.semanticSearchBehavior">
+      <source xml:lang="en">Controls the behavior of the semantic search results displayed in the search view.</source>
+    </trans-unit>
+    <trans-unit id="search.searchView.semanticSearchBehavior.auto">
+      <source xml:lang="en">Request semantic results automatically with every search.</source>
+    </trans-unit>
+    <trans-unit id="search.searchView.semanticSearchBehavior.manual">
+      <source xml:lang="en">Only request semantic search results manually.</source>
+    </trans-unit>
+    <trans-unit id="search.searchView.semanticSearchBehavior.runOnEmpty">
+      <source xml:lang="en">Request semantic results automatically only when text search results are empty.</source>
     </trans-unit>
     <trans-unit id="search.seedOnFocus">
       <source xml:lang="en">Update the search query to the editor's selected text when focusing the search view. This happens either on click or when triggering the `workbench.views.search.focus` command.</source>

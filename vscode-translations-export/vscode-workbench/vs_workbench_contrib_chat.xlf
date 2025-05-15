@@ -195,6 +195,9 @@
     <trans-unit id="interactiveSession.focusInput.label">
       <source xml:lang="en">Focus Chat Input</source>
     </trans-unit>
+    <trans-unit id="interactiveSession.history.clear">
+      <source xml:lang="en">Clear All Workspace Chats</source>
+    </trans-unit>
     <trans-unit id="interactiveSession.history.delete">
       <source xml:lang="en">Delete</source>
     </trans-unit>
@@ -203,6 +206,9 @@
     </trans-unit>
     <trans-unit id="interactiveSession.history.pick">
       <source xml:lang="en">Switch to chat</source>
+    </trans-unit>
+    <trans-unit id="interactiveSession.history.title">
+      <source xml:lang="en">Workspace Chat History</source>
     </trans-unit>
     <trans-unit id="interactiveSession.open">
       <source xml:lang="en">New Chat Editor</source>
@@ -820,6 +826,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.sendElementsToChat.enabled">
       <source xml:lang="en">Controls whether elements can be sent to chat from the Simple Browser.</source>
     </trans-unit>
+    <trans-unit id="chat.signInWithAlternateProvider">
+      <source xml:lang="en">Enable alternative sign-in provider.</source>
+    </trans-unit>
     <trans-unit id="chat.tools.autoApprove">
       <source xml:lang="en">Controls whether tool use should be automatically approved.</source>
     </trans-unit>
@@ -852,6 +861,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="mcp.discovery.source">
       <source xml:lang="en">Enables discovery of {0} servers</source>
+    </trans-unit>
+    <trans-unit id="mcp.gallery.serviceUrl">
+      <source xml:lang="en">Configure the MCP Gallery service URL to connect to</source>
     </trans-unit>
     <trans-unit id="mpc.discovery.enabled">
       <source xml:lang="en">Configures discovery of Model Context Protocol servers on the machine. It may be set to `true` or `false` to disable or enable all sources, and an mapping sources you wish to enable.</source>
@@ -1725,6 +1737,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatDescription">
       <source xml:lang="en">Ask Copilot</source>
     </trans-unit>
+    <trans-unit id="continueWithProvider">
+      <source xml:lang="en">Continue with {0}</source>
+    </trans-unit>
     <trans-unit id="copilotFailedWarning">
       <source xml:lang="en">Copilot failed to get ready. Please review the guidance in the Chat view.</source>
     </trans-unit>
@@ -1764,10 +1779,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="enterpriseSetupError">
       <source xml:lang="en">The provided {0} instance is invalid. Would you like to enter it again?</source>
     </trans-unit>
-    <trans-unit id="headerDialog">
-      <source xml:lang="en">[Copilot]({0}) is your AI pair programmer. Write code faster with completions, fix bugs and build new features across multiple files, and learn about your codebase through chat.</source>
-      <note>{Locked="[Copilot]({0})"}</note>
-    </trans-unit>
     <trans-unit id="hideChatSetup">
       <source xml:lang="en">Hide Copilot</source>
     </trans-unit>
@@ -1792,9 +1803,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="managePlan">
       <source xml:lang="en">Upgrade to Copilot Pro</source>
     </trans-unit>
-    <trans-unit id="maybeLater">
-      <source xml:lang="en">Maybe Later</source>
-    </trans-unit>
     <trans-unit id="retry">
       <source xml:lang="en">Retry</source>
     </trans-unit>
@@ -1816,6 +1824,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="setupCopilot">
       <source xml:lang="en">Set up Copilot.</source>
     </trans-unit>
+    <trans-unit id="setupCopilotButton">
+      <source xml:lang="en">Set up Copilot</source>
+    </trans-unit>
     <trans-unit id="setupErrorDialog">
       <source xml:lang="en">Copilot setup failed. Would you like to try again?</source>
     </trans-unit>
@@ -1825,17 +1836,8 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="setupToolsDescription">
       <source xml:lang="en">Scaffold a new workspace in VS Code</source>
     </trans-unit>
-    <trans-unit id="setupWithEnterpriseProvider">
-      <source xml:lang="en">Sign in with a {0} Account</source>
-    </trans-unit>
-    <trans-unit id="setupWithProvider">
-      <source xml:lang="en">Sign in with a {0} Account</source>
-    </trans-unit>
-    <trans-unit id="setupWithProviderShort">
-      <source xml:lang="en">Sign in with {0}</source>
-    </trans-unit>
-    <trans-unit id="signInButton">
-      <source xml:lang="en">Sign in</source>
+    <trans-unit id="signInWithProvider">
+      <source xml:lang="en">Sign in with a {0} account</source>
     </trans-unit>
     <trans-unit id="signUp">
       <source xml:lang="en">Sign in to use Copilot</source>
@@ -1857,9 +1859,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="unknownSignInErrorDetail">
       <source xml:lang="en">You must be signed in to use Copilot.</source>
-    </trans-unit>
-    <trans-unit id="useCopilotButton">
-      <source xml:lang="en">Use Copilot</source>
     </trans-unit>
     <trans-unit id="vscodeAgentDescription">
       <source xml:lang="en">Ask questions about VS Code</source>
