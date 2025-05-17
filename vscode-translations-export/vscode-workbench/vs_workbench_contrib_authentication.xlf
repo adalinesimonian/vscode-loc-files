@@ -32,6 +32,38 @@
       <source xml:lang="en">Use a new account...</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/authentication/browser/actions/manageAccountPreferencesForMcpServerAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accounts">
+      <source xml:lang="en">Accounts</source>
+    </trans-unit>
+    <trans-unit id="currentAccount">
+      <source xml:lang="en">Current account</source>
+    </trans-unit>
+    <trans-unit id="manageAccountPreferenceForMcpServer">
+      <source xml:lang="en">Manage MCP Server Account Preferences</source>
+    </trans-unit>
+    <trans-unit id="noAccountUsage">
+      <source xml:lang="en">This MCP server has not used any accounts yet.</source>
+    </trans-unit>
+    <trans-unit id="noAccounts">
+      <source xml:lang="en">No accounts are currently used by this MCP server.</source>
+    </trans-unit>
+    <trans-unit id="pickAProviderTitle">
+      <source xml:lang="en">Manage MCP Server Account Preferences</source>
+    </trans-unit>
+    <trans-unit id="placeholder v2">
+      <source xml:lang="en">Manage '{0}' account preferences for {1}...</source>
+    </trans-unit>
+    <trans-unit id="selectProvider">
+      <source xml:lang="en">Select an authentication provider to manage account preferences for</source>
+    </trans-unit>
+    <trans-unit id="title">
+      <source xml:lang="en">'{0}' Account Preferences For This Workspace</source>
+    </trans-unit>
+    <trans-unit id="use new account">
+      <source xml:lang="en">Use a new account...</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/authentication/browser/actions/manageTrustedExtensionsForAccountAction" source-language="en" datatype="plaintext"><body>
     <trans-unit id="accountLastUsedDate">
       <source xml:lang="en">Last used this account {0}</source>
@@ -69,6 +101,46 @@
 always has access to this account</source>
     </trans-unit>
     <trans-unit id="trustedExtensions">
+      <source xml:lang="en">Trusted by Microsoft</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/authentication/browser/actions/manageTrustedMcpServersForAccountAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accountLastUsedDate">
+      <source xml:lang="en">Last used this account {0}</source>
+      <note>The placeholder {0} is a string with time information, such as "3 days ago"</note>
+    </trans-unit>
+    <trans-unit id="accountPreferences">
+      <source xml:lang="en">Manage account preferences for this MCP server</source>
+    </trans-unit>
+    <trans-unit id="accounts">
+      <source xml:lang="en">Accounts</source>
+    </trans-unit>
+    <trans-unit id="manageMcpServers">
+      <source xml:lang="en">Choose which MCP servers can access this account</source>
+    </trans-unit>
+    <trans-unit id="manageTrustedMcpServers">
+      <source xml:lang="en">Manage Trusted MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="manageTrustedMcpServers.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="manageTrustedMcpServersForAccount">
+      <source xml:lang="en">Manage Trusted MCP Servers For Account</source>
+    </trans-unit>
+    <trans-unit id="noTrustedMcpServers">
+      <source xml:lang="en">This account has not been used by any MCP servers.</source>
+    </trans-unit>
+    <trans-unit id="notUsed">
+      <source xml:lang="en">Has not used this account</source>
+    </trans-unit>
+    <trans-unit id="pickAccount">
+      <source xml:lang="en">Pick an account to manage trusted MCP servers for</source>
+    </trans-unit>
+    <trans-unit id="trustedMcpServerTooltip">
+      <source xml:lang="en">This MCP server is trusted by Microsoft and
+always has access to this account</source>
+    </trans-unit>
+    <trans-unit id="trustedMcpServers">
       <source xml:lang="en">Trusted by Microsoft</source>
     </trans-unit>
 </body></file>

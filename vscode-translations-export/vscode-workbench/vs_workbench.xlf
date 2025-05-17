@@ -157,6 +157,30 @@
       <source xml:lang="en">Language Models</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/api/browser/mainThreadMcp" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="allow">
+      <source xml:lang="en">&amp;&amp;Allow</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="confirmLogin">
+      <source xml:lang="en">The MCP Server '{0}' wants to sign in using {1}.</source>
+    </trans-unit>
+    <trans-unit id="confirmRelogin">
+      <source xml:lang="en">The MCP Server '{0}' wants you to sign in again using {1}.</source>
+    </trans-unit>
+    <trans-unit id="incorrectAccount">
+      <source xml:lang="en">Incorrect account detected</source>
+    </trans-unit>
+    <trans-unit id="incorrectAccountDetail">
+      <source xml:lang="en">The chosen account, {0}, does not match the requested account, {1}.</source>
+    </trans-unit>
+    <trans-unit id="keep">
+      <source xml:lang="en">Keep {0}</source>
+    </trans-unit>
+    <trans-unit id="loginWith">
+      <source xml:lang="en">Login with {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/api/browser/mainThreadMessageService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cancel">
       <source xml:lang="en">Cancel</source>
@@ -1737,10 +1761,10 @@ Browser: {3}</source>
 </body></file>
   <file original="src/vs/workbench/browser/parts/editor/auxiliaryEditorPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="disableCompactAuxiliaryWindow">
-      <source xml:lang="en">Unset Compact Mode</source>
+      <source xml:lang="en">Turn Off Compact Mode</source>
     </trans-unit>
     <trans-unit id="enableCompactAuxiliaryWindow">
-      <source xml:lang="en">Set Compact Mode</source>
+      <source xml:lang="en">Turn On Compact Mode</source>
     </trans-unit>
     <trans-unit id="toggleCompactAuxiliaryWindow">
       <source xml:lang="en">Toggle Window Compact Mode</source>
@@ -3218,6 +3242,9 @@ Browser: {3}</source>
     </trans-unit>
     <trans-unit id="manageTrustedExtensions">
       <source xml:lang="en">Manage Trusted Extensions</source>
+    </trans-unit>
+    <trans-unit id="manageTrustedMCPServers">
+      <source xml:lang="en">Manage Trusted MCP Servers</source>
     </trans-unit>
     <trans-unit id="signOut">
       <source xml:lang="en">Sign Out</source>
@@ -4770,11 +4797,8 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="inZenMode">
       <source xml:lang="en">Whether Zen mode is enabled</source>
     </trans-unit>
-    <trans-unit id="isAuxiliaryEditorPart">
-      <source xml:lang="en">Editor Part is in an auxiliary window</source>
-    </trans-unit>
-    <trans-unit id="isAuxiliaryTitleBar">
-      <source xml:lang="en">Title bar is in an auxiliary window</source>
+    <trans-unit id="isAuxiliaryWindow">
+      <source xml:lang="en">Window is an auxiliary window</source>
     </trans-unit>
     <trans-unit id="isAuxiliaryWindowFocusedContext">
       <source xml:lang="en">Whether an auxiliary window is focused</source>
@@ -5483,10 +5507,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <source xml:lang="en">Current Window</source>
     </trans-unit>
     <trans-unit id="disableWindowAlwaysOnTop">
-      <source xml:lang="en">Unset Always on Top</source>
+      <source xml:lang="en">Turn Off Always on Top</source>
     </trans-unit>
     <trans-unit id="enableWindowAlwaysOnTop">
-      <source xml:lang="en">Set Always on Top</source>
+      <source xml:lang="en">Turn On Always on Top</source>
     </trans-unit>
     <trans-unit id="miCloseWindow">
       <source xml:lang="en">Clos&amp;&amp;e Window</source>
