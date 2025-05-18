@@ -241,6 +241,9 @@
     <trans-unit id="edit">
       <source xml:lang="en">Edit</source>
     </trans-unit>
+    <trans-unit id="mcp.debug">
+      <source xml:lang="en">Debug</source>
+    </trans-unit>
     <trans-unit id="mcp.restart">
       <source xml:lang="en">Restart</source>
     </trans-unit>
@@ -385,6 +388,24 @@
     <trans-unit id="app.mcp.args.command">
       <source xml:lang="en">Arguments passed to the server.</source>
     </trans-unit>
+    <trans-unit id="app.mcp.dev">
+      <source xml:lang="en">Enabled development mode for the server. When present, the server will be started eagerly and output will be included in its output. Properties inside the `dev` object can configure additional behavior.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.dev.debug">
+      <source xml:lang="en">If set, debugs the MCP server using the given runtime as it's started.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.dev.debug.debugpyPath">
+      <source xml:lang="en">Path to the debugpy executable.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.dev.debug.type.node">
+      <source xml:lang="en">Debug the MCP server using Node.js.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.dev.debug.type.python">
+      <source xml:lang="en">Debug the MCP server using Python and debugpy.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.dev.watch">
+      <source xml:lang="en">A glob pattern or list of glob patterns relative to the workspace folder to watch. The MCP server will be restarted when these files change.</source>
+    </trans-unit>
     <trans-unit id="app.mcp.env.command">
       <source xml:lang="en">Environment variables passed to the server.</source>
     </trans-unit>
@@ -393,6 +414,9 @@
     </trans-unit>
     <trans-unit id="app.mcp.json.command">
       <source xml:lang="en">The command to run the server.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.cwd">
+      <source xml:lang="en">The working directory for the server command. Defaults to the workspace folder when run in a workspace.</source>
     </trans-unit>
     <trans-unit id="app.mcp.json.headers">
       <source xml:lang="en">Additional headers sent to the server.</source>
@@ -445,6 +469,14 @@
       <source xml:lang="en">Context key that has the number of registered MCP tools</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/mcp/common/mcpDevMode" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.debug.nodeBinReq">
+      <source xml:lang="en">MCP server must be launched with the "node" executable to enable debugging, but was launched with "{0}"</source>
+    </trans-unit>
+    <trans-unit id="mcp.debug.pythonBinReq">
+      <source xml:lang="en">MCP server must be launched with the "python" executable to enable debugging, but was launched with "{0}"</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpRegistry" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcp.launchError">
       <source xml:lang="en">Error starting {0}: {1}</source>
@@ -480,6 +512,9 @@ Do you want to allow running MCP servers from {3}?</source>
     <trans-unit id="mcpBadSchema.tool">
       <source xml:lang="en">Tool `{0}` has invalid JSON parameters:</source>
     </trans-unit>
+    <trans-unit id="mcpDebugPyHelp">
+      <source xml:lang="en">The command "{0}" was not found. You can specify the path to debugpy in the `dev.debug.debugpyPath` option.</source>
+    </trans-unit>
     <trans-unit id="mcpServerError">
       <source xml:lang="en">The MCP server {0} could not be started: {1}</source>
     </trans-unit>
@@ -488,6 +523,9 @@ Do you want to allow running MCP servers from {3}?</source>
     </trans-unit>
     <trans-unit id="mcpServerNotFound">
       <source xml:lang="en">The command "{0}" needed to run {1} was not found.</source>
+    </trans-unit>
+    <trans-unit id="mcpViewDocs">
+      <source xml:lang="en">View Docs</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpServerConnection" source-language="en" datatype="plaintext"><body>
