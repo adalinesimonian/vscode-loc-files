@@ -55,6 +55,15 @@
     <trans-unit id="accessibility.signals.chatResponseReceived.sound">
       <source xml:lang="en">Plays a sound on when the response has been received.</source>
     </trans-unit>
+    <trans-unit id="accessibility.signals.chatUserActionRequired">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when user action is required in the chat.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.chatUserActionRequired.announcement">
+      <source xml:lang="en">Announces when a user action is required in the chat - including information about the action and how to take it.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.chatUserActionRequired.sound">
+      <source xml:lang="en">Plays a sound when user action is required in the chat.</source>
+    </trans-unit>
     <trans-unit id="accessibility.signals.clear">
       <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when a feature is cleared (for example, the terminal, Debug Console, or Output channel).</source>
     </trans-unit>
@@ -381,6 +390,9 @@
     </trans-unit>
     <trans-unit id="sound.enabled.auto">
       <source xml:lang="en">Enable sound when a screen reader is attached.</source>
+    </trans-unit>
+    <trans-unit id="sound.enabled.autoWindow">
+      <source xml:lang="en">Enable sound when a screen reader is attached or when the current window is focused.</source>
     </trans-unit>
     <trans-unit id="sound.enabled.off">
       <source xml:lang="en">Disable sound.</source>
