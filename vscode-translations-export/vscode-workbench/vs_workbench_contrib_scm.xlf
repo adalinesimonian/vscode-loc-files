@@ -448,10 +448,10 @@
       <source xml:lang="en">Summarize History Item</source>
     </trans-unit>
     <trans-unit id="chatContext.scmHistoryItems">
-      <source xml:lang="en">Source Control History Items...</source>
+      <source xml:lang="en">Source Control...</source>
     </trans-unit>
     <trans-unit id="chatContext.scmHistoryItems.placeholder">
-      <source xml:lang="en">Select a source control history item</source>
+      <source xml:lang="en">Select a change</source>
     </trans-unit>
     <trans-unit id="files">
       <source xml:lang="en">file(s)</source>
@@ -473,32 +473,11 @@
     <trans-unit id="currentHistoryItemRef">
       <source xml:lang="en">Current history item reference(s)</source>
     </trans-unit>
-    <trans-unit id="deletion">
-      <source xml:lang="en">{0} deletion{1}</source>
-    </trans-unit>
-    <trans-unit id="deletions">
-      <source xml:lang="en">{0} deletions{1}</source>
-    </trans-unit>
-    <trans-unit id="emailLinkTitle">
-      <source xml:lang="en">Email</source>
-    </trans-unit>
-    <trans-unit id="fileChanged">
-      <source xml:lang="en">{0} file changed</source>
-    </trans-unit>
-    <trans-unit id="filesChanged">
-      <source xml:lang="en">{0} files changed</source>
-    </trans-unit>
     <trans-unit id="goToCurrentHistoryItem">
       <source xml:lang="en">Go to Current History Item</source>
     </trans-unit>
     <trans-unit id="historyItemChangesEditorTitle">
       <source xml:lang="en">All Changes ({0} ↔ {1})</source>
-    </trans-unit>
-    <trans-unit id="insertion">
-      <source xml:lang="en">{0} insertion{1}</source>
-    </trans-unit>
-    <trans-unit id="insertions">
-      <source xml:lang="en">{0} insertions{1}</source>
     </trans-unit>
     <trans-unit id="items">
       <source xml:lang="en">{0} Items</source>
@@ -610,6 +589,29 @@
   <file original="src/vs/workbench/contrib/scm/browser/scmViewService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="auto">
       <source xml:lang="en">Auto</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/util" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="deletion">
+      <source xml:lang="en">{0} deletion{1}</source>
+    </trans-unit>
+    <trans-unit id="deletions">
+      <source xml:lang="en">{0} deletions{1}</source>
+    </trans-unit>
+    <trans-unit id="emailLinkTitle">
+      <source xml:lang="en">Email</source>
+    </trans-unit>
+    <trans-unit id="fileChanged">
+      <source xml:lang="en">{0} file changed</source>
+    </trans-unit>
+    <trans-unit id="filesChanged">
+      <source xml:lang="en">{0} files changed</source>
+    </trans-unit>
+    <trans-unit id="insertion">
+      <source xml:lang="en">{0} insertion{1}</source>
+    </trans-unit>
+    <trans-unit id="insertions">
+      <source xml:lang="en">{0} insertions{1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/scm/common/quickDiff" source-language="en" datatype="plaintext"><body>

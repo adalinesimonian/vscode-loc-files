@@ -981,27 +981,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.partiallyOmittedNotebookImageAttachment">
       <source xml:lang="en">Partially omitted this Notebook output: {0}</source>
     </trans-unit>
-    <trans-unit id="deletion">
-      <source xml:lang="en">{0} deletion{1}</source>
-    </trans-unit>
-    <trans-unit id="deletions">
-      <source xml:lang="en">{0} deletions{1}</source>
-    </trans-unit>
-    <trans-unit id="emailLinkTitle">
-      <source xml:lang="en">Email</source>
-    </trans-unit>
-    <trans-unit id="fileChanged">
-      <source xml:lang="en">{0} file changed</source>
-    </trans-unit>
-    <trans-unit id="filesChanged">
-      <source xml:lang="en">{0} files changed</source>
-    </trans-unit>
-    <trans-unit id="insertion">
-      <source xml:lang="en">{0} insertion{1}</source>
-    </trans-unit>
-    <trans-unit id="insertions">
-      <source xml:lang="en">{0} insertions{1}</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatAgentCommandContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="rerun">
@@ -2060,6 +2039,9 @@ Type {3} to use commands</source>
     <trans-unit id="editsTitle">
       <source xml:lang="en">Edit with Copilot</source>
     </trans-unit>
+    <trans-unit id="input.1">
+      <source xml:lang="en">Follow instructions from {0}.</source>
+    </trans-unit>
     <trans-unit id="scrollDownButtonLabel">
       <source xml:lang="en">Scroll down</source>
     </trans-unit>
@@ -2501,10 +2483,10 @@ Type {3} to use commands</source>
       <source xml:lang="en">Unexpected token '{0}'.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.diagnostics.duplicate-record">
-      <source xml:lang="en">Duplicate metadata record '{0}' will be ignored.</source>
+      <source xml:lang="en">Duplicate metadata '{0}' will be ignored.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.diagnostics.unknown-record">
-      <source xml:lang="en">Unknown metadata record '{0}' will be ignored.</source>
+      <source xml:lang="en">Unknown metadata '{0}' will be ignored.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.mode.diagnostics.incompatible-with-tools">
       <source xml:lang="en">Record '{0}' is implied to have the '{1}' value if '{2}' record is present so the specified value will be ignored.</source>
@@ -2520,12 +2502,12 @@ Type {3} to use commands</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/base/enum" source-language="en" datatype="plaintext"><body>
     <trans-unit id="prompt.header.metadata.enum.diagnostics.invalid-value">
-      <source xml:lang="en">Value of the '{0}' metadata must be one of {1}, got '{2}'.</source>
+      <source xml:lang="en">The '{0}' metadata must be one of {1}, got '{2}'.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/base/string" source-language="en" datatype="plaintext"><body>
     <trans-unit id="prompt.header.metadata.string.diagnostics.invalid-value-type">
-      <source xml:lang="en">Value of the '{0}' metadata must be '{1}', got '{2}'.</source>
+      <source xml:lang="en">The '{0}' metadata must be a '{1}', got '{2}'.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/tools" source-language="en" datatype="plaintext"><body>
@@ -2539,7 +2521,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Unexpected tool name '{0}', expected '{1}'.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.tools.diagnostics.invalid-value-type">
-      <source xml:lang="en">Value of the '{0}' metadata must be an array of strings, got '{2}'.</source>
+      <source xml:lang="en">The '{0}' metadata must be an array of tool names, got '{2}'.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/topError" source-language="en" datatype="plaintext"><body>
