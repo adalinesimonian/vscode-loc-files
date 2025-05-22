@@ -178,7 +178,7 @@
       <source xml:lang="en">You've reached your monthly code completions quota. You still have free chat messages available.</source>
     </trans-unit>
     <trans-unit id="configureCompletions">
-      <source xml:lang="en">Configure Code Completions...</source>
+      <source xml:lang="en">Configure code completions...</source>
     </trans-unit>
     <trans-unit id="copilotQuotaReached">
       <source xml:lang="en">Copilot Quota Reached</source>
@@ -338,15 +338,6 @@
     </trans-unit>
     <trans-unit id="chatContext.tools">
       <source xml:lang="en">Tools...</source>
-    </trans-unit>
-    <trans-unit id="chatContext.tools.extension">
-      <source xml:lang="en">Extensions</source>
-    </trans-unit>
-    <trans-unit id="chatContext.tools.internal">
-      <source xml:lang="en">Built-In</source>
-    </trans-unit>
-    <trans-unit id="chatContext.tools.mcp">
-      <source xml:lang="en">MCP Servers</source>
     </trans-unit>
     <trans-unit id="chatContext.tools.placeholder">
       <source xml:lang="en">Select a tool</source>
@@ -545,11 +536,17 @@
     <trans-unit id="configMcpCol">
       <source xml:lang="en">Configure {0}</source>
     </trans-unit>
+    <trans-unit id="configToolSet">
+      <source xml:lang="en">Configure Tool Sets...</source>
+    </trans-unit>
     <trans-unit id="defaultBucketLabel">
-      <source xml:lang="en">Other Tools</source>
+      <source xml:lang="en">Built-In</source>
     </trans-unit>
     <trans-unit id="label">
-      <source xml:lang="en">Select Tools...</source>
+      <source xml:lang="en">Configure Tools...</source>
+    </trans-unit>
+    <trans-unit id="mcp">
+      <source xml:lang="en">MCP Server</source>
     </trans-unit>
     <trans-unit id="mcpShowOutput">
       <source xml:lang="en">Show Output</source>
@@ -557,14 +554,14 @@
     <trans-unit id="mcplabel">
       <source xml:lang="en">MCP Server: {0}</source>
     </trans-unit>
-    <trans-unit id="mcpstatus">
-      <source xml:lang="en">from {0}</source>
-    </trans-unit>
     <trans-unit id="noTools">
       <source xml:lang="en">Add tools to chat</source>
     </trans-unit>
     <trans-unit id="placeholder">
       <source xml:lang="en">Select tools that are available to chat</source>
+    </trans-unit>
+    <trans-unit id="userBucket">
+      <source xml:lang="en">User Defined</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/codeBlockOperations" source-language="en" datatype="plaintext"><body>
@@ -680,23 +677,11 @@
     <trans-unit id="chat.fileAttachment">
       <source xml:lang="en">Attached {0}, {1}</source>
     </trans-unit>
-    <trans-unit id="chat.fileAttachmentWithRange">
-      <source xml:lang="en">Attached {0}, {1}, line {2} to line {3}</source>
-    </trans-unit>
-    <trans-unit id="disable">
-      <source xml:lang="en">Disable current {0} context</source>
-    </trans-unit>
-    <trans-unit id="enable">
-      <source xml:lang="en">Enable current {0} context</source>
-    </trans-unit>
     <trans-unit id="enableHint">
       <source xml:lang="en">disabled</source>
     </trans-unit>
     <trans-unit id="file.lowercase">
       <source xml:lang="en">file</source>
-    </trans-unit>
-    <trans-unit id="hint.label.current">
-      <source xml:lang="en">Current {0}</source>
     </trans-unit>
     <trans-unit id="openEditor">
       <source xml:lang="en">Current {0} context</source>
@@ -1110,6 +1095,20 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTreeContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="treeAriaLabel">
       <source xml:lang="en">File Tree</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatExtensionsInstallToolSubPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="continue">
+      <source xml:lang="en">Continue</source>
+    </trans-unit>
+    <trans-unit id="installExtensions">
+      <source xml:lang="en">Install Extensions</source>
+    </trans-unit>
+    <trans-unit id="installExtensionsConfirmation">
+      <source xml:lang="en">Click the Install button on the extension and then press Continue when finished.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatInputOutputMarkdownProgressPart" source-language="en" datatype="plaintext"><body>
@@ -1752,12 +1751,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="copilotFailedWarning">
       <source xml:lang="en">Copilot failed to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
     </trans-unit>
-    <trans-unit id="copilotFailedWarningOutsidePanel">
-      <source xml:lang="en">Copilot failed to get ready. Please try again from the Chat view.</source>
-    </trans-unit>
-    <trans-unit id="copilotFreeTitle">
-      <source xml:lang="en">Start using Copilot for free</source>
-    </trans-unit>
     <trans-unit id="copilotProTitle">
       <source xml:lang="en">Start using Copilot Pro</source>
     </trans-unit>
@@ -1773,9 +1766,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="copilotTookLongWarning">
       <source xml:lang="en">Copilot took too long to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
     </trans-unit>
-    <trans-unit id="copilotTookLongWarningOutsidePanel">
-      <source xml:lang="en">Copilot took too long to get ready. Please try again from the Chat view.</source>
-    </trans-unit>
     <trans-unit id="copilotUnavailableWarning">
       <source xml:lang="en">Copilot failed to get a response. Please try again.</source>
     </trans-unit>
@@ -1790,9 +1780,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="enterpriseInstancePlaceholder">
       <source xml:lang="en">i.e. "octocat" or "https://octocat.ghe.com"...</source>
-    </trans-unit>
-    <trans-unit id="enterpriseSetupError">
-      <source xml:lang="en">The provided {0} instance is invalid. Would you like to enter it again?</source>
     </trans-unit>
     <trans-unit id="hideChatSetup">
       <source xml:lang="en">Hide Copilot</source>
@@ -1857,8 +1844,8 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="signUp">
       <source xml:lang="en">Sign in to use Copilot</source>
     </trans-unit>
-    <trans-unit id="signUpFree">
-      <source xml:lang="en">Sign in to use Copilot for free</source>
+    <trans-unit id="skipForNow">
+      <source xml:lang="en">Skip for now</source>
     </trans-unit>
     <trans-unit id="triggerChatSetup">
       <source xml:lang="en">Use AI Features with Copilot for free...</source>
@@ -1914,7 +1901,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Chat messages</source>
     </trans-unit>
     <trans-unit id="completionsDisabledStatus">
-      <source xml:lang="en">Code Completions Disabled</source>
+      <source xml:lang="en">Code completions Disabled</source>
     </trans-unit>
     <trans-unit id="completionsLabel">
       <source xml:lang="en">Code completions</source>
@@ -1983,13 +1970,13 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Included</source>
     </trans-unit>
     <trans-unit id="settings.codeCompletions">
-      <source xml:lang="en">Code Completions (all files)</source>
+      <source xml:lang="en">Code completions (all files)</source>
     </trans-unit>
     <trans-unit id="settings.codeCompletionsLanguage">
-      <source xml:lang="en">Code Completions ({0})</source>
+      <source xml:lang="en">Code completions ({0})</source>
     </trans-unit>
     <trans-unit id="settings.nextEditSuggestions">
-      <source xml:lang="en">Next Edit Suggestions</source>
+      <source xml:lang="en">Next edit suggestions</source>
     </trans-unit>
     <trans-unit id="settingsLabel">
       <source xml:lang="en">Settings</source>
@@ -2038,9 +2025,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="editsTitle">
       <source xml:lang="en">Edit with Copilot</source>
-    </trans-unit>
-    <trans-unit id="input.1">
-      <source xml:lang="en">Follow instructions from {0}.</source>
     </trans-unit>
     <trans-unit id="scrollDownButtonLabel">
       <source xml:lang="en">Scroll down</source>
@@ -2094,9 +2078,6 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputCompletions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="desc">
-      <source xml:lang="en">MCP Server: {0}</source>
-    </trans-unit>
     <trans-unit id="fileEntryDescription">
       <source xml:lang="en">{0} ({1})</source>
     </trans-unit>
@@ -2123,6 +2104,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="promptFileDescriptionWorkspace">
       <source xml:lang="en">Workspace Prompt File</source>
+    </trans-unit>
+    <trans-unit id="tool_source_completion">
+      <source xml:lang="en">{0}: {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputEditorHover" source-language="en" datatype="plaintext"><body>
@@ -2211,6 +2195,47 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="workbench.command.prompts.create.error.invalid-prompt-name">
       <source xml:lang="en">Invalid prompt file name '{0}'.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/tools/toolSetsContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="bad_name1">
+      <source xml:lang="en">Invalid file name</source>
+    </trans-unit>
+    <trans-unit id="bad_name2">
+      <source xml:lang="en">'{0}' is not a valid file name</source>
+    </trans-unit>
+    <trans-unit id="chat.configureToolSets">
+      <source xml:lang="en">Configure Tool Sets...</source>
+    </trans-unit>
+    <trans-unit id="chat.configureToolSets.add">
+      <source xml:lang="en">Add Tool Sets File...</source>
+    </trans-unit>
+    <trans-unit id="chat.configureToolSets.placeholder">
+      <source xml:lang="en">Select a tool set to configure</source>
+    </trans-unit>
+    <trans-unit id="input.placeholder">
+      <source xml:lang="en">Type tool sets file name</source>
+    </trans-unit>
+    <trans-unit id="schema.default">
+      <source xml:lang="en">Empty tool set</source>
+    </trans-unit>
+    <trans-unit id="schema.description">
+      <source xml:lang="en">A short description of this tool set.</source>
+    </trans-unit>
+    <trans-unit id="schema.icon">
+      <source xml:lang="en">Icon to use for this tool set in the UI. Uses the `\$(name)`-syntax, like `\$(zap)`</source>
+    </trans-unit>
+    <trans-unit id="schema.tools">
+      <source xml:lang="en">A list of tools or tool sets to include in this tool set.</source>
+    </trans-unit>
+    <trans-unit id="tooldesc">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="toolsetSchema.json">
+      <source xml:lang="en">User tool sets configuration</source>
+    </trans-unit>
+    <trans-unit id="toolsetdesc">
+      <source xml:lang="en">{0} ({1})</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewWelcomeController" source-language="en" datatype="plaintext"><body>
@@ -2566,6 +2591,9 @@ Type {3} to use commands</source>
     <trans-unit id="condition">
       <source xml:lang="en">Condition which must be true for this tool to be enabled. Note that a tool may still be invoked by another extension even when its `when` condition is false.</source>
     </trans-unit>
+    <trans-unit id="descriptions">
+      <source xml:lang="en">Description</source>
+    </trans-unit>
     <trans-unit id="icon">
       <source xml:lang="en">An icon that represents this tool. Either a file path, an object with file paths for dark and light themes, or a theme icon reference, like `$(zap)`</source>
     </trans-unit>
@@ -2575,11 +2603,20 @@ Type {3} to use commands</source>
     <trans-unit id="icon.light">
       <source xml:lang="en">Icon path when a light theme is used</source>
     </trans-unit>
+    <trans-unit id="langModelToolSets">
+      <source xml:lang="en">Language Model Tool Sets</source>
+    </trans-unit>
     <trans-unit id="langModelTools">
       <source xml:lang="en">Language Model Tools</source>
     </trans-unit>
+    <trans-unit id="name">
+      <source xml:lang="en">Name</source>
+    </trans-unit>
     <trans-unit id="parametersSchema">
       <source xml:lang="en">A JSON schema for the input this tool accepts. The input must be an object at the top level. A particular language model may not support all JSON schema features. See the documentation for the language model family you are using for more information.</source>
+    </trans-unit>
+    <trans-unit id="reference">
+      <source xml:lang="en">Reference Name</source>
     </trans-unit>
     <trans-unit id="toolDisplayName">
       <source xml:lang="en">A human-readable name for this tool that may be used to describe it in the UI.</source>
@@ -2592,6 +2629,21 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="toolName2">
       <source xml:lang="en">If {0} is enabled for this tool, the user may use '#' with this name to invoke the tool in a query. Otherwise, the name is not required. Name must not contain whitespace.</source>
+    </trans-unit>
+    <trans-unit id="toolSetDescription">
+      <source xml:lang="en">A description of this tool set.</source>
+    </trans-unit>
+    <trans-unit id="toolSetIcon">
+      <source xml:lang="en">An icon that represents this tool set, like `$(zap)`</source>
+    </trans-unit>
+    <trans-unit id="toolSetName">
+      <source xml:lang="en">A name for this tool set.</source>
+    </trans-unit>
+    <trans-unit id="toolSetReferenceName">
+      <source xml:lang="en">A name that users can use to reference this tool set. Name must not contain whitespace.</source>
+    </trans-unit>
+    <trans-unit id="toolSetTools">
+      <source xml:lang="en">An array of tool or tool set names that are part of this set.</source>
     </trans-unit>
     <trans-unit id="toolTableDescription">
       <source xml:lang="en">Description</source>
@@ -2607,6 +2659,12 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="toolUserDescription">
       <source xml:lang="en">A description of this tool that may be shown to the user.</source>
+    </trans-unit>
+    <trans-unit id="tools">
+      <source xml:lang="en">Tools</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.contributes.toolSets">
+      <source xml:lang="en">Contributes a set of language model tools that can be used together.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.tools">
       <source xml:lang="en">Contributes a tool that can be invoked by a language model in a chat session, or from a standalone command. Registered tools can be used by all extensions.</source>
