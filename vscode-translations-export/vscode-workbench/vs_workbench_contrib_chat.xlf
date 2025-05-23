@@ -521,6 +521,17 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatToolActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.accept">
+      <source xml:lang="en">Accept</source>
+    </trans-unit>
+    <trans-unit id="label">
+      <source xml:lang="en">Configure Tools...</source>
+    </trans-unit>
+    <trans-unit id="placeholder">
+      <source xml:lang="en">Select tools that are available to chat</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatToolPicker" source-language="en" datatype="plaintext"><body>
     <trans-unit id="addAny">
       <source xml:lang="en">Add More Tools...</source>
     </trans-unit>
@@ -529,9 +540,6 @@
     </trans-unit>
     <trans-unit id="addServer">
       <source xml:lang="en">Add MCP Server...</source>
-    </trans-unit>
-    <trans-unit id="chat.accept">
-      <source xml:lang="en">Accept</source>
     </trans-unit>
     <trans-unit id="configMcpCol">
       <source xml:lang="en">Configure {0}</source>
@@ -542,11 +550,11 @@
     <trans-unit id="defaultBucketLabel">
       <source xml:lang="en">Built-In</source>
     </trans-unit>
-    <trans-unit id="label">
-      <source xml:lang="en">Configure Tools...</source>
+    <trans-unit id="editUserBucket">
+      <source xml:lang="en">Edit Tool Set</source>
     </trans-unit>
     <trans-unit id="mcp">
-      <source xml:lang="en">MCP Server</source>
+      <source xml:lang="en">MCP Servers</source>
     </trans-unit>
     <trans-unit id="mcpShowOutput">
       <source xml:lang="en">Show Output</source>
@@ -556,9 +564,6 @@
     </trans-unit>
     <trans-unit id="noTools">
       <source xml:lang="en">Add tools to chat</source>
-    </trans-unit>
-    <trans-unit id="placeholder">
-      <source xml:lang="en">Select tools that are available to chat</source>
     </trans-unit>
     <trans-unit id="userBucket">
       <source xml:lang="en">User Defined</source>
@@ -628,6 +633,14 @@
       <source xml:lang="en">User data folder</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatModeActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.mode.select-dialog.placeholder">
+      <source xml:lang="en">Select the custom chat mode to edit</source>
+    </trans-unit>
+    <trans-unit id="manage-mode.capitalized">
+      <source xml:lang="en">Manage Custom Chat Modes...</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatRunPromptAction" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commands.prompt.select-dialog.placeholder">
       <source xml:lang="en">Select the prompt file to run (hold {0}-key to use in new chat)</source>
@@ -650,6 +663,9 @@
   <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/dialogs/askToSelectPrompt/promptFilePickers" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commands.new-instructionsfile.select-dialog.label">
       <source xml:lang="en">Create new instruction file...</source>
+    </trans-unit>
+    <trans-unit id="commands.new-modefile.select-dialog.label">
+      <source xml:lang="en">Create new custom chat mode file...</source>
     </trans-unit>
     <trans-unit id="commands.new-promptfile.select-dialog.label">
       <source xml:lang="en">New prompt file...</source>
@@ -753,9 +769,6 @@
     <trans-unit id="chat.extensionToolsPolicy">
       <source xml:lang="en">Enable using tools contributed by third-party extensions.</source>
     </trans-unit>
-    <trans-unit id="chat.focusWindowOnConfirmation">
-      <source xml:lang="en">Controls whether the Copilot window should be focused when a confirmation is needed.</source>
-    </trans-unit>
     <trans-unit id="chat.implicitContext.enabled.1">
       <source xml:lang="en">Enables automatically using the active editor as chat context for specified chat locations.</source>
     </trans-unit>
@@ -781,6 +794,17 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.enabled">
       <source xml:lang="en">Enables integration with Model Context Protocol servers to provide additional tools and functionality.</source>
+    </trans-unit>
+    <trans-unit id="chat.mode.config.locations.description">
+      <source xml:lang="en">Specify location(s) of custom chat mode files (`*{0}`). [Learn More]({1}).
+
+Relative paths are resolved from the root folder(s) of your workspace.</source>
+    </trans-unit>
+    <trans-unit id="chat.mode.config.locations.title">
+      <source xml:lang="en">Mode File Locations</source>
+    </trans-unit>
+    <trans-unit id="chat.notifyWindowOnConfirmation">
+      <source xml:lang="en">Controls whether the Copilot window should notify the user when a confirmation is needed.</source>
     </trans-unit>
     <trans-unit id="chat.promptFiles.policy">
       <source xml:lang="en">Enables reusable prompt and instruction files in Chat, Edits, and Inline Chat sessions.</source>
@@ -810,6 +834,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.sendElementsToChat.enabled">
       <source xml:lang="en">Controls whether elements can be sent to chat from the Simple Browser.</source>
+    </trans-unit>
+    <trans-unit id="chat.signInDialogVariant">
+      <source xml:lang="en">Control variations of the sign-in dialog.</source>
     </trans-unit>
     <trans-unit id="chat.signInWithAlternateProvider">
       <source xml:lang="en">Enable alternative sign-in provider.</source>
@@ -1719,11 +1746,17 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatPasteProviders" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="pastedAttachment.multiple">
+      <source xml:lang="en">{0} and {1} more</source>
+    </trans-unit>
     <trans-unit id="pastedAttachment.multipleLines">
       <source xml:lang="en">{0} lines</source>
     </trans-unit>
     <trans-unit id="pastedAttachment.oneLine">
       <source xml:lang="en">1 line</source>
+    </trans-unit>
+    <trans-unit id="pastedChatAttachments">
+      <source xml:lang="en">Insert Prompt &amp; Attachments</source>
     </trans-unit>
     <trans-unit id="pastedCodeAttachment">
       <source xml:lang="en">Pasted Code Attachment</source>
@@ -1751,17 +1784,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="copilotFailedWarning">
       <source xml:lang="en">Copilot failed to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
     </trans-unit>
-    <trans-unit id="copilotProTitle">
-      <source xml:lang="en">Start using Copilot Pro</source>
-    </trans-unit>
     <trans-unit id="copilotSetupError">
       <source xml:lang="en">Copilot setup failed.</source>
     </trans-unit>
     <trans-unit id="copilotSetupSuccess">
       <source xml:lang="en">Copilot setup finished successfully.</source>
-    </trans-unit>
-    <trans-unit id="copilotTitle">
-      <source xml:lang="en">Start using Copilot</source>
     </trans-unit>
     <trans-unit id="copilotTookLongWarning">
       <source xml:lang="en">Copilot took too long to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
@@ -1812,7 +1839,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">You need to set up Copilot to use Chat.</source>
     </trans-unit>
     <trans-unit id="settings">
-      <source xml:lang="en">GitHub Copilot Free, Pro and Pro+ may show [public code]({0}) suggestions and we may use your data for product improvement. You can change these [settings]({1}) at any time.</source>
+      <source xml:lang="en">{0} Copilot Free, Pro and Pro+ may show [public code]({1}) suggestions and we may use your data for product improvement. You can change these [settings]({2}) at any time.</source>
       <note>{Locked="["}
 {Locked="]({0})"}
 {Locked="]({1})"}</note>
@@ -1838,14 +1865,29 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="setupToolsDescription">
       <source xml:lang="en">Scaffold a new workspace in VS Code</source>
     </trans-unit>
+    <trans-unit id="signIn">
+      <source xml:lang="en">Sign in to use Copilot</source>
+    </trans-unit>
+    <trans-unit id="signInGH">
+      <source xml:lang="en">Sign in to use {0} Copilot</source>
+    </trans-unit>
+    <trans-unit id="signInVSC">
+      <source xml:lang="en">Sign in to use AI</source>
+    </trans-unit>
     <trans-unit id="signInWithProvider">
       <source xml:lang="en">Sign in with a {0} account</source>
     </trans-unit>
-    <trans-unit id="signUp">
-      <source xml:lang="en">Sign in to use Copilot</source>
-    </trans-unit>
     <trans-unit id="skipForNow">
       <source xml:lang="en">Skip for now</source>
+    </trans-unit>
+    <trans-unit id="startUsing">
+      <source xml:lang="en">Start using Copilot</source>
+    </trans-unit>
+    <trans-unit id="startUsingGh">
+      <source xml:lang="en">Start using {0} Copilot</source>
+    </trans-unit>
+    <trans-unit id="startUsingVSC">
+      <source xml:lang="en">Start using AI</source>
     </trans-unit>
     <trans-unit id="triggerChatSetup">
       <source xml:lang="en">Use AI Features with Copilot for free...</source>
@@ -2139,6 +2181,9 @@ Type {3} to use commands</source>
     <trans-unit id="commands.new.instructions.local.title">
       <source xml:lang="en">New Instructions File...</source>
     </trans-unit>
+    <trans-unit id="commands.new.mode.local.title">
+      <source xml:lang="en">New Mode File...</source>
+    </trans-unit>
     <trans-unit id="commands.new.prompt.local.title">
       <source xml:lang="en">New Prompt File...</source>
     </trans-unit>
@@ -2148,19 +2193,16 @@ Type {3} to use commands</source>
     <trans-unit id="learnMore.capitalized">
       <source xml:lang="en">Learn More</source>
     </trans-unit>
-    <trans-unit id="workbench.command.instructions.create.location.placeholder">
-      <source xml:lang="en">Select a location to create the instructions file in...</source>
-    </trans-unit>
-    <trans-unit id="workbench.command.prompt.create.location.placeholder">
-      <source xml:lang="en">Select a location to create the prompt file in...</source>
-    </trans-unit>
     <trans-unit id="workbench.command.prompts.create.user.enable-sync-notification">
-      <source xml:lang="en">Do you want to backup and sync your user prompt and instruction files with Setting Sync?'</source>
+      <source xml:lang="en">Do you want to backup and sync your user prompt, instruction and mode files with Setting Sync?'</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptName" source-language="en" datatype="plaintext"><body>
     <trans-unit id="askForInstructionsFileName.placeholder">
       <source xml:lang="en">Enter the name of the instructions file</source>
+    </trans-unit>
+    <trans-unit id="askForModeFileName.placeholder">
+      <source xml:lang="en">Enter the name of the custom chat mode file</source>
     </trans-unit>
     <trans-unit id="askForPromptFileName.error.empty">
       <source xml:lang="en">Please enter a name.</source>
@@ -2176,6 +2218,18 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptSourceFolder" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.instructions.create.ask-folder.empty.docs-label">
+      <source xml:lang="en">Learn how to configure reusable instructions</source>
+    </trans-unit>
+    <trans-unit id="commands.instructions.create.ask-folder.empty.placeholder">
+      <source xml:lang="en">No instruction source folders found.</source>
+    </trans-unit>
+    <trans-unit id="commands.mode.create.ask-folder.empty.docs-label">
+      <source xml:lang="en">Learn how to configure custom chat modes</source>
+    </trans-unit>
+    <trans-unit id="commands.mode.create.ask-folder.empty.placeholder">
+      <source xml:lang="en">No custom chat mode source folders found.</source>
+    </trans-unit>
     <trans-unit id="commands.prompts.create.ask-folder.empty.docs-label">
       <source xml:lang="en">Learn how to configure reusable prompts</source>
     </trans-unit>
@@ -2187,6 +2241,15 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="commands.prompts.create.source-folder.user">
       <source xml:lang="en">User Data Folder</source>
+    </trans-unit>
+    <trans-unit id="workbench.command.instructions.create.location.placeholder">
+      <source xml:lang="en">Select a location to create the instructions file in...</source>
+    </trans-unit>
+    <trans-unit id="workbench.command.mode.create.location.placeholder">
+      <source xml:lang="en">Select a location to create the mode file in...</source>
+    </trans-unit>
+    <trans-unit id="workbench.command.prompt.create.location.placeholder">
+      <source xml:lang="en">Select a location to create the prompt file in...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/errors" source-language="en" datatype="plaintext"><body>
@@ -2229,13 +2292,13 @@ Type {3} to use commands</source>
       <source xml:lang="en">A list of tools or tool sets to include in this tool set.</source>
     </trans-unit>
     <trans-unit id="tooldesc">
-      <source xml:lang="en">{0} ({1})</source>
+      <source xml:lang="en">{0} - {1}</source>
     </trans-unit>
     <trans-unit id="toolsetSchema.json">
       <source xml:lang="en">User tool sets configuration</source>
     </trans-unit>
     <trans-unit id="toolsetdesc">
-      <source xml:lang="en">{0} ({1})</source>
+      <source xml:lang="en">{0} - {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewWelcomeController" source-language="en" datatype="plaintext"><body>

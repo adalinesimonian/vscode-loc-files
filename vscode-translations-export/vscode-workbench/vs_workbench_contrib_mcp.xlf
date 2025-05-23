@@ -7,8 +7,22 @@
     <trans-unit id="mcp-installed">
       <source xml:lang="en">MCP Servers - Installed</source>
     </trans-unit>
+    <trans-unit id="mcp.quickaccess.add">
+      <source xml:lang="en">Add Server</source>
+    </trans-unit>
+    <trans-unit id="mcp.quickaccess.placeholder">
+      <source xml:lang="en">Filter to an MCP resource</source>
+    </trans-unit>
     <trans-unit id="mcpServer">
       <source xml:lang="en">MCP Server</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpAddContextContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.addContext">
+      <source xml:lang="en">MCP Resources...</source>
+    </trans-unit>
+    <trans-unit id="mcp.addContext.placeholder">
+      <source xml:lang="en">Select MCP Resource...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpCommands" source-language="en" datatype="plaintext"><body>
@@ -23,6 +37,9 @@
     </trans-unit>
     <trans-unit id="mcp.addServer.description">
       <source xml:lang="en">Add a new server configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.browseResources">
+      <source xml:lang="en">Browse Resources...</source>
     </trans-unit>
     <trans-unit id="mcp.command.browse">
       <source xml:lang="en">MCP Servers</source>
@@ -270,6 +287,23 @@
     </trans-unit>
     <trans-unit id="server.toolCountCached">
       <source xml:lang="en">{0} cached tools</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpResourceQuickAccess" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.quickaccess.attach">
+      <source xml:lang="en">Attach to chat</source>
+    </trans-unit>
+    <trans-unit id="mcp.resource.template">
+      <source xml:lang="en">Resource template: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.resource.template.empty">
+      <source xml:lang="en">&lt;Empty&gt;</source>
+    </trans-unit>
+    <trans-unit id="mcp.resource.template.optional">
+      <source xml:lang="en">Optional</source>
+    </trans-unit>
+    <trans-unit id="mcp.resource.template.placeholder">
+      <source xml:lang="en">Value for ${0} in {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServerActions" source-language="en" datatype="plaintext"><body>
