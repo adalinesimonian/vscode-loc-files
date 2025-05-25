@@ -178,7 +178,7 @@
       <source xml:lang="en">You've reached your monthly code completions quota. You still have free chat messages available.</source>
     </trans-unit>
     <trans-unit id="configureCompletions">
-      <source xml:lang="en">Configure code completions...</source>
+      <source xml:lang="en">Configure Code Completions...</source>
     </trans-unit>
     <trans-unit id="copilotQuotaReached">
       <source xml:lang="en">Copilot Quota Reached</source>
@@ -1778,17 +1778,29 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatDescription">
       <source xml:lang="en">Ask Copilot</source>
     </trans-unit>
+    <trans-unit id="continueWithEmailOrUserId">
+      <source xml:lang="en">Continue</source>
+    </trans-unit>
     <trans-unit id="continueWithProvider">
       <source xml:lang="en">Continue with {0}</source>
     </trans-unit>
     <trans-unit id="copilotFailedWarning">
       <source xml:lang="en">Copilot failed to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
     </trans-unit>
+    <trans-unit id="copilotFreeTitle">
+      <source xml:lang="en">Start using Copilot for free</source>
+    </trans-unit>
+    <trans-unit id="copilotProTitle">
+      <source xml:lang="en">Start using Copilot Pro</source>
+    </trans-unit>
     <trans-unit id="copilotSetupError">
       <source xml:lang="en">Copilot setup failed.</source>
     </trans-unit>
     <trans-unit id="copilotSetupSuccess">
       <source xml:lang="en">Copilot setup finished successfully.</source>
+    </trans-unit>
+    <trans-unit id="copilotTitle">
+      <source xml:lang="en">Start using Copilot</source>
     </trans-unit>
     <trans-unit id="copilotTookLongWarning">
       <source xml:lang="en">Copilot took too long to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
@@ -1799,14 +1811,24 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="copilotWorkspaceTrust">
       <source xml:lang="en">Copilot is currently only supported in trusted workspaces.</source>
     </trans-unit>
+    <trans-unit id="createAccount">
+      <source xml:lang="en">Create a New Account</source>
+    </trans-unit>
     <trans-unit id="editsDescription">
       <source xml:lang="en">Edit files in your workspace</source>
+    </trans-unit>
+    <trans-unit id="emailOrUserIdPlaceholder">
+      <source xml:lang="en">Enter your email or {0} username</source>
     </trans-unit>
     <trans-unit id="enterpriseInstance">
       <source xml:lang="en">What is your {0} instance?</source>
     </trans-unit>
     <trans-unit id="enterpriseInstancePlaceholder">
       <source xml:lang="en">i.e. "octocat" or "https://octocat.ghe.com"...</source>
+    </trans-unit>
+    <trans-unit id="headerDialog">
+      <source xml:lang="en">[Copilot]({0}) is your AI pair programmer. Write code faster with completions, fix bugs and build new features across multiple files, and learn about your codebase through chat.</source>
+      <note>{Locked="[Copilot]({0})"}</note>
     </trans-unit>
     <trans-unit id="hideChatSetup">
       <source xml:lang="en">Hide Copilot</source>
@@ -1831,6 +1853,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="managePlan">
       <source xml:lang="en">Upgrade to Copilot Pro</source>
+    </trans-unit>
+    <trans-unit id="maybeLater">
+      <source xml:lang="en">Maybe Later</source>
+    </trans-unit>
+    <trans-unit id="or">
+      <source xml:lang="en">Or</source>
     </trans-unit>
     <trans-unit id="retry">
       <source xml:lang="en">Retry</source>
@@ -1865,8 +1893,20 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="setupToolsDescription">
       <source xml:lang="en">Scaffold a new workspace in VS Code</source>
     </trans-unit>
+    <trans-unit id="setupWithEnterpriseProvider">
+      <source xml:lang="en">Sign in with a {0} Account</source>
+    </trans-unit>
+    <trans-unit id="setupWithProvider">
+      <source xml:lang="en">Sign in with a {0} Account</source>
+    </trans-unit>
+    <trans-unit id="setupWithProviderShort">
+      <source xml:lang="en">Sign in with {0}</source>
+    </trans-unit>
     <trans-unit id="signIn">
       <source xml:lang="en">Sign in to use Copilot</source>
+    </trans-unit>
+    <trans-unit id="signInButton">
+      <source xml:lang="en">Sign in</source>
     </trans-unit>
     <trans-unit id="signInGH">
       <source xml:lang="en">Sign in to use {0} Copilot</source>
@@ -1876,6 +1916,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="signInWithProvider">
       <source xml:lang="en">Sign in with a {0} account</source>
+    </trans-unit>
+    <trans-unit id="signUp">
+      <source xml:lang="en">Sign in to use Copilot</source>
+    </trans-unit>
+    <trans-unit id="signUpFree">
+      <source xml:lang="en">Sign in to use Copilot for free</source>
     </trans-unit>
     <trans-unit id="skipForNow">
       <source xml:lang="en">Skip for now</source>
@@ -1903,6 +1949,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="unknownSignInErrorDetail">
       <source xml:lang="en">You must be signed in to use Copilot.</source>
+    </trans-unit>
+    <trans-unit id="useCopilotButton">
+      <source xml:lang="en">Use Copilot</source>
     </trans-unit>
     <trans-unit id="vscodeAgentDescription">
       <source xml:lang="en">Ask questions about VS Code</source>
