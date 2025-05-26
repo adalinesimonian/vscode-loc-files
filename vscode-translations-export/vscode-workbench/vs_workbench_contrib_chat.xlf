@@ -637,6 +637,9 @@
     <trans-unit id="commands.mode.select-dialog.placeholder">
       <source xml:lang="en">Select the custom chat mode to edit</source>
     </trans-unit>
+    <trans-unit id="manage-mode">
+      <source xml:lang="en">Manage Modes...</source>
+    </trans-unit>
     <trans-unit id="manage-mode.capitalized">
       <source xml:lang="en">Manage Custom Chat Modes...</source>
     </trans-unit>
@@ -1769,14 +1772,8 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentDescription">
-      <source xml:lang="en">Edit files in your workspace in agent mode</source>
-    </trans-unit>
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
-    </trans-unit>
-    <trans-unit id="chatDescription">
-      <source xml:lang="en">Ask Copilot</source>
     </trans-unit>
     <trans-unit id="continueWithEmailOrUserId">
       <source xml:lang="en">Continue</source>
@@ -1813,9 +1810,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="createAccount">
       <source xml:lang="en">Create a New Account</source>
-    </trans-unit>
-    <trans-unit id="editsDescription">
-      <source xml:lang="en">Edit files in your workspace</source>
     </trans-unit>
     <trans-unit id="emailOrUserIdPlaceholder">
       <source xml:lang="en">Enter your email or {0} username</source>
@@ -2414,6 +2408,9 @@ Type {3} to use commands</source>
     <trans-unit id="chatExtensionInvalid">
       <source xml:lang="en">True when the installed chat extension is invalid and needs to be updated.</source>
     </trans-unit>
+    <trans-unit id="chatHasCustomChatModes">
+      <source xml:lang="en">True when the chat has custom chat modes available.</source>
+    </trans-unit>
     <trans-unit id="chatHasFileAttachments">
       <source xml:lang="en">True when the chat has file attachments.</source>
     </trans-unit>
@@ -2539,6 +2536,17 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="editsSummary">
       <source xml:lang="en">Made changes.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/chatModes" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentDescription">
+      <source xml:lang="en">Edit files in your workspace in agent mode</source>
+    </trans-unit>
+    <trans-unit id="chatDescription">
+      <source xml:lang="en">Ask Copilot</source>
+    </trans-unit>
+    <trans-unit id="editsDescription">
+      <source xml:lang="en">Edit files in your workspace</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatProgressTypes/chatToolInvocation" source-language="en" datatype="plaintext"><body>
