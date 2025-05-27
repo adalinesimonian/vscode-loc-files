@@ -64,6 +64,38 @@
       <source xml:lang="en">Use a new account...</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/authentication/browser/actions/manageDynamicAuthenticationProvidersAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="authenticationCategory">
+      <source xml:lang="en">Authentication</source>
+    </trans-unit>
+    <trans-unit id="clientId">
+      <source xml:lang="en">Client ID: {0}</source>
+    </trans-unit>
+    <trans-unit id="confirmDeleteDetail">
+      <source xml:lang="en">This will remove all stored authentication data for the selected provider(s). You will need to re-authenticate if you use these providers again.</source>
+    </trans-unit>
+    <trans-unit id="confirmDeleteMultipleProviders">
+      <source xml:lang="en">Are you sure you want to remove {0} dynamic authentication providers: {1}?</source>
+    </trans-unit>
+    <trans-unit id="confirmDeleteSingleProvider">
+      <source xml:lang="en">Are you sure you want to remove the dynamic authentication provider "{0}"?</source>
+    </trans-unit>
+    <trans-unit id="noDynamicProviders">
+      <source xml:lang="en">No dynamic authentication providers</source>
+    </trans-unit>
+    <trans-unit id="noDynamicProvidersDetail">
+      <source xml:lang="en">No dynamic authentication providers have been used yet.</source>
+    </trans-unit>
+    <trans-unit id="remove">
+      <source xml:lang="en">Remove</source>
+    </trans-unit>
+    <trans-unit id="removeDynamicAuthProviders">
+      <source xml:lang="en">Remove Dynamic Authentication Providers</source>
+    </trans-unit>
+    <trans-unit id="selectProviderToRemove">
+      <source xml:lang="en">Select a dynamic authentication provider to remove</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/authentication/browser/actions/manageTrustedExtensionsForAccountAction" source-language="en" datatype="plaintext"><body>
     <trans-unit id="accountLastUsedDate">
       <source xml:lang="en">Last used this account {0}</source>
