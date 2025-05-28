@@ -553,6 +553,9 @@
     <trans-unit id="editUserBucket">
       <source xml:lang="en">Edit Tool Set</source>
     </trans-unit>
+    <trans-unit id="ext">
+      <source xml:lang="en">Extension: {0}</source>
+    </trans-unit>
     <trans-unit id="mcpShowOutput">
       <source xml:lang="en">Show Output</source>
     </trans-unit>
@@ -992,6 +995,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.partiallyOmittedNotebookImageAttachment">
       <source xml:lang="en">Partially omitted this Notebook output: {0}</source>
+    </trans-unit>
+    <trans-unit id="tool">
+      <source xml:lang="en">{0} - {1}</source>
+    </trans-unit>
+    <trans-unit id="toolset">
+      <source xml:lang="en">{0} - {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatAgentCommandContentPart" source-language="en" datatype="plaintext"><body>
@@ -2373,6 +2382,12 @@ Type {3} to use commands</source>
     <trans-unit id="chat.requestBorder">
       <source xml:lang="en">The border color of a chat request.</source>
     </trans-unit>
+    <trans-unit id="chat.requestBubbleBackground">
+      <source xml:lang="en">Background color of the chat request bubble.</source>
+    </trans-unit>
+    <trans-unit id="chat.requestCodeBorder">
+      <source xml:lang="en">Border color of code blocks within the chat request bubble.</source>
+    </trans-unit>
     <trans-unit id="chat.slashCommandBackground">
       <source xml:lang="en">The background color of a chat slash command.</source>
     </trans-unit>
@@ -2576,6 +2591,20 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="languageModels">
       <source xml:lang="en">Language models usage statistics of this extension.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/languageModelToolsService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="builtin">
+      <source xml:lang="en">Built-In</source>
+    </trans-unit>
+    <trans-unit id="ext">
+      <source xml:lang="en">Extension: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp">
+      <source xml:lang="en">MCP Server: {0}</source>
+    </trans-unit>
+    <trans-unit id="user">
+      <source xml:lang="en">User Defined</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/languageModels" source-language="en" datatype="plaintext"><body>
