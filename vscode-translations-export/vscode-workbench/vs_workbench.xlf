@@ -14,6 +14,20 @@
     <trans-unit id="confirmRelogin">
       <source xml:lang="en">The extension '{0}' wants you to sign in again using {1}.</source>
     </trans-unit>
+    <trans-unit id="copyAndContinue">
+      <source xml:lang="en">Copy &amp; Continue</source>
+    </trans-unit>
+    <trans-unit id="deviceCodeDetail">
+      <source xml:lang="en">Your code: {0}
+
+To complete authentication, navigate to {1} and enter the code above.</source>
+    </trans-unit>
+    <trans-unit id="deviceCodeTitle">
+      <source xml:lang="en">Device Code Authentication</source>
+    </trans-unit>
+    <trans-unit id="failedToOpenUri">
+      <source xml:lang="en">Failed to open {0}</source>
+    </trans-unit>
     <trans-unit id="incorrectAccount">
       <source xml:lang="en">Incorrect account detected</source>
     </trans-unit>
@@ -29,8 +43,14 @@
     <trans-unit id="loginWith">
       <source xml:lang="en">Login with {0}</source>
     </trans-unit>
+    <trans-unit id="no">
+      <source xml:lang="en">No</source>
+    </trans-unit>
     <trans-unit id="signedOut">
       <source xml:lang="en">Successfully signed out.</source>
+    </trans-unit>
+    <trans-unit id="yes">
+      <source xml:lang="en">Yes</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/api/browser/mainThreadCLICommands" source-language="en" datatype="plaintext"><body>
@@ -597,6 +617,23 @@
       <source xml:lang="en">URI of the folder</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/api/common/extHostAuthentication" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="authenticatingTo">
+      <source xml:lang="en">Authenticating to '{0}'</source>
+    </trans-unit>
+    <trans-unit id="completeAuth">
+      <source xml:lang="en">Complete the authentication in the browser window that has opened.</source>
+    </trans-unit>
+    <trans-unit id="continueWith">
+      <source xml:lang="en">You have not yet finished authenticating to '{0}'. Would you like to try a different way? ({1})</source>
+    </trans-unit>
+    <trans-unit id="url handler">
+      <source xml:lang="en">URL Handler</source>
+    </trans-unit>
+    <trans-unit id="userCanceledContinue">
+      <source xml:lang="en">Having trouble authenticating to '{0}'? Would you like to try a different way? ({1})</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/api/common/extHostDiagnostics" source-language="en" datatype="plaintext"><body>
     <trans-unit id="limitHit">
       <source xml:lang="en">Not showing {0} further errors and warnings.</source>
@@ -715,6 +752,20 @@
     </trans-unit>
     <trans-unit id="schema">
       <source xml:lang="en">Schema</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/api/node/extHostAuthentication" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="completeAuth">
+      <source xml:lang="en">Complete the authentication in the browser window that has opened.</source>
+    </trans-unit>
+    <trans-unit id="device code">
+      <source xml:lang="en">Device Code</source>
+    </trans-unit>
+    <trans-unit id="loopback">
+      <source xml:lang="en">Loopback Server</source>
+    </trans-unit>
+    <trans-unit id="waitingForAuth">
+      <source xml:lang="en">Open [{0}]({0}) in a new tab and paste your one-time code: {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/api/node/extHostDebugService" source-language="en" datatype="plaintext"><body>
@@ -4248,8 +4299,8 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="settings.editor.ui">
       <source xml:lang="en">Use the settings UI editor.</source>
     </trans-unit>
-    <trans-unit id="settings.showSuggestions">
-      <source xml:lang="en">Controls whether setting suggestions are shown below the search bar in the Settings editor.</source>
+    <trans-unit id="settings.showAISearchToggle">
+      <source xml:lang="en">Controls whether the AI search toggle is shown in the search bar in the Settings editor.</source>
     </trans-unit>
     <trans-unit id="sharedViewState">
       <source xml:lang="en">Preserves the most recent editor view state (such as scroll position) across all editor groups and restores that if no specific editor view state is found for the editor group.</source>

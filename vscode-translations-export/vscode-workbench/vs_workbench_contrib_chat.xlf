@@ -798,6 +798,18 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.mcp.enabled">
       <source xml:lang="en">Enables integration with Model Context Protocol servers to provide additional tools and functionality.</source>
     </trans-unit>
+    <trans-unit id="chat.mcp.serverSampling">
+      <source xml:lang="en">Configures which models are exposed to MCP servers for sampling (making model requests in the background). This setting can be edited in a graphical way under the `{0}` command.</source>
+    </trans-unit>
+    <trans-unit id="chat.mcp.serverSampling.allowedDuringChat">
+      <source xml:lang="en">Whether this server is make sampling requests during its tool calls in a chat session.</source>
+    </trans-unit>
+    <trans-unit id="chat.mcp.serverSampling.allowedOutsideChat">
+      <source xml:lang="en">Whether this server is allowed to make sampling requests outside of a chat session.</source>
+    </trans-unit>
+    <trans-unit id="chat.mcp.serverSampling.model">
+      <source xml:lang="en">A model the MCP server has access to.</source>
+    </trans-unit>
     <trans-unit id="chat.mode.config.locations.description">
       <source xml:lang="en">Specify location(s) of custom chat mode files (`*{0}`). [Learn More]({1}).
 
@@ -879,6 +891,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="mcp.gallery.serviceUrl">
       <source xml:lang="en">Configure the MCP Gallery service URL to connect to</source>
+    </trans-unit>
+    <trans-unit id="mcp.list">
+      <source xml:lang="en">List Servers</source>
     </trans-unit>
     <trans-unit id="mpc.discovery.enabled">
       <source xml:lang="en">Configures discovery of Model Context Protocol servers on the machine. It may be set to `true` or `false` to disable or enable all sources, and an mapping sources you wish to enable.</source>
@@ -2303,6 +2318,14 @@ Type {3} to use commands</source>
       <source xml:lang="en">Invalid prompt file name '{0}'.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/promptToolsCodeLensProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="eee">
+      <source xml:lang="en">Configure Tools...</source>
+    </trans-unit>
+    <trans-unit id="placeholder">
+      <source xml:lang="en">Select tools</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/tools/toolSetsContribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="bad_name1">
       <source xml:lang="en">Invalid file name</source>
@@ -2334,14 +2357,13 @@ Type {3} to use commands</source>
     <trans-unit id="schema.tools">
       <source xml:lang="en">A list of tools or tool sets to include in this tool set.</source>
     </trans-unit>
-    <trans-unit id="tooldesc">
-      <source xml:lang="en">{0} - {1}</source>
+    <trans-unit id="tool.description">
+      <source xml:lang="en">{1} ({0})
+
+{2}</source>
     </trans-unit>
     <trans-unit id="toolsetSchema.json">
       <source xml:lang="en">User tool sets configuration</source>
-    </trans-unit>
-    <trans-unit id="toolsetdesc">
-      <source xml:lang="en">{0} - {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewWelcomeController" source-language="en" datatype="plaintext"><body>

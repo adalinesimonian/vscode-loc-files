@@ -65,6 +65,15 @@
     <trans-unit id="mcp.config">
       <source xml:lang="en">Show Configuration</source>
     </trans-unit>
+    <trans-unit id="mcp.configAccess">
+      <source xml:lang="en">Configure Model Access</source>
+    </trans-unit>
+    <trans-unit id="mcp.configureSamplingModels">
+      <source xml:lang="en">Configure SamplingModel</source>
+    </trans-unit>
+    <trans-unit id="mcp.configureSamplingModels.ph">
+      <source xml:lang="en">Pick the models {0} can access via MCP sampling</source>
+    </trans-unit>
     <trans-unit id="mcp.editStoredInput">
       <source xml:lang="en">Edit Stored Input</source>
     </trans-unit>
@@ -94,6 +103,9 @@
     </trans-unit>
     <trans-unit id="mcp.showOutput">
       <source xml:lang="en">Show Output</source>
+    </trans-unit>
+    <trans-unit id="mcp.showOutput.description">
+      <source xml:lang="en">Set the models the server can use via MCP sampling</source>
     </trans-unit>
     <trans-unit id="mcp.start">
       <source xml:lang="en">Start Server</source>
@@ -218,7 +230,7 @@
       <source xml:lang="en">Browse MCP Servers...</source>
     </trans-unit>
     <trans-unit id="mcp.target..remote.description">
-      <source xml:lang="en">Available on this remote machine</source>
+      <source xml:lang="en">Available on this remote machine, runs on {0}</source>
     </trans-unit>
     <trans-unit id="mcp.target.remote">
       <source xml:lang="en">Remote Settings</source>
@@ -230,13 +242,16 @@
       <source xml:lang="en">User Settings</source>
     </trans-unit>
     <trans-unit id="mcp.target.user.description">
-      <source xml:lang="en">Available in all workspaces</source>
+      <source xml:lang="en">Available in all workspaces, runs locally</source>
     </trans-unit>
     <trans-unit id="mcp.target.workspace">
       <source xml:lang="en">Workspace Settings</source>
     </trans-unit>
     <trans-unit id="mcp.target.workspace.description">
-      <source xml:lang="en">Available in this workspace</source>
+      <source xml:lang="en">Available in this workspace, runs locally</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.workspace.description.remote">
+      <source xml:lang="en">Available in this workspace, runs on {0}</source>
     </trans-unit>
     <trans-unit id="mcp.url.placeholder">
       <source xml:lang="en">URL of the MCP server (e.g., http://localhost:3000)</source>
@@ -310,6 +325,9 @@
     </trans-unit>
     <trans-unit id="mcp.arg.suggestions">
       <source xml:lang="en">Suggestions</source>
+    </trans-unit>
+    <trans-unit id="mcp.prompt.pick.title">
+      <source xml:lang="en">Value for: {0}</source>
     </trans-unit>
     <trans-unit id="mcp.terminal.name">
       <source xml:lang="en">MCP Terminal</source>
@@ -560,6 +578,41 @@ Do you want to allow running MCP servers from {3}?</source>
     </trans-unit>
     <trans-unit id="trustTitleWithOrigin">
       <source xml:lang="en">Trust MCP servers from {0}?</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/common/mcpSamplingService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="configure">
+      <source xml:lang="en">Configure</source>
+    </trans-unit>
+    <trans-unit id="mcp.sampling.allow.always">
+      <source xml:lang="en">Always</source>
+    </trans-unit>
+    <trans-unit id="mcp.sampling.allow.inSession">
+      <source xml:lang="en">Allow in this Session</source>
+    </trans-unit>
+    <trans-unit id="mcp.sampling.allow.never">
+      <source xml:lang="en">Never</source>
+    </trans-unit>
+    <trans-unit id="mcp.sampling.allow.notNow">
+      <source xml:lang="en">Now Now</source>
+    </trans-unit>
+    <trans-unit id="mcp.sampling.allowDuringChat.desc">
+      <source xml:lang="en">The MCP server "{0}" has issued a request to make an language model call. Do you want to allow it to make requests during chat?</source>
+    </trans-unit>
+    <trans-unit id="mcp.sampling.allowDuringChat.title">
+      <source xml:lang="en">Allow MCP tools from "{0}" to make LLM requests?</source>
+    </trans-unit>
+    <trans-unit id="mcp.sampling.allowOutsideChat.desc">
+      <source xml:lang="en">The MCP server "{0}" has issued a request to make an language model call. Do you want to allow it to make requests, outside of tool calls during chat?</source>
+    </trans-unit>
+    <trans-unit id="mcp.sampling.allowOutsideChat.title">
+      <source xml:lang="en">Allow MCP server "{0}" to make LLM requests?</source>
+    </trans-unit>
+    <trans-unit id="mcp.sampling.needsModels">
+      <source xml:lang="en">MCP server "{0}" triggered a language model request, but it has no allowlisted models.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpServer" source-language="en" datatype="plaintext"><body>
