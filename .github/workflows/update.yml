@@ -43,6 +43,9 @@ jobs:
       run: node ./node_modules/gulp/bin/gulp.js vscode-translations-export
       working-directory: vscode
 
+    - name: Copy licence
+      run: cp vscode/LICENSE.txt vscode-translations-export/LICENSE.txt
+
     - name: Git info
       run: |
         git add vscode-translations-export

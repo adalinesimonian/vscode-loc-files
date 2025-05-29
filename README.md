@@ -4,4 +4,6 @@ This repository contains the base localization files for VS Code in English. The
 
 ## Licence
 
-MIT
+The portions of this repository that are not translation files are licensed by me under the [MIT License](LICENCE).
+
+The translation files themselves are licensed by Microsoft under [the same licence as VS Code](vscode-translations-export/LICENSE.txt).
