@@ -2319,7 +2319,7 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/promptToolsCodeLensProvider" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="eee">
+    <trans-unit id="configure-tools.capitalized.ellipsis">
       <source xml:lang="en">Configure Tools...</source>
     </trans-unit>
     <trans-unit id="placeholder">
@@ -2662,7 +2662,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Background color of an inactive Front Matter header block.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/header" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/headerBase" source-language="en" datatype="plaintext"><body>
     <trans-unit id="prompt.header.diagnostics.parsing-error">
       <source xml:lang="en">Failed to parse prompt header: {0}</source>
     </trans-unit>
@@ -2674,9 +2674,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.diagnostics.unknown-record">
       <source xml:lang="en">Unknown metadata '{0}' will be ignored.</source>
-    </trans-unit>
-    <trans-unit id="prompt.header.metadata.mode.diagnostics.incompatible-with-tools">
-      <source xml:lang="en">Record '{0}' is implied to have the '{1}' value if '{2}' record is present so the specified value will be ignored.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/applyTo" source-language="en" datatype="plaintext"><body>
@@ -2709,6 +2706,11 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.tools.diagnostics.invalid-value-type">
       <source xml:lang="en">The '{0}' metadata must be an array of tool names, got '{2}'.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/promptHeader" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="prompt.header.metadata.mode.diagnostics.incompatible-with-tools">
+      <source xml:lang="en">Record '{0}' is implied to have the '{1}' value if '{2}' record is present so the specified value will be ignored.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/topError" source-language="en" datatype="plaintext"><body>
