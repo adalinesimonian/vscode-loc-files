@@ -1142,6 +1142,27 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.output">
       <source xml:lang="en">Output</source>
     </trans-unit>
+    <trans-unit id="chat.saveResources">
+      <source xml:lang="en">Save As...</source>
+    </trans-unit>
+    <trans-unit id="chat.saveResources.error">
+      <source xml:lang="en">Failed to save {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.saveResources.progress">
+      <source xml:lang="en">Saving resources...</source>
+    </trans-unit>
+    <trans-unit id="chat.saveResources.reveal">
+      <source xml:lang="en">Saved resources to {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.saveResources.title">
+      <source xml:lang="en">Pick folder to save resources</source>
+    </trans-unit>
+    <trans-unit id="chat.unknownData">
+      <source xml:lang="en">Unknown Data</source>
+    </trans-unit>
+    <trans-unit id="chat.unknownData.full">
+      <source xml:lang="en">Unknown Data with MIME type {0}</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTreeContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="treeAriaLabel">
@@ -2928,11 +2949,17 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/electron-sandbox/tools/fetchPageTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="fetchWebPage.confirmationMessage.plural">
+      <source xml:lang="en">Web content may contain malicious code or attempt prompt injection attacks.</source>
+    </trans-unit>
+    <trans-unit id="fetchWebPage.confirmationMessage.singular">
+      <source xml:lang="en">Web content may contain malicious code or attempt prompt injection attacks.</source>
+    </trans-unit>
     <trans-unit id="fetchWebPage.confirmationTitle.plural">
-      <source xml:lang="en">Fetch untrusted web pages?</source>
+      <source xml:lang="en">Fetch web pages?</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.confirmationTitle.singular">
-      <source xml:lang="en">Fetch untrusted web page?</source>
+      <source xml:lang="en">Fetch web page?</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.invalidUrl">
       <source xml:lang="en">Invalid URL</source>

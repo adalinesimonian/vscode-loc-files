@@ -92,8 +92,20 @@
     <trans-unit id="mcp.resetTrust">
       <source xml:lang="en">Reset Trust</source>
     </trans-unit>
+    <trans-unit id="mcp.resources">
+      <source xml:lang="en">Browse Resources</source>
+    </trans-unit>
     <trans-unit id="mcp.restart">
       <source xml:lang="en">Restart Server</source>
+    </trans-unit>
+    <trans-unit id="mcp.samplingLog">
+      <source xml:lang="en">Show Sampling Requests</source>
+    </trans-unit>
+    <trans-unit id="mcp.samplingLog.description">
+      <source xml:lang="en">Show the sampling requests for this server</source>
+    </trans-unit>
+    <trans-unit id="mcp.samplingLog.title">
+      <source xml:lang="en">MCP Sampling: {0}</source>
     </trans-unit>
     <trans-unit id="mcp.selectAction">
       <source xml:lang="en">Select Server Action</source>
@@ -340,6 +352,9 @@
     <trans-unit id="mcp.quickaccess.attach">
       <source xml:lang="en">Attach to chat</source>
     </trans-unit>
+    <trans-unit id="mcp.quickaccess.placeholder">
+      <source xml:lang="en">Search for resources</source>
+    </trans-unit>
     <trans-unit id="mcp.resource.template">
       <source xml:lang="en">Resource template: {0}</source>
     </trans-unit>
@@ -578,6 +593,11 @@ Do you want to allow running MCP servers from {3}?</source>
     </trans-unit>
     <trans-unit id="trustTitleWithOrigin">
       <source xml:lang="en">Trust MCP servers from {0}?</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/common/mcpSamplingLog" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.sampling.rpd">
+      <source xml:lang="en">{0} total requests in the last 7 days.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpSamplingService" source-language="en" datatype="plaintext"><body>
