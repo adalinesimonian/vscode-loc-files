@@ -626,6 +626,12 @@
     <trans-unit id="commands.instructions.select-dialog.placeholder">
       <source xml:lang="en">Select instructions files to attach</source>
     </trans-unit>
+    <trans-unit id="commands.prompt.manage-dialog.placeholder">
+      <source xml:lang="en">Select the instructions file to edit</source>
+    </trans-unit>
+    <trans-unit id="manage-instructions.capitalized.ellipses">
+      <source xml:lang="en">Manage Instructions Files...</source>
+    </trans-unit>
     <trans-unit id="placeholder">
       <source xml:lang="en">Select instructions files to attach</source>
     </trans-unit>
@@ -641,12 +647,18 @@
       <source xml:lang="en">Manage Modes...</source>
     </trans-unit>
     <trans-unit id="manage-mode.capitalized">
-      <source xml:lang="en">Manage Custom Chat Modes...</source>
+      <source xml:lang="en">Manage Chat Modes...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatRunPromptAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompt.manage-dialog.placeholder">
+      <source xml:lang="en">Select the prompt file to open</source>
+    </trans-unit>
     <trans-unit id="commands.prompt.select-dialog.placeholder">
       <source xml:lang="en">Select the prompt file to run (hold {0}-key to use in new chat)</source>
+    </trans-unit>
+    <trans-unit id="manage-prompts.capitalized.ellipses">
+      <source xml:lang="en">Manage Prompt Files...</source>
     </trans-unit>
     <trans-unit id="run-prompt-in-new-chat.capitalized">
       <source xml:lang="en">Run Prompt In New Chat</source>
@@ -676,14 +688,17 @@
     <trans-unit id="commands.prompts.use.select-dialog.delete-prompt.confirm.message">
       <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
     </trans-unit>
-    <trans-unit id="commands.prompts.use.select-dialog.open-button.tooltip">
-      <source xml:lang="en">edit ({0}-key + enter)</source>
-    </trans-unit>
     <trans-unit id="delete">
-      <source xml:lang="en">delete</source>
+      <source xml:lang="en">Delete</source>
     </trans-unit>
     <trans-unit id="help">
-      <source xml:lang="en">help</source>
+      <source xml:lang="en">Help</source>
+    </trans-unit>
+    <trans-unit id="open">
+      <source xml:lang="en">Open in Editor</source>
+    </trans-unit>
+    <trans-unit id="rename">
+      <source xml:lang="en">Rename</source>
     </trans-unit>
     <trans-unit id="user-data-dir.capitalized">
       <source xml:lang="en">User data folder</source>
@@ -2294,6 +2309,15 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="askForPromptFileName.placeholder">
       <source xml:lang="en">Enter the name of the prompt file</source>
+    </trans-unit>
+    <trans-unit id="askForRenamedInstructionsFileName.placeholder">
+      <source xml:lang="en">Enter a new name of the instructions file</source>
+    </trans-unit>
+    <trans-unit id="askForRenamedModeFileName.placeholder">
+      <source xml:lang="en">Enter a new name of the custom chat mode file</source>
+    </trans-unit>
+    <trans-unit id="askForRenamedPromptFileName.placeholder">
+      <source xml:lang="en">Enter a new name of the prompt file</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptSourceFolder" source-language="en" datatype="plaintext"><body>
