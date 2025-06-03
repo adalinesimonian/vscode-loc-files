@@ -381,6 +381,9 @@
     <trans-unit id="download pre-release">
       <source xml:lang="en">Download Pre-Release VSIX</source>
     </trans-unit>
+    <trans-unit id="download specific version">
+      <source xml:lang="en">Download Specific Version VSIX...</source>
+    </trans-unit>
     <trans-unit id="enableAll">
       <source xml:lang="en">Enable All Extensions</source>
     </trans-unit>
@@ -1069,6 +1072,9 @@
     <trans-unit id="migrateExtension">
       <source xml:lang="en">Migrate</source>
     </trans-unit>
+    <trans-unit id="missing from gallery tooltip">
+      <source xml:lang="en">This extension is no longer available on the Extension Marketplace.</source>
+    </trans-unit>
     <trans-unit id="more information">
       <source xml:lang="en">&amp;&amp;More Information</source>
       <note>&amp;&amp; denotes a mnemonic</note>
@@ -1173,6 +1179,9 @@
     </trans-unit>
     <trans-unit id="uninstallAction">
       <source xml:lang="en">Uninstall</source>
+    </trans-unit>
+    <trans-unit id="uninstallAll">
+      <source xml:lang="en">Uninstall (All Profiles)</source>
     </trans-unit>
     <trans-unit id="uninstallExtensionComplete">
       <source xml:lang="en">Please reload Visual Studio Code to complete the uninstallation of the extension {0}.</source>
@@ -1741,6 +1750,9 @@ Would you like to update the extension?</source>
     <trans-unit id="multipleDependentsUninstallError">
       <source xml:lang="en">Cannot uninstall '{0}' extension alone. '{1}', '{2}' and other extensions depend on this. Do you want to uninstall all these extensions?</source>
     </trans-unit>
+    <trans-unit id="no versions">
+      <source xml:lang="en">This extension has no other versions.</source>
+    </trans-unit>
     <trans-unit id="not an extension">
       <source xml:lang="en">The provided object is not an extension.</source>
     </trans-unit>
@@ -1780,6 +1792,9 @@ Would you like to update the extension?</source>
     <trans-unit id="postUpdateUpdateTooltip">
       <source xml:lang="en">Please update {0} to enable the updated extension.</source>
     </trans-unit>
+    <trans-unit id="pre-release">
+      <source xml:lang="en">pre-release</source>
+    </trans-unit>
     <trans-unit id="reload">
       <source xml:lang="en">reload window</source>
     </trans-unit>
@@ -1791,6 +1806,9 @@ Would you like to update the extension?</source>
     </trans-unit>
     <trans-unit id="restart extensions">
       <source xml:lang="en">restart extensions</source>
+    </trans-unit>
+    <trans-unit id="selectVersion">
+      <source xml:lang="en">Select Version to Download</source>
     </trans-unit>
     <trans-unit id="singleDependentError">
       <source xml:lang="en">Cannot disable '{0}' extension alone. '{1}' extension depends on this. Do you want to disable all these extensions?</source>
@@ -1809,6 +1827,15 @@ Would you like to update the extension?</source>
     </trans-unit>
     <trans-unit id="uninstallAll">
       <source xml:lang="en">Uninstall All</source>
+    </trans-unit>
+    <trans-unit id="uninstallAllProfiles">
+      <source xml:lang="en">Uninstall (All Profiles)</source>
+    </trans-unit>
+    <trans-unit id="uninstallApplicationScoped">
+      <source xml:lang="en">Uninstall Extension</source>
+    </trans-unit>
+    <trans-unit id="uninstallApplicationScopedMessage">
+      <source xml:lang="en">Would you like to Uninstall {0} from all profiles?</source>
     </trans-unit>
     <trans-unit id="uninstallDependents">
       <source xml:lang="en">Uninstall Extension with Dependents</source>

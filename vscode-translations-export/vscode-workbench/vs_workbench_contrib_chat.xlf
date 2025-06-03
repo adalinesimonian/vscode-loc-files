@@ -461,6 +461,15 @@
     <trans-unit id="chat.openInNewWindow.label">
       <source xml:lang="en">Open Chat in New Window</source>
     </trans-unit>
+    <trans-unit id="interactiveSession.openInPanel.label">
+      <source xml:lang="en">Open Chat in Panel</source>
+    </trans-unit>
+    <trans-unit id="interactiveSession.openInPrimarySidebar.label">
+      <source xml:lang="en">Open Chat in Primary Side Bar</source>
+    </trans-unit>
+    <trans-unit id="interactiveSession.openInSecondarySidebar.label">
+      <source xml:lang="en">Open Chat in Secondary Side Bar</source>
+    </trans-unit>
     <trans-unit id="interactiveSession.openInSidebar.label">
       <source xml:lang="en">Open Chat in Side Bar</source>
     </trans-unit>
@@ -627,10 +636,10 @@
       <source xml:lang="en">Select instructions files to attach</source>
     </trans-unit>
     <trans-unit id="commands.prompt.manage-dialog.placeholder">
-      <source xml:lang="en">Select the instructions file to edit</source>
+      <source xml:lang="en">Select the instructions file to open</source>
     </trans-unit>
-    <trans-unit id="manage-instructions.capitalized.ellipses">
-      <source xml:lang="en">Manage Instructions Files...</source>
+    <trans-unit id="configure-instructions">
+      <source xml:lang="en">Configure Instructions</source>
     </trans-unit>
     <trans-unit id="placeholder">
       <source xml:lang="en">Select instructions files to attach</source>
@@ -641,13 +650,13 @@
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatModeActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commands.mode.select-dialog.placeholder">
-      <source xml:lang="en">Select the custom chat mode to edit</source>
+      <source xml:lang="en">Select the chat mode file to open</source>
+    </trans-unit>
+    <trans-unit id="configure-modes">
+      <source xml:lang="en">Configure Chat Modes</source>
     </trans-unit>
     <trans-unit id="manage-mode">
-      <source xml:lang="en">Manage Modes...</source>
-    </trans-unit>
-    <trans-unit id="manage-mode.capitalized">
-      <source xml:lang="en">Manage Chat Modes...</source>
+      <source xml:lang="en">Configure Modes</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatRunPromptAction" source-language="en" datatype="plaintext"><body>
@@ -657,8 +666,8 @@
     <trans-unit id="commands.prompt.select-dialog.placeholder">
       <source xml:lang="en">Select the prompt file to run (hold {0}-key to use in new chat)</source>
     </trans-unit>
-    <trans-unit id="manage-prompts.capitalized.ellipses">
-      <source xml:lang="en">Manage Prompt Files...</source>
+    <trans-unit id="configure-prompts">
+      <source xml:lang="en">Configure Prompt Files</source>
     </trans-unit>
     <trans-unit id="run-prompt-in-new-chat.capitalized">
       <source xml:lang="en">Run Prompt In New Chat</source>
@@ -688,6 +697,9 @@
     <trans-unit id="commands.prompts.use.select-dialog.delete-prompt.confirm.message">
       <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
     </trans-unit>
+    <trans-unit id="copy">
+      <source xml:lang="en">Copy or Move (press {0})</source>
+    </trans-unit>
     <trans-unit id="delete">
       <source xml:lang="en">Delete</source>
     </trans-unit>
@@ -699,6 +711,9 @@
     </trans-unit>
     <trans-unit id="rename">
       <source xml:lang="en">Rename</source>
+    </trans-unit>
+    <trans-unit id="searching">
+      <source xml:lang="en">Searching file system...</source>
     </trans-unit>
     <trans-unit id="user-data-dir.capitalized">
       <source xml:lang="en">User data folder</source>
@@ -1172,12 +1187,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.saveResources.title">
       <source xml:lang="en">Pick folder to save resources</source>
     </trans-unit>
-    <trans-unit id="chat.unknownData">
-      <source xml:lang="en">Unknown Data</source>
-    </trans-unit>
-    <trans-unit id="chat.unknownData.full">
-      <source xml:lang="en">Unknown Data with MIME type {0}</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTreeContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="treeAriaLabel">
@@ -1196,11 +1205,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="installExtensionsConfirmation">
       <source xml:lang="en">Click the Install button on the extension and then press Continue when finished.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatInputOutputMarkdownProgressPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="toolResultData">
-      <source xml:lang="en">Data of type {0} ({1} bytes)</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatTerminalToolSubPart" source-language="en" datatype="plaintext"><body>
@@ -1232,6 +1236,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="cancel">
       <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="chat.input">
+      <source xml:lang="en">Input</source>
     </trans-unit>
     <trans-unit id="continue">
       <source xml:lang="en">Continue</source>
@@ -1986,6 +1993,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="startUsingVSC">
       <source xml:lang="en">Start using AI</source>
     </trans-unit>
+    <trans-unit id="title4">
+      <source xml:lang="en">Copilot</source>
+    </trans-unit>
     <trans-unit id="triggerChatSetup">
       <source xml:lang="en">Use AI Features with Copilot for free...</source>
     </trans-unit>
@@ -2176,9 +2186,6 @@ Type {3} to use commands</source>
     <trans-unit id="chat.codeBlock.toolbar">
       <source xml:lang="en">Code block toolbar</source>
     </trans-unit>
-    <trans-unit id="chat.codeBlock.toolbarVerbose">
-      <source xml:lang="en">Toolbar for code block which can be reached via tab</source>
-    </trans-unit>
     <trans-unit id="chat.codeBlockHelp">
       <source xml:lang="en">Code block</source>
     </trans-unit>
@@ -2258,6 +2265,14 @@ Type {3} to use commands</source>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/screenshot" source-language="en" datatype="plaintext"><body>
     <trans-unit id="screenshot">
       <source xml:lang="en">Screenshot</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modePickerActionItem" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="built-in">
+      <source xml:lang="en">Built-In</source>
+    </trans-unit>
+    <trans-unit id="custom">
+      <source xml:lang="en">Custom</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modelPickerActionItem" source-language="en" datatype="plaintext"><body>
@@ -2344,6 +2359,27 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="commands.prompts.create.source-folder.user">
       <source xml:lang="en">User Data Folder</source>
+    </trans-unit>
+    <trans-unit id="current.folder">
+      <source xml:lang="en">Current Location</source>
+    </trans-unit>
+    <trans-unit id="instructions.copy.location.placeholder">
+      <source xml:lang="en">Select a location to copy the instructions file to...</source>
+    </trans-unit>
+    <trans-unit id="instructions.move.location.placeholder">
+      <source xml:lang="en">Select a location to move the instructions file to...</source>
+    </trans-unit>
+    <trans-unit id="mode.copy.location.placeholder">
+      <source xml:lang="en">Select a location to copy the mode file to...</source>
+    </trans-unit>
+    <trans-unit id="mode.move.location.placeholder">
+      <source xml:lang="en">Select a location to move the mode file to...</source>
+    </trans-unit>
+    <trans-unit id="prompt.copy.location.placeholder">
+      <source xml:lang="en">Select a location to copy the prompt file to...</source>
+    </trans-unit>
+    <trans-unit id="prompt.move.location.placeholder">
+      <source xml:lang="en">Select a location to move the prompt file to...</source>
     </trans-unit>
     <trans-unit id="workbench.command.instructions.create.location.placeholder">
       <source xml:lang="en">Select a location to create the instructions file in...</source>
@@ -2510,6 +2546,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatPanelExtensionParticipantRegistered">
       <source xml:lang="en">True when a default chat participant is registered for the panel from an extension.</source>
+    </trans-unit>
+    <trans-unit id="chatPanelLocation">
+      <source xml:lang="en">The location of the chat panel.</source>
     </trans-unit>
     <trans-unit id="chatParticipantRegistered">
       <source xml:lang="en">True when a default chat participant is registered for the panel.</source>
@@ -2846,10 +2885,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">An icon that represents this tool set, like `$(zap)`</source>
     </trans-unit>
     <trans-unit id="toolSetName">
-      <source xml:lang="en">A name for this tool set.</source>
-    </trans-unit>
-    <trans-unit id="toolSetReferenceName">
-      <source xml:lang="en">A name that users can use to reference this tool set. Name must not contain whitespace.</source>
+      <source xml:lang="en">A name for this tool set. Used as reference and should not contain white.</source>
     </trans-unit>
     <trans-unit id="toolSetTools">
       <source xml:lang="en">An array of tool or tool set names that are part of this set.</source>

@@ -26,6 +26,15 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpCommands" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.actions.resources">
+      <source xml:lang="en">Resources</source>
+    </trans-unit>
+    <trans-unit id="mcp.actions.sampling">
+      <source xml:lang="en">Sampling</source>
+    </trans-unit>
+    <trans-unit id="mcp.actions.status">
+      <source xml:lang="en">Status</source>
+    </trans-unit>
     <trans-unit id="mcp.addConfiguration">
       <source xml:lang="en">Add Server...</source>
     </trans-unit>
@@ -64,9 +73,6 @@
     </trans-unit>
     <trans-unit id="mcp.config">
       <source xml:lang="en">Show Configuration</source>
-    </trans-unit>
-    <trans-unit id="mcp.configAccess">
-      <source xml:lang="en">Configure Model Access</source>
     </trans-unit>
     <trans-unit id="mcp.configureSamplingModels">
       <source xml:lang="en">Configure SamplingModel</source>
@@ -116,11 +122,11 @@
     <trans-unit id="mcp.showOutput">
       <source xml:lang="en">Show Output</source>
     </trans-unit>
-    <trans-unit id="mcp.showOutput.description">
-      <source xml:lang="en">Set the models the server can use via MCP sampling</source>
-    </trans-unit>
     <trans-unit id="mcp.start">
       <source xml:lang="en">Start Server</source>
+    </trans-unit>
+    <trans-unit id="mcp.startPromptingServer">
+      <source xml:lang="en">Start Prompting Server</source>
     </trans-unit>
     <trans-unit id="mcp.stop">
       <source xml:lang="en">Stop Server</source>
@@ -291,6 +297,9 @@
     <trans-unit id="mcp.restart">
       <source xml:lang="en">Restart</source>
     </trans-unit>
+    <trans-unit id="mcp.server.more">
+      <source xml:lang="en">More...</source>
+    </trans-unit>
     <trans-unit id="mcp.start">
       <source xml:lang="en">Start</source>
     </trans-unit>
@@ -303,6 +312,9 @@
     <trans-unit id="server.error">
       <source xml:lang="en">Error</source>
     </trans-unit>
+    <trans-unit id="server.promptcount">
+      <source xml:lang="en">{0} prompts</source>
+    </trans-unit>
     <trans-unit id="server.running">
       <source xml:lang="en">Running</source>
     </trans-unit>
@@ -311,9 +323,6 @@
     </trans-unit>
     <trans-unit id="server.toolCount">
       <source xml:lang="en">{0} tools</source>
-    </trans-unit>
-    <trans-unit id="server.toolCountCached">
-      <source xml:lang="en">{0} cached tools</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpPromptArgumentPick" source-language="en" datatype="plaintext"><body>
@@ -677,12 +686,10 @@ Do you want to allow running MCP servers from {3}?</source>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcp.tool.warning">
-      <source xml:lang="en">{0} Note that MCP servers or malicious conversation content may attempt to misuse '{1}' through tools.</source>
+      <source xml:lang="en">Note that MCP servers or malicious conversation content may attempt to misuse '{0}' through tools.</source>
     </trans-unit>
-    <trans-unit id="msg.msg">
-      <source xml:lang="en">{0}
-
- {1}</source>
+    <trans-unit id="mcp.toolset">
+      <source xml:lang="en">{0}: All Tools</source>
     </trans-unit>
     <trans-unit id="msg.ran">
       <source xml:lang="en">Ran {0} </source>
