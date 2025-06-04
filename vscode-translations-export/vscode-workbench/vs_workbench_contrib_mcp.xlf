@@ -8,7 +8,7 @@
       <source xml:lang="en">MCP Servers - Installed</source>
     </trans-unit>
     <trans-unit id="mcp.quickaccess.add">
-      <source xml:lang="en">Add Server</source>
+      <source xml:lang="en">MCP Server Resources</source>
     </trans-unit>
     <trans-unit id="mcp.quickaccess.placeholder">
       <source xml:lang="en">Filter to an MCP resource</source>
@@ -74,6 +74,9 @@
     <trans-unit id="mcp.config">
       <source xml:lang="en">Show Configuration</source>
     </trans-unit>
+    <trans-unit id="mcp.configAccess">
+      <source xml:lang="en">Configure Model Access</source>
+    </trans-unit>
     <trans-unit id="mcp.configureSamplingModels">
       <source xml:lang="en">Configure SamplingModel</source>
     </trans-unit>
@@ -114,13 +117,16 @@
       <source xml:lang="en">MCP Sampling: {0}</source>
     </trans-unit>
     <trans-unit id="mcp.selectAction">
-      <source xml:lang="en">Select Server Action</source>
+      <source xml:lang="en">Select action for '{0}'</source>
     </trans-unit>
     <trans-unit id="mcp.selectServer">
       <source xml:lang="en">Select an MCP Server</source>
     </trans-unit>
     <trans-unit id="mcp.showOutput">
       <source xml:lang="en">Show Output</source>
+    </trans-unit>
+    <trans-unit id="mcp.showOutput.description">
+      <source xml:lang="en">Set the models the server can use via MCP sampling</source>
     </trans-unit>
     <trans-unit id="mcp.start">
       <source xml:lang="en">Start Server</source>
@@ -369,6 +375,9 @@
     </trans-unit>
     <trans-unit id="mcp.resource.template.empty">
       <source xml:lang="en">&lt;Empty&gt;</source>
+    </trans-unit>
+    <trans-unit id="mcp.resource.template.notFound">
+      <source xml:lang="en">The resource {0} was not found.</source>
     </trans-unit>
     <trans-unit id="mcp.resource.template.optional">
       <source xml:lang="en">Optional</source>
@@ -626,7 +635,7 @@ Do you want to allow running MCP servers from {3}?</source>
       <source xml:lang="en">Never</source>
     </trans-unit>
     <trans-unit id="mcp.sampling.allow.notNow">
-      <source xml:lang="en">Now Now</source>
+      <source xml:lang="en">Not Now</source>
     </trans-unit>
     <trans-unit id="mcp.sampling.allowDuringChat.desc">
       <source xml:lang="en">The MCP server "{0}" has issued a request to make an language model call. Do you want to allow it to make requests during chat?</source>
