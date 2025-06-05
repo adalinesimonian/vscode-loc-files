@@ -1020,9 +1020,6 @@ Default Skipped Commands:
     <trans-unit id="terminal.integrated.ignoreBracketedPasteMode">
       <source xml:lang="en">Controls whether the terminal will ignore bracketed paste mode even if the terminal was put into the mode, omitting the {0} and {1} sequences when pasting. This is useful when the shell is not respecting the mode which can happen in sub-shells for example.</source>
     </trans-unit>
-    <trans-unit id="terminal.integrated.killGracefully">
-      <source xml:lang="en">Controls how terminal processes are terminated. When enabled, attempts a graceful shutdown of the process tree. On POSIX, this will send `SIGTERM`. On Windows, it uses `taskkill.exe` without the `/F` (force) flag. Note that this may allow misbehaving processes to remain running. When disabled (default), processes are terminated with: `SIGHUP`.</source>
-    </trans-unit>
     <trans-unit id="terminal.integrated.letterSpacing">
       <source xml:lang="en">Controls the letter spacing of the terminal. This is an integer value which represents the number of additional pixels to add between characters.</source>
     </trans-unit>

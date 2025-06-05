@@ -3958,14 +3958,6 @@ Browser: {3}</source>
       <source xml:lang="en">&amp;&amp;Exit</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
-    <trans-unit id="learnMore">
-      <source xml:lang="en">&amp;&amp;Learn More</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="open">
-      <source xml:lang="en">&amp;&amp;Open</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
     <trans-unit id="openExternalDialogButtonInstall.v3">
       <source xml:lang="en">&amp;&amp;Install</source>
       <note>&amp;&amp; denotes a mnemonic</note>
@@ -4001,6 +3993,10 @@ If {1} did not launch, try again below.</source>
       <source xml:lang="en">&amp;&amp;Reload</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
+    <trans-unit id="retry">
+      <source xml:lang="en">&amp;&amp;Retry</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
     <trans-unit id="shutdownError">
       <source xml:lang="en">An unexpected error occurred that requires a reload of this page.</source>
     </trans-unit>
@@ -4008,7 +4004,10 @@ If {1} did not launch, try again below.</source>
       <source xml:lang="en">The workbench was unexpectedly disposed while running.</source>
     </trans-unit>
     <trans-unit id="unableToOpenExternal">
-      <source xml:lang="en">The browser interrupted the opening of a new tab or window. Press 'Open' to open it anyway.</source>
+      <source xml:lang="en">The browser blocked opening a new tab or window. Press 'Retry' to try again.</source>
+    </trans-unit>
+    <trans-unit id="unableToOpenWindowDetail">
+      <source xml:lang="en">Please allow pop-ups for this website in your [browser settings]({0}).</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/workbench.contribution" source-language="en" datatype="plaintext"><body>

@@ -726,14 +726,11 @@
     <trans-unit id="chat.fileAttachment">
       <source xml:lang="en">Attached {0}, {1}</source>
     </trans-unit>
-    <trans-unit id="enableHint">
-      <source xml:lang="en">disabled</source>
-    </trans-unit>
     <trans-unit id="file.lowercase">
       <source xml:lang="en">file</source>
     </trans-unit>
     <trans-unit id="openEditor">
-      <source xml:lang="en">Current {0} context</source>
+      <source xml:lang="en">Suggested context (current file)</source>
     </trans-unit>
     <trans-unit id="prompt.lowercase">
       <source xml:lang="en">prompt</source>
@@ -774,6 +771,9 @@
     </trans-unit>
     <trans-unit id="chat.commandCenter.enabled">
       <source xml:lang="en">Controls whether the command center shows a menu for actions to control Copilot (requires {0}).</source>
+    </trans-unit>
+    <trans-unit id="chat.continueLaterIndicator">
+      <source xml:lang="en">Enable continue later indicator in the status bar.</source>
     </trans-unit>
     <trans-unit id="chat.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
@@ -1015,13 +1015,16 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Attached file, {0}</source>
     </trans-unit>
     <trans-unit id="chat.fileAttachmentHover">
-      <source xml:lang="en">{0} does not support this {1} type.</source>
+      <source xml:lang="en">{0} does not support this file type.</source>
     </trans-unit>
     <trans-unit id="chat.fileAttachmentWithRange">
       <source xml:lang="en">Attached file, {0}, line {1} to line {2}</source>
     </trans-unit>
     <trans-unit id="chat.imageAttachment">
       <source xml:lang="en">Attached image, {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.imageAttachmentHover">
+      <source xml:lang="en">{0} does not support images.</source>
     </trans-unit>
     <trans-unit id="chat.imageAttachmentWarning">
       <source xml:lang="en">This GIF was partially omitted - current frame will be sent.</source>
@@ -1459,6 +1462,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="paused">
       <source xml:lang="en">Paused</source>
     </trans-unit>
+    <trans-unit id="tooltip">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
     <trans-unit id="tooltip_11">
       <source xml:lang="en">1 change in 1 file</source>
     </trans-unit>
@@ -1839,6 +1845,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
     </trans-unit>
+    <trans-unit id="continueWith">
+      <source xml:lang="en">Continue with {0}</source>
+    </trans-unit>
     <trans-unit id="continueWithEmailOrUserId">
       <source xml:lang="en">Continue</source>
     </trans-unit>
@@ -1922,7 +1931,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Retry</source>
     </trans-unit>
     <trans-unit id="settingUpCopilotNeeded">
-      <source xml:lang="en">You need to set up Copilot to use Chat.</source>
+      <source xml:lang="en">You need to set up Copilot and be signed in to use Chat.</source>
     </trans-unit>
     <trans-unit id="settings">
       <source xml:lang="en">{0} Copilot Free, Pro and Pro+ may show [public code]({1}) suggestions and we may use your data for product improvement. You can change these [settings]({2}) at any time.</source>
@@ -2053,7 +2062,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Chat messages</source>
     </trans-unit>
     <trans-unit id="completionsDisabledStatus">
-      <source xml:lang="en">Code completions Disabled</source>
+      <source xml:lang="en">Code completions disabled</source>
     </trans-unit>
     <trans-unit id="completionsLabel">
       <source xml:lang="en">Code completions</source>
@@ -2063,6 +2072,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="copilotDisabledStatus">
       <source xml:lang="en">Copilot Disabled</source>
+    </trans-unit>
+    <trans-unit id="copilotLaterStatus">
+      <source xml:lang="en">Continue Setup</source>
     </trans-unit>
     <trans-unit id="enableAdditionalUsage">
       <source xml:lang="en">Manage paid premium requests</source>
@@ -2415,10 +2427,10 @@ Type {3} to use commands</source>
       <source xml:lang="en">'{0}' is not a valid file name</source>
     </trans-unit>
     <trans-unit id="chat.configureToolSets">
-      <source xml:lang="en">Configure Tool Sets...</source>
+      <source xml:lang="en">Configure Tool Sets</source>
     </trans-unit>
     <trans-unit id="chat.configureToolSets.add">
-      <source xml:lang="en">Add Tool Sets File...</source>
+      <source xml:lang="en">Create new tool sets file...</source>
     </trans-unit>
     <trans-unit id="chat.configureToolSets.placeholder">
       <source xml:lang="en">Select a tool set to configure</source>
@@ -2436,7 +2448,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Icon to use for this tool set in the UI. Uses the `\$(name)`-syntax, like `\$(zap)`</source>
     </trans-unit>
     <trans-unit id="schema.tools">
-      <source xml:lang="en">A list of tools or tool sets to include in this tool set.</source>
+      <source xml:lang="en">A list of tools or tool sets to include in this tool set. Cannot be empty and must reference tools the way they are referenced in prompts.</source>
     </trans-unit>
     <trans-unit id="tool.description">
       <source xml:lang="en">{1} ({0})
@@ -2885,10 +2897,10 @@ Type {3} to use commands</source>
       <source xml:lang="en">An icon that represents this tool set, like `$(zap)`</source>
     </trans-unit>
     <trans-unit id="toolSetName">
-      <source xml:lang="en">A name for this tool set. Used as reference and should not contain white.</source>
+      <source xml:lang="en">A name for this tool set. Used as reference and should not contain whitespace.</source>
     </trans-unit>
     <trans-unit id="toolSetTools">
-      <source xml:lang="en">An array of tool or tool set names that are part of this set.</source>
+      <source xml:lang="en">A list of tools or tool sets to include in this tool set. Cannot be empty and must reference tools by their `toolReferenceName`.</source>
     </trans-unit>
     <trans-unit id="toolTableDescription">
       <source xml:lang="en">Description</source>
