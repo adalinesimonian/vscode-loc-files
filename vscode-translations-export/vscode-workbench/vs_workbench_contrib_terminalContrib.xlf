@@ -544,6 +544,61 @@ For example:
 </source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/sendSequence/browser/terminal.sendSequence.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sendSequence">
+      <source xml:lang="en">Send Sequence</source>
+    </trans-unit>
+    <trans-unit id="sendSequence.text.desc">
+      <source xml:lang="en">The sequence of text to send to the terminal</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.terminal.sendSequence.prompt">
+      <source xml:lang="en">Enter sequence to send to the terminal</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/sendSignal/browser/terminal.sendSignal.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="SIGCONT">
+      <source xml:lang="en">Continue process</source>
+    </trans-unit>
+    <trans-unit id="SIGHUP">
+      <source xml:lang="en">Hangup</source>
+    </trans-unit>
+    <trans-unit id="SIGINT">
+      <source xml:lang="en">Interrupt process (Ctrl+C)</source>
+    </trans-unit>
+    <trans-unit id="SIGKILL">
+      <source xml:lang="en">Force kill process</source>
+    </trans-unit>
+    <trans-unit id="SIGQUIT">
+      <source xml:lang="en">Quit process</source>
+    </trans-unit>
+    <trans-unit id="SIGSTOP">
+      <source xml:lang="en">Stop process</source>
+    </trans-unit>
+    <trans-unit id="SIGTERM">
+      <source xml:lang="en">Terminate process gracefully</source>
+    </trans-unit>
+    <trans-unit id="SIGUSR1">
+      <source xml:lang="en">User-defined signal 1</source>
+    </trans-unit>
+    <trans-unit id="SIGUSR2">
+      <source xml:lang="en">User-defined signal 2</source>
+    </trans-unit>
+    <trans-unit id="enterSignal">
+      <source xml:lang="en">Enter signal name (e.g., SIGTERM, SIGKILL)</source>
+    </trans-unit>
+    <trans-unit id="manualSignal">
+      <source xml:lang="en">Manually enter signal</source>
+    </trans-unit>
+    <trans-unit id="selectSignal">
+      <source xml:lang="en">Select signal to send to terminal process</source>
+    </trans-unit>
+    <trans-unit id="sendSignal">
+      <source xml:lang="en">Send Signal</source>
+    </trans-unit>
+    <trans-unit id="sendSignal.signal.desc">
+      <source xml:lang="en">The signal to send to the terminal process (e.g., 'SIGTERM', 'SIGINT', 'SIGKILL')</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/stickyScroll/browser/terminal.stickyScroll.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="miStickyScroll">
       <source xml:lang="en">&amp;&amp;Sticky Scroll</source>

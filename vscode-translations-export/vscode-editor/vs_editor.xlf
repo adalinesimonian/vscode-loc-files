@@ -506,6 +506,12 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="autoIndent">
       <source xml:lang="en">Controls whether the editor should automatically adjust the indentation when users type, paste, move or indent lines.</source>
     </trans-unit>
+    <trans-unit id="autoIndentOnPaste">
+      <source xml:lang="en">Controls whether the editor should automatically auto-indent the pasted content.</source>
+    </trans-unit>
+    <trans-unit id="autoIndentOnPasteWithinString">
+      <source xml:lang="en">Controls whether the editor should automatically auto-indent the pasted content when pasted within a string. This takes effect when autoIndentOnPaste is true.</source>
+    </trans-unit>
     <trans-unit id="autoSurround">
       <source xml:lang="en">Controls whether the editor should automatically surround selections when typing quotes or brackets.</source>
     </trans-unit>

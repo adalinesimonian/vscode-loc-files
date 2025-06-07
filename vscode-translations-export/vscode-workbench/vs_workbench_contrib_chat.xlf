@@ -180,6 +180,9 @@
     <trans-unit id="configureCompletions">
       <source xml:lang="en">Configure Code Completions...</source>
     </trans-unit>
+    <trans-unit id="copilot">
+      <source xml:lang="en">Copilot</source>
+    </trans-unit>
     <trans-unit id="copilotQuotaReached">
       <source xml:lang="en">Copilot Quota Reached</source>
     </trans-unit>
@@ -623,100 +626,6 @@
     </trans-unit>
     <trans-unit id="selectOption">
       <source xml:lang="en">Select where to apply the code block</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatAttachInstructionsAction" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="attach-instructions.capitalized.ellipses">
-      <source xml:lang="en">Attach Instructions...</source>
-    </trans-unit>
-    <trans-unit id="chatContext.attach.instructions.label">
-      <source xml:lang="en">Instructions...</source>
-    </trans-unit>
-    <trans-unit id="commands.instructions.select-dialog.placeholder">
-      <source xml:lang="en">Select instructions files to attach</source>
-    </trans-unit>
-    <trans-unit id="commands.prompt.manage-dialog.placeholder">
-      <source xml:lang="en">Select the instructions file to open</source>
-    </trans-unit>
-    <trans-unit id="configure-instructions">
-      <source xml:lang="en">Configure Instructions</source>
-    </trans-unit>
-    <trans-unit id="placeholder">
-      <source xml:lang="en">Select instructions files to attach</source>
-    </trans-unit>
-    <trans-unit id="user-data-dir.capitalized">
-      <source xml:lang="en">User data folder</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatModeActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.mode.select-dialog.placeholder">
-      <source xml:lang="en">Select the chat mode file to open</source>
-    </trans-unit>
-    <trans-unit id="configure-modes">
-      <source xml:lang="en">Configure Chat Modes</source>
-    </trans-unit>
-    <trans-unit id="manage-mode">
-      <source xml:lang="en">Configure Modes</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatRunPromptAction" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.prompt.manage-dialog.placeholder">
-      <source xml:lang="en">Select the prompt file to open</source>
-    </trans-unit>
-    <trans-unit id="commands.prompt.select-dialog.placeholder">
-      <source xml:lang="en">Select the prompt file to run (hold {0}-key to use in new chat)</source>
-    </trans-unit>
-    <trans-unit id="configure-prompts">
-      <source xml:lang="en">Configure Prompt Files</source>
-    </trans-unit>
-    <trans-unit id="run-prompt-in-new-chat.capitalized">
-      <source xml:lang="en">Run Prompt In New Chat</source>
-    </trans-unit>
-    <trans-unit id="run-prompt.capitalized">
-      <source xml:lang="en">Run Prompt in Current Chat</source>
-    </trans-unit>
-    <trans-unit id="run-prompt.capitalized.ellipses">
-      <source xml:lang="en">Run Prompt...</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatSaveToPromptAction" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="workbench.actions.save-to-prompt.label">
-      <source xml:lang="en">Save chat session to a prompt file</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/dialogs/askToSelectPrompt/promptFilePickers" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="commands.new-instructionsfile.select-dialog.label">
-      <source xml:lang="en">Create new instruction file...</source>
-    </trans-unit>
-    <trans-unit id="commands.new-modefile.select-dialog.label">
-      <source xml:lang="en">Create new custom chat mode file...</source>
-    </trans-unit>
-    <trans-unit id="commands.new-promptfile.select-dialog.label">
-      <source xml:lang="en">New prompt file...</source>
-    </trans-unit>
-    <trans-unit id="commands.prompts.use.select-dialog.delete-prompt.confirm.message">
-      <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
-    </trans-unit>
-    <trans-unit id="copy">
-      <source xml:lang="en">Copy or Move (press {0})</source>
-    </trans-unit>
-    <trans-unit id="delete">
-      <source xml:lang="en">Delete</source>
-    </trans-unit>
-    <trans-unit id="help">
-      <source xml:lang="en">Help</source>
-    </trans-unit>
-    <trans-unit id="open">
-      <source xml:lang="en">Open in Editor</source>
-    </trans-unit>
-    <trans-unit id="rename">
-      <source xml:lang="en">Rename</source>
-    </trans-unit>
-    <trans-unit id="searching">
-      <source xml:lang="en">Searching file system...</source>
-    </trans-unit>
-    <trans-unit id="user-data-dir.capitalized">
-      <source xml:lang="en">User data folder</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext"><body>
@@ -2002,9 +1911,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="startUsingVSC">
       <source xml:lang="en">Start using AI</source>
     </trans-unit>
-    <trans-unit id="title4">
-      <source xml:lang="en">Copilot</source>
-    </trans-unit>
     <trans-unit id="triggerChatSetup">
       <source xml:lang="en">Use AI Features with Copilot for free...</source>
     </trans-unit>
@@ -2298,7 +2204,41 @@ Type {3} to use commands</source>
       <source xml:lang="en">Add premium models</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/createPromptCommand" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/attachInstructionsAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="attach-instructions.capitalized.ellipses">
+      <source xml:lang="en">Attach Instructions...</source>
+    </trans-unit>
+    <trans-unit id="chatContext.attach.instructions.label">
+      <source xml:lang="en">Instructions...</source>
+    </trans-unit>
+    <trans-unit id="commands.instructions.select-dialog.placeholder">
+      <source xml:lang="en">Select instructions files to attach</source>
+    </trans-unit>
+    <trans-unit id="commands.prompt.manage-dialog.placeholder">
+      <source xml:lang="en">Select the instructions file to open</source>
+    </trans-unit>
+    <trans-unit id="configure-instructions">
+      <source xml:lang="en">Configure Instructions</source>
+    </trans-unit>
+    <trans-unit id="placeholder">
+      <source xml:lang="en">Select instructions files to attach</source>
+    </trans-unit>
+    <trans-unit id="user-data-dir.capitalized">
+      <source xml:lang="en">User data folder</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/chatModeActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.mode.select-dialog.placeholder">
+      <source xml:lang="en">Select the chat mode file to open</source>
+    </trans-unit>
+    <trans-unit id="configure-modes">
+      <source xml:lang="en">Configure Chat Modes</source>
+    </trans-unit>
+    <trans-unit id="manage-mode">
+      <source xml:lang="en">Configure Modes</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/newPromptFileActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commands.new.instructions.local.title">
       <source xml:lang="en">New Instructions File...</source>
     </trans-unit>
@@ -2318,7 +2258,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Do you want to backup and sync your user prompt, instruction and mode files with Setting Sync?'</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptName" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/pickers/askForPromptName" source-language="en" datatype="plaintext"><body>
     <trans-unit id="askForInstructionsFileName.placeholder">
       <source xml:lang="en">Enter the name of the instructions file</source>
     </trans-unit>
@@ -2347,7 +2287,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Enter a new name of the prompt file</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptSourceFolder" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/pickers/askForPromptSourceFolder" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commands.instructions.create.ask-folder.empty.docs-label">
       <source xml:lang="en">Learn how to configure reusable instructions</source>
     </trans-unit>
@@ -2403,12 +2343,39 @@ Type {3} to use commands</source>
       <source xml:lang="en">Select a location to create the prompt file in...</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/errors" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="workbench.command.prompts.create.error.folder-exists">
-      <source xml:lang="en">Folder already exists at '{0}'.</source>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/pickers/promptFilePickers" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.new-instructionsfile.select-dialog.label">
+      <source xml:lang="en">Create new instruction file...</source>
     </trans-unit>
-    <trans-unit id="workbench.command.prompts.create.error.invalid-prompt-name">
-      <source xml:lang="en">Invalid prompt file name '{0}'.</source>
+    <trans-unit id="commands.new-modefile.select-dialog.label">
+      <source xml:lang="en">Create new custom chat mode file...</source>
+    </trans-unit>
+    <trans-unit id="commands.new-promptfile.select-dialog.label">
+      <source xml:lang="en">New prompt file...</source>
+    </trans-unit>
+    <trans-unit id="commands.prompts.use.select-dialog.delete-prompt.confirm.message">
+      <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="copy">
+      <source xml:lang="en">Copy or Move (press {0})</source>
+    </trans-unit>
+    <trans-unit id="delete">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="help">
+      <source xml:lang="en">Help</source>
+    </trans-unit>
+    <trans-unit id="open">
+      <source xml:lang="en">Open in Editor</source>
+    </trans-unit>
+    <trans-unit id="rename">
+      <source xml:lang="en">Rename</source>
+    </trans-unit>
+    <trans-unit id="searching">
+      <source xml:lang="en">Searching file system...</source>
+    </trans-unit>
+    <trans-unit id="user-data-dir.capitalized">
+      <source xml:lang="en">User data folder</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/promptToolsCodeLensProvider" source-language="en" datatype="plaintext"><body>
@@ -2417,6 +2384,31 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="placeholder">
       <source xml:lang="en">Select tools</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/runPromptAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commands.prompt.manage-dialog.placeholder">
+      <source xml:lang="en">Select the prompt file to open</source>
+    </trans-unit>
+    <trans-unit id="commands.prompt.select-dialog.placeholder">
+      <source xml:lang="en">Select the prompt file to run (hold {0}-key to use in new chat)</source>
+    </trans-unit>
+    <trans-unit id="configure-prompts">
+      <source xml:lang="en">Configure Prompt Files</source>
+    </trans-unit>
+    <trans-unit id="run-prompt-in-new-chat.capitalized">
+      <source xml:lang="en">Run Prompt In New Chat</source>
+    </trans-unit>
+    <trans-unit id="run-prompt.capitalized">
+      <source xml:lang="en">Run Prompt in Current Chat</source>
+    </trans-unit>
+    <trans-unit id="run-prompt.capitalized.ellipses">
+      <source xml:lang="en">Run Prompt...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/saveToPromptAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="workbench.actions.save-to-prompt.label">
+      <source xml:lang="en">Save chat session to a prompt file</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/tools/toolSetsContribution" source-language="en" datatype="plaintext"><body>
@@ -2756,7 +2748,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Other Models</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/contributions/languageFeatures/providers/decorationsProvider/decorations/frontMatterDecoration" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/decorationsProvider/decorations/frontMatterDecoration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.prompt.frontMatter.background.description">
       <source xml:lang="en">Background color of a Front Matter header block.</source>
     </trans-unit>
@@ -2845,7 +2837,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Recursion to itself.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsService" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsServiceImpl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="prompt.file.detail">
       <source xml:lang="en">Prompt file: {0}</source>
     </trans-unit>

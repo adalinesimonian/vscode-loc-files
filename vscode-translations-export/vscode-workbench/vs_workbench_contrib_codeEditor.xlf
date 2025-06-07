@@ -389,8 +389,14 @@ language refers to a programming language</note>
     <trans-unit id="schema.indentationRules.unIndentedLinePattern.pattern">
       <source xml:lang="en">The RegExp pattern for unIndentedLinePattern.</source>
     </trans-unit>
-    <trans-unit id="schema.lineComment">
+    <trans-unit id="schema.lineComment.comment">
       <source xml:lang="en">The character sequence that starts a line comment.</source>
+    </trans-unit>
+    <trans-unit id="schema.lineComment.noIndent">
+      <source xml:lang="en">Whether the comment token should not be indented and placed at the first column. Defaults to false.</source>
+    </trans-unit>
+    <trans-unit id="schema.lineComment.object">
+      <source xml:lang="en">Configuration for line comments.</source>
     </trans-unit>
     <trans-unit id="schema.onEnterRules">
       <source xml:lang="en">The language's rules to be evaluated when pressing Enter.</source>
