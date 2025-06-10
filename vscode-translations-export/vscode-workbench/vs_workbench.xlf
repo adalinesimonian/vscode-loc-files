@@ -3418,6 +3418,15 @@ Browser: {3}</source>
     <trans-unit id="selectSources">
       <source xml:lang="en">Select sources to enable all notifications from</source>
     </trans-unit>
+    <trans-unit id="severityPrefix.error">
+      <source xml:lang="en">Error: </source>
+    </trans-unit>
+    <trans-unit id="severityPrefix.info">
+      <source xml:lang="en">Info: </source>
+    </trans-unit>
+    <trans-unit id="severityPrefix.warning">
+      <source xml:lang="en">Warning: </source>
+    </trans-unit>
     <trans-unit id="showNotifications">
       <source xml:lang="en">Show Notifications</source>
     </trans-unit>
@@ -5496,7 +5505,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <source xml:lang="en">Views</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/electron-sandbox/actions/developerActions" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/electron-browser/actions/developerActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="configureRuntimeArguments">
       <source xml:lang="en">Configure Runtime Arguments</source>
     </trans-unit>
@@ -5529,7 +5538,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <source xml:lang="en">Toggle Developer Tools</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/electron-sandbox/actions/installActions" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/electron-browser/actions/installActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="install">
       <source xml:lang="en">Install '{0}' command in PATH</source>
     </trans-unit>
@@ -5546,7 +5555,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <source xml:lang="en">Uninstall '{0}' command from PATH</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/electron-sandbox/actions/windowActions" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/electron-browser/actions/windowActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="close">
       <source xml:lang="en">Close Window</source>
     </trans-unit>
@@ -5606,7 +5615,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <source xml:lang="en">Reset Zoom</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/electron-sandbox/desktop.contribution" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/electron-browser/desktop.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="application.shellEnvironmentResolutionTimeout">
       <source xml:lang="en">Controls the timeout in seconds before giving up resolving the shell environment when the application is not already launched from a terminal. See our [documentation](https://go.microsoft.com/fwlink/?linkid=2149667) for more information.</source>
     </trans-unit>
@@ -5823,12 +5832,12 @@ This option requires restart to take effect.</source>
       <note>{0} will be a setting name rendered as a link</note>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/electron-sandbox/desktop.main" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/electron-browser/desktop.main" source-language="en" datatype="plaintext"><body>
     <trans-unit id="join.closeStorage">
       <source xml:lang="en">Saving UI state</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/electron-sandbox/parts/dialogs/dialogHandler" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/electron-browser/parts/dialogs/dialogHandler" source-language="en" datatype="plaintext"><body>
     <trans-unit id="aboutDetail">
       <source xml:lang="en">Version: {0}
 Commit: {1}
@@ -5849,7 +5858,7 @@ OS: {8}</source>
       <source xml:lang="en">OK</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/electron-sandbox/window" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/electron-browser/window" source-language="en" datatype="plaintext"><body>
     <trans-unit id="appRootWarning.banner">
       <source xml:lang="en">Files you store within the installation folder ('{0}') may be OVERWRITTEN or DELETED IRREVERSIBLY without warning at update time.</source>
     </trans-unit>

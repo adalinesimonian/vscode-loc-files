@@ -1213,18 +1213,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.editing.discardAll.confirmation.title">
       <source xml:lang="en">Undo all edits?</source>
     </trans-unit>
-    <trans-unit id="chat.editing.removeFile.confirmation.message">
-      <source xml:lang="en">This will remove {0} from your working set and undo the edits made to it. Do you want to proceed?</source>
-    </trans-unit>
-    <trans-unit id="chat.editing.removeFile.confirmation.primaryButton">
-      <source xml:lang="en">Yes</source>
-    </trans-unit>
-    <trans-unit id="chat.editing.removeFile.confirmation.title">
-      <source xml:lang="en">Remove {0} from working set?</source>
-    </trans-unit>
-    <trans-unit id="chat.editing.removeFile.confirmationmanyFiles">
-      <source xml:lang="en">{0} files</source>
-    </trans-unit>
     <trans-unit id="chat.openFileUpdatedBySnapshot.label">
       <source xml:lang="en">Open File</source>
     </trans-unit>
@@ -1267,9 +1255,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatEditing.viewPreviousEdits">
       <source xml:lang="en">View Previous Edits</source>
     </trans-unit>
-    <trans-unit id="clearWorkingSet">
-      <source xml:lang="en">Clear Working Set</source>
-    </trans-unit>
     <trans-unit id="discard">
       <source xml:lang="en">Undo</source>
     </trans-unit>
@@ -1281,9 +1266,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="open.fileInDiff">
       <source xml:lang="en">Open Changes in Diff Editor</source>
-    </trans-unit>
-    <trans-unit id="removeFileFromWorkingSet">
-      <source xml:lang="en">Remove File</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingCodeEditorIntegration" source-language="en" datatype="plaintext"><body>
@@ -2930,12 +2912,12 @@ Type {3} to use commands</source>
       <source xml:lang="en">A speech-to-text session is in progress for chat.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/electron-sandbox/actions/chatDeveloperActions" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/electron-browser/actions/chatDeveloperActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="workbench.action.chat.openStorageFolder.label">
       <source xml:lang="en">Open Chat Storage Folder</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/electron-sandbox/actions/voiceChatActions" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/electron-browser/actions/voiceChatActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="installProviderForVoiceChat.justification">
       <source xml:lang="en">Microphone support requires this extension.</source>
     </trans-unit>
@@ -3018,7 +3000,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Stop Reading Aloud</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/electron-sandbox/tools/fetchPageTool" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/electron-browser/tools/fetchPageTool" source-language="en" datatype="plaintext"><body>
     <trans-unit id="fetchWebPage.confirmationMessage.plural">
       <source xml:lang="en">Web content may contain malicious code or attempt prompt injection attacks.</source>
     </trans-unit>
