@@ -1496,6 +1496,17 @@ Received: '{1}'.</source>
       <source xml:lang="en">{0} will now prompt with 'osascript' for Administrator privileges to uninstall the shell command.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/notification/common/notification" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="severityPrefix.error">
+      <source xml:lang="en">Error: {0}</source>
+    </trans-unit>
+    <trans-unit id="severityPrefix.info">
+      <source xml:lang="en">Info: {0}</source>
+    </trans-unit>
+    <trans-unit id="severityPrefix.warning">
+      <source xml:lang="en">Warning: {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/process/electron-main/processMainService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="local">
       <source xml:lang="en">Local</source>
@@ -2130,6 +2141,9 @@ To override an existing profile use its profile name as the key, for example:
     </trans-unit>
     <trans-unit id="editorStickyScrollBorder">
       <source xml:lang="en">Border color of sticky scroll in the editor</source>
+    </trans-unit>
+    <trans-unit id="editorStickyScrollGutterBackground">
+      <source xml:lang="en">Background color of the gutter part of sticky scroll in the editor</source>
     </trans-unit>
     <trans-unit id="editorStickyScrollHoverBackground">
       <source xml:lang="en">Background color of sticky scroll on hover in the editor</source>
