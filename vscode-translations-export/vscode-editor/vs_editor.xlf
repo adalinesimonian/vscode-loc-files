@@ -608,6 +608,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="dropIntoEditor.showDropSelector.never">
       <source xml:lang="en">Never show the drop selector widget. Instead the default drop provider is always used.</source>
     </trans-unit>
+    <trans-unit id="editContext">
+      <source xml:lang="en">Sets whether the EditContext API should be used instead of the text area to power input in the editor.</source>
+    </trans-unit>
     <trans-unit id="editor.autoClosingBrackets.beforeWhitespace">
       <source xml:lang="en">Autoclose brackets only when the cursor is to the left of whitespace.</source>
     </trans-unit>
@@ -910,9 +913,6 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="enabled">
       <source xml:lang="en">Enables the Code Action lightbulb in the editor.</source>
-    </trans-unit>
-    <trans-unit id="experimentalEditContextEnabled">
-      <source xml:lang="en">Sets whether the new experimental edit context should be used instead of the text area.</source>
     </trans-unit>
     <trans-unit id="experimentalGpuAcceleration">
       <source xml:lang="en">Controls whether to use the experimental GPU acceleration to render the editor.</source>

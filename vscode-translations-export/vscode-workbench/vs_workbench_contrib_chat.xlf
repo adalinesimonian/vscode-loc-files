@@ -147,21 +147,6 @@
     <trans-unit id="chat.history.rename">
       <source xml:lang="en">Rename</source>
     </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.acceptEdits">
-      <source xml:lang="en">Keep &amp; Continue</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.discardEdits">
-      <source xml:lang="en">Undo &amp; Continue</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.pending.message.2">
-      <source xml:lang="en">Do you want to keep pending edits to {0} files?</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.pending.message.default">
-      <source xml:lang="en">Starting a new chat will end your current edit session.</source>
-    </trans-unit>
-    <trans-unit id="chat.startEditing.confirmation.title">
-      <source xml:lang="en">Start new chat?</source>
-    </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
       <source xml:lang="en">You've reached your monthly chat messages and code completions quota.</source>
     </trans-unit>
@@ -953,6 +938,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.partiallyOmittedNotebookImageAttachment">
       <source xml:lang="en">Partially omitted this Notebook output: {0}</source>
     </trans-unit>
+    <trans-unit id="resource">
+      <source xml:lang="en">The full value of the chat attachment resource, including scheme and path</source>
+    </trans-unit>
     <trans-unit id="tool">
       <source xml:lang="en">{0} - {1}</source>
     </trans-unit>
@@ -963,11 +951,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatAgentCommandContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="rerun">
       <source xml:lang="en">Rerun without {0}{1}</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatAttachmentsContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="resource">
-      <source xml:lang="en">The full value of the chat attachment resource, including scheme and path</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatCodeCitationContentPart" source-language="en" datatype="plaintext"><body>
@@ -1480,8 +1463,23 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditorInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.startEditing.confirmation.acceptEdits">
+      <source xml:lang="en">Keep &amp; Continue</source>
+    </trans-unit>
+    <trans-unit id="chat.startEditing.confirmation.discardEdits">
+      <source xml:lang="en">Undo &amp; Continue</source>
+    </trans-unit>
+    <trans-unit id="chat.startEditing.confirmation.pending.message.2">
+      <source xml:lang="en">Do you want to keep pending edits to {0} files?</source>
+    </trans-unit>
     <trans-unit id="chat.startEditing.confirmation.pending.message.default">
       <source xml:lang="en">Closing the chat editor will end your current edit session.</source>
+    </trans-unit>
+    <trans-unit id="chat.startEditing.confirmation.pending.message.default1">
+      <source xml:lang="en">Starting a new chat will end your current edit session.</source>
+    </trans-unit>
+    <trans-unit id="chat.startEditing.confirmation.title">
+      <source xml:lang="en">Start new chat?</source>
     </trans-unit>
     <trans-unit id="chatEditorConfirmTitle">
       <source xml:lang="en">Close Chat Editor</source>
@@ -2632,12 +2630,6 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatModel" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.attachment.problems.all">
-      <source xml:lang="en">All Problems</source>
-    </trans-unit>
-    <trans-unit id="chat.attachment.problems.inFile">
-      <source xml:lang="en">Problems in {0}</source>
-    </trans-unit>
     <trans-unit id="codeCitation">
       <source xml:lang="en">Similar code found with 1 license type</source>
     </trans-unit>
@@ -2678,6 +2670,14 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="newChat">
       <source xml:lang="en">New Chat</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/chatVariableEntries" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.attachment.problems.all">
+      <source xml:lang="en">All Problems</source>
+    </trans-unit>
+    <trans-unit id="chat.attachment.problems.inFile">
+      <source xml:lang="en">Problems in {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/languageModelStats" source-language="en" datatype="plaintext"><body>
