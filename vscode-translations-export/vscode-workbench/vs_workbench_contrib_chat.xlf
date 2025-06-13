@@ -626,32 +626,6 @@
     <trans-unit id="openEditor">
       <source xml:lang="en">Suggested context (current file)</source>
     </trans-unit>
-    <trans-unit id="prompt.lowercase">
-      <source xml:lang="en">prompt</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/attachments/promptInstructions/promptInstructionsWidget" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.instructionsAttachment">
-      <source xml:lang="en">Instructions attachment, {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.promptAttachment">
-      <source xml:lang="en">Prompt file, {0}</source>
-    </trans-unit>
-    <trans-unit id="error">
-      <source xml:lang="en">Error</source>
-    </trans-unit>
-    <trans-unit id="instructions">
-      <source xml:lang="en">Instructions</source>
-    </trans-unit>
-    <trans-unit id="prompt">
-      <source xml:lang="en">Prompt</source>
-    </trans-unit>
-    <trans-unit id="remove">
-      <source xml:lang="en">Remove</source>
-    </trans-unit>
-    <trans-unit id="warning">
-      <source xml:lang="en">Warning</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chat.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat">
@@ -782,6 +756,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.tools.autoApprove">
       <source xml:lang="en">Controls whether tool use should be automatically approved.</source>
+    </trans-unit>
+    <trans-unit id="chat.undoRequests.restoreInput">
+      <source xml:lang="en">Controls whether the input of the chat should be restored when an undo request is made. The input will be filled with the text of the request that was restored.</source>
     </trans-unit>
     <trans-unit id="chat.useFileStorage">
       <source xml:lang="en">Enables storing chat sessions on disk instead of in the storage service. Enabling this does a one-time per-workspace migration of existing sessions to the new format.</source>
@@ -923,6 +900,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.imageAttachmentWarning">
       <source xml:lang="en">This GIF was partially omitted - current frame will be sent.</source>
     </trans-unit>
+    <trans-unit id="chat.instructionsAttachment">
+      <source xml:lang="en">Instructions attachment, {0}</source>
+    </trans-unit>
     <trans-unit id="chat.omittedFileAttachment">
       <source xml:lang="en">Omitted this file: {0}</source>
     </trans-unit>
@@ -937,6 +917,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.partiallyOmittedNotebookImageAttachment">
       <source xml:lang="en">Partially omitted this Notebook output: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.promptAttachment">
+      <source xml:lang="en">Prompt file, {0}</source>
+    </trans-unit>
+    <trans-unit id="instructions">
+      <source xml:lang="en">Instructions</source>
+    </trans-unit>
+    <trans-unit id="prompt">
+      <source xml:lang="en">Prompt</source>
     </trans-unit>
     <trans-unit id="resource">
       <source xml:lang="en">The full value of the chat attachment resource, including scheme and path</source>
@@ -1754,9 +1743,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="copilotSetupError">
       <source xml:lang="en">Copilot setup failed.</source>
-    </trans-unit>
-    <trans-unit id="copilotSetupSuccess">
-      <source xml:lang="en">Copilot setup finished successfully.</source>
     </trans-unit>
     <trans-unit id="copilotTitle">
       <source xml:lang="en">Start using Copilot</source>
