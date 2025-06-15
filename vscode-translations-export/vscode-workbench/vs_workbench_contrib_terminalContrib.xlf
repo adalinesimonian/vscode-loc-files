@@ -713,6 +713,12 @@ For example:
     <trans-unit id="optionValue">
       <source xml:lang="en">Option Value</source>
     </trans-unit>
+    <trans-unit id="symbolicLinkFile">
+      <source xml:lang="en">Symbolic Link File</source>
+    </trans-unit>
+    <trans-unit id="symbolicLinkFolder">
+      <source xml:lang="en">Symbolic Link Folder</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/suggest/browser/terminalSymbolIcons" source-language="en" datatype="plaintext"><body>
     <trans-unit id="terminalSymbolAliasIcon">
@@ -757,6 +763,12 @@ For example:
     <trans-unit id="terminalSymbolIcon.optionForeground">
       <source xml:lang="en">The foreground color for an option icon. These icons will appear in the terminal suggest widget.</source>
     </trans-unit>
+    <trans-unit id="terminalSymbolIcon.symbolicLinkFileForeground">
+      <source xml:lang="en">The foreground color for a symbolic link file icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolIcon.symbolicLinkFolderForeground">
+      <source xml:lang="en">The foreground color for a symbolic link folder icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
     <trans-unit id="terminalSymbolInlineSuggestionIcon">
       <source xml:lang="en">Icon for inline suggestions in the terminal suggest widget.</source>
     </trans-unit>
@@ -768,6 +780,12 @@ For example:
     </trans-unit>
     <trans-unit id="terminalSymbolOptionValue">
       <source xml:lang="en">Icon for enum members in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolSymbolicLinkFileIcon">
+      <source xml:lang="en">Icon for symbolic link files in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolSymbolicLinkFolderIcon">
+      <source xml:lang="en">Icon for symbolic link folders in the terminal suggest widget.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/suggest/common/terminalSuggestConfiguration" source-language="en" datatype="plaintext"><body>
