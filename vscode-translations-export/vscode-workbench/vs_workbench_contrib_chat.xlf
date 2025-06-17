@@ -620,8 +620,20 @@
     <trans-unit id="chat.fileAttachment">
       <source xml:lang="en">Attached {0}, {1}</source>
     </trans-unit>
+    <trans-unit id="chat.fileAttachmentWithRange">
+      <source xml:lang="en">Attached {0}, {1}, line {2} to line {3}</source>
+    </trans-unit>
+    <trans-unit id="disable">
+      <source xml:lang="en">Disable current {0} context</source>
+    </trans-unit>
+    <trans-unit id="enable">
+      <source xml:lang="en">Enable current {0} context</source>
+    </trans-unit>
     <trans-unit id="file.lowercase">
       <source xml:lang="en">file</source>
+    </trans-unit>
+    <trans-unit id="hint.label.current">
+      <source xml:lang="en">Current {0}</source>
     </trans-unit>
     <trans-unit id="openEditor">
       <source xml:lang="en">Suggested context (current file)</source>
@@ -2062,6 +2074,9 @@ Type {3} to use commands</source>
     <trans-unit id="editsTitle">
       <source xml:lang="en">Edit with Copilot</source>
     </trans-unit>
+    <trans-unit id="instruction.file.reason.referenced">
+      <source xml:lang="en">Referenced by {0}</source>
+    </trans-unit>
     <trans-unit id="scrollDownButtonLabel">
       <source xml:lang="en">Scroll down</source>
     </trans-unit>
@@ -2809,6 +2824,12 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsServiceImpl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="instruction.file.reason.allFiles">
+      <source xml:lang="en">Automatically attached as pattern is **</source>
+    </trans-unit>
+    <trans-unit id="instruction.file.reason.specificFile">
+      <source xml:lang="en">Automatically attached as pattern {0} matches {1}</source>
+    </trans-unit>
     <trans-unit id="prompt.file.detail">
       <source xml:lang="en">Prompt file: {0}</source>
     </trans-unit>
