@@ -629,6 +629,9 @@
     <trans-unit id="enable">
       <source xml:lang="en">Enable current {0} context</source>
     </trans-unit>
+    <trans-unit id="enableHint">
+      <source xml:lang="en">disabled</source>
+    </trans-unit>
     <trans-unit id="file.lowercase">
       <source xml:lang="en">file</source>
     </trans-unit>
@@ -636,7 +639,7 @@
       <source xml:lang="en">Current {0}</source>
     </trans-unit>
     <trans-unit id="openEditor">
-      <source xml:lang="en">Suggested context (current file)</source>
+      <source xml:lang="en">Current {0} context</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chat.contribution" source-language="en" datatype="plaintext"><body>
@@ -870,7 +873,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">View Extension</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatAttachmentResolve" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/chatAttachmentResolveService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="imageTooLarge">
       <source xml:lang="en">Image is too large</source>
     </trans-unit>
@@ -1538,7 +1541,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatInputPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="actions.chat.accessibiltyHelp">
-      <source xml:lang="en">Chat Input,  Type to ask questions or type / for topics, press enter to send out the request. Use {0} for Chat Accessibility Help.</source>
+      <source xml:lang="en">Chat Input {0} Press Enter to send out the request. Use {1} for Chat Accessibility Help.</source>
     </trans-unit>
     <trans-unit id="chatAttachFiles">
       <source xml:lang="en">Search for files and context to add to your request</source>
@@ -1559,7 +1562,16 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Chat Input</source>
     </trans-unit>
     <trans-unit id="chatInput.accessibilityHelpNoKb">
-      <source xml:lang="en">Chat Input,  Type code here and press Enter to run. Use the Chat Accessibility Help command for more information.</source>
+      <source xml:lang="en">Chat Input {0} Press Enter to send out the request. Use the Chat Accessibility Help command for more information.</source>
+    </trans-unit>
+    <trans-unit id="chatInput.mode.agent">
+      <source xml:lang="en">(Agent Mode), edit files in your workspace.</source>
+    </trans-unit>
+    <trans-unit id="chatInput.mode.ask">
+      <source xml:lang="en">(Ask Mode), ask questions or type / for topics.</source>
+    </trans-unit>
+    <trans-unit id="chatInput.mode.edit">
+      <source xml:lang="en">(Edit Mode), edit files in your workspace.</source>
     </trans-unit>
     <trans-unit id="notebook.moreExecuteActionsLabel">
       <source xml:lang="en">More...</source>
