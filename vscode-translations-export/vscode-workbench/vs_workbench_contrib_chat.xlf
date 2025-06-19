@@ -442,6 +442,38 @@
       <source xml:lang="en">Import Chat...</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatLanguageModelActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="extensionOwner">
+      <source xml:lang="en">{0}</source>
+    </trans-unit>
+    <trans-unit id="languageModelAuthPlaceholder">
+      <source xml:lang="en">Choose which extensions can access language models</source>
+    </trans-unit>
+    <trans-unit id="languageModelAuthTitle">
+      <source xml:lang="en">Manage Language Model Access</source>
+    </trans-unit>
+    <trans-unit id="manageLanguageModelAuthentication">
+      <source xml:lang="en">Manage Language Model Access...</source>
+    </trans-unit>
+    <trans-unit id="noAccessDescription">
+      <source xml:lang="en">No extensions are currently allowed to use models from {0}</source>
+    </trans-unit>
+    <trans-unit id="noAllowedExtensions">
+      <source xml:lang="en">No extensions have access</source>
+    </trans-unit>
+    <trans-unit id="noLanguageModels">
+      <source xml:lang="en">No language models requiring authentication found.</source>
+    </trans-unit>
+    <trans-unit id="noLanguageModelsDetail">
+      <source xml:lang="en">There are currently no language models that require authentication.</source>
+    </trans-unit>
+    <trans-unit id="openExtension">
+      <source xml:lang="en">Open Extension</source>
+    </trans-unit>
+    <trans-unit id="trustedExtension">
+      <source xml:lang="en">Trusted by Microsoft</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatMoveActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.openInEditor.label">
       <source xml:lang="en">Open Chat in Editor</source>
@@ -939,6 +971,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="instructions">
       <source xml:lang="en">Instructions</source>
     </trans-unit>
+    <trans-unit id="instructions.label">
+      <source xml:lang="en">Additional Instructions</source>
+    </trans-unit>
     <trans-unit id="prompt">
       <source xml:lang="en">Prompt</source>
     </trans-unit>
@@ -1275,6 +1310,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="accept4">
       <source xml:lang="en">Keep All Edits</source>
+    </trans-unit>
+    <trans-unit id="acceptAllEdits">
+      <source xml:lang="en">Keep All Chat Edits</source>
+    </trans-unit>
+    <trans-unit id="acceptAllEditsTooltip">
+      <source xml:lang="en">Keep All Chat Edits in this Session</source>
     </trans-unit>
     <trans-unit id="acceptHunk">
       <source xml:lang="en">Keep this Change</source>
@@ -2086,9 +2127,6 @@ Type {3} to use commands</source>
     <trans-unit id="editsTitle">
       <source xml:lang="en">Edit with Copilot</source>
     </trans-unit>
-    <trans-unit id="instruction.file.reason.referenced">
-      <source xml:lang="en">Referenced by {0}</source>
-    </trans-unit>
     <trans-unit id="scrollDownButtonLabel">
       <source xml:lang="en">Scroll down</source>
     </trans-unit>
@@ -2746,6 +2784,17 @@ Type {3} to use commands</source>
       <source xml:lang="en">Other Models</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/computeAutomaticInstructions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="instruction.file.reason.allFiles">
+      <source xml:lang="en">Automatically attached as pattern is **</source>
+    </trans-unit>
+    <trans-unit id="instruction.file.reason.referenced">
+      <source xml:lang="en">Referenced by {0}</source>
+    </trans-unit>
+    <trans-unit id="instruction.file.reason.specificFile">
+      <source xml:lang="en">Automatically attached as pattern {0} matches {1}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/decorationsProvider/decorations/frontMatterDecoration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.prompt.frontMatter.background.description">
       <source xml:lang="en">Background color of a Front Matter header block.</source>
@@ -2836,12 +2885,6 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsServiceImpl" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="instruction.file.reason.allFiles">
-      <source xml:lang="en">Automatically attached as pattern is **</source>
-    </trans-unit>
-    <trans-unit id="instruction.file.reason.specificFile">
-      <source xml:lang="en">Automatically attached as pattern {0} matches {1}</source>
-    </trans-unit>
     <trans-unit id="prompt.file.detail">
       <source xml:lang="en">Prompt file: {0}</source>
     </trans-unit>

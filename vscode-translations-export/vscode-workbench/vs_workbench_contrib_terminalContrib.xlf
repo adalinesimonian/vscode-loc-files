@@ -798,9 +798,6 @@ For example:
     <trans-unit id="runOnEnter.exactMatchIgnoreExtension">
       <source xml:lang="en">Run on `Enter` when the suggestion is typed in its entirety or when a file is typed without its extension included.</source>
     </trans-unit>
-    <trans-unit id="runOnEnter.ignore">
-      <source xml:lang="en">Ignore suggestions and send the enter directly to the shell without completing. This is used as the default value so the suggest widget is as unobtrusive as possible.</source>
-    </trans-unit>
     <trans-unit id="runOnEnter.never">
       <source xml:lang="en">Never run on `Enter`.</source>
     </trans-unit>
@@ -859,6 +856,18 @@ If shell integration is installed manually, {3} needs to be set to {4} before ca
     </trans-unit>
     <trans-unit id="suggest.upArrowNavigatesHistory">
       <source xml:lang="en">Determines whether the up arrow key navigates the command history when focus is on the first suggestion and navigation has not yet occurred. When set to false, the up arrow will move focus to the last suggestion instead.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.selectionMode">
+      <source xml:lang="en">Controls how suggestion selection works in the integrated terminal.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.selectionMode.always">
+      <source xml:lang="en">Always select.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.selectionMode.never">
+      <source xml:lang="en">No selection will occur until the user explicitly navigates the suggestions.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.selectionMode.partial">
+      <source xml:lang="en">Will show a border and only insert the suggestion via Tab until navigation has occurred. After that, it will show selection and insert via Enter or Tab.</source>
     </trans-unit>
     <trans-unit id="terminalWindowsExecutableSuggestionSetting">
       <source xml:lang="en">A set of windows command executable extensions that will be included as suggestions in the terminal.
