@@ -83,6 +83,9 @@
     <trans-unit id="mcp.configureSamplingModels.ph">
       <source xml:lang="en">Pick the models {0} can access via MCP sampling</source>
     </trans-unit>
+    <trans-unit id="mcp.disconnect">
+      <source xml:lang="en">Disconnect Account</source>
+    </trans-unit>
     <trans-unit id="mcp.editStoredInput">
       <source xml:lang="en">Edit Stored Input</source>
     </trans-unit>
@@ -127,6 +130,9 @@
     </trans-unit>
     <trans-unit id="mcp.showOutput.description">
       <source xml:lang="en">Set the models the server can use via MCP sampling</source>
+    </trans-unit>
+    <trans-unit id="mcp.signOut">
+      <source xml:lang="en">Sign Out</source>
     </trans-unit>
     <trans-unit id="mcp.start">
       <source xml:lang="en">Start Server</source>
@@ -282,6 +288,62 @@
     </trans-unit>
     <trans-unit id="mcp.url.title">
       <source xml:lang="en">Enter Server URL</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpElicitationService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.elicit.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.enum.none">
+      <source xml:lang="en">None</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.enum.none.description">
+      <source xml:lang="en">No selection</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.give">
+      <source xml:lang="en">Respond</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.source">
+      <source xml:lang="en">MCP Server ({0})</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.title">
+      <source xml:lang="en">Request for Input</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.validation.date">
+      <source xml:lang="en">Please enter a valid date (YYYY-MM-DD)</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.validation.dateTime">
+      <source xml:lang="en">Please enter a valid date-time</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.validation.email">
+      <source xml:lang="en">Please enter a valid email address</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.validation.integer">
+      <source xml:lang="en">Please enter a valid integer</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.validation.maxLength">
+      <source xml:lang="en">Maximum length is {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.validation.maximum">
+      <source xml:lang="en">Maximum value is {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.validation.minLength">
+      <source xml:lang="en">Minimum length is {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.validation.minimum">
+      <source xml:lang="en">Minimum value is {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.validation.number">
+      <source xml:lang="en">Please enter a valid number</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.validation.uri">
+      <source xml:lang="en">Please enter a valid URI</source>
+    </trans-unit>
+    <trans-unit id="msg.subtitle">
+      <source xml:lang="en">{0} (MCP Server)</source>
+    </trans-unit>
+    <trans-unit id="optional">
+      <source xml:lang="en">Optional</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpLanguageFeatures" source-language="en" datatype="plaintext"><body>
@@ -560,7 +622,7 @@
       <source xml:lang="en">Windsurf</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.mcp">
-      <source xml:lang="en">Contributes Model Context Protocol servers. Users of this should also use `vscode.lm.registerMcpConfigurationProvider`.</source>
+      <source xml:lang="en">Contributes Model Context Protocol servers. Users of this should also use `vscode.lm.registerMcpServerDefinitionProvider`.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.mcp.id">
       <source xml:lang="en">Unique ID for the collection.</source>
