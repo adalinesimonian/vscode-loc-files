@@ -25,6 +25,12 @@
     <trans-unit id="chat.signals">
       <source xml:lang="en">Accessibility Signals can be changed via settings with a prefix of signals.chat. By default, if a request takes more than 4 seconds, you will hear a sound indicating that progress is still occurring.</source>
     </trans-unit>
+    <trans-unit id="chatAgent.acceptTool">
+      <source xml:lang="en">To accept a tool action, use the Accept Tool Confirmation command{0}.</source>
+    </trans-unit>
+    <trans-unit id="chatAgent.autoApprove">
+      <source xml:lang="en">To automatically approve tool actions without manual confirmation, set chat.tools.autoApprove to true in your settings.</source>
+    </trans-unit>
     <trans-unit id="chatAgent.overview">
       <source xml:lang="en">The chat agent view is used to apply edits across files in your workspace, enable running commands in the terminal, and more.</source>
     </trans-unit>
@@ -161,6 +167,9 @@
     </trans-unit>
     <trans-unit id="completionsQuotaExceeded">
       <source xml:lang="en">You've reached your monthly code completions quota. You still have free chat messages available.</source>
+    </trans-unit>
+    <trans-unit id="config.label">
+      <source xml:lang="en">Configure Chat...</source>
     </trans-unit>
     <trans-unit id="configureCompletions">
       <source xml:lang="en">Configure Code Completions...</source>
@@ -848,9 +857,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="save-chat-to-prompt-file">
       <source xml:lang="en">Save chat to a prompt file</source>
-    </trans-unit>
-    <trans-unit id="workspaceConfig.mcp.description">
-      <source xml:lang="en">Model Context Protocol server configurations</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatAccessibilityProvider" source-language="en" datatype="plaintext"><body>
@@ -1607,8 +1613,8 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatEditingSession.oneFile.1">
       <source xml:lang="en">1 file changed</source>
     </trans-unit>
-    <trans-unit id="chatInput">
-      <source xml:lang="en">Chat Input</source>
+    <trans-unit id="chatInput.accessibilityHelp">
+      <source xml:lang="en">Chat Input {0}.</source>
     </trans-unit>
     <trans-unit id="chatInput.accessibilityHelpNoKb">
       <source xml:lang="en">Chat Input {0} Press Enter to send out the request. Use the Chat Accessibility Help command for more information.</source>
@@ -2213,6 +2219,9 @@ Type {3} to use commands</source>
     <trans-unit id="configure-instructions">
       <source xml:lang="en">Configure Instructions...</source>
     </trans-unit>
+    <trans-unit id="configure-instructions.short">
+      <source xml:lang="en">Instructions</source>
+    </trans-unit>
     <trans-unit id="configureInstructions">
       <source xml:lang="en">Configure Instructions...</source>
     </trans-unit>
@@ -2230,7 +2239,10 @@ Type {3} to use commands</source>
     <trans-unit id="configure-modes">
       <source xml:lang="en">Configure Chat Modes...</source>
     </trans-unit>
-    <trans-unit id="manage-mode">
+    <trans-unit id="configure-modes.short">
+      <source xml:lang="en">Modes</source>
+    </trans-unit>
+    <trans-unit id="select-mode">
       <source xml:lang="en">Configure Modes...</source>
     </trans-unit>
 </body></file>
@@ -2392,6 +2404,9 @@ Type {3} to use commands</source>
     <trans-unit id="configure-prompts">
       <source xml:lang="en">Configure Prompt Files...</source>
     </trans-unit>
+    <trans-unit id="configure-prompts.short">
+      <source xml:lang="en">Prompt Files</source>
+    </trans-unit>
     <trans-unit id="run-prompt-in-new-chat.capitalized">
       <source xml:lang="en">Run Prompt In New Chat</source>
     </trans-unit>
@@ -2422,6 +2437,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chat.configureToolSets.placeholder">
       <source xml:lang="en">Select a tool set to configure</source>
+    </trans-unit>
+    <trans-unit id="chat.configureToolSets.short">
+      <source xml:lang="en">Tool Sets</source>
     </trans-unit>
     <trans-unit id="input.placeholder">
       <source xml:lang="en">Type tool sets file name</source>
@@ -2752,6 +2770,9 @@ Type {3} to use commands</source>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/computeAutomaticInstructions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="instruction.file.reason.allFiles">
       <source xml:lang="en">Automatically attached as pattern is **</source>
+    </trans-unit>
+    <trans-unit id="instruction.file.reason.copilot">
+      <source xml:lang="en">Automatically attached as setting {0} is enabled</source>
     </trans-unit>
     <trans-unit id="instruction.file.reason.referenced">
       <source xml:lang="en">Referenced by {0}</source>

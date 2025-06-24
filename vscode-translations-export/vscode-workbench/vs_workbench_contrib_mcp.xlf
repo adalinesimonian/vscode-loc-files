@@ -157,9 +157,6 @@
     <trans-unit id="cancel">
       <source xml:lang="en">Cancel</source>
     </trans-unit>
-    <trans-unit id="install.description">
-      <source xml:lang="en">Install in your user settings</source>
-    </trans-unit>
     <trans-unit id="install.error">
       <source xml:lang="en">Error installing MCP server {0}: {1}</source>
     </trans-unit>
@@ -263,19 +260,19 @@
       <source xml:lang="en">Available on this remote machine, runs on {0}</source>
     </trans-unit>
     <trans-unit id="mcp.target.remote">
-      <source xml:lang="en">Remote Settings</source>
+      <source xml:lang="en">Remote</source>
     </trans-unit>
     <trans-unit id="mcp.target.title">
-      <source xml:lang="en">Choose where to save the configuration</source>
+      <source xml:lang="en">Choose where to install the MCP server</source>
     </trans-unit>
     <trans-unit id="mcp.target.user">
-      <source xml:lang="en">User Settings</source>
+      <source xml:lang="en">Global</source>
     </trans-unit>
     <trans-unit id="mcp.target.user.description">
       <source xml:lang="en">Available in all workspaces, runs locally</source>
     </trans-unit>
     <trans-unit id="mcp.target.workspace">
-      <source xml:lang="en">Workspace Settings</source>
+      <source xml:lang="en">Workspace</source>
     </trans-unit>
     <trans-unit id="mcp.target.workspace.description">
       <source xml:lang="en">Available in this workspace, runs locally</source>
@@ -538,6 +535,20 @@
     <trans-unit id="mcp servers">
       <source xml:lang="en">MCP Servers</source>
     </trans-unit>
+    <trans-unit id="mcp.welcome.browseButton">
+      <source xml:lang="en">Browse MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="mcp.welcome.description">
+      <source xml:lang="en">Extend agent mode by installing MCP servers to bring extra tools for connecting to databases, invoking APIs, performing specialized tasks, etc.</source>
+    </trans-unit>
+    <trans-unit id="mcp.welcome.title">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpWorkbenchService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.configuration.userLocalValue">
+      <source xml:lang="en">Global in {0}</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/discovery/extensionMcpDiscovery" source-language="en" datatype="plaintext"><body>
     <trans-unit id="invalidData">
@@ -553,11 +564,6 @@
   <file original="src/vs/workbench/contrib/mcp/common/discovery/nativeMcpDiscoveryAbstract" source-language="en" datatype="plaintext"><body>
     <trans-unit id="onRemoteLabel">
       <source xml:lang="en"> on {0}</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/mcp/common/mcpConfigPathsService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="mcp.configuration.userLocalValue">
-      <source xml:lang="en">Global in {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpConfiguration" source-language="en" datatype="plaintext"><body>
@@ -700,13 +706,13 @@ Do you want to allow running MCP servers from {3}?</source>
       <source xml:lang="en">Not Now</source>
     </trans-unit>
     <trans-unit id="mcp.sampling.allowDuringChat.desc">
-      <source xml:lang="en">The MCP server "{0}" has issued a request to make an language model call. Do you want to allow it to make requests during chat?</source>
+      <source xml:lang="en">The MCP server "{0}" has issued a request to make a language model call. Do you want to allow it to make requests during chat?</source>
     </trans-unit>
     <trans-unit id="mcp.sampling.allowDuringChat.title">
       <source xml:lang="en">Allow MCP tools from "{0}" to make LLM requests?</source>
     </trans-unit>
     <trans-unit id="mcp.sampling.allowOutsideChat.desc">
-      <source xml:lang="en">The MCP server "{0}" has issued a request to make an language model call. Do you want to allow it to make requests, outside of tool calls during chat?</source>
+      <source xml:lang="en">The MCP server "{0}" has issued a request to make a language model call. Do you want to allow it to make requests, outside of tool calls during chat?</source>
     </trans-unit>
     <trans-unit id="mcp.sampling.allowOutsideChat.title">
       <source xml:lang="en">Allow MCP server "{0}" to make LLM requests?</source>
