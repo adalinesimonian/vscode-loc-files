@@ -395,11 +395,38 @@
     <trans-unit id="chat.newChat.label">
       <source xml:lang="en">Send to New Chat</source>
     </trans-unit>
+    <trans-unit id="chat.remove.confirmation.checkbox">
+      <source xml:lang="en">Don't ask again</source>
+    </trans-unit>
+    <trans-unit id="chat.remove.confirmation.message2">
+      <source xml:lang="en">This will remove all subsequent requests and undo edits made to {0}. Do you want to proceed?</source>
+    </trans-unit>
+    <trans-unit id="chat.remove.confirmation.multipleEdits.message">
+      <source xml:lang="en">This will remove all subsequent requests and undo edits made to {0} files in your working set. Do you want to proceed?</source>
+    </trans-unit>
+    <trans-unit id="chat.remove.confirmation.primaryButton">
+      <source xml:lang="en">Yes</source>
+    </trans-unit>
+    <trans-unit id="chat.remove.confirmation.title">
+      <source xml:lang="en">Do you want to undo {0} edits?</source>
+    </trans-unit>
+    <trans-unit id="chat.removeLast.confirmation.message2">
+      <source xml:lang="en">This will remove your last request and undo the edits made to {0}. Do you want to proceed?</source>
+    </trans-unit>
+    <trans-unit id="chat.removeLast.confirmation.multipleEdits.message">
+      <source xml:lang="en">This will remove your last request and undo edits made to {0} files in your working set. Do you want to proceed?</source>
+    </trans-unit>
+    <trans-unit id="chat.removeLast.confirmation.title">
+      <source xml:lang="en">Do you want to undo your last edit?</source>
+    </trans-unit>
     <trans-unit id="edits.submit.label">
       <source xml:lang="en">Send</source>
     </trans-unit>
     <trans-unit id="interactive.cancel.label">
       <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="interactive.cancelEdit.label">
+      <source xml:lang="en">Cancel Edit</source>
     </trans-unit>
     <trans-unit id="interactive.changeModel.label">
       <source xml:lang="en">Change Model</source>
@@ -701,6 +728,9 @@
     </trans-unit>
     <trans-unit id="chat.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
+    </trans-unit>
+    <trans-unit id="chat.editRequests">
+      <source xml:lang="en">Enables editing of requests in the chat. This allows you to change the request content and resubmit it to the model.</source>
     </trans-unit>
     <trans-unit id="chat.editing.autoAcceptDelay">
       <source xml:lang="en">Delay after which changes made by chat are automatically accepted. Values are in seconds, `0` means disabled and `100` seconds is the maximum.</source>
@@ -1672,6 +1702,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="reportIssue">
       <source xml:lang="en">Report an issue</source>
     </trans-unit>
+    <trans-unit id="requestMarkdownPartTitle">
+      <source xml:lang="en">Click to edit</source>
+    </trans-unit>
     <trans-unit id="usedAgent">
       <source xml:lang="en">[[(rerun without)]]</source>
     </trans-unit>
@@ -2512,6 +2545,9 @@ Type {3} to use commands</source>
     <trans-unit id="chat.requestBubbleBackground">
       <source xml:lang="en">Background color of the chat request bubble.</source>
     </trans-unit>
+    <trans-unit id="chat.requestBubbleHoverBackground">
+      <source xml:lang="en">Background color of the chat request bubble on hover.</source>
+    </trans-unit>
     <trans-unit id="chat.requestCodeBorder">
       <source xml:lang="en">Border color of code blocks within the chat request bubble.</source>
     </trans-unit>
@@ -2618,6 +2654,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="interactiveInputHasText">
       <source xml:lang="en">True when the chat input has text.</source>
+    </trans-unit>
+    <trans-unit id="interactiveSessionCurrentlyEditing">
+      <source xml:lang="en">True when the current request is being edited.</source>
     </trans-unit>
     <trans-unit id="interactiveSessionRequestInProgress">
       <source xml:lang="en">True when the current request is still in progress.</source>

@@ -1811,7 +1811,7 @@ Received: '{1}'.</source>
       <source xml:lang="en">The default terminal profile on Windows.</source>
     </trans-unit>
     <trans-unit id="terminal.integrated.inheritEnv">
-      <source xml:lang="en">Whether new shells should inherit their environment from VS Code, which may source a login shell to ensure $PATH and other development variables are initialized. This has no effect on Windows.</source>
+      <source xml:lang="en">Whether new shells should inherit their environment from VS Code, which may source a login shell to ensure $PATH and other development variables are initialized.</source>
     </trans-unit>
     <trans-unit id="terminal.integrated.persistentSessionScrollback">
       <source xml:lang="en">Controls the maximum amount of lines that will be restored when reconnecting to a persistent terminal session. Increasing this will restore more lines of scrollback at the cost of more memory and increase the time it takes to connect to terminals on start up. This setting requires a restart to take effect and should be set to a value less than or equal to `#terminal.integrated.scrollback#`.</source>

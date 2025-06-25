@@ -66,6 +66,9 @@ The task will be ignored.</source>
     <trans-unit id="TaskService.noInstanceRunning">
       <source xml:lang="en">No instance is currently running</source>
     </trans-unit>
+    <trans-unit id="TaskService.noRunningTasks">
+      <source xml:lang="en">No running tasks to restart</source>
+    </trans-unit>
     <trans-unit id="TaskService.noTaskIsRunning">
       <source xml:lang="en">No task is running</source>
     </trans-unit>
@@ -338,6 +341,9 @@ The task will be ignored.</source>
     </trans-unit>
     <trans-unit id="ReRunTaskAction.label">
       <source xml:lang="en">Rerun Last Task</source>
+    </trans-unit>
+    <trans-unit id="RerunAllRunningTasksAction.label">
+      <source xml:lang="en">Rerun All Running Tasks</source>
     </trans-unit>
     <trans-unit id="RestartTaskAction.label">
       <source xml:lang="en">Restart Running Task</source>

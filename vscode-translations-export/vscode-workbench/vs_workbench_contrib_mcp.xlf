@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/mcp/browser/mcp.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="mcp">
-      <source xml:lang="en">MCP Servers</source>
-    </trans-unit>
-    <trans-unit id="mcp-installed">
-      <source xml:lang="en">MCP Servers - Installed</source>
-    </trans-unit>
     <trans-unit id="mcp.quickaccess.add">
       <source xml:lang="en">MCP Server Resources</source>
     </trans-unit>
@@ -53,11 +47,14 @@
     <trans-unit id="mcp.command.browse">
       <source xml:lang="en">MCP Servers</source>
     </trans-unit>
-    <trans-unit id="mcp.command.installFromActivation">
-      <source xml:lang="en">Install...</source>
+    <trans-unit id="mcp.command.browse.mcp">
+      <source xml:lang="en">Browse Servers</source>
     </trans-unit>
     <trans-unit id="mcp.command.restartServer">
       <source xml:lang="en">Restart Server</source>
+    </trans-unit>
+    <trans-unit id="mcp.command.show.installed">
+      <source xml:lang="en">Show Installed Servers</source>
     </trans-unit>
     <trans-unit id="mcp.command.showConfiguration">
       <source xml:lang="en">Show Configuration</source>
@@ -455,6 +452,18 @@
     <trans-unit id="manage">
       <source xml:lang="en">Manage</source>
     </trans-unit>
+    <trans-unit id="mcp.configAccess">
+      <source xml:lang="en">Configure Model Access</source>
+    </trans-unit>
+    <trans-unit id="mcp.resources">
+      <source xml:lang="en">Browse Resources</source>
+    </trans-unit>
+    <trans-unit id="mcp.samplingLog">
+      <source xml:lang="en">Show Sampling Requests</source>
+    </trans-unit>
+    <trans-unit id="mcp.samplingLog.title">
+      <source xml:lang="en">MCP Sampling: {0}</source>
+    </trans-unit>
     <trans-unit id="output">
       <source xml:lang="en">Show Output</source>
     </trans-unit>
@@ -484,6 +493,18 @@
     <trans-unit id="Version">
       <source xml:lang="en">Version</source>
     </trans-unit>
+    <trans-unit id="arguments">
+      <source xml:lang="en">Arguments:</source>
+    </trans-unit>
+    <trans-unit id="command">
+      <source xml:lang="en">Command:</source>
+    </trans-unit>
+    <trans-unit id="configuration">
+      <source xml:lang="en">Configuration</source>
+    </trans-unit>
+    <trans-unit id="configurationtooltip">
+      <source xml:lang="en">Server configuration details</source>
+    </trans-unit>
     <trans-unit id="details">
       <source xml:lang="en">Details</source>
     </trans-unit>
@@ -499,6 +520,9 @@
     <trans-unit id="name">
       <source xml:lang="en">Extension name</source>
     </trans-unit>
+    <trans-unit id="noConfig">
+      <source xml:lang="en">No configuration available for this MCP server.</source>
+    </trans-unit>
     <trans-unit id="noReadme">
       <source xml:lang="en">No README available.</source>
     </trans-unit>
@@ -507,6 +531,15 @@
     </trans-unit>
     <trans-unit id="resources">
       <source xml:lang="en">Resources</source>
+    </trans-unit>
+    <trans-unit id="serverName">
+      <source xml:lang="en">Name:</source>
+    </trans-unit>
+    <trans-unit id="serverType">
+      <source xml:lang="en">Type:</source>
+    </trans-unit>
+    <trans-unit id="url">
+      <source xml:lang="en">URL:</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServerEditorInput" source-language="en" datatype="plaintext"><body>
@@ -532,14 +565,17 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServersView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
     <trans-unit id="mcp servers">
       <source xml:lang="en">MCP Servers</source>
     </trans-unit>
-    <trans-unit id="mcp.welcome.browseButton">
-      <source xml:lang="en">Browse MCP Servers</source>
+    <trans-unit id="mcp-installed">
+      <source xml:lang="en">MCP Servers - Installed</source>
     </trans-unit>
-    <trans-unit id="mcp.welcome.description">
-      <source xml:lang="en">Extend agent mode by installing MCP servers to bring extra tools for connecting to databases, invoking APIs, performing specialized tasks, etc.</source>
+    <trans-unit id="mcp.welcome.descriptionWithLink">
+      <source xml:lang="en">Extend agent mode by installing [MCP servers]({0}) to bring extra tools for connecting to databases, invoking APIs, performing specialized tasks, etc.</source>
     </trans-unit>
     <trans-unit id="mcp.welcome.title">
       <source xml:lang="en">MCP Servers</source>
