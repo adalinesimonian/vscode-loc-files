@@ -455,6 +455,9 @@
     <trans-unit id="mcp.configAccess">
       <source xml:lang="en">Configure Model Access</source>
     </trans-unit>
+    <trans-unit id="mcp.disconnect">
+      <source xml:lang="en">Disconnect Account</source>
+    </trans-unit>
     <trans-unit id="mcp.resources">
       <source xml:lang="en">Browse Resources</source>
     </trans-unit>
@@ -463,6 +466,9 @@
     </trans-unit>
     <trans-unit id="mcp.samplingLog.title">
       <source xml:lang="en">MCP Sampling: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.signOut">
+      <source xml:lang="en">Sign Out</source>
     </trans-unit>
     <trans-unit id="output">
       <source xml:lang="en">Show Output</source>
@@ -511,11 +517,23 @@
     <trans-unit id="detailstooltip">
       <source xml:lang="en">Extension details, rendered from the extension's 'README.md' file</source>
     </trans-unit>
+    <trans-unit id="environmentVariables">
+      <source xml:lang="en">Environment Variables:</source>
+    </trans-unit>
+    <trans-unit id="headers">
+      <source xml:lang="en">Headers:</source>
+    </trans-unit>
     <trans-unit id="id">
       <source xml:lang="en">Identifier</source>
     </trans-unit>
     <trans-unit id="last released">
       <source xml:lang="en">Last Released</source>
+    </trans-unit>
+    <trans-unit id="manifest">
+      <source xml:lang="en">Manifest</source>
+    </trans-unit>
+    <trans-unit id="manifesttooltip">
+      <source xml:lang="en">Server manifest details</source>
     </trans-unit>
     <trans-unit id="name">
       <source xml:lang="en">Extension name</source>
@@ -523,8 +541,23 @@
     <trans-unit id="noConfig">
       <source xml:lang="en">No configuration available for this MCP server.</source>
     </trans-unit>
+    <trans-unit id="noManifest">
+      <source xml:lang="en">No manifest available for this MCP server.</source>
+    </trans-unit>
     <trans-unit id="noReadme">
       <source xml:lang="en">No README available.</source>
+    </trans-unit>
+    <trans-unit id="packageName">
+      <source xml:lang="en">Package:</source>
+    </trans-unit>
+    <trans-unit id="packagearguments">
+      <source xml:lang="en">Package Arguments:</source>
+    </trans-unit>
+    <trans-unit id="packages">
+      <source xml:lang="en">Packages</source>
+    </trans-unit>
+    <trans-unit id="remotes">
+      <source xml:lang="en">Remote</source>
     </trans-unit>
     <trans-unit id="repository">
       <source xml:lang="en">Repository</source>
@@ -532,11 +565,17 @@
     <trans-unit id="resources">
       <source xml:lang="en">Resources</source>
     </trans-unit>
+    <trans-unit id="runtimeargs">
+      <source xml:lang="en">Runtime Arguments:</source>
+    </trans-unit>
     <trans-unit id="serverName">
       <source xml:lang="en">Name:</source>
     </trans-unit>
     <trans-unit id="serverType">
       <source xml:lang="en">Type:</source>
+    </trans-unit>
+    <trans-unit id="transport">
+      <source xml:lang="en">Transport:</source>
     </trans-unit>
     <trans-unit id="url">
       <source xml:lang="en">URL:</source>
@@ -575,7 +614,7 @@
       <source xml:lang="en">MCP Servers - Installed</source>
     </trans-unit>
     <trans-unit id="mcp.welcome.descriptionWithLink">
-      <source xml:lang="en">Extend agent mode by installing [MCP servers]({0}) to bring extra tools for connecting to databases, invoking APIs, performing specialized tasks, etc.</source>
+      <source xml:lang="en">Extend agent mode by installing [MCP servers]({0}) to bring extra tools for connecting to databases, invoking APIs and performing specialized tasks.</source>
     </trans-unit>
     <trans-unit id="mcp.welcome.title">
       <source xml:lang="en">MCP Servers</source>

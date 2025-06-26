@@ -389,6 +389,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatExecuteActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="actions.chat.createRemoteJob">
+      <source xml:lang="en">Create Remote Job</source>
+    </trans-unit>
     <trans-unit id="actions.chat.submitWithCodebase">
       <source xml:lang="en">Send with {0}</source>
     </trans-unit>
@@ -448,6 +451,9 @@
     </trans-unit>
     <trans-unit id="interactive.toggleRequestPausd.label">
       <source xml:lang="en">Toggle Request Paused</source>
+    </trans-unit>
+    <trans-unit id="remoteJobCreating">
+      <source xml:lang="en">Remote job is being created</source>
     </trans-unit>
     <trans-unit id="requestIsPaused">
       <source xml:lang="en">Resume Request</source>
@@ -589,11 +595,23 @@
     <trans-unit id="chat.accept">
       <source xml:lang="en">Accept</source>
     </trans-unit>
+    <trans-unit id="chat.tools.description.mode">
+      <source xml:lang="en">The selected tools are configured by the '{0}' chat mode.</source>
+    </trans-unit>
+    <trans-unit id="chat.tools.description.session">
+      <source xml:lang="en">The selected tools were configured by a prompt command and only apply to this chat session.</source>
+    </trans-unit>
+    <trans-unit id="chat.tools.placeholder.global">
+      <source xml:lang="en">Select tools that are available to chat</source>
+    </trans-unit>
+    <trans-unit id="chat.tools.placeholder.mode">
+      <source xml:lang="en">Select tools for this chat mode</source>
+    </trans-unit>
+    <trans-unit id="chat.tools.placeholder.session">
+      <source xml:lang="en">Select tools for this chat session</source>
+    </trans-unit>
     <trans-unit id="label">
       <source xml:lang="en">Configure Tools...</source>
-    </trans-unit>
-    <trans-unit id="placeholder">
-      <source xml:lang="en">Select tools that are available to chat</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatToolPicker" source-language="en" datatype="plaintext"><body>
@@ -2616,6 +2634,9 @@ Type {3} to use commands</source>
     <trans-unit id="chatPromptFileAttachedContextDescription">
       <source xml:lang="en">True when the chat has a prompt file attached.</source>
     </trans-unit>
+    <trans-unit id="chatRemoteJobCreating">
+      <source xml:lang="en">True when a remote coding agent job is being created.</source>
+    </trans-unit>
     <trans-unit id="chatRequest">
       <source xml:lang="en">The chat item is a request</source>
     </trans-unit>
@@ -2636,6 +2657,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatSessionResponseDetectedAgentOrCommand">
       <source xml:lang="en">When the agent or command was automatically detected</source>
+    </trans-unit>
+    <trans-unit id="hasRemoteCodingAgent">
+      <source xml:lang="en">Whether any remote coding agent is available</source>
     </trans-unit>
     <trans-unit id="inChat">
       <source xml:lang="en">True when focus is in the chat widget, false otherwise.</source>
