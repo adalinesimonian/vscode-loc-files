@@ -258,6 +258,12 @@
     <trans-unit id="toggleChat">
       <source xml:lang="en">Toggle Chat</source>
     </trans-unit>
+    <trans-unit id="updateInstructions">
+      <source xml:lang="en">Automatically Update Instructions</source>
+    </trans-unit>
+    <trans-unit id="updateInstructions.short">
+      <source xml:lang="en">Auto-update Instructions</source>
+    </trans-unit>
     <trans-unit id="upgradeChat">
       <source xml:lang="en">Upgrade Copilot Plan</source>
     </trans-unit>
@@ -390,10 +396,13 @@
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatExecuteActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="actions.chat.createRemoteJob">
-      <source xml:lang="en">Create Remote Job</source>
+      <source xml:lang="en">Push to Coding Agent</source>
     </trans-unit>
     <trans-unit id="actions.chat.submitWithCodebase">
       <source xml:lang="en">Send with {0}</source>
+    </trans-unit>
+    <trans-unit id="analyzingChatHistory">
+      <source xml:lang="en">Analyzing chat history</source>
     </trans-unit>
     <trans-unit id="chat.newChat.label">
       <source xml:lang="en">Send to New Chat</source>
@@ -421,6 +430,9 @@
     </trans-unit>
     <trans-unit id="chat.removeLast.confirmation.title">
       <source xml:lang="en">Do you want to undo your last edit?</source>
+    </trans-unit>
+    <trans-unit id="creatingRemoteJob">
+      <source xml:lang="en">Pushing state to coding agent</source>
     </trans-unit>
     <trans-unit id="edits.submit.label">
       <source xml:lang="en">Send</source>
@@ -452,8 +464,11 @@
     <trans-unit id="interactive.toggleRequestPausd.label">
       <source xml:lang="en">Toggle Request Paused</source>
     </trans-unit>
+    <trans-unit id="remoteAgentError">
+      <source xml:lang="en">Coding agent session cancelled.</source>
+    </trans-unit>
     <trans-unit id="remoteJobCreating">
-      <source xml:lang="en">Remote job is being created</source>
+      <source xml:lang="en">Pushing to Coding Agent</source>
     </trans-unit>
     <trans-unit id="requestIsPaused">
       <source xml:lang="en">Resume Request</source>
@@ -740,9 +755,6 @@
     </trans-unit>
     <trans-unit id="chat.commandCenter.enabled">
       <source xml:lang="en">Controls whether the command center shows a menu for actions to control Copilot (requires {0}).</source>
-    </trans-unit>
-    <trans-unit id="chat.continueLaterIndicator">
-      <source xml:lang="en">Enable indicator in the status bar to finish chat setup.</source>
     </trans-unit>
     <trans-unit id="chat.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
@@ -2307,6 +2319,9 @@ Type {3} to use commands</source>
     <trans-unit id="commands.new.prompt.local.title">
       <source xml:lang="en">New Prompt File...</source>
     </trans-unit>
+    <trans-unit id="commands.new.untitled.prompt.title">
+      <source xml:lang="en">New Untitled Prompt File</source>
+    </trans-unit>
     <trans-unit id="enable.capitalized">
       <source xml:lang="en">Enable</source>
     </trans-unit>
@@ -2404,7 +2419,7 @@ Type {3} to use commands</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/pickers/promptFilePickers" source-language="en" datatype="plaintext"><body>
     <trans-unit id="commands.new-instructionsfile.select-dialog.label">
-      <source xml:lang="en">Create new instruction file...</source>
+      <source xml:lang="en">New instruction file...</source>
     </trans-unit>
     <trans-unit id="commands.new-modefile.select-dialog.label">
       <source xml:lang="en">Create new custom chat mode file...</source>
@@ -2414,6 +2429,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="commands.prompts.use.select-dialog.delete-prompt.confirm.message">
       <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="commands.update-instructions.select-dialog.label">
+      <source xml:lang="en">Auto-update instructions...</source>
     </trans-unit>
     <trans-unit id="copy">
       <source xml:lang="en">Copy or Move (press {0})</source>
@@ -2443,6 +2461,40 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="placeholder">
       <source xml:lang="en">Select tools</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/promptUrlHandler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="confirmInstallInstructions">
+      <source xml:lang="en">An external application wants to create an instructions file with content from a URL.</source>
+    </trans-unit>
+    <trans-unit id="confirmInstallMode">
+      <source xml:lang="en">An external application wants to create a chat mode with content from a URL.</source>
+    </trans-unit>
+    <trans-unit id="confirmInstallPrompt">
+      <source xml:lang="en">An external application wants to create a prompt file with content from a URL.</source>
+    </trans-unit>
+    <trans-unit id="confirmOpenButton">
+      <source xml:lang="en">&amp;&amp;Continue</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="confirmOpenDetail1">
+      <source xml:lang="en">Do you want to continue by selecting a destination folder and name?
+
+</source>
+    </trans-unit>
+    <trans-unit id="confirmOpenDetail2">
+      <source xml:lang="en">This will access {0}.
+
+</source>
+    </trans-unit>
+    <trans-unit id="confirmOpenDetail3">
+      <source xml:lang="en">If you did not initiate this request, it may represent an attempted attack on your system. Unless you took an explicit action to initiate this request, you should press 'Cancel'</source>
+    </trans-unit>
+    <trans-unit id="confirmOpenDoNotAskAgain">
+      <source xml:lang="en">Do not show this message again for files from '{0}'</source>
+    </trans-unit>
+    <trans-unit id="failed">
+      <source xml:lang="en">Failed to fetch URL: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/runPromptAction" source-language="en" datatype="plaintext"><body>

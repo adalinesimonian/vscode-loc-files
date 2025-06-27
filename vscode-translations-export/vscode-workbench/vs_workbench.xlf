@@ -1678,6 +1678,9 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/auxiliarybar/auxiliaryBarActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="closeIcon">
+      <source xml:lang="en">Icon to close the secondary side bar.</source>
+    </trans-unit>
     <trans-unit id="closeSecondarySideBar">
       <source xml:lang="en">Hide Secondary Side Bar</source>
     </trans-unit>
@@ -1686,6 +1689,19 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="hideAuxiliaryBar">
       <source xml:lang="en">Hide Secondary Side Bar</source>
+    </trans-unit>
+    <trans-unit id="maximizeAuxiliaryBar">
+      <source xml:lang="en">Maximize Secondary Side Bar</source>
+    </trans-unit>
+    <trans-unit id="maximizeAuxiliaryBarTooltip">
+      <source xml:lang="en">Maximize Secondary Side Bar Size</source>
+    </trans-unit>
+    <trans-unit id="maximizeIcon">
+      <source xml:lang="en">Icon to maximize the secondary side bar.</source>
+    </trans-unit>
+    <trans-unit id="miCloseSecondarySideBar">
+      <source xml:lang="en">&amp;&amp;Secondary Side Bar</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
     <trans-unit id="nextAuxiliaryBarView">
       <source xml:lang="en">Next Secondary Side Bar View</source>
@@ -1696,24 +1712,29 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="previousAuxiliaryBarView">
       <source xml:lang="en">Previous Secondary Side Bar View</source>
     </trans-unit>
-    <trans-unit id="secondary sidebar mnemonic">
-      <source xml:lang="en">Secondary Si&amp;&amp;de Bar</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
+    <trans-unit id="restoreAuxiliaryBar">
+      <source xml:lang="en">Restore Secondary Side Bar</source>
+    </trans-unit>
+    <trans-unit id="restoreAuxiliaryBarTooltip">
+      <source xml:lang="en">Restore Secondary Side Bar Size</source>
     </trans-unit>
     <trans-unit id="toggleAuxiliaryBar">
       <source xml:lang="en">Toggle Secondary Side Bar Visibility</source>
     </trans-unit>
     <trans-unit id="toggleAuxiliaryIconLeft">
-      <source xml:lang="en">Icon to toggle the auxiliary bar in its left position.</source>
+      <source xml:lang="en">Icon to toggle the secondary side bar in its left position.</source>
     </trans-unit>
     <trans-unit id="toggleAuxiliaryIconLeftOn">
-      <source xml:lang="en">Icon to toggle the auxiliary bar on in its left position.</source>
+      <source xml:lang="en">Icon to toggle the secondary side bar on in its left position.</source>
     </trans-unit>
     <trans-unit id="toggleAuxiliaryIconRight">
-      <source xml:lang="en">Icon to toggle the auxiliary bar off in its right position.</source>
+      <source xml:lang="en">Icon to toggle the secondary side bar off in its right position.</source>
     </trans-unit>
     <trans-unit id="toggleAuxiliaryIconRightOn">
-      <source xml:lang="en">Icon to toggle the auxiliary bar on in its right position.</source>
+      <source xml:lang="en">Icon to toggle the secondary side bar on in its right position.</source>
+    </trans-unit>
+    <trans-unit id="toggleMaximizedAuxiliaryBar">
+      <source xml:lang="en">Toggle Maximized Secondary Side Bar</source>
     </trans-unit>
     <trans-unit id="toggleSecondarySideBar">
       <source xml:lang="en">Toggle Secondary Side Bar</source>
@@ -1984,12 +2005,8 @@ Browser: {3}</source>
     <trans-unit id="empty">
       <source xml:lang="en">no elements</source>
     </trans-unit>
-    <trans-unit id="miBreadcrumbs">
-      <source xml:lang="en">Toggle &amp;&amp;Breadcrumbs</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
     <trans-unit id="miBreadcrumbs2">
-      <source xml:lang="en">Toggle &amp;&amp;Breadcrumbs</source>
+      <source xml:lang="en">&amp;&amp;Breadcrumbs</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
     <trans-unit id="separatorIcon">
@@ -3583,6 +3600,10 @@ Browser: {3}</source>
     <trans-unit id="maximizePanel">
       <source xml:lang="en">Maximize Panel Size</source>
     </trans-unit>
+    <trans-unit id="miTogglePanelMnemonic">
+      <source xml:lang="en">&amp;&amp;Panel</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
     <trans-unit id="minimizePanel">
       <source xml:lang="en">Restore Panel Size</source>
     </trans-unit>
@@ -3630,13 +3651,6 @@ Browser: {3}</source>
     </trans-unit>
     <trans-unit id="previousPanelView">
       <source xml:lang="en">Previous Panel View</source>
-    </trans-unit>
-    <trans-unit id="restoreIcon">
-      <source xml:lang="en">Icon to restore a panel.</source>
-    </trans-unit>
-    <trans-unit id="toggle panel mnemonic">
-      <source xml:lang="en">&amp;&amp;Panel</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
     <trans-unit id="toggleMaximizedPanel">
       <source xml:lang="en">Toggle Maximized Panel</source>
@@ -4055,6 +4069,9 @@ If {1} did not launch, try again below.</source>
     <trans-unit id="askChatLocation.quickChat">
       <source xml:lang="en">Ask chat questions in Quick Chat.</source>
     </trans-unit>
+    <trans-unit id="auxiliaryBarOpensMaximized">
+      <source xml:lang="en">Controls whether the secondary side bar opens maximized. It can either always open maximized, never open maximized, or open to the last state it was in before being closed.</source>
+    </trans-unit>
     <trans-unit id="browser">
       <source xml:lang="en">Configure the browser to use for opening http or https links externally. This can either be the name of the browser (`edge`, `chrome`, `firefox`) or an absolute path to the browser's executable. Will use the system default if not set.</source>
     </trans-unit>
@@ -4443,6 +4460,15 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="workbench.activityBar.location.top">
       <source xml:lang="en">Show the Activity Bar on top of the Primary and Secondary Side Bars.</source>
     </trans-unit>
+    <trans-unit id="workbench.auxiliaryBar.opensMaximized.always">
+      <source xml:lang="en">Always maximize the secondary side bar when opening it.</source>
+    </trans-unit>
+    <trans-unit id="workbench.auxiliaryBar.opensMaximized.never">
+      <source xml:lang="en">Never maximize the secondary side bar when opening it.</source>
+    </trans-unit>
+    <trans-unit id="workbench.auxiliaryBar.opensMaximized.preserve">
+      <source xml:lang="en">Open the secondary side bar to the state that it was in, before it was closed.</source>
+    </trans-unit>
     <trans-unit id="workbench.editor.doubleClickTabToToggleEditorGroupSizes.expand">
       <source xml:lang="en">The editor group takes as much space as possible by making all other editor groups as small as possible.</source>
     </trans-unit>
@@ -4639,7 +4665,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <source xml:lang="en">Always maximize the panel when opening it.</source>
     </trans-unit>
     <trans-unit id="workbench.panel.opensMaximized.never">
-      <source xml:lang="en">Never maximize the panel when opening it. The panel will open un-maximized.</source>
+      <source xml:lang="en">Never maximize the panel when opening it.</source>
     </trans-unit>
     <trans-unit id="workbench.panel.opensMaximized.preserve">
       <source xml:lang="en">Open the panel to the state that it was in, before it was closed.</source>
@@ -4810,6 +4836,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="auxiliaryBarFocus">
       <source xml:lang="en">Whether the auxiliary bar has keyboard focus</source>
+    </trans-unit>
+    <trans-unit id="auxiliaryBarMaximized">
+      <source xml:lang="en">Whether the auxiliary bar is maximized</source>
     </trans-unit>
     <trans-unit id="auxiliaryBarVisible">
       <source xml:lang="en">Whether the auxiliary bar is visible</source>
