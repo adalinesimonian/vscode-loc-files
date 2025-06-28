@@ -1297,6 +1297,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="addFilesFromReferences">
       <source xml:lang="en">Add Files From References</source>
     </trans-unit>
+    <trans-unit id="chat.editRequests.label">
+      <source xml:lang="en">Edit Request</source>
+    </trans-unit>
     <trans-unit id="chat.editing.discardAll.confirmation.manyFiles">
       <source xml:lang="en">This will undo changes made by {0} in {1} files. Do you want to proceed?</source>
     </trans-unit>
@@ -2455,6 +2458,11 @@ Type {3} to use commands</source>
       <source xml:lang="en">User data folder</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/promptCodingAgentActionOverlay" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="runPromptWithCodingAgent">
+      <source xml:lang="en">Run with Coding Agent</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/promptToolsCodeLensProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="configure-tools.capitalized.ellipsis">
       <source xml:lang="en">Configure Tools...</source>
@@ -2734,6 +2742,9 @@ Type {3} to use commands</source>
     <trans-unit id="interactiveSessionCurrentlyEditing">
       <source xml:lang="en">True when the current request is being edited.</source>
     </trans-unit>
+    <trans-unit id="interactiveSessionCurrentlyEditingInput">
+      <source xml:lang="en">True when the current request input at the bottom is being edited.</source>
+    </trans-unit>
     <trans-unit id="interactiveSessionRequestInProgress">
       <source xml:lang="en">True when the current request is still in progress.</source>
     </trans-unit>
@@ -2902,6 +2913,11 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chat.prompt.frontMatter.inactiveBackground.description">
       <source xml:lang="en">Background color of an inactive Front Matter header block.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptLinkDiagnosticsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="fileNotFound">
+      <source xml:lang="en">File not found.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/headerBase" source-language="en" datatype="plaintext"><body>
