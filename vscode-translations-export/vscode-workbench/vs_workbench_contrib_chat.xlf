@@ -259,10 +259,10 @@
       <source xml:lang="en">Toggle Chat</source>
     </trans-unit>
     <trans-unit id="updateInstructions">
-      <source xml:lang="en">Automatically Update Instructions</source>
+      <source xml:lang="en">Generate Instructions</source>
     </trans-unit>
     <trans-unit id="updateInstructions.short">
-      <source xml:lang="en">Auto-update Instructions</source>
+      <source xml:lang="en">Generate Instructions</source>
     </trans-unit>
     <trans-unit id="upgradeChat">
       <source xml:lang="en">Upgrade Copilot Plan</source>
@@ -866,9 +866,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.signInDialogVariant">
       <source xml:lang="en">Control variations of the sign-in dialog.</source>
-    </trans-unit>
-    <trans-unit id="chat.signInWithAlternateProvider">
-      <source xml:lang="en">Enable alternative sign-in provider.</source>
     </trans-unit>
     <trans-unit id="chat.tools.autoApprove">
       <source xml:lang="en">Controls whether tool use should be automatically approved.</source>
@@ -1871,9 +1868,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="continueWith">
       <source xml:lang="en">Continue with {0}</source>
     </trans-unit>
-    <trans-unit id="continueWithProvider">
-      <source xml:lang="en">Continue with {0}</source>
-    </trans-unit>
     <trans-unit id="copilotFailedWarning">
       <source xml:lang="en">Copilot failed to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
     </trans-unit>
@@ -1888,9 +1882,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="copilotWorkspaceTrust">
       <source xml:lang="en">Copilot is currently only supported in trusted workspaces.</source>
-    </trans-unit>
-    <trans-unit id="createAccount">
-      <source xml:lang="en">Create a New Account</source>
     </trans-unit>
     <trans-unit id="enterpriseInstance">
       <source xml:lang="en">What is your {0} instance?</source>
@@ -1958,12 +1949,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="signIn">
       <source xml:lang="en">Sign in to use Copilot</source>
     </trans-unit>
-    <trans-unit id="signInGH">
-      <source xml:lang="en">Sign in to use {0} Copilot</source>
-    </trans-unit>
-    <trans-unit id="signInVSC">
-      <source xml:lang="en">Sign in to use AI</source>
-    </trans-unit>
     <trans-unit id="signInWithProvider">
       <source xml:lang="en">Sign in with a {0} account</source>
     </trans-unit>
@@ -1972,12 +1957,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="startUsing">
       <source xml:lang="en">Start using Copilot</source>
-    </trans-unit>
-    <trans-unit id="startUsingGh">
-      <source xml:lang="en">Start using {0} Copilot</source>
-    </trans-unit>
-    <trans-unit id="startUsingVSC">
-      <source xml:lang="en">Start using AI</source>
     </trans-unit>
     <trans-unit id="triggerChatSetup">
       <source xml:lang="en">Use AI Features with Copilot for free...</source>
@@ -2434,7 +2413,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
     </trans-unit>
     <trans-unit id="commands.update-instructions.select-dialog.label">
-      <source xml:lang="en">Auto-update instructions...</source>
+      <source xml:lang="en">Generate instructions...</source>
     </trans-unit>
     <trans-unit id="copy">
       <source xml:lang="en">Copy or Move (press {0})</source>
@@ -2461,6 +2440,9 @@ Type {3} to use commands</source>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/promptCodingAgentActionOverlay" source-language="en" datatype="plaintext"><body>
     <trans-unit id="runPromptWithCodingAgent">
       <source xml:lang="en">Run with Coding Agent</source>
+    </trans-unit>
+    <trans-unit id="runWithCodingAgent.label">
+      <source xml:lang="en">{0} Run with Coding Agent</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/promptToolsCodeLensProvider" source-language="en" datatype="plaintext"><body>
