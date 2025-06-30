@@ -2124,6 +2124,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatMessage">
       <source xml:lang="en">Copilot is powered by AI, so mistakes are possible. Review output carefully before use.</source>
     </trans-unit>
+    <trans-unit id="chatWidget.suggestedPrompts.gettingStarted">
+      <source xml:lang="en">Ask @vscode</source>
+    </trans-unit>
+    <trans-unit id="chatWidget.suggestedPrompts.newProject">
+      <source xml:lang="en">Create a #new Project</source>
+    </trans-unit>
     <trans-unit id="chatWidget.tips">
       <source xml:lang="en">{0} or type {1} to attach context
 
@@ -2619,9 +2625,6 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatContextKeys" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatAgentModeDisallowed">
-      <source xml:lang="en">True when agent mode is not allowed.</source>
-    </trans-unit>
     <trans-unit id="chatCanRequestBePaused">
       <source xml:lang="en">True when the current request can be paused.</source>
     </trans-unit>
@@ -2659,7 +2662,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">The id of the last chat item.</source>
     </trans-unit>
     <trans-unit id="chatMode">
-      <source xml:lang="en">The current chat mode.</source>
+      <source xml:lang="en">The 'kind' of the current chat mode- Agent for custom modes.</source>
     </trans-unit>
     <trans-unit id="chatModelsAreUserSelectable">
       <source xml:lang="en">True when the chat model can be selected manually by the user.</source>
@@ -3165,6 +3168,9 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/electron-browser/tools/fetchPageTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="fetchWebPage.binaryNotSupported">
+      <source xml:lang="en">Binary files are not supported at the moment.</source>
+    </trans-unit>
     <trans-unit id="fetchWebPage.confirmationMessage.plural">
       <source xml:lang="en">Web content may contain malicious code or attempt prompt injection attacks.</source>
     </trans-unit>
@@ -3181,13 +3187,13 @@ Type {3} to use commands</source>
       <source xml:lang="en">Invalid URL</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.invocationMessage.plural">
-      <source xml:lang="en">Fetching {0} web pages</source>
+      <source xml:lang="en">Fetching {0} resources</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.invocationMessage.singular">
       <source xml:lang="en">Fetching {0}</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.invocationMessage.singularAsLink">
-      <source xml:lang="en">Fetching [web page]({0})</source>
+      <source xml:lang="en">Fetching [resource]({0})</source>
       <note>{Locked="]({0})"}</note>
     </trans-unit>
     <trans-unit id="fetchWebPage.modelDescription">
@@ -3197,27 +3203,27 @@ Type {3} to use commands</source>
       <source xml:lang="en">No valid URLs provided.</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.pastTenseMessage.plural">
-      <source xml:lang="en">Fetched {0} web pages, but the following were invalid URLs:
+      <source xml:lang="en">Fetched {0} resources, but the following were invalid URLs:
 
 {1}
 
 </source>
     </trans-unit>
     <trans-unit id="fetchWebPage.pastTenseMessage.singular">
-      <source xml:lang="en">Fetched web page, but the following was an invalid URL:
+      <source xml:lang="en">Fetched resource, but the following was an invalid URL:
 
 {0}
 
 </source>
     </trans-unit>
     <trans-unit id="fetchWebPage.pastTenseMessageResult.plural">
-      <source xml:lang="en">Fetched {0} web pages</source>
+      <source xml:lang="en">Fetched {0} resources</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.pastTenseMessageResult.singular">
       <source xml:lang="en">Fetched {0}</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.pastTenseMessageResult.singularAsLink">
-      <source xml:lang="en">Fetched [web page]({0})</source>
+      <source xml:lang="en">Fetched [resource]({0})</source>
       <note>{Locked="]({0})"}</note>
     </trans-unit>
     <trans-unit id="fetchWebPage.urlsDescription">
