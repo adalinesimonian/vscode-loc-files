@@ -461,14 +461,23 @@ Received: '{1}'.</source>
     <trans-unit id="add">
       <source xml:lang="en">Add folder(s) to the last active window.</source>
     </trans-unit>
+    <trans-unit id="addFile">
+      <source xml:lang="en">Add files as context to the chat session.</source>
+    </trans-unit>
     <trans-unit id="addMcp">
       <source xml:lang="en">Adds a Model Context Protocol server definition to the user profile. Accepts JSON input in the form '{"name":"server-name","command":...}'</source>
     </trans-unit>
     <trans-unit id="category">
       <source xml:lang="en">Filters installed extensions by provided category, when using --list-extensions.</source>
     </trans-unit>
+    <trans-unit id="chatMode">
+      <source xml:lang="en">The mode to use for the chat session. Defaults to 'agent'.</source>
+    </trans-unit>
     <trans-unit id="cliDataDir">
       <source xml:lang="en">Directory where CLI metadata should be stored.</source>
+    </trans-unit>
+    <trans-unit id="cliPrompt">
+      <source xml:lang="en">prompt</source>
     </trans-unit>
     <trans-unit id="deprecated.useInstead">
       <source xml:lang="en">Use {0} instead.</source>
@@ -554,6 +563,9 @@ Received: '{1}'.</source>
     <trans-unit id="profileName">
       <source xml:lang="en">Opens the provided folder or workspace with the given profile and associates the profile with the workspace. If the profile does not exist, a new empty one is created.</source>
     </trans-unit>
+    <trans-unit id="prompt">
+      <source xml:lang="en">The prompt to use as chat.</source>
+    </trans-unit>
     <trans-unit id="remove">
       <source xml:lang="en">Remove folder(s) from the last active window.</source>
     </trans-unit>
@@ -566,11 +578,8 @@ Received: '{1}'.</source>
     <trans-unit id="status">
       <source xml:lang="en">Print process usage and diagnostics information.</source>
     </trans-unit>
-    <trans-unit id="stdinUnix">
-      <source xml:lang="en">To read from stdin, append '-' (e.g. 'ps aux | grep code | {0} -')</source>
-    </trans-unit>
-    <trans-unit id="stdinWindows">
-      <source xml:lang="en">To read output from another program, append '-' (e.g. 'echo Hello World | {0} -')</source>
+    <trans-unit id="stdinUsage">
+      <source xml:lang="en">To read from stdin, append '-' (e.g. '{0}')</source>
     </trans-unit>
     <trans-unit id="subcommands">
       <source xml:lang="en">Subcommands</source>

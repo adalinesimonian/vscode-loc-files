@@ -213,6 +213,9 @@
     <trans-unit id="manageCopilot">
       <source xml:lang="en">Manage Copilot</source>
     </trans-unit>
+    <trans-unit id="mcp.servers">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
     <trans-unit id="more">
       <source xml:lang="en">More...</source>
     </trans-unit>
@@ -611,13 +614,13 @@
       <source xml:lang="en">Accept</source>
     </trans-unit>
     <trans-unit id="chat.tools.description.mode">
-      <source xml:lang="en">The selected tools are configured by the '{0}' chat mode.</source>
+      <source xml:lang="en">The selected tools are configured by the '{0}' chat mode. Changes to the tools will be applied to the mode file as well.</source>
     </trans-unit>
     <trans-unit id="chat.tools.description.session">
       <source xml:lang="en">The selected tools were configured by a prompt command and only apply to this chat session.</source>
     </trans-unit>
     <trans-unit id="chat.tools.placeholder.global">
-      <source xml:lang="en">Select tools that are available to chat</source>
+      <source xml:lang="en">Select tools that are available to chat.</source>
     </trans-unit>
     <trans-unit id="chat.tools.placeholder.mode">
       <source xml:lang="en">Select tools for this chat mode</source>
@@ -2900,6 +2903,61 @@ Type {3} to use commands</source>
       <source xml:lang="en">Background color of an inactive Front Matter header block.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptHeaderDiagnosticsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="promptHeaderDiagnosticsProvider.modelNotFound">
+      <source xml:lang="en">Unknown model '{0}'</source>
+    </trans-unit>
+    <trans-unit id="promptHeaderDiagnosticsProvider.modelNotSuited">
+      <source xml:lang="en">Model '{0}' is not suited for agent mode</source>
+    </trans-unit>
+    <trans-unit id="promptHeaderDiagnosticsProvider.toolNotFound">
+      <source xml:lang="en">Unknown tool '{0}'</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptHeaderHovers" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="modelFamily">
+      <source xml:lang="en">- Family: {0}</source>
+    </trans-unit>
+    <trans-unit id="modelName">
+      <source xml:lang="en">{0}</source>
+    </trans-unit>
+    <trans-unit id="modelVendor">
+      <source xml:lang="en">- Vendor: {0}</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.instructions.applyToRange">
+      <source xml:lang="en">One or more glob pattern (separated by comma) that describe for which files the instructions apply to. Based on these patterns, the file is automatically included in the prompt, when the context contains a file that matches one or more of these patterns. Use `**` when you want this file to always be added.
+Example: **/*.ts, **/*.js, client/**</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.instructions.description">
+      <source xml:lang="en">The description of the instruction file. It can be used to provide additional context or information about the instructions and is passed to the language model as part of the prompt.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.mode.description">
+      <source xml:lang="en">The description of the mode file. It can be used to provide additional context or information about the mode to the mode author.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.mode.model">
+      <source xml:lang="en">The model to use in this mode.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.mode.tools">
+      <source xml:lang="en">The tools to use in this mode.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.prompt.description">
+      <source xml:lang="en">The description of the prompt file. It can be used to provide additional context or information about the prompt to the prompt author.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.prompt.mode">
+      <source xml:lang="en">The mode (ask, edit or agent) to use when running this prompt.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.prompt.model">
+      <source xml:lang="en">The model to use in this prompt.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.prompt.tools">
+      <source xml:lang="en">The tools to use in this prompt.</source>
+    </trans-unit>
+    <trans-unit id="toolSetName">
+      <source xml:lang="en">ToolSet: {0}
+
+</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptLinkDiagnosticsProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="fileNotFound">
       <source xml:lang="en">File not found.</source>
@@ -2913,10 +2971,10 @@ Type {3} to use commands</source>
       <source xml:lang="en">Unexpected token '{0}'.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.diagnostics.duplicate-record">
-      <source xml:lang="en">Duplicate metadata '{0}' will be ignored.</source>
+      <source xml:lang="en">Duplicate property '{0}' will be ignored.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.diagnostics.unknown-record">
-      <source xml:lang="en">Unknown metadata '{0}' will be ignored.</source>
+      <source xml:lang="en">Unknown property '{0}' will be ignored.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/applyTo" source-language="en" datatype="plaintext"><body>
@@ -2924,7 +2982,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Invalid glob pattern '{0}'.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.string.diagnostics.invalid-language">
-      <source xml:lang="en">The '{0}' metadata record is only valid in instruction files.</source>
+      <source xml:lang="en">The '{0}' header property is only valid in instruction files.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/base/enum" source-language="en" datatype="plaintext"><body>
@@ -2945,15 +3003,15 @@ Type {3} to use commands</source>
       <source xml:lang="en">Tool name cannot be empty.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.tools.diagnostics.invalid-tool-name-type">
-      <source xml:lang="en">Unexpected tool name '{0}', expected '{1}'.</source>
+      <source xml:lang="en">Unexpected tool name '{0}', expected a string literal.</source>
     </trans-unit>
     <trans-unit id="prompt.header.metadata.tools.diagnostics.invalid-value-type">
-      <source xml:lang="en">The '{0}' metadata must be an array of tool names, got '{2}'.</source>
+      <source xml:lang="en">Must be an array of tool names, got '{0}'.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/promptHeader" source-language="en" datatype="plaintext"><body>
     <trans-unit id="prompt.header.metadata.mode.diagnostics.incompatible-with-tools">
-      <source xml:lang="en">Record '{0}' is implied to have the '{1}' value if '{2}' record is present so the specified value will be ignored.</source>
+      <source xml:lang="en">Tools can only be used when in 'agent' mode, but the mode is set to '{0}'. The tools will be ignored.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/topError" source-language="en" datatype="plaintext"><body>
@@ -3165,6 +3223,11 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="workbench.action.speech.stopReadAloud">
       <source xml:lang="en">Stop Reading Aloud</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/electron-browser/chat.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotWorkspaceTrust">
+      <source xml:lang="en">Copilot is currently only supported in trusted workspaces.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/electron-browser/tools/fetchPageTool" source-language="en" datatype="plaintext"><body>

@@ -50,6 +50,18 @@
     <trans-unit id="mcp.command.browse.mcp">
       <source xml:lang="en">Browse Servers</source>
     </trans-unit>
+    <trans-unit id="mcp.command.openRemoteUserMcp">
+      <source xml:lang="en">Open Remote User Configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.command.openUserMcp">
+      <source xml:lang="en">Open User Configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.command.openWorkspaceFolderMcp">
+      <source xml:lang="en">Open Workspace Folder MCP Configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.command.openWorkspaceMcp">
+      <source xml:lang="en">Open Workspace MCP Configuration</source>
+    </trans-unit>
     <trans-unit id="mcp.command.restartServer">
       <source xml:lang="en">Restart Server</source>
     </trans-unit>
@@ -385,6 +397,23 @@
     </trans-unit>
     <trans-unit id="server.toolCount">
       <source xml:lang="en">{0} tools</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpMigration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.migration.openRemoteConfig">
+      <source xml:lang="en">Open Remote User MCP Configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.migration.openUserConfig">
+      <source xml:lang="en">Open User MCP Configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.migration.remoteConfigFound">
+      <source xml:lang="en">MCP servers should no longer be configured in remote user settings. Use the dedicated MCP configuration instead.</source>
+    </trans-unit>
+    <trans-unit id="mcp.migration.update">
+      <source xml:lang="en">Update Now</source>
+    </trans-unit>
+    <trans-unit id="mcp.migration.userConfigFound">
+      <source xml:lang="en">MCP servers should no longer be configured in user settings. Use the dedicated MCP configuration instead.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpPromptArgumentPick" source-language="en" datatype="plaintext"><body>
