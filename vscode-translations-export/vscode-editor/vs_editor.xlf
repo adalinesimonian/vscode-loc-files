@@ -70,6 +70,20 @@
       <source xml:lang="en">Loading...</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/editor/browser/services/inlineCompletionsService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="action.inlineSuggest.cancelSnooze">
+      <source xml:lang="en">Cancel Snooze Inline Suggestions</source>
+    </trans-unit>
+    <trans-unit id="action.inlineSuggest.snooze">
+      <source xml:lang="en">Snooze Inline Suggestions</source>
+    </trans-unit>
+    <trans-unit id="inlineCompletions.snoozed">
+      <source xml:lang="en">Whether inline completions are currently snoozed</source>
+    </trans-unit>
+    <trans-unit id="snooze.placeholder">
+      <source xml:lang="en">Select snooze duration for Code completions and NES</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/editor/browser/widget/codeEditor/codeEditorWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cursors.maximum">
       <source xml:lang="en">The number of cursors has been limited to {0}. Consider using [find and replace](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace) for larger changes or increase the editor multi cursor limit setting.</source>
@@ -1105,6 +1119,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="inlineSuggest.syntaxHighlightingEnabled">
       <source xml:lang="en">Controls whether to show syntax highlighting for inline suggestions in the editor.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.triggerCommandOnProviderChange">
+      <source xml:lang="en">Controls whether to trigger a command when the inline suggestion provider changes.</source>
     </trans-unit>
     <trans-unit id="letterSpacing">
       <source xml:lang="en">Controls the letter spacing in pixels.</source>

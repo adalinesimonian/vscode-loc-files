@@ -186,6 +186,12 @@
     <trans-unit id="dismiss">
       <source xml:lang="en">Dismiss</source>
     </trans-unit>
+    <trans-unit id="generateInstructions">
+      <source xml:lang="en">Generate Workspace Instructions File</source>
+    </trans-unit>
+    <trans-unit id="generateInstructions.short">
+      <source xml:lang="en">Generate Instructions</source>
+    </trans-unit>
     <trans-unit id="interactiveSession.clearHistory.label">
       <source xml:lang="en">Clear Input History</source>
     </trans-unit>
@@ -260,12 +266,6 @@
     </trans-unit>
     <trans-unit id="toggleChat">
       <source xml:lang="en">Toggle Chat</source>
-    </trans-unit>
-    <trans-unit id="updateInstructions">
-      <source xml:lang="en">Generate Instructions</source>
-    </trans-unit>
-    <trans-unit id="updateInstructions.short">
-      <source xml:lang="en">Generate Instructions</source>
     </trans-unit>
     <trans-unit id="upgradeChat">
       <source xml:lang="en">Upgrade Copilot Plan</source>
@@ -399,7 +399,7 @@
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatExecuteActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="actions.chat.createRemoteJob">
-      <source xml:lang="en">Push to Coding Agent</source>
+      <source xml:lang="en">Push to Copilot coding agent</source>
     </trans-unit>
     <trans-unit id="actions.chat.submitWithCodebase">
       <source xml:lang="en">Send with {0}</source>
@@ -471,7 +471,7 @@
       <source xml:lang="en">Coding agent session cancelled.</source>
     </trans-unit>
     <trans-unit id="remoteJobCreating">
-      <source xml:lang="en">Pushing to Coding Agent</source>
+      <source xml:lang="en">Pushing to Copilot coding agent</source>
     </trans-unit>
     <trans-unit id="requestIsPaused">
       <source xml:lang="en">Resume Request</source>
@@ -2014,6 +2014,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatsLabel">
       <source xml:lang="en">Chat messages</source>
     </trans-unit>
+    <trans-unit id="completionsAndNES">
+      <source xml:lang="en">Completions / NES</source>
+    </trans-unit>
     <trans-unit id="completionsDisabledStatus">
       <source xml:lang="en">Code completions disabled</source>
     </trans-unit>
@@ -2092,13 +2095,25 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="settings.codeCompletionsLanguage">
       <source xml:lang="en">Code completions ({0})</source>
     </trans-unit>
+    <trans-unit id="settings.mute5minutes">
+      <source xml:lang="en">Mute for 5 mins</source>
+    </trans-unit>
     <trans-unit id="settings.nextEditSuggestions">
       <source xml:lang="en">Next edit suggestions</source>
     </trans-unit>
-    <trans-unit id="settingsLabel">
-      <source xml:lang="en">Settings</source>
+    <trans-unit id="settings.plus5mins">
+      <source xml:lang="en">+5 mins</source>
     </trans-unit>
-    <trans-unit id="settingsTitle">
+    <trans-unit id="settings.snooze">
+      <source xml:lang="en">Snooze</source>
+    </trans-unit>
+    <trans-unit id="settings.snooze5minutes">
+      <source xml:lang="en">Snooze completions and NES for 5 mins</source>
+    </trans-unit>
+    <trans-unit id="settings.snoozeAdditional5minutes">
+      <source xml:lang="en">Snooze additional 5 mins</source>
+    </trans-unit>
+    <trans-unit id="settingsLabel">
       <source xml:lang="en">Settings</source>
     </trans-unit>
     <trans-unit id="settingsTooltip">
@@ -2148,6 +2163,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="editsTitle">
       <source xml:lang="en">Edit with Copilot</source>
+    </trans-unit>
+    <trans-unit id="expChatTitle">
+      <source xml:lang="en">Get Started with VS Code</source>
     </trans-unit>
     <trans-unit id="scrollDownButtonLabel">
       <source xml:lang="en">Scroll down</source>
@@ -2448,10 +2466,10 @@ Type {3} to use commands</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/promptCodingAgentActionOverlay" source-language="en" datatype="plaintext"><body>
     <trans-unit id="runPromptWithCodingAgent">
-      <source xml:lang="en">Run with Coding Agent</source>
+      <source xml:lang="en">Run prompt file in a remote coding agent</source>
     </trans-unit>
     <trans-unit id="runWithCodingAgent.label">
-      <source xml:lang="en">{0} Run with Coding Agent</source>
+      <source xml:lang="en">{0} Push to Copilot coding agent</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/promptToolsCodeLensProvider" source-language="en" datatype="plaintext"><body>
