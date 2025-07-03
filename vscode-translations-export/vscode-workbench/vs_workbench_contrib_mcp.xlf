@@ -50,6 +50,9 @@
     <trans-unit id="mcp.command.browse.mcp">
       <source xml:lang="en">Browse Servers</source>
     </trans-unit>
+    <trans-unit id="mcp.command.open">
+      <source xml:lang="en">Browse MCP Servers</source>
+    </trans-unit>
     <trans-unit id="mcp.command.openRemoteUserMcp">
       <source xml:lang="en">Open Remote User Configuration</source>
     </trans-unit>
@@ -499,6 +502,9 @@
     <trans-unit id="mcp.signOut">
       <source xml:lang="en">Sign Out</source>
     </trans-unit>
+    <trans-unit id="mcpServerInstallation">
+      <source xml:lang="en">Installing MCP Server {0} started. An editor is now open with more details on this MCP Server</source>
+    </trans-unit>
     <trans-unit id="output">
       <source xml:lang="en">Show Output</source>
     </trans-unit>
@@ -611,11 +617,11 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServerEditorInput" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="extensionsEditorLabelIcon">
-      <source xml:lang="en">Icon of the extensions editor label.</source>
-    </trans-unit>
     <trans-unit id="extensionsInputName">
-      <source xml:lang="en">Extension: {0}</source>
+      <source xml:lang="en">MCP Server: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcpServerEditorLabelIcon">
+      <source xml:lang="en">Icon of the MCP Server editor.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServerWidgets" source-language="en" datatype="plaintext"><body>

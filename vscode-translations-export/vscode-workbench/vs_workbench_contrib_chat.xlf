@@ -1967,6 +1967,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="triggerChatSetupFromAccounts">
       <source xml:lang="en">Sign in to use Copilot...</source>
     </trans-unit>
+    <trans-unit id="trustNeeded">
+      <source xml:lang="en">You need to trust this workspace to use Chat.</source>
+    </trans-unit>
     <trans-unit id="unknownSetupError">
       <source xml:lang="en">An error occurred while setting up Copilot. Would you like to try again?</source>
     </trans-unit>
@@ -2014,8 +2017,23 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatsLabel">
       <source xml:lang="en">Chat messages</source>
     </trans-unit>
+    <trans-unit id="completions.plus5mins">
+      <source xml:lang="en">+5 mins</source>
+    </trans-unit>
+    <trans-unit id="completions.remainingTime">
+      <source xml:lang="en">remaining</source>
+    </trans-unit>
+    <trans-unit id="completions.snooze5minutes">
+      <source xml:lang="en">Hide completions and NES for 5 mins</source>
+    </trans-unit>
+    <trans-unit id="completions.snooze5minutesTitle">
+      <source xml:lang="en">Hide completions for 5 mins</source>
+    </trans-unit>
+    <trans-unit id="completions.snoozeAdditional5minutes">
+      <source xml:lang="en">Hide additional 5 mins</source>
+    </trans-unit>
     <trans-unit id="completionsAndNES">
-      <source xml:lang="en">Completions / NES</source>
+      <source xml:lang="en">Completions</source>
     </trans-unit>
     <trans-unit id="completionsDisabledStatus">
       <source xml:lang="en">Code completions disabled</source>
@@ -2089,29 +2107,17 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="quotaUnlimited">
       <source xml:lang="en">Included</source>
     </trans-unit>
-    <trans-unit id="settings.codeCompletions">
-      <source xml:lang="en">Code completions (all files)</source>
+    <trans-unit id="settings.codeCompletions.allFiles">
+      <source xml:lang="en">All files</source>
     </trans-unit>
-    <trans-unit id="settings.codeCompletionsLanguage">
-      <source xml:lang="en">Code completions ({0})</source>
-    </trans-unit>
-    <trans-unit id="settings.mute5minutes">
-      <source xml:lang="en">Mute for 5 mins</source>
+    <trans-unit id="settings.codeCompletions.language">
+      <source xml:lang="en">{0}</source>
     </trans-unit>
     <trans-unit id="settings.nextEditSuggestions">
       <source xml:lang="en">Next edit suggestions</source>
     </trans-unit>
-    <trans-unit id="settings.plus5mins">
-      <source xml:lang="en">+5 mins</source>
-    </trans-unit>
     <trans-unit id="settings.snooze">
       <source xml:lang="en">Snooze</source>
-    </trans-unit>
-    <trans-unit id="settings.snooze5minutes">
-      <source xml:lang="en">Snooze completions and NES for 5 mins</source>
-    </trans-unit>
-    <trans-unit id="settings.snoozeAdditional5minutes">
-      <source xml:lang="en">Snooze additional 5 mins</source>
     </trans-unit>
     <trans-unit id="settingsLabel">
       <source xml:lang="en">Settings</source>
