@@ -153,6 +153,9 @@
     <trans-unit id="chat.history.rename">
       <source xml:lang="en">Rename</source>
     </trans-unit>
+    <trans-unit id="chat.toggleDefaultVisibility.label">
+      <source xml:lang="en">Show View by Default</source>
+    </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
       <source xml:lang="en">You've reached your monthly chat messages and code completions quota.</source>
     </trans-unit>
@@ -218,9 +221,6 @@
     </trans-unit>
     <trans-unit id="manageCopilot">
       <source xml:lang="en">Manage Copilot</source>
-    </trans-unit>
-    <trans-unit id="mcp.servers">
-      <source xml:lang="en">MCP Servers</source>
     </trans-unit>
     <trans-unit id="more">
       <source xml:lang="en">More...</source>
@@ -399,7 +399,7 @@
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatExecuteActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="actions.chat.createRemoteJob">
-      <source xml:lang="en">Push to Copilot coding agent</source>
+      <source xml:lang="en">Delegate to coding agent</source>
     </trans-unit>
     <trans-unit id="actions.chat.submitWithCodebase">
       <source xml:lang="en">Send with {0}</source>
@@ -435,7 +435,7 @@
       <source xml:lang="en">Do you want to undo your last edit?</source>
     </trans-unit>
     <trans-unit id="creatingRemoteJob">
-      <source xml:lang="en">Pushing state to coding agent</source>
+      <source xml:lang="en">Delegating to coding agent</source>
     </trans-unit>
     <trans-unit id="edits.submit.label">
       <source xml:lang="en">Send</source>
@@ -448,6 +448,9 @@
     </trans-unit>
     <trans-unit id="interactive.changeModel.label">
       <source xml:lang="en">Change Model</source>
+    </trans-unit>
+    <trans-unit id="interactive.openModePicker.label">
+      <source xml:lang="en">Open Mode Picker</source>
     </trans-unit>
     <trans-unit id="interactive.openModelPicker.label">
       <source xml:lang="en">Open Model Picker</source>
@@ -471,7 +474,7 @@
       <source xml:lang="en">Coding agent session cancelled.</source>
     </trans-unit>
     <trans-unit id="remoteJobCreating">
-      <source xml:lang="en">Pushing to Copilot coding agent</source>
+      <source xml:lang="en">Delegating to coding agent</source>
     </trans-unit>
     <trans-unit id="requestIsPaused">
       <source xml:lang="en">Resume Request</source>
@@ -2005,6 +2008,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="additionalUsageEnabled">
       <source xml:lang="en">Additional paid premium requests enabled.</source>
     </trans-unit>
+    <trans-unit id="cancelSnooze">
+      <source xml:lang="en">Cancel Snooze</source>
+    </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceededStatus">
       <source xml:lang="en">Quota reached</source>
     </trans-unit>
@@ -2017,23 +2023,26 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatsLabel">
       <source xml:lang="en">Chat messages</source>
     </trans-unit>
-    <trans-unit id="completions.plus5mins">
-      <source xml:lang="en">+5 mins</source>
+    <trans-unit id="codeCompletions">
+      <source xml:lang="en">Code Completions</source>
+    </trans-unit>
+    <trans-unit id="completions.plus5min">
+      <source xml:lang="en">+5 min</source>
     </trans-unit>
     <trans-unit id="completions.remainingTime">
       <source xml:lang="en">remaining</source>
     </trans-unit>
     <trans-unit id="completions.snooze5minutes">
-      <source xml:lang="en">Hide completions and NES for 5 mins</source>
+      <source xml:lang="en">Hide completions and NES for 5 min</source>
     </trans-unit>
     <trans-unit id="completions.snooze5minutesTitle">
-      <source xml:lang="en">Hide completions for 5 mins</source>
+      <source xml:lang="en">Hide completions for 5 min</source>
     </trans-unit>
     <trans-unit id="completions.snoozeAdditional5minutes">
-      <source xml:lang="en">Hide additional 5 mins</source>
+      <source xml:lang="en">Snooze additional 5 min</source>
     </trans-unit>
-    <trans-unit id="completionsAndNES">
-      <source xml:lang="en">Completions</source>
+    <trans-unit id="completions.snoozeTimeDescription">
+      <source xml:lang="en">Completions are hidden for the remaining duration</source>
     </trans-unit>
     <trans-unit id="completionsDisabledStatus">
       <source xml:lang="en">Code completions disabled</source>
@@ -2043,6 +2052,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="completionsQuotaExceededStatus">
       <source xml:lang="en">Completions quota reached</source>
+    </trans-unit>
+    <trans-unit id="completionsSnoozedStatus">
+      <source xml:lang="en">Code completions snoozed</source>
     </trans-unit>
     <trans-unit id="copilotDisabledStatus">
       <source xml:lang="en">Copilot Disabled</source>
@@ -2148,11 +2160,29 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chatMessage">
       <source xml:lang="en">Copilot is powered by AI, so mistakes are possible. Review output carefully before use.</source>
     </trans-unit>
+    <trans-unit id="chatWidget.suggestedPrompts.buildWorkspace">
+      <source xml:lang="en">Build workspace</source>
+    </trans-unit>
+    <trans-unit id="chatWidget.suggestedPrompts.buildWorkspacePrompt">
+      <source xml:lang="en">How do I build this workspace?</source>
+    </trans-unit>
+    <trans-unit id="chatWidget.suggestedPrompts.findConfig">
+      <source xml:lang="en">Show project config</source>
+    </trans-unit>
+    <trans-unit id="chatWidget.suggestedPrompts.findConfigPrompt">
+      <source xml:lang="en">Where is the configuration for this project defined?</source>
+    </trans-unit>
     <trans-unit id="chatWidget.suggestedPrompts.gettingStarted">
       <source xml:lang="en">Ask @vscode</source>
     </trans-unit>
+    <trans-unit id="chatWidget.suggestedPrompts.gettingStartedPrompt">
+      <source xml:lang="en">@vscode How do I change the theme to light mode?</source>
+    </trans-unit>
     <trans-unit id="chatWidget.suggestedPrompts.newProject">
-      <source xml:lang="en">Create a #new Project</source>
+      <source xml:lang="en">Create project</source>
+    </trans-unit>
+    <trans-unit id="chatWidget.suggestedPrompts.newProjectPrompt">
+      <source xml:lang="en">Create a #new Hello World project in TypeScript</source>
     </trans-unit>
     <trans-unit id="chatWidget.tips">
       <source xml:lang="en">{0} or type {1} to attach context
@@ -2170,8 +2200,14 @@ Type {3} to use commands</source>
     <trans-unit id="editsTitle">
       <source xml:lang="en">Edit with Copilot</source>
     </trans-unit>
+    <trans-unit id="expChatAdditionalMessage">
+      <source xml:lang="en">Review AI output carefully before use.</source>
+    </trans-unit>
     <trans-unit id="expChatTitle">
-      <source xml:lang="en">Get Started with VS Code</source>
+      <source xml:lang="en">Welcome to Copilot</source>
+    </trans-unit>
+    <trans-unit id="expchatMessage">
+      <source xml:lang="en">Let's get started</source>
     </trans-unit>
     <trans-unit id="scrollDownButtonLabel">
       <source xml:lang="en">Scroll down</source>
@@ -2475,7 +2511,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Run prompt file in a remote coding agent</source>
     </trans-unit>
     <trans-unit id="runWithCodingAgent.label">
-      <source xml:lang="en">{0} Push to Copilot coding agent</source>
+      <source xml:lang="en">{0} Delegate to Copilot coding agent</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/promptToolsCodeLensProvider" source-language="en" datatype="plaintext"><body>
@@ -2494,16 +2530,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">An external application wants to create a chat mode with content from a URL.</source>
     </trans-unit>
     <trans-unit id="confirmInstallPrompt">
-      <source xml:lang="en">An external application wants to create a prompt file with content from a URL.</source>
-    </trans-unit>
-    <trans-unit id="confirmOpenButton">
-      <source xml:lang="en">&amp;&amp;Continue</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="confirmOpenDetail1">
-      <source xml:lang="en">Do you want to continue by selecting a destination folder and name?
-
-</source>
+      <source xml:lang="en">An external application wants to create a prompt file with content from a URL. Do you want to continue by selecting a destination folder and name?</source>
     </trans-unit>
     <trans-unit id="confirmOpenDetail2">
       <source xml:lang="en">This will access {0}.
@@ -2514,10 +2541,17 @@ Type {3} to use commands</source>
       <source xml:lang="en">If you did not initiate this request, it may represent an attempted attack on your system. Unless you took an explicit action to initiate this request, you should press 'Cancel'</source>
     </trans-unit>
     <trans-unit id="confirmOpenDoNotAskAgain">
-      <source xml:lang="en">Do not show this message again for files from '{0}'</source>
+      <source xml:lang="en">Allow creating a prompt file without asking from '{0}'</source>
     </trans-unit>
     <trans-unit id="failed">
       <source xml:lang="en">Failed to fetch URL: {0}</source>
+    </trans-unit>
+    <trans-unit id="noButton">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="yesButton">
+      <source xml:lang="en">&amp;&amp;Yes</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/runPromptAction" source-language="en" datatype="plaintext"><body>
@@ -2729,6 +2763,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatSessionResponseDetectedAgentOrCommand">
       <source xml:lang="en">When the agent or command was automatically detected</source>
+    </trans-unit>
+    <trans-unit id="enableRemoteCodingAgentPromptFileOverlay">
+      <source xml:lang="en">Whether the remote coding agent prompt file overlay feature is enabled</source>
     </trans-unit>
     <trans-unit id="hasRemoteCodingAgent">
       <source xml:lang="en">Whether any remote coding agent is available</source>
@@ -2943,7 +2980,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">- Family: {0}</source>
     </trans-unit>
     <trans-unit id="modelName">
-      <source xml:lang="en">{0}</source>
+      <source xml:lang="en">- Name: {0}</source>
     </trans-unit>
     <trans-unit id="modelVendor">
       <source xml:lang="en">- Vendor: {0}</source>
@@ -3071,6 +3108,9 @@ Example: **/*.ts, **/*.js, client/**</source>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsServiceImpl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="prompt.file.detail">
       <source xml:lang="en">Prompt file: {0}</source>
+    </trans-unit>
+    <trans-unit id="promptParser.notCompleted">
+      <source xml:lang="en">Prompt parser for {0} did not complete.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/tools/languageModelToolsContribution" source-language="en" datatype="plaintext"><body>

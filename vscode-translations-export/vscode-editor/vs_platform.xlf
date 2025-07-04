@@ -470,6 +470,9 @@ Received: '{1}'.</source>
     <trans-unit id="category">
       <source xml:lang="en">Filters installed extensions by provided category, when using --list-extensions.</source>
     </trans-unit>
+    <trans-unit id="chatMaximize">
+      <source xml:lang="en">Maximize the chat session view.</source>
+    </trans-unit>
     <trans-unit id="chatMode">
       <source xml:lang="en">The mode to use for the chat session. Available options: 'ask', 'edit', 'agent', or the identifier of a custom mode. Defaults to 'agent'.</source>
     </trans-unit>
@@ -548,6 +551,9 @@ Received: '{1}'.</source>
     <trans-unit id="newWindow">
       <source xml:lang="en">Force to open a new window.</source>
     </trans-unit>
+    <trans-unit id="newWindowForChat">
+      <source xml:lang="en">Force to open an empty window for the chat session.</source>
+    </trans-unit>
     <trans-unit id="options">
       <source xml:lang="en">options</source>
     </trans-unit>
@@ -572,8 +578,14 @@ Received: '{1}'.</source>
     <trans-unit id="reuseWindow">
       <source xml:lang="en">Force to open a file or folder in an already opened window.</source>
     </trans-unit>
+    <trans-unit id="reuseWindowForChat">
+      <source xml:lang="en">Force to use the last active window for the chat session.</source>
+    </trans-unit>
     <trans-unit id="showVersions">
       <source xml:lang="en">Show versions of installed extensions, when using --list-extensions.</source>
+    </trans-unit>
+    <trans-unit id="startupExperimentGroup">
+      <source xml:lang="en">Override the startup experiment group.</source>
     </trans-unit>
     <trans-unit id="status">
       <source xml:lang="en">Print process usage and diagnostics information.</source>
