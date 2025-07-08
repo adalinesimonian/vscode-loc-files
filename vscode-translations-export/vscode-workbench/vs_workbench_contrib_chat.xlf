@@ -873,8 +873,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.signInDialogVariant">
       <source xml:lang="en">Control variations of the sign-in dialog.</source>
     </trans-unit>
-    <trans-unit id="chat.tools.autoApprove">
-      <source xml:lang="en">Controls whether tool use should be automatically approved.</source>
+    <trans-unit id="chat.tools.autoApprove.description">
+      <source xml:lang="en">Controls whether tool use should be automatically approved. Allow all tools to run automatically without user confirmation, overriding any tool-specific settings such as terminal auto-approval. Use with caution: carefully review selected tools and be extra wary of possible sources of prompt injection!</source>
+    </trans-unit>
+    <trans-unit id="chat.tools.autoApprove.markdownDescription">
+      <source xml:lang="en">Controls whether tool use should be automatically approved.
+
+Allows _all_ tools to run automatically without user confirmation, overriding any tool-specific settings such as terminal auto-approval.
+
+Use with caution: carefully review selected tools and be extra wary of possible sources of prompt injection!</source>
     </trans-unit>
     <trans-unit id="chat.undoRequests.restoreInput">
       <source xml:lang="en">Controls whether the input of the chat should be restored when an undo request is made. The input will be filled with the text of the request that was restored.</source>
