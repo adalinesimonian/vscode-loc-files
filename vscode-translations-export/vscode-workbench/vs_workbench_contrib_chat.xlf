@@ -913,6 +913,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="interactiveSessionConfigurationTitle">
       <source xml:lang="en">Chat</source>
     </trans-unit>
+    <trans-unit id="mcp.discovery.enabled">
+      <source xml:lang="en">Configures discovery of Model Context Protocol servers on the machine. It may be set to `true` or `false` to disable or enable all sources, and an mapping sources you wish to enable.</source>
+    </trans-unit>
     <trans-unit id="mcp.discovery.source">
       <source xml:lang="en">Enables discovery of {0} servers</source>
     </trans-unit>
@@ -921,9 +924,6 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="mcp.list">
       <source xml:lang="en">List Servers</source>
-    </trans-unit>
-    <trans-unit id="mpc.discovery.enabled">
-      <source xml:lang="en">Configures discovery of Model Context Protocol servers on the machine. It may be set to `true` or `false` to disable or enable all sources, and an mapping sources you wish to enable.</source>
     </trans-unit>
     <trans-unit id="save-chat-to-prompt-file">
       <source xml:lang="en">Save chat to a prompt file</source>
