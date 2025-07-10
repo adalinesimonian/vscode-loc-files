@@ -654,8 +654,11 @@
     <trans-unit id="mcp-installed">
       <source xml:lang="en">MCP Servers - Installed</source>
     </trans-unit>
+    <trans-unit id="mcp.welcome.browseButton">
+      <source xml:lang="en">Browse MCP Servers</source>
+    </trans-unit>
     <trans-unit id="mcp.welcome.descriptionWithLink">
-      <source xml:lang="en">Extend agent mode by installing [MCP servers]({0}) to bring extra tools for connecting to databases, invoking APIs and performing specialized tasks.</source>
+      <source xml:lang="en">Extend agent mode by installing MCP servers to bring extra tools for connecting to databases, invoking APIs and performing specialized tasks.</source>
     </trans-unit>
     <trans-unit id="mcp.welcome.title">
       <source xml:lang="en">MCP Servers</source>
@@ -731,6 +734,9 @@
     <trans-unit id="app.mcp.json.url.pattern">
       <source xml:lang="en">The URL must start with 'http://' or 'https://'.</source>
     </trans-unit>
+    <trans-unit id="id">
+      <source xml:lang="en">ID</source>
+    </trans-unit>
     <trans-unit id="mcp.discovery.source.claude-desktop">
       <source xml:lang="en">Claude Desktop</source>
     </trans-unit>
@@ -742,6 +748,12 @@
     </trans-unit>
     <trans-unit id="mcp.discovery.source.windsurf">
       <source xml:lang="en">Windsurf</source>
+    </trans-unit>
+    <trans-unit id="mcpServerDefinitionProviders">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="name">
+      <source xml:lang="en">Name</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.mcp">
       <source xml:lang="en">Contributes Model Context Protocol servers. Users of this should also use `vscode.lm.registerMcpServerDefinitionProvider`.</source>

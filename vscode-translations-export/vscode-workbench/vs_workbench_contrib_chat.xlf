@@ -141,6 +141,9 @@
     <trans-unit id="agent.newSessionMessage">
       <source xml:lang="en">Changing the chat mode will end your current edit session. Would you like to change the chat mode?</source>
     </trans-unit>
+    <trans-unit id="ai actions">
+      <source xml:lang="en">AI Actions</source>
+    </trans-unit>
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
     </trans-unit>
@@ -176,9 +179,6 @@
     </trans-unit>
     <trans-unit id="configureCompletions">
       <source xml:lang="en">Configure Code Completions...</source>
-    </trans-unit>
-    <trans-unit id="copilot">
-      <source xml:lang="en">Copilot</source>
     </trans-unit>
     <trans-unit id="copilotQuotaReached">
       <source xml:lang="en">Copilot Quota Reached</source>
@@ -794,6 +794,9 @@
     </trans-unit>
     <trans-unit id="chat.implicitContext.enabled.1">
       <source xml:lang="en">Enables automatically using the active editor as chat context for specified chat locations.</source>
+    </trans-unit>
+    <trans-unit id="chat.implicitContext.suggestedContext">
+      <source xml:lang="en">Controls whether the new implicit context flow is shown. In Ask and Edit modes, the context will automatically be included. In Agent mode context will be suggested as an attachment. Selections are always included as context.</source>
     </trans-unit>
     <trans-unit id="chat.implicitContext.value">
       <source xml:lang="en">The value for the implicit context.</source>
