@@ -780,6 +780,9 @@
     <trans-unit id="chat.edits2Enabled">
       <source xml:lang="en">Enable the new Edits mode that is based on tool-calling. When this is enabled, models that don't support tool-calling are unavailable for Edits mode.</source>
     </trans-unit>
+    <trans-unit id="chat.emptyChatState">
+      <source xml:lang="en">Shows a modified empty chat state with hints in the input placeholder text.</source>
+    </trans-unit>
     <trans-unit id="chat.experimental.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
     </trans-unit>
@@ -817,6 +820,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.instructions.config.locations.title">
       <source xml:lang="en">Instructions File Locations</source>
+    </trans-unit>
+    <trans-unit id="chat.mathEnabled.description">
+      <source xml:lang="en">Enable math rendering in chat responses using Katex.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.enabled">
       <source xml:lang="en">Enables integration with Model Context Protocol servers to provide additional tools and functionality.</source>
@@ -1965,9 +1971,6 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="signIn">
       <source xml:lang="en">Sign in to use Copilot</source>
     </trans-unit>
-    <trans-unit id="signInWithProvider">
-      <source xml:lang="en">Sign in with a {0} account</source>
-    </trans-unit>
     <trans-unit id="skipForNow">
       <source xml:lang="en">Skip for now</source>
     </trans-unit>
@@ -2164,8 +2167,14 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="agentMessage">
       <source xml:lang="en">Ask Copilot to edit your files in [agent mode]({0}). Copilot will automatically use multiple requests to pick files to edit, run terminal commands, and iterate on errors.</source>
     </trans-unit>
+    <trans-unit id="agentTitle">
+      <source xml:lang="en">Build with agent mode.</source>
+    </trans-unit>
     <trans-unit id="chatDescription">
-      <source xml:lang="en">Ask Copilot</source>
+      <source xml:lang="en">Ask about your code.</source>
+    </trans-unit>
+    <trans-unit id="chatDisclaimer">
+      <source xml:lang="en">AI responses may be inaccurate.</source>
     </trans-unit>
     <trans-unit id="chatMessage">
       <source xml:lang="en">Copilot is powered by AI, so mistakes are possible. Review output carefully before use.</source>
@@ -2204,11 +2213,11 @@ Type {3} to use commands</source>
     <trans-unit id="chatWidget.tips.withoutParticipants">
       <source xml:lang="en">{0} or type {1} to attach context</source>
     </trans-unit>
-    <trans-unit id="editsMessage">
+    <trans-unit id="editsHelp">
       <source xml:lang="en">Start your editing session by defining a set of files that you want to work with. Then ask Copilot for the changes you want to make.</source>
     </trans-unit>
     <trans-unit id="editsTitle">
-      <source xml:lang="en">Edit with Copilot</source>
+      <source xml:lang="en">Edit in context.</source>
     </trans-unit>
     <trans-unit id="expChatAdditionalMessage">
       <source xml:lang="en">Review AI output carefully before use.</source>
@@ -2291,6 +2300,14 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="tool_source_completion">
       <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputEditorContrib" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="askPlaceholderHint">
+      <source xml:lang="en"># context, @ extensions, / commands</source>
+    </trans-unit>
+    <trans-unit id="editPlaceholderHint">
+      <source xml:lang="en"># context</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputEditorHover" source-language="en" datatype="plaintext"><body>
@@ -2861,13 +2878,13 @@ Type {3} to use commands</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatModes" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentDescription">
-      <source xml:lang="en">Edit files in your workspace in agent mode</source>
+      <source xml:lang="en">Build autonomously.</source>
     </trans-unit>
     <trans-unit id="chatDescription">
-      <source xml:lang="en">Ask Copilot</source>
+      <source xml:lang="en">Ask a question.</source>
     </trans-unit>
     <trans-unit id="editsDescription">
-      <source xml:lang="en">Edit files in your workspace</source>
+      <source xml:lang="en">Edit files.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatProgressTypes/chatToolInvocation" source-language="en" datatype="plaintext"><body>
