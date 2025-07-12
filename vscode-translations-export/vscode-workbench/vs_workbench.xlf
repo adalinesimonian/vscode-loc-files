@@ -2358,11 +2358,23 @@ Browser: {3}</source>
     <trans-unit id="miTwoRowsRightEditorLayoutWithoutMnemonic">
       <source xml:lang="en">Two Rows Right</source>
     </trans-unit>
+    <trans-unit id="moveAbove">
+      <source xml:lang="en">Move Above</source>
+    </trans-unit>
+    <trans-unit id="moveBelow">
+      <source xml:lang="en">Move Below</source>
+    </trans-unit>
     <trans-unit id="moveEditorGroupToNewWindow">
       <source xml:lang="en">Move into New Window</source>
     </trans-unit>
     <trans-unit id="moveEditorToNewWindow">
       <source xml:lang="en">Move Editor into New Window</source>
+    </trans-unit>
+    <trans-unit id="moveLeft">
+      <source xml:lang="en">Move Left</source>
+    </trans-unit>
+    <trans-unit id="moveRight">
+      <source xml:lang="en">Move Right</source>
     </trans-unit>
     <trans-unit id="moveToNewWindow">
       <source xml:lang="en">Move into New Window</source>
@@ -2405,6 +2417,9 @@ Browser: {3}</source>
     </trans-unit>
     <trans-unit id="singleTab">
       <source xml:lang="en">Single Tab</source>
+    </trans-unit>
+    <trans-unit id="splitAndMoveEditor">
+      <source xml:lang="en">Split &amp; Move</source>
     </trans-unit>
     <trans-unit id="splitDown">
       <source xml:lang="en">Split Down</source>
@@ -4325,7 +4340,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <source xml:lang="en">Controls the location of the primary side bar and activity bar. They can either show on the left or right of the workbench. The secondary side bar will show on the opposite side of the workbench.</source>
     </trans-unit>
     <trans-unit id="sideBySideDirection">
-      <source xml:lang="en">Controls the default direction of editors that are opened side by side (for example, from the Explorer). By default, editors will open on the right hand side of the currently active one. If changed to `down`, the editors will open below the currently active one.</source>
+      <source xml:lang="en">Controls the default direction of editors that are opened side by side (for example, from the Explorer). By default, editors will open on the right hand side of the currently active one. If changed to `down`, the editors will open below the currently active one. This also impacts the split editor action in the editor toolbar.</source>
     </trans-unit>
     <trans-unit id="splitInGroupLayout">
       <source xml:lang="en">Controls the layout for when an editor is split in an editor group to be either vertical or horizontal.</source>
