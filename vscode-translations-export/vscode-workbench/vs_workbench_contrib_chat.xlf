@@ -2304,10 +2304,10 @@ Type {3} to use commands</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputEditorContrib" source-language="en" datatype="plaintext"><body>
     <trans-unit id="askPlaceholderHint">
-      <source xml:lang="en"># context, @ extensions, / commands</source>
+      <source xml:lang="en"># to add context, @ for extensions, / for commands</source>
     </trans-unit>
     <trans-unit id="editPlaceholderHint">
-      <source xml:lang="en"># context</source>
+      <source xml:lang="en"># to add context</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputEditorHover" source-language="en" datatype="plaintext"><body>
@@ -3314,8 +3314,26 @@ Example: **/*.ts, **/*.js, client/**</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/electron-browser/chat.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="changeWorkspace.message">
+      <source xml:lang="en">A chat request is in progress. Are you sure you want to change the workspace?</source>
+    </trans-unit>
+    <trans-unit id="closeTheWindow.message">
+      <source xml:lang="en">A chat request is in progress. Are you sure you want to close the window?</source>
+    </trans-unit>
     <trans-unit id="copilotWorkspaceTrust">
       <source xml:lang="en">Copilot is currently only supported in trusted workspaces.</source>
+    </trans-unit>
+    <trans-unit id="exit.message">
+      <source xml:lang="en">A chat request is in progress. Are you sure you want to exit?</source>
+    </trans-unit>
+    <trans-unit id="quit.detail">
+      <source xml:lang="en">The chat request will be cancelled if you continue.</source>
+    </trans-unit>
+    <trans-unit id="quit.message">
+      <source xml:lang="en">A chat request is in progress. Are you sure you want to quit?</source>
+    </trans-unit>
+    <trans-unit id="reloadTheWindow.message">
+      <source xml:lang="en">A chat request is in progress. Are you sure you want to reload the window?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/electron-browser/tools/fetchPageTool" source-language="en" datatype="plaintext"><body>

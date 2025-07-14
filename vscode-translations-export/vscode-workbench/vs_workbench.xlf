@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/api/browser/mainThreadAuthentication" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="addClientRegistrationDetails">
+      <source xml:lang="en">Add Client Registration Details</source>
+    </trans-unit>
     <trans-unit id="allow">
       <source xml:lang="en">&amp;&amp;Allow</source>
       <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="clientIdPlaceholder">
+      <source xml:lang="en">OAuth client ID (azye39d...)</source>
+    </trans-unit>
+    <trans-unit id="clientIdPrompt">
+      <source xml:lang="en">Enter an existing client ID that has been registered with the following redirect URIs: http://127.0.0.1:33418, https://vscode.dev/redirect</source>
+    </trans-unit>
+    <trans-unit id="clientIdRequired">
+      <source xml:lang="en">Client ID is required</source>
+    </trans-unit>
+    <trans-unit id="clientSecretPlaceholder">
+      <source xml:lang="en">OAuth client secret (wer32o50f...) or leave it blank</source>
+    </trans-unit>
+    <trans-unit id="clientSecretPrompt">
+      <source xml:lang="en">(optional) Enter an existing client secret associated with the client id '{0}' or leave this field blank</source>
     </trans-unit>
     <trans-unit id="confirmLogin">
       <source xml:lang="en">The extension '{0}' wants to sign in using {1}.</source>
@@ -13,6 +34,16 @@
     </trans-unit>
     <trans-unit id="copyAndContinue">
       <source xml:lang="en">Copy &amp; Continue</source>
+    </trans-unit>
+    <trans-unit id="dcrNotSupported">
+      <source xml:lang="en">Dynamic Client Registration not supported</source>
+    </trans-unit>
+    <trans-unit id="dcrNotSupportedDetail">
+      <source xml:lang="en">The authorization server '{0}' does not support automatic client registration. Do you want to proceed by manually providing a client registration (client ID)?
+
+Note: When registering your OAuth application, make sure to include these redirect URIs:
+http://127.0.0.1:33418
+https://vscode.dev/redirect</source>
     </trans-unit>
     <trans-unit id="deviceCodeDetail">
       <source xml:lang="en">Your code: {0}
@@ -42,6 +73,9 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     </trans-unit>
     <trans-unit id="no">
       <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="provideClientDetails">
+      <source xml:lang="en">Proceed</source>
     </trans-unit>
     <trans-unit id="yes">
       <source xml:lang="en">Yes</source>
