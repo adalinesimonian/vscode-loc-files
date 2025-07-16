@@ -10,6 +10,9 @@
     <trans-unit id="++CODE++d33636398d4d33c00d489b6b7a46b224e0b779fcf33fd6c3e3d6e40c2933373a">
       <source xml:lang="en">$(info) This repository has no tags.</source>
     </trans-unit>
+    <trans-unit id="++CODE++189adffa42210902c882f3df1bf7ebce09c4e06c9c15d4a20559295c425ac0c6">
+      <source xml:lang="en">$(info) This repository has no worktrees.</source>
+    </trans-unit>
     <trans-unit id="++CODE++418e632797c81516d50735320a9d9cc10b9ca7fdf7af3dcdab4caae0de5e1e57">
       <source xml:lang="en">&#10;&#10;Are you sure you want to discard ALL changes in {0} files?</source>
     </trans-unit>
@@ -693,6 +696,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++28c2080e378f1d291ab790609682492e0a165b461868f8546b32bc1aa497c3da">
       <source xml:lang="en">Select a tag to delete</source>
     </trans-unit>
+    <trans-unit id="++CODE++7eed423d682b3727b0e9c573d84d4a1a575092af646f5921b792c6a0557b97f7">
+      <source xml:lang="en">Select a worktree to delete</source>
+    </trans-unit>
     <trans-unit id="++CODE++a2f33e4d476de1d0148d5cdc59a5d6d85769b8980e454594cb34dde1372ab35c">
       <source xml:lang="en">Select as Repository Destination</source>
     </trans-unit>
@@ -737,6 +743,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++f5c58a33df8fc9fe24b592f358a2796949c7d2b83e28306be28c8ba0454dbadf">
       <source xml:lang="en">The &quot;{0}&quot; repository has {1} submodules which won&apos;t be opened automatically. You can still open each one individually by opening a file within.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++b1624bac5eb4aba7e03ae29039d704913f677943c8311980bd519650261c2526">
+      <source xml:lang="en">The &quot;{0}&quot; repository has {1} worktrees which won&apos;t be opened automatically. You can still open each one individually by opening a file within.</source>
     </trans-unit>
     <trans-unit id="++CODE++8d1325663e5e67d11bb0e5e78eaa966671dfb0b6b3e1fc25b59427d0d7d2713e">
       <source xml:lang="en">The active branch cannot be deleted.</source>
@@ -1544,6 +1553,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     <trans-unit id="config.detectSubmodulesLimit">
       <source xml:lang="en">Controls the limit of Git submodules detected.</source>
     </trans-unit>
+    <trans-unit id="config.detectWorktreesLimit">
+      <source xml:lang="en">Controls the limit of Git worktrees detected.</source>
+    </trans-unit>
     <trans-unit id="config.diagnosticsCommitHook.sources">
       <source xml:lang="en">Controls the list of sources (**Item**) and the minimum severity (**Value**) to be considered before committing. **Note:** To ignore diagnostics from a particular source, add the source to the list and set the minimum severity to `none`.</source>
     </trans-unit>
@@ -1627,6 +1639,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="config.detectSubmodules">
       <source xml:lang="en">Controls whether to automatically detect Git submodules.</source>
+    </trans-unit>
+    <trans-unit id="config.detectWorktrees">
+      <source xml:lang="en">Controls whether to automatically detect Git worktrees.</source>
     </trans-unit>
     <trans-unit id="config.diagnosticsCommitHook.enabled">
       <source xml:lang="en">Controls whether to check for unresolved diagnostics before committing.</source>
@@ -1720,6 +1735,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="command.deleteTag">
       <source xml:lang="en">Delete Tag...</source>
+    </trans-unit>
+    <trans-unit id="command.deleteWorktree">
+      <source xml:lang="en">Delete Worktree...</source>
     </trans-unit>
     <trans-unit id="config.autoRepositoryDetection.false">
       <source xml:lang="en">Disable automatic repository scanning.</source>
@@ -2247,6 +2265,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="config.autorefresh">
       <source xml:lang="en">Whether auto refreshing is enabled.</source>
+    </trans-unit>
+    <trans-unit id="submenu.worktrees">
+      <source xml:lang="en">Worktrees</source>
     </trans-unit>
     <trans-unit id="view.workbench.cloneRepository">
       <source xml:lang="en">You can clone a repository locally.&#10;[Clone Repository](command:git.clone &apos;Clone a repository once the Git extension has activated&apos;)</source>

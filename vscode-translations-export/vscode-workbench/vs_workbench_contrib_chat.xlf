@@ -31,6 +31,9 @@
     <trans-unit id="chatAgent.autoApprove">
       <source xml:lang="en">To automatically approve tool actions without manual confirmation, set chat.tools.autoApprove to true in your settings.</source>
     </trans-unit>
+    <trans-unit id="chatAgent.openEditedFilesSetting">
+      <source xml:lang="en">By default, when edits are made to files, they will be opened. To change this behavior, set accessibility.openChatEditedFiles to false in your settings.</source>
+    </trans-unit>
     <trans-unit id="chatAgent.overview">
       <source xml:lang="en">The chat agent view is used to apply edits across files in your workspace, enable running commands in the terminal, and more.</source>
     </trans-unit>
@@ -291,7 +294,10 @@
       <source xml:lang="en">New Chat</source>
     </trans-unit>
     <trans-unit id="chat.redoEdit.label">
-      <source xml:lang="en">Redo Last Request</source>
+      <source xml:lang="en">Redo Checkpoint Restore</source>
+    </trans-unit>
+    <trans-unit id="chat.redoEdit.label2">
+      <source xml:lang="en">Redo Checkpoint Restore</source>
     </trans-unit>
     <trans-unit id="chat.undoEdit.label">
       <source xml:lang="en">Undo Last Request</source>
@@ -759,6 +765,9 @@
     <trans-unit id="chat.agent.maxRequests">
       <source xml:lang="en">The maximum number of requests to allow Copilot to use per-turn in agent mode. When the limit is reached, Copilot will ask the user to confirm that it should continue.</source>
     </trans-unit>
+    <trans-unit id="chat.checkpoints.enabled">
+      <source xml:lang="en">Enables checkpoints in chat. Checkpoints allow you to restore the chat to a previous state.</source>
+    </trans-unit>
     <trans-unit id="chat.commandCenter.enabled">
       <source xml:lang="en">Controls whether the command center shows a menu for actions to control Copilot (requires {0}).</source>
     </trans-unit>
@@ -814,7 +823,7 @@
       <source xml:lang="en">Implicit context is never enabled.</source>
     </trans-unit>
     <trans-unit id="chat.instructions.config.locations.description">
-      <source xml:lang="en">Specify location(s) of instructions files (`*{0}`) that can be attached in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
+      <source xml:lang="en">Specify location(s) of instructions files (`*{0}`) that can be attached in Chat sessions. [Learn More]({1}).
 
 Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
@@ -848,22 +857,22 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Mode File Locations</source>
     </trans-unit>
     <trans-unit id="chat.notifyWindowOnConfirmation">
-      <source xml:lang="en">Controls whether the Copilot window should notify the user when a confirmation is needed.</source>
+      <source xml:lang="en">Controls whether the Copilot window should notify the user when a confirmation is needed while the window is not in focus. This includes a window badge as well as notification toast.</source>
     </trans-unit>
     <trans-unit id="chat.promptFiles.policy">
-      <source xml:lang="en">Enables reusable prompt and instruction files in Chat, Edits, and Inline Chat sessions.</source>
+      <source xml:lang="en">Enables reusable prompt and instruction files in Chat sessions.</source>
     </trans-unit>
     <trans-unit id="chat.renderRelatedFiles">
       <source xml:lang="en">Controls whether related files should be rendered in the chat input.</source>
     </trans-unit>
     <trans-unit id="chat.reusablePrompts.config.enabled.description">
-      <source xml:lang="en">Enable reusable prompt (`*{0}`) and instruction files in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).</source>
+      <source xml:lang="en">Enable reusable prompt (`*{0}`) and instruction files (`*{1}`) in Chat sessions. [Learn More]({2}).</source>
     </trans-unit>
     <trans-unit id="chat.reusablePrompts.config.enabled.title">
       <source xml:lang="en">Prompt Files</source>
     </trans-unit>
     <trans-unit id="chat.reusablePrompts.config.locations.description">
-      <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be run in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
+      <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be run in Chat sessions. [Learn More]({1}).
 
 Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
@@ -1101,6 +1110,17 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="dismiss">
       <source xml:lang="en">Dismiss</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatConfirmationWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="defaultTitle">
+      <source xml:lang="en">Chat: Confirmation Required</source>
+    </trans-unit>
+    <trans-unit id="notificationDetail">
+      <source xml:lang="en">The current chat session requires your confirmation to proceed.</source>
+    </trans-unit>
+    <trans-unit id="notificationTitle">
+      <source xml:lang="en">Chat: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatElicitationContentPart" source-language="en" datatype="plaintext"><body>
@@ -1360,6 +1380,12 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="chat.removeLast.confirmation.title">
       <source xml:lang="en">Do you want to undo your last edit?</source>
+    </trans-unit>
+    <trans-unit id="chat.restoreCheckpoint.label">
+      <source xml:lang="en">Restore Checkpoint</source>
+    </trans-unit>
+    <trans-unit id="chat.restoreCheckpoint.tooltip">
+      <source xml:lang="en">Restore Checkpoint</source>
     </trans-unit>
     <trans-unit id="chat.undoEdits.label">
       <source xml:lang="en">Undo Requests</source>
@@ -1755,7 +1781,7 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Report an issue</source>
     </trans-unit>
     <trans-unit id="requestMarkdownPartTitle">
-      <source xml:lang="en">Click to edit</source>
+      <source xml:lang="en">Click to Edit</source>
     </trans-unit>
     <trans-unit id="usedAgent">
       <source xml:lang="en">[[(rerun without)]]</source>
@@ -1910,6 +1936,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="enterpriseInstancePlaceholder">
       <source xml:lang="en">i.e. "octocat" or "https://octocat.ghe.com"...</source>
+    </trans-unit>
+    <trans-unit id="forceSignIn">
+      <source xml:lang="en">Sign in to use Copilot</source>
     </trans-unit>
     <trans-unit id="hideChatSetup">
       <source xml:lang="en">Hide Copilot</source>
@@ -2725,9 +2754,6 @@ Type {3} to use commands</source>
     <trans-unit id="chatEditingHasToolConfirmation">
       <source xml:lang="en">True when a tool confirmation is present.</source>
     </trans-unit>
-    <trans-unit id="chatEditingParticipantRegistered">
-      <source xml:lang="en">True when a default chat participant is registered for editing.</source>
-    </trans-unit>
     <trans-unit id="chatExtensionInvalid">
       <source xml:lang="en">True when the installed chat extension is invalid and needs to be updated.</source>
     </trans-unit>
@@ -2757,6 +2783,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatPanelLocation">
       <source xml:lang="en">The location of the chat panel.</source>
+    </trans-unit>
+    <trans-unit id="chatPanelNeverUsed">
+      <source xml:lang="en">True when the user has not sent any chat requests in the Chat Panel.</source>
     </trans-unit>
     <trans-unit id="chatParticipantRegistered">
       <source xml:lang="en">True when a default chat participant is registered for the panel.</source>

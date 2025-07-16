@@ -577,6 +577,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="cursorBlinking">
       <source xml:lang="en">Control the cursor animation style.</source>
     </trans-unit>
+    <trans-unit id="cursorHeight">
+      <source xml:lang="en">Controls the height of the cursor when `#editor.cursorStyle#` is set to `line`. Cursor's max height depends on line height.</source>
+    </trans-unit>
     <trans-unit id="cursorSmoothCaretAnimation">
       <source xml:lang="en">Controls whether the smooth caret animation should be enabled.</source>
     </trans-unit>
@@ -1066,6 +1069,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="hover.sticky">
       <source xml:lang="en">Controls whether the hover should remain visible when mouse is moved over it.</source>
     </trans-unit>
+    <trans-unit id="inertialScroll">
+      <source xml:lang="en">Make scrolling inertial - mostly useful with touchpad on linux.</source>
+    </trans-unit>
     <trans-unit id="inlayHints.enable">
       <source xml:lang="en">Enables the inlay hints in the editor.</source>
     </trans-unit>
@@ -1161,6 +1167,15 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="minimap.autohide">
       <source xml:lang="en">Controls whether the minimap is hidden automatically.</source>
+    </trans-unit>
+    <trans-unit id="minimap.autohide.mouseover">
+      <source xml:lang="en">The minimap is hidden when mouse is not over the minimap and shown when mouse is over the minimap.</source>
+    </trans-unit>
+    <trans-unit id="minimap.autohide.none">
+      <source xml:lang="en">The minimap is always shown.</source>
+    </trans-unit>
+    <trans-unit id="minimap.autohide.scroll">
+      <source xml:lang="en">The minimap is only shown when the editor is scrolled</source>
     </trans-unit>
     <trans-unit id="minimap.enabled">
       <source xml:lang="en">Controls whether the minimap is shown.</source>
@@ -1428,6 +1443,12 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="selectionHighlight">
       <source xml:lang="en">Controls whether the editor should highlight matches similar to the selection.</source>
     </trans-unit>
+    <trans-unit id="selectionHighlightMaxLength">
+      <source xml:lang="en">Controls how many characters can be in the selection before similiar matches are not highlighted. Set to zero for unlimited.</source>
+    </trans-unit>
+    <trans-unit id="selectionHighlightMultiline">
+      <source xml:lang="en">Controls whether the editor should highlight selection matches that span multiple lines.</source>
+    </trans-unit>
     <trans-unit id="showDeprecated">
       <source xml:lang="en">Controls strikethrough deprecated variables.</source>
     </trans-unit>
@@ -1554,6 +1575,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="tabFocusMode">
       <source xml:lang="en">Controls whether the editor receives tabs or defers them to the workbench for navigation.</source>
     </trans-unit>
+    <trans-unit id="trimWhitespaceOnDelete">
+      <source xml:lang="en">Controls whether the editor will also delete the next line's indentation whitespace when deleting a newline.</source>
+    </trans-unit>
     <trans-unit id="unfoldOnClickAfterEndOfLine">
       <source xml:lang="en">Controls whether clicking on the empty content after a folded line will unfold the line.</source>
     </trans-unit>
@@ -1603,7 +1627,7 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <source xml:lang="en">Use the default line break rule.</source>
     </trans-unit>
     <trans-unit id="wordSegmenterLocales">
-      <source xml:lang="en">Locales to be used for word segmentation when doing word related navigations or operations. Specify the BCP 47 language tag of the word you wish to recognize (e.g., ja, zh-CN, zh-Hant-TW, etc.).</source>
+      <source xml:lang="en">Locales to be used for word segmentation when doing word related navigations or operations. Specify the BCP 47 language tag of the word you wish to recognize (e.g., ja, zh-CN, zh-Hant-TW, etc.). The locale specification can be a string or an array of strings.</source>
     </trans-unit>
     <trans-unit id="wordSeparators">
       <source xml:lang="en">Characters that will be used as word separators when doing word related navigations or operations.</source>
@@ -1632,6 +1656,18 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <source xml:lang="en">Controls the wrapping column of the editor when `#editor.wordWrap#` is `wordWrapColumn` or `bounded`.</source>
       <note>- `editor.wordWrap` refers to a different setting and should not be localized.
 - 'wordWrapColumn' and 'bounded' refer to values the different setting can take and should not be localized.</note>
+    </trans-unit>
+    <trans-unit id="wrapOnEscapedLineFeeds">
+      <source xml:lang="en">Controls whether literal `\n` shall trigger a wordWrap.
+for example
+```c
+char* str="hello\nworld"
+```
+will be displayed as
+```c
+char* str="hello\n
+           world"
+```</source>
     </trans-unit>
     <trans-unit id="wrappingIndent">
       <source xml:lang="en">Controls the indentation of wrapped lines.</source>

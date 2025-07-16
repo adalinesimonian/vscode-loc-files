@@ -657,6 +657,9 @@
     <trans-unit id="showWorkspaceUnsupportedExtensions">
       <source xml:lang="en">Show Extensions Unsupported By Workspace</source>
     </trans-unit>
+    <trans-unit id="signInToMarketplace">
+      <source xml:lang="en">Sign in to access Extensions Marketplace</source>
+    </trans-unit>
     <trans-unit id="sort by installs">
       <source xml:lang="en">Install Count</source>
     </trans-unit>
@@ -1388,6 +1391,12 @@ Would you like to update the extension?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/extensions/browser/extensionsViewlet" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="access denied">
+      <source xml:lang="en">You do not have access to the Extensions Marketplace. Please contact your administrator.</source>
+    </trans-unit>
+    <trans-unit id="accessDenied">
+      <source xml:lang="en">Access denied to marketplace</source>
+    </trans-unit>
     <trans-unit id="availableUpdates">
       <source xml:lang="en">Available Updates</source>
     </trans-unit>
@@ -1496,6 +1505,15 @@ Would you like to update the extension?</source>
     </trans-unit>
     <trans-unit id="show">
       <source xml:lang="en">Show</source>
+    </trans-unit>
+    <trans-unit id="sign in">
+      <source xml:lang="en">[Sign in to access Extensions Marketplace]({0})</source>
+    </trans-unit>
+    <trans-unit id="sign in enterprise marketplace">
+      <source xml:lang="en">Sign in to access Marketplace</source>
+    </trans-unit>
+    <trans-unit id="signInRequired">
+      <source xml:lang="en">Sign in required to access marketplace</source>
     </trans-unit>
     <trans-unit id="suggestProxyError">
       <source xml:lang="en">Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting.</source>

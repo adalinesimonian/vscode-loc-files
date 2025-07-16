@@ -60,11 +60,20 @@
     <trans-unit id="shellIntegration">
       <source xml:lang="en">The terminal has a feature called shell integration that offers an enhanced experience and provides useful commands for screen readers such as:</source>
     </trans-unit>
+    <trans-unit id="suggest">
+      <source xml:lang="en">When the terminal suggest widget is focused:</source>
+    </trans-unit>
     <trans-unit id="suggestCommands">
-      <source xml:lang="en">When the terminal suggest widget is focused, accept the suggestion&lt;keybinding:{0}&gt; and configure suggest settings&lt;keybinding:{1}&gt;.</source>
+      <source xml:lang="en">- Accept the suggestion&lt;keybinding:{0}&gt; and configure suggest settings&lt;keybinding:{1}&gt;.</source>
     </trans-unit>
     <trans-unit id="suggestCommandsMore">
-      <source xml:lang="en">Also, when the suggest widget is focused, toggle between the widget and terminal&lt;keybinding:{0}&gt; and toggle details focus&lt;keybinding:{1}&gt; to learn more about the suggestion.</source>
+      <source xml:lang="en">- Toggle between the widget and terminal&lt;keybinding:{0}&gt; and toggle details focus&lt;keybinding:{1}&gt; to learn more about the suggestion.</source>
+    </trans-unit>
+    <trans-unit id="suggestConfigure">
+      <source xml:lang="en">-Configure suggest settings&lt;keybinding:{0}&gt; </source>
+    </trans-unit>
+    <trans-unit id="suggestLearnMore">
+      <source xml:lang="en">- Learn more about the suggestion&lt;keybinding:{0}&gt;.</source>
     </trans-unit>
     <trans-unit id="suggestTrigger">
       <source xml:lang="en">The terminal request completions command can be invoked manually&lt;keybinding:{0}&gt;, but also appears while typing.</source>
@@ -833,6 +842,9 @@ If shell integration is installed manually, {3} needs to be set to {4} before ca
     <trans-unit id="suggest.inlineSuggestion.off">
       <source xml:lang="en">Disable the feature.</source>
     </trans-unit>
+    <trans-unit id="suggest.provider.description">
+      <source xml:lang="en">Enable or disable the '{0}' terminal suggestion provider.</source>
+    </trans-unit>
     <trans-unit id="suggest.providers">
       <source xml:lang="en">Providers are enabled by default. Omit them by setting the id of the provider to `false`.</source>
     </trans-unit>
@@ -871,6 +883,9 @@ If shell integration is installed manually, {3} needs to be set to {4} before ca
     </trans-unit>
     <trans-unit id="terminal.integrated.selectionMode.partial">
       <source xml:lang="en">Partially select a suggestion when automatically triggering IntelliSense. `Tab` can be used to accept the first suggestion, only after navigating the suggestions via `Down` will `Enter` also accept the active suggestion.</source>
+    </trans-unit>
+    <trans-unit id="terminalSuggestProvidersConfigurationTitle">
+      <source xml:lang="en">Terminal Suggest Providers</source>
     </trans-unit>
     <trans-unit id="terminalWindowsExecutableSuggestionSetting">
       <source xml:lang="en">A set of windows command executable extensions that will be included as suggestions in the terminal.
