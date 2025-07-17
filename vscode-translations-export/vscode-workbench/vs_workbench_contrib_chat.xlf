@@ -294,10 +294,13 @@
       <source xml:lang="en">New Chat</source>
     </trans-unit>
     <trans-unit id="chat.redoEdit.label">
-      <source xml:lang="en">Redo Checkpoint Restore</source>
+      <source xml:lang="en">Redo Last Request</source>
     </trans-unit>
     <trans-unit id="chat.redoEdit.label2">
-      <source xml:lang="en">Redo Checkpoint Restore</source>
+      <source xml:lang="en">Redo</source>
+    </trans-unit>
+    <trans-unit id="chat.redoEdit.tooltip">
+      <source xml:lang="en">Reapply discarded workspace changes and chat</source>
     </trans-unit>
     <trans-unit id="chat.undoEdit.label">
       <source xml:lang="en">Undo Last Request</source>
@@ -1382,10 +1385,10 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Do you want to undo your last edit?</source>
     </trans-unit>
     <trans-unit id="chat.restoreCheckpoint.label">
-      <source xml:lang="en">Restore Checkpoint</source>
+      <source xml:lang="en">Restore checkpoint</source>
     </trans-unit>
     <trans-unit id="chat.restoreCheckpoint.tooltip">
-      <source xml:lang="en">Restore Checkpoint</source>
+      <source xml:lang="en">Restores workspace and chat to this point</source>
     </trans-unit>
     <trans-unit id="chat.undoEdits.label">
       <source xml:lang="en">Undo Requests</source>
@@ -1746,6 +1749,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
   <file original="src/vs/workbench/contrib/chat/browser/chatListRenderer" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatConfirmationAction">
       <source xml:lang="en">selected "{0}"</source>
+    </trans-unit>
+    <trans-unit id="checkpointRestore">
+      <source xml:lang="en">Checkpoint restored</source>
     </trans-unit>
     <trans-unit id="didNotFollowInstructions">
       <source xml:lang="en">Didn't follow instructions</source>
@@ -2783,9 +2789,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatPanelLocation">
       <source xml:lang="en">The location of the chat panel.</source>
-    </trans-unit>
-    <trans-unit id="chatPanelNeverUsed">
-      <source xml:lang="en">True when the user has not sent any chat requests in the Chat Panel.</source>
     </trans-unit>
     <trans-unit id="chatParticipantRegistered">
       <source xml:lang="en">True when a default chat participant is registered for the panel.</source>

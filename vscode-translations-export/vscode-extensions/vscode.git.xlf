@@ -580,6 +580,9 @@
     <trans-unit id="++CODE++fc2a1795716d5b38e136f05edebeea54359088832fc36dcf048a92deba47971d">
       <source xml:lang="en">Please provide a tag name</source>
     </trans-unit>
+    <trans-unit id="++CODE++691b9bbae7e25577e1b0e7812e82ed2f7018132b40b3caa0f7e5479bd03ccbe2">
+      <source xml:lang="en">Please provide a worktree name</source>
+    </trans-unit>
     <trans-unit id="++CODE++00b3526ea21a69a7bbd09c6f006cce721c78be5995e2eb6c3cb8f0c2ede22879">
       <source xml:lang="en">Please provide the commit hash</source>
     </trans-unit>
@@ -672,6 +675,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++be8e59066232b90b3820f1ad5bafd5d609e5d3ab42d30fb11a27c7e6cd8e2448">
       <source xml:lang="en">Select a branch to checkout in detached mode</source>
     </trans-unit>
+    <trans-unit id="++CODE++95f012f7732cd37dabf781ef118ee094f8f4cf6d9a42c9d1253683aa287b223e">
+      <source xml:lang="en">Select a branch to create the new worktree from</source>
+    </trans-unit>
     <trans-unit id="++CODE++5410dd4e0d2b06155ae6bd36e52b58b7358ce288ef781b45e9852016e2394b7a">
       <source xml:lang="en">Select a branch to delete</source>
     </trans-unit>
@@ -701,6 +707,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++a2f33e4d476de1d0148d5cdc59a5d6d85769b8980e454594cb34dde1372ab35c">
       <source xml:lang="en">Select as Repository Destination</source>
+    </trans-unit>
+    <trans-unit id="++CODE++aac37c27b31f75b2878fe32cbcb8fd8db83399cdfa90da4c0e2f5e51efeb2b67">
+      <source xml:lang="en">Select as Worktree Destination</source>
     </trans-unit>
     <trans-unit id="++CODE++edd969c69f64aff645b3027bab51746e3b4b8bbafdc573981df42125e9e85dbe">
       <source xml:lang="en">Show Changes</source>
@@ -884,6 +893,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++2dc8b13386dff158637242fd41c300a614a188df36546d65f9efde8953c68e3b">
       <source xml:lang="en">View Problems</source>
+    </trans-unit>
+    <trans-unit id="++CODE++9dd7d78ef00b05c28acfef1520cda8f7170ae9ca879c813b34842a1781164b5f">
+      <source xml:lang="en">Worktree name</source>
     </trans-unit>
     <trans-unit id="++CODE++7f1d79b89e7e2a73fb77da103a8f48ff6a1d82d197245b96a00bd0bb1b807301">
       <source xml:lang="en">Would you like to add &quot;{0}&quot; to .gitignore?</source>
@@ -1717,6 +1729,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="command.createTag">
       <source xml:lang="en">Create Tag...</source>
+    </trans-unit>
+    <trans-unit id="command.createWorktree">
+      <source xml:lang="en">Create Worktree...</source>
     </trans-unit>
     <trans-unit id="command.graphDeleteBranch">
       <source xml:lang="en">Delete Branch</source>

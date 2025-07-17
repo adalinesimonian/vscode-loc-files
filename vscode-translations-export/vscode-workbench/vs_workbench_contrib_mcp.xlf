@@ -493,6 +493,9 @@
     <trans-unit id="config">
       <source xml:lang="en">Show Configuration</source>
     </trans-unit>
+    <trans-unit id="disabled - not allowed">
+      <source xml:lang="en">This MCP Server is disabled because {0}</source>
+    </trans-unit>
     <trans-unit id="install">
       <source xml:lang="en">Install</source>
     </trans-unit>
@@ -654,6 +657,9 @@
     </trans-unit>
     <trans-unit id="verified publisher">
       <source xml:lang="en">This publisher has verified ownership of {0}</source>
+    </trans-unit>
+    <trans-unit id="workspace extension">
+      <source xml:lang="en">Workspace MCP Server</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServersView" source-language="en" datatype="plaintext"><body>
