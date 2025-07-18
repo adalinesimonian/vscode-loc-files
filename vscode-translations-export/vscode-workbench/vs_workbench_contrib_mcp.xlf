@@ -683,8 +683,14 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpWorkbenchService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cannot be installed">
+      <source xml:lang="en">Cannot install the '{0}' MCP Server because it is not available in this setup.</source>
+    </trans-unit>
     <trans-unit id="mcp.configuration.userLocalValue">
       <source xml:lang="en">Global in {0}</source>
+    </trans-unit>
+    <trans-unit id="not an extension">
+      <source xml:lang="en">The provided object is not an mcp server.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/discovery/extensionMcpDiscovery" source-language="en" datatype="plaintext"><body>
