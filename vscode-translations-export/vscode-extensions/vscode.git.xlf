@@ -10,9 +10,6 @@
     <trans-unit id="++CODE++d33636398d4d33c00d489b6b7a46b224e0b779fcf33fd6c3e3d6e40c2933373a">
       <source xml:lang="en">$(info) This repository has no tags.</source>
     </trans-unit>
-    <trans-unit id="++CODE++189adffa42210902c882f3df1bf7ebce09c4e06c9c15d4a20559295c425ac0c6">
-      <source xml:lang="en">$(info) This repository has no worktrees.</source>
-    </trans-unit>
     <trans-unit id="++CODE++418e632797c81516d50735320a9d9cc10b9ca7fdf7af3dcdab4caae0de5e1e57">
       <source xml:lang="en">&#10;&#10;Are you sure you want to discard ALL changes in {0} files?</source>
     </trans-unit>
@@ -324,6 +321,9 @@
     </trans-unit>
     <trans-unit id="++CODE++c801735bdcbaef47f4f9fdc4e6db3ef65f65738dd91850477f7a4c89d4b5b60b">
       <source xml:lang="en">Force Checkout</source>
+    </trans-unit>
+    <trans-unit id="++CODE++0e243e646697d2d56c954f899031aea3dc6def6d2e66255cfe4757697021c099">
+      <source xml:lang="en">Force Delete</source>
     </trans-unit>
     <trans-unit id="++CODE++dea241f37f7b03284af862a9376f0b02d561af0bcaa05f80bec1226bc26c8bca">
       <source xml:lang="en">Force push is not allowed, please enable it with the &quot;git.allowForcePush&quot; setting.</source>
@@ -702,9 +702,6 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++28c2080e378f1d291ab790609682492e0a165b461868f8546b32bc1aa497c3da">
       <source xml:lang="en">Select a tag to delete</source>
     </trans-unit>
-    <trans-unit id="++CODE++7eed423d682b3727b0e9c573d84d4a1a575092af646f5921b792c6a0557b97f7">
-      <source xml:lang="en">Select a worktree to delete</source>
-    </trans-unit>
     <trans-unit id="++CODE++a2f33e4d476de1d0148d5cdc59a5d6d85769b8980e454594cb34dde1372ab35c">
       <source xml:lang="en">Select as Repository Destination</source>
     </trans-unit>
@@ -812,6 +809,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++27ee389973941a5e4c33938ada96f71810852631100b4c853fde3b8ff00a4b5c">
       <source xml:lang="en">The selection range does not contain any changes.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++27c167750a8ab2078b5f839d16b7b2936d058c0b4572600e430dd40b77d39e5a">
+      <source xml:lang="en">The worktree contains modified or untracked files. Do you want to force delete?</source>
     </trans-unit>
     <trans-unit id="++CODE++72dbcd7478452a578554f9540148e0276884de955c89a499404e8723d8276986">
       <source xml:lang="en">There are known issues with the installed Git &quot;{0}&quot;. Please update to Git &gt;= 2.27 for the git features to work correctly.</source>
@@ -1752,7 +1752,7 @@ Please make sure there is no space between the right bracket and left parenthesi
       <source xml:lang="en">Delete Tag...</source>
     </trans-unit>
     <trans-unit id="command.deleteWorktree">
-      <source xml:lang="en">Delete Worktree...</source>
+      <source xml:lang="en">Delete Worktree</source>
     </trans-unit>
     <trans-unit id="config.autoRepositoryDetection.false">
       <source xml:lang="en">Disable automatic repository scanning.</source>

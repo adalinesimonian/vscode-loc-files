@@ -156,8 +156,17 @@
     <trans-unit id="chat.history.label">
       <source xml:lang="en">Show Chats...</source>
     </trans-unit>
+    <trans-unit id="chat.history.recent">
+      <source xml:lang="en">Recent Chats</source>
+    </trans-unit>
     <trans-unit id="chat.history.rename">
       <source xml:lang="en">Rename</source>
+    </trans-unit>
+    <trans-unit id="chat.history.showMore">
+      <source xml:lang="en">Show more...</source>
+    </trans-unit>
+    <trans-unit id="chat.history.showMoreAgents">
+      <source xml:lang="en">Show more...</source>
     </trans-unit>
     <trans-unit id="chat.toggleDefaultVisibility.label">
       <source xml:lang="en">Show View by Default</source>
@@ -218,6 +227,9 @@
     </trans-unit>
     <trans-unit id="interactiveSession.history.title">
       <source xml:lang="en">Workspace Chat History</source>
+    </trans-unit>
+    <trans-unit id="interactiveSession.history.titleAll">
+      <source xml:lang="en">All Workspace Chat History</source>
     </trans-unit>
     <trans-unit id="interactiveSession.open">
       <source xml:lang="en">New Chat Editor</source>
@@ -729,6 +741,11 @@
       <source xml:lang="en">Select where to apply the code block</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/manageModelsActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="manageLanguageModels">
+      <source xml:lang="en">Manage Language Models...</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cell.lowercase">
       <source xml:lang="en">cell</source>
@@ -746,7 +763,7 @@
       <source xml:lang="en">Enable current {0} context</source>
     </trans-unit>
     <trans-unit id="enableHint">
-      <source xml:lang="en">disabled</source>
+      <source xml:lang="en">Enable current {0} context</source>
     </trans-unit>
     <trans-unit id="file.lowercase">
       <source xml:lang="en">file</source>
@@ -887,6 +904,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.sendElementsToChat.enabled">
       <source xml:lang="en">Controls whether elements can be sent to chat from the Simple Browser.</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionsViewLocation.description">
+      <source xml:lang="en">Controls where to show the agent sessions menu.</source>
     </trans-unit>
     <trans-unit id="chat.signInDialogVariant">
       <source xml:lang="en">Control variations of the sign-in dialog.</source>
@@ -2309,6 +2329,9 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputCompletions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="activeFile">
+      <source xml:lang="en">Active file</source>
+    </trans-unit>
     <trans-unit id="fileEntryDescription">
       <source xml:lang="en">{0} ({1})</source>
     </trans-unit>
@@ -2366,6 +2389,12 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modelPickerActionItem" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.manageModels">
+      <source xml:lang="en">Manage Models...</source>
+    </trans-unit>
+    <trans-unit id="chat.manageModels.tooltip">
+      <source xml:lang="en">Manage language models</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.label">
       <source xml:lang="en">Pick Model</source>
     </trans-unit>
@@ -2685,6 +2714,9 @@ Type {3} to use commands</source>
     <trans-unit id="agentModeSubtitle">
       <source xml:lang="en">Agent Mode</source>
     </trans-unit>
+    <trans-unit id="suggestedPromptAriaLabel">
+      <source xml:lang="en">Suggested prompt: {0}</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewsWelcomeHandler" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatViewsWelcome.content">
@@ -2777,9 +2809,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatMode">
       <source xml:lang="en">The 'kind' of the current chat mode- Agent for custom modes.</source>
-    </trans-unit>
-    <trans-unit id="chatModelsAreUserSelectable">
-      <source xml:lang="en">True when the chat model can be selected manually by the user.</source>
     </trans-unit>
     <trans-unit id="chatPanelExtensionParticipantRegistered">
       <source xml:lang="en">True when a default chat participant is registered for the panel from an extension.</source>
@@ -2977,8 +3006,14 @@ Type {3} to use commands</source>
     <trans-unit id="vscode.extension.contributes.languageModels.chatProviderRequired">
       <source xml:lang="en">This contribution point requires the 'chatProvider' proposal.</source>
     </trans-unit>
+    <trans-unit id="vscode.extension.contributes.languageModels.displayName">
+      <source xml:lang="en">The display name of the language model vendor.</source>
+    </trans-unit>
     <trans-unit id="vscode.extension.contributes.languageModels.emptyVendor">
       <source xml:lang="en">The vendor field cannot be empty.</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.contributes.languageModels.managementCommand">
+      <source xml:lang="en">A command to manage the language model vendor, e.g. 'Manage Copilot models'. This is used in the chat model picker. If not provided, a gear icon is not rendered during vendor selection.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.languageModels.vendor">
       <source xml:lang="en">A globally unique vendor of language models.</source>
