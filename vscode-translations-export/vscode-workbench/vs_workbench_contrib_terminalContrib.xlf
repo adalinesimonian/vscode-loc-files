@@ -269,27 +269,65 @@ Remarks:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="autoApprove">
-      <source xml:lang="en">A list of commands or regular expressions that control whether the run in terminal tool commands require explicit approval. These will be matched against the start of a command. A regular expression can be provided by wrapping the string in `/` characters followed by optional flags such as `i`.
-
-Set to `true` to automatically approve commands, `false` to always require explicit approval or `null` to unset the value.
-
-Examples:
-- `"mkdir": true` Will allow all command lines starting with `mkdir`
-- `"npm run build": true` Will allow all command lines starting with `npm run build`
-- `"rm": false` Will require explicit approval for all command lines starting with `rm`
-- `"/^git (status|show\b.*)$/": true` will allow `git status` and all command lines starting with `git show`
-- `"/^Get-ChildItem\b/i": true` will allow Get-ChildItem command regardless of casing
-- `"/.*/": true` will allow all command lines
-- `"rm": null` will unset the default `false` value for `rm`
-
-Note that these commands and regular expressions are evaluated for every _sub-command_  within a single command line, so `foo &amp;&amp; bar` for example will need both `foo` and `bar` to match a `true` entry and must not match a `false` entry in order to auto approve. Inline commands are also detected so `echo $(rm file)` will need both `echo $(rm file)` and `rm file` to pass.</source>
+    <trans-unit id="autoApprove.description.commandLine">
+      <source xml:lang="en">An object can be used to match against the full command line instead of matching sub-commands and inline commands, for example {0}. This will be checked _after_ sub-commands are checked, taking precedence over even denied sub-commands.</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.examples.description">
+      <source xml:lang="en">Description</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.examples.mkdir">
+      <source xml:lang="en">Allow all commands starting with {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.examples.npmRunBuild">
+      <source xml:lang="en">Allow all commands starting with {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.examples.ps1">
+      <source xml:lang="en">Require explicit approval for any _command line_ that contains {0} regardless of casing</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.examples.regexAll">
+      <source xml:lang="en">Allow all commands (denied commands still require approval)</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.examples.regexCase">
+      <source xml:lang="en">will allow {0} commands regardless of casing</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.examples.regexGit">
+      <source xml:lang="en">Allow {0} and all commands starting with {1}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.examples.rm">
+      <source xml:lang="en">Require explicit approval for all commands starting with {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.examples.rmUnset">
+      <source xml:lang="en">Unset the default {0} value for {1}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.examples.title">
+      <source xml:lang="en">Examples:</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.examples.value">
+      <source xml:lang="en">Value</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.intro">
+      <source xml:lang="en">A list of commands or regular expressions that control whether the run in terminal tool commands require explicit approval. These will be matched against the start of a command. A regular expression can be provided by wrapping the string in {0} characters followed by optional flags such as {1} for case-insensitivity.</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.subCommands">
+      <source xml:lang="en">Note that these commands and regular expressions are evaluated for every _sub-command_ within the full _command line_, so {0} for example will need both {1} and {2} to match a {3} entry and must not match a {4} entry in order to auto approve. Inline commands are also detected so {5} will need both {5} and {6} to pass.</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.values">
+      <source xml:lang="en">Set to {0} to automatically approve commands, {1} to always require explicit approval or {2} to unset the value.</source>
     </trans-unit>
     <trans-unit id="autoApprove.false">
       <source xml:lang="en">Require explicit approval for the pattern.</source>
     </trans-unit>
     <trans-unit id="autoApprove.key">
       <source xml:lang="en">The start of a command to match against. A regular expression can be provided by wrapping the string in `/` characters.</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.matchCommandLine">
+      <source xml:lang="en">Whether to match against the full command line, as opposed to splitting by sub-commands and inline commands.</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.matchCommandLine.false">
+      <source xml:lang="en">Match against sub-commands and inline commands, eg. `foo &amp;&amp; bar` will need both `foo` and `bar` to match.</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.matchCommandLine.true">
+      <source xml:lang="en">Match against the full command line, eg. `foo &amp;&amp; bar`.</source>
     </trans-unit>
     <trans-unit id="autoApprove.null">
       <source xml:lang="en">Ignore the pattern, this is useful for unsetting the same pattern set at a higher scope.</source>
