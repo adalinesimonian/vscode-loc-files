@@ -56,7 +56,7 @@ jobs:
         ls -hlaF
 
     - name: Commit and push changes
-      uses: planetscale/ghcommit-action@v0.2.15
+      uses: planetscale/ghcommit-action@v0.2.16
       with:
         commit_message: "chore: Update localization files"
         repo: ${{ github.repository }}
