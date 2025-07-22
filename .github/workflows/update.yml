@@ -45,6 +45,8 @@ jobs:
     - name: Run vscode-translations-export
       run: node ./node_modules/gulp/bin/gulp.js vscode-translations-export
       working-directory: vscode
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
     - name: Copy licence
       run: cp vscode/LICENSE.txt vscode-translations-export/LICENSE.txt
