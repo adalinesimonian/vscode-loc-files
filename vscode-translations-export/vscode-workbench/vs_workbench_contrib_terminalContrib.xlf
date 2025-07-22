@@ -243,6 +243,20 @@ Remarks:
       <source xml:lang="en">Controls if the first terminal without input will show a hint about available actions when it is focused.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/bufferOutputPolling" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="poll.terminal.accept">
+      <source xml:lang="en">Yes</source>
+    </trans-unit>
+    <trans-unit id="poll.terminal.polling">
+      <source xml:lang="en">Copilot will continue to poll for output to determine when the terminal becomes idle for up to 2 minutes.</source>
+    </trans-unit>
+    <trans-unit id="poll.terminal.reject">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="poll.terminal.waiting">
+      <source xml:lang="en">Continue waiting for `{0}` to finish?</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/getTerminalOutputTool" source-language="en" datatype="plaintext"><body>
     <trans-unit id="bg.past">
       <source xml:lang="en">Checked background terminal output</source>
@@ -266,6 +280,79 @@ Remarks:
     </trans-unit>
     <trans-unit id="runInTerminalTool.userDescription">
       <source xml:lang="en">Tool for running commands in the terminal</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/task/getTaskOutputTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotChat.checkedTerminalOutput">
+      <source xml:lang="en">Checked terminal output for `{0}`</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.checkingTerminalOutput">
+      <source xml:lang="en">Checking terminal output for `{0}`</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.taskAlreadyRunning">
+      <source xml:lang="en">The task `{0}` is already running.</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.taskNotFound">
+      <source xml:lang="en">Task not found: `{0}`</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.taskOutput">
+      <source xml:lang="en">Output of task `{0}`:
+{1}</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.terminalNotFound">
+      <source xml:lang="en">Terminal not found for task `{0}`</source>
+    </trans-unit>
+    <trans-unit id="getTaskOutputTool.displayName">
+      <source xml:lang="en">Get Task Output</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/task/runTaskTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotChat.allowTaskRunMsg">
+      <source xml:lang="en">Allow Copilot to run the task `{0}`?</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.allowTaskRunTitle">
+      <source xml:lang="en">Allow task run?</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.checkingOutput">
+      <source xml:lang="en">Checking output for `{0}`</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.noTerminal">
+      <source xml:lang="en">Task started but no terminal was found for: `{0}`</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.ranTask">
+      <source xml:lang="en">Ran `{0}`</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.runningTask">
+      <source xml:lang="en">Running `{0}`</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.startedTask">
+      <source xml:lang="en">Started `{0}`</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.taskAlreadyActive">
+      <source xml:lang="en">The task is already running.</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.taskAlreadyRunning">
+      <source xml:lang="en">The task `{0}` is already running.</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.taskIsAlreadyRunning">
+      <source xml:lang="en">`{0}` is already running.</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.taskNotFound">
+      <source xml:lang="en">Task not found: `{0}`</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.taskWasAlreadyRunning">
+      <source xml:lang="en">`{0}` was already running.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminalTool.displayName">
+      <source xml:lang="en">Run Task</source>
+    </trans-unit>
+    <trans-unit id="runInTerminalTool.userDescription">
+      <source xml:lang="en">Tool for running tasks in the workspace</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/terminal.chatAgentTools.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="toolset.runCommands">
+      <source xml:lang="en">Runs commands in the terminal</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext"><body>
@@ -334,6 +421,9 @@ Remarks:
     </trans-unit>
     <trans-unit id="autoApprove.true">
       <source xml:lang="en">Automatically approve the pattern.</source>
+    </trans-unit>
+    <trans-unit id="newTaskToolsEnabled.description">
+      <source xml:lang="en">Whether the new task tools are enabled.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/clipboard/browser/terminal.clipboard.contribution" source-language="en" datatype="plaintext"><body>

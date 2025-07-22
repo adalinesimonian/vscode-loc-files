@@ -315,6 +315,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpElicitationService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.elicit.accept">
+      <source xml:lang="en">Respond</source>
+    </trans-unit>
     <trans-unit id="mcp.elicit.cancel">
       <source xml:lang="en">Cancel</source>
     </trans-unit>
@@ -326,6 +329,9 @@
     </trans-unit>
     <trans-unit id="mcp.elicit.give">
       <source xml:lang="en">Respond</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.reject">
+      <source xml:lang="en">Cancel</source>
     </trans-unit>
     <trans-unit id="mcp.elicit.source">
       <source xml:lang="en">MCP Server ({0})</source>
@@ -645,6 +651,17 @@
       <source xml:lang="en">Icon of the MCP Server editor.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpServerIcons" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcpServer">
+      <source xml:lang="en">Icon used for the MCP server.</source>
+    </trans-unit>
+    <trans-unit id="mcpServerRemoteIcon">
+      <source xml:lang="en">Icon to indicate that an MCP server is for the remote user scope.</source>
+    </trans-unit>
+    <trans-unit id="mcpServerWorkspaceIcon">
+      <source xml:lang="en">Icon to indicate that an MCP server is for the workspace scope.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServerWidgets" source-language="en" datatype="plaintext"><body>
     <trans-unit id="install count">
       <source xml:lang="en">Install count</source>
@@ -654,6 +671,9 @@
     </trans-unit>
     <trans-unit id="ratedLabel">
       <source xml:lang="en">Average rating: {0} out of 5</source>
+    </trans-unit>
+    <trans-unit id="remote user extension">
+      <source xml:lang="en">Remote MCP Server</source>
     </trans-unit>
     <trans-unit id="verified publisher">
       <source xml:lang="en">This publisher has verified ownership of {0}</source>
@@ -934,9 +954,6 @@ Do you want to allow running MCP servers from {3}?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpTypes" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="mcpServer">
-      <source xml:lang="en">Icon used for the MCP server.</source>
-    </trans-unit>
     <trans-unit id="mcpstate.error">
       <source xml:lang="en">Error {0}</source>
     </trans-unit>
