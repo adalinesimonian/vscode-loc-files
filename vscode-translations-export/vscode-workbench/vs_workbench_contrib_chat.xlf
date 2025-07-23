@@ -847,6 +847,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.instructions.config.locations.title">
       <source xml:lang="en">Instructions File Locations</source>
     </trans-unit>
+    <trans-unit id="chat.manageTasksTool.enabled">
+      <source xml:lang="en">Enables manageTasksTool in chat. This tool allows you to use task lists in chat.</source>
+    </trans-unit>
     <trans-unit id="chat.mathEnabled.description">
       <source xml:lang="en">Enable math rendering in chat responses using Katex.</source>
     </trans-unit>
@@ -1266,6 +1269,11 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Click the Install button on the extension and then press Continue when finished.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatTaskListSubPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.task.title">
+      <source xml:lang="en">Tasks</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatTerminalToolSubPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cancel">
       <source xml:lang="en">Cancel</source>
@@ -1304,6 +1312,11 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="seeMore">
       <source xml:lang="en">See more</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolOutputPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="loading">
+      <source xml:lang="en">Rendering tool output...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatDragAndDrop" source-language="en" datatype="plaintext"><body>
@@ -1812,6 +1825,14 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="working">
       <source xml:lang="en">Working</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatOutputItemRenderer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatOutputRenderer.mimeTypes">
+      <source xml:lang="en">MIME types that this renderer can handle</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.contributes.chatOutputRenderer">
+      <source xml:lang="en">Contributes a renderer for specific MIME types in chat outputs</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatParticipant.contribution" source-language="en" datatype="plaintext"><body>

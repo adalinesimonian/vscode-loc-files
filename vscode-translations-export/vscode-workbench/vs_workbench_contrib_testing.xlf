@@ -725,23 +725,6 @@ Please make sure the markdown extension is enabled.</source>
       <source xml:lang="en">Shows or hides the history of test runs in the peek view</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/testing/browser/testingProgressUiService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="testProgress.completed">
-      <source xml:lang="en">{0}/{1} tests passed ({2}%)</source>
-    </trans-unit>
-    <trans-unit id="testProgress.running">
-      <source xml:lang="en">Running tests, {0}/{1} passed ({2}%)</source>
-    </trans-unit>
-    <trans-unit id="testProgress.runningInitial">
-      <source xml:lang="en">Running tests...</source>
-    </trans-unit>
-    <trans-unit id="testProgressWithSkip.completed">
-      <source xml:lang="en">{0}/{1} tests passed ({2}%, {3} skipped)</source>
-    </trans-unit>
-    <trans-unit id="testProgressWithSkip.running">
-      <source xml:lang="en">Running tests, {0}/{1} tests passed ({2}%, {3} skipped)</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/testing/browser/testingViewPaneContainer" source-language="en" datatype="plaintext"><body>
     <trans-unit id="testing">
       <source xml:lang="en">Testing</source>
@@ -1006,6 +989,41 @@ Please make sure the markdown extension is enabled.</source>
       <source xml:lang="en">Run</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/testing/common/testingChatAgentTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="runTestTool.confirm.all">
+      <source xml:lang="en">The model wants to run all tests.</source>
+    </trans-unit>
+    <trans-unit id="runTestTool.confirm.invocation">
+      <source xml:lang="en">Running tests...</source>
+    </trans-unit>
+    <trans-unit id="runTestTool.confirm.message">
+      <source xml:lang="en">The model wants to run tests in {0}.</source>
+    </trans-unit>
+    <trans-unit id="runTestTool.confirm.title">
+      <source xml:lang="en">Allow test run?</source>
+    </trans-unit>
+    <trans-unit id="runTestTool.invoke.cancelled">
+      <source xml:lang="en">Test run was cancelled.</source>
+    </trans-unit>
+    <trans-unit id="runTestTool.invoke.filesProgress">
+      <source xml:lang="en">Discovering tests...</source>
+    </trans-unit>
+    <trans-unit id="runTestTool.invoke.filterProgress">
+      <source xml:lang="en">Filtering tests...</source>
+    </trans-unit>
+    <trans-unit id="runTestTool.invoke.progress">
+      <source xml:lang="en">Starting test run...</source>
+    </trans-unit>
+    <trans-unit id="runTestTool.noRunStarted">
+      <source xml:lang="en">No test run was started. This may be an issue with your test runner or extension.</source>
+    </trans-unit>
+    <trans-unit id="runTestTool.noTests">
+      <source xml:lang="en">No tests found in the files</source>
+    </trans-unit>
+    <trans-unit id="runTestTool.userDescription">
+      <source xml:lang="en">Runs unit tests</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/testing/common/testingContentProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="runNoOutout">
       <source xml:lang="en">The test run did not record any output.</source>
@@ -1101,6 +1119,23 @@ Please make sure the markdown extension is enabled.</source>
     </trans-unit>
     <trans-unit id="testing.testResultState">
       <source xml:lang="en">Value available testing/item/result indicating the state of the item.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/testing/common/testingProgressMessages" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="testProgress.completed">
+      <source xml:lang="en">{0}/{1} tests passed ({2}%)</source>
+    </trans-unit>
+    <trans-unit id="testProgress.running">
+      <source xml:lang="en">Running tests, {0}/{1} passed ({2}%)</source>
+    </trans-unit>
+    <trans-unit id="testProgress.runningInitial">
+      <source xml:lang="en">Running tests...</source>
+    </trans-unit>
+    <trans-unit id="testProgressWithSkip.completed">
+      <source xml:lang="en">{0}/{1} tests passed ({2}%, {3} skipped)</source>
+    </trans-unit>
+    <trans-unit id="testProgressWithSkip.running">
+      <source xml:lang="en">Running tests, {0}/{1} tests passed ({2}%, {3} skipped)</source>
     </trans-unit>
 </body></file>
 </xliff>
