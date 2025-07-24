@@ -88,6 +88,9 @@
     <trans-unit id="chatEditing.viewChanges">
       <source xml:lang="en">- View Changes{0}.</source>
     </trans-unit>
+    <trans-unit id="chatEditing.viewPreviousEdits">
+      <source xml:lang="en">- View Previous Edits{0}.</source>
+    </trans-unit>
     <trans-unit id="inlineChat.access">
       <source xml:lang="en">It can be activated via code actions or directly using the command: Inline Chat: Start Inline Chat{0}.</source>
     </trans-unit>
@@ -975,10 +978,10 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Chat</source>
     </trans-unit>
     <trans-unit id="multiCodeBlock">
-      <source xml:lang="en">{0} {1} code blocks</source>
+      <source xml:lang="en">{0}{1}{2} code blocks: {3} {4}</source>
     </trans-unit>
     <trans-unit id="multiCodeBlockHint">
-      <source xml:lang="en">{0}{1}{2} code blocks: {3}{4}</source>
+      <source xml:lang="en">{0}{1}{2}{3} code blocks: {4}{5} {6}</source>
     </trans-unit>
     <trans-unit id="multiFileTreeHint">
       <source xml:lang="en">{0} file trees </source>
@@ -987,16 +990,16 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">{0} tables </source>
     </trans-unit>
     <trans-unit id="noCodeBlocks">
-      <source xml:lang="en">{0} {1}</source>
+      <source xml:lang="en">{0}{1}{2} {3}</source>
     </trans-unit>
     <trans-unit id="noCodeBlocksHint">
-      <source xml:lang="en">{0}{1}{2}{3} {4}</source>
+      <source xml:lang="en">{0}{1}{2}{3}{4} {5}</source>
     </trans-unit>
     <trans-unit id="singleCodeBlock">
-      <source xml:lang="en">{0} 1 code block: {1}</source>
+      <source xml:lang="en">{0}{1}1 code block: {2} {3}</source>
     </trans-unit>
     <trans-unit id="singleCodeBlockHint">
-      <source xml:lang="en">{0}{1}1 code block: {2} {3}{4}</source>
+      <source xml:lang="en">{0}{1}{2}1 code block: {3} {4}{5}</source>
     </trans-unit>
     <trans-unit id="singleFileTreeHint">
       <source xml:lang="en">1 file tree </source>
@@ -1949,6 +1952,46 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="pastedImageName">
       <source xml:lang="en">Pasted Image</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSessions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.sessions">
+      <source xml:lang="en">Chat Sessions</source>
+    </trans-unit>
+    <trans-unit id="chat.sessions.chatView">
+      <source xml:lang="en">Chat</source>
+    </trans-unit>
+    <trans-unit id="chat.sessions.chatView.description">
+      <source xml:lang="en">Chat View</source>
+    </trans-unit>
+    <trans-unit id="chat.sessions.title">
+      <source xml:lang="en">Chat Sessions</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.treeAriaLabel">
+      <source xml:lang="en">Chat Sessions</source>
+    </trans-unit>
+    <trans-unit id="interactiveSession.open">
+      <source xml:lang="en">New Chat Editor</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSessions.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatSessionsExtPoint">
+      <source xml:lang="en">Contributes chat session integrations to the chat widget.</source>
+    </trans-unit>
+    <trans-unit id="chatSessionsExtPoint.description">
+      <source xml:lang="en">Description of the chat session for use in menus and tooltips.</source>
+    </trans-unit>
+    <trans-unit id="chatSessionsExtPoint.displayName">
+      <source xml:lang="en">A longer name for this item which is used for display in menus.</source>
+    </trans-unit>
+    <trans-unit id="chatSessionsExtPoint.id">
+      <source xml:lang="en">A unique identifier for this item.</source>
+    </trans-unit>
+    <trans-unit id="chatSessionsExtPoint.name">
+      <source xml:lang="en">Name shown in the chat widget. (eg: @agent)</source>
+    </trans-unit>
+    <trans-unit id="chatSessionsExtPoint.when">
+      <source xml:lang="en">Condition which must be true to show this item.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
