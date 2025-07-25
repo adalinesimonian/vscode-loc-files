@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/editTelemetry/browser/editStats/aiStatsStatusBar" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="aiStatsStatusBarHeader">
+      <source xml:lang="en">AI Usage Statistics</source>
+    </trans-unit>
     <trans-unit id="inlineSuggestions">
       <source xml:lang="en">Inline Suggestions</source>
     </trans-unit>
     <trans-unit id="inlineSuggestionsStatusBar">
       <source xml:lang="en">Inline suggestions status bar</source>
+    </trans-unit>
+    <trans-unit id="text1">
+      <source xml:lang="en">Manual vs. AI typing ratio: {0}</source>
+    </trans-unit>
+    <trans-unit id="text2">
+      <source xml:lang="en">Accepted inline suggestions today: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/editTelemetry/browser/editTelemetry.contribution" source-language="en" datatype="plaintext"><body>

@@ -1698,6 +1698,9 @@ Would you like to update the extension?</source>
     <trans-unit id="download.completed">
       <source xml:lang="en">Successfully downloaded the VSIX</source>
     </trans-unit>
+    <trans-unit id="download.failed">
+      <source xml:lang="en">Error while downloading the VSIX: {0}</source>
+    </trans-unit>
     <trans-unit id="downloading...">
       <source xml:lang="en">Downloading VSIX...</source>
     </trans-unit>
@@ -1984,6 +1987,9 @@ Would you like to update the extension?</source>
     <trans-unit id="debugExtensionHost.progress">
       <source xml:lang="en">Attaching Debugger To Extension Host</source>
     </trans-unit>
+    <trans-unit id="openDevToolsForExtensionHost">
+      <source xml:lang="en">Open Developer Tools for Extension Host</source>
+    </trans-unit>
     <trans-unit id="restart1">
       <source xml:lang="en">Debug Extensions</source>
     </trans-unit>
@@ -1993,6 +1999,9 @@ Would you like to update the extension?</source>
     <trans-unit id="restart3">
       <source xml:lang="en">&amp;&amp;Restart</source>
       <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="selectExtensionHost">
+      <source xml:lang="en">Pick extension host</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/extensions/electron-browser/extensionProfileService" source-language="en" datatype="plaintext"><body>

@@ -834,6 +834,26 @@
       <source xml:lang="en">MCP server must be launched with the "python" executable to enable debugging, but was launched with "{0}"</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/mcp/common/mcpLanguageModelToolContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.tool.warning">
+      <source xml:lang="en">Note that MCP servers or malicious conversation content may attempt to misuse '{0}' through tools.</source>
+    </trans-unit>
+    <trans-unit id="mcp.toolset">
+      <source xml:lang="en">{0}: All Tools</source>
+    </trans-unit>
+    <trans-unit id="msg.ran">
+      <source xml:lang="en">Ran {0} </source>
+    </trans-unit>
+    <trans-unit id="msg.run">
+      <source xml:lang="en">Running {0}</source>
+    </trans-unit>
+    <trans-unit id="msg.subtitle">
+      <source xml:lang="en">{0} (MCP Server)</source>
+    </trans-unit>
+    <trans-unit id="msg.title">
+      <source xml:lang="en">Run {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpRegistry" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcp.launchError">
       <source xml:lang="en">Error starting {0}: {1}</source>
@@ -842,18 +862,32 @@
       <source xml:lang="en">Open Configuration</source>
     </trans-unit>
     <trans-unit id="mcp.trust.details">
-      <source xml:lang="en">{0} discovered Model Context Protocol servers from {1} (`{2}`). {0} can use their capabilities in Chat.
+      <source xml:lang="en">The MCP server {0} was updated. MCP servers may add context to your chat session and lead to unexpected behavior. Do you want to trust and run this server?</source>
+    </trans-unit>
+    <trans-unit id="mcp.trust.detailsMulti">
+      <source xml:lang="en">Several updated MCP servers were discovered:
 
-Do you want to allow running MCP servers from {3}?</source>
+{0}
+
+ MCP servers may add context to your chat session and lead to unexpected behavior. Do you want to trust and run these server?</source>
     </trans-unit>
     <trans-unit id="mcp.trust.no">
       <source xml:lang="en">Do not trust</source>
     </trans-unit>
+    <trans-unit id="mcp.trust.pick">
+      <source xml:lang="en">Pick Trusted</source>
+    </trans-unit>
     <trans-unit id="mcp.trust.yes">
       <source xml:lang="en">Trust</source>
     </trans-unit>
+    <trans-unit id="trustFromExt">
+      <source xml:lang="en">from {0}</source>
+    </trans-unit>
     <trans-unit id="trustTitleWithOrigin">
-      <source xml:lang="en">Trust MCP servers from {0}?</source>
+      <source xml:lang="en">Trust and run MCP server {0}?</source>
+    </trans-unit>
+    <trans-unit id="trustTitleWithOriginMulti">
+      <source xml:lang="en">Trust and run {0} MCP servers?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpSamplingLog" source-language="en" datatype="plaintext"><body>
@@ -934,26 +968,6 @@ Do you want to allow running MCP servers from {3}?</source>
     </trans-unit>
     <trans-unit id="mcpServer.stopping">
       <source xml:lang="en">Stopping server {0}</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/mcp/common/mcpService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="mcp.tool.warning">
-      <source xml:lang="en">Note that MCP servers or malicious conversation content may attempt to misuse '{0}' through tools.</source>
-    </trans-unit>
-    <trans-unit id="mcp.toolset">
-      <source xml:lang="en">{0}: All Tools</source>
-    </trans-unit>
-    <trans-unit id="msg.ran">
-      <source xml:lang="en">Ran {0} </source>
-    </trans-unit>
-    <trans-unit id="msg.run">
-      <source xml:lang="en">Running {0}</source>
-    </trans-unit>
-    <trans-unit id="msg.subtitle">
-      <source xml:lang="en">{0} (MCP Server)</source>
-    </trans-unit>
-    <trans-unit id="msg.title">
-      <source xml:lang="en">Run {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpTypes" source-language="en" datatype="plaintext"><body>

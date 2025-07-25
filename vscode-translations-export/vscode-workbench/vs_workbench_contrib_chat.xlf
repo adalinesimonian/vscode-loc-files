@@ -666,6 +666,12 @@
     <trans-unit id="addExtension">
       <source xml:lang="en">Install Extension...</source>
     </trans-unit>
+    <trans-unit id="addExtensionButton">
+      <source xml:lang="en">Install Extension...</source>
+    </trans-unit>
+    <trans-unit id="addMcpServer">
+      <source xml:lang="en">Add MCP Server...</source>
+    </trans-unit>
     <trans-unit id="addServer">
       <source xml:lang="en">Add MCP Server...</source>
     </trans-unit>
@@ -674,6 +680,12 @@
     </trans-unit>
     <trans-unit id="configToolSet">
       <source xml:lang="en">Configure Tool Sets...</source>
+    </trans-unit>
+    <trans-unit id="configToolSets">
+      <source xml:lang="en">Configure Tool Sets...</source>
+    </trans-unit>
+    <trans-unit id="configureTools">
+      <source xml:lang="en">Configure Tools</source>
     </trans-unit>
     <trans-unit id="defaultBucketLabel">
       <source xml:lang="en">Built-In</source>
@@ -788,6 +800,9 @@
     <trans-unit id="chat.checkpoints.enabled">
       <source xml:lang="en">Enables checkpoints in chat. Checkpoints allow you to restore the chat to a previous state.</source>
     </trans-unit>
+    <trans-unit id="chat.checkpoints.showFileChanges">
+      <source xml:lang="en">Controls whether to show chat checkpoint file changes.</source>
+    </trans-unit>
     <trans-unit id="chat.commandCenter.enabled">
       <source xml:lang="en">Controls whether the command center shows a menu for actions to control Copilot (requires {0}).</source>
     </trans-unit>
@@ -855,6 +870,21 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.mathEnabled.description">
       <source xml:lang="en">Enable math rendering in chat responses using Katex.</source>
+    </trans-unit>
+    <trans-unit id="chat.mcp.assisted.nuget.enabled.description">
+      <source xml:lang="en">Enables NuGet packages for AI-assisted MCP server installation. Used to install MCP servers by name from the central registry for .NET packages (NuGet.org).</source>
+    </trans-unit>
+    <trans-unit id="chat.mcp.autostart">
+      <source xml:lang="en">Controls whether MCP servers should be automatically started when the chat messages are submitted.</source>
+    </trans-unit>
+    <trans-unit id="chat.mcp.autostart.never">
+      <source xml:lang="en">Never automatically start MCP servers.</source>
+    </trans-unit>
+    <trans-unit id="chat.mcp.autostart.newAndOutdated">
+      <source xml:lang="en">Automatically start new and outdated MCP servers that are not yet running.</source>
+    </trans-unit>
+    <trans-unit id="chat.mcp.autostart.onlyNew">
+      <source xml:lang="en">Only automatically start new MCP servers that have never been run.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.enabled">
       <source xml:lang="en">Enables integration with Model Context Protocol servers to provide additional tools and functionality.</source>
@@ -926,6 +956,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
 Allows _all_ tools to run automatically without user confirmation, overriding any tool-specific settings such as terminal auto-approval.
 
 Use with caution: carefully review selected tools and be extra wary of possible sources of prompt injection!</source>
+    </trans-unit>
+    <trans-unit id="chat.tools.useTreePicker">
+      <source xml:lang="en">Use the new tree-based tools picker interface instead of the flat list. Provides better hierarchical organization of tools and tool sets with collapsible sections, improved visual hierarchy, and native tree interactions. MCP servers are displayed as expandable parent nodes with their tools as children.</source>
     </trans-unit>
     <trans-unit id="chat.undoRequests.restoreInput">
       <source xml:lang="en">Controls whether the input of the chat should be restored when an undo request is made. The input will be filled with the text of the request that was restored.</source>
@@ -2834,6 +2867,9 @@ Type {3} to use commands</source>
     <trans-unit id="chat.slashCommandForeground">
       <source xml:lang="en">The foreground color of a chat slash command.</source>
     </trans-unit>
+    <trans-unit id="chatCheckpointSeparator">
+      <source xml:lang="en">Chat checkpoint separator color.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatContextKeys" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatCanRequestBePaused">
@@ -3467,9 +3503,6 @@ Example: **/*.ts, **/*.js, client/**</source>
       <source xml:lang="en">Binary files are not supported at the moment.</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.confirmationMessage.plural">
-      <source xml:lang="en">Web content may contain malicious code or attempt prompt injection attacks.</source>
-    </trans-unit>
-    <trans-unit id="fetchWebPage.confirmationMessage.singular">
       <source xml:lang="en">Web content may contain malicious code or attempt prompt injection attacks.</source>
     </trans-unit>
     <trans-unit id="fetchWebPage.confirmationTitle.plural">
