@@ -148,7 +148,7 @@
       <source xml:lang="en">Changing the chat mode will end your current edit session. Would you like to change the chat mode?</source>
     </trans-unit>
     <trans-unit id="ai actions">
-      <source xml:lang="en">AI Actions</source>
+      <source xml:lang="en">Generate Code</source>
     </trans-unit>
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
@@ -238,7 +238,7 @@
       <source xml:lang="en">New Chat Editor</source>
     </trans-unit>
     <trans-unit id="manageCopilot">
-      <source xml:lang="en">Manage Copilot</source>
+      <source xml:lang="en">Manage Chat</source>
     </trans-unit>
     <trans-unit id="more">
       <source xml:lang="en">More...</source>
@@ -277,10 +277,10 @@
       <source xml:lang="en">Copilot</source>
     </trans-unit>
     <trans-unit id="toggle.chatControl">
-      <source xml:lang="en">Copilot Controls</source>
+      <source xml:lang="en">Chat Controls</source>
     </trans-unit>
     <trans-unit id="toggle.chatControlsDescription">
-      <source xml:lang="en">Toggle visibility of the Copilot Controls in title bar</source>
+      <source xml:lang="en">Toggle visibility of the Chat Controls in title bar</source>
     </trans-unit>
     <trans-unit id="toggleChat">
       <source xml:lang="en">Toggle Chat</source>
@@ -497,6 +497,9 @@
     <trans-unit id="remoteAgentError">
       <source xml:lang="en">Coding agent session cancelled.</source>
     </trans-unit>
+    <trans-unit id="remoteAgentResponse">
+      <source xml:lang="en">Coding agent response: {0}</source>
+    </trans-unit>
     <trans-unit id="remoteJobCreating">
       <source xml:lang="en">Delegating to coding agent</source>
     </trans-unit>
@@ -505,6 +508,9 @@
     </trans-unit>
     <trans-unit id="requestNotPaused">
       <source xml:lang="en">Pause Request</source>
+    </trans-unit>
+    <trans-unit id="sendToRemoteAgent">
+      <source xml:lang="en">Send to coding agent</source>
     </trans-unit>
     <trans-unit id="setChatMode">
       <source xml:lang="en">Set Mode</source>
@@ -1210,6 +1216,17 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Edited {0}, {1}, {2}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatMultiDiffContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatMultiDiff.manyFiles">
+      <source xml:lang="en">Changed {0} files</source>
+    </trans-unit>
+    <trans-unit id="chatMultiDiff.oneFile">
+      <source xml:lang="en">Changed 1 file</source>
+    </trans-unit>
+    <trans-unit id="chatMultiDiffList">
+      <source xml:lang="en">File Changes</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatProgressContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="pausedMessage">
       <source xml:lang="en">Paused</source>
@@ -1219,6 +1236,11 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="workingMessage">
       <source xml:lang="en">Working...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatPullRequestContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatPullRequest.author">
+      <source xml:lang="en">by {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatQuotaExceededPart" source-language="en" datatype="plaintext"><body>
@@ -1253,6 +1275,11 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="usedReferencesSingular">
       <source xml:lang="en">Used {0} reference</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatStickyTaskWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.task.title">
+      <source xml:lang="en">Tasks</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTextEditContentPart" source-language="en" datatype="plaintext"><body>
@@ -1303,11 +1330,6 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="installExtensionsConfirmation">
       <source xml:lang="en">Click the Install button on the extension and then press Continue when finished.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatTaskListSubPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.task.title">
-      <source xml:lang="en">Tasks</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatTerminalToolSubPart" source-language="en" datatype="plaintext"><body>
@@ -1867,6 +1889,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chatOutputRenderer.mimeTypes">
       <source xml:lang="en">MIME types that this renderer can handle</source>
     </trans-unit>
+    <trans-unit id="chatOutputRenderer.viewType">
+      <source xml:lang="en">Unique identifier for the renderer.</source>
+    </trans-unit>
     <trans-unit id="vscode.extension.contributes.chatOutputRenderer">
       <source xml:lang="en">Contributes a renderer for specific MIME types in chat outputs</source>
     </trans-unit>
@@ -2059,16 +2084,16 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Sign in to use Copilot</source>
     </trans-unit>
     <trans-unit id="hideChatSetup">
-      <source xml:lang="en">Hide Copilot</source>
+      <source xml:lang="en">Hide Chat</source>
     </trans-unit>
     <trans-unit id="hideChatSetupButton">
-      <source xml:lang="en">Hide Copilot</source>
+      <source xml:lang="en">Hide Chat</source>
     </trans-unit>
     <trans-unit id="hideChatSetupConfirm">
-      <source xml:lang="en">Are you sure you want to hide Copilot?</source>
+      <source xml:lang="en">Are you sure you want to hide Chat?</source>
     </trans-unit>
     <trans-unit id="hideChatSetupDetail">
-      <source xml:lang="en">You can restore Copilot by running the '{0}' command.</source>
+      <source xml:lang="en">You can restore Chat by running the '{0}' command.</source>
     </trans-unit>
     <trans-unit id="installingCopilot">
       <source xml:lang="en">Getting Copilot ready</source>
@@ -2317,6 +2342,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="agentTitle">
       <source xml:lang="en">Build with agent mode.</source>
     </trans-unit>
+    <trans-unit id="chat.input.placeholder.lockedToAgent">
+      <source xml:lang="en">Chat with @{0}</source>
+    </trans-unit>
     <trans-unit id="chatDescription">
       <source xml:lang="en">Ask about your code.</source>
     </trans-unit>
@@ -2359,6 +2387,12 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatWidget.tips.withoutParticipants">
       <source xml:lang="en">{0} or type {1} to attach context</source>
+    </trans-unit>
+    <trans-unit id="codingAgentMessage">
+      <source xml:lang="en">This chat session will be forwarded to the {0} coding agent</source>
+    </trans-unit>
+    <trans-unit id="codingAgentTitle">
+      <source xml:lang="en">Chat with {0}</source>
     </trans-unit>
     <trans-unit id="editsHelp">
       <source xml:lang="en">Start your editing session by defining a set of files that you want to work with. Then ask Copilot for the changes you want to make.</source>
@@ -2453,11 +2487,8 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputEditorContrib" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="askPlaceholderHint">
-      <source xml:lang="en"># to add context, @ for extensions, / for commands</source>
-    </trans-unit>
-    <trans-unit id="editPlaceholderHint">
-      <source xml:lang="en"># to add context</source>
+    <trans-unit id="chatPlaceholderHint">
+      <source xml:lang="en">Add Context (#), Extensions (@), Commands (/)</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputEditorHover" source-language="en" datatype="plaintext"><body>
@@ -2980,6 +3011,9 @@ Type {3} to use commands</source>
     <trans-unit id="interactiveSessionResponseVote">
       <source xml:lang="en">When the response has been voted up, is set to 'up'. When voted down, is set to 'down'. Otherwise an empty string.</source>
     </trans-unit>
+    <trans-unit id="lockedToCodingAgent">
+      <source xml:lang="en">True when the chat widget is locked to the coding agent session.</source>
+    </trans-unit>
     <trans-unit id="toolsCount">
       <source xml:lang="en">The count of tools available in the chat.</source>
     </trans-unit>
@@ -3034,7 +3068,7 @@ Type {3} to use commands</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatModes" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentDescription">
-      <source xml:lang="en">Build autonomously.</source>
+      <source xml:lang="en">Provide instructions.</source>
     </trans-unit>
     <trans-unit id="chatDescription">
       <source xml:lang="en">Ask a question.</source>
