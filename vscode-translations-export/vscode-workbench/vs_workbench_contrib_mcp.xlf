@@ -41,6 +41,9 @@
     <trans-unit id="mcp.addServer.description">
       <source xml:lang="en">Add a new server configuration</source>
     </trans-unit>
+    <trans-unit id="mcp.autoStart">
+      <source xml:lang="en">Automatically start MCP servers when sending a chat message</source>
+    </trans-unit>
     <trans-unit id="mcp.browseResources">
       <source xml:lang="en">Browse Resources...</source>
     </trans-unit>
@@ -101,11 +104,27 @@
     <trans-unit id="mcp.editStoredInput">
       <source xml:lang="en">Edit Stored Input</source>
     </trans-unit>
+    <trans-unit id="mcp.err.md.multi">
+      <source xml:lang="en">Multiple MCP servers were unable to start successfully:
+
+{0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.err.md.single">
+      <source xml:lang="en">MCP server {0} was unable to start successfully.</source>
+    </trans-unit>
     <trans-unit id="mcp.list">
       <source xml:lang="en">List Servers</source>
     </trans-unit>
     <trans-unit id="mcp.newTools">
       <source xml:lang="en">New tools available ({0})</source>
+    </trans-unit>
+    <trans-unit id="mcp.newTools.md.multi">
+      <source xml:lang="en">MCP servers have been updated and may have new tools available:
+
+{0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.newTools.md.single">
+      <source xml:lang="en">MCP server {0} has been updated and may have new tools available.</source>
     </trans-unit>
     <trans-unit id="mcp.options">
       <source xml:lang="en">Server Options</source>

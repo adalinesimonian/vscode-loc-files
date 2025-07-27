@@ -871,9 +871,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.instructions.config.locations.title">
       <source xml:lang="en">Instructions File Locations</source>
     </trans-unit>
-    <trans-unit id="chat.manageTasksTool.enabled">
-      <source xml:lang="en">Enables manageTasksTool in chat. This tool allows you to use task lists in chat.</source>
-    </trans-unit>
     <trans-unit id="chat.mathEnabled.description">
       <source xml:lang="en">Enable math rendering in chat responses using Katex.</source>
     </trans-unit>
@@ -952,6 +949,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.signInDialogVariant">
       <source xml:lang="en">Control variations of the sign-in dialog.</source>
+    </trans-unit>
+    <trans-unit id="chat.todoListTool.enabled">
+      <source xml:lang="en">Enables todo lists in chat. This tool allows you to use todo lists in chat.</source>
     </trans-unit>
     <trans-unit id="chat.tools.autoApprove.description">
       <source xml:lang="en">Controls whether tool use should be automatically approved. Allow all tools to run automatically without user confirmation, overriding any tool-specific settings such as terminal auto-approval. Use with caution: carefully review selected tools and be extra wary of possible sources of prompt injection!</source>
@@ -1277,17 +1277,17 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Used {0} reference</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatStickyTaskWidget" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.task.title">
-      <source xml:lang="en">Tasks</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTextEditContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="edits0">
       <source xml:lang="en">Making changes was aborted.</source>
     </trans-unit>
     <trans-unit id="editsSummary">
       <source xml:lang="en">Made changes.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTodoListWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.todoList.title">
+      <source xml:lang="en">Tasks</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatToolInputOutputContentPart" source-language="en" datatype="plaintext"><body>
