@@ -405,7 +405,7 @@ Remarks:
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="autoApprove.description.commandLine">
-      <source xml:lang="en">An object can be used to match against the full command line instead of matching sub-commands and inline commands, for example {0}. This will be checked _after_ sub-commands are checked, taking precedence over even denied sub-commands.</source>
+      <source xml:lang="en">An object can be used to match against the full command line instead of matching sub-commands and inline commands, for example {0}. In order to be auto approved _both_ the sub-command and command line must not be explicitly denied, then _either_ all sub-commands or command line needs to be approved.</source>
     </trans-unit>
     <trans-unit id="autoApprove.description.examples.description">
       <source xml:lang="en">Description</source>
