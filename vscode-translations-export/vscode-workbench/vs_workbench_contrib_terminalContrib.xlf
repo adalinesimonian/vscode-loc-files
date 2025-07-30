@@ -404,6 +404,9 @@ Remarks:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="autoApprove.deprecated">
+      <source xml:lang="en">Use {0} instead</source>
+    </trans-unit>
     <trans-unit id="autoApprove.description.commandLine">
       <source xml:lang="en">An object can be used to match against the full command line instead of matching sub-commands and inline commands, for example {0}. In order to be auto approved _both_ the sub-command and command line must not be explicitly denied, then _either_ all sub-commands or command line needs to be approved.</source>
     </trans-unit>

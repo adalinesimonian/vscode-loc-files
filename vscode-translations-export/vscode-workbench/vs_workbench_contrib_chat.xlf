@@ -500,6 +500,9 @@
     <trans-unit id="remoteAgentResponse">
       <source xml:lang="en">Coding agent response: {0}</source>
     </trans-unit>
+    <trans-unit id="remoteAgentResponse2">
+      <source xml:lang="en">Your work will be continued in this pull request.</source>
+    </trans-unit>
     <trans-unit id="remoteJobCreating">
       <source xml:lang="en">Delegating to coding agent</source>
     </trans-unit>
@@ -661,6 +664,9 @@
     <trans-unit id="chat.tools.placeholder.session">
       <source xml:lang="en">Select tools for this chat session</source>
     </trans-unit>
+    <trans-unit id="chatTools.tooManyEnabled">
+      <source xml:lang="en">More than {0} tools are enabled, you may experience degraded tool calling.</source>
+    </trans-unit>
     <trans-unit id="label">
       <source xml:lang="en">Configure Tools...</source>
     </trans-unit>
@@ -710,6 +716,9 @@
     </trans-unit>
     <trans-unit id="noTools">
       <source xml:lang="en">Add tools to chat</source>
+    </trans-unit>
+    <trans-unit id="toolLimitExceeded">
+      <source xml:lang="en">{0} tools are enabled. You may experience degraded tool calling above {1} tools.</source>
     </trans-unit>
     <trans-unit id="userBucket">
       <source xml:lang="en">User Defined Tool Sets</source>
@@ -964,7 +973,7 @@ Allows _all_ tools to run automatically without user confirmation, overriding an
 Use with caution: carefully review selected tools and be extra wary of possible sources of prompt injection!</source>
     </trans-unit>
     <trans-unit id="chat.tools.useTreePicker">
-      <source xml:lang="en">Use the new tree-based tools picker interface instead of the flat list. Provides better hierarchical organization of tools and tool sets with collapsible sections, improved visual hierarchy, and native tree interactions. MCP servers are displayed as expandable parent nodes with their tools as children.</source>
+      <source xml:lang="en">Use the new Quick Tree-based tools picker instead of the Quick Pick-based one. Provides better hierarchical organization of tools and tool sets with collapsible sections, improved visual hierarchy, and native tree interactions.</source>
     </trans-unit>
     <trans-unit id="chat.undoRequests.restoreInput">
       <source xml:lang="en">Controls whether the input of the chat should be restored when an undo request is made. The input will be filled with the text of the request that was restored.</source>
@@ -2025,6 +2034,12 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chat.sessions.title">
       <source xml:lang="en">Chat Sessions</source>
     </trans-unit>
+    <trans-unit id="chatSessions.loading">
+      <source xml:lang="en">Loading chat sessions...</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.refreshing">
+      <source xml:lang="en">Refreshing chat sessions...</source>
+    </trans-unit>
     <trans-unit id="chatSessions.treeAriaLabel">
       <source xml:lang="en">Chat Sessions</source>
     </trans-unit>
@@ -2036,14 +2051,14 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chatSessionsExtPoint">
       <source xml:lang="en">Contributes chat session integrations to the chat widget.</source>
     </trans-unit>
+    <trans-unit id="chatSessionsExtPoint.chatSessionType">
+      <source xml:lang="en">Unique identifier for the type of chat session.</source>
+    </trans-unit>
     <trans-unit id="chatSessionsExtPoint.description">
       <source xml:lang="en">Description of the chat session for use in menus and tooltips.</source>
     </trans-unit>
     <trans-unit id="chatSessionsExtPoint.displayName">
       <source xml:lang="en">A longer name for this item which is used for display in menus.</source>
-    </trans-unit>
-    <trans-unit id="chatSessionsExtPoint.id">
-      <source xml:lang="en">A unique identifier for this item.</source>
     </trans-unit>
     <trans-unit id="chatSessionsExtPoint.name">
       <source xml:lang="en">Name shown in the chat widget. (eg: @agent)</source>
@@ -2488,7 +2503,7 @@ Type {3} to use commands</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputEditorContrib" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatPlaceholderHint">
-      <source xml:lang="en">Add Context (#), Extensions (@), Commands (/)</source>
+      <source xml:lang="en">Add context (#), extensions (@), commands (/)</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputEditorHover" source-language="en" datatype="plaintext"><body>
@@ -2974,6 +2989,12 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatSessionResponseDetectedAgentOrCommand">
       <source xml:lang="en">When the agent or command was automatically detected</source>
+    </trans-unit>
+    <trans-unit id="chatToolCount">
+      <source xml:lang="en">The number of tools available in the current chat mode.</source>
+    </trans-unit>
+    <trans-unit id="chatToolGroupingThreshold">
+      <source xml:lang="en">The number of tools at which we start doing virtual grouping.</source>
     </trans-unit>
     <trans-unit id="enableRemoteCodingAgentPromptFileOverlay">
       <source xml:lang="en">Whether the remote coding agent prompt file overlay feature is enabled</source>
