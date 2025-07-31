@@ -1661,8 +1661,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
 - 'wordWrapColumn' and 'bounded' refer to values the different setting can take and should not be localized.</note>
     </trans-unit>
     <trans-unit id="wrapOnEscapedLineFeeds">
-      <source xml:lang="en">Controls whether literal `\n` shall trigger a wordWrap.
-for example
+      <source xml:lang="en">Controls whether literal `\n` shall trigger a wordWrap when `#editor.wordWrap#` is enabled.
+
+For example:
 ```c
 char* str="hello\nworld"
 ```
