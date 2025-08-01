@@ -28,6 +28,9 @@
     <trans-unit id="++CODE++621321bc491d0f5f5702b38ee93f4b2f0b07bb9f72e3c1ad3ce06ce6b0f06219">
       <source xml:lang="en">A git repository was found in the parent folders of the workspace or the open file(s). Would you like to open the repository?</source>
     </trans-unit>
+    <trans-unit id="++CODE++6cc08db6a675c3cc802e29d811f01ea604d607d6e2a7d4d28d54534480fe0a69">
+      <source xml:lang="en">A worktree already exists at &quot;{0}&quot;.</source>
+    </trans-unit>
     <trans-unit id="++CODE++1da1a00fd75ac0a5f8e6d1c1649dec3b58f5c987faaffe73078f7296a636312f">
       <source xml:lang="en">Absolute paths not supported in &quot;git.scanRepositories&quot; setting.</source>
     </trans-unit>
@@ -100,11 +103,11 @@
     <trans-unit id="++CODE++fca24e51f77ed30ee8b875dba3000717e817f65dacb9130a9b1f1dffe8fdc679">
       <source xml:lang="en">Ask Me Later</source>
     </trans-unit>
-    <trans-unit id="++CODE++c21b891b8bc38d0c75e8ade10f20963c5f842037a15f4b0f1c08850368bf8ead">
-      <source xml:lang="en">Branch &apos;{0}&apos; is already checked out in the worktree at &apos;{1}&apos;.</source>
-    </trans-unit>
     <trans-unit id="++CODE++46d553cc97a3c34f098f8feeaa9258b97f79a5a830661f12acd913889a433742">
       <source xml:lang="en">Branch &quot;{0}&quot; already exists</source>
+    </trans-unit>
+    <trans-unit id="++CODE++3f668ddd919bec2736e38f30f6fff11a696f2a96f6d0a1cb20b1132cfd4c89e0">
+      <source xml:lang="en">Branch &quot;{0}&quot; is already checked out in the worktree at &quot;{1}&quot;.</source>
     </trans-unit>
     <trans-unit id="++CODE++06f6bb7108ffdb5caf844b4538b5ec8f44cc1b3bc6b577624d32fc57eff9fe3f">
       <source xml:lang="en">Branch name</source>
@@ -520,8 +523,11 @@
     <trans-unit id="++CODE++3f940108cb1ecd9c0090da0b51b45f9fe673f00b22c7ffe3d013319b97456674">
       <source xml:lang="en">Open Settings</source>
     </trans-unit>
-    <trans-unit id="++CODE++149caee7dafbd7ae4f773fa2308387e9d3b0fbbc60ab224b2c3efd8e7d71a4cc">
-      <source xml:lang="en">Open in Current Window</source>
+    <trans-unit id="++CODE++0ac6040cb1a239d2f028ff4590c8c61067a02f14fef52f212cfc534a30890cf1">
+      <source xml:lang="en">Open Worktree in Current Window</source>
+    </trans-unit>
+    <trans-unit id="++CODE++5dce5d076344a87abff64faa4c82a26ec21aaf2acbcc02ce21f1446bba057a0d">
+      <source xml:lang="en">Open Worktree in New Window</source>
     </trans-unit>
     <trans-unit id="++CODE++e8e0ccba8b0da9ab15259028d04ab1bb9e9ae240bae643e8e07c87dae591120b">
       <source xml:lang="en">Open in New Window</source>
