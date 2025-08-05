@@ -362,6 +362,10 @@
     <trans-unit id="launchProfile">
       <source xml:lang="en">Launch Profile...</source>
     </trans-unit>
+    <trans-unit id="miNewInNewWindow">
+      <source xml:lang="en">New Terminal &amp;&amp;Window</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
     <trans-unit id="miNewTerminal">
       <source xml:lang="en">&amp;&amp;New Terminal</source>
       <note>&amp;&amp; denotes a mnemonic</note>
@@ -378,8 +382,8 @@
       <source xml:lang="en">&amp;&amp;Split Terminal</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
-    <trans-unit id="splitTerminal">
-      <source xml:lang="en">Split Terminal</source>
+    <trans-unit id="split.profile">
+      <source xml:lang="en">Split Terminal with Profile</source>
     </trans-unit>
     <trans-unit id="workbench.action.tasks.configureTaskRunner">
       <source xml:lang="en">Configure Tasks...</source>
@@ -1329,6 +1333,9 @@ This setting applies only when terminals are created, so you will need to restar
     </trans-unit>
     <trans-unit id="moveToEditor">
       <source xml:lang="en">Move Terminal into Editor Area</source>
+    </trans-unit>
+    <trans-unit id="newInNewWindow">
+      <source xml:lang="en">New Terminal Window</source>
     </trans-unit>
     <trans-unit id="previousSessionCategory">
       <source xml:lang="en">previous session</source>

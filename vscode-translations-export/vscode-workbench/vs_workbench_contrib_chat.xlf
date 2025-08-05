@@ -512,6 +512,9 @@
     <trans-unit id="requestNotPaused">
       <source xml:lang="en">Pause Request</source>
     </trans-unit>
+    <trans-unit id="selectCodingAgent">
+      <source xml:lang="en">Select Coding Agent</source>
+    </trans-unit>
     <trans-unit id="sendToRemoteAgent">
       <source xml:lang="en">Send to coding agent</source>
     </trans-unit>
@@ -3095,8 +3098,14 @@ Type {3} to use commands</source>
     <trans-unit id="codeCitations">
       <source xml:lang="en">Similar code found with {0} license types</source>
     </trans-unit>
+    <trans-unit id="copyrightContentRetry">
+      <source xml:lang="en">Response cleared due to possible match to public code, retrying with modified prompt.</source>
+    </trans-unit>
     <trans-unit id="editsSummary">
       <source xml:lang="en">Made changes.</source>
+    </trans-unit>
+    <trans-unit id="filteredContentRetry">
+      <source xml:lang="en">Response cleared due to content safety filters, retrying with modified prompt.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatModes" source-language="en" datatype="plaintext"><body>
