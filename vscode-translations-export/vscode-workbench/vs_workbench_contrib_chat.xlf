@@ -815,6 +815,9 @@
     <trans-unit id="chat.agent.maxRequests">
       <source xml:lang="en">The maximum number of requests to allow Copilot to use per-turn in agent mode. When the limit is reached, Copilot will ask the user to confirm that it should continue.</source>
     </trans-unit>
+    <trans-unit id="chat.agent.showThinking">
+      <source xml:lang="en">Controls whether to show the thinking process of the model in chat responses.</source>
+    </trans-unit>
     <trans-unit id="chat.checkpoints.enabled">
       <source xml:lang="en">Enables checkpoints in chat. Checkpoints allow you to restore the chat to a previous state.</source>
     </trans-unit>
@@ -1299,7 +1302,10 @@ Use with caution: carefully review selected tools and be extra wary of possible 
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTodoListWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.todoList.title">
-      <source xml:lang="en">Tasks</source>
+      <source xml:lang="en">Todos</source>
+    </trans-unit>
+    <trans-unit id="chat.todoList.titleWithProgress">
+      <source xml:lang="en">Todos ({0}/{1})</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatToolInputOutputContentPart" source-language="en" datatype="plaintext"><body>
@@ -1486,7 +1492,7 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Restores workspace and chat to this point</source>
     </trans-unit>
     <trans-unit id="chat.restoreLastCheckpoint.label">
-      <source xml:lang="en">Restore to last checkpoint</source>
+      <source xml:lang="en">Restore to Last Checkpoint</source>
     </trans-unit>
     <trans-unit id="chat.undoEdits.label">
       <source xml:lang="en">Undo Requests</source>
@@ -3552,8 +3558,14 @@ Example: **/*.ts, **/*.js, client/**</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/electron-browser/chat.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="changeWorkspace.detail">
+      <source xml:lang="en">The chat request will stop if you change the workspace.</source>
+    </trans-unit>
     <trans-unit id="changeWorkspace.message">
       <source xml:lang="en">A chat request is in progress. Are you sure you want to change the workspace?</source>
+    </trans-unit>
+    <trans-unit id="closeTheWindow.detail">
+      <source xml:lang="en">The chat request will stop if you close the window.</source>
     </trans-unit>
     <trans-unit id="closeTheWindow.message">
       <source xml:lang="en">A chat request is in progress. Are you sure you want to close the window?</source>
@@ -3561,14 +3573,20 @@ Example: **/*.ts, **/*.js, client/**</source>
     <trans-unit id="copilotWorkspaceTrust">
       <source xml:lang="en">Copilot is currently only supported in trusted workspaces.</source>
     </trans-unit>
+    <trans-unit id="exit.detail">
+      <source xml:lang="en">The chat request will stop if you exit.</source>
+    </trans-unit>
     <trans-unit id="exit.message">
       <source xml:lang="en">A chat request is in progress. Are you sure you want to exit?</source>
     </trans-unit>
     <trans-unit id="quit.detail">
-      <source xml:lang="en">The chat request will be cancelled if you continue.</source>
+      <source xml:lang="en">The chat request will stop if you quit.</source>
     </trans-unit>
     <trans-unit id="quit.message">
       <source xml:lang="en">A chat request is in progress. Are you sure you want to quit?</source>
+    </trans-unit>
+    <trans-unit id="reloadTheWindow.detail">
+      <source xml:lang="en">The chat request will stop if you reload the window.</source>
     </trans-unit>
     <trans-unit id="reloadTheWindow.message">
       <source xml:lang="en">A chat request is in progress. Are you sure you want to reload the window?</source>

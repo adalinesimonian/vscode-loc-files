@@ -257,7 +257,15 @@ Remarks:
       <source xml:lang="en">Continue waiting for `{0}` to finish?</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/getTerminalOutputTool" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/terminal.chatAgentTools.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="toolset.runCommands">
+      <source xml:lang="en">Runs commands in the terminal</source>
+    </trans-unit>
+    <trans-unit id="toolset.runTasks">
+      <source xml:lang="en">Runs tasks and gets their output for your workspace</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/getTerminalOutputTool" source-language="en" datatype="plaintext"><body>
     <trans-unit id="bg.past">
       <source xml:lang="en">Checked background terminal output</source>
     </trans-unit>
@@ -268,7 +276,7 @@ Remarks:
       <source xml:lang="en">Get Terminal Output</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/runInTerminalTool" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalTool" source-language="en" datatype="plaintext"><body>
     <trans-unit id="runInTerminal.background">
       <source xml:lang="en">Run command in background terminal</source>
     </trans-unit>
@@ -285,12 +293,7 @@ Remarks:
       <source xml:lang="en">Tool for running commands in the terminal</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/task.chatAgentTools.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="toolset.runTasks">
-      <source xml:lang="en">Runs tasks and gets their output for your workspace</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/task/createAndRunTaskTool" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/task/createAndRunTaskTool" source-language="en" datatype="plaintext"><body>
     <trans-unit id="allowTaskCreationExecution">
       <source xml:lang="en">Allow task creation and execution?</source>
     </trans-unit>
@@ -337,7 +340,7 @@ Remarks:
       <source xml:lang="en">Task `{0}` already exists.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/task/getTaskOutputTool" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/task/getTaskOutputTool" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copilotChat.checkedTerminalOutput">
       <source xml:lang="en">Checked output for task `{0}`</source>
     </trans-unit>
@@ -357,7 +360,7 @@ Remarks:
       <source xml:lang="en">Get Task Output</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/task/runTaskTool" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/task/runTaskTool" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copilotChat.allowTaskRunMsg">
       <source xml:lang="en">Allow Copilot to run the task `{0}`?</source>
     </trans-unit>
@@ -399,11 +402,6 @@ Remarks:
     </trans-unit>
     <trans-unit id="runInTerminalTool.userDescription">
       <source xml:lang="en">Tool for running tasks in the workspace</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/terminal.chatAgentTools.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="toolset.runCommands">
-      <source xml:lang="en">Runs commands in the terminal</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext"><body>
