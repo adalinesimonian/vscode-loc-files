@@ -224,6 +224,9 @@
     <trans-unit id="mcp.docker.title">
       <source xml:lang="en">Enter Docker Image Name</source>
     </trans-unit>
+    <trans-unit id="mcp.error.openHelpUri">
+      <source xml:lang="en">Open help URL</source>
+    </trans-unit>
     <trans-unit id="mcp.error.retry">
       <source xml:lang="en">Try a different package</source>
     </trans-unit>
@@ -301,6 +304,9 @@
     </trans-unit>
     <trans-unit id="mcp.servers.browse">
       <source xml:lang="en">Browse MCP Servers...</source>
+    </trans-unit>
+    <trans-unit id="mcp.servers.discovery">
+      <source xml:lang="en">Add from another application...</source>
     </trans-unit>
     <trans-unit id="mcp.target..remote.description">
       <source xml:lang="en">Available on this remote machine, runs on {0}</source>
@@ -809,14 +815,26 @@
     <trans-unit id="mcp.discovery.source.claude-desktop">
       <source xml:lang="en">Claude Desktop</source>
     </trans-unit>
+    <trans-unit id="mcp.discovery.source.claude-desktop.config">
+      <source xml:lang="en">Claude Desktop configuration (`claude_desktop_config.json`)</source>
+    </trans-unit>
     <trans-unit id="mcp.discovery.source.cursor-global">
       <source xml:lang="en">Cursor (Global)</source>
+    </trans-unit>
+    <trans-unit id="mcp.discovery.source.cursor-global.config">
+      <source xml:lang="en">Cursor global configuration (`~/.cursor/mcp.json`)</source>
     </trans-unit>
     <trans-unit id="mcp.discovery.source.cursor-workspace">
       <source xml:lang="en">Cursor (Workspace)</source>
     </trans-unit>
+    <trans-unit id="mcp.discovery.source.cursor-workspace.config">
+      <source xml:lang="en">Cursor workspace configuration (`.cursor/mcp.json`)</source>
+    </trans-unit>
     <trans-unit id="mcp.discovery.source.windsurf">
       <source xml:lang="en">Windsurf</source>
+    </trans-unit>
+    <trans-unit id="mcp.discovery.source.windsurf.config">
+      <source xml:lang="en">Windsurf configurations (`~/.codeium/windsurf/mcp_config.json`)</source>
     </trans-unit>
     <trans-unit id="mcpServerDefinitionProviders">
       <source xml:lang="en">MCP Servers</source>

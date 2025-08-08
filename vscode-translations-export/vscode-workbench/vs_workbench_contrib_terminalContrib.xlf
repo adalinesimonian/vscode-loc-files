@@ -277,6 +277,42 @@ Remarks:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="autoApprove.baseCommand">
+      <source xml:lang="en">Always allow commands: {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.baseCommandSingle">
+      <source xml:lang="en">Always Allow Command: {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.baseCommandSingleTooltip">
+      <source xml:lang="en">Always allow command starting with `{0}` to run without confirmation</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.baseCommandTooltip">
+      <source xml:lang="en">Always allow commands starting with `{0}` to run without confirmation</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.configure">
+      <source xml:lang="en">Configure Auto Approve...</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.configureTooltip">
+      <source xml:lang="en">Open settings to configure terminal command auto approval</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.exactCommand">
+      <source xml:lang="en">Always Allow Full Command Line: {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.exactCommandTooltip">
+      <source xml:lang="en">Always allow this exact command to run without confirmation</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.rule">
+      <source xml:lang="en">Auto approved by rule {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.rules">
+      <source xml:lang="en">Auto approved by rules {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApproveDenied.rule">
+      <source xml:lang="en">Auto approval denied by rule {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApproveDenied.rules">
+      <source xml:lang="en">Auto approval denied by rules {0}</source>
+    </trans-unit>
     <trans-unit id="runInTerminal.background">
       <source xml:lang="en">Run command in background terminal</source>
     </trans-unit>

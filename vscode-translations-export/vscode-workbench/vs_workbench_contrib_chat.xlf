@@ -675,26 +675,14 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatToolPicker" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="addAny">
-      <source xml:lang="en">Add More Tools...</source>
-    </trans-unit>
-    <trans-unit id="addExtension">
-      <source xml:lang="en">Install Extension...</source>
-    </trans-unit>
     <trans-unit id="addExtensionButton">
       <source xml:lang="en">Install Extension...</source>
     </trans-unit>
     <trans-unit id="addMcpServer">
       <source xml:lang="en">Add MCP Server...</source>
     </trans-unit>
-    <trans-unit id="addServer">
-      <source xml:lang="en">Add MCP Server...</source>
-    </trans-unit>
     <trans-unit id="configMcpCol">
       <source xml:lang="en">Configure {0}</source>
-    </trans-unit>
-    <trans-unit id="configToolSet">
-      <source xml:lang="en">Configure Tool Sets...</source>
     </trans-unit>
     <trans-unit id="configToolSets">
       <source xml:lang="en">Configure Tool Sets...</source>
@@ -978,9 +966,6 @@ Allows _all_ tools to run automatically without user confirmation, overriding an
 
 Use with caution: carefully review selected tools and be extra wary of possible sources of prompt injection!</source>
     </trans-unit>
-    <trans-unit id="chat.tools.useTreePicker">
-      <source xml:lang="en">Use the new Quick Tree-based tools picker instead of the Quick Pick-based one. Provides better hierarchical organization of tools and tool sets with collapsible sections, improved visual hierarchy, and native tree interactions.</source>
-    </trans-unit>
     <trans-unit id="chat.undoRequests.restoreInput">
       <source xml:lang="en">Controls whether the input of the chat should be restored when an undo request is made. The input will be filled with the text of the request that was restored.</source>
     </trans-unit>
@@ -1012,10 +997,7 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Chat</source>
     </trans-unit>
     <trans-unit id="mcp.discovery.enabled">
-      <source xml:lang="en">Configures discovery of Model Context Protocol servers on the machine. It may be set to `true` or `false` to disable or enable all sources, and an mapping sources you wish to enable.</source>
-    </trans-unit>
-    <trans-unit id="mcp.discovery.source">
-      <source xml:lang="en">Enables discovery of {0} servers</source>
+      <source xml:lang="en">Configures discovery of Model Context Protocol servers from configuration from various other applications.</source>
     </trans-unit>
     <trans-unit id="mcp.gallery.serviceUrl">
       <source xml:lang="en">Configure the MCP Gallery service URL to connect to</source>
@@ -1301,6 +1283,12 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTodoListWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.todoList.clearButton">
+      <source xml:lang="en">Clear all todos</source>
+    </trans-unit>
+    <trans-unit id="chat.todoList.clearButton.ariaLabel">
+      <source xml:lang="en">Clear all todos</source>
+    </trans-unit>
     <trans-unit id="chat.todoList.title">
       <source xml:lang="en">Todos</source>
     </trans-unit>
