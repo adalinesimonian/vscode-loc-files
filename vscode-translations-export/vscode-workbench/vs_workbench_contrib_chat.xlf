@@ -975,9 +975,6 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="clear">
       <source xml:lang="en">Start a new chat</source>
     </trans-unit>
-    <trans-unit id="file">
-      <source xml:lang="en">Choose a file in the workspace</source>
-    </trans-unit>
     <trans-unit id="interactiveSession.editor.fontFamily">
       <source xml:lang="en">Controls the font family in chat codeblocks.</source>
     </trans-unit>
@@ -1344,6 +1341,12 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="continue">
       <source xml:lang="en">Continue</source>
+    </trans-unit>
+    <trans-unit id="newRule">
+      <source xml:lang="en">Auto approve rule {0} added</source>
+    </trans-unit>
+    <trans-unit id="newRule.plural">
+      <source xml:lang="en">Auto approve rules {0} added</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolConfirmationSubPart" source-language="en" datatype="plaintext"><body>
@@ -2132,10 +2135,12 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">You need to set up Copilot and be signed in to use Chat.</source>
     </trans-unit>
     <trans-unit id="settings">
-      <source xml:lang="en">{0} Copilot Free, Pro and Pro+ may show [public code]({1}) suggestions and we may use your data for product improvement. You can change these [settings]({2}) at any time.</source>
+      <source xml:lang="en">By continuing, you agree to {0}'s [Terms]({1}) and [Privacy Statement]({2}). {3} Copilot may show [public code]({4}) suggestions and use your data to improve the product. You can change these [settings]({5}) anytime.</source>
       <note>{Locked="["}
-{Locked="]({0})"}
-{Locked="]({1})"}</note>
+{Locked="]({1})"}
+{Locked="]({2})"}
+{Locked="]({4})"}
+{Locked="]({5})"}</note>
     </trans-unit>
     <trans-unit id="setupChatProgress">
       <source xml:lang="en">Getting Copilot ready...</source>
@@ -2159,13 +2164,13 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Scaffold a new workspace in VS Code</source>
     </trans-unit>
     <trans-unit id="signIn">
-      <source xml:lang="en">Sign in to use Copilot</source>
+      <source xml:lang="en">Sign in to use {0} Copilot</source>
     </trans-unit>
     <trans-unit id="skipForNow">
       <source xml:lang="en">Skip for now</source>
     </trans-unit>
     <trans-unit id="startUsing">
-      <source xml:lang="en">Start using Copilot</source>
+      <source xml:lang="en">Start using {0} Copilot</source>
     </trans-unit>
     <trans-unit id="triggerChatSetup">
       <source xml:lang="en">Use AI Features with Copilot for free...</source>
@@ -3551,6 +3556,9 @@ Example: **/*.ts, **/*.js, client/**</source>
     </trans-unit>
     <trans-unit id="changeWorkspace.message">
       <source xml:lang="en">A chat request is in progress. Are you sure you want to change the workspace?</source>
+    </trans-unit>
+    <trans-unit id="chatRequestInProgress">
+      <source xml:lang="en">A chat request is in progress.</source>
     </trans-unit>
     <trans-unit id="closeTheWindow.detail">
       <source xml:lang="en">The chat request will stop if you close the window.</source>

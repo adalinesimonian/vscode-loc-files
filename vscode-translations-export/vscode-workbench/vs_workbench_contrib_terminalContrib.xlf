@@ -278,7 +278,7 @@ Remarks:
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalTool" source-language="en" datatype="plaintext"><body>
     <trans-unit id="autoApprove.baseCommand">
-      <source xml:lang="en">Always allow commands: {0}</source>
+      <source xml:lang="en">Always Allow Commands: {0}</source>
     </trans-unit>
     <trans-unit id="autoApprove.baseCommandSingle">
       <source xml:lang="en">Always Allow Command: {0}</source>
@@ -446,6 +446,9 @@ Remarks:
     </trans-unit>
     <trans-unit id="autoApprove.description.commandLine">
       <source xml:lang="en">An object can be used to match against the full command line instead of matching sub-commands and inline commands, for example {0}. In order to be auto approved _both_ the sub-command and command line must not be explicitly denied, then _either_ all sub-commands or command line needs to be approved.</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.description.examples.binTest">
+      <source xml:lang="en">Allow all commands that match the path {0} ({1}, {2}, etc.)</source>
     </trans-unit>
     <trans-unit id="autoApprove.description.examples.description">
       <source xml:lang="en">Description</source>
@@ -1112,6 +1115,9 @@ If shell integration is installed manually, {3} needs to be set to {4} before ca
     </trans-unit>
     <trans-unit id="suggest.provider.description">
       <source xml:lang="en">Whether to enable this provider.</source>
+    </trans-unit>
+    <trans-unit id="suggest.provider.lsp.description">
+      <source xml:lang="en">Enable or disable the LSP-based provider. This enables language server protocol-specific argument completion.</source>
     </trans-unit>
     <trans-unit id="suggest.provider.pwsh.deprecation">
       <source xml:lang="en">This is deprecated as it has performance problems, the upcoming LSP provider will supersede this.</source>

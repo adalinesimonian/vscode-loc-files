@@ -4440,6 +4440,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="tips.enabled">
       <source xml:lang="en">When enabled, will show the watermark tips when no editor is open.</source>
     </trans-unit>
+    <trans-unit id="titleScrollbarVisibility">
+      <source xml:lang="en">Controls the visibility of the scrollbars used for tabs and breadcrumbs in the editor title area.</source>
+    </trans-unit>
     <trans-unit id="untitledLabelFormat">
       <source xml:lang="en">Controls the format of the label for an untitled editor.</source>
     </trans-unit>
@@ -4711,6 +4714,15 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="workbench.editor.titleScrollbarSizing.large">
       <source xml:lang="en">Increases the size, so it can be grabbed more easily with the mouse.</source>
+    </trans-unit>
+    <trans-unit id="workbench.editor.titleScrollbarVisibility.auto">
+      <source xml:lang="en">The horizontal scrollbar will be visible only when necessary.</source>
+    </trans-unit>
+    <trans-unit id="workbench.editor.titleScrollbarVisibility.hidden">
+      <source xml:lang="en">The horizontal scrollbar will always be hidden.</source>
+    </trans-unit>
+    <trans-unit id="workbench.editor.titleScrollbarVisibility.visible">
+      <source xml:lang="en">The horizontal scrollbar will always be visible.</source>
     </trans-unit>
     <trans-unit id="workbench.editor.untitled.labelFormat.content">
       <source xml:lang="en">The name of the untitled file is derived from the contents of its first line unless it has an associated file path. It will fallback to the name in case the line is empty or contains no word characters.</source>
