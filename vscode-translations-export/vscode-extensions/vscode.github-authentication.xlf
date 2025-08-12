@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="extensions/vscode.github-authentication/bundle" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="++CODE++120ec0ffa190a8e7759483f35d54a335e265693733bd681f5edf54448861ffcf">
+      <source xml:lang="en">A reload is required for the fetch setting change to take effect.</source>
+    </trans-unit>
     <trans-unit id="++CODE++f223faa96f22916294922b171a2696d868fd1f9129302eb41a45b2a2ea2ebbfd">
       <source xml:lang="en">Apple</source>
     </trans-unit>
@@ -15,6 +18,9 @@
     </trans-unit>
     <trans-unit id="++CODE++f911e414cf6bdfc595532ab166b5ba0f63d73c021452fcdacbda363dda6ad8fb">
       <source xml:lang="en">GitHub</source>
+    </trans-unit>
+    <trans-unit id="++CODE++87fb8c7a5a4e4a2001d3556350d50560cd5f0d6423f0c780e0b447f0aefb0583">
+      <source xml:lang="en">GitHub Authentication - Reload required</source>
     </trans-unit>
     <trans-unit id="++CODE++ec19f01de52b36689edfccd0fc86e8521bab59d83a3d611b35882f044d54d833">
       <source xml:lang="en">GitHub Enterprise Server URI is not a valid URI: {0}</source>
@@ -32,6 +38,9 @@
       <source xml:lang="en">Open [{0}]({0}) in a new tab and paste your one-time code: {1}</source>
       <note>The [{0}]({0}) will be a url and the {1} will be a code, e.g. 123-456
 {Locked=&quot;[{0}]({0})&quot;}</note>
+    </trans-unit>
+    <trans-unit id="++CODE++423e44de44431caef68c0c61968777e088fd50d2577feea60b9ba4a14b28a827">
+      <source xml:lang="en">Reload Window</source>
     </trans-unit>
     <trans-unit id="++CODE++c7bd7105f7c2bf98654930d6271e164cb935b377cf2d167bdb4fe8fff95d9336">
       <source xml:lang="en">Sign in failed: {0}</source>
@@ -84,6 +93,9 @@
     </trans-unit>
     <trans-unit id="config.github-enterprise.uri.description">
       <source xml:lang="en">The URI for your GHE.com or GitHub Enterprise Server instance.&#10;&#10;Examples:&#10;* GHE.com: `https://octocat.ghe.com`&#10;* GitHub Enterprise Server: `https://github.octocat.com`&#10;&#10;&gt; **Note:** This should _not_ be set to a GitHub.com URI. If your account exists on GitHub.com or is a GitHub Enterprise Managed User, you do not need any additional configuration and can simply log in to GitHub.</source>
+    </trans-unit>
+    <trans-unit id="config.github-authentication.useElectronFetch.description">
+      <source xml:lang="en">When true, uses Electron&apos;s built-in fetch function for HTTP requests. When false, uses the Node.js global fetch function. This setting only applies when running in the Electron environment. **Note:** A restart is required for this setting to take effect.</source>
     </trans-unit>
   </body></file>
 </xliff>

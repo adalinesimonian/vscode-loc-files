@@ -258,11 +258,28 @@ Remarks:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/terminal.chatAgentTools.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="addTerminalSelection">
+      <source xml:lang="en">Add Terminal Selection to Chat</source>
+    </trans-unit>
+    <trans-unit id="terminalSelection">
+      <source xml:lang="en">Terminal Selection</source>
+    </trans-unit>
     <trans-unit id="toolset.runCommands">
       <source xml:lang="en">Runs commands in the terminal</source>
     </trans-unit>
     <trans-unit id="toolset.runTasks">
       <source xml:lang="en">Runs tasks and gets their output for your workspace</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/getTerminalLastCommandTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="getTerminalLastCommand.past">
+      <source xml:lang="en">Got last terminal command</source>
+    </trans-unit>
+    <trans-unit id="getTerminalLastCommand.progressive">
+      <source xml:lang="en">Getting last terminal command</source>
+    </trans-unit>
+    <trans-unit id="terminalLastCommandTool.displayName">
+      <source xml:lang="en">Get Terminal Last Command</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/getTerminalOutputTool" source-language="en" datatype="plaintext"><body>
@@ -274,6 +291,17 @@ Remarks:
     </trans-unit>
     <trans-unit id="getTerminalOutputTool.displayName">
       <source xml:lang="en">Get Terminal Output</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/getTerminalSelectionTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="getTerminalSelection.past">
+      <source xml:lang="en">Read terminal selection</source>
+    </trans-unit>
+    <trans-unit id="getTerminalSelection.progressive">
+      <source xml:lang="en">Reading terminal selection</source>
+    </trans-unit>
+    <trans-unit id="terminalSelectionTool.displayName">
+      <source xml:lang="en">Get Terminal Selection</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalTool" source-language="en" datatype="plaintext"><body>

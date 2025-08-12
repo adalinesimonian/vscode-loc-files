@@ -5762,6 +5762,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="argv.proxyBypassList">
       <source xml:lang="en">Bypass any specified proxy for the given semi-colon-separated list of hosts. Example value "&lt;local&gt;;*.microsoft.com;*foo.com;1.2.3.4:5678", will use the proxy server for all hosts except for local addresses (localhost, 127.0.0.1 etc.), microsoft.com subdomains, hosts that contain the suffix foo.com and anything at 1.2.3.4:5678</source>
     </trans-unit>
+    <trans-unit id="argv.remoteDebuggingPort">
+      <source xml:lang="en">Specifies the port to use for remote debugging.</source>
+    </trans-unit>
     <trans-unit id="argv.useInMemorySecretStorage">
       <source xml:lang="en">Ensures that an in-memory store will be used for secret storage instead of using the OS's credential store. This is often used when running VS Code extension tests or when you're experiencing difficulties with the credential store.</source>
     </trans-unit>
