@@ -171,6 +171,9 @@
     <trans-unit id="chat.history.showMoreAgents">
       <source xml:lang="en">Show more...</source>
     </trans-unit>
+    <trans-unit id="chat.openNewChatToTheSide.label">
+      <source xml:lang="en">Open New Chat to the Side</source>
+    </trans-unit>
     <trans-unit id="chat.toggleDefaultVisibility.label">
       <source xml:lang="en">Show View by Default</source>
     </trans-unit>
@@ -182,6 +185,12 @@
     </trans-unit>
     <trans-unit id="chatQuotaExceededButton">
       <source xml:lang="en">Copilot Free plan chat messages quota reached. Click for details.</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.newChatInWidget">
+      <source xml:lang="en">Open New Chat in Widget</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.openNewChatInNewWindow">
+      <source xml:lang="en">Open New Chat in New Window</source>
     </trans-unit>
     <trans-unit id="chatWith">
       <source xml:lang="en">Chat with Extension</source>
@@ -423,7 +432,7 @@
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatExecuteActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="actions.chat.createRemoteJob">
-      <source xml:lang="en">Delegate to coding agent</source>
+      <source xml:lang="en">Delegate to Coding Agent</source>
     </trans-unit>
     <trans-unit id="actions.chat.submitWithCodebase">
       <source xml:lang="en">Send with {0}</source>
@@ -504,7 +513,7 @@
       <source xml:lang="en">Your work will be continued in this pull request.</source>
     </trans-unit>
     <trans-unit id="remoteJobCreating">
-      <source xml:lang="en">Delegating to coding agent</source>
+      <source xml:lang="en">Delegating to Coding Agent</source>
     </trans-unit>
     <trans-unit id="requestIsPaused">
       <source xml:lang="en">Resume Request</source>
@@ -1335,7 +1344,7 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Click the Install button on the extension and then press Continue when finished.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatTerminalToolSubPart" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatTerminalToolConfirmationSubPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cancel">
       <source xml:lang="en">Cancel</source>
     </trans-unit>
@@ -1347,6 +1356,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="newRule.plural">
       <source xml:lang="en">Auto approve rules {0} added</source>
+    </trans-unit>
+    <trans-unit id="ruleTooltip">
+      <source xml:lang="en">View rule in settings</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolConfirmationSubPart" source-language="en" datatype="plaintext"><body>
@@ -1819,6 +1831,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chatEditingSession.oneFile.1">
       <source xml:lang="en">1 file changed</source>
     </trans-unit>
+    <trans-unit id="chatEditingSession.toggleWorkingSet">
+      <source xml:lang="en">Toggle changed files.</source>
+    </trans-unit>
     <trans-unit id="chatInput.accessibilityHelp">
       <source xml:lang="en">Chat Input {0}.</source>
     </trans-unit>
@@ -2034,11 +2049,17 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chat.sessions.title">
       <source xml:lang="en">Chat Sessions</source>
     </trans-unit>
+    <trans-unit id="chatSessions.dragLabel">
+      <source xml:lang="en">{0} chat sessions</source>
+    </trans-unit>
     <trans-unit id="chatSessions.loading">
       <source xml:lang="en">Loading chat sessions...</source>
     </trans-unit>
-    <trans-unit id="chatSessions.noResults">
-      <source xml:lang="en">No sessions found from {0}</source>
+    <trans-unit id="chatSessions.noAgentSessions">
+      <source xml:lang="en">No agent sessions found</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.noChatSessions">
+      <source xml:lang="en">No chat sessions</source>
     </trans-unit>
     <trans-unit id="chatSessions.refreshing">
       <source xml:lang="en">Refreshing chat sessions...</source>
@@ -3000,6 +3021,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatSessionResponseDetectedAgentOrCommand">
       <source xml:lang="en">When the agent or command was automatically detected</source>
+    </trans-unit>
+    <trans-unit id="chatSessionType">
+      <source xml:lang="en">The type of the current chat session item.</source>
     </trans-unit>
     <trans-unit id="chatSkipRequestInProgressMessage">
       <source xml:lang="en">True when the chat request in progress message should be skipped.</source>

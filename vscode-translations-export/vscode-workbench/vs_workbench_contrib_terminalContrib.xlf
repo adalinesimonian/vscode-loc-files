@@ -248,13 +248,13 @@ Remarks:
       <source xml:lang="en">Yes</source>
     </trans-unit>
     <trans-unit id="poll.terminal.polling">
-      <source xml:lang="en">Copilot will continue to poll for output to determine when the terminal becomes idle for up to 2 minutes.</source>
+      <source xml:lang="en">This will continue to poll for output to determine when the terminal becomes idle for up to 2 minutes.</source>
     </trans-unit>
     <trans-unit id="poll.terminal.reject">
       <source xml:lang="en">No</source>
     </trans-unit>
     <trans-unit id="poll.terminal.waiting">
-      <source xml:lang="en">Continue waiting for `{0}` to finish?</source>
+      <source xml:lang="en">Continue waiting?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/terminal.chatAgentTools.contribution" source-language="en" datatype="plaintext"><body>
@@ -324,10 +324,10 @@ Remarks:
       <source xml:lang="en">Open settings to configure terminal command auto approval</source>
     </trans-unit>
     <trans-unit id="autoApprove.exactCommand">
-      <source xml:lang="en">Always Allow Full Command Line: {0}</source>
+      <source xml:lang="en">Always Allow Exact Command Line: {0}</source>
     </trans-unit>
     <trans-unit id="autoApprove.exactCommandTooltip">
-      <source xml:lang="en">Always allow this exact command to run without confirmation</source>
+      <source xml:lang="en">Always allow this exact command line to run without confirmation</source>
     </trans-unit>
     <trans-unit id="autoApprove.rule">
       <source xml:lang="en">Auto approved by rule {0}</source>
@@ -344,11 +344,11 @@ Remarks:
     <trans-unit id="ruleTooltip">
       <source xml:lang="en">View rule in settings</source>
     </trans-unit>
-    <trans-unit id="runInTerminal.background">
-      <source xml:lang="en">Run command in background terminal</source>
+    <trans-unit id="runInTerminal">
+      <source xml:lang="en">Run `{0}` command?</source>
     </trans-unit>
-    <trans-unit id="runInTerminal.foreground">
-      <source xml:lang="en">Run command in terminal</source>
+    <trans-unit id="runInTerminal.background">
+      <source xml:lang="en">Run `{0}` command? (background terminal)</source>
     </trans-unit>
     <trans-unit id="runInTerminal.promptInjectionDisclaimer">
       <source xml:lang="en">Web content may contain malicious code or attempt prompt injection attacks.</source>
@@ -469,6 +469,15 @@ Remarks:
     </trans-unit>
     <trans-unit id="runInTerminalTool.userDescription">
       <source xml:lang="en">Tool for running tasks in the workspace</source>
+    </trans-unit>
+    <trans-unit id="taskFailed">
+      <source xml:lang="en">Task `{0}` failed with exit code {1}.</source>
+    </trans-unit>
+    <trans-unit id="taskFinished">
+      <source xml:lang="en">Task `{0}` finished</source>
+    </trans-unit>
+    <trans-unit id="taskStartedBackground">
+      <source xml:lang="en">Task `{0}` started and will continue to run in the background.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext"><body>
