@@ -254,7 +254,7 @@ Remarks:
       <source xml:lang="en">No</source>
     </trans-unit>
     <trans-unit id="poll.terminal.waiting">
-      <source xml:lang="en">Continue waiting?</source>
+      <source xml:lang="en">Continue waiting for `{0}`?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/terminal.chatAgentTools.contribution" source-language="en" datatype="plaintext"><body>
@@ -329,6 +329,9 @@ Remarks:
     <trans-unit id="autoApprove.exactCommandTooltip">
       <source xml:lang="en">Always allow this exact command line to run without confirmation</source>
     </trans-unit>
+    <trans-unit id="autoApprove.global">
+      <source xml:lang="en">Auto approved by setting {0}</source>
+    </trans-unit>
     <trans-unit id="autoApprove.rule">
       <source xml:lang="en">Auto approved by rule {0}</source>
     </trans-unit>
@@ -343,6 +346,9 @@ Remarks:
     </trans-unit>
     <trans-unit id="ruleTooltip">
       <source xml:lang="en">View rule in settings</source>
+    </trans-unit>
+    <trans-unit id="ruleTooltip.global">
+      <source xml:lang="en">View settings</source>
     </trans-unit>
     <trans-unit id="runInTerminal">
       <source xml:lang="en">Run `{0}` command?</source>
@@ -367,9 +373,6 @@ Remarks:
     <trans-unit id="alreadyRunning">
       <source xml:lang="en">Task `{0}` is already running.</source>
     </trans-unit>
-    <trans-unit id="copilotChat.checkingOutput">
-      <source xml:lang="en">Checking output for `{0}`</source>
-    </trans-unit>
     <trans-unit id="copilotChat.fetchingTask">
       <source xml:lang="en">Resolving the task</source>
     </trans-unit>
@@ -378,6 +381,9 @@ Remarks:
     </trans-unit>
     <trans-unit id="copilotChat.runningTask">
       <source xml:lang="en">Running task `{0}`</source>
+    </trans-unit>
+    <trans-unit id="copilotChat.taskFailedWithExitCode">
+      <source xml:lang="en">Task `{0}` failed with exit code {1}.</source>
     </trans-unit>
     <trans-unit id="copilotChat.taskNotFound">
       <source xml:lang="en">Task not found: `{0}`</source>
@@ -434,9 +440,6 @@ Remarks:
     <trans-unit id="copilotChat.allowTaskRunTitle">
       <source xml:lang="en">Allow task run?</source>
     </trans-unit>
-    <trans-unit id="copilotChat.checkingOutput">
-      <source xml:lang="en">Checking output for `{0}`</source>
-    </trans-unit>
     <trans-unit id="copilotChat.noTerminal">
       <source xml:lang="en">Task started but no terminal was found for: `{0}`</source>
     </trans-unit>
@@ -455,6 +458,9 @@ Remarks:
     <trans-unit id="copilotChat.taskAlreadyRunning">
       <source xml:lang="en">The task `{0}` is already running.</source>
     </trans-unit>
+    <trans-unit id="copilotChat.taskFailedWithExitCode">
+      <source xml:lang="en">Task `{0}` failed with exit code {1}.</source>
+    </trans-unit>
     <trans-unit id="copilotChat.taskIsAlreadyRunning">
       <source xml:lang="en">`{0}` is already running.</source>
     </trans-unit>
@@ -469,15 +475,6 @@ Remarks:
     </trans-unit>
     <trans-unit id="runInTerminalTool.userDescription">
       <source xml:lang="en">Tool for running tasks in the workspace</source>
-    </trans-unit>
-    <trans-unit id="taskFailed">
-      <source xml:lang="en">Task `{0}` failed with exit code {1}.</source>
-    </trans-unit>
-    <trans-unit id="taskFinished">
-      <source xml:lang="en">Task `{0}` finished</source>
-    </trans-unit>
-    <trans-unit id="taskStartedBackground">
-      <source xml:lang="en">Task `{0}` started and will continue to run in the background.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext"><body>

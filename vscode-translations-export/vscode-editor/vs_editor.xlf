@@ -327,19 +327,19 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <source xml:lang="en">Controls whether async tokenization should be verified against legacy background tokenization. Might slow down tokenization. For debugging only.</source>
     </trans-unit>
     <trans-unit id="editor.experimental.preferTreeSitter.css">
-      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for css. This will take precedence over `editor.experimental.treeSitterTelemetry` for css.</source>
+      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for css. This will take precedence over `#editor.experimental.treeSitterTelemetry#` for css.</source>
     </trans-unit>
     <trans-unit id="editor.experimental.preferTreeSitter.ini">
-      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for ini. This will take precedence over `editor.experimental.treeSitterTelemetry` for ini.</source>
+      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for ini. This will take precedence over `#editor.experimental.treeSitterTelemetry#` for ini.</source>
     </trans-unit>
     <trans-unit id="editor.experimental.preferTreeSitter.regex">
-      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for regex. This will take precedence over `editor.experimental.treeSitterTelemetry` for regex.</source>
+      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for regex. This will take precedence over `#editor.experimental.treeSitterTelemetry#` for regex.</source>
     </trans-unit>
     <trans-unit id="editor.experimental.preferTreeSitter.typescript">
-      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for typescript. This will take precedence over `editor.experimental.treeSitterTelemetry` for typescript.</source>
+      <source xml:lang="en">Controls whether tree sitter parsing should be turned on for typescript. This will take precedence over `#editor.experimental.treeSitterTelemetry#` for typescript.</source>
     </trans-unit>
     <trans-unit id="editor.experimental.treeSitterTelemetry">
-      <source xml:lang="en">Controls whether tree sitter parsing should be turned on and telemetry collected. Setting `editor.experimental.preferTreeSitter` for specific languages will take precedence.</source>
+      <source xml:lang="en">Controls whether tree sitter parsing should be turned on and telemetry collected. Setting `#editor.experimental.preferTreeSitter#` for specific languages will take precedence.</source>
     </trans-unit>
     <trans-unit id="editorConfigurationTitle">
       <source xml:lang="en">Editor</source>
@@ -1064,7 +1064,7 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <source xml:lang="en">Controls whether the hover is shown.</source>
     </trans-unit>
     <trans-unit id="hover.hidingDelay">
-      <source xml:lang="en">Controls the delay in milliseconds after which the hover is hidden. Requires `editor.hover.sticky` to be enabled.</source>
+      <source xml:lang="en">Controls the delay in milliseconds after which the hover is hidden. Requires `#editor.hover.sticky#` to be enabled.</source>
     </trans-unit>
     <trans-unit id="hover.sticky">
       <source xml:lang="en">Controls whether the hover should remain visible when mouse is moved over it.</source>
@@ -1108,7 +1108,7 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="inlineSuggest.fontFamily">
       <source xml:lang="en">Controls the font family of the inline suggestions.</source>
     </trans-unit>
-    <trans-unit id="inlineSuggest.minimalDelay">
+    <trans-unit id="inlineSuggest.minShowDelay">
       <source xml:lang="en">Controls the minimal delay in milliseconds after which inline suggestions are shown after typing.</source>
     </trans-unit>
     <trans-unit id="inlineSuggest.showToolbar">
@@ -1342,7 +1342,7 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <source xml:lang="en">Controls whether the editor auto renames on type.</source>
     </trans-unit>
     <trans-unit id="renameOnTypeDeprecate">
-      <source xml:lang="en">Deprecated, use `editor.linkedEditing` instead.</source>
+      <source xml:lang="en">Deprecated, use `#editor.linkedEditing#` instead.</source>
     </trans-unit>
     <trans-unit id="renderControlCharacters">
       <source xml:lang="en">Controls whether the editor should render control characters.</source>

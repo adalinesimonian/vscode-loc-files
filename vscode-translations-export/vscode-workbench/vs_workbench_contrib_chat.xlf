@@ -500,9 +500,6 @@
     <trans-unit id="interactive.toggleAgent.label">
       <source xml:lang="en">Set Chat Mode</source>
     </trans-unit>
-    <trans-unit id="interactive.toggleRequestPausd.label">
-      <source xml:lang="en">Toggle Request Paused</source>
-    </trans-unit>
     <trans-unit id="remoteAgentError">
       <source xml:lang="en">Coding agent session cancelled.</source>
     </trans-unit>
@@ -514,12 +511,6 @@
     </trans-unit>
     <trans-unit id="remoteJobCreating">
       <source xml:lang="en">Delegating to Coding Agent</source>
-    </trans-unit>
-    <trans-unit id="requestIsPaused">
-      <source xml:lang="en">Resume Request</source>
-    </trans-unit>
-    <trans-unit id="requestNotPaused">
-      <source xml:lang="en">Pause Request</source>
     </trans-unit>
     <trans-unit id="selectCodingAgent">
       <source xml:lang="en">Select Coding Agent</source>
@@ -963,10 +954,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Control variations of the sign-in dialog.</source>
     </trans-unit>
     <trans-unit id="chat.todoListTool.enabled">
-      <source xml:lang="en">Enables todo lists in chat. This tool allows you to use todo lists in chat.</source>
+      <source xml:lang="en">Enables todo lists in chat, which the agent uses as a tool for planning, progress tracking, and context management for complex development workflows.</source>
     </trans-unit>
     <trans-unit id="chat.tools.autoApprove.description">
       <source xml:lang="en">Controls whether tool use should be automatically approved. Allow all tools to run automatically without user confirmation, overriding any tool-specific settings such as terminal auto-approval. Use with caution: carefully review selected tools and be extra wary of possible sources of prompt injection!</source>
+    </trans-unit>
+    <trans-unit id="chat.tools.autoApprove.edits">
+      <source xml:lang="en">Controls whether edits made by chat are automatically approved. The default is to approve all edits except those made to certain files which have the potential to cause immediate unintened side-effects, such as `**/.vscode/*.json`.
+
+Files are matched against the glob patterns in the order they are specified.</source>
     </trans-unit>
     <trans-unit id="chat.tools.autoApprove.markdownDescription">
       <source xml:lang="en">Controls whether tool use should be automatically approved.
@@ -1231,12 +1227,6 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatProgressContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="pausedMessage">
-      <source xml:lang="en">Paused</source>
-    </trans-unit>
-    <trans-unit id="resume">
-      <source xml:lang="en">Click to resume</source>
-    </trans-unit>
     <trans-unit id="workingMessage">
       <source xml:lang="en">Working...</source>
     </trans-unit>
@@ -1610,9 +1600,6 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="nOfM">
       <source xml:lang="en">{0} of {1}</source>
     </trans-unit>
-    <trans-unit id="paused">
-      <source xml:lang="en">Paused</source>
-    </trans-unit>
     <trans-unit id="tooltip">
       <source xml:lang="en">{0} ({1})</source>
     </trans-unit>
@@ -1825,6 +1812,12 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chatEditingSession.addSuggestion">
       <source xml:lang="en">Add suggestion {0}</source>
     </trans-unit>
+    <trans-unit id="chatEditingSession.fileRequiresManualApproval">
+      <source xml:lang="en">Edits requires manual approval</source>
+    </trans-unit>
+    <trans-unit id="chatEditingSession.manualApprovalNeeded">
+      <source xml:lang="en">One or more file edits require manual approval</source>
+    </trans-unit>
     <trans-unit id="chatEditingSession.manyFiles.1">
       <source xml:lang="en">{0} files changed</source>
     </trans-unit>
@@ -1880,9 +1873,6 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="other">
       <source xml:lang="en">Other</source>
-    </trans-unit>
-    <trans-unit id="paused">
-      <source xml:lang="en">Paused</source>
     </trans-unit>
     <trans-unit id="poorlyWrittenOrFormatted">
       <source xml:lang="en">Poorly written or formatted</source>
@@ -2947,9 +2937,6 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatContextKeys" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatCanRequestBePaused">
-      <source xml:lang="en">True when the current request can be paused.</source>
-    </trans-unit>
     <trans-unit id="chatEditApplied">
       <source xml:lang="en">True when the chat text edits have been applied.</source>
     </trans-unit>
@@ -3003,9 +2990,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatRequest">
       <source xml:lang="en">The chat item is a request</source>
-    </trans-unit>
-    <trans-unit id="chatRequestIsPaused">
-      <source xml:lang="en">True when the current request is paused.</source>
     </trans-unit>
     <trans-unit id="chatResponse">
       <source xml:lang="en">The chat item is a response.</source>
