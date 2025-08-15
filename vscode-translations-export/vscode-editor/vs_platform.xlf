@@ -415,6 +415,14 @@ Received: '{1}'.</source>
       <source xml:lang="en">Did you mean {0}, {1} or {2}?</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/dialogs/browser/dialog" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="aboutDetail">
+      <source xml:lang="en">Version: {0}
+Commit: {1}
+Date: {2}
+Browser: {3}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/dialogs/common/dialogs" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cancelButton">
       <source xml:lang="en">Cancel</source>
@@ -432,6 +440,20 @@ Received: '{1}'.</source>
     <trans-unit id="yesButton">
       <source xml:lang="en">&amp;&amp;Yes</source>
       <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/dialogs/electron-browser/dialog" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="aboutDetail">
+      <source xml:lang="en">Version: {0}
+Commit: {1}
+Date: {2}
+Electron: {3}
+ElectronBuildId: {4}
+Chromium: {5}
+Node.js: {6}
+V8: {7}
+OS: {8}</source>
+      <note>Electron, Chromium, Node.js and V8 are product names that need no translation</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/dialogs/electron-main/dialogMainService" source-language="en" datatype="plaintext"><body>
