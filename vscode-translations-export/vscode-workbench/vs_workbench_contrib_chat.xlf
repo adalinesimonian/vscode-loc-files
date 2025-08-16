@@ -172,7 +172,7 @@
       <source xml:lang="en">Show more...</source>
     </trans-unit>
     <trans-unit id="chat.openNewChatToTheSide.label">
-      <source xml:lang="en">Open New Chat to the Side</source>
+      <source xml:lang="en">Open New Chat Editor to the Side</source>
     </trans-unit>
     <trans-unit id="chat.toggleDefaultVisibility.label">
       <source xml:lang="en">Show View by Default</source>
@@ -186,8 +186,8 @@
     <trans-unit id="chatQuotaExceededButton">
       <source xml:lang="en">Copilot Free plan chat messages quota reached. Click for details.</source>
     </trans-unit>
-    <trans-unit id="chatSessions.newChatInWidget">
-      <source xml:lang="en">Open New Chat in Widget</source>
+    <trans-unit id="chatSessions.newChatInSideBar">
+      <source xml:lang="en">Open New Chat in Side Bar</source>
     </trans-unit>
     <trans-unit id="chatSessions.openNewChatInNewWindow">
       <source xml:lang="en">Open New Chat in New Window</source>
@@ -847,6 +847,9 @@
     </trans-unit>
     <trans-unit id="chat.extensionToolsPolicy">
       <source xml:lang="en">Enable using tools contributed by third-party extensions.</source>
+    </trans-unit>
+    <trans-unit id="chat.hideAIFeatures">
+      <source xml:lang="en">Hide and disables the getting started UI elements for setting up AI features and Chat. This setting has no effect when Copilot extensions are installed.</source>
     </trans-unit>
     <trans-unit id="chat.implicitContext.enabled.1">
       <source xml:lang="en">Enables automatically using the active editor as chat context for specified chat locations.</source>
@@ -3245,6 +3248,9 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptHeaderDiagnosticsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="promptHeaderDiagnosticsProvider.modeNotFound">
+      <source xml:lang="en">Unknown mode '{0}'. Available modes: {1}</source>
+    </trans-unit>
     <trans-unit id="promptHeaderDiagnosticsProvider.modelNotFound">
       <source xml:lang="en">Unknown model '{0}'</source>
     </trans-unit>
@@ -3285,7 +3291,22 @@ Example: **/*.ts, **/*.js, client/**</source>
       <source xml:lang="en">The description of the prompt file. It can be used to provide additional context or information about the prompt to the prompt author.</source>
     </trans-unit>
     <trans-unit id="promptHeader.prompt.mode">
-      <source xml:lang="en">The mode (ask, edit or agent) to use when running this prompt.</source>
+      <source xml:lang="en">The mode to use in this prompt.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.prompt.mode.builtInDesc">
+      <source xml:lang="en">Built-in chat mode</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.prompt.mode.builtin">
+      <source xml:lang="en">**Built-in modes:**</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.prompt.mode.custom">
+      <source xml:lang="en">**Custom modes:**</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.prompt.mode.customDesc">
+      <source xml:lang="en">Custom chat mode</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.prompt.mode.description">
+      <source xml:lang="en">The chat mode to use when running this prompt.</source>
     </trans-unit>
     <trans-unit id="promptHeader.prompt.model">
       <source xml:lang="en">The model to use in this prompt.</source>
@@ -3328,12 +3349,12 @@ Example: **/*.ts, **/*.js, client/**</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/base/enum" source-language="en" datatype="plaintext"><body>
     <trans-unit id="prompt.header.metadata.enum.diagnostics.invalid-value">
-      <source xml:lang="en">The '{0}' metadata must be one of {1}, got '{2}'.</source>
+      <source xml:lang="en">The property '{0}' must be one of {1}, got '{2}'.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/base/string" source-language="en" datatype="plaintext"><body>
     <trans-unit id="prompt.header.metadata.string.diagnostics.invalid-value-type">
-      <source xml:lang="en">The '{0}' metadata must be a '{1}', got '{2}'.</source>
+      <source xml:lang="en">The property '{0}' must be of type '{1}', got '{2}'.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/tools" source-language="en" datatype="plaintext"><body>
@@ -3352,7 +3373,7 @@ Example: **/*.ts, **/*.js, client/**</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/promptHeader" source-language="en" datatype="plaintext"><body>
     <trans-unit id="prompt.header.metadata.mode.diagnostics.incompatible-with-tools">
-      <source xml:lang="en">Tools can only be used when in 'agent' mode, but the mode is set to '{0}'. The tools will be ignored.</source>
+      <source xml:lang="en">Tools can not be used in '{0}' mode and will be ignored.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/topError" source-language="en" datatype="plaintext"><body>
@@ -3487,9 +3508,6 @@ Example: **/*.ts, **/*.js, client/**</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/electron-browser/actions/voiceChatActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="installProviderForVoiceChat.justification">
-      <source xml:lang="en">Microphone support requires this extension.</source>
-    </trans-unit>
     <trans-unit id="keywordActivation.status.active">
       <source xml:lang="en">Listening to 'Hey Code'...</source>
     </trans-unit>
@@ -3502,9 +3520,6 @@ Example: **/*.ts, **/*.js, client/**</source>
     <trans-unit id="listening">
       <source xml:lang="en">I'm listening</source>
     </trans-unit>
-    <trans-unit id="retry">
-      <source xml:lang="en">Retry</source>
-    </trans-unit>
     <trans-unit id="scopedChatSynthesisInProgress">
       <source xml:lang="en">Defined as a location where voice recording from microphone is in progress for voice chat. This key is only defined scoped, per chat context.</source>
     </trans-unit>
@@ -3513,9 +3528,6 @@ Example: **/*.ts, **/*.js, client/**</source>
     </trans-unit>
     <trans-unit id="scopedVoiceChatInProgress">
       <source xml:lang="en">Defined as a location where voice recording from microphone is in progress for voice chat. This key is only defined scoped, per chat context.</source>
-    </trans-unit>
-    <trans-unit id="unknownSetupError">
-      <source xml:lang="en">An error occurred while setting up voice chat. Would you like to try again?</source>
     </trans-unit>
     <trans-unit id="voice.keywordActivation">
       <source xml:lang="en">Controls whether the keyword phrase 'Hey Code' is recognized to start a voice chat session. Enabling this will start recording from the microphone but the audio is processed locally and never sent to a server.</source>
@@ -3540,9 +3552,6 @@ Example: **/*.ts, **/*.js, client/**</source>
     </trans-unit>
     <trans-unit id="workbench.action.chat.inlineVoiceChat">
       <source xml:lang="en">Inline Voice Chat</source>
-    </trans-unit>
-    <trans-unit id="workbench.action.chat.installProviderForVoiceChat.label">
-      <source xml:lang="en">Start Voice Chat</source>
     </trans-unit>
     <trans-unit id="workbench.action.chat.quickVoiceChat.label">
       <source xml:lang="en">Quick Voice Chat</source>
