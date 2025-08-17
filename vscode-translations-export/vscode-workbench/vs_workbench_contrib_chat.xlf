@@ -616,6 +616,23 @@
       <source xml:lang="en">The query to open the quick chat with</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatSessionActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="renameSession">
+      <source xml:lang="en">Rename</source>
+    </trans-unit>
+    <trans-unit id="renameSession.emptyName">
+      <source xml:lang="en">Name cannot be empty</source>
+    </trans-unit>
+    <trans-unit id="renameSession.error">
+      <source xml:lang="en">Failed to rename chat session: {0}</source>
+    </trans-unit>
+    <trans-unit id="renameSession.nameTooLong">
+      <source xml:lang="en">Name is too long (maximum 100 characters)</source>
+    </trans-unit>
+    <trans-unit id="renameSession.placeholder">
+      <source xml:lang="en">Enter new name for chat session</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatTitleActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.retry.confirmation.checkbox">
       <source xml:lang="en">Don't ask again</source>
@@ -2053,6 +2070,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chat.sessions.title">
       <source xml:lang="en">Chat Sessions</source>
     </trans-unit>
+    <trans-unit id="chatSessionInputAriaLabel">
+      <source xml:lang="en">Type session name. Press Enter to confirm or Escape to cancel.</source>
+    </trans-unit>
     <trans-unit id="chatSessions.dragLabel">
       <source xml:lang="en">{0} chat sessions</source>
     </trans-unit>
@@ -3156,9 +3176,6 @@ Type {3} to use commands</source>
   <file original="src/vs/workbench/contrib/chat/common/chatSessionStore" source-language="en" datatype="plaintext"><body>
     <trans-unit id="join.chatSessionStore">
       <source xml:lang="en">Saving chat history</source>
-    </trans-unit>
-    <trans-unit id="newChat">
-      <source xml:lang="en">New Chat</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatVariableEntries" source-language="en" datatype="plaintext"><body>
