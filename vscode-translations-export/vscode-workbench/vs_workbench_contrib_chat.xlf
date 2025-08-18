@@ -976,6 +976,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.todoListTool.enabled">
       <source xml:lang="en">Enables todo lists in chat, which the agent uses as a tool for planning, progress tracking, and context management for complex development workflows.</source>
     </trans-unit>
+    <trans-unit id="chat.todoListTool.writeOnly">
+      <source xml:lang="en">When enabled, the todo tool operates in write-only mode, requiring the agent to remember todos in context.</source>
+    </trans-unit>
     <trans-unit id="chat.tools.autoApprove.description">
       <source xml:lang="en">Controls whether tool use should be automatically approved. Allow all tools to run automatically without user confirmation, overriding any tool-specific settings such as terminal auto-approval. Use with caution: carefully review selected tools and be extra wary of possible sources of prompt injection!</source>
     </trans-unit>

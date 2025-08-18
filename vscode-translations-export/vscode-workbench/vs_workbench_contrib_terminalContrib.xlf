@@ -524,7 +524,7 @@ Remarks:
       <source xml:lang="en">A list of commands or regular expressions that control whether the run in terminal tool commands require explicit approval. These will be matched against the start of a command. A regular expression can be provided by wrapping the string in {0} characters followed by optional flags such as {1} for case-insensitivity.</source>
     </trans-unit>
     <trans-unit id="autoApprove.description.subCommands">
-      <source xml:lang="en">Note that these commands and regular expressions are evaluated for every _sub-command_ within the full _command line_, so {0} for example will need both {1} and {2} to match a {3} entry and must not match a {4} entry in order to auto approve. Inline commands are also detected so {5} will need both {5} and {6} to pass.</source>
+      <source xml:lang="en">Note that these commands and regular expressions are evaluated for every _sub-command_ within the full _command line_, so {0} for example will need both {1} and {2} to match a {3} entry and must not match a {4} entry in order to auto approve. Inline commands such as {5} (command sustitution) or {6} (process substitution) are currently blocked by default via broad rules that detect these patterns.</source>
     </trans-unit>
     <trans-unit id="autoApprove.description.values">
       <source xml:lang="en">Set to {0} to automatically approve commands, {1} to always require explicit approval or {2} to unset the value.</source>
@@ -549,6 +549,9 @@ Remarks:
     </trans-unit>
     <trans-unit id="autoApprove.true">
       <source xml:lang="en">Automatically approve the pattern.</source>
+    </trans-unit>
+    <trans-unit id="shellIntegrationTimeout.description">
+      <source xml:lang="en">Configures the duration in milliseconds to wait for shell integration to be detected when the run in terminal tool launches a new terminal. Set to `0` to wait the minimum time, the default value `-1` means the wait time is variable based on the value of {0} and whether it's a remote window. A large value can be useful if your shell starts very slowly and a low value if you're intentionally not using shell integration.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/clipboard/browser/terminal.clipboard.contribution" source-language="en" datatype="plaintext"><body>
@@ -1155,12 +1158,6 @@ If shell integration is installed manually, {3} needs to be set to {4} before ca
     </trans-unit>
     <trans-unit id="suggest.provider.lsp.description">
       <source xml:lang="en">Enable or disable the LSP-based provider. This enables language server protocol-specific argument completion.</source>
-    </trans-unit>
-    <trans-unit id="suggest.provider.pwsh.deprecation">
-      <source xml:lang="en">This is deprecated as it has performance problems, the upcoming LSP provider will supersede this.</source>
-    </trans-unit>
-    <trans-unit id="suggest.provider.pwsh.description">
-      <source xml:lang="en">Enable or disable the PowerShell script-based provider. This enables PowerShell-specific argument completion.</source>
     </trans-unit>
     <trans-unit id="suggest.providers">
       <source xml:lang="en">Providers are enabled by default. Omit them by setting the id of the provider to `false`.</source>
