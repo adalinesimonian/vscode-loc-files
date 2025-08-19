@@ -258,6 +258,12 @@
     <trans-unit id="openChat">
       <source xml:lang="en">Open Chat</source>
     </trans-unit>
+    <trans-unit id="openChatFeatureSettings">
+      <source xml:lang="en">Chat Settings</source>
+    </trans-unit>
+    <trans-unit id="openChatFeatureSettings.short">
+      <source xml:lang="en">Chat Settings</source>
+    </trans-unit>
     <trans-unit id="openChatMode">
       <source xml:lang="en">Open Chat ({0})</source>
     </trans-unit>
@@ -1173,6 +1179,11 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Rerun without {0}{1}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatChangesSummaryPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.viewFileChangesSummary">
+      <source xml:lang="en">View All File Changes</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatCodeCitationContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="viewMatches">
       <source xml:lang="en">View matches</source>
@@ -1416,6 +1427,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="seeMore">
       <source xml:lang="en">See more</source>
     </trans-unit>
+    <trans-unit id="showMore">
+      <source xml:lang="en">Show More</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolOutputPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="loading">
@@ -1471,10 +1485,10 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Edit Request</source>
     </trans-unit>
     <trans-unit id="chat.editing.discardAll.confirmation.manyFiles">
-      <source xml:lang="en">This will undo changes made by {0} in {1} files. Do you want to proceed?</source>
+      <source xml:lang="en">This will undo changes made in {0} files. Do you want to proceed?</source>
     </trans-unit>
     <trans-unit id="chat.editing.discardAll.confirmation.oneFile">
-      <source xml:lang="en">This will undo changes made by {0} in {1}. Do you want to proceed?</source>
+      <source xml:lang="en">This will undo changes made in {0}. Do you want to proceed?</source>
     </trans-unit>
     <trans-unit id="chat.editing.discardAll.confirmation.primaryButton">
       <source xml:lang="en">Yes</source>
@@ -1846,11 +1860,8 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chatEditingSession.addSuggestion">
       <source xml:lang="en">Add suggestion {0}</source>
     </trans-unit>
-    <trans-unit id="chatEditingSession.fileRequiresManualApproval">
-      <source xml:lang="en">Edits requires manual approval</source>
-    </trans-unit>
-    <trans-unit id="chatEditingSession.manualApprovalNeeded">
-      <source xml:lang="en">One or more file edits require manual approval</source>
+    <trans-unit id="chatEditingSession.ariaLabelWithCounts">
+      <source xml:lang="en">{0}, {1} lines added, {2} lines removed</source>
     </trans-unit>
     <trans-unit id="chatEditingSession.manyFiles.1">
       <source xml:lang="en">{0} files changed</source>
@@ -2082,11 +2093,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chatSessions.loading">
       <source xml:lang="en">Loading chat sessions...</source>
     </trans-unit>
-    <trans-unit id="chatSessions.noAgentSessions">
-      <source xml:lang="en">No agent sessions found</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.noChatSessions">
-      <source xml:lang="en">No chat sessions</source>
+    <trans-unit id="chatSessions.noResults">
+      <source xml:lang="en">No local chat sessions
+[Start a Chat](command:workbench.action.openChat)</source>
     </trans-unit>
     <trans-unit id="chatSessions.refreshing">
       <source xml:lang="en">Refreshing chat sessions...</source>
@@ -3445,7 +3454,7 @@ Example: **/*.ts, **/*.js, client/**</source>
       <source xml:lang="en">Description</source>
     </trans-unit>
     <trans-unit id="icon">
-      <source xml:lang="en">An icon that represents this tool. Either a file path, an object with file paths for dark and light themes, or a theme icon reference, like `$(zap)`</source>
+      <source xml:lang="en">An icon that represents this tool. Either a file path, an object with file paths for dark and light themes, or a theme icon reference, like `\$(zap)`</source>
     </trans-unit>
     <trans-unit id="icon.dark">
       <source xml:lang="en">Icon path when a dark theme is used</source>

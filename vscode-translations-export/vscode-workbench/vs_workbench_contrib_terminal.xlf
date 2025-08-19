@@ -746,11 +746,20 @@ The terminal's title</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminal/common/terminalConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="autoApproveMode.description">
+      <source xml:lang="en">Controls whether to allow auto approval in the run in terminal tool.</source>
+    </trans-unit>
     <trans-unit id="cwd">
       <source xml:lang="en">the terminal's current working directory.</source>
     </trans-unit>
     <trans-unit id="cwdFolder">
       <source xml:lang="en">the terminal's current working directory, displayed for multi-root workspaces or in a single root workspace when the value differs from the initial working directory. On Windows, this will only be displayed when shell integration is enabled.</source>
+    </trans-unit>
+    <trans-unit id="enableAutoApprove.off">
+      <source xml:lang="en">Terminal auto approval is disabled.</source>
+    </trans-unit>
+    <trans-unit id="enableAutoApprove.on">
+      <source xml:lang="en">Terminal auto approval is enabled, with the default rules defined in {0}.</source>
     </trans-unit>
     <trans-unit id="enableFileLinks.notRemote">
       <source xml:lang="en">Enable only when not in a remote workspace.</source>
