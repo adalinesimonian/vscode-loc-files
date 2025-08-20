@@ -257,6 +257,32 @@ Remarks:
       <source xml:lang="en">Continue waiting for `{0}`?</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/runInTerminalHelpers" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="autoApprove.baseCommand">
+      <source xml:lang="en">Always Allow Commands: {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.baseCommandSingle">
+      <source xml:lang="en">Always Allow Command: {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.baseCommandSingleTooltip">
+      <source xml:lang="en">Always allow command starting with `{0}` to run without confirmation</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.baseCommandTooltip">
+      <source xml:lang="en">Always allow commands starting with `{0}` to run without confirmation</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.configure">
+      <source xml:lang="en">Configure Auto Approve...</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.configureTooltip">
+      <source xml:lang="en">Open settings to configure terminal command auto approval</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.exactCommand">
+      <source xml:lang="en">Always Allow Exact Command Line: {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.exactCommandTooltip">
+      <source xml:lang="en">Always allow this exact command line to run without confirmation</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/terminal.chatAgentTools.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="addTerminalSelection">
       <source xml:lang="en">Add Terminal Selection to Chat</source>
@@ -305,30 +331,6 @@ Remarks:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalTool" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="autoApprove.baseCommand">
-      <source xml:lang="en">Always Allow Commands: {0}</source>
-    </trans-unit>
-    <trans-unit id="autoApprove.baseCommandSingle">
-      <source xml:lang="en">Always Allow Command: {0}</source>
-    </trans-unit>
-    <trans-unit id="autoApprove.baseCommandSingleTooltip">
-      <source xml:lang="en">Always allow command starting with `{0}` to run without confirmation</source>
-    </trans-unit>
-    <trans-unit id="autoApprove.baseCommandTooltip">
-      <source xml:lang="en">Always allow commands starting with `{0}` to run without confirmation</source>
-    </trans-unit>
-    <trans-unit id="autoApprove.configure">
-      <source xml:lang="en">Configure Auto Approve...</source>
-    </trans-unit>
-    <trans-unit id="autoApprove.configureTooltip">
-      <source xml:lang="en">Open settings to configure terminal command auto approval</source>
-    </trans-unit>
-    <trans-unit id="autoApprove.exactCommand">
-      <source xml:lang="en">Always Allow Exact Command Line: {0}</source>
-    </trans-unit>
-    <trans-unit id="autoApprove.exactCommandTooltip">
-      <source xml:lang="en">Always allow this exact command line to run without confirmation</source>
-    </trans-unit>
     <trans-unit id="autoApprove.global">
       <source xml:lang="en">Auto approved by setting {0}</source>
     </trans-unit>

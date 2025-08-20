@@ -1266,8 +1266,8 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatPullRequestContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatPullRequest.author">
-      <source xml:lang="en">by {0}</source>
+    <trans-unit id="chatPullRequest.seeMore">
+      <source xml:lang="en">See more</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatQuotaExceededPart" source-language="en" datatype="plaintext"><body>
@@ -1290,6 +1290,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="chatCollapsibleList">
       <source xml:lang="en">Collapsible Chat References List</source>
+    </trans-unit>
+    <trans-unit id="chatEditingSession.fileCounts">
+      <source xml:lang="en">{0} lines added, {1} lines removed</source>
     </trans-unit>
     <trans-unit id="copyLink">
       <source xml:lang="en">Copy Link</source>
@@ -2128,6 +2131,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="chatSessionsExtPoint.when">
       <source xml:lang="en">Condition which must be true to show this item.</source>
+    </trans-unit>
+    <trans-unit id="continueInNewChat">
+      <source xml:lang="en">Continue **{0}** in a new chat editor</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
