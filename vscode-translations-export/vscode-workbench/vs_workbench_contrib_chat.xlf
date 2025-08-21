@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAccessibilityActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.category">
+      <source xml:lang="en">Chat</source>
+    </trans-unit>
+    <trans-unit id="chatNotReady">
+      <source xml:lang="en">Chat interface not ready.</source>
+    </trans-unit>
+    <trans-unit id="focusChatConfirmation">
+      <source xml:lang="en">Focus Chat Confirmation</source>
+    </trans-unit>
+    <trans-unit id="noChatSession">
+      <source xml:lang="en">No active chat session found.</source>
+    </trans-unit>
+    <trans-unit id="noConfirmationRequired">
+      <source xml:lang="en">No chat confirmation required</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatAccessibilityHelp" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.announcement">
       <source xml:lang="en">Chat responses will be announced as they come in. A response will indicate the number of code blocks, if any, and then the rest of the response.</source>
@@ -115,6 +132,9 @@
     <trans-unit id="inlineChat.toolbar">
       <source xml:lang="en">Use tab to reach conditional parts like commands, status, message responses and more.</source>
     </trans-unit>
+    <trans-unit id="workbench.action.chat.announceConfirmation">
+      <source xml:lang="en">To focus pending chat confirmation dialogs, invoke the Focus Chat Confirmation Status command{0}.</source>
+    </trans-unit>
     <trans-unit id="workbench.action.chat.editing.attachFiles">
       <source xml:lang="en">- Attach Files{0}.</source>
     </trans-unit>
@@ -156,6 +176,12 @@
     <trans-unit id="chat.clear.label">
       <source xml:lang="en">Clear All Workspace Chats</source>
     </trans-unit>
+    <trans-unit id="chat.editToolApproval.label">
+      <source xml:lang="en">Edit Tool Approval</source>
+    </trans-unit>
+    <trans-unit id="chat.editToolApproval.title">
+      <source xml:lang="en">Approval setting for {0}</source>
+    </trans-unit>
     <trans-unit id="chat.history.label">
       <source xml:lang="en">Show Chats...</source>
     </trans-unit>
@@ -176,6 +202,18 @@
     </trans-unit>
     <trans-unit id="chat.toggleDefaultVisibility.label">
       <source xml:lang="en">Show View by Default</source>
+    </trans-unit>
+    <trans-unit id="chat.toolApproval.manual">
+      <source xml:lang="en">Always require manual approval</source>
+    </trans-unit>
+    <trans-unit id="chat.toolApproval.profile">
+      <source xml:lang="en">Auto-approve globally</source>
+    </trans-unit>
+    <trans-unit id="chat.toolApproval.session">
+      <source xml:lang="en">Auto-approve for this session</source>
+    </trans-unit>
+    <trans-unit id="chat.toolApproval.workspace">
+      <source xml:lang="en">Auto-approve for this workspace</source>
     </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
       <source xml:lang="en">You've reached your monthly chat messages and code completions quota.</source>
@@ -1211,6 +1249,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatConfirmationWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.confirmationWidget.ariaLabel">
+      <source xml:lang="en">Chat Confirmation Dialog {0} {1}</source>
+    </trans-unit>
     <trans-unit id="defaultTitle">
       <source xml:lang="en">Chat: Confirmation Required</source>
     </trans-unit>
@@ -1383,6 +1424,18 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatTerminalToolConfirmationSubPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="autoApprove.button.enable">
+      <source xml:lang="en">Enable</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.enable">
+      <source xml:lang="en">Enable Auto Approve...</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.markdown">
+      <source xml:lang="en">This will enable a configurable subset of commands to run in the terminal autonomously. It provides *best effort protections* and assumes the agent is not acting maliciously.</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.title">
+      <source xml:lang="en">Enable terminal auto approve?</source>
+    </trans-unit>
     <trans-unit id="cancel">
       <source xml:lang="en">Cancel</source>
     </trans-unit>
@@ -1432,6 +1485,23 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="showMore">
       <source xml:lang="en">Show More</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolInvocationPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.autoapprove.lmServicePerTool.profile">
+      <source xml:lang="en">Auto approved for this profile</source>
+    </trans-unit>
+    <trans-unit id="chat.autoapprove.lmServicePerTool.session">
+      <source xml:lang="en">Auto approved for this session</source>
+    </trans-unit>
+    <trans-unit id="chat.autoapprove.lmServicePerTool.workspace">
+      <source xml:lang="en">Auto approved for this workspace</source>
+    </trans-unit>
+    <trans-unit id="chat.autoapprove.setting">
+      <source xml:lang="en">Auto approved by {0}</source>
+    </trans-unit>
+    <trans-unit id="edit">
+      <source xml:lang="en">Edit</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolOutputPart" source-language="en" datatype="plaintext"><body>
@@ -2134,6 +2204,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="continueInNewChat">
       <source xml:lang="en">Continue **{0}** in a new chat editor</source>
+    </trans-unit>
+    <trans-unit id="interactiveSession.openNewSessionEditor">
+      <source xml:lang="en">New {0} Chat Editor</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
