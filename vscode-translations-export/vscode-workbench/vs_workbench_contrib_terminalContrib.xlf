@@ -227,7 +227,10 @@ Remarks:
       <source xml:lang="en">Run First Chat Command</source>
     </trans-unit>
     <trans-unit id="startChat">
-      <source xml:lang="en">Terminal Inline Chat</source>
+      <source xml:lang="en">Open Inline Chat</source>
+    </trans-unit>
+    <trans-unit id="terminalCategory">
+      <source xml:lang="en">Terminal</source>
     </trans-unit>
     <trans-unit id="viewInChat">
       <source xml:lang="en">View in Chat</source>
@@ -241,20 +244,6 @@ Remarks:
   <file original="src/vs/workbench/contrib/terminalContrib/chat/common/terminalInitialHintConfiguration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="terminal.integrated.initialHint">
       <source xml:lang="en">Controls if the first terminal without input will show a hint about available actions when it is focused.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/bufferOutputPolling" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="poll.terminal.accept">
-      <source xml:lang="en">Yes</source>
-    </trans-unit>
-    <trans-unit id="poll.terminal.polling">
-      <source xml:lang="en">This will continue to poll for output to determine when the terminal becomes idle for up to 2 minutes.</source>
-    </trans-unit>
-    <trans-unit id="poll.terminal.reject">
-      <source xml:lang="en">No</source>
-    </trans-unit>
-    <trans-unit id="poll.terminal.waiting">
-      <source xml:lang="en">Continue waiting for `{0}`?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/runInTerminalHelpers" source-language="en" datatype="plaintext"><body>
@@ -318,6 +307,32 @@ Remarks:
       <source xml:lang="en">Get Terminal Selection</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/monitoring/outputMonitor" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="poll.terminal.accept">
+      <source xml:lang="en">Yes</source>
+    </trans-unit>
+    <trans-unit id="poll.terminal.acceptRun">
+      <source xml:lang="en">Yes</source>
+    </trans-unit>
+    <trans-unit id="poll.terminal.confirmRun">
+      <source xml:lang="en">Run `{0}` in the terminal?</source>
+    </trans-unit>
+    <trans-unit id="poll.terminal.confirmRunDetail">
+      <source xml:lang="en">The terminal output appears to require a response. Do you want to send `{0}` to the terminal?</source>
+    </trans-unit>
+    <trans-unit id="poll.terminal.polling">
+      <source xml:lang="en">This will continue to poll for output to determine when the terminal becomes idle for up to 2 minutes.</source>
+    </trans-unit>
+    <trans-unit id="poll.terminal.reject">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="poll.terminal.rejectRun">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="poll.terminal.waiting">
+      <source xml:lang="en">Continue waiting for `{0}`?</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalTool" source-language="en" datatype="plaintext"><body>
     <trans-unit id="autoApprove.global">
       <source xml:lang="en">Auto approved by setting {0}</source>
@@ -371,9 +386,6 @@ Remarks:
     </trans-unit>
     <trans-unit id="copilotChat.runningTask">
       <source xml:lang="en">Running task `{0}`</source>
-    </trans-unit>
-    <trans-unit id="copilotChat.taskFailedWithExitCode">
-      <source xml:lang="en">Task `{0}` failed with exit code {1}.</source>
     </trans-unit>
     <trans-unit id="copilotChat.taskNotFound">
       <source xml:lang="en">Task not found: `{0}`</source>
@@ -448,9 +460,6 @@ Remarks:
     <trans-unit id="copilotChat.taskAlreadyRunning">
       <source xml:lang="en">The task `{0}` is already running.</source>
     </trans-unit>
-    <trans-unit id="copilotChat.taskFailedWithExitCode">
-      <source xml:lang="en">Task `{0}` failed with exit code {1}.</source>
-    </trans-unit>
     <trans-unit id="copilotChat.taskIsAlreadyRunning">
       <source xml:lang="en">`{0}` is already running.</source>
     </trans-unit>
@@ -465,6 +474,11 @@ Remarks:
     </trans-unit>
     <trans-unit id="runInTerminalTool.userDescription">
       <source xml:lang="en">Tool for running tasks in the workspace</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/task/taskHelpers" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotChat.taskFailedWithExitCode">
+      <source xml:lang="en">Task `{0}` failed with exit code {1}.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext"><body>

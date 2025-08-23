@@ -167,9 +167,6 @@
     <trans-unit id="agent.newSessionMessage">
       <source xml:lang="en">Changing the chat mode will end your current edit session. Would you like to change the chat mode?</source>
     </trans-unit>
-    <trans-unit id="ai actions">
-      <source xml:lang="en">Generate Code</source>
-    </trans-unit>
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
     </trans-unit>
@@ -251,11 +248,26 @@
     <trans-unit id="dismiss">
       <source xml:lang="en">Dismiss</source>
     </trans-unit>
+    <trans-unit id="explain">
+      <source xml:lang="en">Explain</source>
+    </trans-unit>
+    <trans-unit id="fix">
+      <source xml:lang="en">Fix</source>
+    </trans-unit>
+    <trans-unit id="generateCode">
+      <source xml:lang="en">Generate Code</source>
+    </trans-unit>
+    <trans-unit id="generateDocs">
+      <source xml:lang="en">Generate Docs</source>
+    </trans-unit>
     <trans-unit id="generateInstructions">
       <source xml:lang="en">Generate Workspace Instructions File</source>
     </trans-unit>
     <trans-unit id="generateInstructions.short">
       <source xml:lang="en">Generate Instructions</source>
+    </trans-unit>
+    <trans-unit id="generateTests">
+      <source xml:lang="en">Generate Tests</source>
     </trans-unit>
     <trans-unit id="interactiveSession.clearHistory.label">
       <source xml:lang="en">Clear Input History</source>
@@ -313,6 +325,9 @@
     </trans-unit>
     <trans-unit id="resetTrustedToolsSuccess">
       <source xml:lang="en">Tool confirmation preferences have been reset.</source>
+    </trans-unit>
+    <trans-unit id="review">
+      <source xml:lang="en">Code Review</source>
     </trans-unit>
     <trans-unit id="showCopilotUsageExtensions">
       <source xml:lang="en">Show Extensions using Copilot</source>
@@ -661,6 +676,24 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatSessionActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.openSessionInNewEditorGroup.label">
+      <source xml:lang="en">Open Chat to the Side</source>
+    </trans-unit>
+    <trans-unit id="chat.openSessionInNewWindow.label">
+      <source xml:lang="en">Open Chat in New Window</source>
+    </trans-unit>
+    <trans-unit id="chat.openSessionInSidebar.label">
+      <source xml:lang="en">Open Chat in Sidebar</source>
+    </trans-unit>
+    <trans-unit id="openSessionInNewEditorGroup">
+      <source xml:lang="en">Open in New Editor Group</source>
+    </trans-unit>
+    <trans-unit id="openSessionInNewWindow">
+      <source xml:lang="en">Open in New Window</source>
+    </trans-unit>
+    <trans-unit id="openSessionInSidebar">
+      <source xml:lang="en">Open in Sidebar</source>
+    </trans-unit>
     <trans-unit id="renameSession">
       <source xml:lang="en">Rename</source>
     </trans-unit>
@@ -879,6 +912,9 @@
     <trans-unit id="chat.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
     </trans-unit>
+    <trans-unit id="chat.disableAIFeatures">
+      <source xml:lang="en">Disable and hide built-in AI features provided by GitHub Copilot, including chat, code completions and next edit suggestions.</source>
+    </trans-unit>
     <trans-unit id="chat.editRequests">
       <source xml:lang="en">Enables editing of requests in the chat. This allows you to change the request content and resubmit it to the model.</source>
     </trans-unit>
@@ -908,9 +944,6 @@
     </trans-unit>
     <trans-unit id="chat.extensionToolsPolicy">
       <source xml:lang="en">Enable using tools contributed by third-party extensions.</source>
-    </trans-unit>
-    <trans-unit id="chat.hideAIFeatures">
-      <source xml:lang="en">Hide and disables the getting started UI elements for setting up AI features and Chat. This setting has no effect when Copilot extensions are installed.</source>
     </trans-unit>
     <trans-unit id="chat.implicitContext.enabled.1">
       <source xml:lang="en">Enables automatically using the active editor as chat context for specified chat locations.</source>
@@ -1301,6 +1334,17 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">File Changes</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatPinnedContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.pinned.thinking.header.base">
+      <source xml:lang="en">Thinking...</source>
+    </trans-unit>
+    <trans-unit id="chat.pinned.thinking.header.count">
+      <source xml:lang="en">Thought for a few seconds...</source>
+    </trans-unit>
+    <trans-unit id="chat.pinned.thinking.header.count.time">
+      <source xml:lang="en">Thought for {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatProgressContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="workingMessage">
       <source xml:lang="en">Working...</source>
@@ -1354,17 +1398,6 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="editsSummary">
       <source xml:lang="en">Made changes.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatThinkingContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="thinkingHeader">
-      <source xml:lang="en">Thinking...</source>
-    </trans-unit>
-    <trans-unit id="thinkingPlural">
-      <source xml:lang="en">Thought for {0} seconds</source>
-    </trans-unit>
-    <trans-unit id="thinkingSingular">
-      <source xml:lang="en">Thought for 1 second</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTodoListWidget" source-language="en" datatype="plaintext"><body>
@@ -1505,6 +1538,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolOutputPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.toolOutputError">
+      <source xml:lang="en">Error rendering the tool output</source>
+    </trans-unit>
     <trans-unit id="loading">
       <source xml:lang="en">Rendering tool output...</source>
     </trans-unit>
@@ -2154,11 +2190,17 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chat.sessions.chatView.description">
       <source xml:lang="en">Chat View</source>
     </trans-unit>
+    <trans-unit id="chat.sessions.showHistory">
+      <source xml:lang="en">History</source>
+    </trans-unit>
     <trans-unit id="chat.sessions.title">
       <source xml:lang="en">Chat Sessions</source>
     </trans-unit>
     <trans-unit id="chatSessionInputAriaLabel">
       <source xml:lang="en">Type session name. Press Enter to confirm or Escape to cancel.</source>
+    </trans-unit>
+    <trans-unit id="chatSessions">
+      <source xml:lang="en">Chat Sessions</source>
     </trans-unit>
     <trans-unit id="chatSessions.dragLabel">
       <source xml:lang="en">{0} chat sessions</source>
@@ -2172,9 +2214,6 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="chatSessions.refreshing">
       <source xml:lang="en">Refreshing chat sessions...</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.treeAriaLabel">
-      <source xml:lang="en">Chat Sessions</source>
     </trans-unit>
     <trans-unit id="interactiveSession.open">
       <source xml:lang="en">New Chat Editor</source>
@@ -2264,6 +2303,12 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="managePlan">
       <source xml:lang="en">Upgrade to Copilot Pro</source>
     </trans-unit>
+    <trans-unit id="restartExtensionHost.reason.disable">
+      <source xml:lang="en">Disabling AI features</source>
+    </trans-unit>
+    <trans-unit id="restartExtensionHost.reason.enable">
+      <source xml:lang="en">Enabling AI features</source>
+    </trans-unit>
     <trans-unit id="retry">
       <source xml:lang="en">Retry</source>
     </trans-unit>
@@ -2309,7 +2354,7 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Start using {0} Copilot</source>
     </trans-unit>
     <trans-unit id="triggerChatSetup">
-      <source xml:lang="en">Use AI Features with Copilot for free...</source>
+      <source xml:lang="en">Use AI Features with GitHub Copilot for free...</source>
     </trans-unit>
     <trans-unit id="triggerChatSetupFromAccounts">
       <source xml:lang="en">Sign in to use Copilot...</source>
@@ -2360,6 +2405,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="chatQuotaExceededStatus">
       <source xml:lang="en">Chat quota reached</source>
+    </trans-unit>
+    <trans-unit id="chatSessionsTitle">
+      <source xml:lang="en">Chat Sessions</source>
     </trans-unit>
     <trans-unit id="chatStatus">
       <source xml:lang="en">Copilot Status</source>
@@ -2436,6 +2484,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="gaugeWarningForeground">
       <source xml:lang="en">Gauge warning foreground color.</source>
     </trans-unit>
+    <trans-unit id="inProgressChatSession">
+      <source xml:lang="en">$(loading~spin) {0} {1} in progress</source>
+    </trans-unit>
     <trans-unit id="learnMore">
       <source xml:lang="en">Learn More</source>
     </trans-unit>
@@ -2493,6 +2544,12 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="usageTitle">
       <source xml:lang="en">Copilot Usage</source>
     </trans-unit>
+    <trans-unit id="viewChatSessionsLabel">
+      <source xml:lang="en">View Chat Sessions</source>
+    </trans-unit>
+    <trans-unit id="viewChatSessionsTooltip">
+      <source xml:lang="en">View Chat Sessions</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentMessage">
@@ -2502,7 +2559,7 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Build with agent mode.</source>
     </trans-unit>
     <trans-unit id="chat.input.placeholder.lockedToAgent">
-      <source xml:lang="en">Follow up with {0}</source>
+      <source xml:lang="en">Chat with {0}</source>
     </trans-unit>
     <trans-unit id="chatDescription">
       <source xml:lang="en">Ask about your code.</source>
@@ -3085,6 +3142,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatIsEnabled">
       <source xml:lang="en">True when chat is enabled because a default chat participant is activated with an implementation.</source>
+    </trans-unit>
+    <trans-unit id="chatIsHistoryItem">
+      <source xml:lang="en">True when the chat session item is from history.</source>
     </trans-unit>
     <trans-unit id="chatItemId">
       <source xml:lang="en">The id of the chat item.</source>
