@@ -1016,6 +1016,12 @@ For example:
     <trans-unit id="argument">
       <source xml:lang="en">Argument</source>
     </trans-unit>
+    <trans-unit id="branch">
+      <source xml:lang="en">Branch</source>
+    </trans-unit>
+    <trans-unit id="commit">
+      <source xml:lang="en">Commit</source>
+    </trans-unit>
     <trans-unit id="file">
       <source xml:lang="en">File</source>
     </trans-unit>
@@ -1040,11 +1046,20 @@ For example:
     <trans-unit id="optionValue">
       <source xml:lang="en">Option Value</source>
     </trans-unit>
+    <trans-unit id="remote">
+      <source xml:lang="en">Remote</source>
+    </trans-unit>
+    <trans-unit id="stash">
+      <source xml:lang="en">Stash</source>
+    </trans-unit>
     <trans-unit id="symbolicLinkFile">
       <source xml:lang="en">Symbolic Link File</source>
     </trans-unit>
     <trans-unit id="symbolicLinkFolder">
       <source xml:lang="en">Symbolic Link Folder</source>
+    </trans-unit>
+    <trans-unit id="tag">
+      <source xml:lang="en">Tag</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/suggest/browser/terminalSymbolIcons" source-language="en" datatype="plaintext"><body>
@@ -1053,6 +1068,12 @@ For example:
     </trans-unit>
     <trans-unit id="terminalSymbolArgumentIcon">
       <source xml:lang="en">Icon for arguments in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolBranchIcon">
+      <source xml:lang="en">Icon for branches in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolCommitIcon">
+      <source xml:lang="en">Icon for commits in the terminal suggest widget.</source>
     </trans-unit>
     <trans-unit id="terminalSymbolFileIcon">
       <source xml:lang="en">Icon for files in the terminal suggest widget.</source>
@@ -1068,6 +1089,12 @@ For example:
     </trans-unit>
     <trans-unit id="terminalSymbolIcon.argumentForeground">
       <source xml:lang="en">The foreground color for an argument icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolIcon.branchForeground">
+      <source xml:lang="en">The foreground color for a branch icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolIcon.commitForeground">
+      <source xml:lang="en">The foreground color for a commit icon. These icons will appear in the terminal suggest widget.</source>
     </trans-unit>
     <trans-unit id="terminalSymbolIcon.enumMemberForeground">
       <source xml:lang="en">The foreground color for an enum member icon. These icons will appear in the terminal suggest widget.</source>
@@ -1090,11 +1117,20 @@ For example:
     <trans-unit id="terminalSymbolIcon.optionForeground">
       <source xml:lang="en">The foreground color for an option icon. These icons will appear in the terminal suggest widget.</source>
     </trans-unit>
+    <trans-unit id="terminalSymbolIcon.remoteForeground">
+      <source xml:lang="en">The foreground color for a remote icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolIcon.stashForeground">
+      <source xml:lang="en">The foreground color for a stash icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
     <trans-unit id="terminalSymbolIcon.symbolicLinkFileForeground">
       <source xml:lang="en">The foreground color for a symbolic link file icon. These icons will appear in the terminal suggest widget.</source>
     </trans-unit>
     <trans-unit id="terminalSymbolIcon.symbolicLinkFolderForeground">
       <source xml:lang="en">The foreground color for a symbolic link folder icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolIcon.tagForeground">
+      <source xml:lang="en">The foreground color for a tag icon. These icons will appear in the terminal suggest widget.</source>
     </trans-unit>
     <trans-unit id="terminalSymbolInlineSuggestionIcon">
       <source xml:lang="en">Icon for inline suggestions in the terminal suggest widget.</source>
@@ -1108,11 +1144,20 @@ For example:
     <trans-unit id="terminalSymbolOptionValue">
       <source xml:lang="en">Icon for enum members in the terminal suggest widget.</source>
     </trans-unit>
+    <trans-unit id="terminalSymbolRemoteIcon">
+      <source xml:lang="en">Icon for remotes in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolStashIcon">
+      <source xml:lang="en">Icon for stashes in the terminal suggest widget.</source>
+    </trans-unit>
     <trans-unit id="terminalSymbolSymbolicLinkFileIcon">
       <source xml:lang="en">Icon for symbolic link files in the terminal suggest widget.</source>
     </trans-unit>
     <trans-unit id="terminalSymbolSymbolicLinkFolderIcon">
       <source xml:lang="en">Icon for symbolic link folders in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolTagIcon">
+      <source xml:lang="en">Icon for tags in the terminal suggest widget.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/suggest/common/terminalSuggestConfiguration" source-language="en" datatype="plaintext"><body>

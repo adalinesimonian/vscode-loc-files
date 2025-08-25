@@ -557,7 +557,7 @@
       <source xml:lang="en">Switch to Next Model</source>
     </trans-unit>
     <trans-unit id="interactive.toggleAgent.label">
-      <source xml:lang="en">Set Chat Mode</source>
+      <source xml:lang="en">Switch to Next Chat Mode</source>
     </trans-unit>
     <trans-unit id="remoteAgentError">
       <source xml:lang="en">Coding agent session cancelled.</source>
@@ -1073,6 +1073,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="chat.undoRequests.restoreInput">
       <source xml:lang="en">Controls whether the input of the chat should be restored when an undo request is made. The input will be filled with the text of the request that was restored.</source>
+    </trans-unit>
+    <trans-unit id="chat.useChatSessionsForCloudButton">
+      <source xml:lang="en">Controls whether the 'Delegate to coding agent' button uses the new chat sessions API.</source>
     </trans-unit>
     <trans-unit id="chat.useFileStorage">
       <source xml:lang="en">Enables storing chat sessions on disk instead of in the storage service. Enabling this does a one-time per-workspace migration of existing sessions to the new format.</source>
