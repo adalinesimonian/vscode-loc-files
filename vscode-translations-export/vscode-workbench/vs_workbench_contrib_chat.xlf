@@ -945,6 +945,12 @@
     <trans-unit id="chat.extensionToolsPolicy">
       <source xml:lang="en">Enable using tools contributed by third-party extensions.</source>
     </trans-unit>
+    <trans-unit id="chat.fontFamily">
+      <source xml:lang="en">Controls the font family in chat messages.</source>
+    </trans-unit>
+    <trans-unit id="chat.fontSize">
+      <source xml:lang="en">Controls the font size in pixels in chat messages.</source>
+    </trans-unit>
     <trans-unit id="chat.implicitContext.enabled.1">
       <source xml:lang="en">Enables automatically using the active editor as chat context for specified chat locations.</source>
     </trans-unit>
@@ -1446,20 +1452,23 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatExtensionsInstallToolSubPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="allow">
+      <source xml:lang="en">Allow</source>
+    </trans-unit>
     <trans-unit id="cancel">
       <source xml:lang="en">Cancel</source>
-    </trans-unit>
-    <trans-unit id="continue">
-      <source xml:lang="en">Continue</source>
     </trans-unit>
     <trans-unit id="installExtensions">
       <source xml:lang="en">Install Extensions</source>
     </trans-unit>
     <trans-unit id="installExtensionsConfirmation">
-      <source xml:lang="en">Click the Install button on the extension and then press Continue when finished.</source>
+      <source xml:lang="en">Click the Install button on the extension and then press Allow when finished.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatTerminalToolConfirmationSubPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="allow">
+      <source xml:lang="en">Allow</source>
+    </trans-unit>
     <trans-unit id="autoApprove.button.enable">
       <source xml:lang="en">Enable</source>
     </trans-unit>
@@ -1471,9 +1480,6 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="autoApprove.title">
       <source xml:lang="en">Enable terminal auto approve?</source>
-    </trans-unit>
-    <trans-unit id="continue">
-      <source xml:lang="en">Continue</source>
     </trans-unit>
     <trans-unit id="newRule">
       <source xml:lang="en">Auto approve rule {0} added</source>
@@ -1492,6 +1498,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolConfirmationSubPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="allow">
+      <source xml:lang="en">Allow</source>
+    </trans-unit>
     <trans-unit id="allowGloballTooltip">
       <source xml:lang="en">Always allow this tool to run without confirmation.</source>
     </trans-unit>
@@ -1516,14 +1525,14 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chat.input">
       <source xml:lang="en">Input</source>
     </trans-unit>
-    <trans-unit id="continue">
-      <source xml:lang="en">Continue</source>
-    </trans-unit>
     <trans-unit id="seeMore">
       <source xml:lang="en">See more</source>
     </trans-unit>
     <trans-unit id="showMore">
       <source xml:lang="en">Show More</source>
+    </trans-unit>
+    <trans-unit id="skip">
+      <source xml:lang="en">Skip</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolInvocationPart" source-language="en" datatype="plaintext"><body>

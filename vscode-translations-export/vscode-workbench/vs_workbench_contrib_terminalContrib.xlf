@@ -257,7 +257,7 @@ Remarks:
       <source xml:lang="en">Configure Auto Approve...</source>
     </trans-unit>
     <trans-unit id="autoApprove.exactCommand">
-      <source xml:lang="en">Always Allow Exact Command Line: {0}</source>
+      <source xml:lang="en">Always Allow Exact Command Line</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/terminal.chatAgentTools.contribution" source-language="en" datatype="plaintext"><body>
@@ -312,13 +312,13 @@ Remarks:
       <source xml:lang="en">Yes</source>
     </trans-unit>
     <trans-unit id="poll.terminal.acceptRun">
-      <source xml:lang="en">Yes</source>
+      <source xml:lang="en">Allow</source>
     </trans-unit>
     <trans-unit id="poll.terminal.confirmRun">
       <source xml:lang="en">Run `{0}` in the terminal?</source>
     </trans-unit>
     <trans-unit id="poll.terminal.confirmRunDetail">
-      <source xml:lang="en">The terminal output appears to require a response. Do you want to send `{0}` to the terminal?</source>
+      <source xml:lang="en">The terminal output appears to require a response. Do you want to send `{0}` followed by `Enter` to the terminal?</source>
     </trans-unit>
     <trans-unit id="poll.terminal.polling">
       <source xml:lang="en">This will continue to poll for output to determine when the terminal becomes idle for up to 2 minutes.</source>
@@ -327,7 +327,7 @@ Remarks:
       <source xml:lang="en">No</source>
     </trans-unit>
     <trans-unit id="poll.terminal.rejectRun">
-      <source xml:lang="en">No</source>
+      <source xml:lang="en">Focus Terminal</source>
     </trans-unit>
     <trans-unit id="poll.terminal.waiting">
       <source xml:lang="en">Continue waiting for `{0}`?</source>
@@ -1046,6 +1046,12 @@ For example:
     <trans-unit id="optionValue">
       <source xml:lang="en">Option Value</source>
     </trans-unit>
+    <trans-unit id="pullRequest">
+      <source xml:lang="en">Pull Request</source>
+    </trans-unit>
+    <trans-unit id="pullRequestDone">
+      <source xml:lang="en">Pull Request (Done)</source>
+    </trans-unit>
     <trans-unit id="remote">
       <source xml:lang="en">Remote</source>
     </trans-unit>
@@ -1117,6 +1123,12 @@ For example:
     <trans-unit id="terminalSymbolIcon.optionForeground">
       <source xml:lang="en">The foreground color for an option icon. These icons will appear in the terminal suggest widget.</source>
     </trans-unit>
+    <trans-unit id="terminalSymbolIcon.pullRequestDoneForeground">
+      <source xml:lang="en">The foreground color for a completed pull request icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolIcon.pullRequestForeground">
+      <source xml:lang="en">The foreground color for a pull request icon. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
     <trans-unit id="terminalSymbolIcon.remoteForeground">
       <source xml:lang="en">The foreground color for a remote icon. These icons will appear in the terminal suggest widget.</source>
     </trans-unit>
@@ -1143,6 +1155,12 @@ For example:
     </trans-unit>
     <trans-unit id="terminalSymbolOptionValue">
       <source xml:lang="en">Icon for enum members in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolPullRequestDoneIcon">
+      <source xml:lang="en">Icon for completed pull requests in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolPullRequestIcon">
+      <source xml:lang="en">Icon for pull requests in the terminal suggest widget.</source>
     </trans-unit>
     <trans-unit id="terminalSymbolRemoteIcon">
       <source xml:lang="en">Icon for remotes in the terminal suggest widget.</source>
