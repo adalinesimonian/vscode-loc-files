@@ -980,6 +980,18 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.mathEnabled.description">
       <source xml:lang="en">Enable math rendering in chat responses using KaTeX.</source>
     </trans-unit>
+    <trans-unit id="chat.mcp.access">
+      <source xml:lang="en">Controls access to Model Context Protocol servers.</source>
+    </trans-unit>
+    <trans-unit id="chat.mcp.access.any">
+      <source xml:lang="en">Allow access to any MCP server.</source>
+    </trans-unit>
+    <trans-unit id="chat.mcp.access.none">
+      <source xml:lang="en">No access to MCP servers.</source>
+    </trans-unit>
+    <trans-unit id="chat.mcp.access.registry">
+      <source xml:lang="en">Only allow access to MCP servers from the registry.</source>
+    </trans-unit>
     <trans-unit id="chat.mcp.assisted.nuget.enabled.description">
       <source xml:lang="en">Enables NuGet packages for AI-assisted MCP server installation. Used to install MCP servers by name from the central registry for .NET packages (NuGet.org).</source>
     </trans-unit>
@@ -994,9 +1006,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.autostart.onlyNew">
       <source xml:lang="en">Only automatically start new MCP servers that have never been run.</source>
-    </trans-unit>
-    <trans-unit id="chat.mcp.enabled">
-      <source xml:lang="en">Enables integration with Model Context Protocol servers to provide additional tools and functionality.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.serverSampling">
       <source xml:lang="en">Configures which models are exposed to MCP servers for sampling (making model requests in the background). This setting can be edited in a graphical way under the `{0}` command.</source>
@@ -2368,6 +2377,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="startUsing">
       <source xml:lang="en">Start using {0} Copilot</source>
     </trans-unit>
+    <trans-unit id="terminalAgentDescription">
+      <source xml:lang="en">Ask how to do something in the terminal</source>
+    </trans-unit>
     <trans-unit id="triggerChatSetup">
       <source xml:lang="en">Use AI Features with GitHub Copilot for free...</source>
     </trans-unit>
@@ -2397,6 +2409,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="willResolveTo">
       <source xml:lang="en">Will resolve to {0}</source>
+    </trans-unit>
+    <trans-unit id="workspaceAgentDescription">
+      <source xml:lang="en">Ask about your workspace</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatStatus" source-language="en" datatype="plaintext"><body>
@@ -2619,11 +2634,11 @@ Type {3} to use commands</source>
     <trans-unit id="chatWidget.tips.withoutParticipants">
       <source xml:lang="en">{0} or type {1} to attach context</source>
     </trans-unit>
-    <trans-unit id="codingAgentMessage">
-      <source xml:lang="en">This chat session will be forwarded to the {0} coding agent</source>
-    </trans-unit>
     <trans-unit id="codingAgentTitle">
-      <source xml:lang="en">Chat with {0}</source>
+      <source xml:lang="en">Delegate to {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotCodingAgentMessage">
+      <source xml:lang="en">This chat session will be forwarded to the {0} [coding agent]({1}) where work is completed in the background. </source>
     </trans-unit>
     <trans-unit id="editsHelp">
       <source xml:lang="en">Start your editing session by defining a set of files that you want to work with. Then ask Copilot for the changes you want to make.</source>
@@ -2639,6 +2654,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="expchatMessage">
       <source xml:lang="en">Let's get started</source>
+    </trans-unit>
+    <trans-unit id="genericCodingAgentMessage">
+      <source xml:lang="en">This chat session will be forwarded to the {0} coding agent where work is completed in the background. </source>
     </trans-unit>
     <trans-unit id="scrollDownButtonLabel">
       <source xml:lang="en">Scroll down</source>

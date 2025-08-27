@@ -527,8 +527,11 @@
     <trans-unit id="configJson">
       <source xml:lang="en">Show Configuration (JSON)</source>
     </trans-unit>
-    <trans-unit id="disabled - not allowed">
-      <source xml:lang="en">This MCP Server is disabled because {0}</source>
+    <trans-unit id="disabled - all not allowed">
+      <source xml:lang="en">This MCP Server is disabled because MCP servers are configured to be disabled in the Editor. Please check your [settings]({0}).</source>
+    </trans-unit>
+    <trans-unit id="disabled - some not allowed">
+      <source xml:lang="en">This MCP Server is disabled because it is configured to be disabled in the Editor. Please check your [settings]({0}).</source>
     </trans-unit>
     <trans-unit id="install">
       <source xml:lang="en">Install</source>
