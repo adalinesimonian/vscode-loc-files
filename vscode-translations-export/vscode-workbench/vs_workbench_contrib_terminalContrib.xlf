@@ -314,11 +314,12 @@ Remarks:
     <trans-unit id="poll.terminal.acceptRun">
       <source xml:lang="en">Allow</source>
     </trans-unit>
-    <trans-unit id="poll.terminal.confirmRun">
-      <source xml:lang="en">Run `{0}` in the terminal?</source>
+    <trans-unit id="poll.terminal.confirmRequired">
+      <source xml:lang="en">The terminal is awaiting input.</source>
     </trans-unit>
     <trans-unit id="poll.terminal.confirmRunDetail">
-      <source xml:lang="en">The terminal output appears to require a response. Do you want to send `{0}` followed by `Enter` to the terminal?</source>
+      <source xml:lang="en">{0}
+ Do you want to send `{1}`{2} followed by `Enter` to the terminal?</source>
     </trans-unit>
     <trans-unit id="poll.terminal.polling">
       <source xml:lang="en">This will continue to poll for output to determine when the terminal becomes idle for up to 2 minutes.</source>

@@ -900,6 +900,9 @@
     <trans-unit id="chat.agent.showThinking">
       <source xml:lang="en">Controls whether to show the thinking process of the model in chat responses.</source>
     </trans-unit>
+    <trans-unit id="chat.agent.thinkingCollapsedByDefault">
+      <source xml:lang="en">Controls whether the thinking section is collapsed by default when shown.</source>
+    </trans-unit>
     <trans-unit id="chat.checkpoints.enabled">
       <source xml:lang="en">Enables checkpoints in chat. Checkpoints allow you to restore the chat to a previous state.</source>
     </trans-unit>
@@ -1528,9 +1531,6 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="allowWorkspaceTooltip">
       <source xml:lang="en">Allow this tool to run in this workspace without confirmation.</source>
     </trans-unit>
-    <trans-unit id="cancel">
-      <source xml:lang="en">Cancel</source>
-    </trans-unit>
     <trans-unit id="chat.input">
       <source xml:lang="en">Input</source>
     </trans-unit>
@@ -1542,6 +1542,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="skip">
       <source xml:lang="en">Skip</source>
+    </trans-unit>
+    <trans-unit id="skip.detail">
+      <source xml:lang="en">Proceed without running this tool</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolInvocationPart" source-language="en" datatype="plaintext"><body>
@@ -3396,23 +3399,20 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/languageModels" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="vscode.extension.contributes.languageModels">
-      <source xml:lang="en">Contribute language models of a specific vendor.</source>
-    </trans-unit>
-    <trans-unit id="vscode.extension.contributes.languageModels.chatProviderRequired">
-      <source xml:lang="en">This contribution point requires the 'chatProvider' proposal.</source>
+    <trans-unit id="vscode.extension.contributes.languageModelChatProviders">
+      <source xml:lang="en">Contribute language model chat providers of a specific vendor.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.languageModels.displayName">
-      <source xml:lang="en">The display name of the language model vendor.</source>
+      <source xml:lang="en">The display name of the language model chat provider.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.languageModels.emptyVendor">
       <source xml:lang="en">The vendor field cannot be empty.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.languageModels.managementCommand">
-      <source xml:lang="en">A command to manage the language model vendor, e.g. 'Manage Copilot models'. This is used in the chat model picker. If not provided, a gear icon is not rendered during vendor selection.</source>
+      <source xml:lang="en">A command to manage the language model chat provider, e.g. 'Manage Copilot models'. This is used in the chat model picker. If not provided, a gear icon is not rendered during vendor selection.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.languageModels.vendor">
-      <source xml:lang="en">A globally unique vendor of language models.</source>
+      <source xml:lang="en">A globally unique vendor of language model chat provider.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.languageModels.vendorAlreadyRegistered">
       <source xml:lang="en">The vendor '{0}' is already registered and cannot be registered twice</source>
