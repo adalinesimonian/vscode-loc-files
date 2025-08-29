@@ -663,7 +663,7 @@
       <source xml:lang="en">Open Quick Chat</source>
     </trans-unit>
     <trans-unit id="quickChat">
-      <source xml:lang="en">Quick Chat</source>
+      <source xml:lang="en">Open Quick Chat</source>
     </trans-unit>
     <trans-unit id="toggle.desc">
       <source xml:lang="en">Toggle the quick chat</source>
@@ -684,6 +684,9 @@
     </trans-unit>
     <trans-unit id="chat.openSessionInSidebar.label">
       <source xml:lang="en">Open Chat in Sidebar</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.toggleDescriptionDisplay.label">
+      <source xml:lang="en">Show Rich Descriptions</source>
     </trans-unit>
     <trans-unit id="openSessionInNewEditorGroup">
       <source xml:lang="en">Open in New Editor Group</source>
@@ -897,11 +900,20 @@
     <trans-unit id="chat.agent.maxRequests">
       <source xml:lang="en">The maximum number of requests to allow Copilot to use per-turn in agent mode. When the limit is reached, Copilot will ask the user to confirm that it should continue.</source>
     </trans-unit>
-    <trans-unit id="chat.agent.showThinking">
-      <source xml:lang="en">Controls whether to show the thinking process of the model in chat responses.</source>
-    </trans-unit>
     <trans-unit id="chat.agent.thinkingCollapsedByDefault">
-      <source xml:lang="en">Controls whether the thinking section is collapsed by default when shown.</source>
+      <source xml:lang="en">Controls how thinking is rendered.</source>
+    </trans-unit>
+    <trans-unit id="chat.agent.thinkingMode.collapsed">
+      <source xml:lang="en">Collapsed normal</source>
+    </trans-unit>
+    <trans-unit id="chat.agent.thinkingMode.collapsedPreview">
+      <source xml:lang="en">Collapsed and show thinking related tool calls as they come in.</source>
+    </trans-unit>
+    <trans-unit id="chat.agent.thinkingMode.expanded">
+      <source xml:lang="en">Uncollapsed (expanded)</source>
+    </trans-unit>
+    <trans-unit id="chat.agent.thinkingMode.none">
+      <source xml:lang="en">Do not show the thinking</source>
     </trans-unit>
     <trans-unit id="chat.checkpoints.enabled">
       <source xml:lang="en">Enables checkpoints in chat. Checkpoints allow you to restore the chat to a previous state.</source>
@@ -1065,6 +1077,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.sessionsViewLocation.description">
       <source xml:lang="en">Controls where to show the agent sessions menu.</source>
     </trans-unit>
+    <trans-unit id="chat.showAgentSessionsViewDescription">
+      <source xml:lang="en">Controls whether session descriptions are displayed on a second row in the Chat Sessions view.</source>
+    </trans-unit>
     <trans-unit id="chat.signInDialogVariant">
       <source xml:lang="en">Control variations of the sign-in dialog.</source>
     </trans-unit>
@@ -1091,6 +1106,12 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="chat.undoRequests.restoreInput">
       <source xml:lang="en">Controls whether the input of the chat should be restored when an undo request is made. The input will be filled with the text of the request that was restored.</source>
+    </trans-unit>
+    <trans-unit id="chat.useAgentMd.description">
+      <source xml:lang="en">Controls whether instructions from `AGENTS.MD` file found in a workspace roots are added to all chat requests.</source>
+    </trans-unit>
+    <trans-unit id="chat.useAgentMd.title">
+      <source xml:lang="en">Use AGENTS.MD file</source>
     </trans-unit>
     <trans-unit id="chat.useChatSessionsForCloudButton">
       <source xml:lang="en">Controls whether the 'Delegate to coding agent' button uses the new chat sessions API.</source>
@@ -1359,12 +1380,6 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chat.pinned.thinking.header.base">
       <source xml:lang="en">Thinking...</source>
     </trans-unit>
-    <trans-unit id="chat.pinned.thinking.header.count">
-      <source xml:lang="en">Thought for a few seconds...</source>
-    </trans-unit>
-    <trans-unit id="chat.pinned.thinking.header.count.time">
-      <source xml:lang="en">Thought for {0}</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatProgressContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="workingMessage">
@@ -1489,6 +1504,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="autoApprove.markdown">
       <source xml:lang="en">This will enable a configurable subset of commands to run in the terminal autonomously. It provides *best effort protections* and assumes the agent is not acting maliciously.</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.markdown2">
+      <source xml:lang="en">Learn more about the potential risks and how to avoid them.</source>
     </trans-unit>
     <trans-unit id="autoApprove.title">
       <source xml:lang="en">Enable terminal auto approve?</source>
@@ -2031,6 +2049,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatListRenderer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.pinned.thinking.header.done">
+      <source xml:lang="en">Thought for a few seconds...</source>
+    </trans-unit>
     <trans-unit id="chatConfirmationAction">
       <source xml:lang="en">selected "{0}"</source>
     </trans-unit>
@@ -2217,6 +2238,12 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chat.sessions.chatView.description">
       <source xml:lang="en">Chat View</source>
     </trans-unit>
+    <trans-unit id="chat.sessions.gettingStarted">
+      <source xml:lang="en">Getting Started</source>
+    </trans-unit>
+    <trans-unit id="chat.sessions.gettingStarted.action">
+      <source xml:lang="en">Getting Started with Chat Sessions</source>
+    </trans-unit>
     <trans-unit id="chat.sessions.showHistory">
       <source xml:lang="en">History</source>
     </trans-unit>
@@ -2232,6 +2259,18 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chatSessions.dragLabel">
       <source xml:lang="en">{0} chat sessions</source>
     </trans-unit>
+    <trans-unit id="chatSessions.extensionAlreadyInstalled">
+      <source xml:lang="en">Extension already installed</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.installExtension">
+      <source xml:lang="en">Installs '{0}' extension</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.installExtensions">
+      <source xml:lang="en">Install Chat Extensions</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.learnMoreGHCodingAgent">
+      <source xml:lang="en">Learn More about GitHub Copilot coding agent</source>
+    </trans-unit>
     <trans-unit id="chatSessions.loading">
       <source xml:lang="en">Loading chat sessions...</source>
     </trans-unit>
@@ -2239,8 +2278,14 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">No local chat sessions
 [Start a Chat](command:workbench.action.openChat)</source>
     </trans-unit>
+    <trans-unit id="chatSessions.pickPlaceholder">
+      <source xml:lang="en">Choose an extension that adds chat session functionality</source>
+    </trans-unit>
     <trans-unit id="chatSessions.refreshing">
       <source xml:lang="en">Refreshing chat sessions...</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.selectExtension">
+      <source xml:lang="en">Select extensions to install</source>
     </trans-unit>
     <trans-unit id="interactiveSession.open">
       <source xml:lang="en">New Chat Editor</source>
@@ -2253,6 +2298,9 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chatSessionsExtPoint">
       <source xml:lang="en">Contributes chat session integrations to the chat widget.</source>
     </trans-unit>
+    <trans-unit id="chatSessionsExtPoint.capabilities">
+      <source xml:lang="en">Optional capabilities for this chat session.</source>
+    </trans-unit>
     <trans-unit id="chatSessionsExtPoint.chatSessionType">
       <source xml:lang="en">Unique identifier for the type of chat session.</source>
     </trans-unit>
@@ -2264,6 +2312,12 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     </trans-unit>
     <trans-unit id="chatSessionsExtPoint.name">
       <source xml:lang="en">Name shown in the chat widget. (eg: @agent)</source>
+    </trans-unit>
+    <trans-unit id="chatSessionsExtPoint.supportsFileAttachments">
+      <source xml:lang="en">Whether this chat session supports attaching files or file references.</source>
+    </trans-unit>
+    <trans-unit id="chatSessionsExtPoint.supportsToolAttachments">
+      <source xml:lang="en">Whether this chat session supports attaching tools or tool references.</source>
     </trans-unit>
     <trans-unit id="chatSessionsExtPoint.when">
       <source xml:lang="en">Condition which must be true to show this item.</source>
@@ -3427,6 +3481,9 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/computeAutomaticInstructions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="instruction.file.reason.agentsmd">
+      <source xml:lang="en">Automatically attached as setting {0} is enabled</source>
+    </trans-unit>
     <trans-unit id="instruction.file.reason.allFiles">
       <source xml:lang="en">Automatically attached as pattern is **</source>
     </trans-unit>

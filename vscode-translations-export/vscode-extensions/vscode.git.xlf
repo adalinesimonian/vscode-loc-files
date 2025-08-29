@@ -13,6 +13,9 @@
     <trans-unit id="++CODE++189adffa42210902c882f3df1bf7ebce09c4e06c9c15d4a20559295c425ac0c6">
       <source xml:lang="en">$(info) This repository has no worktrees.</source>
     </trans-unit>
+    <trans-unit id="++CODE++a329d942c577d6fdf474fc53bb66e69b358d150bc09927e9b37001afb8c6cc1d">
+      <source xml:lang="en">&#10; and {0} more file{1}...</source>
+    </trans-unit>
     <trans-unit id="++CODE++418e632797c81516d50735320a9d9cc10b9ca7fdf7af3dcdab4caae0de5e1e57">
       <source xml:lang="en">&#10;&#10;Are you sure you want to discard ALL changes in {0} files?</source>
     </trans-unit>
@@ -610,6 +613,12 @@
     <trans-unit id="++CODE++00b3526ea21a69a7bbd09c6f006cce721c78be5995e2eb6c3cb8f0c2ede22879">
       <source xml:lang="en">Please provide the commit hash</source>
     </trans-unit>
+    <trans-unit id="++CODE++f01847dfc94126426b4849004762a12557de2332ae0ca1b4602210b341f0281b">
+      <source xml:lang="en">Proceed</source>
+    </trans-unit>
+    <trans-unit id="++CODE++29ce66d66490da3b7cb7fcd995ad389c6d46355f55a15c275d9f59e91e68d298">
+      <source xml:lang="en">Proceed with migrating changes to the current repository?</source>
+    </trans-unit>
     <trans-unit id="++CODE++fe4e7d8ab1a693b8d287c28b1fe5b6f772a2afbaa5063ebbd0766c52e54f161a">
       <source xml:lang="en">Publish Branch</source>
     </trans-unit>
@@ -732,6 +741,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++7eed423d682b3727b0e9c573d84d4a1a575092af646f5921b792c6a0557b97f7">
       <source xml:lang="en">Select a worktree to delete</source>
     </trans-unit>
+    <trans-unit id="++CODE++7917efb73119a21be72da885f36842d475b268c5eea4f0675fa5ed6ae08bf8d8">
+      <source xml:lang="en">Select a worktree to migrate changes from</source>
+    </trans-unit>
     <trans-unit id="++CODE++a2f33e4d476de1d0148d5cdc59a5d6d85769b8980e454594cb34dde1372ab35c">
       <source xml:lang="en">Select as Repository Destination</source>
     </trans-unit>
@@ -846,6 +858,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++72dbcd7478452a578554f9540148e0276884de955c89a499404e8723d8276986">
       <source xml:lang="en">There are known issues with the installed Git &quot;{0}&quot;. Please update to Git &gt;= 2.27 for the git features to work correctly.</source>
     </trans-unit>
+    <trans-unit id="++CODE++bc2938baf50f83b0f136d5b7574ae5fa7c2e4a5de2c87fab410fcdb8ddaf0f8d">
+      <source xml:lang="en">There are merge conflicts from migrating changes. Please resolve them before committing.</source>
+    </trans-unit>
     <trans-unit id="++CODE++afc7a0a052244cf074d97256a36bbc8ce4c0a07f1cfd00dd4894ec37c06aaad9">
       <source xml:lang="en">There are merge conflicts while applying the stash. Please resolve them before committing your changes.</source>
     </trans-unit>
@@ -857,6 +872,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++b57f6413a8c4b3e3809b021b4c115cf9c735b19bde5d9a0f01b8e9fea3b48627">
       <source xml:lang="en">There are no available repositories matching the filter</source>
+    </trans-unit>
+    <trans-unit id="++CODE++6d7e53a1ac9638958fad16d68189ae3730ad9bb01bf57d413865c23fbc750be0">
+      <source xml:lang="en">There are no changes in the selected worktree to migrate.</source>
     </trans-unit>
     <trans-unit id="++CODE++ae1a589b1c95953ed140c40811e495dcbaea430a742c8f895231e3c270e852ef">
       <source xml:lang="en">There are no changes to commit.</source>
@@ -896,6 +914,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++a3bfed7d5da3d9d87e3ffe75f75ecb1c47b3d635177a918a421dbc3da4789012">
       <source xml:lang="en">This repository has no remotes configured to fetch from.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++b53f4d29dbd6a23908d1a6a7b371508e195546cfc4827f1402160d8ad7f0b1f4">
+      <source xml:lang="en">This will apply the worktree&apos;s changes to this repository and discard changes in the worktree.&#10;This is IRREVERSIBLE!</source>
     </trans-unit>
     <trans-unit id="++CODE++8a31a9a33b1daab0d79eae0dc86548abb75d8210f058d99a3ef4b6f3ece60162">
       <source xml:lang="en">This will create a Git repository in &quot;{0}&quot;. Are you sure you want to continue?</source>
@@ -986,6 +1007,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++f68e4809fc65bd612c47b8183ca4ad4d72dd82321983cae49eeb791fd145b1e5">
       <source xml:lang="en">You seem to have git &quot;{0}&quot; installed. Code works best with git &gt;= 2</source>
+    </trans-unit>
+    <trans-unit id="++CODE++dce32be36c161387de16e89b9afa9f25d052fb368cbd3711174a82b007e0f98c">
+      <source xml:lang="en">Your local changes to the following files would be overwritten by merge:&#10; {0}&#10;&#10;Please stage, commit, or stash your changes in the repository before migrating changes.</source>
     </trans-unit>
     <trans-unit id="++CODE++802759f1e5e53993fd0ea369ce7f0ae28138651ca90cffb363771432692e5630">
       <source xml:lang="en">Your local changes would be overwritten by checkout.</source>
@@ -1954,6 +1978,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="command.merge">
       <source xml:lang="en">Merge...</source>
+    </trans-unit>
+    <trans-unit id="command.migrateWorktreeChanges">
+      <source xml:lang="en">Migrate Worktree Changes...</source>
     </trans-unit>
     <trans-unit id="config.openRepositoryInParentFolders.never">
       <source xml:lang="en">Never open a repository in parent folders of workspaces or open files.</source>
