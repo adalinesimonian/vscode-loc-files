@@ -93,7 +93,7 @@
 The `#microsoft-sovereign-cloud.customEnvironment#` syntax will turn into a link. Do not translate it.</note>
     </trans-unit>
     <trans-unit id="microsoft-authentication.implementation.description">
-      <source xml:lang="en">The authentication implementation to use for signing in with a Microsoft account.&#10;&#10;*NOTE: The `classic` implementation is deprecated and will be removed, along with this setting, in a future release. If only the `classic` implementation works for you, please [open an issue](command:workbench.action.openIssueReporter) and explain what you are trying to log in to.*</source>
+      <source xml:lang="en">The authentication implementation to use for signing in with a Microsoft account.&#10;&#10;*NOTE: The `classic` implementation is deprecated and will be removed in a future release. If the `msal` implementation does not work for you, please [open an issue](command:workbench.action.openIssueReporter) and explain what you are trying to log in to.*</source>
       <note>{Locked=&apos;[(command:workbench.action.openIssueReporter)]&apos;}
 The `command:` syntax will turn into a link. Do not translate it.</note>
     </trans-unit>
@@ -113,6 +113,9 @@ The `#microsoft-sovereign-cloud.environment#` syntax will turn into a link. Do n
     </trans-unit>
     <trans-unit id="microsoft-sovereign-cloud.customEnvironment.resourceManagerEndpointUrl.description">
       <source xml:lang="en">The resource manager endpoint for the custom Sovereign Cloud.</source>
+    </trans-unit>
+    <trans-unit id="microsoft-authentication.implementation.enumDescriptions.msal-no-broker">
+      <source xml:lang="en">Use the Microsoft Authentication Library (MSAL) to sign in with a Microsoft account using a browser. This is useful if you are having issues with the native broker.</source>
     </trans-unit>
     <trans-unit id="microsoft-authentication.implementation.enumDescriptions.msal">
       <source xml:lang="en">Use the Microsoft Authentication Library (MSAL) to sign in with a Microsoft account.</source>

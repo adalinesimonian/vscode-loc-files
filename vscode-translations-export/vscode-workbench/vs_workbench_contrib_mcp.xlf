@@ -595,6 +595,9 @@
     <trans-unit id="arguments">
       <source xml:lang="en">Arguments:</source>
     </trans-unit>
+    <trans-unit id="categories">
+      <source xml:lang="en">Categories</source>
+    </trans-unit>
     <trans-unit id="command">
       <source xml:lang="en">Command:</source>
     </trans-unit>
@@ -649,6 +652,12 @@
     <trans-unit id="packages">
       <source xml:lang="en">Packages</source>
     </trans-unit>
+    <trans-unit id="published">
+      <source xml:lang="en">Published</source>
+    </trans-unit>
+    <trans-unit id="released">
+      <source xml:lang="en">Released</source>
+    </trans-unit>
     <trans-unit id="remotes">
       <source xml:lang="en">Remote</source>
     </trans-unit>
@@ -692,16 +701,16 @@
     <trans-unit id="mcpServerWorkspaceIcon">
       <source xml:lang="en">Icon to indicate that an MCP server is for the workspace scope.</source>
     </trans-unit>
+    <trans-unit id="starredIcon">
+      <source xml:lang="en">Icon shown along with the starred status.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServerWidgets" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="install count">
-      <source xml:lang="en">Install count</source>
+    <trans-unit id="mcpIconStarForeground">
+      <source xml:lang="en">The icon color for mcp starred.</source>
     </trans-unit>
     <trans-unit id="publisher">
       <source xml:lang="en">Publisher ({0})</source>
-    </trans-unit>
-    <trans-unit id="ratedLabel">
-      <source xml:lang="en">Average rating: {0} out of 5</source>
     </trans-unit>
     <trans-unit id="remote user extension">
       <source xml:lang="en">Remote MCP Server</source>
