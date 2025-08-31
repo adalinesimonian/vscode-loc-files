@@ -219,7 +219,7 @@
       <source xml:lang="en">You've reached your monthly chat messages quota. You still have free code completions available.</source>
     </trans-unit>
     <trans-unit id="chatQuotaExceededButton">
-      <source xml:lang="en">Copilot Free plan chat messages quota reached. Click for details.</source>
+      <source xml:lang="en">GitHub Copilot Free plan chat messages quota reached. Click for details.</source>
     </trans-unit>
     <trans-unit id="chatSessions.newChatInSideBar">
       <source xml:lang="en">Open New Chat in Side Bar</source>
@@ -240,7 +240,7 @@
       <source xml:lang="en">Configure Code Completions...</source>
     </trans-unit>
     <trans-unit id="copilotQuotaReached">
-      <source xml:lang="en">Copilot Quota Reached</source>
+      <source xml:lang="en">GitHub Copilot Quota Reached</source>
     </trans-unit>
     <trans-unit id="currentChatLabel">
       <source xml:lang="en">current</source>
@@ -296,7 +296,7 @@
     <trans-unit id="interactiveSession.open">
       <source xml:lang="en">New Chat Editor</source>
     </trans-unit>
-    <trans-unit id="manageCopilot">
+    <trans-unit id="manageChat">
       <source xml:lang="en">Manage Chat</source>
     </trans-unit>
     <trans-unit id="more">
@@ -333,7 +333,7 @@
       <source xml:lang="en">Show Extensions using Copilot</source>
     </trans-unit>
     <trans-unit id="signInToChatSetup">
-      <source xml:lang="en">Sign in to use Copilot...</source>
+      <source xml:lang="en">Sign in to use AI features...</source>
     </trans-unit>
     <trans-unit id="switchChat.confirmPhrase">
       <source xml:lang="en">Switching chats will end your current edit session.</source>
@@ -342,7 +342,7 @@
       <source xml:lang="en">Switching chat modes will end your current edit session.</source>
     </trans-unit>
     <trans-unit id="title4">
-      <source xml:lang="en">Copilot</source>
+      <source xml:lang="en">Chat</source>
     </trans-unit>
     <trans-unit id="toggle.chatControl">
       <source xml:lang="en">Chat Controls</source>
@@ -354,16 +354,16 @@
       <source xml:lang="en">Toggle Chat</source>
     </trans-unit>
     <trans-unit id="upgradeChat">
-      <source xml:lang="en">Upgrade Copilot Plan</source>
+      <source xml:lang="en">Upgrade GitHub Copilot Plan</source>
     </trans-unit>
     <trans-unit id="upgradePlan">
-      <source xml:lang="en">Upgrade Copilot Plan</source>
+      <source xml:lang="en">Upgrade GitHub Copilot Plan</source>
     </trans-unit>
     <trans-unit id="upgradePro">
-      <source xml:lang="en">Upgrade to Copilot Pro</source>
+      <source xml:lang="en">Upgrade to GitHub Copilot Pro</source>
     </trans-unit>
     <trans-unit id="upgradeToPro">
-      <source xml:lang="en">Upgrade to Copilot Pro (your first 30 days are free) for:
+      <source xml:lang="en">Upgrade to GitHub Copilot Pro (your first 30 days are free) for:
 - Unlimited code completions
 - Unlimited chat messages
 - Access to premium models</source>
@@ -895,10 +895,10 @@
       <source xml:lang="en">Chat</source>
     </trans-unit>
     <trans-unit id="chat.agent.enabled.description">
-      <source xml:lang="en">Enable agent mode for {0}. When this is enabled, agent mode can be activated via the dropdown in the view.</source>
+      <source xml:lang="en">Enable agent mode for chat. When this is enabled, agent mode can be activated via the dropdown in the view.</source>
     </trans-unit>
     <trans-unit id="chat.agent.maxRequests">
-      <source xml:lang="en">The maximum number of requests to allow Copilot to use per-turn in agent mode. When the limit is reached, Copilot will ask the user to confirm that it should continue.</source>
+      <source xml:lang="en">The maximum number of requests to allow per-turn in agent mode. When the limit is reached, will ask to confirm to continue.</source>
     </trans-unit>
     <trans-unit id="chat.agent.thinkingCollapsedByDefault">
       <source xml:lang="en">Controls how thinking is rendered.</source>
@@ -922,7 +922,7 @@
       <source xml:lang="en">Controls whether to show chat checkpoint file changes.</source>
     </trans-unit>
     <trans-unit id="chat.commandCenter.enabled">
-      <source xml:lang="en">Controls whether the command center shows a menu for actions to control Copilot (requires {0}).</source>
+      <source xml:lang="en">Controls whether the command center shows a menu for actions to control chat (requires {0}).</source>
     </trans-unit>
     <trans-unit id="chat.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
@@ -1043,10 +1043,16 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Mode File Locations</source>
     </trans-unit>
     <trans-unit id="chat.notifyWindowOnConfirmation">
-      <source xml:lang="en">Controls whether the Copilot window should notify the user when a confirmation is needed while the window is not in focus. This includes a window badge as well as notification toast.</source>
+      <source xml:lang="en">Controls whether a chat session should notify the user when a confirmation is needed while the window is not in focus. This includes a window badge as well as notification toast.</source>
     </trans-unit>
     <trans-unit id="chat.promptFiles.policy">
       <source xml:lang="en">Enables reusable prompt and instruction files in Chat sessions.</source>
+    </trans-unit>
+    <trans-unit id="chat.promptFilesRecommendations.description">
+      <source xml:lang="en">Configure which prompt files to recommend in the chat welcome view. Each key is a prompt file name, and the value can be `true` to always recommend, `false` to never recommend, or a [when clause](https://aka.ms/vscode-when-clause) expression like `resourceExtname == .js` or `resourceLangId == markdown`.</source>
+    </trans-unit>
+    <trans-unit id="chat.promptFilesRecommendations.title">
+      <source xml:lang="en">Prompt File Recommendations</source>
     </trans-unit>
     <trans-unit id="chat.renderRelatedFiles">
       <source xml:lang="en">Controls whether related files should be rendered in the chat input.</source>
@@ -1399,7 +1405,7 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Manage paid premium requests</source>
     </trans-unit>
     <trans-unit id="upgradeToCopilotPro">
-      <source xml:lang="en">Upgrade to Copilot Pro</source>
+      <source xml:lang="en">Upgrade to GitHub Copilot Pro</source>
     </trans-unit>
     <trans-unit id="waitWarning">
       <source xml:lang="en">Changes may take a few minutes to take effect.</source>
@@ -2333,23 +2339,23 @@ Use with caution: carefully review selected tools and be extra wary of possible 
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
     </trans-unit>
+    <trans-unit id="chatFailedWarning">
+      <source xml:lang="en">Chat failed to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
+    </trans-unit>
+    <trans-unit id="chatSetupError">
+      <source xml:lang="en">Chat setup failed.</source>
+    </trans-unit>
+    <trans-unit id="chatTookLongWarning">
+      <source xml:lang="en">Chat took too long to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
+    </trans-unit>
+    <trans-unit id="chatWorkspaceTrust">
+      <source xml:lang="en">AI features are currently only supported in trusted workspaces.</source>
+    </trans-unit>
     <trans-unit id="continueWith">
       <source xml:lang="en">Continue with {0}</source>
     </trans-unit>
-    <trans-unit id="copilotFailedWarning">
-      <source xml:lang="en">Copilot failed to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
-    </trans-unit>
-    <trans-unit id="copilotSetupError">
-      <source xml:lang="en">Copilot setup failed.</source>
-    </trans-unit>
-    <trans-unit id="copilotTookLongWarning">
-      <source xml:lang="en">Copilot took too long to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
-    </trans-unit>
     <trans-unit id="copilotUnavailableWarning">
-      <source xml:lang="en">Copilot failed to get a response. Please try again.</source>
-    </trans-unit>
-    <trans-unit id="copilotWorkspaceTrust">
-      <source xml:lang="en">Copilot is currently only supported in trusted workspaces.</source>
+      <source xml:lang="en">Failed to get a response. Please try again.</source>
     </trans-unit>
     <trans-unit id="enterpriseInstance">
       <source xml:lang="en">What is your {0} instance?</source>
@@ -2358,19 +2364,19 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">i.e. "octocat" or "https://octocat.ghe.com"...</source>
     </trans-unit>
     <trans-unit id="forceSignIn">
-      <source xml:lang="en">Sign in to use Copilot</source>
+      <source xml:lang="en">Sign in to use AI features</source>
     </trans-unit>
-    <trans-unit id="installingCopilot">
-      <source xml:lang="en">Getting Copilot ready</source>
+    <trans-unit id="installingChat">
+      <source xml:lang="en">Getting chat ready...</source>
     </trans-unit>
     <trans-unit id="invalidEnterpriseInstance">
       <source xml:lang="en">You must enter a valid {0} instance (i.e. "octocat" or "https://octocat.ghe.com")</source>
     </trans-unit>
     <trans-unit id="manageOverages">
-      <source xml:lang="en">Manage Copilot Overages</source>
+      <source xml:lang="en">Manage GitHub Copilot Overages</source>
     </trans-unit>
     <trans-unit id="managePlan">
-      <source xml:lang="en">Upgrade to Copilot Pro</source>
+      <source xml:lang="en">Upgrade to GitHub Copilot Pro</source>
     </trans-unit>
     <trans-unit id="restartExtensionHost.reason.disable">
       <source xml:lang="en">Disabling AI features</source>
@@ -2382,7 +2388,7 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Retry</source>
     </trans-unit>
     <trans-unit id="settingUpCopilotNeeded">
-      <source xml:lang="en">You need to set up Copilot and be signed in to use Chat.</source>
+      <source xml:lang="en">You need to set up GitHub Copilot and be signed in to use Chat.</source>
     </trans-unit>
     <trans-unit id="settings">
       <source xml:lang="en">By continuing, you agree to {0}'s [Terms]({1}) and [Privacy Statement]({2}). {3} Copilot may show [public code]({4}) suggestions and use your data to improve the product. You can change these [settings]({5}) anytime.</source>
@@ -2392,20 +2398,20 @@ Use with caution: carefully review selected tools and be extra wary of possible 
 {Locked="]({4})"}
 {Locked="]({5})"}</note>
     </trans-unit>
+    <trans-unit id="setupChat">
+      <source xml:lang="en">Set up chat.</source>
+    </trans-unit>
     <trans-unit id="setupChatProgress">
-      <source xml:lang="en">Getting Copilot ready...</source>
+      <source xml:lang="en">Getting chat ready...</source>
     </trans-unit>
     <trans-unit id="setupChatSignIn2">
-      <source xml:lang="en">Signing in to {0}.</source>
-    </trans-unit>
-    <trans-unit id="setupCopilot">
-      <source xml:lang="en">Set up Copilot.</source>
+      <source xml:lang="en">Signing in to {0}...</source>
     </trans-unit>
     <trans-unit id="setupCopilotButton">
       <source xml:lang="en">Set up Copilot</source>
     </trans-unit>
     <trans-unit id="setupErrorDialog">
-      <source xml:lang="en">Copilot setup failed. Would you like to try again?</source>
+      <source xml:lang="en">Chat setup failed. Would you like to try again?</source>
     </trans-unit>
     <trans-unit id="setupToolDisplayName">
       <source xml:lang="en">New Workspace</source>
@@ -2414,13 +2420,13 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Scaffold a new workspace in VS Code</source>
     </trans-unit>
     <trans-unit id="signIn">
-      <source xml:lang="en">Sign in to use {0} Copilot</source>
+      <source xml:lang="en">Sign in to use GitHub Copilot</source>
     </trans-unit>
     <trans-unit id="skipForNow">
       <source xml:lang="en">Skip for now</source>
     </trans-unit>
     <trans-unit id="startUsing">
-      <source xml:lang="en">Start using {0} Copilot</source>
+      <source xml:lang="en">Start using GitHub Copilot</source>
     </trans-unit>
     <trans-unit id="terminalAgentDescription">
       <source xml:lang="en">Ask how to do something in the terminal</source>
@@ -2429,28 +2435,28 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Use AI Features with Copilot for free...</source>
     </trans-unit>
     <trans-unit id="triggerChatSetupFromAccounts">
-      <source xml:lang="en">Sign in to use Copilot...</source>
+      <source xml:lang="en">Sign in to use AI features...</source>
     </trans-unit>
     <trans-unit id="trustNeeded">
       <source xml:lang="en">You need to trust this workspace to use Chat.</source>
     </trans-unit>
     <trans-unit id="unknownSetupError">
-      <source xml:lang="en">An error occurred while setting up Copilot. Would you like to try again?</source>
+      <source xml:lang="en">An error occurred while setting up chat. Would you like to try again?</source>
     </trans-unit>
     <trans-unit id="unknownSignInError">
       <source xml:lang="en">Failed to sign in to {0}. Would you like to try again?</source>
     </trans-unit>
     <trans-unit id="unknownSignInErrorDetail">
-      <source xml:lang="en">You must be signed in to use Copilot.</source>
+      <source xml:lang="en">You must be signed in to use AI features.</source>
     </trans-unit>
     <trans-unit id="vscodeAgentDescription">
       <source xml:lang="en">Ask questions about VS Code</source>
     </trans-unit>
-    <trans-unit id="waitingCopilot">
-      <source xml:lang="en">Getting Copilot ready</source>
+    <trans-unit id="waitingChat">
+      <source xml:lang="en">Getting chat ready...</source>
     </trans-unit>
-    <trans-unit id="waitingCopilot2">
-      <source xml:lang="en">Copilot is almost ready</source>
+    <trans-unit id="waitingChat2">
+      <source xml:lang="en">Chat is almost ready...</source>
     </trans-unit>
     <trans-unit id="willResolveTo">
       <source xml:lang="en">Will resolve to {0}</source>
@@ -2581,10 +2587,10 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">+{0} requests</source>
     </trans-unit>
     <trans-unit id="quotaLabel">
-      <source xml:lang="en">Manage Copilot</source>
+      <source xml:lang="en">Manage Chat</source>
     </trans-unit>
     <trans-unit id="quotaTooltip">
-      <source xml:lang="en">Manage Copilot</source>
+      <source xml:lang="en">Manage Chat</source>
     </trans-unit>
     <trans-unit id="quotaUnlimited">
       <source xml:lang="en">Included</source>
@@ -2614,7 +2620,7 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">Sign in to use Copilot</source>
     </trans-unit>
     <trans-unit id="upgradeToCopilotPro">
-      <source xml:lang="en">Upgrade to Copilot Pro</source>
+      <source xml:lang="en">Upgrade to GitHub Copilot Pro</source>
     </trans-unit>
     <trans-unit id="usageTitle">
       <source xml:lang="en">Copilot Usage</source>
@@ -2628,7 +2634,7 @@ Use with caution: carefully review selected tools and be extra wary of possible 
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentMessage">
-      <source xml:lang="en">Ask Copilot to edit your files in [agent mode]({0}). Copilot will automatically use multiple requests to pick files to edit, run terminal commands, and iterate on errors.</source>
+      <source xml:lang="en">Ask to edit your files in [agent mode]({0}). Agent mode will automatically use multiple requests to pick files to edit, run terminal commands, and iterate on errors.</source>
     </trans-unit>
     <trans-unit id="agentTitle">
       <source xml:lang="en">Build with agent mode.</source>
@@ -2643,7 +2649,13 @@ Use with caution: carefully review selected tools and be extra wary of possible 
       <source xml:lang="en">AI responses may be inaccurate.</source>
     </trans-unit>
     <trans-unit id="chatMessage">
-      <source xml:lang="en">Copilot is powered by AI, so mistakes are possible. Review output carefully before use.</source>
+      <source xml:lang="en">Chat is powered by AI, so mistakes are possible. Review output carefully before use.</source>
+    </trans-unit>
+    <trans-unit id="chatWidget.instructions">
+      <source xml:lang="en">[Generate instructions]({0}) to onboard AI onto your codebase.</source>
+    </trans-unit>
+    <trans-unit id="chatWidget.promptFile.suggestion">
+      <source xml:lang="en">/{0}</source>
     </trans-unit>
     <trans-unit id="chatWidget.suggestedPrompts.buildWorkspace">
       <source xml:lang="en">Build workspace</source>
@@ -2686,7 +2698,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">This chat session will be forwarded to the {0} [coding agent]({1}) where work is completed in the background. </source>
     </trans-unit>
     <trans-unit id="editsHelp">
-      <source xml:lang="en">Start your editing session by defining a set of files that you want to work with. Then ask Copilot for the changes you want to make.</source>
+      <source xml:lang="en">Start your editing session by defining a set of files that you want to work with. Then ask for the changes you want to make.</source>
     </trans-unit>
     <trans-unit id="editsTitle">
       <source xml:lang="en">Edit in context.</source>
@@ -3134,6 +3146,9 @@ Type {3} to use commands</source>
     <trans-unit id="agentModeSubtitle">
       <source xml:lang="en">Agent Mode</source>
     </trans-unit>
+    <trans-unit id="runPromptTitle">
+      <source xml:lang="en">Suggested prompt: {0}</source>
+    </trans-unit>
     <trans-unit id="suggestedPromptAriaLabel">
       <source xml:lang="en">Suggested prompt: {0}</source>
     </trans-unit>
@@ -3355,10 +3370,10 @@ Type {3} to use commands</source>
       <source xml:lang="en">Unexpected status code {0}.</source>
     </trans-unit>
     <trans-unit id="unknownSignUpError">
-      <source xml:lang="en">An error occurred while signing up for the Copilot Free plan. Would you like to try again?</source>
+      <source xml:lang="en">An error occurred while signing up for the GitHub Copilot Free plan. Would you like to try again?</source>
     </trans-unit>
     <trans-unit id="unprocessableSignUpError">
-      <source xml:lang="en">An error occurred while signing up for the Copilot Free plan.</source>
+      <source xml:lang="en">An error occurred while signing up for the GitHub Copilot Free plan.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatModel" source-language="en" datatype="plaintext"><body>
@@ -3841,7 +3856,7 @@ Example: **/*.ts, **/*.js, client/**</source>
       <source xml:lang="en">A chat request is in progress. Are you sure you want to close the window?</source>
     </trans-unit>
     <trans-unit id="copilotWorkspaceTrust">
-      <source xml:lang="en">Copilot is currently only supported in trusted workspaces.</source>
+      <source xml:lang="en">AI features are currently only supported in trusted workspaces.</source>
     </trans-unit>
     <trans-unit id="exit.detail">
       <source xml:lang="en">The chat request will stop if you exit.</source>
