@@ -46,7 +46,7 @@
       <source xml:lang="en">To accept a tool action, use the Accept Tool Confirmation command{0}.</source>
     </trans-unit>
     <trans-unit id="chatAgent.autoApprove">
-      <source xml:lang="en">To automatically approve tool actions without manual confirmation, set {0} to {1} in your settings.</source>
+      <source xml:lang="en">To automatically approve tool actions without manual confirmation, set chat.tools.autoApprove to true in your settings.</source>
     </trans-unit>
     <trans-unit id="chatAgent.openEditedFilesSetting">
       <source xml:lang="en">By default, when edits are made to files, they will be opened. To change this behavior, set accessibility.openChatEditedFiles to false in your settings.</source>
@@ -904,13 +904,13 @@
       <source xml:lang="en">Controls how thinking is rendered.</source>
     </trans-unit>
     <trans-unit id="chat.agent.thinkingMode.collapsed">
-      <source xml:lang="en">Collapsed normal</source>
+      <source xml:lang="en">Thinking parts will be collapsed by default.</source>
     </trans-unit>
     <trans-unit id="chat.agent.thinkingMode.collapsedPreview">
-      <source xml:lang="en">Collapsed and show thinking related tool calls as they come in.</source>
+      <source xml:lang="en">Thinking parts will be expanded first, then collapse once we reach a part that is not thinking.</source>
     </trans-unit>
     <trans-unit id="chat.agent.thinkingMode.expanded">
-      <source xml:lang="en">Uncollapsed (expanded)</source>
+      <source xml:lang="en">Thinking parts will be expanded by default.</source>
     </trans-unit>
     <trans-unit id="chat.agent.thinkingMode.none">
       <source xml:lang="en">Do not show the thinking</source>
@@ -947,6 +947,9 @@
     </trans-unit>
     <trans-unit id="chat.emptyChatState">
       <source xml:lang="en">Shows a modified empty chat state with hints in the input placeholder text.</source>
+    </trans-unit>
+    <trans-unit id="chat.emptyState.history.enabled">
+      <source xml:lang="en">Show recent chat history on the empty chat state.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
@@ -1095,10 +1098,20 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.todoListTool.writeOnly">
       <source xml:lang="en">When enabled, the todo tool operates in write-only mode, requiring the agent to remember todos in context.</source>
     </trans-unit>
+    <trans-unit id="chat.tools.autoApprove.description">
+      <source xml:lang="en">Controls whether tool use should be automatically approved. Allow all tools to run automatically without user confirmation, overriding any tool-specific settings such as terminal auto-approval. Use with caution: carefully review selected tools and be extra wary of possible sources of prompt injection!</source>
+    </trans-unit>
     <trans-unit id="chat.tools.autoApprove.edits">
       <source xml:lang="en">Controls whether edits made by chat are automatically approved. The default is to approve all edits except those made to certain files which have the potential to cause immediate unintened side-effects, such as `**/.vscode/*.json`.
 
 Files are matched against the glob patterns in the order they are specified.</source>
+    </trans-unit>
+    <trans-unit id="chat.tools.autoApprove.markdownDescription">
+      <source xml:lang="en">Controls whether tool use should be automatically approved.
+
+Allows _all_ tools to run automatically without user confirmation, overriding any tool-specific settings such as terminal auto-approval.
+
+Use with caution: carefully review selected tools and be extra wary of possible sources of prompt injection!</source>
     </trans-unit>
     <trans-unit id="chat.undoRequests.restoreInput">
       <source xml:lang="en">Controls whether the input of the chat should be restored when an undo request is made. The input will be filled with the text of the request that was restored.</source>
@@ -1372,11 +1385,6 @@ Files are matched against the glob patterns in the order they are specified.</so
       <source xml:lang="en">File Changes</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatPinnedContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.pinned.thinking.header.base">
-      <source xml:lang="en">Thinking...</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatProgressContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="workingMessage">
       <source xml:lang="en">Working...</source>
@@ -1432,12 +1440,41 @@ Files are matched against the glob patterns in the order they are specified.</so
       <source xml:lang="en">Made changes.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatThinkingContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.pinned.thinking.header.done">
+      <source xml:lang="en">Thought for a few seconds...</source>
+    </trans-unit>
+    <trans-unit id="chat.thinking.header">
+      <source xml:lang="en">Thinking...</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTodoListWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.todoList.clearButton">
       <source xml:lang="en">Clear all todos</source>
     </trans-unit>
     <trans-unit id="chat.todoList.clearButton.ariaLabel">
       <source xml:lang="en">Clear all todos</source>
+    </trans-unit>
+    <trans-unit id="chat.todoList.collapseButtonWithProgress">
+      <source xml:lang="en">Collapse {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.todoList.expandButtonWithProgress">
+      <source xml:lang="en">Expand {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.todoList.item">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.todoList.itemWithDescription">
+      <source xml:lang="en">{0}, {1}, {2}</source>
+    </trans-unit>
+    <trans-unit id="chat.todoList.status.completed">
+      <source xml:lang="en">completed</source>
+    </trans-unit>
+    <trans-unit id="chat.todoList.status.inProgress">
+      <source xml:lang="en">in progress</source>
+    </trans-unit>
+    <trans-unit id="chat.todoList.status.notStarted">
+      <source xml:lang="en">not started</source>
     </trans-unit>
     <trans-unit id="chat.todoList.title">
       <source xml:lang="en">Todos</source>
@@ -2045,9 +2082,6 @@ Files are matched against the glob patterns in the order they are specified.</so
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatListRenderer" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.pinned.thinking.header.done">
-      <source xml:lang="en">Thought for a few seconds...</source>
-    </trans-unit>
     <trans-unit id="chatConfirmationAction">
       <source xml:lang="en">selected "{0}"</source>
     </trans-unit>
@@ -2356,6 +2390,9 @@ Files are matched against the glob patterns in the order they are specified.</so
     <trans-unit id="forceSignIn">
       <source xml:lang="en">Sign in to use AI features</source>
     </trans-unit>
+    <trans-unit id="hideChatSetup">
+      <source xml:lang="en">Hide AI Features</source>
+    </trans-unit>
     <trans-unit id="installingChat">
       <source xml:lang="en">Getting chat ready...</source>
     </trans-unit>
@@ -2629,6 +2666,15 @@ Files are matched against the glob patterns in the order they are specified.</so
     <trans-unit id="agentTitle">
       <source xml:lang="en">Build with agent mode.</source>
     </trans-unit>
+    <trans-unit id="chat.history.list">
+      <source xml:lang="en">Chat History</source>
+    </trans-unit>
+    <trans-unit id="chat.history.showAllHover">
+      <source xml:lang="en">Show history...</source>
+    </trans-unit>
+    <trans-unit id="chat.history.title">
+      <source xml:lang="en">Chat History</source>
+    </trans-unit>
     <trans-unit id="chat.input.placeholder.lockedToAgent">
       <source xml:lang="en">Chat with {0}</source>
     </trans-unit>
@@ -2800,26 +2846,6 @@ Type {3} to use commands</source>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/screenshot" source-language="en" datatype="plaintext"><body>
     <trans-unit id="screenshot">
       <source xml:lang="en">Screenshot</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/languageModelToolsService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="autoApprove2.button.disable">
-      <source xml:lang="en">Disable</source>
-    </trans-unit>
-    <trans-unit id="autoApprove2.button.enable">
-      <source xml:lang="en">Enable</source>
-    </trans-unit>
-    <trans-unit id="autoApprove2.markdown">
-      <source xml:lang="en">Global auto approve also known as "YOLO mode" disables manual approval completely for _all tools in all workspaces_, allowing the agent to act fully autonomously. This is extremely dangerous and is *never* recommended, even containerized environments like [Codespaces](https://github.com/features/codespaces) and [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) have user keys forwarded into the container that could be compromised.
-
-**This feature disables [critical security protections](https://code.visualstudio.com/docs/copilot/security) and makes it much easier for an attacker to compromise the machine.**</source>
-      <note>{Locked='](https://github.com/features/codespaces)'}
-{Locked='](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)'}
-{Locked='](https://code.visualstudio.com/docs/copilot/security)'}
-{Locked='**'}</note>
-    </trans-unit>
-    <trans-unit id="autoApprove2.title">
-      <source xml:lang="en">Enable global auto approve?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modePickerActionItem" source-language="en" datatype="plaintext"><body>
@@ -3242,6 +3268,9 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatHasFileAttachments">
       <source xml:lang="en">True when the chat has file attachments.</source>
+    </trans-unit>
+    <trans-unit id="chatInEmptyStateWithHistoryEnabled">
+      <source xml:lang="en">True when chat empty state history is enabled AND chat is in empty state.</source>
     </trans-unit>
     <trans-unit id="chatIsEnabled">
       <source xml:lang="en">True when chat is enabled because a default chat participant is activated with an implementation.</source>
