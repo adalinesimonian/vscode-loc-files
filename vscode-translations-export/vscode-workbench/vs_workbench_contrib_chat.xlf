@@ -703,14 +703,11 @@
     <trans-unit id="deleteSession.detail">
       <source xml:lang="en">This action cannot be undone.</source>
     </trans-unit>
-    <trans-unit id="openSessionInNewEditorGroup">
-      <source xml:lang="en">Open in New Editor Group</source>
-    </trans-unit>
-    <trans-unit id="openSessionInNewWindow">
-      <source xml:lang="en">Open in New Window</source>
-    </trans-unit>
     <trans-unit id="openSessionInSidebar">
       <source xml:lang="en">Open in Sidebar</source>
+    </trans-unit>
+    <trans-unit id="openToSide">
+      <source xml:lang="en">Open to the Side</source>
     </trans-unit>
     <trans-unit id="renameSession">
       <source xml:lang="en">Rename</source>
@@ -1119,7 +1116,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">When enabled, the todo tool operates in write-only mode, requiring the agent to remember todos in context.</source>
     </trans-unit>
     <trans-unit id="chat.tools.autoApprove.edits">
-      <source xml:lang="en">Controls whether edits made by chat are automatically approved. The default is to approve all edits except those made to certain files which have the potential to cause immediate unintened side-effects, such as `**/.vscode/*.json`.
+      <source xml:lang="en">Controls whether edits made by chat are automatically approved. The default is to approve all edits except those made to certain files which have the potential to cause immediate unintended side-effects, such as `**/.vscode/*.json`.
 
 Files are matched against the glob patterns in the order they are specified.</source>
     </trans-unit>
@@ -2407,7 +2404,7 @@ Files are matched against the glob patterns in the order they are specified.</so
       <source xml:lang="en">Sign in to use AI features</source>
     </trans-unit>
     <trans-unit id="hideChatSetup">
-      <source xml:lang="en">Hide AI Features</source>
+      <source xml:lang="en">Learn How to Hide AI Features</source>
     </trans-unit>
     <trans-unit id="installingChat">
       <source xml:lang="en">Getting chat ready...</source>
@@ -2710,13 +2707,13 @@ Files are matched against the glob patterns in the order they are specified.</so
       <source xml:lang="en">/{0}</source>
     </trans-unit>
     <trans-unit id="chatWidget.suggestedPrompts.buildWorkspace">
-      <source xml:lang="en">Build workspace</source>
+      <source xml:lang="en">Build Workspace</source>
     </trans-unit>
     <trans-unit id="chatWidget.suggestedPrompts.buildWorkspacePrompt">
       <source xml:lang="en">How do I build this workspace?</source>
     </trans-unit>
     <trans-unit id="chatWidget.suggestedPrompts.findConfig">
-      <source xml:lang="en">Show project config</source>
+      <source xml:lang="en">Show Config</source>
     </trans-unit>
     <trans-unit id="chatWidget.suggestedPrompts.findConfigPrompt">
       <source xml:lang="en">Where is the configuration for this project defined?</source>
@@ -2728,7 +2725,7 @@ Files are matched against the glob patterns in the order they are specified.</so
       <source xml:lang="en">@vscode How do I change the theme to light mode?</source>
     </trans-unit>
     <trans-unit id="chatWidget.suggestedPrompts.newProject">
-      <source xml:lang="en">Create project</source>
+      <source xml:lang="en">Create Project</source>
     </trans-unit>
     <trans-unit id="chatWidget.suggestedPrompts.newProjectPrompt">
       <source xml:lang="en">Create a #new Hello World project in TypeScript</source>
@@ -3834,6 +3831,14 @@ Example: **/*.ts, **/*.js, client/**</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.tools">
       <source xml:lang="en">Contributes a tool that can be invoked by a language model in a chat session, or from a standalone command. Registered tools can be used by all extensions.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/tools/manageTodoListTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="tool.manageTodoList.displayName">
+      <source xml:lang="en">Manage and track todo items for task planning</source>
+    </trans-unit>
+    <trans-unit id="tool.manageTodoList.userDescription">
+      <source xml:lang="en">Tool for managing and tracking todo items for task planning</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/voiceChatService" source-language="en" datatype="plaintext"><body>

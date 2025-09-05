@@ -4376,7 +4376,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <note>{0}, {1} will be a setting name rendered as a link</note>
     </trans-unit>
     <trans-unit id="secondarySideBarDefaultVisibility">
-      <source xml:lang="en">Controls the default visibility of the secondary side bar in workspaces or empty windows opened for the first time.</source>
+      <source xml:lang="en">Controls the default visibility of the secondary side bar in workspaces or empty windows that are opened for the first time.</source>
     </trans-unit>
     <trans-unit id="secondarySideBarShowLabels">
       <source xml:lang="en">Controls whether activity items in the secondary side bar title are shown as label or icon. This setting only has an effect when {0} is not set to {1}.</source>
@@ -5853,8 +5853,23 @@ This option requires restart to take effect.</source>
     <trans-unit id="touchbar.ignored">
       <source xml:lang="en">A set of identifiers for entries in the touchbar that should not show up (for example `workbench.action.navigateBack`).</source>
     </trans-unit>
-    <trans-unit id="window.border">
-      <source xml:lang="en">Controls the border color of the window. Set to `default` to respect Windows or color theme settings, `off` to disable, or to a specific color in Hex, RGB, RGBA, HSL, HSLA format. Use {0} to set different colors for active and inactive windows. This setting is ignored when {1} is set to {2}.</source>
+    <trans-unit id="window.border.color">
+      <source xml:lang="en">{0}: specific color in Hex, RGB, RGBA, HSL, HSLA format</source>
+    </trans-unit>
+    <trans-unit id="window.border.default">
+      <source xml:lang="en">{0}: respect color theme settings, fallback to Windows settings</source>
+    </trans-unit>
+    <trans-unit id="window.border.off">
+      <source xml:lang="en">{0}: disable border colors</source>
+    </trans-unit>
+    <trans-unit id="window.border.prefix">
+      <source xml:lang="en">Controls the border color of the window:</source>
+    </trans-unit>
+    <trans-unit id="window.border.suffix">
+      <source xml:lang="en">Use {0} to set different colors for active and inactive windows. This setting is ignored when {1} is set to {2}.</source>
+    </trans-unit>
+    <trans-unit id="window.border.system">
+      <source xml:lang="en">{0}: respect Windows settings only</source>
     </trans-unit>
     <trans-unit id="window.clickThroughInactive">
       <source xml:lang="en">If enabled, clicking on an inactive window will both activate the window and trigger the element under the mouse if it is clickable. If disabled, clicking anywhere on an inactive window will activate it only and a second click is required on the element.</source>

@@ -109,6 +109,9 @@
     <trans-unit id="++CODE++17f6e16640851ff5f8f107e625f37fea87d46c8638fd5c8b9610ca3efc17135f">
       <source xml:lang="en">Describes the media type of a string property.</source>
     </trans-unit>
+    <trans-unit id="++CODE++9196746a13e5c5dfb36a1a197f04e0dfe050c3c689b640fbaeafa4590b220bfc">
+      <source xml:lang="en">Downloading schemas is disabled in untrusted workspaces</source>
+    </trans-unit>
     <trans-unit id="++CODE++6c0050a7efb7d3c2d26bd306153c8234db19f6392354488621979ee41f5a06bd">
       <source xml:lang="en">Downloading schemas is disabled through setting &apos;{0}&apos;</source>
     </trans-unit>
@@ -388,6 +391,9 @@
     <trans-unit id="++CODE++4f9b24d9d53626d33ba88c0528c6145a9f1d7e6ba3b8f851319975da219d191b">
       <source xml:lang="en">Unable to compute used schemas: {0}</source>
     </trans-unit>
+    <trans-unit id="++CODE++73c770b62497b1b9453183c219f6c8aecdeea4f4746bd1dcbb7ac73ac2282adf">
+      <source xml:lang="en">Unable to download schemas in untrusted workspaces.</source>
+    </trans-unit>
     <trans-unit id="++CODE++82ce4ce92815106fba93d21231f903405a8ba450bcf84e03e98f574dd0974262">
       <source xml:lang="en">Unable to load schema from &apos;{0}&apos;. No schema request service available</source>
     </trans-unit>
@@ -497,6 +503,9 @@
     </trans-unit>
     <trans-unit id="json.command.sort">
       <source xml:lang="en">Sort Document</source>
+    </trans-unit>
+    <trans-unit id="json.workspaceTrust">
+      <source xml:lang="en">The extension requires workspace trust to load schemas from http and https.</source>
     </trans-unit>
     <trans-unit id="json.maxItemsComputed.desc">
       <source xml:lang="en">The maximum number of outline symbols and folding regions computed (limited for performance reasons).</source>
