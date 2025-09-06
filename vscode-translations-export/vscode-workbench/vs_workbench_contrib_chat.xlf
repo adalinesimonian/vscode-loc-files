@@ -293,6 +293,9 @@
     <trans-unit id="interactiveSession.history.titleAll">
       <source xml:lang="en">All Workspace Chat History</source>
     </trans-unit>
+    <trans-unit id="interactiveSession.newChatWindow">
+      <source xml:lang="en">New Chat Window</source>
+    </trans-unit>
     <trans-unit id="interactiveSession.open">
       <source xml:lang="en">New Chat Editor</source>
     </trans-unit>
@@ -2686,7 +2689,7 @@ Files are matched against the glob patterns in the order they are specified.</so
       <source xml:lang="en">Show history...</source>
     </trans-unit>
     <trans-unit id="chat.history.title">
-      <source xml:lang="en">Chat History</source>
+      <source xml:lang="en">History</source>
     </trans-unit>
     <trans-unit id="chat.input.placeholder.lockedToAgent">
       <source xml:lang="en">Chat with {0}</source>
@@ -3834,6 +3837,33 @@ Example: **/*.ts, **/*.js, client/**</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/tools/manageTodoListTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="todo.added.multiple">
+      <source xml:lang="en">Added {0} todos</source>
+    </trans-unit>
+    <trans-unit id="todo.added.single">
+      <source xml:lang="en">Added 1 todo</source>
+    </trans-unit>
+    <trans-unit id="todo.completed">
+      <source xml:lang="en">Completed ({0}/{1}) *{2}*</source>
+    </trans-unit>
+    <trans-unit id="todo.created.multiple">
+      <source xml:lang="en">Created {0} todos</source>
+    </trans-unit>
+    <trans-unit id="todo.created.single">
+      <source xml:lang="en">Created 1 todo</source>
+    </trans-unit>
+    <trans-unit id="todo.readOperation">
+      <source xml:lang="en">Read todo list</source>
+    </trans-unit>
+    <trans-unit id="todo.starting">
+      <source xml:lang="en">Starting ({0}/{1}) *{2}*</source>
+    </trans-unit>
+    <trans-unit id="todo.updated">
+      <source xml:lang="en">Updated todo list</source>
+    </trans-unit>
+    <trans-unit id="todo.updatedList">
+      <source xml:lang="en">Updated todo list</source>
+    </trans-unit>
     <trans-unit id="tool.manageTodoList.displayName">
       <source xml:lang="en">Manage and track todo items for task planning</source>
     </trans-unit>
