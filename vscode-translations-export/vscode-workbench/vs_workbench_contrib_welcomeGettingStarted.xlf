@@ -467,6 +467,16 @@ Please make sure the markdown extension is enabled.</source>
     <trans-unit id="gettingStarted.debug.title">
       <source xml:lang="en">Watch your code in action</source>
     </trans-unit>
+    <trans-unit id="gettingStarted.dictation.description.interpolated">
+      <source xml:lang="en">Dictation allows you to write code and text using your voice. It can be activated with the Voice: Start Dictation in Editor command.
+{0}
+ For dictation in the terminal, use the Voice: Start Dictation in Terminal and Voice: Stop Dictation in Terminal commands.
+{1}
+{2}</source>
+    </trans-unit>
+    <trans-unit id="gettingStarted.dictation.title">
+      <source xml:lang="en">Use dictation to write code and text in the editor and terminal</source>
+    </trans-unit>
     <trans-unit id="gettingStarted.extensions.description.interpolated">
       <source xml:lang="en">Extensions are VS Code's power-ups. They range from handy productivity hacks, expanding out-of-the-box features, to adding completely new capabilities.
 {0}</source>
@@ -788,8 +798,17 @@ Opening a file/folder will prompt to grant trust. You can always {1} later.</sou
     <trans-unit id="showTerminal">
       <source xml:lang="en">Open Terminal</source>
     </trans-unit>
+    <trans-unit id="terminalStartDictation">
+      <source xml:lang="en">Terminal: Start Dictation in Terminal</source>
+    </trans-unit>
+    <trans-unit id="terminalStopDictation">
+      <source xml:lang="en">Terminal: Stop Dictation in Terminal</source>
+    </trans-unit>
     <trans-unit id="titleID">
       <source xml:lang="en">Browse Color Themes</source>
+    </trans-unit>
+    <trans-unit id="toggleDictation">
+      <source xml:lang="en">Voice: Start Dictation in Editor</source>
     </trans-unit>
     <trans-unit id="toggleFold">
       <source xml:lang="en">Toggle Fold</source>
