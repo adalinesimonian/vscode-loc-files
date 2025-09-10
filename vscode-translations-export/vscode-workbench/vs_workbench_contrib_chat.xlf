@@ -36,6 +36,9 @@
     <trans-unit id="chat.overview">
       <source xml:lang="en">The quick chat view is comprised of an input box and a request/response list. The input box is used to make requests and the list is used to display responses.</source>
     </trans-unit>
+    <trans-unit id="chat.progressVerbosity">
+      <source xml:lang="en">As the chat request is being processed, you will hear verbose progress updates if the request takes more than 4 seconds. This includes information like searched text for &lt;search term&gt; with X results, created file &lt;file_name&gt;, or read file &lt;file path&gt;. This can be disabled with accessibility.verboseChatProgressUpdates.</source>
+    </trans-unit>
     <trans-unit id="chat.requestHistory">
       <source xml:lang="en">In the input box, use up and down arrows to navigate your request history. Edit input and use enter or the submit button to run a new request.</source>
     </trans-unit>
@@ -706,6 +709,9 @@
     <trans-unit id="deleteSession.detail">
       <source xml:lang="en">This action cannot be undone.</source>
     </trans-unit>
+    <trans-unit id="openSessionInNewWindow">
+      <source xml:lang="en">Open in New Window</source>
+    </trans-unit>
     <trans-unit id="openSessionInSidebar">
       <source xml:lang="en">Open in Sidebar</source>
     </trans-unit>
@@ -1112,11 +1118,20 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.signInDialogVariant">
       <source xml:lang="en">Control variations of the sign-in dialog.</source>
     </trans-unit>
-    <trans-unit id="chat.todoListTool.enabled">
-      <source xml:lang="en">Enables todo lists in chat, which the agent uses as a tool for planning, progress tracking, and context management for complex development workflows.</source>
-    </trans-unit>
     <trans-unit id="chat.todoListTool.writeOnly">
       <source xml:lang="en">When enabled, the todo tool operates in write-only mode, requiring the agent to remember todos in context.</source>
+    </trans-unit>
+    <trans-unit id="chat.todoListWidget.position">
+      <source xml:lang="en">Controls the position of the todo list widget in chat.</source>
+    </trans-unit>
+    <trans-unit id="chat.todoListWidget.position.chatInput">
+      <source xml:lang="en">Show todo list widget near the chat input.</source>
+    </trans-unit>
+    <trans-unit id="chat.todoListWidget.position.default">
+      <source xml:lang="en">Show todo list widget in the default position at the top of the chat panel.</source>
+    </trans-unit>
+    <trans-unit id="chat.todoListWidget.position.off">
+      <source xml:lang="en">Hide the todo list widget.</source>
     </trans-unit>
     <trans-unit id="chat.tools.autoApprove.edits">
       <source xml:lang="en">Controls whether edits made by chat are automatically approved. The default is to approve all edits except those made to certain files which have the potential to cause immediate unintended side-effects, such as `**/.vscode/*.json`.
@@ -3420,35 +3435,6 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="chatEditingWidgetFileState">
       <source xml:lang="en">The current state of the file in the chat editing widget</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/chatEntitlementService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="learnMore">
-      <source xml:lang="en">Learn More</source>
-    </trans-unit>
-    <trans-unit id="ok">
-      <source xml:lang="en">OK</source>
-    </trans-unit>
-    <trans-unit id="retry">
-      <source xml:lang="en">Retry</source>
-    </trans-unit>
-    <trans-unit id="signUpInvalidResponseError">
-      <source xml:lang="en">Invalid response contents.</source>
-    </trans-unit>
-    <trans-unit id="signUpNoResponseContentsError">
-      <source xml:lang="en">Response has no contents.</source>
-    </trans-unit>
-    <trans-unit id="signUpNoResponseError">
-      <source xml:lang="en">No response received.</source>
-    </trans-unit>
-    <trans-unit id="signUpUnexpectedStatusError">
-      <source xml:lang="en">Unexpected status code {0}.</source>
-    </trans-unit>
-    <trans-unit id="unknownSignUpError">
-      <source xml:lang="en">An error occurred while signing up for the GitHub Copilot Free plan. Would you like to try again?</source>
-    </trans-unit>
-    <trans-unit id="unprocessableSignUpError">
-      <source xml:lang="en">An error occurred while signing up for the GitHub Copilot Free plan.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatModel" source-language="en" datatype="plaintext"><body>
