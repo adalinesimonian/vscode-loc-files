@@ -926,11 +926,11 @@ This feature disables critical security protections and makes it much easier for
     <trans-unit id="chat.agent.maxRequests">
       <source xml:lang="en">The maximum number of requests to allow per-turn in agent mode. When the limit is reached, will ask to confirm to continue.</source>
     </trans-unit>
-    <trans-unit id="chat.agent.thinkingCollapsedByDefault">
-      <source xml:lang="en">Controls how thinking is rendered.</source>
-    </trans-unit>
     <trans-unit id="chat.agent.thinkingMode.collapsed">
       <source xml:lang="en">Thinking parts will be collapsed by default.</source>
+    </trans-unit>
+    <trans-unit id="chat.agent.thinkingMode.collapsedPerItem">
+      <source xml:lang="en">Each thinking subsection is individually collapsible and collapsed by default inside the thinking block.</source>
     </trans-unit>
     <trans-unit id="chat.agent.thinkingMode.collapsedPreview">
       <source xml:lang="en">Thinking parts will be expanded first, then collapse once we reach a part that is not thinking.</source>
@@ -940,6 +940,9 @@ This feature disables critical security protections and makes it much easier for
     </trans-unit>
     <trans-unit id="chat.agent.thinkingMode.none">
       <source xml:lang="en">Do not show the thinking</source>
+    </trans-unit>
+    <trans-unit id="chat.agent.thinkingStyle">
+      <source xml:lang="en">Controls how thinking is rendered.</source>
     </trans-unit>
     <trans-unit id="chat.checkpoints.enabled">
       <source xml:lang="en">Enables checkpoints in chat. Checkpoints allow you to restore the chat to a previous state.</source>

@@ -388,9 +388,6 @@ Received: '{1}'.</source>
     <trans-unit id="isMobile">
       <source xml:lang="en">Whether the platform is a mobile web browser</source>
     </trans-unit>
-    <trans-unit id="isSimulation">
-      <source xml:lang="en">Whether the application runs in simulation mode</source>
-    </trans-unit>
     <trans-unit id="isWeb">
       <source xml:lang="en">Whether the platform is a web browser</source>
     </trans-unit>
@@ -1639,6 +1636,12 @@ OS: {8}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/quickinput/browser/quickInputActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="nonQuickWidget">
+      <source xml:lang="en">Used while in the context of some quick input. If you change one keybinding for this command, you should change all of the other keybindings (modifier variants) of this command as well.</source>
+    </trans-unit>
+    <trans-unit id="quickInput">
+      <source xml:lang="en">Used while in the context of any kind of quick input. If you change one keybinding for this command, you should change all of the other keybindings (modifier variants) of this command as well.</source>
+    </trans-unit>
     <trans-unit id="quickInput.nextSeparatorWithQuickAccessFallback">
       <source xml:lang="en">If we're in quick access mode, this will navigate to the next item. If we are not in quick access mode, this will navigate to the next separator.</source>
     </trans-unit>
