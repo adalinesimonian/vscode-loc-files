@@ -321,6 +321,12 @@ Remarks:
       <source xml:lang="en">{0}
  Do you want to send `{1}`{2} followed by `Enter` to the terminal?</source>
     </trans-unit>
+    <trans-unit id="poll.terminal.enterInput">
+      <source xml:lang="en">Focus terminal</source>
+    </trans-unit>
+    <trans-unit id="poll.terminal.inputRequest">
+      <source xml:lang="en">The terminal is awaiting input.</source>
+    </trans-unit>
     <trans-unit id="poll.terminal.polling">
       <source xml:lang="en">This will continue to poll for output to determine when the terminal becomes idle for up to 2 minutes.</source>
     </trans-unit>
@@ -329,6 +335,12 @@ Remarks:
     </trans-unit>
     <trans-unit id="poll.terminal.rejectRun">
       <source xml:lang="en">Focus Terminal</source>
+    </trans-unit>
+    <trans-unit id="poll.terminal.requireInput">
+      <source xml:lang="en">{0}
+Please provide the required input to the terminal.
+
+</source>
     </trans-unit>
     <trans-unit id="poll.terminal.waiting">
       <source xml:lang="en">Continue waiting for `{0}`?</source>
