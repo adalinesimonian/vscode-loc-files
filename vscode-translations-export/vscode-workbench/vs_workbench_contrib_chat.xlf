@@ -105,12 +105,6 @@
     <trans-unit id="chatEditing.undoKeepSounds">
       <source xml:lang="en">Sounds will play when a change is accepted or undone. The sounds can be disabled with accessibility.signals.editsKept and accessibility.signals.editsUndone.</source>
     </trans-unit>
-    <trans-unit id="chatEditing.viewChanges">
-      <source xml:lang="en">- View Changes{0}.</source>
-    </trans-unit>
-    <trans-unit id="chatEditing.viewPreviousEdits">
-      <source xml:lang="en">- View Previous Edits{0}.</source>
-    </trans-unit>
     <trans-unit id="inlineChat.access">
       <source xml:lang="en">It can be activated via code actions or directly using the command: Inline Chat: Start Inline Chat{0}.</source>
     </trans-unit>
@@ -694,6 +688,21 @@
     <trans-unit id="chat.openSessionInSidebar.label">
       <source xml:lang="en">Open Chat in Sidebar</source>
     </trans-unit>
+    <trans-unit id="chat.sessions.gettingStarted.action">
+      <source xml:lang="en">Getting Started with Chat Sessions</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.extensionAlreadyInstalled">
+      <source xml:lang="en">'{0}' is already installed</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.installExtension">
+      <source xml:lang="en">Installs '{0}'</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.pickPlaceholder">
+      <source xml:lang="en">Choose extensions to enhance your chat experience</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.selectExtension">
+      <source xml:lang="en">Install Chat Extensions</source>
+    </trans-unit>
     <trans-unit id="chatSessions.toggleDescriptionDisplay.label">
       <source xml:lang="en">Show Rich Descriptions</source>
     </trans-unit>
@@ -708,6 +717,9 @@
     </trans-unit>
     <trans-unit id="deleteSession.detail">
       <source xml:lang="en">This action cannot be undone.</source>
+    </trans-unit>
+    <trans-unit id="interactiveSession.open">
+      <source xml:lang="en">New Chat Editor</source>
     </trans-unit>
     <trans-unit id="openSessionInNewWindow">
       <source xml:lang="en">Open in New Window</source>
@@ -819,6 +831,9 @@
     </trans-unit>
     <trans-unit id="mcpShowOutput">
       <source xml:lang="en">Show Output</source>
+    </trans-unit>
+    <trans-unit id="mcpUpdate">
+      <source xml:lang="en">Update Tools</source>
     </trans-unit>
     <trans-unit id="mcplabel">
       <source xml:lang="en">MCP Server: {0}</source>
@@ -937,6 +952,9 @@ This feature disables critical security protections and makes it much easier for
     </trans-unit>
     <trans-unit id="chat.agent.thinkingMode.expanded">
       <source xml:lang="en">Thinking parts will be expanded by default.</source>
+    </trans-unit>
+    <trans-unit id="chat.agent.thinkingMode.fixedScrolling">
+      <source xml:lang="en">Show thinking in a fixed-height streaming panel that auto-scrolls; click header to expand to full height.</source>
     </trans-unit>
     <trans-unit id="chat.agent.thinkingMode.none">
       <source xml:lang="en">Do not show the thinking</source>
@@ -1142,7 +1160,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.tools.autoApprove.edits">
       <source xml:lang="en">Controls whether edits made by chat are automatically approved. The default is to approve all edits except those made to certain files which have the potential to cause immediate unintended side-effects, such as `**/.vscode/*.json`.
 
-Files are matched against the glob patterns in the order they are specified.</source>
+Set to `true` to automatically approve edits to matching files, `false` to always require explicit approval. The last pattern matching a given file will determine whether the edit is automatically approved.</source>
     </trans-unit>
     <trans-unit id="chat.undoRequests.restoreInput">
       <source xml:lang="en">Controls whether the input of the chat should be restored when an undo request is made. The input will be filled with the text of the request that was restored.</source>
@@ -1402,6 +1420,17 @@ Files are matched against the glob patterns in the order they are specified.</so
       <source xml:lang="en">Edited {0}, {1}, {2}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatMcpServersInteractionContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.start.multiple">
+      <source xml:lang="en">The MCP servers {0} may have new tools and require interaction to start. [Start them now?]({1})</source>
+    </trans-unit>
+    <trans-unit id="mcp.start.single">
+      <source xml:lang="en">The MCP server {0} may have new tools and requires interaction to start. [Start it now?]({1})</source>
+    </trans-unit>
+    <trans-unit id="mcp.starting">
+      <source xml:lang="en">Starting {0}...</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatMultiDiffContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatEditingSession.fileCounts">
       <source xml:lang="en">{0} lines added, {1} lines removed</source>
@@ -1472,8 +1501,8 @@ Files are matched against the glob patterns in the order they are specified.</so
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatThinkingContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.pinned.thinking.header.done">
-      <source xml:lang="en">Thought for a few seconds...</source>
+    <trans-unit id="chat.thinking.fixed.done.generic">
+      <source xml:lang="en">Thought for a few seconds</source>
     </trans-unit>
     <trans-unit id="chat.thinking.header">
       <source xml:lang="en">Thinking...</source>
@@ -2289,69 +2318,6 @@ Files are matched against the glob patterns in the order they are specified.</so
       <source xml:lang="en">Pasted Image</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatSessions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.sessions">
-      <source xml:lang="en">Chat Sessions</source>
-    </trans-unit>
-    <trans-unit id="chat.sessions.chatView">
-      <source xml:lang="en">Chat</source>
-    </trans-unit>
-    <trans-unit id="chat.sessions.chatView.description">
-      <source xml:lang="en">Chat View</source>
-    </trans-unit>
-    <trans-unit id="chat.sessions.gettingStarted">
-      <source xml:lang="en">Getting Started</source>
-    </trans-unit>
-    <trans-unit id="chat.sessions.gettingStarted.action">
-      <source xml:lang="en">Getting Started with Chat Sessions</source>
-    </trans-unit>
-    <trans-unit id="chat.sessions.showHistory">
-      <source xml:lang="en">History</source>
-    </trans-unit>
-    <trans-unit id="chat.sessions.title">
-      <source xml:lang="en">Chat Sessions</source>
-    </trans-unit>
-    <trans-unit id="chatSessionInputAriaLabel">
-      <source xml:lang="en">Type session name. Press Enter to confirm or Escape to cancel.</source>
-    </trans-unit>
-    <trans-unit id="chatSessions">
-      <source xml:lang="en">Chat Sessions</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.dragLabel">
-      <source xml:lang="en">{0} chat sessions</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.extensionAlreadyInstalled">
-      <source xml:lang="en">'{0}' is already installed</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.installExtension">
-      <source xml:lang="en">Installs '{0}'</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.installExtensions">
-      <source xml:lang="en">Install Chat Extensions</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.learnMoreGHCodingAgent">
-      <source xml:lang="en">Learn More About GitHub Copilot coding agent</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.loading">
-      <source xml:lang="en">Loading chat sessions...</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.noResults">
-      <source xml:lang="en">No local chat sessions
-[Start a Chat](command:workbench.action.openChat)</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.pickPlaceholder">
-      <source xml:lang="en">Choose extensions to enhance your chat experience</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.refreshing">
-      <source xml:lang="en">Refreshing chat sessions...</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.selectExtension">
-      <source xml:lang="en">Install Chat Extensions</source>
-    </trans-unit>
-    <trans-unit id="interactiveSession.open">
-      <source xml:lang="en">New Chat Editor</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatSessionNotFoundCopilot">
       <source xml:lang="en">Failed to create chat session. Use `#copilotCodingAgent` to begin a new [coding agent session]({0}).</source>
@@ -2391,6 +2357,57 @@ Files are matched against the glob patterns in the order they are specified.</so
     </trans-unit>
     <trans-unit id="interactiveSession.openNewSessionEditor">
       <source xml:lang="en">New {0} Chat Editor</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/localChatSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.sessions.chatView">
+      <source xml:lang="en">Chat</source>
+    </trans-unit>
+    <trans-unit id="chat.sessions.chatView.description">
+      <source xml:lang="en">Chat View</source>
+    </trans-unit>
+    <trans-unit id="chat.sessions.showHistory">
+      <source xml:lang="en">History</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/view/chatSessionsView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.sessions">
+      <source xml:lang="en">Chat Sessions</source>
+    </trans-unit>
+    <trans-unit id="chat.sessions.gettingStarted">
+      <source xml:lang="en">Getting Started</source>
+    </trans-unit>
+    <trans-unit id="chat.sessions.title">
+      <source xml:lang="en">Chat Sessions</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.noResults">
+      <source xml:lang="en">No local chat sessions
+[Start a Chat](command:workbench.action.openChat)</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/view/sessionsTreeRenderer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatSessionInputAriaLabel">
+      <source xml:lang="en">Type session name. Press Enter to confirm or Escape to cancel.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/view/sessionsViewPane" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatSessions">
+      <source xml:lang="en">Chat Sessions</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.dragLabel">
+      <source xml:lang="en">{0} chat sessions</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.installExtensions">
+      <source xml:lang="en">Install Chat Extensions</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.learnMoreGHCodingAgent">
+      <source xml:lang="en">Learn More About GitHub Copilot coding agent</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.loading">
+      <source xml:lang="en">Loading chat sessions...</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.refreshing">
+      <source xml:lang="en">Refreshing chat sessions...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
@@ -2774,7 +2791,7 @@ Type {3} to use commands</source>
       <source xml:lang="en">Edit in context.</source>
     </trans-unit>
     <trans-unit id="expChatAdditionalMessage">
-      <source xml:lang="en">Review AI output carefully before use.</source>
+      <source xml:lang="en">AI responses may be inaccurate.</source>
     </trans-unit>
     <trans-unit id="expChatTitle">
       <source xml:lang="en">Welcome to Copilot</source>
@@ -2787,6 +2804,12 @@ Type {3} to use commands</source>
     </trans-unit>
     <trans-unit id="scrollDownButtonLabel">
       <source xml:lang="en">Scroll down</source>
+    </trans-unit>
+    <trans-unit id="settings">
+      <source xml:lang="en">AI responses may be inaccurate.
+By continuing with {0} Copilot, you agree to {1}'s [Terms]({2}) and [Privacy Statement]({3}).</source>
+      <note>{Locked="]({2})"}
+{Locked="]({3})"}</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/codeBlockPart" source-language="en" datatype="plaintext"><body>
@@ -3477,6 +3500,9 @@ Type {3} to use commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatServiceImpl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.startMcpServers">
+      <source xml:lang="en">Start MCP Servers</source>
+    </trans-unit>
     <trans-unit id="emptyResponse">
       <source xml:lang="en">Provider returned null response</source>
     </trans-unit>
