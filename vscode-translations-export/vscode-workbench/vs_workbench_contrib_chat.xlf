@@ -2720,9 +2720,6 @@ Set to `true` to automatically approve edits to matching files, `false` to alway
     <trans-unit id="chat.history.list">
       <source xml:lang="en">Chat History</source>
     </trans-unit>
-    <trans-unit id="chat.history.showAllHover">
-      <source xml:lang="en">Show history...</source>
-    </trans-unit>
     <trans-unit id="chat.history.title">
       <source xml:lang="en">History</source>
     </trans-unit>
@@ -3593,28 +3590,6 @@ By continuing with {0} Copilot, you agree to {1}'s [Terms]({2}) and [Privacy Sta
       <source xml:lang="en">Automatically attached as pattern {0} matches {1}</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/decorationsProvider/decorations/frontMatterDecoration" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.prompt.frontMatter.background.description">
-      <source xml:lang="en">Background color of a Front Matter header block.</source>
-    </trans-unit>
-    <trans-unit id="chat.prompt.frontMatter.inactiveBackground.description">
-      <source xml:lang="en">Background color of an inactive Front Matter header block.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptHeaderDiagnosticsProvider" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="promptHeaderDiagnosticsProvider.modeNotFound">
-      <source xml:lang="en">Unknown mode '{0}'. Available modes: {1}</source>
-    </trans-unit>
-    <trans-unit id="promptHeaderDiagnosticsProvider.modelNotFound">
-      <source xml:lang="en">Unknown model '{0}'</source>
-    </trans-unit>
-    <trans-unit id="promptHeaderDiagnosticsProvider.modelNotSuited">
-      <source xml:lang="en">Model '{0}' is not suited for agent mode</source>
-    </trans-unit>
-    <trans-unit id="promptHeaderDiagnosticsProvider.toolNotFound">
-      <source xml:lang="en">Unknown tool '{0}'</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptHeaderHovers" source-language="en" datatype="plaintext"><body>
     <trans-unit id="modelFamily">
       <source xml:lang="en">- Family: {0}</source>
@@ -3674,98 +3649,74 @@ Example: **/*.ts, **/*.js, client/**</source>
 </source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptLinkDiagnosticsProvider" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="fileNotFound">
-      <source xml:lang="en">File not found.</source>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/service/promptValidator" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="promptValidator.applyToMustBeString">
+      <source xml:lang="en">The 'applyTo' attribute must be a string.</source>
     </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/headerBase" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="prompt.header.diagnostics.parsing-error">
-      <source xml:lang="en">Failed to parse prompt header: {0}</source>
+    <trans-unit id="promptValidator.applyToMustBeValidGlob">
+      <source xml:lang="en">The 'applyTo' attribute must be a valid glob pattern.</source>
     </trans-unit>
-    <trans-unit id="prompt.header.diagnostics.unexpected-token">
-      <source xml:lang="en">Unexpected token '{0}'.</source>
+    <trans-unit id="promptValidator.descriptionMustBeString">
+      <source xml:lang="en">The 'description' attribute must be a string.</source>
     </trans-unit>
-    <trans-unit id="prompt.header.metadata.diagnostics.duplicate-record">
-      <source xml:lang="en">Duplicate property '{0}' will be ignored.</source>
+    <trans-unit id="promptValidator.descriptionShouldNotBeEmpty">
+      <source xml:lang="en">The 'description' attribute should not be empty.</source>
     </trans-unit>
-    <trans-unit id="prompt.header.metadata.diagnostics.unknown-record">
-      <source xml:lang="en">Unknown property '{0}' will be ignored.</source>
+    <trans-unit id="promptValidator.eachToolMustBeString">
+      <source xml:lang="en">Each tool name in the 'tools' attribute must be a string.</source>
     </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/applyTo" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="prompt.header.metadata.applyTo.diagnostics.non-valid-glob">
-      <source xml:lang="en">Invalid glob pattern '{0}'.</source>
+    <trans-unit id="promptValidator.fileNotFound">
+      <source xml:lang="en">File '{0}' not found.</source>
     </trans-unit>
-    <trans-unit id="prompt.header.metadata.string.diagnostics.invalid-language">
-      <source xml:lang="en">The '{0}' header property is only valid in instruction files.</source>
+    <trans-unit id="promptValidator.invalidFileReference">
+      <source xml:lang="en">Invalid file reference '{0}'.</source>
     </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/base/enum" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="prompt.header.metadata.enum.diagnostics.invalid-value">
-      <source xml:lang="en">The property '{0}' must be one of {1}, got '{2}'.</source>
+    <trans-unit id="promptValidator.modeMustBeNonEmpty">
+      <source xml:lang="en">The 'mode' attribute must be a non-empty string.</source>
     </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/base/string" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="prompt.header.metadata.string.diagnostics.invalid-value-type">
-      <source xml:lang="en">The property '{0}' must be of type '{1}', got '{2}'.</source>
+    <trans-unit id="promptValidator.modeMustBeString">
+      <source xml:lang="en">The 'mode' attribute must be a string.</source>
     </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/tools" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="prompt.header.metadata.tools.diagnostics.duplicate-tool-name">
-      <source xml:lang="en">Duplicate tool name '{0}'.</source>
+    <trans-unit id="promptValidator.modeNotFound">
+      <source xml:lang="en">Unknown mode '{0}'. Available modes: {1}.</source>
     </trans-unit>
-    <trans-unit id="prompt.header.metadata.tools.diagnostics.empty-tool-name">
-      <source xml:lang="en">Tool name cannot be empty.</source>
+    <trans-unit id="promptValidator.modelMustBeNonEmpty">
+      <source xml:lang="en">The 'model' attribute must be a non-empty string.</source>
     </trans-unit>
-    <trans-unit id="prompt.header.metadata.tools.diagnostics.invalid-tool-name-type">
-      <source xml:lang="en">Unexpected tool name '{0}', expected a string literal.</source>
+    <trans-unit id="promptValidator.modelMustBeString">
+      <source xml:lang="en">The 'model' attribute must be a string.</source>
     </trans-unit>
-    <trans-unit id="prompt.header.metadata.tools.diagnostics.invalid-value-type">
-      <source xml:lang="en">Must be an array of tool names, got '{0}'.</source>
+    <trans-unit id="promptValidator.modelNotFound">
+      <source xml:lang="en">Unknown model '{0}'.</source>
     </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/promptHeader" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="prompt.header.metadata.mode.diagnostics.incompatible-with-tools">
-      <source xml:lang="en">Tools can not be used in '{0}' mode and will be ignored.</source>
+    <trans-unit id="promptValidator.modelNotSuited">
+      <source xml:lang="en">Model '{0}' is not suited for agent mode.</source>
     </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/topError" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="broken">
-      <source xml:lang="en">broken</source>
+    <trans-unit id="promptValidator.toolNotFound">
+      <source xml:lang="en">Unknown tool '{0}'.</source>
     </trans-unit>
-    <trans-unit id="recursive">
-      <source xml:lang="en">recursive</source>
+    <trans-unit id="promptValidator.toolsMustBeArray">
+      <source xml:lang="en">The 'tools' attribute must be an array.</source>
     </trans-unit>
-    <trans-unit id="workbench.reusable-prompts.top-error.cannot-read">
-      <source xml:lang="en">Cannot read '{0}'.{1}</source>
+    <trans-unit id="promptValidator.toolsOnlyInAgent">
+      <source xml:lang="en">The 'tools' attribute is only supported in agent mode. Attribute will be ignored.</source>
     </trans-unit>
-    <trans-unit id="workbench.reusable-prompts.top-error.child.direct">
-      <source xml:lang="en">Contains</source>
+    <trans-unit id="promptValidator.unknownAttribute.instructions">
+      <source xml:lang="en">Attribute '{0}' is not supported in instructions files. Supported: {1}</source>
     </trans-unit>
-    <trans-unit id="workbench.reusable-prompts.top-error.child.final-message">
-      <source xml:lang="en">{0} a {1} link to '{2}' that will be ignored.{3}</source>
+    <trans-unit id="promptValidator.unknownAttribute.mode">
+      <source xml:lang="en">Attribute '{0}' is not supported in mode files. Supported: {1}</source>
     </trans-unit>
-    <trans-unit id="workbench.reusable-prompts.top-error.child.indirect">
-      <source xml:lang="en">Indirectly referenced prompt '{0}' contains</source>
+    <trans-unit id="promptValidator.unknownAttribute.prompt">
+      <source xml:lang="en">Attribute '{0}' is not supported in prompt files. Supported: {1}</source>
     </trans-unit>
-    <trans-unit id="workbench.reusable-prompts.top-error.more-issues-label">
-      <source xml:lang="en">
-(+{0} more issues)</source>
-    </trans-unit>
-    <trans-unit id="workbench.reusable-prompts.top-error.open-failed">
-      <source xml:lang="en">Cannot open '{0}'.{1}</source>
-    </trans-unit>
-    <trans-unit id="workbench.reusable-prompts.top-error.recursive-reference">
-      <source xml:lang="en">Recursion to itself.</source>
+    <trans-unit id="promptValidator.unknownVariableReference">
+      <source xml:lang="en">Unknown tool or toolset '{0}'.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsServiceImpl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="prompt.file.detail">
       <source xml:lang="en">Prompt file: {0}</source>
-    </trans-unit>
-    <trans-unit id="promptParser.notCompleted">
-      <source xml:lang="en">Prompt parser for {0} did not complete.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/tools/languageModelToolsContribution" source-language="en" datatype="plaintext"><body>
