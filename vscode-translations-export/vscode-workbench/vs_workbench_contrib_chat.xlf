@@ -2550,11 +2550,20 @@ Set to `true` to automatically approve edits to matching files, `false` to alway
     <trans-unit id="activateDescription">
       <source xml:lang="en">Set up Copilot to use AI features.</source>
     </trans-unit>
+    <trans-unit id="activateDescriptionAnonymous">
+      <source xml:lang="en">By continuing with {0} Copilot, you agree to {1}'s [Terms]({2}) and [Privacy Statement]({3})</source>
+    </trans-unit>
     <trans-unit id="additionalUsageDisabled">
       <source xml:lang="en">Additional paid premium requests disabled.</source>
     </trans-unit>
     <trans-unit id="additionalUsageEnabled">
       <source xml:lang="en">Additional paid premium requests enabled.</source>
+    </trans-unit>
+    <trans-unit id="anonymousFooter">
+      <source xml:lang="en">Sign in to increase allowance.</source>
+    </trans-unit>
+    <trans-unit id="anonymousTitle">
+      <source xml:lang="en">Copilot Usage</source>
     </trans-unit>
     <trans-unit id="cancelSnooze">
       <source xml:lang="en">Cancel Snooze</source>
@@ -2564,6 +2573,12 @@ Set to `true` to automatically approve edits to matching files, `false` to alway
     </trans-unit>
     <trans-unit id="chatQuotaExceededStatus">
       <source xml:lang="en">Chat quota reached</source>
+    </trans-unit>
+    <trans-unit id="chatSessionInProgressStatus">
+      <source xml:lang="en">1 chat session in progress</source>
+    </trans-unit>
+    <trans-unit id="chatSessionsInProgressStatus">
+      <source xml:lang="en">{0} chat sessions in progress</source>
     </trans-unit>
     <trans-unit id="chatSessionsTitle">
       <source xml:lang="en">Chat Sessions</source>
@@ -2622,6 +2637,12 @@ Set to `true` to automatically approve edits to matching files, `false` to alway
     <trans-unit id="enableDescription">
       <source xml:lang="en">Enable Copilot to use AI features.</source>
     </trans-unit>
+    <trans-unit id="enableMoreCopilotButton">
+      <source xml:lang="en">Enable more AI Features</source>
+    </trans-unit>
+    <trans-unit id="enableMoreDescription">
+      <source xml:lang="en">Sign in to enable more Copilot AI features.</source>
+    </trans-unit>
     <trans-unit id="gaugeBackground">
       <source xml:lang="en">Gauge background color.</source>
     </trans-unit>
@@ -2644,7 +2665,7 @@ Set to `true` to automatically approve edits to matching files, `false` to alway
       <source xml:lang="en">Gauge warning foreground color.</source>
     </trans-unit>
     <trans-unit id="inProgressChatSession">
-      <source xml:lang="en">$(loading~spin) {0} {1} in progress</source>
+      <source xml:lang="en">$(loading~spin) {0} in progress</source>
     </trans-unit>
     <trans-unit id="learnMore">
       <source xml:lang="en">Learn More</source>
@@ -2666,6 +2687,9 @@ Set to `true` to automatically approve edits to matching files, `false` to alway
     </trans-unit>
     <trans-unit id="quotaLabel">
       <source xml:lang="en">Manage Chat</source>
+    </trans-unit>
+    <trans-unit id="quotaLimited">
+      <source xml:lang="en">Limited</source>
     </trans-unit>
     <trans-unit id="quotaTooltip">
       <source xml:lang="en">Manage Chat</source>
