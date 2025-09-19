@@ -3690,7 +3690,7 @@ Example: **/*.ts, **/*.js, client/**</source>
       <source xml:lang="en">Each tool name in the 'tools' attribute must be a string.</source>
     </trans-unit>
     <trans-unit id="promptValidator.fileNotFound">
-      <source xml:lang="en">File '{0}' not found.</source>
+      <source xml:lang="en">File '{0}' not found at '{1}'.</source>
     </trans-unit>
     <trans-unit id="promptValidator.invalidFileReference">
       <source xml:lang="en">Invalid file reference '{0}'.</source>
@@ -3719,20 +3719,20 @@ Example: **/*.ts, **/*.js, client/**</source>
     <trans-unit id="promptValidator.toolNotFound">
       <source xml:lang="en">Unknown tool '{0}'.</source>
     </trans-unit>
-    <trans-unit id="promptValidator.toolsMustBeArray">
+    <trans-unit id="promptValidator.toolsMustBeArrayOrMap">
       <source xml:lang="en">The 'tools' attribute must be an array.</source>
     </trans-unit>
     <trans-unit id="promptValidator.toolsOnlyInAgent">
       <source xml:lang="en">The 'tools' attribute is only supported in agent mode. Attribute will be ignored.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownAttribute.instructions">
-      <source xml:lang="en">Attribute '{0}' is not supported in instructions files. Supported: {1}</source>
+      <source xml:lang="en">Attribute '{0}' is not supported in instructions files. Supported: {1}.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownAttribute.mode">
-      <source xml:lang="en">Attribute '{0}' is not supported in mode files. Supported: {1}</source>
+      <source xml:lang="en">Attribute '{0}' is not supported in mode files. Supported: {1}.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownAttribute.prompt">
-      <source xml:lang="en">Attribute '{0}' is not supported in prompt files. Supported: {1}</source>
+      <source xml:lang="en">Attribute '{0}' is not supported in prompt files. Supported: {1}.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownVariableReference">
       <source xml:lang="en">Unknown tool or toolset '{0}'.</source>
