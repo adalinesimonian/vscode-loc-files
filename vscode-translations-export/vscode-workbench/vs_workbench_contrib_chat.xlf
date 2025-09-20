@@ -553,6 +553,9 @@
     <trans-unit id="interactive.submit.label">
       <source xml:lang="en">Send and Dispatch</source>
     </trans-unit>
+    <trans-unit id="interactive.submit.panel.label">
+      <source xml:lang="en">Send to Edit Session</source>
+    </trans-unit>
     <trans-unit id="interactive.submitWithoutDispatch.label">
       <source xml:lang="en">Send</source>
     </trans-unit>
@@ -3439,6 +3442,9 @@ By continuing with {0} Copilot, you agree to {1}'s [Terms]({2}) and [Privacy Sta
     <trans-unit id="enableRemoteCodingAgentPromptFileOverlay">
       <source xml:lang="en">Whether the remote coding agent prompt file overlay feature is enabled</source>
     </trans-unit>
+    <trans-unit id="filePartOfEditSession">
+      <source xml:lang="en">True when the chat widget is within a file with an edit session.</source>
+    </trans-unit>
     <trans-unit id="hasRemoteCodingAgent">
       <source xml:lang="en">Whether any remote coding agent is available</source>
     </trans-unit>
@@ -3477,6 +3483,9 @@ By continuing with {0} Copilot, you agree to {1}'s [Terms]({2}) and [Privacy Sta
     </trans-unit>
     <trans-unit id="toolsCount">
       <source xml:lang="en">The count of tools available in the chat.</source>
+    </trans-unit>
+    <trans-unit id="withinEditSessionDiff">
+      <source xml:lang="en">True when the chat widget dispatches to the edit session chat.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatEditingService" source-language="en" datatype="plaintext"><body>
