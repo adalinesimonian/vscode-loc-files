@@ -1350,6 +1350,14 @@ Set to `true` to automatically approve edits to matching files, `false` to alway
       <source xml:lang="en">Rerun without {0}{1}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatAnonymousRateLimitedPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="anonymousRateLimited">
+      <source xml:lang="en">You've reached the usage limit for users that are not signed in. Sign in to continue using AI features.</source>
+    </trans-unit>
+    <trans-unit id="signInToContinue">
+      <source xml:lang="en">Sign in to Continue</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatChangesSummaryPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.viewFileChangesSummary">
       <source xml:lang="en">View All File Changes</source>
@@ -1460,10 +1468,10 @@ Set to `true` to automatically approve edits to matching files, `false` to alway
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatQuotaExceededPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="clickToContinue">
-      <source xml:lang="en">Click to retry.</source>
+      <source xml:lang="en">Click to Retry</source>
     </trans-unit>
     <trans-unit id="enableAdditionalUsage">
-      <source xml:lang="en">Manage paid premium requests</source>
+      <source xml:lang="en">Manage Paid Premium Requests</source>
     </trans-unit>
     <trans-unit id="upgradeToCopilotPro">
       <source xml:lang="en">Upgrade to GitHub Copilot Pro</source>
