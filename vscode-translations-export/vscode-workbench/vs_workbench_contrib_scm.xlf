@@ -249,6 +249,12 @@
     <trans-unit id="scm.graph.pageSize">
       <source xml:lang="en">The number of items to show in the Source Control Graph view by default and when loading more items.</source>
     </trans-unit>
+    <trans-unit id="scm.graph.showIncomingChanges">
+      <source xml:lang="en">Controls whether to show incoming changes in the Source Control Graph view.</source>
+    </trans-unit>
+    <trans-unit id="scm.graph.showOutgoingChanges">
+      <source xml:lang="en">Controls whether to show outgoing changes in the Source Control Graph view.</source>
+    </trans-unit>
     <trans-unit id="scm.providerCountBadge">
       <source xml:lang="en">Controls the count badges on Source Control Provider headers. These headers appear in the Source Control view when there is more than one provider or when the {0} setting is enabled, and in the Source Control Repositories view.</source>
     </trans-unit>
@@ -260,6 +266,18 @@
     </trans-unit>
     <trans-unit id="scm.providerCountBadge.visible">
       <source xml:lang="en">Show Source Control Provider count badges.</source>
+    </trans-unit>
+    <trans-unit id="scm.repositories.explorer">
+      <source xml:lang="en">Controls whether to show repository artifacts in the Source Control Repositories view. This feature is experimental and only works when {0} is set to `{1}`.</source>
+    </trans-unit>
+    <trans-unit id="scm.repositories.selectionMode">
+      <source xml:lang="en">Controls the selection mode of the repositories in the Source Control Repositories view.</source>
+    </trans-unit>
+    <trans-unit id="scm.repositories.selectionMode.multiple">
+      <source xml:lang="en">Multiple repositories can be selected at the same time.</source>
+    </trans-unit>
+    <trans-unit id="scm.repositories.selectionMode.single">
+      <source xml:lang="en">Only one repository can be selected at a time.</source>
     </trans-unit>
     <trans-unit id="scm.repositoriesSortOrder.discoveryTime">
       <source xml:lang="en">Repositories in the Source Control Repositories view are sorted by discovery time. Repositories in the Source Control view are sorted in the order that they were selected.</source>
@@ -283,7 +301,7 @@
       <source xml:lang="en">Controls whether to store editor working sets when switching between source control history item groups.</source>
     </trans-unit>
     <trans-unit id="scmActiveRepositoryAutoDescription">
-      <source xml:lang="en">The active repository is updated based on focused repository/active editor</source>
+      <source xml:lang="en">The active repository is updated based on active editor</source>
     </trans-unit>
     <trans-unit id="scmActiveRepositoryPlaceHolder">
       <source xml:lang="en">Select the active repository, type to filter all repositories</source>
@@ -293,6 +311,9 @@
     </trans-unit>
     <trans-unit id="scmConfigurationTitle">
       <source xml:lang="en">Source Control</source>
+    </trans-unit>
+    <trans-unit id="scmEditorResolveMergeConflict">
+      <source xml:lang="en">Resolve Conflicts with AI</source>
     </trans-unit>
     <trans-unit id="scmGraph">
       <source xml:lang="en">Graph</source>
@@ -397,6 +418,12 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/scm/browser/scmHistory" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="incomingChanges">
+      <source xml:lang="en">Incoming Changes</source>
+    </trans-unit>
+    <trans-unit id="outgoingChanges">
+      <source xml:lang="en">Outgoing Changes</source>
+    </trans-unit>
     <trans-unit id="scmGraph.HistoryItemHoverAdditionsForeground">
       <source xml:lang="en">History item hover additions foreground color.</source>
     </trans-unit>
@@ -473,8 +500,8 @@
     <trans-unit id="goToCurrentHistoryItem">
       <source xml:lang="en">Go to Current History Item</source>
     </trans-unit>
-    <trans-unit id="historyItemChangesEditorTitle">
-      <source xml:lang="en">All Changes ({0} ↔ {1})</source>
+    <trans-unit id="incomingChanges">
+      <source xml:lang="en">Incoming Changes</source>
     </trans-unit>
     <trans-unit id="items">
       <source xml:lang="en">{0} Items</source>
@@ -487,6 +514,9 @@
     </trans-unit>
     <trans-unit id="openFile">
       <source xml:lang="en">Open File</source>
+    </trans-unit>
+    <trans-unit id="outgoingChanges">
+      <source xml:lang="en">Outgoing Changes</source>
     </trans-unit>
     <trans-unit id="referencePicker">
       <source xml:lang="en">History Item Reference Picker</source>
@@ -533,6 +563,12 @@
     </trans-unit>
     <trans-unit id="repositories">
       <source xml:lang="en">Repositories</source>
+    </trans-unit>
+    <trans-unit id="repositoryMultiSelectionMode">
+      <source xml:lang="en">Select Multiple Repositories</source>
+    </trans-unit>
+    <trans-unit id="repositorySingleSelectionMode">
+      <source xml:lang="en">Select Single Repository</source>
     </trans-unit>
     <trans-unit id="repositorySortByDiscoveryTime">
       <source xml:lang="en">Sort by Discovery Time</source>
@@ -592,29 +628,6 @@
   <file original="src/vs/workbench/contrib/scm/browser/scmViewService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="auto">
       <source xml:lang="en">Auto</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/scm/browser/util" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="deletion">
-      <source xml:lang="en">{0} deletion{1}</source>
-    </trans-unit>
-    <trans-unit id="deletions">
-      <source xml:lang="en">{0} deletions{1}</source>
-    </trans-unit>
-    <trans-unit id="emailLinkTitle">
-      <source xml:lang="en">Email</source>
-    </trans-unit>
-    <trans-unit id="fileChanged">
-      <source xml:lang="en">{0} file changed</source>
-    </trans-unit>
-    <trans-unit id="filesChanged">
-      <source xml:lang="en">{0} files changed</source>
-    </trans-unit>
-    <trans-unit id="insertion">
-      <source xml:lang="en">{0} insertion{1}</source>
-    </trans-unit>
-    <trans-unit id="insertions">
-      <source xml:lang="en">{0} insertions{1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/scm/common/quickDiff" source-language="en" datatype="plaintext"><body>

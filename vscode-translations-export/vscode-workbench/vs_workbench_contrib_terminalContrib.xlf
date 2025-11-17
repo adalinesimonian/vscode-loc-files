@@ -144,6 +144,12 @@ Remarks:
     <trans-unit id="chatVisibleContextKey">
       <source xml:lang="en">Whether the chat view is visible.</source>
     </trans-unit>
+    <trans-unit id="terminalHasChatTerminals">
+      <source xml:lang="en">Whether there are any chat terminals.</source>
+    </trans-unit>
+    <trans-unit id="terminalHasHiddenChatTerminals">
+      <source xml:lang="en">Whether there are any hidden chat terminals.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chat/browser/terminalChatAccessibilityHelp" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.signals">
@@ -199,6 +205,9 @@ Remarks:
     <trans-unit id="chat.rerun.label">
       <source xml:lang="en">Rerun Request</source>
     </trans-unit>
+    <trans-unit id="chatTerminal.lastCommand">
+      <source xml:lang="en">Last: {0}</source>
+    </trans-unit>
     <trans-unit id="closeChat">
       <source xml:lang="en">Close</source>
     </trans-unit>
@@ -226,11 +235,23 @@ Remarks:
     <trans-unit id="runFirstCommand">
       <source xml:lang="en">Run First Chat Command</source>
     </trans-unit>
+    <trans-unit id="selectChatTerminal">
+      <source xml:lang="en">Select a chat terminal to show and focus</source>
+    </trans-unit>
+    <trans-unit id="showChatTerminals.title">
+      <source xml:lang="en">Chat Terminals</source>
+    </trans-unit>
     <trans-unit id="startChat">
       <source xml:lang="en">Open Inline Chat</source>
     </trans-unit>
     <trans-unit id="terminalCategory">
       <source xml:lang="en">Terminal</source>
+    </trans-unit>
+    <trans-unit id="terminalCategory2">
+      <source xml:lang="en">Terminal</source>
+    </trans-unit>
+    <trans-unit id="viewHiddenChatTerminals">
+      <source xml:lang="en">View Hidden Chat Terminals</source>
     </trans-unit>
     <trans-unit id="viewInChat">
       <source xml:lang="en">View in Chat</source>
@@ -247,6 +268,12 @@ Remarks:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/runInTerminalHelpers" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="allowSession">
+      <source xml:lang="en">Allow All Commands in this Session</source>
+    </trans-unit>
+    <trans-unit id="allowSessionTooltip">
+      <source xml:lang="en">Allow this tool to run in this session without confirmation.</source>
+    </trans-unit>
     <trans-unit id="autoApprove.baseCommand">
       <source xml:lang="en">Always Allow Commands: {0}</source>
     </trans-unit>
@@ -272,6 +299,46 @@ Remarks:
     </trans-unit>
     <trans-unit id="toolset.runTasks">
       <source xml:lang="en">Runs tasks and gets their output for your workspace</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineAnalyzer/commandLineAutoApproveAnalyzer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="autoApprove.global">
+      <source xml:lang="en">Auto approved by setting {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.rule">
+      <source xml:lang="en">Auto approved by rule {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.rules">
+      <source xml:lang="en">Auto approved by rules {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.session">
+      <source xml:lang="en">Auto approved for this session</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.session.disable">
+      <source xml:lang="en">Disable</source>
+    </trans-unit>
+    <trans-unit id="autoApproveDenied.rule">
+      <source xml:lang="en">Auto approval denied by rule {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApproveDenied.rules">
+      <source xml:lang="en">Auto approval denied by rules {0}</source>
+    </trans-unit>
+    <trans-unit id="ruleTooltip">
+      <source xml:lang="en">View rule in settings</source>
+    </trans-unit>
+    <trans-unit id="ruleTooltip.global">
+      <source xml:lang="en">View settings</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.promptInjectionDisclaimer">
+      <source xml:lang="en">Web content may contain malicious code or attempt prompt injection attacks.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineAnalyzer/commandLineFileWriteAnalyzer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="runInTerminal.fileWriteBlockedDisclaimer">
+      <source xml:lang="en">File write operations detected that cannot be auto approved: {0}</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.fileWriteDisclaimer">
+      <source xml:lang="en">File write operations detected: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/getTerminalLastCommandTool" source-language="en" datatype="plaintext"><body>
@@ -346,36 +413,20 @@ Please provide the required input to the terminal.
       <source xml:lang="en">Continue waiting for `{0}`?</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalConfirmationTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="confirmTerminalCommandTool.displayName">
+      <source xml:lang="en">Confirm Terminal Command</source>
+    </trans-unit>
+    <trans-unit id="confirmTerminalCommandTool.userDescription">
+      <source xml:lang="en">Tool for confirming terminal commands</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalTool" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="autoApprove.global">
-      <source xml:lang="en">Auto approved by setting {0}</source>
-    </trans-unit>
-    <trans-unit id="autoApprove.rule">
-      <source xml:lang="en">Auto approved by rule {0}</source>
-    </trans-unit>
-    <trans-unit id="autoApprove.rules">
-      <source xml:lang="en">Auto approved by rules {0}</source>
-    </trans-unit>
-    <trans-unit id="autoApproveDenied.rule">
-      <source xml:lang="en">Auto approval denied by rule {0}</source>
-    </trans-unit>
-    <trans-unit id="autoApproveDenied.rules">
-      <source xml:lang="en">Auto approval denied by rules {0}</source>
-    </trans-unit>
-    <trans-unit id="ruleTooltip">
-      <source xml:lang="en">View rule in settings</source>
-    </trans-unit>
-    <trans-unit id="ruleTooltip.global">
-      <source xml:lang="en">View settings</source>
-    </trans-unit>
     <trans-unit id="runInTerminal">
       <source xml:lang="en">Run `{0}` command?</source>
     </trans-unit>
     <trans-unit id="runInTerminal.background">
       <source xml:lang="en">Run `{0}` command? (background terminal)</source>
-    </trans-unit>
-    <trans-unit id="runInTerminal.promptInjectionDisclaimer">
-      <source xml:lang="en">Web content may contain malicious code or attempt prompt injection attacks.</source>
     </trans-unit>
     <trans-unit id="runInTerminalTool.displayName">
       <source xml:lang="en">Run in Terminal</source>
@@ -403,17 +454,14 @@ Please provide the required input to the terminal.
     <trans-unit id="copilotChat.taskNotFound">
       <source xml:lang="en">Task not found: `{0}`</source>
     </trans-unit>
-    <trans-unit id="copilotCreateTask">
-      <source xml:lang="en">Copilot will create the task `{0}` with command `{1}`{2}.</source>
-    </trans-unit>
     <trans-unit id="createAndRunTask.displayName">
       <source xml:lang="en">Create and run Task</source>
     </trans-unit>
-    <trans-unit id="createAndRunTask.modelDescription">
-      <source xml:lang="en">Creates and runs a build, run, or custom task for the workspace by generating or adding to a tasks.json file based on the project structure (such as package.json or README.md). If the user asks to build, run, launch and they have no tasks.json file, use this tool. If they ask to create or add a task, use this tool.</source>
-    </trans-unit>
     <trans-unit id="createAndRunTask.userDescription">
       <source xml:lang="en">Create and run a task in the workspace</source>
+    </trans-unit>
+    <trans-unit id="createTask">
+      <source xml:lang="en">A task `{0}` with command `{1}`{2} will be created.</source>
     </trans-unit>
     <trans-unit id="createdTask">
       <source xml:lang="en">Created task `{0}`</source>
@@ -449,37 +497,37 @@ Please provide the required input to the terminal.
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/task/runTaskTool" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="copilotChat.allowTaskRunMsg">
-      <source xml:lang="en">Allow Copilot to run the task `{0}`?</source>
+    <trans-unit id="chat.allowTaskRunMsg">
+      <source xml:lang="en">Allow to run the task `{0}`?</source>
     </trans-unit>
-    <trans-unit id="copilotChat.allowTaskRunTitle">
+    <trans-unit id="chat.allowTaskRunTitle">
       <source xml:lang="en">Allow task run?</source>
     </trans-unit>
-    <trans-unit id="copilotChat.noTerminal">
+    <trans-unit id="chat.noTerminal">
       <source xml:lang="en">Task started but no terminal was found for: `{0}`</source>
     </trans-unit>
-    <trans-unit id="copilotChat.ranTask">
+    <trans-unit id="chat.ranTask">
       <source xml:lang="en">Ran `{0}`</source>
     </trans-unit>
-    <trans-unit id="copilotChat.runningTask">
+    <trans-unit id="chat.runningTask">
       <source xml:lang="en">Running `{0}`</source>
     </trans-unit>
-    <trans-unit id="copilotChat.startedTask">
+    <trans-unit id="chat.startedTask">
       <source xml:lang="en">Started `{0}`</source>
     </trans-unit>
-    <trans-unit id="copilotChat.taskAlreadyActive">
+    <trans-unit id="chat.taskAlreadyActive">
       <source xml:lang="en">The task is already running.</source>
     </trans-unit>
-    <trans-unit id="copilotChat.taskAlreadyRunning">
+    <trans-unit id="chat.taskAlreadyRunning">
       <source xml:lang="en">The task `{0}` is already running.</source>
     </trans-unit>
-    <trans-unit id="copilotChat.taskIsAlreadyRunning">
+    <trans-unit id="chat.taskIsAlreadyRunning">
       <source xml:lang="en">`{0}` is already running.</source>
     </trans-unit>
-    <trans-unit id="copilotChat.taskNotFound">
+    <trans-unit id="chat.taskNotFound">
       <source xml:lang="en">Task not found: `{0}`</source>
     </trans-unit>
-    <trans-unit id="copilotChat.taskWasAlreadyRunning">
+    <trans-unit id="chat.taskWasAlreadyRunning">
       <source xml:lang="en">`{0}` was already running.</source>
     </trans-unit>
     <trans-unit id="runInTerminalTool.displayName">
@@ -495,6 +543,9 @@ Please provide the required input to the terminal.
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="autoApprove.defaults">
+      <source xml:lang="en">Note that there's a default set of rules to allow and also deny commands. Consider setting {0} to {1} to ignore all default rules to ensure there are no conflicts with your own rules. Do this at your own risk, the default denial rules are designed to protect you against running dangerous commands.</source>
+    </trans-unit>
     <trans-unit id="autoApprove.deprecated">
       <source xml:lang="en">Use {0} instead</source>
     </trans-unit>
@@ -541,7 +592,7 @@ Please provide the required input to the terminal.
       <source xml:lang="en">A list of commands or regular expressions that control whether the run in terminal tool commands require explicit approval. These will be matched against the start of a command. A regular expression can be provided by wrapping the string in {0} characters followed by optional flags such as {1} for case-insensitivity.</source>
     </trans-unit>
     <trans-unit id="autoApprove.description.subCommands">
-      <source xml:lang="en">Note that these commands and regular expressions are evaluated for every _sub-command_ within the full _command line_, so {0} for example will need both {1} and {2} to match a {3} entry and must not match a {4} entry in order to auto approve. Inline commands such as {5} (command sustitution) or {6} (process substitution) are currently blocked by default via broad rules that detect these patterns.</source>
+      <source xml:lang="en">Note that these commands and regular expressions are evaluated for every _sub-command_ within the full _command line_, so {0} for example will need both {1} and {2} to match a {3} entry and must not match a {4} entry in order to auto approve. Inline commands such as {5} (process substitution) should also be detected.</source>
     </trans-unit>
     <trans-unit id="autoApprove.description.values">
       <source xml:lang="en">Set to {0} to automatically approve commands, {1} to always require explicit approval or {2} to unset the value.</source>
@@ -567,11 +618,55 @@ Please provide the required input to the terminal.
     <trans-unit id="autoApprove.true">
       <source xml:lang="en">Automatically approve the pattern.</source>
     </trans-unit>
+    <trans-unit id="autoApproveMode.description">
+      <source xml:lang="en">Controls whether to allow auto approval in the run in terminal tool.</source>
+    </trans-unit>
     <trans-unit id="autoReplyToPrompts.key">
       <source xml:lang="en">Whether to automatically respond to prompts in the terminal such as `Confirm? y/n`. This is an experimental feature and may not work in all scenarios.</source>
     </trans-unit>
+    <trans-unit id="blockFileWrites.all">
+      <source xml:lang="en">Block all detected file writes.</source>
+    </trans-unit>
+    <trans-unit id="blockFileWrites.description">
+      <source xml:lang="en">Controls whether detected file write operations are blocked in the run in terminal tool. When detected, this will require explicit approval regardless of whether the command would normally be auto approved. Note that this cannot detect all possible methods of writing files, this is what is currently detected:
+
+- File redirection (detected via the bash or PowerShell tree sitter grammar)</source>
+    </trans-unit>
+    <trans-unit id="blockFileWrites.never">
+      <source xml:lang="en">Allow all detected file writes.</source>
+    </trans-unit>
+    <trans-unit id="blockFileWrites.outsideWorkspace">
+      <source xml:lang="en">Block file writes detected outside the workspace. This depends on the shell integration feature working correctly to determine the current working directory of the terminal.</source>
+    </trans-unit>
+    <trans-unit id="ignoreDefaultAutoApproveRules.description">
+      <source xml:lang="en">Whether to ignore the built-in default auto-approve rules used by the run in terminal tool as defined in {0}. When this setting is enabled, the run in terminal tool will ignore any rule that comes from the default set but still follow rules defined in the user, remote and workspace settings. Use this setting at your own risk; the default auto-approve rules are designed to protect you against running dangerous commands.</source>
+    </trans-unit>
+    <trans-unit id="outputLocation.description">
+      <source xml:lang="en">Where to show the output from the run in terminal tool session.</source>
+    </trans-unit>
+    <trans-unit id="outputLocation.none">
+      <source xml:lang="en">Do not reveal the terminal automatically.</source>
+    </trans-unit>
+    <trans-unit id="outputLocation.terminal">
+      <source xml:lang="en">Reveal the terminal when running the command.</source>
+    </trans-unit>
+    <trans-unit id="shellIntegrationTimeout.deprecated">
+      <source xml:lang="en">Use {0} instead</source>
+    </trans-unit>
     <trans-unit id="shellIntegrationTimeout.description">
       <source xml:lang="en">Configures the duration in milliseconds to wait for shell integration to be detected when the run in terminal tool launches a new terminal. Set to `0` to wait the minimum time, the default value `-1` means the wait time is variable based on the value of {0} and whether it's a remote window. A large value can be useful if your shell starts very slowly and a low value if you're intentionally not using shell integration.</source>
+    </trans-unit>
+    <trans-unit id="terminalChatAgentProfile.linux">
+      <source xml:lang="en">The terminal profile to use on Linux for chat agent's run in terminal tool.</source>
+    </trans-unit>
+    <trans-unit id="terminalChatAgentProfile.osx">
+      <source xml:lang="en">The terminal profile to use on macOS for chat agent's run in terminal tool.</source>
+    </trans-unit>
+    <trans-unit id="terminalChatAgentProfile.path">
+      <source xml:lang="en">A path to a shell executable.</source>
+    </trans-unit>
+    <trans-unit id="terminalChatAgentProfile.windows">
+      <source xml:lang="en">The terminal profile to use on Windows for chat agent's run in terminal tool.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/clipboard/browser/terminal.clipboard.contribution" source-language="en" datatype="plaintext"><body>
@@ -997,9 +1092,6 @@ For example:
     <trans-unit id="workbench.action.terminal.learnMore">
       <source xml:lang="en">Learn More</source>
     </trans-unit>
-    <trans-unit id="workbench.action.terminal.requestCompletions">
-      <source xml:lang="en">Request Completions</source>
-    </trans-unit>
     <trans-unit id="workbench.action.terminal.resetSuggestWidgetSize">
       <source xml:lang="en">Reset Suggest Widget Size</source>
     </trans-unit>
@@ -1023,6 +1115,9 @@ For example:
     </trans-unit>
     <trans-unit id="workbench.action.terminal.suggestToggleExplainMode">
       <source xml:lang="en">Suggest Toggle Explain Modes</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.terminal.triggerSuggest">
+      <source xml:lang="en">Trigger Suggest</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/suggest/browser/terminalSuggestAddon" source-language="en" datatype="plaintext"><body>
@@ -1151,6 +1246,9 @@ For example:
     <trans-unit id="terminalSymbolIcon.stashForeground">
       <source xml:lang="en">The foreground color for a stash icon. These icons will appear in the terminal suggest widget.</source>
     </trans-unit>
+    <trans-unit id="terminalSymbolIcon.symbolTextForeground">
+      <source xml:lang="en">The foreground color for a plaintext suggestion. These icons will appear in the terminal suggest widget.</source>
+    </trans-unit>
     <trans-unit id="terminalSymbolIcon.symbolicLinkFileForeground">
       <source xml:lang="en">The foreground color for a symbolic link file icon. These icons will appear in the terminal suggest widget.</source>
     </trans-unit>
@@ -1183,6 +1281,9 @@ For example:
     </trans-unit>
     <trans-unit id="terminalSymbolStashIcon">
       <source xml:lang="en">Icon for stashes in the terminal suggest widget.</source>
+    </trans-unit>
+    <trans-unit id="terminalSymbolSymboTextIcon">
+      <source xml:lang="en">Icon for plain text suggestions in the terminal suggest widget.</source>
     </trans-unit>
     <trans-unit id="terminalSymbolSymbolicLinkFileIcon">
       <source xml:lang="en">Icon for symbolic link files in the terminal suggest widget.</source>
@@ -1234,14 +1335,20 @@ For example:
     <trans-unit id="suggest.inlineSuggestion.off">
       <source xml:lang="en">Disable the feature.</source>
     </trans-unit>
-    <trans-unit id="suggest.provider.description">
-      <source xml:lang="en">Whether to enable this provider.</source>
+    <trans-unit id="suggest.insertTrailingSpace">
+      <source xml:lang="en">Controls whether a space is automatically inserted after accepting a suggestion and re-trigger suggestions. Folders and symbolic link folders will never have a trailing space added.</source>
     </trans-unit>
     <trans-unit id="suggest.provider.lsp.description">
-      <source xml:lang="en">Enable or disable the LSP-based provider. This enables language server protocol-specific argument completion.</source>
+      <source xml:lang="en">Show suggestions from language servers.</source>
+    </trans-unit>
+    <trans-unit id="suggest.provider.title">
+      <source xml:lang="en">Show suggestions from {0}.</source>
     </trans-unit>
     <trans-unit id="suggest.providers">
       <source xml:lang="en">Providers are enabled by default. Omit them by setting the id of the provider to `false`.</source>
+    </trans-unit>
+    <trans-unit id="suggest.providersEnabledByDefault">
+      <source xml:lang="en">Controls which suggestions automatically show up while typing. Suggestion providers are enabled by default.</source>
     </trans-unit>
     <trans-unit id="suggest.quickSuggestions">
       <source xml:lang="en">Controls whether suggestions should automatically show up while typing. Also be aware of the {0}-setting which controls if suggestions are triggered by special characters.</source>
@@ -1323,6 +1430,21 @@ To exclude an extension, set it to `false`
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/voice/browser/terminalVoiceActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="enableExtension">
+      <source xml:lang="en">Enable Extension</source>
+    </trans-unit>
+    <trans-unit id="installExtension">
+      <source xml:lang="en">Install Extension</source>
+    </trans-unit>
+    <trans-unit id="terminal.voice.detail">
+      <source xml:lang="en">Microphone support requires this extension.</source>
+    </trans-unit>
+    <trans-unit id="terminal.voice.enableSpeechExtension">
+      <source xml:lang="en">Would you like to enable the speech extension?</source>
+    </trans-unit>
+    <trans-unit id="terminal.voice.installSpeechExtension">
+      <source xml:lang="en">Would you like to install 'VS Code Speech' extension from 'Microsoft'?</source>
+    </trans-unit>
     <trans-unit id="workbench.action.terminal.startDictation">
       <source xml:lang="en">Start Dictation in Terminal</source>
     </trans-unit>

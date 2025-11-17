@@ -18,9 +18,6 @@
     <trans-unit id="Keep">
       <source xml:lang="en">Keep</source>
     </trans-unit>
-    <trans-unit id="Undo">
-      <source xml:lang="en">Undo</source>
-    </trans-unit>
     <trans-unit id="apply1">
       <source xml:lang="en">Accept Changes</source>
     </trans-unit>
@@ -32,9 +29,6 @@
     </trans-unit>
     <trans-unit id="arrowUp">
       <source xml:lang="en">Cursor Up</source>
-    </trans-unit>
-    <trans-unit id="cancel">
-      <source xml:lang="en">Cancel Request</source>
     </trans-unit>
     <trans-unit id="cat">
       <source xml:lang="en">Inline Chat</source>
@@ -65,9 +59,6 @@
     </trans-unit>
     <trans-unit id="rerun">
       <source xml:lang="en">Rerun</source>
-    </trans-unit>
-    <trans-unit id="reveal">
-      <source xml:lang="en">Toggle Inline Chat</source>
     </trans-unit>
     <trans-unit id="run">
       <source xml:lang="en">Open Inline Chat</source>
@@ -101,45 +92,68 @@
     <trans-unit id="err.discard">
       <source xml:lang="en">Failed to discard changes.</source>
     </trans-unit>
+    <trans-unit id="fix1">
+      <source xml:lang="en">Fix the attached problem</source>
+    </trans-unit>
+    <trans-unit id="fixN">
+      <source xml:lang="en">Fix the attached problems</source>
+    </trans-unit>
+    <trans-unit id="loading">
+      <source xml:lang="en">Working...</source>
+    </trans-unit>
+    <trans-unit id="placeholder">
+      <source xml:lang="en">Edit, refactor, and generate code</source>
+    </trans-unit>
+    <trans-unit id="responseWasEmpty">
+      <source xml:lang="en">Response was empty</source>
+    </trans-unit>
     <trans-unit id="welcome.2">
       <source xml:lang="en">Getting ready...</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatCurrentLine" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="defaultTitle">
-      <source xml:lang="en">Chat</source>
+  <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatSessionServiceImpl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.remove.confirmation.checkbox">
+      <source xml:lang="en">Don't ask again</source>
     </trans-unit>
-    <trans-unit id="disableHint">
-      <source xml:lang="en">Disable Inline Chat Hint</source>
+    <trans-unit id="confirm">
+      <source xml:lang="en">Do you want to continue in panel chat or rephrase your prompt?</source>
     </trans-unit>
-    <trans-unit id="hideHint">
-      <source xml:lang="en">Hide Inline Chat Hint</source>
+    <trans-unit id="confirm.cancel">
+      <source xml:lang="en">Cancel</source>
     </trans-unit>
-    <trans-unit id="inlineChatShowingHint">
-      <source xml:lang="en">Whether inline chat shows a contextual hint</source>
+    <trans-unit id="confirm.detail">
+      <source xml:lang="en">Inline Chat is designed for single file code changes. This task is either too complex or requires a text response. You can rephrase your prompt or continue in panel chat.</source>
     </trans-unit>
-    <trans-unit id="showHint">
-      <source xml:lang="en">Show Inline Chat Hint</source>
+    <trans-unit id="confirm.title">
+      <source xml:lang="en">Continue in Panel Chat?</source>
     </trans-unit>
-    <trans-unit id="startWithCurrentLine">
-      <source xml:lang="en">Start in Editor with Current Line</source>
+    <trans-unit id="confirm.yes">
+      <source xml:lang="en">Continue in Chat</source>
     </trans-unit>
-    <trans-unit id="title1">
-      <source xml:lang="en">{0} to continue with {1}</source>
+    <trans-unit id="name">
+      <source xml:lang="en">Inline Chat to Panel Chat</source>
     </trans-unit>
-    <trans-unit id="title2">
-      <source xml:lang="en">{0} to edit with {1}</source>
+    <trans-unit id="resetChoice.label">
+      <source xml:lang="en">Reset Choice for 'Move Inline Chat to Panel Chat'</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="aria-label">
       <source xml:lang="en">Inline Chat Input</source>
     </trans-unit>
+    <trans-unit id="feedbackThanks">
+      <source xml:lang="en">Thank you for your feedback!</source>
+    </trans-unit>
     <trans-unit id="inlineChat.accessibilityHelp">
       <source xml:lang="en">Inline Chat Input, Use {0} for Inline Chat Accessibility Help.</source>
     </trans-unit>
     <trans-unit id="inlineChat.accessibilityHelpNoKb">
       <source xml:lang="en">Inline Chat Input, Run the Inline Chat Accessibility Help command for more information.</source>
+    </trans-unit>
+    <trans-unit id="termsDisclaimer">
+      <source xml:lang="en">By continuing with {0} Copilot, you agree to {1}'s [Terms]({2}) and [Privacy Statement]({3})</source>
+      <note>{Locked="]({2})"}
+{Locked="]({3})"}</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatZoneWidget" source-language="en" datatype="plaintext"><body>
@@ -169,17 +183,11 @@
     <trans-unit id="editorOverviewRuler.inlineChatRemoved">
       <source xml:lang="en">Overview ruler marker color for inline chat removed content.</source>
     </trans-unit>
-    <trans-unit id="emptyLineHint">
-      <source xml:lang="en">Whether empty lines show a hint to generate code with inline chat.</source>
-    </trans-unit>
     <trans-unit id="enableV2">
       <source xml:lang="en">Whether to use the next version of inline chat.</source>
     </trans-unit>
     <trans-unit id="finishOnType">
       <source xml:lang="en">Whether to finish an inline chat session when typing outside of changed regions.</source>
-    </trans-unit>
-    <trans-unit id="hideOnRequest">
-      <source xml:lang="en">Whether to hide the inline chat widget after making a request. When enabled, the widget hides after a request has been made and instead the chat overlay shows. When hidden, the widget can always be shown again with the inline chat keybinding or from the chat overlay widget. *Note* that this setting requires `#inlineChat.enableV2#` to be enabled.</source>
     </trans-unit>
     <trans-unit id="holdToSpeech">
       <source xml:lang="en">Whether holding the inline chat keybinding will automatically enable speech recognition.</source>
@@ -218,7 +226,13 @@
       <source xml:lang="en">Whether the interactive editor input is focused</source>
     </trans-unit>
     <trans-unit id="inlineChatHasEditsAgent">
-      <source xml:lang="en">Whether an agent for inliine for interactive editors exists</source>
+      <source xml:lang="en">Whether an agent for inline for interactive editors exists</source>
+    </trans-unit>
+    <trans-unit id="inlineChatHasNotebookAgent">
+      <source xml:lang="en">Whether an agent for notebook cells exists</source>
+    </trans-unit>
+    <trans-unit id="inlineChatHasNotebookInline">
+      <source xml:lang="en">Whether an agent for notebook cells exists</source>
     </trans-unit>
     <trans-unit id="inlineChatHasPossible">
       <source xml:lang="en">Whether a provider for inline chat exists and whether an editor for inline chat is open</source>
@@ -262,11 +276,8 @@
     <trans-unit id="inlineChatVisible">
       <source xml:lang="en">Whether the interactive editor input is visible</source>
     </trans-unit>
-    <trans-unit id="lineSuffixHint">
-      <source xml:lang="en">Whether lines that are dominated by natural language or pseudo code show a hint to continue with inline chat. For instance, `class Person with name and hobbies` would show a hint to continue with chat.</source>
-    </trans-unit>
     <trans-unit id="notebookAgent">
-      <source xml:lang="en">Enable agent-like behavior for inline chat widget in notebooks. Depends on the `#inlineChat.enableV2#` setting being enabled.</source>
+      <source xml:lang="en">Enable agent-like behavior for inline chat widget in notebooks.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/inlineChat/electron-browser/inlineChatActions" source-language="en" datatype="plaintext"><body>

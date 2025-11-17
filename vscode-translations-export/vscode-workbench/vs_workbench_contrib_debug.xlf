@@ -446,7 +446,7 @@
       <note>This is the description for a setting</note>
     </trans-unit>
     <trans-unit id="always">
-      <source xml:lang="en">Always show debug in Status bar</source>
+      <source xml:lang="en">Always show debug item in status bar</source>
     </trans-unit>
     <trans-unit id="breakWhenValueChanges">
       <source xml:lang="en">Break on Value Change</source>
@@ -528,7 +528,7 @@
       <source xml:lang="en">Show Source Code in Disassembly View.</source>
     </trans-unit>
     <trans-unit id="debug.enableStatusBarColor">
-      <source xml:lang="en">Color of the Status bar when debugger is active.</source>
+      <source xml:lang="en">Color of the status bar when the debugger is active.</source>
     </trans-unit>
     <trans-unit id="debug.focusEditorOnBreak">
       <source xml:lang="en">Controls whether the editor should be focused when the debugger breaks.</source>
@@ -700,10 +700,10 @@
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
     <trans-unit id="never">
-      <source xml:lang="en">Never show debug in Status bar</source>
+      <source xml:lang="en">Never show debug item in status bar</source>
     </trans-unit>
     <trans-unit id="onFirstSessionStart">
-      <source xml:lang="en">Show debug in Status bar only after debug was started for the first time</source>
+      <source xml:lang="en">Show debug item in status bar only after debug was started for the first time</source>
     </trans-unit>
     <trans-unit id="openDebug">
       <source xml:lang="en">Controls when the debug view should open.</source>
@@ -741,7 +741,7 @@
       <source xml:lang="en">Show the Problems view and do not start debugging.</source>
     </trans-unit>
     <trans-unit id="showInStatusBar">
-      <source xml:lang="en">Controls when the debug Status bar should be visible.</source>
+      <source xml:lang="en">Controls when the debug status bar item should be visible.</source>
       <note>This is the description for a setting</note>
     </trans-unit>
     <trans-unit id="showInlineBreakpointCandidates">
@@ -1864,16 +1864,17 @@
     <trans-unit id="allDebuggersDisabled">
       <source xml:lang="en">All debug extensions are disabled. Enable a debug extension or install a new one from the Marketplace.</source>
     </trans-unit>
-    <trans-unit id="customizeRunAndDebug">
-      <source xml:lang="en">To customize Run and Debug [create a launch.json file](command:{0}).</source>
-      <note>Please do not translate the word "command", it is part of our internal syntax which must not change
-{Locked="](command:{0})"}</note>
+    <trans-unit id="customizeRunAndDebug2">
+      <source xml:lang="en">To customize Run and Debug [create a launch.json file]({0}).</source>
+      <note>{Locked="launch.json"}
+{Locked="["}
+{Locked="]({0})"}</note>
     </trans-unit>
-    <trans-unit id="customizeRunAndDebugOpenFolder">
-      <source xml:lang="en">To customize Run and Debug, [open a folder](command:{0}) and create a launch.json file.</source>
-      <note>Please do not translate the word "command", it is part of our internal syntax which must not change
-Please do not translate "launch.json", it is the specific configuration file name
-{Locked="](command:{0})"}</note>
+    <trans-unit id="customizeRunAndDebugOpenFolder2">
+      <source xml:lang="en">To customize Run and Debug, [open a folder]({0}) and create a launch.json file.</source>
+      <note>{Locked="launch.json"}
+{Locked="["}
+{Locked="]({0})"}</note>
     </trans-unit>
     <trans-unit id="openAFileWhichCanBeDebugged">
       <source xml:lang="en">[Open a file](command:{0}) which can be debugged or run.</source>

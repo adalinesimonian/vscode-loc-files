@@ -51,9 +51,9 @@
       <source xml:lang="en">MCP Servers</source>
     </trans-unit>
     <trans-unit id="mcp.command.browse.mcp">
-      <source xml:lang="en">Browse Servers</source>
+      <source xml:lang="en">Browse MCP Servers</source>
     </trans-unit>
-    <trans-unit id="mcp.command.open">
+    <trans-unit id="mcp.command.browse.tooltip">
       <source xml:lang="en">Browse MCP Servers</source>
     </trans-unit>
     <trans-unit id="mcp.command.openRemoteUserMcp">
@@ -167,6 +167,9 @@
     </trans-unit>
     <trans-unit id="mcp.signOut">
       <source xml:lang="en">Sign Out</source>
+    </trans-unit>
+    <trans-unit id="mcp.skipCurrentAutostart">
+      <source xml:lang="en">Skip Current Autostart</source>
     </trans-unit>
     <trans-unit id="mcp.start">
       <source xml:lang="en">Start Server</source>
@@ -311,11 +314,14 @@
     <trans-unit id="mcp.target..remote.description">
       <source xml:lang="en">Available on this remote machine, runs on {0}</source>
     </trans-unit>
+    <trans-unit id="mcp.target.placeholder">
+      <source xml:lang="en">Select the configuration target</source>
+    </trans-unit>
     <trans-unit id="mcp.target.remote">
       <source xml:lang="en">Remote</source>
     </trans-unit>
     <trans-unit id="mcp.target.title">
-      <source xml:lang="en">Choose where to install the MCP server</source>
+      <source xml:lang="en">Add MCP Server</source>
     </trans-unit>
     <trans-unit id="mcp.target.user">
       <source xml:lang="en">Global</source>
@@ -363,6 +369,21 @@
     </trans-unit>
     <trans-unit id="mcp.elicit.title">
       <source xml:lang="en">Request for Input</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.url.instruction">
+      <source xml:lang="en">Open this URL?</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.url.instruction2">
+      <source xml:lang="en">This will open {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.url.open">
+      <source xml:lang="en">Open {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.url.open2">
+      <source xml:lang="en">Open URL</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.url.title">
+      <source xml:lang="en">Authorization Required</source>
     </trans-unit>
     <trans-unit id="mcp.elicit.useDefault">
       <source xml:lang="en">Default value</source>
@@ -516,6 +537,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpResourceQuickAccess" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="goBack">
+      <source xml:lang="en">Go back ↩</source>
+    </trans-unit>
     <trans-unit id="mcp.quickaccess.attach">
       <source xml:lang="en">Attach to chat</source>
     </trans-unit>
@@ -545,14 +569,20 @@
     <trans-unit id="configJson">
       <source xml:lang="en">Show Configuration (JSON)</source>
     </trans-unit>
-    <trans-unit id="disabled - all not allowed">
-      <source xml:lang="en">This MCP Server is disabled because MCP servers are configured to be disabled in the Editor. Please check your [settings]({0}).</source>
-    </trans-unit>
-    <trans-unit id="disabled - some not allowed">
-      <source xml:lang="en">This MCP Server is disabled because it is configured to be disabled in the Editor. Please check your [settings]({0}).</source>
-    </trans-unit>
     <trans-unit id="install">
       <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="install in workspace folder">
+      <source xml:lang="en">Workspace Folder</source>
+    </trans-unit>
+    <trans-unit id="installInRemote">
+      <source xml:lang="en">Install (Remote)</source>
+    </trans-unit>
+    <trans-unit id="installInRemoteLabel">
+      <source xml:lang="en">Install in {0}</source>
+    </trans-unit>
+    <trans-unit id="installInWorkspace">
+      <source xml:lang="en">Install in Workspace</source>
     </trans-unit>
     <trans-unit id="installing">
       <source xml:lang="en">Installing</source>
@@ -577,6 +607,12 @@
     </trans-unit>
     <trans-unit id="mcp.signOut">
       <source xml:lang="en">Sign Out</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.title">
+      <source xml:lang="en">Choose where to install the MCP server</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.workspace">
+      <source xml:lang="en">Workspace</source>
     </trans-unit>
     <trans-unit id="mcpServerInstallation">
       <source xml:lang="en">Installing MCP Server {0} started. An editor is now open with more details on this MCP Server</source>
@@ -667,17 +703,11 @@
     <trans-unit id="packages">
       <source xml:lang="en">Packages</source>
     </trans-unit>
-    <trans-unit id="privacy">
-      <source xml:lang="en">Privacy Policy</source>
-    </trans-unit>
     <trans-unit id="published">
       <source xml:lang="en">Published</source>
     </trans-unit>
     <trans-unit id="remotes">
       <source xml:lang="en">Remote</source>
-    </trans-unit>
-    <trans-unit id="report">
-      <source xml:lang="en">Report abuse</source>
     </trans-unit>
     <trans-unit id="repository">
       <source xml:lang="en">Repository</source>
@@ -695,13 +725,10 @@
       <source xml:lang="en">Type:</source>
     </trans-unit>
     <trans-unit id="support">
-      <source xml:lang="en">Support</source>
+      <source xml:lang="en">Contact Support</source>
     </trans-unit>
     <trans-unit id="tags">
       <source xml:lang="en">Tags</source>
-    </trans-unit>
-    <trans-unit id="terms">
-      <source xml:lang="en">Terms of Service</source>
     </trans-unit>
     <trans-unit id="transport">
       <source xml:lang="en">Transport:</source>
@@ -762,19 +789,43 @@
     <trans-unit id="mcp-installed">
       <source xml:lang="en">MCP Servers - Installed</source>
     </trans-unit>
-    <trans-unit id="mcp.welcome.browseButton">
-      <source xml:lang="en">Browse MCP Servers</source>
+    <trans-unit id="mcp.gallery.enableDialog.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="mcp.gallery.enableDialog.enable">
+      <source xml:lang="en">Enable</source>
+    </trans-unit>
+    <trans-unit id="mcp.gallery.enableDialog.setting">
+      <source xml:lang="en">This feature is currently in preview. You can disable it anytime using the setting {0}.</source>
+    </trans-unit>
+    <trans-unit id="mcp.gallery.enableDialog.title">
+      <source xml:lang="en">Enable MCP Servers Marketplace?</source>
     </trans-unit>
     <trans-unit id="mcp.welcome.descriptionWithLink">
-      <source xml:lang="en">Extend agent mode by installing MCP servers to bring extra tools for connecting to databases, invoking APIs and performing specialized tasks.</source>
+      <source xml:lang="en">Browse and install [Model Context Protocol (MCP) servers](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) directly from VS Code to extend agent mode with extra tools for connecting to databases, invoking APIs and performing specialized tasks.</source>
+    </trans-unit>
+    <trans-unit id="mcp.welcome.enableGalleryButton">
+      <source xml:lang="en">Enable MCP Servers Marketplace</source>
+    </trans-unit>
+    <trans-unit id="mcp.welcome.settings.tooltip">
+      <source xml:lang="en">Open Settings</source>
     </trans-unit>
     <trans-unit id="mcp.welcome.title">
       <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="no extensions found">
+      <source xml:lang="en">No MCP Servers found.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpWorkbenchService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cannot be installed">
       <source xml:lang="en">Cannot install the '{0}' MCP Server because it is not available in this setup.</source>
+    </trans-unit>
+    <trans-unit id="disabled - all not allowed">
+      <source xml:lang="en">This MCP Server is disabled because MCP servers are configured to be disabled in the Editor. Please check your [settings]({0}).</source>
+    </trans-unit>
+    <trans-unit id="disabled - some not allowed">
+      <source xml:lang="en">This MCP Server is disabled because it is configured to be disabled in the Editor. Please check your [settings]({0}).</source>
     </trans-unit>
     <trans-unit id="mcp.configuration.userLocalValue">
       <source xml:lang="en">Global in {0}</source>
@@ -795,6 +846,9 @@
     </trans-unit>
     <trans-unit id="invalidLabel">
       <source xml:lang="en">Expected 'label' to be a non-empty string.</source>
+    </trans-unit>
+    <trans-unit id="invalidWhen">
+      <source xml:lang="en">Expected 'when' to be a non-empty string.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/discovery/nativeMcpDiscoveryAbstract" source-language="en" datatype="plaintext"><body>
@@ -892,6 +946,9 @@
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.mcp.label">
       <source xml:lang="en">Display name for the collection.</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.contributes.mcp.when">
+      <source xml:lang="en">Condition which must be true to enable this collection.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpContextKeys" source-language="en" datatype="plaintext"><body>
@@ -1050,17 +1107,6 @@
     </trans-unit>
     <trans-unit id="mcpServer.stopping">
       <source xml:lang="en">Stopping server {0}</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/mcp/common/mcpService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="mcp.autostart.configure">
-      <source xml:lang="en">Configure</source>
-    </trans-unit>
-    <trans-unit id="mcp.autostart.progress">
-      <source xml:lang="en">Waiting for MCP server "{0}" to start...</source>
-    </trans-unit>
-    <trans-unit id="mcp.autostart.send">
-      <source xml:lang="en">Skip Waiting</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpTypes" source-language="en" datatype="plaintext"><body>

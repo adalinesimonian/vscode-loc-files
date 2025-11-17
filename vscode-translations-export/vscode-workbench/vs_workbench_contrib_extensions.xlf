@@ -492,6 +492,9 @@
     <trans-unit id="extensionsInQuickAccess">
       <source xml:lang="en">When enabled, extensions can be searched for via Quick Access and report issues from there.</source>
     </trans-unit>
+    <trans-unit id="extensionsRequestTimeout">
+      <source xml:lang="en">Controls the timeout in milliseconds for HTTP requests made when fetching extensions from the Marketplace</source>
+    </trans-unit>
     <trans-unit id="extensionsShowRecommendationsOnlyOnDemand_Deprecated">
       <source xml:lang="en">This setting is deprecated. Use extensions.ignoreRecommendations setting to control recommendation notifications. Use Extensions view's visibility actions to hide Recommended view by default.</source>
     </trans-unit>
@@ -935,6 +938,9 @@
     </trans-unit>
     <trans-unit id="extension disabled because of trust requirement">
       <source xml:lang="en">This extension has been disabled because the current workspace is not trusted.</source>
+    </trans-unit>
+    <trans-unit id="extension disabled because of unification">
+      <source xml:lang="en">All GitHub Copilot functionality is now being served from the GitHub Copilot Chat extension. To temporarily opt out of this extension unification, toggle the {0} setting.</source>
     </trans-unit>
     <trans-unit id="extension enabled on remote">
       <source xml:lang="en">Extension is enabled on '{0}'</source>
@@ -1937,9 +1943,6 @@ Would you like to update the extension?</source>
     <trans-unit id="installExtensionsTool.displayName">
       <source xml:lang="en">Install Extensions</source>
     </trans-unit>
-    <trans-unit id="installExtensionsTool.modelDescription">
-      <source xml:lang="en">This is a tool for installing extensions in Visual Studio Code. You should provide the list of extension ids to install. The identifier of an extension is '${ publisher }.${ name }' for example: 'vscode.csharp'.</source>
-    </trans-unit>
     <trans-unit id="installExtensionsTool.noResultMessage">
       <source xml:lang="en">No extensions were installed.</source>
     </trans-unit>
@@ -1966,9 +1969,6 @@ Would you like to update the extension?</source>
   <file original="src/vs/workbench/contrib/extensions/common/searchExtensionsTool" source-language="en" datatype="plaintext"><body>
     <trans-unit id="searchExtensionsTool.displayName">
       <source xml:lang="en">Search Extensions</source>
-    </trans-unit>
-    <trans-unit id="searchExtensionsTool.modelDescription">
-      <source xml:lang="en">This is a tool for browsing Visual Studio Code Extensions Marketplace. It allows the model to search for extensions and retrieve detailed information about them. The model should use this tool whenever it needs to discover extensions or resolve information about known ones. To use the tool, the model has to provide the category of the extensions, relevant search keywords, or known extension IDs. Note that search results may include false positives, so reviewing and filtering is recommended.</source>
     </trans-unit>
     <trans-unit id="searchExtensionsTool.noInput">
       <source xml:lang="en">Please provide a category or keywords or ids to search for.</source>

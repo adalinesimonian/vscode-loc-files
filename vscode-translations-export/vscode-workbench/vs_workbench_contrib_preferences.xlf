@@ -487,6 +487,9 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/preferences/browser/settingsEditorSettingIndicators" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="advancedLabel">
+      <source xml:lang="en">Advanced</source>
+    </trans-unit>
     <trans-unit id="alsoConfiguredElsewhere">
       <source xml:lang="en">Also modified elsewhere</source>
     </trans-unit>
@@ -743,6 +746,18 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/preferences/browser/settingsSearchMenu" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="advancedSettingsSearch">
+      <source xml:lang="en">Advanced</source>
+    </trans-unit>
+    <trans-unit id="advancedSettingsSearchTooltip">
+      <source xml:lang="en">Show advanced settings</source>
+    </trans-unit>
+    <trans-unit id="experimental">
+      <source xml:lang="en">Experimental</source>
+    </trans-unit>
+    <trans-unit id="experimentalSettingsSearchTooltip">
+      <source xml:lang="en">Show experimental settings</source>
+    </trans-unit>
     <trans-unit id="extSettingsSearch">
       <source xml:lang="en">Extension ID...</source>
     </trans-unit>
@@ -756,7 +771,7 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
       <source xml:lang="en">Add feature filter</source>
     </trans-unit>
     <trans-unit id="idSettingsSearch">
-      <source xml:lang="en">Setting ID</source>
+      <source xml:lang="en">Setting ID...</source>
     </trans-unit>
     <trans-unit id="idSettingsSearchTooltip">
       <source xml:lang="en">Add Setting ID filter</source>
@@ -780,10 +795,22 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
       <source xml:lang="en">Show settings for online services</source>
     </trans-unit>
     <trans-unit id="policySettingsSearch">
-      <source xml:lang="en">Policy services</source>
+      <source xml:lang="en">Organization policies</source>
     </trans-unit>
     <trans-unit id="policySettingsSearchTooltip">
-      <source xml:lang="en">Show settings for policy services</source>
+      <source xml:lang="en">Show organization policy settings</source>
+    </trans-unit>
+    <trans-unit id="previewSettings">
+      <source xml:lang="en">Preview</source>
+    </trans-unit>
+    <trans-unit id="previewSettingsSearchTooltip">
+      <source xml:lang="en">Show preview settings</source>
+    </trans-unit>
+    <trans-unit id="stableSettings">
+      <source xml:lang="en">Stable</source>
+    </trans-unit>
+    <trans-unit id="stableSettingsSearchTooltip">
+      <source xml:lang="en">Show stable settings</source>
     </trans-unit>
     <trans-unit id="tagSettingsSearch">
       <source xml:lang="en">Tag...</source>
@@ -950,6 +977,9 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/preferences/common/preferences" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="advancedIndicatorDescription">
+      <source xml:lang="en">Advanced setting: this setting is intended for advanced scenarios and configurations. Only modify this if you know what it does.</source>
+    </trans-unit>
     <trans-unit id="experimentalIndicatorDescription">
       <source xml:lang="en">Experimental setting: this setting controls a new feature that is actively being developed and may be unstable. It is subject to change or removal.</source>
     </trans-unit>

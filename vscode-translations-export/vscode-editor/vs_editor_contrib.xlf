@@ -1095,6 +1095,14 @@ This allows for users to show the hover without using the mouse.</note>
       <source xml:lang="en">Show or focus the editor hover which shows documentation, references, and other content for a symbol at the current cursor position.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/editor/contrib/hover/browser/hoverCopyButton" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="hover.copied">
+      <source xml:lang="en">Copied to clipboard</source>
+    </trans-unit>
+    <trans-unit id="hover.copy">
+      <source xml:lang="en">Copy</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/editor/contrib/hover/browser/markdownHoverParticipant" source-language="en" datatype="plaintext"><body>
     <trans-unit id="decreaseHoverVerbosity">
       <source xml:lang="en">Icon for decreasing hover verbosity.</source>
@@ -1278,14 +1286,17 @@ This allows for users to show the hover without using the mouse.</note>
     <trans-unit id="action.inlineSuggest.trigger">
       <source xml:lang="en">Trigger Inline Suggestion</source>
     </trans-unit>
-    <trans-unit id="action.inlineSuggest.trigger.explicitInlineEdit">
-      <source xml:lang="en">Trigger Next Edit Suggestion</source>
+    <trans-unit id="inlineSuggest.trigger.args">
+      <source xml:lang="en">Options for triggering inline suggestions.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.trigger.description">
+      <source xml:lang="en">Triggers an inline suggestion in the editor.</source>
     </trans-unit>
     <trans-unit id="jump">
       <source xml:lang="en">Jump</source>
     </trans-unit>
-    <trans-unit id="noInlineEditAvailable">
-      <source xml:lang="en">No inline edit is available.</source>
+    <trans-unit id="noInlineSuggestionAvailable">
+      <source xml:lang="en">No inline suggestion is available.</source>
     </trans-unit>
     <trans-unit id="reject">
       <source xml:lang="en">Reject</source>
@@ -1379,6 +1390,9 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="showExpanded">
       <source xml:lang="en">Show Expanded</source>
+    </trans-unit>
+    <trans-unit id="snooze">
+      <source xml:lang="en">Snooze</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/indicatorView" source-language="en" datatype="plaintext"><body>
@@ -1772,20 +1786,29 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/quickAccess/browser/gotoLineQuickAccess" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="cannotRunGotoLine">
-      <source xml:lang="en">Open a text editor first to go to a line.</source>
+    <trans-unit id="gotoLine.columnPrompt">
+      <source xml:lang="en">Press 'Enter' to go to line {0} or enter a column number (from 1 to {1}).</source>
     </trans-unit>
-    <trans-unit id="gotoLineColumnLabel">
-      <source xml:lang="en">Go to line {0} and character {1}.</source>
+    <trans-unit id="gotoLine.goToPosition">
+      <source xml:lang="en">Press 'Enter' to go to line {0} at column {1}.</source>
     </trans-unit>
-    <trans-unit id="gotoLineLabel">
-      <source xml:lang="en">Go to line {0}.</source>
+    <trans-unit id="gotoLine.lineColumnPrompt">
+      <source xml:lang="en">Press 'Enter' to go to line {0} or enter : to add a column number.</source>
     </trans-unit>
-    <trans-unit id="gotoLineLabelEmpty">
-      <source xml:lang="en">Current Line: {0}, Character: {1}. Type a line number to navigate to.</source>
+    <trans-unit id="gotoLine.linePrompt">
+      <source xml:lang="en">Type a line number to go to (from 1 to {0}).</source>
     </trans-unit>
-    <trans-unit id="gotoLineLabelEmptyWithLimit">
-      <source xml:lang="en">Current Line: {0}, Character: {1}. Type a line number between 1 and {2} to navigate to.</source>
+    <trans-unit id="gotoLine.noEditor">
+      <source xml:lang="en">Open a text editor first to go to a line or an offset.</source>
+    </trans-unit>
+    <trans-unit id="gotoLine.offsetPrompt">
+      <source xml:lang="en">Type a character position to go to (from 1 to {0}).</source>
+    </trans-unit>
+    <trans-unit id="gotoLine.offsetPromptZero">
+      <source xml:lang="en">Type a character position to go to (from 0 to {0}).</source>
+    </trans-unit>
+    <trans-unit id="gotoLineToggle">
+      <source xml:lang="en">Use Zero-Based Offset</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/quickAccess/browser/gotoSymbolQuickAccess" source-language="en" datatype="plaintext"><body>
@@ -1934,7 +1957,7 @@ A keybinding</note>
       <source xml:lang="en">Cancel</source>
     </trans-unit>
     <trans-unit id="generateRenameSuggestionsButton">
-      <source xml:lang="en">Generate new name suggestions</source>
+      <source xml:lang="en">Generate New Name Suggestions</source>
     </trans-unit>
     <trans-unit id="label">
       <source xml:lang="en">{0} to Rename, {1} to Preview</source>

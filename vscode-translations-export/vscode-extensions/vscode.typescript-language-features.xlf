@@ -693,6 +693,9 @@
     <trans-unit id="configuration.suggest.includeAutomaticOptionalChainCompletions">
       <source xml:lang="en">Enable/disable showing completions on potentially undefined values that insert an optional chain call. Requires strict null checks to be enabled.</source>
     </trans-unit>
+    <trans-unit id="typescript.implementationsCodeLens.showOnAllClassMethods">
+      <source xml:lang="en">Enable/disable showing implementations CodeLens above all class methods instead of only on abstract methods.</source>
+    </trans-unit>
     <trans-unit id="configuration.suggest.classMemberSnippets.enabled">
       <source xml:lang="en">Enable/disable snippet completions for class members.</source>
     </trans-unit>
@@ -1021,6 +1024,9 @@
       <source xml:lang="en">TypeScript problems</source>
     </trans-unit>
     <trans-unit id="typescript.problemMatchers.tscWatch.label">
+      <source xml:lang="en">TypeScript problems (watch mode)</source>
+    </trans-unit>
+    <trans-unit id="typescript.problemMatchers.tsgo-watch.label">
       <source xml:lang="en">TypeScript problems (watch mode)</source>
     </trans-unit>
     <trans-unit id="typescript.preferences.organizeImports.caseFirst.upper">

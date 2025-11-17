@@ -473,6 +473,10 @@ OS: {8}</source>
     <trans-unit id="openWorkspaceTitle">
       <source xml:lang="en">Open Workspace from File</source>
     </trans-unit>
+    <trans-unit id="selectFolder">
+      <source xml:lang="en">&amp;&amp;Select folder</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
 </body></file>
   <file original="src/vs/platform/dnd/browser/dnd" source-language="en" datatype="plaintext"><body>
     <trans-unit id="fileTooLarge">
@@ -1198,6 +1202,16 @@ OS: {8}</source>
       <source xml:lang="en">Whether suggestion are visible</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/hover/browser/hoverWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="hoverhint">
+      <source xml:lang="en">Hold {0} key to mouse over</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/hover/browser/updatableHoverWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="iconLabel.loading">
+      <source xml:lang="en">Loading...</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/keybinding/common/abstractKeybindingService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="first.chord">
       <source xml:lang="en">({0}) was pressed. Waiting for second key of chord...</source>
@@ -1742,6 +1756,9 @@ OS: {8}</source>
     <trans-unit id="httpConfigurationTitle">
       <source xml:lang="en">HTTP</source>
     </trans-unit>
+    <trans-unit id="networkInterfaceCheckInterval">
+      <source xml:lang="en">Controls the interval in seconds for checking network interface changes to invalidate the proxy cache. Set to -1 to disable. When during [remote development](https://aka.ms/vscode-remote) the {0} setting is disabled this setting can be configured in the local and the remote settings separately.</source>
+    </trans-unit>
     <trans-unit id="noProxy">
       <source xml:lang="en">Specifies domain names for which proxy settings should be ignored for HTTP/HTTPS requests. When during [remote development](https://aka.ms/vscode-remote) the {0} setting is disabled this setting can be configured in the local and the remote settings separately.</source>
     </trans-unit>
@@ -1774,6 +1791,9 @@ OS: {8}</source>
     </trans-unit>
     <trans-unit id="systemCertificates">
       <source xml:lang="en">Controls whether CA certificates should be loaded from the OS. On Windows and macOS, a reload of the window is required after turning this off. When during [remote development](https://aka.ms/vscode-remote) the {0} setting is disabled this setting can be configured in the local and the remote settings separately.</source>
+    </trans-unit>
+    <trans-unit id="systemCertificatesNode">
+      <source xml:lang="en">Controls whether system certificates should be loaded using Node.js built-in support. Reload the window after changing this setting. When during [remote development](https://aka.ms/vscode-remote) the {0} setting is disabled this setting can be configured in the local and the remote settings separately.</source>
     </trans-unit>
     <trans-unit id="systemCertificatesV2">
       <source xml:lang="en">Controls whether experimental loading of CA certificates from the OS should be enabled. This uses a more general approach than the default implementation. When during [remote development](https://aka.ms/vscode-remote) the {0} setting is disabled this setting can be configured in the local and the remote settings separately.</source>
@@ -1912,7 +1932,7 @@ To override an existing profile use its profile name as the key, for example:
       <source xml:lang="en">Controls whether or not WSL distros are shown in the terminal dropdown</source>
     </trans-unit>
     <trans-unit id="terminalAutomationProfile.path">
-      <source xml:lang="en">A single path to a shell executable.</source>
+      <source xml:lang="en">A path to a shell executable.</source>
     </trans-unit>
     <trans-unit id="terminalIntegratedConfigurationTitle">
       <source xml:lang="en">Integrated Terminal</source>
@@ -2710,6 +2730,9 @@ To override an existing profile use its profile name as the key, for example:
     </trans-unit>
     <trans-unit id="sashActiveBorder">
       <source xml:lang="en">Border color of active sashes.</source>
+    </trans-unit>
+    <trans-unit id="scrollbarBackground">
+      <source xml:lang="en">Scrollbar track background color.</source>
     </trans-unit>
     <trans-unit id="scrollbarShadow">
       <source xml:lang="en">Scrollbar shadow to indicate that the view is scrolled.</source>

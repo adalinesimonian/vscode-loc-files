@@ -94,6 +94,9 @@
     <trans-unit id="config.github-enterprise.uri.description">
       <source xml:lang="en">The URI for your GHE.com or GitHub Enterprise Server instance.&#10;&#10;Examples:&#10;* GHE.com: `https://octocat.ghe.com`&#10;* GitHub Enterprise Server: `https://github.octocat.com`&#10;&#10;&gt; **Note:** This should _not_ be set to a GitHub.com URI. If your account exists on GitHub.com or is a GitHub Enterprise Managed User, you do not need any additional configuration and can simply log in to GitHub.</source>
     </trans-unit>
+    <trans-unit id="config.github-authentication.preferDeviceCodeFlow.description">
+      <source xml:lang="en">When true, prioritize the device code flow for authentication instead of other available flows. This is useful for environments like WSL where the local server or URL handler flows may not work as expected.</source>
+    </trans-unit>
     <trans-unit id="config.github-authentication.useElectronFetch.description">
       <source xml:lang="en">When true, uses Electron&apos;s built-in fetch function for HTTP requests. When false, uses the Node.js global fetch function. This setting only applies when running in the Electron environment. **Note:** A restart is required for this setting to take effect.</source>
     </trans-unit>

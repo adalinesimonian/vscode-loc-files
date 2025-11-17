@@ -437,13 +437,13 @@
       <source xml:lang="en">Select Default Profile</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.startVoice">
-      <source xml:lang="en">Start Voice</source>
+      <source xml:lang="en">Start Dictation</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.startVoiceEditor">
       <source xml:lang="en">Start Dictation</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.stopVoice">
-      <source xml:lang="en">Stop Voice</source>
+      <source xml:lang="en">Stop Dictation</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.stopVoiceEditor">
       <source xml:lang="en">Stop Dictation</source>
@@ -522,6 +522,23 @@
     </trans-unit>
     <trans-unit id="moveTabsRight">
       <source xml:lang="en">Move Tabs Right</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminal/browser/terminalTabsChatEntry" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="terminal.tabs.chatEntryAriaLabelPlural">
+      <source xml:lang="en">Show {0} hidden chat terminals</source>
+    </trans-unit>
+    <trans-unit id="terminal.tabs.chatEntryAriaLabelSingle">
+      <source xml:lang="en">Show 1 hidden chat terminal</source>
+    </trans-unit>
+    <trans-unit id="terminal.tabs.chatEntryLabelPlural">
+      <source xml:lang="en">{0} Hidden Terminals</source>
+    </trans-unit>
+    <trans-unit id="terminal.tabs.chatEntryLabelSingle">
+      <source xml:lang="en">{0} Hidden Terminal</source>
+    </trans-unit>
+    <trans-unit id="terminal.tabs.chatEntryTooltip">
+      <source xml:lang="en">Show hidden chat terminals</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminal/browser/terminalTabsList" source-language="en" datatype="plaintext"><body>
@@ -604,6 +621,9 @@ The terminal's title</note>
     <trans-unit id="rerun">
       <source xml:lang="en">Do you want to run the command: {0}</source>
     </trans-unit>
+    <trans-unit id="terminal.attachToChat">
+      <source xml:lang="en">Attach To Chat</source>
+    </trans-unit>
     <trans-unit id="terminal.copyCommand">
       <source xml:lang="en">Copy Command</source>
     </trans-unit>
@@ -670,6 +690,12 @@ The terminal's title</note>
     <trans-unit id="vscode.extension.contributes.terminal">
       <source xml:lang="en">Contributes terminal functionality.</source>
     </trans-unit>
+    <trans-unit id="vscode.extension.contributes.terminal.completionProviders">
+      <source xml:lang="en">Defines terminal completion providers that will be registered when the extension activates.</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.contributes.terminal.completionProviders.description">
+      <source xml:lang="en">A description of what the completion provider does. This will be shown in the settings UI.</source>
+    </trans-unit>
     <trans-unit id="vscode.extension.contributes.terminal.profiles">
       <source xml:lang="en">Defines additional terminal profiles that the user can create.</source>
     </trans-unit>
@@ -717,6 +743,9 @@ The terminal's title</note>
     <trans-unit id="terminal.foreground">
       <source xml:lang="en">The foreground color of the terminal.</source>
     </trans-unit>
+    <trans-unit id="terminal.hoverHighlightBackground">
+      <source xml:lang="en">Highlight below the word for which a hover is shown. The color must not be opaque so as not to hide underlying decorations.</source>
+    </trans-unit>
     <trans-unit id="terminal.inactiveSelectionBackground">
       <source xml:lang="en">The selection background color of the terminal when it does not have focus.</source>
     </trans-unit>
@@ -758,9 +787,6 @@ The terminal's title</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminal/common/terminalConfiguration" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="autoApproveMode.description">
-      <source xml:lang="en">Controls whether to allow auto approval in the run in terminal tool.</source>
-    </trans-unit>
     <trans-unit id="cwd">
       <source xml:lang="en">the terminal's current working directory.</source>
     </trans-unit>
@@ -919,6 +945,15 @@ Default Skipped Commands:
     <trans-unit id="terminal.integrated.detectLocale.on">
       <source xml:lang="en">Always set the `$LANG` environment variable.</source>
     </trans-unit>
+    <trans-unit id="terminal.integrated.developer.devMode">
+      <source xml:lang="en">Enable developer mode for the terminal. This shows additional debug information and visualizations for shell integration sequences.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.developer.ptyHost.latency">
+      <source xml:lang="en">Simulated latency in milliseconds applied to all calls made to the pty host. This is useful for testing terminal behavior under high latency conditions.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.developer.ptyHost.startupDelay">
+      <source xml:lang="en">Simulated startup delay in milliseconds for the pty host process. This is useful for testing terminal initialization under slow startup conditions.</source>
+    </trans-unit>
     <trans-unit id="terminal.integrated.drawBoldTextInBrightColors">
       <source xml:lang="en">Controls whether bold text in the terminal will always use the "bright" ANSI color variant.</source>
     </trans-unit>
@@ -960,18 +995,6 @@ Default Skipped Commands:
     </trans-unit>
     <trans-unit id="terminal.integrated.env.windows">
       <source xml:lang="en">Object with environment variables that will be added to the VS Code process to be used by the terminal on Windows. Set to `null` to delete the environment variable.</source>
-    </trans-unit>
-    <trans-unit id="terminal.integrated.environmentChangesIndicator">
-      <source xml:lang="en">Whether to display the environment changes indicator on each terminal which explains whether extensions have made, or want to make changes to the terminal's environment.</source>
-    </trans-unit>
-    <trans-unit id="terminal.integrated.environmentChangesIndicator.off">
-      <source xml:lang="en">Disable the indicator.</source>
-    </trans-unit>
-    <trans-unit id="terminal.integrated.environmentChangesIndicator.on">
-      <source xml:lang="en">Enable the indicator.</source>
-    </trans-unit>
-    <trans-unit id="terminal.integrated.environmentChangesIndicator.warnonly">
-      <source xml:lang="en">Only show the warning indicator when a terminal's environment is 'stale', not the information indicator that shows a terminal has had its environment modified by an extension.</source>
     </trans-unit>
     <trans-unit id="terminal.integrated.environmentChangesRelaunch">
       <source xml:lang="en">Whether to relaunch terminals automatically if extensions want to contribute to their environment and have not been interacted with yet.</source>
@@ -1143,6 +1166,12 @@ This setting applies only when terminals are created, so you will need to restar
     </trans-unit>
     <trans-unit id="terminal.integrated.shellIntegration.environmentReporting">
       <source xml:lang="en">Controls whether to report the shell environment, enabling its use in features such as {0}. This may cause a slowdown when printing your shell's prompt.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.shellIntegration.quickFixEnabled">
+      <source xml:lang="en">When shell integration is enabled, enables quick fixes for terminal commands that appear as a lightbulb or sparkle icon to the left of the prompt.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.shellIntegration.timeout">
+      <source xml:lang="en">Configures the duration in milliseconds to wait for shell integration after launch before declaring it's not there. Set to {0} to wait the minimum time (500ms), the default value {1} means the wait time is variable based on whether shell integration injection is enabled and whether it's a remote window. Consider setting this to a small value if you intentionally disabled shell integration, or a large value if your shell starts very slowly.</source>
     </trans-unit>
     <trans-unit id="terminal.integrated.showExitAlert">
       <source xml:lang="en">Controls whether to show the alert "The terminal process terminated with exit code" when exit code is non-zero.</source>
@@ -1391,6 +1420,9 @@ This setting applies only when terminals are created, so you will need to restar
     <trans-unit id="workbench.action.terminal.focusHover">
       <source xml:lang="en">Focus Hover</source>
     </trans-unit>
+    <trans-unit id="workbench.action.terminal.focusInstance">
+      <source xml:lang="en">Focus Terminal</source>
+    </trans-unit>
     <trans-unit id="workbench.action.terminal.moveToTerminalPanel">
       <source xml:lang="en">Move Terminal into Panel</source>
     </trans-unit>
@@ -1402,6 +1434,9 @@ This setting applies only when terminals are created, so you will need to restar
     </trans-unit>
     <trans-unit id="workbench.action.terminal.renameWithArg">
       <source xml:lang="en">Rename the Currently Active Terminal</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.terminal.revealCommand">
+      <source xml:lang="en">Reveal Command in Terminal</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.scrollToNextCommand">
       <source xml:lang="en">Scroll to Next Command</source>

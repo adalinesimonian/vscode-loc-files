@@ -453,9 +453,14 @@ Please make sure the markdown extension is enabled.</source>
       <source xml:lang="en">Unlock productivity with the Command Palette </source>
     </trans-unit>
     <trans-unit id="gettingStarted.copilotSetup.description">
-      <source xml:lang="en">You can use [Copilot]({0}) to generate code across multiple files, fix errors, ask questions about your code and much more using natural language.</source>
+      <source xml:lang="en">You can use [Copilot]({0}) to generate code across multiple files, fix errors, ask questions about your code, and much more using natural language.</source>
       <note>{Locked="["}
 {Locked="]({0})"}</note>
+    </trans-unit>
+    <trans-unit id="gettingStarted.copilotSetup.terms">
+      <source xml:lang="en">By continuing with {0} Copilot, you agree to {1}'s [Terms]({2}) and [Privacy Statement]({3})</source>
+      <note>{Locked="]({2})"}
+{Locked="]({3})"}</note>
     </trans-unit>
     <trans-unit id="gettingStarted.copilotSetup.title">
       <source xml:lang="en">Use AI features with Copilot for free</source>
@@ -489,7 +494,7 @@ Please make sure the markdown extension is enabled.</source>
 {0}</source>
     </trans-unit>
     <trans-unit id="gettingStarted.findLanguageExts.description.interpolated">
-      <source xml:lang="en">Code smarter with syntax highlighting, code completion, linting and debugging. While many languages are built-in, many more can be added as extensions.
+      <source xml:lang="en">Code smarter with syntax highlighting, inline suggestions, linting and debugging. While many languages are built-in, many more can be added as extensions.
 {0}</source>
     </trans-unit>
     <trans-unit id="gettingStarted.findLanguageExts.title">
@@ -784,13 +789,10 @@ Opening a file/folder will prompt to grant trust. You can always {1} later.</sou
 {Locked="]({1})"}</note>
     </trans-unit>
     <trans-unit id="setupCopilotButton.chatWithCopilot">
-      <source xml:lang="en">Chat with Copilot</source>
+      <source xml:lang="en">Start to Chat</source>
     </trans-unit>
     <trans-unit id="setupCopilotButton.setup">
-      <source xml:lang="en">Set up Copilot</source>
-    </trans-unit>
-    <trans-unit id="setupCopilotButton.signIn">
-      <source xml:lang="en">Set up Copilot</source>
+      <source xml:lang="en">Use AI Features</source>
     </trans-unit>
     <trans-unit id="showOrFocusHover">
       <source xml:lang="en">Show or Focus Hover</source>

@@ -76,6 +76,12 @@
     <trans-unit id="++CODE++ffb8582a7ae040adfcc7adbee5a8207a55754268d09fa3b06b21a86c0893b609">
       <source xml:lang="en">Are you sure you want to create an empty commit?</source>
     </trans-unit>
+    <trans-unit id="++CODE++779ed04c367ab0aa81d61c2f2ac90e061d36a2d5d12d85e14f96b2e3037e2d16">
+      <source xml:lang="en">Are you sure you want to delete branch &quot;{0}&quot;? This action will permanently remove the branch reference from the repository.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++de2f350f9c1c1d0f0908dacf2e03f17dafff3a798e6a3b184a3f26015d0747a2">
+      <source xml:lang="en">Are you sure you want to delete tag &quot;{0}&quot;? This action will permanently remove the tag reference from the repository.</source>
+    </trans-unit>
     <trans-unit id="++CODE++0d3ea6d88129bedbc541dd628d84b9fbed6883d7f5d06ba086dda483593256be">
       <source xml:lang="en">Are you sure you want to discard ALL changes in {0} files?&#10;&#10;This is IRREVERSIBLE!&#10;Your current working set will be FOREVER LOST if you proceed.</source>
     </trans-unit>
@@ -124,6 +130,9 @@
     <trans-unit id="++CODE++69c5b417453bbe27e9b739db7bbb93c3ee3b7a3698a808d28fa6115e685c36f7">
       <source xml:lang="en">Branch name needs to match regex: {0}</source>
     </trans-unit>
+    <trans-unit id="++CODE++2eee037c67fbe81b5c419d833bd1dde6f59246b189cb1f54ca80e1d1ecb51dc5">
+      <source xml:lang="en">Branches</source>
+    </trans-unit>
     <trans-unit id="++CODE++c8a48a8e4270f581a8215e266abccc79eb1c1e914328db324f68fec2f97a91b8">
       <source xml:lang="en">Can&apos;t force push refs to remote. The tip of the remote-tracking branch has been updated since the last checkout. Try running &quot;Pull&quot; first to pull the latest changes from the remote branch first.</source>
     </trans-unit>
@@ -162,6 +171,9 @@
     </trans-unit>
     <trans-unit id="++CODE++c7603b4751690aeae72662e14277aa1e80e68cfcb1376cd39cbb7fdc5c135e63">
       <source xml:lang="en">Clear whitespace characters</source>
+    </trans-unit>
+    <trans-unit id="++CODE++e05eb495b65039940249c1969c5e126f49abf28a934e855e54802373997f973a">
+      <source xml:lang="en">Clone again</source>
     </trans-unit>
     <trans-unit id="++CODE++d425c4cb46b4dbd6b73ee7bc369b63795cefbe0702c041f581fc0be71739c4b5">
       <source xml:lang="en">Clone from URL</source>
@@ -292,6 +304,9 @@
     <trans-unit id="++CODE++e1e5fe2043bd3003147a785a42a5edddccbf57d465ca32ad0f033cf7b64f04c8">
       <source xml:lang="en">Delete File</source>
     </trans-unit>
+    <trans-unit id="++CODE++01595e8f253bee9c7dd4cd6a1f8dba408c75e79e75da41ff96eef5292627f579">
+      <source xml:lang="en">Delete Tag</source>
+    </trans-unit>
     <trans-unit id="++CODE++b48ff39c2e0f5451b9b29b09c2a74d2760db230749ffd48a6e901cc91fef9a8d">
       <source xml:lang="en">Deleted</source>
     </trans-unit>
@@ -316,9 +331,6 @@
     <trans-unit id="++CODE++64488bcdbc42e52d74ab9bb817297e8e3c66c04011677d381ca0428664bb5f03">
       <source xml:lang="en">Download Git</source>
     </trans-unit>
-    <trans-unit id="++CODE++969ccbd3cf6300ecd5c880459d81ae9027df7517563184a1b8b15282db230621">
-      <source xml:lang="en">Email</source>
-    </trans-unit>
     <trans-unit id="++CODE++975dd75001ae0d7c535f15e85326be3fc636a908ef77dcd64931d0564b64c7f5">
       <source xml:lang="en">Enables the following features: {0}</source>
     </trans-unit>
@@ -333,6 +345,9 @@
     </trans-unit>
     <trans-unit id="++CODE++0c8d76c9fd3b64afedb8359849287f1c80217104bb41f533e5c487af99f7aabd">
       <source xml:lang="en">Failed to delete using the Trash. Do you want to permanently delete instead?</source>
+    </trans-unit>
+    <trans-unit id="++CODE++cb66a2d43337eed5e426750deecaaea3ee8a8eb63ddbf970f9441bc504a5217f">
+      <source xml:lang="en">Failed to open changes between &quot;{0}&quot; and &quot;{1}&quot;: {2}</source>
     </trans-unit>
     <trans-unit id="++CODE++26cc264ee3b80ee46273b591fbf36b42435793ccd2c9278e404148ff072744e1">
       <source xml:lang="en">File &quot;{0}&quot; was deleted by them and modified by us.&#10;&#10;What would you like to do?</source>
@@ -516,6 +531,9 @@
     </trans-unit>
     <trans-unit id="++CODE++d77d0470fcb6e709dbc646f6ae4b68a4db64162b769b2914a3a760a1bbadb4df">
       <source xml:lang="en">Open Comparison</source>
+    </trans-unit>
+    <trans-unit id="++CODE++38471cd75a008a65bc63b36b36748479c243e8518cff2195e92a3f1bc7d9233f">
+      <source xml:lang="en">Open Existing Repository Clone</source>
     </trans-unit>
     <trans-unit id="++CODE++1e8d18f62f2d2a2fcb2027969e109cad13bcf2a861737f80eabd6774406c8a10">
       <source xml:lang="en">Open File</source>
@@ -726,6 +744,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++34412b9ae0d9a8f1243ae6c065eacf2f2d3febce0e38f5df0b6e8d8cdbed0c20">
       <source xml:lang="en">Select a ref to create the branch from</source>
     </trans-unit>
+    <trans-unit id="++CODE++1999f94ed41bf106065245fcb5c7e70ecb250a34ac7a566fc6d77c683404c18b">
+      <source xml:lang="en">Select a reference to compare with</source>
+    </trans-unit>
     <trans-unit id="++CODE++bdfd5e5c7e18e36a027605c4230990bab64012b8cd03f0535613896a1778d346">
       <source xml:lang="en">Select a remote branch to delete</source>
     </trans-unit>
@@ -791,6 +812,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++1ace926bc7cdee5323e297d439d2d268286749252b1c7f5e332d5003681d092d">
       <source xml:lang="en">Tag name</source>
+    </trans-unit>
+    <trans-unit id="++CODE++1331275bc537b4c2bf1e46f7275677967515342e30b572e6852fa6f51b831fe8">
+      <source xml:lang="en">Tags</source>
     </trans-unit>
     <trans-unit id="++CODE++f5c58a33df8fc9fe24b592f358a2796949c7d2b83e28306be28c8ba0454dbadf">
       <source xml:lang="en">The &quot;{0}&quot; repository has {1} submodules which won&apos;t be opened automatically. You can still open each one individually by opening a file within.</source>
@@ -876,6 +900,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++b57f6413a8c4b3e3809b021b4c115cf9c735b19bde5d9a0f01b8e9fea3b48627">
       <source xml:lang="en">There are no available repositories matching the filter</source>
     </trans-unit>
+    <trans-unit id="++CODE++b37119dc18f007f50b8d5348db9621db22d0ee12d3206c4882a6e9c831ebcc01">
+      <source xml:lang="en">There are no changes between &quot;{0}&quot; and &quot;{1}&quot;.</source>
+    </trans-unit>
     <trans-unit id="++CODE++6d7e53a1ac9638958fad16d68189ae3730ad9bb01bf57d413865c23fbc750be0">
       <source xml:lang="en">There are no changes in the selected worktree to migrate.</source>
     </trans-unit>
@@ -954,6 +981,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++87bb59ba2f92f2a5a9f13e021fd58dd14ae5c065b1046146875e6e68d5ebc8b7">
       <source xml:lang="en">Workspace</source>
     </trans-unit>
+    <trans-unit id="++CODE++738edbfcd87d592c67109f2bebf668197a4dbd9112ce1586d9581d2900cb7502">
+      <source xml:lang="en">Workspace: {0}</source>
+    </trans-unit>
     <trans-unit id="++CODE++c893ba3003855aabfee294479c03266349e97e1675ade569b480e56ce4c2bde3">
       <source xml:lang="en">Worktree</source>
     </trans-unit>
@@ -963,17 +993,17 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++7f1d79b89e7e2a73fb77da103a8f48ff6a1d82d197245b96a00bd0bb1b807301">
       <source xml:lang="en">Would you like to add &quot;{0}&quot; to .gitignore?</source>
     </trans-unit>
-    <trans-unit id="++CODE++a9b2a56ef24209b80c6e9e0508fae6e0cd8dde12582670f4867730d234fa660f">
-      <source xml:lang="en">Would you like to open the cloned repository, or add it to the current workspace?</source>
-    </trans-unit>
-    <trans-unit id="++CODE++8e3e2fa1eac65813d54533388a9394094f68b3af6c8408dde1e4a3d4e57d91d7">
-      <source xml:lang="en">Would you like to open the cloned repository?</source>
-    </trans-unit>
     <trans-unit id="++CODE++2f583a9a7e36a2087285836c950f99f22099e18fd2565543ba73d4b175fdd72f">
       <source xml:lang="en">Would you like to open the initialized repository, or add it to the current workspace?</source>
     </trans-unit>
     <trans-unit id="++CODE++01cedefc7a6bda340489ba5bce02d9cf13cf3344b44ff23845566a379edf01a5">
       <source xml:lang="en">Would you like to open the initialized repository?</source>
+    </trans-unit>
+    <trans-unit id="++CODE++18f9e4b65ff1d973682eafd4d4387132adac524578c32f5e3439c987da27f78f">
+      <source xml:lang="en">Would you like to open the repository, or add it to the current workspace?</source>
+    </trans-unit>
+    <trans-unit id="++CODE++4528c7ed53b2a5dd9dc2b4f93b465edcba119f68021851cb0a60d4dd4efe2cab">
+      <source xml:lang="en">Would you like to open the repository?</source>
     </trans-unit>
     <trans-unit id="++CODE++e585609fff7e6032c9d99ad0b808dbd1af85f8f16f5eb77bc8ed45bf7bb6f170">
       <source xml:lang="en">Would you like to publish this repository to continue working on it elsewhere?</source>
@@ -1095,8 +1125,8 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++fa1e7180cf6c8ea611aeffecae3ff04d94f9558bbd8f2c69960ac883c1f31595">
       <source xml:lang="en">{0} ({1})</source>
     </trans-unit>
-    <trans-unit id="++CODE++10e858c003479d92e7f97dcfac77c7ac8950cc2017a2edacb99f84eceacc5e3b">
-      <source xml:lang="en">{0} ({1}) ↔ {0} ({2})</source>
+    <trans-unit id="++CODE++e3f9592eaf05b3492226ff02b630a0bddb400e54d373bbc3a266308402ff0145">
+      <source xml:lang="en">{0} ({1}) ș {0} ({2})</source>
     </trans-unit>
     <trans-unit id="++CODE++2dca5dc73e8ba33fc3d8cd45ec0b8623733b7955d43a9dafb0ed087516f1eee9">
       <source xml:lang="en">{0} Checkout detached...</source>
@@ -1310,8 +1340,8 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++6bf6132dfe816dc6a2b022115ed31ed7692c605299b2912dab52a4eb8e4fb9b5">
       <source xml:lang="en">{0} yrs ago</source>
     </trans-unit>
-    <trans-unit id="++CODE++93264f176451ecdd4985efc6ce3e65eb7759381031de21dcdf8809bc3e90e810">
-      <source xml:lang="en">{0} ↔ {1}</source>
+    <trans-unit id="++CODE++db36f26454d82a7d8ad999bcec09a28541d14cd1a3952fb12f9739b579878a59">
+      <source xml:lang="en">{0} ș {1}</source>
     </trans-unit>
   </body></file>
   <file original="extensions/vscode.git/package" source-language="en" datatype="plaintext"><body>
@@ -1583,11 +1613,20 @@ Please make sure there is no space between the right bracket and left parenthesi
     <trans-unit id="config.enableSmartCommit">
       <source xml:lang="en">Commit all changes when there are no staged changes.</source>
     </trans-unit>
+    <trans-unit id="command.graphCompareWithMergeBase">
+      <source xml:lang="en">Compare with Merge Base</source>
+    </trans-unit>
+    <trans-unit id="command.graphCompareWithRemote">
+      <source xml:lang="en">Compare with Remote</source>
+    </trans-unit>
     <trans-unit id="command.timelineCompareWithSelected">
       <source xml:lang="en">Compare with Selected</source>
     </trans-unit>
     <trans-unit id="command.compareWithWorkspace">
       <source xml:lang="en">Compare with Workspace</source>
+    </trans-unit>
+    <trans-unit id="command.graphCompareRef">
+      <source xml:lang="en">Compare with...</source>
     </trans-unit>
     <trans-unit id="command.git.acceptMerge">
       <source xml:lang="en">Complete Merge</source>
@@ -1805,6 +1844,12 @@ Please make sure there is no space between the right bracket and left parenthesi
     <trans-unit id="command.createWorktree">
       <source xml:lang="en">Create Worktree...</source>
     </trans-unit>
+    <trans-unit id="command.createFrom">
+      <source xml:lang="en">Create from...</source>
+    </trans-unit>
+    <trans-unit id="command.deleteRef">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
     <trans-unit id="command.graphDeleteBranch">
       <source xml:lang="en">Delete Branch</source>
     </trans-unit>
@@ -1988,6 +2033,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     <trans-unit id="command.manageUnsafeRepositories">
       <source xml:lang="en">Manage Unsafe Repositories</source>
     </trans-unit>
+    <trans-unit id="command.merge2">
+      <source xml:lang="en">Merge</source>
+    </trans-unit>
     <trans-unit id="command.merge">
       <source xml:lang="en">Merge...</source>
     </trans-unit>
@@ -2110,6 +2158,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="command.pushToForce">
       <source xml:lang="en">Push to... (Force)</source>
+    </trans-unit>
+    <trans-unit id="command.rebase2">
+      <source xml:lang="en">Rebase</source>
     </trans-unit>
     <trans-unit id="command.rebase">
       <source xml:lang="en">Rebase Branch...</source>

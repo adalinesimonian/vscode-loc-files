@@ -8,7 +8,7 @@
       <source xml:lang="en">Current account</source>
     </trans-unit>
     <trans-unit id="manageAccountPreferenceForExtension">
-      <source xml:lang="en">Manage Extension Account Preferences</source>
+      <source xml:lang="en">Manage Extension Account Preferences...</source>
     </trans-unit>
     <trans-unit id="noAccountUsage">
       <source xml:lang="en">This extension has not used any accounts yet.</source>
@@ -65,6 +65,35 @@
     </trans-unit>
     <trans-unit id="use new account">
       <source xml:lang="en">Use a new account...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/authentication/browser/actions/manageAccountsAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accounts">
+      <source xml:lang="en">Accounts</source>
+    </trans-unit>
+    <trans-unit id="manageAccount">
+      <source xml:lang="en">Manage '{0}'</source>
+    </trans-unit>
+    <trans-unit id="manageAccounts">
+      <source xml:lang="en">Manage Accounts</source>
+    </trans-unit>
+    <trans-unit id="manageTrustedExtensions">
+      <source xml:lang="en">Manage Trusted Extensions</source>
+    </trans-unit>
+    <trans-unit id="manageTrustedMCPServers">
+      <source xml:lang="en">Manage Trusted MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="noActiveAccounts">
+      <source xml:lang="en">There are no active accounts.</source>
+    </trans-unit>
+    <trans-unit id="pickAccount">
+      <source xml:lang="en">Select an account to manage</source>
+    </trans-unit>
+    <trans-unit id="selectAction">
+      <source xml:lang="en">Select an action</source>
+    </trans-unit>
+    <trans-unit id="signOut">
+      <source xml:lang="en">Sign Out</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/authentication/browser/actions/manageDynamicAuthenticationProvidersAction" source-language="en" datatype="plaintext"><body>
@@ -137,6 +166,9 @@ always has access to this account</source>
     </trans-unit>
     <trans-unit id="trustedExtensions">
       <source xml:lang="en">Trusted by Microsoft</source>
+    </trans-unit>
+    <trans-unit id="viewExtensionDetails">
+      <source xml:lang="en">View extension details</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/authentication/browser/actions/manageTrustedMcpServersForAccountAction" source-language="en" datatype="plaintext"><body>

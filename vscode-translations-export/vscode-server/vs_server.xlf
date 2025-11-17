@@ -27,6 +27,9 @@
     <trans-unit id="port">
       <source xml:lang="en">The port the server should listen to. If 0 is passed a random free port is picked. If a range in the format num-num is passed, a free port from the range (end inclusive) is selected.</source>
     </trans-unit>
+    <trans-unit id="reconnection-grace-time">
+      <source xml:lang="en">Override the reconnection grace time window in seconds. Defaults to 10800 (3 hours).</source>
+    </trans-unit>
     <trans-unit id="server-base-path">
       <source xml:lang="en">The path under which the web UI and the code server is provided. Defaults to '/'.`</source>
     </trans-unit>

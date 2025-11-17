@@ -34,6 +34,18 @@
     <trans-unit id="testing.filterActionLabel">
       <source xml:lang="en">Filter Coverage to Test</source>
     </trans-unit>
+    <trans-unit id="testing.goToNextMissedLine">
+      <source xml:lang="en">Go to Next Uncovered Line</source>
+    </trans-unit>
+    <trans-unit id="testing.goToNextMissedLineDesc">
+      <source xml:lang="en">Navigate to the next line that is not covered by tests.</source>
+    </trans-unit>
+    <trans-unit id="testing.goToPreviousMissedLine">
+      <source xml:lang="en">Go to Previous Uncovered Line</source>
+    </trans-unit>
+    <trans-unit id="testing.goToPreviousMissedLineDesc">
+      <source xml:lang="en">Navigate to the previous line that is not covered by tests.</source>
+    </trans-unit>
     <trans-unit id="testing.hideCoverageInExplorer">
       <source xml:lang="en">Hide Coverage in Explorer</source>
     </trans-unit>
@@ -427,6 +439,9 @@
     </trans-unit>
     <trans-unit id="testing.toggleInlineTestOutput">
       <source xml:lang="en">Toggle Inline Test Output</source>
+    </trans-unit>
+    <trans-unit id="testing.toggleResultsViewLayout">
+      <source xml:lang="en">Toggle Tree Position</source>
     </trans-unit>
     <trans-unit id="testing.viewAsList">
       <source xml:lang="en">View as List</source>
@@ -931,6 +946,15 @@ Please make sure the markdown extension is enabled.</source>
     <trans-unit id="testing.openTesting.openOnTestStart">
       <source xml:lang="en">Open the test results view when tests start</source>
     </trans-unit>
+    <trans-unit id="testing.resultsView.layout">
+      <source xml:lang="en">Controls the layout of the Test Results view.</source>
+    </trans-unit>
+    <trans-unit id="testing.resultsView.layout.treeLeft">
+      <source xml:lang="en">Show the test run tree on the left side with details on the right.</source>
+    </trans-unit>
+    <trans-unit id="testing.resultsView.layout.treeRight">
+      <source xml:lang="en">Show the test run tree on the right side with details on the left.</source>
+    </trans-unit>
     <trans-unit id="testing.saveBeforeTest">
       <source xml:lang="en">Control whether save all dirty editors before running a test.</source>
     </trans-unit>
@@ -1033,7 +1057,7 @@ Please make sure the markdown extension is enabled.</source>
       <source xml:lang="en">No tests found in the files</source>
     </trans-unit>
     <trans-unit id="runTestTool.userDescription">
-      <source xml:lang="en">Runs unit tests</source>
+      <source xml:lang="en">Runs unit tests (optionally with coverage)</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/testing/common/testingContentProvider" source-language="en" datatype="plaintext"><body>

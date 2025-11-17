@@ -178,6 +178,12 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/notebook/browser/contrib/find/notebookFind" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="notebook.findNext.fromWidget">
+      <source xml:lang="en">Find Next</source>
+    </trans-unit>
+    <trans-unit id="notebook.findPrevious.fromWidget">
+      <source xml:lang="en">Find Previous</source>
+    </trans-unit>
     <trans-unit id="notebookActions.findInNotebook">
       <source xml:lang="en">Find in Notebook</source>
     </trans-unit>
@@ -452,6 +458,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/notebook/browser/controller/cellOutputActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="imageFiles">
+      <source xml:lang="en">Image Files</source>
+    </trans-unit>
     <trans-unit id="notebookActions.copyOutput">
       <source xml:lang="en">Copy Cell Output</source>
     </trans-unit>
@@ -461,44 +470,14 @@
     <trans-unit id="notebookActions.openOutputInNotebookOutputEditor">
       <source xml:lang="en">Open in Output Preview</source>
     </trans-unit>
+    <trans-unit id="notebookActions.saveOutputImage">
+      <source xml:lang="en">Save Image</source>
+    </trans-unit>
     <trans-unit id="notebookActions.showAllOutput">
       <source xml:lang="en">Show Empty Outputs</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/notebook/browser/controller/chat/cellChatActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="apply1">
-      <source xml:lang="en">Accept Changes</source>
-    </trans-unit>
-    <trans-unit id="apply2">
-      <source xml:lang="en">Accept</source>
-    </trans-unit>
-    <trans-unit id="apply3">
-      <source xml:lang="en">Accept Changes</source>
-    </trans-unit>
-    <trans-unit id="arrowDown">
-      <source xml:lang="en">Cursor Down</source>
-    </trans-unit>
-    <trans-unit id="arrowUp">
-      <source xml:lang="en">Cursor Up</source>
-    </trans-unit>
-    <trans-unit id="discard">
-      <source xml:lang="en">Discard</source>
-    </trans-unit>
-    <trans-unit id="focusChatWidget">
-      <source xml:lang="en">Focus Chat Widget</source>
-    </trans-unit>
-    <trans-unit id="focusNextCell">
-      <source xml:lang="en">Focus Next Cell</source>
-    </trans-unit>
-    <trans-unit id="focusNextChatWidget">
-      <source xml:lang="en">Focus Next Cell Chat Widget</source>
-    </trans-unit>
-    <trans-unit id="focusNotebookChat">
-      <source xml:lang="en">Focus Chat</source>
-    </trans-unit>
-    <trans-unit id="focusPreviousCell">
-      <source xml:lang="en">Focus Previous Cell</source>
-    </trans-unit>
     <trans-unit id="notebook.apply1">
       <source xml:lang="en">Accept and Run</source>
     </trans-unit>
@@ -507,21 +486,6 @@
     </trans-unit>
     <trans-unit id="notebook.apply3">
       <source xml:lang="en">Accept the changes and run the cell</source>
-    </trans-unit>
-    <trans-unit id="notebook.cell.chat.accept">
-      <source xml:lang="en">Make Request</source>
-    </trans-unit>
-    <trans-unit id="notebook.cell.chat.close">
-      <source xml:lang="en">Close Chat</source>
-    </trans-unit>
-    <trans-unit id="notebook.cell.chat.nextFromHistory">
-      <source xml:lang="en">Next From History</source>
-    </trans-unit>
-    <trans-unit id="notebook.cell.chat.previousFromHistory">
-      <source xml:lang="en">Previous From History</source>
-    </trans-unit>
-    <trans-unit id="notebook.cell.chat.stop">
-      <source xml:lang="en">Stop Request</source>
     </trans-unit>
     <trans-unit id="notebookActions.menu.insertCode.ontoolbar">
       <source xml:lang="en">Generate</source>
@@ -534,9 +498,6 @@
     </trans-unit>
     <trans-unit id="notebookActions.menu.insertCodeCellWithChat.tooltip">
       <source xml:lang="en">Start Chat to Generate Code</source>
-    </trans-unit>
-    <trans-unit id="notebookActions.restoreCellprompt">
-      <source xml:lang="en">Generate</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/notebook/browser/controller/chat/notebook.chat.contribution" source-language="en" datatype="plaintext"><body>
@@ -560,28 +521,8 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/notebook/browser/controller/chat/notebookChatContext" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="notebookCellChatFocused">
-      <source xml:lang="en">Whether the cell chat editor is focused</source>
-    </trans-unit>
     <trans-unit id="notebookChatAgentRegistered">
       <source xml:lang="en">Whether a chat agent for notebook is registered</source>
-    </trans-unit>
-    <trans-unit id="notebookChatHasActiveRequest">
-      <source xml:lang="en">Whether the cell chat editor has an active request</source>
-    </trans-unit>
-    <trans-unit id="notebookChatOuterFocusPosition">
-      <source xml:lang="en">Whether the focus of the notebook editor is above or below the cell chat</source>
-    </trans-unit>
-    <trans-unit id="notebookChatUserDidEdit">
-      <source xml:lang="en">Whether the user did changes ontop of the notebook cell chat</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/notebook/browser/controller/chat/notebookChatController" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="default.placeholder">
-      <source xml:lang="en">Ask or edit in context</source>
-    </trans-unit>
-    <trans-unit id="welcome.1">
-      <source xml:lang="en">AI-generated code may be incorrect</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/notebook/browser/controller/coreActions" source-language="en" datatype="plaintext"><body>
@@ -1185,13 +1126,13 @@
       <source xml:lang="en">Whether the cell status bar should be shown.</source>
     </trans-unit>
     <trans-unit id="notebook.showCellStatusbar.hidden.description">
-      <source xml:lang="en">The cell Status bar is always hidden.</source>
+      <source xml:lang="en">The cell status bar is always hidden.</source>
     </trans-unit>
     <trans-unit id="notebook.showCellStatusbar.visible.description">
-      <source xml:lang="en">The cell Status bar is always visible.</source>
+      <source xml:lang="en">The cell status bar is always visible.</source>
     </trans-unit>
     <trans-unit id="notebook.showCellStatusbar.visibleAfterExecute.description">
-      <source xml:lang="en">The cell Status bar is hidden until the cell has executed. Then it becomes visible to show the execution status.</source>
+      <source xml:lang="en">The cell status bar is hidden until the cell has executed. Then it becomes visible to show the execution status.</source>
     </trans-unit>
     <trans-unit id="notebook.showFoldingControls.description">
       <source xml:lang="en">Controls when the Markdown header folding arrow is shown.</source>
@@ -1536,6 +1477,9 @@ Run the Open Accessibility Help command for more information</source>
     </trans-unit>
     <trans-unit id="revertIcon">
       <source xml:lang="en">Icon to revert in notebook editors.</source>
+    </trans-unit>
+    <trans-unit id="saveIcon">
+      <source xml:lang="en">Icon to save content to disk</source>
     </trans-unit>
     <trans-unit id="selectKernelIcon">
       <source xml:lang="en">Configure icon to select a kernel in notebook editors.</source>

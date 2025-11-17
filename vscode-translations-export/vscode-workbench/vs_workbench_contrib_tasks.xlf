@@ -252,6 +252,21 @@ The task will be ignored.</source>
     <trans-unit id="showOutput">
       <source xml:lang="en">Show Output</source>
     </trans-unit>
+    <trans-unit id="task.longRunningTaskCompleted">
+      <source xml:lang="en">Task finished in {0}.</source>
+    </trans-unit>
+    <trans-unit id="task.longRunningTaskCompletedWithLabel">
+      <source xml:lang="en">Task "{0}" finished in {1}.</source>
+    </trans-unit>
+    <trans-unit id="task.longRunningTaskDurationMinutes">
+      <source xml:lang="en">{0}m</source>
+    </trans-unit>
+    <trans-unit id="task.longRunningTaskDurationMinutesSeconds">
+      <source xml:lang="en">{0}m {1}s</source>
+    </trans-unit>
+    <trans-unit id="task.longRunningTaskDurationSeconds">
+      <source xml:lang="en">{0}s</source>
+    </trans-unit>
     <trans-unit id="taskEvent">
       <source xml:lang="en">Task Event kind: {0}</source>
     </trans-unit>
@@ -311,7 +326,7 @@ The task will be ignored.</source>
 	// for the documentation about the tasks.json format</source>
     </trans-unit>
     <trans-unit id="troubleshootWithChat">
-      <source xml:lang="en">Fix with {0}</source>
+      <source xml:lang="en">Fix with AI</source>
     </trans-unit>
     <trans-unit id="unexpectedTaskType">
       <source xml:lang="en">The task provider for "{0}" tasks unexpectedly provided a task of type "{1}".
@@ -402,6 +417,9 @@ The task will be ignored.</source>
     </trans-unit>
     <trans-unit id="status.runningTasks">
       <source xml:lang="en">Running Tasks</source>
+    </trans-unit>
+    <trans-unit id="task.NotifyWindowOnTaskCompletion">
+      <source xml:lang="en">Controls the minimum task runtime in milliseconds before showing an OS notification when the task finishes while the window is not in focus. Set to -1 to disable notifications. Set to 0 to always show notifications. This includes a window badge as well as notification toast.</source>
     </trans-unit>
     <trans-unit id="task.SaveBeforeRun.prompt">
       <source xml:lang="en">Prompts whether to save editors before running.</source>
@@ -923,6 +941,9 @@ The task command line or label</note>
     </trans-unit>
     <trans-unit id="JsonSchema.tasks.presentation.instance">
       <source xml:lang="en">Controls if the panel is shared between tasks, dedicated to this task or a new one is created on every run.</source>
+    </trans-unit>
+    <trans-unit id="JsonSchema.tasks.presentation.preserveTerminalName">
+      <source xml:lang="en">Controls whether to preserve the task name in the terminal after task completion.</source>
     </trans-unit>
     <trans-unit id="JsonSchema.tasks.presentation.reveal">
       <source xml:lang="en">Controls whether the terminal running the task is revealed or not. May be overridden by option "revealProblems". Default is "always".</source>
