@@ -1395,20 +1395,9 @@ A keybinding</note>
       <source xml:lang="en">Snooze</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/indicatorView" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="inlineEdit.indicator.background">
-      <source xml:lang="en">Background color for the inline edit indicator.</source>
-    </trans-unit>
-    <trans-unit id="inlineEdit.indicator.border">
-      <source xml:lang="en">Border color for the inline edit indicator.</source>
-    </trans-unit>
-    <trans-unit id="inlineEdit.indicator.foreground">
-      <source xml:lang="en">Foreground color for the inline edit indicator.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/inlineEditsModel" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="inlineEdit">
-      <source xml:lang="en">Inline Edit</source>
+  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/gutterIndicatorView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inlineSuggestion">
+      <source xml:lang="en">Inline Suggestion</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/theme" source-language="en" datatype="plaintext"><body>
@@ -1786,6 +1775,10 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/quickAccess/browser/gotoLineQuickAccess" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="gotoLine.ariaLabel">
+      <source xml:lang="en">Current position: line {0}, column {1}. {2}</source>
+      <note>{0} is the line number, {1} is the column number, {2} is instructions for typing in the Go To Line picker</note>
+    </trans-unit>
     <trans-unit id="gotoLine.columnPrompt">
       <source xml:lang="en">Press 'Enter' to go to line {0} or enter a column number (from 1 to {1}).</source>
     </trans-unit>
@@ -1793,7 +1786,7 @@ A keybinding</note>
       <source xml:lang="en">Press 'Enter' to go to line {0} at column {1}.</source>
     </trans-unit>
     <trans-unit id="gotoLine.lineColumnPrompt">
-      <source xml:lang="en">Press 'Enter' to go to line {0} or enter : to add a column number.</source>
+      <source xml:lang="en">Press 'Enter' to go to line {0} or enter colon : to add a column number.</source>
     </trans-unit>
     <trans-unit id="gotoLine.linePrompt">
       <source xml:lang="en">Type a line number to go to (from 1 to {0}).</source>

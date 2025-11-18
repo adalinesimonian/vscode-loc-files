@@ -463,21 +463,6 @@
     <trans-unit id="continueInCloud">
       <source xml:lang="en">Continue in Cloud</source>
     </trans-unit>
-    <trans-unit id="creatingRemoteJob">
-      <source xml:lang="en">Delegating to coding agent</source>
-    </trans-unit>
-    <trans-unit id="remoteAgentError">
-      <source xml:lang="en">Coding agent session cancelled.</source>
-    </trans-unit>
-    <trans-unit id="remoteAgentResponse">
-      <source xml:lang="en">Coding agent response: {0}</source>
-    </trans-unit>
-    <trans-unit id="remoteAgentResponse2">
-      <source xml:lang="en">Your work will be continued in this pull request.</source>
-    </trans-unit>
-    <trans-unit id="selectBackgroundAgent">
-      <source xml:lang="en">Select Agent to delegate the task to</source>
-    </trans-unit>
     <trans-unit id="summarizeUserPromptCreateRemoteJob">
       <source xml:lang="en">Summarizing user prompt</source>
     </trans-unit>
@@ -1286,9 +1271,6 @@ Examples:
     <trans-unit id="chat.useAgentMd.title">
       <source xml:lang="en">Use AGENTS.MD file</source>
     </trans-unit>
-    <trans-unit id="chat.useCloudButtonV2">
-      <source xml:lang="en">Experimental implementation of 'cloud button'</source>
-    </trans-unit>
     <trans-unit id="chat.useNestedAgentMd.description">
       <source xml:lang="en">Controls whether instructions `AGENTS.MD` files found in the workspace are listed in all chat requests.</source>
     </trans-unit>
@@ -1809,6 +1791,23 @@ Examples:
       <source xml:lang="en">Click the Install button on the extension and then press Allow when finished.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatInputOutputMarkdownProgressPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.autoapprove.lmServicePerTool.profile">
+      <source xml:lang="en">Auto approved for this profile</source>
+    </trans-unit>
+    <trans-unit id="chat.autoapprove.lmServicePerTool.session">
+      <source xml:lang="en">Auto approved for this session</source>
+    </trans-unit>
+    <trans-unit id="chat.autoapprove.lmServicePerTool.workspace">
+      <source xml:lang="en">Auto approved for this workspace</source>
+    </trans-unit>
+    <trans-unit id="chat.autoapprove.setting">
+      <source xml:lang="en">Auto approved by {0}</source>
+    </trans-unit>
+    <trans-unit id="edit">
+      <source xml:lang="en">Edit</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatTerminalToolConfirmationSubPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="autoApprove.button.enable">
       <source xml:lang="en">Enable</source>
@@ -1906,23 +1905,6 @@ Examples:
     </trans-unit>
     <trans-unit id="skip.detail">
       <source xml:lang="en">Proceed without running this tool</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolInvocationPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.autoapprove.lmServicePerTool.profile">
-      <source xml:lang="en">Auto approved for this profile</source>
-    </trans-unit>
-    <trans-unit id="chat.autoapprove.lmServicePerTool.session">
-      <source xml:lang="en">Auto approved for this session</source>
-    </trans-unit>
-    <trans-unit id="chat.autoapprove.lmServicePerTool.workspace">
-      <source xml:lang="en">Auto approved for this workspace</source>
-    </trans-unit>
-    <trans-unit id="chat.autoapprove.setting">
-      <source xml:lang="en">Auto approved by {0}</source>
-    </trans-unit>
-    <trans-unit id="edit">
-      <source xml:lang="en">Edit</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatToolOutputPart" source-language="en" datatype="plaintext"><body>
@@ -2435,7 +2417,7 @@ Examples:
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatListRenderer" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatConfirmationAction">
-      <source xml:lang="en">selected "{0}"</source>
+      <source xml:lang="en">Selected "{0}"</source>
     </trans-unit>
     <trans-unit id="checkpointRestore">
       <source xml:lang="en">Checkpoint Restored</source>

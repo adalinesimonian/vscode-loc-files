@@ -1504,6 +1504,12 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="about">
       <source xml:lang="en">About</source>
     </trans-unit>
+    <trans-unit id="activeOpenedRecentlyOpenedFolder">
+      <source xml:lang="en">Folder Opened in Active Window</source>
+    </trans-unit>
+    <trans-unit id="activeOpenedRecentlyOpenedWorkspace">
+      <source xml:lang="en">Workspace Opened in Active Window</source>
+    </trans-unit>
     <trans-unit id="blur">
       <source xml:lang="en">Remove keyboard focus from focused element</source>
     </trans-unit>
@@ -5719,6 +5725,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
   <file original="src/vs/workbench/electron-browser/actions/windowActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="close">
       <source xml:lang="en">Close Window</source>
+    </trans-unit>
+    <trans-unit id="closeActive">
+      <source xml:lang="en">Close Active Window</source>
     </trans-unit>
     <trans-unit id="closeWindow">
       <source xml:lang="en">Close Window</source>
