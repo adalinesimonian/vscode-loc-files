@@ -457,11 +457,8 @@
     <trans-unit id="continueChatInSession">
       <source xml:lang="en">Continue Chat in...</source>
     </trans-unit>
-    <trans-unit id="continueInBackground">
-      <source xml:lang="en">Continue in Background</source>
-    </trans-unit>
-    <trans-unit id="continueInCloud">
-      <source xml:lang="en">Continue in Cloud</source>
+    <trans-unit id="continueSessionIn">
+      <source xml:lang="en">Continue in {0}</source>
     </trans-unit>
     <trans-unit id="summarizeUserPromptCreateRemoteJob">
       <source xml:lang="en">Summarizing user prompt</source>
@@ -918,7 +915,7 @@
       <source xml:lang="en">Manage Language Models...</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionViewModel" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.session.providerLabel.background">
       <source xml:lang="en">Background</source>
     </trans-unit>
@@ -928,17 +925,23 @@
     <trans-unit id="chat.session.providerLabel.local">
       <source xml:lang="en">Local</source>
     </trans-unit>
-    <trans-unit id="chat.session.status.completed">
-      <source xml:lang="en">Finished</source>
-    </trans-unit>
-    <trans-unit id="chat.session.status.error">
-      <source xml:lang="en">Failed</source>
-    </trans-unit>
-    <trans-unit id="chat.session.status.inProgress">
-      <source xml:lang="en">Working...</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="diffFile">
+      <source xml:lang="en">1 file</source>
+    </trans-unit>
+    <trans-unit id="diffFiles">
+      <source xml:lang="en">{0} files</source>
+    </trans-unit>
+    <trans-unit id="filterAgentSessions">
+      <source xml:lang="en">Filter Agent Sessions</source>
+    </trans-unit>
+    <trans-unit id="find">
+      <source xml:lang="en">Find Agent Session</source>
+    </trans-unit>
+    <trans-unit id="refresh">
+      <source xml:lang="en">Refresh Agent Sessions</source>
+    </trans-unit>
     <trans-unit id="showDiff">
       <source xml:lang="en">Open Changes</source>
     </trans-unit>
@@ -959,9 +962,6 @@
     <trans-unit id="chatSessions.installExtensions">
       <source xml:lang="en">Install Chat Extensions...</source>
     </trans-unit>
-    <trans-unit id="find">
-      <source xml:lang="en">Find Agent Session</source>
-    </trans-unit>
     <trans-unit id="newBackgroundSession">
       <source xml:lang="en">New Background Session</source>
     </trans-unit>
@@ -974,8 +974,22 @@
     <trans-unit id="newCloudSession">
       <source xml:lang="en">New Cloud Session</source>
     </trans-unit>
-    <trans-unit id="refresh">
-      <source xml:lang="en">Refresh Agent Sessions</source>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsViewFilter" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessions.filter.archived">
+      <source xml:lang="en">Archived</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.filter.reset">
+      <source xml:lang="en">Reset</source>
+    </trans-unit>
+    <trans-unit id="chatSessionStatus.completed">
+      <source xml:lang="en">Completed</source>
+    </trans-unit>
+    <trans-unit id="chatSessionStatus.failed">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="chatSessionStatus.inProgress">
+      <source xml:lang="en">In Progress</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsViewer" source-language="en" datatype="plaintext"><body>
@@ -984,6 +998,24 @@
     </trans-unit>
     <trans-unit id="agentSessions.dragLabel">
       <source xml:lang="en">{0} agent sessions</source>
+    </trans-unit>
+    <trans-unit id="chat.session.status.completed">
+      <source xml:lang="en">Finished</source>
+    </trans-unit>
+    <trans-unit id="chat.session.status.completedAfter">
+      <source xml:lang="en">Finished in {0}.</source>
+    </trans-unit>
+    <trans-unit id="chat.session.status.failed">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="chat.session.status.failedAfter">
+      <source xml:lang="en">Failed after {0}.</source>
+    </trans-unit>
+    <trans-unit id="chat.session.status.inProgress">
+      <source xml:lang="en">Working...</source>
+    </trans-unit>
+    <trans-unit id="chat.session.status.inProgressWithDuration">
+      <source xml:lang="en">Working... ({0})</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext"><body>
@@ -1691,8 +1723,11 @@ Examples:
     <trans-unit id="chat.thinking.fixed.done.withHeader">
       <source xml:lang="en">{0}{1}</source>
     </trans-unit>
+    <trans-unit id="chat.thinking.fixed.progress">
+      <source xml:lang="en">Thinking...</source>
+    </trans-unit>
     <trans-unit id="chat.thinking.fixed.progress.withHeader">
-      <source xml:lang="en">Thinking: {0}{1}</source>
+      <source xml:lang="en">Thinking: {0}</source>
     </trans-unit>
     <trans-unit id="chat.thinking.header">
       <source xml:lang="en">Thinking...</source>
@@ -2933,11 +2968,6 @@ Examples:
       <source xml:lang="en">Pick Option</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/localChatSessionsProvider" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.sessions.chatView">
-      <source xml:lang="en">Local Chat</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions/view/chatSessionsView" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.agent.sessions">
       <source xml:lang="en">Agent Sessions</source>
@@ -3622,7 +3652,7 @@ Examples:
       <source xml:lang="en">Enable global auto approve?</source>
     </trans-unit>
     <trans-unit id="defaultToolConfirmation.disclaimer">
-      <source xml:lang="en">Auto approval for '{0}' is restricted by '{1}'.</source>
+      <source xml:lang="en">Auto approval for '{0}' is restricted via {1}.</source>
     </trans-unit>
     <trans-unit id="defaultToolConfirmation.message">
       <source xml:lang="en">Run the '{0}' tool?</source>

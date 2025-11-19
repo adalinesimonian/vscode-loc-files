@@ -659,6 +659,12 @@ The terminal's title</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminal/browser/xterm/decorationStyles" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="terminalCommandDecoration.running">
+      <source xml:lang="en">Running</source>
+    </trans-unit>
+    <trans-unit id="terminalCommandDecoration.unknown">
+      <source xml:lang="en">Unknown</source>
+    </trans-unit>
     <trans-unit id="terminalPromptCommandFailed">
       <source xml:lang="en">Command executed {0} and failed</source>
     </trans-unit>
@@ -672,7 +678,10 @@ The terminal's title</note>
       <source xml:lang="en">Command executed {0}, took {1} and failed (Exit Code {2})</source>
     </trans-unit>
     <trans-unit id="terminalPromptCommandSuccess">
-      <source xml:lang="en">Command executed {0}</source>
+      <source xml:lang="en">Command executed {0} now</source>
+    </trans-unit>
+    <trans-unit id="terminalPromptCommandSuccess.">
+      <source xml:lang="en">Command executed {0} </source>
     </trans-unit>
     <trans-unit id="terminalPromptCommandSuccess.duration">
       <source xml:lang="en">Command executed {0} and took {1}</source>
