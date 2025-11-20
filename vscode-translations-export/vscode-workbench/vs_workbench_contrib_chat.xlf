@@ -451,17 +451,11 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatContinueInAction" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="analyzingChatHistory">
-      <source xml:lang="en">Analyzing chat history</source>
-    </trans-unit>
     <trans-unit id="continueChatInSession">
       <source xml:lang="en">Continue Chat in...</source>
     </trans-unit>
     <trans-unit id="continueSessionIn">
       <source xml:lang="en">Continue in {0}</source>
-    </trans-unit>
-    <trans-unit id="summarizeUserPromptCreateRemoteJob">
-      <source xml:lang="en">Summarizing user prompt</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatCopyActions" source-language="en" datatype="plaintext"><body>
@@ -1143,6 +1137,9 @@ This feature disables critical security protections and makes it much easier for
     <trans-unit id="chat.fontSize">
       <source xml:lang="en">Controls the font size in pixels in chat messages.</source>
     </trans-unit>
+    <trans-unit id="chat.hideNewButtonInAgentSessionsView">
+      <source xml:lang="en">Controls whether the new session button is hidden in the Agent Sessions view.</source>
+    </trans-unit>
     <trans-unit id="chat.implicitContext.enabled.1">
       <source xml:lang="en">Enables automatically using the active editor as chat context for specified chat locations.</source>
     </trans-unit>
@@ -1275,6 +1272,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.todoListTool.writeOnly">
       <source xml:lang="en">When enabled, the todo tool operates in write-only mode, requiring the agent to remember todos in context.</source>
     </trans-unit>
+    <trans-unit id="chat.toolReferenceName.description">
+      <source xml:lang="en">{0} - {1}</source>
+    </trans-unit>
     <trans-unit id="chat.tools.autoApprove.edits">
       <source xml:lang="en">Controls whether edits made by chat are automatically approved. The default is to approve all edits except those made to certain files which have the potential to cause immediate unintended side-effects, such as `**/.vscode/*.json`.
 
@@ -1298,13 +1298,19 @@ Examples:
       <source xml:lang="en">Controls whether the input of the chat should be restored when an undo request is made. The input will be filled with the text of the request that was restored.</source>
     </trans-unit>
     <trans-unit id="chat.useAgentMd.description">
-      <source xml:lang="en">Controls whether instructions from `AGENTS.MD` file found in a workspace roots are added to all chat requests.</source>
+      <source xml:lang="en">Controls whether instructions from `AGENTS.MD` file found in a workspace roots are attached to all chat requests.</source>
     </trans-unit>
     <trans-unit id="chat.useAgentMd.title">
       <source xml:lang="en">Use AGENTS.MD file</source>
     </trans-unit>
+    <trans-unit id="chat.useClaudeSkills.description">
+      <source xml:lang="en">Controls whether Claude skills found in the workspace and user home directories under `.claude/skills` are listed in all chat requests. The language model can load these skills on-demand if the `read` tool is available.</source>
+    </trans-unit>
+    <trans-unit id="chat.useClaudeSkills.title">
+      <source xml:lang="en">Use Claude skills</source>
+    </trans-unit>
     <trans-unit id="chat.useNestedAgentMd.description">
-      <source xml:lang="en">Controls whether instructions `AGENTS.MD` files found in the workspace are listed in all chat requests.</source>
+      <source xml:lang="en">Controls whether instructions from nested `AGENTS.MD` files found in the workspace are listed in all chat requests. The language model can load these skills on-demand if the `read` tool is available.</source>
     </trans-unit>
     <trans-unit id="chat.useNestedAgentMd.title">
       <source xml:lang="en">Use nested AGENTS.MD files</source>
@@ -1723,17 +1729,11 @@ Examples:
     <trans-unit id="chat.thinking.fixed.done.withHeader">
       <source xml:lang="en">{0}{1}</source>
     </trans-unit>
-    <trans-unit id="chat.thinking.fixed.progress">
-      <source xml:lang="en">Thinking...</source>
-    </trans-unit>
     <trans-unit id="chat.thinking.fixed.progress.withHeader">
       <source xml:lang="en">Thinking: {0}</source>
     </trans-unit>
     <trans-unit id="chat.thinking.header">
       <source xml:lang="en">Thinking...</source>
-    </trans-unit>
-    <trans-unit id="chat.thinking.progress.withHeader">
-      <source xml:lang="en">{0}{1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTodoListWidget" source-language="en" datatype="plaintext"><body>
@@ -4687,9 +4687,6 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="promptValidator.modelNotSuited">
       <source xml:lang="en">Model '{0}' is not suited for agent mode.</source>
-    </trans-unit>
-    <trans-unit id="promptValidator.nameInvalidCharacters">
-      <source xml:lang="en">The 'name' attribute can only consist of letters, digits, underscores, hyphens, and periods.</source>
     </trans-unit>
     <trans-unit id="promptValidator.nameMustBeString">
       <source xml:lang="en">The 'name' attribute must be a string.</source>
