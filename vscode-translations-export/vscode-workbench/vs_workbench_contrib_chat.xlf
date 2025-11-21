@@ -451,6 +451,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatContinueInAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.learnMore">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
     <trans-unit id="continueChatInSession">
       <source xml:lang="en">Continue Chat in...</source>
     </trans-unit>
@@ -707,7 +710,7 @@
       <source xml:lang="en">Show Rich Descriptions</source>
     </trans-unit>
     <trans-unit id="chatSessions.toggleViewLocation.label">
-      <source xml:lang="en">Enable New Single View</source>
+      <source xml:lang="en">Combined Sessions View</source>
     </trans-unit>
     <trans-unit id="deleteSession">
       <source xml:lang="en">Delete</source>
@@ -921,6 +924,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessions.filter.reset">
+      <source xml:lang="en">Reset</source>
+    </trans-unit>
     <trans-unit id="diffFile">
       <source xml:lang="en">1 file</source>
     </trans-unit>
@@ -972,9 +978,6 @@
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsViewFilter" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentSessions.filter.archived">
       <source xml:lang="en">Archived</source>
-    </trans-unit>
-    <trans-unit id="agentSessions.filter.reset">
-      <source xml:lang="en">Reset</source>
     </trans-unit>
     <trans-unit id="chatSessionStatus.completed">
       <source xml:lang="en">Completed</source>
@@ -3651,6 +3654,12 @@ Examples:
     <trans-unit id="autoApprove2.title">
       <source xml:lang="en">Enable global auto approve?</source>
     </trans-unit>
+    <trans-unit id="copilot.toolSet.launch.description">
+      <source xml:lang="en">Launch and run code, binaries or tests in the workspace</source>
+    </trans-unit>
+    <trans-unit id="copilot.toolSet.vscode.description">
+      <source xml:lang="en">Use VS Code features</source>
+    </trans-unit>
     <trans-unit id="defaultToolConfirmation.disclaimer">
       <source xml:lang="en">Auto approval for '{0}' is restricted via {1}.</source>
     </trans-unit>
@@ -4481,6 +4490,9 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptCodeActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="expandToolNames">
+      <source xml:lang="en">Expand to {0} tools</source>
+    </trans-unit>
     <trans-unit id="migrateToAgent">
       <source xml:lang="en">Migrate to custom agent file</source>
     </trans-unit>
@@ -4625,6 +4637,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.deprecatedVariableReference">
       <source xml:lang="en">Tool or toolset '{0}' has been renamed, use '{1}' instead.</source>
     </trans-unit>
+    <trans-unit id="promptValidator.deprecatedVariableReferenceMultipleNames">
+      <source xml:lang="en">Tool or toolset '{0}' has been renamed, use the following tools instead: {1}</source>
+    </trans-unit>
     <trans-unit id="promptValidator.descriptionMustBeString">
       <source xml:lang="en">The 'description' attribute must be a string.</source>
     </trans-unit>
@@ -4706,6 +4721,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.toolDeprecated">
       <source xml:lang="en">Tool or toolset '{0}' has been renamed, use '{1}' instead.</source>
     </trans-unit>
+    <trans-unit id="promptValidator.toolDeprecatedMultipleNames">
+      <source xml:lang="en">Tool or toolset '{0}' has been renamed, use the following tools instead: {1}</source>
+    </trans-unit>
     <trans-unit id="promptValidator.toolNotFound">
       <source xml:lang="en">Unknown tool '{0}'.</source>
     </trans-unit>
@@ -4767,6 +4785,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="langModelTools">
       <source xml:lang="en">Language Model Tools</source>
     </trans-unit>
+    <trans-unit id="legacyToolReferenceFullNames">
+      <source xml:lang="en">An array of deprecated names for backwards compatibility that can also be used to reference this tool in a query. Each name must not contain whitespace. Full names are generally in the format `toolsetName/toolReferenceName` (e.g., `search/readFile`) or just `toolReferenceName` when there is no toolset (e.g., `readFile`).</source>
+    </trans-unit>
     <trans-unit id="name">
       <source xml:lang="en">Name</source>
     </trans-unit>
@@ -4793,6 +4814,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="toolSetIcon">
       <source xml:lang="en">An icon that represents this tool set, like `$(zap)`</source>
+    </trans-unit>
+    <trans-unit id="toolSetLegacyFullNames">
+      <source xml:lang="en">An array of deprecated names for backwards compatibility that can also be used to reference this tool set. Each name must not contain whitespace. Full names are generally in the format `parentToolSetName/toolSetName` (e.g., `github/repo`) or just `toolSetName` when there is no parent toolset (e.g., `repo`).</source>
     </trans-unit>
     <trans-unit id="toolSetName">
       <source xml:lang="en">A name for this tool set. Used as reference and should not contain whitespace.</source>
@@ -4857,7 +4881,7 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
       <source xml:lang="en">Manage and track todo items for task planning</source>
     </trans-unit>
     <trans-unit id="tool.manageTodoList.userDescription">
-      <source xml:lang="en">Tool for managing and tracking todo items for task planning</source>
+      <source xml:lang="en">Manage and track todo items for task planning</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/tools/runSubagentTool" source-language="en" datatype="plaintext"><body>
@@ -4865,7 +4889,12 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
       <source xml:lang="en">Run Subagent</source>
     </trans-unit>
     <trans-unit id="tool.runSubagent.userDescription">
-      <source xml:lang="en">Runs a task within an isolated subagent context. Enables efficient organization of tasks and context window management.</source>
+      <source xml:lang="en">Run a task within an isolated subagent context to enable efficient organization of tasks and context window management.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/tools/tools" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="toolset.custom-agent">
+      <source xml:lang="en">Delegate tasks to other agents</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/voiceChatService" source-language="en" datatype="plaintext"><body>
