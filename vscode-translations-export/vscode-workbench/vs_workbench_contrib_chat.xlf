@@ -460,6 +460,9 @@
     <trans-unit id="continueSessionIn">
       <source xml:lang="en">Continue in {0}</source>
     </trans-unit>
+    <trans-unit id="delegate">
+      <source xml:lang="en">Delegate to...</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatCopyActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.copyKatexMathSource.label">
@@ -1010,9 +1013,6 @@
     </trans-unit>
     <trans-unit id="chat.session.status.inProgress">
       <source xml:lang="en">Working...</source>
-    </trans-unit>
-    <trans-unit id="chat.session.status.inProgressWithDuration">
-      <source xml:lang="en">Working... ({0})</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext"><body>
@@ -1715,6 +1715,12 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.suggestNext.item">
       <source xml:lang="en">{0}</source>
+    </trans-unit>
+    <trans-unit id="chat.suggestNext.moreOptions">
+      <source xml:lang="en">More options for {0}</source>
+    </trans-unit>
+    <trans-unit id="continueIn">
+      <source xml:lang="en">Continue in {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTextEditContentPart" source-language="en" datatype="plaintext"><body>
@@ -2587,6 +2593,14 @@ Examples:
       <source xml:lang="en">Icon of the Models Management editor label.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatManagement/chatModelsViewModel" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="hidden">
+      <source xml:lang="en">Hidden</source>
+    </trans-unit>
+    <trans-unit id="visible">
+      <source xml:lang="en">Visible</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatManagement/chatModelsWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="Search.FullTextSearchPlaceholder">
       <source xml:lang="en">Type to search...</source>
@@ -2632,6 +2646,18 @@ Examples:
     </trans-unit>
     <trans-unit id="filterByVisible">
       <source xml:lang="en">Filter by {0}</source>
+    </trans-unit>
+    <trans-unit id="groupBy">
+      <source xml:lang="en">Group By</source>
+    </trans-unit>
+    <trans-unit id="groupBy.provider">
+      <source xml:lang="en">Provider</source>
+    </trans-unit>
+    <trans-unit id="groupBy.visibility">
+      <source xml:lang="en">Visibility</source>
+    </trans-unit>
+    <trans-unit id="groupByTooltip">
+      <source xml:lang="en">Group by {0}</source>
     </trans-unit>
     <trans-unit id="model.ariaLabel">
       <source xml:lang="en">{0} from {1}</source>
@@ -2689,6 +2715,9 @@ Examples:
     </trans-unit>
     <trans-unit id="modelsTable.ariaLabel">
       <source xml:lang="en">Language Models</source>
+    </trans-unit>
+    <trans-unit id="provider">
+      <source xml:lang="en">Provider</source>
     </trans-unit>
     <trans-unit id="tokenLimits">
       <source xml:lang="en">Context Size</source>
@@ -2969,6 +2998,17 @@ Examples:
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions/chatSessionPickerActionItem" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.sessionPicker.label">
       <source xml:lang="en">Pick Option</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/localChatSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.sessions.description.finished">
+      <source xml:lang="en">Finished</source>
+    </trans-unit>
+    <trans-unit id="chat.sessions.description.waitingForConfirmation">
+      <source xml:lang="en">Waiting for confirmation:</source>
+    </trans-unit>
+    <trans-unit id="chat.sessions.description.working">
+      <source xml:lang="en">Working...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions/view/chatSessionsView" source-language="en" datatype="plaintext"><body>
@@ -4157,6 +4197,9 @@ Examples:
     <trans-unit id="chatIsArchivedItem">
       <source xml:lang="en">True when the chat session item is archived.</source>
     </trans-unit>
+    <trans-unit id="chatIsCombinedSessionViewer">
+      <source xml:lang="en">True when the chat session viewer uses the new combined style.</source>
+    </trans-unit>
     <trans-unit id="chatIsEnabled">
       <source xml:lang="en">True when chat is enabled because a default chat participant is activated with an implementation.</source>
     </trans-unit>
@@ -4673,6 +4716,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.handoffSendMustBeBoolean">
       <source xml:lang="en">The 'send' property in a handoff must be a boolean.</source>
     </trans-unit>
+    <trans-unit id="promptValidator.handoffShowContinueOnMustBeBoolean">
+      <source xml:lang="en">The 'showContinueOn' property in a handoff must be a boolean.</source>
+    </trans-unit>
     <trans-unit id="promptValidator.handoffsMustBeArray">
       <source xml:lang="en">The 'handoffs' attribute must be an array.</source>
     </trans-unit>
@@ -4746,7 +4792,7 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
       <source xml:lang="en">Attribute '{0}' is not supported in VS Code agent files. Supported: {1}.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownHandoffProperty">
-      <source xml:lang="en">Unknown property '{0}' in handoff object. Supported properties are 'label', 'agent', 'prompt' and optional 'send'.</source>
+      <source xml:lang="en">Unknown property '{0}' in handoff object. Supported properties are 'label', 'agent', 'prompt' and optional 'send', 'showContinueOn'.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownVariableReference">
       <source xml:lang="en">Unknown tool or toolset '{0}'.</source>
