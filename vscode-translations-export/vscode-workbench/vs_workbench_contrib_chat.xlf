@@ -1894,17 +1894,17 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/chatTerminalToolProgressPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.focusMostRecentTerminal">
-      <source xml:lang="en">Chat: Focus Most Recent Terminal</source>
-    </trans-unit>
-    <trans-unit id="chat.focusMostRecentTerminalOutput">
-      <source xml:lang="en">Chat: Focus Most Recent Terminal Output</source>
+    <trans-unit id="chat.terminalOutputCommandMissing">
+      <source xml:lang="en">Command information is not available.</source>
     </trans-unit>
     <trans-unit id="chat.terminalOutputEmpty">
       <source xml:lang="en">No output was produced by the command.</source>
     </trans-unit>
-    <trans-unit id="chat.terminalOutputTruncated">
-      <source xml:lang="en">Output truncated to first {0} lines.</source>
+    <trans-unit id="chat.terminalOutputPending">
+      <source xml:lang="en">Command output will appear here once available.</source>
+    </trans-unit>
+    <trans-unit id="chat.terminalOutputTerminalMissing">
+      <source xml:lang="en">Terminal is no longer available.</source>
     </trans-unit>
     <trans-unit id="chatTerminalOutputAccessibleViewHeader">
       <source xml:lang="en">Command: {0}</source>
@@ -2895,6 +2895,12 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.sessions.description.waitingForConfirmation">
+      <source xml:lang="en">Waiting for confirmation: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.sessions.description.working">
+      <source xml:lang="en">Working...</source>
+    </trans-unit>
     <trans-unit id="chatCommand">
       <source xml:lang="en">A short name by which this command is referred to in the UI, e.g. `fix` or `explain` for commands that fix an issue or explain code. The name should be unique among the commands provided by this participant.</source>
     </trans-unit>
@@ -2998,17 +3004,6 @@ Examples:
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions/chatSessionPickerActionItem" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.sessionPicker.label">
       <source xml:lang="en">Pick Option</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/localChatSessionsProvider" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.sessions.description.finished">
-      <source xml:lang="en">Finished</source>
-    </trans-unit>
-    <trans-unit id="chat.sessions.description.waitingForConfirmation">
-      <source xml:lang="en">Waiting for confirmation:</source>
-    </trans-unit>
-    <trans-unit id="chat.sessions.description.working">
-      <source xml:lang="en">Working...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions/view/chatSessionsView" source-language="en" datatype="plaintext"><body>
@@ -3694,8 +3689,11 @@ Examples:
     <trans-unit id="autoApprove2.title">
       <source xml:lang="en">Enable global auto approve?</source>
     </trans-unit>
-    <trans-unit id="copilot.toolSet.launch.description">
-      <source xml:lang="en">Launch and run code, binaries or tests in the workspace</source>
+    <trans-unit id="copilot.toolSet.execute.description">
+      <source xml:lang="en">Execute code and applications on your machine</source>
+    </trans-unit>
+    <trans-unit id="copilot.toolSet.read.description">
+      <source xml:lang="en">Read files in your workspace</source>
     </trans-unit>
     <trans-unit id="copilot.toolSet.vscode.description">
       <source xml:lang="en">Use VS Code features</source>
@@ -3716,6 +3714,9 @@ Examples:
     </trans-unit>
     <trans-unit id="custom">
       <source xml:lang="en">Custom</source>
+    </trans-unit>
+    <trans-unit id="managedByOrganization">
+      <source xml:lang="en">Managed by your organization</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modelPickerActionItem" source-language="en" datatype="plaintext"><body>
@@ -3776,6 +3777,9 @@ Examples:
     </trans-unit>
     <trans-unit id="configure.agent.prompts.placeholder">
       <source xml:lang="en">Select the custom agents to open and configure visibility in the agent picker</source>
+    </trans-unit>
+    <trans-unit id="managedByOrganization">
+      <source xml:lang="en">Managed by your organization</source>
     </trans-unit>
     <trans-unit id="select-agent">
       <source xml:lang="en">Configure Custom Agents...</source>
@@ -4163,6 +4167,9 @@ Examples:
     </trans-unit>
     <trans-unit id="agentSupportsAttachments">
       <source xml:lang="en">True when the chat agent supports attachments.</source>
+    </trans-unit>
+    <trans-unit id="chatAgentModeDisabledByPolicy">
+      <source xml:lang="en">True when agent mode is disabled by organization policy.</source>
     </trans-unit>
     <trans-unit id="chatEditApplied">
       <source xml:lang="en">True when the chat text edits have been applied.</source>
