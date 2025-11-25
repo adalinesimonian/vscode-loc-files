@@ -215,9 +215,6 @@
     <trans-unit id="chat.openNewChatToTheSide.label">
       <source xml:lang="en">Open New Chat Editor to the Side</source>
     </trans-unit>
-    <trans-unit id="chat.toggleChatHistoryVisibility.label">
-      <source xml:lang="en">Chat History</source>
-    </trans-unit>
     <trans-unit id="chat.toggleDefaultVisibility.label">
       <source xml:lang="en">Show View by Default</source>
     </trans-unit>
@@ -456,6 +453,9 @@
     </trans-unit>
     <trans-unit id="continueChatInSession">
       <source xml:lang="en">Continue Chat in...</source>
+    </trans-unit>
+    <trans-unit id="continueIn">
+      <source xml:lang="en">Continue In</source>
     </trans-unit>
     <trans-unit id="continueSessionIn">
       <source xml:lang="en">Continue in {0}</source>
@@ -927,8 +927,8 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentSessions.filter.reset">
-      <source xml:lang="en">Reset</source>
+    <trans-unit id="archive">
+      <source xml:lang="en">Archive</source>
     </trans-unit>
     <trans-unit id="diffFile">
       <source xml:lang="en">1 file</source>
@@ -942,11 +942,37 @@
     <trans-unit id="find">
       <source xml:lang="en">Find Agent Session</source>
     </trans-unit>
+    <trans-unit id="interactiveSession.newBackgroundChatEditor">
+      <source xml:lang="en">New Background Chat</source>
+    </trans-unit>
+    <trans-unit id="interactiveSession.newCloudChat">
+      <source xml:lang="en">New Cloud Chat</source>
+    </trans-unit>
     <trans-unit id="refresh">
       <source xml:lang="en">Refresh Agent Sessions</source>
     </trans-unit>
     <trans-unit id="showDiff">
       <source xml:lang="en">Open Changes</source>
+    </trans-unit>
+    <trans-unit id="unarchive">
+      <source xml:lang="en">Unarchive</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsFilter" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessions.filter.archived">
+      <source xml:lang="en">Archived</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.filter.reset">
+      <source xml:lang="en">Reset</source>
+    </trans-unit>
+    <trans-unit id="chatSessionStatus.completed">
+      <source xml:lang="en">Completed</source>
+    </trans-unit>
+    <trans-unit id="chatSessionStatus.failed">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="chatSessionStatus.inProgress">
+      <source xml:lang="en">In Progress</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsView" source-language="en" datatype="plaintext"><body>
@@ -978,20 +1004,6 @@
       <source xml:lang="en">New Cloud Session</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsViewFilter" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentSessions.filter.archived">
-      <source xml:lang="en">Archived</source>
-    </trans-unit>
-    <trans-unit id="chatSessionStatus.completed">
-      <source xml:lang="en">Completed</source>
-    </trans-unit>
-    <trans-unit id="chatSessionStatus.failed">
-      <source xml:lang="en">Failed</source>
-    </trans-unit>
-    <trans-unit id="chatSessionStatus.inProgress">
-      <source xml:lang="en">In Progress</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsViewer" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentSessions">
       <source xml:lang="en">Agent Sessions</source>
@@ -1013,6 +1025,14 @@
     </trans-unit>
     <trans-unit id="chat.session.status.inProgress">
       <source xml:lang="en">Working...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/chatCloseNotification" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.closeWithActiveResponse">
+      <source xml:lang="en">A chat session is in progress. It will continue running in the background.</source>
+    </trans-unit>
+    <trans-unit id="chat.openAgentSessions">
+      <source xml:lang="en">Open Agent Sessions</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext"><body>
@@ -1118,9 +1138,6 @@ This feature disables critical security protections and makes it much easier for
     </trans-unit>
     <trans-unit id="chat.edits2Enabled">
       <source xml:lang="en">Enable the new Edits mode that is based on tool-calling. When this is enabled, models that don't support tool-calling are unavailable for Edits mode.</source>
-    </trans-unit>
-    <trans-unit id="chat.emptyState.history.enabled">
-      <source xml:lang="en">Show recent chat history on the empty chat state.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
@@ -3006,6 +3023,11 @@ Examples:
       <source xml:lang="en">Pick Option</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/localChatSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.localSessionDescription.finished">
+      <source xml:lang="en">Finished</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions/view/chatSessionsView" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.agent.sessions">
       <source xml:lang="en">Agent Sessions</source>
@@ -3221,7 +3243,7 @@ Examples:
       <source xml:lang="en">Ask about your workspace</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatStatus" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/chatStatus/chatStatusDashboard" source-language="en" datatype="plaintext"><body>
     <trans-unit id="activateDescription">
       <source xml:lang="en">Set up Copilot to use AI features.</source>
     </trans-unit>
@@ -3245,24 +3267,6 @@ Examples:
     <trans-unit id="chatAgentSessionsTitle">
       <source xml:lang="en">Agent Sessions</source>
     </trans-unit>
-    <trans-unit id="chatAndCompletionsQuotaExceededStatus">
-      <source xml:lang="en">Quota reached</source>
-    </trans-unit>
-    <trans-unit id="chatQuotaExceededStatus">
-      <source xml:lang="en">Chat quota reached</source>
-    </trans-unit>
-    <trans-unit id="chatSessionInProgressStatus">
-      <source xml:lang="en">1 agent session in progress</source>
-    </trans-unit>
-    <trans-unit id="chatSessionsInProgressStatus">
-      <source xml:lang="en">{0} agent sessions in progress</source>
-    </trans-unit>
-    <trans-unit id="chatStatus">
-      <source xml:lang="en">Copilot Status</source>
-    </trans-unit>
-    <trans-unit id="chatStatusAria">
-      <source xml:lang="en">Copilot status</source>
-    </trans-unit>
     <trans-unit id="chatsLabel">
       <source xml:lang="en">Chat messages</source>
     </trans-unit>
@@ -3284,20 +3288,8 @@ Examples:
     <trans-unit id="completions.snoozeTimeDescription">
       <source xml:lang="en">Inline suggestions are hidden for the remaining duration</source>
     </trans-unit>
-    <trans-unit id="completionsDisabledStatus">
-      <source xml:lang="en">Inline suggestions disabled</source>
-    </trans-unit>
     <trans-unit id="completionsLabel">
       <source xml:lang="en">Inline Suggestions</source>
-    </trans-unit>
-    <trans-unit id="completionsQuotaExceededStatus">
-      <source xml:lang="en">Inline suggestions quota reached</source>
-    </trans-unit>
-    <trans-unit id="completionsSnoozedStatus">
-      <source xml:lang="en">Inline suggestions snoozed</source>
-    </trans-unit>
-    <trans-unit id="copilotDisabledStatus">
-      <source xml:lang="en">Copilot disabled</source>
     </trans-unit>
     <trans-unit id="enableAIFeatures">
       <source xml:lang="en">Use AI Features</source>
@@ -3316,9 +3308,6 @@ Examples:
     </trans-unit>
     <trans-unit id="enableMoreDescription">
       <source xml:lang="en">Sign in to enable more Copilot AI features.</source>
-    </trans-unit>
-    <trans-unit id="finishSetup">
-      <source xml:lang="en">Finish Setup</source>
     </trans-unit>
     <trans-unit id="gaugeBackground">
       <source xml:lang="en">Gauge background color.</source>
@@ -3352,9 +3341,6 @@ Examples:
     </trans-unit>
     <trans-unit id="limitQuota">
       <source xml:lang="en">Allowance resets {0}.</source>
-    </trans-unit>
-    <trans-unit id="notSignedIn">
-      <source xml:lang="en">Signed out</source>
     </trans-unit>
     <trans-unit id="premiumChatsLabel">
       <source xml:lang="en">Premium requests</source>
@@ -3414,21 +3400,47 @@ Examples:
       <source xml:lang="en">View Agent Sessions</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatStatus/chatStatusEntry" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatAndCompletionsQuotaExceededStatus">
+      <source xml:lang="en">Quota reached</source>
+    </trans-unit>
+    <trans-unit id="chatQuotaExceededStatus">
+      <source xml:lang="en">Chat quota reached</source>
+    </trans-unit>
+    <trans-unit id="chatSessionInProgressStatus">
+      <source xml:lang="en">1 agent session in progress</source>
+    </trans-unit>
+    <trans-unit id="chatSessionsInProgressStatus">
+      <source xml:lang="en">{0} agent sessions in progress</source>
+    </trans-unit>
+    <trans-unit id="chatStatus">
+      <source xml:lang="en">Copilot Status</source>
+    </trans-unit>
+    <trans-unit id="chatStatusAria">
+      <source xml:lang="en">Copilot status</source>
+    </trans-unit>
+    <trans-unit id="completionsDisabledStatus">
+      <source xml:lang="en">Inline suggestions disabled</source>
+    </trans-unit>
+    <trans-unit id="completionsQuotaExceededStatus">
+      <source xml:lang="en">Inline suggestions quota reached</source>
+    </trans-unit>
+    <trans-unit id="completionsSnoozedStatus">
+      <source xml:lang="en">Inline suggestions snoozed</source>
+    </trans-unit>
+    <trans-unit id="copilotDisabledStatus">
+      <source xml:lang="en">Copilot disabled</source>
+    </trans-unit>
+    <trans-unit id="finishSetup">
+      <source xml:lang="en">Finish Setup</source>
+    </trans-unit>
+    <trans-unit id="notSignedIn">
+      <source xml:lang="en">Signed out</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentTitle">
       <source xml:lang="en">Build with Agent</source>
-    </trans-unit>
-    <trans-unit id="chat.history.list">
-      <source xml:lang="en">Chat History</source>
-    </trans-unit>
-    <trans-unit id="chat.history.showMore">
-      <source xml:lang="en">Chat history...</source>
-    </trans-unit>
-    <trans-unit id="chat.history.showMoreAriaLabel">
-      <source xml:lang="en">Open chat history</source>
-    </trans-unit>
-    <trans-unit id="chat.history.showMoreHover">
-      <source xml:lang="en">Show chat history...</source>
     </trans-unit>
     <trans-unit id="chat.input.placeholder.lockedToAgent">
       <source xml:lang="en">Chat with {0}</source>
@@ -4195,9 +4207,6 @@ Examples:
     <trans-unit id="chatHasFileAttachments">
       <source xml:lang="en">True when the chat has file attachments.</source>
     </trans-unit>
-    <trans-unit id="chatInEmptyStateWithHistoryEnabled">
-      <source xml:lang="en">True when chat empty state history is enabled AND chat is in empty state.</source>
-    </trans-unit>
     <trans-unit id="chatIsActiveSession">
       <source xml:lang="en">True when the chat session is currently active (not deletable).</source>
     </trans-unit>
@@ -4583,6 +4592,9 @@ Examples:
     <trans-unit id="promptHeader.agent.handoffs.githubCopilot">
       <source xml:lang="en">Note: This attribute is not used when target is github-copilot.</source>
     </trans-unit>
+    <trans-unit id="promptHeader.agent.infer">
+      <source xml:lang="en">Whether the agent can be used as a subagent.</source>
+    </trans-unit>
     <trans-unit id="promptHeader.agent.model">
       <source xml:lang="en">Specify the model that runs this custom agent.</source>
     </trans-unit>
@@ -4731,6 +4743,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="promptValidator.ignoredAttribute.vscode-agent">
       <source xml:lang="en">Attribute '{0}' is ignored when running locally in VS Code.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.inferMustBeBoolean">
+      <source xml:lang="en">The 'infer' attribute must be a boolean.</source>
     </trans-unit>
     <trans-unit id="promptValidator.invalidFileReference">
       <source xml:lang="en">Invalid file reference '{0}'.</source>
