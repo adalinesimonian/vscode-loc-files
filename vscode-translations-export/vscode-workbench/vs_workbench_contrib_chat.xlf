@@ -218,6 +218,9 @@
     <trans-unit id="chat.toggleDefaultVisibility.label">
       <source xml:lang="en">Show View by Default</source>
     </trans-unit>
+    <trans-unit id="chat.toggleEmptyChatViewSessions.label">
+      <source xml:lang="en">Show Agent Sessions</source>
+    </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
       <source xml:lang="en">You've reached your monthly chat messages and inline suggestions quota.</source>
     </trans-unit>
@@ -360,6 +363,14 @@
 - Access to premium models</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatCloseNotification" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.closeWithActiveResponse">
+      <source xml:lang="en">A chat session is in progress. It will continue running in the background.</source>
+    </trans-unit>
+    <trans-unit id="chat.openAgentSessions">
+      <source xml:lang="en">Open Agent Sessions</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatCodeblockActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="interactive.applyInEditor.label">
       <source xml:lang="en">Apply in Editor</source>
@@ -457,11 +468,11 @@
     <trans-unit id="continueIn">
       <source xml:lang="en">Continue In</source>
     </trans-unit>
+    <trans-unit id="continueInEllipsis">
+      <source xml:lang="en">Continue in...</source>
+    </trans-unit>
     <trans-unit id="continueSessionIn">
       <source xml:lang="en">Continue in {0}</source>
-    </trans-unit>
-    <trans-unit id="delegate">
-      <source xml:lang="en">Delegate to...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatCopyActions" source-language="en" datatype="plaintext"><body>
@@ -986,7 +997,7 @@
       <source xml:lang="en">Refreshing agent sessions...</source>
     </trans-unit>
     <trans-unit id="agentSessions.view.label">
-      <source xml:lang="en">Agent Sessions</source>
+      <source xml:lang="en">Agents</source>
     </trans-unit>
     <trans-unit id="chatSessions.installExtensions">
       <source xml:lang="en">Install Chat Extensions...</source>
@@ -1025,14 +1036,6 @@
     </trans-unit>
     <trans-unit id="chat.session.status.inProgress">
       <source xml:lang="en">Working...</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/chatCloseNotification" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.closeWithActiveResponse">
-      <source xml:lang="en">A chat session is in progress. It will continue running in the background.</source>
-    </trans-unit>
-    <trans-unit id="chat.openAgentSessions">
-      <source xml:lang="en">Open Agent Sessions</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext"><body>
@@ -1080,16 +1083,16 @@ This feature disables critical security protections and makes it much easier for
       <source xml:lang="en">The maximum number of requests to allow per-turn when using an agent. When the limit is reached, will ask to confirm to continue.</source>
     </trans-unit>
     <trans-unit id="chat.agent.thinking.collapsedTools">
-      <source xml:lang="en">When enabled, tool calls are added into the collapsible thinking section according to the selected mode.</source>
+      <source xml:lang="en">Controls how tool calls are displayed in relation to thinking sections.</source>
     </trans-unit>
-    <trans-unit id="chat.agent.thinking.collapsedTools.all">
-      <source xml:lang="en">All tool calls are added into the collapsible thinking section.</source>
+    <trans-unit id="chat.agent.thinking.collapsedTools.always">
+      <source xml:lang="en">Tool calls are always collapsed, even without thinking.</source>
     </trans-unit>
-    <trans-unit id="chat.agent.thinking.collapsedTools.none">
-      <source xml:lang="en">No tool calls are added into the collapsible thinking section.</source>
+    <trans-unit id="chat.agent.thinking.collapsedTools.off">
+      <source xml:lang="en">Tool calls are shown separately, not collapsed into thinking.</source>
     </trans-unit>
-    <trans-unit id="chat.agent.thinking.collapsedTools.readOnly">
-      <source xml:lang="en">Only read-only tool calls are added into the collapsible thinking section.</source>
+    <trans-unit id="chat.agent.thinking.collapsedTools.withThinking">
+      <source xml:lang="en">Tool calls are collapsed into thinking sections when thinking is present.</source>
     </trans-unit>
     <trans-unit id="chat.agent.thinkingMode.collapsed">
       <source xml:lang="en">Thinking parts will be collapsed by default.</source>
@@ -1138,6 +1141,9 @@ This feature disables critical security protections and makes it much easier for
     </trans-unit>
     <trans-unit id="chat.edits2Enabled">
       <source xml:lang="en">Enable the new Edits mode that is based on tool-calling. When this is enabled, models that don't support tool-calling are unavailable for Edits mode.</source>
+    </trans-unit>
+    <trans-unit id="chat.emptyState.history.enabled">
+      <source xml:lang="en">Show agent sessions on the empty chat state.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
@@ -1749,14 +1755,11 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatThinkingContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.thinking.fixed.done.generic">
-      <source xml:lang="en">Thought for a few seconds</source>
+    <trans-unit id="chat.thinking.finished">
+      <source xml:lang="en">Finished Thinking</source>
     </trans-unit>
-    <trans-unit id="chat.thinking.fixed.done.withHeader">
-      <source xml:lang="en">{0}{1}</source>
-    </trans-unit>
-    <trans-unit id="chat.thinking.fixed.progress.withHeader">
-      <source xml:lang="en">Thinking: {0}</source>
+    <trans-unit id="chat.thinking.finished.withTools">
+      <source xml:lang="en">Finished thinking and invoked {0} tool{1}</source>
     </trans-unit>
     <trans-unit id="chat.thinking.header">
       <source xml:lang="en">Thinking...</source>
@@ -3023,11 +3026,6 @@ Examples:
       <source xml:lang="en">Pick Option</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/localChatSessionsProvider" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.localSessionDescription.finished">
-      <source xml:lang="en">Finished</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions/view/chatSessionsView" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.agent.sessions">
       <source xml:lang="en">Agent Sessions</source>
@@ -3291,6 +3289,9 @@ Examples:
     <trans-unit id="completionsLabel">
       <source xml:lang="en">Inline Suggestions</source>
     </trans-unit>
+    <trans-unit id="currentModel.description">
+      <source xml:lang="en">Currently selected</source>
+    </trans-unit>
     <trans-unit id="enableAIFeatures">
       <source xml:lang="en">Use AI Features</source>
     </trans-unit>
@@ -3342,6 +3343,9 @@ Examples:
     <trans-unit id="limitQuota">
       <source xml:lang="en">Allowance resets {0}.</source>
     </trans-unit>
+    <trans-unit id="modelLabel">
+      <source xml:lang="en">Model: {0}</source>
+    </trans-unit>
     <trans-unit id="premiumChatsLabel">
       <source xml:lang="en">Premium requests</source>
     </trans-unit>
@@ -3362,6 +3366,12 @@ Examples:
     </trans-unit>
     <trans-unit id="quotaUnlimited">
       <source xml:lang="en">Included</source>
+    </trans-unit>
+    <trans-unit id="selectModel">
+      <source xml:lang="en">Select Model</source>
+    </trans-unit>
+    <trans-unit id="selectModelFor">
+      <source xml:lang="en">Select a model for {0}</source>
     </trans-unit>
     <trans-unit id="settings.codeCompletions.allFiles">
       <source xml:lang="en">All files</source>
@@ -3436,6 +3446,11 @@ Examples:
     </trans-unit>
     <trans-unit id="notSignedIn">
       <source xml:lang="en">Signed out</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatViewPane" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="openAgentSessionsView">
+      <source xml:lang="en">Show All Sessions</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext"><body>
