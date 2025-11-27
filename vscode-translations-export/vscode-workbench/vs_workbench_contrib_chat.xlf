@@ -715,10 +715,10 @@
       <source xml:lang="en">Installs '{0}'</source>
     </trans-unit>
     <trans-unit id="chatSessions.pickPlaceholder">
-      <source xml:lang="en">Choose extensions to enhance your chat experience</source>
+      <source xml:lang="en">Install agents from the extension marketplace</source>
     </trans-unit>
     <trans-unit id="chatSessions.selectExtension">
-      <source xml:lang="en">Install Chat Extensions</source>
+      <source xml:lang="en">Install Agents...</source>
     </trans-unit>
     <trans-unit id="chatSessions.toggleDescriptionDisplay.label">
       <source xml:lang="en">Show Rich Descriptions</source>
@@ -1000,7 +1000,7 @@
       <source xml:lang="en">Agents</source>
     </trans-unit>
     <trans-unit id="chatSessions.installExtensions">
-      <source xml:lang="en">Install Chat Extensions...</source>
+      <source xml:lang="en">Install Agents...</source>
     </trans-unit>
     <trans-unit id="newBackgroundSession">
       <source xml:lang="en">New Background Session</source>
@@ -1142,7 +1142,7 @@ This feature disables critical security protections and makes it much easier for
     <trans-unit id="chat.edits2Enabled">
       <source xml:lang="en">Enable the new Edits mode that is based on tool-calling. When this is enabled, models that don't support tool-calling are unavailable for Edits mode.</source>
     </trans-unit>
-    <trans-unit id="chat.emptyState.history.enabled">
+    <trans-unit id="chat.emptyState.sessions.enabled">
       <source xml:lang="en">Show agent sessions on the empty chat state.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.detectParticipant.enabled">
@@ -1162,9 +1162,6 @@ This feature disables critical security protections and makes it much easier for
     </trans-unit>
     <trans-unit id="chat.fontSize">
       <source xml:lang="en">Controls the font size in pixels in chat messages.</source>
-    </trans-unit>
-    <trans-unit id="chat.hideNewButtonInAgentSessionsView">
-      <source xml:lang="en">Controls whether the new session button is hidden in the Agent Sessions view.</source>
     </trans-unit>
     <trans-unit id="chat.implicitContext.enabled.1">
       <source xml:lang="en">Enables automatically using the active editor as chat context for specified chat locations.</source>
@@ -3069,7 +3066,7 @@ Examples:
       <source xml:lang="en">{0} agent sessions</source>
     </trans-unit>
     <trans-unit id="chatSessions.installExtensions">
-      <source xml:lang="en">Install Chat Extensions</source>
+      <source xml:lang="en">Install Agents...</source>
     </trans-unit>
     <trans-unit id="chatSessions.learnMoreGHCodingAgent">
       <source xml:lang="en">Learn More About GitHub Copilot coding agent</source>
@@ -3081,36 +3078,9 @@ Examples:
       <source xml:lang="en">Refreshing chat sessions...</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatSetup" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSetup/chatSetupContributions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
-    </trans-unit>
-    <trans-unit id="chatSetupError">
-      <source xml:lang="en">Chat setup failed.</source>
-    </trans-unit>
-    <trans-unit id="chatTookLongWarning">
-      <source xml:lang="en">Chat took too long to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
-    </trans-unit>
-    <trans-unit id="chatTookLongWarningAnonymous">
-      <source xml:lang="en">Chat took too long to get ready. Please ensure that the extension `{0}` is installed and enabled.</source>
-    </trans-unit>
-    <trans-unit id="chatWorkspaceTrust">
-      <source xml:lang="en">AI features are currently only supported in trusted workspaces.</source>
-    </trans-unit>
-    <trans-unit id="continueWith">
-      <source xml:lang="en">Continue with {0}</source>
-    </trans-unit>
-    <trans-unit id="copilotUnavailableWarning">
-      <source xml:lang="en">Failed to get a response. Please try again.</source>
-    </trans-unit>
-    <trans-unit id="enableMore">
-      <source xml:lang="en">Enable more AI features</source>
-    </trans-unit>
-    <trans-unit id="enterpriseInstance">
-      <source xml:lang="en">What is your {0} instance?</source>
-    </trans-unit>
-    <trans-unit id="enterpriseInstancePlaceholder">
-      <source xml:lang="en">i.e. "octocat" or "https://octocat.ghe.com"...</source>
     </trans-unit>
     <trans-unit id="explain">
       <source xml:lang="en">Explain</source>
@@ -3121,9 +3091,6 @@ Examples:
     <trans-unit id="forceSignIn">
       <source xml:lang="en">Sign in to use AI features</source>
     </trans-unit>
-    <trans-unit id="generate">
-      <source xml:lang="en">Generate</source>
-    </trans-unit>
     <trans-unit id="generateDocs">
       <source xml:lang="en">Generate Docs</source>
     </trans-unit>
@@ -3133,20 +3100,11 @@ Examples:
     <trans-unit id="hideChatSetup">
       <source xml:lang="en">Learn How to Hide AI Features</source>
     </trans-unit>
-    <trans-unit id="installingChat">
-      <source xml:lang="en">Getting chat ready...</source>
-    </trans-unit>
-    <trans-unit id="invalidEnterpriseInstance">
-      <source xml:lang="en">You must enter a valid {0} instance (i.e. "octocat" or "https://octocat.ghe.com")</source>
-    </trans-unit>
     <trans-unit id="manageOverages">
       <source xml:lang="en">Manage GitHub Copilot Overages</source>
     </trans-unit>
     <trans-unit id="managePlan">
       <source xml:lang="en">Upgrade to GitHub Copilot Pro</source>
-    </trans-unit>
-    <trans-unit id="modify">
-      <source xml:lang="en">Modify</source>
     </trans-unit>
     <trans-unit id="restartExtensionHost.reason.disable">
       <source xml:lang="en">Disabling AI features</source>
@@ -3160,8 +3118,113 @@ Examples:
     <trans-unit id="review">
       <source xml:lang="en">Code Review</source>
     </trans-unit>
+    <trans-unit id="setupErrorDialog">
+      <source xml:lang="en">Chat setup failed. Would you like to try again?</source>
+    </trans-unit>
+    <trans-unit id="triggerChatSetup">
+      <source xml:lang="en">Use AI Features with Copilot for free...</source>
+    </trans-unit>
+    <trans-unit id="triggerChatSetupFromAccounts">
+      <source xml:lang="en">Sign in to use AI features...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSetup/chatSetupController" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="enterpriseInstance">
+      <source xml:lang="en">What is your {0} instance?</source>
+    </trans-unit>
+    <trans-unit id="enterpriseInstancePlaceholder">
+      <source xml:lang="en">i.e. "octocat" or "https://octocat.ghe.com"...</source>
+    </trans-unit>
+    <trans-unit id="invalidEnterpriseInstance">
+      <source xml:lang="en">You must enter a valid {0} instance (i.e. "octocat" or "https://octocat.ghe.com")</source>
+    </trans-unit>
+    <trans-unit id="retry">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="setupChatProgress">
+      <source xml:lang="en">Getting chat ready...</source>
+    </trans-unit>
+    <trans-unit id="unknownSetupError">
+      <source xml:lang="en">An error occurred while setting up chat. Would you like to try again?</source>
+    </trans-unit>
+    <trans-unit id="unknownSignInError">
+      <source xml:lang="en">Failed to sign in to {0}. Would you like to try again?</source>
+    </trans-unit>
+    <trans-unit id="unknownSignInErrorDetail">
+      <source xml:lang="en">You must be signed in to use AI features.</source>
+    </trans-unit>
+    <trans-unit id="willResolveTo">
+      <source xml:lang="en">Will resolve to {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSetup/chatSetupProviders" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatSetupError">
+      <source xml:lang="en">Chat setup failed.</source>
+    </trans-unit>
+    <trans-unit id="chatTookLongWarning">
+      <source xml:lang="en">Chat took too long to get ready. Please ensure you are signed in to {0} and that the extension `{1}` is installed and enabled.</source>
+    </trans-unit>
+    <trans-unit id="chatTookLongWarningAnonymous">
+      <source xml:lang="en">Chat took too long to get ready. Please ensure that the extension `{0}` is installed and enabled.</source>
+    </trans-unit>
+    <trans-unit id="copilotUnavailableWarning">
+      <source xml:lang="en">Failed to get a response. Please try again.</source>
+    </trans-unit>
+    <trans-unit id="explain">
+      <source xml:lang="en">Explain</source>
+    </trans-unit>
+    <trans-unit id="fix">
+      <source xml:lang="en">Fix</source>
+    </trans-unit>
+    <trans-unit id="generate">
+      <source xml:lang="en">Generate</source>
+    </trans-unit>
+    <trans-unit id="installingChat">
+      <source xml:lang="en">Getting chat ready...</source>
+    </trans-unit>
+    <trans-unit id="modify">
+      <source xml:lang="en">Modify</source>
+    </trans-unit>
     <trans-unit id="settingUpCopilotNeeded">
       <source xml:lang="en">You need to set up GitHub Copilot and be signed in to use Chat.</source>
+    </trans-unit>
+    <trans-unit id="setupChatSignIn2">
+      <source xml:lang="en">Signing in to {0}...</source>
+    </trans-unit>
+    <trans-unit id="setupToolDisplayName">
+      <source xml:lang="en">New Workspace</source>
+    </trans-unit>
+    <trans-unit id="setupToolsDescription">
+      <source xml:lang="en">Scaffold a new workspace in VS Code</source>
+    </trans-unit>
+    <trans-unit id="terminalAgentDescription">
+      <source xml:lang="en">Ask how to do something in the terminal</source>
+    </trans-unit>
+    <trans-unit id="trustNeeded">
+      <source xml:lang="en">You need to trust this workspace to use Chat.</source>
+    </trans-unit>
+    <trans-unit id="vscodeAgentDescription">
+      <source xml:lang="en">Ask questions about VS Code</source>
+    </trans-unit>
+    <trans-unit id="waitingChat">
+      <source xml:lang="en">Getting chat ready...</source>
+    </trans-unit>
+    <trans-unit id="waitingChat2">
+      <source xml:lang="en">Chat is almost ready...</source>
+    </trans-unit>
+    <trans-unit id="workspaceAgentDescription">
+      <source xml:lang="en">Ask about your workspace</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSetup/chatSetupRunner" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatWorkspaceTrust">
+      <source xml:lang="en">AI features are currently only supported in trusted workspaces.</source>
+    </trans-unit>
+    <trans-unit id="continueWith">
+      <source xml:lang="en">Continue with {0}</source>
+    </trans-unit>
+    <trans-unit id="enableMore">
+      <source xml:lang="en">Enable more AI features</source>
     </trans-unit>
     <trans-unit id="settings">
       <source xml:lang="en">By continuing, you agree to {0}'s [Terms]({1}) and [Privacy Statement]({2}). {3} Copilot may show [public code]({4}) suggestions and use your data to improve the product. You can change these [settings]({5}) anytime.</source>
@@ -3180,21 +3243,6 @@ Examples:
     <trans-unit id="setupAIButton">
       <source xml:lang="en">Use AI Features</source>
     </trans-unit>
-    <trans-unit id="setupChatProgress">
-      <source xml:lang="en">Getting chat ready...</source>
-    </trans-unit>
-    <trans-unit id="setupChatSignIn2">
-      <source xml:lang="en">Signing in to {0}...</source>
-    </trans-unit>
-    <trans-unit id="setupErrorDialog">
-      <source xml:lang="en">Chat setup failed. Would you like to try again?</source>
-    </trans-unit>
-    <trans-unit id="setupToolDisplayName">
-      <source xml:lang="en">New Workspace</source>
-    </trans-unit>
-    <trans-unit id="setupToolsDescription">
-      <source xml:lang="en">Scaffold a new workspace in VS Code</source>
-    </trans-unit>
     <trans-unit id="signIn">
       <source xml:lang="en">Sign in to use AI Features</source>
     </trans-unit>
@@ -3203,42 +3251,6 @@ Examples:
     </trans-unit>
     <trans-unit id="startUsing">
       <source xml:lang="en">Start using AI Features</source>
-    </trans-unit>
-    <trans-unit id="terminalAgentDescription">
-      <source xml:lang="en">Ask how to do something in the terminal</source>
-    </trans-unit>
-    <trans-unit id="triggerChatSetup">
-      <source xml:lang="en">Use AI Features with Copilot for free...</source>
-    </trans-unit>
-    <trans-unit id="triggerChatSetupFromAccounts">
-      <source xml:lang="en">Sign in to use AI features...</source>
-    </trans-unit>
-    <trans-unit id="trustNeeded">
-      <source xml:lang="en">You need to trust this workspace to use Chat.</source>
-    </trans-unit>
-    <trans-unit id="unknownSetupError">
-      <source xml:lang="en">An error occurred while setting up chat. Would you like to try again?</source>
-    </trans-unit>
-    <trans-unit id="unknownSignInError">
-      <source xml:lang="en">Failed to sign in to {0}. Would you like to try again?</source>
-    </trans-unit>
-    <trans-unit id="unknownSignInErrorDetail">
-      <source xml:lang="en">You must be signed in to use AI features.</source>
-    </trans-unit>
-    <trans-unit id="vscodeAgentDescription">
-      <source xml:lang="en">Ask questions about VS Code</source>
-    </trans-unit>
-    <trans-unit id="waitingChat">
-      <source xml:lang="en">Getting chat ready...</source>
-    </trans-unit>
-    <trans-unit id="waitingChat2">
-      <source xml:lang="en">Chat is almost ready...</source>
-    </trans-unit>
-    <trans-unit id="willResolveTo">
-      <source xml:lang="en">Will resolve to {0}</source>
-    </trans-unit>
-    <trans-unit id="workspaceAgentDescription">
-      <source xml:lang="en">Ask about your workspace</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatStatus/chatStatusDashboard" source-language="en" datatype="plaintext"><body>
@@ -4581,6 +4593,9 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptHeaderAutocompletion" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="promptHeaderAutocompletion.addHeader">
+      <source xml:lang="en">Add Prompt Header</source>
+    </trans-unit>
     <trans-unit id="promptHeaderAutocompletion.handoffsExample">
       <source xml:lang="en">Handoff Example</source>
     </trans-unit>
