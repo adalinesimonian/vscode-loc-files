@@ -218,8 +218,8 @@
     <trans-unit id="chat.toggleDefaultVisibility.label">
       <source xml:lang="en">Show View by Default</source>
     </trans-unit>
-    <trans-unit id="chat.toggleEmptyChatViewSessions.label">
-      <source xml:lang="en">Show Agent Sessions</source>
+    <trans-unit id="chat.toggleEmptyChatViewRecentSessions.label">
+      <source xml:lang="en">Show Recent Agent Sessions</source>
     </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
       <source xml:lang="en">You've reached your monthly chat messages and inline suggestions quota.</source>
@@ -1143,7 +1143,7 @@ This feature disables critical security protections and makes it much easier for
       <source xml:lang="en">Enable the new Edits mode that is based on tool-calling. When this is enabled, models that don't support tool-calling are unavailable for Edits mode.</source>
     </trans-unit>
     <trans-unit id="chat.emptyState.sessions.enabled">
-      <source xml:lang="en">Show agent sessions on the empty chat state.</source>
+      <source xml:lang="en">Show recent agent sessions on the empty chat state.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
@@ -3462,7 +3462,10 @@ Examples:
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatViewPane" source-language="en" datatype="plaintext"><body>
     <trans-unit id="openAgentSessionsView">
-      <source xml:lang="en">Show All Sessions</source>
+      <source xml:lang="en">Show all sessions</source>
+    </trans-unit>
+    <trans-unit id="recentSessions">
+      <source xml:lang="en">Recent Sessions</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext"><body>
