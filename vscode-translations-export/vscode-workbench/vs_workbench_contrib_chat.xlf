@@ -221,6 +221,9 @@
     <trans-unit id="chat.toggleEmptyChatViewRecentSessions.label">
       <source xml:lang="en">Show Recent Agent Sessions</source>
     </trans-unit>
+    <trans-unit id="chat.toggleEmptyChatViewWelcomeBanner.label">
+      <source xml:lang="en">Show Welcome Banner</source>
+    </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
       <source xml:lang="en">You've reached your monthly chat messages and inline suggestions quota.</source>
     </trans-unit>
@@ -962,6 +965,9 @@
     <trans-unit id="refresh">
       <source xml:lang="en">Refresh Agent Sessions</source>
     </trans-unit>
+    <trans-unit id="showAllSessions">
+      <source xml:lang="en">Show All Agent Sessions</source>
+    </trans-unit>
     <trans-unit id="showDiff">
       <source xml:lang="en">Open Changes</source>
     </trans-unit>
@@ -1143,7 +1149,10 @@ This feature disables critical security protections and makes it much easier for
       <source xml:lang="en">Enable the new Edits mode that is based on tool-calling. When this is enabled, models that don't support tool-calling are unavailable for Edits mode.</source>
     </trans-unit>
     <trans-unit id="chat.emptyState.sessions.enabled">
-      <source xml:lang="en">Show recent agent sessions on the empty chat state.</source>
+      <source xml:lang="en">Show recent agent sessions when chat view is empty.</source>
+    </trans-unit>
+    <trans-unit id="chat.emptyState.welcome.enabled">
+      <source xml:lang="en">Show welcome banner when chat view is empty.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
@@ -3461,9 +3470,6 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatViewPane" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="openAgentSessionsView">
-      <source xml:lang="en">Show all sessions</source>
-    </trans-unit>
     <trans-unit id="recentSessions">
       <source xml:lang="en">Recent Sessions</source>
     </trans-unit>
