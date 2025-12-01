@@ -1256,6 +1256,9 @@ This allows for users to show the hover without using the mouse.</note>
     <trans-unit id="action.inlineSuggest.accept">
       <source xml:lang="en">Accept Inline Suggestion</source>
     </trans-unit>
+    <trans-unit id="action.inlineSuggest.acceptAlternativeAction">
+      <source xml:lang="en">Accept Inline Suggestion Alternative Action</source>
+    </trans-unit>
     <trans-unit id="action.inlineSuggest.acceptNextLine">
       <source xml:lang="en">Accept Next Line Of Inline Suggestion</source>
     </trans-unit>
@@ -1321,6 +1324,9 @@ This allows for users to show the hover without using the mouse.</note>
     <trans-unit id="inlineEditVisible">
       <source xml:lang="en">Whether an inline edit is visible</source>
     </trans-unit>
+    <trans-unit id="inlineSuggestionAlternativeActionVisible">
+      <source xml:lang="en">Whether an alternative action for the inline suggestion is visible.</source>
+    </trans-unit>
     <trans-unit id="inlineSuggestionHasIndentation">
       <source xml:lang="en">Whether the inline suggestion starts with whitespace</source>
     </trans-unit>
@@ -1373,8 +1379,8 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/model/renameSymbolProcessor" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="renameSymbol">
-      <source xml:lang="en">Rename '{0}' to '{1}'</source>
+    <trans-unit id="rename">
+      <source xml:lang="en">Rename</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/gutterIndicatorMenu" source-language="en" datatype="plaintext"><body>

@@ -1148,12 +1148,6 @@ This feature disables critical security protections and makes it much easier for
     <trans-unit id="chat.edits2Enabled">
       <source xml:lang="en">Enable the new Edits mode that is based on tool-calling. When this is enabled, models that don't support tool-calling are unavailable for Edits mode.</source>
     </trans-unit>
-    <trans-unit id="chat.emptyState.sessions.enabled">
-      <source xml:lang="en">Show recent agent sessions when chat view is empty.</source>
-    </trans-unit>
-    <trans-unit id="chat.emptyState.welcome.enabled">
-      <source xml:lang="en">Show welcome banner when chat view is empty.</source>
-    </trans-unit>
     <trans-unit id="chat.experimental.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
     </trans-unit>
@@ -1286,6 +1280,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.sendElementsToChat.enabled">
       <source xml:lang="en">Controls whether elements can be sent to chat from the Simple Browser.</source>
     </trans-unit>
+    <trans-unit id="chat.sessions.enabled">
+      <source xml:lang="en">Show recent chat agent sessions when chat is empty.</source>
+    </trans-unit>
     <trans-unit id="chat.sessionsViewLocation.description">
       <source xml:lang="en">Controls where to show the agent sessions menu.</source>
     </trans-unit>
@@ -1346,6 +1343,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.useNestedAgentMd.title">
       <source xml:lang="en">Use nested AGENTS.MD files</source>
+    </trans-unit>
+    <trans-unit id="chat.welcome.enabled">
+      <source xml:lang="en">Show welcome banner when chat is empty.</source>
     </trans-unit>
     <trans-unit id="clear">
       <source xml:lang="en">Start a new chat</source>
