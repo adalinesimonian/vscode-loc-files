@@ -215,14 +215,14 @@
     <trans-unit id="chat.openNewChatToTheSide.label">
       <source xml:lang="en">Open New Chat Editor to the Side</source>
     </trans-unit>
+    <trans-unit id="chat.toggleChatViewRecentSessions.label">
+      <source xml:lang="en">Show Recent Sessions</source>
+    </trans-unit>
+    <trans-unit id="chat.toggleChatViewWelcome.label">
+      <source xml:lang="en">Show Welcome</source>
+    </trans-unit>
     <trans-unit id="chat.toggleDefaultVisibility.label">
       <source xml:lang="en">Show View by Default</source>
-    </trans-unit>
-    <trans-unit id="chat.toggleEmptyChatViewRecentSessions.label">
-      <source xml:lang="en">Show Recent Agent Sessions</source>
-    </trans-unit>
-    <trans-unit id="chat.toggleEmptyChatViewWelcomeBanner.label">
-      <source xml:lang="en">Show Welcome Banner</source>
     </trans-unit>
     <trans-unit id="chatAndCompletionsQuotaExceeded">
       <source xml:lang="en">You've reached your monthly chat messages and inline suggestions quota.</source>
@@ -956,12 +956,6 @@
     <trans-unit id="find">
       <source xml:lang="en">Find Agent Session</source>
     </trans-unit>
-    <trans-unit id="interactiveSession.newBackgroundChatEditor">
-      <source xml:lang="en">New Background Chat</source>
-    </trans-unit>
-    <trans-unit id="interactiveSession.newCloudChat">
-      <source xml:lang="en">New Cloud Chat</source>
-    </trans-unit>
     <trans-unit id="refresh">
       <source xml:lang="en">Refresh Agent Sessions</source>
     </trans-unit>
@@ -1263,6 +1257,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.renderRelatedFiles">
       <source xml:lang="en">Controls whether related files should be rendered in the chat input.</source>
     </trans-unit>
+    <trans-unit id="chat.restoreLastPanelSession">
+      <source xml:lang="en">Controls whether the last session is restored in panel after restart.</source>
+    </trans-unit>
     <trans-unit id="chat.reusablePrompts.config.locations.description">
       <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be run in Chat sessions. [Learn More]({1}).
 
@@ -1289,8 +1286,8 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.showAgentSessionsViewDescription">
       <source xml:lang="en">Controls whether session descriptions are displayed on a second row in the Chat Sessions view.</source>
     </trans-unit>
-    <trans-unit id="chat.signInWithAlternateScopes">
-      <source xml:lang="en">Controls whether sign-in with alternate scopes is used.</source>
+    <trans-unit id="chat.statusWidget.enabled.description">
+      <source xml:lang="en">Show the status widget in new chat sessions when quota is exceeded.</source>
     </trans-unit>
     <trans-unit id="chat.subagentTool.customAgents">
       <source xml:lang="en">Whether the runSubagent tool is able to use custom agents. When enabled, the tool can take the name of a custom agent, but it must be given the exact name of the agent.</source>
@@ -1937,6 +1934,12 @@ Examples:
     </trans-unit>
     <trans-unit id="chatTerminalOutputAriaLabel">
       <source xml:lang="en">Terminal output for {0}</source>
+    </trans-unit>
+    <trans-unit id="chatTerminalOutputTruncated">
+      <source xml:lang="en">Output truncated.</source>
+    </trans-unit>
+    <trans-unit id="chatTerminalOutputUnavailable">
+      <source xml:lang="en">Command output is no longer available.</source>
     </trans-unit>
     <trans-unit id="focusTerminal">
       <source xml:lang="en">Focus Terminal</source>
@@ -2924,9 +2927,6 @@ Examples:
     <trans-unit id="chat.sessions.description.waitingForConfirmation">
       <source xml:lang="en">Waiting for confirmation: {0}</source>
     </trans-unit>
-    <trans-unit id="chat.sessions.description.working">
-      <source xml:lang="en">Working...</source>
-    </trans-unit>
     <trans-unit id="chatCommand">
       <source xml:lang="en">A short name by which this command is referred to in the UI, e.g. `fix` or `explain` for commands that fix an issue or explain code. The name should be unique among the commands provided by this participant.</source>
     </trans-unit>
@@ -2949,7 +2949,7 @@ Examples:
       <source xml:lang="en">Alternative identifiers for backward compatibility.</source>
     </trans-unit>
     <trans-unit id="chatSessionsExtPoint.canDelegate">
-      <source xml:lang="en">Whether delegation is supported. Defaults to true.</source>
+      <source xml:lang="en">Whether delegation is supported. Default is false. Note that enabling this is experimental and may not be respected at all times.</source>
     </trans-unit>
     <trans-unit id="chatSessionsExtPoint.capabilities">
       <source xml:lang="en">Optional capabilities for this chat session.</source>
@@ -3025,6 +3025,9 @@ Examples:
     </trans-unit>
     <trans-unit id="interactiveSession.openNewSessionEditor">
       <source xml:lang="en">New {0}</source>
+    </trans-unit>
+    <trans-unit id="interactiveSession.openSessionWithPrompt">
+      <source xml:lang="en">New {0} with Prompt</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions/chatSessionPickerActionItem" source-language="en" datatype="plaintext"><body>
@@ -3469,6 +3472,17 @@ Examples:
       <source xml:lang="en">Signed out</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatStatusWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.quotaExceeded.increaseLimit">
+      <source xml:lang="en">Increase Limit</source>
+    </trans-unit>
+    <trans-unit id="chat.quotaExceeded.message">
+      <source xml:lang="en">Free tier chat message limit reached.</source>
+    </trans-unit>
+    <trans-unit id="chat.toggleStatusWidget.label">
+      <source xml:lang="en">Toggle Chat Status Widget State</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatViewPane" source-language="en" datatype="plaintext"><body>
     <trans-unit id="recentSessions">
       <source xml:lang="en">Recent Sessions</source>
@@ -3791,14 +3805,8 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/attachInstructionsAction" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="attach-instructions.capitalized.ellipses">
-      <source xml:lang="en">Attach Instructions...</source>
-    </trans-unit>
     <trans-unit id="chatContext.attach.instructions.label">
       <source xml:lang="en">Instructions...</source>
-    </trans-unit>
-    <trans-unit id="commands.instructions.select-dialog.placeholder">
-      <source xml:lang="en">Select instructions files to attach</source>
     </trans-unit>
     <trans-unit id="commands.prompt.manage-dialog.placeholder">
       <source xml:lang="en">Select the instructions file to open</source>
@@ -4296,6 +4304,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chatSessionHasModels">
       <source xml:lang="en">True when the chat is in a contributed chat session that has available 'models' to display.</source>
+    </trans-unit>
+    <trans-unit id="chatSessionIsEmpty">
+      <source xml:lang="en">True when the current chat session has no requests.</source>
     </trans-unit>
     <trans-unit id="chatSessionResponseDetectedAgentOrCommand">
       <source xml:lang="en">When the agent or command was automatically detected</source>
