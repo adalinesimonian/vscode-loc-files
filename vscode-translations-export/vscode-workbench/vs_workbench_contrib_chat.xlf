@@ -218,9 +218,6 @@
     <trans-unit id="chat.toggleChatViewRecentSessions.label">
       <source xml:lang="en">Show Recent Sessions</source>
     </trans-unit>
-    <trans-unit id="chat.toggleChatViewWelcome.label">
-      <source xml:lang="en">Show Welcome</source>
-    </trans-unit>
     <trans-unit id="chat.toggleDefaultVisibility.label">
       <source xml:lang="en">Show View by Default</source>
     </trans-unit>
@@ -364,6 +361,11 @@
 - Unlimited inline suggestions
 - Unlimited chat messages
 - Access to premium models</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAgentRecommendationActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.installRecommendation">
+      <source xml:lang="en">Install {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatCloseNotification" source-language="en" datatype="plaintext"><body>
@@ -708,21 +710,6 @@
     <trans-unit id="chat.openSessionInSidebar.label">
       <source xml:lang="en">Move Chat into Side Bar</source>
     </trans-unit>
-    <trans-unit id="chat.sessions.gettingStarted.action">
-      <source xml:lang="en">Getting Started with Chat Sessions</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.extensionAlreadyInstalled">
-      <source xml:lang="en">'{0}' is already installed</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.installExtension">
-      <source xml:lang="en">Installs '{0}'</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.pickPlaceholder">
-      <source xml:lang="en">Install agents from the extension marketplace</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.selectExtension">
-      <source xml:lang="en">Install Agents...</source>
-    </trans-unit>
     <trans-unit id="chatSessions.toggleDescriptionDisplay.label">
       <source xml:lang="en">Show Rich Descriptions</source>
     </trans-unit>
@@ -924,11 +911,6 @@
       <source xml:lang="en">Select where to apply the code block</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/manageModelsActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="manageLanguageModels">
-      <source xml:lang="en">Manage Language Models...</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.session.providerLabel.background">
       <source xml:lang="en">Background</source>
@@ -998,9 +980,6 @@
     </trans-unit>
     <trans-unit id="agentSessions.view.label">
       <source xml:lang="en">Agents</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.installExtensions">
-      <source xml:lang="en">Install Agents...</source>
     </trans-unit>
     <trans-unit id="newBackgroundSession">
       <source xml:lang="en">New Background Session</source>
@@ -1141,6 +1120,9 @@ This feature disables critical security protections and makes it much easier for
     </trans-unit>
     <trans-unit id="chat.edits2Enabled">
       <source xml:lang="en">Enable the new Edits mode that is based on tool-calling. When this is enabled, models that don't support tool-calling are unavailable for Edits mode.</source>
+    </trans-unit>
+    <trans-unit id="chat.exitAfterDelegation">
+      <source xml:lang="en">Controls whether the chat panel automatically exits after delegating a request to another session.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
@@ -1287,10 +1269,19 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Controls whether session descriptions are displayed on a second row in the Chat Sessions view.</source>
     </trans-unit>
     <trans-unit id="chat.statusWidget.enabled.description">
-      <source xml:lang="en">Show the status widget in new chat sessions when quota is exceeded.</source>
+      <source xml:lang="en">Controls which user type should see the status widget in new chat sessions when quota is exceeded.</source>
+    </trans-unit>
+    <trans-unit id="chat.statusWidget.sku.anonymous">
+      <source xml:lang="en">Show status widget for anonymous users.</source>
+    </trans-unit>
+    <trans-unit id="chat.statusWidget.sku.free">
+      <source xml:lang="en">Show status widget for free tier users.</source>
     </trans-unit>
     <trans-unit id="chat.subagentTool.customAgents">
       <source xml:lang="en">Whether the runSubagent tool is able to use custom agents. When enabled, the tool can take the name of a custom agent, but it must be given the exact name of the agent.</source>
+    </trans-unit>
+    <trans-unit id="chat.suspendThrottling">
+      <source xml:lang="en">Controls whether background throttling is suspended when a chat request is in progress, allowing the chat session to continue even when the window is not in focus.</source>
     </trans-unit>
     <trans-unit id="chat.todoListTool.descriptionField">
       <source xml:lang="en">When enabled, todo items include detailed descriptions for implementation context. This provides more information but uses additional tokens and may slow down responses.</source>
@@ -1340,9 +1331,6 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.useNestedAgentMd.title">
       <source xml:lang="en">Use nested AGENTS.MD files</source>
-    </trans-unit>
-    <trans-unit id="chat.welcome.enabled">
-      <source xml:lang="en">Show welcome banner when chat is empty.</source>
     </trans-unit>
     <trans-unit id="clear">
       <source xml:lang="en">Start a new chat</source>
@@ -3473,14 +3461,17 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatStatusWidget" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.quotaExceeded.increaseLimit">
-      <source xml:lang="en">Increase Limit</source>
+    <trans-unit id="chat.anonymousRateLimited.message">
+      <source xml:lang="en">You've reached the limit for chat messages. Try Copilot Pro for free.</source>
     </trans-unit>
-    <trans-unit id="chat.quotaExceeded.message">
-      <source xml:lang="en">Free tier chat message limit reached.</source>
+    <trans-unit id="chat.anonymousRateLimited.signIn">
+      <source xml:lang="en">Sign In</source>
     </trans-unit>
-    <trans-unit id="chat.toggleStatusWidget.label">
-      <source xml:lang="en">Toggle Chat Status Widget State</source>
+    <trans-unit id="chat.freeQuotaExceeded.message">
+      <source xml:lang="en">You've reached the limit for chat messages.</source>
+    </trans-unit>
+    <trans-unit id="chat.freeQuotaExceeded.upgrade">
+      <source xml:lang="en">Upgrade</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatViewPane" source-language="en" datatype="plaintext"><body>
