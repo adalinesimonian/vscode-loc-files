@@ -218,6 +218,9 @@
     <trans-unit id="chat.toggleChatViewRecentSessions.label">
       <source xml:lang="en">Show Recent Sessions</source>
     </trans-unit>
+    <trans-unit id="chat.toggleChatViewTitle.label">
+      <source xml:lang="en">Show Chat Title</source>
+    </trans-unit>
     <trans-unit id="chat.toggleDefaultVisibility.label">
       <source xml:lang="en">Show View by Default</source>
     </trans-unit>
@@ -650,6 +653,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatNewActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.goBack">
+      <source xml:lang="en">Go Back</source>
+    </trans-unit>
     <trans-unit id="chat.newChat.label">
       <source xml:lang="en">New Chat</source>
     </trans-unit>
@@ -701,12 +707,6 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatSessionActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.openSessionInNewEditorGroup.label">
-      <source xml:lang="en">Move Chat to the Side</source>
-    </trans-unit>
-    <trans-unit id="chat.openSessionInNewWindow.label">
-      <source xml:lang="en">Move Chat into New Window</source>
-    </trans-unit>
     <trans-unit id="chat.openSessionInSidebar.label">
       <source xml:lang="en">Move Chat into Side Bar</source>
     </trans-unit>
@@ -731,14 +731,8 @@
     <trans-unit id="interactiveSession.open">
       <source xml:lang="en">New Chat Editor</source>
     </trans-unit>
-    <trans-unit id="openSessionInNewWindow">
-      <source xml:lang="en">Open in New Window</source>
-    </trans-unit>
     <trans-unit id="openSessionInSidebar">
       <source xml:lang="en">Open in Sidebar</source>
-    </trans-unit>
-    <trans-unit id="openToSide">
-      <source xml:lang="en">Open to the Side</source>
     </trans-unit>
     <trans-unit id="renameSession">
       <source xml:lang="en">Rename</source>
@@ -922,9 +916,26 @@
       <source xml:lang="en">Local</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessions.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessions.view.label">
+      <source xml:lang="en">Agents</source>
+    </trans-unit>
+    <trans-unit id="filterAgentSessions">
+      <source xml:lang="en">Filter Agent Sessions</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="archive">
       <source xml:lang="en">Archive</source>
+    </trans-unit>
+    <trans-unit id="chat.openSessionInEditorGroup.label">
+      <source xml:lang="en">Open as Editor</source>
+    </trans-unit>
+    <trans-unit id="chat.openSessionInNewEditorGroup.label">
+      <source xml:lang="en">Open to the Side</source>
+    </trans-unit>
+    <trans-unit id="chat.openSessionInNewWindow.label">
+      <source xml:lang="en">Open in New Window</source>
     </trans-unit>
     <trans-unit id="diffFile">
       <source xml:lang="en">1 file</source>
@@ -932,17 +943,17 @@
     <trans-unit id="diffFiles">
       <source xml:lang="en">{0} files</source>
     </trans-unit>
-    <trans-unit id="filterAgentSessions">
-      <source xml:lang="en">Filter Agent Sessions</source>
-    </trans-unit>
     <trans-unit id="find">
       <source xml:lang="en">Find Agent Session</source>
+    </trans-unit>
+    <trans-unit id="hideAgentSessionsSidebar">
+      <source xml:lang="en">Hide Agent Sessions Sidebar</source>
     </trans-unit>
     <trans-unit id="refresh">
       <source xml:lang="en">Refresh Agent Sessions</source>
     </trans-unit>
-    <trans-unit id="showAllSessions">
-      <source xml:lang="en">Show All Agent Sessions</source>
+    <trans-unit id="showAgentSessionsSidebar">
+      <source xml:lang="en">Show Agent Sessions Sidebar</source>
     </trans-unit>
     <trans-unit id="showDiff">
       <source xml:lang="en">Open Changes</source>
@@ -977,9 +988,6 @@
     </trans-unit>
     <trans-unit id="agentSessions.refreshing">
       <source xml:lang="en">Refreshing agent sessions...</source>
-    </trans-unit>
-    <trans-unit id="agentSessions.view.label">
-      <source xml:lang="en">Agents</source>
     </trans-unit>
     <trans-unit id="newBackgroundSession">
       <source xml:lang="en">New Background Session</source>
@@ -1331,6 +1339,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.useNestedAgentMd.title">
       <source xml:lang="en">Use nested AGENTS.MD files</source>
+    </trans-unit>
+    <trans-unit id="chat.viewTitle.enabled">
+      <source xml:lang="en">Show the title of the chat above the chat in the chat view.</source>
     </trans-unit>
     <trans-unit id="clear">
       <source xml:lang="en">Start a new chat</source>
@@ -1911,9 +1922,6 @@ Examples:
     <trans-unit id="chat.terminalOutputEmpty">
       <source xml:lang="en">No output was produced by the command.</source>
     </trans-unit>
-    <trans-unit id="chat.terminalOutputPending">
-      <source xml:lang="en">Command output will appear here once available.</source>
-    </trans-unit>
     <trans-unit id="chat.terminalOutputTerminalMissing">
       <source xml:lang="en">Terminal is no longer available.</source>
     </trans-unit>
@@ -2400,6 +2408,12 @@ Examples:
     <trans-unit id="actions.openToSide.label">
       <source xml:lang="en">Open to the Side</source>
     </trans-unit>
+    <trans-unit id="chat.inlineAnchor.ariaLabel.line">
+      <source xml:lang="en">{0} line {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.inlineAnchor.ariaLabel.range">
+      <source xml:lang="en">{0} lines {1} to {2}</source>
+    </trans-unit>
     <trans-unit id="goToImplementations.label">
       <source xml:lang="en">Go to Implementations</source>
     </trans-unit>
@@ -2640,6 +2654,9 @@ Examples:
     <trans-unit id="collapse">
       <source xml:lang="en">Collapse</source>
     </trans-unit>
+    <trans-unit id="collapseAll">
+      <source xml:lang="en">Collapse All</source>
+    </trans-unit>
     <trans-unit id="cost">
       <source xml:lang="en">Multiplier</source>
     </trans-unit>
@@ -2676,8 +2693,23 @@ Examples:
     <trans-unit id="groupByTooltip">
       <source xml:lang="en">Group by {0}</source>
     </trans-unit>
-    <trans-unit id="model.ariaLabel">
+    <trans-unit id="hidden.ariaLabel">
+      <source xml:lang="en">Hidden Models</source>
+    </trans-unit>
+    <trans-unit id="model.capabilities">
+      <source xml:lang="en">Capabilities: {0}</source>
+    </trans-unit>
+    <trans-unit id="model.contextSize">
+      <source xml:lang="en">Context size: {0} input tokens and {1} output tokens</source>
+    </trans-unit>
+    <trans-unit id="model.hidden">
+      <source xml:lang="en">This model is hidden in the chat model picker</source>
+    </trans-unit>
+    <trans-unit id="model.name">
       <source xml:lang="en">{0} from {1}</source>
+    </trans-unit>
+    <trans-unit id="model.visible">
+      <source xml:lang="en">This model is visible in the chat model picker</source>
     </trans-unit>
     <trans-unit id="modelName">
       <source xml:lang="en">Name</source>
@@ -2733,6 +2765,9 @@ Examples:
     <trans-unit id="modelsTable.ariaLabel">
       <source xml:lang="en">Language Models</source>
     </trans-unit>
+    <trans-unit id="multiplier.tooltip">
+      <source xml:lang="en">Every chat message counts {0} towards your premium model request quota</source>
+    </trans-unit>
     <trans-unit id="provider">
       <source xml:lang="en">Provider</source>
     </trans-unit>
@@ -2740,7 +2775,10 @@ Examples:
       <source xml:lang="en">Context Size</source>
     </trans-unit>
     <trans-unit id="vendor.ariaLabel">
-      <source xml:lang="en">{0} provider</source>
+      <source xml:lang="en">{0} Models</source>
+    </trans-unit>
+    <trans-unit id="visible.ariaLabel">
+      <source xml:lang="en">Visible Models</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatManagement/chatUsageWidget" source-language="en" datatype="plaintext"><body>
@@ -3012,6 +3050,9 @@ Examples:
       <source xml:lang="en">Create chat session</source>
     </trans-unit>
     <trans-unit id="interactiveSession.openNewSessionEditor">
+      <source xml:lang="en">New {0}</source>
+    </trans-unit>
+    <trans-unit id="interactiveSession.openNewSessionSidebar">
       <source xml:lang="en">New {0}</source>
     </trans-unit>
     <trans-unit id="interactiveSession.openSessionWithPrompt">
@@ -3479,6 +3520,14 @@ Examples:
       <source xml:lang="en">Recent Sessions</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatViewTitleControl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat">
+      <source xml:lang="en">Chat Session</source>
+    </trans-unit>
+    <trans-unit id="chatTitleWithPrefixCustom">
+      <source xml:lang="en">Chat: {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentTitle">
       <source xml:lang="en">Build with Agent</source>
@@ -3778,6 +3827,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.manageModels.tooltip">
       <source xml:lang="en">Manage Language Models</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.auto">
+      <source xml:lang="en">Auto</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.label">
       <source xml:lang="en">Pick Model</source>
@@ -4359,6 +4411,12 @@ Examples:
     <trans-unit id="lockedToCodingAgent">
       <source xml:lang="en">True when the chat widget is locked to the coding agent session.</source>
     </trans-unit>
+    <trans-unit id="sessionsViewerOrientation">
+      <source xml:lang="en">Orientation of the sessions view in the chat view.</source>
+    </trans-unit>
+    <trans-unit id="sessionsViewerPosition">
+      <source xml:lang="en">Position of the sessions view in the chat view.</source>
+    </trans-unit>
     <trans-unit id="toolsCount">
       <source xml:lang="en">The count of tools available in the chat.</source>
     </trans-unit>
@@ -4372,6 +4430,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chatEditingWidgetFileState">
       <source xml:lang="en">The current state of the file in the chat editing widget</source>
+    </trans-unit>
+    <trans-unit id="chatMultidiff.autoGenerated">
+      <source xml:lang="en">Changes to {0} files</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatModel" source-language="en" datatype="plaintext"><body>
@@ -4698,18 +4759,6 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptValidator" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="githubCopilotTools.customAgent">
-      <source xml:lang="en">Call custom agents</source>
-    </trans-unit>
-    <trans-unit id="githubCopilotTools.edit">
-      <source xml:lang="en">Edit files</source>
-    </trans-unit>
-    <trans-unit id="githubCopilotTools.search">
-      <source xml:lang="en">Search in files</source>
-    </trans-unit>
-    <trans-unit id="githubCopilotTools.shell">
-      <source xml:lang="en">Execute shell commands</source>
-    </trans-unit>
     <trans-unit id="promptValidator.agentNotFound">
       <source xml:lang="en">Unknown agent '{0}'. Available agents: {1}.</source>
     </trans-unit>
