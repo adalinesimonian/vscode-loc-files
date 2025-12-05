@@ -221,6 +221,9 @@
     <trans-unit id="chat.toggleChatViewTitle.label">
       <source xml:lang="en">Show Chat Title</source>
     </trans-unit>
+    <trans-unit id="chat.toggleChatViewWelcome.label">
+      <source xml:lang="en">Show Welcome</source>
+    </trans-unit>
     <trans-unit id="chat.toggleDefaultVisibility.label">
       <source xml:lang="en">Show View by Default</source>
     </trans-unit>
@@ -368,7 +371,7 @@
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatAgentRecommendationActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.installRecommendation">
-      <source xml:lang="en">Install {0}</source>
+      <source xml:lang="en">New {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatCloseNotification" source-language="en" datatype="plaintext"><body>
@@ -1081,6 +1084,9 @@ This feature disables critical security protections and makes it much easier for
     <trans-unit id="chat.agent.thinking.collapsedTools.withThinking">
       <source xml:lang="en">Tool calls are collapsed into thinking sections when thinking is present.</source>
     </trans-unit>
+    <trans-unit id="chat.agent.thinking.generateTitles">
+      <source xml:lang="en">Controls whether to use an LLM to generate summary titles for thinking sections.</source>
+    </trans-unit>
     <trans-unit id="chat.agent.thinkingMode.collapsed">
       <source xml:lang="en">Thinking parts will be collapsed by default.</source>
     </trans-unit>
@@ -1268,7 +1274,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <source xml:lang="en">Controls whether elements can be sent to chat from the Simple Browser.</source>
     </trans-unit>
     <trans-unit id="chat.sessions.enabled">
-      <source xml:lang="en">Show recent chat agent sessions when chat is empty.</source>
+      <source xml:lang="en">Show recent chat agent sessions when chat is empty or to the side when chat view is wide enough.</source>
     </trans-unit>
     <trans-unit id="chat.sessionsViewLocation.description">
       <source xml:lang="en">Controls where to show the agent sessions menu.</source>
@@ -1342,6 +1348,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.viewTitle.enabled">
       <source xml:lang="en">Show the title of the chat above the chat in the chat view.</source>
+    </trans-unit>
+    <trans-unit id="chat.welcome.enabled">
+      <source xml:lang="en">Show welcome banner when chat is empty.</source>
     </trans-unit>
     <trans-unit id="clear">
       <source xml:lang="en">Start a new chat</source>
@@ -3508,21 +3517,36 @@ Examples:
     <trans-unit id="chat.anonymousRateLimited.signIn">
       <source xml:lang="en">Sign In</source>
     </trans-unit>
+    <trans-unit id="chat.anonymousRateLimited.signIn.ariaLabel">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
     <trans-unit id="chat.freeQuotaExceeded.message">
       <source xml:lang="en">You've reached the limit for chat messages.</source>
     </trans-unit>
     <trans-unit id="chat.freeQuotaExceeded.upgrade">
       <source xml:lang="en">Upgrade</source>
     </trans-unit>
+    <trans-unit id="chat.freeQuotaExceeded.upgrade.ariaLabel">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatViewPane" source-language="en" datatype="plaintext"><body>
     <trans-unit id="recentSessions">
       <source xml:lang="en">Recent Sessions</source>
     </trans-unit>
+    <trans-unit id="showAllSessions">
+      <source xml:lang="en">Show All Sessions</source>
+    </trans-unit>
+    <trans-unit id="showRecentSessions">
+      <source xml:lang="en">Limit to Recent Sessions</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatViewTitleControl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="backgroundSession">
+      <source xml:lang="en">{0} Agent Session</source>
+    </trans-unit>
     <trans-unit id="chat">
-      <source xml:lang="en">Chat Session</source>
+      <source xml:lang="en">Chat</source>
     </trans-unit>
     <trans-unit id="chatTitleWithPrefixCustom">
       <source xml:lang="en">Chat: {0}</source>
@@ -4261,8 +4285,23 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatContextKeys" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentIsActive">
+      <source xml:lang="en">True when the agent session is currently active (not deletable).</source>
+    </trans-unit>
+    <trans-unit id="agentIsArchived">
+      <source xml:lang="en">True when the agent session item is archived.</source>
+    </trans-unit>
     <trans-unit id="agentKind">
       <source xml:lang="en">The 'kind' of the current agent.</source>
+    </trans-unit>
+    <trans-unit id="agentSessionType">
+      <source xml:lang="en">The type of the current agent session item.</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsViewerOrientation">
+      <source xml:lang="en">Orientation of the agent sessions view in the chat view.</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsViewerPosition">
+      <source xml:lang="en">Position of the agent sessions view in the chat view.</source>
     </trans-unit>
     <trans-unit id="agentSupportsAttachments">
       <source xml:lang="en">True when the chat agent supports attachments.</source>
@@ -4293,12 +4332,6 @@ Examples:
     </trans-unit>
     <trans-unit id="chatHasFileAttachments">
       <source xml:lang="en">True when the chat has file attachments.</source>
-    </trans-unit>
-    <trans-unit id="chatIsActiveSession">
-      <source xml:lang="en">True when the chat session is currently active (not deletable).</source>
-    </trans-unit>
-    <trans-unit id="chatIsArchivedItem">
-      <source xml:lang="en">True when the chat session item is archived.</source>
     </trans-unit>
     <trans-unit id="chatIsCombinedSessionViewer">
       <source xml:lang="en">True when the chat session viewer uses the new combined style.</source>
@@ -4354,9 +4387,6 @@ Examples:
     <trans-unit id="chatSessionResponseDetectedAgentOrCommand">
       <source xml:lang="en">When the agent or command was automatically detected</source>
     </trans-unit>
-    <trans-unit id="chatSessionType">
-      <source xml:lang="en">The type of the current chat session item.</source>
-    </trans-unit>
     <trans-unit id="chatSkipRequestInProgressMessage">
       <source xml:lang="en">True when the chat request in progress message should be skipped.</source>
     </trans-unit>
@@ -4410,12 +4440,6 @@ Examples:
     </trans-unit>
     <trans-unit id="lockedToCodingAgent">
       <source xml:lang="en">True when the chat widget is locked to the coding agent session.</source>
-    </trans-unit>
-    <trans-unit id="sessionsViewerOrientation">
-      <source xml:lang="en">Orientation of the sessions view in the chat view.</source>
-    </trans-unit>
-    <trans-unit id="sessionsViewerPosition">
-      <source xml:lang="en">Position of the sessions view in the chat view.</source>
     </trans-unit>
     <trans-unit id="toolsCount">
       <source xml:lang="en">The count of tools available in the chat.</source>

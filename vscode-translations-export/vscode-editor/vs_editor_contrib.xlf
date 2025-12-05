@@ -1412,8 +1412,14 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/inlineEditsViews/inlineEditsWordReplacementView" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="labelOccurances">
+    <trans-unit id="labelOccurence">
+      <source xml:lang="en">{0} 1 occurrence</source>
+    </trans-unit>
+    <trans-unit id="labelOccurences">
       <source xml:lang="en">{0} {1} occurrences</source>
+    </trans-unit>
+    <trans-unit id="shiftToSeeOccurences">
+      <source xml:lang="en">{0} show occurrences</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/theme" source-language="en" datatype="plaintext"><body>
