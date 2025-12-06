@@ -2126,8 +2126,14 @@ Examples:
     <trans-unit id="chat.undoEdits.label">
       <source xml:lang="en">Undo Requests</source>
     </trans-unit>
+    <trans-unit id="chatEditing.allChanges.title">
+      <source xml:lang="en">All Session Changes</source>
+    </trans-unit>
     <trans-unit id="chatEditing.snapshot">
       <source xml:lang="en">{0} (Snapshot)</source>
+    </trans-unit>
+    <trans-unit id="chatEditing.viewAllSessionChanges">
+      <source xml:lang="en">View All Changes</source>
     </trans-unit>
     <trans-unit id="chatEditing.viewChanges">
       <source xml:lang="en">View All Edits</source>
@@ -2462,14 +2468,23 @@ Examples:
     <trans-unit id="chatEditingSession.addSuggestion">
       <source xml:lang="en">Add suggestion {0}</source>
     </trans-unit>
+    <trans-unit id="chatEditingSession.allChanges">
+      <source xml:lang="en">Worktree Changes</source>
+    </trans-unit>
     <trans-unit id="chatEditingSession.ariaLabelWithCounts">
       <source xml:lang="en">{0}, {1} lines added, {2} lines removed</source>
     </trans-unit>
     <trans-unit id="chatEditingSession.manyFiles.1">
       <source xml:lang="en">{0} files changed</source>
     </trans-unit>
+    <trans-unit id="chatEditingSession.manyFiles.2">
+      <source xml:lang="en">{0} files ready to merge</source>
+    </trans-unit>
     <trans-unit id="chatEditingSession.oneFile.1">
       <source xml:lang="en">1 file changed</source>
+    </trans-unit>
+    <trans-unit id="chatEditingSession.oneFile.2">
+      <source xml:lang="en">1 file ready to merge</source>
     </trans-unit>
     <trans-unit id="chatEditingSession.toggleWorkingSet">
       <source xml:lang="en">Toggle changed files.</source>
@@ -3531,6 +3546,9 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatViewPane" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="allSessions">
+      <source xml:lang="en">All Sessions</source>
+    </trans-unit>
     <trans-unit id="recentSessions">
       <source xml:lang="en">Recent Sessions</source>
     </trans-unit>
@@ -3538,7 +3556,7 @@ Examples:
       <source xml:lang="en">Show All Sessions</source>
     </trans-unit>
     <trans-unit id="showRecentSessions">
-      <source xml:lang="en">Limit to Recent Sessions</source>
+      <source xml:lang="en">Show Recent Sessions</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatViewTitleControl" source-language="en" datatype="plaintext"><body>
@@ -4029,9 +4047,6 @@ Examples:
     <trans-unit id="commands.update-instructions.select-dialog.label">
       <source xml:lang="en">Generate agent instructions...</source>
     </trans-unit>
-    <trans-unit id="copy">
-      <source xml:lang="en">Copy</source>
-    </trans-unit>
     <trans-unit id="delete">
       <source xml:lang="en">Delete</source>
     </trans-unit>
@@ -4049,6 +4064,9 @@ Examples:
     </trans-unit>
     <trans-unit id="hiddenLabelInfo">
       <source xml:lang="en">{0} (hidden)</source>
+    </trans-unit>
+    <trans-unit id="makeACopy">
+      <source xml:lang="en">Make a Copy</source>
     </trans-unit>
     <trans-unit id="makeInvisible">
       <source xml:lang="en">Hide from agent picker</source>
@@ -4297,6 +4315,9 @@ Examples:
     <trans-unit id="agentSessionType">
       <source xml:lang="en">The type of the current agent session item.</source>
     </trans-unit>
+    <trans-unit id="agentSessionsViewerExpanded">
+      <source xml:lang="en">If the agent sessions view in the chat view is expanded to show all sessions.</source>
+    </trans-unit>
     <trans-unit id="agentSessionsViewerOrientation">
       <source xml:lang="en">Orientation of the agent sessions view in the chat view.</source>
     </trans-unit>
@@ -4377,6 +4398,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chatResponseSupportsIssueReporting">
       <source xml:lang="en">True when the current chat response supports issue reporting.</source>
+    </trans-unit>
+    <trans-unit id="chatSessionHasAgentChanges">
+      <source xml:lang="en">True when the current agent session item has changes.</source>
     </trans-unit>
     <trans-unit id="chatSessionHasModels">
       <source xml:lang="en">True when the chat is in a contributed chat session that has available 'models' to display.</source>
@@ -4967,9 +4991,6 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="langModelTools">
       <source xml:lang="en">Language Model Tools</source>
     </trans-unit>
-    <trans-unit id="legacyToolReferenceFullNames">
-      <source xml:lang="en">An array of deprecated names for backwards compatibility that can also be used to reference this tool in a query. Each name must not contain whitespace. Full names are generally in the format `toolsetName/toolReferenceName` (e.g., `search/readFile`) or just `toolReferenceName` when there is no toolset (e.g., `readFile`).</source>
-    </trans-unit>
     <trans-unit id="name">
       <source xml:lang="en">Name</source>
     </trans-unit>
@@ -4996,9 +5017,6 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="toolSetIcon">
       <source xml:lang="en">An icon that represents this tool set, like `$(zap)`</source>
-    </trans-unit>
-    <trans-unit id="toolSetLegacyFullNames">
-      <source xml:lang="en">An array of deprecated names for backwards compatibility that can also be used to reference this tool set. Each name must not contain whitespace. Full names are generally in the format `parentToolSetName/toolSetName` (e.g., `github/repo`) or just `toolSetName` when there is no parent toolset (e.g., `repo`).</source>
     </trans-unit>
     <trans-unit id="toolSetName">
       <source xml:lang="en">A name for this tool set. Used as reference and should not contain whitespace.</source>
