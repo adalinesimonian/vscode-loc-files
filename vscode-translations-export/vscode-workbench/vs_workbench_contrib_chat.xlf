@@ -215,8 +215,8 @@
     <trans-unit id="chat.openNewChatToTheSide.label">
       <source xml:lang="en">Open New Chat Editor to the Side</source>
     </trans-unit>
-    <trans-unit id="chat.toggleChatViewRecentSessions.label">
-      <source xml:lang="en">Show Recent Sessions</source>
+    <trans-unit id="chat.toggleChatViewSessions.label">
+      <source xml:lang="en">Show Sessions</source>
     </trans-unit>
     <trans-unit id="chat.toggleChatViewTitle.label">
       <source xml:lang="en">Show Chat Title</source>
@@ -923,6 +923,12 @@
     <trans-unit id="archive">
       <source xml:lang="en">Archive</source>
     </trans-unit>
+    <trans-unit id="archiveSession">
+      <source xml:lang="en">Archive chat with pending edits?</source>
+    </trans-unit>
+    <trans-unit id="archiveSessionDescription">
+      <source xml:lang="en">You have pending changes in this chat session.</source>
+    </trans-unit>
     <trans-unit id="chat.openSessionInEditorGroup.label">
       <source xml:lang="en">Open as Editor</source>
     </trans-unit>
@@ -944,6 +950,12 @@
     <trans-unit id="hideAgentSessionsSidebar">
       <source xml:lang="en">Hide Agent Sessions Sidebar</source>
     </trans-unit>
+    <trans-unit id="markRead">
+      <source xml:lang="en">Mark as Read</source>
+    </trans-unit>
+    <trans-unit id="markUnread">
+      <source xml:lang="en">Mark as Unread</source>
+    </trans-unit>
     <trans-unit id="refresh">
       <source xml:lang="en">Refresh Agent Sessions</source>
     </trans-unit>
@@ -960,6 +972,9 @@
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsFilter" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentSessions.filter.archived">
       <source xml:lang="en">Archived</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.filter.read">
+      <source xml:lang="en">Read</source>
     </trans-unit>
     <trans-unit id="agentSessions.filter.reset">
       <source xml:lang="en">Reset</source>
@@ -1265,9 +1280,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     <trans-unit id="chat.sendElementsToChat.enabled">
       <source xml:lang="en">Controls whether elements can be sent to chat from the Simple Browser.</source>
     </trans-unit>
-    <trans-unit id="chat.sessions.enabled">
-      <source xml:lang="en">Show recent chat agent sessions when chat is empty or to the side when chat view is wide enough.</source>
-    </trans-unit>
     <trans-unit id="chat.sessionsViewLocation.description">
       <source xml:lang="en">Controls where to show the agent sessions menu.</source>
     </trans-unit>
@@ -1337,6 +1349,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.useNestedAgentMd.title">
       <source xml:lang="en">Use nested AGENTS.MD files</source>
+    </trans-unit>
+    <trans-unit id="chat.viewSessions.enabled">
+      <source xml:lang="en">Show chat agent sessions when chat is empty or to the side when chat view is wide enough.</source>
     </trans-unit>
     <trans-unit id="chat.viewTitle.enabled">
       <source xml:lang="en">Show the title of the chat above the chat in the chat view.</source>
@@ -2966,6 +2981,9 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.sessions.description.thinking">
+      <source xml:lang="en">Thinking...</source>
+    </trans-unit>
     <trans-unit id="chat.sessions.description.waitingForConfirmation">
       <source xml:lang="en">Waiting for confirmation: {0}</source>
     </trans-unit>
@@ -4295,20 +4313,26 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatContextKeys" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentIsActive">
-      <source xml:lang="en">True when the agent session is currently active (not deletable).</source>
-    </trans-unit>
-    <trans-unit id="agentIsArchived">
-      <source xml:lang="en">True when the agent session item is archived.</source>
-    </trans-unit>
     <trans-unit id="agentKind">
       <source xml:lang="en">The 'kind' of the current agent.</source>
+    </trans-unit>
+    <trans-unit id="agentSessionHasChanges">
+      <source xml:lang="en">True when the current agent session item has changes.</source>
+    </trans-unit>
+    <trans-unit id="agentSessionIsActive">
+      <source xml:lang="en">True when the agent session is currently active (not deletable).</source>
+    </trans-unit>
+    <trans-unit id="agentSessionIsArchived">
+      <source xml:lang="en">True when the agent session item is archived.</source>
+    </trans-unit>
+    <trans-unit id="agentSessionIsRead">
+      <source xml:lang="en">True when the agent session item is read.</source>
     </trans-unit>
     <trans-unit id="agentSessionType">
       <source xml:lang="en">The type of the current agent session item.</source>
     </trans-unit>
-    <trans-unit id="agentSessionsViewerExpanded">
-      <source xml:lang="en">If the agent sessions view in the chat view is expanded to show all sessions.</source>
+    <trans-unit id="agentSessionsViewerLimited">
+      <source xml:lang="en">If the agent sessions view in the chat view is limited to show recent sessions only.</source>
     </trans-unit>
     <trans-unit id="agentSessionsViewerOrientation">
       <source xml:lang="en">Orientation of the agent sessions view in the chat view.</source>
@@ -4390,9 +4414,6 @@ Examples:
     </trans-unit>
     <trans-unit id="chatResponseSupportsIssueReporting">
       <source xml:lang="en">True when the current chat response supports issue reporting.</source>
-    </trans-unit>
-    <trans-unit id="chatSessionHasAgentChanges">
-      <source xml:lang="en">True when the current agent session item has changes.</source>
     </trans-unit>
     <trans-unit id="chatSessionHasModels">
       <source xml:lang="en">True when the chat is in a contributed chat session that has available 'models' to display.</source>
