@@ -215,6 +215,18 @@
     <trans-unit id="chat.openNewChatToTheSide.label">
       <source xml:lang="en">Open New Chat Editor to the Side</source>
     </trans-unit>
+    <trans-unit id="chat.sessionsOrientation">
+      <source xml:lang="en">Sessions Orientation</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionsOrientation.auto">
+      <source xml:lang="en">Auto</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionsOrientation.sideBySide">
+      <source xml:lang="en">Side by Side</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionsOrientation.stacked">
+      <source xml:lang="en">Stacked</source>
+    </trans-unit>
     <trans-unit id="chat.toggleChatViewSessions.label">
       <source xml:lang="en">Show Sessions</source>
     </trans-unit>
@@ -901,6 +913,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessionReadIndicatorForeground">
+      <source xml:lang="en">Foreground color for the read indicator in an agent session.</source>
+    </trans-unit>
     <trans-unit id="chat.session.providerLabel.background">
       <source xml:lang="en">Background</source>
     </trans-unit>
@@ -938,12 +953,6 @@
     <trans-unit id="chat.openSessionInNewWindow.label">
       <source xml:lang="en">Open in New Window</source>
     </trans-unit>
-    <trans-unit id="diffFile">
-      <source xml:lang="en">1 file</source>
-    </trans-unit>
-    <trans-unit id="diffFiles">
-      <source xml:lang="en">{0} files</source>
-    </trans-unit>
     <trans-unit id="find">
       <source xml:lang="en">Find Agent Session</source>
     </trans-unit>
@@ -961,9 +970,6 @@
     </trans-unit>
     <trans-unit id="showAgentSessionsSidebar">
       <source xml:lang="en">Show Agent Sessions Sidebar</source>
-    </trans-unit>
-    <trans-unit id="showDiff">
-      <source xml:lang="en">Open Changes</source>
     </trans-unit>
     <trans-unit id="unarchive">
       <source xml:lang="en">Unarchive</source>
@@ -1033,6 +1039,12 @@
     </trans-unit>
     <trans-unit id="chat.session.status.inProgress">
       <source xml:lang="en">Working...</source>
+    </trans-unit>
+    <trans-unit id="diffFile">
+      <source xml:lang="en">1 file</source>
+    </trans-unit>
+    <trans-unit id="diffFiles">
+      <source xml:lang="en">{0} files</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext"><body>
@@ -1333,10 +1345,10 @@ Examples:
       <source xml:lang="en">Controls whether the input of the chat should be restored when an undo request is made. The input will be filled with the text of the request that was restored.</source>
     </trans-unit>
     <trans-unit id="chat.useAgentMd.description">
-      <source xml:lang="en">Controls whether instructions from `AGENTS.MD` file found in a workspace roots are attached to all chat requests.</source>
+      <source xml:lang="en">Controls whether instructions from `AGENTS.md` file found in a workspace roots are attached to all chat requests.</source>
     </trans-unit>
     <trans-unit id="chat.useAgentMd.title">
-      <source xml:lang="en">Use AGENTS.MD file</source>
+      <source xml:lang="en">Use AGENTS.md file</source>
     </trans-unit>
     <trans-unit id="chat.useClaudeSkills.description">
       <source xml:lang="en">Controls whether Claude skills found in the workspace and user home directories under `.claude/skills` are listed in all chat requests. The language model can load these skills on-demand if the `read` tool is available.</source>
@@ -1345,13 +1357,25 @@ Examples:
       <source xml:lang="en">Use Claude skills</source>
     </trans-unit>
     <trans-unit id="chat.useNestedAgentMd.description">
-      <source xml:lang="en">Controls whether instructions from nested `AGENTS.MD` files found in the workspace are listed in all chat requests. The language model can load these skills on-demand if the `read` tool is available.</source>
+      <source xml:lang="en">Controls whether instructions from nested `AGENTS.md` files found in the workspace are listed in all chat requests. The language model can load these skills on-demand if the `read` tool is available.</source>
     </trans-unit>
     <trans-unit id="chat.useNestedAgentMd.title">
-      <source xml:lang="en">Use nested AGENTS.MD files</source>
+      <source xml:lang="en">Use nested AGENTS.md files</source>
     </trans-unit>
     <trans-unit id="chat.viewSessions.enabled">
       <source xml:lang="en">Show chat agent sessions when chat is empty or to the side when chat view is wide enough.</source>
+    </trans-unit>
+    <trans-unit id="chat.viewSessions.orientation">
+      <source xml:lang="en">Controls the orientation of the chat agent sessions view when it is shown alongside the chat.</source>
+    </trans-unit>
+    <trans-unit id="chat.viewSessions.orientation.auto">
+      <source xml:lang="en">Automatically determine the orientation based on available space.</source>
+    </trans-unit>
+    <trans-unit id="chat.viewSessions.orientation.sideBySide">
+      <source xml:lang="en">Display sessions side by side if space is sufficient.</source>
+    </trans-unit>
+    <trans-unit id="chat.viewSessions.orientation.stacked">
+      <source xml:lang="en">Display sessions vertically stacked unless a chat session is visible.</source>
     </trans-unit>
     <trans-unit id="chat.viewTitle.enabled">
       <source xml:lang="en">Show the title of the chat above the chat in the chat view.</source>
@@ -4366,6 +4390,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chatHasAgents">
       <source xml:lang="en">True when the chat has custom agents available.</source>
+    </trans-unit>
+    <trans-unit id="chatHasCanDelegateProviders">
+      <source xml:lang="en">True when there are chat session providers with delegation support available.</source>
     </trans-unit>
     <trans-unit id="chatHasFileAttachments">
       <source xml:lang="en">True when the chat has file attachments.</source>

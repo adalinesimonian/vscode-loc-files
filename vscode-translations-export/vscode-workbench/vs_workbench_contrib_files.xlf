@@ -966,11 +966,11 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
       <source xml:lang="en">When enabled, insert a final new line at the end of the file when saving it.</source>
     </trans-unit>
     <trans-unit id="modification">
-      <source xml:lang="en">Format modifications (requires source control).</source>
+      <source xml:lang="en">Format modifications. Requires source control and a formatter that supports 'Format Selection'.</source>
       <note>This is the description of an option</note>
     </trans-unit>
     <trans-unit id="modificationIfAvailable">
-      <source xml:lang="en">Will attempt to format modifications only (requires source control). If source control can't be used, then the whole file will be formatted.</source>
+      <source xml:lang="en">Will attempt to format modifications only (requires source control and a formatter that supports 'Format Selection'). If source control can't be used, then the whole file will be formatted.</source>
       <note>This is the description of an option</note>
     </trans-unit>
     <trans-unit id="openEditorsSortOrder">
