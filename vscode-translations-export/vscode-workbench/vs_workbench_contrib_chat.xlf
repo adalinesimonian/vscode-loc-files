@@ -147,6 +147,9 @@
     <trans-unit id="workbench.action.chat.focus">
       <source xml:lang="en">To focus the chat request and response list, invoke the Focus Chat command{0}. This will move focus to the most recent response, which you can then navigate using the up and down arrow keys.</source>
     </trans-unit>
+    <trans-unit id="workbench.action.chat.focusAgentSessionsViewer">
+      <source xml:lang="en">You can focus the agent sessions list by invoking the Focus Agent Sessions command{0}.</source>
+    </trans-unit>
     <trans-unit id="workbench.action.chat.focusInput">
       <source xml:lang="en">To focus the input box for chat requests, invoke the Focus Chat Input command{0}.</source>
     </trans-unit>
@@ -916,6 +919,12 @@
     <trans-unit id="agentSessionReadIndicatorForeground">
       <source xml:lang="en">Foreground color for the read indicator in an agent session.</source>
     </trans-unit>
+    <trans-unit id="agentSessionSelectedBadgeBorder">
+      <source xml:lang="en">Border color for the badges in selected agent session items.</source>
+    </trans-unit>
+    <trans-unit id="agentSessionSelectedUnfocusedBadgeBorder">
+      <source xml:lang="en">Border color for the badges in selected agent session items when the view is unfocused.</source>
+    </trans-unit>
     <trans-unit id="chat.session.providerLabel.background">
       <source xml:lang="en">Background</source>
     </trans-unit>
@@ -943,6 +952,9 @@
     </trans-unit>
     <trans-unit id="archiveSessionDescription">
       <source xml:lang="en">You have pending changes in this chat session.</source>
+    </trans-unit>
+    <trans-unit id="chat.focusAgentSessionsViewer.label">
+      <source xml:lang="en">Focus Agent Sessions</source>
     </trans-unit>
     <trans-unit id="chat.openSessionInEditorGroup.label">
       <source xml:lang="en">Open as Editor</source>
@@ -1019,6 +1031,18 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsViewer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessionCompleted">
+      <source xml:lang="en">completed</source>
+    </trans-unit>
+    <trans-unit id="agentSessionFailed">
+      <source xml:lang="en">failed</source>
+    </trans-unit>
+    <trans-unit id="agentSessionInProgress">
+      <source xml:lang="en">in progress</source>
+    </trans-unit>
+    <trans-unit id="agentSessionItemAriaLabel">
+      <source xml:lang="en">Agent session {0} ({1}), created {2}</source>
+    </trans-unit>
     <trans-unit id="agentSessions">
       <source xml:lang="en">Agent Sessions</source>
     </trans-unit>
