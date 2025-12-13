@@ -1391,9 +1391,6 @@ Please make sure there is no space between the right bracket and left parenthesi
     <trans-unit id="command.rebaseAbort">
       <source xml:lang="en">Abort Rebase</source>
     </trans-unit>
-    <trans-unit id="command.commitMessageAccept">
-      <source xml:lang="en">Accept Commit Message</source>
-    </trans-unit>
     <trans-unit id="command.addRemote">
       <source xml:lang="en">Add Remote...</source>
     </trans-unit>
@@ -1456,6 +1453,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="submenu.branch">
       <source xml:lang="en">Branch</source>
+    </trans-unit>
+    <trans-unit id="command.commitMessageDiscard">
+      <source xml:lang="en">Cancel</source>
     </trans-unit>
     <trans-unit id="submenu.changes">
       <source xml:lang="en">Changes</source>
@@ -1557,6 +1557,9 @@ Please make sure there is no space between the right bracket and left parenthesi
       <source xml:lang="en">Color for untracked resources.</source>
     </trans-unit>
     <trans-unit id="submenu.commit">
+      <source xml:lang="en">Commit</source>
+    </trans-unit>
+    <trans-unit id="command.commitMessageAccept">
       <source xml:lang="en">Commit</source>
     </trans-unit>
     <trans-unit id="command.commit">
@@ -1903,9 +1906,6 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="command.clean">
       <source xml:lang="en">Discard Changes</source>
-    </trans-unit>
-    <trans-unit id="command.commitMessageDiscard">
-      <source xml:lang="en">Discard Commit Message</source>
     </trans-unit>
     <trans-unit id="config.postCommitCommand.none">
       <source xml:lang="en">Don&apos;t run any command after a commit.</source>

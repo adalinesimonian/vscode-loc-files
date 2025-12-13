@@ -25,7 +25,7 @@
       <source xml:lang="en">To remove attached contexts, focus an attachment and press Delete or Backspace.</source>
     </trans-unit>
     <trans-unit id="chat.differencePanel">
-      <source xml:lang="en">The panel chat view is a persistent interface that also supports navigating suggested follow-up questions, while the quick chat view is a transient interface for making and viewing requests.</source>
+      <source xml:lang="en">The chat view is a persistent interface that also supports navigating suggested follow-up questions, while the quick chat view is a transient interface for making and viewing requests.</source>
     </trans-unit>
     <trans-unit id="chat.differenceQuick">
       <source xml:lang="en">The quick chat view is a transient interface for making and viewing requests, while the panel chat view is a persistent interface that also supports navigating suggested follow-up questions.</source>
@@ -156,6 +156,9 @@
     <trans-unit id="workbench.action.chat.focusLastFocusedItem">
       <source xml:lang="en">To return to the last chat response you focused, invoke the Focus Last Focused Chat Response command{0}.</source>
     </trans-unit>
+    <trans-unit id="workbench.action.chat.history">
+      <source xml:lang="en">To view all chat sessions, invoke the Show Chats command{0}.</source>
+    </trans-unit>
     <trans-unit id="workbench.action.chat.newChat">
       <source xml:lang="en">To create a new chat session, invoke the New Chat command{0}.</source>
     </trans-unit>
@@ -191,47 +194,11 @@
     <trans-unit id="chat.category">
       <source xml:lang="en">Chat</source>
     </trans-unit>
-    <trans-unit id="chat.clear.label">
-      <source xml:lang="en">Clear All Workspace Chats</source>
-    </trans-unit>
     <trans-unit id="chat.editToolApproval.description">
       <source xml:lang="en">Edit/manage the tool approval and confirmation preferences for AI chat agents.</source>
     </trans-unit>
     <trans-unit id="chat.editToolApproval.label">
       <source xml:lang="en">Manage Tool Approval</source>
-    </trans-unit>
-    <trans-unit id="chat.history.label">
-      <source xml:lang="en">Show Chats...</source>
-    </trans-unit>
-    <trans-unit id="chat.history.recent">
-      <source xml:lang="en">Recent Chats</source>
-    </trans-unit>
-    <trans-unit id="chat.history.rename">
-      <source xml:lang="en">Rename</source>
-    </trans-unit>
-    <trans-unit id="chat.history.showMore">
-      <source xml:lang="en">Show more...</source>
-    </trans-unit>
-    <trans-unit id="chat.history.showMoreAgents">
-      <source xml:lang="en">Show more...</source>
-    </trans-unit>
-    <trans-unit id="chat.openNewChatToTheSide.label">
-      <source xml:lang="en">Open New Chat Editor to the Side</source>
-    </trans-unit>
-    <trans-unit id="chat.sessionsOrientation">
-      <source xml:lang="en">Sessions Orientation</source>
-    </trans-unit>
-    <trans-unit id="chat.sessionsOrientation.auto">
-      <source xml:lang="en">Auto</source>
-    </trans-unit>
-    <trans-unit id="chat.sessionsOrientation.sideBySide">
-      <source xml:lang="en">Side by Side</source>
-    </trans-unit>
-    <trans-unit id="chat.sessionsOrientation.stacked">
-      <source xml:lang="en">Stacked</source>
-    </trans-unit>
-    <trans-unit id="chat.toggleChatViewSessions.label">
-      <source xml:lang="en">Show Sessions</source>
     </trans-unit>
     <trans-unit id="chat.toggleChatViewTitle.label">
       <source xml:lang="en">Show Chat Title</source>
@@ -251,12 +218,6 @@
     <trans-unit id="chatQuotaExceededButton">
       <source xml:lang="en">GitHub Copilot Free plan chat messages quota reached. Click for details.</source>
     </trans-unit>
-    <trans-unit id="chatSessions.newChatInSideBar">
-      <source xml:lang="en">Open New Chat in Side Bar</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.openNewChatInNewWindow">
-      <source xml:lang="en">Open New Chat in New Window</source>
-    </trans-unit>
     <trans-unit id="completionsQuotaExceeded">
       <source xml:lang="en">You've reached your monthly inline suggestions quota. You still have free chat messages available.</source>
     </trans-unit>
@@ -268,9 +229,6 @@
     </trans-unit>
     <trans-unit id="copilotQuotaReached">
       <source xml:lang="en">GitHub Copilot Quota Reached</source>
-    </trans-unit>
-    <trans-unit id="currentChatLabel">
-      <source xml:lang="en">current</source>
     </trans-unit>
     <trans-unit id="dismiss">
       <source xml:lang="en">Dismiss</source>
@@ -290,24 +248,6 @@
     <trans-unit id="interactiveSession.focusInput.label">
       <source xml:lang="en">Focus Chat Input</source>
     </trans-unit>
-    <trans-unit id="interactiveSession.history.clear">
-      <source xml:lang="en">Clear All Workspace Chats</source>
-    </trans-unit>
-    <trans-unit id="interactiveSession.history.delete">
-      <source xml:lang="en">Delete</source>
-    </trans-unit>
-    <trans-unit id="interactiveSession.history.editor">
-      <source xml:lang="en">Open in Editor</source>
-    </trans-unit>
-    <trans-unit id="interactiveSession.history.pick">
-      <source xml:lang="en">Switch to chat</source>
-    </trans-unit>
-    <trans-unit id="interactiveSession.history.title">
-      <source xml:lang="en">Workspace Chat History</source>
-    </trans-unit>
-    <trans-unit id="interactiveSession.history.titleAll">
-      <source xml:lang="en">All Workspace Chat History</source>
-    </trans-unit>
     <trans-unit id="interactiveSession.newChatWindow">
       <source xml:lang="en">New Chat Window</source>
     </trans-unit>
@@ -319,9 +259,6 @@
     </trans-unit>
     <trans-unit id="more">
       <source xml:lang="en">More...</source>
-    </trans-unit>
-    <trans-unit id="newChatTitle">
-      <source xml:lang="en">New chat title</source>
     </trans-unit>
     <trans-unit id="openChat">
       <source xml:lang="en">Open Chat</source>
@@ -349,9 +286,6 @@
     </trans-unit>
     <trans-unit id="signInToChatSetup">
       <source xml:lang="en">Sign in to use AI features...</source>
-    </trans-unit>
-    <trans-unit id="switchChat.confirmPhrase">
-      <source xml:lang="en">Switching chats will end your current edit session.</source>
     </trans-unit>
     <trans-unit id="switchMode.confirmPhrase">
       <source xml:lang="en">Switching agents will end your current edit session.</source>
@@ -673,7 +607,7 @@
       <source xml:lang="en">New Chat</source>
     </trans-unit>
     <trans-unit id="chat.redoEdit.label">
-      <source xml:lang="en">Redo Last Request</source>
+      <source xml:lang="en">Redo Last Edit</source>
     </trans-unit>
     <trans-unit id="chat.redoEdit.label2">
       <source xml:lang="en">Redo</source>
@@ -682,7 +616,7 @@
       <source xml:lang="en">Reapply discarded workspace changes and chat</source>
     </trans-unit>
     <trans-unit id="chat.undoEdit.label">
-      <source xml:lang="en">Undo Last Request</source>
+      <source xml:lang="en">Undo Last Edit</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatPromptNavigationActions" source-language="en" datatype="plaintext"><body>
@@ -714,50 +648,6 @@
     </trans-unit>
     <trans-unit id="toggle.query">
       <source xml:lang="en">The query to open the quick chat with</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatSessionActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.openSessionInSidebar.label">
-      <source xml:lang="en">Move Chat into Side Bar</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.toggleDescriptionDisplay.label">
-      <source xml:lang="en">Show Rich Descriptions</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.toggleViewLocation.label">
-      <source xml:lang="en">Combined Sessions View</source>
-    </trans-unit>
-    <trans-unit id="deleteSession">
-      <source xml:lang="en">Delete</source>
-    </trans-unit>
-    <trans-unit id="deleteSession.confirm">
-      <source xml:lang="en">Are you sure you want to delete this chat session?</source>
-    </trans-unit>
-    <trans-unit id="deleteSession.delete">
-      <source xml:lang="en">Delete</source>
-    </trans-unit>
-    <trans-unit id="deleteSession.detail">
-      <source xml:lang="en">This action cannot be undone.</source>
-    </trans-unit>
-    <trans-unit id="interactiveSession.open">
-      <source xml:lang="en">New Chat Editor</source>
-    </trans-unit>
-    <trans-unit id="openSessionInSidebar">
-      <source xml:lang="en">Open in Sidebar</source>
-    </trans-unit>
-    <trans-unit id="renameSession">
-      <source xml:lang="en">Rename</source>
-    </trans-unit>
-    <trans-unit id="renameSession.emptyName">
-      <source xml:lang="en">Name cannot be empty</source>
-    </trans-unit>
-    <trans-unit id="renameSession.error">
-      <source xml:lang="en">Failed to rename chat session: {0}</source>
-    </trans-unit>
-    <trans-unit id="renameSession.nameTooLong">
-      <source xml:lang="en">Name is too long (maximum 100 characters)</source>
-    </trans-unit>
-    <trans-unit id="renameSession.placeholder">
-      <source xml:lang="en">Enter new name for chat session</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatTitleActions" source-language="en" datatype="plaintext"><body>
@@ -936,22 +826,37 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessions.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentSessions.view.label">
-      <source xml:lang="en">Agents</source>
-    </trans-unit>
     <trans-unit id="filterAgentSessions">
       <source xml:lang="en">Filter Agent Sessions</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessions.open">
+      <source xml:lang="en">Open Agent Session...</source>
+    </trans-unit>
     <trans-unit id="archive">
       <source xml:lang="en">Archive</source>
+    </trans-unit>
+    <trans-unit id="archiveAllSessions.archive">
+      <source xml:lang="en">Archive</source>
+    </trans-unit>
+    <trans-unit id="archiveAllSessions.confirm">
+      <source xml:lang="en">Are you sure you want to archive {0} agent sessions?</source>
+    </trans-unit>
+    <trans-unit id="archiveAllSessions.confirmSingle">
+      <source xml:lang="en">Are you sure you want to archive 1 agent session?</source>
+    </trans-unit>
+    <trans-unit id="archiveAllSessions.detail">
+      <source xml:lang="en">You can unarchive sessions later if needed from the Chat view.</source>
     </trans-unit>
     <trans-unit id="archiveSession">
       <source xml:lang="en">Archive chat with pending edits?</source>
     </trans-unit>
     <trans-unit id="archiveSessionDescription">
       <source xml:lang="en">You have pending changes in this chat session.</source>
+    </trans-unit>
+    <trans-unit id="chat.clear.label">
+      <source xml:lang="en">Archive All Workspace Agent Sessions</source>
     </trans-unit>
     <trans-unit id="chat.focusAgentSessionsViewer.label">
       <source xml:lang="en">Focus Agent Sessions</source>
@@ -965,6 +870,21 @@
     <trans-unit id="chat.openSessionInNewWindow.label">
       <source xml:lang="en">Open in New Window</source>
     </trans-unit>
+    <trans-unit id="chat.sessionsOrientation">
+      <source xml:lang="en">Sessions Orientation</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionsOrientation.auto">
+      <source xml:lang="en">Auto</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionsOrientation.sideBySide">
+      <source xml:lang="en">Side by Side</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionsOrientation.stacked">
+      <source xml:lang="en">Stacked</source>
+    </trans-unit>
+    <trans-unit id="chat.toggleChatViewSessions.label">
+      <source xml:lang="en">Show Sessions</source>
+    </trans-unit>
     <trans-unit id="find">
       <source xml:lang="en">Find Agent Session</source>
     </trans-unit>
@@ -977,8 +897,14 @@
     <trans-unit id="markUnread">
       <source xml:lang="en">Mark as Unread</source>
     </trans-unit>
+    <trans-unit id="newChatTitle">
+      <source xml:lang="en">New agent session title</source>
+    </trans-unit>
     <trans-unit id="refresh">
       <source xml:lang="en">Refresh Agent Sessions</source>
+    </trans-unit>
+    <trans-unit id="rename">
+      <source xml:lang="en">Rename...</source>
     </trans-unit>
     <trans-unit id="showAgentSessionsSidebar">
       <source xml:lang="en">Show Agent Sessions Sidebar</source>
@@ -1006,28 +932,37 @@
     <trans-unit id="chatSessionStatus.inProgress">
       <source xml:lang="en">In Progress</source>
     </trans-unit>
+    <trans-unit id="chatSessionStatus.needsInput">
+      <source xml:lang="en">Input Needed</source>
+    </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsView" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentSessions.newSession">
-      <source xml:lang="en">New Session</source>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="archiveSession">
+      <source xml:lang="en">Archive</source>
     </trans-unit>
-    <trans-unit id="agentSessions.newSessionAriaLabel">
-      <source xml:lang="en">New Session</source>
+    <trans-unit id="archivedSessions">
+      <source xml:lang="en">Archived</source>
     </trans-unit>
-    <trans-unit id="agentSessions.refreshing">
-      <source xml:lang="en">Refreshing agent sessions...</source>
+    <trans-unit id="chatAgentPickerPlaceholder">
+      <source xml:lang="en">Search agent sessions by name</source>
     </trans-unit>
-    <trans-unit id="newBackgroundSession">
-      <source xml:lang="en">New Background Session</source>
+    <trans-unit id="newChatTitle">
+      <source xml:lang="en">New agent session title</source>
     </trans-unit>
-    <trans-unit id="newChatSessionDefault">
-      <source xml:lang="en">New Local Session</source>
+    <trans-unit id="olderSessions">
+      <source xml:lang="en">Older</source>
     </trans-unit>
-    <trans-unit id="newChatSessionFromProvider">
-      <source xml:lang="en">New {0}</source>
+    <trans-unit id="recentSessions">
+      <source xml:lang="en">Recent</source>
     </trans-unit>
-    <trans-unit id="newCloudSession">
-      <source xml:lang="en">New Cloud Session</source>
+    <trans-unit id="renameSession">
+      <source xml:lang="en">Rename</source>
+    </trans-unit>
+    <trans-unit id="todaySessions">
+      <source xml:lang="en">Today</source>
+    </trans-unit>
+    <trans-unit id="unarchiveSession">
+      <source xml:lang="en">Unarchive</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsViewer" source-language="en" datatype="plaintext"><body>
@@ -1041,7 +976,10 @@
       <source xml:lang="en">in progress</source>
     </trans-unit>
     <trans-unit id="agentSessionItemAriaLabel">
-      <source xml:lang="en">Agent session {0} ({1}), created {2}</source>
+      <source xml:lang="en">{0} session {1} ({2}), created {3}</source>
+    </trans-unit>
+    <trans-unit id="agentSessionNeedsInput">
+      <source xml:lang="en">needs input</source>
     </trans-unit>
     <trans-unit id="agentSessions">
       <source xml:lang="en">Agent Sessions</source>
@@ -1063,6 +1001,9 @@
     </trans-unit>
     <trans-unit id="chat.session.status.inProgress">
       <source xml:lang="en">Working...</source>
+    </trans-unit>
+    <trans-unit id="chat.session.status.needsInput">
+      <source xml:lang="en">Input needed.</source>
     </trans-unit>
     <trans-unit id="diffFile">
       <source xml:lang="en">1 file</source>
@@ -1110,7 +1051,7 @@ This feature disables critical security protections and makes it much easier for
       <source xml:lang="en">Chat</source>
     </trans-unit>
     <trans-unit id="chat.agent.enabled.description">
-      <source xml:lang="en">Enable agent mode for chat. When this is enabled, agent mode can be activated via the dropdown in the view.</source>
+      <source xml:lang="en">When enabled, agent mode can be activated from chat and tools in agentic contexts with side effects can be used.</source>
     </trans-unit>
     <trans-unit id="chat.agent.maxRequests">
       <source xml:lang="en">The maximum number of requests to allow per-turn when using an agent. When the limit is reached, will ask to confirm to continue.</source>
@@ -1315,12 +1256,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
     </trans-unit>
     <trans-unit id="chat.sendElementsToChat.enabled">
       <source xml:lang="en">Controls whether elements can be sent to chat from the Simple Browser.</source>
-    </trans-unit>
-    <trans-unit id="chat.sessionsViewLocation.description">
-      <source xml:lang="en">Controls where to show the agent sessions menu.</source>
-    </trans-unit>
-    <trans-unit id="chat.showAgentSessionsViewDescription">
-      <source xml:lang="en">Controls whether session descriptions are displayed on a second row in the Chat Sessions view.</source>
     </trans-unit>
     <trans-unit id="chat.statusWidget.enabled.description">
       <source xml:lang="en">Controls which user type should see the status widget in new chat sessions when quota is exceeded.</source>
@@ -1575,9 +1510,6 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.terminalCommandHoverCommandTitleExit">
       <source xml:lang="en">Command: {0}, exit code: {1}</source>
-    </trans-unit>
-    <trans-unit id="chat.terminalCommandHoverHint">
-      <source xml:lang="en">Click to focus this command in the terminal.</source>
     </trans-unit>
     <trans-unit id="chat.terminalCommandHoverOutputTitle">
       <source xml:lang="en">Output:</source>
@@ -2006,6 +1938,9 @@ Examples:
     </trans-unit>
     <trans-unit id="hideTerminalOutput">
       <source xml:lang="en">Hide Output</source>
+    </trans-unit>
+    <trans-unit id="showAndFocusTerminal">
+      <source xml:lang="en">Show and Focus Terminal</source>
     </trans-unit>
     <trans-unit id="showTerminal">
       <source xml:lang="en">Show and Focus Terminal</source>
@@ -3128,9 +3063,6 @@ Examples:
     <trans-unit id="icon.light">
       <source xml:lang="en">Icon path when a light theme is used</source>
     </trans-unit>
-    <trans-unit id="interactiveSession.chatSessionSubMenuTitle">
-      <source xml:lang="en">Create chat session</source>
-    </trans-unit>
     <trans-unit id="interactiveSession.openNewSessionEditor">
       <source xml:lang="en">New {0}</source>
     </trans-unit>
@@ -3144,61 +3076,6 @@ Examples:
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions/chatSessionPickerActionItem" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.sessionPicker.label">
       <source xml:lang="en">Pick Option</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/view/chatSessionsView" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.agent.sessions">
-      <source xml:lang="en">Agent Sessions</source>
-    </trans-unit>
-    <trans-unit id="chat.agent.sessions.title">
-      <source xml:lang="en">Agent Sessions</source>
-    </trans-unit>
-    <trans-unit id="chat.sessions.gettingStarted">
-      <source xml:lang="en">Getting Started</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.noResults">
-      <source xml:lang="en">No local chat agent sessions
-[Start an Agent Session](command:{0})</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/view/sessionsTreeRenderer" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.sessions.archivedSessions">
-      <source xml:lang="en">History</source>
-    </trans-unit>
-    <trans-unit id="chat.sessions.groupNode.multiple">
-      <source xml:lang="en">{0} sessions</source>
-    </trans-unit>
-    <trans-unit id="chat.sessions.groupNode.single">
-      <source xml:lang="en">1 session</source>
-    </trans-unit>
-    <trans-unit id="chat.sessions.lastActivity">
-      <source xml:lang="en">Last Activity: {0}</source>
-    </trans-unit>
-    <trans-unit id="chatSessionInputAriaLabel">
-      <source xml:lang="en">Type session name. Press Enter to confirm or Escape to cancel.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/view/sessionsViewPane" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatSession.selectOption">
-      <source xml:lang="en">More...</source>
-    </trans-unit>
-    <trans-unit id="chatSessions">
-      <source xml:lang="en">Chat Sessions</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.dragLabel">
-      <source xml:lang="en">{0} agent sessions</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.installExtensions">
-      <source xml:lang="en">Install Agents...</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.learnMoreGHCodingAgent">
-      <source xml:lang="en">Learn More About GitHub Copilot coding agent</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.loading">
-      <source xml:lang="en">Loading chat sessions...</source>
-    </trans-unit>
-    <trans-unit id="chatSessions.refreshing">
-      <source xml:lang="en">Refreshing chat sessions...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSetup/chatSetupContributions" source-language="en" datatype="plaintext"><body>
@@ -3624,6 +3501,9 @@ Examples:
     <trans-unit id="chat">
       <source xml:lang="en">Chat</source>
     </trans-unit>
+    <trans-unit id="chat.pickAgentSession">
+      <source xml:lang="en">Pick Agent Session</source>
+    </trans-unit>
     <trans-unit id="chatTitleWithPrefixCustom">
       <source xml:lang="en">Chat: {0}</source>
     </trans-unit>
@@ -3769,7 +3649,7 @@ Examples:
       <source xml:lang="en">{0} (Suggested)</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/contrib/screenshot" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/chat/browser/contrib/chatScreenshotContext" source-language="en" datatype="plaintext"><body>
     <trans-unit id="screenshot">
       <source xml:lang="en">Screenshot</source>
     </trans-unit>
@@ -4367,9 +4247,6 @@ Examples:
     <trans-unit id="agentSessionHasChanges">
       <source xml:lang="en">True when the current agent session item has changes.</source>
     </trans-unit>
-    <trans-unit id="agentSessionIsActive">
-      <source xml:lang="en">True when the agent session is currently active (not deletable).</source>
-    </trans-unit>
     <trans-unit id="agentSessionIsArchived">
       <source xml:lang="en">True when the agent session item is archived.</source>
     </trans-unit>
@@ -4420,9 +4297,6 @@ Examples:
     </trans-unit>
     <trans-unit id="chatHasFileAttachments">
       <source xml:lang="en">True when the chat has file attachments.</source>
-    </trans-unit>
-    <trans-unit id="chatIsCombinedSessionViewer">
-      <source xml:lang="en">True when the chat session viewer uses the new combined style.</source>
     </trans-unit>
     <trans-unit id="chatIsEnabled">
       <source xml:lang="en">True when chat is enabled because a default chat participant is activated with an implementation.</source>

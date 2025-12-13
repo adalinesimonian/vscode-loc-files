@@ -426,9 +426,6 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     <trans-unit id="views">
       <source xml:lang="en">Views</source>
     </trans-unit>
-    <trans-unit id="views.agentSessions">
-      <source xml:lang="en">Contributes views to Agent Sessions container in the Activity bar. To contribute to this container, the 'chatSessionsProvider' API proposal must be enabled.</source>
-    </trans-unit>
     <trans-unit id="views.container.activitybar">
       <source xml:lang="en">Contribute views containers to Activity Bar</source>
     </trans-unit>
@@ -2047,6 +2044,9 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="icons">
       <source xml:lang="en">Render breadcrumb items with icons.</source>
     </trans-unit>
+    <trans-unit id="symbolPathSeparator">
+      <source xml:lang="en">The separator used when copying the breadcrumb symbol path.</source>
+    </trans-unit>
     <trans-unit id="symbolSortOrder">
       <source xml:lang="en">Controls how symbols are sorted in the breadcrumbs outline view.</source>
     </trans-unit>
@@ -2084,6 +2084,9 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="breadcrumbsVisible">
       <source xml:lang="en">Whether breadcrumbs are currently visible</source>
+    </trans-unit>
+    <trans-unit id="cmd.copyPath">
+      <source xml:lang="en">Copy Breadcrumbs Path</source>
     </trans-unit>
     <trans-unit id="cmd.focus">
       <source xml:lang="en">Focus Breadcrumbs</source>
