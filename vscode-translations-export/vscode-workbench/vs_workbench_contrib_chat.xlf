@@ -909,6 +909,9 @@
     <trans-unit id="showAgentSessionsSidebar">
       <source xml:lang="en">Show Agent Sessions Sidebar</source>
     </trans-unit>
+    <trans-unit id="toggleAgentSessionsSidebar">
+      <source xml:lang="en">Toggle Agent Sessions Sidebar</source>
+    </trans-unit>
     <trans-unit id="unarchive">
       <source xml:lang="en">Unarchive</source>
     </trans-unit>
@@ -981,11 +984,29 @@
     <trans-unit id="agentSessionNeedsInput">
       <source xml:lang="en">needs input</source>
     </trans-unit>
+    <trans-unit id="agentSessionSectionAriaLabel">
+      <source xml:lang="en">{0} sessions section</source>
+    </trans-unit>
     <trans-unit id="agentSessions">
       <source xml:lang="en">Agent Sessions</source>
     </trans-unit>
+    <trans-unit id="agentSessions.activeSection">
+      <source xml:lang="en">Active</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.archivedSection">
+      <source xml:lang="en">Archived</source>
+    </trans-unit>
     <trans-unit id="agentSessions.dragLabel">
       <source xml:lang="en">{0} agent sessions</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.olderSection">
+      <source xml:lang="en">Older</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.todaySection">
+      <source xml:lang="en">Today</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.weekSection">
+      <source xml:lang="en">Week</source>
     </trans-unit>
     <trans-unit id="chat.session.status.completed">
       <source xml:lang="en">Finished</source>
@@ -4256,6 +4277,9 @@ Examples:
     <trans-unit id="agentSessionType">
       <source xml:lang="en">The type of the current agent session item.</source>
     </trans-unit>
+    <trans-unit id="agentSessionsViewerFocused">
+      <source xml:lang="en">If the agent sessions view in the chat view is focused.</source>
+    </trans-unit>
     <trans-unit id="agentSessionsViewerLimited">
       <source xml:lang="en">If the agent sessions view in the chat view is limited to show recent sessions only.</source>
     </trans-unit>
@@ -4264,6 +4288,9 @@ Examples:
     </trans-unit>
     <trans-unit id="agentSessionsViewerPosition">
       <source xml:lang="en">Position of the agent sessions view in the chat view.</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsViewerVisible">
+      <source xml:lang="en">Visibility of the agent sessions view in the chat view.</source>
     </trans-unit>
     <trans-unit id="agentSupportsAttachments">
       <source xml:lang="en">True when the chat agent supports attachments.</source>
