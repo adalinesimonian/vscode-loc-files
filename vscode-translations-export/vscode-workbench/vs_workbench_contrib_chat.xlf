@@ -849,6 +849,21 @@
     <trans-unit id="archiveAllSessions.detail">
       <source xml:lang="en">You can unarchive sessions later if needed from the Chat view.</source>
     </trans-unit>
+    <trans-unit id="archiveSection">
+      <source xml:lang="en">Archive All</source>
+    </trans-unit>
+    <trans-unit id="archiveSectionSessions.archive">
+      <source xml:lang="en">Archive All</source>
+    </trans-unit>
+    <trans-unit id="archiveSectionSessions.confirm">
+      <source xml:lang="en">Are you sure you want to archive {0} agent sessions from '{1}'?</source>
+    </trans-unit>
+    <trans-unit id="archiveSectionSessions.confirmSingle">
+      <source xml:lang="en">Are you sure you want to archive 1 agent session from '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="archiveSectionSessions.detail">
+      <source xml:lang="en">You can unarchive sessions later if needed from the sessions view.</source>
+    </trans-unit>
     <trans-unit id="archiveSession">
       <source xml:lang="en">Archive chat with pending edits?</source>
     </trans-unit>
@@ -943,26 +958,14 @@
     <trans-unit id="archiveSession">
       <source xml:lang="en">Archive</source>
     </trans-unit>
-    <trans-unit id="archivedSessions">
-      <source xml:lang="en">Archived</source>
-    </trans-unit>
     <trans-unit id="chatAgentPickerPlaceholder">
       <source xml:lang="en">Search agent sessions by name</source>
     </trans-unit>
     <trans-unit id="newChatTitle">
       <source xml:lang="en">New agent session title</source>
     </trans-unit>
-    <trans-unit id="olderSessions">
-      <source xml:lang="en">Older</source>
-    </trans-unit>
-    <trans-unit id="recentSessions">
-      <source xml:lang="en">Recent</source>
-    </trans-unit>
     <trans-unit id="renameSession">
       <source xml:lang="en">Rename</source>
-    </trans-unit>
-    <trans-unit id="todaySessions">
-      <source xml:lang="en">Today</source>
     </trans-unit>
     <trans-unit id="unarchiveSession">
       <source xml:lang="en">Unarchive</source>
@@ -1007,6 +1010,9 @@
     </trans-unit>
     <trans-unit id="agentSessions.weekSection">
       <source xml:lang="en">Week</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.yesterdaySection">
+      <source xml:lang="en">Yesterday</source>
     </trans-unit>
     <trans-unit id="chat.session.status.completed">
       <source xml:lang="en">Finished</source>
@@ -1575,14 +1581,6 @@ Examples:
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatCodeCitationContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="viewMatches">
       <source xml:lang="en">View matches</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatCollapsibleContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="usedReferencesCollapsed">
-      <source xml:lang="en">{0}, collapsed</source>
-    </trans-unit>
-    <trans-unit id="usedReferencesExpanded">
-      <source xml:lang="en">{0}, expanded</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatCommandContentPart" source-language="en" datatype="plaintext"><body>
@@ -4273,6 +4271,9 @@ Examples:
     </trans-unit>
     <trans-unit id="agentSessionIsRead">
       <source xml:lang="en">True when the agent session item is read.</source>
+    </trans-unit>
+    <trans-unit id="agentSessionSection">
+      <source xml:lang="en">The section of the current agent session section item.</source>
     </trans-unit>
     <trans-unit id="agentSessionType">
       <source xml:lang="en">The type of the current agent session item.</source>
