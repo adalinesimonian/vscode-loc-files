@@ -993,14 +993,14 @@
     <trans-unit id="agentSessions">
       <source xml:lang="en">Agent Sessions</source>
     </trans-unit>
-    <trans-unit id="agentSessions.activeSection">
-      <source xml:lang="en">Active</source>
-    </trans-unit>
     <trans-unit id="agentSessions.archivedSection">
       <source xml:lang="en">Archived</source>
     </trans-unit>
     <trans-unit id="agentSessions.dragLabel">
       <source xml:lang="en">{0} agent sessions</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.inProgressSection">
+      <source xml:lang="en">In Progress</source>
     </trans-unit>
     <trans-unit id="agentSessions.olderSection">
       <source xml:lang="en">Older</source>
@@ -1009,7 +1009,7 @@
       <source xml:lang="en">Today</source>
     </trans-unit>
     <trans-unit id="agentSessions.weekSection">
-      <source xml:lang="en">Week</source>
+      <source xml:lang="en">Last Week</source>
     </trans-unit>
     <trans-unit id="agentSessions.yesterdaySection">
       <source xml:lang="en">Yesterday</source>
@@ -1599,15 +1599,6 @@ Examples:
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatConfirmationWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.confirmationWidget.ariaLabel">
       <source xml:lang="en">Chat Confirmation Dialog {0} {1}</source>
-    </trans-unit>
-    <trans-unit id="chat.untitledChat">
-      <source xml:lang="en">Untitled Chat</source>
-    </trans-unit>
-    <trans-unit id="chatTitle">
-      <source xml:lang="en">Chat: {0}</source>
-    </trans-unit>
-    <trans-unit id="notificationDetail">
-      <source xml:lang="en">Approval needed to continue.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatExtensionsContentPart" source-language="en" datatype="plaintext"><body>
@@ -3523,9 +3514,6 @@ Examples:
     <trans-unit id="chat.pickAgentSession">
       <source xml:lang="en">Pick Agent Session</source>
     </trans-unit>
-    <trans-unit id="chatTitleWithPrefixCustom">
-      <source xml:lang="en">Chat: {0}</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentTitle">
@@ -3589,6 +3577,17 @@ Examples:
       <source xml:lang="en">By continuing with {0} Copilot, you agree to {1}'s [Terms]({2}) and [Privacy Statement]({3}).</source>
       <note>{Locked="]({2})"}
 {Locked="]({3})"}</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatWindowNotifier" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.untitledChat">
+      <source xml:lang="en">Untitled Chat</source>
+    </trans-unit>
+    <trans-unit id="chatTitle">
+      <source xml:lang="en">Chat: {0}</source>
+    </trans-unit>
+    <trans-unit id="notificationDetail">
+      <source xml:lang="en">Approval needed to continue.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/codeBlockPart" source-language="en" datatype="plaintext"><body>
@@ -3806,7 +3805,7 @@ Examples:
       <source xml:lang="en">Run the '{0}' tool?</source>
     </trans-unit>
     <trans-unit id="defaultToolConfirmation.title">
-      <source xml:lang="en">Allow tool to execute?</source>
+      <source xml:lang="en">Confirm tool execution</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modePickerActionItem" source-language="en" datatype="plaintext"><body>
@@ -4611,10 +4610,16 @@ Examples:
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/chatPromptFilesContribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatContribution.property.description">
-      <source xml:lang="en">(Optional) Description of the file.</source>
+      <source xml:lang="en">(Optional) Description of the entry.</source>
+    </trans-unit>
+    <trans-unit id="chatContribution.property.description.deprecated">
+      <source xml:lang="en">Specify "description" in the prompt file itself instead.</source>
     </trans-unit>
     <trans-unit id="chatContribution.property.name">
-      <source xml:lang="en">Identifier for this file. Must be unique within this extension for this contribution point.</source>
+      <source xml:lang="en">(Optional) Name for this entry.</source>
+    </trans-unit>
+    <trans-unit id="chatContribution.property.name.deprecated">
+      <source xml:lang="en">Specify "name" in the prompt file itself instead.</source>
     </trans-unit>
     <trans-unit id="chatContribution.property.path">
       <source xml:lang="en">Path to the file relative to the extension root.</source>
@@ -4622,14 +4627,8 @@ Examples:
     <trans-unit id="chatContribution.schema.description">
       <source xml:lang="en">Contributes {0} for chat prompts.</source>
     </trans-unit>
-    <trans-unit id="extension.invalid.name">
-      <source xml:lang="en">Extension '{0}' cannot register {1} entry with invalid name '{2}'.</source>
-    </trans-unit>
     <trans-unit id="extension.invalid.path">
       <source xml:lang="en">Extension '{0}' {1} entry '{2}' path resolves outside the extension.</source>
-    </trans-unit>
-    <trans-unit id="extension.missing.description">
-      <source xml:lang="en">Extension '{0}' cannot register {1} entry '{2}' without description.</source>
     </trans-unit>
     <trans-unit id="extension.missing.path">
       <source xml:lang="en">Extension '{0}' cannot register {1} entry '{2}' without path.</source>
