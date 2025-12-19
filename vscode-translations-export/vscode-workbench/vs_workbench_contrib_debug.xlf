@@ -178,11 +178,17 @@
     <trans-unit id="breakpoint">
       <source xml:lang="en">Breakpoint</source>
     </trans-unit>
+    <trans-unit id="breakpointFolder">
+      <source xml:lang="en">Breakpoints in {0}, {1} breakpoints</source>
+    </trans-unit>
     <trans-unit id="breakpointUnsupported">
       <source xml:lang="en">Breakpoints of this type are not supported by the debugger</source>
     </trans-unit>
     <trans-unit id="breakpoints">
       <source xml:lang="en">Breakpoints</source>
+    </trans-unit>
+    <trans-unit id="cannotLoadLine">
+      <source xml:lang="en">(cannot load line)</source>
     </trans-unit>
     <trans-unit id="dataBreakPointExpresionAriaLabel">
       <source xml:lang="en">Type expression. Data breakpoint will break when expression evaluates to true</source>
@@ -253,6 +259,9 @@
     <trans-unit id="editMode">
       <source xml:lang="en">Edit Mode...</source>
     </trans-unit>
+    <trans-unit id="emptyLine">
+      <source xml:lang="en">(empty line)</source>
+    </trans-unit>
     <trans-unit id="enableAllBreakpoints">
       <source xml:lang="en">Enable All Breakpoints</source>
     </trans-unit>
@@ -310,6 +319,12 @@
     <trans-unit id="instructionBreakpointUnsupported">
       <source xml:lang="en">Instruction breakpoints not supported by this debug type</source>
     </trans-unit>
+    <trans-unit id="lineNotFound">
+      <source xml:lang="en">(line not found)</source>
+    </trans-unit>
+    <trans-unit id="loading">
+      <source xml:lang="en">Loading...</source>
+    </trans-unit>
     <trans-unit id="logMessage">
       <source xml:lang="en">Log Message: {0}</source>
     </trans-unit>
@@ -345,8 +360,14 @@
     <trans-unit id="removeBreakpoint">
       <source xml:lang="en">Remove Breakpoint</source>
     </trans-unit>
+    <trans-unit id="removeBreakpointsInFile">
+      <source xml:lang="en">Remove Breakpoints in File</source>
+    </trans-unit>
     <trans-unit id="selectBreakpointMode">
       <source xml:lang="en">Select Breakpoint Mode</source>
+    </trans-unit>
+    <trans-unit id="toggleBreakpointsPresentation">
+      <source xml:lang="en">Toggle Breakpoints View Presentation</source>
     </trans-unit>
     <trans-unit id="triggeredBy">
       <source xml:lang="en">Hit after breakpoint: {0}</source>
@@ -490,6 +511,9 @@
     </trans-unit>
     <trans-unit id="debug.autoExpandLazyVariables.on">
       <source xml:lang="en">Always automatically expand lazy variables.</source>
+    </trans-unit>
+    <trans-unit id="debug.breakpointsView.presentation">
+      <source xml:lang="en">Controls whether breakpoints are displayed in a tree view grouped by file, or as a flat list.</source>
     </trans-unit>
     <trans-unit id="debug.confirmOnExit">
       <source xml:lang="en">Controls whether to confirm when the window closes if there are active debug sessions.</source>

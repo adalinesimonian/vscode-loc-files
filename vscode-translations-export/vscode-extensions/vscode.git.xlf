@@ -999,6 +999,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++c6509104fe77b05a75de018c0cf90008b446b083f23ca6e3afcac0e3c4b9683f">
       <source xml:lang="en">Worktree path</source>
     </trans-unit>
+    <trans-unit id="++CODE++aec2f93d67b7c4c5fd9b94042f33299f7a0e55cdcb7e8e35feb9d0f6da697f3d">
+      <source xml:lang="en">Worktrees</source>
+    </trans-unit>
     <trans-unit id="++CODE++7f1d79b89e7e2a73fb77da103a8f48ff6a1d82d197245b96a00bd0bb1b807301">
       <source xml:lang="en">Would you like to add &quot;{0}&quot; to .gitignore?</source>
     </trans-unit>
@@ -1035,8 +1038,8 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++13e594fcc96a4ccf6489d00518d4d1f33b2da6945e9b0f42510739a1ab9bd495">
       <source xml:lang="en">You are about to force push your changes, this can be destructive and could inadvertently overwrite changes made by others.&#10;&#10;Are you sure to continue?</source>
     </trans-unit>
-    <trans-unit id="++CODE++6381ebc4662b0ef8b7baf39bfadd0dc9a0eb99d41197a856972e95b9d601bcf6">
-      <source xml:lang="en">You are trying to commit to a protected branch and you might not have permission to push your commits to the remote.&#10;&#10;How would you like to proceed?</source>
+    <trans-unit id="++CODE++8304b26088d267443877f80682f7734cda1136b909e2ca26d0070f5991288203">
+      <source xml:lang="en">You are trying to commit to a protected branch. How would you like to proceed?</source>
     </trans-unit>
     <trans-unit id="++CODE++6b5218d0067603b8bbd8accfd23135ffb324dd5ac32b217311b828341a0fc495">
       <source xml:lang="en">You can restore these files from the Recycle Bin.</source>
@@ -1088,6 +1091,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++dce1905351040e792f97d8bba6273802f9053551866071596763170bc5331e12">
       <source xml:lang="en">branches</source>
+    </trans-unit>
+    <trans-unit id="++CODE++88e34e4cdbb5c6066cb1b0d0abe74714bd72f86259433bc8287614e4ae052605">
+      <source xml:lang="en">detached</source>
     </trans-unit>
     <trans-unit id="++CODE++6b74890feee73b66d30aca9ed5b9946ecbdf2f3bca79be34f51737497c55a687">
       <source xml:lang="en">in {0}</source>
@@ -1790,6 +1796,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     <trans-unit id="config.terminalAuthentication">
       <source xml:lang="en">Controls whether to enable VS Code to be the authentication handler for Git processes spawned in the Integrated Terminal. Note: Terminals need to be restarted to pick up a change in this setting.</source>
     </trans-unit>
+    <trans-unit id="config.blameIgnoreWhitespace">
+      <source xml:lang="en">Controls whether to ignore whitespace changes when computing blame information.</source>
+    </trans-unit>
     <trans-unit id="config.openAfterClone">
       <source xml:lang="en">Controls whether to open a repository automatically after cloning.</source>
     </trans-unit>
@@ -2063,6 +2072,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     <trans-unit id="config.openAfterClone.whenNoFolderOpen">
       <source xml:lang="en">Only open in current window when no folder is opened.</source>
     </trans-unit>
+    <trans-unit id="command.openWorktree2">
+      <source xml:lang="en">Open</source>
+    </trans-unit>
     <trans-unit id="command.openAllChanges">
       <source xml:lang="en">Open All Changes</source>
     </trans-unit>
@@ -2104,6 +2116,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="command.openWorktreeInNewWindow">
       <source xml:lang="en">Open Worktree in New Window</source>
+    </trans-unit>
+    <trans-unit id="command.openWorktreeInNewWindow2">
+      <source xml:lang="en">Open in New Window</source>
     </trans-unit>
     <trans-unit id="config.mergeEditor">
       <source xml:lang="en">Open the merge editor for files that are currently under conflict.</source>

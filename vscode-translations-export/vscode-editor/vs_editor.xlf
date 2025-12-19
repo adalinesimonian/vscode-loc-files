@@ -442,6 +442,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="wordBasedSuggestions.off">
       <source xml:lang="en">Turn off Word Based Suggestions.</source>
     </trans-unit>
+    <trans-unit id="wordBasedSuggestions.offWithInlineSuggestions">
+      <source xml:lang="en">Turn off Word Based Suggestions when Inline Suggestions are present.</source>
+    </trans-unit>
     <trans-unit id="wordWrap.inherit">
       <source xml:lang="en">Lines will wrap according to the {0} setting.</source>
     </trans-unit>
@@ -1778,6 +1781,9 @@ char* str="hello\n
     </trans-unit>
     <trans-unit id="editorBracketMatchBorder">
       <source xml:lang="en">Color for matching brackets boxes</source>
+    </trans-unit>
+    <trans-unit id="editorBracketMatchForeground">
+      <source xml:lang="en">Foreground color for matching brackets</source>
     </trans-unit>
     <trans-unit id="editorBracketPairGuide.activeBackground1">
       <source xml:lang="en">Background color of active bracket pair guides (1). Requires enabling bracket pair guides.</source>

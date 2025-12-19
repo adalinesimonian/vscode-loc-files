@@ -831,11 +831,17 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessions.deleteAll">
+      <source xml:lang="en">Delete All Local Workspace Chat Sessions</source>
+    </trans-unit>
     <trans-unit id="agentSessions.open">
       <source xml:lang="en">Open Agent Session...</source>
     </trans-unit>
     <trans-unit id="archive">
       <source xml:lang="en">Archive</source>
+    </trans-unit>
+    <trans-unit id="archiveAll.label">
+      <source xml:lang="en">Archive All Workspace Agent Sessions</source>
     </trans-unit>
     <trans-unit id="archiveAllSessions.archive">
       <source xml:lang="en">Archive</source>
@@ -870,9 +876,6 @@
     <trans-unit id="archiveSessionDescription">
       <source xml:lang="en">You have pending changes in this chat session.</source>
     </trans-unit>
-    <trans-unit id="chat.clear.label">
-      <source xml:lang="en">Archive All Workspace Agent Sessions</source>
-    </trans-unit>
     <trans-unit id="chat.focusAgentSessionsViewer.label">
       <source xml:lang="en">Focus Agent Sessions</source>
     </trans-unit>
@@ -888,9 +891,6 @@
     <trans-unit id="chat.sessionsOrientation">
       <source xml:lang="en">Sessions Orientation</source>
     </trans-unit>
-    <trans-unit id="chat.sessionsOrientation.auto">
-      <source xml:lang="en">Auto</source>
-    </trans-unit>
     <trans-unit id="chat.sessionsOrientation.sideBySide">
       <source xml:lang="en">Side by Side</source>
     </trans-unit>
@@ -899,6 +899,27 @@
     </trans-unit>
     <trans-unit id="chat.toggleChatViewSessions.label">
       <source xml:lang="en">Show Sessions</source>
+    </trans-unit>
+    <trans-unit id="delete">
+      <source xml:lang="en">Delete...</source>
+    </trans-unit>
+    <trans-unit id="deleteAllChats.button">
+      <source xml:lang="en">Delete All</source>
+    </trans-unit>
+    <trans-unit id="deleteAllChats.confirm">
+      <source xml:lang="en">Are you sure you want to delete all local workspace chat sessions?</source>
+    </trans-unit>
+    <trans-unit id="deleteAllChats.detail">
+      <source xml:lang="en">This action cannot be undone.</source>
+    </trans-unit>
+    <trans-unit id="deleteSession.confirm">
+      <source xml:lang="en">Are you sure you want to delete this chat session?</source>
+    </trans-unit>
+    <trans-unit id="deleteSession.delete">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="deleteSession.detail">
+      <source xml:lang="en">This action cannot be undone.</source>
     </trans-unit>
     <trans-unit id="find">
       <source xml:lang="en">Find Agent Session</source>
@@ -961,8 +982,8 @@
     <trans-unit id="chatAgentPickerPlaceholder">
       <source xml:lang="en">Search agent sessions by name</source>
     </trans-unit>
-    <trans-unit id="newChatTitle">
-      <source xml:lang="en">New agent session title</source>
+    <trans-unit id="deleteSession">
+      <source xml:lang="en">Delete</source>
     </trans-unit>
     <trans-unit id="renameSession">
       <source xml:lang="en">Rename</source>
@@ -973,19 +994,19 @@
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsViewer" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentSessionCompleted">
-      <source xml:lang="en">completed</source>
+      <source xml:lang="en">Completed</source>
     </trans-unit>
     <trans-unit id="agentSessionFailed">
-      <source xml:lang="en">failed</source>
+      <source xml:lang="en">Failed</source>
     </trans-unit>
     <trans-unit id="agentSessionInProgress">
-      <source xml:lang="en">in progress</source>
+      <source xml:lang="en">In Progress</source>
     </trans-unit>
     <trans-unit id="agentSessionItemAriaLabel">
       <source xml:lang="en">{0} session {1} ({2}), created {3}</source>
     </trans-unit>
     <trans-unit id="agentSessionNeedsInput">
-      <source xml:lang="en">needs input</source>
+      <source xml:lang="en">Needs Input</source>
     </trans-unit>
     <trans-unit id="agentSessionSectionAriaLabel">
       <source xml:lang="en">{0} sessions section</source>
@@ -1015,10 +1036,10 @@
       <source xml:lang="en">Yesterday</source>
     </trans-unit>
     <trans-unit id="chat.session.status.completed">
-      <source xml:lang="en">Finished</source>
+      <source xml:lang="en">Completed</source>
     </trans-unit>
     <trans-unit id="chat.session.status.completedAfter">
-      <source xml:lang="en">Finished in {0}.</source>
+      <source xml:lang="en">Completed in {0}.</source>
     </trans-unit>
     <trans-unit id="chat.session.status.failed">
       <source xml:lang="en">Failed</source>
@@ -1036,6 +1057,15 @@
       <source xml:lang="en">1 file</source>
     </trans-unit>
     <trans-unit id="diffFiles">
+      <source xml:lang="en">{0} files</source>
+    </trans-unit>
+    <trans-unit id="tooltip.archived">
+      <source xml:lang="en">Archived</source>
+    </trans-unit>
+    <trans-unit id="tooltip.file">
+      <source xml:lang="en">1 file</source>
+    </trans-unit>
+    <trans-unit id="tooltip.files">
       <source xml:lang="en">{0} files</source>
     </trans-unit>
 </body></file>
@@ -1336,11 +1366,11 @@ Examples:
     <trans-unit id="chat.useAgentMd.title">
       <source xml:lang="en">Use AGENTS.md file</source>
     </trans-unit>
-    <trans-unit id="chat.useClaudeSkills.description">
-      <source xml:lang="en">Controls whether Claude skills found in the workspace and user home directories under `.claude/skills` are listed in all chat requests. The language model can load these skills on-demand if the `read` tool is available.</source>
+    <trans-unit id="chat.useAgentSkills.description">
+      <source xml:lang="en">Controls whether skills are provided as specialized capabilities to the chat requests. Skills are loaded from `.github/skills`, `~/.copilot/skills`, `.claude/skills`, and `~/.claude/skills`. The language model can load these skills on-demand if the `read` tool is available. Learn more about [Agent Skills](https://aka.ms/vscode-agent-skills).</source>
     </trans-unit>
-    <trans-unit id="chat.useClaudeSkills.title">
-      <source xml:lang="en">Use Claude skills</source>
+    <trans-unit id="chat.useAgentSkills.title">
+      <source xml:lang="en">Use Agent skills</source>
     </trans-unit>
     <trans-unit id="chat.useNestedAgentMd.description">
       <source xml:lang="en">Controls whether instructions from nested `AGENTS.md` files found in the workspace are listed in all chat requests. The language model can load these skills on-demand if the `read` tool is available.</source>
@@ -1354,14 +1384,11 @@ Examples:
     <trans-unit id="chat.viewSessions.orientation">
       <source xml:lang="en">Controls the orientation of the chat agent sessions view when it is shown alongside the chat.</source>
     </trans-unit>
-    <trans-unit id="chat.viewSessions.orientation.auto">
-      <source xml:lang="en">Automatically determine the orientation based on available space.</source>
-    </trans-unit>
     <trans-unit id="chat.viewSessions.orientation.sideBySide">
-      <source xml:lang="en">Display sessions side by side if space is sufficient.</source>
+      <source xml:lang="en">Display chat sessions side by side if space is sufficient, otherwise fallback to stacked above the chat input unless a chat session is visible.</source>
     </trans-unit>
     <trans-unit id="chat.viewSessions.orientation.stacked">
-      <source xml:lang="en">Display sessions vertically stacked unless a chat session is visible.</source>
+      <source xml:lang="en">Display chat sessions vertically stacked above the chat input unless a chat session is visible.</source>
     </trans-unit>
     <trans-unit id="chat.viewTitle.enabled">
       <source xml:lang="en">Show the title of the chat above the chat in the chat view.</source>
@@ -1448,6 +1475,9 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatAccessibilityService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.backgroundRequest">
+      <source xml:lang="en">Chat session will continue in the background.</source>
+    </trans-unit>
     <trans-unit id="chat.untitledChat">
       <source xml:lang="en">Untitled Chat</source>
     </trans-unit>
@@ -3492,19 +3522,16 @@ Examples:
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatViewPane" source-language="en" datatype="plaintext"><body>
     <trans-unit id="allSessions">
-      <source xml:lang="en">All Sessions</source>
+      <source xml:lang="en">Sessions</source>
     </trans-unit>
     <trans-unit id="recentSessions">
       <source xml:lang="en">Recent Sessions</source>
     </trans-unit>
-    <trans-unit id="sessions">
-      <source xml:lang="en">Sessions</source>
-    </trans-unit>
     <trans-unit id="showAllSessions">
-      <source xml:lang="en">Show All Sessions</source>
+      <source xml:lang="en">Show More</source>
     </trans-unit>
     <trans-unit id="showRecentSessions">
-      <source xml:lang="en">Show Recent Sessions</source>
+      <source xml:lang="en">Show Less</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatViewTitleControl" source-language="en" datatype="plaintext"><body>
