@@ -100,6 +100,9 @@
     <trans-unit id="stepsToReproduce">
       <source xml:lang="en">Steps to Reproduce</source>
     </trans-unit>
+    <trans-unit id="submittingIssue">
+      <source xml:lang="en">Submitting...</source>
+    </trans-unit>
     <trans-unit id="undefinedPlaceholder">
       <source xml:lang="en">Please enter a title</source>
     </trans-unit>
@@ -113,17 +116,24 @@
       <source xml:lang="en">E.g Workbench is missing problems panel</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/issue/browser/issue.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="statusUnsupported">
-      <source xml:lang="en">The --status argument is not yet supported in browsers.</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/issue/browser/issueFormService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="additionalIssueData">
+      <source xml:lang="en">Additional Issue Data</source>
+    </trans-unit>
     <trans-unit id="cancel">
       <source xml:lang="en">Cancel</source>
     </trans-unit>
     <trans-unit id="confirmCloseIssueReporter">
       <source xml:lang="en">Your input will not be saved. Are you sure you want to close this window?</source>
+    </trans-unit>
+    <trans-unit id="issueData">
+      <source xml:lang="en">Issue Data</source>
+    </trans-unit>
+    <trans-unit id="issueReporter.attachmentsHeading">
+      <source xml:lang="en">Attachments</source>
+    </trans-unit>
+    <trans-unit id="issueReporter.attachmentsUploadFailed">
+      <source xml:lang="en">Upload failed. Please drag and drop attachments manually.</source>
     </trans-unit>
     <trans-unit id="issueReporterWriteToClipboard">
       <source xml:lang="en">There is too much data to send to GitHub directly. The data will be copied to the clipboard, please paste it into the GitHub issue page that is opened.</source>
@@ -131,6 +141,9 @@
     <trans-unit id="ok">
       <source xml:lang="en">&amp;&amp;OK</source>
       <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="pasteData">
+      <source xml:lang="en">We have written the needed data into your clipboard because it was too large to send. Please paste.</source>
     </trans-unit>
     <trans-unit id="yes">
       <source xml:lang="en">&amp;&amp;Yes</source>
@@ -146,6 +159,332 @@
     </trans-unit>
     <trans-unit id="reportExtensionMarketplace">
       <source xml:lang="en">Extension Marketplace</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/issue/browser/issueReporterEditorInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="discard">
+      <source xml:lang="en">Discard</source>
+    </trans-unit>
+    <trans-unit id="discardIssue">
+      <source xml:lang="en">Discard issue report?</source>
+    </trans-unit>
+    <trans-unit id="discardIssueDetail">
+      <source xml:lang="en">Your issue report has unsaved changes that will be lost.</source>
+    </trans-unit>
+    <trans-unit id="issueReporterEditorInputName">
+      <source xml:lang="en">Report Issue</source>
+    </trans-unit>
+    <trans-unit id="issueReporterIcon">
+      <source xml:lang="en">Icon for the issue reporter editor.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/issue/browser/issueReporterOverlay" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="abExperiments">
+      <source xml:lang="en">A/B Experiments</source>
+    </trans-unit>
+    <trans-unit id="additionalInformation">
+      <source xml:lang="en">Additional Information</source>
+    </trans-unit>
+    <trans-unit id="additionalPerformanceData">
+      <source xml:lang="en">Additional Performance Data</source>
+    </trans-unit>
+    <trans-unit id="additionalPerformanceDataDescription">
+      <source xml:lang="en">Optionally include currently running processes and workspace metadata to help diagnose performance issues.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindow">
+      <source xml:lang="en">Agents Window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowPlaceholder">
+      <source xml:lang="en">E.g. Sessions list does not refresh after creating a new session</source>
+    </trans-unit>
+    <trans-unit id="attachments">
+      <source xml:lang="en">Attachments ({0})</source>
+    </trans-unit>
+    <trans-unit id="back">
+      <source xml:lang="en">Back</source>
+    </trans-unit>
+    <trans-unit id="bug">
+      <source xml:lang="en">Bug</source>
+    </trans-unit>
+    <trans-unit id="bugGuidance">
+      <source xml:lang="en">Describe what happened, the steps to reproduce, what you expected, and what you observed instead.</source>
+    </trans-unit>
+    <trans-unit id="captureOptions">
+      <source xml:lang="en">Capture options</source>
+    </trans-unit>
+    <trans-unit id="category">
+      <source xml:lang="en">Category</source>
+    </trans-unit>
+    <trans-unit id="categoryRequired">
+      <source xml:lang="en">Select a category to continue.</source>
+    </trans-unit>
+    <trans-unit id="closeTab">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="composeMessage">
+      <source xml:lang="en">Describe</source>
+    </trans-unit>
+    <trans-unit id="defaultGuidance">
+      <source xml:lang="en">Select a category above, then describe your feedback in detail.</source>
+    </trans-unit>
+    <trans-unit id="deleteRecording">
+      <source xml:lang="en">Remove recording</source>
+    </trans-unit>
+    <trans-unit id="deleteScreenshot">
+      <source xml:lang="en">Delete screenshot</source>
+    </trans-unit>
+    <trans-unit id="describeHeading">
+      <source xml:lang="en">Describe your feedback</source>
+    </trans-unit>
+    <trans-unit id="description">
+      <source xml:lang="en">Description</source>
+    </trans-unit>
+    <trans-unit id="descriptionPlaceholder">
+      <source xml:lang="en">Describe the issue in detail...</source>
+    </trans-unit>
+    <trans-unit id="descriptionRequired">
+      <source xml:lang="en">Enter a description to continue.</source>
+    </trans-unit>
+    <trans-unit id="editScreenshot">
+      <source xml:lang="en">Click to edit screenshot</source>
+    </trans-unit>
+    <trans-unit id="extension">
+      <source xml:lang="en">Extension</source>
+    </trans-unit>
+    <trans-unit id="extensionData">
+      <source xml:lang="en">Extension Data</source>
+    </trans-unit>
+    <trans-unit id="extensionExternalIssueUrl">
+      <source xml:lang="en">This extension uses an external issue reporter. Preview will open that issue reporter.</source>
+    </trans-unit>
+    <trans-unit id="extensionNoIssueUrl">
+      <source xml:lang="en">This extension does not provide an issue reporting URL.</source>
+    </trans-unit>
+    <trans-unit id="extensionPlaceholder">
+      <source xml:lang="en">E.g. Missing alt text on extension readme image</source>
+    </trans-unit>
+    <trans-unit id="extensionRequired">
+      <source xml:lang="en">Select an extension to continue.</source>
+    </trans-unit>
+    <trans-unit id="extensionSource">
+      <source xml:lang="en">A VS Code extension</source>
+    </trans-unit>
+    <trans-unit id="extensions">
+      <source xml:lang="en">Extensions ({0})</source>
+    </trans-unit>
+    <trans-unit id="featureGuidance">
+      <source xml:lang="en">Describe the feature you'd like to see, what problem it would solve, and any alternatives you've considered.</source>
+    </trans-unit>
+    <trans-unit id="featureRequest">
+      <source xml:lang="en">Feature Request</source>
+    </trans-unit>
+    <trans-unit id="feedbackCategory">
+      <source xml:lang="en">Category</source>
+    </trans-unit>
+    <trans-unit id="fiveSeconds">
+      <source xml:lang="en">5 seconds</source>
+    </trans-unit>
+    <trans-unit id="generateTitle">
+      <source xml:lang="en">Generate title from description</source>
+    </trans-unit>
+    <trans-unit id="generateTitleBtn">
+      <source xml:lang="en">Generate from description</source>
+    </trans-unit>
+    <trans-unit id="generatingTitle">
+      <source xml:lang="en">Generating...</source>
+    </trans-unit>
+    <trans-unit id="hideToolbarInScreenshots">
+      <source xml:lang="en">Hide Toolbar in Screenshots</source>
+    </trans-unit>
+    <trans-unit id="issueTargetRepo">
+      <source xml:lang="en">Issue will be created in {0}/{1}.</source>
+    </trans-unit>
+    <trans-unit id="issueTitle">
+      <source xml:lang="en">Title</source>
+    </trans-unit>
+    <trans-unit id="issueTitlePlaceholder">
+      <source xml:lang="en">Brief summary of the issue</source>
+    </trans-unit>
+    <trans-unit id="loadingDiagnostics">
+      <source xml:lang="en">Loading diagnostics...</source>
+    </trans-unit>
+    <trans-unit id="loadingExtensionData">
+      <source xml:lang="en">Loading extension issue data...</source>
+    </trans-unit>
+    <trans-unit id="loadingProcessInfo">
+      <source xml:lang="en">Loading currently running processes...</source>
+    </trans-unit>
+    <trans-unit id="loadingSystemInfo">
+      <source xml:lang="en">Loading system information...</source>
+    </trans-unit>
+    <trans-unit id="loadingWorkspaceInfo">
+      <source xml:lang="en">Loading workspace metadata...</source>
+    </trans-unit>
+    <trans-unit id="markdownSupported">
+      <source xml:lang="en">Markdown formatting is supported.</source>
+    </trans-unit>
+    <trans-unit id="marketplace">
+      <source xml:lang="en">Extensions Marketplace</source>
+    </trans-unit>
+    <trans-unit id="marketplacePlaceholder">
+      <source xml:lang="en">E.g. Cannot disable installed extension</source>
+    </trans-unit>
+    <trans-unit id="maxAttachmentsReached">
+      <source xml:lang="en">Max attachments reached</source>
+    </trans-unit>
+    <trans-unit id="next">
+      <source xml:lang="en">Next</source>
+    </trans-unit>
+    <trans-unit id="noDelay">
+      <source xml:lang="en">No delay</source>
+    </trans-unit>
+    <trans-unit id="noDescription">
+      <source xml:lang="en">(no description)</source>
+    </trans-unit>
+    <trans-unit id="noSimilarIssues">
+      <source xml:lang="en">No similar issues found.</source>
+    </trans-unit>
+    <trans-unit id="noTitle">
+      <source xml:lang="en">(no title)</source>
+    </trans-unit>
+    <trans-unit id="openExternalIssueReporter">
+      <source xml:lang="en">Open External Issue Reporter</source>
+    </trans-unit>
+    <trans-unit id="or">
+      <source xml:lang="en">or</source>
+    </trans-unit>
+    <trans-unit id="perfGuidance">
+      <source xml:lang="en">Describe what is slow, when it happens, whether it's consistent or intermittent, and any patterns you've noticed.</source>
+    </trans-unit>
+    <trans-unit id="perfWikiLink">
+      <source xml:lang="en">See the performance issue reporting guide.</source>
+    </trans-unit>
+    <trans-unit id="performanceIssue">
+      <source xml:lang="en">Performance Issue</source>
+    </trans-unit>
+    <trans-unit id="previewOnGitHub">
+      <source xml:lang="en">Preview on GitHub</source>
+    </trans-unit>
+    <trans-unit id="recordVideo">
+      <source xml:lang="en">Record video</source>
+    </trans-unit>
+    <trans-unit id="recordingActive">
+      <source xml:lang="en">Recording active</source>
+    </trans-unit>
+    <trans-unit id="recordingThumbnailAlt">
+      <source xml:lang="en">Recording {0}</source>
+    </trans-unit>
+    <trans-unit id="refresh">
+      <source xml:lang="en">Refresh</source>
+    </trans-unit>
+    <trans-unit id="refreshPerformanceData">
+      <source xml:lang="en">Reload running processes and workspace metadata</source>
+    </trans-unit>
+    <trans-unit id="reportIssue">
+      <source xml:lang="en">Report Issue</source>
+    </trans-unit>
+    <trans-unit id="reviewGuidanceLabelWizard">
+      <source xml:lang="en">Before you report an issue here please [review the guidance we provide](https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions). Please complete the form in English.</source>
+      <note>{Locked="https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions"}</note>
+    </trans-unit>
+    <trans-unit id="reviewSubmit">
+      <source xml:lang="en">Review and submit</source>
+    </trans-unit>
+    <trans-unit id="runningProcesses">
+      <source xml:lang="en">Running Processes</source>
+    </trans-unit>
+    <trans-unit id="screenshot">
+      <source xml:lang="en">Screenshot</source>
+    </trans-unit>
+    <trans-unit id="screenshotAlt">
+      <source xml:lang="en">Screenshot {0}</source>
+    </trans-unit>
+    <trans-unit id="screenshots">
+      <source xml:lang="en">Attachments</source>
+    </trans-unit>
+    <trans-unit id="screenshotsHeading">
+      <source xml:lang="en">Add attachments for better context</source>
+    </trans-unit>
+    <trans-unit id="screenshotsSubtitle">
+      <source xml:lang="en">You can add up to {0} screenshots or videos. Navigate VS Code and choose when to capture.</source>
+    </trans-unit>
+    <trans-unit id="searchingSimilarIssues">
+      <source xml:lang="en">Searching similar issues...</source>
+    </trans-unit>
+    <trans-unit id="selectExtension">
+      <source xml:lang="en">Select extension</source>
+    </trans-unit>
+    <trans-unit id="shortcutHintIntro">
+      <source xml:lang="en">Use the floating capture bar, or press</source>
+    </trans-unit>
+    <trans-unit id="similarIssues">
+      <source xml:lang="en">Similar Issues</source>
+    </trans-unit>
+    <trans-unit id="similarIssuesNeedsTitle">
+      <source xml:lang="en">Enter a title to search for similar issues.</source>
+    </trans-unit>
+    <trans-unit id="similarIssuesSearchFailed">
+      <source xml:lang="en">Unable to search for similar issues.</source>
+    </trans-unit>
+    <trans-unit id="skip">
+      <source xml:lang="en">Skip</source>
+    </trans-unit>
+    <trans-unit id="stepOf">
+      <source xml:lang="en">Step {0} of {1}</source>
+    </trans-unit>
+    <trans-unit id="stopRecording">
+      <source xml:lang="en">Stop recording</source>
+    </trans-unit>
+    <trans-unit id="submit">
+      <source xml:lang="en">Review</source>
+    </trans-unit>
+    <trans-unit id="systemInformation">
+      <source xml:lang="en">System Information</source>
+    </trans-unit>
+    <trans-unit id="target">
+      <source xml:lang="en">Target</source>
+    </trans-unit>
+    <trans-unit id="targetRequired">
+      <source xml:lang="en">Select a target to continue.</source>
+    </trans-unit>
+    <trans-unit id="tenSeconds">
+      <source xml:lang="en">10 seconds</source>
+    </trans-unit>
+    <trans-unit id="threeSeconds">
+      <source xml:lang="en">3 seconds</source>
+    </trans-unit>
+    <trans-unit id="titleRequired">
+      <source xml:lang="en">Enter a title to continue.</source>
+    </trans-unit>
+    <trans-unit id="toCapture">
+      <source xml:lang="en">to capture a screenshot</source>
+    </trans-unit>
+    <trans-unit id="toRecord">
+      <source xml:lang="en">to start or stop recording</source>
+    </trans-unit>
+    <trans-unit id="unknown">
+      <source xml:lang="en">Unknown</source>
+    </trans-unit>
+    <trans-unit id="unknownSource">
+      <source xml:lang="en">Don't know</source>
+    </trans-unit>
+    <trans-unit id="updateAvailable">
+      <source xml:lang="en">A new version of {0} is available.</source>
+    </trans-unit>
+    <trans-unit id="uploading">
+      <source xml:lang="en">Uploading...</source>
+    </trans-unit>
+    <trans-unit id="vscode">
+      <source xml:lang="en">Visual Studio Code</source>
+    </trans-unit>
+    <trans-unit id="vscodePlaceholder">
+      <source xml:lang="en">E.g. Workbench is missing problems panel</source>
+    </trans-unit>
+    <trans-unit id="waitingForDiagnostics">
+      <source xml:lang="en">Waiting for performance diagnostics to finish loading</source>
+    </trans-unit>
+    <trans-unit id="workspaceMetadata">
+      <source xml:lang="en">Workspace Metadata</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/browser/issueReporterPage" source-language="en" datatype="plaintext"><body>
@@ -303,6 +642,104 @@ During the process the window reloads repeatedly. Each time you must confirm if 
       <source xml:lang="en">This likely means that the issue has been addressed already and will be available in an upcoming release. You can safely use {0} insiders until the new stable version is available.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/issue/browser/screenshotAnnotation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="annotationHint">
+      <source xml:lang="en">Edit screenshot to highlight the problem</source>
+    </trans-unit>
+    <trans-unit id="apply">
+      <source xml:lang="en">Apply</source>
+    </trans-unit>
+    <trans-unit id="arrow">
+      <source xml:lang="en">Arrow</source>
+    </trans-unit>
+    <trans-unit id="cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="colorValue">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="crop">
+      <source xml:lang="en">Crop</source>
+    </trans-unit>
+    <trans-unit id="discard">
+      <source xml:lang="en">Discard</source>
+    </trans-unit>
+    <trans-unit id="ellipse">
+      <source xml:lang="en">Ellipse</source>
+    </trans-unit>
+    <trans-unit id="eraser">
+      <source xml:lang="en">Eraser</source>
+    </trans-unit>
+    <trans-unit id="fillColor">
+      <source xml:lang="en">Fill Color</source>
+    </trans-unit>
+    <trans-unit id="freehand">
+      <source xml:lang="en">Draw</source>
+    </trans-unit>
+    <trans-unit id="opacity">
+      <source xml:lang="en">Opacity</source>
+    </trans-unit>
+    <trans-unit id="pan">
+      <source xml:lang="en">Pan</source>
+    </trans-unit>
+    <trans-unit id="rectangle">
+      <source xml:lang="en">Rectangle</source>
+    </trans-unit>
+    <trans-unit id="redo">
+      <source xml:lang="en">Redo</source>
+    </trans-unit>
+    <trans-unit id="save">
+      <source xml:lang="en">Save</source>
+    </trans-unit>
+    <trans-unit id="select">
+      <source xml:lang="en">Select / Move</source>
+    </trans-unit>
+    <trans-unit id="setFillColor">
+      <source xml:lang="en">Set Fill Color</source>
+    </trans-unit>
+    <trans-unit id="setOpacity">
+      <source xml:lang="en">Set Opacity</source>
+    </trans-unit>
+    <trans-unit id="setStrokeColor">
+      <source xml:lang="en">Set Stroke Color</source>
+    </trans-unit>
+    <trans-unit id="setStrokeWidth">
+      <source xml:lang="en">Set Stroke Width to {0}px</source>
+    </trans-unit>
+    <trans-unit id="setTextSize">
+      <source xml:lang="en">Set Text Size to {0}px</source>
+    </trans-unit>
+    <trans-unit id="strokeColor">
+      <source xml:lang="en">Stroke Color</source>
+    </trans-unit>
+    <trans-unit id="strokeWidth">
+      <source xml:lang="en">Stroke Width</source>
+    </trans-unit>
+    <trans-unit id="text">
+      <source xml:lang="en">Text</source>
+    </trans-unit>
+    <trans-unit id="textBackgroundColor">
+      <source xml:lang="en">Background Color</source>
+    </trans-unit>
+    <trans-unit id="textColor">
+      <source xml:lang="en">Text Color</source>
+    </trans-unit>
+    <trans-unit id="textSize">
+      <source xml:lang="en">Text Size</source>
+    </trans-unit>
+    <trans-unit id="toolOptions">
+      <source xml:lang="en">Tool Options</source>
+    </trans-unit>
+    <trans-unit id="transparentColor">
+      <source xml:lang="en">{0}: Transparent</source>
+    </trans-unit>
+    <trans-unit id="typeText">
+      <source xml:lang="en">Type text</source>
+    </trans-unit>
+    <trans-unit id="undo">
+      <source xml:lang="en">Undo</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/issue/common/issue.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="miReportIssue">
       <source xml:lang="en">Report &amp;&amp;Issue</source>
@@ -315,6 +752,18 @@ Translate this to "Report Issue in English" in all languages please!</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/electron-browser/issue.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="issueReporter.wizard.enabled">
+      <source xml:lang="en">Enable the new issue reporter wizard instead of the classic issue reporter.</source>
+    </trans-unit>
+    <trans-unit id="issueReporter.wizard.fullWorkspaceScan">
+      <source xml:lang="en">When auto-collecting performance diagnostics for the issue reporter wizard, walk the full workspace instead of stopping at the default 20,000-file cap. Set to false on very large workspaces if the scan slows the initial wizard render.</source>
+    </trans-unit>
+    <trans-unit id="issueReporterConfigurationTitle">
+      <source xml:lang="en">Issue Reporter</source>
+    </trans-unit>
+    <trans-unit id="issueReporterEditorPaneTitle">
+      <source xml:lang="en">Issue Reporter</source>
+    </trans-unit>
     <trans-unit id="openIssueReporter">
       <source xml:lang="en">Open Issue Reporter</source>
     </trans-unit>
@@ -324,6 +773,26 @@ Translate this to "Report Issue in English" in all languages please!</note>
     </trans-unit>
     <trans-unit id="tasksQuickAccessPlaceholder">
       <source xml:lang="en">Type the name of an extension to report on.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/issue/electron-browser/issueReporterEditorPane" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="noData">
+      <source xml:lang="en">No issue reporter data available.</source>
+    </trans-unit>
+    <trans-unit id="noExperiments">
+      <source xml:lang="en">No current experiments.</source>
+    </trans-unit>
+    <trans-unit id="openSystemSettings">
+      <source xml:lang="en">Open System Settings</source>
+    </trans-unit>
+    <trans-unit id="recordingTooLarge">
+      <source xml:lang="en">Recording stopped automatically: the 100 MB upload limit was reached.</source>
+    </trans-unit>
+    <trans-unit id="screenRecordingPermissionDenied">
+      <source xml:lang="en">{0} needs Screen Recording permission to record videos. Grant access in System Settings, then click Record again.</source>
+    </trans-unit>
+    <trans-unit id="screenRecordingPermissionDeniedGeneric">
+      <source xml:lang="en">Screen recording permission was denied. Allow {0} to record the screen and try again.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/electron-browser/issueReporterService" source-language="en" datatype="plaintext"><body>

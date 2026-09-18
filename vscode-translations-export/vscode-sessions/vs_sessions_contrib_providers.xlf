@@ -1,0 +1,1726 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostAgentPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostAgentPicker">
+      <source xml:lang="en">Agent</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostAutomationStore" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostAutomation.cancelled">
+      <source xml:lang="en">Cancelled</source>
+    </trans-unit>
+    <trans-unit id="agentHostAutomation.interruptedLegacyRun">
+      <source xml:lang="en">Interrupted while migrating Automation history</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostClaudePermissionModePicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostClaudePermissionModePicker.ariaLabel">
+      <source xml:lang="en">Approvals Picker</source>
+    </trans-unit>
+    <trans-unit id="agentHostClaudePermissionModePicker.triggerAriaLabel">
+      <source xml:lang="en">Pick Approvals, {0}</source>
+    </trans-unit>
+    <trans-unit id="permissions.learnMore">
+      <source xml:lang="en">Learn more about permissions</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostCodexApprovalsPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostCodexApprovalsPicker.ariaLabel">
+      <source xml:lang="en">Approvals Picker</source>
+    </trans-unit>
+    <trans-unit id="agentHostCodexApprovalsPicker.triggerAriaLabel">
+      <source xml:lang="en">Pick Approvals, {0}</source>
+    </trans-unit>
+    <trans-unit id="codexApprovals.learnMore">
+      <source xml:lang="en">Learn more about permissions</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostModePicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostModePicker.ariaLabel">
+      <source xml:lang="en">Agent Mode Picker</source>
+    </trans-unit>
+    <trans-unit id="agentHostModePicker.combinedAriaLabel">
+      <source xml:lang="en">Mode and Permissions Picker</source>
+    </trans-unit>
+    <trans-unit id="agentHostModePicker.triggerAriaLabel">
+      <source xml:lang="en">Pick Agent Mode, {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostPermissionPickerDelegate" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostPermissionPicker.allowAll.detail">
+      <source xml:lang="en">Runs tool calls without asking</source>
+    </trans-unit>
+    <trans-unit id="agentHostPermissionPicker.approveWhenSafe.detail">
+      <source xml:lang="en">Evaluates risk before running tools</source>
+    </trans-unit>
+    <trans-unit id="agentHostPermissionPicker.askWhenNeeded.detail">
+      <source xml:lang="en">Asks when approval settings don't apply</source>
+    </trans-unit>
+    <trans-unit id="agentHostPermissionPicker.assistedHover">
+      <source xml:lang="en">An LLM judge evaluates each tool call. Tools it doesn't approve require your approval.</source>
+    </trans-unit>
+    <trans-unit id="agentHostPermissionPicker.autoApproveHover">
+      <source xml:lang="en">Copilot runs all tools without asking for approval.</source>
+    </trans-unit>
+    <trans-unit id="agentHostPermissionPicker.autopilotApprovalsHover">
+      <source xml:lang="en">Copilot runs tools without asking for approval and continues until the task is done.</source>
+    </trans-unit>
+    <trans-unit id="agentHostPermissionPicker.defaultApprovalsHover">
+      <source xml:lang="en">Copilot asks before running tools unless your configured settings allow the tool.</source>
+    </trans-unit>
+    <trans-unit id="agentHostPermissionPicker.manual.label">
+      <source xml:lang="en">Manual permissions</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSessionBranchActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copyAgentHostChatLink">
+      <source xml:lang="en">Copy Link</source>
+    </trans-unit>
+    <trans-unit id="copyAgentHostSessionLink">
+      <source xml:lang="en">Copy Link</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSessionChangesets" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="lastTurnChanges">
+      <source xml:lang="en">Last Turn Changes</source>
+    </trans-unit>
+    <trans-unit id="lastTurnChangesDescription">
+      <source xml:lang="en">Show only changes made in the last turn</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSessionConfigPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostNewSessionApprovePicker">
+      <source xml:lang="en">Session Approvals</source>
+    </trans-unit>
+    <trans-unit id="agentHostNewSessionCodexApprovalsPicker">
+      <source xml:lang="en">Approvals</source>
+    </trans-unit>
+    <trans-unit id="agentHostNewSessionModePicker">
+      <source xml:lang="en">Agent Mode</source>
+    </trans-unit>
+    <trans-unit id="agentHostNewSessionPermissionModePicker">
+      <source xml:lang="en">Approvals</source>
+    </trans-unit>
+    <trans-unit id="agentHostRunningSessionCodexApprovalsPicker">
+      <source xml:lang="en">Approvals</source>
+    </trans-unit>
+    <trans-unit id="agentHostRunningSessionConfigPicker">
+      <source xml:lang="en">Session Approvals</source>
+    </trans-unit>
+    <trans-unit id="agentHostRunningSessionModePicker">
+      <source xml:lang="en">Agent Mode</source>
+    </trans-unit>
+    <trans-unit id="agentHostRunningSessionPermissionModePicker">
+      <source xml:lang="en">Approvals</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.ariaLabel">
+      <source xml:lang="en">{0} Picker</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.boolean.false">
+      <source xml:lang="en">Off</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.boolean.offLabel">
+      <source xml:lang="en">Off</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.boolean.onLabel">
+      <source xml:lang="en">On</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.boolean.true">
+      <source xml:lang="en">On</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.branchHoverUncommittedChangeWithDescription">
+      <source xml:lang="en">{0}, {1} uncommitted file</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.branchHoverUncommittedChangesWithDescription">
+      <source xml:lang="en">{0}, {1} uncommitted files</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.branchItemShowChanges">
+      <source xml:lang="en">Show Changes</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.branchItemUncommittedPlural">
+      <source xml:lang="en">{0} uncommitted files</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.branchItemUncommittedSingular">
+      <source xml:lang="en">1 uncommitted file</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.filter">
+      <source xml:lang="en">Filter options...</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.isolation.devContainerDisabled">
+      <source xml:lang="en">New Worktree cannot be combined with Dev Container execution.</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.isolation.worktree">
+      <source xml:lang="en">New Worktree</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.itemAriaLabelWithDescription">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.policyDisabled">
+      <source xml:lang="en">Disabled by your organization. Contact your administrator.</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.triggerAria">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.triggerAriaReadOnly">
+      <source xml:lang="en">{0}: {1}, Read-Only</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.triggerAriaReadOnlyUncommitted">
+      <source xml:lang="en">{0}: {1}, Uncommitted Files, Read-Only</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.triggerAriaUncommitted">
+      <source xml:lang="en">{0}: {1}, Uncommitted Files</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfigPicker.checkoutCommit">
+      <source xml:lang="en">Commit &amp; Checkout</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfigPicker.checkoutDirty">
+      <source xml:lang="en">Your local changes would be overwritten when checking out '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfigPicker.checkoutStash">
+      <source xml:lang="en">Stash &amp; Checkout</source>
+    </trans-unit>
+    <trans-unit id="mobileAgentHostSessionConfig.repoSheet.branchSearchAria">
+      <source xml:lang="en">Search base branches</source>
+    </trans-unit>
+    <trans-unit id="mobileAgentHostSessionConfig.repoSheet.branchSearchEmpty">
+      <source xml:lang="en">No matching branches.</source>
+    </trans-unit>
+    <trans-unit id="mobileAgentHostSessionConfig.repoSheet.branchSearchPlaceholder">
+      <source xml:lang="en">Search branches</source>
+    </trans-unit>
+    <trans-unit id="mobileAgentHostSessionConfig.repoSheet.branchSection">
+      <source xml:lang="en">Base Branch</source>
+    </trans-unit>
+    <trans-unit id="mobileAgentHostSessionConfig.repoSheet.isolationSection">
+      <source xml:lang="en">Isolation</source>
+    </trans-unit>
+    <trans-unit id="mobileAgentHostSessionConfig.repoSheet.title">
+      <source xml:lang="en">Worktree</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSettings.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostSettings.label">
+      <source xml:lang="en">Host Settings</source>
+    </trans-unit>
+    <trans-unit id="openHostSettings">
+      <source xml:lang="en">Open Host Settings</source>
+    </trans-unit>
+    <trans-unit id="sessionItemSettings">
+      <source xml:lang="en">Settings</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSettingsFileSystemProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostSettings.header">
+      <source xml:lang="en">Agent host settings.</source>
+    </trans-unit>
+    <trans-unit id="agentHostSettings.notObject">
+      <source xml:lang="en">Agent host settings must be a JSON object.</source>
+    </trans-unit>
+    <trans-unit id="agentHostSettings.parseError">
+      <source xml:lang="en">Failed to parse agent host settings as JSON.</source>
+    </trans-unit>
+    <trans-unit id="agentHostSettings.saveHint">
+      <source xml:lang="en">Edit values below and save to apply. Unknown properties are ignored.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSkillButtons" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessions.runSkill.createDraftPR">
+      <source xml:lang="en">Create Draft PR</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.runSkill.createPR">
+      <source xml:lang="en">Create PR</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.runSkill.merge">
+      <source xml:lang="en">Merge Changes</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.runSkill.updatePR">
+      <source xml:lang="en">Sync Pull Request</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentMergeActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentMerge.action.addressReviews">
+      <source xml:lang="en">Address Reviews</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.action.fixCI">
+      <source xml:lang="en">Fix CI Failures</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.action.reset">
+      <source xml:lang="en">Reset to Global Defaults</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.action.reset.complete">
+      <source xml:lang="en">Agent Merge now follows the global action defaults for this session.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.action.resolveConflicts">
+      <source xml:lang="en">Resolve Conflicts and Behind Branches</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.action.select">
+      <source xml:lang="en">Select actions Agent Merge may perform for this session</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.action.title">
+      <source xml:lang="en">Agent Merge</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.action.updated">
+      <source xml:lang="en">Agent Merge actions were updated for the active session.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.configure">
+      <source xml:lang="en">Configure Agent Merge for Active Session</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.configure.submenu">
+      <source xml:lang="en">Configure Agent Merge</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.disable">
+      <source xml:lang="en">Disable Agent Merge for Active Session</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.disableInSession">
+      <source xml:lang="en">Disable Agent Merge</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.disabled">
+      <source xml:lang="en">Agent Merge is disabled for the active session.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.enable">
+      <source xml:lang="en">Enable Agent Merge for Active Session</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.enableInSession">
+      <source xml:lang="en">Enable Agent Merge</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.enabled">
+      <source xml:lang="en">Agent Merge is enabled for the active session.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.merge.always">
+      <source xml:lang="en">On</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.merge.always.description">
+      <source xml:lang="en">Merge the pull request whenever it is ready.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.merge.ifUnchanged">
+      <source xml:lang="en">Only if Agent Merge Made No Changes</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.merge.ifUnchanged.description">
+      <source xml:lang="en">Merge the pull request only while Agent Merge has not changed it. Once a repair turn lands a commit this switches itself off.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.merge.never">
+      <source xml:lang="en">Off</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.merge.never.description">
+      <source xml:lang="en">Do not merge the pull request automatically.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.merge.submenu">
+      <source xml:lang="en">Merge Pull Request ({0})</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.openDefaults">
+      <source xml:lang="en">Agent Merge Defaults</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.primary">
+      <source xml:lang="en">Agent Merge</source>
+    </trans-unit>
+    <trans-unit id="sessionAgentMergeAddressReviews">
+      <source xml:lang="en">True when Agent Merge may address reviews for the active agent session.</source>
+    </trans-unit>
+    <trans-unit id="sessionAgentMergeFixCI">
+      <source xml:lang="en">True when Agent Merge may fix CI failures for the active agent session.</source>
+    </trans-unit>
+    <trans-unit id="sessionAgentMergeMergePullRequest">
+      <source xml:lang="en">When Agent Merge may merge the pull request for the active agent session ('always', 'ifUnchanged' or 'never').</source>
+    </trans-unit>
+    <trans-unit id="sessionAgentMergeResolveConflicts">
+      <source xml:lang="en">True when Agent Merge may resolve conflicts for the active agent session.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentSessionSettings.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessionSettings.label">
+      <source xml:lang="en">Session Settings</source>
+    </trans-unit>
+    <trans-unit id="openSessionSettings">
+      <source xml:lang="en">Open Session Settings</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentSessionSettingsFileSystemProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessionSettings.header">
+      <source xml:lang="en">Session settings for this agent host session.</source>
+    </trans-unit>
+    <trans-unit id="agentSessionSettings.notObject">
+      <source xml:lang="en">Agent session settings must be a JSON object.</source>
+    </trans-unit>
+    <trans-unit id="agentSessionSettings.parseError">
+      <source xml:lang="en">Failed to parse agent session settings as JSON.</source>
+    </trans-unit>
+    <trans-unit id="agentSessionSettings.saveHint">
+      <source xml:lang="en">Edit values below and save to apply. Unknown or non-mutable properties are ignored.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/baseAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotCLI">
+      <source xml:lang="en">Copilot</source>
+    </trans-unit>
+    <trans-unit id="deleteChat.confirm">
+      <source xml:lang="en">Are you sure you want to delete this chat?</source>
+    </trans-unit>
+    <trans-unit id="deleteChat.delete">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="deleteChat.detail">
+      <source xml:lang="en">This action cannot be undone.</source>
+    </trans-unit>
+    <trans-unit id="new chat">
+      <source xml:lang="en">New Chat</source>
+    </trans-unit>
+    <trans-unit id="new session">
+      <source xml:lang="en">New Session</source>
+    </trans-unit>
+    <trans-unit id="newChatTab">
+      <source xml:lang="en">New Chat</source>
+    </trans-unit>
+    <trans-unit id="noAgents">
+      <source xml:lang="en">Agent host has not advertised any agents yet.</source>
+    </trans-unit>
+    <trans-unit id="notConnectedSend">
+      <source xml:lang="en">Cannot send request: not connected to agent host.</source>
+    </trans-unit>
+    <trans-unit id="removeSessionArtifactUnavailable">
+      <source xml:lang="en">Removing artifacts is unavailable for this session.</source>
+    </trans-unit>
+    <trans-unit id="sessionHome">
+      <source xml:lang="en">Session</source>
+    </trans-unit>
+    <trans-unit id="sessionNotCommitted">
+      <source xml:lang="en">Agent host session was not committed.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/codexCustomizationSettings.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codexCustomizationSettings.navigationDescription">
+      <source xml:lang="en">Configure global behavior for this harness.</source>
+    </trans-unit>
+    <trans-unit id="codexCustomizationSettings.navigationLabel">
+      <source xml:lang="en">Codex</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/devContainerAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="devContainerAgentHost.noAgents">
+      <source xml:lang="en">The Dev Container Agent Host did not advertise any agents.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.providerUnavailable">
+      <source xml:lang="en">Dev Container sessions provider '{0}' is not available.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.starting">
+      <source xml:lang="en">Starting Dev Container...</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.trustFolder">
+      <source xml:lang="en">Starting the Dev Container can run lifecycle commands from this workspace.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.workspaceRequired">
+      <source xml:lang="en">Dev Container sessions require a workspace.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.worktreePreparationUnsupported">
+      <source xml:lang="en">The source Agent Host does not support preparing a worktree for a Dev Container.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/exportDebugLogsAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="exportAgentHostDebugLogs">
+      <source xml:lang="en">Export Agent Host Debug Logs...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/localAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localAgentHostLabel">
+      <source xml:lang="en">Local Agent Host</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/openAgentHostStateFileAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="openAgentHostStateFile">
+      <source xml:lang="en">Open Agent Host State File</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/branchPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="branchPicker.select">
+      <source xml:lang="en">Branch</source>
+    </trans-unit>
+    <trans-unit id="isolationMode.worktree">
+      <source xml:lang="en">New Worktree</source>
+    </trans-unit>
+    <trans-unit id="isolationPicker.checkboxAriaLabel">
+      <source xml:lang="en">Worktree isolation</source>
+    </trans-unit>
+    <trans-unit id="isolationPicker.noGitRepo">
+      <source xml:lang="en">Git repository required for worktree isolation</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessions.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.github.copilot.multiChatSessions">
+      <source xml:lang="en">Whether to enable multiple chats within a single session in the Copilot Chat sessions provider.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="branchPicker">
+      <source xml:lang="en">Branch</source>
+    </trans-unit>
+    <trans-unit id="modePicker">
+      <source xml:lang="en">Mode</source>
+    </trans-unit>
+    <trans-unit id="permissionPicker">
+      <source xml:lang="en">Permissions</source>
+    </trans-unit>
+    <trans-unit id="sandboxPicker">
+      <source xml:lang="en">Sandbox</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsChangesets" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="allChanges">
+      <source xml:lang="en">All Changes</source>
+    </trans-unit>
+    <trans-unit id="allChangesDescription">
+      <source xml:lang="en">Show all changes made in this session</source>
+    </trans-unit>
+    <trans-unit id="branchChanges">
+      <source xml:lang="en">Branch Changes</source>
+    </trans-unit>
+    <trans-unit id="changesCategory">
+      <source xml:lang="en">Changes</source>
+    </trans-unit>
+    <trans-unit id="checkpointsCategory">
+      <source xml:lang="en">Checkpoints</source>
+    </trans-unit>
+    <trans-unit id="lastTurnChanges">
+      <source xml:lang="en">Last Turn Changes</source>
+    </trans-unit>
+    <trans-unit id="lastTurnChangesDescription">
+      <source xml:lang="en">Show only changes made in the last turn</source>
+    </trans-unit>
+    <trans-unit id="uncommittedChanges">
+      <source xml:lang="en">Uncommitted Changes</source>
+    </trans-unit>
+    <trans-unit id="uncommittedChangesDescription">
+      <source xml:lang="en">Show uncommitted changes in this session</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationAgentResolutionTimeout">
+      <source xml:lang="en">Timed out resolving the Automation's custom agent. Check the provider connection and try again.</source>
+    </trans-unit>
+    <trans-unit id="automationAgentUnavailable">
+      <source xml:lang="en">The Automation's selected agent '{0}' is unavailable. Choose another agent or restore it before running the Automation.</source>
+    </trans-unit>
+    <trans-unit id="automationAgentUriInvalid">
+      <source xml:lang="en">The Automation's selected agent must have an absolute URI.</source>
+    </trans-unit>
+    <trans-unit id="automationCloudAgentUnsupported">
+      <source xml:lang="en">This provider does not support custom agents in Automation session templates.</source>
+    </trans-unit>
+    <trans-unit id="cloneRepository.workspaceFile">
+      <source xml:lang="en">The selected clone is a workspace file. Choose the repository again to select a repository folder.</source>
+    </trans-unit>
+    <trans-unit id="copilotChatSessionsProvider">
+      <source xml:lang="en">Copilot Chat</source>
+    </trans-unit>
+    <trans-unit id="copilotCloud">
+      <source xml:lang="en">Cloud</source>
+    </trans-unit>
+    <trans-unit id="deleteChat.confirm">
+      <source xml:lang="en">Are you sure you want to delete this chat?</source>
+    </trans-unit>
+    <trans-unit id="deleteChat.delete">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="deleteChat.detail">
+      <source xml:lang="en">This action cannot be undone.</source>
+    </trans-unit>
+    <trans-unit id="issue">
+      <source xml:lang="en">Issue...</source>
+    </trans-unit>
+    <trans-unit id="new chat">
+      <source xml:lang="en">New Chat</source>
+    </trans-unit>
+    <trans-unit id="new session">
+      <source xml:lang="en">New Session</source>
+    </trans-unit>
+    <trans-unit id="pullRequest">
+      <source xml:lang="en">Pull Request...</source>
+    </trans-unit>
+    <trans-unit id="repository">
+      <source xml:lang="en">Repository...</source>
+    </trans-unit>
+    <trans-unit id="sandboxModelNotApplied">
+      <source xml:lang="en">Couldn't use {0} for this session. The agent's default model will be used instead.</source>
+    </trans-unit>
+    <trans-unit id="workInRepository">
+      <source xml:lang="en">Work in Repository...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/mobilePermissionPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="permissionPicker.title">
+      <source xml:lang="en">Approvals</source>
+    </trans-unit>
+    <trans-unit id="permissions.learnMore">
+      <source xml:lang="en">Learn more about permissions</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/modePicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="configureCustomAgents">
+      <source xml:lang="en">Configure Custom Agents...</source>
+    </trans-unit>
+    <trans-unit id="modePicker.ariaLabel">
+      <source xml:lang="en">Mode Picker</source>
+    </trans-unit>
+    <trans-unit id="modePicker.triggerAriaLabel">
+      <source xml:lang="en">Pick Mode, {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/permissionPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="permissionPicker.ariaLabel">
+      <source xml:lang="en">Permission Picker</source>
+    </trans-unit>
+    <trans-unit id="permissionPicker.sandboxedHover">
+      <source xml:lang="en">{0} Terminal commands are sandboxed.</source>
+    </trans-unit>
+    <trans-unit id="permissionPicker.sandboxedLabel">
+      <source xml:lang="en">{0} (sandboxed)</source>
+    </trans-unit>
+    <trans-unit id="permissionPicker.triggerAriaLabel">
+      <source xml:lang="en">Pick Permission Level, {0}</source>
+    </trans-unit>
+    <trans-unit id="permissionPicker.triggerAriaLabelWithDescription">
+      <source xml:lang="en">Pick Permission Level, {0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="permissions.assisted">
+      <source xml:lang="en">Assisted permissions</source>
+    </trans-unit>
+    <trans-unit id="permissions.assisted.description">
+      <source xml:lang="en">An LLM judge evaluates each tool call. Tools it doesn't approve require your approval.</source>
+    </trans-unit>
+    <trans-unit id="permissions.assisted.subtext">
+      <source xml:lang="en">Evaluates risk before running tools</source>
+    </trans-unit>
+    <trans-unit id="permissions.autoApprove">
+      <source xml:lang="en">Allow all</source>
+    </trans-unit>
+    <trans-unit id="permissions.autoApprove.subtext">
+      <source xml:lang="en">Runs tool calls without asking</source>
+    </trans-unit>
+    <trans-unit id="permissions.autopilot">
+      <source xml:lang="en">Autopilot (Preview)</source>
+    </trans-unit>
+    <trans-unit id="permissions.autopilot.description">
+      <source xml:lang="en">Auto-approve all tool calls and continue until the task is done. Autopilot may increase costs.</source>
+    </trans-unit>
+    <trans-unit id="permissions.autopilot.subtext">
+      <source xml:lang="en">Works autonomously within permissions</source>
+    </trans-unit>
+    <trans-unit id="permissions.default">
+      <source xml:lang="en">Default permissions</source>
+    </trans-unit>
+    <trans-unit id="permissions.default.subtext">
+      <source xml:lang="en">Asks when approval settings don't apply</source>
+    </trans-unit>
+    <trans-unit id="permissions.learnMore">
+      <source xml:lang="en">Learn more about permissions</source>
+    </trans-unit>
+    <trans-unit id="permissions.policyDescription">
+      <source xml:lang="en">Disabled by enterprise policy</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/sandboxPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sandboxPicker.checkboxAriaLabel">
+      <source xml:lang="en">Run in a GitHub-managed sandbox</source>
+    </trans-unit>
+    <trans-unit id="sandboxPicker.label">
+      <source xml:lang="en">Sandbox</source>
+    </trans-unit>
+    <trans-unit id="sandboxPicker.noRepository">
+      <source xml:lang="en">A repository is required to run in a sandbox</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxAgentHostContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.connecting">
+      <source xml:lang="en">Connecting...</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.connectingTitle">
+      <source xml:lang="en">Connecting to the Environment</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.incompatible">
+      <source xml:lang="en">This environment is incompatible with this version of Visual Studio Code.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.incompatibleTitle">
+      <source xml:lang="en">Cannot Connect to the Environment</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.offline">
+      <source xml:lang="en">Environment offline.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.offlineTitle">
+      <source xml:lang="en">Environment Offline</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.reconnecting">
+      <source xml:lang="en">Reconnecting...</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.reconnectingIn">
+      <source xml:lang="en">Reconnecting in {0}s</source>
+    </trans-unit>
+    <trans-unit id="githubSandbox.hostGroup">
+      <source xml:lang="en">GitHub Sandboxes</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxReadOnlySessionHandler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.truncatedHistory">
+      <source xml:lang="en">This conversation is incomplete. Its recorded history ends mid-response, so the last exchange may be missing.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/connectionDiagnostics.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="connectionDiagnostics.captureFailed">
+      <source xml:lang="en">Could not capture connection information. {0}</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.category">
+      <source xml:lang="en">Remote Agent Hosts</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.help.close">
+      <source xml:lang="en">Escape or Close dismisses diagnostics. Closing this accessible view returns to the diagnostics snapshot.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.help.copy">
+      <source xml:lang="en">Copy Diagnostics and Download Diagnostics include the entire displayed snapshot, including collapsed sections. Review host names and addresses before sharing. Refresh reads current local state without discovery, authentication, or connection changes.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.help.hostPicker">
+      <source xml:lang="en">On phones, Open Connection Information beside the Hosts sheet title closes the picker and opens this report. Closing the report returns focus to the host picker control, or its toolbar if that control was replaced.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.help.logs">
+      <source xml:lang="en">Snapshots include recorded connection stages and a bounded excerpt of the local Window log. Copy and Download use the captured text without collecting new logs. Known credentials are redacted; review messages before sharing.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.help.navigation">
+      <source xml:lang="en">Use Tab and Shift+Tab to move between the header actions, report, and collapsed sections. Use arrow keys to scroll the focused report. Use Enter or Space to expand client details.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.help.overview">
+      <source xml:lang="en">Connection diagnostics shows a read-only snapshot of local connection state.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.help.view">
+      <source xml:lang="en">Open the report as plain text with {0}.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.help.webCopy">
+      <source xml:lang="en">Copy Diagnostics and Download Diagnostics include the entire displayed snapshot, including collapsed sections. Review host names and addresses before sharing. Refresh re-runs host discovery and then captures current local state.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.help.webNavigation">
+      <source xml:lang="en">Use Tab and Shift+Tab to move between host actions, header actions, the report, and collapsed sections. Use arrow keys to scroll the focused report. Use Enter or Space to expand client details.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.help.webOverview">
+      <source xml:lang="en">Connection information shows live host summaries with Connect and Disconnect beside each host. Expand a host to read its captured diagnostic details. Actions use current host state. An intentional disconnect keeps the host in the picker and pauses automatic connection. The separate Hidden hosts section has Restore actions that return hosts to discovery; restoration does not guarantee a connection.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.hint">
+      <source xml:lang="en">Use {0} for connection diagnostics accessibility help.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.showCommand">
+      <source xml:lang="en">Show Connection Information</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/connectionDiagnosticsLogs" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="diagnostics.logCollectionFailed">
+      <source xml:lang="en">Log collection failed</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.logMessages">
+      <source xml:lang="en">Messages</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.logScope">
+      <source xml:lang="en">Up to 200 lifecycle lines from the last 128 KiB of the current Window log; no rotated or remote logs. Messages may be unavailable at the current log level. Known credentials are redacted; review before sharing.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.logsCaptured">
+      <source xml:lang="en">Collection started at</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.noLogLines">
+      <source xml:lang="en">No matching connection lifecycle lines were found in this bounded excerpt.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.windowLogs">
+      <source xml:lang="en">Connection-related Window log excerpt</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/connectionDiagnosticsReport" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="connectionDiagnostics.captured">
+      <source xml:lang="en">Captured: {0}</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.connect">
+      <source xml:lang="en">Connect</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.connectHost">
+      <source xml:lang="en">Connect {0}</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.connected">
+      <source xml:lang="en">Connected</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.connecting">
+      <source xml:lang="en">Connecting</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.copied">
+      <source xml:lang="en">Diagnostics copied.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.copy">
+      <source xml:lang="en">Copy Diagnostics</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.copyFailed">
+      <source xml:lang="en">Could not copy. Try downloading diagnostics.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.disconnect">
+      <source xml:lang="en">Disconnect</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.disconnectHost">
+      <source xml:lang="en">Disconnect {0}</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.disconnected">
+      <source xml:lang="en">Disconnected</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.discoveryFailed">
+      <source xml:lang="en">Snapshot refreshed, but one or more host discovery operations failed.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.download">
+      <source xml:lang="en">Download Diagnostics</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.downloadFailed">
+      <source xml:lang="en">Could not download. Try copying diagnostics.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.downloadStarted">
+      <source xml:lang="en">Download requested.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.hiddenHosts">
+      <source xml:lang="en">Hidden hosts</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.hiddenStatus">
+      <source xml:lang="en">Hidden from host picker</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.incompatible">
+      <source xml:lang="en">Incompatible</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.liveSummaries">
+      <source xml:lang="en">Host summaries and controls are live. Details and exports use the captured snapshot.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.notCaptured">
+      <source xml:lang="en">Not included in the captured snapshot. Refresh to capture details.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.onDemand">
+      <source xml:lang="en">Connections managed on demand</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.paused">
+      <source xml:lang="en">Disconnected. Automatic connection paused.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.pending">
+      <source xml:lang="en">Working...</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.reconnecting">
+      <source xml:lang="en">Reconnecting</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.refresh">
+      <source xml:lang="en">Refresh</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.refreshFailed">
+      <source xml:lang="en">Could not refresh connection information. {0}</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.refreshed">
+      <source xml:lang="en">Hosts rediscovered and snapshot refreshed.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.report">
+      <source xml:lang="en">Connection diagnostics report</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.restore">
+      <source xml:lang="en">Restore</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.restoreHost">
+      <source xml:lang="en">Restore {0}</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.restored">
+      <source xml:lang="en">Host restored to the picker.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.restoredNotFound">
+      <source xml:lang="en">Host restored, but not found in the latest discovery.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.sharing">
+      <source xml:lang="en">Local snapshot, including connection-related Window logs. Known credentials are redacted, but host names, addresses, and messages can contain personal information. Review before sharing.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.snapshotRefreshed">
+      <source xml:lang="en">Snapshot refreshed.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.title">
+      <source xml:lang="en">Connection information</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/connectionDiagnosticsService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="connectionDiagnostics.hostNoLongerAvailable">
+      <source xml:lang="en">The host is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.hostNotHidden">
+      <source xml:lang="en">The host is not hidden.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.hostNotManageable">
+      <source xml:lang="en">The host does not have manual connection controls.</source>
+    </trans-unit>
+    <trans-unit id="connectionDiagnostics.restoreDiscoveryFailed">
+      <source xml:lang="en">Host is no longer hidden, but discovery failed. Use Refresh to try again.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.activeHostCount">
+      <source xml:lang="en">Active tunnel hosts</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.activity">
+      <source xml:lang="en">Recent activity logs</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.activityScope">
+      <source xml:lang="en">Up to 100 local events since {0}. Earlier history is not captured. Host names and addresses are included; review before sharing.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.address">
+      <source xml:lang="en">Address</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.agents">
+      <source xml:lang="en">Advertised agents</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.attempt">
+      <source xml:lang="en">Attempt</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.attemptElapsed">
+      <source xml:lang="en">Attempt elapsed at capture (ms)</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.attemptPhase">
+      <source xml:lang="en">Attempt phase</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.attemptStarted">
+      <source xml:lang="en">Attempt started at</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.attemptTrigger">
+      <source xml:lang="en">Attempt trigger</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.autoConnect">
+      <source xml:lang="en">Automatic connections enabled</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.automatic">
+      <source xml:lang="en">automatic</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.cached">
+      <source xml:lang="en">Cached</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.cachedCount">
+      <source xml:lang="en">Cached tunnels</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.captured">
+      <source xml:lang="en">Captured at</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.clientId">
+      <source xml:lang="en">Protocol client ID</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.clientKind">
+      <source xml:lang="en">Client</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.clientProtocols">
+      <source xml:lang="en">Client protocol versions</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.cluster">
+      <source xml:lang="en">Tunnel cluster</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.commit">
+      <source xml:lang="en">Commit</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.configured">
+      <source xml:lang="en">Configured</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.connectRequested">
+      <source xml:lang="en">{0}: connection requested ({1}).</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.connectionEntryPresent">
+      <source xml:lang="en">Connection entry present</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.connectionRemoved">
+      <source xml:lang="en">{0}: connection entry removed.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.connectionState">
+      <source xml:lang="en">{0}: {1}.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.desktop">
+      <source xml:lang="en">Desktop</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.disconnectReason">
+      <source xml:lang="en">Disconnect reason</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.disconnectedByUser">
+      <source xml:lang="en">{0}: disconnect requested by the user; automatic reconnect suppressed.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.discovered">
+      <source xml:lang="en">In last successful discovery</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.discoveredCount">
+      <source xml:lang="en">Hosts in last successful discovery</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.discoveryFailed">
+      <source xml:lang="en">Discovery #{0} failed after {1} ms. {2}</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.discoveryFailedTitle">
+      <source xml:lang="en">Tunnel discovery failed</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.discoveryFinished">
+      <source xml:lang="en">Discovery #{0} succeeded in {1} ms: {2} found, {3} with an active host, {4} dismissed.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.discoveryMany">
+      <source xml:lang="en">Tunnel discovery successful with {0} tunnels</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.discoveryNotObserved">
+      <source xml:lang="en">Tunnel discovery not yet observed</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.discoveryOne">
+      <source xml:lang="en">Tunnel discovery successful with 1 tunnel</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.discoveryPendingTitle">
+      <source xml:lang="en">Tunnel discovery in progress</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.discoveryScope">
+      <source xml:lang="en">Host details use the last successful discovery in this window; they may be stale. No network requests are made when viewing or copying diagnostics.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.discoveryStarted">
+      <source xml:lang="en">Discovery #{0} started ({1}).</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.dismissedLabel">
+      <source xml:lang="en">Persistently dismissed</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.duration">
+      <source xml:lang="en">Duration (ms)</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.enabled">
+      <source xml:lang="en">Remote hosts enabled</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.environment">
+      <source xml:lang="en">This client</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.error">
+      <source xml:lang="en">Error</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.hostSummary">
+      <source xml:lang="en">{0} - {1}, {2}</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.lastStage">
+      <source xml:lang="en">Last observed connection stage</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.lastSuccess">
+      <source xml:lang="en">Last successful discovery</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.networkChanged">
+      <source xml:lang="en">Browser network signal: {0}.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.nextRetry">
+      <source xml:lang="en">Next reconnect attempt</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.no">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.noConnection">
+      <source xml:lang="en">no connection</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.noDiscovery">
+      <source xml:lang="en">No discovery observed in this window.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.none">
+      <source xml:lang="en">None</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.notObserved">
+      <source xml:lang="en">No connection entry</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.notSelectable">
+      <source xml:lang="en">not selectable</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.online">
+      <source xml:lang="en">Browser online signal</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.pending">
+      <source xml:lang="en">Pending</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.pendingAttempt">
+      <source xml:lang="en">Connection attempt</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.phaseScope">
+      <source xml:lang="en">Up to 200 connection and 200 discovery events from this window. A start without a completion may still be pending, or its completion may not have been captured. Error descriptions are redacted and bounded. These are client observations, not server logs.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.phases">
+      <source xml:lang="en">Connection and discovery stages</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.protocolPending">
+      <source xml:lang="en">Protocol connection</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.result">
+      <source xml:lang="en">Result</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.retryScheduled">
+      <source xml:lang="en">reconnecting; next attempt at {0}</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.secureContext">
+      <source xml:lang="en">Secure browser context</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.selectable">
+      <source xml:lang="en">selectable</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.selectableLabel">
+      <source xml:lang="en">Selectable</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.selected">
+      <source xml:lang="en">Selected host</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.serverProtocols">
+      <source xml:lang="en">Server protocol versions</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.settingsChanged">
+      <source xml:lang="en">Remote host connection settings changed.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.setupPending">
+      <source xml:lang="en">Connection setup (before protocol client)</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.stageError">
+      <source xml:lang="en">Stage error</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.stageTime">
+      <source xml:lang="en">Stage observed at</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.standalone">
+      <source xml:lang="en">Standalone display mode</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.started">
+      <source xml:lang="en">Started at</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.status">
+      <source xml:lang="en">Connection status</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.suppressedLabel">
+      <source xml:lang="en">Auto-connect suppressed</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.title">
+      <source xml:lang="en">Connection diagnostics</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.transport">
+      <source xml:lang="en">Connection type</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.trigger">
+      <source xml:lang="en">Trigger</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.tunnelProtocol">
+      <source xml:lang="en">Tunnel protocol version</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.unknown">
+      <source xml:lang="en">Unknown</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.user">
+      <source xml:lang="en">user</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.version">
+      <source xml:lang="en">Version</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.visibility">
+      <source xml:lang="en">Page visibility</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.visibilityChanged">
+      <source xml:lang="en">Page visibility: {0}.</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.visibleCount">
+      <source xml:lang="en">Host picker entries</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.web">
+      <source xml:lang="en">Web</source>
+    </trans-unit>
+    <trans-unit id="diagnostics.yes">
+      <source xml:lang="en">Yes</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/devContainerAgentHostService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="devContainerAgentHost.agentDiscoveryTimeout">
+      <source xml:lang="en">Timed out waiting for the Dev Container Agent Host to advertise agents.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.connectionUnavailable">
+      <source xml:lang="en">Dev Container Agent Host connection was not available after connecting.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.connectorAlreadyRegistered">
+      <source xml:lang="en">A Dev Container Agent Host connector is already registered.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.connectorUnavailable">
+      <source xml:lang="en">No Dev Container Agent Host connector is registered.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.invalidWorkspaceUri">
+      <source xml:lang="en">Dev Container workspace URI must use the '{0}' scheme and '{1}' authority.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/devContainerSource" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="devContainerAgentHost.sourceNotConnected">
+      <source xml:lang="en">The SSH, Tunnel, or WSL host could not be connected for this Dev Container workspace.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.sourceUnavailable">
+      <source xml:lang="en">The SSH, Tunnel, or WSL connection for this Dev Container workspace is no longer configured.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/manageRemoteAgentHosts" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="manageHosts.actionsHeader">
+      <source xml:lang="en">Add or Manage</source>
+    </trans-unit>
+    <trans-unit id="manageHosts.placeholder">
+      <source xml:lang="en">Select a remote to manage or pick an action</source>
+    </trans-unit>
+    <trans-unit id="manageHosts.remoteHostsHeader">
+      <source xml:lang="en">Remote Agent Hosts</source>
+    </trans-unit>
+    <trans-unit id="manageHosts.removeTooltip">
+      <source xml:lang="en">Remove</source>
+    </trans-unit>
+    <trans-unit id="manageHosts.title">
+      <source xml:lang="en">Manage Remote Agent Hosts</source>
+    </trans-unit>
+    <trans-unit id="manageRemoteAgentHosts">
+      <source xml:lang="en">Manage Remote Agent Hosts...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHost.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.agentHost.cloudSandbox.enabled">
+      <source xml:lang="en">Enable Copilot cloud sandbox sessions over a live Agent Host Protocol relay, for slash commands and a responsive, steerable experience instead of only polling logs. Adds a Sandbox option when starting a cloud session, and connects to the sandbox when opening one.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.forwardSSHAgent">
+      <source xml:lang="en">When enabled, forwards the local SSH agent to the remote machine during SSH agent host connections to hosts whose SSH config has `ForwardAgent yes`. Only enable this for trusted hosts. The remote agent host process must be restarted for this setting to take effect.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.localFilePermissions">
+      <source xml:lang="en">Per-host filesystem grants for remote agent hosts. Maps a remote agent host address to URI strings and the access mode the host has been granted (`r` for read, `rw` for read and write). Hosts cannot read or write any files outside the granted URIs without prompting; a URI grant covers descendants. This setting is normally maintained by the agent-host permission prompts and rarely edited by hand.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.localFilePermissions.lexicalUri">
+      <source xml:lang="en">Original resource URI used to display accessible directory entries.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.localFilePermissions.read">
+      <source xml:lang="en">Read-only access.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.localFilePermissions.readWrite">
+      <source xml:lang="en">Read and write access.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.wsl.autoStart">
+      <source xml:lang="en">Automatically start a WSL distribution when opening a chat whose distribution is not running. When disabled, the chat shows a Start button instead.</source>
+    </trans-unit>
+    <trans-unit id="chat.remoteAgentHosts">
+      <source xml:lang="en">A list of WebSocket remote agent host addresses to connect to (e.g. "localhost:3000"). SSH remote agent host details are managed by VS Code.</source>
+    </trans-unit>
+    <trans-unit id="chat.remoteAgentHosts.address">
+      <source xml:lang="en">The WebSocket address of the remote agent host (e.g. "localhost:3000").</source>
+    </trans-unit>
+    <trans-unit id="chat.remoteAgentHosts.autoConnect">
+      <source xml:lang="en">Automatically connect to online dev tunnel, SSH, and WSL remote agent hosts on startup. When disabled, cached sessions are still shown but connections are established only on demand.</source>
+    </trans-unit>
+    <trans-unit id="chat.remoteAgentHosts.connectionToken">
+      <source xml:lang="en">An optional connection token for authenticating with the remote agent host.</source>
+    </trans-unit>
+    <trans-unit id="chat.remoteAgentHosts.enabled">
+      <source xml:lang="en">Enable connecting to remote agent hosts.</source>
+    </trans-unit>
+    <trans-unit id="chat.remoteAgentHosts.name">
+      <source xml:lang="en">A display name for this remote agent host.</source>
+    </trans-unit>
+    <trans-unit id="chat.remoteAgentTunnels">
+      <source xml:lang="en">Additional dev tunnel names to look for when connecting to remote agent hosts. These are looked up in addition to tunnels automatically enumerated from your account.</source>
+    </trans-unit>
+    <trans-unit id="chat.sshRemoteAgentHostCommand">
+      <source xml:lang="en">For development: Override the command used to start the remote agent host over SSH. When set, skips automatic CLI installation and runs this command instead. The command must print a WebSocket URL matching ws://127.0.0.1:PORT (optionally with ?tkn=TOKEN) to stdout or stderr./</source>
+    </trans-unit>
+    <trans-unit id="chat.wslRemoteAgentHostCommand">
+      <source xml:lang="en">For development: Override the command used to start the remote agent host in WSL. When set, skips automatic CLI installation and runs this command instead. The command must print a WebSocket URL matching ws://127.0.0.1:PORT (optionally with ?tkn=TOKEN) to stdout or stderr.</source>
+    </trans-unit>
+    <trans-unit id="remoteAgentHost.removeConfiguredPlugin">
+      <source xml:lang="en">Remove from Remote Host</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHostActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="addNewSSHHost">
+      <source xml:lang="en">Add New SSH Host...</source>
+    </trans-unit>
+    <trans-unit id="addRemoteAgentHost">
+      <source xml:lang="en">Add Remote Agent Host...</source>
+    </trans-unit>
+    <trans-unit id="addRemoteFailed">
+      <source xml:lang="en">Failed to connect to remote agent host {0}.</source>
+    </trans-unit>
+    <trans-unit id="addRemotePrompt">
+      <source xml:lang="en">Paste a host, host:port, or WebSocket URL. Example: {0}</source>
+    </trans-unit>
+    <trans-unit id="addRemoteTitle">
+      <source xml:lang="en">Add Remote Agent Host</source>
+    </trans-unit>
+    <trans-unit id="addRemoteValidationEmpty">
+      <source xml:lang="en">Enter a remote agent host address.</source>
+    </trans-unit>
+    <trans-unit id="addRemoteValidationInvalid">
+      <source xml:lang="en">Enter a valid host, host:port, or WebSocket URL.</source>
+    </trans-unit>
+    <trans-unit id="configureSSHHosts">
+      <source xml:lang="en">Configure SSH Hosts...</source>
+    </trans-unit>
+    <trans-unit id="connectViaSSH">
+      <source xml:lang="en">Connect to Remote Agent Host via SSH</source>
+    </trans-unit>
+    <trans-unit id="connectViaSSHShort">
+      <source xml:lang="en">SSH</source>
+    </trans-unit>
+    <trans-unit id="connectViaTunnel">
+      <source xml:lang="en">Connect to Remote Agent Host via Dev Tunnel</source>
+    </trans-unit>
+    <trans-unit id="connectViaTunnelShort">
+      <source xml:lang="en">Tunnels</source>
+    </trans-unit>
+    <trans-unit id="connectViaWSL">
+      <source xml:lang="en">Connect to Remote Agent Host via WSL</source>
+    </trans-unit>
+    <trans-unit id="connectViaWSLShort">
+      <source xml:lang="en">WSL...</source>
+    </trans-unit>
+    <trans-unit id="nameRemotePlaceholder">
+      <source xml:lang="en">My Remote</source>
+    </trans-unit>
+    <trans-unit id="nameRemotePrompt">
+      <source xml:lang="en">Enter a display name for this remote agent host.</source>
+    </trans-unit>
+    <trans-unit id="nameRemoteTitle">
+      <source xml:lang="en">Name Remote Agent Host</source>
+    </trans-unit>
+    <trans-unit id="nameRemoteValidationEmpty">
+      <source xml:lang="en">Enter a name for this remote agent host.</source>
+    </trans-unit>
+    <trans-unit id="sshAddNewHost">
+      <source xml:lang="en">Add New SSH Host...</source>
+    </trans-unit>
+    <trans-unit id="sshAuthAgent">
+      <source xml:lang="en">SSH Agent</source>
+    </trans-unit>
+    <trans-unit id="sshAuthAgentDesc">
+      <source xml:lang="en">Use the running SSH agent for authentication</source>
+    </trans-unit>
+    <trans-unit id="sshAuthKey">
+      <source xml:lang="en">Private Key File</source>
+    </trans-unit>
+    <trans-unit id="sshAuthKeyDesc">
+      <source xml:lang="en">Authenticate with a private key file</source>
+    </trans-unit>
+    <trans-unit id="sshAuthPassword">
+      <source xml:lang="en">Password</source>
+    </trans-unit>
+    <trans-unit id="sshAuthPasswordDesc">
+      <source xml:lang="en">Authenticate with a password</source>
+    </trans-unit>
+    <trans-unit id="sshAuthPlaceholder">
+      <source xml:lang="en">Choose how to authenticate with {0}</source>
+    </trans-unit>
+    <trans-unit id="sshAuthTitle">
+      <source xml:lang="en">Authentication Method</source>
+    </trans-unit>
+    <trans-unit id="sshConfigCreateFailed">
+      <source xml:lang="en">Failed to create SSH config file: {0}</source>
+    </trans-unit>
+    <trans-unit id="sshConfigListFailed">
+      <source xml:lang="en">Failed to list SSH config files: {0}</source>
+    </trans-unit>
+    <trans-unit id="sshConfigOpenFailed">
+      <source xml:lang="en">Failed to open SSH config file: {0}</source>
+    </trans-unit>
+    <trans-unit id="sshConfigPickPlaceholder">
+      <source xml:lang="en">Select an SSH configuration file</source>
+    </trans-unit>
+    <trans-unit id="sshConfigPickTitle">
+      <source xml:lang="en">Select SSH configuration file to edit</source>
+    </trans-unit>
+    <trans-unit id="sshConfigureHosts">
+      <source xml:lang="en">Configure SSH Hosts...</source>
+    </trans-unit>
+    <trans-unit id="sshConnectFailed">
+      <source xml:lang="en">Failed to connect via SSH to {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="sshConnecting">
+      <source xml:lang="en">Connecting to {0} via SSH...</source>
+    </trans-unit>
+    <trans-unit id="sshHostEmpty">
+      <source xml:lang="en">Enter an SSH host.</source>
+    </trans-unit>
+    <trans-unit id="sshHostInvalid">
+      <source xml:lang="en">Invalid SSH host.</source>
+    </trans-unit>
+    <trans-unit id="sshHostInvalidPort">
+      <source xml:lang="en">Enter a valid port number.</source>
+    </trans-unit>
+    <trans-unit id="sshHostMissingAfterAt">
+      <source xml:lang="en">Enter a host name after '@'.</source>
+    </trans-unit>
+    <trans-unit id="sshHostPickerPlaceholder">
+      <source xml:lang="en">Select configured SSH host or enter user@host</source>
+    </trans-unit>
+    <trans-unit id="sshHostTitle">
+      <source xml:lang="en">Connect via SSH</source>
+    </trans-unit>
+    <trans-unit id="sshKeyEmpty">
+      <source xml:lang="en">Enter a key file path.</source>
+    </trans-unit>
+    <trans-unit id="sshKeyPrompt">
+      <source xml:lang="en">Enter the path to your SSH private key.</source>
+    </trans-unit>
+    <trans-unit id="sshKeyTitle">
+      <source xml:lang="en">Private Key Path</source>
+    </trans-unit>
+    <trans-unit id="sshNameEmpty">
+      <source xml:lang="en">Enter a name.</source>
+    </trans-unit>
+    <trans-unit id="sshNamePlaceholder">
+      <source xml:lang="en">My Remote</source>
+    </trans-unit>
+    <trans-unit id="sshNamePrompt">
+      <source xml:lang="en">Enter a display name for this SSH remote.</source>
+    </trans-unit>
+    <trans-unit id="sshNameTitle">
+      <source xml:lang="en">Name Remote</source>
+    </trans-unit>
+    <trans-unit id="sshPasswordEmpty">
+      <source xml:lang="en">Enter a password.</source>
+    </trans-unit>
+    <trans-unit id="sshPasswordPrompt">
+      <source xml:lang="en">Enter the password for {0}@{1}.</source>
+    </trans-unit>
+    <trans-unit id="sshPasswordTitle">
+      <source xml:lang="en">SSH Password</source>
+    </trans-unit>
+    <trans-unit id="sshResolveConfigFailed">
+      <source xml:lang="en">Failed to resolve SSH config for {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="sshUsernameEmpty">
+      <source xml:lang="en">Enter a username.</source>
+    </trans-unit>
+    <trans-unit id="sshUsernameMissingInHost">
+      <source xml:lang="en">Enter a username before '@'.</source>
+    </trans-unit>
+    <trans-unit id="sshUsernamePrompt">
+      <source xml:lang="en">Enter the username for {0}.</source>
+    </trans-unit>
+    <trans-unit id="sshUsernameTitle">
+      <source xml:lang="en">SSH Username</source>
+    </trans-unit>
+    <trans-unit id="tunnelAuthFailed">
+      <source xml:lang="en">Authentication failed. Please try again.</source>
+    </trans-unit>
+    <trans-unit id="tunnelConnectFailed">
+      <source xml:lang="en">Failed to connect to tunnel '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="tunnelConnecting">
+      <source xml:lang="en">Connecting to tunnel '{0}'...</source>
+    </trans-unit>
+    <trans-unit id="tunnelDeleteButton">
+      <source xml:lang="en">&amp;&amp;Delete</source>
+    </trans-unit>
+    <trans-unit id="tunnelDeleteConfirmation">
+      <source xml:lang="en">Are you sure you want to delete dev tunnel '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="tunnelDeleteDetail">
+      <source xml:lang="en">The tunnel may be recreated if a machine starts hosting it again.</source>
+    </trans-unit>
+    <trans-unit id="tunnelDeleteFailed">
+      <source xml:lang="en">Failed to delete dev tunnel '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="tunnelDeleteTooltip">
+      <source xml:lang="en">Delete Dev Tunnel</source>
+    </trans-unit>
+    <trans-unit id="tunnelListFailed">
+      <source xml:lang="en">Failed to list dev tunnels: {0}</source>
+    </trans-unit>
+    <trans-unit id="tunnelNoneFound">
+      <source xml:lang="en">No dev tunnels with agent host support were found. Start a tunnel with 'code tunnel' on another machine.</source>
+    </trans-unit>
+    <trans-unit id="tunnelNoneFoundAfterDelete">
+      <source xml:lang="en">No dev tunnels with agent host support were found. Start a tunnel with 'code tunnel' on another machine.</source>
+    </trans-unit>
+    <trans-unit id="tunnelOnlyLocalFound">
+      <source xml:lang="en">This machine is already hosting the only available dev tunnel.</source>
+    </trans-unit>
+    <trans-unit id="tunnelPickOffline">
+      <source xml:lang="en">{0} · Offline</source>
+    </trans-unit>
+    <trans-unit id="tunnelPickOnline">
+      <source xml:lang="en">{0} · Online</source>
+    </trans-unit>
+    <trans-unit id="tunnelPickPlaceholder">
+      <source xml:lang="en">Select a dev tunnel to connect to</source>
+    </trans-unit>
+    <trans-unit id="tunnelPickTitle">
+      <source xml:lang="en">Connect via Dev Tunnel</source>
+    </trans-unit>
+    <trans-unit id="tunnelRefreshAfterDeleteFailed">
+      <source xml:lang="en">Deleted dev tunnel '{0}', but failed to refresh dev tunnels: {1}</source>
+    </trans-unit>
+    <trans-unit id="updateRemoteAgentHost">
+      <source xml:lang="en">Update Remote Agent Host Server...</source>
+    </trans-unit>
+    <trans-unit id="updateRemoteAgentHost.none">
+      <source xml:lang="en">No remote agent hosts need updating.</source>
+    </trans-unit>
+    <trans-unit id="updateRemoteAgentHost.noneUpgradable">
+      <source xml:lang="en">No remote agent hosts can be updated from here. Incompatible hosts must be updated manually, then reconnected.</source>
+    </trans-unit>
+    <trans-unit id="updateRemoteAgentHost.pick">
+      <source xml:lang="en">Select a remote agent host to update</source>
+    </trans-unit>
+    <trans-unit id="wslConnectFailed">
+      <source xml:lang="en">Failed to connect to WSL distribution '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="wslConnecting">
+      <source xml:lang="en">Connecting to WSL distribution '{0}'...</source>
+    </trans-unit>
+    <trans-unit id="wslDistroDefault">
+      <source xml:lang="en">Default distribution</source>
+    </trans-unit>
+    <trans-unit id="wslDistroRunning">
+      <source xml:lang="en">Running</source>
+    </trans-unit>
+    <trans-unit id="wslDistroStopped">
+      <source xml:lang="en">Stopped</source>
+    </trans-unit>
+    <trans-unit id="wslInstallDocsAction">
+      <source xml:lang="en">Install WSL</source>
+    </trans-unit>
+    <trans-unit id="wslListFailed">
+      <source xml:lang="en">Failed to list WSL distributions: {0}</source>
+    </trans-unit>
+    <trans-unit id="wslNoDistros">
+      <source xml:lang="en">No WSL 2 distributions are installed.</source>
+    </trans-unit>
+    <trans-unit id="wslNotInstalled">
+      <source xml:lang="en">Windows Subsystem for Linux is not installed or not enabled.</source>
+    </trans-unit>
+    <trans-unit id="wslPickPlaceholder">
+      <source xml:lang="en">Select a WSL distribution to connect to</source>
+    </trans-unit>
+    <trans-unit id="wslPickTitle">
+      <source xml:lang="en">Connect via WSL</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHostCustomizationHarness" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="remoteAgentHost.addPlugin">
+      <source xml:lang="en">Add Remote Plugin</source>
+    </trans-unit>
+    <trans-unit id="remoteAgentHost.addPluginTooltip">
+      <source xml:lang="en">Add a plugin folder that already exists on this remote agent host.</source>
+    </trans-unit>
+    <trans-unit id="remoteAgentHost.pluginAlreadyConfigured">
+      <source xml:lang="en">'{0}' is already configured on {1}.</source>
+    </trans-unit>
+    <trans-unit id="remoteAgentHost.selectPluginFolder">
+      <source xml:lang="en">Select Plugin Folder on {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="connectFailed">
+      <source xml:lang="en">Failed to connect to remote agent host '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="folders">
+      <source xml:lang="en">Folders</source>
+    </trans-unit>
+    <trans-unit id="noAgents">
+      <source xml:lang="en">Remote agent host '{0}' has not advertised any agents yet.</source>
+    </trans-unit>
+    <trans-unit id="notConnected">
+      <source xml:lang="en">Unable to connect to remote agent host '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="notConnectedSend">
+      <source xml:lang="en">Cannot send request: not connected to remote agent host '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="notConnectedSession">
+      <source xml:lang="en">Cannot create session: not connected to remote agent host '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="selectRemoteFolder">
+      <source xml:lang="en">Select Folder on {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteHostOptions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostIncompatibleNotification">
+      <source xml:lang="en">Cannot connect to {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHostIncompatibleShowOptions">
+      <source xml:lang="en">Show Options</source>
+    </trans-unit>
+    <trans-unit id="agentHostIncompatibleUpdate">
+      <source xml:lang="en">Update Server</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.changeLocationPreference">
+      <source xml:lang="en">Change Preferred Agent Location</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.copyAddress">
+      <source xml:lang="en">Copy Address</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.hoverConnected">
+      <source xml:lang="en">Remote agent host is connected and ready.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.hoverConnectedAddr">
+      <source xml:lang="en">Remote agent host is connected and ready.
+
+Address: {0}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.hoverConnecting">
+      <source xml:lang="en">Attempting to connect to remote agent host...</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.hoverConnectingAddr">
+      <source xml:lang="en">Attempting to connect to remote agent host...
+
+Address: {0}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.hoverDisconnected">
+      <source xml:lang="en">Remote agent host is disconnected.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.hoverDisconnectedAddr">
+      <source xml:lang="en">Remote agent host is disconnected.
+
+Address: {0}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.hoverIncompatible">
+      <source xml:lang="en">Cannot connect to remote agent host: {0}
+
+This client speaks protocol version {1}.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.hoverIncompatibleAddr">
+      <source xml:lang="en">Cannot connect to remote agent host: {0}
+
+This client speaks protocol version {1}.
+
+Address: {2}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.hoverReconnecting">
+      <source xml:lang="en">The remote agent host connection dropped and is being restored automatically.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.hoverReconnectingAddr">
+      <source xml:lang="en">The remote agent host connection dropped and is being restored automatically.
+
+Address: {0}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.incompatibleValidationClient">
+      <source xml:lang="en">Incompatible protocol version. We speak {0}. Error from {1}: {2}
+
+ Ensure {3} and {1} are both up to date.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.incompatibleValidationServer">
+      <source xml:lang="en">Incompatible protocol version. We speak {0}, but {1} speaks {2}. Ensure {3} and {1} are both up to date.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.locationPreferenceReconnectFailed">
+      <source xml:lang="en">Preference saved for {0}, but reconnection failed: {1}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.locationPreferenceReconnecting">
+      <source xml:lang="en">Reconnecting to {0}...</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.locationPreferenceSavedNoProvider">
+      <source xml:lang="en">Preference saved for {0}, but no active connection was found. This takes effect the next time it connects.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.locationPreferenceUpdated">
+      <source xml:lang="en">Preference updated for {0}.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.openSSHConfig">
+      <source xml:lang="en">Open SSH Configuration</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.openSettings">
+      <source xml:lang="en">Open Settings</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.reconnect">
+      <source xml:lang="en">Reconnect</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.remoteOptionsTitle">
+      <source xml:lang="en">Options for {0}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.removeRemote">
+      <source xml:lang="en">Remove Remote</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.statusConnecting">
+      <source xml:lang="en">Connecting</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.statusIncompatible">
+      <source xml:lang="en">Incompatible</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.statusOffline">
+      <source xml:lang="en">Offline</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.statusOnline">
+      <source xml:lang="en">Online</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.statusReconnecting">
+      <source xml:lang="en">Reconnecting</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.updateServer">
+      <source xml:lang="en">Update Server</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.upgradeCountdown">
+      <source xml:lang="en">Restarting in {0}s...</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.upgradeFailed">
+      <source xml:lang="en">Failed to update {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.upgradeFailedWithReason">
+      <source xml:lang="en">Failed to update {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.upgradeNotNeeded">
+      <source xml:lang="en">{0} is already on the latest version.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.upgradeNotStarted">
+      <source xml:lang="en">{0} did not start an update.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.upgradeReconnecting">
+      <source xml:lang="en">Reconnecting...</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.upgradingServer">
+      <source xml:lang="en">Updating {0}...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/tunnelAgentHost.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="tunnelConnecting">
+      <source xml:lang="en">Connecting to tunnel '{0}'...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/wslAgentHost.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="wslAgentHost.autoStart">
+      <source xml:lang="en">Automatically Start WSL When Opening Chats</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/electron-browser/devContainerAgentHostConnector.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.agentHost.devContainer.enabled">
+      <source xml:lang="en">Enable running Agent Host sessions in Dev Containers.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.devContainer.worktree.enabled">
+      <source xml:lang="en">Enable running Dev Container Agent Host sessions in new worktrees.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.disabled">
+      <source xml:lang="en">Dev Container Agent Host connections are not enabled.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.remoteAgentHostsDisabled">
+      <source xml:lang="en">Remote Agent Host connections are not enabled.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.unsupportedHost">
+      <source xml:lang="en">This remote Agent Host does not support Dev Container sessions. Update VS Code on the remote machine.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.workspaceRequired">
+      <source xml:lang="en">Dev Container Agent Hosts require a local, SSH, Tunnel, or WSL workspace.</source>
+    </trans-unit>
+    <trans-unit id="devContainerOutputChannel">
+      <source xml:lang="en">Dev Container ({0})</source>
+    </trans-unit>
+    <trans-unit id="devContainerOutputStarting">
+      <source xml:lang="en">
+--- Starting Dev Container for {0} ---
+</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/electron-browser/forgetSSHHostKeyCommand" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="forgetSSHHostKey">
+      <source xml:lang="en">Forget SSH Host Key</source>
+    </trans-unit>
+    <trans-unit id="forgetSSHHostKey.forgotMany">
+      <source xml:lang="en">Forgot saved SSH host keys for {0} hosts. You'll be asked to verify them the next time you connect.</source>
+    </trans-unit>
+    <trans-unit id="forgetSSHHostKey.forgotOne">
+      <source xml:lang="en">Forgot the saved SSH host key for '{0}'. You'll be asked to verify it the next time you connect.</source>
+    </trans-unit>
+    <trans-unit id="forgetSSHHostKey.none">
+      <source xml:lang="en">No SSH host keys have been saved yet.</source>
+    </trans-unit>
+    <trans-unit id="forgetSSHHostKey.placeholder">
+      <source xml:lang="en">Select the hosts whose saved SSH host keys should be forgotten</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/electron-browser/remoteAgentHostLocationPreferenceCommand" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="changeRemoteAgentHostLocationPreference">
+      <source xml:lang="en">Change Preferred Remote Agent Location</source>
+    </trans-unit>
+    <trans-unit id="remoteAgentHostLocation.noHosts">
+      <source xml:lang="en">No remote agent hosts are configured yet. Connect to one first, then change its preferred agent run location.</source>
+    </trans-unit>
+    <trans-unit id="remoteAgentHostLocation.pickHost">
+      <source xml:lang="en">Select a remote host to change its preferred agent run location</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/electron-browser/tunnelAgentHostServiceImpl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="tunnelAgentHost.noAuthentication">
+      <source xml:lang="en">No authentication is available to enumerate tunnels.</source>
+    </trans-unit>
+    <trans-unit id="tunnelAgentHostFailoverNotification">
+      <source xml:lang="en">The editor agent host exited. Reconnected to a dedicated agent host. In-progress work may have been interrupted.</source>
+    </trans-unit>
+    <trans-unit id="tunnelAgentHostRejectedEditorNotification">
+      <source xml:lang="en">The editor agent host is no longer running. Connected to a dedicated agent host instead.</source>
+    </trans-unit>
+</body></file>
+</xliff>

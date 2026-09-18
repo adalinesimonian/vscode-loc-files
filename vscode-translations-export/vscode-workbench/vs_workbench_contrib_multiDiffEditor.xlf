@@ -7,6 +7,9 @@
     <trans-unit id="collapseAllDiffs">
       <source xml:lang="en">Collapse All Diffs</source>
     </trans-unit>
+    <trans-unit id="diffView">
+      <source xml:lang="en">Diff View</source>
+    </trans-unit>
     <trans-unit id="goToFile">
       <source xml:lang="en">Open File</source>
     </trans-unit>
@@ -15,6 +18,9 @@
     </trans-unit>
     <trans-unit id="goToPreviousChange">
       <source xml:lang="en">Go to Previous Change</source>
+    </trans-unit>
+    <trans-unit id="openMultiDiffEditorLayoutDebug">
+      <source xml:lang="en">Open Multi Diff Editor Layout Debug State</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/multiDiffEditor/browser/icons.contribution" source-language="en" datatype="plaintext"><body>
@@ -44,6 +50,20 @@
   <file original="src/vs/workbench/contrib/multiDiffEditor/browser/scmMultiDiffSourceResolver" source-language="en" datatype="plaintext"><body>
     <trans-unit id="openChanges">
       <source xml:lang="en">Open Changes</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/multiDiffEditor/common/multiDiffEditor" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="multiDiffEditor.experimental.variant">
+      <source xml:lang="en">Controls the experimental variant of the multi diff editor.</source>
+    </trans-unit>
+    <trans-unit id="multiDiffEditor.experimental.variant.cards">
+      <source xml:lang="en">Use the compact card-based variant.</source>
+    </trans-unit>
+    <trans-unit id="multiDiffEditor.experimental.variant.noCards">
+      <source xml:lang="en">Use the compact variant without cards.</source>
+    </trans-unit>
+    <trans-unit id="multiDiffEditorConfigurationTitle">
+      <source xml:lang="en">Multi Diff Editor</source>
     </trans-unit>
 </body></file>
 </xliff>

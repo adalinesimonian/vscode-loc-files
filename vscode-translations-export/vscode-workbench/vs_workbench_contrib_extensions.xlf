@@ -342,9 +342,6 @@
     <trans-unit id="InstallVSIXs.successRestart">
       <source xml:lang="en">Completed installing extensions. Please restart extensions to enable them.</source>
     </trans-unit>
-    <trans-unit id="all">
-      <source xml:lang="en">All Extensions</source>
-    </trans-unit>
     <trans-unit id="autoRestart">
       <source xml:lang="en">If activated, extensions will automatically restart following an update if the window is not in focus. There can be a data loss if you have open Notebooks or Custom Editors.</source>
     </trans-unit>
@@ -367,7 +364,7 @@
       <source xml:lang="en">Disable All Installed Extensions for this Workspace</source>
     </trans-unit>
     <trans-unit id="disableAutoUpdate">
-      <source xml:lang="en">Disable Auto Update for All Extensions</source>
+      <source xml:lang="en">Disable Auto Update for Extensions</source>
     </trans-unit>
     <trans-unit id="disablePreRleaseLabel">
       <source xml:lang="en">Switch to Release Version</source>
@@ -391,13 +388,10 @@
       <source xml:lang="en">Enable All Extensions for this Workspace</source>
     </trans-unit>
     <trans-unit id="enableAutoUpdate">
-      <source xml:lang="en">Enable Auto Update for All Extensions</source>
+      <source xml:lang="en">Enable Auto Update for Extensions</source>
     </trans-unit>
     <trans-unit id="enablePreRleaseLabel">
       <source xml:lang="en">Switch to Pre-Release Version</source>
-    </trans-unit>
-    <trans-unit id="enabled">
-      <source xml:lang="en">Only Enabled Extensions</source>
     </trans-unit>
     <trans-unit id="enabled filter">
       <source xml:lang="en">Enabled</source>
@@ -435,20 +429,35 @@
     <trans-unit id="extensions.affinity">
       <source xml:lang="en">Configure an extension to execute in a different extension host process.</source>
     </trans-unit>
+    <trans-unit id="extensions.allowOpenInModalEditor">
+      <source xml:lang="en">Controls whether extensions and MCP servers open in a modal editor overlay.</source>
+    </trans-unit>
     <trans-unit id="extensions.autoUpdate">
       <source xml:lang="en">Controls the automatic update behavior of extensions. The updates are fetched from a Microsoft online service.</source>
     </trans-unit>
-    <trans-unit id="extensions.autoUpdate.enabled">
-      <source xml:lang="en">Download and install updates automatically only for enabled extensions.</source>
-    </trans-unit>
-    <trans-unit id="extensions.autoUpdate.false">
+    <trans-unit id="extensions.autoUpdate.off">
       <source xml:lang="en">Extensions are not automatically updated.</source>
     </trans-unit>
-    <trans-unit id="extensions.autoUpdate.true">
-      <source xml:lang="en">Download and install updates automatically for all extensions.</source>
+    <trans-unit id="extensions.autoUpdate.on">
+      <source xml:lang="en">Download and install updates automatically only for enabled extensions.</source>
+    </trans-unit>
+    <trans-unit id="extensions.autoUpdateDelay">
+      <source xml:lang="en">Controls the delay in hours after an extension update is published before it is automatically installed. Only applies when `#extensions.autoUpdate#` is set to `on`. This delay helps avoid installing potentially problematic updates immediately after release.</source>
+    </trans-unit>
+    <trans-unit id="extensions.gallery.authProvider">
+      <source xml:lang="en">Configure the authentication provider for the Extensions Marketplace</source>
+    </trans-unit>
+    <trans-unit id="extensions.gallery.authProvider.github">
+      <source xml:lang="en">Authenticate to the Extensions Marketplace using GitHub.</source>
+    </trans-unit>
+    <trans-unit id="extensions.gallery.authProvider.microsoft">
+      <source xml:lang="en">Authenticate to the Extensions Marketplace using a Microsoft (Entra ID) account.</source>
     </trans-unit>
     <trans-unit id="extensions.gallery.serviceUrl">
       <source xml:lang="en">Configure the Marketplace service URL to connect to</source>
+    </trans-unit>
+    <trans-unit id="extensions.supportAgentsWindow">
+      <source xml:lang="en">Override the Agents window support of an extension. Extensions using `true` will be enabled in the Agents window even when they would otherwise be disabled.</source>
     </trans-unit>
     <trans-unit id="extensions.supportUntrustedWorkspaces">
       <source xml:lang="en">Override the untrusted workspace support of an extension. Extensions using `true` will always be enabled. Extensions using `limited` will always be enabled, and the extension will hide functionality that requires trust. Extensions using `false` will only be enabled only when the workspace is trusted.</source>
@@ -606,9 +615,6 @@
     <trans-unit id="noUpdatesAvailable">
       <source xml:lang="en">All extensions are up to date.</source>
     </trans-unit>
-    <trans-unit id="none">
-      <source xml:lang="en">None</source>
-    </trans-unit>
     <trans-unit id="notFound">
       <source xml:lang="en">Extension '{0}' not found.</source>
     </trans-unit>
@@ -747,9 +753,6 @@
     <trans-unit id="workbench.extensions.installExtension.description">
       <source xml:lang="en">Install the given extension</source>
     </trans-unit>
-    <trans-unit id="workbench.extensions.installExtension.option.context">
-      <source xml:lang="en">Context for the installation. This is a JSON object that can be used to pass any information to the installation handlers. i.e. `{skipWalkthrough: true}` will skip opening the walkthrough upon install.</source>
-    </trans-unit>
     <trans-unit id="workbench.extensions.installExtension.option.donotSync">
       <source xml:lang="en">When enabled, VS Code do not sync this extension when Settings Sync is on.</source>
     </trans-unit>
@@ -779,11 +782,6 @@
     </trans-unit>
     <trans-unit id="workspace unsupported filter">
       <source xml:lang="en">Workspace Unsupported</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/extensions/browser/extensions.web.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="runtimeExtension">
-      <source xml:lang="en">Running Extensions</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/extensions/browser/extensionsActions" source-language="en" datatype="plaintext"><body>
@@ -820,6 +818,9 @@
     </trans-unit>
     <trans-unit id="auto update message">
       <source xml:lang="en">Please [review the extension]({0}) and update it manually.</source>
+    </trans-unit>
+    <trans-unit id="autoUpdateDelayed">
+      <source xml:lang="en">This extension is not updated yet because new versions are auto updated {0} after they are published. It will be auto updated {1}.</source>
     </trans-unit>
     <trans-unit id="cancel">
       <source xml:lang="en">Cancel</source>
@@ -867,6 +868,18 @@
     <trans-unit id="deprecated with alternate settings tooltip">
       <source xml:lang="en">This extension is deprecated as this functionality is now built-in to VS Code. Configure these {0} to use this functionality.</source>
     </trans-unit>
+    <trans-unit id="disableAIGloballyAction">
+      <source xml:lang="en">Disable AI Features</source>
+    </trans-unit>
+    <trans-unit id="disableAIGloballyActionToolTip">
+      <source xml:lang="en">Disable AI features</source>
+    </trans-unit>
+    <trans-unit id="disableAIInWorkspaceAction">
+      <source xml:lang="en">Disable AI Features (Workspace)</source>
+    </trans-unit>
+    <trans-unit id="disableAIInWorkspaceActionToolTip">
+      <source xml:lang="en">Disable AI features in this workspace</source>
+    </trans-unit>
     <trans-unit id="disableAutoUpdate">
       <source xml:lang="en">Disabled auto updates for</source>
     </trans-unit>
@@ -899,6 +912,18 @@
     </trans-unit>
     <trans-unit id="download">
       <source xml:lang="en">Try Downloading Manually...</source>
+    </trans-unit>
+    <trans-unit id="enableAIGloballyAction">
+      <source xml:lang="en">Enable AI Features</source>
+    </trans-unit>
+    <trans-unit id="enableAIGloballyActionToolTip">
+      <source xml:lang="en">Enable AI features</source>
+    </trans-unit>
+    <trans-unit id="enableAIInWorkspaceAction">
+      <source xml:lang="en">Enable AI Features (Workspace)</source>
+    </trans-unit>
+    <trans-unit id="enableAIInWorkspaceActionToolTip">
+      <source xml:lang="en">Enable AI features in this workspace</source>
     </trans-unit>
     <trans-unit id="enableAutoUpdate">
       <source xml:lang="en">Enabled auto updates for</source>
@@ -953,6 +978,9 @@
     </trans-unit>
     <trans-unit id="extensionButtonBackground">
       <source xml:lang="en">Button background color for extension actions.</source>
+    </trans-unit>
+    <trans-unit id="extensionButtonBorder">
+      <source xml:lang="en">Button border color for extension actions.</source>
     </trans-unit>
     <trans-unit id="extensionButtonForeground">
       <source xml:lang="en">Button foreground color for extension actions.</source>
@@ -1128,6 +1156,9 @@
     </trans-unit>
     <trans-unit id="restart product">
       <source xml:lang="en">Restart to Update</source>
+    </trans-unit>
+    <trans-unit id="restartExtensionHost.reason.disable">
+      <source xml:lang="en">Disabling AI features</source>
     </trans-unit>
     <trans-unit id="review">
       <source xml:lang="en">Review</source>
@@ -1334,6 +1365,9 @@ Would you like to update the extension?</source>
     <trans-unit id="remoteIcon">
       <source xml:lang="en">Icon to indicate that an extension is remote in the extensions view and editor.</source>
     </trans-unit>
+    <trans-unit id="restartRequiredIcon">
+      <source xml:lang="en">Icon shown when an extension requires a restart in the extensions view.</source>
+    </trans-unit>
     <trans-unit id="sponsorIcon">
       <source xml:lang="en">Icon used for sponsoring extensions in the extensions view and editor.</source>
     </trans-unit>
@@ -1430,10 +1464,7 @@ Would you like to update the extension?</source>
     <trans-unit id="disabledExtensions">
       <source xml:lang="en">Disabled</source>
     </trans-unit>
-    <trans-unit id="dismiss">
-      <source xml:lang="en">Dismiss</source>
-    </trans-unit>
-    <trans-unit id="dismiss hover">
+    <trans-unit id="dismiss notification">
       <source xml:lang="en">Dismiss</source>
     </trans-unit>
     <trans-unit id="enabled">
@@ -1503,6 +1534,9 @@ Would you like to update the extension?</source>
       <source xml:lang="en">Remote</source>
       <note>Remote as in remote machine</note>
     </trans-unit>
+    <trans-unit id="restart required">
+      <source xml:lang="en">Restart Required</source>
+    </trans-unit>
     <trans-unit id="restartNow">
       <source xml:lang="en">Restart Extensions</source>
     </trans-unit>
@@ -1561,9 +1595,6 @@ Would you like to update the extension?</source>
     </trans-unit>
     <trans-unit id="showing local extensions only">
       <source xml:lang="en">{0} Showing local extensions.</source>
-    </trans-unit>
-    <trans-unit id="showingExtensionsForFeature">
-      <source xml:lang="en">Extensions using {0} in the last 30 days</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/extensions/browser/extensionsWidgets" source-language="en" datatype="plaintext"><body>
@@ -1624,6 +1655,9 @@ Would you like to update the extension?</source>
     <trans-unit id="remote extension title">
       <source xml:lang="en">Extension in {0}</source>
     </trans-unit>
+    <trans-unit id="restart required">
+      <source xml:lang="en">Restart Required</source>
+    </trans-unit>
     <trans-unit id="sponsor">
       <source xml:lang="en">Sponsor</source>
     </trans-unit>
@@ -1663,10 +1697,10 @@ Would you like to update the extension?</source>
       <source xml:lang="en">Cannot install the '{0}' extension because it is not available in this setup.</source>
     </trans-unit>
     <trans-unit id="confirmDisableAutoUpdate">
-      <source xml:lang="en">Do you want to disable auto update for all extensions?</source>
+      <source xml:lang="en">Do you want to disable auto update for extensions?</source>
     </trans-unit>
     <trans-unit id="confirmEnableAutoUpdate">
-      <source xml:lang="en">Do you want to enable auto update for all extensions?</source>
+      <source xml:lang="en">Do you want to enable auto update for extensions?</source>
     </trans-unit>
     <trans-unit id="confirmEnableDisableAutoUpdate">
       <source xml:lang="en">Auto Update Extensions</source>
@@ -1735,6 +1769,12 @@ Would you like to update the extension?</source>
     </trans-unit>
     <trans-unit id="extension not found">
       <source xml:lang="en">Extension '{0}' not found.</source>
+    </trans-unit>
+    <trans-unit id="extensions need reload">
+      <source xml:lang="en">Extensions require a window reload to apply updates.</source>
+    </trans-unit>
+    <trans-unit id="extensions need restart">
+      <source xml:lang="en">All extensions require a restart to apply updates.</source>
     </trans-unit>
     <trans-unit id="extensionsAutoRestart">
       <source xml:lang="en">Extensions were auto restarted to enable updates.</source>
@@ -1825,8 +1865,14 @@ Would you like to update the extension?</source>
     <trans-unit id="pre-release">
       <source xml:lang="en">pre-release</source>
     </trans-unit>
+    <trans-unit id="privateMarketplace">
+      <source xml:lang="en">This window is connected to a [private extension marketplace]({0}) managed by your organization.</source>
+    </trans-unit>
     <trans-unit id="reload">
       <source xml:lang="en">reload window</source>
+    </trans-unit>
+    <trans-unit id="reload window">
+      <source xml:lang="en">Reload Window</source>
     </trans-unit>
     <trans-unit id="report issue">
       <source xml:lang="en">If this issue persists, please report it at {0}</source>
@@ -1836,6 +1882,9 @@ Would you like to update the extension?</source>
     </trans-unit>
     <trans-unit id="restart extensions">
       <source xml:lang="en">restart extensions</source>
+    </trans-unit>
+    <trans-unit id="restart extensions action">
+      <source xml:lang="en">Restart Extensions</source>
     </trans-unit>
     <trans-unit id="selectVersion">
       <source xml:lang="en">Select Version to Download</source>
@@ -1936,26 +1985,6 @@ Would you like to update the extension?</source>
       <source xml:lang="en">Yes</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/extensions/common/installExtensionsTool" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="installExtensionsTool.confirmationMessage">
-      <source xml:lang="en">Review the suggested extensions and click the **Install** button for each extension you wish to add. Once you have finished installing the selected extensions, click **Continue** to proceed.</source>
-    </trans-unit>
-    <trans-unit id="installExtensionsTool.confirmationTitle">
-      <source xml:lang="en">Install Extensions</source>
-    </trans-unit>
-    <trans-unit id="installExtensionsTool.displayName">
-      <source xml:lang="en">Install Extensions</source>
-    </trans-unit>
-    <trans-unit id="installExtensionsTool.noResultMessage">
-      <source xml:lang="en">No extensions were installed.</source>
-    </trans-unit>
-    <trans-unit id="installExtensionsTool.resultMessage">
-      <source xml:lang="en">Following extensions are installed: {0}</source>
-    </trans-unit>
-    <trans-unit id="installExtensionsTool.userDescription">
-      <source xml:lang="en">Tool for installing extensions</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/extensions/common/reportExtensionIssueAction" source-language="en" datatype="plaintext"><body>
     <trans-unit id="reportExtensionIssue">
       <source xml:lang="en">Report Issue</source>
@@ -1989,6 +2018,18 @@ Would you like to update the extension?</source>
     </trans-unit>
     <trans-unit id="debugExtensionHost.progress">
       <source xml:lang="en">Attaching Debugger To Extension Host</source>
+    </trans-unit>
+    <trans-unit id="debugExtensionHostAndRenderer">
+      <source xml:lang="en">Debug Extension Host and Renderer In New Window</source>
+    </trans-unit>
+    <trans-unit id="debugRenderer">
+      <source xml:lang="en">Debug Renderer In New Window</source>
+    </trans-unit>
+    <trans-unit id="debugRenderer.launch.name">
+      <source xml:lang="en">Attach Renderer</source>
+    </trans-unit>
+    <trans-unit id="debugRenderer.progress">
+      <source xml:lang="en">Attaching Debugger To Renderer</source>
     </trans-unit>
     <trans-unit id="openDevToolsForExtensionHost">
       <source xml:lang="en">Debug Extension Host In Dev Tools</source>

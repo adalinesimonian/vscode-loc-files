@@ -79,8 +79,8 @@
     <trans-unit id="++CODE++54f7822fa5072b5266cae29e5480dc51046ebd33e97ac193ae7a5683bea8c866">
       <source xml:lang="en">Could not determine references</source>
     </trans-unit>
-    <trans-unit id="++CODE++7abab4ba4a654f142c352cd74b30383d4e23969985089f2d4c9dd67541d069ba">
-      <source xml:lang="en">Could not install typings files for JavaScript language features. Please ensure that NPM is installed, or configure &apos;typescript.npm&apos; in your user settings. Alternatively, check the [documentation]({0}) to learn more.</source>
+    <trans-unit id="++CODE++d845d572d0cac56b2a5bf696cff646cc02be4b582defd47eb696d178a2af3d96">
+      <source xml:lang="en">Could not install typings files for JavaScript language features. Please ensure that NPM is installed, or configure &apos;js/ts.tsserver.npm.path&apos; in your user settings. Alternatively, check the [documentation]({0}) to learn more.</source>
     </trans-unit>
     <trans-unit id="++CODE++704c9d9267270252092f44c7a1063371a9573338479612b4cfba8d3848a2922f">
       <source xml:lang="en">Could not load the TypeScript version at this path</source>
@@ -183,6 +183,9 @@
     </trans-unit>
     <trans-unit id="++CODE++e2ca755eccdc287ca2c74b86e9a33a06671c11cd9dda1c69de2d2b47a9a14e0d">
       <source xml:lang="en">Initializing &apos;{0}&apos;</source>
+    </trans-unit>
+    <trans-unit id="++CODE++569ca49f4aaf7846e952c1d4aeca72febd0b79fa1c4f9db08fd3127551218572">
+      <source xml:lang="en">Install</source>
     </trans-unit>
     <trans-unit id="++CODE++00288f01741225c3ff00094bacb6455d996af76613ea2511ea445f0e58baf524">
       <source xml:lang="en">JS/TS IntelliSense Status</source>
@@ -307,8 +310,8 @@
     <trans-unit id="++CODE++1e32e5d3b54f26c23592c471d672beb47c5d95a8a6946fdf17dd486c77320284">
       <source xml:lang="en">TS Server logging is currently enabled which may impact performance.</source>
     </trans-unit>
-    <trans-unit id="++CODE++00edef43b793884c746a58b028731f392d3c59b7b32ccde6bc676d4f3e865a99">
-      <source xml:lang="en">TS Server logging is off. Please set &apos;typescript.tsserver.log&apos; and restart the TS server to enable logging</source>
+    <trans-unit id="++CODE++bf48fb74e6782ba5a346d2f4afcea625d7fd2855f66d6123487bb4658cf8c589">
+      <source xml:lang="en">TS Server logging is off. Please set &apos;js/ts.tsserver.log&apos; and restart the TS server to enable logging</source>
     </trans-unit>
     <trans-unit id="++CODE++fab6a7ed1ed9b87eec1851d4397bc0c0da3050fd4e18467a8d0a7b4fe1eb85ea">
       <source xml:lang="en">The JS/TS language service crashed 5 times in the last 5 Minutes.</source>
@@ -358,6 +361,9 @@
     <trans-unit id="++CODE++f7208a0481001f45bba41f9033b238421e9b1a5db356c864db3d9585c32740c5">
       <source xml:lang="en">To enable project-wide JavaScript/TypeScript language features, exclude large folders with source files that you do not work on.</source>
     </trans-unit>
+    <trans-unit id="++CODE++933d6f73988a1ce3e08138ffe6dfd3614cb9fbd9a4a8acb158b36affa0442400">
+      <source xml:lang="en">Try TypeScript 7 for significantly faster type checking and language features.</source>
+    </trans-unit>
     <trans-unit id="++CODE++017d70fbcbf87e8aa65e2563f7ee58ff2337156a965a4141fb6595cb6799ff70">
       <source xml:lang="en">TypeScript Server Log</source>
     </trans-unit>
@@ -382,8 +388,8 @@
     <trans-unit id="++CODE++c959c280f828e1598d8e796076878d7a2dde9875a4287f6032c45fa13bcede2b">
       <source xml:lang="en">Update imports for the following {0} files?</source>
     </trans-unit>
-    <trans-unit id="++CODE++3595cbf3cfdc6adf953a481916e6e3ef42713bceb7f11083e7deda5e88159a5e">
-      <source xml:lang="en">Use TypeScript Native Preview (Experimental)</source>
+    <trans-unit id="++CODE++53d92b25dda624113a67857c8e8c47d288d76a6c2bec45ccfcfac92cfcbc8ae9">
+      <source xml:lang="en">Use TypeScript 7</source>
     </trans-unit>
     <trans-unit id="++CODE++a48ad4c858751b66d827e6ed1f2a1974a660e1042c70da87b2f1278fb37edd73">
       <source xml:lang="en">Use VS Code&apos;s Version</source>
@@ -477,14 +483,23 @@
     <trans-unit id="typescript.check.npmIsInstalled">
       <source xml:lang="en">Check if npm is installed for [Automatic Type Acquisition](https://code.visualstudio.com/docs/nodejs/working-with-javascript#_typings-and-automatic-type-acquisition).</source>
     </trans-unit>
+    <trans-unit id="configuration.codeLens">
+      <source xml:lang="en">CodeLens</source>
+    </trans-unit>
     <trans-unit id="configuration.suggest.completeFunctionCalls">
       <source xml:lang="en">Complete functions with their parameter signature.</source>
     </trans-unit>
     <trans-unit id="configuration.tsserver.watchOptions">
       <source xml:lang="en">Configure which watching strategies should be used to keep track of files and directories.</source>
     </trans-unit>
+    <trans-unit id="configuration.tsserver.heapProfile">
+      <source xml:lang="en">Configures heap profiling for TypeScript server.</source>
+    </trans-unit>
     <trans-unit id="typescript.tsc.autoDetect">
       <source xml:lang="en">Controls auto detection of tsc tasks.</source>
+    </trans-unit>
+    <trans-unit id="configuration.tsserver.heapSnapshot">
+      <source xml:lang="en">Controls how many near-heap-limit snapshots TypeScript server writes by passing `--heapsnapshot-near-heap-limit`. Set to `0` to disable.</source>
     </trans-unit>
     <trans-unit id="configuration.tsserver.useSyntaxServer">
       <source xml:lang="en">Controls if TypeScript launches a dedicated server to more quickly handle syntax related operations, such as computing code folding.</source>
@@ -561,6 +576,12 @@
     <trans-unit id="typescript.preferences.organizeImports.typeOrder.auto">
       <source xml:lang="en">Detect where type-only named imports should be sorted.</source>
     </trans-unit>
+    <trans-unit id="configuration.tsserver.diagnosticDir">
+      <source xml:lang="en">Directory where TypeScript server writes Node diagnostic output by passing `--diagnostic-dir`.</source>
+    </trans-unit>
+    <trans-unit id="configuration.tsserver.heapProfile.dir">
+      <source xml:lang="en">Directory where TypeScript server writes heap profiles by passing `--heap-prof-dir`.</source>
+    </trans-unit>
     <trans-unit id="configuration.tsserver.watchOptions.synchronousWatchDirectory">
       <source xml:lang="en">Disable deferred watching on directories. Deferred watching is useful when lots of file changes might occur at once (e.g. a change in node_modules from running npm install), but you might want to disable it with this flag for some less-common setups.</source>
     </trans-unit>
@@ -588,17 +609,29 @@
     <trans-unit id="typescript.tsserver.pluginPaths.item">
       <source xml:lang="en">Either an absolute or relative path. Relative path will be resolved against workspace folder(s).</source>
     </trans-unit>
+    <trans-unit id="configuration.automaticTypeAcquisition.enabled">
+      <source xml:lang="en">Enable [automatic type acquisition](https://code.visualstudio.com/docs/nodejs/working-with-javascript#_typings-and-automatic-type-acquisition). Automatic type acquisition fetches `@types` packages from npm to improve IntelliSense for external libraries.</source>
+    </trans-unit>
+    <trans-unit id="configuration.tsserver.heapProfile.enabled">
+      <source xml:lang="en">Enable heap profiling for TypeScript server by passing `--heap-prof`.</source>
+    </trans-unit>
     <trans-unit id="inlayHints.parameterNames.all">
       <source xml:lang="en">Enable parameter name hints for literal and non-literal arguments.</source>
     </trans-unit>
     <trans-unit id="inlayHints.parameterNames.literals">
       <source xml:lang="en">Enable parameter name hints only for literal arguments.</source>
     </trans-unit>
+    <trans-unit id="configuration.validate.enable">
+      <source xml:lang="en">Enable/disable JavaScript and TypeScript validation.</source>
+    </trans-unit>
     <trans-unit id="javascript.validate.enable">
       <source xml:lang="en">Enable/disable JavaScript validation.</source>
     </trans-unit>
     <trans-unit id="typescript.validate.enable">
       <source xml:lang="en">Enable/disable TypeScript validation.</source>
+    </trans-unit>
+    <trans-unit id="configuration.implementationsCodeLens.showOnInterfaceMethods">
+      <source xml:lang="en">Enable/disable [implementations CodeLens](#js/ts.implementationsCodeLens.enabled) on TypeScript interface methods.</source>
     </trans-unit>
     <trans-unit id="configuration.implicitProjectConfig.strictFunctionTypes">
       <source xml:lang="en">Enable/disable [strict function types](https://www.typescriptlang.org/tsconfig#strictFunctionTypes) in JavaScript and TypeScript files that are not part of a project. Existing `jsconfig.json` or `tsconfig.json` files override this setting.</source>
@@ -636,11 +669,8 @@
     <trans-unit id="configuration.suggest.jsdoc.generateReturns">
       <source xml:lang="en">Enable/disable generating `@returns` annotations for JSDoc templates.</source>
     </trans-unit>
-    <trans-unit id="typescript.implementationsCodeLens.showOnInterfaceMethods">
-      <source xml:lang="en">Enable/disable implementations CodeLens on interface methods.</source>
-    </trans-unit>
-    <trans-unit id="typescript.implementationsCodeLens.enabled">
-      <source xml:lang="en">Enable/disable implementations CodeLens. This CodeLens shows the implementers of an interface.</source>
+    <trans-unit id="configuration.implementationsCodeLens.enabled">
+      <source xml:lang="en">Enable/disable implementations CodeLens in TypeScript files. This CodeLens shows the implementers of TypeScript interfaces.</source>
     </trans-unit>
     <trans-unit id="configuration.suggest.names">
       <source xml:lang="en">Enable/disable including unique names from the file in JavaScript suggestions. Note that name suggestions are always disabled in JavaScript code that is semantically checked using `@ts-check` or `checkJs`.</source>
@@ -673,22 +703,13 @@
       <source xml:lang="en">Enable/disable introducing aliases for object shorthand properties during renames.</source>
     </trans-unit>
     <trans-unit id="configuration.tsserver.web.typeAcquisition.enabled">
-      <source xml:lang="en">Enable/disable package acquisition on the web. This enables IntelliSense for imported packages. Requires `#typescript.tsserver.web.projectWideIntellisense.enabled#`. Currently not supported for Safari.</source>
+      <source xml:lang="en">Enable/disable package acquisition on the web. This enables IntelliSense for imported packages. Requires `#js/ts.tsserver.web.projectWideIntellisense.enabled#`. Currently not supported for Safari.</source>
     </trans-unit>
     <trans-unit id="configuration.tsserver.web.projectWideIntellisense.enabled">
       <source xml:lang="en">Enable/disable project-wide IntelliSense on web. Requires that VS Code is running in a trusted context.</source>
     </trans-unit>
-    <trans-unit id="javascript.referencesCodeLens.enabled">
-      <source xml:lang="en">Enable/disable references CodeLens in JavaScript files.</source>
-    </trans-unit>
-    <trans-unit id="typescript.referencesCodeLens.enabled">
-      <source xml:lang="en">Enable/disable references CodeLens in TypeScript files.</source>
-    </trans-unit>
-    <trans-unit id="javascript.referencesCodeLens.showOnAllFunctions">
-      <source xml:lang="en">Enable/disable references CodeLens on all functions in JavaScript files.</source>
-    </trans-unit>
-    <trans-unit id="typescript.referencesCodeLens.showOnAllFunctions">
-      <source xml:lang="en">Enable/disable references CodeLens on all functions in TypeScript files.</source>
+    <trans-unit id="configuration.referencesCodeLens.enabled">
+      <source xml:lang="en">Enable/disable references CodeLens in JavaScript and TypeScript files. This CodeLens shows the number of references for classes and exported functions and allows you to peek or navigate to them.</source>
     </trans-unit>
     <trans-unit id="typescript.preferences.includePackageJsonAutoImports">
       <source xml:lang="en">Enable/disable searching `package.json` dependencies for available auto imports.</source>
@@ -696,11 +717,11 @@
     <trans-unit id="configuration.implicitProjectConfig.checkJs">
       <source xml:lang="en">Enable/disable semantic checking of JavaScript files. Existing `jsconfig.json` or `tsconfig.json` files override this setting.</source>
     </trans-unit>
+    <trans-unit id="configuration.implementationsCodeLens.showOnAllClassMethods">
+      <source xml:lang="en">Enable/disable showing [implementations CodeLens](#js/ts.implementationsCodeLens.enabled) above all TypeScript class methods instead of only on abstract methods.</source>
+    </trans-unit>
     <trans-unit id="configuration.suggest.includeAutomaticOptionalChainCompletions">
       <source xml:lang="en">Enable/disable showing completions on potentially undefined values that insert an optional chain call. Requires strict null checks to be enabled.</source>
-    </trans-unit>
-    <trans-unit id="typescript.implementationsCodeLens.showOnAllClassMethods">
-      <source xml:lang="en">Enable/disable showing implementations CodeLens above all class methods instead of only on abstract methods.</source>
     </trans-unit>
     <trans-unit id="configuration.suggest.classMemberSnippets.enabled">
       <source xml:lang="en">Enable/disable snippet completions for class members.</source>
@@ -711,17 +732,26 @@
     <trans-unit id="configuration.tsserver.useSeparateSyntaxServer">
       <source xml:lang="en">Enable/disable spawning a separate TypeScript server that can more quickly respond to syntax related operations, such as calculating folding or computing document symbols.</source>
     </trans-unit>
+    <trans-unit id="configuration.suggestionActions.enabled">
+      <source xml:lang="en">Enable/disable suggestion diagnostics for JavaScript and TypeScript files in the editor.</source>
+    </trans-unit>
     <trans-unit id="javascript.suggestionActions.enabled">
       <source xml:lang="en">Enable/disable suggestion diagnostics for JavaScript files in the editor.</source>
     </trans-unit>
     <trans-unit id="typescript.suggestionActions.enabled">
       <source xml:lang="en">Enable/disable suggestion diagnostics for TypeScript files in the editor.</source>
     </trans-unit>
-    <trans-unit id="configuration.suggest.completeJSDocs">
+    <trans-unit id="configuration.suggest.jsdoc.enabled">
       <source xml:lang="en">Enable/disable suggestion to complete JSDoc comments.</source>
     </trans-unit>
     <trans-unit id="configuration.suggest.paths">
       <source xml:lang="en">Enable/disable suggestions for paths in import statements and require calls.</source>
+    </trans-unit>
+    <trans-unit id="configuration.referencesCodeLens.showOnAllFunctions">
+      <source xml:lang="en">Enable/disable the [references CodeLens](#js/ts.referencesCodeLens.enabled) on all functions in JavaScript and TypeScript files.</source>
+    </trans-unit>
+    <trans-unit id="format.enable">
+      <source xml:lang="en">Enable/disable the default JavaScript and TypeScript formatter.</source>
     </trans-unit>
     <trans-unit id="typescript.tsserver.log">
       <source xml:lang="en">Enables logging of the TS server to a file. This log can be used to diagnose TS Server issues. The log may contain file paths, source code, and other potentially sensitive information from your project.</source>
@@ -731,9 +761,6 @@
     </trans-unit>
     <trans-unit id="typescript.enablePromptUseWorkspaceTsdk">
       <source xml:lang="en">Enables prompting of users to use the TypeScript version configured in the workspace for Intellisense.</source>
-    </trans-unit>
-    <trans-unit id="typescript.tsserver.enableRegionDiagnostics">
-      <source xml:lang="en">Enables region-based diagnostics in TypeScript. Requires using TypeScript 5.6+ in the workspace.</source>
     </trans-unit>
     <trans-unit id="typescript.tsserver.enableTracing">
       <source xml:lang="en">Enables tracing TS server performance to a directory. These trace files can be used to diagnose TS Server performance issues. The log may contain file paths, source code, and other potentially sensitive information from your project.</source>
@@ -765,6 +792,9 @@
     <trans-unit id="typescript.goToSourceDefinition">
       <source xml:lang="en">Go to Source Definition</source>
     </trans-unit>
+    <trans-unit id="configuration.implicitProjectConfig">
+      <source xml:lang="en">Implicit Project Config</source>
+    </trans-unit>
     <trans-unit id="virtualWorkspaces">
       <source xml:lang="en">In virtual workspaces, resolving and finding references across files is not supported.</source>
     </trans-unit>
@@ -786,6 +816,9 @@
     <trans-unit id="javascript.preferences.jsxAttributeCompletionStyle.auto">
       <source xml:lang="en">Insert `={}` or `=&quot;&quot;` after attribute names based on the prop type. See `#javascript.preferences.quoteStyle#` to control the type of quotes used for string attributes.</source>
     </trans-unit>
+    <trans-unit id="configuration.preferences.jsxAttributeCompletionStyle.auto">
+      <source xml:lang="en">Insert `={}` or `=&quot;&quot;` after attribute names based on the prop type. See `#js/ts.preferences.quoteStyle#` to control the type of quotes used for string attributes.</source>
+    </trans-unit>
     <trans-unit id="typescript.preferences.jsxAttributeCompletionStyle.auto">
       <source xml:lang="en">Insert `={}` or `=&quot;&quot;` after attribute names based on the prop type. See `#typescript.preferences.quoteStyle#` to control the type of quotes used for string attributes.</source>
     </trans-unit>
@@ -797,6 +830,12 @@
     </trans-unit>
     <trans-unit id="walkthroughs.nodejsWelcome.downloadNode.forMacOrWindows.title">
       <source xml:lang="en">Install Node.js</source>
+    </trans-unit>
+    <trans-unit id="displayName">
+      <source xml:lang="en">JavaScript and TypeScript Language Features</source>
+    </trans-unit>
+    <trans-unit id="configuration.languageFeatures">
+      <source xml:lang="en">Language Features</source>
     </trans-unit>
     <trans-unit id="walkthroughs.nodejsWelcome.learnMoreAboutJs.altText">
       <source xml:lang="en">Learn more about JavaScript and Node.js in Visual Studio Code.</source>
@@ -913,10 +952,13 @@
       <source xml:lang="en">Restart TS Server</source>
     </trans-unit>
     <trans-unit id="configuration.tsserver.nodePath">
-      <source xml:lang="en">Run TS Server on a custom Node installation. This can be a path to a Node executable, or &apos;node&apos; if you want VS Code to detect a Node installation.</source>
+      <source xml:lang="en">Run TS Server on a custom Node installation. This can be a path to a Node executable, or `node` if you want VS Code to detect a Node installation.</source>
     </trans-unit>
     <trans-unit id="walkthroughs.nodejsWelcome.debugJsFile.title">
       <source xml:lang="en">Run and Debug your JavaScript</source>
+    </trans-unit>
+    <trans-unit id="configuration.tsserver.heapProfile.interval">
+      <source xml:lang="en">Sampling interval in bytes for TypeScript server heap profiling by passing `--heap-prof-interval`.</source>
     </trans-unit>
     <trans-unit id="typescript.workspaceSymbols.scope.allOpenProjects">
       <source xml:lang="en">Search all open JavaScript or TypeScript projects for symbols.</source>
@@ -964,7 +1006,7 @@
       <source xml:lang="en">Specifies how imports should be sorted with regards to case-sensitivity. If `auto` or unspecified, we will detect the case-sensitivity per file</source>
     </trans-unit>
     <trans-unit id="typescript.tsdk.desc">
-      <source xml:lang="en">Specifies the folder path to the tsserver and `lib*.d.ts` files under a TypeScript install to use for IntelliSense, for example: `./node_modules/typescript/lib`.&#10;&#10;- When specified as a user setting, the TypeScript version from `typescript.tsdk` automatically replaces the built-in TypeScript version.&#10;- When specified as a workspace setting, `typescript.tsdk` allows you to switch to use that workspace version of TypeScript for IntelliSense with the `TypeScript: Select TypeScript version` command.&#10;&#10;See the [TypeScript documentation](https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-newer-typescript-versions) for more detail about managing TypeScript versions.</source>
+      <source xml:lang="en">Specifies the folder path to the tsserver and `lib*.d.ts` files under a TypeScript install to use for IntelliSense, for example: `./node_modules/typescript/lib`.&#10;&#10;- When specified as a user setting, the TypeScript version from `js/ts.tsdk.path` automatically replaces the built-in TypeScript version.&#10;- When specified as a workspace setting, `js/ts.tsdk.path` allows you to switch to use that workspace version of TypeScript for IntelliSense with the `TypeScript: Select TypeScript version` command.&#10;&#10;See the [TypeScript documentation](https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-newer-typescript-versions) for more detail about managing TypeScript versions.</source>
     </trans-unit>
     <trans-unit id="typescript.npm">
       <source xml:lang="en">Specifies the path to the npm executable used for [Automatic Type Acquisition](https://code.visualstudio.com/docs/nodejs/working-with-javascript#_typings-and-automatic-type-acquisition).</source>
@@ -997,16 +1039,19 @@
       <source xml:lang="en">Suppress type hints on variables whose name is identical to the type name.</source>
     </trans-unit>
     <trans-unit id="configuration.tsserver.web.projectWideIntellisense.suppressSemanticErrors">
-      <source xml:lang="en">Suppresses semantic errors on web even when project wide IntelliSense is enabled. This is always on when project wide IntelliSense is not enabled or available. See `#typescript.tsserver.web.projectWideIntellisense.enabled#`</source>
+      <source xml:lang="en">Suppresses semantic errors on web even when project wide IntelliSense is enabled. This is always on when project wide IntelliSense is not enabled or available. See `#js/ts.tsserver.web.projectWideIntellisense.enabled#`</source>
     </trans-unit>
-    <trans-unit id="configuration.server">
-      <source xml:lang="en">TS Server</source>
+    <trans-unit id="configuration.serverAdvanced">
+      <source xml:lang="en">TS Server Advanced Settings</source>
     </trans-unit>
     <trans-unit id="workspaceTrust">
       <source xml:lang="en">The extension requires workspace trust when the workspace version is used because it executes code specified by the workspace.</source>
     </trans-unit>
+    <trans-unit id="configuration.tsserver.maxMemory">
+      <source xml:lang="en">The maximum amount of memory (in MB) to allocate to the TypeScript server process. To use a memory limit greater than 4 GB, use `#js/ts.tsserver.node.path#` to run TS Server with a custom Node installation.</source>
+    </trans-unit>
     <trans-unit id="configuration.tsserver.maxTsServerMemory">
-      <source xml:lang="en">The maximum amount of memory (in MB) to allocate to the TypeScript server process. To use a memory limit greater than 4 GB, use `#typescript.tsserver.nodePath#` to run TS Server with a custom Node installation.</source>
+      <source xml:lang="en">The maximum amount of memory (in MB) to allocate to the TypeScript server process. To use a memory limit greater than 4 GB, use `#js/ts.tsserver.node.path#` to run TS Server with a custom Node installation.</source>
     </trans-unit>
     <trans-unit id="configuration.hover.maximumLength">
       <source xml:lang="en">The maximum number of characters in a hover. If the hover is longer than this, it will be truncated. Requires TypeScript 5.9+.</source>
@@ -1014,17 +1059,257 @@
     <trans-unit id="taskDefinition.tsconfig.description">
       <source xml:lang="en">The tsconfig file that defines the TS build.</source>
     </trans-unit>
+    <trans-unit id="configuration.autoClosingTags.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.autoClosingTags.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="typescript.useTsgo.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.experimental.useTsgo#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.enable.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.indentSwitchCase.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.indentSwitchCase#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceAfterCommaDelimiter.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceAfterCommaDelimiter#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceAfterConstructor.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceAfterConstructor#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceAfterKeywordsInControlFlowStatements.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceAfterKeywordsInControlFlowStatements#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceAfterSemicolonInForStatements.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceAfterSemicolonInForStatements#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceAfterTypeAssertion.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceAfterTypeAssertion#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceBeforeAndAfterBinaryOperators.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceBeforeAndAfterBinaryOperators#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.insertSpaceBeforeFunctionParenthesis.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.insertSpaceBeforeFunctionParenthesis#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.placeOpenBraceOnNewLineForControlBlocks.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.placeOpenBraceOnNewLineForControlBlocks#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.placeOpenBraceOnNewLineForFunctions.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.placeOpenBraceOnNewLineForFunctions#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.format.semicolons.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.format.semicolons#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.implementationsCodeLens.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.implementationsCodeLens.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.implementationsCodeLens.showOnAllClassMethods.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.implementationsCodeLens.showOnAllClassMethods#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.implementationsCodeLens.showOnInterfaceMethods.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.implementationsCodeLens.showOnInterfaceMethods#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.inlayHints.enumMemberValues.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.inlayHints.enumMemberValues.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.inlayHints.functionLikeReturnTypes.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.inlayHints.functionLikeReturnTypes.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.inlayHints.parameterNames.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.inlayHints.parameterNames.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.inlayHints.parameterNames.suppressWhenArgumentMatchesName.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.inlayHints.parameterNames.suppressWhenArgumentMatchesName#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.inlayHints.parameterTypes.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.inlayHints.parameterTypes.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.inlayHints.propertyDeclarationTypes.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.inlayHints.propertyDeclarationTypes.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.inlayHints.variableTypes.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.inlayHints.variableTypes.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.inlayHints.variableTypes.suppressWhenTypeMatchesName.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.inlayHints.variableTypes.suppressWhenTypeMatchesName#` instead.</source>
+    </trans-unit>
+    <trans-unit id="typescript.locale.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.locale#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.preferGoToSourceDefinition.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.preferGoToSourceDefinition#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.preferences.autoImportFileExcludePatterns.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.preferences.autoImportFileExcludePatterns#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.preferences.autoImportSpecifierExcludeRegexes.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.preferences.autoImportSpecifierExcludeRegexes#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.preferences.importModuleSpecifier.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.preferences.importModuleSpecifier#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.preferences.importModuleSpecifierEnding.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.preferences.importModuleSpecifierEnding#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.preferences.includePackageJsonAutoImports.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.preferences.includePackageJsonAutoImports#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.preferences.jsxAttributeCompletionStyle.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.preferences.jsxAttributeCompletionStyle#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.preferences.organizeImports.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.preferences.organizeImports#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.preferences.preferTypeOnlyAutoImports.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.preferences.preferTypeOnlyAutoImports#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.preferences.quoteStyle.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.preferences.quoteStyle#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.preferences.renameMatchingJsxTags.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.preferences.renameMatchingJsxTags#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.preferences.useAliasesForRenames.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.preferences.useAliasesForRenames#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.referencesCodeLens.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.referencesCodeLens.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.referencesCodeLens.showOnAllFunctions.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.referencesCodeLens.showOnAllFunctions#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.reportStyleChecksAsWarnings.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.reportStyleChecksAsWarnings#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.suggest.autoImports.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.suggest.autoImports#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.suggest.classMemberSnippets.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.suggest.classMemberSnippets.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.suggest.completeFunctionCalls.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.suggest.completeFunctionCalls#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.suggest.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.suggest.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.suggest.includeAutomaticOptionalChainCompletions.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.suggest.includeAutomaticOptionalChainCompletions#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.suggest.includeCompletionsForImportStatements.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.suggest.includeCompletionsForImportStatements#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.suggest.completeJSDocs.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.suggest.jsdoc.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.suggest.jsdoc.generateReturns.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.suggest.jsdoc.generateReturns#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.suggest.names.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.suggest.names#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.suggest.objectLiteralMethodSnippets.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.suggest.objectLiteralMethodSnippets.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.suggest.paths.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.suggest.paths#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.suggestionActions.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.suggestionActions.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="typescript.tsc.autoDetect.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsc.autoDetect#` instead.</source>
+    </trans-unit>
+    <trans-unit id="typescript.tsdk.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsdk.path#` instead.</source>
+    </trans-unit>
+    <trans-unit id="typescript.enablePromptUseWorkspaceTsdk.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsdk.promptToUseWorkspaceVersion#` instead.</source>
+    </trans-unit>
+    <trans-unit id="typescript.disableAutomaticTypeAcquisition.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.automaticTypeAcquisition.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="typescript.check.npmIsInstalled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.checkNpmIsInstalled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.tsserver.experimental.enableProjectDiagnostics.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.experimental.enableProjectDiagnostics#` instead.</source>
+    </trans-unit>
+    <trans-unit id="typescript.tsserver.log.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.log#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.tsserver.maxTsServerMemory.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.maxMemory#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.tsserver.nodePath.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.node.path#` instead.</source>
+    </trans-unit>
+    <trans-unit id="typescript.npm.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.npm.path#` instead.</source>
+    </trans-unit>
+    <trans-unit id="typescript.tsserver.pluginPaths.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.pluginPaths#` instead.</source>
+    </trans-unit>
+    <trans-unit id="typescript.tsserver.enableTracing.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.tracing.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.tsserver.useSyntaxServer.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.useSyntaxServer#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.tsserver.watchOptions.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.watchOptions#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.tsserver.web.projectWideIntellisense.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.web.projectWideIntellisense.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.tsserver.web.projectWideIntellisense.suppressSemanticErrors.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.web.projectWideIntellisense.suppressSemanticErrors#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.tsserver.web.typeAcquisition.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.tsserver.web.typeAcquisition.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.updateImportsOnFileMove.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.updateImportsOnFileMove.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.updateImportsOnPaste.enabled.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.updateImportsOnPaste.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.validate.enable.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.validate.enabled#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.workspaceSymbols.excludeLibrarySymbols.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.workspaceSymbols.excludeLibrarySymbols#` instead.</source>
+    </trans-unit>
+    <trans-unit id="configuration.workspaceSymbols.scope.unifiedDeprecationMessage">
+      <source xml:lang="en">This setting is deprecated. Use `#js/ts.workspaceSymbols.scope#` instead.</source>
+    </trans-unit>
     <trans-unit id="typescript.preferences.organizeImports.typeOrder.first">
       <source xml:lang="en">Type only named imports are sorted to the beginning of the import list. E.g. `import { type A, type Y, B, Z } from &apos;module&apos;;`</source>
     </trans-unit>
     <trans-unit id="typescript.preferences.organizeImports.typeOrder.last">
       <source xml:lang="en">Type only named imports are sorted to the end of the import list. E.g. `import { B, Z, type A, type Y } from &apos;module&apos;;`</source>
-    </trans-unit>
-    <trans-unit id="configuration.typescript">
-      <source xml:lang="en">TypeScript</source>
-    </trans-unit>
-    <trans-unit id="displayName">
-      <source xml:lang="en">TypeScript and JavaScript Language Features</source>
     </trans-unit>
     <trans-unit id="typescript.problemMatchers.tsc.label">
       <source xml:lang="en">TypeScript problems</source>
@@ -1057,10 +1342,13 @@
       <source xml:lang="en">Use a dynamic queue where less-frequently modified files will be checked less often.</source>
     </trans-unit>
     <trans-unit id="configuration.tsserver.useSyntaxServer.always">
-      <source xml:lang="en">Use a lighter weight syntax server to handle all IntelliSense operations. This syntax server can only provide IntelliSense for opened files.</source>
+      <source xml:lang="en">Use a lighter weight syntax server to handle all IntelliSense operations. This disables project-wide features including auto-imports, cross-file completions, and go to definition for symbols in other files. Only use this for very large projects where performance is critical.</source>
     </trans-unit>
     <trans-unit id="typescript.preferences.importModuleSpecifierEnding.auto">
       <source xml:lang="en">Use project settings to select a default.</source>
+    </trans-unit>
+    <trans-unit id="configuration.validation">
+      <source xml:lang="en">Validation</source>
     </trans-unit>
     <trans-unit id="walkthroughs.nodejsWelcome.learnMoreAboutJs.description">
       <source xml:lang="en">Want to get more comfortable with JavaScript, Node.js, and VS Code? Be sure to check out our docs!&#10;We&apos;ve got lots of resources for learning [JavaScript](https://code.visualstudio.com/docs/nodejs/working-with-javascript) and [Node.js](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial).&#10;&#10;[Learn More](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial)</source>

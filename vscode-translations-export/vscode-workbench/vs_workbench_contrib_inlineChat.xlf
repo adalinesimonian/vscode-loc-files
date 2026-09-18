@@ -1,97 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChat.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="cancel">
-      <source xml:lang="en">Cancel Request</source>
-    </trans-unit>
-    <trans-unit id="cancelShort">
-      <source xml:lang="en">Cancel</source>
-    </trans-unit>
-    <trans-unit id="send.edit">
-      <source xml:lang="en">Edit Code</source>
-    </trans-unit>
-    <trans-unit id="send.generate">
-      <source xml:lang="en">Generate</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="Keep">
       <source xml:lang="en">Keep</source>
     </trans-unit>
-    <trans-unit id="apply1">
-      <source xml:lang="en">Accept Changes</source>
+    <trans-unit id="askInChat">
+      <source xml:lang="en">Ask in Chat</source>
     </trans-unit>
-    <trans-unit id="apply2">
-      <source xml:lang="en">Accept</source>
-    </trans-unit>
-    <trans-unit id="arrowDown">
-      <source xml:lang="en">Cursor Down</source>
-    </trans-unit>
-    <trans-unit id="arrowUp">
-      <source xml:lang="en">Cursor Up</source>
+    <trans-unit id="cancel">
+      <source xml:lang="en">Cancel</source>
     </trans-unit>
     <trans-unit id="cat">
       <source xml:lang="en">Inline Chat</source>
     </trans-unit>
-    <trans-unit id="chat.rerun.label">
-      <source xml:lang="en">Rerun Request</source>
-    </trans-unit>
-    <trans-unit id="close">
-      <source xml:lang="en">Close</source>
-    </trans-unit>
     <trans-unit id="close2">
       <source xml:lang="en">Close</source>
     </trans-unit>
-    <trans-unit id="configure">
-      <source xml:lang="en">Configure Inline Chat</source>
+    <trans-unit id="continueInChat">
+      <source xml:lang="en">Ask in Chat</source>
     </trans-unit>
-    <trans-unit id="discard">
-      <source xml:lang="en">Discard</source>
+    <trans-unit id="dismissAffordance">
+      <source xml:lang="en">Dismiss Editor Affordance</source>
+    </trans-unit>
+    <trans-unit id="editCode">
+      <source xml:lang="en">Ask for Edits</source>
+    </trans-unit>
+    <trans-unit id="editCodeShort">
+      <source xml:lang="en">Ask for Edits</source>
+    </trans-unit>
+    <trans-unit id="fix">
+      <source xml:lang="en">Fix</source>
     </trans-unit>
     <trans-unit id="focus">
       <source xml:lang="en">Focus Input</source>
     </trans-unit>
-    <trans-unit id="moveToNextHunk">
-      <source xml:lang="en">Move to Next Change</source>
-    </trans-unit>
-    <trans-unit id="moveToPreviousHunk">
-      <source xml:lang="en">Move to Previous Change</source>
-    </trans-unit>
-    <trans-unit id="rerun">
-      <source xml:lang="en">Rerun</source>
+    <trans-unit id="rephrase">
+      <source xml:lang="en">Rephrase</source>
     </trans-unit>
     <trans-unit id="run">
       <source xml:lang="en">Open Inline Chat</source>
     </trans-unit>
-    <trans-unit id="showChanges">
-      <source xml:lang="en">Toggle Changes</source>
+    <trans-unit id="runShort">
+      <source xml:lang="en">Inline Chat</source>
     </trans-unit>
     <trans-unit id="startInlineChat">
       <source xml:lang="en">Icon which spawns the inline chat from the editor toolbar.</source>
     </trans-unit>
-    <trans-unit id="unstash">
-      <source xml:lang="en">Resume Last Dismissed Inline Chat</source>
-    </trans-unit>
-    <trans-unit id="viewInChat">
-      <source xml:lang="en">View in Chat</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatController" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="askOrEditInContext">
-      <source xml:lang="en">Ask or edit in context</source>
-    </trans-unit>
-    <trans-unit id="create.fail">
-      <source xml:lang="en">Failed to start editor chat</source>
-    </trans-unit>
-    <trans-unit id="empty">
-      <source xml:lang="en">No results, please refine your input and try again</source>
-    </trans-unit>
-    <trans-unit id="err.apply">
-      <source xml:lang="en">Failed to apply changes.</source>
-    </trans-unit>
-    <trans-unit id="err.discard">
-      <source xml:lang="en">Failed to discard changes.</source>
-    </trans-unit>
     <trans-unit id="fix1">
       <source xml:lang="en">Fix the attached problem</source>
     </trans-unit>
@@ -107,37 +63,32 @@
     <trans-unit id="placeholderWithSelection">
       <source xml:lang="en">Modify selected code</source>
     </trans-unit>
-    <trans-unit id="responseWasEmpty">
-      <source xml:lang="en">Response was empty</source>
+</body></file>
+  <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatDefaultModel" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inlineChatConfigurationTitle">
+      <source xml:lang="en">Inline Chat</source>
     </trans-unit>
-    <trans-unit id="welcome.2">
-      <source xml:lang="en">Getting ready...</source>
+    <trans-unit id="inlineChatDefaultModelDescription">
+      <source xml:lang="en">Select the default language model to use for inline chat from the available providers. Model names may include the provider in parentheses, for example 'Claude Haiku 4.5 (copilot)'.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatEditReviewSession" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inlineChatReadonly">
+      <source xml:lang="en">Editor is read-only while Copilot is editing this file.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatSessionServiceImpl" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.remove.confirmation.checkbox">
-      <source xml:lang="en">Don't ask again</source>
-    </trans-unit>
-    <trans-unit id="confirm">
-      <source xml:lang="en">Do you want to continue in Chat view?</source>
-    </trans-unit>
-    <trans-unit id="confirm.cancel">
-      <source xml:lang="en">Cancel</source>
-    </trans-unit>
-    <trans-unit id="confirm.detail">
-      <source xml:lang="en">Inline chat is designed for making single-file code changes. Continue your request in the Chat view or rephrase it for inline chat.</source>
-    </trans-unit>
-    <trans-unit id="confirm.title">
-      <source xml:lang="en">Do you want to continue in Chat view?</source>
-    </trans-unit>
-    <trans-unit id="confirm.yes">
-      <source xml:lang="en">Continue in Chat view</source>
-    </trans-unit>
     <trans-unit id="name">
       <source xml:lang="en">Inline Chat to Panel Chat</source>
     </trans-unit>
-    <trans-unit id="resetChoice.label">
-      <source xml:lang="en">Reset Choice for 'Move Inline Chat to Panel Chat'</source>
+    <trans-unit id="response.description">
+      <source xml:lang="en">Optional brief response for inline chat. Keep it at 10 words or fewer.</source>
+    </trans-unit>
+    <trans-unit id="terminated.message">
+      <source xml:lang="en">Inline chat is designed for making single-file code changes. Continue your request in the Chat view or rephrase it for inline chat.</source>
+    </trans-unit>
+    <trans-unit id="tool.cancel">
+      <source xml:lang="en">Cancel</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatWidget" source-language="en" datatype="plaintext"><body>
@@ -165,6 +116,18 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/inlineChat/common/inlineChat" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="affordance">
+      <source xml:lang="en">Controls whether an inline chat affordance is shown when text is selected.</source>
+    </trans-unit>
+    <trans-unit id="affordance.editor">
+      <source xml:lang="en">Show an affordance in the editor at the cursor position.</source>
+    </trans-unit>
+    <trans-unit id="affordance.off">
+      <source xml:lang="en">No affordance is shown.</source>
+    </trans-unit>
+    <trans-unit id="askInChat">
+      <source xml:lang="en">Controls whether files in a chat editing session use Ask in Chat instead of Inline Chat.</source>
+    </trans-unit>
     <trans-unit id="editorMinimap.inlineChatInserted">
       <source xml:lang="en">Minimap marker color for inline chat inserted content.</source>
     </trans-unit>
@@ -174,14 +137,8 @@
     <trans-unit id="editorOverviewRuler.inlineChatRemoved">
       <source xml:lang="en">Overview ruler marker color for inline chat removed content.</source>
     </trans-unit>
-    <trans-unit id="enableV2">
-      <source xml:lang="en">Whether to use the next version of inline chat.</source>
-    </trans-unit>
-    <trans-unit id="finishOnType">
-      <source xml:lang="en">Whether to finish an inline chat session when typing outside of changed regions.</source>
-    </trans-unit>
-    <trans-unit id="holdToSpeech">
-      <source xml:lang="en">Whether holding the inline chat keybinding will automatically enable speech recognition.</source>
+    <trans-unit id="fixDiagnostics">
+      <source xml:lang="en">Controls whether the Fix action is shown for diagnostics in the editor.</source>
     </trans-unit>
     <trans-unit id="inlineChat.background">
       <source xml:lang="en">Background color of the interactive editor widget</source>
@@ -195,11 +152,8 @@
     <trans-unit id="inlineChat.shadow">
       <source xml:lang="en">Shadow color of the interactive editor widget</source>
     </trans-unit>
-    <trans-unit id="inlineChatChangeHasDiff">
-      <source xml:lang="en">Whether the current change supports showing a diff</source>
-    </trans-unit>
-    <trans-unit id="inlineChatChangeShowsDiff">
-      <source xml:lang="en">Whether the current change showing a diff</source>
+    <trans-unit id="inlineChatAffordanceVisible">
+      <source xml:lang="en">Whether an inline chat affordance widget is visible</source>
     </trans-unit>
     <trans-unit id="inlineChatDiff.inserted">
       <source xml:lang="en">Background color of inserted text in the interactive editor input</source>
@@ -213,11 +167,14 @@
     <trans-unit id="inlineChatEmpty">
       <source xml:lang="en">Whether the interactive editor input is empty</source>
     </trans-unit>
+    <trans-unit id="inlineChatFileBelongsToChat">
+      <source xml:lang="en">Whether the current file belongs to a chat editing session</source>
+    </trans-unit>
     <trans-unit id="inlineChatFocused">
       <source xml:lang="en">Whether the interactive editor input is focused</source>
     </trans-unit>
     <trans-unit id="inlineChatHasEditsAgent">
-      <source xml:lang="en">Whether an agent for inline for interactive editors exists</source>
+      <source xml:lang="en">Whether an agent for inline chat in interactive editors exists</source>
     </trans-unit>
     <trans-unit id="inlineChatHasNotebookAgent">
       <source xml:lang="en">Whether an agent for notebook cells exists</source>
@@ -227,18 +184,6 @@
     </trans-unit>
     <trans-unit id="inlineChatHasPossible">
       <source xml:lang="en">Whether a provider for inline chat exists and whether an editor for inline chat is open</source>
-    </trans-unit>
-    <trans-unit id="inlineChatHasProvider">
-      <source xml:lang="en">Whether a provider for interactive editors exists</source>
-    </trans-unit>
-    <trans-unit id="inlineChatHasStashedSession">
-      <source xml:lang="en">Whether interactive editor has kept a session for quick restore</source>
-    </trans-unit>
-    <trans-unit id="inlineChatInnerCursorFirst">
-      <source xml:lang="en">Whether the cursor of the iteractive editor input is on the first line</source>
-    </trans-unit>
-    <trans-unit id="inlineChatInnerCursorLast">
-      <source xml:lang="en">Whether the cursor of the iteractive editor input is on the last line</source>
     </trans-unit>
     <trans-unit id="inlineChatInput.background">
       <source xml:lang="en">Background color of the interactive editor input</source>
@@ -261,19 +206,14 @@
     <trans-unit id="inlineChatResponseFocused">
       <source xml:lang="en">Whether the interactive widget's response is focused</source>
     </trans-unit>
-    <trans-unit id="inlineChatResponseTypes">
-      <source xml:lang="en">What type was the responses have been receieved, nothing yet, just messages, or messaged and local edits</source>
+    <trans-unit id="inlineChatTerminated">
+      <source xml:lang="en">Whether the current inline chat session is terminated</source>
     </trans-unit>
     <trans-unit id="inlineChatVisible">
       <source xml:lang="en">Whether the interactive editor input is visible</source>
     </trans-unit>
     <trans-unit id="notebookAgent">
       <source xml:lang="en">Enable agent-like behavior for inline chat widget in notebooks.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/inlineChat/electron-browser/inlineChatActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="holdForSpeech">
-      <source xml:lang="en">Hold for Speech</source>
     </trans-unit>
 </body></file>
 </xliff>

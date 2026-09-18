@@ -79,7 +79,7 @@
       <source xml:lang="en">Click to view coverage for a single test</source>
     </trans-unit>
     <trans-unit id="testing.allTests">
-      <source xml:lang="en">All tests</source>
+      <source xml:lang="en">Entire run</source>
     </trans-unit>
     <trans-unit id="testing.coverageForTest">
       <source xml:lang="en">Showing "{0}"</source>
@@ -711,6 +711,9 @@
     <trans-unit id="testingNoTest">
       <source xml:lang="en">No tests were found in this file.</source>
     </trans-unit>
+    <trans-unit id="testingRunningBadge">
+      <source xml:lang="en">Tests are running</source>
+    </trans-unit>
     <trans-unit id="testingSelectConfig">
       <source xml:lang="en">Select Configuration...</source>
     </trans-unit>
@@ -772,6 +775,9 @@ Please make sure the markdown extension is enabled.</source>
     </trans-unit>
     <trans-unit id="testing.coveredGutterBackground">
       <source xml:lang="en">Gutter color of regions where code was covered.</source>
+    </trans-unit>
+    <trans-unit id="testing.coveredMinimapBackground">
+      <source xml:lang="en">Minimap color of regions where code was covered.</source>
     </trans-unit>
     <trans-unit id="testing.iconErrored">
       <source xml:lang="en">Color for the 'Errored' icon in the test explorer.</source>
@@ -851,6 +857,9 @@ Please make sure the markdown extension is enabled.</source>
     <trans-unit id="testing.uncoveredGutterBackground">
       <source xml:lang="en">Gutter color of regions where code not covered.</source>
     </trans-unit>
+    <trans-unit id="testing.uncoveredMinimapBackground">
+      <source xml:lang="en">Minimap color of regions where code was not covered.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/testing/common/configuration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="testConfigurationTitle">
@@ -894,6 +903,9 @@ Please make sure the markdown extension is enabled.</source>
     </trans-unit>
     <trans-unit id="testing.coverageBarThresholds">
       <source xml:lang="en">Configures the colors used for percentages in test coverage bars.</source>
+    </trans-unit>
+    <trans-unit id="testing.coverageMinimapEnabled">
+      <source xml:lang="en">Controls whether coverage indicators are shown in the minimap.</source>
     </trans-unit>
     <trans-unit id="testing.coverageToolbarEnabled">
       <source xml:lang="en">Controls whether the coverage toolbar is shown in the editor.</source>
@@ -1059,6 +1071,18 @@ Please make sure the markdown extension is enabled.</source>
     <trans-unit id="runTestTool.userDescription">
       <source xml:lang="en">Run unit tests (optionally with coverage)</source>
     </trans-unit>
+    <trans-unit id="testFailureTool.displayName">
+      <source xml:lang="en">Test failures</source>
+    </trans-unit>
+    <trans-unit id="testFailureTool.invocation">
+      <source xml:lang="en">Finding test failures</source>
+    </trans-unit>
+    <trans-unit id="testFailureTool.pastTense">
+      <source xml:lang="en">Found test failures</source>
+    </trans-unit>
+    <trans-unit id="testFailureTool.userDescription">
+      <source xml:lang="en">Include test failure information</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/testing/common/testingContentProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="runNoOutout">
@@ -1139,7 +1163,7 @@ Please make sure the markdown extension is enabled.</source>
       <source xml:lang="en">Type of menu where the configure testing profile submenu exists. Either "run", "debug", or "coverage"</source>
     </trans-unit>
     <trans-unit id="testing.supportsContinuousRun">
-      <source xml:lang="en">Indicates whether continous test running is supported</source>
+      <source xml:lang="en">Indicates whether continuous test running is supported</source>
     </trans-unit>
     <trans-unit id="testing.testId">
       <source xml:lang="en">ID of the current test item, set when creating or opening menus on test items</source>

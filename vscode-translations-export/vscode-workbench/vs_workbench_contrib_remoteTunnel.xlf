@@ -51,6 +51,9 @@
       <source xml:lang="en">You can now access this machine anywhere via the secure tunnel [{0}](command:{4}). To connect via a different machine, use the generated [{1}]({2}) link or use the [{6}]({7}) extension in the desktop or web. You can [configure](command:{3}) or [turn off](command:{5}) this access via the VS Code Accounts menu.</source>
       <note>{0} will be the tunnel name, {1} will the link address to the web UI, {6} an extension name, {7} a link to the extension documentation. [label](command:commandId) is a markdown link. Only translate the label, do not modify the format</note>
     </trans-unit>
+    <trans-unit id="progress.turnOn.final.noLink">
+      <source xml:lang="en">Remote Tunnel Access is enabled for {0}. You can [configure](command:{1}) or [turn off](command:{2}) this access via the VS Code Accounts menu.</source>
+    </trans-unit>
     <trans-unit id="recommend.remoteExtension">
       <source xml:lang="en">Tunnel '{0}' is avaiable for remote access. The {1} extension can be used to connect to it.</source>
       <note>{0} will be a tunnel name, {1} will the link address to the web UI, {6} an extension name. [label](command:commandId) is a markdown link. Only translate the label, do not modify the format</note>
@@ -69,6 +72,9 @@
     </trans-unit>
     <trans-unit id="remoteTunnel.actions.manage.on.v2">
       <source xml:lang="en">Remote Tunnel Access is On</source>
+    </trans-unit>
+    <trans-unit id="remoteTunnel.actions.rename">
+      <source xml:lang="en">Rename Tunnel</source>
     </trans-unit>
     <trans-unit id="remoteTunnel.actions.showLog">
       <source xml:lang="en">Show Remote Tunnel Service Log</source>
@@ -100,6 +106,21 @@
     </trans-unit>
     <trans-unit id="remoteTunnelAccess.preventSleep">
       <source xml:lang="en">Prevent this computer from sleeping when remote tunnel access is turned on.</source>
+    </trans-unit>
+    <trans-unit id="renameTunnel.invalidName">
+      <source xml:lang="en">The name must only consist of letters, numbers, underscore and dash. It must not start with a dash.</source>
+    </trans-unit>
+    <trans-unit id="renameTunnel.maxLength">
+      <source xml:lang="en">The name must not be longer than {0} characters.</source>
+    </trans-unit>
+    <trans-unit id="renameTunnel.placeholder">
+      <source xml:lang="en">Leave blank to use this machine's host name.</source>
+    </trans-unit>
+    <trans-unit id="renameTunnel.prompt">
+      <source xml:lang="en">Enter a name for this tunnel.</source>
+    </trans-unit>
+    <trans-unit id="renameTunnel.title">
+      <source xml:lang="en">Rename Tunnel</source>
     </trans-unit>
     <trans-unit id="sign in using account">
       <source xml:lang="en">Sign in with {0}</source>

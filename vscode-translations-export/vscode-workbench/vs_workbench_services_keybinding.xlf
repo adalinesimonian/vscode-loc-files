@@ -19,6 +19,9 @@
     <trans-unit id="keybindings.json.removalCommand">
       <source xml:lang="en">Name of the command to remove keyboard shortcut for</source>
     </trans-unit>
+    <trans-unit id="keybindings.json.systemWide">
+      <source xml:lang="en">When `true`, registers this keybinding as a system-wide (OS global) shortcut that fires even when the application is not focused. Desktop only. Only single key combinations are supported (no chords), and any `when` clause is ignored for the global trigger.</source>
+    </trans-unit>
     <trans-unit id="keybindings.json.title">
       <source xml:lang="en">Keybindings configuration</source>
     </trans-unit>
@@ -60,14 +63,6 @@
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.keybindings.win">
       <source xml:lang="en">Windows specific key or key sequence.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/services/keybinding/browser/keyboardLayoutService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="keyboard.layout.config">
-      <source xml:lang="en">Control the keyboard layout used in web.</source>
-    </trans-unit>
-    <trans-unit id="keyboardConfigurationTitle">
-      <source xml:lang="en">Keyboard</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/services/keybinding/common/keybindingEditing" source-language="en" datatype="plaintext"><body>

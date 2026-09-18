@@ -4,20 +4,23 @@
     <trans-unit id="++CODE++120ec0ffa190a8e7759483f35d54a335e265693733bd681f5edf54448861ffcf">
       <source xml:lang="en">A reload is required for the fetch setting change to take effect.</source>
     </trans-unit>
-    <trans-unit id="++CODE++f223faa96f22916294922b171a2696d868fd1f9129302eb41a45b2a2ea2ebbfd">
-      <source xml:lang="en">Apple</source>
-    </trans-unit>
     <trans-unit id="++CODE++401c9d5938a3808b7f0f056710e8fea7bcceaca69b428cd9247eadda3b40be6b">
       <source xml:lang="en">Continue to GitHub</source>
     </trans-unit>
     <trans-unit id="++CODE++b60aed3c58e6e5d2b56709f9cacbec0e9aa1acc8158597fe444c8778d2fdfb06">
       <source xml:lang="en">Continue to GitHub to create a Personal Access Token (PAT)</source>
     </trans-unit>
-    <trans-unit id="++CODE++2363daf3927d94f8a1e7964ac99b7f30f7df2009ca431f2d9edf2b5edc4f2073">
-      <source xml:lang="en">Copy &amp; Continue to {0}</source>
+    <trans-unit id="++CODE++db70ed1bfc4262628dc4f1adcd07e5220f86833a256706f2d42f0d2767f16176">
+      <source xml:lang="en">Copy &amp; Continue to Browser</source>
     </trans-unit>
-    <trans-unit id="++CODE++f911e414cf6bdfc595532ab166b5ba0f63d73c021452fcdacbda363dda6ad8fb">
-      <source xml:lang="en">GitHub</source>
+    <trans-unit id="++CODE++54952de8c3e1b0a9594168394c6d22c41c7ba81b1f9649be74b63347ecaaea0e">
+      <source xml:lang="en">Could not reach GitHub to finish signing in with Microsoft. Check your connection and try again.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++79fbbd7ea81f71c6edcc69315f5485580827a79b12a14900f5e20a1259f5450e">
+      <source xml:lang="en">Could not read the GitHub account linked to your Microsoft account.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++7c4e13c9e1a670a5ee6f26a87cb876cc50a35b89caaafa3768dc954d3bc61d44">
+      <source xml:lang="en">Could not sign in to Microsoft. Try again or choose a different way to sign in.</source>
     </trans-unit>
     <trans-unit id="++CODE++87fb8c7a5a4e4a2001d3556350d50560cd5f0d6423f0c780e0b447f0aefb0583">
       <source xml:lang="en">GitHub Authentication - Reload required</source>
@@ -25,8 +28,17 @@
     <trans-unit id="++CODE++ec19f01de52b36689edfccd0fc86e8521bab59d83a3d611b35882f044d54d833">
       <source xml:lang="en">GitHub Enterprise Server URI is not a valid URI: {0}</source>
     </trans-unit>
-    <trans-unit id="++CODE++ce770667e5f9b0d8f55367bb79419689d90c48451bb33f079f3a9a72ae132de8">
-      <source xml:lang="en">Google</source>
+    <trans-unit id="++CODE++d6bd67ed66b5863983aaaf606ba312e82fa0683cc027d478d8191a6542ac05e1">
+      <source xml:lang="en">GitHub did not accept your Microsoft account for sign in.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++dc0823f1755926736f3938ee76ac6b20d6993a4fff796c8084d0b47ad5c59f27">
+      <source xml:lang="en">GitHub is not configured to accept Microsoft sign in from this application ({0}).</source>
+    </trans-unit>
+    <trans-unit id="++CODE++741bdf08ad6fd06adb0860968fda8dd4ddffb3e06973f36584800e9baf71f282">
+      <source xml:lang="en">GitHub rejected the Microsoft sign in ({0}).</source>
+    </trans-unit>
+    <trans-unit id="++CODE++bf4856c3bc80f5392305da751d6ebc8a0161822f23b980aa030a553be2ba0ed3">
+      <source xml:lang="en">GitHub returned an unexpected response while signing in with Microsoft.</source>
     </trans-unit>
     <trans-unit id="++CODE++2c1355b1b52e1bb108a7d638522f74ca3b7fe8aebbae36fda7902ccbdbe9e335">
       <source xml:lang="en">Having trouble logging in? Would you like to try a different way? ({0})</source>
@@ -45,18 +57,33 @@
     <trans-unit id="++CODE++c7bd7105f7c2bf98654930d6271e164cb935b377cf2d167bdb4fe8fff95d9336">
       <source xml:lang="en">Sign in failed: {0}</source>
     </trans-unit>
+    <trans-unit id="++CODE++73e984e9b4809573e6fde6f4e40d79d0c982e26b46accba7aafdf6138b6e019d">
+      <source xml:lang="en">Sign in with SSO</source>
+    </trans-unit>
     <trans-unit id="++CODE++a093812fd21d65a4cd97e289705124445d735cd50ffb7f88f4abbac215c5d5a2">
       <source xml:lang="en">Sign out failed: {0}</source>
+    </trans-unit>
+    <trans-unit id="++CODE++a2115e25d34aa40f842a9dae77e45843310309c1a14dc860f29eb38b6f391734">
+      <source xml:lang="en">Signing in to Microsoft again is required.</source>
     </trans-unit>
     <trans-unit id="++CODE++483548c44e4bd1ccd117f8087f641c1a392885d1378106b2a20e63cd2f23a4d2">
       <source xml:lang="en">Signing in to {0}...</source>
       <note>The {0} will be a url, e.g. github.com</note>
+    </trans-unit>
+    <trans-unit id="++CODE++746212942816d0ad3f0d3e17799cda596ddb525ad33603ac6a28d31c30017c9b">
+      <source xml:lang="en">This GitHub host does not support signing in with Microsoft.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++5b243983b8cc487f2c207b1b5415c6fb8bcf61243896c157011793a59166cc15">
+      <source xml:lang="en">This build of {0} is not configured to sign in to GitHub with Microsoft.</source>
     </trans-unit>
     <trans-unit id="++CODE++de597b4537605540f77c1475713aa6a04c823bb6a8fda97d24705eccf184f18e">
       <source xml:lang="en">To finish authenticating, navigate to GitHub and paste in the above one-time code.</source>
     </trans-unit>
     <trans-unit id="++CODE++60609d4c011ba044569e8d990343f22439f06f4c2401c49fb4e1b7ff3cd49dcc">
       <source xml:lang="en">To finish authenticating, navigate to GitHub to create a PAT then paste the PAT into the input box.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++1a0b391a57d9ffb163511e5faf5e1de0781dfefa4fa0bbefb9f76a0f541e819a">
+      <source xml:lang="en">Use a Different Microsoft Account</source>
     </trans-unit>
     <trans-unit id="++CODE++85a39ab345d672ff8ca9b9c6876f3adcacf45ee7c1e2dbd2408fd338bd55e07e">
       <source xml:lang="en">Yes</source>
@@ -67,6 +94,12 @@
     <trans-unit id="++CODE++5cd54bf182ab05afda0e219c101add4b96941dd2f851acc6d7e211136f05e26b">
       <source xml:lang="en">Your Code: {0}</source>
       <note>The {0} will be a code, e.g. 123-456</note>
+    </trans-unit>
+    <trans-unit id="++CODE++c6bbdb7ba882802a6944f5aa8b9f281063b98fec00330fff64a2752f4529a032">
+      <source xml:lang="en">Your Microsoft account is now linked to a different GitHub account.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++d582369bfa5b9c6133a759aa7a82240c6bc98363b4cba52205e4421a23da76e6">
+      <source xml:lang="en">Your organization&apos;s Microsoft sign-in is linked to this GitHub account:&#10;&#10;{0}&#10;&#10;Sign in to GitHub with this account?</source>
     </trans-unit>
     <trans-unit id="++CODE++030248d797725762fcfcadd8e0c074a04036fd678e4211f1d93102c47b934ad4">
       <source xml:lang="en">device code</source>

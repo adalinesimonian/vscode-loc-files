@@ -112,10 +112,18 @@ action keybinding</note>
       <source xml:lang="en">More</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/base/browser/ui/progressbar/progressbar" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="progress">
+      <source xml:lang="en">Progress</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/base/browser/ui/selectBox/selectBoxCustom" source-language="en" datatype="plaintext"><body>
     <trans-unit id="selectBox">
       <source xml:lang="en">Select Box</source>
       <note>Behave like native select dropdown element.</note>
+    </trans-unit>
+    <trans-unit id="selectBoxSeparator">
+      <source xml:lang="en">separator</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/base/browser/ui/splitview/paneview" source-language="en" datatype="plaintext"><body>
@@ -146,6 +154,12 @@ action keybinding</note>
     </trans-unit>
     <trans-unit id="replFindNoResults">
       <source xml:lang="en">No results</source>
+    </trans-unit>
+    <trans-unit id="treeNodeCollapsed">
+      <source xml:lang="en">collapsed</source>
+    </trans-unit>
+    <trans-unit id="treeNodeExpanded">
+      <source xml:lang="en">expanded</source>
     </trans-unit>
     <trans-unit id="type to filter">
       <source xml:lang="en">Type to filter</source>
@@ -286,6 +300,9 @@ action keybinding</note>
     </trans-unit>
     <trans-unit id="date.fromNow.seconds.singular.fullWord">
       <source xml:lang="en">{0} second</source>
+    </trans-unit>
+    <trans-unit id="date.fromNow.unknown">
+      <source xml:lang="en">unknown</source>
     </trans-unit>
     <trans-unit id="date.fromNow.weeks.plural">
       <source xml:lang="en">{0} wks</source>
@@ -477,6 +494,35 @@ action keybinding</note>
     </trans-unit>
     <trans-unit id="updateConfigurationTitle">
       <source xml:lang="en">Update</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/base/common/yaml" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="duplicateKey">
+      <source xml:lang="en">Duplicate key: "{0}"</source>
+    </trans-unit>
+    <trans-unit id="expectedColon">
+      <source xml:lang="en">Expected ":"</source>
+    </trans-unit>
+    <trans-unit id="expectedFlowMapEnd">
+      <source xml:lang="en">Expected "}"</source>
+    </trans-unit>
+    <trans-unit id="expectedFlowSeqEnd">
+      <source xml:lang="en">Expected "]"</source>
+    </trans-unit>
+    <trans-unit id="expectedMappingKey">
+      <source xml:lang="en">Expected mapping key</source>
+    </trans-unit>
+    <trans-unit id="missingSeqItemValue">
+      <source xml:lang="en">Missing sequence item value</source>
+    </trans-unit>
+    <trans-unit id="missingValue">
+      <source xml:lang="en">Missing value</source>
+    </trans-unit>
+    <trans-unit id="unexpectedIndentation">
+      <source xml:lang="en">Unexpected indentation (expected {0}, got {1})</source>
+    </trans-unit>
+    <trans-unit id="unexpectedTokenInFlowSeq">
+      <source xml:lang="en">Unexpected token in flow sequence</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/base/node/zip" source-language="en" datatype="plaintext"><body>

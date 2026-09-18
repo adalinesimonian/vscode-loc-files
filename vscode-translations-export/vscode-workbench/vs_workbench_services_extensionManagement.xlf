@@ -102,28 +102,20 @@
     <trans-unit id="cannot change invalid extension enablement">
       <source xml:lang="en">Cannot change enablement of {0} extension because of it is invalid</source>
     </trans-unit>
-    <trans-unit id="cannot disable auth extension">
-      <source xml:lang="en">Cannot change enablement {0} extension because Settings Sync depends on it.</source>
-    </trans-unit>
-    <trans-unit id="cannot disable auth extension in workspace">
-      <source xml:lang="en">Cannot change enablement of {0} extension in workspace because it contributes authentication providers</source>
-    </trans-unit>
     <trans-unit id="cannot disable language pack extension">
       <source xml:lang="en">Cannot change enablement of {0} extension because it contributes language packs.</source>
+    </trans-unit>
+    <trans-unit id="cannot disable settings sync auth extension">
+      <source xml:lang="en">Cannot change enablement of {0} extension because Settings Sync depends on it.</source>
+    </trans-unit>
+    <trans-unit id="cannot disable settings sync auth extension in workspace">
+      <source xml:lang="en">Cannot change enablement of {0} extension in workspace because Settings Sync depends on it.</source>
     </trans-unit>
     <trans-unit id="extensionsDisabled">
       <source xml:lang="en">All installed extensions are temporarily disabled.</source>
     </trans-unit>
     <trans-unit id="noWorkspace">
       <source xml:lang="en">No workspace.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/services/extensionManagement/browser/webExtensionsScannerService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="not a web extension">
-      <source xml:lang="en">Cannot add '{0}' because this extension is not a web extension.</source>
-    </trans-unit>
-    <trans-unit id="openInstalledWebExtensionsResource">
-      <source xml:lang="en">Open Installed Web Extensions Resource</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/services/extensionManagement/common/extensionFeaturesManagemetService" source-language="en" datatype="plaintext"><body>
@@ -138,14 +130,6 @@
     </trans-unit>
     <trans-unit id="disallow">
       <source xml:lang="en">Don't Allow</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/services/extensionManagement/common/extensionManagementServerService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="browser">
-      <source xml:lang="en">Browser</source>
-    </trans-unit>
-    <trans-unit id="remote">
-      <source xml:lang="en">Remote</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/services/extensionManagement/common/extensionManagementService" source-language="en" datatype="plaintext"><body>
@@ -294,9 +278,20 @@
       <source xml:lang="en">Icon used for the verified extension publisher in the extensions view and editor.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/services/extensionManagement/electron-browser/extensionGalleryAccountService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="marketplace.pickAccount">
+      <source xml:lang="en">Select the account to use for the Extensions Marketplace</source>
+    </trans-unit>
+    <trans-unit id="marketplace.signInDifferentAccount">
+      <source xml:lang="en">Sign in with a Different Account…</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/services/extensionManagement/electron-browser/extensionGalleryManifestService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="extensionGalleryManifestService.accountChange">
       <source xml:lang="en">{0} is now configured to a different Marketplace. Please restart to apply the changes.</source>
+    </trans-unit>
+    <trans-unit id="extensionGalleryManifestService.configurationChange">
+      <source xml:lang="en">The Extensions Marketplace configuration has changed. Please restart to apply the changes.</source>
     </trans-unit>
     <trans-unit id="restart">
       <source xml:lang="en">&amp;&amp;Restart</source>
@@ -312,9 +307,6 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/services/extensionManagement/electron-browser/remoteExtensionManagementService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="incompatibleAPI">
-      <source xml:lang="en">Can't install '{0}' extension. {1}</source>
-    </trans-unit>
     <trans-unit id="notFoundCompatibleDependency">
       <source xml:lang="en">Can't install '{0}' extension because it is not compatible with the current version of {1} (version {2}).</source>
     </trans-unit>

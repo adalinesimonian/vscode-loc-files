@@ -56,10 +56,21 @@
       <source xml:lang="en">Remote Help</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/remote/browser/remote.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="remote.togglePortsView">
+      <source xml:lang="en">Toggle Forwarded Ports View</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/remote/browser/remoteConnectionHealth" source-language="en" datatype="plaintext"><body>
     <trans-unit id="allow">
       <source xml:lang="en">&amp;&amp;Allow</source>
       <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="arm32ServerDeprecation.banner">
+      <source xml:lang="en">Support for 32-bit ARM remote servers is deprecated and will be removed in a future release of {0}.</source>
+    </trans-unit>
+    <trans-unit id="arm32ServerDeprecationBannerLearnMore">
+      <source xml:lang="en">Learn More</source>
     </trans-unit>
     <trans-unit id="learnMore">
       <source xml:lang="en">&amp;&amp;Learn More</source>
@@ -67,6 +78,9 @@
     </trans-unit>
     <trans-unit id="remember">
       <source xml:lang="en">Do not show again</source>
+    </trans-unit>
+    <trans-unit id="remoteBannerDoNotShowAgainThisVersion">
+      <source xml:lang="en">Do not show again in v{0}</source>
     </trans-unit>
     <trans-unit id="unsupportedGlibcBannerLearnMore">
       <source xml:lang="en">Learn More</source>
@@ -263,14 +277,6 @@
     <trans-unit id="workspace.tooltip2">
       <source xml:lang="en">Some [features are not available]({0}) for resources located on a virtual file system.</source>
       <note>[features are not available]({1}) is a link. Only translate `features are not available`. Do not change brackets and parentheses or {0}</note>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/remote/browser/remoteStartEntry" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="remote.category">
-      <source xml:lang="en">Remote</source>
-    </trans-unit>
-    <trans-unit id="remote.showWebStartEntryActions">
-      <source xml:lang="en">Show Remote Start Entry for web</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/remote/browser/tunnelFactory" source-language="en" datatype="plaintext"><body>

@@ -22,6 +22,74 @@
       <source xml:lang="en">Share</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/quickDiff.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="diffDecorations">
+      <source xml:lang="en">Controls diff decorations in the editor.</source>
+    </trans-unit>
+    <trans-unit id="diffDecorationsIgnoreTrimWhitespace">
+      <source xml:lang="en">Controls whether leading and trailing whitespace is ignored in Source Control diff gutter decorations.</source>
+    </trans-unit>
+    <trans-unit id="diffGutterPattern">
+      <source xml:lang="en">Controls whether a pattern is used for the diff decorations in gutter.</source>
+    </trans-unit>
+    <trans-unit id="diffGutterPatternAdded">
+      <source xml:lang="en">Use pattern for the diff decorations in gutter for added lines.</source>
+    </trans-unit>
+    <trans-unit id="diffGutterPatternModifed">
+      <source xml:lang="en">Use pattern for the diff decorations in gutter for modified lines.</source>
+    </trans-unit>
+    <trans-unit id="diffGutterWidth">
+      <source xml:lang="en">Controls the width(px) of diff decorations in gutter (added &amp; modified).</source>
+    </trans-unit>
+    <trans-unit id="quickDiffDecoration">
+      <source xml:lang="en">Diff Decorations</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorations.all">
+      <source xml:lang="en">Show the diff decorations in all available locations.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorations.gutter">
+      <source xml:lang="en">Show the diff decorations only in the editor gutter.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorations.minimap">
+      <source xml:lang="en">Show the diff decorations only in the minimap.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorations.none">
+      <source xml:lang="en">Do not show the diff decorations.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorations.overviewRuler">
+      <source xml:lang="en">Show the diff decorations only in the overview ruler.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsGutterAction">
+      <source xml:lang="en">Controls the behavior of Source Control diff gutter decorations.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsGutterAction.diff">
+      <source xml:lang="en">Show the inline diff Peek view on click.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsGutterAction.none">
+      <source xml:lang="en">Do nothing.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsGutterVisibility">
+      <source xml:lang="en">Controls the visibility of the Source Control diff decorator in the gutter.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsGutterVisibility.always">
+      <source xml:lang="en">Show the diff decorator in the gutter at all times.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsGutterVisibility.hover">
+      <source xml:lang="en">Show the diff decorator in the gutter only on hover.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsIgnoreTrimWhitespace.false">
+      <source xml:lang="en">Do not ignore leading and trailing whitespace.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsIgnoreTrimWhitespace.inherit">
+      <source xml:lang="en">Inherit from `diffEditor.ignoreTrimWhitespace`.</source>
+    </trans-unit>
+    <trans-unit id="scm.diffDecorationsIgnoreTrimWhitespace.true">
+      <source xml:lang="en">Ignore leading and trailing whitespace.</source>
+    </trans-unit>
+    <trans-unit id="scmConfigurationTitle">
+      <source xml:lang="en">Source Control</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/scm/browser/quickDiffDecorator" source-language="en" datatype="plaintext"><body>
     <trans-unit id="diffAdded">
       <source xml:lang="en">Added lines</source>
@@ -140,9 +208,6 @@
     </trans-unit>
     <trans-unit id="providersVisible">
       <source xml:lang="en">Controls how many repositories are visible in the Source Control Repositories section. Set to 0, to be able to manually resize the view.</source>
-    </trans-unit>
-    <trans-unit id="quickDiffDecoration">
-      <source xml:lang="en">Diff Decorations</source>
     </trans-unit>
     <trans-unit id="repositoriesSortOrder">
       <source xml:lang="en">Controls the sort order of the repositories in the source control repositories view.</source>
@@ -537,13 +602,33 @@
       <source xml:lang="en">Select the repository to view, type to filter all repositories</source>
     </trans-unit>
     <trans-unit id="scmGraphViewOutdated">
-      <source xml:lang="en">Please refresh the graph using the refresh action ($(refresh)).</source>
+      <source xml:lang="en">Please refresh the graph using the refresh action ({0}).</source>
     </trans-unit>
     <trans-unit id="setListViewMode">
       <source xml:lang="en">View as List</source>
     </trans-unit>
     <trans-unit id="setTreeViewMode">
       <source xml:lang="en">View as Tree</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/scm/browser/scmInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="label.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="scmInput.accessibilityHelp">
+      <source xml:lang="en">{0}, Use {1} to open Source Control Accessibility Help.</source>
+    </trans-unit>
+    <trans-unit id="scmInput.accessibilityHelpNoKb">
+      <source xml:lang="en">{0}, Run the Open Accessibility Help command for more information.</source>
+    </trans-unit>
+    <trans-unit id="scmInputCancelAction">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="scmInputGenerateCommitMessage">
+      <source xml:lang="en">Generate Commit Message</source>
+    </trans-unit>
+    <trans-unit id="scmInputMoreActions">
+      <source xml:lang="en">More Actions...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/scm/browser/scmRepositoriesViewPane" source-language="en" datatype="plaintext"><body>
@@ -557,9 +642,6 @@
     </trans-unit>
     <trans-unit id="expand all">
       <source xml:lang="en">Expand All Repositories</source>
-    </trans-unit>
-    <trans-unit id="label.close">
-      <source xml:lang="en">Close</source>
     </trans-unit>
     <trans-unit id="repositories">
       <source xml:lang="en">Repositories</source>
@@ -582,23 +664,11 @@
     <trans-unit id="scm">
       <source xml:lang="en">Source Control Management</source>
     </trans-unit>
+    <trans-unit id="scmCollapseAll">
+      <source xml:lang="en">Collapse All</source>
+    </trans-unit>
     <trans-unit id="scmInput">
       <source xml:lang="en">Source Control Input</source>
-    </trans-unit>
-    <trans-unit id="scmInput.accessibilityHelp">
-      <source xml:lang="en">{0}, Use {1} to open Source Control Accessibility Help.</source>
-    </trans-unit>
-    <trans-unit id="scmInput.accessibilityHelpNoKb">
-      <source xml:lang="en">{0}, Run the Open Accessibility Help command for more information.</source>
-    </trans-unit>
-    <trans-unit id="scmInputCancelAction">
-      <source xml:lang="en">Cancel</source>
-    </trans-unit>
-    <trans-unit id="scmInputGenerateCommitMessage">
-      <source xml:lang="en">Generate Commit Message</source>
-    </trans-unit>
-    <trans-unit id="scmInputMoreActions">
-      <source xml:lang="en">More Actions...</source>
     </trans-unit>
     <trans-unit id="scmInputRow.accessibilityHelp">
       <source xml:lang="en">Source Control Input, Use {0} to open Source Control Accessibility Help.</source>

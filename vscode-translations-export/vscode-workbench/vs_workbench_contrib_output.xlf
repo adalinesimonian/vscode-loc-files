@@ -102,6 +102,95 @@
       <source xml:lang="en">User Logs</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/output/browser/outputAccessibilityHelp" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="output.closingDesc">
+      <source xml:lang="en">Press Escape to clear the filter and see all output, or close the Output panel. Your filter text is preserved if you reopen the panel.</source>
+    </trans-unit>
+    <trans-unit id="output.closingHeader">
+      <source xml:lang="en">Closing:</source>
+    </trans-unit>
+    <trans-unit id="output.context">
+      <source xml:lang="en">You are in the Output panel filter input. This is NOT a navigating search. Instead, it instantly hides lines that do not match your filter, showing only the lines you want to see.</source>
+    </trans-unit>
+    <trans-unit id="output.filterDesc1">
+      <source xml:lang="en">Each time you change the filter text, the panel instantly regenerates to show only matching lines. Your screen reader announces how many lines are now visible. This is live feedback: as you type or delete characters, the displayed lines update immediately.</source>
+    </trans-unit>
+    <trans-unit id="output.filterDesc2">
+      <source xml:lang="en">New output from your running program is appended to the panel and automatically filtered, so matching new output appears instantly.</source>
+    </trans-unit>
+    <trans-unit id="output.filterHeader">
+      <source xml:lang="en">What Happens When You Filter:</source>
+    </trans-unit>
+    <trans-unit id="output.focusDesc1">
+      <source xml:lang="en">Your focus stays in the filter input while the panel updates in the background. This is intentional, so you can keep typing without losing your place.</source>
+    </trans-unit>
+    <trans-unit id="output.focusDesc2">
+      <source xml:lang="en">If you want to review the filtered output, press Down Arrow to move focus from the filter into the output content below.</source>
+    </trans-unit>
+    <trans-unit id="output.focusDesc3">
+      <source xml:lang="en">If you want to clear the filter and see all output, press Escape or delete all filter text.</source>
+    </trans-unit>
+    <trans-unit id="output.focusHeader">
+      <source xml:lang="en">Focus Behavior (Important):</source>
+    </trans-unit>
+    <trans-unit id="output.header">
+      <source xml:lang="en">Accessibility Help: Output Panel Filter</source>
+    </trans-unit>
+    <trans-unit id="output.inputDesc">
+      <source xml:lang="en">While you are in the filter input, your focus stays in the field. You can type, edit, or adjust your filter without leaving the input. As you type, the Output panel instantly updates to show only lines matching your filter.</source>
+    </trans-unit>
+    <trans-unit id="output.inputHeader">
+      <source xml:lang="en">Inside the Filter Input (What It Does):</source>
+    </trans-unit>
+    <trans-unit id="output.keyDown">
+      <source xml:lang="en">- Down Arrow: Move focus from filter into the output content.</source>
+    </trans-unit>
+    <trans-unit id="output.keyEscape">
+      <source xml:lang="en">- Escape: Clear the filter and return to showing all output.</source>
+    </trans-unit>
+    <trans-unit id="output.keyTab">
+      <source xml:lang="en">- Tab: Move to log level filter buttons if available.</source>
+    </trans-unit>
+    <trans-unit id="output.keyboardHeader">
+      <source xml:lang="en">Keyboard Navigation Summary:</source>
+    </trans-unit>
+    <trans-unit id="output.settingSmartScroll">
+      <source xml:lang="en">- `output.smartScroll.enabled`: Automatically scroll to the latest output when messages arrive.</source>
+    </trans-unit>
+    <trans-unit id="output.settingVerbosity">
+      <source xml:lang="en">- `accessibility.verbosity.find`: Controls whether the filter input announces the Accessibility Help hint.</source>
+    </trans-unit>
+    <trans-unit id="output.settingsHeader">
+      <source xml:lang="en">Settings You Can Adjust ({0} opens Settings):</source>
+    </trans-unit>
+    <trans-unit id="output.settingsIntro">
+      <source xml:lang="en">These settings affect how the Output panel works.</source>
+    </trans-unit>
+    <trans-unit id="output.statusDesc">
+      <source xml:lang="en">You are filtering the output.</source>
+    </trans-unit>
+    <trans-unit id="output.statusHeader">
+      <source xml:lang="en">Current Filter Status:</source>
+    </trans-unit>
+    <trans-unit id="output.syntaxEscape">
+      <source xml:lang="en">- \\! (escape): Use backslash to search for a literal "!" character.</source>
+    </trans-unit>
+    <trans-unit id="output.syntaxExample">
+      <source xml:lang="en">Example: typing "error, warning" shows lines containing either "error" or "warning".</source>
+    </trans-unit>
+    <trans-unit id="output.syntaxExclude">
+      <source xml:lang="en">- !text (exclude): Hides lines containing 'text', showing all other lines.</source>
+    </trans-unit>
+    <trans-unit id="output.syntaxHeader">
+      <source xml:lang="en">Filter Syntax and Patterns:</source>
+    </trans-unit>
+    <trans-unit id="output.syntaxMultiple">
+      <source xml:lang="en">- text1, text2 (multiple patterns): Separate patterns with commas to show lines matching ANY pattern.</source>
+    </trans-unit>
+    <trans-unit id="output.syntaxText">
+      <source xml:lang="en">- Type text: Shows only lines containing that text (case-insensitive by default).</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/output/browser/outputServices" source-language="en" datatype="plaintext"><body>
     <trans-unit id="saveLog.dialogTitle">
       <source xml:lang="en">Save Output As</source>

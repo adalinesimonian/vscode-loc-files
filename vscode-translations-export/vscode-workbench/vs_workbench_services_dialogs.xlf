@@ -50,33 +50,6 @@
       <source xml:lang="en">Save As</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/services/dialogs/browser/fileDialogService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="learnMore">
-      <source xml:lang="en">&amp;&amp;Learn More</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="openFiles">
-      <source xml:lang="en">Open &amp;&amp;Files...</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="openRemote">
-      <source xml:lang="en">&amp;&amp;Open Remote...</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="pickFolderAndOpen">
-      <source xml:lang="en">Can't open folders, try adding a folder to the workspace instead.</source>
-    </trans-unit>
-    <trans-unit id="pickWorkspaceAndOpen">
-      <source xml:lang="en">Can't open workspaces, try adding a folder to the workspace instead.</source>
-    </trans-unit>
-    <trans-unit id="unsupportedBrowserDetail">
-      <source xml:lang="en">Your browser doesn't support opening local folders.
-You can either open single files or open a remote repository.</source>
-    </trans-unit>
-    <trans-unit id="unsupportedBrowserMessage">
-      <source xml:lang="en">Opening Local Folders is Unsupported</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/services/dialogs/browser/simpleFileDialog" source-language="en" datatype="plaintext"><body>
     <trans-unit id="openLocalFile">
       <source xml:lang="en">Open Local File...</source>
@@ -92,6 +65,9 @@ You can either open single files or open a remote repository.</source>
     </trans-unit>
     <trans-unit id="remoteFileDialog.cancel">
       <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="remoteFileDialog.createFolderFailed">
+      <source xml:lang="en">Could not create folder: {0}</source>
     </trans-unit>
     <trans-unit id="remoteFileDialog.hideDotFiles">
       <source xml:lang="en">Hide dot files</source>
@@ -115,6 +91,9 @@ You can either open single files or open a remote repository.</source>
       <source xml:lang="en">Please enter a valid file name.</source>
     </trans-unit>
     <trans-unit id="remoteFileDialog.validateCreateDirectory">
+      <source xml:lang="en">The folder {0} does not exist. Would you like to create it?</source>
+    </trans-unit>
+    <trans-unit id="remoteFileDialog.validateCreateDirectoryOpen">
       <source xml:lang="en">The folder {0} does not exist. Would you like to create it?</source>
     </trans-unit>
     <trans-unit id="remoteFileDialog.validateExisting">

@@ -20,6 +20,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpCommands" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.actions.enablement">
+      <source xml:lang="en">Enablement</source>
+    </trans-unit>
     <trans-unit id="mcp.actions.resources">
       <source xml:lang="en">Resources</source>
     </trans-unit>
@@ -40,6 +43,66 @@
     </trans-unit>
     <trans-unit id="mcp.addServer.description">
       <source xml:lang="en">Add a new server configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.authenticate">
+      <source xml:lang="en">Authenticate</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.disable">
+      <source xml:lang="en">Disable</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.disableSession">
+      <source xml:lang="en">Disable (Session)</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.disableWorkspace">
+      <source xml:lang="en">Disable (Workspace)</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.enable">
+      <source xml:lang="en">Enable</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.enablePlugin">
+      <source xml:lang="en">Enable Plugin</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.enableSession">
+      <source xml:lang="en">Enable (Session)</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.enableWorkspace">
+      <source xml:lang="en">Enable (Workspace)</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.noServers">
+      <source xml:lang="en">No MCP servers</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.noServers.description">
+      <source xml:lang="en">This session does not expose any MCP servers</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.restartUnsupported">
+      <source xml:lang="en">Restarting MCP server '{0}' is not supported for agent-host servers. Stop and start the server instead.</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.showLocal">
+      <source xml:lang="en">Show locally configured servers...</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.startError">
+      <source xml:lang="en">Failed to start MCP server '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.status.authRequired">
+      <source xml:lang="en">Authentication required</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.status.error">
+      <source xml:lang="en">Error</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.status.ready">
+      <source xml:lang="en">Running</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.status.starting">
+      <source xml:lang="en">Starting</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.status.stopped">
+      <source xml:lang="en">Stopped</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHost.stopError">
+      <source xml:lang="en">Failed to stop MCP server '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="mcp.agentHostOptions">
+      <source xml:lang="en">Agent Host Server Options</source>
     </trans-unit>
     <trans-unit id="mcp.autoStart">
       <source xml:lang="en">Automatically start MCP servers when sending a chat message</source>
@@ -98,11 +161,17 @@
     <trans-unit id="mcp.configureSamplingModels.ph">
       <source xml:lang="en">Pick the models {0} can access via MCP sampling</source>
     </trans-unit>
+    <trans-unit id="mcp.disabled">
+      <source xml:lang="en">Disabled</source>
+    </trans-unit>
     <trans-unit id="mcp.disconnect">
       <source xml:lang="en">Disconnect Account</source>
     </trans-unit>
     <trans-unit id="mcp.editStoredInput">
       <source xml:lang="en">Edit Stored Input</source>
+    </trans-unit>
+    <trans-unit id="mcp.enableWorkspace">
+      <source xml:lang="en">Enable Server (Workspace)</source>
     </trans-unit>
     <trans-unit id="mcp.err.md.multi">
       <source xml:lang="en">Multiple MCP servers were unable to start successfully:
@@ -111,6 +180,12 @@
     </trans-unit>
     <trans-unit id="mcp.err.md.single">
       <source xml:lang="en">MCP server {0} was unable to start successfully.</source>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest">
+      <source xml:lang="en">Install Server from Manifest...</source>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest.description">
+      <source xml:lang="en">Install an MCP server from a JSON manifest file</source>
     </trans-unit>
     <trans-unit id="mcp.list">
       <source xml:lang="en">List Servers</source>
@@ -153,11 +228,41 @@
     <trans-unit id="mcp.selectAction">
       <source xml:lang="en">Select action for '{0}'</source>
     </trans-unit>
+    <trans-unit id="mcp.selectAgentHostServer">
+      <source xml:lang="en">Select an MCP Server for this session</source>
+    </trans-unit>
     <trans-unit id="mcp.selectServer">
       <source xml:lang="en">Select an MCP Server</source>
     </trans-unit>
-    <trans-unit id="mcp.servers">
-      <source xml:lang="en">MCP Servers</source>
+    <trans-unit id="mcp.server.options.tooltip">
+      <source xml:lang="en">Show server options for {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.setOAuthClientSecret">
+      <source xml:lang="en">Set OAuth Client Secret</source>
+    </trans-unit>
+    <trans-unit id="mcp.setOAuthClientSecret.delete">
+      <source xml:lang="en">Delete stored client secret</source>
+    </trans-unit>
+    <trans-unit id="mcp.setOAuthClientSecret.hide">
+      <source xml:lang="en">Hide client secret</source>
+    </trans-unit>
+    <trans-unit id="mcp.setOAuthClientSecret.placeholder.replace">
+      <source xml:lang="en">Enter a new client secret to replace the stored value</source>
+    </trans-unit>
+    <trans-unit id="mcp.setOAuthClientSecret.placeholder.set">
+      <source xml:lang="en">Enter client secret</source>
+    </trans-unit>
+    <trans-unit id="mcp.setOAuthClientSecret.prompt">
+      <source xml:lang="en">Enter the client secret for OAuth client '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="mcp.setOAuthClientSecret.reveal">
+      <source xml:lang="en">Show client secret</source>
+    </trans-unit>
+    <trans-unit id="mcp.setOAuthClientSecret.title.replace">
+      <source xml:lang="en">Replace Client Secret for {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.setOAuthClientSecret.title.set">
+      <source xml:lang="en">Set Client Secret for {0}</source>
     </trans-unit>
     <trans-unit id="mcp.showOutput">
       <source xml:lang="en">Show Output</source>
@@ -232,6 +337,40 @@
     </trans-unit>
     <trans-unit id="mcp.error.retry">
       <source xml:lang="en">Try a different package</source>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest.filter">
+      <source xml:lang="en">MCP Manifest</source>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest.installError">
+      <source xml:lang="en">Failed to install MCP server: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest.invalidJson">
+      <source xml:lang="en">Invalid manifest file: expected a JSON object</source>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest.invalidManifest">
+      <source xml:lang="en">Invalid manifest: expected 'packages' or 'remotes' with at least one entry</source>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest.openLabel">
+      <source xml:lang="en">&amp;&amp;Install</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest.parseError">
+      <source xml:lang="en">Failed to parse manifest: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest.readError">
+      <source xml:lang="en">Failed to read manifest file: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest.serverId.placeholder">
+      <source xml:lang="en">Unique identifier for this server</source>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest.serverId.title">
+      <source xml:lang="en">Enter Server ID</source>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest.success">
+      <source xml:lang="en">MCP server '{0}' installed successfully</source>
+    </trans-unit>
+    <trans-unit id="mcp.installFromManifest.title">
+      <source xml:lang="en">Select MCP Server Manifest</source>
     </trans-unit>
     <trans-unit id="mcp.loading.title">
       <source xml:lang="en">Loading package details...</source>
@@ -314,6 +453,12 @@
     <trans-unit id="mcp.target..remote.description">
       <source xml:lang="en">Available on this remote machine, runs on {0}</source>
     </trans-unit>
+    <trans-unit id="mcp.target.agentHost">
+      <source xml:lang="en">Add to Current Agent Session</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.local">
+      <source xml:lang="en">Install Server Locally...</source>
+    </trans-unit>
     <trans-unit id="mcp.target.placeholder">
       <source xml:lang="en">Select the configuration target</source>
     </trans-unit>
@@ -338,6 +483,9 @@
     <trans-unit id="mcp.target.workspace.description.remote">
       <source xml:lang="en">Available in this workspace, runs on {0}</source>
     </trans-unit>
+    <trans-unit id="mcp.target.workspaceFolder">
+      <source xml:lang="en">Workspace Folder</source>
+    </trans-unit>
     <trans-unit id="mcp.url.placeholder">
       <source xml:lang="en">URL of the MCP server (e.g., http://localhost:3000)</source>
     </trans-unit>
@@ -345,10 +493,39 @@
       <source xml:lang="en">Enter Server URL</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/mcp/browser/mcpElicitationService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="mcp.elicit.accept">
-      <source xml:lang="en">Respond</source>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpConfigurationDestination" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.config.add">
+      <source xml:lang="en">Add MCP Server to {0}</source>
     </trans-unit>
+    <trans-unit id="mcp.config.add.placeholder">
+      <source xml:lang="en">Select the configuration file for the new server</source>
+    </trans-unit>
+    <trans-unit id="mcp.config.invalidTarget">
+      <source xml:lang="en">Select a .mcp.json or .vscode/mcp.json file at the root of an open workspace folder.</source>
+    </trans-unit>
+    <trans-unit id="mcp.config.legacy">
+      <source xml:lang="en">VS Code workspace configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.config.legacy.deprecated">
+      <source xml:lang="en">Deprecated</source>
+    </trans-unit>
+    <trans-unit id="mcp.config.legacyRequired">
+      <source xml:lang="en">This server requires .vscode/mcp.json</source>
+    </trans-unit>
+    <trans-unit id="mcp.config.open">
+      <source xml:lang="en">Open MCP Configuration in {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.config.open.placeholder">
+      <source xml:lang="en">Select the configuration file to open</source>
+    </trans-unit>
+    <trans-unit id="mcp.config.root">
+      <source xml:lang="en">Workspace root</source>
+    </trans-unit>
+    <trans-unit id="mcp.rootConfig.disabled">
+      <source xml:lang="en">Enable {0} to add servers to .mcp.json, or use .vscode/mcp.json.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpElicitationService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcp.elicit.cancel">
       <source xml:lang="en">Cancel</source>
     </trans-unit>
@@ -357,6 +534,9 @@
     </trans-unit>
     <trans-unit id="mcp.elicit.enum.none.description">
       <source xml:lang="en">No selection</source>
+    </trans-unit>
+    <trans-unit id="mcp.elicit.false">
+      <source xml:lang="en">False</source>
     </trans-unit>
     <trans-unit id="mcp.elicit.give">
       <source xml:lang="en">Respond</source>
@@ -367,8 +547,8 @@
     <trans-unit id="mcp.elicit.source">
       <source xml:lang="en">MCP Server ({0})</source>
     </trans-unit>
-    <trans-unit id="mcp.elicit.title">
-      <source xml:lang="en">Request for Input</source>
+    <trans-unit id="mcp.elicit.true">
+      <source xml:lang="en">True</source>
     </trans-unit>
     <trans-unit id="mcp.elicit.url.instruction">
       <source xml:lang="en">Open this URL?</source>
@@ -432,20 +612,35 @@
     <trans-unit id="clear">
       <source xml:lang="en">Clear</source>
     </trans-unit>
+    <trans-unit id="clear.savedValue.tooltip">
+      <source xml:lang="en">Clear saved value</source>
+    </trans-unit>
     <trans-unit id="clearAll">
       <source xml:lang="en">Clear All</source>
+    </trans-unit>
+    <trans-unit id="clearAll.savedValues.tooltip">
+      <source xml:lang="en">Clear all saved values</source>
     </trans-unit>
     <trans-unit id="edit">
       <source xml:lang="en">Edit</source>
     </trans-unit>
+    <trans-unit id="edit.savedValue.tooltip">
+      <source xml:lang="en">Edit saved value</source>
+    </trans-unit>
     <trans-unit id="mcp.debug">
       <source xml:lang="en">Debug</source>
+    </trans-unit>
+    <trans-unit id="mcp.replaceClientSecret">
+      <source xml:lang="en">Replace Client Secret</source>
     </trans-unit>
     <trans-unit id="mcp.restart">
       <source xml:lang="en">Restart</source>
     </trans-unit>
     <trans-unit id="mcp.server.more">
       <source xml:lang="en">More...</source>
+    </trans-unit>
+    <trans-unit id="mcp.setClientSecret">
+      <source xml:lang="en">Set Client Secret</source>
     </trans-unit>
     <trans-unit id="mcp.start">
       <source xml:lang="en">Start</source>
@@ -456,6 +651,12 @@
     <trans-unit id="mcp.variableNotFound">
       <source xml:lang="en">Variable `{0}` not found, did you mean ${{1}}?</source>
     </trans-unit>
+    <trans-unit id="server.authRequired">
+      <source xml:lang="en">Authentication Required</source>
+    </trans-unit>
+    <trans-unit id="server.disabled">
+      <source xml:lang="en">Disabled</source>
+    </trans-unit>
     <trans-unit id="server.error">
       <source xml:lang="en">Error</source>
     </trans-unit>
@@ -464,6 +665,12 @@
     </trans-unit>
     <trans-unit id="server.running">
       <source xml:lang="en">Running</source>
+    </trans-unit>
+    <trans-unit id="server.runningInOneOtherSession">
+      <source xml:lang="en">(Running in 1 session)</source>
+    </trans-unit>
+    <trans-unit id="server.runningInOtherSessions">
+      <source xml:lang="en">(Running in {0} sessions)</source>
     </trans-unit>
     <trans-unit id="server.starting">
       <source xml:lang="en">Starting</source>
@@ -569,6 +776,30 @@
     <trans-unit id="configJson">
       <source xml:lang="en">Show Configuration (JSON)</source>
     </trans-unit>
+    <trans-unit id="disableForWorkspace">
+      <source xml:lang="en">Disable (Workspace)</source>
+    </trans-unit>
+    <trans-unit id="disableForWorkspaceTooltip">
+      <source xml:lang="en">Disable this MCP server only in this workspace</source>
+    </trans-unit>
+    <trans-unit id="disableGlobally">
+      <source xml:lang="en">Disable</source>
+    </trans-unit>
+    <trans-unit id="disableGloballyTooltip">
+      <source xml:lang="en">Disable this MCP server</source>
+    </trans-unit>
+    <trans-unit id="enableForWorkspace">
+      <source xml:lang="en">Enable (Workspace)</source>
+    </trans-unit>
+    <trans-unit id="enableForWorkspaceTooltip">
+      <source xml:lang="en">Enable this MCP server only in this workspace</source>
+    </trans-unit>
+    <trans-unit id="enableGlobally">
+      <source xml:lang="en">Enable</source>
+    </trans-unit>
+    <trans-unit id="enableGloballyTooltip">
+      <source xml:lang="en">Enable this MCP server</source>
+    </trans-unit>
     <trans-unit id="install">
       <source xml:lang="en">Install</source>
     </trans-unit>
@@ -663,6 +894,12 @@
     </trans-unit>
     <trans-unit id="detailstooltip">
       <source xml:lang="en">Extension details, rendered from the extension's 'README.md' file</source>
+    </trans-unit>
+    <trans-unit id="envFile">
+      <source xml:lang="en">Environment File:</source>
+    </trans-unit>
+    <trans-unit id="environment">
+      <source xml:lang="en">Environment:</source>
     </trans-unit>
     <trans-unit id="environmentVariables">
       <source xml:lang="en">Environment Variables:</source>
@@ -802,7 +1039,7 @@
       <source xml:lang="en">Enable MCP Servers Marketplace?</source>
     </trans-unit>
     <trans-unit id="mcp.welcome.descriptionWithLink">
-      <source xml:lang="en">Browse and install [Model Context Protocol (MCP) servers](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) directly from VS Code to extend agent mode with extra tools for connecting to databases, invoking APIs and performing specialized tasks.</source>
+      <source xml:lang="en">Browse and install [Model Context Protocol (MCP) servers](https://code.visualstudio.com/docs/agent-customization/mcp-servers) directly from VS Code to extend agent mode with extra tools for connecting to databases, invoking APIs and performing specialized tasks.</source>
     </trans-unit>
     <trans-unit id="mcp.welcome.enableGalleryButton">
       <source xml:lang="en">Enable MCP Servers Marketplace</source>
@@ -817,6 +1054,11 @@
       <source xml:lang="en">No MCP Servers found.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpToolCallUI" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcpApp.agentHostConnectionUnavailable">
+      <source xml:lang="en">The Agent Host connection is no longer available.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpWorkbenchService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cannot be installed">
       <source xml:lang="en">Cannot install the '{0}' MCP Server because it is not available in this setup.</source>
@@ -826,6 +1068,12 @@
     </trans-unit>
     <trans-unit id="disabled - some not allowed">
       <source xml:lang="en">This MCP Server is disabled because it is configured to be disabled in the Editor. Please check your [settings]({0}).</source>
+    </trans-unit>
+    <trans-unit id="disabled globally">
+      <source xml:lang="en">This MCP server is disabled.</source>
+    </trans-unit>
+    <trans-unit id="disabled in workspace">
+      <source xml:lang="en">This MCP server is disabled for this workspace.</source>
     </trans-unit>
     <trans-unit id="mcp.configuration.userLocalValue">
       <source xml:lang="en">Global in {0}</source>
@@ -893,6 +1141,42 @@
     <trans-unit id="app.mcp.json.headers">
       <source xml:lang="en">Additional headers sent to the server.</source>
     </trans-unit>
+    <trans-unit id="app.mcp.json.oauth">
+      <source xml:lang="en">OAuth configuration for authenticating with the server.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.oauth.clientId">
+      <source xml:lang="en">The OAuth client ID to use when authenticating with the server. When `enterpriseManaged` is `true`, this is the **resource** authorization server's client ID (the client trusted by the protected resource), not the IdP's. To set the matching client secret, use the *Set Client Secret* code lens above this field — secrets are stored in the OS secret store, not in this file.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.oauth.enterpriseManaged">
+      <source xml:lang="en">(Preview) When set to `true`, this MCP server authenticates through the SSO issuer configured by `#mcp.enterpriseManagedAuth.idp#` using OAuth Identity Assertion Authorization Grant (ID-JAG). After a one-time sign-in, subsequent enterprise-managed servers connect silently. The IdP issuer and client credentials are read from the `#mcp.enterpriseManagedAuth.idp#` setting; the `clientId` on this server entry is passed to the resource authorization server.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.sandbox">
+      <source xml:lang="en">Sandbox config that determines file system and network access. Sandboxing is enabled when sandboxEnabled property is set at the server level on Mac OS and Linux only.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.sandbox.filesystem">
+      <source xml:lang="en">Filesystem access settings for the sandboxed server. Glob patterns are supported for Mac OS only.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.sandbox.filesystem.allowWrite">
+      <source xml:lang="en">List of file paths that the server is allowed to write to. e.g. `~/src/`.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.sandbox.filesystem.denyRead">
+      <source xml:lang="en">List of file paths that the server is not allowed to read. By default, all files are allowed to be read. e.g. `~/src/secrets`.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.sandbox.filesystem.denyWrite">
+      <source xml:lang="en">List of file paths that the server is not allowed to write to. e.g. `~/src/auth/`.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.sandbox.network">
+      <source xml:lang="en">Network access settings for the sandboxed server.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.sandbox.network.allowedDomains">
+      <source xml:lang="en">List of domains that the server is allowed to access. Wildcards are supported, e.g. `*.example.com`.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.sandbox.network.deniedDomains">
+      <source xml:lang="en">List of domains that the server is not allowed to access. e.g. `invalid.example.com`.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.sandboxEnabled">
+      <source xml:lang="en">Whether to run the server in a sandboxed environment.</source>
+    </trans-unit>
     <trans-unit id="app.mcp.json.title">
       <source xml:lang="en">Model Context Protocol Servers</source>
     </trans-unit>
@@ -913,6 +1197,12 @@
     </trans-unit>
     <trans-unit id="mcp.discovery.source.claude-desktop.config">
       <source xml:lang="en">Claude Desktop configuration (`claude_desktop_config.json`)</source>
+    </trans-unit>
+    <trans-unit id="mcp.discovery.source.copilot">
+      <source xml:lang="en">GitHub Copilot CLI</source>
+    </trans-unit>
+    <trans-unit id="mcp.discovery.source.copilot.config">
+      <source xml:lang="en">GitHub Copilot CLI configuration (`mcp-config.json` in `COPILOT_HOME`, or `~/.copilot/mcp-config.json` when unset)</source>
     </trans-unit>
     <trans-unit id="mcp.discovery.source.cursor-global">
       <source xml:lang="en">Cursor (Global)</source>
@@ -1019,6 +1309,9 @@
     <trans-unit id="mcp.trust.yes">
       <source xml:lang="en">Trust</source>
     </trans-unit>
+    <trans-unit id="runTrust">
+      <source xml:lang="en">This MCP server definition is defined in your workspace files.</source>
+    </trans-unit>
     <trans-unit id="trustFromExt">
       <source xml:lang="en">from {0}</source>
     </trans-unit>
@@ -1069,6 +1362,18 @@
       <source xml:lang="en">MCP server "{0}" triggered a language model request, but it has no allowlisted models.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/mcp/common/mcpSandboxService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcpSandboxSuggestion.allowWrite">
+      <source xml:lang="en">Add to `sandbox.filesystem.allowWrite`: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcpSandboxSuggestion.allowedDomains">
+      <source xml:lang="en">Add to `sandbox.network.allowedDomains`: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcpSandboxSuggestion.message">
+      <source xml:lang="en">The MCP server {0} reported potential sandbox blocks. VS Code found possible sandbox configuration updates:
+{1}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpServer" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcp.command.showOutput">
       <source xml:lang="en">Show Output</source>
@@ -1084,6 +1389,24 @@
     </trans-unit>
     <trans-unit id="mcpDebugPyHelp">
       <source xml:lang="en">The command "{0}" was not found. You can specify the path to debugpy in the `dev.debug.debugpyPath` option.</source>
+    </trans-unit>
+    <trans-unit id="mcpSandboxSuggestion.apply.error">
+      <source xml:lang="en">Failed to update sandbox configuration for {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="mcpSandboxSuggestion.apply.success">
+      <source xml:lang="en">Updated sandbox configuration for {0} in mcp.json. Restart server.</source>
+    </trans-unit>
+    <trans-unit id="mcpSandboxSuggestion.apply.unavailable">
+      <source xml:lang="en">Couldn't determine where to update sandbox configuration for {0}.</source>
+    </trans-unit>
+    <trans-unit id="mcpSandboxSuggestion.confirm.message">
+      <source xml:lang="en">Update sandbox configuration in mcp.json for {0}?</source>
+    </trans-unit>
+    <trans-unit id="mcpSandboxSuggestion.confirm.no">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="mcpSandboxSuggestion.confirm.yes">
+      <source xml:lang="en">Yes</source>
     </trans-unit>
     <trans-unit id="mcpServerError">
       <source xml:lang="en">The MCP server {0} could not be started: {1}</source>

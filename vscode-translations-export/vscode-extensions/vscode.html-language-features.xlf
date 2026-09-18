@@ -124,9 +124,6 @@
     <trans-unit id="++CODE++402cb0931e0cb418cb38c52035d99151555d4d8dd3f134bbada40567f8eb6ff5">
       <source xml:lang="en">Creates a Color from lightness, chroma, and hue values.</source>
     </trans-unit>
-    <trans-unit id="++CODE++19ba64242a0bbd657eef71695d8fb9052e48d1888de34c8d57ea67c1bb8c126e">
-      <source xml:lang="en">Creates a Color from red, green, and blue values.</source>
-    </trans-unit>
     <trans-unit id="++CODE++671f48990e087bb61e590db0d46ccc21428742bfaa2a150a74e274f4fd215415">
       <source xml:lang="en">Creates a Color from red, green, blue, and alpha values.</source>
     </trans-unit>
@@ -583,6 +580,9 @@
     <trans-unit id="++CODE++d72f8c92977a5bdd88da506a042190dadba3cef4ee9e19826e4308207f09f898">
       <source xml:lang="en">identifier or wildcard expected</source>
     </trans-unit>
+    <trans-unit id="++CODE++e88d1454e703948514f45c602e55ecfcc8656b5d3cff66478d2163abc10f9ba9">
+      <source xml:lang="en">if condition expected</source>
+    </trans-unit>
     <trans-unit id="++CODE++4817b70063f4742c67f6addd2c649e3d1bc6ff8e375029164d79571a90e56845">
       <source xml:lang="en">inline-block is ignored due to the float. If &apos;float&apos; has a value other than &apos;none&apos;, the box is floated and &apos;display&apos; is treated as &apos;block&apos;</source>
     </trans-unit>
@@ -783,9 +783,6 @@
     <trans-unit id="html.validate.styles">
       <source xml:lang="en">Controls whether the built-in HTML language support validates embedded styles.</source>
     </trans-unit>
-    <trans-unit id="html.mirrorCursorOnMatchingTagDeprecationMessage">
-      <source xml:lang="en">Deprecated in favor of `editor.linkedEditing`</source>
-    </trans-unit>
     <trans-unit id="html.autoCreateQuotes">
       <source xml:lang="en">Enable/disable auto creation of quotes for HTML attribute assignment. The type of quotes can be configured by `#html.completion.attributeDefaultValue#`.</source>
     </trans-unit>
@@ -794,9 +791,6 @@
     </trans-unit>
     <trans-unit id="html.format.enable.desc">
       <source xml:lang="en">Enable/disable default HTML formatter.</source>
-    </trans-unit>
-    <trans-unit id="html.mirrorCursorOnMatchingTag">
-      <source xml:lang="en">Enable/disable mirroring cursor on matching HTML tag.</source>
     </trans-unit>
     <trans-unit id="html.format.indentHandlebars.desc">
       <source xml:lang="en">Format and indent `{{#foo}}` and `{{/foo}}`.</source>

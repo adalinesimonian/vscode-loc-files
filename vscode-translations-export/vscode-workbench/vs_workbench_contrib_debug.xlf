@@ -828,6 +828,12 @@
     <trans-unit id="debugLaunchConfigurations">
       <source xml:lang="en">Debug Launch Configurations</source>
     </trans-unit>
+    <trans-unit id="debugLaunchConfigurations.search">
+      <source xml:lang="en">Search configurations</source>
+    </trans-unit>
+    <trans-unit id="debugLaunchConfigurationsAriaLabel">
+      <source xml:lang="en">Debug Launch Configurations: {0}</source>
+    </trans-unit>
     <trans-unit id="debugSession">
       <source xml:lang="en">Debug Session</source>
     </trans-unit>
@@ -1098,6 +1104,9 @@
     <trans-unit id="conditionalBreakpointEditorAction">
       <source xml:lang="en">Debug: Add Conditional Breakpoint...</source>
     </trans-unit>
+    <trans-unit id="debugCategory">
+      <source xml:lang="en">Debug</source>
+    </trans-unit>
     <trans-unit id="editor.debug.action.stepIntoTargets.notAvailable">
       <source xml:lang="en">Step targets are not available here</source>
     </trans-unit>
@@ -1155,7 +1164,7 @@
       <note>Step Into Targets lets the user step into an exact function he or she is interested in.</note>
     </trans-unit>
     <trans-unit id="toggleBreakpointAction">
-      <source xml:lang="en">Debug: Toggle Breakpoint</source>
+      <source xml:lang="en">Toggle Breakpoint</source>
     </trans-unit>
     <trans-unit id="toggleDisassemblyViewSourceCode">
       <source xml:lang="en">Toggle Source Code in Disassembly View</source>
@@ -1615,6 +1624,9 @@
     <trans-unit id="close">
       <source xml:lang="en">Close</source>
     </trans-unit>
+    <trans-unit id="copy">
+      <source xml:lang="en">Copy</source>
+    </trans-unit>
     <trans-unit id="debugExceptionWidgetBackground">
       <source xml:lang="en">Exception widget background color.</source>
     </trans-unit>
@@ -1752,29 +1764,113 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/debug/browser/replAccessibilityHelp" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="repl.accessibleView">
-      <source xml:lang="en">The Open Accessible View command{0} will allow character by character navigation of the console output.</source>
+    <trans-unit id="repl.closingDesc">
+      <source xml:lang="en">Press Escape to clear the filter, or close the Debug Console. Your filter text is preserved if you reopen the console.</source>
     </trans-unit>
-    <trans-unit id="repl.clear">
-      <source xml:lang="en">The Debug: Clear Console command{0} will clear the console output.</source>
+    <trans-unit id="repl.closingHeader">
+      <source xml:lang="en">Closing:</source>
     </trans-unit>
-    <trans-unit id="repl.help">
-      <source xml:lang="en">The debug console is a Read-Eval-Print-Loop that allows you to evaluate expressions and run commands and can be focused with{0}.</source>
+    <trans-unit id="repl.context">
+      <source xml:lang="en">You are in the Debug Console filter input. This is a filter that instantly hides console messages that do not match your filter, showing only the messages you want to see.</source>
     </trans-unit>
-    <trans-unit id="repl.history">
-      <source xml:lang="en">The debug console output history can be navigated with the up and down arrow keys.</source>
+    <trans-unit id="repl.distinguishConsole">
+      <source xml:lang="en">The console input is at the bottom of the console, after all displayed messages. That is where you type and press Enter to evaluate expressions during debugging.</source>
     </trans-unit>
-    <trans-unit id="repl.input">
-      <source xml:lang="en">The debug console input can be navigated to from the output with the Focus Next Widget command{0}.</source>
+    <trans-unit id="repl.distinguishFilter">
+      <source xml:lang="en">The filter input is where you are now. It hides or shows messages without running code.</source>
     </trans-unit>
-    <trans-unit id="repl.lazyVariables">
-      <source xml:lang="en">The setting `debug.expandLazyVariables` controls whether variables are evaluated automatically. This is enabled by default when using a screen reader.</source>
+    <trans-unit id="repl.distinguishHeader">
+      <source xml:lang="en">Distinguishing Filter from Console Input:</source>
     </trans-unit>
-    <trans-unit id="repl.output">
-      <source xml:lang="en">The debug console output can be navigated to from the input field with the Focus Previous Widget command{0}.</source>
+    <trans-unit id="repl.distinguishSwitch">
+      <source xml:lang="en">To switch to the console input and evaluate an expression, use {0} to focus the console input.</source>
     </trans-unit>
-    <trans-unit id="repl.showRunAndDebug">
-      <source xml:lang="en">The Show Run and Debug view command{0} will open the Run and Debug view and provides more information about debugging.</source>
+    <trans-unit id="repl.filterDesc">
+      <source xml:lang="en">Each time you change the filter text, the console instantly regenerates to show only matching messages. Your screen reader announces how many messages are now visible. This is live feedback: text searches console output, variable values, and log messages.</source>
+    </trans-unit>
+    <trans-unit id="repl.filterHeader">
+      <source xml:lang="en">What Happens When You Filter:</source>
+    </trans-unit>
+    <trans-unit id="repl.focusDesc1">
+      <source xml:lang="en">Your focus stays in the filter input while the console updates in the background. This is intentional, so you can keep typing without losing your place.</source>
+    </trans-unit>
+    <trans-unit id="repl.focusDesc2">
+      <source xml:lang="en">If you want to review the filtered console output, press Down Arrow to move focus from the filter into the console messages above.</source>
+    </trans-unit>
+    <trans-unit id="repl.focusDesc3">
+      <source xml:lang="en">Important: The console input area is at the bottom of the console, separate from the filter. To evaluate expressions, navigate to the console input (after the filtered messages) and type your expression.</source>
+    </trans-unit>
+    <trans-unit id="repl.focusHeader">
+      <source xml:lang="en">Focus Behavior (Important):</source>
+    </trans-unit>
+    <trans-unit id="repl.header">
+      <source xml:lang="en">Accessibility Help: Debug Console Filter</source>
+    </trans-unit>
+    <trans-unit id="repl.inputDesc">
+      <source xml:lang="en">While you are in the filter input, your focus stays in the field. You can type, edit, or adjust your filter without leaving the input. As you type, the console instantly updates to show only messages matching your filter.</source>
+    </trans-unit>
+    <trans-unit id="repl.inputHeader">
+      <source xml:lang="en">Inside the Filter Input (What It Does):</source>
+    </trans-unit>
+    <trans-unit id="repl.keyDown">
+      <source xml:lang="en">- Down Arrow: Move focus from filter into the console output.</source>
+    </trans-unit>
+    <trans-unit id="repl.keyEscape">
+      <source xml:lang="en">- Escape: Clear the filter or close the filter.</source>
+    </trans-unit>
+    <trans-unit id="repl.keyFocus">
+      <source xml:lang="en">- {0}: Focus the console input to evaluate expressions.</source>
+    </trans-unit>
+    <trans-unit id="repl.keyTab">
+      <source xml:lang="en">- Tab: Move to other console controls if available.</source>
+    </trans-unit>
+    <trans-unit id="repl.keyboardHeader">
+      <source xml:lang="en">Keyboard Navigation Summary:</source>
+    </trans-unit>
+    <trans-unit id="repl.settingCloseOnEnd">
+      <source xml:lang="en">- `debug.console.closeOnEnd`: Automatically close the Debug Console when the debugging session ends.</source>
+    </trans-unit>
+    <trans-unit id="repl.settingCollapse">
+      <source xml:lang="en">- `debug.console.collapseIdenticalLines`: Collapse repeated messages with a count.</source>
+    </trans-unit>
+    <trans-unit id="repl.settingFontFamily">
+      <source xml:lang="en">- `debug.console.fontFamily`: Font family in the console.</source>
+    </trans-unit>
+    <trans-unit id="repl.settingFontSize">
+      <source xml:lang="en">- `debug.console.fontSize`: Font size in the console.</source>
+    </trans-unit>
+    <trans-unit id="repl.settingHistory">
+      <source xml:lang="en">- `debug.console.historySuggestions`: Suggest previously typed input.</source>
+    </trans-unit>
+    <trans-unit id="repl.settingMaxLines">
+      <source xml:lang="en">- `debug.console.maximumLines`: Maximum number of messages to keep in the console.</source>
+    </trans-unit>
+    <trans-unit id="repl.settingVerbosity">
+      <source xml:lang="en">- `accessibility.verbosity.find`: Controls whether the filter input announces the Accessibility Help hint.</source>
+    </trans-unit>
+    <trans-unit id="repl.settingWordWrap">
+      <source xml:lang="en">- `debug.console.wordWrap`: Wrap lines in the console.</source>
+    </trans-unit>
+    <trans-unit id="repl.settingsHeader">
+      <source xml:lang="en">Settings You Can Adjust ({0} opens Settings):</source>
+    </trans-unit>
+    <trans-unit id="repl.settingsIntro">
+      <source xml:lang="en">These settings affect the Debug Console.</source>
+    </trans-unit>
+    <trans-unit id="repl.statusDesc">
+      <source xml:lang="en">You are filtering the console output.</source>
+    </trans-unit>
+    <trans-unit id="repl.statusHeader">
+      <source xml:lang="en">Current Filter Status:</source>
+    </trans-unit>
+    <trans-unit id="repl.syntaxExclude">
+      <source xml:lang="en">- !text (exclude): Hides messages containing the text, showing all others.</source>
+    </trans-unit>
+    <trans-unit id="repl.syntaxHeader">
+      <source xml:lang="en">Filter Syntax and Patterns:</source>
+    </trans-unit>
+    <trans-unit id="repl.syntaxText">
+      <source xml:lang="en">- Type text: Shows only messages containing that text.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/debug/browser/replViewer" source-language="en" datatype="plaintext"><body>
@@ -1893,6 +1989,9 @@
     <trans-unit id="collapse">
       <source xml:lang="en">Collapse All</source>
     </trans-unit>
+    <trans-unit id="copyAllWatchExpressions">
+      <source xml:lang="en">Copy All</source>
+    </trans-unit>
     <trans-unit id="copyWatchExpression">
       <source xml:lang="en">Copy Expression</source>
     </trans-unit>
@@ -1972,7 +2071,7 @@
       <source xml:lang="en">Whether the breakpoint item is a data breakpoint on a byte range.</source>
     </trans-unit>
     <trans-unit id="breakpointItemType">
-      <source xml:lang="en">Represents the item type of the focused element in the BREAKPOINTS view. For example: 'breakpoint', 'exceptionBreakppint', 'functionBreakpoint', 'dataBreakpoint'</source>
+      <source xml:lang="en">Represents the item type of the focused element in the BREAKPOINTS view. For example: 'breakpoint', 'exceptionBreakpoint', 'functionBreakpoint', 'dataBreakpoint'</source>
     </trans-unit>
     <trans-unit id="breakpointSupportsCondition">
       <source xml:lang="en">True when the focused breakpoint supports conditions.</source>
@@ -1990,7 +2089,7 @@
       <source xml:lang="en">True when the CALLSTACK view is focused, false otherwise.</source>
     </trans-unit>
     <trans-unit id="callStackItemStopped">
-      <source xml:lang="en">True when the focused item in the CALL STACK is stopped. Used internaly for inline menus in the CALL STACK view.</source>
+      <source xml:lang="en">True when the focused item in the CALL STACK is stopped. Used internally for inline menus in the CALL STACK view.</source>
     </trans-unit>
     <trans-unit id="callStackItemType">
       <source xml:lang="en">Represents the item type of the focused element in the CALL STACK view. For example: 'session', 'thread', 'stackFrame'</source>
@@ -2002,7 +2101,7 @@
       <source xml:lang="en">True when the session in the CALL STACK view is attach, false otherwise. Used internally for inline menus in the CALL STACK view.</source>
     </trans-unit>
     <trans-unit id="canViewMemory">
-      <source xml:lang="en">Indicates whether the item in the view has an associated memory refrence.</source>
+      <source xml:lang="en">Indicates whether the item in the view has an associated memory reference.</source>
     </trans-unit>
     <trans-unit id="debugConfigurationType">
       <source xml:lang="en">Debug type of the selected launch configuration. For example 'python'.</source>
@@ -2113,7 +2212,7 @@
       <source xml:lang="en">True when the focused session supports the terminate threads capability.</source>
     </trans-unit>
     <trans-unit id="variableEvaluateNamePresent">
-      <source xml:lang="en">True when the focused variable has an 'evalauteName' field set.</source>
+      <source xml:lang="en">True when the focused variable has an 'evaluateName' field set.</source>
     </trans-unit>
     <trans-unit id="variableExtensionId">
       <source xml:lang="en">Extension ID of the variable source, present for debug visualization clauses.</source>
@@ -2393,6 +2492,9 @@
     <trans-unit id="debugAdapterCannotDetermineExecutable">
       <source xml:lang="en">Cannot determine executable for debug adapter '{0}'.</source>
       <note>Adapter executable file not found</note>
+    </trans-unit>
+    <trans-unit id="invalidWindowsBatchCommand">
+      <source xml:lang="en">Debug adapter commands and arguments contain invalid characters.</source>
     </trans-unit>
     <trans-unit id="unableToLaunchDebugAdapter">
       <source xml:lang="en">Unable to launch debug adapter from '{0}'.</source>

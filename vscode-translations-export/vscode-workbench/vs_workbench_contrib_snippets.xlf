@@ -18,6 +18,9 @@
     <trans-unit id="detail.label">
       <source xml:lang="en">({0}) {1}</source>
     </trans-unit>
+    <trans-unit id="detected">
+      <source xml:lang="en">This file type was detected from the current file.</source>
+    </trans-unit>
     <trans-unit id="global.1">
       <source xml:lang="en">({0})</source>
     </trans-unit>
@@ -137,6 +140,12 @@
     </trans-unit>
     <trans-unit id="snippetSchema.json.description">
       <source xml:lang="en">The snippet description.</source>
+    </trans-unit>
+    <trans-unit id="snippetSchema.json.exclude">
+      <source xml:lang="en">A list of [glob patterns](https://aka.ms/vscode-glob-patterns) to exclude the snippet from specific files, e.g. `["**/*.min.js"]` or `"*.min.js"`. Patterns will match on the absolute path of a file if they contain a path separator and will match on the name of the file otherwise. Exclude patterns take precedence over `include` patterns.</source>
+    </trans-unit>
+    <trans-unit id="snippetSchema.json.include">
+      <source xml:lang="en">A list of [glob patterns](https://aka.ms/vscode-glob-patterns) to include the snippet for specific files, e.g. `["**/*.test.ts", "*.spec.ts"]` or `"**/*.spec.ts"`. Patterns will match on the absolute path of a file if they contain a path separator and will match on the name of the file otherwise. You can exclude matching files via the `exclude` property.</source>
     </trans-unit>
     <trans-unit id="snippetSchema.json.isFileTemplate">
       <source xml:lang="en">The snippet is meant to populate or replace a whole file</source>

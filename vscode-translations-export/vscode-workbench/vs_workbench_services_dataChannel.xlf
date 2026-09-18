@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/services/dataChannel/browser/dataChannelService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="linkPresentation.unavailable">
+      <source xml:lang="en">Not available</source>
+    </trans-unit>
+    <trans-unit id="linkPresentation.unavailableAriaLabel">
+      <source xml:lang="en">Link presentation is not available</source>
+    </trans-unit>
+    <trans-unit id="linkPresentation.unavailableTooltip">
+      <source xml:lang="en">The link presentation provider failed to load.</source>
+    </trans-unit>
+    <trans-unit id="linkPresentationProvider.coreDuplicateId">
+      <source xml:lang="en">Link presentation provider identifier '{0}' is already registered by the core.</source>
+    </trans-unit>
+    <trans-unit id="linkPresentationProvider.duplicateId">
+      <source xml:lang="en">Link presentation provider identifier '{0}' is already contributed.</source>
+    </trans-unit>
+    <trans-unit id="linkPresentationProvider.enablement">
+      <source xml:lang="en">Configuration key that must be enabled before this provider is selected.</source>
+    </trans-unit>
+    <trans-unit id="linkPresentationProvider.id">
+      <source xml:lang="en">Unique identifier used to register this link presentation provider.</source>
+    </trans-unit>
+    <trans-unit id="linkPresentationProvider.invalidPattern">
+      <source xml:lang="en">Link presentation provider '{0}' must use a valid anchored URI regular expression of at most {1} characters.</source>
+    </trans-unit>
+    <trans-unit id="linkPresentationProvider.kind">
+      <source xml:lang="en">The semantic kind produced by this provider.</source>
+    </trans-unit>
+    <trans-unit id="linkPresentationProvider.uriPattern">
+      <source xml:lang="en">Anchored regular expression matched against the canonical URI string before the extension is activated.</source>
+    </trans-unit>
+    <trans-unit id="linkPresentationProviderExtensionPoint">
+      <source xml:lang="en">Contributes link presentation providers selected by URI regular expressions.</source>
+    </trans-unit>
+</body></file>
+</xliff>

@@ -16,6 +16,9 @@
     <trans-unit id="++CODE++183c7081100618aebb39219dd011d8d9961649aad278be8fe49c0d1a8874684f">
       <source xml:lang="en">Do not show again</source>
     </trans-unit>
+    <trans-unit id="++CODE++15ee25564a12fe61fcf1b92ec401d98d2a41ce095f9d47d9830f5be4b9094ef6">
+      <source xml:lang="en">Installed version: {0}</source>
+    </trans-unit>
     <trans-unit id="++CODE++73d5bd0c6b1f206026ed3c40c156ff8ef4ed5bb53fefb86e64eca925bb59c919">
       <source xml:lang="en">Latest version: {0}</source>
     </trans-unit>
@@ -241,10 +244,7 @@
       <source xml:lang="en">Debug</source>
     </trans-unit>
     <trans-unit id="config.npm.scriptHover">
-      <source xml:lang="en">Display hover with &apos;Run&apos; and &apos;Debug&apos; commands for scripts.</source>
-    </trans-unit>
-    <trans-unit id="config.npm.enableScriptExplorer">
-      <source xml:lang="en">Enable an explorer view for npm scripts when there is no top-level &apos;package.json&apos; file.</source>
+      <source xml:lang="en">Display hover with `Run` and `Debug` commands for scripts.</source>
     </trans-unit>
     <trans-unit id="config.npm.enableRunFromFolder">
       <source xml:lang="en">Enable running npm scripts contained in a folder from the Explorer context menu.</source>
@@ -311,6 +311,9 @@
     </trans-unit>
     <trans-unit id="config.npm.scriptRunner.node">
       <source xml:lang="en">Use Node.js as the script runner.</source>
+    </trans-unit>
+    <trans-unit id="config.npm.scriptRunner.vp">
+      <source xml:lang="en">Use Vite+ (vp) as the script runner.</source>
     </trans-unit>
     <trans-unit id="config.npm.packageManager.bun">
       <source xml:lang="en">Use bun as the package manager.</source>

@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/services/themes/browser/cssExtensionPoint" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="contributes.css">
+      <source xml:lang="en">Contributes CSS files to be loaded in the workbench.</source>
+    </trans-unit>
+    <trans-unit id="contributes.css.path">
+      <source xml:lang="en">Path to the CSS file. The path is relative to the extension folder.</source>
+    </trans-unit>
+    <trans-unit id="invalid.css.configuration">
+      <source xml:lang="en">'contributes.css' must be an array.</source>
+    </trans-unit>
+    <trans-unit id="invalid.css.path">
+      <source xml:lang="en">'contributes.css.path' must be a string.</source>
+    </trans-unit>
+    <trans-unit id="invalid.css.path.location">
+      <source xml:lang="en">Expected 'contributes.css.path' ({0}) to be included inside extension's folder ({1}).</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/services/themes/browser/fileIconThemeData" source-language="en" datatype="plaintext"><body>
     <trans-unit id="error.cannotparseicontheme">
       <source xml:lang="en">Problems parsing file icons file: {0}</source>
@@ -50,6 +67,16 @@
   <file original="src/vs/workbench/services/themes/browser/workbenchThemeService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="error.cannotloadtheme">
       <source xml:lang="en">Unable to load {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="noThanks">
+      <source xml:lang="en">No Thanks</source>
+    </trans-unit>
+    <trans-unit id="themeUpdatedNotification">
+      <source xml:lang="en">VS Code has a new default theme: '{0}'.</source>
+      <note>{0} is the name of the new default theme</note>
+    </trans-unit>
+    <trans-unit id="tryNewTheme">
+      <source xml:lang="en">Keep It</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/services/themes/common/colorExtensionPoint" source-language="en" datatype="plaintext"><body>
@@ -175,7 +202,7 @@
       <source xml:lang="en">Font family for the token (e.g., "Fira Code", "JetBrains Mono").</source>
     </trans-unit>
     <trans-unit id="schema.token.fontSize">
-      <source xml:lang="en">Font size string for the token (e.g., "14px", "1.2em").</source>
+      <source xml:lang="en">Font size multiplier for the token (e.g., 1.2 will use 1.2 times the default font size).</source>
     </trans-unit>
     <trans-unit id="schema.token.fontStyle">
       <source xml:lang="en">Font style of the rule: 'italic', 'bold', 'underline', 'strikethrough' or a combination. The empty string unsets inherited settings.</source>
@@ -187,7 +214,7 @@
       <source xml:lang="en">Foreground color for the token.</source>
     </trans-unit>
     <trans-unit id="schema.token.lineHeight">
-      <source xml:lang="en">Line height number for the token (e.g., "20").</source>
+      <source xml:lang="en">Line height multiplier for the token (e.g., 1.2 will use 1.2 times the default height). If the font size is set and the line height is not explicitly set, the line height will be computed based on the font size.</source>
     </trans-unit>
     <trans-unit id="schema.token.settings">
       <source xml:lang="en">Colors and styles for the token.</source>
@@ -310,6 +337,9 @@
     </trans-unit>
     <trans-unit id="schema.src">
       <source xml:lang="en">The location of the font.</source>
+    </trans-unit>
+    <trans-unit id="schema.usesCurrentColor">
+      <source xml:lang="en">Whether image icons use their alpha channel as a mask filled with the current text color. When enabled, only the shape of an image icon is used, so any colors defined in the icon (including light and high contrast variants) are ignored.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/services/themes/common/iconExtensionPoint" source-language="en" datatype="plaintext"><body>
@@ -541,10 +571,10 @@
       <source xml:lang="en">Label of the color theme as shown in the UI.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.themes.path">
-      <source xml:lang="en">Path of the tmTheme file. The path is relative to the extension folder and is typically './colorthemes/awesome-color-theme.json'.</source>
+      <source xml:lang="en">Path of the tmTheme file. The path is relative to the extension folder and is typically `./colorthemes/awesome-color-theme.json`.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.themes.uiTheme">
-      <source xml:lang="en">Base theme defining the colors around the editor: 'vs' is the light color theme, 'vs-dark' is the dark color theme. 'hc-black' is the dark high contrast theme, 'hc-light' is the light high contrast theme.</source>
+      <source xml:lang="en">Base theme defining the colors around the editor: `vs` is the light color theme, `vs-dark` is the dark color theme. `hc-black` is the dark high contrast theme, `hc-light` is the light high contrast theme.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/services/themes/common/tokenClassificationExtensionPoint" source-language="en" datatype="plaintext"><body>

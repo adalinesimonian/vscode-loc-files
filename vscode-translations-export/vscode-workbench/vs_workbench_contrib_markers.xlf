@@ -105,6 +105,131 @@
       <source xml:lang="en">Show the problems view as a tree.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/markers/browser/markersAccessibilityHelp" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="problems.closingDesc">
+      <source xml:lang="en">Press Escape to clear the filter and see all problems. Your filter text is preserved if you reopen the panel. Problems are shown from your entire workspace; use Active File Only to focus on a single file.</source>
+    </trans-unit>
+    <trans-unit id="problems.closingHeader">
+      <source xml:lang="en">Closing:</source>
+    </trans-unit>
+    <trans-unit id="problems.context">
+      <source xml:lang="en">You are in the Problems panel filter input. This is a filter, not a navigating search. It instantly hides problems that do not match your filter, showing only the problems you want to see.</source>
+    </trans-unit>
+    <trans-unit id="problems.filterDesc1">
+      <source xml:lang="en">Each time you change the filter text, the panel instantly regenerates to show only matching problems. Your screen reader announces how many problems are now visible. This is live feedback: as you type or delete characters, the displayed problems update immediately.</source>
+    </trans-unit>
+    <trans-unit id="problems.filterDesc2">
+      <source xml:lang="en">The panel searches problem messages, file names, and error codes, so you can filter by any of these details.</source>
+    </trans-unit>
+    <trans-unit id="problems.filterHeader">
+      <source xml:lang="en">What Happens When You Filter:</source>
+    </trans-unit>
+    <trans-unit id="problems.focusDesc1">
+      <source xml:lang="en">Your focus stays in the filter input while the panel updates in the background. This is intentional, so you can keep typing without losing your place.</source>
+    </trans-unit>
+    <trans-unit id="problems.focusDesc2">
+      <source xml:lang="en">If you want to navigate the filtered problems, press Down Arrow to move focus from the filter into the problems list below.</source>
+    </trans-unit>
+    <trans-unit id="problems.focusDesc3">
+      <source xml:lang="en">When a problem is focused, press Enter to navigate to that problem in the editor.</source>
+    </trans-unit>
+    <trans-unit id="problems.focusDesc4">
+      <source xml:lang="en">If you want to clear the filter and see all problems, press Escape or delete all filter text.</source>
+    </trans-unit>
+    <trans-unit id="problems.focusHeader">
+      <source xml:lang="en">Focus Behavior (Important):</source>
+    </trans-unit>
+    <trans-unit id="problems.header">
+      <source xml:lang="en">Accessibility Help: Problems Panel Filter</source>
+    </trans-unit>
+    <trans-unit id="problems.inputDesc">
+      <source xml:lang="en">While you are in the filter input, your focus stays in the field. You can type, edit, or adjust your filter without leaving the input. As you type, the Problems panel instantly updates to show only problems matching your filter.</source>
+    </trans-unit>
+    <trans-unit id="problems.inputHeader">
+      <source xml:lang="en">Inside the Filter Input (What It Does):</source>
+    </trans-unit>
+    <trans-unit id="problems.keyDown">
+      <source xml:lang="en">- Down Arrow: Move focus from filter into the problems list.</source>
+    </trans-unit>
+    <trans-unit id="problems.keyEnter">
+      <source xml:lang="en">- Enter (on a problem): Navigate to that problem in the editor.</source>
+    </trans-unit>
+    <trans-unit id="problems.keyEscape">
+      <source xml:lang="en">- Escape: Clear the filter and return to showing all problems.</source>
+    </trans-unit>
+    <trans-unit id="problems.keyF8">
+      <source xml:lang="en">- {0}: Move to the next problem globally from anywhere in the editor.</source>
+    </trans-unit>
+    <trans-unit id="problems.keyShiftF8">
+      <source xml:lang="en">- {0}: Move to the previous problem globally from anywhere in the editor.</source>
+    </trans-unit>
+    <trans-unit id="problems.keyTab">
+      <source xml:lang="en">- Tab: Move to severity and scope toggle buttons.</source>
+    </trans-unit>
+    <trans-unit id="problems.keyboardHeader">
+      <source xml:lang="en">Keyboard Navigation Summary:</source>
+    </trans-unit>
+    <trans-unit id="problems.settingAutoReveal">
+      <source xml:lang="en">- `problems.autoReveal`: Automatically reveal problems in the editor when you select them.</source>
+    </trans-unit>
+    <trans-unit id="problems.settingShowCurrent">
+      <source xml:lang="en">- `problems.showCurrentInStatus`: Show the current problem in the status bar.</source>
+    </trans-unit>
+    <trans-unit id="problems.settingSortOrder">
+      <source xml:lang="en">- `problems.sortOrder`: Sort problems by severity or position.</source>
+    </trans-unit>
+    <trans-unit id="problems.settingVerbosity">
+      <source xml:lang="en">- `accessibility.verbosity.find`: Controls whether the filter input announces the Accessibility Help hint.</source>
+    </trans-unit>
+    <trans-unit id="problems.settingViewMode">
+      <source xml:lang="en">- `problems.defaultViewMode`: Show problems as a table or tree.</source>
+    </trans-unit>
+    <trans-unit id="problems.settingsHeader">
+      <source xml:lang="en">Settings You Can Adjust ({0} opens Settings):</source>
+    </trans-unit>
+    <trans-unit id="problems.settingsIntro">
+      <source xml:lang="en">These settings affect the Problems panel.</source>
+    </trans-unit>
+    <trans-unit id="problems.severityActiveFile">
+      <source xml:lang="en">- Active File Only button: When enabled, shows only problems in the currently open file.</source>
+    </trans-unit>
+    <trans-unit id="problems.severityConclusion">
+      <source xml:lang="en">These buttons work together with your text filter.</source>
+    </trans-unit>
+    <trans-unit id="problems.severityErrors">
+      <source xml:lang="en">- Errors button: Toggle to show or hide error problems.</source>
+    </trans-unit>
+    <trans-unit id="problems.severityHeader">
+      <source xml:lang="en">Severity and Scope Filtering:</source>
+    </trans-unit>
+    <trans-unit id="problems.severityInfo">
+      <source xml:lang="en">- Info button: Toggle to show or hide informational problems.</source>
+    </trans-unit>
+    <trans-unit id="problems.severityIntro">
+      <source xml:lang="en">Above the filter input are toggle buttons for severity levels and scope:</source>
+    </trans-unit>
+    <trans-unit id="problems.severityWarnings">
+      <source xml:lang="en">- Warnings button: Toggle to show or hide warning problems.</source>
+    </trans-unit>
+    <trans-unit id="problems.statusDesc">
+      <source xml:lang="en">You are filtering the problems.</source>
+    </trans-unit>
+    <trans-unit id="problems.statusHeader">
+      <source xml:lang="en">Current Filter Status:</source>
+    </trans-unit>
+    <trans-unit id="problems.syntaxExample">
+      <source xml:lang="en">Example: typing "node_modules" hides all problems in node_modules.</source>
+    </trans-unit>
+    <trans-unit id="problems.syntaxExclude">
+      <source xml:lang="en">- !text (exclude): Hides problems containing the text, showing all others.</source>
+    </trans-unit>
+    <trans-unit id="problems.syntaxHeader">
+      <source xml:lang="en">Filter Syntax and Patterns:</source>
+    </trans-unit>
+    <trans-unit id="problems.syntaxText">
+      <source xml:lang="en">- Type text: Shows problems whose message, file path, or code contains that text.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/markers/browser/markersChatContext" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatContext.diagnstic">
       <source xml:lang="en">Problems...</source>

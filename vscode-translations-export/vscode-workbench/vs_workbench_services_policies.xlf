@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/services/policies/browser/accountPolicyGateContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accountPolicy.notification.learnMore">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
+    <trans-unit id="accountPolicy.notification.orgWithAccount">
+      <source xml:lang="en">Your administrator restricts AI features to GitHub accounts in the following organizations: {0}. The account "{1}" is not a member of any of these.</source>
+    </trans-unit>
+    <trans-unit id="accountPolicy.notification.orgWithAccountNoList">
+      <source xml:lang="en">Your administrator restricts AI features to specific GitHub accounts. The account "{0}" does not qualify.</source>
+    </trans-unit>
+    <trans-unit id="accountPolicy.notification.signin">
+      <source xml:lang="en">Your administrator restricts AI features to specific GitHub accounts.</source>
+    </trans-unit>
+    <trans-unit id="accountPolicy.notification.signin.action">
+      <source xml:lang="en">Sign In</source>
+    </trans-unit>
+    <trans-unit id="accountPolicy.notification.signinWithOrgs">
+      <source xml:lang="en">Your administrator restricts AI features to GitHub accounts in the following organizations: {0}.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsRefresh.dialog.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsRefresh.dialog.httpError">
+      <source xml:lang="en">AI features are unavailable because {0} could not refresh your organization's managed settings (HTTP {1}). Retry after checking your connection.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsRefresh.dialog.invalidTitle">
+      <source xml:lang="en">Invalid Managed Settings</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsRefresh.dialog.malformed">
+      <source xml:lang="en">AI features are unavailable because {0} received an invalid managed settings response. Retry or contact your administrator.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsRefresh.dialog.network">
+      <source xml:lang="en">Your organization requires {0} to refresh managed settings whenever it starts or reloads.
+
+An error prevented the required policy from being retrieved, so AI features are unavailable. Retry, or contact your organization's administrator if the issue persists.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsRefresh.dialog.noToken">
+      <source xml:lang="en">AI features are unavailable because {0} must refresh your organization's managed settings. Sign in to continue.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsRefresh.dialog.noUrl">
+      <source xml:lang="en">AI features are unavailable because {0} cannot locate your organization's managed settings service. Contact your administrator.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsRefresh.dialog.rateLimited">
+      <source xml:lang="en">AI features are temporarily unavailable because your organization's managed settings service is rate limiting requests. Try again later.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsRefresh.dialog.retry">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsRefresh.dialog.signIn">
+      <source xml:lang="en">Sign In</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsRefresh.dialog.title">
+      <source xml:lang="en">Managed Settings Unavailable</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsRefresh.notification.pending">
+      <source xml:lang="en">{0} is resolving your organization's policy. AI features will remain unavailable until this completes.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.dialog.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.dialog.learnMore">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.dialog.title">
+      <source xml:lang="en">Update Required</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.dialog.update">
+      <source xml:lang="en">Check for Updates</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.notification">
+      <source xml:lang="en">Your version of {0} cannot enforce your organization's managed settings. Update {0} to continue using AI features.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.notificationWithMinimumVersion">
+      <source xml:lang="en">Your version of {0} cannot enforce your organization's managed settings. Update {0} to version {1} or later to continue using AI features.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/services/policies/common/accountPolicyService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatAccountPolicyGateActive">
+      <source xml:lang="en">True when account policy or managed-settings enforcement prevents this client from using AI features.</source>
+    </trans-unit>
+</body></file>
+</xliff>

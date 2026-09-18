@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/browser/accountTitleBarState" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accountSignedInAria">
+      <source xml:lang="en">Signed in as {0} with {1}</source>
+    </trans-unit>
+    <trans-unit id="accountSignedInAriaNameOnly">
+      <source xml:lang="en">Signed in as {0}</source>
+    </trans-unit>
+    <trans-unit id="agentsSignInOptional">
+      <source xml:lang="en">Sign In</source>
+    </trans-unit>
+    <trans-unit id="agentsSignInOptionalAria">
+      <source xml:lang="en">Sign in to GitHub to use more agents</source>
+    </trans-unit>
+    <trans-unit id="agentsSignedOut">
+      <source xml:lang="en">Agents Signed Out</source>
+    </trans-unit>
+    <trans-unit id="agentsSignedOutAria">
+      <source xml:lang="en">Agents is signed out</source>
+    </trans-unit>
+    <trans-unit id="copilotAllQuotaReachedAria">
+      <source xml:lang="en">GitHub Copilot chat and inline suggestion quota reached</source>
+    </trans-unit>
+    <trans-unit id="copilotChatQuotaReachedAria">
+      <source xml:lang="en">GitHub Copilot chat quota reached</source>
+    </trans-unit>
+    <trans-unit id="copilotCompletionsQuotaReachedAria">
+      <source xml:lang="en">GitHub Copilot inline suggestion quota reached</source>
+    </trans-unit>
+    <trans-unit id="copilotQuotaReached">
+      <source xml:lang="en">Quota Reached</source>
+    </trans-unit>
+    <trans-unit id="copilotTokensRemaining">
+      <source xml:lang="en">Tokens Remaining</source>
+    </trans-unit>
+    <trans-unit id="copilotTokensRemainingAria">
+      <source xml:lang="en">{0}% GitHub Copilot tokens remaining</source>
+    </trans-unit>
+    <trans-unit id="copilotUnavailable">
+      <source xml:lang="en">Copilot Unavailable</source>
+    </trans-unit>
+    <trans-unit id="copilotUnavailableDisabledAria">
+      <source xml:lang="en">GitHub Copilot is disabled</source>
+    </trans-unit>
+    <trans-unit id="copilotUnavailableUntrustedAria">
+      <source xml:lang="en">GitHub Copilot is unavailable in untrusted workspaces</source>
+    </trans-unit>
+    <trans-unit id="loadingAccount">
+      <source xml:lang="en">Loading Account...</source>
+    </trans-unit>
+    <trans-unit id="loadingAccountAria">
+      <source xml:lang="en">Loading account</source>
+    </trans-unit>
+    <trans-unit id="signInAria">
+      <source xml:lang="en">Sign in to your account</source>
+    </trans-unit>
+    <trans-unit id="signInLabel">
+      <source xml:lang="en">Sign In</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/layoutActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentPanelCloseIcon">
+      <source xml:lang="en">Icon to close the panel.</source>
+    </trans-unit>
+    <trans-unit id="agentSidebarToggleClosedIcon">
+      <source xml:lang="en">Icon for the sessions sidebar when closed.</source>
+    </trans-unit>
+    <trans-unit id="agentSidebarToggleOpenIcon">
+      <source xml:lang="en">Icon for the sessions sidebar when open.</source>
+    </trans-unit>
+    <trans-unit id="closePanel">
+      <source xml:lang="en">Hide Panel</source>
+    </trans-unit>
+    <trans-unit id="disableScreenReaderOptimizedMode">
+      <source xml:lang="en">Disable Screen Reader Optimized Mode</source>
+    </trans-unit>
+    <trans-unit id="hidePanel">
+      <source xml:lang="en">Hide Panel</source>
+    </trans-unit>
+    <trans-unit id="hideSecondarySideBar">
+      <source xml:lang="en">Hide Secondary Side Bar</source>
+    </trans-unit>
+    <trans-unit id="openAndCloseSidebar">
+      <source xml:lang="en">Open/Show and Close/Hide Sidebar</source>
+    </trans-unit>
+    <trans-unit id="screenReaderOptimizedBadge">
+      <source xml:lang="en">Screen Reader Optimized</source>
+    </trans-unit>
+    <trans-unit id="showPanel">
+      <source xml:lang="en">Show Panel</source>
+    </trans-unit>
+    <trans-unit id="showSecondarySideBar">
+      <source xml:lang="en">Show Secondary Side Bar</source>
+    </trans-unit>
+    <trans-unit id="sidebarHidden">
+      <source xml:lang="en">Primary Side Bar hidden</source>
+    </trans-unit>
+    <trans-unit id="sidebarVisible">
+      <source xml:lang="en">Primary Side Bar shown</source>
+    </trans-unit>
+    <trans-unit id="toggleSidebar">
+      <source xml:lang="en">Toggle Side Bar</source>
+    </trans-unit>
+    <trans-unit id="toggleWindowAlwaysOnTop">
+      <source xml:lang="en">Toggle Always on Top</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/auxiliaryBarPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="auxiliaryBarAriaLabel">
+      <source xml:lang="en">Session Details</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/chatCompositeBar" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatTabAriaLabel">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="chatTabsAriaLabel">
+      <source xml:lang="en">Chats</source>
+    </trans-unit>
+    <trans-unit id="copyChatLink">
+      <source xml:lang="en">Copy Link</source>
+    </trans-unit>
+    <trans-unit id="deleteChat">
+      <source xml:lang="en">Delete Chat</source>
+    </trans-unit>
+    <trans-unit id="renameChat">
+      <source xml:lang="en">Rename</source>
+    </trans-unit>
+    <trans-unit id="renameChat.aria">
+      <source xml:lang="en">Rename chat</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/chatGroupView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatGroupAriaLabel">
+      <source xml:lang="en">Chat Group {0} of {1}</source>
+    </trans-unit>
+    <trans-unit id="chatGroupTabsAriaLabel">
+      <source xml:lang="en">Chats, Group {0} of {1}</source>
+    </trans-unit>
+    <trans-unit id="chatTabsAriaLabel">
+      <source xml:lang="en">Chats</source>
+    </trans-unit>
+    <trans-unit id="sessionReadOnlyBanner.archived">
+      <source xml:lang="en">Archived sessions are read-only.</source>
+    </trans-unit>
+    <trans-unit id="sessionReadOnlyBanner.message">
+      <source xml:lang="en">This chat is read-only</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/menubar.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mEdit">
+      <source xml:lang="en">&amp;&amp;Edit</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mFile">
+      <source xml:lang="en">&amp;&amp;File</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mGo">
+      <source xml:lang="en">&amp;&amp;Go</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mHelp">
+      <source xml:lang="en">&amp;&amp;Help</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mPreferences">
+      <source xml:lang="en">&amp;&amp;Preferences</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mSelection">
+      <source xml:lang="en">&amp;&amp;Selection</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mTerminal">
+      <source xml:lang="en">&amp;&amp;Terminal</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mView">
+      <source xml:lang="en">&amp;&amp;View</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/mobile/contributions/mobileChangesView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="changesView.back">
+      <source xml:lang="en">Back</source>
+    </trans-unit>
+    <trans-unit id="changesView.backLabel">
+      <source xml:lang="en">Back</source>
+    </trans-unit>
+    <trans-unit id="changesView.changeAdded">
+      <source xml:lang="en">added</source>
+    </trans-unit>
+    <trans-unit id="changesView.changeDeleted">
+      <source xml:lang="en">deleted</source>
+    </trans-unit>
+    <trans-unit id="changesView.changeModified">
+      <source xml:lang="en">modified</source>
+    </trans-unit>
+    <trans-unit id="changesView.empty">
+      <source xml:lang="en">No changes in this session yet.</source>
+    </trans-unit>
+    <trans-unit id="changesView.rowAria">
+      <source xml:lang="en">{0}, {1}, +{2} -{3}</source>
+    </trans-unit>
+    <trans-unit id="changesView.subtitleFilePlural">
+      <source xml:lang="en">{0} files</source>
+    </trans-unit>
+    <trans-unit id="changesView.subtitleFileSingular">
+      <source xml:lang="en">1 file</source>
+    </trans-unit>
+    <trans-unit id="changesView.title">
+      <source xml:lang="en">Session Changes</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/mobile/contributions/mobileDiffColors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsMobileDiff.addedForeground">
+      <source xml:lang="en">Foreground color used for added files / lines in the mobile changes-list and diff overlay in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsMobileDiff.deletedForeground">
+      <source xml:lang="en">Foreground color used for deleted files / removed lines in the mobile changes-list and diff overlay in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsMobileDiff.modifiedForeground">
+      <source xml:lang="en">Foreground color used for modified files in the mobile changes-list in the agent sessions window.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/mobile/contributions/mobileDiffView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="diffView.back">
+      <source xml:lang="en">Back</source>
+    </trans-unit>
+    <trans-unit id="diffView.loading">
+      <source xml:lang="en">Loading…</source>
+    </trans-unit>
+    <trans-unit id="diffView.nextFile">
+      <source xml:lang="en">Next file</source>
+    </trans-unit>
+    <trans-unit id="diffView.noChanges">
+      <source xml:lang="en">No changes in this file.</source>
+    </trans-unit>
+    <trans-unit id="diffView.position">
+      <source xml:lang="en">{0} / {1}</source>
+    </trans-unit>
+    <trans-unit id="diffView.prevFile">
+      <source xml:lang="en">Previous file</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/mobile/contributions/mobileMultiDiffView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="multiDiffView.back">
+      <source xml:lang="en">Back</source>
+    </trans-unit>
+    <trans-unit id="multiDiffView.file">
+      <source xml:lang="en">file</source>
+    </trans-unit>
+    <trans-unit id="multiDiffView.fileCount">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+    <trans-unit id="multiDiffView.fileFallback">
+      <source xml:lang="en">file</source>
+    </trans-unit>
+    <trans-unit id="multiDiffView.files">
+      <source xml:lang="en">files</source>
+    </trans-unit>
+    <trans-unit id="multiDiffView.loadError">
+      <source xml:lang="en">Unable to load changes in this file.</source>
+    </trans-unit>
+    <trans-unit id="multiDiffView.loading">
+      <source xml:lang="en">Loading…</source>
+    </trans-unit>
+    <trans-unit id="multiDiffView.noChanges">
+      <source xml:lang="en">No changes in this file.</source>
+    </trans-unit>
+    <trans-unit id="multiDiffView.toggleFile">
+      <source xml:lang="en">Toggle {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/mobile/mobilePickerSheet" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mobilePickerSheet.done">
+      <source xml:lang="en">Done</source>
+    </trans-unit>
+    <trans-unit id="mobilePickerSheet.doneAriaLabel">
+      <source xml:lang="en">Close {0}</source>
+    </trans-unit>
+    <trans-unit id="mobilePickerSheet.noResults">
+      <source xml:lang="en">No results</source>
+    </trans-unit>
+    <trans-unit id="mobilePickerSheet.searching">
+      <source xml:lang="en">Searching…</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/mobile/mobileSessionFilterChips" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chipCompleted">
+      <source xml:lang="en">Completed</source>
+    </trans-unit>
+    <trans-unit id="chipFailed">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="chipInProgress">
+      <source xml:lang="en">In Progress</source>
+    </trans-unit>
+    <trans-unit id="filterChipsLabel">
+      <source xml:lang="en">Session status filters</source>
+    </trans-unit>
+    <trans-unit id="findAriaLabel">
+      <source xml:lang="en">Find session</source>
+    </trans-unit>
+    <trans-unit id="sortGroup">
+      <source xml:lang="en">Sort</source>
+    </trans-unit>
+    <trans-unit id="sortGroupAriaLabel">
+      <source xml:lang="en">Sort and group options</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/mobile/mobileSortGroupSheet" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sortGroupSheet.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/mobile/mobileTitlebarPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mobileAccount.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="mobileAccount.loading">
+      <source xml:lang="en">Loading...</source>
+    </trans-unit>
+    <trans-unit id="mobileAccount.signedOut">
+      <source xml:lang="en">Not signed in</source>
+    </trans-unit>
+    <trans-unit id="mobileAccount.title">
+      <source xml:lang="en">Account</source>
+    </trans-unit>
+    <trans-unit id="mobileTopBar.account">
+      <source xml:lang="en">Account</source>
+    </trans-unit>
+    <trans-unit id="mobileTopBar.changes">
+      <source xml:lang="en">View changes</source>
+    </trans-unit>
+    <trans-unit id="mobileTopBar.changesTooltip">
+      <source xml:lang="en">{0} files changed (+{1} -{2})</source>
+    </trans-unit>
+    <trans-unit id="mobileTopBar.closeSessions">
+      <source xml:lang="en">Close sessions</source>
+    </trans-unit>
+    <trans-unit id="mobileTopBar.filesChangedCount">
+      <source xml:lang="en">{0} files</source>
+    </trans-unit>
+    <trans-unit id="mobileTopBar.filesChangedTooltip">
+      <source xml:lang="en">{0} files changed</source>
+    </trans-unit>
+    <trans-unit id="mobileTopBar.newSession">
+      <source xml:lang="en">New Session</source>
+    </trans-unit>
+    <trans-unit id="mobileTopBar.newSessionAria">
+      <source xml:lang="en">New session</source>
+    </trans-unit>
+    <trans-unit id="mobileTopBar.openSessions">
+      <source xml:lang="en">Open sessions</source>
+    </trans-unit>
+    <trans-unit id="mobileTopBar.singleFileChanged">
+      <source xml:lang="en">1 file</source>
+    </trans-unit>
+    <trans-unit id="mobileTopBar.singleFileChangedTooltip">
+      <source xml:lang="en">1 file changed</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/sessionHeader" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="renameChat.aria">
+      <source xml:lang="en">Rename chat</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/sessionReadOnlyBanner" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionReadOnlyBanner.message">
+      <source xml:lang="en">This chat is read-only</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/sessionRemoteConnection" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionRemoteHost.connect">
+      <source xml:lang="en">Connect</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.connectingTitle">
+      <source xml:lang="en">Connecting to {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.disconnected">
+      <source xml:lang="en">Cannot reach {0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.disconnectedTitle">
+      <source xml:lang="en">Cannot Connect to {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.incompatibleDescription">
+      <source xml:lang="en">{0} is incompatible with this version of Visual Studio Code.</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.incompatibleTitle">
+      <source xml:lang="en">Cannot Connect to {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.notRunning">
+      <source xml:lang="en">{0} is not running.</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.notRunningTitle">
+      <source xml:lang="en">Unable to Connect to {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.reconnecting">
+      <source xml:lang="en">Reconnecting to {0}...</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.reconnectingIn">
+      <source xml:lang="en">Reconnecting to {0} in {1}s</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.retry">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.start">
+      <source xml:lang="en">Start {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.startingDescription">
+      <source xml:lang="en">Starting {0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.tryNow">
+      <source xml:lang="en">Try Now</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.unknown">
+      <source xml:lang="en">The remote host</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.waitingForConnection">
+      <source xml:lang="en">Waiting for agent host connection...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/sessionsPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsChatBackground.confetti">
+      <source xml:lang="en">Confetti!</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/sessionConversationGroups" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionConversationStatus.ariaLabel">
+      <source xml:lang="en">State: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionConversationStatus.completed">
+      <source xml:lang="en">Completed</source>
+    </trans-unit>
+    <trans-unit id="sessionConversationStatus.failed">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="sessionConversationStatus.inProgress">
+      <source xml:lang="en">In Progress</source>
+    </trans-unit>
+    <trans-unit id="sessionConversationStatus.needsInput">
+      <source xml:lang="en">Input Needed</source>
+    </trans-unit>
+    <trans-unit id="sessionConversationStatus.new">
+      <source xml:lang="en">New</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/sessionsSetUpService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="loading">
+      <source xml:lang="en">Loading</source>
+    </trans-unit>
+    <trans-unit id="sessions.aiDisabled.detail">
+      <source xml:lang="en">Enable AI features to continue using Agents.</source>
+    </trans-unit>
+    <trans-unit id="sessions.aiDisabled.enable">
+      <source xml:lang="en">Enable AI Features</source>
+    </trans-unit>
+    <trans-unit id="sessions.welcome.detail">
+      <source xml:lang="en">Your AI-powered coding experience where agents explore, build, and iterate with you.</source>
+    </trans-unit>
+    <trans-unit id="sessions.welcome.getStarted">
+      <source xml:lang="en">Get Started</source>
+    </trans-unit>
+    <trans-unit id="sessions.welcome.title">
+      <source xml:lang="en">Welcome to {0}</source>
+    </trans-unit>
+    <trans-unit id="walkthrough.productName">
+      <source xml:lang="en">{0} - Agents</source>
+    </trans-unit>
+    <trans-unit id="welcomeFooter">
+      <source xml:lang="en">By continuing, you agree to {0}'s [Terms]({1}) and [Privacy Statement]({2}). {3} Copilot may show [public code]({4}) suggestions and use your data to improve the product. You can change these [settings]({5}) anytime.</source>
+      <note>{Locked="["}
+{Locked="]({1})"}
+{Locked="]({2})"}
+{Locked="]({4})"}
+{Locked="]({5})"}</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/sessionsSignInDialog" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.returnToVSCodeEditor">
+      <source xml:lang="en">Return to VS Code Editor</source>
+    </trans-unit>
+    <trans-unit id="sessions.signIn">
+      <source xml:lang="en">Sign in to use Agents</source>
+    </trans-unit>
+    <trans-unit id="sessions.signingIn">
+      <source xml:lang="en">Signing in…</source>
+    </trans-unit>
+    <trans-unit id="sessions.signingIn.detail">
+      <source xml:lang="en">Please complete sign-in in the browser.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/singlePaneWorkbench" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sidePaneHidden">
+      <source xml:lang="en">Side pane hidden</source>
+    </trans-unit>
+    <trans-unit id="sidePaneVisible">
+      <source xml:lang="en">Side pane shown</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/widget/openInVSCodeWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="openInVSCodeHover">
+      <source xml:lang="en">Open in VS Code Editor Window</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/workbench" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="auxiliaryBarHidden">
+      <source xml:lang="en">Secondary Side Bar hidden</source>
+    </trans-unit>
+    <trans-unit id="auxiliaryBarVisible">
+      <source xml:lang="en">Secondary Side Bar shown</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/common/categories" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agents">
+      <source xml:lang="en">Agents</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/common/contextkeys" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="activeSessions">
+      <source xml:lang="en">The identifier of the active sessions panel</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionTypesAvailable">
+      <source xml:lang="en">Whether at least one connected agent-host provider has advertised session types</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsHasDockedDetails">
+      <source xml:lang="en">Whether the single-pane active editor has a docked detail panel (a managed Changes/Files tab or a text file editor)</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsSinglePaneChangesTabAvailable">
+      <source xml:lang="en">Whether the single-pane session supports a Changes editor</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsSinglePaneChangesTabMissing">
+      <source xml:lang="en">Whether the single-pane session supports a Changes editor but its tab is not currently open</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsSinglePaneDiffEditorInputActive">
+      <source xml:lang="en">Whether the active single-pane editor input is a diff, independent of the editor used to render it</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsSinglePaneFilesTabAvailable">
+      <source xml:lang="en">Whether the single-pane session supports a Files editor</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsSinglePaneFilesTabMissing">
+      <source xml:lang="en">Whether the single-pane session supports a Files tab but its tab is not currently open</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsSinglePaneLayoutEnabled">
+      <source xml:lang="en">Whether the Agents window is using the single-pane (docked detail panel) layout. Single source of truth for gating single-pane behaviour — set once by the workbench from the layout it was constructed with; features must read this instead of the underlying setting</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomViewFocus">
+      <source xml:lang="en">Whether the Automations custom view has keyboard focus</source>
+    </trans-unit>
+    <trans-unit id="automationsHasItems">
+      <source xml:lang="en">Whether there is at least one automation</source>
+    </trans-unit>
+    <trans-unit id="customViewVisible">
+      <source xml:lang="en">Whether a custom view is shown in place of the sessions grid. The side panel and the panel are hidden while it is.</source>
+    </trans-unit>
+    <trans-unit id="editorMaximized">
+      <source xml:lang="en">Whether the editor area is maximized</source>
+    </trans-unit>
+    <trans-unit id="isQuickChatSession">
+      <source xml:lang="en">Whether the session in scope is a workspace-less quick chat</source>
+    </trans-unit>
+    <trans-unit id="multipleSessionsVisible">
+      <source xml:lang="en">Whether more than one session is visible in the sessions part's grid</source>
+    </trans-unit>
+    <trans-unit id="sessionActiveChatIsClosable">
+      <source xml:lang="en">Whether the session's active chat can be closed (hidden) from the tab strip, i.e. it is not the main chat. Includes read-only subagent chats. Used to scope the close-chat keybinding so it closes the tab instead of the session</source>
+    </trans-unit>
+    <trans-unit id="sessionActiveChatIsDeletable">
+      <source xml:lang="en">Whether the session's active chat can be permanently deleted from the tab strip, i.e. it is a real, user-created non-main chat (not the main chat and not a tool-spawned subagent chat, which are transient children). Used to scope the delete-chat keybinding</source>
+    </trans-unit>
+    <trans-unit id="sessionAgentMergeEnabled">
+      <source xml:lang="en">True when Agent Merge is enabled for the active agent session</source>
+    </trans-unit>
+    <trans-unit id="sessionChatsPickerVisible">
+      <source xml:lang="en">Whether the chats picker (chats within the active session) is visible</source>
+    </trans-unit>
+    <trans-unit id="sessionFocusedChatIsRenameTarget">
+      <source xml:lang="en">Whether the focused chat group's visible chat is a non-main chat that should receive the chat-specific rename command instead of the session rename command</source>
+    </trans-unit>
+    <trans-unit id="sessionHarnessPickerVisible">
+      <source xml:lang="en">Whether the new-session view's harness (session type) picker is visible — it is hidden when at most one harness can serve the selected workspace</source>
+    </trans-unit>
+    <trans-unit id="sessionHasCachedChanges">
+      <source xml:lang="en">Whether the session view's session has remembered changes from the last time its changes pill was shown, while it has not reported its own changes yet. Used to render the changes pill optimistically when a session opens</source>
+    </trans-unit>
+    <trans-unit id="sessionHasChanges">
+      <source xml:lang="en">Whether the session view's session has pending changes (insertions or deletions)</source>
+    </trans-unit>
+    <trans-unit id="sessionHasGitRepository">
+      <source xml:lang="en">Whether the session has a usable git repository</source>
+    </trans-unit>
+    <trans-unit id="sessionHasIssues">
+      <source xml:lang="en">Whether the session view's session references at least one GitHub issue</source>
+    </trans-unit>
+    <trans-unit id="sessionHasMultipleCommittedChats">
+      <source xml:lang="en">Whether the session view's session has more than one committed (non-draft) chat, which drives the Chats dropdown visibility</source>
+    </trans-unit>
+    <trans-unit id="sessionHasMultipleOpenChats">
+      <source xml:lang="en">Whether the session view's session has more than one open chat (the tabs shown in the strip, including in-composer drafts). Used to scope chat-to-chat navigation (next/previous chat, the Ctrl+Tab chat switcher)</source>
+    </trans-unit>
+    <trans-unit id="sessionHasOpenPullRequest">
+      <source xml:lang="en">Whether the active session's branch has an open pull request</source>
+    </trans-unit>
+    <trans-unit id="sessionHasPullRequest">
+      <source xml:lang="en">Whether the session view's session is associated with a GitHub pull request</source>
+    </trans-unit>
+    <trans-unit id="sessionHasSideChats">
+      <source xml:lang="en">Whether the session has side chats, which are shown in the Side Chats dropdown</source>
+    </trans-unit>
+    <trans-unit id="sessionHasWorkspace">
+      <source xml:lang="en">Whether the session view's session has an associated workspace folder</source>
+    </trans-unit>
+    <trans-unit id="sessionId">
+      <source xml:lang="en">The identifier of the session in scope (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>
+    </trans-unit>
+    <trans-unit id="sessionIsActive">
+      <source xml:lang="en">Whether the session in scope is in progress or needs input</source>
+    </trans-unit>
+    <trans-unit id="sessionIsArchived">
+      <source xml:lang="en">Whether the session in scope is archived/marked as done (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>
+    </trans-unit>
+    <trans-unit id="sessionIsCreated">
+      <source xml:lang="en">Whether the session view's session has been created (chat view shown, not new-session view)</source>
+    </trans-unit>
+    <trans-unit id="sessionIsMaximized">
+      <source xml:lang="en">Whether the session view is currently maximized in the sessions part's grid</source>
+    </trans-unit>
+    <trans-unit id="sessionIsRead">
+      <source xml:lang="en">Whether the session has been marked as read</source>
+    </trans-unit>
+    <trans-unit id="sessionIsSticky">
+      <source xml:lang="en">Whether the session view's session is sticky in the grid</source>
+    </trans-unit>
+    <trans-unit id="sessionIsolationPickerVisible">
+      <source xml:lang="en">Whether the new-session view's isolation picker is visible — it is shown only when the isolation option is enabled and the workspace has a git repository</source>
+    </trans-unit>
+    <trans-unit id="sessionPrimaryPullRequestOperation">
+      <source xml:lang="en">The id of the first pull request operation advertised for the active session, or empty when there is none</source>
+    </trans-unit>
+    <trans-unit id="sessionProviderId">
+      <source xml:lang="en">The provider ID of the session in scope (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>
+    </trans-unit>
+    <trans-unit id="sessionShouldShowChatTabs">
+      <source xml:lang="en">Whether the session view's chat tab strip is shown, i.e. the session has more than one chat actually showing as a tab. A single visible tab always hides the strip</source>
+    </trans-unit>
+    <trans-unit id="sessionSupportsDelete">
+      <source xml:lang="en">Whether the session can be deleted</source>
+    </trans-unit>
+    <trans-unit id="sessionSupportsFork">
+      <source xml:lang="en">Whether the session view's session supports forking a chat from a turn into a new peer chat</source>
+    </trans-unit>
+    <trans-unit id="sessionSupportsMultipleChats">
+      <source xml:lang="en">Whether the session view's session supports multiple chats</source>
+    </trans-unit>
+    <trans-unit id="sessionSupportsRename">
+      <source xml:lang="en">Whether the session can be renamed</source>
+    </trans-unit>
+    <trans-unit id="sessionSupportsSideChat">
+      <source xml:lang="en">Whether the session view's session supports creating a side chat from a turn (via /btw)</source>
+    </trans-unit>
+    <trans-unit id="sessionType">
+      <source xml:lang="en">The session type of the session in scope (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>
+    </trans-unit>
+    <trans-unit id="sessionUsesCombinedConfigPicker">
+      <source xml:lang="en">Whether the session's provider offers a combined mode and model configuration picker (used on phone layouts in place of the standalone pickers)</source>
+    </trans-unit>
+    <trans-unit id="sessionWorkspaceIsVirtual">
+      <source xml:lang="en">Whether the session's workspace is virtual</source>
+    </trans-unit>
+    <trans-unit id="sessionWorkspacePickerGroup">
+      <source xml:lang="en">The currently active group tab in the session workspace picker</source>
+    </trans-unit>
+    <trans-unit id="sessionWorkspacePickerVisible">
+      <source xml:lang="en">Whether the new-session view's workspace picker is rendered (as opposed to being replaced by the no-agent-host empty state)</source>
+    </trans-unit>
+    <trans-unit id="sessionsAquariumActive">
+      <source xml:lang="en">Whether the sessions aquarium overlay is active</source>
+    </trans-unit>
+    <trans-unit id="sessionsBlockedSessionsVisible">
+      <source xml:lang="en">Whether the blocked-sessions dropdown (surfacing sessions that require input) is open in the sessions titlebar</source>
+    </trans-unit>
+    <trans-unit id="sessionsCanGoBack">
+      <source xml:lang="en">Whether there is a previous session in the navigation history</source>
+    </trans-unit>
+    <trans-unit id="sessionsCanGoForward">
+      <source xml:lang="en">Whether there is a next session in the navigation history</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatBackgroundAvailable">
+      <source xml:lang="en">Whether chat background customization is available for the current color theme</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatBackgroundConfigured">
+      <source xml:lang="en">Whether a chat background is configured for the current color theme</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatBackgroundImageConfigured">
+      <source xml:lang="en">Whether a chat background image is configured for the current color theme</source>
+    </trans-unit>
+    <trans-unit id="sessionsFocus">
+      <source xml:lang="en">Whether the sessions part has keyboard focus</source>
+    </trans-unit>
+    <trans-unit id="sessionsHasClosedItem">
+      <source xml:lang="en">Whether a chat or session was closed recently and can be reopened with the Reopen Closed Chat or Session command</source>
+    </trans-unit>
+    <trans-unit id="sessionsIsPhoneLayout">
+      <source xml:lang="en">Whether the current layout is the phone layout</source>
+    </trans-unit>
+    <trans-unit id="sessionsKeyboardVisible">
+      <source xml:lang="en">Whether the virtual keyboard is visible</source>
+    </trans-unit>
+    <trans-unit id="sessionsListPromoteNewChatAction">
+      <source xml:lang="en">Whether New Chat in This Session replaces Pin or Unpin as the primary action on session rows (A/B experiment)</source>
+    </trans-unit>
+    <trans-unit id="sessionsPickerVisible">
+      <source xml:lang="en">Whether the sessions picker is visible</source>
+    </trans-unit>
+    <trans-unit id="sessionsTitleBarNewSessionEnabled">
+      <source xml:lang="en">Whether the new-session button is shown in the titlebar when the sessions list is hidden (A/B experiment)</source>
+    </trans-unit>
+    <trans-unit id="sessionsVisible">
+      <source xml:lang="en">Whether the sessions part is visible</source>
+    </trans-unit>
+    <trans-unit id="sessionsWelcomeVisible">
+      <source xml:lang="en">Whether the sessions welcome overlay is visible</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/common/sizes" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agents.fontSize.body1">
+      <source xml:lang="en">Primary body font size for the agents window.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.body1.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.body1` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.body2">
+      <source xml:lang="en">Secondary body font size for the agents window.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.body2.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.body2` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.heading1">
+      <source xml:lang="en">Heading 1 font size for the agents window (welcome screen title).</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.heading1.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.heading1` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.heading2">
+      <source xml:lang="en">Heading 2 font size for the agents window (title).</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.heading2.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.heading2` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.heading3">
+      <source xml:lang="en">Heading 3 font size for the agents window (subtitle).</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.heading3.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.heading3` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.label1">
+      <source xml:lang="en">Label 1 font size for the agents window (section title, tabs).</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.label1.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.label1` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.label2">
+      <source xml:lang="en">Label 2 font size for the agents window (metadata).</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.label2.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.label2` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.label3">
+      <source xml:lang="en">Label 3 font size for the agents window (badge).</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.label3.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.label3` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontWeight.regular">
+      <source xml:lang="en">Regular font weight (400) for the agents window.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontWeight.regular.deprecated">
+      <source xml:lang="en">Deprecated: use `fontWeight.regular` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontWeight.semiBold">
+      <source xml:lang="en">SemiBold font weight (600) for the agents window.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontWeight.semiBold.deprecated">
+      <source xml:lang="en">Deprecated: use `fontWeight.semiBold` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.layout.floatingPanelGap">
+      <source xml:lang="en">Gap between floating panels in the Agents window.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/common/theme" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="activeSessionView.background">
+      <source xml:lang="en">Background color of an active session view in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="activeSessionView.foreground">
+      <source xml:lang="en">Foreground color of an active session view in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentFeedbackEditorWidget.background">
+      <source xml:lang="en">Background color of the agent feedback widget shown in the editor.</source>
+    </trans-unit>
+    <trans-unit id="agentFeedbackEditorWidget.border">
+      <source xml:lang="en">Border color of the agent feedback widget shown in the editor.</source>
+    </trans-unit>
+    <trans-unit id="agentFeedbackInputWidget.border">
+      <source xml:lang="en">Border color of the agent feedback input widget shown in the editor.</source>
+    </trans-unit>
+    <trans-unit id="agents.background">
+      <source xml:lang="en">Background color of the agent sessions window shell and gradient base.</source>
+    </trans-unit>
+    <trans-unit id="agentsBadge.background">
+      <source xml:lang="en">Background color of badges in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsBadge.foreground">
+      <source xml:lang="en">Foreground color of badges in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsBottomPanel.border">
+      <source xml:lang="en">Border color of the bottom panel in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsCard.border">
+      <source xml:lang="en">Border color of the floating content card (sessions grid and custom view grid) in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsChatInput.background">
+      <source xml:lang="en">Background color of the chat input field in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsChatInput.border">
+      <source xml:lang="en">Border color of the chat input field in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsChatInput.focusBorder">
+      <source xml:lang="en">Border color of the chat input field when focused in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsChatInput.foreground">
+      <source xml:lang="en">Foreground color of the chat input field in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsChatInput.placeholderForeground">
+      <source xml:lang="en">Placeholder text color in the chat input field in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsGradient.tintColor">
+      <source xml:lang="en">Tint color used in the background gradient of the agent sessions window shell.</source>
+    </trans-unit>
+    <trans-unit id="agentsNewSessionButton.background">
+      <source xml:lang="en">Background color of the New Session button in the agent sessions sidebar.</source>
+    </trans-unit>
+    <trans-unit id="agentsNewSessionButton.border">
+      <source xml:lang="en">Border color of the New Session button in the agent sessions sidebar.</source>
+    </trans-unit>
+    <trans-unit id="agentsNewSessionButton.foreground">
+      <source xml:lang="en">Foreground color of the New Session button in the agent sessions sidebar.</source>
+    </trans-unit>
+    <trans-unit id="agentsNewSessionButton.hoverBackground">
+      <source xml:lang="en">Background color of the New Session button when hovered in the agent sessions sidebar.</source>
+    </trans-unit>
+    <trans-unit id="agentsPanel.background">
+      <source xml:lang="en">Background color of the card panels (chat, files, terminal) in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsPanel.border">
+      <source xml:lang="en">Border color of the card panels (chat, files, terminal) in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsPanel.foreground">
+      <source xml:lang="en">Foreground color of the card panels (chat, files, terminal) in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsUnreadBadge.background">
+      <source xml:lang="en">Background color of the unread sessions count badge on the sidebar toggle.</source>
+    </trans-unit>
+    <trans-unit id="agentsUnreadBadge.foreground">
+      <source xml:lang="en">Foreground color of the unread sessions count badge on the sidebar toggle.</source>
+    </trans-unit>
+    <trans-unit id="agentsUpdateButton.downloadedBackground">
+      <source xml:lang="en">Background color of the update button when download is complete in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsUpdateButton.downloadingBackground">
+      <source xml:lang="en">Background color of the update button to show download progress in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="inactiveSessionView.background">
+      <source xml:lang="en">Background color of an inactive session view in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="inactiveSessionView.foreground">
+      <source xml:lang="en">Foreground color of an inactive session view in the agent sessions window.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/electron-browser/actions/vscodeActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="openInVSCode">
+      <source xml:lang="en">Open in Editor</source>
+    </trans-unit>
+    <trans-unit id="openVSCodeWindow">
+      <source xml:lang="en">Open VS Code Window</source>
+    </trans-unit>
+    <trans-unit id="returnToVSCodeEditor">
+      <source xml:lang="en">Return to VS Code Editor</source>
+    </trans-unit>
+    <trans-unit id="shouldShowReturnToVSCodeEditor">
+      <source xml:lang="en">Check Whether to Show Return to VS Code Editor</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/electron-browser/parts/titlebarPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindowTitle">
+      <source xml:lang="en">Agents</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/electron-browser/sessions.main" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="join.closeStorage">
+      <source xml:lang="en">Saving UI state</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/services/chatBackground/browser/chatBackgroundRenderer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsChatBackground.confettiButton">
+      <source xml:lang="en">Celebrate</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/services/sessions/browser/sessionsManagementService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.cancelCurrentRequest.loadFailed">
+      <source xml:lang="en">Failed to load chat session for cancellation.</source>
+    </trans-unit>
+    <trans-unit id="sessions.removeSessionArtifact.unsupported">
+      <source xml:lang="en">Removing artifacts is not supported for this session.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/services/sessions/browser/sessionsService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsService.trustFolderMessage">
+      <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/services/sessions/common/session" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessions.newChat">
+      <source xml:lang="en">New Chat</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.newSession">
+      <source xml:lang="en">New Session</source>
+    </trans-unit>
+    <trans-unit id="failed">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="needsInput">
+      <source xml:lang="en">Input needed</source>
+    </trans-unit>
+    <trans-unit id="sessionWorkspaceGroup.github">
+      <source xml:lang="en">GitHub</source>
+    </trans-unit>
+    <trans-unit id="sessionWorkspaceGroup.local">
+      <source xml:lang="en">Local</source>
+    </trans-unit>
+    <trans-unit id="sessionWorkspaceGroup.remote">
+      <source xml:lang="en">Remote</source>
+    </trans-unit>
+    <trans-unit id="working">
+      <source xml:lang="en">Working...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/services/workspace/browser/workspaceContextService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindow">
+      <source xml:lang="en">Agents Window</source>
+    </trans-unit>
+</body></file>
+</xliff>

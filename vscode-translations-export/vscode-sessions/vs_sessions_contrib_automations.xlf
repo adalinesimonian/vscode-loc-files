@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/automations/browser/automationDialog" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automation.form.branch.capabilityLoadingReason">
+      <source xml:lang="en">Session capabilities are loading.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.chooseReason">
+      <source xml:lang="en">Choose the local branch to use as the Worktree base.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.detached">
+      <source xml:lang="en">({0})</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.folderModeReason">
+      <source xml:lang="en">Select Worktree to choose a branch.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.loadError">
+      <source xml:lang="en">Unable to load branches</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.loadErrorReason">
+      <source xml:lang="en">Open the branch picker to retry loading local branches.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.loading">
+      <source xml:lang="en">Loading branches…</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.loadingReason">
+      <source xml:lang="en">Local branches are loading.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.noBranches">
+      <source xml:lang="en">No local branches</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.noBranchesReason">
+      <source xml:lang="en">No local branches were found in this repository.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.noFolderReason">
+      <source xml:lang="en">Select a folder to determine its Git branch.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.noRepo">
+      <source xml:lang="en">no git repo</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.noRepoReason">
+      <source xml:lang="en">No Git repository was found for the selected folder.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.select">
+      <source xml:lang="en">Select branch</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.unknown">
+      <source xml:lang="en">—</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branch.unsupportedReason">
+      <source xml:lang="en">The selected session type does not support Worktree branch configuration.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.branchRequired">
+      <source xml:lang="en">A branch is required for Worktree isolation.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.day">
+      <source xml:lang="en">Day of week</source>
+    </trans-unit>
+    <trans-unit id="automation.form.enabled">
+      <source xml:lang="en">Enabled (the scheduler runs this automation when due)</source>
+    </trans-unit>
+    <trans-unit id="automation.form.folderRequired">
+      <source xml:lang="en">Workspace folder is required.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.harnessChip.action">
+      <source xml:lang="en">Automations Harness Chip</source>
+    </trans-unit>
+    <trans-unit id="automation.form.interval">
+      <source xml:lang="en">Schedule</source>
+    </trans-unit>
+    <trans-unit id="automation.form.isolation.checkboxAriaLabel">
+      <source xml:lang="en">Worktree isolation</source>
+    </trans-unit>
+    <trans-unit id="automation.form.isolation.worktree">
+      <source xml:lang="en">New Worktree</source>
+    </trans-unit>
+    <trans-unit id="automation.form.isolation.worktreeNoFolder">
+      <source xml:lang="en">Select a folder to use Worktree isolation.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.isolation.worktreeUnavailable">
+      <source xml:lang="en">Not supported by the selected session type</source>
+    </trans-unit>
+    <trans-unit id="automation.form.isolationGroup.action">
+      <source xml:lang="en">Automations Isolation Group</source>
+    </trans-unit>
+    <trans-unit id="automation.form.name">
+      <source xml:lang="en">Name</source>
+    </trans-unit>
+    <trans-unit id="automation.form.namePlaceholder">
+      <source xml:lang="en">e.g. Morning standup notes</source>
+    </trans-unit>
+    <trans-unit id="automation.form.nameRequired">
+      <source xml:lang="en">Name is required.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.noWorkspace">
+      <source xml:lang="en">No workspace</source>
+    </trans-unit>
+    <trans-unit id="automation.form.noWorkspace.description">
+      <source xml:lang="en">Run without a backing workspace</source>
+    </trans-unit>
+    <trans-unit id="automation.form.prompt">
+      <source xml:lang="en">Prompt</source>
+    </trans-unit>
+    <trans-unit id="automation.form.prompt.placeholder">
+      <source xml:lang="en">Describe what you want to automate</source>
+    </trans-unit>
+    <trans-unit id="automation.form.promptRequired">
+      <source xml:lang="en">Prompt is required.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.saving">
+      <source xml:lang="en">Saving automation…</source>
+    </trans-unit>
+    <trans-unit id="automation.form.selectWorkspace">
+      <source xml:lang="en">Select workspace</source>
+    </trans-unit>
+    <trans-unit id="automation.form.sessionConfiguration">
+      <source xml:lang="en">Session configuration</source>
+    </trans-unit>
+    <trans-unit id="automation.form.sessionConfigurationLoading">
+      <source xml:lang="en">Loading session configuration…</source>
+    </trans-unit>
+    <trans-unit id="automation.form.sessionConfigurationOptions">
+      <source xml:lang="en">Session configuration options</source>
+    </trans-unit>
+    <trans-unit id="automation.form.sessionConfigurationUnavailable">
+      <source xml:lang="en">Session configuration unavailable</source>
+    </trans-unit>
+    <trans-unit id="automation.form.sessionControls">
+      <source xml:lang="en">Session controls</source>
+    </trans-unit>
+    <trans-unit id="automation.form.sessionTypeRequired">
+      <source xml:lang="en">Session type is required.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.target">
+      <source xml:lang="en">Target</source>
+    </trans-unit>
+    <trans-unit id="automation.form.targetOptions">
+      <source xml:lang="en">Automation target options</source>
+    </trans-unit>
+    <trans-unit id="automation.form.time">
+      <source xml:lang="en">Time</source>
+    </trans-unit>
+    <trans-unit id="automation.form.trustFolderMessage">
+      <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.workspacePicker.action">
+      <source xml:lang="en">Automations Workspace Picker</source>
+    </trans-unit>
+    <trans-unit id="automation.form.workspacePicker.pickAriaLabel">
+      <source xml:lang="en">Pick a workspace for this automation</source>
+    </trans-unit>
+    <trans-unit id="automation.form.workspacePicker.selectedAriaLabel">
+      <source xml:lang="en">Automation target, {0}</source>
+    </trans-unit>
+    <trans-unit id="automation.interval.daily">
+      <source xml:lang="en">Daily</source>
+    </trans-unit>
+    <trans-unit id="automation.interval.hourly">
+      <source xml:lang="en">Hourly</source>
+    </trans-unit>
+    <trans-unit id="automation.interval.manual">
+      <source xml:lang="en">Manual</source>
+    </trans-unit>
+    <trans-unit id="automation.interval.weekly">
+      <source xml:lang="en">Weekly</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationDialogService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automation.dialog.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="automation.dialog.captureError">
+      <source xml:lang="en">The automation wasn't saved because its session configuration couldn't be captured. Check the provider connection and try again.</source>
+    </trans-unit>
+    <trans-unit id="automation.dialog.create">
+      <source xml:lang="en">Create</source>
+    </trans-unit>
+    <trans-unit id="automation.dialog.createDescription">
+      <source xml:lang="en">Define a prompt that will run on a schedule against the selected target.</source>
+    </trans-unit>
+    <trans-unit id="automation.dialog.createTitle">
+      <source xml:lang="en">New automation</source>
+    </trans-unit>
+    <trans-unit id="automation.dialog.editDescription">
+      <source xml:lang="en">Update the schedule, prompt, or run target for this automation.</source>
+    </trans-unit>
+    <trans-unit id="automation.dialog.editTitle">
+      <source xml:lang="en">Edit automation</source>
+    </trans-unit>
+    <trans-unit id="automation.dialog.save">
+      <source xml:lang="en">Save</source>
+    </trans-unit>
+    <trans-unit id="automation.dialog.saving">
+      <source xml:lang="en">Saving…</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationRunner" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationRunFailed">
+      <source xml:lang="en">Automation '{0}' failed: {1}</source>
+    </trans-unit>
+    <trans-unit id="automationRunner.cancelled">
+      <source xml:lang="en">Cancelled</source>
+    </trans-unit>
+    <trans-unit id="automationRunner.sessionFailed">
+      <source xml:lang="en">Agent session failed.</source>
+    </trans-unit>
+    <trans-unit id="automationTargetUnavailable">
+      <source xml:lang="en">Automation '{0}' cannot start until its agent becomes available.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationScheduler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automation.timedOut">
+      <source xml:lang="en">Timed out after {0} minute(s).</source>
+    </trans-unit>
+    <trans-unit id="automations.crashRecoveryReason">
+      <source xml:lang="en">Interrupted by app shutdown</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationTools" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automation.tool.cancelled">
+      <source xml:lang="en">Automation change cancelled</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.configure.create.confirmationMessage">
+      <source xml:lang="en">Create the automation **{0}**?</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.configure.create.confirmationTitle">
+      <source xml:lang="en">Create Automation?</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.configure.create.invocationMessage">
+      <source xml:lang="en">Configuring a new automation</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.configure.create.pastTenseMessage">
+      <source xml:lang="en">Configured a new automation</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.configure.created">
+      <source xml:lang="en">Created automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.configure.displayName">
+      <source xml:lang="en">Configure Automation</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.configure.update.confirmationMessage">
+      <source xml:lang="en">Apply the proposed changes to **{0}** (`{1}`)?</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.configure.update.confirmationTitle">
+      <source xml:lang="en">Update Automation?</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.configure.update.invocationMessage">
+      <source xml:lang="en">Configuring automation</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.configure.update.pastTenseMessage">
+      <source xml:lang="en">Configured automation</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.configure.updated">
+      <source xml:lang="en">Updated automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.configure.userDescription">
+      <source xml:lang="en">Create or update an automation</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.delete.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.delete.cancelled">
+      <source xml:lang="en">Automation deletion cancelled</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.delete.confirm">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.delete.confirmationMessage">
+      <source xml:lang="en">Delete **{0}** (`{1}`)? Its saved configuration and run history will be permanently removed. Runs already in flight will continue.</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.delete.confirmationTitle">
+      <source xml:lang="en">Delete Automation?</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.delete.deleted">
+      <source xml:lang="en">Deleted automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.delete.displayName">
+      <source xml:lang="en">Delete Automation</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.delete.invocationMessage">
+      <source xml:lang="en">Deleting automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.delete.pastTenseMessage">
+      <source xml:lang="en">Deleted automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.delete.userDescription">
+      <source xml:lang="en">Delete a scheduled agent automation</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.error">
+      <source xml:lang="en">Automation request failed</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.list.displayName">
+      <source xml:lang="en">List Automations</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.list.invocationMessage">
+      <source xml:lang="en">Reading automations</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.list.pastTenseMessage">
+      <source xml:lang="en">Read automations</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.list.result.incomplete">
+      <source xml:lang="en">Listed {0} available automations; catalogue is incomplete</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.list.result.plural">
+      <source xml:lang="en">Listed {0} automations</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.list.result.singular">
+      <source xml:lang="en">Listed 1 automation</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.list.userDescription">
+      <source xml:lang="en">List scheduled agent automations</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.run.alreadyRunning">
+      <source xml:lang="en">Automation {0} is already running</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.run.alreadyRunningResult">
+      <source xml:lang="en">Automation {0} is already running</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.run.cancelled">
+      <source xml:lang="en">Automation run cancelled</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.run.confirmationMessage">
+      <source xml:lang="en">Run **{0}** (`{1}`) now? This starts a new agent session using the automation's configured prompt and permissions.</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.run.confirmationTitle">
+      <source xml:lang="en">Run Automation?</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.run.displayName">
+      <source xml:lang="en">Run Automation</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.run.invocationMessage">
+      <source xml:lang="en">Running automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.run.pastTenseMessage">
+      <source xml:lang="en">Started automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.run.started">
+      <source xml:lang="en">Started automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.run.userDescription">
+      <source xml:lang="en">Run a configured agent automation now</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.run.wasAlreadyRunning">
+      <source xml:lang="en">Automation {0} was already running</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/automations/browser/automations.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.automations.enabled">
+      <source xml:lang="en">Enables the Automations feature: scheduling agent sessions to run on a cadence. When disabled, the Automations entry in the Customizations sidebar, the Automations section in the Customizations editor, and the Automation option in the new-session composer are hidden, and scheduled automations are not dispatched.</source>
+    </trans-unit>
+    <trans-unit id="chat.automations.runTimeoutMinutes">
+      <source xml:lang="en">Maximum number of minutes an automation run is allowed to take before it is ended. Prevents a single hung run from permanently blocking subsequent runs.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/automations/browser/providerAutomationService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationActiveRunPreventsTransfer">
+      <source xml:lang="en">Wait for the active run to finish before changing this automation's agent.</source>
+    </trans-unit>
+</body></file>
+</xliff>

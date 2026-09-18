@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/sessions/browser/aiCustomizationShortcutsWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizations">
+      <source xml:lang="en">Customizations</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/blockedSessionsIndicatorModel" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="nSessionsFailingCI">
+      <source xml:lang="en">{0} sessions are failing CI</source>
+    </trans-unit>
+    <trans-unit id="nSessionsQuestion">
+      <source xml:lang="en">{0} sessions have questions</source>
+    </trans-unit>
+    <trans-unit id="nSessionsRequireInput">
+      <source xml:lang="en">{0} sessions require input</source>
+    </trans-unit>
+    <trans-unit id="nSessionsTerminalApproval">
+      <source xml:lang="en">{0} sessions require terminal approval</source>
+    </trans-unit>
+    <trans-unit id="oneSessionFailingCI">
+      <source xml:lang="en">1 session is failing CI</source>
+    </trans-unit>
+    <trans-unit id="oneSessionQuestion">
+      <source xml:lang="en">1 session has a question</source>
+    </trans-unit>
+    <trans-unit id="oneSessionRequiresInput">
+      <source xml:lang="en">1 session requires input</source>
+    </trans-unit>
+    <trans-unit id="oneSessionTerminalApproval">
+      <source xml:lang="en">1 session requires terminal approval</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/blockedSessionsList" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="allInputNeededIgnored">
+      <source xml:lang="en">All current blocked sessions were ignored.</source>
+    </trans-unit>
+    <trans-unit id="ciFailureIgnored">
+      <source xml:lang="en">CI failure ignored until this session has another CI failure.</source>
+    </trans-unit>
+    <trans-unit id="ignoreCIFailure">
+      <source xml:lang="en">Ignore CI Failure</source>
+    </trans-unit>
+    <trans-unit id="ignoreInputNeeded">
+      <source xml:lang="en">Ignore Input Needed</source>
+    </trans-unit>
+    <trans-unit id="inputNeededIgnored">
+      <source xml:lang="en">Input needed ignored until this session needs input again.</source>
+    </trans-unit>
+    <trans-unit id="sessionsRequiringInput">
+      <source xml:lang="en">Sessions requiring input</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/customizationsToolbar.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agents">
+      <source xml:lang="en">Agents</source>
+    </trans-unit>
+    <trans-unit id="harnessSettings">
+      <source xml:lang="en">Codex</source>
+    </trans-unit>
+    <trans-unit id="hooks">
+      <source xml:lang="en">Hooks</source>
+    </trans-unit>
+    <trans-unit id="instructions">
+      <source xml:lang="en">Instructions</source>
+    </trans-unit>
+    <trans-unit id="mcpServers">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="overview">
+      <source xml:lang="en">Overview</source>
+    </trans-unit>
+    <trans-unit id="plugins">
+      <source xml:lang="en">Plugins</source>
+    </trans-unit>
+    <trans-unit id="skills">
+      <source xml:lang="en">Skills</source>
+    </trans-unit>
+    <trans-unit id="tools">
+      <source xml:lang="en">Tools</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/mobile/mobileOverlayContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mobileChangesNotAvailable">
+      <source xml:lang="en">File-level changes are not available for this session yet.</source>
+    </trans-unit>
+    <trans-unit id="mobileOpenFileDiff">
+      <source xml:lang="en">Open File Diff</source>
+    </trans-unit>
+    <trans-unit id="mobileOpenSessionChanges">
+      <source xml:lang="en">Open Session Changes</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/sessionDetailsAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.details.editorTitle">
+      <source xml:lang="en">Session Details</source>
+    </trans-unit>
+    <trans-unit id="sessions.showSessionDetails">
+      <source xml:lang="en">Show Session Details</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/sessions.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessions.view.label">
+      <source xml:lang="en">Sessions</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsViewIcon">
+      <source xml:lang="en">Icon for Agent Sessions View</source>
+    </trans-unit>
+    <trans-unit id="miSessions">
+      <source xml:lang="en">&amp;&amp;Sessions</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="sessions.automations.newBadgeStyle">
+      <source xml:lang="en">Controls the visual style of the Automations first-use badge.</source>
+    </trans-unit>
+    <trans-unit id="sessions.list.showEmptyDefaultGroups">
+      <source xml:lang="en">Controls whether the Chats group is shown in the sessions list even when it is empty.</source>
+    </trans-unit>
+    <trans-unit id="sessions.list.showUnreadInCollapsedSections">
+      <source xml:lang="en">Controls whether collapsed sections in the sessions list show needs-input, CI-failure, or unread indicators for the unarchived sessions they contain.</source>
+    </trans-unit>
+    <trans-unit id="sessions.markAsDoneConfetti">
+      <source xml:lang="en">Controls whether a confetti animation is shown when marking a session as done.</source>
+    </trans-unit>
+    <trans-unit id="sessions.newSessionButton.style">
+      <source xml:lang="en">Controls the visual style of the New Session button.</source>
+    </trans-unit>
+    <trans-unit id="sessions.showChatTabs">
+      <source xml:lang="en">Controls whether chats in a session are shown as individual tabs or whether the active chat is shown as the session view.</source>
+    </trans-unit>
+    <trans-unit id="sessions.showChatTabs.multiple">
+      <source xml:lang="en">Each chat is displayed as a tab in the session view.</source>
+    </trans-unit>
+    <trans-unit id="sessions.showChatTabs.single">
+      <source xml:lang="en">The active chat is displayed as the session view.</source>
+    </trans-unit>
+    <trans-unit id="sessions.useWorktree">
+      <source xml:lang="en">Controls whether New Worktree is checked when no previous isolation choice has been saved. Once a choice is saved, it is used across workspaces instead of this setting.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/sessionsActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatCompositeBar.addChat">
+      <source xml:lang="en">New Chat in This Session</source>
+    </trans-unit>
+    <trans-unit id="chatCompositeBar.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="chatCompositeBar.maximize">
+      <source xml:lang="en">Maximize</source>
+    </trans-unit>
+    <trans-unit id="chatCompositeBar.pin">
+      <source xml:lang="en">Pin</source>
+    </trans-unit>
+    <trans-unit id="chatCompositeBar.pinView">
+      <source xml:lang="en">Pin</source>
+    </trans-unit>
+    <trans-unit id="chatCompositeBar.reopenLastClosedChat">
+      <source xml:lang="en">Reopen Last Closed Chat</source>
+    </trans-unit>
+    <trans-unit id="chatCompositeBar.sideChats">
+      <source xml:lang="en">Side Chats</source>
+    </trans-unit>
+    <trans-unit id="chatCompositeBar.unmaximize">
+      <source xml:lang="en">Restore</source>
+    </trans-unit>
+    <trans-unit id="chatCompositeBar.unpin">
+      <source xml:lang="en">Unpin</source>
+    </trans-unit>
+    <trans-unit id="chatCompositeBar.unpinView">
+      <source xml:lang="en">Unpin</source>
+    </trans-unit>
+    <trans-unit id="closeActiveChat">
+      <source xml:lang="en">Close Chat</source>
+    </trans-unit>
+    <trans-unit id="closeAllChats">
+      <source xml:lang="en">Close All Chats</source>
+    </trans-unit>
+    <trans-unit id="closeAllSessions">
+      <source xml:lang="en">Close All Sessions</source>
+    </trans-unit>
+    <trans-unit id="closeEditorArea">
+      <source xml:lang="en">Close Editor Area</source>
+    </trans-unit>
+    <trans-unit id="closedChatsGroup">
+      <source xml:lang="en">Closed</source>
+    </trans-unit>
+    <trans-unit id="deleteActiveChat">
+      <source xml:lang="en">Delete Chat</source>
+    </trans-unit>
+    <trans-unit id="deleteChat">
+      <source xml:lang="en">Delete...</source>
+    </trans-unit>
+    <trans-unit id="focusActiveSession">
+      <source xml:lang="en">Focus Active Session</source>
+    </trans-unit>
+    <trans-unit id="focusLastSessionInGrid">
+      <source xml:lang="en">Focus Last Session in Grid</source>
+    </trans-unit>
+    <trans-unit id="focusNextChatGroup">
+      <source xml:lang="en">Focus Next Chat Group</source>
+    </trans-unit>
+    <trans-unit id="focusPreviousChatGroup">
+      <source xml:lang="en">Focus Previous Chat Group</source>
+    </trans-unit>
+    <trans-unit id="focusSessionInGrid">
+      <source xml:lang="en">Focus Session {0} in Grid</source>
+    </trans-unit>
+    <trans-unit id="miSessionsBack">
+      <source xml:lang="en">&amp;&amp;Back</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="miSessionsForward">
+      <source xml:lang="en">&amp;&amp;Forward</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="moveChatToNextGroup">
+      <source xml:lang="en">Move Chat to Next Group</source>
+    </trans-unit>
+    <trans-unit id="moveChatToPreviousGroup">
+      <source xml:lang="en">Move Chat to Previous Group</source>
+    </trans-unit>
+    <trans-unit id="navigateNextChat">
+      <source xml:lang="en">Go to Next Chat</source>
+    </trans-unit>
+    <trans-unit id="navigatePreviousChat">
+      <source xml:lang="en">Go to Previous Chat</source>
+    </trans-unit>
+    <trans-unit id="newCompact">
+      <source xml:lang="en">New</source>
+    </trans-unit>
+    <trans-unit id="newSession">
+      <source xml:lang="en">New Session</source>
+    </trans-unit>
+    <trans-unit id="newSessionButtonAriaLabel">
+      <source xml:lang="en">New Session ({0})</source>
+    </trans-unit>
+    <trans-unit id="newSessionButtonAriaLabelWithoutKeybinding">
+      <source xml:lang="en">New Session</source>
+    </trans-unit>
+    <trans-unit id="newSessionButtonTitle">
+      <source xml:lang="en">New Session ({0})</source>
+    </trans-unit>
+    <trans-unit id="newSessionButtonTitleWithoutKeybinding">
+      <source xml:lang="en">New Session</source>
+    </trans-unit>
+    <trans-unit id="openChatToSide">
+      <source xml:lang="en">Open to the Side</source>
+    </trans-unit>
+    <trans-unit id="openChatsGroup">
+      <source xml:lang="en">Open</source>
+    </trans-unit>
+    <trans-unit id="otherSessions">
+      <source xml:lang="en">other sessions</source>
+    </trans-unit>
+    <trans-unit id="quickSwitchNextChat">
+      <source xml:lang="en">Quick Switch to Next Chat</source>
+    </trans-unit>
+    <trans-unit id="quickSwitchPreviousChat">
+      <source xml:lang="en">Quick Switch to Previous Chat</source>
+    </trans-unit>
+    <trans-unit id="recentlyOpened">
+      <source xml:lang="en">recently opened</source>
+    </trans-unit>
+    <trans-unit id="renameActiveChat">
+      <source xml:lang="en">Rename...</source>
+    </trans-unit>
+    <trans-unit id="renameChat">
+      <source xml:lang="en">Rename...</source>
+    </trans-unit>
+    <trans-unit id="renameChat.empty">
+      <source xml:lang="en">Title cannot be empty</source>
+    </trans-unit>
+    <trans-unit id="renameChat.prompt">
+      <source xml:lang="en">New chat title</source>
+    </trans-unit>
+    <trans-unit id="renameSessionHeader">
+      <source xml:lang="en">Rename...</source>
+    </trans-unit>
+    <trans-unit id="reopenLastClosedItem">
+      <source xml:lang="en">Reopen Closed Chat or Session</source>
+    </trans-unit>
+    <trans-unit id="searchChats">
+      <source xml:lang="en">Search chats by name</source>
+    </trans-unit>
+    <trans-unit id="searchSessions">
+      <source xml:lang="en">Search sessions by name or folder</source>
+    </trans-unit>
+    <trans-unit id="sessionsGoBack">
+      <source xml:lang="en">Go Back</source>
+    </trans-unit>
+    <trans-unit id="sessionsGoBackTooltip">
+      <source xml:lang="en">Go Back One Session</source>
+    </trans-unit>
+    <trans-unit id="sessionsGoForward">
+      <source xml:lang="en">Go Forward</source>
+    </trans-unit>
+    <trans-unit id="sessionsGoForwardTooltip">
+      <source xml:lang="en">Go Forward One Session</source>
+    </trans-unit>
+    <trans-unit id="sessionsPickerNeedsInput">
+      <source xml:lang="en">needs input</source>
+    </trans-unit>
+    <trans-unit id="sessionsPickerUnread">
+      <source xml:lang="en">unread</source>
+    </trans-unit>
+    <trans-unit id="showChatsPicker">
+      <source xml:lang="en">Go to Chat in Session</source>
+    </trans-unit>
+    <trans-unit id="showSessionsPicker">
+      <source xml:lang="en">Show Sessions Picker</source>
+    </trans-unit>
+    <trans-unit id="splitChatGroupDown">
+      <source xml:lang="en">Split Chat Group Down</source>
+    </trans-unit>
+    <trans-unit id="splitChatGroupRight">
+      <source xml:lang="en">Split Chat Group Right</source>
+    </trans-unit>
+    <trans-unit id="untitledChat">
+      <source xml:lang="en">Untitled Chat</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/sessionsTitleBarWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSessionsControl">
+      <source xml:lang="en">Agent Sessions</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsSessionWithContext">
+      <source xml:lang="en">{0} · {1}</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsSessionWithContextAccessible">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsShowSessions">
+      <source xml:lang="en">Show Sessions</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsShowSessionsWithTitle">
+      <source xml:lang="en">Show Sessions: {0}</source>
+    </trans-unit>
+    <trans-unit id="closeBlockedSessions">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="ignoreAllInputNeeded">
+      <source xml:lang="en">Ignore All Input Needed</source>
+    </trans-unit>
+    <trans-unit id="nSessionsApproved">
+      <source xml:lang="en">Approved {0} sessions</source>
+    </trans-unit>
+    <trans-unit id="noWorkspace">
+      <source xml:lang="en">No workspace</source>
+    </trans-unit>
+    <trans-unit id="oneSessionApproved">
+      <source xml:lang="en">Approved 1 session</source>
+    </trans-unit>
+    <trans-unit id="showAllSessions">
+      <source xml:lang="en">Show All Sessions</source>
+    </trans-unit>
+    <trans-unit id="showSessions">
+      <source xml:lang="en">Show Sessions</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/sessionsWindowNotifier" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.notification.completed">
+      <source xml:lang="en">Session completed.</source>
+    </trans-unit>
+    <trans-unit id="sessions.notification.completedWithWorkspace">
+      <source xml:lang="en">Completed in {0}.</source>
+    </trans-unit>
+    <trans-unit id="sessions.notification.failed">
+      <source xml:lang="en">Session failed.</source>
+    </trans-unit>
+    <trans-unit id="sessions.notification.failedWithWorkspace">
+      <source xml:lang="en">Failed in {0}.</source>
+    </trans-unit>
+    <trans-unit id="sessions.notification.needsInput">
+      <source xml:lang="en">Input needed.</source>
+    </trans-unit>
+    <trans-unit id="sessions.notification.needsInputWithWorkspace">
+      <source xml:lang="en">Input needed in {0}.</source>
+    </trans-unit>
+    <trans-unit id="sessions.notification.openSession">
+      <source xml:lang="en">Open Session</source>
+    </trans-unit>
+    <trans-unit id="sessions.notification.title">
+      <source xml:lang="en">Session: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/automationTemplates" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationTemplate.findBugs.description">
+      <source xml:lang="en">Explore the codebase and report verified, reproducible bugs.</source>
+    </trans-unit>
+    <trans-unit id="automationTemplate.findBugs.name">
+      <source xml:lang="en">Find bugs</source>
+    </trans-unit>
+    <trans-unit id="automationTemplate.findBugs.prompt">
+      <source xml:lang="en">Explore this codebase and find concrete, reproducible bugs.
+
+Read the repository guidance and understand the architecture before choosing a focused area to investigate, such as recent changes, complex state transitions, or error handling. Trace suspected problems through callers and existing tests. Use the smallest relevant tests or a minimal reproduction to verify behavior, and distinguish confirmed bugs from hypotheses. Avoid style-only suggestions and speculative findings.
+
+Report high-confidence, actionable bugs with severity, file and line references, a triggering scenario, expected versus actual behavior, and supporting test or reproduction results. Suggest a focused fix for each finding without modifying repository files or committing changes. State what you explored, any validation limitations, and when no confirmed bugs were found.</source>
+    </trans-unit>
+    <trans-unit id="automationTemplate.issueTriage.description">
+      <source xml:lang="en">Triage my GitHub repositories' issues using their precedents.</source>
+    </trans-unit>
+    <trans-unit id="automationTemplate.issueTriage.name">
+      <source xml:lang="en">Issue triage</source>
+    </trans-unit>
+    <trans-unit id="automationTemplate.issueTriage.prompt">
+      <source xml:lang="en">Triage my GitHub repositories' issues using existing repository precedents.
+
+Use the authenticated GitHub account to find my repositories, prioritizing active repositories and new or untriaged issues. For each repository, read its contribution guidelines, issue templates, existing labels, and comparable issues with maintainer decisions. Learn each repository's conventions separately before making recommendations.
+
+Produce a report grouped by repository. Link to each issue, recommend existing labels, identify likely duplicates, and draft a reply when useful. Cite prior issues, pull requests, or maintainer comments supporting each recommendation. Flag uncertainty or missing precedent rather than inventing a rule. Do not apply labels, post comments, close issues, or make other GitHub changes. State which repositories and issues were reviewed and any access limitations.</source>
+    </trans-unit>
+    <trans-unit id="automationTemplate.mainUpdates.description">
+      <source xml:lang="en">Pull the latest main and summarize new commits.</source>
+    </trans-unit>
+    <trans-unit id="automationTemplate.mainUpdates.name">
+      <source xml:lang="en">Catch up on main</source>
+    </trans-unit>
+    <trans-unit id="automationTemplate.mainUpdates.prompt">
+      <source xml:lang="en">Pull the latest main and summarize the commits that were pulled.
+
+Inspect this repository's current branch, working tree, and configured remotes. Resolve the remote for main from the repository configuration rather than assuming origin. Record HEAD, then pull that remote's main into the current checkout using --ff-only. Proceed only with a clean working tree and a fast-forward update. If the remote is ambiguous, main is missing, or the update is blocked, stop and explain why. Do not switch branches, stash or discard local changes, rebase, or force an update.
+
+Compare the starting and ending HEAD and summarize only newly pulled commits, grouped by theme. Highlight user-visible changes, bug fixes, breaking changes, and follow-up actions. Include commit links and related pull requests when available. If no commits were pulled, say so.</source>
+    </trans-unit>
+    <trans-unit id="automationTemplate.pluginDescription">
+      <source xml:lang="en">Provided by {0}.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/automationsAccessibility" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationsAccessibleView.automation">
+      <source xml:lang="en">{0}, enabled</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.automationDisabled">
+      <source xml:lang="en">{0}, disabled</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.builtInTemplates">
+      <source xml:lang="en">Built-in Templates</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.completed">
+      <source xml:lang="en">Completed</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.daily">
+      <source xml:lang="en">Daily at {0}</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.empty">
+      <source xml:lang="en">No automations.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.failed">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.history">
+      <source xml:lang="en">Run history</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.hourly">
+      <source xml:lang="en">Hourly</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.loadError">
+      <source xml:lang="en">Unable to load automations.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.loading">
+      <source xml:lang="en">Loading automations.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.manual">
+      <source xml:lang="en">Manual</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.noRuns">
+      <source xml:lang="en">No runs.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.partialLoadError">
+      <source xml:lang="en">Some automations could not be loaded.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.partialLoading">
+      <source xml:lang="en">Additional automations are loading.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.partialUnavailable">
+      <source xml:lang="en">Some automations are unavailable.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.pending">
+      <source xml:lang="en">Pending</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.pluginTemplate">
+      <source xml:lang="en">{0}, {1}. {2} From {3}.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.pluginTemplates">
+      <source xml:lang="en">Templates from Plugins</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.prompt">
+      <source xml:lang="en">Prompt: {0}</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.run">
+      <source xml:lang="en">{0}, {1}, started {2}</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.runError">
+      <source xml:lang="en">Error: {0}</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.running">
+      <source xml:lang="en">Running</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.schedule">
+      <source xml:lang="en">Schedule: {0}</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.template">
+      <source xml:lang="en">{0}, {1}. {2}</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.templates">
+      <source xml:lang="en">Available templates</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.title">
+      <source xml:lang="en">Automations</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.unavailable">
+      <source xml:lang="en">Some automations are unavailable. One or more providers are disconnected, disabled, or do not support automations.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.unknown">
+      <source xml:lang="en">Unknown automation</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.weekly">
+      <source xml:lang="en">{0} at {1}</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.accessibleView">
+      <source xml:lang="en">Use Open Accessible View to read the current automations and run history as text.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.builtInTemplatesCollapsed">
+      <source xml:lang="en">The Built-in Templates section is collapsed by default because saved automations exist. Press Enter or Space on its disclosure control to expand it.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.builtInTemplatesExpanded">
+      <source xml:lang="en">The Built-in Templates section is expanded by default while there are no saved automations. Tab to a template and press Enter or Space to open a New automation dialog with an editable name, prompt, and schedule.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.cards">
+      <source xml:lang="en">For saved automations, Tab to a card's Edit control and action buttons. Use Left Arrow and Right Arrow to move between Run now and Delete. Press Enter or Space to activate a control. Edit, or clicking anywhere else on the card, opens the automation dialog. Open a card's context menu{0} (for example Shift+F10). Duplicate opens a prefilled New automation dialog, Disable prevents scheduled runs, and Delete asks for confirmation. Run now starts a session immediately.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.history">
+      <source xml:lang="en">Run history is grouped by date. While a run is waiting for its session, a lightweight row shows the automation name with a Working... description. Once the session is available, use Up Arrow and Down Arrow to navigate the Sessions list, Enter to open, and Tab to reach Stop, the configured Archive or Mark as Done action, or Delete when available. Open a row's context menu, for example with Shift+F10, to rename it, change its active or read state, or delete it. Delete permanently deletes the session and removes it from run history after confirmation.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.overview">
+      <source xml:lang="en">You are in the Automations view. It contains available automation cards followed by run history. Loading, unavailable, and error messages indicate that the catalogue may be incomplete.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.pluginTemplates">
+      <source xml:lang="en">The Templates from Plugins section is available whenever enabled plugins provide templates. Press Enter or Space on its disclosure control to expand or collapse it. A blue marker indicates templates added since the section was last expanded. Plugin templates start disabled.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.read">
+      <source xml:lang="en">Completed and failed runs that have not been opened are announced as unread. Use Mark all as read to clear all available unread runs.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.sharing">
+      <source xml:lang="en">Use Import Automation in the view header, or drop one .automation.md file anywhere in the view, to review a shared Automation blueprint. Imported Automations start disabled. Open a saved Automation's context menu and choose Export to save a portable blueprint.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/automationsView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationActions">
+      <source xml:lang="en">Actions for {0}</source>
+    </trans-unit>
+    <trans-unit id="automationAlreadyRunningStatus">
+      <source xml:lang="en">Automation {0} is already running</source>
+    </trans-unit>
+    <trans-unit id="automationBlueprint.invalidField">
+      <source xml:lang="en">The property '{0}' is missing or invalid.</source>
+    </trans-unit>
+    <trans-unit id="automationBlueprint.invalidFrontmatter">
+      <source xml:lang="en">The file must start with valid YAML frontmatter.</source>
+    </trans-unit>
+    <trans-unit id="automationBlueprint.invalidId">
+      <source xml:lang="en">The blueprint id '{0}' is invalid.</source>
+    </trans-unit>
+    <trans-unit id="automationBlueprint.missingPrompt">
+      <source xml:lang="en">The Automation prompt must follow the frontmatter.</source>
+    </trans-unit>
+    <trans-unit id="automationBlueprint.unknownProperty">
+      <source xml:lang="en">The property '{0}' is not supported.</source>
+    </trans-unit>
+    <trans-unit id="automationBlueprint.unsupportedSchedule">
+      <source xml:lang="en">The cron expression '{0}' cannot be represented by the current Automation editor.</source>
+    </trans-unit>
+    <trans-unit id="automationBlueprint.unsupportedTimeZone">
+      <source xml:lang="en">The time zone '{0}' is not supported. Use 'local' so the schedule follows the importing user's time zone.</source>
+    </trans-unit>
+    <trans-unit id="automationBlueprint.unsupportedVersion">
+      <source xml:lang="en">Automation blueprint version {0} is not supported.</source>
+    </trans-unit>
+    <trans-unit id="automationBlueprintFileFilter">
+      <source xml:lang="en">Automation Blueprint</source>
+    </trans-unit>
+    <trans-unit id="automationBuiltInTemplatesDescription">
+      <source xml:lang="en">Choose a starting point, then review and customize it before creating.</source>
+    </trans-unit>
+    <trans-unit id="automationBuiltInTemplatesTitle">
+      <source xml:lang="en">Built-in Templates</source>
+    </trans-unit>
+    <trans-unit id="automationCard">
+      <source xml:lang="en">{0} — {1}</source>
+    </trans-unit>
+    <trans-unit id="automationChangedDuringDisable">
+      <source xml:lang="en">This automation changed before it could be disabled. Try again.</source>
+    </trans-unit>
+    <trans-unit id="automationChangedDuringEdit">
+      <source xml:lang="en">This automation changed while the dialog was open. Reopen it to review the latest values.</source>
+    </trans-unit>
+    <trans-unit id="automationChangedDuringEnable">
+      <source xml:lang="en">This automation changed before it could be enabled. Try again.</source>
+    </trans-unit>
+    <trans-unit id="automationCopyName">
+      <source xml:lang="en">{0} Copy</source>
+    </trans-unit>
+    <trans-unit id="automationCreateFailed">
+      <source xml:lang="en">Failed to create automation.</source>
+    </trans-unit>
+    <trans-unit id="automationCreatedStatus">
+      <source xml:lang="en">Created automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automationDeleteFailed">
+      <source xml:lang="en">Failed to delete automation.</source>
+    </trans-unit>
+    <trans-unit id="automationDeletedDuringDisable">
+      <source xml:lang="en">This automation was deleted before it could be disabled.</source>
+    </trans-unit>
+    <trans-unit id="automationDeletedDuringEdit">
+      <source xml:lang="en">This automation was deleted while the dialog was open.</source>
+    </trans-unit>
+    <trans-unit id="automationDeletedDuringEnable">
+      <source xml:lang="en">This automation was deleted before it could be enabled.</source>
+    </trans-unit>
+    <trans-unit id="automationDeletedStatus">
+      <source xml:lang="en">Deleted automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automationDisableFailed">
+      <source xml:lang="en">Failed to disable automation.</source>
+    </trans-unit>
+    <trans-unit id="automationDisabledStatus">
+      <source xml:lang="en">Disabled automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automationDropDescription">
+      <source xml:lang="en">You can review the Automation before creating it.</source>
+    </trans-unit>
+    <trans-unit id="automationDropFailed">
+      <source xml:lang="en">Unable to import automation.</source>
+    </trans-unit>
+    <trans-unit id="automationDropMultiple">
+      <source xml:lang="en">Drop one Automation blueprint file at a time.</source>
+    </trans-unit>
+    <trans-unit id="automationDropTitle">
+      <source xml:lang="en">Drop to import automation</source>
+    </trans-unit>
+    <trans-unit id="automationDropUnsupported">
+      <source xml:lang="en">Only .automation.md files can be imported.</source>
+    </trans-unit>
+    <trans-unit id="automationDuplicateFailed">
+      <source xml:lang="en">Failed to duplicate automation.</source>
+    </trans-unit>
+    <trans-unit id="automationDuplicatedStatus">
+      <source xml:lang="en">Created duplicate automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automationEnableFailed">
+      <source xml:lang="en">Failed to enable automation.</source>
+    </trans-unit>
+    <trans-unit id="automationEnabledStatus">
+      <source xml:lang="en">Enabled automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automationExportFailed">
+      <source xml:lang="en">Failed to export automation.</source>
+    </trans-unit>
+    <trans-unit id="automationExportInvalidFileName">
+      <source xml:lang="en">Use a file name ending in exactly one .automation.md suffix.</source>
+    </trans-unit>
+    <trans-unit id="automationExportInvalidFileNameTitle">
+      <source xml:lang="en">Unable to export automation.</source>
+    </trans-unit>
+    <trans-unit id="automationExportedStatus">
+      <source xml:lang="en">Exported automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automationImportFailed">
+      <source xml:lang="en">Failed to import automation.</source>
+    </trans-unit>
+    <trans-unit id="automationImportReadFailed">
+      <source xml:lang="en">Failed to import automation.</source>
+    </trans-unit>
+    <trans-unit id="automationImportedStatus">
+      <source xml:lang="en">Imported automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automationIndexedCopyName">
+      <source xml:lang="en">{0} Copy {1}</source>
+    </trans-unit>
+    <trans-unit id="automationMarkAllReadFailed">
+      <source xml:lang="en">Failed to mark automation runs as read.</source>
+    </trans-unit>
+    <trans-unit id="automationNotStartedStatus">
+      <source xml:lang="en">Automation {0} did not start</source>
+    </trans-unit>
+    <trans-unit id="automationPluginTemplateBadge">
+      <source xml:lang="en">Plugin</source>
+    </trans-unit>
+    <trans-unit id="automationPluginTemplatesDescription">
+      <source xml:lang="en">Templates provided by enabled plugins start disabled.</source>
+    </trans-unit>
+    <trans-unit id="automationPluginTemplatesManyNewAriaLabel">
+      <source xml:lang="en">Templates from Plugins, {0} new templates</source>
+    </trans-unit>
+    <trans-unit id="automationPluginTemplatesOneNewAriaLabel">
+      <source xml:lang="en">Templates from Plugins, 1 new template</source>
+    </trans-unit>
+    <trans-unit id="automationPluginTemplatesTitle">
+      <source xml:lang="en">Templates from Plugins</source>
+    </trans-unit>
+    <trans-unit id="automationRunActionFailed">
+      <source xml:lang="en">Failed to run automation.</source>
+    </trans-unit>
+    <trans-unit id="automationRunOpenFailed">
+      <source xml:lang="en">Failed to open automation run.</source>
+    </trans-unit>
+    <trans-unit id="automationRunSessionStopFailed">
+      <source xml:lang="en">Failed to stop the automation run session.</source>
+    </trans-unit>
+    <trans-unit id="automationRunSessionStoppedStatus">
+      <source xml:lang="en">Stopped the session for {0}</source>
+    </trans-unit>
+    <trans-unit id="automationRunWorking">
+      <source xml:lang="en">Working...</source>
+    </trans-unit>
+    <trans-unit id="automationRunWorkingAriaLabel">
+      <source xml:lang="en">{0}, Working...</source>
+    </trans-unit>
+    <trans-unit id="automationStartedStatus">
+      <source xml:lang="en">Started automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automationTemplateBadge">
+      <source xml:lang="en">Template</source>
+    </trans-unit>
+    <trans-unit id="automationTemplateSource">
+      <source xml:lang="en">From {0}</source>
+    </trans-unit>
+    <trans-unit id="automationUpdateFailed">
+      <source xml:lang="en">Failed to update automation.</source>
+    </trans-unit>
+    <trans-unit id="automationUpdatedStatus">
+      <source xml:lang="en">Updated automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automationsDescription">
+      <source xml:lang="en">Schedule agent sessions to run automatically on a cadence you choose.</source>
+    </trans-unit>
+    <trans-unit id="automationsDisabledBeforeDelete">
+      <source xml:lang="en">Automations were disabled before the automation could be deleted.</source>
+    </trans-unit>
+    <trans-unit id="automationsDisabledBeforeDisable">
+      <source xml:lang="en">Automations were disabled before the automation could be updated.</source>
+    </trans-unit>
+    <trans-unit id="automationsDisabledBeforeDuplicate">
+      <source xml:lang="en">Automations were disabled before the duplicate could be saved.</source>
+    </trans-unit>
+    <trans-unit id="automationsDisabledBeforeEnable">
+      <source xml:lang="en">Automations were disabled before the automation could be enabled.</source>
+    </trans-unit>
+    <trans-unit id="automationsDisabledBeforeImport">
+      <source xml:lang="en">Automations were disabled before the imported automation could be saved.</source>
+    </trans-unit>
+    <trans-unit id="automationsDisabledBeforeSave">
+      <source xml:lang="en">Automations were disabled before the change could be saved.</source>
+    </trans-unit>
+    <trans-unit id="automationsDisabledDetail">
+      <source xml:lang="en">Enable “{0}” to make changes.</source>
+    </trans-unit>
+    <trans-unit id="automationsDisabledTitle">
+      <source xml:lang="en">Automations are disabled.</source>
+    </trans-unit>
+    <trans-unit id="automationsLoadError">
+      <source xml:lang="en">Unable to load automations</source>
+    </trans-unit>
+    <trans-unit id="automationsLoadErrorDescription">
+      <source xml:lang="en">The complete automation catalogue could not be read.</source>
+    </trans-unit>
+    <trans-unit id="automationsPartialLoadError">
+      <source xml:lang="en">Some automations could not be loaded.</source>
+    </trans-unit>
+    <trans-unit id="automationsPartialLoading">
+      <source xml:lang="en">Loading additional automations...</source>
+    </trans-unit>
+    <trans-unit id="automationsPartialUnavailable">
+      <source xml:lang="en">Some automations are unavailable.</source>
+    </trans-unit>
+    <trans-unit id="automationsTitle">
+      <source xml:lang="en">Automations</source>
+    </trans-unit>
+    <trans-unit id="automationsUnavailable">
+      <source xml:lang="en">Some automations are unavailable</source>
+    </trans-unit>
+    <trans-unit id="automationsUnavailableDescription">
+      <source xml:lang="en">One or more providers are disconnected, disabled, or do not support automations.</source>
+    </trans-unit>
+    <trans-unit id="confirmDeleteAutomation">
+      <source xml:lang="en">Delete automation "{0}"?</source>
+    </trans-unit>
+    <trans-unit id="confirmDeleteDetail">
+      <source xml:lang="en">This will permanently delete the automation and its run history.</source>
+    </trans-unit>
+    <trans-unit id="createAutomation">
+      <source xml:lang="en">Create Automation</source>
+    </trans-unit>
+    <trans-unit id="delete">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="deleteAutomationContextMenu">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="disableAutomationContextMenu">
+      <source xml:lang="en">Disable</source>
+    </trans-unit>
+    <trans-unit id="disabled">
+      <source xml:lang="en">Disabled</source>
+    </trans-unit>
+    <trans-unit id="duplicateAutomation">
+      <source xml:lang="en">Duplicate</source>
+    </trans-unit>
+    <trans-unit id="editAutomationNamed">
+      <source xml:lang="en">Edit automation {0}</source>
+    </trans-unit>
+    <trans-unit id="enableAutomationContextMenu">
+      <source xml:lang="en">Enable</source>
+    </trans-unit>
+    <trans-unit id="exportAutomation">
+      <source xml:lang="en">Export</source>
+    </trans-unit>
+    <trans-unit id="exportAutomationDialogSave">
+      <source xml:lang="en">Export</source>
+    </trans-unit>
+    <trans-unit id="exportAutomationDialogTitle">
+      <source xml:lang="en">Export Automation</source>
+    </trans-unit>
+    <trans-unit id="historyHeader">
+      <source xml:lang="en">History</source>
+    </trans-unit>
+    <trans-unit id="importAutomation">
+      <source xml:lang="en">Import Automation</source>
+    </trans-unit>
+    <trans-unit id="importAutomationDialogOpen">
+      <source xml:lang="en">Import</source>
+    </trans-unit>
+    <trans-unit id="importAutomationDialogTitle">
+      <source xml:lang="en">Import Automation</source>
+    </trans-unit>
+    <trans-unit id="lastWeek">
+      <source xml:lang="en">Last week</source>
+    </trans-unit>
+    <trans-unit id="loadingAutomations">
+      <source xml:lang="en">Loading automations...</source>
+    </trans-unit>
+    <trans-unit id="loadingAutomationsDescription">
+      <source xml:lang="en">You can create a new automation while existing automations load.</source>
+    </trans-unit>
+    <trans-unit id="markAllRead">
+      <source xml:lang="en">Mark all as read</source>
+    </trans-unit>
+    <trans-unit id="markAutomationRunSessionReadAction">
+      <source xml:lang="en">Mark as Read</source>
+    </trans-unit>
+    <trans-unit id="markAutomationRunSessionUnreadAction">
+      <source xml:lang="en">Mark as Unread</source>
+    </trans-unit>
+    <trans-unit id="moreActionsForAutomation">
+      <source xml:lang="en">More Actions for {0}</source>
+    </trans-unit>
+    <trans-unit id="newAutomation">
+      <source xml:lang="en">New Automation</source>
+    </trans-unit>
+    <trans-unit id="noAutomationsDesc">
+      <source xml:lang="en">Create an automation to schedule an agent session to run on a cadence you choose.</source>
+    </trans-unit>
+    <trans-unit id="noAutomationsYet">
+      <source xml:lang="en">No automations yet</source>
+    </trans-unit>
+    <trans-unit id="quickChat">
+      <source xml:lang="en">No workspace</source>
+    </trans-unit>
+    <trans-unit id="renameAutomationRunSessionAction">
+      <source xml:lang="en">Rename...</source>
+    </trans-unit>
+    <trans-unit id="runNow">
+      <source xml:lang="en">Run now</source>
+    </trans-unit>
+    <trans-unit id="running">
+      <source xml:lang="en">Running</source>
+    </trans-unit>
+    <trans-unit id="scheduleDailyAt">
+      <source xml:lang="en">Daily at {0}</source>
+    </trans-unit>
+    <trans-unit id="scheduleHourly">
+      <source xml:lang="en">Hourly</source>
+    </trans-unit>
+    <trans-unit id="scheduleManual">
+      <source xml:lang="en">Manual</source>
+    </trans-unit>
+    <trans-unit id="scheduleWeeklyAt">
+      <source xml:lang="en">{0} at {1}</source>
+    </trans-unit>
+    <trans-unit id="stopAutomationRunSessionAction">
+      <source xml:lang="en">Stop</source>
+    </trans-unit>
+    <trans-unit id="today">
+      <source xml:lang="en">Today</source>
+    </trans-unit>
+    <trans-unit id="unknownAutomation">
+      <source xml:lang="en">Unknown</source>
+    </trans-unit>
+    <trans-unit id="useAutomationTemplate">
+      <source xml:lang="en">Use template: {0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="usePluginAutomationTemplate">
+      <source xml:lang="en">Use template: {0}, {1}, from {2}</source>
+    </trans-unit>
+    <trans-unit id="yesterday">
+      <source xml:lang="en">Yesterday</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsList" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="addToGroupAction">
+      <source xml:lang="en">Add to Group</source>
+    </trans-unit>
+    <trans-unit id="allowAction">
+      <source xml:lang="en">Allow</source>
+    </trans-unit>
+    <trans-unit id="allowActionAria">
+      <source xml:lang="en">Allow once: {0}</source>
+    </trans-unit>
+    <trans-unit id="allowActionOnce">
+      <source xml:lang="en">Allow once</source>
+    </trans-unit>
+    <trans-unit id="automations">
+      <source xml:lang="en">Automations</source>
+    </trans-unit>
+    <trans-unit id="automationsActiveAria">
+      <source xml:lang="en">{0}, run in progress</source>
+    </trans-unit>
+    <trans-unit id="automationsNeedsInputAria">
+      <source xml:lang="en">{0}, run needs input</source>
+    </trans-unit>
+    <trans-unit id="automationsNewBadge">
+      <source xml:lang="en">New</source>
+    </trans-unit>
+    <trans-unit id="automationsNewFeatureAria">
+      <source xml:lang="en">{0}, new feature</source>
+    </trans-unit>
+    <trans-unit id="automationsUnreadRunAria">
+      <source xml:lang="en">{0}, unread run</source>
+    </trans-unit>
+    <trans-unit id="chatsSection">
+      <source xml:lang="en">Chats</source>
+    </trans-unit>
+    <trans-unit id="ci.blockedRow">
+      <source xml:lang="en">{0} checks failed, {1} pending</source>
+    </trans-unit>
+    <trans-unit id="ci.fixCI">
+      <source xml:lang="en">Fix CI</source>
+    </trans-unit>
+    <trans-unit id="ci.fixCITooltip">
+      <source xml:lang="en">Fix failing CI checks</source>
+    </trans-unit>
+    <trans-unit id="createGroupAction">
+      <source xml:lang="en">Create Group</source>
+    </trans-unit>
+    <trans-unit id="deleteGroupAction">
+      <source xml:lang="en">Delete Group</source>
+    </trans-unit>
+    <trans-unit id="inlineRename.empty">
+      <source xml:lang="en">Title cannot be empty</source>
+    </trans-unit>
+    <trans-unit id="markAllInSectionRead">
+      <source xml:lang="en">Mark All as Read</source>
+    </trans-unit>
+    <trans-unit id="moveToGroupAction">
+      <source xml:lang="en">Move to Group</source>
+    </trans-unit>
+    <trans-unit id="newGroupName">
+      <source xml:lang="en">New Group</source>
+    </trans-unit>
+    <trans-unit id="newSessionForWorkspaceMoreActions">
+      <source xml:lang="en">More Actions</source>
+    </trans-unit>
+    <trans-unit id="noChats">
+      <source xml:lang="en">No chats</source>
+    </trans-unit>
+    <trans-unit id="noSessionInGroup">
+      <source xml:lang="en">No session</source>
+    </trans-unit>
+    <trans-unit id="noSessionInGroupHover">
+      <source xml:lang="en">Use Add to Group from a session's context menu, or drag it into this group.</source>
+    </trans-unit>
+    <trans-unit id="older">
+      <source xml:lang="en">Older</source>
+    </trans-unit>
+    <trans-unit id="pendingVoiceResponse">
+      <source xml:lang="en">Voice response ready</source>
+    </trans-unit>
+    <trans-unit id="pinned">
+      <source xml:lang="en">Pinned</source>
+    </trans-unit>
+    <trans-unit id="quickChatBadge">
+      <source xml:lang="en">No workspace</source>
+    </trans-unit>
+    <trans-unit id="recent">
+      <source xml:lang="en">Recent</source>
+    </trans-unit>
+    <trans-unit id="removeFromGroupAction">
+      <source xml:lang="en">Remove from Group</source>
+    </trans-unit>
+    <trans-unit id="renameChat.inputAriaLabel">
+      <source xml:lang="en">Rename chat. Press Enter to confirm or Escape to cancel.</source>
+    </trans-unit>
+    <trans-unit id="renameGroupAction">
+      <source xml:lang="en">Rename...</source>
+    </trans-unit>
+    <trans-unit id="renameSession.inputAriaLabel">
+      <source xml:lang="en">Rename session. Press Enter to confirm or Escape to cancel.</source>
+    </trans-unit>
+    <trans-unit id="secondsDuration">
+      <source xml:lang="en">now</source>
+    </trans-unit>
+    <trans-unit id="sessionChatItemAria">
+      <source xml:lang="en">{0}, chat, updated {1}, {2}</source>
+    </trans-unit>
+    <trans-unit id="sessionGroupName">
+      <source xml:lang="en">Group name</source>
+    </trans-unit>
+    <trans-unit id="sessionItemAria">
+      <source xml:lang="en">{0}, updated {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionItemInputNeededMessageAria">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionItemQuickChatAria">
+      <source xml:lang="en">{0}, chat, updated {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionItemStatusAria">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionItemWorkspaceAria">
+      <source xml:lang="en">{0}, in {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionItemWorktreePendingAria">
+      <source xml:lang="en">{0}, creating worktree, updated {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionPlaceholderAria">
+      <source xml:lang="en">{0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionSectionAria">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionSectionFailingCIAria">
+      <source xml:lang="en">{0}, {1}, session has failing CI checks</source>
+    </trans-unit>
+    <trans-unit id="sessionSectionNeedsInputAria">
+      <source xml:lang="en">{0}, {1}, session needs input</source>
+    </trans-unit>
+    <trans-unit id="sessionSectionUnreadAria">
+      <source xml:lang="en">{0}, {1}, contains unread sessions</source>
+    </trans-unit>
+    <trans-unit id="sessions.dragLabel">
+      <source xml:lang="en">{0} sessions</source>
+    </trans-unit>
+    <trans-unit id="sessionsList">
+      <source xml:lang="en">Sessions</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.archiveOnboardingUnavailable">
+      <source xml:lang="en">The session could not be revealed in the sessions list. Try again.</source>
+    </trans-unit>
+    <trans-unit id="showLessAria">
+      <source xml:lang="en">Show fewer sessions</source>
+    </trans-unit>
+    <trans-unit id="showLessCompact">
+      <source xml:lang="en">Show less</source>
+    </trans-unit>
+    <trans-unit id="showLessWorkspacesAria">
+      <source xml:lang="en">Show fewer workspaces</source>
+    </trans-unit>
+    <trans-unit id="showLessWorkspacesCompact">
+      <source xml:lang="en">Show fewer workspaces</source>
+    </trans-unit>
+    <trans-unit id="showMoreAria">
+      <source xml:lang="en">Show {0} more sessions</source>
+    </trans-unit>
+    <trans-unit id="showMoreCompact">
+      <source xml:lang="en">+{0} more</source>
+    </trans-unit>
+    <trans-unit id="showMoreWorkspaceAria">
+      <source xml:lang="en">Show {0} more workspace</source>
+    </trans-unit>
+    <trans-unit id="showMoreWorkspaceCompact">
+      <source xml:lang="en">+{0} more workspace</source>
+    </trans-unit>
+    <trans-unit id="showMoreWorkspacesAria">
+      <source xml:lang="en">Show {0} more workspaces</source>
+    </trans-unit>
+    <trans-unit id="showMoreWorkspacesCompact">
+      <source xml:lang="en">+{0} more workspaces</source>
+    </trans-unit>
+    <trans-unit id="unknown">
+      <source xml:lang="en">Unknown</source>
+    </trans-unit>
+    <trans-unit id="untitledChat">
+      <source xml:lang="en">Untitled Chat</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="filterEmptyGroups">
+      <source xml:lang="en">Empty Groups</source>
+    </trans-unit>
+    <trans-unit id="filterRead">
+      <source xml:lang="en">Read</source>
+    </trans-unit>
+    <trans-unit id="groupByTime">
+      <source xml:lang="en">Group by Time</source>
+    </trans-unit>
+    <trans-unit id="groupByWorkspace">
+      <source xml:lang="en">Group by Workspace</source>
+    </trans-unit>
+    <trans-unit id="resetFilters">
+      <source xml:lang="en">Reset</source>
+    </trans-unit>
+    <trans-unit id="sessionsHeader">
+      <source xml:lang="en">Sessions</source>
+    </trans-unit>
+    <trans-unit id="sortByCreated">
+      <source xml:lang="en">Sort by Created</source>
+    </trans-unit>
+    <trans-unit id="sortByUpdated">
+      <source xml:lang="en">Sort by Updated</source>
+    </trans-unit>
+    <trans-unit id="sortGroupSheet.group">
+      <source xml:lang="en">Group</source>
+    </trans-unit>
+    <trans-unit id="sortGroupSheet.sort">
+      <source xml:lang="en">Sort</source>
+    </trans-unit>
+    <trans-unit id="sortGroupSheet.title">
+      <source xml:lang="en">Sort</source>
+    </trans-unit>
+    <trans-unit id="statusCompleted">
+      <source xml:lang="en">Completed</source>
+    </trans-unit>
+    <trans-unit id="statusFailed">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="statusInProgress">
+      <source xml:lang="en">In Progress</source>
+    </trans-unit>
+    <trans-unit id="statusNeedsInput">
+      <source xml:lang="en">Input Needed</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsViewActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="archiveGroupSession.confirmSingle">
+      <source xml:lang="en">Are you sure you want to archive 1 session from '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="archiveGroupSessions.confirm">
+      <source xml:lang="en">Are you sure you want to archive {0} sessions from '{1}'?</source>
+    </trans-unit>
+    <trans-unit id="archiveGroupSessions.detail">
+      <source xml:lang="en">You can unarchive sessions later if needed from the sessions view.</source>
+    </trans-unit>
+    <trans-unit id="archivePinnedSectionSession.confirmSingle">
+      <source xml:lang="en">Are you sure you want to archive 1 pinned session?</source>
+    </trans-unit>
+    <trans-unit id="archivePinnedSectionSessions.confirm">
+      <source xml:lang="en">Are you sure you want to archive {0} pinned sessions?</source>
+    </trans-unit>
+    <trans-unit id="archiveSectionSession.confirmSingle">
+      <source xml:lang="en">Are you sure you want to archive 1 session from '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="archiveSectionSessions.confirm">
+      <source xml:lang="en">Are you sure you want to archive {0} sessions from '{1}'?</source>
+    </trans-unit>
+    <trans-unit id="archiveSectionSessions.detail">
+      <source xml:lang="en">You can unarchive sessions later if needed from the sessions view.</source>
+    </trans-unit>
+    <trans-unit id="closeSession">
+      <source xml:lang="en">Close Session</source>
+    </trans-unit>
+    <trans-unit id="collapseAllGroups">
+      <source xml:lang="en">Collapse All Groups</source>
+    </trans-unit>
+    <trans-unit id="deleteEmptyGroup">
+      <source xml:lang="en">Delete Group</source>
+    </trans-unit>
+    <trans-unit id="deleteSession">
+      <source xml:lang="en">Delete...</source>
+    </trans-unit>
+    <trans-unit id="deleteSession.confirm">
+      <source xml:lang="en">Are you sure you want to delete this session?</source>
+    </trans-unit>
+    <trans-unit id="deleteSession.delete">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="deleteSession.detail">
+      <source xml:lang="en">This action cannot be undone.</source>
+    </trans-unit>
+    <trans-unit id="deleteSession.error">
+      <source xml:lang="en">Failed to delete the session: {0}</source>
+    </trans-unit>
+    <trans-unit id="deleteSessions.confirm">
+      <source xml:lang="en">Are you sure you want to delete {0} sessions?</source>
+    </trans-unit>
+    <trans-unit id="deleteSessions.error">
+      <source xml:lang="en">Failed to delete the sessions: {0}</source>
+    </trans-unit>
+    <trans-unit id="doNotAskAgain">
+      <source xml:lang="en">Do not ask me again</source>
+    </trans-unit>
+    <trans-unit id="filter">
+      <source xml:lang="en">Filter</source>
+    </trans-unit>
+    <trans-unit id="filterSessions">
+      <source xml:lang="en">Filter Sessions</source>
+    </trans-unit>
+    <trans-unit id="find">
+      <source xml:lang="en">Find Session</source>
+    </trans-unit>
+    <trans-unit id="groupByTime">
+      <source xml:lang="en">Group by Time</source>
+    </trans-unit>
+    <trans-unit id="groupByWorkspace">
+      <source xml:lang="en">Group by Workspace</source>
+    </trans-unit>
+    <trans-unit id="manageAutomations">
+      <source xml:lang="en">Manage Automations</source>
+    </trans-unit>
+    <trans-unit id="markAllAutomationRunsRead">
+      <source xml:lang="en">Mark All as Read</source>
+    </trans-unit>
+    <trans-unit id="markAllRead">
+      <source xml:lang="en">Mark All as Read</source>
+    </trans-unit>
+    <trans-unit id="markGroupSessionDone.confirmSingle">
+      <source xml:lang="en">Are you sure you want to mark 1 session from '{0}' as done?</source>
+    </trans-unit>
+    <trans-unit id="markGroupSessionsDone.confirm">
+      <source xml:lang="en">Are you sure you want to mark {0} sessions from '{1}' as done?</source>
+    </trans-unit>
+    <trans-unit id="markGroupSessionsDone.detail">
+      <source xml:lang="en">You can restore sessions later if needed from the sessions view.</source>
+    </trans-unit>
+    <trans-unit id="markPinnedSectionSessionDone.confirmSingle">
+      <source xml:lang="en">Are you sure you want to mark 1 pinned session as done?</source>
+    </trans-unit>
+    <trans-unit id="markPinnedSectionSessionsDone.confirm">
+      <source xml:lang="en">Are you sure you want to mark {0} pinned sessions as done?</source>
+    </trans-unit>
+    <trans-unit id="markRead">
+      <source xml:lang="en">Mark as Read</source>
+    </trans-unit>
+    <trans-unit id="markSectionSessionDone.confirmSingle">
+      <source xml:lang="en">Are you sure you want to mark 1 session from '{0}' as done?</source>
+    </trans-unit>
+    <trans-unit id="markSectionSessionsDone.confirm">
+      <source xml:lang="en">Are you sure you want to mark {0} sessions from '{1}' as done?</source>
+    </trans-unit>
+    <trans-unit id="markSectionSessionsDone.detail">
+      <source xml:lang="en">You can restore sessions later if needed from the sessions view.</source>
+    </trans-unit>
+    <trans-unit id="markUnread">
+      <source xml:lang="en">Mark as Unread</source>
+    </trans-unit>
+    <trans-unit id="navigateNextSession">
+      <source xml:lang="en">Go to Next Session</source>
+    </trans-unit>
+    <trans-unit id="navigateNextSession.mnemonic">
+      <source xml:lang="en">&amp;&amp;Next Session</source>
+    </trans-unit>
+    <trans-unit id="navigatePreviousSession">
+      <source xml:lang="en">Go to Previous Session</source>
+    </trans-unit>
+    <trans-unit id="navigatePreviousSession.mnemonic">
+      <source xml:lang="en">&amp;&amp;Previous Session</source>
+    </trans-unit>
+    <trans-unit id="newQuickChat">
+      <source xml:lang="en">New Quick Chat</source>
+    </trans-unit>
+    <trans-unit id="newSessionForWorkspace">
+      <source xml:lang="en">New Session</source>
+    </trans-unit>
+    <trans-unit id="newSessionInGroup">
+      <source xml:lang="en">New Session</source>
+    </trans-unit>
+    <trans-unit id="openToTheSide">
+      <source xml:lang="en">Open to the Side</source>
+    </trans-unit>
+    <trans-unit id="pinSession">
+      <source xml:lang="en">Pin</source>
+    </trans-unit>
+    <trans-unit id="refresh">
+      <source xml:lang="en">Refresh Sessions</source>
+    </trans-unit>
+    <trans-unit id="renameSession">
+      <source xml:lang="en">Rename...</source>
+    </trans-unit>
+    <trans-unit id="renameSession.empty">
+      <source xml:lang="en">Title cannot be empty</source>
+    </trans-unit>
+    <trans-unit id="renameSession.prompt">
+      <source xml:lang="en">New agent session title</source>
+    </trans-unit>
+    <trans-unit id="resetAutomationsNewBadge">
+      <source xml:lang="en">Reset Automations New Badge</source>
+    </trans-unit>
+    <trans-unit id="showAllSessions">
+      <source xml:lang="en">Show All Sessions</source>
+    </trans-unit>
+    <trans-unit id="showRecentSessions">
+      <source xml:lang="en">Show Recent Sessions</source>
+    </trans-unit>
+    <trans-unit id="sortByCreated">
+      <source xml:lang="en">Sort by Created</source>
+    </trans-unit>
+    <trans-unit id="sortByUpdated">
+      <source xml:lang="en">Sort by Updated</source>
+    </trans-unit>
+    <trans-unit id="toggleCompactSessionsView">
+      <source xml:lang="en">Compact View</source>
+    </trans-unit>
+    <trans-unit id="unpinSession">
+      <source xml:lang="en">Unpin</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/electron-browser/sessions.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.applicationBadge">
+      <source xml:lang="en">Controls which unarchived sessions are counted in the application badge when {0} is enabled. Sessions matching more than one enabled option are counted once.</source>
+    </trans-unit>
+    <trans-unit id="sessions.applicationBadge.ciFailing">
+      <source xml:lang="en">Count sessions with failing CI checks on an open, non-draft pull request that are no longer in progress and are not being handled by Agent Merge.</source>
+    </trans-unit>
+    <trans-unit id="sessions.applicationBadge.inputNeeded">
+      <source xml:lang="en">Count sessions that need input or approval.</source>
+    </trans-unit>
+    <trans-unit id="sessions.applicationBadge.unread">
+      <source xml:lang="en">Count unread sessions that are no longer in progress.</source>
+    </trans-unit>
+    <trans-unit id="sessions.showApplicationBadge">
+      <source xml:lang="en">Controls whether the application icon shows a badge with the number of unarchived sessions matching {0}. The badge appears on the dock icon on macOS, on the launcher icon on Linux and over the taskbar icon on Windows.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/electron-browser/sessionsApplicationBadge" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.applicationBadge.multiple">
+      <source xml:lang="en">{0} sessions need your attention</source>
+    </trans-unit>
+    <trans-unit id="sessions.applicationBadge.single">
+      <source xml:lang="en">1 session needs your attention</source>
+    </trans-unit>
+</body></file>
+</xliff>

@@ -63,6 +63,37 @@
     <trans-unit id="search.rerunSearchInEditor">
       <source xml:lang="en">Search Again</source>
     </trans-unit>
+    <trans-unit id="search.searchEditor.defaultNumberOfContextLines">
+      <source xml:lang="en">The default number of surrounding context lines to use when creating new Search Editors. If using `#search.searchEditor.reusePriorSearchConfiguration#`, this can be set to `null` (empty) to use the prior Search Editor's configuration.</source>
+    </trans-unit>
+    <trans-unit id="search.searchEditor.doubleClickBehaviour">
+      <source xml:lang="en">Configure effect of double-clicking a result in a search editor.</source>
+    </trans-unit>
+    <trans-unit id="search.searchEditor.doubleClickBehaviour.goToLocation">
+      <source xml:lang="en">Double-clicking opens the result in the active editor group.</source>
+    </trans-unit>
+    <trans-unit id="search.searchEditor.doubleClickBehaviour.openLocationToSide">
+      <source xml:lang="en">Double-clicking opens the result in the editor group to the side, creating one if it does not yet exist.</source>
+    </trans-unit>
+    <trans-unit id="search.searchEditor.doubleClickBehaviour.selectWord">
+      <source xml:lang="en">Double-clicking selects the word under the cursor.</source>
+    </trans-unit>
+    <trans-unit id="search.searchEditor.focusResultsOnSearch">
+      <source xml:lang="en">When a search is triggered, focus the Search Editor results instead of the Search Editor input.</source>
+    </trans-unit>
+    <trans-unit id="search.searchEditor.reusePriorSearchConfiguration">
+      <source xml:lang="en">When enabled, new Search Editors will reuse the includes, excludes, and flags of the previously opened Search Editor.</source>
+      <note>"Search Editor" is a type of editor that can display search results. "includes, excludes, and flags" refers to the "files to include" and "files to exclude" input boxes, and the flags that control whether a query is case-sensitive or a regex.</note>
+    </trans-unit>
+    <trans-unit id="search.searchEditor.singleClickBehaviour">
+      <source xml:lang="en">Configure effect of single-clicking a result in a search editor.</source>
+    </trans-unit>
+    <trans-unit id="search.searchEditor.singleClickBehaviour.default">
+      <source xml:lang="en">Single-clicking does nothing.</source>
+    </trans-unit>
+    <trans-unit id="search.searchEditor.singleClickBehaviour.peekDefinition">
+      <source xml:lang="en">Single-clicking opens a Peek Definition window.</source>
+    </trans-unit>
     <trans-unit id="searchEditor">
       <source xml:lang="en">Search Editor</source>
     </trans-unit>

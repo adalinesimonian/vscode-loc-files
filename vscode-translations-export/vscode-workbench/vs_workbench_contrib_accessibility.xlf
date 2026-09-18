@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/accessibility/browser/accessibilityConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accessibility.chat.showCheckmarks">
+      <source xml:lang="en">Controls whether checkmark icons are shown on completed tool calls and other collapsible items in chat responses.</source>
+    </trans-unit>
     <trans-unit id="accessibility.debugWatchVariableAnnouncements">
       <source xml:lang="en">Controls whether variable changes should be announced in the debug watch view.</source>
     </trans-unit>
@@ -346,6 +349,24 @@
     <trans-unit id="accessibility.signals.terminalQuickFix.sound">
       <source xml:lang="en">Plays a sound when terminal Quick Fixes are available.</source>
     </trans-unit>
+    <trans-unit id="accessibility.signals.voiceModeStarted">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when voice mode has started.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.voiceModeStarted.announcement">
+      <source xml:lang="en">Announces when voice mode has started.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.voiceModeStarted.sound">
+      <source xml:lang="en">Plays a sound when voice mode has started.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.voiceModeStopped">
+      <source xml:lang="en">Plays a signal - sound (audio cue) and/or announcement (alert) - when voice mode has stopped.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.voiceModeStopped.announcement">
+      <source xml:lang="en">Announces when voice mode has stopped.</source>
+    </trans-unit>
+    <trans-unit id="accessibility.signals.voiceModeStopped.sound">
+      <source xml:lang="en">Plays a sound when voice mode has stopped.</source>
+    </trans-unit>
     <trans-unit id="accessibility.signals.voiceRecordingStarted">
       <source xml:lang="en">Plays a sound / audio cue when the voice recording has started.</source>
     </trans-unit>
@@ -412,11 +433,29 @@
     <trans-unit id="terminal.integrated.accessibleView.closeOnKeyPress">
       <source xml:lang="en">On keypress, close the Accessible View and focus the element from which it was invoked.</source>
     </trans-unit>
+    <trans-unit id="verbosity.automations">
+      <source xml:lang="en">Provide information about how to use Automations management views, including keyboard navigation and how to inspect scheduled runs.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.browserElementCommenting">
+      <source xml:lang="en">Provide information about how to access element commenting accessibility help in the Integrated Browser.</source>
+    </trans-unit>
     <trans-unit id="verbosity.chat.description">
       <source xml:lang="en">Provide information about how to access the chat help menu when the chat input is focused.</source>
     </trans-unit>
+    <trans-unit id="verbosity.chatPetAchievements">
+      <source xml:lang="en">Provide information about how to access chat pet achievements accessibility help when the Achievements modal is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.chatQuestionCarousel">
+      <source xml:lang="en">Provide information about how to navigate and interact with the chat question carousel, including how to focus the terminal when applicable.</source>
+    </trans-unit>
     <trans-unit id="verbosity.comments">
       <source xml:lang="en">Provide information about actions that can be taken in the comment widget or in a file which contains comments.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.connectionDiagnostics">
+      <source xml:lang="en">Provide information about how to access connection diagnostics accessibility help when the report is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.customizationMigrations.description">
+      <source xml:lang="en">Provide information about how to access accessibility help for the customization migration checklist.</source>
     </trans-unit>
     <trans-unit id="verbosity.debug">
       <source xml:lang="en">Provide information about how to access the debug console accessibility help dialog when the debug console or run and debug viewlet is focused. Note that a reload of the window is required for this to take effect.</source>
@@ -430,6 +469,9 @@
     <trans-unit id="verbosity.emptyEditorHint">
       <source xml:lang="en">Provide information about relevant actions in an empty text editor.</source>
     </trans-unit>
+    <trans-unit id="verbosity.find">
+      <source xml:lang="en">Provide information about how to access the find accessibility help menu when the find input is focused.</source>
+    </trans-unit>
     <trans-unit id="verbosity.hover">
       <source xml:lang="en">Provide information about how to open the hover in an Accessible View.</source>
     </trans-unit>
@@ -440,7 +482,7 @@
       <source xml:lang="en">Provide information about how to access the inline editor chat accessibility help menu and alert with hints that describe how to use the feature when the input is focused.</source>
     </trans-unit>
     <trans-unit id="verbosity.keybindingsEditor.description">
-      <source xml:lang="en">Provide information about how to change a keybinding in the keybindings editor when a row is focused.</source>
+      <source xml:lang="en">Provide information about how to change a keybinding in the keybindings editor when a row is focused and how to navigate to the results table.</source>
     </trans-unit>
     <trans-unit id="verbosity.notebook">
       <source xml:lang="en">Provide information about how to focus the cell container or inner editor when a notebook cell is focused.</source>
@@ -453,6 +495,15 @@
     </trans-unit>
     <trans-unit id="verbosity.scm">
       <source xml:lang="en">Provide information about how to access the source control accessibility help menu when the input is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.sessionsChanges">
+      <source xml:lang="en">Provide information about how to access the Changes view accessibility help menu when the Changes view is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.sessionsChat">
+      <source xml:lang="en">Provide information about how to access the Agents window accessibility help menu when the chat input is focused.</source>
+    </trans-unit>
+    <trans-unit id="verbosity.survey">
+      <source xml:lang="en">Provide information about how to navigate and interact with the survey editor pane.</source>
     </trans-unit>
     <trans-unit id="verbosity.terminal.description">
       <source xml:lang="en">Provide information about how to access the terminal accessibility help menu when the terminal is focused.</source>

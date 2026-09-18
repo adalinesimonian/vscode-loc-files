@@ -338,6 +338,15 @@
     <trans-unit id="context.minimap.renderCharacters">
       <source xml:lang="en">Render Characters</source>
     </trans-unit>
+    <trans-unit id="context.minimap.side">
+      <source xml:lang="en">Side</source>
+    </trans-unit>
+    <trans-unit id="context.minimap.side.left">
+      <source xml:lang="en">Left</source>
+    </trans-unit>
+    <trans-unit id="context.minimap.side.right">
+      <source xml:lang="en">Right</source>
+    </trans-unit>
     <trans-unit id="context.minimap.size">
       <source xml:lang="en">Vertical size</source>
     </trans-unit>
@@ -466,6 +475,9 @@ The first edit matching the preferences will be applied.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/find/browser/findController" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="ariaSearchNoResult">
+      <source xml:lang="en">{0} found for '{1}'</source>
+    </trans-unit>
     <trans-unit id="findMatchAction.goToMatch">
       <source xml:lang="en">Go to Match...</source>
     </trans-unit>
@@ -515,6 +527,9 @@ The first edit matching the preferences will be applied.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/find/browser/findWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accessibilityHelpHintInLabel">
+      <source xml:lang="en">Press {0} for accessibility help</source>
+    </trans-unit>
     <trans-unit id="ariaSearchNoResult">
       <source xml:lang="en">{0} found for '{1}'</source>
     </trans-unit>
@@ -532,6 +547,9 @@ The first edit matching the preferences will be applied.</source>
     </trans-unit>
     <trans-unit id="findExpandedIcon">
       <source xml:lang="en">Icon to indicate that the editor find widget is expanded.</source>
+    </trans-unit>
+    <trans-unit id="findInputAriaLabelWithHint">
+      <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
     <trans-unit id="findNextMatchIcon">
       <source xml:lang="en">Icon for 'Find Next' in the editor find widget.</source>
@@ -589,6 +607,9 @@ The first edit matching the preferences will be applied.</source>
     </trans-unit>
     <trans-unit id="placeholder.replace">
       <source xml:lang="en">Replace</source>
+    </trans-unit>
+    <trans-unit id="replaceInputAriaLabelWithHint">
+      <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
     <trans-unit id="title.matchesCountLimit">
       <source xml:lang="en">Only the first {0} results are highlighted, but all find operations work on the entire text.</source>
@@ -770,7 +791,7 @@ The first edit matching the preferences will be applied.</source>
       <source xml:lang="en">Editor marker navigation widget warning heading background.</source>
     </trans-unit>
     <trans-unit id="marker aria">
-      <source xml:lang="en">{0} at {1}. </source>
+      <source xml:lang="en">{0}: {1} at {2}. </source>
     </trans-unit>
     <trans-unit id="problems">
       <source xml:lang="en">{0} of {1} problems</source>
@@ -1110,26 +1131,24 @@ This allows for users to show the hover without using the mouse.</note>
     <trans-unit id="decreaseVerbosity">
       <source xml:lang="en">Decrease Hover Verbosity</source>
     </trans-unit>
-    <trans-unit id="decreaseVerbosityWithKb">
-      <source xml:lang="en">Decrease Hover Verbosity ({0})</source>
-    </trans-unit>
     <trans-unit id="increaseHoverVerbosity">
       <source xml:lang="en">Icon for increaseing hover verbosity.</source>
     </trans-unit>
     <trans-unit id="increaseVerbosity">
       <source xml:lang="en">Increase Hover Verbosity</source>
     </trans-unit>
-    <trans-unit id="increaseVerbosityWithKb">
-      <source xml:lang="en">Increase Hover Verbosity ({0})</source>
-    </trans-unit>
     <trans-unit id="modesContentHover.loading">
       <source xml:lang="en">Loading...</source>
     </trans-unit>
     <trans-unit id="stopped rendering">
-      <source xml:lang="en">Rendering paused for long line for performance reasons. This can be configured via `editor.stopRenderingLineAfter`.</source>
+      <source xml:lang="en">Rendering paused for long line for performance reasons. This can be configured via `editor.stopRenderingLineAfter`. [Don't Show Again](command:{0})</source>
+      <note>Please do not translate the word "command", it is part of our internal syntax which must not change
+{Locked="](command:{0})"}</note>
     </trans-unit>
     <trans-unit id="too many characters">
-      <source xml:lang="en">Tokenization is skipped for long lines for performance reasons. This can be configured via `editor.maxTokenizationLineLength`.</source>
+      <source xml:lang="en">Tokenization is skipped for long lines for performance reasons. This can be configured via `editor.maxTokenizationLineLength`. [Don't Show Again](command:{0})</source>
+      <note>Please do not translate the word "command", it is part of our internal syntax which must not change
+{Locked="](command:{0})"}</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/hover/browser/markerHoverParticipant" source-language="en" datatype="plaintext"><body>
@@ -1347,6 +1366,21 @@ This allows for users to show the hover without using the mouse.</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/controller/inlineCompletionsController" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="nextEditSuggestionAcceptNoKb">
+      <source xml:lang="en">Next edit suggestion available on line {0}, accept it to apply</source>
+    </trans-unit>
+    <trans-unit id="nextEditSuggestionAcceptWithKb">
+      <source xml:lang="en">Next edit suggestion available on line {0}, press {1} to accept</source>
+    </trans-unit>
+    <trans-unit id="nextEditSuggestionJumpNoKb">
+      <source xml:lang="en">Next edit suggestion available on line {0}</source>
+    </trans-unit>
+    <trans-unit id="nextEditSuggestionJumpWithKb">
+      <source xml:lang="en">Next edit suggestion available on line {0}, press {1} to jump</source>
+    </trans-unit>
+    <trans-unit id="nextEditSuggestionNoAction">
+      <source xml:lang="en">Next edit suggestion available on line {0}</source>
+    </trans-unit>
     <trans-unit id="showAccessibleViewHint">
       <source xml:lang="en">Inspect this in the accessible view ({0})</source>
     </trans-unit>
@@ -1360,11 +1394,6 @@ This allows for users to show the hover without using the mouse.</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/hintsWidget/inlineCompletionsHintsWidget" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="content">
-      <source xml:lang="en">{0} ({1})</source>
-      <note>A label
-A keybinding</note>
-    </trans-unit>
     <trans-unit id="next">
       <source xml:lang="en">Next</source>
     </trans-unit>
@@ -1384,11 +1413,8 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/gutterIndicatorMenu" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="accept">
-      <source xml:lang="en">Accept</source>
-    </trans-unit>
-    <trans-unit id="goto">
-      <source xml:lang="en">Go To</source>
+    <trans-unit id="gotoAndAccept">
+      <source xml:lang="en">Go To / Accept</source>
     </trans-unit>
     <trans-unit id="reject">
       <source xml:lang="en">Reject</source>
@@ -1796,16 +1822,23 @@ A keybinding</note>
       <source xml:lang="en">Foreground color of the placeholder text in the editor.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/editor/contrib/quickAccess/browser/editorNavigationQuickAccess" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="gotoLocation.status">
+      <source xml:lang="en">Line {0}, column {1}: {2}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/editor/contrib/quickAccess/browser/gotoLineQuickAccess" source-language="en" datatype="plaintext"><body>
     <trans-unit id="gotoLine.ariaLabel">
-      <source xml:lang="en">Current position: line {0}, column {1}. {2}</source>
-      <note>{0} is the line number, {1} is the column number, {2} is instructions for typing in the Go To Line picker</note>
+      <source xml:lang="en">Go to line. Type a line number, optionally followed by colon and column number.</source>
     </trans-unit>
     <trans-unit id="gotoLine.columnPrompt">
       <source xml:lang="en">Press 'Enter' to go to line {0} or enter a column number (from 1 to {1}).</source>
     </trans-unit>
     <trans-unit id="gotoLine.goToPosition">
       <source xml:lang="en">Press 'Enter' to go to line {0} at column {1}.</source>
+    </trans-unit>
+    <trans-unit id="gotoLine.itemAriaLabel">
+      <source xml:lang="en">Go to line {0}, column {1}. Press Enter to navigate.</source>
     </trans-unit>
     <trans-unit id="gotoLine.lineColumnPrompt">
       <source xml:lang="en">Press 'Enter' to go to line {0} or enter colon : to add a column number.</source>
@@ -2013,6 +2046,9 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="hasPrevTabstop">
       <source xml:lang="en">Whether there is a previous tab stop when in snippet mode</source>
+    </trans-unit>
+    <trans-unit id="inSnippetChoice">
+      <source xml:lang="en">Whether the current snippet tab stop is a choice</source>
     </trans-unit>
     <trans-unit id="inSnippetMode">
       <source xml:lang="en">Whether the editor in current in snippet mode</source>
@@ -2242,6 +2278,9 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="editorSuggestWidgetFocusHighlightForeground">
       <source xml:lang="en">Color of the match highlights in the suggest widget when an item is focused.</source>
+    </trans-unit>
+    <trans-unit id="editorSuggestWidgetFocusOutline">
+      <source xml:lang="en">Outline color of the focused (keyboard-navigated) entry in the suggest widget.</source>
     </trans-unit>
     <trans-unit id="editorSuggestWidgetForeground">
       <source xml:lang="en">Foreground color of the suggest widget.</source>

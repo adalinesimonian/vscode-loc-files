@@ -94,6 +94,9 @@
     <trans-unit id="edge.attach.description">
       <source xml:lang="en">Attach to an instance of Edge already in debug mode</source>
     </trans-unit>
+    <trans-unit id="editorBrowser.attach.description">
+      <source xml:lang="en">Attach to an open VS Code integrated browser</source>
+    </trans-unit>
     <trans-unit id="node.snippet.remoteattach.description">
       <source xml:lang="en">Attach to the debug port of a remote node program</source>
     </trans-unit>
@@ -322,6 +325,12 @@
     <trans-unit id="browser.profileStartup.description">
       <source xml:lang="en">If true, will start profiling soon as the process launches</source>
     </trans-unit>
+    <trans-unit id="editorBrowser.attach.label">
+      <source xml:lang="en">Integrated Browser: Attach</source>
+    </trans-unit>
+    <trans-unit id="editorBrowser.launch.label">
+      <source xml:lang="en">Integrated Browser: Launch</source>
+    </trans-unit>
     <trans-unit id="longPredictionWarning.message">
       <source xml:lang="en">It&apos;s taking a while to configure your breakpoints. You can speed this up by updating the &apos;outFiles&apos; in your launch.json.</source>
     </trans-unit>
@@ -342,6 +351,9 @@
     </trans-unit>
     <trans-unit id="extensionHost.snippet.launch.description">
       <source xml:lang="en">Launch a VS Code extension in debug mode</source>
+    </trans-unit>
+    <trans-unit id="editorBrowser.launch.description">
+      <source xml:lang="en">Launch a VS Code integrated browser to debug a URL</source>
     </trans-unit>
     <trans-unit id="node.snippet.launch.description">
       <source xml:lang="en">Launch a node program in debug mode</source>
@@ -595,6 +607,9 @@
     </trans-unit>
     <trans-unit id="edge.label">
       <source xml:lang="en">Web App (Edge)</source>
+    </trans-unit>
+    <trans-unit id="editorBrowser.label">
+      <source xml:lang="en">Web App (Integrated Browser)</source>
     </trans-unit>
     <trans-unit id="browser.cleanUp.description">
       <source xml:lang="en">What clean-up to do after the debugging session finishes. Close only the tab being debug, vs. close the whole browser.</source>

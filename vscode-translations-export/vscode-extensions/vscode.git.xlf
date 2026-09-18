@@ -184,6 +184,9 @@
     <trans-unit id="++CODE++dc4a4db67704a975c2d0d65338d136d6f9ad7336dec08ffe2dac1e42b42f21d0">
       <source xml:lang="en">Cloning git repository &quot;{0}&quot;...</source>
     </trans-unit>
+    <trans-unit id="++CODE++98231cce3985ea20e3b5e0fe6392ccdc7c6d8b668c4891ec40f4f99e0c1c869f">
+      <source xml:lang="en">Co-author</source>
+    </trans-unit>
     <trans-unit id="++CODE++82a9c46ffa4789945d9f2359d75891558ef6faa8dee09e4b25e4e0597704f5bd">
       <source xml:lang="en">Commit</source>
     </trans-unit>
@@ -340,6 +343,9 @@
     <trans-unit id="++CODE++d1212fc6b97b49a3d80ed311b0c518e476f0c378adf57cd70a1e8a54cd8a3469">
       <source xml:lang="en">Failed to authenticate to git remote:&#10;&#10;{0}</source>
     </trans-unit>
+    <trans-unit id="++CODE++0f3a49fcaf6c54014760f45d81e1d2c624b78f5756060f4830bb3023067b0201">
+      <source xml:lang="en">Failed to copy {0} folder(s)/file(s) to the worktree.</source>
+    </trans-unit>
     <trans-unit id="++CODE++f131c35dd2bf15b59e6f92bb51a1f3b2973074be9aaa7c350ad353c39d5573b4">
       <source xml:lang="en">Failed to delete using the Recycle Bin. Do you want to permanently delete instead?</source>
     </trans-unit>
@@ -384,6 +390,9 @@
     </trans-unit>
     <trans-unit id="++CODE++6a29332d3557881b20eb99f45dcbce35edccdb3f47128fbf67b1795e1b8c75c9">
       <source xml:lang="en">Git repositories were found in the parent folders of the workspace or the open file(s). Would you like to open the repositories?</source>
+    </trans-unit>
+    <trans-unit id="++CODE++5bef7ec51a58997a250f8b7607feb39a814d82cc95abd8184f5219c67a28cb82">
+      <source xml:lang="en">Git: Delete can only be performed on committed files without uncommitted changes.</source>
     </trans-unit>
     <trans-unit id="++CODE++854b5b2f0c2de71cd9efe57794a6f669b49e3d554ba7c7c175d78154d2bd28c9">
       <source xml:lang="en">Git: {0}</source>
@@ -888,6 +897,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++27c167750a8ab2078b5f839d16b7b2936d058c0b4572600e430dd40b77d39e5a">
       <source xml:lang="en">The worktree contains modified or untracked files. Do you want to force delete?</source>
     </trans-unit>
+    <trans-unit id="++CODE++487087a30acff0661c1cdd793a4017961f762298fbb299c2375aaf28b76030bd">
+      <source xml:lang="en">The worktree for session &quot;{0}&quot; contains modified or untracked files. Do you want to force delete?</source>
+    </trans-unit>
     <trans-unit id="++CODE++72dbcd7478452a578554f9540148e0276884de955c89a499404e8723d8276986">
       <source xml:lang="en">There are known issues with the installed Git &quot;{0}&quot;. Please update to Git &gt;= 2.27 for the git features to work correctly.</source>
     </trans-unit>
@@ -999,6 +1011,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     <trans-unit id="++CODE++c6509104fe77b05a75de018c0cf90008b446b083f23ca6e3afcac0e3c4b9683f">
       <source xml:lang="en">Worktree path</source>
     </trans-unit>
+    <trans-unit id="++CODE++6cb151230daf3a7e33eb8097e65964b718ec4684cc95bef919e97830cff7a83f">
+      <source xml:lang="en">Worktree: {0}</source>
+    </trans-unit>
     <trans-unit id="++CODE++aec2f93d67b7c4c5fd9b94042f33299f7a0e55cdcb7e8e35feb9d0f6da697f3d">
       <source xml:lang="en">Worktrees</source>
     </trans-unit>
@@ -1037,6 +1052,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++13e594fcc96a4ccf6489d00518d4d1f33b2da6945e9b0f42510739a1ab9bd495">
       <source xml:lang="en">You are about to force push your changes, this can be destructive and could inadvertently overwrite changes made by others.&#10;&#10;Are you sure to continue?</source>
+    </trans-unit>
+    <trans-unit id="++CODE++d7add70fc9f25c5293dccf907cb7eba01ec7520af8f9978b9eb37b5206245673">
+      <source xml:lang="en">You are opening a repository from a location that is not trusted. Do you trust the authors of the files in the repository you are opening?</source>
     </trans-unit>
     <trans-unit id="++CODE++8304b26088d267443877f80682f7734cda1136b909e2ca26d0070f5991288203">
       <source xml:lang="en">You are trying to commit to a protected branch. How would you like to proceed?</source>
@@ -1177,6 +1195,9 @@ Do not translate &quot;Branch&quot; as it is a git term</note>
     </trans-unit>
     <trans-unit id="++CODE++da089f5ddfe606c3dc6f961bcb1316e41e11cf382afe908f8371b88e97b89225">
       <source xml:lang="en">{0} Sync Changes{1}{2}</source>
+    </trans-unit>
+    <trans-unit id="++CODE++534ae6a19ab8a1744d0114001ba98bbbb9ef2bb7554e7cdf5dfd0e022407415b">
+      <source xml:lang="en">{0} character over {1} in current line</source>
     </trans-unit>
     <trans-unit id="++CODE++8de94f809d2ce26a9db6bd5c9e3fe247254b40c6888ad3044050a147374dbd91">
       <source xml:lang="en">{0} characters over {1} in current line</source>
@@ -1399,6 +1420,12 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="command.addRemote">
       <source xml:lang="en">Add Remote...</source>
+    </trans-unit>
+    <trans-unit id="config.addAICoAuthor.all">
+      <source xml:lang="en">Add the AI co-author trailer when any AI-generated code is included, such as inline completions, chat, or agent edits.</source>
+    </trans-unit>
+    <trans-unit id="config.addAICoAuthor.chatAndAgent">
+      <source xml:lang="en">Add the AI co-author trailer when code from chat or agent edits is included.</source>
     </trans-unit>
     <trans-unit id="command.ignore">
       <source xml:lang="en">Add to .gitignore</source>
@@ -1655,8 +1682,14 @@ Please make sure there is no space between the right bracket and left parenthesi
     <trans-unit id="command.git.runGitMergeDiff3">
       <source xml:lang="en">Compute Conflicts With Git (Diff3)</source>
     </trans-unit>
+    <trans-unit id="config.worktreeIncludeFiles">
+      <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) for files and folders that are included when creating a new worktree. Only files and folders that match the patterns and are listed in `.gitignore` will be copied to the newly created worktree.</source>
+    </trans-unit>
     <trans-unit id="config.autoRepositoryDetection">
       <source xml:lang="en">Configures when repositories should be automatically detected.</source>
+    </trans-unit>
+    <trans-unit id="config.confirmCommittedDelete">
+      <source xml:lang="en">Confirm before deleting committed files with Git.</source>
     </trans-unit>
     <trans-unit id="config.confirmSync">
       <source xml:lang="en">Confirm before synchronizing Git repositories.</source>
@@ -1729,6 +1762,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="config.promptToSaveFilesBeforeStash">
       <source xml:lang="en">Controls whether Git should check for unsaved files before stashing changes.</source>
+    </trans-unit>
+    <trans-unit id="config.addAICoAuthor">
+      <source xml:lang="en">Controls whether a &apos;Co-authored-by&apos; trailer is automatically added to the commit message when AI-generated code is included in the commit.</source>
     </trans-unit>
     <trans-unit id="config.pullBeforeCheckout">
       <source xml:lang="en">Controls whether a branch that does not have outgoing commits is fast-forwarded before it is checked out.</source>
@@ -1844,11 +1880,26 @@ Please make sure there is no space between the right bracket and left parenthesi
     <trans-unit id="config.timeline.date">
       <source xml:lang="en">Controls which date to use for items in the Timeline view.</source>
     </trans-unit>
+    <trans-unit id="command.artifactCopyBranchName">
+      <source xml:lang="en">Copy Branch Name</source>
+    </trans-unit>
+    <trans-unit id="command.artifactCopyCommitHash">
+      <source xml:lang="en">Copy Commit Hash</source>
+    </trans-unit>
     <trans-unit id="command.timelineCopyCommitId">
-      <source xml:lang="en">Copy Commit ID</source>
+      <source xml:lang="en">Copy Commit Hash</source>
     </trans-unit>
     <trans-unit id="command.timelineCopyCommitMessage">
       <source xml:lang="en">Copy Commit Message</source>
+    </trans-unit>
+    <trans-unit id="command.artifactCopyStashName">
+      <source xml:lang="en">Copy Stash Name</source>
+    </trans-unit>
+    <trans-unit id="command.artifactCopyTagName">
+      <source xml:lang="en">Copy Tag Name</source>
+    </trans-unit>
+    <trans-unit id="command.artifactCopyWorktreePath">
+      <source xml:lang="en">Copy Worktree Path</source>
     </trans-unit>
     <trans-unit id="config.countBadge.all">
       <source xml:lang="en">Count all changes.</source>
@@ -1872,6 +1923,9 @@ Please make sure there is no space between the right bracket and left parenthesi
       <source xml:lang="en">Create from...</source>
     </trans-unit>
     <trans-unit id="command.deleteRef">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="command.delete">
       <source xml:lang="en">Delete</source>
     </trans-unit>
     <trans-unit id="command.graphDeleteBranch">
@@ -2062,6 +2116,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="command.migrateWorktreeChanges">
       <source xml:lang="en">Migrate Worktree Changes...</source>
+    </trans-unit>
+    <trans-unit id="config.addAICoAuthor.off">
+      <source xml:lang="en">Never add the AI co-author trailer.</source>
     </trans-unit>
     <trans-unit id="config.openRepositoryInParentFolders.never">
       <source xml:lang="en">Never open a repository in parent folders of workspaces or open files.</source>

@@ -28,4 +28,153 @@
       <source xml:lang="en">Take Survey</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/surveys/browser/survey.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="openSurvey">
+      <source xml:lang="en">Open Survey</source>
+    </trans-unit>
+    <trans-unit id="survey.help.overview">
+      <source xml:lang="en">You are in a survey form. Use Tab to move between questions and options.</source>
+    </trans-unit>
+    <trans-unit id="survey.help.select">
+      <source xml:lang="en">Use arrow keys within a question to navigate between options, and Space or Enter to select.</source>
+    </trans-unit>
+    <trans-unit id="survey.help.submit">
+      <source xml:lang="en">Tab to the Submit button and press Enter once the required question is answered. Additional questions are optional.</source>
+    </trans-unit>
+    <trans-unit id="surveyEditorPaneTitle">
+      <source xml:lang="en">Survey</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/surveys/browser/surveyEditorInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="surveyIcon">
+      <source xml:lang="en">Icon for the survey editor.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/surveys/browser/surveyEditorPane" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="survey.pane.ariaLabel">
+      <source xml:lang="en">Survey</source>
+    </trans-unit>
+    <trans-unit id="survey.questionOptional">
+      <source xml:lang="en">{0} (optional)</source>
+    </trans-unit>
+    <trans-unit id="survey.submitFeedback">
+      <source xml:lang="en">Submit feedback</source>
+    </trans-unit>
+    <trans-unit id="survey.submitHint">
+      <source xml:lang="en">Answer the required question to submit</source>
+    </trans-unit>
+    <trans-unit id="survey.success.detail">
+      <source xml:lang="en">Your answer helps us understand who needs this most. Thank you.</source>
+    </trans-unit>
+    <trans-unit id="survey.success.message">
+      <source xml:lang="en">Response sent</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/surveys/browser/surveyQuestions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="survey.copilotPmf.description">
+      <source xml:lang="en">This short survey helps us understand how well Copilot fits into your workflow.</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q1">
+      <source xml:lang="en">How disappointed would you be if you could no longer use Copilot?</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q1.extremely">
+      <source xml:lang="en">Extremely</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q1.notAtAll">
+      <source xml:lang="en">Not at all</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q1.slightly">
+      <source xml:lang="en">Slightly</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q1.somewhat">
+      <source xml:lang="en">Somewhat</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q1.very">
+      <source xml:lang="en">Very</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q2">
+      <source xml:lang="en">What has Copilot helped you with most recently?</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q2.automating">
+      <source xml:lang="en">Automating repetitive work</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q2.gettingUnstuck">
+      <source xml:lang="en">Getting unstuck on bugs</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q2.multiFile">
+      <source xml:lang="en">Making multi-file changes</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q2.noClearValue">
+      <source xml:lang="en">I haven't gotten clear value yet</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q2.other">
+      <source xml:lang="en">None of the above</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q2.planning">
+      <source xml:lang="en">Planning an approach</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q2.reviewing">
+      <source xml:lang="en">Improving or reviewing code</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q2.shippingFaster">
+      <source xml:lang="en">Shipping changes faster</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q2.understanding">
+      <source xml:lang="en">Understanding the codebase</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q3">
+      <source xml:lang="en">What most gets in your way?</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q3.biggerTasks">
+      <source xml:lang="en">Struggles with bigger tasks</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q3.context">
+      <source xml:lang="en">Missing repo or project context</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q3.cost">
+      <source xml:lang="en">Limits, cost, or billing</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q3.other">
+      <source xml:lang="en">None of the above</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q3.reviewingTime">
+      <source xml:lang="en">Too much time reviewing</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q3.security">
+      <source xml:lang="en">Security or permissions friction</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q3.setup">
+      <source xml:lang="en">Setup or integrations are hard</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q3.slow">
+      <source xml:lang="en">Too slow / breaks flow</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q3.steering">
+      <source xml:lang="en">Too much steering needed</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q3.trust">
+      <source xml:lang="en">Output is hard to trust</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q4">
+      <source xml:lang="en">How long have you been programming?</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q4.10to19">
+      <source xml:lang="en">10-19 yr</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q4.20plus">
+      <source xml:lang="en">20+ yr</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q4.3to5">
+      <source xml:lang="en">3-5 yr</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q4.6to9">
+      <source xml:lang="en">6-9 yr</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.q4.lessThan3">
+      <source xml:lang="en">&lt;3 yr</source>
+    </trans-unit>
+    <trans-unit id="survey.copilotPmf.title">
+      <source xml:lang="en">Help Us Improve GitHub Copilot</source>
+    </trans-unit>
+</body></file>
 </xliff>

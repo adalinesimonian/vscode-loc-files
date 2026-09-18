@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/chat/browser/agentsWindowWorkspaceHandoff" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsHandoff.chooseWorkspace">
+      <source xml:lang="en">Choose Workspace</source>
+    </trans-unit>
+    <trans-unit id="agentsHandoff.retry">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="agentsHandoff.workspaceUnavailable">
+      <source xml:lang="en">The workspace could not be selected. Try again or choose a workspace to continue.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/aiCustomizationWorkspaceService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commitToRepoFailed">
+      <source xml:lang="en">Your customization was saved to this session's worktree, but we couldn't apply it to the default branch. You may need to apply it manually.</source>
+    </trans-unit>
+    <trans-unit id="deleteFromRepoFailed">
+      <source xml:lang="en">Your customization was removed from this session's worktree, but we couldn't apply the change to the default branch. You may need to remove it manually.</source>
+    </trans-unit>
+    <trans-unit id="skillUI.actOnFeedback">
+      <source xml:lang="en">Used by the Submit Feedback button in the Changes toolbar</source>
+    </trans-unit>
+    <trans-unit id="skillUI.codeReview">
+      <source xml:lang="en">Used by the Run Code Review button in the Changes view</source>
+    </trans-unit>
+    <trans-unit id="skillUI.commit">
+      <source xml:lang="en">Used by the Commit button in the Changes toolbar</source>
+    </trans-unit>
+    <trans-unit id="skillUI.createDraftPr">
+      <source xml:lang="en">Used by the Create Draft PR button in the Changes toolbar</source>
+    </trans-unit>
+    <trans-unit id="skillUI.createPr">
+      <source xml:lang="en">Used by the Create PR button in the Changes toolbar</source>
+    </trans-unit>
+    <trans-unit id="skillUI.fixCi">
+      <source xml:lang="en">Used by the Fix Checks button in the Changes toolbar</source>
+    </trans-unit>
+    <trans-unit id="skillUI.generateRunCommands">
+      <source xml:lang="en">Used by the Run button in the title bar</source>
+    </trans-unit>
+    <trans-unit id="skillUI.mergeChanges">
+      <source xml:lang="en">Used by the Merge button in the Changes toolbar</source>
+    </trans-unit>
+    <trans-unit id="skillUI.updatePr">
+      <source xml:lang="en">Used by the Update Pull Request button in the Changes toolbar</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/branchChatSessionAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="branchChatSession">
+      <source xml:lang="en">Branch Chat</source>
+    </trans-unit>
+    <trans-unit id="branchChatSessionTooltip">
+      <source xml:lang="en">Branch to new session</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/branchPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="branchPicker.ariaLabel">
+      <source xml:lang="en">Branch Picker</source>
+    </trans-unit>
+    <trans-unit id="branchPicker.disabledAriaLabel">
+      <source xml:lang="en">{0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="branchPicker.empty">
+      <source xml:lang="en">No local branches</source>
+    </trans-unit>
+    <trans-unit id="branchPicker.filter">
+      <source xml:lang="en">Filter branches…</source>
+    </trans-unit>
+    <trans-unit id="branchPicker.loading">
+      <source xml:lang="en">Loading branches…</source>
+    </trans-unit>
+    <trans-unit id="branchPicker.retry">
+      <source xml:lang="en">Retry Loading Branches</source>
+    </trans-unit>
+    <trans-unit id="branchPicker.select">
+      <source xml:lang="en">Branch</source>
+    </trans-unit>
+    <trans-unit id="branchPicker.triggerAriaLabel">
+      <source xml:lang="en">Pick Branch, {0}</source>
+    </trans-unit>
+    <trans-unit id="branchPicker.unavailable">
+      <source xml:lang="en">Unavailable locally</source>
+    </trans-unit>
+    <trans-unit id="branchPicker.unavailableAriaLabel">
+      <source xml:lang="en">{0}, unavailable locally</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/btwSlashCommand.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="btw">
+      <source xml:lang="en">Ask a side question without adding it to this conversation</source>
+    </trans-unit>
+    <trans-unit id="btw.createFailed">
+      <source xml:lang="en">The side chat could not be created.</source>
+    </trans-unit>
+    <trans-unit id="btw.missingPrompt">
+      <source xml:lang="en">Enter a question after `/btw`.</source>
+    </trans-unit>
+    <trans-unit id="btw.noTurn">
+      <source xml:lang="en">Send a message in this conversation before starting a side chat.</source>
+    </trans-unit>
+    <trans-unit id="btw.sessionUnavailable">
+      <source xml:lang="en">A side chat cannot be created from this conversation.</source>
+    </trans-unit>
+    <trans-unit id="btw.unsupported">
+      <source xml:lang="en">This conversation does not support side chats.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/chat.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.agentHost.runWorktreeCreatedTasks">
+      <source xml:lang="en">Whether to automatically run tasks tagged with `"runOptions": { "runOn": "worktreeCreated" }` when a new agent host session worktree is created. Manual `Run Task` invocations are unaffected.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.archiveNudge.enabled">
+      <source xml:lang="en">Suggests archiving an inactive session when all GitHub pull requests associated with the session have merged. Dismissing the suggestion hides it for that session until it is archived or deleted.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.bottom.description">
+      <source xml:lang="en">Shows the image at its original size at the bottom center.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.bottom.label">
+      <source xml:lang="en">Bottom</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.bottomLeft.description">
+      <source xml:lang="en">Shows the image at its original size in the bottom left.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.bottomLeft.label">
+      <source xml:lang="en">Bottom Left</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.bottomRight.description">
+      <source xml:lang="en">Shows the image at its original size in the bottom right.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.bottomRight.label">
+      <source xml:lang="en">Bottom Right</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.center.description">
+      <source xml:lang="en">Shows the image at its original size in the center.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.center.label">
+      <source xml:lang="en">Center</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.left.description">
+      <source xml:lang="en">Shows the image at its original size at the center left.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.left.label">
+      <source xml:lang="en">Left</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.repeat.description">
+      <source xml:lang="en">Repeats the image at its original size until it fills the chat background.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.repeat.label">
+      <source xml:lang="en">Repeat</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.right.description">
+      <source xml:lang="en">Shows the image at its original size at the center right.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.right.label">
+      <source xml:lang="en">Right</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.stretch.description">
+      <source xml:lang="en">Stretches the image to fill the chat background.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.stretch.label">
+      <source xml:lang="en">Stretch</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.top.description">
+      <source xml:lang="en">Shows the image at its original size at the top center.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.top.label">
+      <source xml:lang="en">Top</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.topLeft.description">
+      <source xml:lang="en">Shows the image at its original size in the top left.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.topLeft.label">
+      <source xml:lang="en">Top Left</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.topRight.description">
+      <source xml:lang="en">Shows the image at its original size in the top right.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundImageLayout.topRight.label">
+      <source xml:lang="en">Top Right</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundType.codicons.detail">
+      <source xml:lang="en">Use a theme-aware pattern of built-in VS Code icons.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundType.codicons.label">
+      <source xml:lang="en">Codicons</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundType.image.detail">
+      <source xml:lang="en">Choose an image file from this machine.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundType.image.label">
+      <source xml:lang="en">Image...</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundType.none.detail">
+      <source xml:lang="en">Remove the current chat background.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundType.none.label">
+      <source xml:lang="en">No Background</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundType.recentlyUsed">
+      <source xml:lang="en">recently used</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.changeBackground.images">
+      <source xml:lang="en">Images</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.changeBackgroundLayout">
+      <source xml:lang="en">Change Background Layout...</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.changeBackgroundLayout.changed">
+      <source xml:lang="en">Chat background layout changed to {0}.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.changeBackgroundLayout.placeholder">
+      <source xml:lang="en">Select how the background image is displayed</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.changeBackgroundLayout.title">
+      <source xml:lang="en">Change Chat Background Layout</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.clearBackground.cleared">
+      <source xml:lang="en">Chat background cleared.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.consolidatedRemoteWorkspaces.deprecated">
+      <source xml:lang="en">Deprecated. Use the unified workspace picker setting instead.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.preferredDarkBackgroundImage">
+      <source xml:lang="en">Specifies `codicons`, an absolute file path, or a `file` URI for the background displayed behind chat content in the Agents Window when using a dark color theme. The background is hidden in high contrast themes.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.preferredDarkBackgroundImageLayout">
+      <source xml:lang="en">Controls how the chat background image is laid out in the Agents Window when using a dark color theme.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.preferredLightBackgroundImage">
+      <source xml:lang="en">Specifies `codicons`, an absolute file path, or a `file` URI for the background displayed behind chat content in the Agents Window when using a light color theme. The background is hidden in high contrast themes.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.preferredLightBackgroundImageLayout">
+      <source xml:lang="en">Controls how the chat background image is laid out in the Agents Window when using a light color theme.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.scopedInputHistory">
+      <source xml:lang="en">Controls whether chat input history in the Agents Window is scoped to the current session. Disable this to use shared input history across sessions.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.setBackground">
+      <source xml:lang="en">Set Background...</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.setBackground.codicons">
+      <source xml:lang="en">Chat background set to Codicons.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.setBackground.dialogTitle">
+      <source xml:lang="en">Set Chat Background</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.setBackground.image">
+      <source xml:lang="en">Chat background image set.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.setBackground.openLabel">
+      <source xml:lang="en">Set Background</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.setBackground.placeholder">
+      <source xml:lang="en">Select a background type</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.setBackground.recentImage">
+      <source xml:lang="en">Chat background image set to {0}.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.setBackground.title">
+      <source xml:lang="en">Set Chat Background</source>
+    </trans-unit>
+    <trans-unit id="sessions.newSession.label">
+      <source xml:lang="en">New Session</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/externalSessionBanner" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="externalSessionBanner.actions.ariaLabel">
+      <source xml:lang="en">External session banner actions</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.ariaLabel">
+      <source xml:lang="en">External session visibility</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.confirm.daysAgo">
+      <source xml:lang="en">{0} days ago</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.confirm.last30Days.detail">
+      <source xml:lang="en">Only external sessions updated in the last 30 days will be shown. This session was last updated {0}. Are you sure you want to save this change?</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.confirm.last7Days.detail">
+      <source xml:lang="en">Only external sessions updated in the last 7 days will be shown. This session was last updated {0}. Are you sure you want to save this change?</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.confirm.lastDay.detail">
+      <source xml:lang="en">Only external sessions updated in the last day will be shown. This session was last updated {0}. Are you sure you want to save this change?</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.confirm.message">
+      <source xml:lang="en">This session will no longer appear in {0}</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.confirm.none.detail">
+      <source xml:lang="en">The option you selected hides sessions created in another application, including the session you currently have open. Are you sure you want to save this change?</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.confirm.oneDayAgo">
+      <source xml:lang="en">1 day ago</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.confirm.recent.detail">
+      <source xml:lang="en">Only up to the 2 most recently updated external sessions from the last 7 days will be shown. Are you sure you want to save this change?</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.confirm.recent.message">
+      <source xml:lang="en">This session may no longer appear in {0}</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.confirm.save">
+      <source xml:lang="en">&amp;&amp;Save Anyway</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.description">
+      <source xml:lang="en">Choose how you want external sessions to appear in {0}. You can change this later in Settings.</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.message">
+      <source xml:lang="en">{0} picked up this session, which was created in another application.</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.save">
+      <source xml:lang="en">Save</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.save.invalidState">
+      <source xml:lang="en">Unable to save external session visibility because no option or session is selected.</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.select.ariaLabel">
+      <source xml:lang="en">External sessions to show</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.select.last24Hours">
+      <source xml:lang="en">Last 24 Hours</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.select.last24Hours.description">
+      <source xml:lang="en">Show external sessions updated in the last 24 hours.</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.select.last30Days">
+      <source xml:lang="en">Last 30 Days</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.select.last30Days.description">
+      <source xml:lang="en">Show external sessions updated in the last 30 days.</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.select.last7Days">
+      <source xml:lang="en">Last 7 Days</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.select.last7Days.description">
+      <source xml:lang="en">Show external sessions updated in the last 7 days.</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.select.none">
+      <source xml:lang="en">None</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.select.none.description">
+      <source xml:lang="en">Do not show sessions created in another application.</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.select.placeholder">
+      <source xml:lang="en">Pick an option</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.select.recent">
+      <source xml:lang="en">Recent</source>
+    </trans-unit>
+    <trans-unit id="externalSessionBanner.select.recent.description">
+      <source xml:lang="en">Show up to the 2 most recent external sessions updated in the last 7 days. Once at least 2 local sessions exist, external sessions older than the second-newest local session are hidden.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/mobile/mobileSessionTypePicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mobileSessionTypePicker.title">
+      <source xml:lang="en">Session Type</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/mobile/mobileWorkspacePickerSheet" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mobileWorkspacePicker.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="mobileWorkspacePicker.caption">
+      <source xml:lang="en">Search to browse folders on the host</source>
+    </trans-unit>
+    <trans-unit id="mobileWorkspacePicker.foldersSection">
+      <source xml:lang="en">Folders</source>
+    </trans-unit>
+    <trans-unit id="mobileWorkspacePicker.noFolders">
+      <source xml:lang="en">No folders match</source>
+    </trans-unit>
+    <trans-unit id="mobileWorkspacePicker.noWorkspaces">
+      <source xml:lang="en">No workspaces match</source>
+    </trans-unit>
+    <trans-unit id="mobileWorkspacePicker.searchFolders">
+      <source xml:lang="en">Search folders…</source>
+    </trans-unit>
+    <trans-unit id="mobileWorkspacePicker.searchWorkspaces">
+      <source xml:lang="en">Search Workspaces...</source>
+    </trans-unit>
+    <trans-unit id="mobileWorkspacePicker.selectCurrentFolder">
+      <source xml:lang="en">Select '{0}'</source>
+    </trans-unit>
+    <trans-unit id="mobileWorkspacePicker.title">
+      <source xml:lang="en">Choose Workspace</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/modelPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsModelPicker">
+      <source xml:lang="en">Model</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/newChatContextAttachments" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatContext.attach.placeholder">
+      <source xml:lang="en">Attach as context...</source>
+    </trans-unit>
+    <trans-unit id="files">
+      <source xml:lang="en">Files...</source>
+    </trans-unit>
+    <trans-unit id="imageFromClipboard">
+      <source xml:lang="en">Image from Clipboard</source>
+    </trans-unit>
+    <trans-unit id="openNamedAttachment">
+      <source xml:lang="en">Open {0}</source>
+    </trans-unit>
+    <trans-unit id="pastedImage">
+      <source xml:lang="en">Pasted Image</source>
+    </trans-unit>
+    <trans-unit id="pastedLines">
+      <source xml:lang="en">Pasted {0}</source>
+    </trans-unit>
+    <trans-unit id="removeAttachment">
+      <source xml:lang="en">Remove</source>
+    </trans-unit>
+    <trans-unit id="removeNamedAttachment">
+      <source xml:lang="en">Remove {0}</source>
+    </trans-unit>
+    <trans-unit id="selectFilesOrFolders">
+      <source xml:lang="en">Select Files or Folders</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/newChatInSessionWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="newChatInSessionPlaceholder">
+      <source xml:lang="en">Ask a follow-up question or start a new topic within this session...</source>
+    </trans-unit>
+    <trans-unit id="subSessionTip.ariaLabel">
+      <source xml:lang="en">New chat tip</source>
+    </trans-unit>
+    <trans-unit id="subSessionTip.dismiss">
+      <source xml:lang="en">Dismiss tip</source>
+    </trans-unit>
+    <trans-unit id="subSessionTip.message">
+      <source xml:lang="en">Start a parallel conversation to build on all the changes made in this session.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/newChatInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="addContext">
+      <source xml:lang="en">Add Context...</source>
+    </trans-unit>
+    <trans-unit id="chatInput">
+      <source xml:lang="en">Chat input</source>
+    </trans-unit>
+    <trans-unit id="chatInput.accessibilityHelp">
+      <source xml:lang="en">Chat input. Press Enter to send out the request. Use {0} for Chat Accessibility Help.</source>
+    </trans-unit>
+    <trans-unit id="chatInput.accessibilityHelpNoKb">
+      <source xml:lang="en">Chat input. Press Enter to send out the request. Use the Chat Accessibility Help command for more information.</source>
+    </trans-unit>
+    <trans-unit id="initializing">
+      <source xml:lang="en">Initializing...</source>
+    </trans-unit>
+    <trans-unit id="loading">
+      <source xml:lang="en">Loading...</source>
+    </trans-unit>
+    <trans-unit id="newChatInput.status.otel.learnMore">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
+    <trans-unit id="newChatInput.status.otel.manage">
+      <source xml:lang="en">Manage</source>
+    </trans-unit>
+    <trans-unit id="newChatInput.status.otel.title">
+      <source xml:lang="en">Monitoring with OpenTelemetry enabled</source>
+    </trans-unit>
+    <trans-unit id="newSessionPromptOptions.closed">
+      <source xml:lang="en">Prompt options closed</source>
+    </trans-unit>
+    <trans-unit id="newSessionPromptOptions.inserted">
+      <source xml:lang="en">Inserted prompt: {0}</source>
+    </trans-unit>
+    <trans-unit id="send">
+      <source xml:lang="en">Send</source>
+    </trans-unit>
+    <trans-unit id="sendWithBackgroundHint">
+      <source xml:lang="en">Send (Alt-click to start in the background)</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.describeTheOutcome">
+      <source xml:lang="en">Describe the outcome you want</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.describeWhatYouWantToBuild">
+      <source xml:lang="en">Describe what you want to build</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.describeYourMission">
+      <source xml:lang="en">Describe your mission</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.pitchYourIdea">
+      <source xml:lang="en">Pitch your idea</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.whatAreYouBuilding">
+      <source xml:lang="en">What are you building?</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.whatAreYouTryingToAchieve">
+      <source xml:lang="en">What are you trying to achieve?</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.whatFeatureAreYouDreamingUp">
+      <source xml:lang="en">What feature are you dreaming up?</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.whatProblemAreYouSolving">
+      <source xml:lang="en">What problem are you solving?</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.whatWillYouCreate">
+      <source xml:lang="en">What will you create?</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.whatWillYouLaunch">
+      <source xml:lang="en">What will you launch?</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.whatWillYouShipToday">
+      <source xml:lang="en">What will you ship today?</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.whatWouldYouLikeToAutomate">
+      <source xml:lang="en">What would you like to automate?</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.whatsNextOnYourRoadmap">
+      <source xml:lang="en">What's next on your roadmap?</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.whatsTheGoal">
+      <source xml:lang="en">What's the goal?</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInput.placeholder.whatsYourNextMilestone">
+      <source xml:lang="en">What's your next milestone?</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatInputHasDictationFocus">
+      <source xml:lang="en">True when focus is in an Agents window chat composer that supports dictation.</source>
+    </trans-unit>
+    <trans-unit id="sessionsStt.cancelPreparing">
+      <source xml:lang="en">Cancel Dictation. {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionsStt.dictate">
+      <source xml:lang="en">Dictate (Speech to Text)</source>
+    </trans-unit>
+    <trans-unit id="sessionsStt.stop">
+      <source xml:lang="en">Stop Dictation</source>
+    </trans-unit>
+    <trans-unit id="voiceInputMode">
+      <source xml:lang="en">Voice Input Mode</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/newChatVoice" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsVoice.connecting">
+      <source xml:lang="en">Connecting...</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.disconnect">
+      <source xml:lang="en">Disconnect Voice Mode</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.openSettings">
+      <source xml:lang="en">Voice Mode Settings</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.pttStopInChat">
+      <source xml:lang="en">Voice Mode: Stop Recording</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.startVoiceInChat">
+      <source xml:lang="en">Voice Mode</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/newChatWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="aquariumAction">
+      <source xml:lang="en">Aquarium</source>
+    </trans-unit>
+    <trans-unit id="newSessionFeedback.many">
+      <source xml:lang="en">{0} comments</source>
+    </trans-unit>
+    <trans-unit id="newSessionFeedback.one">
+      <source xml:lang="en">1 comment</source>
+    </trans-unit>
+    <trans-unit id="newSessionFeedback.reveal">
+      <source xml:lang="en">Reveal</source>
+    </trans-unit>
+    <trans-unit id="newSessionPromptPlaceholder">
+      <source xml:lang="en">Pitch your idea</source>
+    </trans-unit>
+    <trans-unit id="newSessionWorkspacePicker.noWorkspaceDescription">
+      <source xml:lang="en">Start without a backing workspace</source>
+    </trans-unit>
+    <trans-unit id="newSessionWorkspacePicker.workspace">
+      <source xml:lang="en">Workspace</source>
+    </trans-unit>
+    <trans-unit id="newSessionWorkspacePicker.workspaceAriaLabel">
+      <source xml:lang="en">Choose a workspace for the new session</source>
+    </trans-unit>
+    <trans-unit id="newSessionWorkspacePicker.workspaceTooltip">
+      <source xml:lang="en">Choose where the new session runs</source>
+    </trans-unit>
+    <trans-unit id="petAction">
+      <source xml:lang="en">Pet (/vscode-pet)</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.signInGitHub">
+      <source xml:lang="en">Sign in to GitHub</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/newSessionFolderQuickPickAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.newSession.pickFolderQuickPick.browse">
+      <source xml:lang="en">Browse...</source>
+    </trans-unit>
+    <trans-unit id="sessions.newSession.pickFolderQuickPick.label">
+      <source xml:lang="en">New Session in Folder...</source>
+    </trans-unit>
+    <trans-unit id="sessions.newSession.pickFolderQuickPick.placeholder">
+      <source xml:lang="en">Select a folder to start a new session in</source>
+    </trans-unit>
+    <trans-unit id="sessions.newSession.pickFolderQuickPick.recent">
+      <source xml:lang="en">Recent</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/newSessionPromptOptions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="newSessionPromptOptions.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="newSessionPromptOptions.optionAriaLabel">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="newSessionPromptOptions.title">
+      <source xml:lang="en">Send your first prompt</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/noAgentHostEmptyState" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="noAgentHost.aria">
+      <source xml:lang="en">No agent hosts available</source>
+    </trans-unit>
+    <trans-unit id="noAgentHost.description">
+      <source xml:lang="en">Run ``{0}`` from any device, then return here to run agent tasks on it.</source>
+    </trans-unit>
+    <trans-unit id="noAgentHost.learnMore">
+      <source xml:lang="en">Learn more</source>
+    </trans-unit>
+    <trans-unit id="noAgentHost.title">
+      <source xml:lang="en">Connect a host to get started</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/openSessionLinkOpener.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentChatLink.unresolvedTitle">
+      <source xml:lang="en">Chat · {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/promptTemplatePlaceholder" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.promptTemplatePlaceholder.hover">
+      <source xml:lang="en">Click or place the caret here and press Enter to describe the coding task</source>
+    </trans-unit>
+    <trans-unit id="sessionsPromptTemplatePlaceholderFocused">
+      <source xml:lang="en">Whether the caret is inside an editable prompt template placeholder.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/responseSelectionSideChatController" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.selectionSideChat.ariaLabel">
+      <source xml:lang="en">Ask a question about the selected response text</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.ask">
+      <source xml:lang="en">Ask Question</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.busy">
+      <source xml:lang="en">Asking question…</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.createFailed">
+      <source xml:lang="en">The side chat could not be created.</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.enter">
+      <source xml:lang="en">Enter</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.placeholder">
+      <source xml:lang="en">Ask Question</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.sessionUnavailable">
+      <source xml:lang="en">A side chat cannot be created from this conversation.</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.unsupported">
+      <source xml:lang="en">This conversation does not support side chats.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/runScriptAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="addActionTooltip">
+      <source xml:lang="en">Add a new task</source>
+    </trans-unit>
+    <trans-unit id="addActionTooltipDisabled">
+      <source xml:lang="en">Cannot add tasks to this session because workspace storage is unavailable</source>
+    </trans-unit>
+    <trans-unit id="addActionWidgetDescription">
+      <source xml:lang="en">Create a shell task and configure how it should be saved and run.</source>
+    </trans-unit>
+    <trans-unit id="addActionWidgetTitle">
+      <source xml:lang="en">Add Task</source>
+    </trans-unit>
+    <trans-unit id="addExistingActionWidgetDescription">
+      <source xml:lang="en">Enable an existing task for sessions and configure when it should run.</source>
+    </trans-unit>
+    <trans-unit id="addExistingActionWidgetTitle">
+      <source xml:lang="en">Add Existing Task</source>
+    </trans-unit>
+    <trans-unit id="browserActionsCategory">
+      <source xml:lang="en">Browser</source>
+    </trans-unit>
+    <trans-unit id="closeQuickWidget">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="configureActionWidgetDescription">
+      <source xml:lang="en">Update how this task is named, saved, and run.</source>
+    </trans-unit>
+    <trans-unit id="configureActionWidgetTitle">
+      <source xml:lang="en">Configure Task</source>
+    </trans-unit>
+    <trans-unit id="configureBrowserUrl">
+      <source xml:lang="en">Configure URL</source>
+    </trans-unit>
+    <trans-unit id="configureBrowserUrlPrompt">
+      <source xml:lang="en">Enter the URL to open in the integrated browser. Leave empty to clear.</source>
+    </trans-unit>
+    <trans-unit id="configureBrowserUrlTitle">
+      <source xml:lang="en">Configure Browser URL</source>
+    </trans-unit>
+    <trans-unit id="configureDefaultRunAction">
+      <source xml:lang="en">Add Task...</source>
+    </trans-unit>
+    <trans-unit id="configureTask">
+      <source xml:lang="en">Configure</source>
+    </trans-unit>
+    <trans-unit id="createNewTask">
+      <source xml:lang="en">Create new task...</source>
+    </trans-unit>
+    <trans-unit id="custom">
+      <source xml:lang="en">Custom</source>
+    </trans-unit>
+    <trans-unit id="enterCustomCommandDesc">
+      <source xml:lang="en">Create a new shell task</source>
+    </trans-unit>
+    <trans-unit id="existingTaskCommandLocked">
+      <source xml:lang="en">This command comes from an existing task and cannot be changed here.</source>
+    </trans-unit>
+    <trans-unit id="existingTaskLabelLocked">
+      <source xml:lang="en">This name comes from an existing task and cannot be changed here.</source>
+    </trans-unit>
+    <trans-unit id="existingTaskTargetLocked">
+      <source xml:lang="en">This existing task cannot be moved between workspace and user storage.</source>
+    </trans-unit>
+    <trans-unit id="existingTasks">
+      <source xml:lang="en">Existing Tasks</source>
+    </trans-unit>
+    <trans-unit id="generateRunAction">
+      <source xml:lang="en">Generate New Task...</source>
+    </trans-unit>
+    <trans-unit id="generateRunActionTooltip">
+      <source xml:lang="en">Generate a new workspace task</source>
+    </trans-unit>
+    <trans-unit id="npmTaskCommandPreview">
+      <source xml:lang="en">npm run {0}</source>
+    </trans-unit>
+    <trans-unit id="openBrowserAction">
+      <source xml:lang="en">Open Browser</source>
+    </trans-unit>
+    <trans-unit id="openBrowserActionTooltip">
+      <source xml:lang="en">Open '{0}' in the integrated browser</source>
+    </trans-unit>
+    <trans-unit id="openBrowserActionTooltipUnconfigured">
+      <source xml:lang="en">Open the integrated browser</source>
+    </trans-unit>
+    <trans-unit id="pickRunAction">
+      <source xml:lang="en">Select or create a task</source>
+    </trans-unit>
+    <trans-unit id="pinBrowser">
+      <source xml:lang="en">Pin</source>
+    </trans-unit>
+    <trans-unit id="pinBrowserTooltip">
+      <source xml:lang="en">Pin</source>
+    </trans-unit>
+    <trans-unit id="pinTask">
+      <source xml:lang="en">Pin</source>
+    </trans-unit>
+    <trans-unit id="pinTaskTooltip">
+      <source xml:lang="en">Pin</source>
+    </trans-unit>
+    <trans-unit id="removeTask">
+      <source xml:lang="en">Remove</source>
+    </trans-unit>
+    <trans-unit id="run">
+      <source xml:lang="en">Run</source>
+    </trans-unit>
+    <trans-unit id="runActionTooltip">
+      <source xml:lang="en">Run '{0}' in terminal</source>
+    </trans-unit>
+    <trans-unit id="runActionTooltipKeybinding">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="runDropdown">
+      <source xml:lang="en">More Tasks...</source>
+    </trans-unit>
+    <trans-unit id="runPrimaryTask">
+      <source xml:lang="en">Run Primary Task</source>
+    </trans-unit>
+    <trans-unit id="runPrimaryTaskTooltip">
+      <source xml:lang="en">Run Primary Task</source>
+    </trans-unit>
+    <trans-unit id="runScriptNotAvailableTooltip">
+      <source xml:lang="en">Run Task is not available for this session type</source>
+    </trans-unit>
+    <trans-unit id="tasksActionsCategory">
+      <source xml:lang="en">Tasks</source>
+    </trans-unit>
+    <trans-unit id="unpinBrowser">
+      <source xml:lang="en">Unpin</source>
+    </trans-unit>
+    <trans-unit id="unpinBrowserTooltip">
+      <source xml:lang="en">Unpin</source>
+    </trans-unit>
+    <trans-unit id="unpinTask">
+      <source xml:lang="en">Unpin</source>
+    </trans-unit>
+    <trans-unit id="unpinTaskTooltip">
+      <source xml:lang="en">Unpin</source>
+    </trans-unit>
+    <trans-unit id="workspaceStorageUnavailableTooltip">
+      <source xml:lang="en">Workspace storage is unavailable for this session</source>
+    </trans-unit>
+    <trans-unit id="worktreeCreationCategory">
+      <source xml:lang="en">Run on Worktree Creation</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/runScriptCustomTaskWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cancelAddAction">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="commandFieldLabel">
+      <source xml:lang="en">Command</source>
+    </trans-unit>
+    <trans-unit id="confirmAddTask">
+      <source xml:lang="en">Add Task</source>
+    </trans-unit>
+    <trans-unit id="confirmAddToAgents">
+      <source xml:lang="en">Add to Agents Window</source>
+    </trans-unit>
+    <trans-unit id="confirmMoveAndUpdateTask">
+      <source xml:lang="en">Move and Update Task</source>
+    </trans-unit>
+    <trans-unit id="confirmMoveTask">
+      <source xml:lang="en">Move Task</source>
+    </trans-unit>
+    <trans-unit id="confirmUpdateTask">
+      <source xml:lang="en">Update Task</source>
+    </trans-unit>
+    <trans-unit id="enterCommandAriaLabel">
+      <source xml:lang="en">Task command</source>
+    </trans-unit>
+    <trans-unit id="enterCommandPlaceholder">
+      <source xml:lang="en">Enter command (for example, npm run dev)</source>
+    </trans-unit>
+    <trans-unit id="enterLabelAriaLabel">
+      <source xml:lang="en">Task name</source>
+    </trans-unit>
+    <trans-unit id="enterLabelPlaceholder">
+      <source xml:lang="en">Enter a name for this task (optional)</source>
+    </trans-unit>
+    <trans-unit id="labelFieldLabel">
+      <source xml:lang="en">Name</source>
+    </trans-unit>
+    <trans-unit id="runOnWorktreeCreated">
+      <source xml:lang="en">Run When Worktree Is Created</source>
+    </trans-unit>
+    <trans-unit id="runOnWorktreeCreatedDescription">
+      <source xml:lang="en">Automatically run this task when the session worktree is created</source>
+    </trans-unit>
+    <trans-unit id="runOptionsLabel">
+      <source xml:lang="en">Run Options</source>
+    </trans-unit>
+    <trans-unit id="storageAriaLabel">
+      <source xml:lang="en">Task storage target</source>
+    </trans-unit>
+    <trans-unit id="storageLabel">
+      <source xml:lang="en">Save In</source>
+    </trans-unit>
+    <trans-unit id="userStorageLabel">
+      <source xml:lang="en">User</source>
+    </trans-unit>
+    <trans-unit id="userStorageTooltip">
+      <source xml:lang="en">Save this task in your user tasks and make it available in all sessions</source>
+    </trans-unit>
+    <trans-unit id="workspaceStorageLabel">
+      <source xml:lang="en">Workspace</source>
+    </trans-unit>
+    <trans-unit id="workspaceStorageTooltip">
+      <source xml:lang="en">Save this task in the current workspace</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionArchiveNudge" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="archiveOnboarding.listUnavailable">
+      <source xml:lang="en">The sessions list could not be opened. Try again.</source>
+    </trans-unit>
+    <trans-unit id="sessionArchiveNudge.noLongerAvailable">
+      <source xml:lang="en">This suggestion is no longer available. Review the session before trying again.</source>
+    </trans-unit>
+    <trans-unit id="sessionArchiveNudge.updateFailed">
+      <source xml:lang="en">The session could not be updated. Check its connection and try again.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionArtifacts" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionArtifacts.commits">
+      <source xml:lang="en">Commits</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.copyCommitHash">
+      <source xml:lang="en">Copy Commit Hash</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.copyIssueLink">
+      <source xml:lang="en">Copy Issue Link</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.copyPullRequestLink">
+      <source xml:lang="en">Copy Pull Request Link</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.files">
+      <source xml:lang="en">Files</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.imageCarouselTitle">
+      <source xml:lang="en">Artifact Images</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.images">
+      <source xml:lang="en">Images</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.issues">
+      <source xml:lang="en">Issues</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.open">
+      <source xml:lang="en">Open {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.openImage">
+      <source xml:lang="en">Open {0} in Images Preview</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.pullRequests">
+      <source xml:lang="en">Pull Requests</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.resources">
+      <source xml:lang="en">Resources</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.websites">
+      <source xml:lang="en">Websites</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionBackgroundActivitiesControl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="backgroundActivities.subagent">
+      <source xml:lang="en">Subagent</source>
+    </trans-unit>
+    <trans-unit id="backgroundActivities.subagents">
+      <source xml:lang="en">Subagents</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionBrowsersControl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browsers.browser">
+      <source xml:lang="en">Browser</source>
+    </trans-unit>
+    <trans-unit id="browsers.browsers">
+      <source xml:lang="en">Browsers</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionChatInputToolbar" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionArtifacts.files">
+      <source xml:lang="en">Files</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.allChanges">
+      <source xml:lang="en">All Changes</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.allChangesOnBranch">
+      <source xml:lang="en">All Changes ({0})</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.copyIssue">
+      <source xml:lang="en">Copy Issue URL</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.copyPullRequest">
+      <source xml:lang="en">Copy Pull Request URL</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.issue">
+      <source xml:lang="en">Issue #{0}</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.issueDescription">
+      <source xml:lang="en">{0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.issueWithTitle">
+      <source xml:lang="en">Issue #{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.issues">
+      <source xml:lang="en">Issues</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequest">
+      <source xml:lang="en">Pull Request #{0}</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequestAttention">
+      <source xml:lang="en">failing checks or merge conflicts</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequestClosed">
+      <source xml:lang="en">closed</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequestComments">
+      <source xml:lang="en">unresolved review comments</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequestDescription">
+      <source xml:lang="en">{0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequestDescriptionWithChecks">
+      <source xml:lang="en">{0}. {1}. {2}</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequestDraft">
+      <source xml:lang="en">draft</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequestFailingChecks">
+      <source xml:lang="en">failing checks</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequestFailingChecksAndComments">
+      <source xml:lang="en">failing checks and unresolved review comments</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequestMerged">
+      <source xml:lang="en">merged</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequestOpen">
+      <source xml:lang="en">open</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequestRemoved">
+      <source xml:lang="en">Pull request artifact removed from session.</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequestWithTitle">
+      <source xml:lang="en">Pull Request #{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.pullRequests">
+      <source xml:lang="en">Pull Requests</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.removePullRequest">
+      <source xml:lang="en">Remove Pull Request Artifact from Session</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.removePullRequestFailed">
+      <source xml:lang="en">Could not remove pull request artifact: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionChatInputToolbarDebug" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.debug.chatPills.agentFeedback">
+      <source xml:lang="en">Agent Feedback to Address</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.apply">
+      <source xml:lang="en">Apply</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.artifactFiles">
+      <source xml:lang="en">Artifact File Names</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.autoIncrementChanges">
+      <source xml:lang="en">Automatically increase insertions and deletions every 2 seconds</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.browsers">
+      <source xml:lang="en">Browser Labels</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.ciFailed">
+      <source xml:lang="en">Failed CI Checks</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.ciPending">
+      <source xml:lang="en">Pending CI Checks</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.clear">
+      <source xml:lang="en">Clear</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.deletions">
+      <source xml:lang="en">Deletions</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.description">
+      <source xml:lang="en">Configure the values shown by status pills and input banners. Separate multiple names with commas or new lines.</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.files">
+      <source xml:lang="en">Files</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.inputBanners">
+      <source xml:lang="en">Input Banners</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.insertions">
+      <source xml:lang="en">Insertions</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.nonNegativeInteger">
+      <source xml:lang="en">Enter a whole number greater than or equal to 0.</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.prFeedback">
+      <source xml:lang="en">PR Feedback to Address</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.subagents">
+      <source xml:lang="en">Subagent Names</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.chatPills.title">
+      <source xml:lang="en">Fake Session Chat UI</source>
+    </trans-unit>
+    <trans-unit id="sessions.debug.showFakeChatPills">
+      <source xml:lang="en">Configure Fake Session Chat UI</source>
+    </trans-unit>
+    <trans-unit id="sessionsChatPillsDebugAvailable">
+      <source xml:lang="en">Whether a session chat view is active and can show fake status pills</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionCustomizations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionCustomizations.agents">
+      <source xml:lang="en">Agents</source>
+    </trans-unit>
+    <trans-unit id="sessionCustomizations.hooks">
+      <source xml:lang="en">Hooks</source>
+    </trans-unit>
+    <trans-unit id="sessionCustomizations.instructions">
+      <source xml:lang="en">Instructions</source>
+    </trans-unit>
+    <trans-unit id="sessionCustomizations.mcpServers">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="sessionCustomizations.plugins">
+      <source xml:lang="en">Plugins</source>
+    </trans-unit>
+    <trans-unit id="sessionCustomizations.prompts">
+      <source xml:lang="en">Prompts</source>
+    </trans-unit>
+    <trans-unit id="sessionCustomizations.skills">
+      <source xml:lang="en">Skills</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionReferenceCompletions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="currentSessionLabel">
+      <source xml:lang="en">{0} (current)</source>
+    </trans-unit>
+    <trans-unit id="untitledSession">
+      <source xml:lang="en">Untitled session</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionTurnChanges" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatTurnPills.changes.title">
+      <source xml:lang="en">Turn File Changes</source>
+    </trans-unit>
+    <trans-unit id="historicalTurnChanges.description">
+      <source xml:lang="en">Changes from the selected chat turn.</source>
+    </trans-unit>
+    <trans-unit id="historicalTurnChanges.label">
+      <source xml:lang="en">Turn Changes</source>
+    </trans-unit>
+    <trans-unit id="lastTurnChanges.description">
+      <source xml:lang="en">Changes from the viewed chat's last turn.</source>
+    </trans-unit>
+    <trans-unit id="lastTurnChanges.label">
+      <source xml:lang="en">Turn Changes</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionTypePicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionTypePicker.ariaLabel">
+      <source xml:lang="en">Session Type</source>
+    </trans-unit>
+    <trans-unit id="sessionTypePicker.disabledTriggerAriaLabel">
+      <source xml:lang="en">Session Type, {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionTypePicker.itemAriaLabel">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionTypePicker.triggerAriaLabel">
+      <source xml:lang="en">Pick Session Type, {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionWorkspacePicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="pathNotExistDetail">
+      <source xml:lang="en">The path '{0}' does not exist on this computer.</source>
+    </trans-unit>
+    <trans-unit id="pathNotExistTitle">
+      <source xml:lang="en">Path does not exist</source>
+    </trans-unit>
+    <trans-unit id="pickWorkspace">
+      <source xml:lang="en">workspace</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.ariaLabel">
+      <source xml:lang="en">Workspace Picker</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.attachFolder">
+      <source xml:lang="en">Attach Folder</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.attachFolderWithEllipsis">
+      <source xml:lang="en">Attach Folder...</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.attachRepository">
+      <source xml:lang="en">Attach Repository</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.attachRepositoryWithEllipsis">
+      <source xml:lang="en">Attach Repository...</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.attachedContextCountAriaLabel">
+      <source xml:lang="en">{0}, {1} attached</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.browseSelectLocal">
+      <source xml:lang="en">Select...</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.categorySelectionAriaLabel">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.chat">
+      <source xml:lang="en">Chat</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.connectRemoteAgentHostFailed">
+      <source xml:lang="en">Failed to connect to {0}.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.connectingRemoteAgentHost">
+      <source xml:lang="en">Connecting to {0}...</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.devContainer.label">
+      <source xml:lang="en">{0} - Dev Container</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.devContainer.local">
+      <source xml:lang="en">Use Local</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.devContainer.remote">
+      <source xml:lang="en">Use Remote Host</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.devContainer.use">
+      <source xml:lang="en">Use Dev Container</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.experimental">
+      <source xml:lang="en">Experimental</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.filter">
+      <source xml:lang="en">Search</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.githubLoading">
+      <source xml:lang="en">GitHub repositories are still loading</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.manageRemoteHost">
+      <source xml:lang="en">Manage {0}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.noFolderDescription">
+      <source xml:lang="en">Start the session in a temporary directory.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.noWorkspace">
+      <source xml:lang="en">No workspace</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.noWorkspaceSelectedAriaLabel">
+      <source xml:lang="en">New session with no workspace</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.openFolder">
+      <source xml:lang="en">Open Folder...</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.pickAriaLabel">
+      <source xml:lang="en">Start by picking a workspace</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.remote">
+      <source xml:lang="en">Remote</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.remoteAriaLabel">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.remoteFilter">
+      <source xml:lang="en">Search Remote</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.selectedAriaLabel">
+      <source xml:lang="en">New session in {0}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.statusWithActiveSession">
+      <source xml:lang="en">{0} · {1} active session</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.statusWithActiveSessions">
+      <source xml:lang="en">{0} · {1} active sessions</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionsChatAccessibilityHelp" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsChat.aquariumAction">
+      <source xml:lang="en">To show or hide the aquarium action on the new-session view, use the checked Aquarium item in the context menu outside the composer, or run the Toggle Aquarium Action Visibility command.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.archiveNudge">
+      <source xml:lang="en">When all GitHub pull requests associated with the session have merged and no chat is working or waiting for input, an archive suggestion may appear above the chat input. Use Tab or Shift+Tab to reach Archive, Configure Automatic Cleanup, or Dismiss Archive Suggestion, then Enter or Space to activate it. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Archive" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismiss Archive Suggestion, or Escape while the suggestion is focused, hides the suggestion for this session, including after a reload, until it is archived or deleted, and returns focus to the chat input. Archiving the session hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Archived" section of the sessions list. You can unarchive it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by unarchiving the session.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.archiveNudgeOnboarding">
+      <source xml:lang="en">The first time you activate the suggestion's Archive or Mark as Done button, a spotlight may reveal that session's action in the sessions list. It briefly waits for the list action to appear. The action waits until you activate the highlighted action, activate Understood, or press Escape to end the spotlight. Use Tab or Shift+Tab to move between the highlighted action and Understood, and Enter or Space to activate either. If the spotlight cannot be shown or is interrupted, the session is still archived or marked as done as long as the suggestion remains available. Once completed or skipped, the spotlight will not appear again.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.archiveSession">
+      <source xml:lang="en">To archive or mark one or more sessions as done, focus them in the Sessions list and invoke Archive or Mark as Done{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.background">
+      <source xml:lang="en">Outside high contrast themes, use Set Background to choose no background, the built-in theme-aware Codicons pattern, a new image, or one of the five most recently selected images. One randomly selected icon in the Codicons pattern is a Celebrate button; press Tab to find it, then press Enter or Space to activate it. Each activation selects another random icon as the next Celebrate button. Use Change Background Layout to choose whether an image repeats, stretches, or appears at an edge or corner for the current color theme. Moving through the layout picker previews each option; select one to save it, or press Escape to restore the previous layout. Both commands are available from the Command Palette and by right-clicking empty chat space. Change Background Layout is shown only for images. Background customization is unavailable while a high contrast theme is active.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.backgroundActivities">
+      <source xml:lang="en">Press Shift+Tab from the chat input to reach metadata and status pills above it, use the left and right arrows to move between pills, and press Enter or Space to activate one. Live browsers appear in their own pill, and the chat's subagents of any status appear in another. A pill with more than one entry opens a picker. Use the up and down arrows to move between entries. When an entry has details, Tab moves through its row actions and detail links; Shift+Tab returns to the row action, and the up and down arrows continue moving between entries. Press Enter to open an entry, or Escape to dismiss the picker and return focus to the pill.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.changes">
+      <source xml:lang="en">Focus the Changes view{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.chatGroups">
+      <source xml:lang="en">Chats can be arranged in groups. Focus the previous group{0} or next group{1}. Split the active chat into a group to the right{2} or below{3}, or move it to the previous group{4} or next group{5}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.closeChat">
+      <source xml:lang="en">Activate a chat tab's close button to close (hide) that chat from the tab strip without deleting it; reopen it later from the Chats menu. The session's main chat cannot be closed.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.contextReferences">
+      <source xml:lang="en">Type # in the chat input to attach context. Use #file to reference a file or folder, or #session to reference another agent session. Referencing a session together with the /troubleshoot command analyzes that session's logs instead of the current one. Accept a suggestion with Tab or Enter. Openable references appear as buttons above the input; activate one to open it, or use its Remove button to detach it.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.conversationsAsSessionView">
+      <source xml:lang="en">Chats open directly in the session view without a tab row. Side-by-side chat groups retain the session header.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.conversationsAsTabs">
+      <source xml:lang="en">When multiple chats appear as tabs in a single group, the tab row replaces the session header and includes the session actions. Side-by-side chat groups retain the session header and keep their tab rows compact.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.copySessionLink">
+      <source xml:lang="en">To copy a browser link that opens an Agent Host session in the Agents window, open the session's context menu and choose Copy Link.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.createdBySession">
+      <source xml:lang="en">When a session was created by another session, focus it in the Sessions list and use the Show Hover command{0}. Move focus to the Created by link, then press Enter or Space to open the creator session.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.customizations">
+      <source xml:lang="en">Focus the Chat Customizations section at the bottom of the left sidebar{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.delegatedMessage">
+      <source xml:lang="en">Messages sent by another session or chat show a source annotation above the message. Press Tab to focus the annotation, then press Enter or Space to open the source chat.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.deleteChat">
+      <source xml:lang="en">To permanently delete a chat, open the chat tab's context menu and choose Delete Chat. This is destructive and cannot be undone.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.deleteSession">
+      <source xml:lang="en">To permanently delete a session, open its context menu and choose Delete. This is destructive and cannot be undone.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.devContainer">
+      <source xml:lang="en">When Dev Container Agent Host sessions are enabled, Docker is available on the host, and a local, SSH, Tunnel, or WSL folder contains a Dev Container configuration, open the folder's submenu and choose Use Dev Container. For remote folders, first connect to a host that supports Dev Container sessions. For WSL folders, Docker must be available in the WSL distribution. Use the arrow keys to navigate submenus and Enter to select. The workspace picker then identifies the folder with a Dev Container suffix. Choose Use Local or Use Remote Host to switch back.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.dictation">
+      <source xml:lang="en">When dictation is configured, dictate your message into the input{0}. Tap to start and stop, or hold to dictate only while pressed. If the speech-to-text model is still preparing, activate the dictation control again to cancel.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.doneNudge">
+      <source xml:lang="en">When all GitHub pull requests associated with the session have merged and no chat is working or waiting for input, a mark as done suggestion may appear above the chat input. Use Tab or Shift+Tab to reach Mark as Done, Configure Automatic Cleanup, or Dismiss Mark as Done Suggestion, then Enter or Space to activate it. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Mark as Done" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismiss Mark as Done Suggestion, or Escape while the suggestion is focused, hides the suggestion for this session, including after a reload, until it is marked as done or deleted, and returns focus to the chat input. Marking the session as done hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Done" section of the sessions list. You can restore it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by restoring the session.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.externalSessionBanner">
+      <source xml:lang="en">When you first open a session created in another application, a banner appears at the top of the chat. Use Tab to reach its external-session picker, choose an option, and activate Save. The Close action dismisses the banner without changing the setting. Saving or closing permanently dismisses the banner.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.externalSessionFilter">
+      <source xml:lang="en">The Sessions list Filter menu includes an External submenu. Use it to choose whether external sessions from another application are shown for the last 24 hours, the last 7 days, always, or not at all.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.failingChecksPullRequest">
+      <source xml:lang="en">When a session pull request has failing checks, use Reveal in its banner item to open that pull request, or use Fix Checks to ask the agent to address the failures.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.feedbackAttachment">
+      <source xml:lang="en">When a feedback comments attachment appears above the input, focus it and press Enter or Space. A single comment opens directly. Multiple comments open a tree grouped by file; use the arrow keys to navigate, Enter to reveal a comment, and Escape to close the tree.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.feedbackComments">
+      <source xml:lang="en">When pull requests have failing checks or unreviewed comments, one banner appears above the input. If several pull requests need attention, use the Previous Banner and Next Banner buttons to move between them. A pull request with both failing checks and comments uses a split button: activate the main action to address both, or use its More Actions button to address only the checks or comments. In-product agent review comments appear as their own carousel item.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.filesView">
+      <source xml:lang="en">Focus the Files Explorer view{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.find">
+      <source xml:lang="en">To search the chat transcript, invoke Find in Chat{0}. Find Next{1} and Find Previous{2} move between results, scrolling each one into view.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.focusActiveSession">
+      <source xml:lang="en">Focus the active session{0}. The default Open Chat (Agent) shortcut also focuses the active session in the Agents window.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.forkToSide">
+      <source xml:lang="en">Alt-click, or Option-click on macOS, the Fork Conversation button at a checkpoint to open the fork beside its source. Ordinary activation keeps its existing behavior. With the keyboard, activate Fork Conversation, reopen the source from the Sessions list, then choose Open to the Side from the fork's context menu.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.githubContext">
+      <source xml:lang="en">Use Add Context to attach files, images, and, when available, GitHub issues or pull requests.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.githubReferences">
+      <source xml:lang="en">Pull request and issue pills above the chat input open their GitHub item in the GitHub Pull Requests extension when it is available. Pills that represent several items open a keyboard-accessible picker.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.goBack">
+      <source xml:lang="en">Go back through visited sessions{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.goForward">
+      <source xml:lang="en">Go forward through visited sessions{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.history">
+      <source xml:lang="en">Use up and down arrows to navigate your request history in the input box.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.input">
+      <source xml:lang="en">You are in the chat input. Type a message and press Enter to send it.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.inputBackground">
+      <source xml:lang="en">Press Alt+Enter to start the session in the background without navigating into it. The started session appears in the Chat Sessions view.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.inputPills">
+      <source xml:lang="en">When session metadata or active-turn status pills appear above the input, press Shift+Tab to reach them, use the Left and Right arrow keys to move between them, and press Enter or Space to activate one. Open the context menu{0} to choose which pills are shown. Pull Requests Options lets you show all pull requests or only open and draft ones, remembered across sessions. If every pull request is filtered out, these options are also available in any other pill's context menu or the toolbar context menu.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.micContextMenu">
+      <source xml:lang="en">To choose a microphone or turn off dictation or Voice Mode, focus the microphone button in the input toolbar and open its context menu (for example Shift+F10).</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.mobileConfig">
+      <source xml:lang="en">On mobile, the mode and model pickers appear as tappable chips below the input. Tap a chip to open a bottom sheet where you can change the selection.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.navigateChatTabs">
+      <source xml:lang="en">When a chat tab is focused, use the left and right arrow keys to move to and activate an adjacent chat tab, or Home and End to activate the first and last tabs.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.navigateNextSession">
+      <source xml:lang="en">Navigate to the next session in the list{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.navigatePreviousSession">
+      <source xml:lang="en">Navigate to the previous session in the list{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.openPullRequest">
+      <source xml:lang="en">When the session is associated with GitHub pull requests, a status pill above the chat input shows the pull request number or count. Activate it to open a single pull request or choose from the associated pull requests{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.overview">
+      <source xml:lang="en">You are in the Agents window. The Agents window is a dedicated workspace for working with AI agents. It provides a chat interface, a changes view for reviewing agent-generated changes, a file explorer, and customization options.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.pasteAsText">
+      <source xml:lang="en">To paste the clipboard as plain text, without converting it to Markdown or storing it as an attachment, invoke Paste as Text{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.pastedText">
+      <source xml:lang="en">Long pasted text is stored as an attached text item and replaced in the input with a numbered inline reference.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.pickFolderQuickPick">
+      <source xml:lang="en">To choose a folder from a searchable list instead, use the New Session in Folder command{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.promptOptions">
+      <source xml:lang="en">When prompt options appear above the new-session input, use Tab and Shift+Tab to move between them, then press Enter or Space to insert one. You can select a different option while the input is empty, exactly matches the inserted prompt, or only has its editable placeholder removed; other edits disable the options without hiding them. Clearing the input also clears the selected option. Use the Close action to hide the options and return focus to the input.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.promptTemplatePlaceholder">
+      <source xml:lang="en">When the new-session prompt contains a highlighted task placeholder, place the caret inside it and replace it{0} to type your task.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.promptTimeline">
+      <source xml:lang="en">When the prompt timeline is enabled, a handle on the left edge of the transcript lists your prompts. Activate it to expand the list, use the up and down arrows (or Home and End) to move between prompts, Enter or Space to jump to a prompt, and Escape to dismiss the list and return focus to the handle. When a prompt title is pinned above the transcript, activate its title to jump to that prompt.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.pullRequestSession">
+      <source xml:lang="en">In a repository section where New Session is a split button, focus New Session and press Right Arrow to reach its dropdown, then activate New Session from Pull Request to open a searchable pull request picker. Pull requests are grouped by review and assignment status. Use the arrow keys to navigate, Enter to create the session, and Escape to close the picker.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.quickChat">
+      <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. When consolidated remote workspaces are enabled, this opens the new-session composer, where you can choose No workspace. Otherwise, it starts a workspace-less chat directly. The Toggle Side Panel command is disabled for quick chats.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.removePullRequestArtifact">
+      <source xml:lang="en">For pull requests recorded as session artifacts, the pull request dropdown offers Remove Pull Request Artifact from Session on each row. Use Tab to reach its actions. When only one pull request is visible, use the pull request pill's context menu instead. Removal is immediate and only deletes the artifact record; it does not close the pull request or remove independent session associations.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.renameChat">
+      <source xml:lang="en">When Rename is available for a non-main chat, focus its nested row in the Sessions list and invoke Rename{0} or double-click its title to rename it inline. Type the new title, then press Enter to confirm or Escape to cancel. From the chat transcript or input, invoking Rename opens a prompt instead.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.renameSession">
+      <source xml:lang="en">To rename a session inline, focus its row in the Sessions list and invoke Rename{0}, double-click its title, or open its context menu and choose Rename. Type the new title, then press Enter to confirm or Escape to cancel. From the main chat transcript or input, invoking Rename opens a prompt instead.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.sessionsListChatContextMenu">
+      <source xml:lang="en">Open a nested chat's context menu to rename it, open it to the side, or, when supported, permanently delete it. Agent Host chats also offer Copy Link.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.sessionsListChatsAsSessionView">
+      <source xml:lang="en">Sessions with multiple user-facing chats show those chats nested beneath the session in the Sessions list. Use the arrow keys to navigate the list and Enter to show a chat as the session view. Side chats and subagent chats are omitted from this nested list: side chats are reachable from the Side Chats dropdown in the session's overflow menu, and subagent chats open from their pills in the chat transcript.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.sessionsListChatsAsTabs">
+      <source xml:lang="en">Sessions with multiple user-facing chats show those chats nested beneath the session in the Sessions list. Use the arrow keys to navigate the list and Enter to open a chat as a tab. Side chats and subagent chats are omitted from this nested list: side chats are reachable from the Side Chats dropdown in the session's overflow menu, and subagent chats open from their pills in the chat transcript.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.sessionsListDefaultArchiveActions">
+      <source xml:lang="en">The session row toolbar offers Pin or Unpin before Archive. For sessions that support multiple chats, open the session's context menu to start a new chat.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.sessionsListDefaultDoneActions">
+      <source xml:lang="en">The session row toolbar offers Pin or Unpin before Mark as Done. For sessions that support multiple chats, open the session's context menu to start a new chat.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.sessionsListPromotedNewChatArchiveActions">
+      <source xml:lang="en">For sessions that support multiple chats, the session row toolbar offers New Chat in This Session before Archive. Open the session's context menu to pin or unpin it.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.sessionsListPromotedNewChatDoneActions">
+      <source xml:lang="en">For sessions that support multiple chats, the session row toolbar offers New Chat in This Session before Mark as Done. Open the session's context menu to pin or unpin it.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.sessionsView">
+      <source xml:lang="en">Focus the Chat Sessions view{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.subagentPills">
+      <source xml:lang="en">Activate a subagent pill in the chat transcript to open the subagent beside the current chat. With the keyboard, focus a pill and press Enter or Space; Alt+Enter also opens it to the side. You can also drag a pill to a chat group's edge to choose where it opens.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.syncChanges">
+      <source xml:lang="en">When available, Sync Changes appears with incoming and outgoing commit counts in the same repository toolbar as the worktree and branch controls below the input. Use Tab and the arrow keys to reach it, then Enter or Space to synchronize the session's repository. The action is disabled while synchronization is running.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.toggleSidePanel">
+      <source xml:lang="en">Toggle the side panel (the editor area together with the auxiliary bar) open or closed{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.viewAllChanges">
+      <source xml:lang="en">Status pills above the chat input include the session's diff stats (lines added and removed). Activate the Changes pill to open the multi-file diff editor with Session Changes for a folder session or Branch Changes for a worktree session{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.voiceMode">
+      <source xml:lang="en">Start or stop Voice Mode to interact with the agent using your microphone{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.vscodePet">
+      <source xml:lang="en">Use the checked Pet item in the new-session view context menu, or type /vscode-pet, to show or hide the VS Code pet above the input. Drag it horizontally to reposition it, or use Tab to focus it and the left and right arrow keys to move it. Press Enter or Space to show it some love.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.vscodePetAchievements">
+      <source xml:lang="en">When the pet is enabled, the user account menu lists unlocked achievement badges before locked badges and provides a View Achievements button. A gold star on the pet announces a newly unlocked achievement; activate the pet while the star is visible to open Achievements.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.workspace">
+      <source xml:lang="en">Shift+Tab to navigate to the workspace picker and choose a workspace for your session. When consolidated remote workspaces are enabled, opening the picker focuses its search input so you can immediately type to filter workspaces. If quick chats are available, you can also choose No workspace to start a workspace-less chat.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.workspaceHandoff">
+      <source xml:lang="en">Opening Agents from an editor can suggest that editor's folder for a fresh session. Choosing a workspace yourself or starting another session cancels a pending suggestion. If an explicitly requested workspace cannot be selected, a notification offers Retry and Choose Workspace actions.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/slashCommands" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="slashCommand.agents">
+      <source xml:lang="en">View and manage custom agents</source>
+    </trans-unit>
+    <trans-unit id="slashCommand.hooks">
+      <source xml:lang="en">View and manage hooks</source>
+    </trans-unit>
+    <trans-unit id="slashCommand.instructions">
+      <source xml:lang="en">View and manage instructions</source>
+    </trans-unit>
+    <trans-unit id="slashCommand.models">
+      <source xml:lang="en">Open the model picker</source>
+    </trans-unit>
+    <trans-unit id="slashCommand.skills">
+      <source xml:lang="en">View and manage skills</source>
+    </trans-unit>
+    <trans-unit id="slashCommand.vscodePet">
+      <source xml:lang="en">Toggle an interactive VS Code pet (Experimental)</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/variableCompletions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="activeFile">
+      <source xml:lang="en">Active file</source>
+    </trans-unit>
+    <trans-unit id="fileEntryDescription">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/webWorkspacePicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="scopedWorkspacePicker.githubLoading">
+      <source xml:lang="en">GitHub repositories are still loading</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/electron-browser/chat.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsHandoff.sessionNotFound">
+      <source xml:lang="en">The linked session could not be found: {0}</source>
+    </trans-unit>
+</body></file>
+</xliff>

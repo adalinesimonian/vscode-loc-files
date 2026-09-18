@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/update/browser/postUpdateWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="postUpdate.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="postUpdate.releaseNotes">
+      <source xml:lang="en">Release Notes</source>
+    </trans-unit>
+    <trans-unit id="postUpdate.title">
+      <source xml:lang="en">New in {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/update/browser/releaseNotesEditor" source-language="en" datatype="plaintext"><body>
     <trans-unit id="releaseNotesInputName">
       <source xml:lang="en">Release Notes: {0}</source>
@@ -15,6 +26,12 @@
     <trans-unit id="DownloadingUpdate">
       <source xml:lang="en">Downloading Update...</source>
     </trans-unit>
+    <trans-unit id="cancellingUpdate">
+      <source xml:lang="en">Cancelling {0} update...</source>
+    </trans-unit>
+    <trans-unit id="cancellingUpdateMenuEntry">
+      <source xml:lang="en">Cancelling Update...</source>
+    </trans-unit>
     <trans-unit id="checkForUpdates">
       <source xml:lang="en">Check for Updates...</source>
     </trans-unit>
@@ -24,29 +41,17 @@
     <trans-unit id="checkingForUpdates2">
       <source xml:lang="en">Checking for Updates...</source>
     </trans-unit>
-    <trans-unit id="download update">
-      <source xml:lang="en">Download Update</source>
-    </trans-unit>
     <trans-unit id="download update_1">
       <source xml:lang="en">Download Update (1)</source>
     </trans-unit>
     <trans-unit id="downloading">
       <source xml:lang="en">Downloading {0} update...</source>
     </trans-unit>
-    <trans-unit id="installUpdate">
-      <source xml:lang="en">Install Update</source>
-    </trans-unit>
     <trans-unit id="installUpdate...">
       <source xml:lang="en">Install Update... (1)</source>
     </trans-unit>
     <trans-unit id="installingUpdate">
       <source xml:lang="en">Installing Update...</source>
-    </trans-unit>
-    <trans-unit id="later">
-      <source xml:lang="en">Later</source>
-    </trans-unit>
-    <trans-unit id="learn more">
-      <source xml:lang="en">Learn More</source>
     </trans-unit>
     <trans-unit id="noUpdatesAvailable">
       <source xml:lang="en">There are currently no updates available.</source>
@@ -88,29 +93,11 @@
     <trans-unit id="switchToStable">
       <source xml:lang="en">Switch to Stable Version...</source>
     </trans-unit>
-    <trans-unit id="thereIsUpdateAvailable">
-      <source xml:lang="en">There is an available update.</source>
-    </trans-unit>
-    <trans-unit id="update service">
-      <source xml:lang="en">Update Service</source>
-    </trans-unit>
-    <trans-unit id="update service disabled">
-      <source xml:lang="en">Updates are disabled because you are running the user-scope installation of {0} as Administrator.</source>
-    </trans-unit>
     <trans-unit id="update.noReleaseNotesOnline">
       <source xml:lang="en">This version of {0} does not have release notes online</source>
     </trans-unit>
-    <trans-unit id="updateAvailable">
-      <source xml:lang="en">There's an update available: {0} {1}</source>
-    </trans-unit>
-    <trans-unit id="updateAvailableAfterRestart">
-      <source xml:lang="en">Restart {0} to apply the latest update.</source>
-    </trans-unit>
     <trans-unit id="updateIsReady">
       <source xml:lang="en">New {0} update available.</source>
-    </trans-unit>
-    <trans-unit id="updateNow">
-      <source xml:lang="en">Update Now</source>
     </trans-unit>
     <trans-unit id="updating">
       <source xml:lang="en">Updating {0}...</source>
@@ -126,7 +113,7 @@
 </body></file>
   <file original="src/vs/workbench/contrib/update/browser/update.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="applyUpdate">
-      <source xml:lang="en">Apply Update...</source>
+      <source xml:lang="en">Apply Update from File...</source>
     </trans-unit>
     <trans-unit id="checkForUpdates">
       <source xml:lang="en">Check for Updates...</source>
@@ -148,7 +135,7 @@
       <source xml:lang="en">Download {0}</source>
     </trans-unit>
     <trans-unit id="pickUpdate">
-      <source xml:lang="en">Apply Update</source>
+      <source xml:lang="en">Apply Update from File</source>
     </trans-unit>
     <trans-unit id="releaseNotesFromFileNone">
       <source xml:lang="en">Cannot open the current file as Release Notes</source>
@@ -162,12 +149,213 @@
     <trans-unit id="showReleaseNotesCurrentFile">
       <source xml:lang="en">Open Current File as Release Notes</source>
     </trans-unit>
+    <trans-unit id="showUpdateInfo">
+      <source xml:lang="en">Show Update Info</source>
+    </trans-unit>
+    <trans-unit id="showUpdateInfo.prompt">
+      <source xml:lang="en">Enter markdown to render, or JSON with markdown/buttons (leave empty to load from URL)</source>
+    </trans-unit>
     <trans-unit id="update.noReleaseNotesOnline">
       <source xml:lang="en">This version of {0} does not have release notes online</source>
     </trans-unit>
     <trans-unit id="updateButton">
       <source xml:lang="en">&amp;&amp;Update</source>
       <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/update/browser/updateTitleBarEntry" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="updateIndicator.cancelling">
+      <source xml:lang="en">Cancelling...</source>
+    </trans-unit>
+    <trans-unit id="updateIndicator.checking">
+      <source xml:lang="en">Checking...</source>
+    </trans-unit>
+    <trans-unit id="updateIndicator.downloading">
+      <source xml:lang="en">Downloading...</source>
+    </trans-unit>
+    <trans-unit id="updateIndicator.installing">
+      <source xml:lang="en">Installing...</source>
+    </trans-unit>
+    <trans-unit id="updateIndicator.overwriting">
+      <source xml:lang="en">Updating...</source>
+    </trans-unit>
+    <trans-unit id="updateIndicator.restarting">
+      <source xml:lang="en">Restarting...</source>
+    </trans-unit>
+    <trans-unit id="updateIndicator.update">
+      <source xml:lang="en">Update</source>
+    </trans-unit>
+    <trans-unit id="updateIndicatorTitleBarAction">
+      <source xml:lang="en">Update</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/update/browser/updateTooltip" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="updateTooltip.autoUpdateDefault">
+      <source xml:lang="en">Automatic updates are enabled. Happy Coding!</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.autoUpdateManual">
+      <source xml:lang="en">Automatic updates will be checked but not installed automatically.</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.autoUpdateNone">
+      <source xml:lang="en">Automatic updates are disabled.</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.autoUpdateStart">
+      <source xml:lang="en">Updates will be applied on restart.</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.cancellingPleaseWait">
+      <source xml:lang="en">Cancelling update, please wait...</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.cancellingTitle">
+      <source xml:lang="en">Cancelling Update</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.checkingForUpdatesTitle">
+      <source xml:lang="en">Checking for Updates</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.checkingPleaseWait">
+      <source xml:lang="en">Checking for updates, please wait...</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.copyVersion">
+      <source xml:lang="en">Copy</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.currentVersionLabel">
+      <source xml:lang="en">Current Version: {0}</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.currentVersionLabelWithCommit">
+      <source xml:lang="en">Current Version: {0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.disabledByEnvironment">
+      <source xml:lang="en">Updates are disabled by the --disable-updates command line flag.</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.disabledByPolicy">
+      <source xml:lang="en">Updates are disabled by organization policy.</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.disabledGeneric">
+      <source xml:lang="en">Updates are disabled.</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.disabledInvalidConfig">
+      <source xml:lang="en">Updates are disabled because the update URL is invalid.</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.disabledManually">
+      <source xml:lang="en">Updates are manually disabled. Change the "update.mode" setting to enable.</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.disabledMissingConfig">
+      <source xml:lang="en">Updates are disabled because no update URL is configured.</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.disabledNotBuilt">
+      <source xml:lang="en">Updates are not available for this build.</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.disabledRunningAsAdmin">
+      <source xml:lang="en">Updates are not available when running a user install of {0} as administrator.</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.downloadButton">
+      <source xml:lang="en">Download</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.downloadSpeed">
+      <source xml:lang="en">{0}/s</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.downloadingNewerPleaseWait">
+      <source xml:lang="en">A newer update was released. Downloading, please wait...</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.downloadingNewerUpdateTitle">
+      <source xml:lang="en">Downloading Newer Update</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.downloadingPleaseWait">
+      <source xml:lang="en">Downloading update, please wait...</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.downloadingUpdateTitle">
+      <source xml:lang="en">Downloading Update</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.initializingMessage">
+      <source xml:lang="en">Initializing update service...</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.initializingTitle">
+      <source xml:lang="en">Initializing</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.installButton">
+      <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.installingPleaseWait">
+      <source xml:lang="en">Installing update, please wait...</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.installingUpdateTitle">
+      <source xml:lang="en">Installing Update</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.latestVersionLabel">
+      <source xml:lang="en">Latest Version: {0}</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.latestVersionLabelWithCommit">
+      <source xml:lang="en">Latest Version: {0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.noUpdateAvailableMessage">
+      <source xml:lang="en">There are no updates currently available.</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.noUpdateAvailableTitle">
+      <source xml:lang="en">No Update Available</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.releasedLabel">
+      <source xml:lang="en">Released {0}</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.restartButton">
+      <source xml:lang="en">Restart</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.restartToUpdateTitle">
+      <source xml:lang="en">Restart to Update</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.restartingPleaseWait">
+      <source xml:lang="en">Restarting to update, please wait...</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.restartingTitle">
+      <source xml:lang="en">Restarting {0}</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.timeRemaining">
+      <source xml:lang="en">remaining</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.upToDateTitle">
+      <source xml:lang="en">Up to Date</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.updateAvailableTitle">
+      <source xml:lang="en">Update Available</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.updateErrorTitle">
+      <source xml:lang="en">Update Error</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.updateInstalledTitle">
+      <source xml:lang="en">Update Installed</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.updateReadyTitle">
+      <source xml:lang="en">Update is Ready to Install</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.updatesDisabledTitle">
+      <source xml:lang="en">Updates Disabled</source>
+    </trans-unit>
+    <trans-unit id="updateTooltip.viewReleaseNotes">
+      <source xml:lang="en">Release Notes</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/update/common/updateUtils" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="update.bytes">
+      <source xml:lang="en">{0} B</source>
+    </trans-unit>
+    <trans-unit id="update.gigabytes">
+      <source xml:lang="en">{0} GB</source>
+    </trans-unit>
+    <trans-unit id="update.kilobytes">
+      <source xml:lang="en">{0} KB</source>
+    </trans-unit>
+    <trans-unit id="update.megabytes">
+      <source xml:lang="en">{0} MB</source>
+    </trans-unit>
+    <trans-unit id="update.timeRemainingHour">
+      <source xml:lang="en">{0} hour</source>
+    </trans-unit>
+    <trans-unit id="update.timeRemainingHours">
+      <source xml:lang="en">{0} hours</source>
+    </trans-unit>
+    <trans-unit id="update.timeRemainingMinutes">
+      <source xml:lang="en">{0} min</source>
+    </trans-unit>
+    <trans-unit id="update.timeRemainingSeconds">
+      <source xml:lang="en">{0}s</source>
     </trans-unit>
 </body></file>
 </xliff>

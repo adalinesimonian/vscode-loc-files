@@ -5,4 +5,12 @@
       <source xml:lang="en">Toggle Keyboard Shortcuts Troubleshooting</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/keybindings/electron-browser/systemWideKeybindings.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="systemWideKeybindings.registrationFailed">
+      <source xml:lang="en">Some system-wide keybindings could not be registered ({0}); the key combination may already be taken by the operating system or another application.</source>
+    </trans-unit>
+    <trans-unit id="systemWideKeybindings.whenIgnored">
+      <source xml:lang="en">The "when" clause is ignored for system-wide keybindings ({0}); they are always active while {1} is running.</source>
+    </trans-unit>
+</body></file>
 </xliff>

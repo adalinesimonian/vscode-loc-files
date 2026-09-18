@@ -70,6 +70,42 @@
     <trans-unit id="inlineCompletions.snoozed">
       <source xml:lang="en">Whether inline completions are currently snoozed</source>
     </trans-unit>
+    <trans-unit id="snooze.10minutes">
+      <source xml:lang="en">10 minutes</source>
+    </trans-unit>
+    <trans-unit id="snooze.15minutes">
+      <source xml:lang="en">15 minutes</source>
+    </trans-unit>
+    <trans-unit id="snooze.1minute">
+      <source xml:lang="en">1 minute</source>
+    </trans-unit>
+    <trans-unit id="snooze.30minutes">
+      <source xml:lang="en">30 minutes</source>
+    </trans-unit>
+    <trans-unit id="snooze.5minutes">
+      <source xml:lang="en">5 minutes</source>
+    </trans-unit>
+    <trans-unit id="snooze.60minutes">
+      <source xml:lang="en">60 minutes</source>
+    </trans-unit>
+    <trans-unit id="snooze.custom">
+      <source xml:lang="en">Custom...</source>
+    </trans-unit>
+    <trans-unit id="snooze.customPlaceholder">
+      <source xml:lang="en">Duration in minutes (e.g. 90)</source>
+    </trans-unit>
+    <trans-unit id="snooze.customPrompt">
+      <source xml:lang="en">Enter snooze duration in minutes</source>
+    </trans-unit>
+    <trans-unit id="snooze.invalidInput">
+      <source xml:lang="en">Please enter a positive number</source>
+    </trans-unit>
+    <trans-unit id="snooze.lastCustom">
+      <source xml:lang="en">{0} minutes (Last used)</source>
+    </trans-unit>
+    <trans-unit id="snooze.lastUsed">
+      <source xml:lang="en">Last used custom duration</source>
+    </trans-unit>
     <trans-unit id="snooze.placeholder">
       <source xml:lang="en">Select snooze duration for Inline Suggestions</source>
     </trans-unit>
@@ -212,13 +248,19 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="showMoves">
       <source xml:lang="en">Show Moved Code Blocks</source>
     </trans-unit>
-    <trans-unit id="useInlineViewWhenSpaceIsLimited">
-      <source xml:lang="en">Use Inline View When Space Is Limited</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/editor/browser/widget/diffEditor/features/hideUnchangedRegionsFeature" source-language="en" datatype="plaintext"><body>
     <trans-unit id="diff.bottom">
       <source xml:lang="en">Click or drag to show more below</source>
+    </trans-unit>
+    <trans-unit id="diff.hiddenLines.breadcrumb">
+      <source xml:lang="en">Go to {0}</source>
+    </trans-unit>
+    <trans-unit id="diff.hiddenLines.collapse">
+      <source xml:lang="en">Collapse unchanged lines</source>
+    </trans-unit>
+    <trans-unit id="diff.hiddenLines.expand">
+      <source xml:lang="en">Show {0} hidden lines</source>
     </trans-unit>
     <trans-unit id="diff.hiddenLines.expandAll">
       <source xml:lang="en">Double click to unfold</source>
@@ -286,6 +328,14 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <source xml:lang="en">The background color of the diff editor's header</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/editor/browser/widget/multiDiffEditor/diffEditorItemTemplate" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="binaryFileChanged">
+      <source xml:lang="en">Binary file changed</source>
+    </trans-unit>
+    <trans-unit id="openBinaryDiff">
+      <source xml:lang="en">Open Diff</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/editor/browser/widget/multiDiffEditor/multiDiffEditorWidgetImpl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="loading">
       <source xml:lang="en">Loading...</source>
@@ -303,6 +353,12 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="diffAlgorithm.advanced">
       <source xml:lang="en">Uses the advanced diffing algorithm.</source>
+    </trans-unit>
+    <trans-unit id="diffAlgorithm.advancedExternal">
+      <source xml:lang="en">Uses the advanced diffing algorithm from the external `@vscode/diff` package (pure JavaScript).</source>
+    </trans-unit>
+    <trans-unit id="diffAlgorithm.advancedWasm">
+      <source xml:lang="en">Uses the advanced diffing algorithm from the external `@vscode/diff` package (WebAssembly).</source>
     </trans-unit>
     <trans-unit id="diffAlgorithm.legacy">
       <source xml:lang="en">Uses the legacy diffing algorithm.</source>
@@ -333,6 +389,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="editorConfigurationTitle">
       <source xml:lang="en">Editor</source>
+    </trans-unit>
+    <trans-unit id="hideOriginalLineNumbers">
+      <source xml:lang="en">Controls whether original line numbers are hidden in inline diffs. When set to null, uses the editor's default: hidden in compact multi diff editors and visible in other diff editors.</source>
     </trans-unit>
     <trans-unit id="hideUnchangedRegions.contextLineCount">
       <source xml:lang="en">Controls how many lines are used as context when comparing unchanged regions.</source>
@@ -611,6 +670,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="deprecated">
       <source xml:lang="en">This setting is deprecated, please use separate settings like 'editor.suggest.showKeywords' or 'editor.suggest.showSnippets' instead.</source>
+    </trans-unit>
+    <trans-unit id="doubleClickSelectsBlock">
+      <source xml:lang="en">Controls whether double-clicking next to a bracket or quote selects the content inside.</source>
     </trans-unit>
     <trans-unit id="dragAndDrop">
       <source xml:lang="en">Controls whether the editor should allow moving selections via drag and drop.</source>
@@ -963,6 +1025,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="find.autoFindInSelection">
       <source xml:lang="en">Controls the condition for turning on Find in Selection automatically.</source>
     </trans-unit>
+    <trans-unit id="find.closeOnResult">
+      <source xml:lang="en">Controls whether the Find Widget closes after an explicit find navigation command lands on a result.</source>
+    </trans-unit>
     <trans-unit id="find.cursorMoveOnType">
       <source xml:lang="en">Controls whether the cursor should jump to find matches while typing.</source>
     </trans-unit>
@@ -1041,6 +1106,15 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="formatOnType">
       <source xml:lang="en">Controls whether the editor should automatically format the line after typing.</source>
     </trans-unit>
+    <trans-unit id="fullwidthCharacterWidth">
+      <source xml:lang="en">Controls the width used to render full-width characters.</source>
+    </trans-unit>
+    <trans-unit id="fullwidthCharacterWidth.font">
+      <source xml:lang="en">Render full-width characters using the width defined by the font.</source>
+    </trans-unit>
+    <trans-unit id="fullwidthCharacterWidth.twoCells">
+      <source xml:lang="en">Render full-width characters centered in exactly two character cells. Only applies to monospace fonts. Does not apply to multi codepoint full-width characters or to GPU rendering. This has a performance impact on line rendering.</source>
+    </trans-unit>
     <trans-unit id="glyphMargin">
       <source xml:lang="en">Controls whether the editor should render the vertical glyph margin. Glyph margin is mostly used for debugging.</source>
     </trans-unit>
@@ -1067,6 +1141,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="hover.hidingDelay">
       <source xml:lang="en">Controls the delay in milliseconds after which the hover is hidden. Requires `#editor.hover.sticky#` to be enabled.</source>
+    </trans-unit>
+    <trans-unit id="hover.showLongLineWarning">
+      <source xml:lang="en">Controls whether long line warning hovers are shown, such as when tokenization is skipped or rendering is paused.</source>
     </trans-unit>
     <trans-unit id="hover.sticky">
       <source xml:lang="en">Controls whether the hover should remain visible when mouse is moved over it.</source>
@@ -1097,6 +1174,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="inlineSuggest.edits.allowCodeShifting">
       <source xml:lang="en">Controls whether showing a suggestion will shift the code to make space for the suggestion inline.</source>
+    </trans-unit>
+    <trans-unit id="inlineSuggest.edits.longDistanceHintContextLineCount">
+      <source xml:lang="en">Controls how many lines of surrounding context are shown above and below the target line in the long distance inline suggestion preview. Set to 0 to only show the target line.</source>
     </trans-unit>
     <trans-unit id="inlineSuggest.edits.renderSideBySide">
       <source xml:lang="en">Controls whether larger suggestions can be shown side by side.</source>
@@ -1295,6 +1375,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="off">
       <source xml:lang="en">Quick suggestions are disabled</source>
     </trans-unit>
+    <trans-unit id="offWhenInlineCompletions">
+      <source xml:lang="en">Quick suggestions are disabled when inline completions are showing</source>
+    </trans-unit>
     <trans-unit id="on">
       <source xml:lang="en">Quick suggestions show inside the suggest widget</source>
     </trans-unit>
@@ -1351,6 +1434,18 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="quickSuggestions.strings">
       <source xml:lang="en">Enable quick suggestions inside strings.</source>
+    </trans-unit>
+    <trans-unit id="quickSuggestions.topLevel.inline">
+      <source xml:lang="en">Quick suggestions show as ghost text for all token types</source>
+    </trans-unit>
+    <trans-unit id="quickSuggestions.topLevel.off">
+      <source xml:lang="en">Quick suggestions are disabled for all token types</source>
+    </trans-unit>
+    <trans-unit id="quickSuggestions.topLevel.offWhenInlineCompletions">
+      <source xml:lang="en">Quick suggestions are disabled for all token types when inline completions are showing</source>
+    </trans-unit>
+    <trans-unit id="quickSuggestions.topLevel.on">
+      <source xml:lang="en">Quick suggestions are enabled for all token types</source>
     </trans-unit>
     <trans-unit id="quickSuggestionsDelay">
       <source xml:lang="en">Controls the delay in milliseconds after which quick suggestions will show up.</source>
@@ -1467,7 +1562,7 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <source xml:lang="en">Controls whether the editor should highlight matches similar to the selection.</source>
     </trans-unit>
     <trans-unit id="selectionHighlightMaxLength">
-      <source xml:lang="en">Controls how many characters can be in the selection before similiar matches are not highlighted. Set to zero for unlimited.</source>
+      <source xml:lang="en">Controls how many characters can be in the selection before similar matches are not highlighted. Set to zero for unlimited.</source>
     </trans-unit>
     <trans-unit id="selectionHighlightMultiline">
       <source xml:lang="en">Controls whether the editor should highlight selection matches that span multiple lines.</source>
@@ -1537,9 +1632,6 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     </trans-unit>
     <trans-unit id="suggest.localityBonus">
       <source xml:lang="en">Controls whether sorting favors words that appear close to the cursor.</source>
-    </trans-unit>
-    <trans-unit id="suggest.maxVisibleSuggestions.dep">
-      <source xml:lang="en">This setting is deprecated. The suggest widget can now be resized.</source>
     </trans-unit>
     <trans-unit id="suggest.preview">
       <source xml:lang="en">Controls whether to preview the suggestion outcome in the editor.</source>
@@ -1679,6 +1771,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <source xml:lang="en">Controls the wrapping column of the editor when `#editor.wordWrap#` is `wordWrapColumn` or `bounded`.</source>
       <note>- `editor.wordWrap` refers to a different setting and should not be localized.
 - 'wordWrapColumn' and 'bounded' refer to values the different setting can take and should not be localized.</note>
+    </trans-unit>
+    <trans-unit id="wordWrapIndicator">
+      <source xml:lang="en">Controls whether an indicator is rendered at the wrapping column of lines that wrap. Only has an effect when `#editor.wordWrap#` is enabled.</source>
     </trans-unit>
     <trans-unit id="wrapOnEscapedLineFeeds">
       <source xml:lang="en">Controls whether literal `\n` shall trigger a wordWrap when `#editor.wordWrap#` is enabled.
@@ -1896,6 +1991,9 @@ char* str="hello\n
     <trans-unit id="editorWhitespaces">
       <source xml:lang="en">Color of whitespace characters in the editor.</source>
     </trans-unit>
+    <trans-unit id="editorWordWrapIndicator">
+      <source xml:lang="en">Color of the indicator shown at the end of a soft wrapped line in the editor.</source>
+    </trans-unit>
     <trans-unit id="inactiveLineHighlight">
       <source xml:lang="en">Background color for the highlight of line at the cursor position when the editor is not focused.</source>
     </trans-unit>
@@ -1943,6 +2041,9 @@ char* str="hello\n
     <trans-unit id="comparingMovedCode">
       <source xml:lang="en">Whether a moved code block is selected for comparison</source>
     </trans-unit>
+    <trans-unit id="diffEditorAutomaticRenderSideBySide">
+      <source xml:lang="en">Whether automatic diff editor layout would render side by side</source>
+    </trans-unit>
     <trans-unit id="diffEditorHasChanges">
       <source xml:lang="en">Whether the diff editor has changes</source>
     </trans-unit>
@@ -1963,6 +2064,9 @@ char* str="hello\n
     </trans-unit>
     <trans-unit id="diffEditorRenderSideBySideInlineBreakpointReached">
       <source xml:lang="en">Whether the diff editor render side by side inline breakpoint is reached</source>
+    </trans-unit>
+    <trans-unit id="diffEditorTemporaryInlineMode">
+      <source xml:lang="en">Whether inline mode is temporarily active after manually resizing the diff editor</source>
     </trans-unit>
     <trans-unit id="editorColumnSelection">
       <source xml:lang="en">Whether `editor.columnSelection` is enabled</source>
@@ -2042,6 +2146,9 @@ char* str="hello\n
     <trans-unit id="editorReadonly">
       <source xml:lang="en">Whether the editor is read-only</source>
     </trans-unit>
+    <trans-unit id="editorSelectionHasDiagnostics">
+      <source xml:lang="en">Whether any diagnostic is present in the current editor selection</source>
+    </trans-unit>
     <trans-unit id="editorTabMovesFocus">
       <source xml:lang="en">Whether `Tab` will move focus out of the editor</source>
     </trans-unit>
@@ -2057,11 +2164,20 @@ char* str="hello\n
     <trans-unit id="inMultiDiffEditor">
       <source xml:lang="en">Whether the context is a multi diff editor</source>
     </trans-unit>
+    <trans-unit id="isComposing">
+      <source xml:lang="en">Whether the editor is in the composition mode</source>
+    </trans-unit>
     <trans-unit id="isEmbeddedDiffEditor">
       <source xml:lang="en">Whether the context is an embedded diff editor</source>
     </trans-unit>
     <trans-unit id="multiDiffEditorAllCollapsed">
       <source xml:lang="en">Whether all files in multi diff editor are collapsed</source>
+    </trans-unit>
+    <trans-unit id="multiDiffEditorItemAllUnchangedRegionsShown">
+      <source xml:lang="en">Whether all unchanged regions of a multi diff editor file are revealed</source>
+    </trans-unit>
+    <trans-unit id="multiDiffEditorRenderSideBySide">
+      <source xml:lang="en">Whether the multi diff editor renders diffs side by side instead of inline</source>
     </trans-unit>
     <trans-unit id="standaloneColorPickerFocused">
       <source xml:lang="en">Whether the standalone color picker is focused</source>
@@ -2266,6 +2382,9 @@ char* str="hello\n
     <trans-unit id="accessibilityHelpTitle">
       <source xml:lang="en">Accessibility Help</source>
     </trans-unit>
+    <trans-unit id="announceCursorPosition">
+      <source xml:lang="en">Run the command: Announce Cursor Position{0} to hear the current line and column.</source>
+    </trans-unit>
     <trans-unit id="auto_off">
       <source xml:lang="en">The application is configured to never be optimized for usage with a Screen Reader.</source>
     </trans-unit>
@@ -2317,8 +2436,14 @@ char* str="hello\n
     <trans-unit id="editableEditor">
       <source xml:lang="en">You are in a code editor.</source>
     </trans-unit>
+    <trans-unit id="editorDictation">
+      <source xml:lang="en">Start or stop dictation in the editor{0}.</source>
+    </trans-unit>
     <trans-unit id="editorViewAccessibleLabel">
       <source xml:lang="en">Editor content</source>
+    </trans-unit>
+    <trans-unit id="focusNotifications">
+      <source xml:lang="en">Focus notification toasts{0} to navigate them with the keyboard. Accept the primary action of a focused notification{1}.</source>
     </trans-unit>
     <trans-unit id="goToSymbol">
       <source xml:lang="en">Go to Symbol{0} to quickly navigate between symbols in the current file.</source>

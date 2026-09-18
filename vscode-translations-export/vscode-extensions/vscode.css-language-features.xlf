@@ -67,9 +67,6 @@
     <trans-unit id="++CODE++f4d2c433ad7095715b6afc133ee95adc66119ca16cde08f1a7427994baafe212">
       <source xml:lang="en">CSS Language Server</source>
     </trans-unit>
-    <trans-unit id="++CODE++4dfd86d9a072a20e2df170ef115a5f58d1e4aa4a2f5522f1d8523ca008c80f91">
-      <source xml:lang="en">CSS fix is outdated and can&apos;t be applied to the document.</source>
-    </trans-unit>
     <trans-unit id="++CODE++2d7ebf2bc4e5ccb35460e8ac0e45abaa3a0110ef76c58cb1b4d916d8932530e9">
       <source xml:lang="en">Causes one or more rules to be emitted at the root of the document.</source>
     </trans-unit>
@@ -114,9 +111,6 @@
     </trans-unit>
     <trans-unit id="++CODE++402cb0931e0cb418cb38c52035d99151555d4d8dd3f134bbada40567f8eb6ff5">
       <source xml:lang="en">Creates a Color from lightness, chroma, and hue values.</source>
-    </trans-unit>
-    <trans-unit id="++CODE++19ba64242a0bbd657eef71695d8fb9052e48d1888de34c8d57ea67c1bb8c126e">
-      <source xml:lang="en">Creates a Color from red, green, and blue values.</source>
     </trans-unit>
     <trans-unit id="++CODE++671f48990e087bb61e590db0d46ccc21428742bfaa2a150a74e274f4fd215415">
       <source xml:lang="en">Creates a Color from red, green, blue, and alpha values.</source>
@@ -171,9 +165,6 @@
     </trans-unit>
     <trans-unit id="++CODE++b010ba796d36ae3e3b36fd3337eb2f06fe437e51cd63b633accdbcbcb24f74a3">
       <source xml:lang="en">Extracts a substring from $string.</source>
-    </trans-unit>
-    <trans-unit id="++CODE++53f73a1dc7e5e521a1924064965471e05509e68f94d22bec30b3fa8e5c981dc8">
-      <source xml:lang="en">Failed to apply CSS fix to the document. Please consider opening an issue with steps to reproduce.</source>
     </trans-unit>
     <trans-unit id="++CODE++bf40c3e59212416205f9be2c4926fc3d2dcde9592e0b1a28b75f125137820d33">
       <source xml:lang="en">Finds the maximum of several numbers.</source>
@@ -562,6 +553,9 @@
     <trans-unit id="++CODE++d72f8c92977a5bdd88da506a042190dadba3cef4ee9e19826e4308207f09f898">
       <source xml:lang="en">identifier or wildcard expected</source>
     </trans-unit>
+    <trans-unit id="++CODE++e88d1454e703948514f45c602e55ecfcc8656b5d3cff66478d2163abc10f9ba9">
+      <source xml:lang="en">if condition expected</source>
+    </trans-unit>
     <trans-unit id="++CODE++4817b70063f4742c67f6addd2c649e3d1bc6ff8e375029164d79571a90e56845">
       <source xml:lang="en">inline-block is ignored due to the float. If &apos;float&apos; has a value other than &apos;none&apos;, the box is floated and &apos;display&apos; is treated as &apos;block&apos;</source>
     </trans-unit>
@@ -832,13 +826,13 @@
       <source xml:lang="en">Enables or disables all validations.</source>
     </trans-unit>
     <trans-unit id="scss.format.spaceAroundSelectorSeparator.desc">
-      <source xml:lang="en">Ensure a space character around selector separators &apos;&gt;&apos;, &apos;+&apos;, &apos;~&apos; (e.g. `a &gt; b`).</source>
+      <source xml:lang="en">Ensure a space character around selector separators `&gt;`, `+`, `~` (e.g. `a &gt; b`).</source>
     </trans-unit>
     <trans-unit id="less.format.spaceAroundSelectorSeparator.desc">
-      <source xml:lang="en">Ensure a space character around selector separators &apos;&gt;&apos;, &apos;+&apos;, &apos;~&apos; (e.g. `a &gt; b`).</source>
+      <source xml:lang="en">Ensure a space character around selector separators `&gt;`, `+`, `~` (e.g. `a &gt; b`).</source>
     </trans-unit>
     <trans-unit id="css.format.spaceAroundSelectorSeparator.desc">
-      <source xml:lang="en">Ensure a space character around selector separators &apos;&gt;&apos;, &apos;+&apos;, &apos;~&apos; (e.g. `a &gt; b`).</source>
+      <source xml:lang="en">Ensure a space character around selector separators `&gt;`, `+`, `~` (e.g. `a &gt; b`).</source>
     </trans-unit>
     <trans-unit id="scss.lint.hexColorLength.desc">
       <source xml:lang="en">Hex colors must consist of 3, 4, 6 or 8 hex numbers.</source>

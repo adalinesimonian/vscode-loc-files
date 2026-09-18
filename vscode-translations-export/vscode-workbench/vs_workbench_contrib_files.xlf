@@ -301,9 +301,6 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
     <trans-unit id="emptyFileNameError">
       <source xml:lang="en">A file or folder name must be provided.</source>
     </trans-unit>
-    <trans-unit id="fileDeleted">
-      <source xml:lang="en">The file(s) to paste have been deleted or moved since you copied them. {0}</source>
-    </trans-unit>
     <trans-unit id="fileIsAncestor">
       <source xml:lang="en">File to paste is an ancestor of the destination folder</source>
     </trans-unit>
@@ -766,7 +763,7 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
       <source xml:lang="en">Controls whether the Explorer should render folders in a compact form. In such a form, single child folders will be compressed in a combined tree element. Useful for Java package structures, for example.</source>
     </trans-unit>
     <trans-unit id="confirmDelete">
-      <source xml:lang="en">Controls whether the Explorer should ask for confirmation when deleting a file via the trash.</source>
+      <source xml:lang="en">Controls whether the Explorer should ask for confirmation when deleting files and folders.</source>
     </trans-unit>
     <trans-unit id="confirmDragAndDrop">
       <source xml:lang="en">Controls whether the Explorer should ask for confirmation to move files and folders via drag and drop.</source>
@@ -857,7 +854,7 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
       <source xml:lang="en">The glob pattern to match file paths against. Set to true or false to enable or disable the pattern.</source>
     </trans-unit>
     <trans-unit id="explorer.autoRevealExclude.when">
-      <source xml:lang="en">Additional check on the siblings of a matching file. Use $(basename) as variable for the matching file name.</source>
+      <source xml:lang="en">Additional check on the siblings of a matching file. Use {0} as variable for the matching file name.</source>
     </trans-unit>
     <trans-unit id="explorer.decorations.badges">
       <source xml:lang="en">Controls whether file decorations should use badges.</source>
@@ -1052,7 +1049,7 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
       <source xml:lang="en">When enabled, will trim trailing whitespace when saving a file.</source>
     </trans-unit>
     <trans-unit id="trimTrailingWhitespaceInRegexAndStrings">
-      <source xml:lang="en">When enabled, trailing whitespace will be removed from multiline strings and regexes will be removed on save or when executing 'editor.action.trimTrailingWhitespace'. This can cause whitespace to not be trimmed from lines when there isn't up-to-date token information.</source>
+      <source xml:lang="en">When enabled, trailing whitespace will be removed from multiline strings and regexes on save or when executing 'editor.action.trimTrailingWhitespace'. This can cause whitespace to not be trimmed from lines when there isn't up-to-date token information.</source>
     </trans-unit>
     <trans-unit id="trueDescription">
       <source xml:lang="en">Enable the pattern.</source>
@@ -1164,6 +1161,9 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
     <trans-unit id="dirtyCounter">
       <source xml:lang="en">{0} unsaved</source>
     </trans-unit>
+    <trans-unit id="dirtyCounterAriaLabel">
+      <source xml:lang="en">{0} unsaved, open unsaved editor</source>
+    </trans-unit>
     <trans-unit id="flipLayout">
       <source xml:lang="en">Toggle Vertical/Horizontal Editor Layout</source>
     </trans-unit>
@@ -1179,6 +1179,10 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
     </trans-unit>
     <trans-unit id="openEditors">
       <source xml:lang="en">Open Editors</source>
+      <note>Open is an adjective</note>
+    </trans-unit>
+    <trans-unit id="openUnsavedEditor">
+      <source xml:lang="en">Open Unsaved Editor</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/files/browser/workspaceWatcher" source-language="en" datatype="plaintext"><body>

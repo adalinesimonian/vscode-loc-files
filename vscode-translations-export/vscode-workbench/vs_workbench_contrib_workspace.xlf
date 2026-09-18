@@ -17,14 +17,14 @@
       <source xml:lang="en">Configure Workspace Trust Settings</source>
     </trans-unit>
     <trans-unit id="dontTrustFolderOptionDescription">
-      <source xml:lang="en">Browse folder in restricted mode</source>
+      <source xml:lang="en">Open folder in restricted mode</source>
     </trans-unit>
     <trans-unit id="dontTrustOption">
       <source xml:lang="en">&amp;&amp;No, I don't trust the authors</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
     <trans-unit id="dontTrustWorkspaceOptionDescription">
-      <source xml:lang="en">Browse workspace in restricted mode</source>
+      <source xml:lang="en">Open workspace in restricted mode</source>
     </trans-unit>
     <trans-unit id="folderStartupTrustDetails">
       <source xml:lang="en">{0} provides features that may automatically execute files in this folder.</source>
@@ -82,6 +82,15 @@
     <trans-unit id="openLooseFileWorkspaceMesssage">
       <source xml:lang="en">Do you want to allow untrusted files in this workspace?</source>
     </trans-unit>
+    <trans-unit id="resourcesTrustDetails">
+      <source xml:lang="en">You are trying to open an untrusted folder. Do you trust the authors of this content?</source>
+    </trans-unit>
+    <trans-unit id="resourcesTrustLearnMore">
+      <source xml:lang="en">If you don't trust the authors of these files, we recommend not continuing as the files may be malicious. See [our docs](https://aka.ms/vscode-workspace-trust) to learn more.</source>
+    </trans-unit>
+    <trans-unit id="resourcesTrustMessage">
+      <source xml:lang="en">Do you trust the authors of the files in this folder?</source>
+    </trans-unit>
     <trans-unit id="restrictedModeBannerAriaLabelFolder">
       <source xml:lang="en">Restricted Mode is intended for safe code browsing. Trust this folder to enable all features. Use navigation keys to access banner actions.</source>
     </trans-unit>
@@ -105,6 +114,12 @@
     </trans-unit>
     <trans-unit id="restrictedModeBannerMessageWorkspace">
       <source xml:lang="en">Restricted Mode is intended for safe code browsing. Trust this workspace to enable all features.</source>
+    </trans-unit>
+    <trans-unit id="sessionsWindowFolderTrustNote">
+      <source xml:lang="en">Trusting this folder will also mark it as trusted in {0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsWindowWorkspaceTrustNote">
+      <source xml:lang="en">Trusting this workspace will also mark it as trusted in {0}.</source>
     </trans-unit>
     <trans-unit id="startupTrustRequestLearnMore">
       <source xml:lang="en">If you don't trust the authors of these files, we recommend to continue in restricted mode as the files may be malicious. See [our docs](https://aka.ms/vscode-workspace-trust) to learn more.</source>
@@ -144,6 +159,10 @@ Some [features are disabled]({0}) because this [workspace is not trusted]({1}).<
     </trans-unit>
     <trans-unit id="trustOption">
       <source xml:lang="en">&amp;&amp;Yes, I trust the authors</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="trustResources">
+      <source xml:lang="en">&amp;&amp;Trust Folder &amp; Continue</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
     <trans-unit id="trustWorkspaceOptionDescription">
@@ -272,16 +291,10 @@ Some [features are disabled]({0}) because this [workspace is not trusted]({1}).<
     <trans-unit id="trustButton">
       <source xml:lang="en">Trust</source>
     </trans-unit>
-    <trans-unit id="trustMessage">
-      <source xml:lang="en">Trust the authors of all files in the current folder or its parent '{0}'.</source>
-    </trans-unit>
     <trans-unit id="trustOrg">
       <source xml:lang="en">You will trust all repositories and forks under '{0}' on {1}.</source>
       <note>The {0} will be an organization or user name.
 The {1} will be a host name where repositories are hosted.</note>
-    </trans-unit>
-    <trans-unit id="trustParentButton">
-      <source xml:lang="en">Trust Parent</source>
     </trans-unit>
     <trans-unit id="trustUri">
       <source xml:lang="en">Trust Folder</source>

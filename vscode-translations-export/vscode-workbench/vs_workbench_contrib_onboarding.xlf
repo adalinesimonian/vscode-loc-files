@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/onboarding/browser/onboarding.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="onboarding.developerMode">
+      <source xml:lang="en">Map of onboarding scenario/tour id to whether developer mode is enabled for it. When enabled for a scenario, that onboarding tour ignores usage-based eligibility checks (such as how many sessions you have started), previously persisted shown state, and any linked experiment (so it is shown even if the experiment is not running or you are in the control group). It does not override the {0} setting. The tour is still shown at most once per window session, so reload the window to show it again.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.developerModeVariations">
+      <source xml:lang="en">Map of onboarding scenario/tour id to the variation used while developer mode is enabled for that scenario. An empty value uses the experiment-selected or default variation.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.enabled">
+      <source xml:lang="en">When enabled, onboarding tours and hints may appear automatically to highlight features. Disabling this does not affect tours you start manually.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.resetShownState">
+      <source xml:lang="en">Reset Onboarding Shown State</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/onboarding/browser/spotlight/spotlightOverlay" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="spotlight.back">
+      <source xml:lang="en">Back</source>
+    </trans-unit>
+    <trans-unit id="spotlight.counter">
+      <source xml:lang="en">{0} of {1}</source>
+    </trans-unit>
+    <trans-unit id="spotlight.done">
+      <source xml:lang="en">Done</source>
+    </trans-unit>
+    <trans-unit id="spotlight.endTour">
+      <source xml:lang="en">End Tour</source>
+    </trans-unit>
+    <trans-unit id="spotlight.endTour.tooltip">
+      <source xml:lang="en">End Tour (Esc)</source>
+    </trans-unit>
+    <trans-unit id="spotlight.next">
+      <source xml:lang="en">Next</source>
+    </trans-unit>
+</body></file>
+</xliff>

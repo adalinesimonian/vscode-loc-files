@@ -188,7 +188,7 @@
       <source xml:lang="en">Some useful comment commands include:</source>
     </trans-unit>
     <trans-unit id="escape">
-      <source xml:lang="en">- Dismiss Comment (Escape)</source>
+      <source xml:lang="en">- Dismiss Comment{0}.</source>
     </trans-unit>
     <trans-unit id="intro">
       <source xml:lang="en">The editor contains commentable range(s). Some useful commands include:</source>
@@ -467,6 +467,9 @@ The first arg is localized message "Toggle reaction" or empty if the user doesn'
     </trans-unit>
     <trans-unit id="commentThreadIsEmpty">
       <source xml:lang="en">Set when the comment thread has no comments</source>
+    </trans-unit>
+    <trans-unit id="commentWidgetVisible">
+      <source xml:lang="en">Set when a comment widget is visible in the editor</source>
     </trans-unit>
     <trans-unit id="commentingEnabled">
       <source xml:lang="en">Whether commenting functionality is enabled</source>

@@ -38,6 +38,9 @@
     <trans-unit id="defaultLabel">
       <source xml:lang="en">input</source>
     </trans-unit>
+    <trans-unit id="onlySearchInChangedFiles">
+      <source xml:lang="en">Search only in Changed Files (Source Control)</source>
+    </trans-unit>
     <trans-unit id="onlySearchInOpenEditors">
       <source xml:lang="en">Search only in Open Editors</source>
     </trans-unit>
@@ -76,13 +79,7 @@
       <source xml:lang="en">Search and Replace</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/search/browser/search.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="anythingQuickAccess">
-      <source xml:lang="en">Go to File</source>
-    </trans-unit>
-    <trans-unit id="anythingQuickAccessPlaceholder">
-      <source xml:lang="en">Search files by name (append {0} to go to line or {1} to go to symbol)</source>
-    </trans-unit>
+  <file original="src/vs/workbench/contrib/search/browser/search.common.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="exclude">
       <source xml:lang="en">Configure [glob patterns](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) for excluding files and folders in fulltext searches and file search in quick open. To exclude files from the recently opened list in quick open, patterns must be absolute (for example `**/node_modules/**`). Inherits all glob patterns from the `#files.exclude#` setting.</source>
     </trans-unit>
@@ -93,6 +90,56 @@
       <source xml:lang="en">Additional check on the siblings of a matching file. Use \$(basename) as variable for the matching file name.</source>
       <note>\$(basename) should not be translated</note>
     </trans-unit>
+    <trans-unit id="search.followSymlinks">
+      <source xml:lang="en">Controls whether to follow symlinks while searching.</source>
+    </trans-unit>
+    <trans-unit id="search.maxResults">
+      <source xml:lang="en">Controls the maximum number of search results, this can be set to `null` (empty) to return unlimited results.</source>
+    </trans-unit>
+    <trans-unit id="search.ripgrep.maxThreads">
+      <source xml:lang="en">Number of threads to use for searching. When set to 0, the engine automatically determines this value.</source>
+    </trans-unit>
+    <trans-unit id="search.searchOnType">
+      <source xml:lang="en">Search all files as you type.</source>
+    </trans-unit>
+    <trans-unit id="search.searchOnTypeDebouncePeriod">
+      <source xml:lang="en">When {0} is enabled, controls the timeout in milliseconds between a character being typed and the search starting. Has no effect when {0} is disabled.</source>
+    </trans-unit>
+    <trans-unit id="search.smartCase">
+      <source xml:lang="en">Search case-insensitively if the pattern is all lowercase, otherwise, search case-sensitively.</source>
+    </trans-unit>
+    <trans-unit id="search.sortOrder">
+      <source xml:lang="en">Controls sorting order of search results.</source>
+    </trans-unit>
+    <trans-unit id="searchSortOrder.countAscending">
+      <source xml:lang="en">Results are sorted by count per file, in ascending order.</source>
+    </trans-unit>
+    <trans-unit id="searchSortOrder.countDescending">
+      <source xml:lang="en">Results are sorted by count per file, in descending order.</source>
+    </trans-unit>
+    <trans-unit id="searchSortOrder.default">
+      <source xml:lang="en">Results are sorted by folder and file names, in alphabetical order.</source>
+    </trans-unit>
+    <trans-unit id="searchSortOrder.filesOnly">
+      <source xml:lang="en">Results are sorted by file names ignoring folder order, in alphabetical order.</source>
+    </trans-unit>
+    <trans-unit id="searchSortOrder.modified">
+      <source xml:lang="en">Results are sorted by file last modified date, in descending order.</source>
+    </trans-unit>
+    <trans-unit id="searchSortOrder.type">
+      <source xml:lang="en">Results are sorted by file extensions, in alphabetical order.</source>
+    </trans-unit>
+    <trans-unit id="useGlobalIgnoreFiles">
+      <source xml:lang="en">Controls whether to use your global gitignore file (for example, from `$HOME/.config/git/ignore`) when searching for files. Requires {0} to be enabled.</source>
+    </trans-unit>
+    <trans-unit id="useIgnoreFiles">
+      <source xml:lang="en">Controls whether to use `.gitignore` and `.ignore` files when searching for files.</source>
+    </trans-unit>
+    <trans-unit id="useParentIgnoreFiles">
+      <source xml:lang="en">Controls whether to use `.gitignore` and `.ignore` files in parent directories when searching for files. Requires {0} to be enabled.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/search/browser/search.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="filterSortOrder">
       <source xml:lang="en">Controls sorting order of editor history in quick open when filtering.</source>
     </trans-unit>
@@ -101,9 +148,6 @@
     </trans-unit>
     <trans-unit id="filterSortOrder.recency">
       <source xml:lang="en">History entries are sorted by recency. More recently opened entries appear first.</source>
-    </trans-unit>
-    <trans-unit id="maintainFileSearchCacheDeprecated">
-      <source xml:lang="en">The search cache is kept in the extension host which never shuts down, so this setting is no longer needed.</source>
     </trans-unit>
     <trans-unit id="miViewSearch">
       <source xml:lang="en">&amp;&amp;Search</source>
@@ -145,23 +189,11 @@
     <trans-unit id="search.experimental.closedNotebookResults">
       <source xml:lang="en">Show notebook editor rich content results for closed notebooks. Please refresh your search results after changing this setting.</source>
     </trans-unit>
-    <trans-unit id="search.followSymlinks">
-      <source xml:lang="en">Controls whether to follow symlinks while searching.</source>
+    <trans-unit id="search.experimental.useIgnoreFilesInFindFiles">
+      <source xml:lang="en">When enabled, the legacy `findFiles` extension API honors the user's `#search.useIgnoreFiles#` setting instead of always ignoring `.gitignore`. Extensions that explicitly pass `null` as the `exclude` argument still get unfiltered results. Telemetry is emitted regardless of this setting to help decide future defaults.</source>
     </trans-unit>
     <trans-unit id="search.globalFindClipboard">
       <source xml:lang="en">Controls whether the Search view should read or modify the shared find clipboard on macOS.</source>
-    </trans-unit>
-    <trans-unit id="search.location">
-      <source xml:lang="en">Controls whether the search will be shown as a view in the sidebar or as a panel in the panel area for more horizontal space.</source>
-    </trans-unit>
-    <trans-unit id="search.location.deprecationMessage">
-      <source xml:lang="en">This setting is deprecated. You can drag the search icon to a new location instead.</source>
-    </trans-unit>
-    <trans-unit id="search.maintainFileSearchCache">
-      <source xml:lang="en">When enabled, the searchService process will be kept alive instead of being shut down after an hour of inactivity. This will keep the file search cache in memory.</source>
-    </trans-unit>
-    <trans-unit id="search.maxResults">
-      <source xml:lang="en">Controls the maximum number of search results, this can be set to `null` (empty) to return unlimited results.</source>
     </trans-unit>
     <trans-unit id="search.mode">
       <source xml:lang="en">Controls where new `Search: Find in Files` and `Find in Folder` operations occur: either in the Search view, or in a search editor.</source>
@@ -183,46 +215,6 @@
     </trans-unit>
     <trans-unit id="search.quickOpen.includeSymbols">
       <source xml:lang="en">Whether to include results from a global symbol search in the file results for Quick Open.</source>
-    </trans-unit>
-    <trans-unit id="search.ripgrep.maxThreads">
-      <source xml:lang="en">Number of threads to use for searching. When set to 0, the engine automatically determines this value.</source>
-    </trans-unit>
-    <trans-unit id="search.searchEditor.defaultNumberOfContextLines">
-      <source xml:lang="en">The default number of surrounding context lines to use when creating new Search Editors. If using `#search.searchEditor.reusePriorSearchConfiguration#`, this can be set to `null` (empty) to use the prior Search Editor's configuration.</source>
-    </trans-unit>
-    <trans-unit id="search.searchEditor.doubleClickBehaviour">
-      <source xml:lang="en">Configure effect of double-clicking a result in a search editor.</source>
-    </trans-unit>
-    <trans-unit id="search.searchEditor.doubleClickBehaviour.goToLocation">
-      <source xml:lang="en">Double-clicking opens the result in the active editor group.</source>
-    </trans-unit>
-    <trans-unit id="search.searchEditor.doubleClickBehaviour.openLocationToSide">
-      <source xml:lang="en">Double-clicking opens the result in the editor group to the side, creating one if it does not yet exist.</source>
-    </trans-unit>
-    <trans-unit id="search.searchEditor.doubleClickBehaviour.selectWord">
-      <source xml:lang="en">Double-clicking selects the word under the cursor.</source>
-    </trans-unit>
-    <trans-unit id="search.searchEditor.focusResultsOnSearch">
-      <source xml:lang="en">When a search is triggered, focus the Search Editor results instead of the Search Editor input.</source>
-    </trans-unit>
-    <trans-unit id="search.searchEditor.reusePriorSearchConfiguration">
-      <source xml:lang="en">When enabled, new Search Editors will reuse the includes, excludes, and flags of the previously opened Search Editor.</source>
-      <note>"Search Editor" is a type of editor that can display search results. "includes, excludes, and flags" refers to the "files to include" and "files to exclude" input boxes, and the flags that control whether a query is case-sensitive or a regex.</note>
-    </trans-unit>
-    <trans-unit id="search.searchEditor.singleClickBehaviour">
-      <source xml:lang="en">Configure effect of single-clicking a result in a search editor.</source>
-    </trans-unit>
-    <trans-unit id="search.searchEditor.singleClickBehaviour.default">
-      <source xml:lang="en">Single-clicking does nothing.</source>
-    </trans-unit>
-    <trans-unit id="search.searchEditor.singleClickBehaviour.peekDefinition">
-      <source xml:lang="en">Single-clicking opens a Peek Definition window.</source>
-    </trans-unit>
-    <trans-unit id="search.searchOnType">
-      <source xml:lang="en">Search all files as you type.</source>
-    </trans-unit>
-    <trans-unit id="search.searchOnTypeDebouncePeriod">
-      <source xml:lang="en">When {0} is enabled, controls the timeout in milliseconds between a character being typed and the search starting. Has no effect when {0} is disabled.</source>
     </trans-unit>
     <trans-unit id="search.searchView.keywordSuggestions">
       <source xml:lang="en">Enable keyword suggestions in the Search view.</source>
@@ -248,44 +240,8 @@
     <trans-unit id="search.showLineNumbers">
       <source xml:lang="en">Controls whether to show line numbers for search results.</source>
     </trans-unit>
-    <trans-unit id="search.smartCase">
-      <source xml:lang="en">Search case-insensitively if the pattern is all lowercase, otherwise, search case-sensitively.</source>
-    </trans-unit>
-    <trans-unit id="search.sortOrder">
-      <source xml:lang="en">Controls sorting order of search results.</source>
-    </trans-unit>
-    <trans-unit id="search.usePCRE2">
-      <source xml:lang="en">Whether to use the PCRE2 regex engine in text search. This enables using some advanced regex features like lookahead and backreferences. However, not all PCRE2 features are supported - only features that are also supported by JavaScript.</source>
-    </trans-unit>
     <trans-unit id="search.useReplacePreview">
       <source xml:lang="en">Controls whether to open Replace Preview when selecting or replacing a match.</source>
-    </trans-unit>
-    <trans-unit id="searchConfigurationTitle">
-      <source xml:lang="en">Search</source>
-    </trans-unit>
-    <trans-unit id="searchSortOrder.countAscending">
-      <source xml:lang="en">Results are sorted by count per file, in ascending order.</source>
-    </trans-unit>
-    <trans-unit id="searchSortOrder.countDescending">
-      <source xml:lang="en">Results are sorted by count per file, in descending order.</source>
-    </trans-unit>
-    <trans-unit id="searchSortOrder.default">
-      <source xml:lang="en">Results are sorted by folder and file names, in alphabetical order.</source>
-    </trans-unit>
-    <trans-unit id="searchSortOrder.filesOnly">
-      <source xml:lang="en">Results are sorted by file names ignoring folder order, in alphabetical order.</source>
-    </trans-unit>
-    <trans-unit id="searchSortOrder.modified">
-      <source xml:lang="en">Results are sorted by file last modified date, in descending order.</source>
-    </trans-unit>
-    <trans-unit id="searchSortOrder.type">
-      <source xml:lang="en">Results are sorted by file extensions, in alphabetical order.</source>
-    </trans-unit>
-    <trans-unit id="symbolsQuickAccess">
-      <source xml:lang="en">Go to Symbol in Workspace</source>
-    </trans-unit>
-    <trans-unit id="symbolsQuickAccessPlaceholder">
-      <source xml:lang="en">Type the name of a symbol to open.</source>
     </trans-unit>
     <trans-unit id="textSearchPickerHelp">
       <source xml:lang="en">Search for Text</source>
@@ -293,23 +249,172 @@
     <trans-unit id="textSearchPickerPlaceholder">
       <source xml:lang="en">Search for text in your workspace files.</source>
     </trans-unit>
-    <trans-unit id="useGlobalIgnoreFiles">
-      <source xml:lang="en">Controls whether to use your global gitignore file (for example, from `$HOME/.config/git/ignore`) when searching for files. Requires {0} to be enabled.</source>
+</body></file>
+  <file original="src/vs/workbench/contrib/search/browser/searchAccessibilityHelp" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="search.closingDesc">
+      <source xml:lang="en">Press Escape to close Search. Focus returns to the editor, and your search history is preserved.</source>
     </trans-unit>
-    <trans-unit id="useIgnoreFiles">
-      <source xml:lang="en">Controls whether to use `.gitignore` and `.ignore` files when searching for files.</source>
+    <trans-unit id="search.closingHeader">
+      <source xml:lang="en">Closing:</source>
     </trans-unit>
-    <trans-unit id="usePCRE2Deprecated">
-      <source xml:lang="en">Deprecated. PCRE2 will be used automatically when using regex features that are only supported by PCRE2.</source>
+    <trans-unit id="search.context">
+      <source xml:lang="en">You are in the Search view. This workspace-wide tool lets you find text or patterns across all files in your workspace.</source>
     </trans-unit>
-    <trans-unit id="useParentIgnoreFiles">
-      <source xml:lang="en">Controls whether to use `.gitignore` and `.ignore` files in parent directories when searching for files. Requires {0} to be enabled.</source>
+    <trans-unit id="search.focusDesc1">
+      <source xml:lang="en">When you navigate from the Search input, the editor updates while your focus stays in the search field. This is intentional, so you can keep refining your search without losing your place.</source>
     </trans-unit>
-    <trans-unit id="useRipgrep">
-      <source xml:lang="en">This setting is deprecated and now falls back on "search.usePCRE2".</source>
+    <trans-unit id="search.focusDesc2">
+      <source xml:lang="en">If you press Tab, focus moves to the results tree below the input, and you can navigate results and open them. When you press Enter on a result, the match is shown in the editor.</source>
     </trans-unit>
-    <trans-unit id="useRipgrepDeprecated">
-      <source xml:lang="en">Deprecated. Consider "search.usePCRE2" for advanced regex feature support.</source>
+    <trans-unit id="search.focusDesc3">
+      <source xml:lang="en">If you want to focus the editor to edit text at a search result, use {0} to navigate to the result and automatically focus the editor there.</source>
+    </trans-unit>
+    <trans-unit id="search.focusHeader">
+      <source xml:lang="en">Focus Behavior (Important):</source>
+    </trans-unit>
+    <trans-unit id="search.header">
+      <source xml:lang="en">Accessibility Help: Search Across Files</source>
+    </trans-unit>
+    <trans-unit id="search.hear1">
+      <source xml:lang="en">1) The file name where the result is located is read first, so you know which file contains the match.</source>
+    </trans-unit>
+    <trans-unit id="search.hear2">
+      <source xml:lang="en">2) The full line that contains the match is read, so you get immediate context.</source>
+    </trans-unit>
+    <trans-unit id="search.hear3">
+      <source xml:lang="en">3) Your position among the results is announced, so you know how far you are through the results.</source>
+    </trans-unit>
+    <trans-unit id="search.hear4">
+      <source xml:lang="en">4) The exact line and column are announced, so you know precisely where the match is in the file.</source>
+    </trans-unit>
+    <trans-unit id="search.hearDesc">
+      <source xml:lang="en">Each navigation step gives you a complete spoken update:</source>
+    </trans-unit>
+    <trans-unit id="search.hearHeader">
+      <source xml:lang="en">What You Hear Each Time You Move to a Result:</source>
+    </trans-unit>
+    <trans-unit id="search.inputDesc">
+      <source xml:lang="en">While you are in the Search input, your focus stays in the field. You can type your search term and navigate the search results list without leaving the input. When you navigate to a result, the editor updates in the background to show the match.</source>
+    </trans-unit>
+    <trans-unit id="search.inputHeader">
+      <source xml:lang="en">Inside the Search Input (What It Does):</source>
+    </trans-unit>
+    <trans-unit id="search.keyArrow">
+      <source xml:lang="en">- Down Arrow: Navigate through results in the tree.</source>
+    </trans-unit>
+    <trans-unit id="search.keyEnter">
+      <source xml:lang="en">- Enter: Run or refresh the search.</source>
+    </trans-unit>
+    <trans-unit id="search.keyF4">
+      <source xml:lang="en">- {0}: Jump to the next result and focus the editor.</source>
+    </trans-unit>
+    <trans-unit id="search.keyNavGlobalHeader">
+      <source xml:lang="en">From anywhere (Search input or editor):</source>
+    </trans-unit>
+    <trans-unit id="search.keyNavResultsHeader">
+      <source xml:lang="en">Navigating search results:</source>
+    </trans-unit>
+    <trans-unit id="search.keyNavSearchHeader">
+      <source xml:lang="en">While focused IN the Search input:</source>
+    </trans-unit>
+    <trans-unit id="search.keyResultEnter">
+      <source xml:lang="en">- Enter (when a result is focused): Navigate to that result in the editor.</source>
+    </trans-unit>
+    <trans-unit id="search.keyShiftF4">
+      <source xml:lang="en">- {0}: Jump to the previous result and focus the editor.</source>
+    </trans-unit>
+    <trans-unit id="search.keyTab">
+      <source xml:lang="en">- Tab: Move focus to the results tree below.</source>
+    </trans-unit>
+    <trans-unit id="search.keyboardHeader">
+      <source xml:lang="en">Keyboard Navigation Summary:</source>
+    </trans-unit>
+    <trans-unit id="search.macSetting">
+      <source xml:lang="en">- `search.globalFindClipboard`: Uses the shared macOS Find clipboard when available.</source>
+    </trans-unit>
+    <trans-unit id="search.macSettingHeader">
+      <source xml:lang="en">Platform-Specific Setting (macOS only):</source>
+    </trans-unit>
+    <trans-unit id="search.noResults">
+      <source xml:lang="en">No results found. Check your search term or adjust options below.</source>
+    </trans-unit>
+    <trans-unit id="search.noSearch">
+      <source xml:lang="en">Type a search term to find results.</source>
+    </trans-unit>
+    <trans-unit id="search.optionCase">
+      <source xml:lang="en">- Match Case: Only exact case matches are included.</source>
+    </trans-unit>
+    <trans-unit id="search.optionRegex">
+      <source xml:lang="en">- Regular Expression: Use pattern matching for advanced searches.</source>
+    </trans-unit>
+    <trans-unit id="search.optionWord">
+      <source xml:lang="en">- Whole Word: Only full words are matched.</source>
+    </trans-unit>
+    <trans-unit id="search.optionsHeader">
+      <source xml:lang="en">Search Options in the Dialog:</source>
+    </trans-unit>
+    <trans-unit id="search.replaceDesc1">
+      <source xml:lang="en">Tab to the Replace input and type your replacement text.</source>
+    </trans-unit>
+    <trans-unit id="search.replaceDesc2">
+      <source xml:lang="en">You can replace individual matches or all matches at once.</source>
+    </trans-unit>
+    <trans-unit id="search.replaceHeader">
+      <source xml:lang="en">Replace Across Files (Replace Mode Active):</source>
+    </trans-unit>
+    <trans-unit id="search.replaceWarning">
+      <source xml:lang="en">Warning: This action affects multiple files. Make sure you have searched for exactly what you want to replace.</source>
+    </trans-unit>
+    <trans-unit id="search.resultCount">
+      <source xml:lang="en">{0} results found.</source>
+    </trans-unit>
+    <trans-unit id="search.settingActions">
+      <source xml:lang="en">- `search.actionsPosition`: Position of action buttons.</source>
+    </trans-unit>
+    <trans-unit id="search.settingCollapse">
+      <source xml:lang="en">- `search.collapseResults`: Expand or collapse results.</source>
+    </trans-unit>
+    <trans-unit id="search.settingContextLines">
+      <source xml:lang="en">- `search.searchEditor.defaultNumberOfContextLines`: Number of context lines shown around matches.</source>
+    </trans-unit>
+    <trans-unit id="search.settingDebounce">
+      <source xml:lang="en">- `search.searchOnTypeDebouncePeriod`: Wait time in milliseconds before searching as you type.</source>
+    </trans-unit>
+    <trans-unit id="search.settingLineNumbers">
+      <source xml:lang="en">- `search.showLineNumbers`: Show line numbers for results.</source>
+    </trans-unit>
+    <trans-unit id="search.settingMaxResults">
+      <source xml:lang="en">- `search.maxResults`: Maximum number of search results to show.</source>
+    </trans-unit>
+    <trans-unit id="search.settingReplacePreview">
+      <source xml:lang="en">- `search.useReplacePreview`: Open preview when replacing matches.</source>
+    </trans-unit>
+    <trans-unit id="search.settingSearchOnType">
+      <source xml:lang="en">- `search.searchOnType`: Search all files as you type.</source>
+    </trans-unit>
+    <trans-unit id="search.settingSmartCase">
+      <source xml:lang="en">- `search.smartCase`: Use case-insensitive search if your search term is all lowercase.</source>
+    </trans-unit>
+    <trans-unit id="search.settingSortOrder">
+      <source xml:lang="en">- `search.sortOrder`: Sort results by file name, type, modified time, or match count.</source>
+    </trans-unit>
+    <trans-unit id="search.settingVerbosity">
+      <source xml:lang="en">- `accessibility.verbosity.find`: Controls whether the Search input announces the Accessibility Help hint.</source>
+    </trans-unit>
+    <trans-unit id="search.settingViewMode">
+      <source xml:lang="en">- `search.defaultViewMode`: Show results as list or tree.</source>
+    </trans-unit>
+    <trans-unit id="search.settingsHeader">
+      <source xml:lang="en">Settings You Can Adjust ({0} opens Settings):</source>
+    </trans-unit>
+    <trans-unit id="search.settingsIntro">
+      <source xml:lang="en">These settings affect how Search across files behaves.</source>
+    </trans-unit>
+    <trans-unit id="search.statusHeader">
+      <source xml:lang="en">Current Search Status:</source>
+    </trans-unit>
+    <trans-unit id="search.statusIntro">
+      <source xml:lang="en">You are searching across your workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/search/browser/searchActionsBase" source-language="en" datatype="plaintext"><body>
@@ -569,6 +674,20 @@
       <source xml:lang="en">Unable to open command link from untrusted source: {0}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/search/browser/searchQuickAccess.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="anythingQuickAccess">
+      <source xml:lang="en">Go to File</source>
+    </trans-unit>
+    <trans-unit id="anythingQuickAccessPlaceholder">
+      <source xml:lang="en">Search files by name (append {0} to go to line or {1} to go to symbol)</source>
+    </trans-unit>
+    <trans-unit id="symbolsQuickAccess">
+      <source xml:lang="en">Go to Symbol in Workspace</source>
+    </trans-unit>
+    <trans-unit id="symbolsQuickAccessPlaceholder">
+      <source xml:lang="en">Type the name of a symbol to open.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/search/browser/searchResultsView" source-language="en" datatype="plaintext"><body>
     <trans-unit id="fileMatchAriaLabel">
       <source xml:lang="en">{0} matches in file {1} of folder {2}, Search result</source>
@@ -792,6 +911,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/search/browser/searchWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accessibilityHelpHintInLabel">
+      <source xml:lang="en">Press {0} for accessibility help</source>
+    </trans-unit>
     <trans-unit id="label.Replace">
       <source xml:lang="en">Replace: Type replace term and press Enter to preview</source>
     </trans-unit>
@@ -826,6 +948,11 @@
     </trans-unit>
     <trans-unit id="openToSide">
       <source xml:lang="en">Open to the Side</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/search/common/search" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="searchConfigurationTitle">
+      <source xml:lang="en">Search</source>
     </trans-unit>
 </body></file>
 </xliff>

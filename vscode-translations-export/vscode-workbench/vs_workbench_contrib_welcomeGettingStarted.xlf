@@ -81,11 +81,14 @@
     <trans-unit id="start">
       <source xml:lang="en">Start</source>
     </trans-unit>
+    <trans-unit id="stepAutoCompleted">
+      <source xml:lang="en">Step {0} completed</source>
+    </trans-unit>
     <trans-unit id="stepDone">
-      <source xml:lang="en">Checkbox for Step {0}: Completed</source>
+      <source xml:lang="en">{0}: Completed</source>
     </trans-unit>
     <trans-unit id="stepNotDone">
-      <source xml:lang="en">Checkbox for Step {0}: Not completed</source>
+      <source xml:lang="en">{0}: Not completed</source>
     </trans-unit>
     <trans-unit id="toStart">
       <source xml:lang="en">to start.</source>
@@ -149,6 +152,10 @@
     <trans-unit id="workbench.startupEditor">
       <source xml:lang="en">Controls which editor is shown at startup, if none are restored from the previous session.</source>
     </trans-unit>
+    <trans-unit id="workbench.startupEditor.agentSessionsWelcomePage">
+      <source xml:lang="en">Open the Agent Sessions Welcome page. Will override the workbench secondary side bar visibility settings.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
     <trans-unit id="workbench.startupEditor.newUntitledFile">
       <source xml:lang="en">Open a new untitled text file (only applies when opening an empty window).</source>
       <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
@@ -172,6 +179,9 @@
     <trans-unit id="workbench.startupEditor.welcomePageInEmptyWorkbench">
       <source xml:lang="en">Open the Welcome page when opening an empty workbench.</source>
       <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="workbench.welcomePage.experimentalOnboarding">
+      <source xml:lang="en">When enabled, show the new onboarding experience instead of the classic walkthrough on first launch.</source>
     </trans-unit>
     <trans-unit id="workbench.welcomePage.preferReducedMotion">
       <source xml:lang="en">When enabled, reduce motion in welcome page.</source>

@@ -79,6 +79,15 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     <trans-unit id="no">
       <source xml:lang="en">No</source>
     </trans-unit>
+    <trans-unit id="xaaResourceSecretPlaceholder">
+      <source xml:lang="en">Resource client secret</source>
+    </trans-unit>
+    <trans-unit id="xaaResourceSecretPrompt">
+      <source xml:lang="en">The resource at '{0}' uses a per-resource client identifier '{1}'. Enter the matching client secret (leave blank if none). The value is saved in OS secret storage; manage it later via the 'Set Client Secret' code lens in mcp.json.</source>
+    </trans-unit>
+    <trans-unit id="xaaResourceSecretTitle">
+      <source xml:lang="en">Resource Client Secret Required</source>
+    </trans-unit>
     <trans-unit id="yes">
       <source xml:lang="en">Yes</source>
     </trans-unit>
@@ -107,6 +116,20 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     </trans-unit>
     <trans-unit id="vetoExtHostRestart">
       <source xml:lang="en">An extension provided editor for '{0}' is still open that would close otherwise.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/api/browser/mainThreadDataChannels" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="linkPresentation.ruleMismatch">
+      <source xml:lang="en">The selected link presentation provider does not accept this resource.</source>
+    </trans-unit>
+    <trans-unit id="linkPresentation.unavailable">
+      <source xml:lang="en">Not available</source>
+    </trans-unit>
+    <trans-unit id="linkPresentation.unavailableAriaLabel">
+      <source xml:lang="en">Link presentation is not available</source>
+    </trans-unit>
+    <trans-unit id="linkPresentation.unavailableTooltip">
+      <source xml:lang="en">The link presentation provider failed to load.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/api/browser/mainThreadEditSessionIdentityParticipant" source-language="en" datatype="plaintext"><body>
@@ -208,6 +231,7 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     </trans-unit>
     <trans-unit id="preview">
       <source xml:lang="en">Show &amp;&amp;Preview</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/api/browser/mainThreadLanguageModels" source-language="en" datatype="plaintext"><body>
@@ -240,6 +264,21 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     </trans-unit>
     <trans-unit id="loginWith">
       <source xml:lang="en">Login with {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp.enterpriseManaged.issuerInvalid">
+      <source xml:lang="en">Enterprise-managed MCP authentication requires `mcp.enterpriseManagedAuth.idp.issuer` to be a valid URL; got '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="mcp.enterpriseManaged.issuerMissing">
+      <source xml:lang="en">Enterprise-managed MCP authentication requires `mcp.enterpriseManagedAuth.idp.issuer` to be configured. Set it via enterprise policy (Windows Group Policy / macOS managed preferences / Linux `/etc/vscode/policy.json`) or, for local testing, by hand-editing `settings.json`.</source>
+    </trans-unit>
+    <trans-unit id="mcp.enterpriseManaged.issuerNotHttp">
+      <source xml:lang="en">Enterprise-managed MCP authentication requires `mcp.enterpriseManagedAuth.idp.issuer` to use the `https` or `http` scheme; got '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="mcp.enterpriseManaged.missingAS">
+      <source xml:lang="en">The enterprise-managed MCP server '{0}' did not advertise an `authorization_servers` entry in its protected-resource metadata.</source>
+    </trans-unit>
+    <trans-unit id="mcp.enterpriseManaged.missingResource">
+      <source xml:lang="en">The enterprise-managed MCP server '{0}' did not advertise a protected-resource metadata document with a 'resource' identifier.</source>
     </trans-unit>
     <trans-unit id="mcpAuthSessionRemoved">
       <source xml:lang="en">Authentication session for {0} removed, stopping server</source>
@@ -359,7 +398,7 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <source xml:lang="en">The priority of the status bar entry. Higher value means the item should be shown more to the left.</source>
     </trans-unit>
     <trans-unit id="text">
-      <source xml:lang="en">The text to show for the entry. You can embed icons in the text by leveraging the `$(&lt;name&gt;)`-syntax, like 'Hello $(globe)!'</source>
+      <source xml:lang="en">The text to show for the entry. You can embed icons in the text by leveraging the `$(&lt;name&gt;)`-syntax, like 'Hello {0}!'</source>
     </trans-unit>
     <trans-unit id="tooltip">
       <source xml:lang="en">The tooltip text for the entry.</source>
@@ -528,6 +567,12 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     <trans-unit id="advanced">
       <source xml:lang="en">Advanced settings are hidden by default in the Settings editor unless the user chooses to show advanced settings.</source>
     </trans-unit>
+    <trans-unit id="config.property.agentHost.unsupported">
+      <source xml:lang="en">Extension '{0}' CANNOT use the 'agentHost' property on configuration '{1}'.</source>
+    </trans-unit>
+    <trans-unit id="config.property.agentsWindow.proposed">
+      <source xml:lang="en">Extension '{0}' CANNOT use 'agentsWindow' property on configuration '{1}' without enabling the 'agentsWindowConfiguration' API proposal.</source>
+    </trans-unit>
     <trans-unit id="config.property.defaultConfiguration.warning">
       <source xml:lang="en">Cannot register configuration defaults for '{0}'. Only defaults for machine-overridable, window, resource and language overridable scoped settings are supported.</source>
     </trans-unit>
@@ -567,11 +612,31 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     <trans-unit id="preview">
       <source xml:lang="en">Preview settings can be used to try out new features before they are finalized.</source>
     </trans-unit>
+    <trans-unit id="scope.agentsWindow">
+      <source xml:lang="en">Configuration overrides for the Agents window. Allows specifying a different default value and read-only behavior for this setting when running in the Agents window.
+
+**Note**: This is a proposed API. To use it, extensions must include `agentsWindowConfiguration` in their `enabledApiProposals`.</source>
+    </trans-unit>
+    <trans-unit id="scope.agentsWindow.default">
+      <source xml:lang="en">The default value for this setting in the Agents window.</source>
+    </trans-unit>
+    <trans-unit id="scope.agentsWindow.readOnly">
+      <source xml:lang="en">When true, this setting cannot be changed by the user in the Agents window.</source>
+    </trans-unit>
     <trans-unit id="scope.application.description">
       <source xml:lang="en">Configuration that can be configured only in the user settings.</source>
     </trans-unit>
     <trans-unit id="scope.deprecationMessage">
       <source xml:lang="en">If set, the property is marked as deprecated and the given message is shown as an explanation.</source>
+    </trans-unit>
+    <trans-unit id="scope.deprecationMessageSeverity">
+      <source xml:lang="en">Controls the severity used to display the deprecation message.</source>
+    </trans-unit>
+    <trans-unit id="scope.deprecationMessageSeverity.info">
+      <source xml:lang="en">Shows the deprecation message using an informational treatment.</source>
+    </trans-unit>
+    <trans-unit id="scope.deprecationMessageSeverity.warning">
+      <source xml:lang="en">Shows the deprecation message using the standard warning treatment.</source>
     </trans-unit>
     <trans-unit id="scope.description">
       <source xml:lang="en">Scope in which the configuration is applicable. Available scopes are `application`, `machine`, `window`, `resource`, and `machine-overridable`.</source>
@@ -587,6 +652,9 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     </trans-unit>
     <trans-unit id="scope.ignoreSync">
       <source xml:lang="en">When enabled, Settings Sync will not sync the user value of this configuration by default.</source>
+    </trans-unit>
+    <trans-unit id="scope.keywords">
+      <source xml:lang="en">A list of keywords that help users find this setting in the Settings editor. These are not shown to the user.</source>
     </trans-unit>
     <trans-unit id="scope.language-overridable.description">
       <source xml:lang="en">Resource configuration that can be configured in language specific settings.</source>
@@ -778,11 +846,6 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <source xml:lang="en">Could not find the terminal with id {0} on the extension host</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/api/common/extHostTreeViews" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="treeView.duplicateElement">
-      <source xml:lang="en">Element with id {0} is already registered</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/api/common/extHostTunnelService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="tunnelPrivacy.private">
       <source xml:lang="en">Private</source>
@@ -806,6 +869,12 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     <trans-unit id="contributes.jsonValidation.url">
       <source xml:lang="en">A schema URL ('http:', 'https:') or relative path to the extension folder ('./').</source>
     </trans-unit>
+    <trans-unit id="contributes.jsonValidationRegistry">
+      <source xml:lang="en">Contributes a JSON validation registry. The registry can be a dynamic resource from a filesystem provider and allows associations to change at runtime.</source>
+    </trans-unit>
+    <trans-unit id="contributes.jsonValidationRegistry.url">
+      <source xml:lang="en">A registry URI or relative path to the extension folder ('./').</source>
+    </trans-unit>
     <trans-unit id="fileMatch">
       <source xml:lang="en">File Match</source>
     </trans-unit>
@@ -814,6 +883,21 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     </trans-unit>
     <trans-unit id="invalid.jsonValidation">
       <source xml:lang="en">'configuration.jsonValidation' must be a array</source>
+    </trans-unit>
+    <trans-unit id="invalid.jsonValidationRegistry">
+      <source xml:lang="en">'configuration.jsonValidationRegistry' must be an array</source>
+    </trans-unit>
+    <trans-unit id="invalid.jsonValidationRegistry.fileschema">
+      <source xml:lang="en">'configuration.jsonValidationRegistry.url' is an invalid relative URI: {0}</source>
+    </trans-unit>
+    <trans-unit id="invalid.jsonValidationRegistry.path">
+      <source xml:lang="en">Expected `contributes.{0}.url` ({1}) to be included inside extension's folder ({2}). This might make the extension non-portable.</source>
+    </trans-unit>
+    <trans-unit id="invalid.jsonValidationRegistry.schema">
+      <source xml:lang="en">'configuration.jsonValidationRegistry.url' must be an absolute URI or start with './' to reference a registry located in the extension.</source>
+    </trans-unit>
+    <trans-unit id="invalid.jsonValidationRegistry.url">
+      <source xml:lang="en">'configuration.jsonValidationRegistry.url' must be a URI or relative path</source>
     </trans-unit>
     <trans-unit id="invalid.path.1">
       <source xml:lang="en">Expected `contributes.{0}.url` ({1}) to be included inside extension's folder ({2}). This might make the extension non-portable.</source>
@@ -853,14 +937,6 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <source xml:lang="en">Debug Process</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/api/test/browser/mainThreadTreeViews.test" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="Test View 1">
-      <source xml:lang="en">Test View 1</source>
-    </trans-unit>
-    <trans-unit id="test">
-      <source xml:lang="en">test</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/browser/actions/developerActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="global">
       <source xml:lang="en">Global</source>
@@ -884,6 +960,18 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     </trans-unit>
     <trans-unit id="policyDiagnostics">
       <source xml:lang="en">Policy Diagnostics</source>
+    </trans-unit>
+    <trans-unit id="policyDiagnostics.editorTitle">
+      <source xml:lang="en">Policy Diagnostics</source>
+    </trans-unit>
+    <trans-unit id="policyDiagnostics.previewError">
+      <source xml:lang="en">Policy diagnostics opened as Markdown source because the rendered preview could not be opened: {0}</source>
+    </trans-unit>
+    <trans-unit id="policyDiagnostics.previewMissingResource">
+      <source xml:lang="en">Policy diagnostics opened as Markdown source because the rendered preview could not be initialized.</source>
+    </trans-unit>
+    <trans-unit id="policyDiagnostics.progress">
+      <source xml:lang="en">Generating policy diagnostics...</source>
     </trans-unit>
     <trans-unit id="profile">
       <source xml:lang="en">Profile</source>
@@ -962,6 +1050,21 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="storageLogDialogMessage">
       <source xml:lang="en">The storage database contents have been logged to the developer tools.</source>
+    </trans-unit>
+    <trans-unit id="syncAccountPolicy">
+      <source xml:lang="en">Sync Account Policy</source>
+    </trans-unit>
+    <trans-unit id="syncAccountPolicy.blocked">
+      <source xml:lang="en">Failed to sync account policy.</source>
+    </trans-unit>
+    <trans-unit id="syncAccountPolicy.blocked.detail">
+      <source xml:lang="en">The required managed settings could not be refreshed.</source>
+    </trans-unit>
+    <trans-unit id="syncAccountPolicy.error">
+      <source xml:lang="en">Failed to sync account policy.</source>
+    </trans-unit>
+    <trans-unit id="syncAccountPolicy.success">
+      <source xml:lang="en">Account policy has been synced.</source>
     </trans-unit>
     <trans-unit id="toggle screencast mode">
       <source xml:lang="en">Toggle Screencast Mode</source>
@@ -1143,6 +1246,21 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="justifyPanel">
       <source xml:lang="en">Justify</source>
     </trans-unit>
+    <trans-unit id="layoutDensity">
+      <source xml:lang="en">Layout Density</source>
+    </trans-unit>
+    <trans-unit id="layoutDensityCompact">
+      <source xml:lang="en">Compact</source>
+    </trans-unit>
+    <trans-unit id="layoutDensityCompactIcon">
+      <source xml:lang="en">Represents the compact layout density</source>
+    </trans-unit>
+    <trans-unit id="layoutDensityDefault">
+      <source xml:lang="en">Default</source>
+    </trans-unit>
+    <trans-unit id="layoutDensityDefaultIcon">
+      <source xml:lang="en">Represents the default layout density</source>
+    </trans-unit>
     <trans-unit id="layoutModes">
       <source xml:lang="en">Modes</source>
     </trans-unit>
@@ -1187,10 +1305,6 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="miToggleCenteredLayout">
       <source xml:lang="en">&amp;&amp;Centered Layout</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="miToggleZenMode">
-      <source xml:lang="en">Zen Mode</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
     <trans-unit id="move second sidebar left">
@@ -1426,9 +1540,6 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="toggleVisibility">
       <source xml:lang="en">Visibility</source>
-    </trans-unit>
-    <trans-unit id="toggleZenMode">
-      <source xml:lang="en">Toggle Zen Mode</source>
     </trans-unit>
     <trans-unit id="top">
       <source xml:lang="en">Top</source>
@@ -1699,6 +1810,30 @@ This action is irreversible and may result in data loss!</source>
       <source xml:lang="en">Select workspace folder</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/browser/chatChangesPill" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatChangesPill.ariaLabel">
+      <source xml:lang="en">{0}: {1}, +{2}, -{3}</source>
+    </trans-unit>
+    <trans-unit id="chatChangesPill.file">
+      <source xml:lang="en">{0} File</source>
+    </trans-unit>
+    <trans-unit id="chatChangesPill.files">
+      <source xml:lang="en">{0} Files</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/browser/chatPills" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatPills.ariaLabel">
+      <source xml:lang="en">Chat status</source>
+    </trans-unit>
+    <trans-unit id="chatPills.open">
+      <source xml:lang="en">Open {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/browser/chatResourcePill" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatResourcePill.open">
+      <source xml:lang="en">Open {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/browser/editor" source-language="en" datatype="plaintext"><body>
     <trans-unit id="pinned">
       <source xml:lang="en">{0}, pinned</source>
@@ -1718,9 +1853,26 @@ This action is irreversible and may result in data loss!</source>
       <source xml:lang="en">{0} • Cell {1} • Output</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/browser/layout" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="auxiliaryBarHidden">
+      <source xml:lang="en">Secondary Side Bar hidden</source>
+    </trans-unit>
+    <trans-unit id="auxiliaryBarVisible">
+      <source xml:lang="en">Secondary Side Bar shown</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/browser/parts/activitybar/activitybarPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="activity bar position">
       <source xml:lang="en">Activity Bar Position</source>
+    </trans-unit>
+    <trans-unit id="activity bar size">
+      <source xml:lang="en">Activity Bar Size</source>
+    </trans-unit>
+    <trans-unit id="activityBarSizeCompact">
+      <source xml:lang="en">Compact</source>
+    </trans-unit>
+    <trans-unit id="activityBarSizeDefault">
+      <source xml:lang="en">Default</source>
     </trans-unit>
     <trans-unit id="bottom">
       <source xml:lang="en">Bottom</source>
@@ -1782,12 +1934,6 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/auxiliarybar/auxiliaryBarActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="auxiliaryBarHidden">
-      <source xml:lang="en">Secondary Side Bar hidden</source>
-    </trans-unit>
-    <trans-unit id="auxiliaryBarVisible">
-      <source xml:lang="en">Secondary Side Bar shown</source>
-    </trans-unit>
     <trans-unit id="closeIcon">
       <source xml:lang="en">Icon to close the secondary side bar.</source>
     </trans-unit>
@@ -1804,7 +1950,10 @@ This action is irreversible and may result in data loss!</source>
       <source xml:lang="en">Maximize Secondary Side Bar</source>
     </trans-unit>
     <trans-unit id="maximizeAuxiliaryBarTooltip">
-      <source xml:lang="en">Maximize Secondary Side Bar Size</source>
+      <source xml:lang="en">Maximize Secondary Side Bar</source>
+    </trans-unit>
+    <trans-unit id="maximizeAuxiliaryBarTooltip2">
+      <source xml:lang="en">Maximize Secondary Side Bar</source>
     </trans-unit>
     <trans-unit id="maximizeIcon">
       <source xml:lang="en">Icon to maximize the secondary side bar.</source>
@@ -1824,9 +1973,6 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="restoreAuxiliaryBar">
       <source xml:lang="en">Restore Secondary Side Bar</source>
-    </trans-unit>
-    <trans-unit id="restoreAuxiliaryBarTooltip">
-      <source xml:lang="en">Restore Secondary Side Bar Size</source>
     </trans-unit>
     <trans-unit id="toggleAuxiliaryBar">
       <source xml:lang="en">Toggle Secondary Side Bar Visibility</source>
@@ -1921,6 +2067,14 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="viewsAndMoreActions">
       <source xml:lang="en">Views and More Actions...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/browser/parts/dialogs/dialog" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="aboutDetail">
+      <source xml:lang="en">Version: {0}
+Commit: {1}
+Date: {2}
+Browser: {3}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/dialogs/dialogHandler" source-language="en" datatype="plaintext"><body>
@@ -2056,6 +2210,9 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="icons">
       <source xml:lang="en">Render breadcrumb items with icons.</source>
     </trans-unit>
+    <trans-unit id="showEditorType">
+      <source xml:lang="en">Controls whether the breadcrumbs bar shows a dropdown to switch between the editors that can open the current file (for example the text editor and a custom editor). The dropdown only appears when a more specialized editor is available.</source>
+    </trans-unit>
     <trans-unit id="symbolPathSeparator">
       <source xml:lang="en">The separator used when copying the breadcrumb symbol path.</source>
     </trans-unit>
@@ -2091,6 +2248,9 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="breadcrumbsActive">
       <source xml:lang="en">Whether breadcrumbs have focus</source>
     </trans-unit>
+    <trans-unit id="breadcrumbsHasSymbols">
+      <source xml:lang="en">Whether breadcrumbs contain symbol items</source>
+    </trans-unit>
     <trans-unit id="breadcrumbsPossible">
       <source xml:lang="en">Whether the editor can show breadcrumbs</source>
     </trans-unit>
@@ -2109,8 +2269,14 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="cmd.toggle">
       <source xml:lang="en">Toggle Breadcrumbs</source>
     </trans-unit>
+    <trans-unit id="cmd.toggle.short">
+      <source xml:lang="en">Breadcrumbs</source>
+    </trans-unit>
     <trans-unit id="cmd.toggle2">
-      <source xml:lang="en">Toggle Breadcrumbs</source>
+      <source xml:lang="en">Breadcrumbs</source>
+    </trans-unit>
+    <trans-unit id="editorType.hover">
+      <source xml:lang="en">Editor: {0}</source>
     </trans-unit>
     <trans-unit id="empty">
       <source xml:lang="en">no elements</source>
@@ -2214,6 +2380,24 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="copyToNewWindow">
       <source xml:lang="en">Copy into New Window</source>
+    </trans-unit>
+    <trans-unit id="diffView">
+      <source xml:lang="en">Diff View</source>
+    </trans-unit>
+    <trans-unit id="diffView.automaticInline">
+      <source xml:lang="en">Automatic (Currently Inline)</source>
+    </trans-unit>
+    <trans-unit id="diffView.automaticSideBySide">
+      <source xml:lang="en">Automatic (Currently Side by Side)</source>
+    </trans-unit>
+    <trans-unit id="diffView.inline">
+      <source xml:lang="en">Inline</source>
+    </trans-unit>
+    <trans-unit id="diffView.inlineTemporary">
+      <source xml:lang="en">Inline (Temporary)</source>
+    </trans-unit>
+    <trans-unit id="diffView.sideBySide">
+      <source xml:lang="en">Side by Side</source>
     </trans-unit>
     <trans-unit id="editorActionsPosition">
       <source xml:lang="en">Editor Actions Position</source>
@@ -2516,6 +2700,9 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="previousChangeIcon">
       <source xml:lang="en">Icon for the previous change action in the diff editor.</source>
     </trans-unit>
+    <trans-unit id="reopenAsText">
+      <source xml:lang="en">Reopen as Text</source>
+    </trans-unit>
     <trans-unit id="reopenWith">
       <source xml:lang="en">Reopen Editor With...</source>
     </trans-unit>
@@ -2632,6 +2819,9 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="closeOneEditor">
       <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="closeOthers">
+      <source xml:lang="en">Close Others</source>
     </trans-unit>
     <trans-unit id="confirmClearDetail">
       <source xml:lang="en">This action is irreversible!</source>
@@ -2794,6 +2984,9 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="moveEditorToBelowGroup">
       <source xml:lang="en">Move Editor into Group Below</source>
     </trans-unit>
+    <trans-unit id="moveEditorToEnd">
+      <source xml:lang="en">Move Editor to End</source>
+    </trans-unit>
     <trans-unit id="moveEditorToFirstGroup">
       <source xml:lang="en">Move Editor into First Group</source>
     </trans-unit>
@@ -2814,6 +3007,9 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="moveEditorToRightGroup">
       <source xml:lang="en">Move Editor into Right Group</source>
+    </trans-unit>
+    <trans-unit id="moveEditorToStart">
+      <source xml:lang="en">Move Editor to Start</source>
     </trans-unit>
     <trans-unit id="navigateBack">
       <source xml:lang="en">Go Back</source>
@@ -2988,6 +3184,9 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/editor/editorCommands" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="closeModalEditor">
+      <source xml:lang="en">Close Modal Editor</source>
+    </trans-unit>
     <trans-unit id="editorCommand.activeEditorCopy.arg.description">
       <source xml:lang="en">Argument Properties:
 	* 'to': String value providing where to copy.
@@ -3032,6 +3231,21 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="lockEditorGroup">
       <source xml:lang="en">Lock Editor Group</source>
     </trans-unit>
+    <trans-unit id="moveModalEditorToWindow">
+      <source xml:lang="en">Open Modal Editor in New Window</source>
+    </trans-unit>
+    <trans-unit id="moveToMainWindow">
+      <source xml:lang="en">Open Modal Editor in Main Window</source>
+    </trans-unit>
+    <trans-unit id="navigateModalEditorNext">
+      <source xml:lang="en">Navigate to Next Item in Modal Editor</source>
+    </trans-unit>
+    <trans-unit id="navigateModalEditorPrevious">
+      <source xml:lang="en">Navigate to Previous Item in Modal Editor</source>
+    </trans-unit>
+    <trans-unit id="restoreModalEditorSize">
+      <source xml:lang="en">Restore Modal Editor</source>
+    </trans-unit>
     <trans-unit id="splitEditorInGroup">
       <source xml:lang="en">Split Editor in Group</source>
     </trans-unit>
@@ -3041,6 +3255,12 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="toggleJoinEditorInGroup">
       <source xml:lang="en">Toggle Split Editor in Group</source>
     </trans-unit>
+    <trans-unit id="toggleModalEditorMaximized">
+      <source xml:lang="en">Maximize Modal Editor</source>
+    </trans-unit>
+    <trans-unit id="toggleModalEditorSidebar">
+      <source xml:lang="en">Toggle Modal Editor Sidebar</source>
+    </trans-unit>
     <trans-unit id="toggleSplitEditorInGroupLayout">
       <source xml:lang="en">Toggle Layout of Split Editor in Group</source>
     </trans-unit>
@@ -3049,6 +3269,9 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/editor/editorConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="editor.diffEditorAssociations">
+      <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) to editors for diff views (for example `"*.md": "vscode.markdown.preview.editor"`). These override `workbench.editorAssociations` for diffs.</source>
+    </trans-unit>
     <trans-unit id="editor.editorAssociations">
       <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) to editors (for example `"*.hex": "hexEditor.hexedit"`). These have precedence over the default behavior.</source>
     </trans-unit>
@@ -3101,6 +3324,9 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="moveErrorDetails">
       <source xml:lang="en">Try saving or reverting the editor first and then try again.</source>
     </trans-unit>
+    <trans-unit id="reopenWith">
+      <source xml:lang="en">Reopen Editor With</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/editor/editorGroupWatermark" source-language="en" datatype="plaintext"><body>
     <trans-unit id="watermark.findInFiles">
@@ -3139,6 +3365,17 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="watermark.toggleTerminal">
       <source xml:lang="en">Toggle Terminal</source>
       <note>toggle is a verb here</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/browser/parts/editor/editorHeaderControl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="ariaLabelEditorHeaderActions">
+      <source xml:lang="en">Editor actions</source>
+    </trans-unit>
+    <trans-unit id="ariaLabelEditorHeaderLayoutActions">
+      <source xml:lang="en">Editor layout actions</source>
+    </trans-unit>
+    <trans-unit id="ariaLabelEditorHeaderPrimaryActions">
+      <source xml:lang="en">Editor primary actions</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/editor/editorPanes" source-language="en" datatype="plaintext"><body>
@@ -3388,14 +3625,69 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/editor/editorTabsControl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="addTab">
+      <source xml:lang="en">Add Tab</source>
+    </trans-unit>
+    <trans-unit id="ariaLabelAddTab">
+      <source xml:lang="en">Add Tab</source>
+    </trans-unit>
     <trans-unit id="ariaLabelEditorActions">
       <source xml:lang="en">Editor actions</source>
+    </trans-unit>
+    <trans-unit id="ariaLabelEditorActionsLayout">
+      <source xml:lang="en">Editor layout actions</source>
     </trans-unit>
     <trans-unit id="draggedEditorGroup">
       <source xml:lang="en">{0} (+{1})</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/browser/parts/editor/editorTypePicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="builtinProviderDisplayName">
+      <source xml:lang="en">Built-in</source>
+    </trans-unit>
+    <trans-unit id="editorType.labelWithSource">
+      <source xml:lang="en">{0} - {1}</source>
+    </trans-unit>
+    <trans-unit id="editorType.openModified">
+      <source xml:lang="en">Open Modified</source>
+    </trans-unit>
+    <trans-unit id="editorType.openOriginal">
+      <source xml:lang="en">Open Original</source>
+    </trans-unit>
+    <trans-unit id="editorType.setDefault">
+      <source xml:lang="en">Set Default for '{0}'</source>
+    </trans-unit>
+    <trans-unit id="editorType.setDefaultDiff">
+      <source xml:lang="en">Set Default (Diff Only) for '{0}'</source>
+    </trans-unit>
+    <trans-unit id="textDiffEditor">
+      <source xml:lang="en">Text Diff Editor</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/browser/parts/editor/modalEditorPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="modalEditorPart">
+      <source xml:lang="en">Modal Editor Area</source>
+    </trans-unit>
+    <trans-unit id="navigationCounter">
+      <source xml:lang="en">{0} of {1}</source>
+    </trans-unit>
+    <trans-unit id="nextItem">
+      <source xml:lang="en">Next</source>
+    </trans-unit>
+    <trans-unit id="previousItem">
+      <source xml:lang="en">Previous</source>
+    </trans-unit>
+    <trans-unit id="toggleSidebar">
+      <source xml:lang="en">Toggle Sidebar</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/browser/parts/editor/multiEditorTabsControl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="altClick">
+      <source xml:lang="en">Alt+Click</source>
+    </trans-unit>
+    <trans-unit id="altClickMac">
+      <source xml:lang="en">⌥+Click</source>
+    </trans-unit>
     <trans-unit id="ariaLabelTabActions">
       <source xml:lang="en">Tab actions</source>
     </trans-unit>
@@ -3488,6 +3780,9 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="collapseNotification">
       <source xml:lang="en">Collapse Notification</source>
     </trans-unit>
+    <trans-unit id="collapseUpIcon">
+      <source xml:lang="en">Icon for the collapse action in notifications when the notification center is at the top.</source>
+    </trans-unit>
     <trans-unit id="configureDoNotDisturbMode">
       <source xml:lang="en">Configure Do Not Disturb...</source>
     </trans-unit>
@@ -3497,11 +3792,17 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="configureNotification">
       <source xml:lang="en">More Actions...</source>
     </trans-unit>
+    <trans-unit id="configureNotificationsPosition">
+      <source xml:lang="en">Configure Notifications Position...</source>
+    </trans-unit>
     <trans-unit id="copyNotification">
       <source xml:lang="en">Copy Text</source>
     </trans-unit>
     <trans-unit id="doNotDisturbIcon">
       <source xml:lang="en">Icon for the mute all action in notifications.</source>
+    </trans-unit>
+    <trans-unit id="expandDownIcon">
+      <source xml:lang="en">Icon for the expand action in notifications when the notification center is at the top.</source>
     </trans-unit>
     <trans-unit id="expandIcon">
       <source xml:lang="en">Icon for the expand action in notifications.</source>
@@ -3514,6 +3815,12 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="hideNotificationsCenter">
       <source xml:lang="en">Hide Notifications</source>
+    </trans-unit>
+    <trans-unit id="hideUpIcon">
+      <source xml:lang="en">Icon for the hide action in notifications when positioned at the top.</source>
+    </trans-unit>
+    <trans-unit id="positionIcon">
+      <source xml:lang="en">Icon for the position action in notifications.</source>
     </trans-unit>
     <trans-unit id="toggleDoNotDisturbMode">
       <source xml:lang="en">Toggle Do Not Disturb Mode</source>
@@ -3572,6 +3879,15 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="notifications">
       <source xml:lang="en">Notifications</source>
     </trans-unit>
+    <trans-unit id="positionBottomLeft">
+      <source xml:lang="en">Bottom Left</source>
+    </trans-unit>
+    <trans-unit id="positionBottomRight">
+      <source xml:lang="en">Bottom Right</source>
+    </trans-unit>
+    <trans-unit id="positionTopRight">
+      <source xml:lang="en">Top Right</source>
+    </trans-unit>
     <trans-unit id="selectSources">
       <source xml:lang="en">Select sources to enable all notifications from</source>
     </trans-unit>
@@ -3583,6 +3899,9 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="toggleDoNotDisturbModeBySource">
       <source xml:lang="en">Toggle Do Not Disturb Mode By Source...</source>
+    </trans-unit>
+    <trans-unit id="toggleNotifications">
+      <source xml:lang="en">Toggle Notifications</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/notifications/notificationsList" source-language="en" datatype="plaintext"><body>
@@ -3744,14 +4063,14 @@ This action is irreversible and may result in data loss!</source>
       <source xml:lang="en">Icon to maximize a panel.</source>
     </trans-unit>
     <trans-unit id="maximizePanel">
-      <source xml:lang="en">Maximize Panel Size</source>
+      <source xml:lang="en">Maximize Panel</source>
     </trans-unit>
     <trans-unit id="miTogglePanelMnemonic">
       <source xml:lang="en">&amp;&amp;Panel</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
     <trans-unit id="minimizePanel">
-      <source xml:lang="en">Restore Panel Size</source>
+      <source xml:lang="en">Restore Panel</source>
     </trans-unit>
     <trans-unit id="movePanelToSecondarySideBar">
       <source xml:lang="en">Move Panel Views To Secondary Side Bar</source>
@@ -3880,9 +4199,46 @@ This action is irreversible and may result in data loss!</source>
       <source xml:lang="en">Command Center</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/browser/parts/titlebar/menubar.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mEdit">
+      <source xml:lang="en">&amp;&amp;Edit</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mFile">
+      <source xml:lang="en">&amp;&amp;File</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mGoto">
+      <source xml:lang="en">&amp;&amp;Go</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mHelp">
+      <source xml:lang="en">&amp;&amp;Help</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mPreferences">
+      <source xml:lang="en">&amp;&amp;Preferences</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mSelection">
+      <source xml:lang="en">&amp;&amp;Selection</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mTerminal">
+      <source xml:lang="en">&amp;&amp;Terminal</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="mView">
+      <source xml:lang="en">&amp;&amp;View</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/browser/parts/titlebar/menubarControl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="DownloadingUpdate">
       <source xml:lang="en">Downloading Update...</source>
+    </trans-unit>
+    <trans-unit id="cancellingUpdate">
+      <source xml:lang="en">Cancelling Update...</source>
     </trans-unit>
     <trans-unit id="checkForUpdates">
       <source xml:lang="en">Check for &amp;&amp;Updates...</source>
@@ -3907,38 +4263,6 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="installingUpdate">
       <source xml:lang="en">Installing Update...</source>
-    </trans-unit>
-    <trans-unit id="mEdit">
-      <source xml:lang="en">&amp;&amp;Edit</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="mFile">
-      <source xml:lang="en">&amp;&amp;File</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="mGoto">
-      <source xml:lang="en">&amp;&amp;Go</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="mHelp">
-      <source xml:lang="en">&amp;&amp;Help</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="mPreferences">
-      <source xml:lang="en">Preferences</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="mSelection">
-      <source xml:lang="en">&amp;&amp;Selection</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="mTerminal">
-      <source xml:lang="en">&amp;&amp;Terminal</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
-    </trans-unit>
-    <trans-unit id="mView">
-      <source xml:lang="en">&amp;&amp;View</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
     <trans-unit id="menubar.customTitlebarAccessibilityNotification">
       <source xml:lang="en">Accessibility support is enabled for you. For the most accessible experience, we recommend the custom menu style.</source>
@@ -3994,6 +4318,12 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="toggle.navigationDescription">
       <source xml:lang="en">Toggle visibility of the Navigation Controls in title bar</source>
     </trans-unit>
+    <trans-unit id="toggle.notifications">
+      <source xml:lang="en">Notifications</source>
+    </trans-unit>
+    <trans-unit id="toggle.notificationsDescription">
+      <source xml:lang="en">Toggle visibility of the Notifications button in title bar</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/titlebar/titlebarPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="ariaLabelTitleActions">
@@ -4035,6 +4365,21 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="refresh">
       <source xml:lang="en">Refresh</source>
     </trans-unit>
+    <trans-unit id="treeActionBarAriaLabel">
+      <source xml:lang="en">Actions for {0}</source>
+    </trans-unit>
+    <trans-unit id="treeActionBarAriaLabelNoName">
+      <source xml:lang="en">Actions</source>
+    </trans-unit>
+    <trans-unit id="treeAriaLabelHasActions">
+      <source xml:lang="en">has actions</source>
+    </trans-unit>
+    <trans-unit id="treeAriaLabelHasActionsSuffix">
+      <source xml:lang="en">{0}, has actions</source>
+    </trans-unit>
+    <trans-unit id="treeAriaLabelHasActionsTooltip">
+      <source xml:lang="en">{0}, has actions</source>
+    </trans-unit>
     <trans-unit id="treeView.enableCollapseAll">
       <source xml:lang="en">Whether the tree view with id {0} enables collapse all.</source>
     </trans-unit>
@@ -4046,8 +4391,14 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/views/viewFilter" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accessibilityHelpHintInLabel">
+      <source xml:lang="en">Press {0} for accessibility help</source>
+    </trans-unit>
     <trans-unit id="more filters">
       <source xml:lang="en">More Filters...</source>
+    </trans-unit>
+    <trans-unit id="viewFilter">
+      <source xml:lang="en">Filter</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/views/viewPane" source-language="en" datatype="plaintext"><body>
@@ -4062,6 +4413,9 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="viewToolbarAriaLabel">
       <source xml:lang="en">{0} actions</source>
+    </trans-unit>
+    <trans-unit id="welcomeViewAriaLabel">
+      <source xml:lang="en">Welcome</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/views/viewPaneContainer" source-language="en" datatype="plaintext"><body>
@@ -4087,14 +4441,6 @@ This action is irreversible and may result in data loss!</source>
   <file original="src/vs/workbench/browser/quickaccess" source-language="en" datatype="plaintext"><body>
     <trans-unit id="inQuickOpen">
       <source xml:lang="en">Whether keyboard focus is inside the quick open control</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/browser/web.main" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="reset">
-      <source xml:lang="en">Reset User Data</source>
-    </trans-unit>
-    <trans-unit id="reset user data message">
-      <source xml:lang="en">Would you like to reset your data (settings, keybindings, extensions, snippets and UI State) and reload?</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/window" source-language="en" datatype="plaintext"><body>
@@ -4165,6 +4511,12 @@ If {1} did not launch, try again below.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/workbench.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="accountsShowAvatar">
+      <source xml:lang="en">Controls whether signed-in account profile images (avatars) are shown in account-related UI, such as the Accounts item in the Activity Bar.</source>
+    </trans-unit>
+    <trans-unit id="activeEditorLanguageId">
+      <source xml:lang="en">`${activeEditorLanguageId}`: the language identifier of the active editor (e.g. typescript).</source>
+    </trans-unit>
     <trans-unit id="activeEditorLong">
       <source xml:lang="en">`${activeEditorLong}`: the full path of the file (e.g. /Users/Development/myFolder/myFileFolder/myFile.txt).</source>
     </trans-unit>
@@ -4191,6 +4543,14 @@ If {1} did not launch, try again below.</source>
     </trans-unit>
     <trans-unit id="activeRepositoryName">
       <source xml:lang="en">`${activeRepositoryName}`: the name of the active repository (e.g. vscode).</source>
+    </trans-unit>
+    <trans-unit id="activityBarAutoHide">
+      <source xml:lang="en">Controls whether the Activity Bar is automatically hidden when there is only one view container to show. This applies to the Primary and Secondary Side Bars when {0} is set to {1} or {2}.</source>
+      <note>This is the description for a setting</note>
+    </trans-unit>
+    <trans-unit id="activityBarCompact">
+      <source xml:lang="en">Controls whether the Activity Bar uses a compact layout with smaller icons and reduced width. This setting only applies when {0} is set to {1}.</source>
+      <note>This is the description for a setting</note>
     </trans-unit>
     <trans-unit id="activityBarIconClickBehavior">
       <source xml:lang="en">Controls the behavior of clicking an Activity Bar icon in the workbench. This value is ignored when {0} is not set to {1}.</source>
@@ -4359,6 +4719,23 @@ If {1} did not launch, try again below.</source>
     <trans-unit id="mergeWindow">
       <source xml:lang="en">Configure an interval in seconds during which the last entry in local file history is replaced with the entry that is being added. This helps reduce the overall number of entries that are added, for example when auto save is enabled. This setting is only applied to entries that have the same source of origin. Changing this setting has no effect on existing local file history entries.</source>
     </trans-unit>
+    <trans-unit id="modernUI">
+      <source xml:lang="en">Controls whether the Modern UI Update is enabled. When on, the side bars and bottom panel are shown as floating cards with rounded corners and gaps, and a set of refreshed workbench styles is applied, matching the Agents window design.</source>
+    </trans-unit>
+    <trans-unit id="modernUIEditorTabStyle">
+      <source xml:lang="en">Controls the editor tab style when {0} is enabled. High contrast themes retain explicit selection and focus borders.</source>
+      <note>{0} is a placeholder for a setting identifier.</note>
+    </trans-unit>
+    <trans-unit id="modernUIEditorTabStyle.connected">
+      <source xml:lang="en">Connect the active tab to the editor surface with an outside border and curved shoulders.</source>
+    </trans-unit>
+    <trans-unit id="modernUIEditorTabStyle.pill">
+      <source xml:lang="en">Show editor tabs as separate rounded pills.</source>
+    </trans-unit>
+    <trans-unit id="modernUIUppercaseViewHeaders">
+      <source xml:lang="en">Controls whether view headers, side bar titles, and panel tabs use uppercase text when {0} is enabled.</source>
+      <note>{0} is a placeholder for a setting identifier.</note>
+    </trans-unit>
     <trans-unit id="mouseBackForwardToNavigate">
       <source xml:lang="en">Enables the use of mouse buttons four and five for commands 'Go Back' and 'Go Forward'.</source>
     </trans-unit>
@@ -4371,6 +4748,12 @@ If {1} did not launch, try again below.</source>
     </trans-unit>
     <trans-unit id="navigationScope">
       <source xml:lang="en">Controls the scope of history navigation in editors for commands such as 'Go Back' and 'Go Forward'.</source>
+    </trans-unit>
+    <trans-unit id="notificationsButton">
+      <source xml:lang="en">Controls the visibility of the Notifications button in the title bar. Only applies when notifications are positioned at the top right.</source>
+    </trans-unit>
+    <trans-unit id="notificationsPosition">
+      <source xml:lang="en">Controls the position of the notification toasts and notification center.</source>
     </trans-unit>
     <trans-unit id="openDefaultKeybindings">
       <source xml:lang="en">Controls whether opening keybinding settings also opens an editor showing all default keybindings.</source>
@@ -4418,6 +4801,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="remoteName">
       <source xml:lang="en">`${remoteName}`: e.g. SSH</source>
     </trans-unit>
+    <trans-unit id="restoreOnStartup">
+      <source xml:lang="en">Controls whether editors are restored on startup. When disabled, only dirty editors will be restored from the previous session.</source>
+    </trans-unit>
     <trans-unit id="restoreViewState">
       <source xml:lang="en">Restores the last editor view state (such as scroll position) when re-opening editors after they have been closed. Editor view state is stored per editor group and discarded when a group closes. Use the {0} setting to use the last known view state across all editor groups in case no previous view state was found for a editor group.</source>
     </trans-unit>
@@ -4438,7 +4824,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <note>{0}, {1} will be a setting name rendered as a link</note>
     </trans-unit>
     <trans-unit id="secondarySideBarDefaultVisibility">
-      <source xml:lang="en">Controls the default visibility of the secondary side bar in workspaces or empty windows that are opened for the first time.</source>
+      <source xml:lang="en">Controls the default visibility of the secondary side bar in workspaces or empty windows that are opened for the first time. Can be overridden by the agent sessions startup editor setting.</source>
+    </trans-unit>
+    <trans-unit id="secondarySideBarForceMaximized">
+      <source xml:lang="en">Controls whether the secondary side bar is enforced to always show maximized on startup and when there are no open editors, in layouts that support a maximized secondary side bar.</source>
     </trans-unit>
     <trans-unit id="secondarySideBarShowLabels">
       <source xml:lang="en">Controls whether activity items in the secondary side bar title are shown as label or icon. This setting only has an effect when {0} is not set to {1}.</source>
@@ -4457,6 +4846,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="settings.showAISearchToggle">
       <source xml:lang="en">Controls whether the AI search results toggle is shown in the search bar in the Settings editor after doing a search and once AI search results are available.</source>
+    </trans-unit>
+    <trans-unit id="shadows">
+      <source xml:lang="en">Controls whether shadow effects are shown around the side panels and other workbench elements.</source>
     </trans-unit>
     <trans-unit id="sharedViewState">
       <source xml:lang="en">Preserves the most recent editor view state (such as scroll position) across all editor groups and restores that if no specific editor view state is found for the editor group.</source>
@@ -4520,6 +4912,18 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="untitledLabelFormat">
       <source xml:lang="en">Controls the format of the label for an untitled editor.</source>
+    </trans-unit>
+    <trans-unit id="useModal">
+      <source xml:lang="en">Controls whether editors open in a modal overlay.</source>
+    </trans-unit>
+    <trans-unit id="useModal.all">
+      <source xml:lang="en">All editors open in a centered modal overlay.</source>
+    </trans-unit>
+    <trans-unit id="useModal.off">
+      <source xml:lang="en">Editors never open in a modal overlay.</source>
+    </trans-unit>
+    <trans-unit id="useModal.some">
+      <source xml:lang="en">Certain editors such as Settings and Keyboard Shortcuts may open in a centered modal overlay.</source>
     </trans-unit>
     <trans-unit id="useSplitJSON">
       <source xml:lang="en">Controls whether to use the split JSON editor when editing settings as JSON.</source>
@@ -4597,6 +5001,16 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="window.titleSeparator">
       <source xml:lang="en">Separator used by {0}.</source>
+    </trans-unit>
+    <trans-unit id="windowDensityLayout">
+      <source xml:lang="en">Controls the spacing density of the workbench layout. Only applies when {0} is enabled.</source>
+      <note>{0} is a placeholder for a setting identifier.</note>
+    </trans-unit>
+    <trans-unit id="windowDensityLayout.compact">
+      <source xml:lang="en">Removes the gaps between workbench parts and reduces their internal spacing to provide more room for content.</source>
+    </trans-unit>
+    <trans-unit id="windowDensityLayout.default">
+      <source xml:lang="en">Uses the standard spacing between workbench parts.</source>
     </trans-unit>
     <trans-unit id="windowTitle">
       <source xml:lang="en">Controls the window title based on the current context such as the opened workspace or active editor. Variables are substituted based on the context:</source>
@@ -4760,6 +5174,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="workbench.editor.tabActionCloseVisibility">
       <source xml:lang="en">Controls the visibility of the tab close action button.</source>
     </trans-unit>
+    <trans-unit id="workbench.editor.tabActionReserveSpace">
+      <source xml:lang="en">Controls whether Modern UI editor tabs always reserve space for tab action buttons. When disabled, clean tabs stay compact; tabs with persistent dirty or pinned indicators reserve space regardless.</source>
+    </trans-unit>
     <trans-unit id="workbench.editor.tabActionUnpinVisibility">
       <source xml:lang="en">Controls the visibility of the tab unpin action button.</source>
     </trans-unit>
@@ -4820,6 +5237,18 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="workbench.hover.delay">
       <source xml:lang="en">Controls the delay in milliseconds after which the hover is shown for workbench items (ex. some extension provided tree view items). Already visible items may require a refresh before reflecting this setting change.</source>
     </trans-unit>
+    <trans-unit id="workbench.hover.reducedDelay">
+      <source xml:lang="en">Controls the reduced delay in milliseconds used for showing hovers in specific contexts where faster feedback is beneficial.</source>
+    </trans-unit>
+    <trans-unit id="workbench.notifications.position.bottom-left">
+      <source xml:lang="en">Show notifications in the bottom left corner.</source>
+    </trans-unit>
+    <trans-unit id="workbench.notifications.position.bottom-right">
+      <source xml:lang="en">Show notifications in the bottom right corner.</source>
+    </trans-unit>
+    <trans-unit id="workbench.notifications.position.top-right">
+      <source xml:lang="en">Show notifications in the top right corner, similar to OS-level notifications.</source>
+    </trans-unit>
     <trans-unit id="workbench.panel.opensMaximized.always">
       <source xml:lang="en">Always maximize the panel when opening it.</source>
     </trans-unit>
@@ -4847,6 +5276,18 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="workbench.reduceMotion.on">
       <source xml:lang="en">Always render with reduced motion.</source>
     </trans-unit>
+    <trans-unit id="workbench.reduceTransparency">
+      <source xml:lang="en">Controls whether the workbench should render with fewer transparency and blur effects for improved performance.</source>
+    </trans-unit>
+    <trans-unit id="workbench.reduceTransparency.auto">
+      <source xml:lang="en">Reduce transparency and blur effects based on OS configuration.</source>
+    </trans-unit>
+    <trans-unit id="workbench.reduceTransparency.off">
+      <source xml:lang="en">Do not reduce transparency and blur effects.</source>
+    </trans-unit>
+    <trans-unit id="workbench.reduceTransparency.on">
+      <source xml:lang="en">Always render without transparency and blur effects.</source>
+    </trans-unit>
     <trans-unit id="workbench.secondarySideBar.defaultVisibility.hidden">
       <source xml:lang="en">The secondary side bar is hidden by default.</source>
     </trans-unit>
@@ -4868,6 +5309,18 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="wrapTabs">
       <source xml:lang="en">Controls whether tabs should be wrapped over multiple lines when exceeding available space or whether a scrollbar should appear instead. This value is ignored when {0} is not set to '{1}'.</source>
       <note>{0}, {1} will be a setting name rendered as a link</note>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/browser/workbench.zenMode.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="miToggleZenMode">
+      <source xml:lang="en">Zen Mode</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="tabBar">
+      <source xml:lang="en">Tab Bar</source>
+    </trans-unit>
+    <trans-unit id="toggleZenMode">
+      <source xml:lang="en">Toggle Zen Mode</source>
     </trans-unit>
     <trans-unit id="zenMode.centerLayout">
       <source xml:lang="en">Controls whether turning on Zen Mode also centers the layout.</source>
@@ -4948,6 +5401,12 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="activeCompareEditorCanSwap">
       <source xml:lang="en">Whether the active compare editor can swap sides</source>
     </trans-unit>
+    <trans-unit id="activeCustomEditorDiffCanToggleLayout">
+      <source xml:lang="en">Whether the active custom editor diff can toggle between inline and side by side layout</source>
+    </trans-unit>
+    <trans-unit id="activeCustomEditorTextDiff">
+      <source xml:lang="en">Whether the active custom editor diff is backed by text documents</source>
+    </trans-unit>
     <trans-unit id="activeEditor">
       <source xml:lang="en">The identifier of the active editor</source>
     </trans-unit>
@@ -4959,6 +5418,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="activeEditorCanToggleReadonly">
       <source xml:lang="en">Whether the active editor can toggle between being read-only or writeable</source>
+    </trans-unit>
+    <trans-unit id="activeEditorCannotClose">
+      <source xml:lang="en">Whether the active editor cannot be closed through standard user actions</source>
     </trans-unit>
     <trans-unit id="activeEditorGroupEmpty">
       <source xml:lang="en">Whether the active editor group is empty</source>
@@ -5011,11 +5473,32 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="dirtyWorkingCopies">
       <source xml:lang="en">Whether there are any working copies with unsaved changes</source>
     </trans-unit>
+    <trans-unit id="editorAreaFocus">
+      <source xml:lang="en">Whether the editor area (any editor part) has keyboard focus</source>
+    </trans-unit>
     <trans-unit id="editorIsOpen">
       <source xml:lang="en">Whether an editor is open</source>
     </trans-unit>
     <trans-unit id="editorPartEditorGroupMaximized">
       <source xml:lang="en">Editor Part has a maximized group</source>
+    </trans-unit>
+    <trans-unit id="editorPartModal">
+      <source xml:lang="en">Whether focus is in a modal editor part</source>
+    </trans-unit>
+    <trans-unit id="editorPartModalMaximized">
+      <source xml:lang="en">Whether the modal editor part is maximized</source>
+    </trans-unit>
+    <trans-unit id="editorPartModalNavigation">
+      <source xml:lang="en">Whether the modal editor part has navigation context</source>
+    </trans-unit>
+    <trans-unit id="editorPartModalSidebar">
+      <source xml:lang="en">Whether the modal editor part has a sidebar</source>
+    </trans-unit>
+    <trans-unit id="editorPartModalSidebarVisible">
+      <source xml:lang="en">Whether the modal editor part sidebar is visible</source>
+    </trans-unit>
+    <trans-unit id="editorPartModalVisible">
+      <source xml:lang="en">Whether a modal editor part is visible</source>
     </trans-unit>
     <trans-unit id="editorPartMultipleEditorGroups">
       <source xml:lang="en">Whether there are multiple editor groups opened in an editor part</source>
@@ -5055,6 +5538,12 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="isMainEditorCenteredLayout">
       <source xml:lang="en">Whether centered layout is enabled for the main editor</source>
+    </trans-unit>
+    <trans-unit id="isSessionsWindow">
+      <source xml:lang="en">Whether the current window is a agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="isTopRightEditorGroup">
+      <source xml:lang="en">Whether the editor group is the top right editor group in the editor part</source>
     </trans-unit>
     <trans-unit id="isWindowAlwaysOnTop">
       <source xml:lang="en">Whether the window is always on top</source>
@@ -5118,6 +5607,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="resourceSet">
       <source xml:lang="en">Whether a resource is present or not</source>
+    </trans-unit>
+    <trans-unit id="secondarySideBarVisible">
+      <source xml:lang="en">Whether the layout surface representing the secondary side bar is visible</source>
     </trans-unit>
     <trans-unit id="sideBarFocus">
       <source xml:lang="en">Whether the sidebar has keyboard focus</source>
@@ -5249,6 +5741,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="banner.iconForeground">
       <source xml:lang="en">Banner icon color. The banner is shown under the title bar of the window.</source>
     </trans-unit>
+    <trans-unit id="browserBorder">
+      <source xml:lang="en">Border color for integrated browser pages.</source>
+    </trans-unit>
     <trans-unit id="commandCenter-activeBackground">
       <source xml:lang="en">Active background color of the command center</source>
     </trans-unit>
@@ -5272,6 +5767,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="commandCenter-inactiveForeground">
       <source xml:lang="en">Foreground color of the command center when the window is inactive</source>
+    </trans-unit>
+    <trans-unit id="editorBorder">
+      <source xml:lang="en">Border color of the editor surface in the modern layout.</source>
     </trans-unit>
     <trans-unit id="editorDragAndDropBackground">
       <source xml:lang="en">Background color when dragging editors around. The color should have transparency so that the editor contents can still shine through.</source>
@@ -5320,6 +5818,105 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="menubarSelectionForeground">
       <source xml:lang="en">Foreground color of the selected menu item in the menubar.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarActiveBackground">
+      <source xml:lang="en">Background color of active Activity bar items in the default side position when the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarActiveBackgroundDeprecated">
+      <source xml:lang="en">'modernActivityBar.activeBackground' is deprecated. Use 'modernActivityBarItem.activeBackground' instead.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarActiveForeground">
+      <source xml:lang="en">Foreground color of active Activity bar items in the default side position when the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarActiveForegroundDeprecated">
+      <source xml:lang="en">'modernActivityBar.activeForeground' is deprecated. Use 'modernActivityBarItem.activeForeground' instead.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarBackground">
+      <source xml:lang="en">Background color of the Activity bar in the default side position when the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarBorder">
+      <source xml:lang="en">Border color of the Activity bar in the default side position when the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarHoverBackground">
+      <source xml:lang="en">Background color of Activity bar items in the default side position when hovering and the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarHoverBackgroundDeprecated">
+      <source xml:lang="en">'modernActivityBar.hoverBackground' is deprecated. Use 'modernActivityBarItem.hoverBackground' instead.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarHoverForeground">
+      <source xml:lang="en">Foreground color of Activity bar items in the default side position when hovering and the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarHoverForegroundDeprecated">
+      <source xml:lang="en">'modernActivityBar.hoverForeground' is deprecated. Use 'modernActivityBarItem.hoverForeground' instead.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarInactiveBackground">
+      <source xml:lang="en">Background color of the Activity bar in an inactive window when it is in the default side position and the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarItemActiveBackground">
+      <source xml:lang="en">Background color of active Activity bar items in the default side position when the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarItemActiveForeground">
+      <source xml:lang="en">Foreground color of active Activity bar items in the default side position when the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarItemHoverBackground">
+      <source xml:lang="en">Background color of Activity bar items in the default side position when hovering and the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernActivityBarItemHoverForeground">
+      <source xml:lang="en">Foreground color of Activity bar items in the default side position when hovering and the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernEditorTabActiveActionBackground">
+      <source xml:lang="en">Opaque background color of tab actions on active editor tabs when the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernEditorTabActiveBackground">
+      <source xml:lang="en">Background color of active editor tabs when the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernEditorTabActiveForeground">
+      <source xml:lang="en">Foreground color of active editor tabs when the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernEditorTabActiveHoverActionBackground">
+      <source xml:lang="en">Opaque background color of tab actions on active editor tabs when hovering and the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernEditorTabActiveHoverBackground">
+      <source xml:lang="en">Background color of active editor tabs when hovering and the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernEditorTabHoverActionBackground">
+      <source xml:lang="en">Opaque background color of tab actions on editor tabs when hovering and the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernEditorTabHoverBackground">
+      <source xml:lang="en">Background color of editor tabs when hovering and the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernEditorTabHoverForeground">
+      <source xml:lang="en">Foreground color of editor tabs when hovering and the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernEditorTabInactiveBackground">
+      <source xml:lang="en">Background color of inactive editor tabs when the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernEditorTabSelectedActionBackground">
+      <source xml:lang="en">Opaque background color of tab actions on selected editor tabs when the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernPanelBorder">
+      <source xml:lang="en">Border color of the panel surface when the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernSashGripForeground">
+      <source xml:lang="en">Color of the grip handles marking the resizable boundaries between workbench parts when the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernTabActiveBackground">
+      <source xml:lang="en">Background color of active tabs when the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernTabActiveForeground">
+      <source xml:lang="en">Foreground color of active tabs when the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernTabHoverBackground">
+      <source xml:lang="en">Background color of tabs when hovering and the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernTabHoverForeground">
+      <source xml:lang="en">Foreground color of tabs when hovering and the modern tab style is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernUIInactiveShellBackground">
+      <source xml:lang="en">Background color of the shell visible around floating workbench surfaces when the window is inactive and the modern UI is enabled.</source>
+    </trans-unit>
+    <trans-unit id="modernUIShellBackground">
+      <source xml:lang="en">Background color of the shell visible around floating workbench surfaces when the modern UI is enabled.</source>
     </trans-unit>
     <trans-unit id="notificationCenterBorder">
       <source xml:lang="en">Notifications center border color. Notifications slide in from the bottom right of the window.</source>
@@ -5492,6 +6089,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="statusBarForeground">
       <source xml:lang="en">Status bar foreground color when a workspace or folder is opened. The status bar is shown in the bottom of the window.</source>
     </trans-unit>
+    <trans-unit id="statusBarInactiveBackground">
+      <source xml:lang="en">Status bar background color when a workspace or folder is opened and the window is inactive. Debugging and other background overrides take precedence. If not set, the current status bar background is used.</source>
+    </trans-unit>
     <trans-unit id="statusBarItemActiveBackground">
       <source xml:lang="en">Status bar item background color when clicking. The status bar is shown in the bottom of the window.</source>
     </trans-unit>
@@ -5563,6 +6163,15 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="statusBarWarningItemHoverForeground">
       <source xml:lang="en">Status bar warning items foreground color when hovering. Warning items stand out from other status bar entries to indicate warning conditions. The status bar is shown in the bottom of the window.</source>
+    </trans-unit>
+    <trans-unit id="surfaceBackground">
+      <source xml:lang="en">Background color of framed container surfaces ("cards"), such as the floating workbench panels in the modern layout.</source>
+    </trans-unit>
+    <trans-unit id="surfaceBorder">
+      <source xml:lang="en">Border color of framed container surfaces ("cards"), such as the floating workbench panels in the modern layout.</source>
+    </trans-unit>
+    <trans-unit id="surfaceForeground">
+      <source xml:lang="en">Foreground color of framed container surfaces ("cards"), such as the floating workbench panels in the modern layout.</source>
     </trans-unit>
     <trans-unit id="tabActiveBackground">
       <source xml:lang="en">Active tab background color in an active group. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.</source>
@@ -5703,6 +6312,24 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="showGPUInfo">
       <source xml:lang="en">Show GPU Info</source>
     </trans-unit>
+    <trans-unit id="startHeapTracing">
+      <source xml:lang="en">Start Heap Tracing</source>
+    </trans-unit>
+    <trans-unit id="startTracing">
+      <source xml:lang="en">Start Tracing</source>
+    </trans-unit>
+    <trans-unit id="startTracing.ariaLabel">
+      <source xml:lang="en">Recording performance trace. Click to stop recording.</source>
+    </trans-unit>
+    <trans-unit id="startTracing.name">
+      <source xml:lang="en">Performance Trace</source>
+    </trans-unit>
+    <trans-unit id="startTracing.recording">
+      <source xml:lang="en">Recording trace (click to stop)</source>
+    </trans-unit>
+    <trans-unit id="startTracing.tooltip">
+      <source xml:lang="en">Click to stop recording</source>
+    </trans-unit>
     <trans-unit id="stopTracing">
       <source xml:lang="en">Stop Tracing</source>
     </trans-unit>
@@ -5714,7 +6341,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <source xml:lang="en">This can take up to one minute to complete.</source>
     </trans-unit>
     <trans-unit id="stopTracing.message">
-      <source xml:lang="en">Tracing requires to launch with a '--trace' argument</source>
+      <source xml:lang="en">No tracing session is in progress. Use 'Developer: Start Tracing' or launch with a '--trace' argument to begin tracing.</source>
     </trans-unit>
     <trans-unit id="stopTracing.title">
       <source xml:lang="en">Creating trace file...</source>
@@ -5762,6 +6389,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     <trans-unit id="enableWindowAlwaysOnTop">
       <source xml:lang="en">Turn On Always on Top</source>
     </trans-unit>
+    <trans-unit id="focusWindow">
+      <source xml:lang="en">Focus Window</source>
+    </trans-unit>
     <trans-unit id="miCloseWindow">
       <source xml:lang="en">Clos&amp;&amp;e Window</source>
       <note>&amp;&amp; denotes a mnemonic</note>
@@ -5780,6 +6410,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="quickSwitchWindow">
       <source xml:lang="en">Quick Switch Window...</source>
+    </trans-unit>
+    <trans-unit id="switchToMainWindow">
+      <source xml:lang="en">Switch to Main Window</source>
     </trans-unit>
     <trans-unit id="switchWindow">
       <source xml:lang="en">Switch Window...</source>
@@ -5836,6 +6469,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="argv.forceColorProfile">
       <source xml:lang="en">Allows to override the color profile to use. If you experience colors appear badly, try to set this to `srgb` and restart.</source>
+    </trans-unit>
+    <trans-unit id="argv.jsFlags">
+      <source xml:lang="en">Specifies V8 JavaScript engine flags to pass (e.g. "--max-old-space-size=4096"). These flags are applied to the main process, renderer and utility processes.</source>
     </trans-unit>
     <trans-unit id="argv.locale">
       <source xml:lang="en">The display Language to use. Picking a different language requires the associated language pack to be installed.</source>
@@ -6177,9 +6813,6 @@ This option requires restart to take effect.</source>
     </trans-unit>
     <trans-unit id="zoomReset">
       <source xml:lang="en">Reset</source>
-    </trans-unit>
-    <trans-unit id="zoomResetLabel">
-      <source xml:lang="en">{0} ({1})</source>
     </trans-unit>
     <trans-unit id="zoomSettings">
       <source xml:lang="en">Settings</source>

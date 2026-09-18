@@ -110,6 +110,9 @@
     <trans-unit id="vscode.extension.activationEvents.onAuthenticationRequest">
       <source xml:lang="en">An activation event emitted whenever sessions are requested from the specified authentication provider.</source>
     </trans-unit>
+    <trans-unit id="vscode.extension.activationEvents.onChatContextProvider">
+      <source xml:lang="en">An activation event emitted when the specified chat context provider is invoked.</source>
+    </trans-unit>
     <trans-unit id="vscode.extension.activationEvents.onChatParticipant">
       <source xml:lang="en">An activation event emitted when the specified chat participant is invoked.</source>
     </trans-unit>
@@ -153,7 +156,7 @@
       <source xml:lang="en">An activation event emitted when the specified language model tool is invoked.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.activationEvents.onMcpCollection">
-      <source xml:lang="en">An activation event emitted whenver a tool from the MCP server is requested.</source>
+      <source xml:lang="en">An activation event emitted whenever a tool from the MCP server is requested.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.activationEvents.onNotebook">
       <source xml:lang="en">An activation event emitted whenever the specified notebook document is opened.</source>
@@ -195,7 +198,7 @@
       <source xml:lang="en">An activation event emitted when a specified walkthrough is opened.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.activationEvents.onWebviewPanel">
-      <source xml:lang="en">An activation event emmited when a webview is loaded of a certain viewType</source>
+      <source xml:lang="en">An activation event emitted when a webview is loaded of a certain viewType</source>
     </trans-unit>
     <trans-unit id="vscode.extension.activationEvents.star">
       <source xml:lang="en">An activation event emitted on VS Code startup. To ensure a great end user experience, please use this activation event in your extension only when no other activation events combination works in your use-case.</source>
@@ -223,6 +226,12 @@
     </trans-unit>
     <trans-unit id="vscode.extension.capabilities">
       <source xml:lang="en">Declare the set of supported capabilities by the extension.</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.capabilities.agentsWindow">
+      <source xml:lang="en">Declares whether the extension should be enabled in the Agents window. Requires the `agentsWindowActivation` API proposal and the experimental Agents window capability setting.</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.capabilities.agentsWindow.supported">
+      <source xml:lang="en">Declares whether the extension supports running in the Agents window. The extension must enable the `agentsWindowActivation` API proposal and the `extensions.experimental.enableAgentsWindowCapability` setting for this property to take effect.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.capabilities.untrustedWorkspaces">
       <source xml:lang="en">Declares how the extension should be handled in untrusted workspaces.</source>
@@ -294,7 +303,10 @@
       <source xml:lang="en">Engine compatibility.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.engines.vscode">
-      <source xml:lang="en">For VS Code extensions, specifies the VS Code version that the extension is compatible with. Cannot be *. For example: ^0.10.5 indicates compatibility with a minimum VS Code version of 0.10.5.</source>
+      <source xml:lang="en">For VS Code extensions, specifies the VS Code version that the extension is compatible with. Cannot be *. For example: ^1.105.0 indicates compatibility with a minimum VS Code version of 1.105.0.</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.extensionAffinity">
+      <source xml:lang="en">Extensions that this extension should be colocated with in the same extension host process if possible. The identifier of an extension is always ${publisher}.${name}. For example: vscode.git.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.extensionDependencies">
       <source xml:lang="en">Dependencies to other extensions. The identifier of an extension is always ${publisher}.${name}. For example: vscode.csharp.</source>
@@ -415,6 +427,18 @@ Do you want to install the extension?</source>
     </trans-unit>
     <trans-unit id="relaunch">
       <source xml:lang="en">Relaunch VS Code</source>
+    </trans-unit>
+    <trans-unit id="remoteConnectionConfirm">
+      <source xml:lang="en">Allow connecting to the remote server '{0}:{1}'?</source>
+    </trans-unit>
+    <trans-unit id="remoteConnectionConfirmButton">
+      <source xml:lang="en">Connect</source>
+    </trans-unit>
+    <trans-unit id="remoteConnectionConfirmDetail">
+      <source xml:lang="en">Code is about to connect to '{0}:{1}' to host a remote extension host. Only continue if you trust this server, as it will be able to run code and access files on your behalf.</source>
+    </trans-unit>
+    <trans-unit id="remoteConnectionRejected">
+      <source xml:lang="en">Connection to '{0}:{1}' was not allowed.</source>
     </trans-unit>
     <trans-unit id="resolverExtensionNotFound">
       <source xml:lang="en">`{0}` not found on marketplace</source>

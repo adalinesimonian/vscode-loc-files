@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/editTelemetry/browser/editStats/aiStatsChart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="noData">
+      <source xml:lang="en">No data yet</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/editTelemetry/browser/editStats/aiStatsStatusBar" source-language="en" datatype="plaintext"><body>
     <trans-unit id="aiStats.statusBar.configure">
       <source xml:lang="en">Configure</source>
     </trans-unit>
     <trans-unit id="aiStatsStatusBarHeader">
       <source xml:lang="en">AI Usage Statistics</source>
+    </trans-unit>
+    <trans-unit id="chartHeaderDays">
+      <source xml:lang="en">AI Rate by Day</source>
+    </trans-unit>
+    <trans-unit id="chartHeaderSessions">
+      <source xml:lang="en">AI Rate by Session</source>
     </trans-unit>
     <trans-unit id="inlineSuggestions">
       <source xml:lang="en">Inline Suggestions</source>
@@ -19,13 +30,19 @@
     <trans-unit id="text2">
       <source xml:lang="en">Accepted inline suggestions today: {0}</source>
     </trans-unit>
+    <trans-unit id="viewByDays">
+      <source xml:lang="en">Days</source>
+    </trans-unit>
+    <trans-unit id="viewBySessions">
+      <source xml:lang="en">Sessions</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/editTelemetry/browser/editTelemetry.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="editTelemetry">
       <source xml:lang="en">Edit Telemetry</source>
     </trans-unit>
     <trans-unit id="editor.aiStats.enabled">
-      <source xml:lang="en">Controls whether to enable AI statistics in the editor. The gauge represents the average amount of code inserted by AI vs manual typing over a 24 hour period.</source>
+      <source xml:lang="en">Controls whether to enable AI statistics in the editor. The gauge shows the average AI rate across 5-minute sessions, where each session's rate is calculated as AI-inserted characters divided by total inserted characters.</source>
     </trans-unit>
     <trans-unit id="telemetry.editStats.detailed.enabled">
       <source xml:lang="en">Controls whether to enable telemetry for detailed edit statistics (only sends statistics if general telemetry is enabled).</source>

@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/browserView/common/browserEditorInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.editorLabel">
+      <source xml:lang="en">Browser</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/common/browserSearch" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.search.engine.bing">
+      <source xml:lang="en">Bing</source>
+    </trans-unit>
+    <trans-unit id="browser.search.engine.duckduckgo">
+      <source xml:lang="en">DuckDuckGo</source>
+    </trans-unit>
+    <trans-unit id="browser.search.engine.google">
+      <source xml:lang="en">Google</source>
+    </trans-unit>
+    <trans-unit id="browser.search.engine.yahoo">
+      <source xml:lang="en">Yahoo!</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/common/browserView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browserView.openShareableCopy.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="browserView.openShareableCopy.confirm">
+      <source xml:lang="en">&amp;&amp;Open and Share</source>
+    </trans-unit>
+    <trans-unit id="browserView.openShareableCopy.detail">
+      <source xml:lang="en">This tab does not enforce the configured policy restrictions required for agent sharing.
+
+Open the page in a new tab to share it with agents.</source>
+    </trans-unit>
+    <trans-unit id="browserView.openShareableCopy.message">
+      <source xml:lang="en">Open a New Tab for Sharing?</source>
+    </trans-unit>
+    <trans-unit id="browserView.shareBlocked.title">
+      <source xml:lang="en">Cannot Share with Agent</source>
+    </trans-unit>
+    <trans-unit id="browserView.shareWithAgent.allow">
+      <source xml:lang="en">&amp;&amp;Allow</source>
+    </trans-unit>
+    <trans-unit id="browserView.shareWithAgent.deny">
+      <source xml:lang="en">Deny</source>
+    </trans-unit>
+    <trans-unit id="browserView.shareWithAgent.detail">
+      <source xml:lang="en">The agent will be able to read and modify browser content and saved data, including cookies.</source>
+    </trans-unit>
+    <trans-unit id="browserView.shareWithAgent.dontAskAgain">
+      <source xml:lang="en">Don't ask again</source>
+    </trans-unit>
+    <trans-unit id="browserView.shareWithAgent.message">
+      <source xml:lang="en">Share this browser page with the agent?</source>
+    </trans-unit>
+    <trans-unit id="browserView.shareWithAgent.title">
+      <source xml:lang="en">Share with Agent?</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/browserEditor" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.editorFocused">
+      <source xml:lang="en">Whether the browser editor is focused</source>
+    </trans-unit>
+    <trans-unit id="browser.hasError">
+      <source xml:lang="en">Whether the browser has a load error</source>
+    </trans-unit>
+    <trans-unit id="browser.hasUrl">
+      <source xml:lang="en">Whether the browser has a URL loaded</source>
+    </trans-unit>
+    <trans-unit id="browserCategory">
+      <source xml:lang="en">Browser</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/browserView.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.editorLabel">
+      <source xml:lang="en">Browser</source>
+    </trans-unit>
+    <trans-unit id="browser.htmlEditorLabel">
+      <source xml:lang="en">Integrated Browser</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/browserViewWorkbenchService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.networkFilteringEnabled">
+      <source xml:lang="en">Agent access to browser tabs was revoked because network filtering was enabled.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserAutoReloadFeatures" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.autoReloadOnFileChange">
+      <source xml:lang="en">Controls whether the Integrated Browser automatically reloads by default when displaying local `file://` resources that change on disk.</source>
+      <note>This is the description for a setting.</note>
+    </trans-unit>
+    <trans-unit id="browser.refreshAutomatically">
+      <source xml:lang="en">Refresh Automatically</source>
+    </trans-unit>
+    <trans-unit id="browser.reloadAutomaticRefreshEnabled">
+      <source xml:lang="en">Reload (Automatic Refresh Enabled)</source>
+    </trans-unit>
+    <trans-unit id="browser.reloadMenu">
+      <source xml:lang="en">More Reload Actions</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserDataStorageFeatures" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.clearAgentStorageAction">
+      <source xml:lang="en">Clear Storage (Agent)</source>
+    </trans-unit>
+    <trans-unit id="browser.clearEphemeralStorageAction">
+      <source xml:lang="en">Clear Storage (Ephemeral)</source>
+    </trans-unit>
+    <trans-unit id="browser.clearGlobalStorageAction">
+      <source xml:lang="en">Clear Storage (Global)</source>
+    </trans-unit>
+    <trans-unit id="browser.clearWorkspaceStorageAction">
+      <source xml:lang="en">Clear Storage (Workspace)</source>
+    </trans-unit>
+    <trans-unit id="browser.dataStorage">
+      <source xml:lang="en">Controls how browser data (cookies, cache, storage) is shared between browser views.
+
+**Note**: In untrusted workspaces, this setting is ignored and `ephemeral` storage is always used.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="browser.dataStorage.agent">
+      <source xml:lang="en">Browser views share one in-memory session that is cleaned up when the application is closed. This session is shared with agent-opened browser pages, so **all data including local storage and cookies will be accessible by agents.** When agent network filtering is enabled, requests from this session are restricted by the configured network domain policy.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="browser.dataStorage.default">
+      <source xml:lang="en">`global` for local workspaces, `workspace` for remote workspaces.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="browser.dataStorage.ephemeral">
+      <source xml:lang="en">Each browser view has its own session that is cleaned up when closed.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="browser.dataStorage.global">
+      <source xml:lang="en">All browser views share a single persistent session across all workspaces. Incompatible with remote sessions.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="browser.dataStorage.workspace">
+      <source xml:lang="en">Browser views within the same workspace share a persistent session. If no workspace is opened, `ephemeral` storage is used.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="browser.storageScope">
+      <source xml:lang="en">The storage scope of the current browser view</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserDevToolsFeature" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.devToolsOpen">
+      <source xml:lang="en">Whether developer tools are open for the current browser view</source>
+    </trans-unit>
+    <trans-unit id="browser.toggleDevToolsAction">
+      <source xml:lang="en">Developer Tools</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserEditorChatFeatures" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.addAreaScreenshotToChatAction">
+      <source xml:lang="en">Add Area Screenshot to Chat</source>
+    </trans-unit>
+    <trans-unit id="browser.addConsoleLogsToChatAction">
+      <source xml:lang="en">Add Console Logs to Chat</source>
+    </trans-unit>
+    <trans-unit id="browser.addElementCommentToChatAction">
+      <source xml:lang="en">Comment on Elements</source>
+    </trans-unit>
+    <trans-unit id="browser.addElementToChatAction">
+      <source xml:lang="en">Add Element to Chat</source>
+    </trans-unit>
+    <trans-unit id="browser.addFullPageScreenshotToChatAction">
+      <source xml:lang="en">Add Full Page Screenshot to Chat (Experimental)</source>
+    </trans-unit>
+    <trans-unit id="browser.addScreenshotToChatAction">
+      <source xml:lang="en">Add Screenshot to Chat</source>
+    </trans-unit>
+    <trans-unit id="browser.agentSharingContentWarning.detail">
+      <source xml:lang="en">Pages may contain hidden prompts that can influence agent behavior. Double-check the attached contents before sending.</source>
+    </trans-unit>
+    <trans-unit id="browser.agentSharingContentWarning.dontShowAgain">
+      <source xml:lang="en">Don't show again</source>
+    </trans-unit>
+    <trans-unit id="browser.agentSharingContentWarning.message">
+      <source xml:lang="en">Use caution when attaching content from untrusted sources.</source>
+    </trans-unit>
+    <trans-unit id="browser.agentSharingContentWarning.ok">
+      <source xml:lang="en">&amp;&amp;OK</source>
+    </trans-unit>
+    <trans-unit id="browser.areaSelectionActive">
+      <source xml:lang="en">Whether area selection is currently active</source>
+    </trans-unit>
+    <trans-unit id="browser.chatActionsSubmenu">
+      <source xml:lang="en">Add to Chat</source>
+    </trans-unit>
+    <trans-unit id="browser.elementCommentingAccessibilityHelp.composer">
+      <source xml:lang="en">In the comment input, press Enter to add the comment or Escape to cancel it.</source>
+    </trans-unit>
+    <trans-unit id="browser.elementCommentingAccessibilityHelp.continuous">
+      <source xml:lang="en">Commenting mode remains active after adding a comment. Press Escape outside the comment input to stop commenting.</source>
+    </trans-unit>
+    <trans-unit id="browser.elementCommentingAccessibilityHelp.navigation">
+      <source xml:lang="en">Use Tab and Shift+Tab to move through focusable page elements. Press Enter to comment on the focused element.</source>
+    </trans-unit>
+    <trans-unit id="browser.elementCommentingAccessibilityHelp.overview">
+      <source xml:lang="en">You are in Integrated Browser element commenting mode.</source>
+    </trans-unit>
+    <trans-unit id="browser.elementCommentingAccessibilityHelp.pins">
+      <source xml:lang="en">Numbered comment pins are in the page tab order. Focus a pin to preview its comment, then Tab to its Remove Comment button.</source>
+    </trans-unit>
+    <trans-unit id="browser.elementCommentingDisabled">
+      <source xml:lang="en">Element commenting disabled.</source>
+    </trans-unit>
+    <trans-unit id="browser.elementCommentingEnabled">
+      <source xml:lang="en">Element commenting enabled. Press Enter to comment on the focused element.</source>
+    </trans-unit>
+    <trans-unit id="browser.elementCommentingEnabledWithAccessibilityHelp">
+      <source xml:lang="en">Element commenting enabled. Press Enter to comment on the focused element. {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.elementSelectionDisabled">
+      <source xml:lang="en">Element selection disabled.</source>
+    </trans-unit>
+    <trans-unit id="browser.elementSelectionEnabled">
+      <source xml:lang="en">Element selection enabled. Press Enter to add the focused element to chat.</source>
+    </trans-unit>
+    <trans-unit id="browser.elementSelectionMode">
+      <source xml:lang="en">The active element selection mode</source>
+    </trans-unit>
+    <trans-unit id="browser.enableChatTools">
+      <source xml:lang="en">When enabled, chat agents can use browser tools to open and interact with pages in the Integrated Browser.</source>
+    </trans-unit>
+    <trans-unit id="browser.experimentalUserTools.enabled">
+      <source xml:lang="en">When enabled, experimental user-facing tools are available in the Integrated Browser's Add to Chat menu.</source>
+      <note>This is the description for a setting.</note>
+    </trans-unit>
+    <trans-unit id="browser.shareWithAgent">
+      <source xml:lang="en">Share with Agent</source>
+    </trans-unit>
+    <trans-unit id="browser.shareWithAgent.blockedByNetworkPolicy">
+      <source xml:lang="en">Cannot share with agents due to network domain policy.</source>
+    </trans-unit>
+    <trans-unit id="browser.shareWithAgent.failed">
+      <source xml:lang="en">Unable to Share Browser Tab</source>
+    </trans-unit>
+    <trans-unit id="browser.shareWithAgent.isolated">
+      <source xml:lang="en">Share with Agent (Opens Isolated Tab)</source>
+    </trans-unit>
+    <trans-unit id="browser.sharingWithAgent">
+      <source xml:lang="en">Sharing with Agent</source>
+    </trans-unit>
+    <trans-unit id="browser.stopElementSelectionAction">
+      <source xml:lang="en">Stop Element Selection</source>
+    </trans-unit>
+    <trans-unit id="browser.unshareWithAgent">
+      <source xml:lang="en">Stop Sharing with Agent</source>
+    </trans-unit>
+    <trans-unit id="browserAreaScreenshot">
+      <source xml:lang="en">Browser Area Screenshot</source>
+    </trans-unit>
+    <trans-unit id="browserCategory">
+      <source xml:lang="en">Browser</source>
+    </trans-unit>
+    <trans-unit id="browserFullPageScreenshot">
+      <source xml:lang="en">Browser Full Page Screenshot</source>
+    </trans-unit>
+    <trans-unit id="browserScreenshot">
+      <source xml:lang="en">Browser Screenshot</source>
+    </trans-unit>
+    <trans-unit id="consoleLogs">
+      <source xml:lang="en">Console Logs</source>
+    </trans-unit>
+    <trans-unit id="workbench.browser.sendElementsToChat.attachImages">
+      <source xml:lang="en">Controls whether a screenshot of the selected element will be added to the chat.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserEditorEmulationFeatures" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.device.dimensionsLabel">
+      <source xml:lang="en">Dimensions:</source>
+    </trans-unit>
+    <trans-unit id="browser.device.dprAriaLabel">
+      <source xml:lang="en">Device pixel ratio</source>
+    </trans-unit>
+    <trans-unit id="browser.device.dprLabel">
+      <source xml:lang="en">DPR:</source>
+    </trans-unit>
+    <trans-unit id="browser.device.dprTitle">
+      <source xml:lang="en">Device pixel ratio (blank = system default)</source>
+    </trans-unit>
+    <trans-unit id="browser.device.heightAriaLabel">
+      <source xml:lang="en">Viewport height</source>
+    </trans-unit>
+    <trans-unit id="browser.device.inputPlaceholderAuto">
+      <source xml:lang="en">auto</source>
+    </trans-unit>
+    <trans-unit id="browser.device.scaleLabel">
+      <source xml:lang="en">Scale:</source>
+    </trans-unit>
+    <trans-unit id="browser.device.swapDimensionsTitle">
+      <source xml:lang="en">Swap Dimensions</source>
+    </trans-unit>
+    <trans-unit id="browser.device.widthAriaLabel">
+      <source xml:lang="en">Viewport width</source>
+    </trans-unit>
+    <trans-unit id="browser.device.zoomAriaLabel">
+      <source xml:lang="en">Zoom factor</source>
+    </trans-unit>
+    <trans-unit id="browser.device.zoomAuto">
+      <source xml:lang="en">Auto ({0}%)</source>
+    </trans-unit>
+    <trans-unit id="browser.devicePresets.mobileTag">
+      <source xml:lang="en">mobile</source>
+    </trans-unit>
+    <trans-unit id="browser.devicePresets.placeholder">
+      <source xml:lang="en">Select a device preset</source>
+    </trans-unit>
+    <trans-unit id="browser.emulationHasUserAgent">
+      <source xml:lang="en">Whether the browser emulation has a custom user agent</source>
+    </trans-unit>
+    <trans-unit id="browser.emulationIsMobile">
+      <source xml:lang="en">Whether the browser emulation is in mobile mode</source>
+    </trans-unit>
+    <trans-unit id="browser.emulationToolbar.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="browser.emulationToolbar.mobile">
+      <source xml:lang="en">Mobile Emulation</source>
+    </trans-unit>
+    <trans-unit id="browser.emulationToolbar.presets">
+      <source xml:lang="en">Apply Preset...</source>
+    </trans-unit>
+    <trans-unit id="browser.emulationToolbar.reset">
+      <source xml:lang="en">Reset</source>
+    </trans-unit>
+    <trans-unit id="browser.emulationToolbar.userAgent">
+      <source xml:lang="en">Set User Agent...</source>
+    </trans-unit>
+    <trans-unit id="browser.emulationToolbarVisible">
+      <source xml:lang="en">Whether the browser emulation toolbar is visible</source>
+    </trans-unit>
+    <trans-unit id="browser.pickDevicePreset">
+      <source xml:lang="en">Emulate Device...</source>
+    </trans-unit>
+    <trans-unit id="browser.resetEmulation">
+      <source xml:lang="en">Reset Emulation</source>
+    </trans-unit>
+    <trans-unit id="browser.setUserAgent">
+      <source xml:lang="en">Emulate User Agent...</source>
+    </trans-unit>
+    <trans-unit id="browser.toggleDeviceEmulation">
+      <source xml:lang="en">Device Emulation</source>
+    </trans-unit>
+    <trans-unit id="browser.toggleMobileEmulation">
+      <source xml:lang="en">Toggle Mobile Emulation</source>
+    </trans-unit>
+    <trans-unit id="browser.userAgent.prompt">
+      <source xml:lang="en">User agent string (leave empty for VS Code default)</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserEditorErrorFeatures" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.certCloseTab">
+      <source xml:lang="en">Close Tab</source>
+    </trans-unit>
+    <trans-unit id="browser.certDetailsHeading">
+      <source xml:lang="en">Certificate Details</source>
+    </trans-unit>
+    <trans-unit id="browser.certError">
+      <source xml:lang="en">Error</source>
+    </trans-unit>
+    <trans-unit id="browser.certErrorDescription">
+      <source xml:lang="en">This site's security certificate could not be verified.</source>
+    </trans-unit>
+    <trans-unit id="browser.certErrorExtraWarning">
+      <source xml:lang="en"> Your connection is not private.</source>
+    </trans-unit>
+    <trans-unit id="browser.certErrorLabel">
+      <source xml:lang="en">Certificate Error</source>
+    </trans-unit>
+    <trans-unit id="browser.certFingerprint">
+      <source xml:lang="en">Fingerprint</source>
+    </trans-unit>
+    <trans-unit id="browser.certGoBack">
+      <source xml:lang="en">Go Back</source>
+    </trans-unit>
+    <trans-unit id="browser.certHoverDetail1">
+      <source xml:lang="en">Your connection to this site is not secure.</source>
+    </trans-unit>
+    <trans-unit id="browser.certHoverDetail2">
+      <source xml:lang="en">You previously chose to proceed to '{0}' despite a certificate error ({1}).</source>
+    </trans-unit>
+    <trans-unit id="browser.certHoverHeading">
+      <source xml:lang="en">Certificate Not Trusted</source>
+    </trans-unit>
+    <trans-unit id="browser.certIssuer">
+      <source xml:lang="en">Issuer</source>
+    </trans-unit>
+    <trans-unit id="browser.certProceed">
+      <source xml:lang="en">Proceed anyway (unsafe)</source>
+    </trans-unit>
+    <trans-unit id="browser.certRevoke">
+      <source xml:lang="en">Revoke and Close</source>
+    </trans-unit>
+    <trans-unit id="browser.certSubject">
+      <source xml:lang="en">Subject</source>
+    </trans-unit>
+    <trans-unit id="browser.certValid">
+      <source xml:lang="en">Valid</source>
+    </trans-unit>
+    <trans-unit id="browser.errorUrlLabel">
+      <source xml:lang="en">URL:</source>
+    </trans-unit>
+    <trans-unit id="browser.loadErrorLabel">
+      <source xml:lang="en">Failed to Load Page</source>
+    </trans-unit>
+    <trans-unit id="browser.networkPolicyErrorExtraWarning">
+      <source xml:lang="en">The request was most likely blocked by network domain policy.
+Check the configured allowed and denied network domains.</source>
+    </trans-unit>
+    <trans-unit id="browser.notSecure">
+      <source xml:lang="en">Not Secure</source>
+    </trans-unit>
+    <trans-unit id="browser.remoteErrorExtraWarning">
+      <source xml:lang="en">This usually means the host could not be found.
+Ensure the URL is correct and the server is accessible from the remote machine.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserEditorFindFeature" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.findNextAction">
+      <source xml:lang="en">Find Next</source>
+    </trans-unit>
+    <trans-unit id="browser.findPreviousAction">
+      <source xml:lang="en">Find Previous</source>
+    </trans-unit>
+    <trans-unit id="browser.findWidgetFocused">
+      <source xml:lang="en">Whether the browser find widget is focused</source>
+    </trans-unit>
+    <trans-unit id="browser.findWidgetVisible">
+      <source xml:lang="en">Whether the browser find widget is visible</source>
+    </trans-unit>
+    <trans-unit id="browser.hideFindAction">
+      <source xml:lang="en">Close Find Widget</source>
+    </trans-unit>
+    <trans-unit id="browser.showFindAction">
+      <source xml:lang="en">Find in Page</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserEditorZoomFeature" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.canZoomIn">
+      <source xml:lang="en">Whether the browser can zoom in further</source>
+    </trans-unit>
+    <trans-unit id="browser.canZoomOut">
+      <source xml:lang="en">Whether the browser can zoom out further</source>
+    </trans-unit>
+    <trans-unit id="browser.defaultZoomLevel.matchWindow">
+      <source xml:lang="en">Matches the application's current UI zoom level.</source>
+      <note>This is the description for a setting enum value.</note>
+    </trans-unit>
+    <trans-unit id="browser.pageZoom">
+      <source xml:lang="en">Default zoom level for all sites in the Integrated Browser.</source>
+      <note>This is the description for a setting.</note>
+    </trans-unit>
+    <trans-unit id="browser.resetZoomAction">
+      <source xml:lang="en">Reset Zoom</source>
+    </trans-unit>
+    <trans-unit id="browser.zoomInAction">
+      <source xml:lang="en">Zoom In</source>
+    </trans-unit>
+    <trans-unit id="browser.zoomOutAction">
+      <source xml:lang="en">Zoom Out</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserFavoritesFeature" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.addFavorite">
+      <source xml:lang="en">Add to Favorites</source>
+    </trans-unit>
+    <trans-unit id="browser.addFavoriteAction">
+      <source xml:lang="en">Add to Favorites</source>
+    </trans-unit>
+    <trans-unit id="browser.favorites">
+      <source xml:lang="en">Favorites</source>
+    </trans-unit>
+    <trans-unit id="browser.removeFavorite">
+      <source xml:lang="en">Remove from Favorites</source>
+    </trans-unit>
+    <trans-unit id="browser.removeFavoriteWithKb">
+      <source xml:lang="en">Remove from Favorites ({0})</source>
+    </trans-unit>
+    <trans-unit id="browser.urlIsFavorited">
+      <source xml:lang="en">Whether the current browser URL is a favorite</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserHistoryFeature" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.history">
+      <source xml:lang="en">History</source>
+    </trans-unit>
+    <trans-unit id="browser.history.clearAll">
+      <source xml:lang="en">Clear All History</source>
+    </trans-unit>
+    <trans-unit id="browser.history.clearDay">
+      <source xml:lang="en">Clear Entries for This Day</source>
+    </trans-unit>
+    <trans-unit id="browser.history.placeholder">
+      <source xml:lang="en">Filter browser history</source>
+    </trans-unit>
+    <trans-unit id="browser.history.title">
+      <source xml:lang="en">Browser History</source>
+    </trans-unit>
+    <trans-unit id="browser.history.today">
+      <source xml:lang="en">Today</source>
+    </trans-unit>
+    <trans-unit id="browser.history.yesterday">
+      <source xml:lang="en">Yesterday</source>
+    </trans-unit>
+    <trans-unit id="browser.maxHistoryEntries">
+      <source xml:lang="en">Maximum number of history items kept per session scope. Older entries are evicted first.</source>
+    </trans-unit>
+    <trans-unit id="browser.recents">
+      <source xml:lang="en">Recents</source>
+    </trans-unit>
+    <trans-unit id="browser.removeFromHistory">
+      <source xml:lang="en">Remove from History</source>
+    </trans-unit>
+    <trans-unit id="browser.showHistory">
+      <source xml:lang="en">History</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserNavigationFeatures" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.canGoBack">
+      <source xml:lang="en">Whether the browser can go back</source>
+    </trans-unit>
+    <trans-unit id="browser.canGoForward">
+      <source xml:lang="en">Whether the browser can go forward</source>
+    </trans-unit>
+    <trans-unit id="browser.configureSearchEngine">
+      <source xml:lang="en">Configure Search Engine</source>
+    </trans-unit>
+    <trans-unit id="browser.focusUrlInputAction">
+      <source xml:lang="en">Focus URL Input</source>
+    </trans-unit>
+    <trans-unit id="browser.goBackAction">
+      <source xml:lang="en">Go Back</source>
+    </trans-unit>
+    <trans-unit id="browser.goForwardAction">
+      <source xml:lang="en">Go Forward</source>
+    </trans-unit>
+    <trans-unit id="browser.hardReloadAction">
+      <source xml:lang="en">Hard Reload</source>
+    </trans-unit>
+    <trans-unit id="browser.openExternalAction">
+      <source xml:lang="en">Open in External Browser</source>
+    </trans-unit>
+    <trans-unit id="browser.openSettingsAction">
+      <source xml:lang="en">Browser Settings</source>
+    </trans-unit>
+    <trans-unit id="browser.reloadAction">
+      <source xml:lang="en">Reload</source>
+    </trans-unit>
+    <trans-unit id="browser.searchFor">
+      <source xml:lang="en">{0} - {1} Search</source>
+    </trans-unit>
+    <trans-unit id="browser.urlOrSearchPlaceholder">
+      <source xml:lang="en">Search or enter URL</source>
+      <note>Placeholder text shown in the integrated browser's address (URL) bar when it is empty. The user can either type a search query to search the web, or type a URL to navigate to it.</note>
+    </trans-unit>
+    <trans-unit id="browser.urlPlaceholder">
+      <source xml:lang="en">Enter a URL</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserPermissionsFeature" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.device.kind.bluetooth">
+      <source xml:lang="en">a Bluetooth device</source>
+    </trans-unit>
+    <trans-unit id="browser.device.kind.hid">
+      <source xml:lang="en">an HID device</source>
+    </trans-unit>
+    <trans-unit id="browser.device.kind.serial">
+      <source xml:lang="en">a serial port</source>
+    </trans-unit>
+    <trans-unit id="browser.device.kind.usb">
+      <source xml:lang="en">a USB device</source>
+    </trans-unit>
+    <trans-unit id="browser.device.placeholder">
+      <source xml:lang="en">Select a device to connect to</source>
+    </trans-unit>
+    <trans-unit id="browser.device.title">
+      <source xml:lang="en">{0} wants to connect to {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.managePermissions">
+      <source xml:lang="en">Site Permissions</source>
+    </trans-unit>
+    <trans-unit id="browser.permissions.allow">
+      <source xml:lang="en">Allow</source>
+    </trans-unit>
+    <trans-unit id="browser.permissions.block">
+      <source xml:lang="en">Block</source>
+    </trans-unit>
+    <trans-unit id="browser.permissions.noOrigin">
+      <source xml:lang="en">Permissions can only be managed for web pages.</source>
+    </trans-unit>
+    <trans-unit id="browser.permissions.placeholder">
+      <source xml:lang="en">Filter permissions</source>
+    </trans-unit>
+    <trans-unit id="browser.permissions.prompt">
+      <source xml:lang="en">{0} wants access to {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.permissions.saveMany">
+      <source xml:lang="en">Save {0} Changes</source>
+    </trans-unit>
+    <trans-unit id="browser.permissions.saveOne">
+      <source xml:lang="en">Save 1 Change</source>
+    </trans-unit>
+    <trans-unit id="browser.permissions.state.allowed">
+      <source xml:lang="en">Allowed</source>
+    </trans-unit>
+    <trans-unit id="browser.permissions.state.ask">
+      <source xml:lang="en">Ask</source>
+    </trans-unit>
+    <trans-unit id="browser.permissions.state.blocked">
+      <source xml:lang="en">Blocked</source>
+    </trans-unit>
+    <trans-unit id="browser.permissions.state.default">
+      <source xml:lang="en">{0} (default)</source>
+    </trans-unit>
+    <trans-unit id="browser.permissions.title">
+      <source xml:lang="en">Permissions for {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserRemoteFeatures" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.connectedLocally.file">
+      <source xml:lang="en">File URLs are served locally, not over the remote connection.</source>
+    </trans-unit>
+    <trans-unit id="browser.connectedLocally.generic">
+      <source xml:lang="en">Connected locally</source>
+    </trans-unit>
+    <trans-unit id="browser.connectedRemotely">
+      <source xml:lang="en">Connected via remote</source>
+    </trans-unit>
+    <trans-unit id="browser.enableRemoteProxy">
+      <source xml:lang="en">When enabled, browser requests in remote workspaces are proxied through the remote connection. This allows web pages to access resources available on the remote host.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserSearchFeatures" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.search.engine.none">
+      <source xml:lang="en">None</source>
+    </trans-unit>
+    <trans-unit id="browser.searchEngine">
+      <source xml:lang="en">Controls the search engine used to search the web from the address bar of the integrated browser. Select 'None' to disable search.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserTabManagementFeatures" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.backgroundGroup">
+      <source xml:lang="en">Background</source>
+    </trans-unit>
+    <trans-unit id="browser.closeAll">
+      <source xml:lang="en">Close All Browser Tabs</source>
+    </trans-unit>
+    <trans-unit id="browser.closeAllInGroup">
+      <source xml:lang="en">Close All Browser Tabs in Group</source>
+    </trans-unit>
+    <trans-unit id="browser.closeAllInGroupShort">
+      <source xml:lang="en">Close All Browser Tabs</source>
+    </trans-unit>
+    <trans-unit id="browser.closeAllTabs">
+      <source xml:lang="en">Close All</source>
+    </trans-unit>
+    <trans-unit id="browser.closeTab">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="browser.editorOpen">
+      <source xml:lang="en">Whether any browser editor is currently open</source>
+    </trans-unit>
+    <trans-unit id="browser.linkOpenedHint.ariaLabel">
+      <source xml:lang="en">This link opened in the integrated browser</source>
+    </trans-unit>
+    <trans-unit id="browser.linkOpenedHint.detail">
+      <source xml:lang="en">**Integrated Browser**
+
+Localhost links automatically open in the integrated browser.</source>
+    </trans-unit>
+    <trans-unit id="browser.linkOpenedHint.dismiss">
+      <source xml:lang="en">Don't Show Again</source>
+    </trans-unit>
+    <trans-unit id="browser.linkOpenedHint.label">
+      <source xml:lang="en">Link opened here</source>
+    </trans-unit>
+    <trans-unit id="browser.linkOpenedHint.openSettings">
+      <source xml:lang="en">Open Settings</source>
+    </trans-unit>
+    <trans-unit id="browser.newTabAction">
+      <source xml:lang="en">New Tab</source>
+    </trans-unit>
+    <trans-unit id="browser.newTabPlacement">
+      <source xml:lang="en">Controls where new Integrated Browser tabs are opened.</source>
+      <note>This is the description for a setting.</note>
+    </trans-unit>
+    <trans-unit id="browser.newTabPlacement.activeGroup">
+      <source xml:lang="en">New browser tabs open in the currently active editor group.</source>
+      <note>This is the description for a setting.</note>
+    </trans-unit>
+    <trans-unit id="browser.newTabPlacement.sideGroup">
+      <source xml:lang="en">New browser tabs open in a dedicated editor group to the side that is reused for subsequent tabs. The group is locked so other editors are not opened into it.</source>
+      <note>This is the description for a setting.</note>
+    </trans-unit>
+    <trans-unit id="browser.newTabPlacement.window">
+      <source xml:lang="en">New browser tabs open in a dedicated window that is reused for subsequent tabs. The window is locked so other editors are not opened into it.</source>
+      <note>This is the description for a setting.</note>
+    </trans-unit>
+    <trans-unit id="browser.openAction">
+      <source xml:lang="en">Open Integrated Browser</source>
+    </trans-unit>
+    <trans-unit id="browser.openFileAction">
+      <source xml:lang="en">Open in Integrated Browser</source>
+    </trans-unit>
+    <trans-unit id="browser.openLocalhostLinks">
+      <source xml:lang="en">When enabled, localhost links (`localhost`, `127.0.0.1`, `[::1]`) and all-interfaces links (`0.0.0.0`, `[0:0:0:0:0:0:0:0]`, `[::]`) from the terminal, chat, and other sources will open in the Integrated Browser instead of the system browser.</source>
+      <note>This is the description for a setting.</note>
+    </trans-unit>
+    <trans-unit id="browser.openNewTab">
+      <source xml:lang="en">New Integrated Browser Tab</source>
+    </trans-unit>
+    <trans-unit id="browser.openOrListAction">
+      <source xml:lang="en">Browser</source>
+    </trans-unit>
+    <trans-unit id="browser.openTabs">
+      <source xml:lang="en">Open Tabs</source>
+    </trans-unit>
+    <trans-unit id="browser.openTabsDescription">
+      <source xml:lang="en">Select a tab to switch</source>
+    </trans-unit>
+    <trans-unit id="browser.quickOpenAction">
+      <source xml:lang="en">Quick Open Browser Tab...</source>
+    </trans-unit>
+    <trans-unit id="browser.quickOpenPlaceholder">
+      <source xml:lang="en">Select a browser tab</source>
+    </trans-unit>
+    <trans-unit id="browser.showInTitleBar">
+      <source xml:lang="en">Controls whether the Integrated Browser button is shown in the title bar.</source>
+      <note>This is the description for a setting.</note>
+    </trans-unit>
+    <trans-unit id="browser.showInTitleBar.false">
+      <source xml:lang="en">The button is never shown in the title bar.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="browser.showInTitleBar.true">
+      <source xml:lang="en">The button is always shown in the title bar.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="browser.showInTitleBar.whenOpen">
+      <source xml:lang="en">The button is shown in the title bar when a browser editor is open.</source>
+      <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="browserEntryAriaLabelWithGroup">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="miOpenBrowser">
+      <source xml:lang="en">&amp;&amp;Browser</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="toggle.browser">
+      <source xml:lang="en">Integrated Browser</source>
+    </trans-unit>
+    <trans-unit id="toggle.browserDescription">
+      <source xml:lang="en">Toggle visibility of the Integrated Browser button in title bar</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserWelcomeFeature" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.welcomeSubtitle">
+      <source xml:lang="en">Enter a URL above to get started.</source>
+    </trans-unit>
+    <trans-unit id="browser.welcomeSubtitleChat">
+      <source xml:lang="en">Use Add Element to Chat to reference UI elements in chat prompts.</source>
+    </trans-unit>
+    <trans-unit id="browser.welcomeTitle">
+      <source xml:lang="en">Browser</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/webContentsViewRendererFeature" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.overlayPauseDetail.notification">
+      <source xml:lang="en">Dismiss the notification to continue using the browser.</source>
+    </trans-unit>
+    <trans-unit id="browser.overlayPauseHeading.notification">
+      <source xml:lang="en">Paused due to Notification</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/browserToolHelpers" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.actionFailed">
+      <source xml:lang="en">Browser action failed</source>
+    </trans-unit>
+    <trans-unit id="browser.blockedByPolicy">
+      <source xml:lang="en">Blocked by network domain policy</source>
+    </trans-unit>
+    <trans-unit id="browser.element">
+      <source xml:lang="en">element</source>
+    </trans-unit>
+    <trans-unit id="browser.open.alreadyOpen">
+      <source xml:lang="en">Already open: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/browserTools.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browserContext.label">
+      <source xml:lang="en">Browser Pages</source>
+    </trans-unit>
+    <trans-unit id="browserToolSet.description">
+      <source xml:lang="en">Open and interact with integrated browser pages</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/clickBrowserTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.click.invocation">
+      <source xml:lang="en">Clicking {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.click.invocation.middle">
+      <source xml:lang="en">Middle-clicking {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.click.invocation.right">
+      <source xml:lang="en">Right-clicking {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.click.past">
+      <source xml:lang="en">Clicked {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.click.past.middle">
+      <source xml:lang="en">Middle-clicked {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.click.past.right">
+      <source xml:lang="en">Right-clicked {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.dblClick.invocation">
+      <source xml:lang="en">Double-clicking {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.dblClick.past">
+      <source xml:lang="en">Double-clicked {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="clickBrowserTool.displayName">
+      <source xml:lang="en">Click Element</source>
+    </trans-unit>
+    <trans-unit id="clickBrowserTool.userDescription">
+      <source xml:lang="en">Click an element in a browser page</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/dragElementTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.drag.invocation">
+      <source xml:lang="en">Dragging {0} to {1} in {2}</source>
+    </trans-unit>
+    <trans-unit id="browser.drag.past">
+      <source xml:lang="en">Dragged {0} to {1} in {2}</source>
+    </trans-unit>
+    <trans-unit id="dragElementTool.displayName">
+      <source xml:lang="en">Drag Element</source>
+    </trans-unit>
+    <trans-unit id="dragElementTool.userDescription">
+      <source xml:lang="en">Drag an element over another element</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/handleDialogBrowserTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.handleDialog.invocation">
+      <source xml:lang="en">Handling dialog in {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.handleDialog.past">
+      <source xml:lang="en">Handled dialog in {0}</source>
+    </trans-unit>
+    <trans-unit id="handleDialogBrowserTool.displayName">
+      <source xml:lang="en">Handle Dialog</source>
+    </trans-unit>
+    <trans-unit id="handleDialogBrowserTool.userDescription">
+      <source xml:lang="en">Respond to a dialog in a browser page</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/hoverElementTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.hover.invocation">
+      <source xml:lang="en">Hovering over {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.hover.past">
+      <source xml:lang="en">Hovered over {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="hoverElementTool.displayName">
+      <source xml:lang="en">Hover Element</source>
+    </trans-unit>
+    <trans-unit id="hoverElementTool.userDescription">
+      <source xml:lang="en">Hover over an element in a browser page</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/listBrowserPagesTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="listBrowserPagesTool.displayName">
+      <source xml:lang="en">List Browser Pages</source>
+    </trans-unit>
+    <trans-unit id="listBrowserPagesTool.userDescription">
+      <source xml:lang="en">List browser pages that are shared with the agent</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/navigateBrowserTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.goBack.invocation">
+      <source xml:lang="en">Navigating backward in {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.goBack.past">
+      <source xml:lang="en">Navigated backward in {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.goForward.invocation">
+      <source xml:lang="en">Navigating forward in {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.goForward.past">
+      <source xml:lang="en">Navigated forward in {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.navigate.confirmMessage">
+      <source xml:lang="en">This will navigate the browser to {0} and allow the agent to access its contents.</source>
+    </trans-unit>
+    <trans-unit id="browser.navigate.confirmTitle">
+      <source xml:lang="en">Navigate Browser?</source>
+    </trans-unit>
+    <trans-unit id="browser.navigate.invocation">
+      <source xml:lang="en">Navigating to {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.navigate.past">
+      <source xml:lang="en">Navigated to {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.reload.invocation">
+      <source xml:lang="en">Reloading {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.reload.past">
+      <source xml:lang="en">Reloaded {0}</source>
+    </trans-unit>
+    <trans-unit id="navigateBrowserTool.displayName">
+      <source xml:lang="en">Navigate Page</source>
+    </trans-unit>
+    <trans-unit id="navigateBrowserTool.userDescription">
+      <source xml:lang="en">Navigate or reload a browser page</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/openBrowserTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.open.confirmMessage">
+      <source xml:lang="en">This will open {0} in the integrated browser. The agent will be able to read and interact with its contents.</source>
+    </trans-unit>
+    <trans-unit id="browser.open.confirmTitle">
+      <source xml:lang="en">Open Browser Page?</source>
+    </trans-unit>
+    <trans-unit id="browser.open.invocation">
+      <source xml:lang="en">Opening browser page at {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.open.newPageOption">
+      <source xml:lang="en">No, open a new page at {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.open.noPagesOption">
+      <source xml:lang="en">No - Do not share any tabs with the agent</source>
+      <note>{Locked=" - "}</note>
+    </trans-unit>
+    <trans-unit id="browser.open.past">
+      <source xml:lang="en">Opened browser page at {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.open.prompt.invocation">
+      <source xml:lang="en">Prompting user to share a browser tab</source>
+    </trans-unit>
+    <trans-unit id="browser.open.prompt.past">
+      <source xml:lang="en">Prompted user to share a browser tab</source>
+    </trans-unit>
+    <trans-unit id="browser.open.result">
+      <source xml:lang="en">Opened {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.open.shareExistingOption">
+      <source xml:lang="en">Yes, share "{0}" - {1}</source>
+      <note>{Locked=" - "}
+{0} is the editor title
+{1} is the truncated URL</note>
+    </trans-unit>
+    <trans-unit id="browser.open.shareQuestion.message">
+      <source xml:lang="en">Share an existing browser tab?</source>
+    </trans-unit>
+    <trans-unit id="browser.open.shareQuestion.title">
+      <source xml:lang="en">Share Browser Tab</source>
+    </trans-unit>
+    <trans-unit id="browser.open.sharedResult">
+      <source xml:lang="en">User shared {0}</source>
+    </trans-unit>
+    <trans-unit id="openBrowserTool.displayName">
+      <source xml:lang="en">Open Browser Page</source>
+    </trans-unit>
+    <trans-unit id="openBrowserTool.userDescription">
+      <source xml:lang="en">Open a URL in the integrated browser</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/openBrowserToolNonAgentic" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.open.nonAgentic.confirmMessage">
+      <source xml:lang="en">This will open {0} in the integrated browser. The agent will not be able to read its contents.</source>
+    </trans-unit>
+    <trans-unit id="browser.open.nonAgentic.confirmTitle">
+      <source xml:lang="en">Open Browser Page?</source>
+    </trans-unit>
+    <trans-unit id="browser.open.nonAgentic.invocation">
+      <source xml:lang="en">Opening browser page at {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.open.nonAgentic.past">
+      <source xml:lang="en">Opened browser page at {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.open.nonAgentic.result">
+      <source xml:lang="en">Opened {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/readBrowserTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.read.invocation">
+      <source xml:lang="en">Reading {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.read.past">
+      <source xml:lang="en">Read {0}</source>
+    </trans-unit>
+    <trans-unit id="readBrowserTool.displayName">
+      <source xml:lang="en">Read Page</source>
+    </trans-unit>
+    <trans-unit id="readBrowserTool.userDescription">
+      <source xml:lang="en">Read the content of a browser page</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/runPlaywrightCodeTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.runCode.confirmDisclaimer">
+      <source xml:lang="en">Make sure you trust the code before continuing.</source>
+    </trans-unit>
+    <trans-unit id="browser.runCode.confirmTitle">
+      <source xml:lang="en">Run Playwright Code?</source>
+    </trans-unit>
+    <trans-unit id="browser.runCode.invocation">
+      <source xml:lang="en">Running Playwright code...</source>
+    </trans-unit>
+    <trans-unit id="browser.runCode.past">
+      <source xml:lang="en">Ran Playwright code</source>
+    </trans-unit>
+    <trans-unit id="browser.runCode.waitInvocation">
+      <source xml:lang="en">Waiting for Playwright code to complete...</source>
+    </trans-unit>
+    <trans-unit id="browser.runCode.waitPast">
+      <source xml:lang="en">Waited for Playwright code</source>
+    </trans-unit>
+    <trans-unit id="runPlaywrightCodeTool.displayName">
+      <source xml:lang="en">Run Playwright Code</source>
+    </trans-unit>
+    <trans-unit id="runPlaywrightCodeTool.userDescription">
+      <source xml:lang="en">Run a Playwright code snippet against a browser page</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/screenshotBrowserTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.screenshot.invocation">
+      <source xml:lang="en">Capturing browser screenshot</source>
+    </trans-unit>
+    <trans-unit id="browser.screenshot.invocation.element">
+      <source xml:lang="en">Capturing screenshot of {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.screenshot.past">
+      <source xml:lang="en">Captured browser screenshot</source>
+    </trans-unit>
+    <trans-unit id="browser.screenshot.past.element">
+      <source xml:lang="en">Captured screenshot of {0}</source>
+    </trans-unit>
+    <trans-unit id="screenshotBrowserTool.displayName">
+      <source xml:lang="en">Screenshot Page</source>
+    </trans-unit>
+    <trans-unit id="screenshotBrowserTool.userDescription">
+      <source xml:lang="en">Capture a screenshot of a browser page</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/typeBrowserTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.pressKey.invocation">
+      <source xml:lang="en">Pressing key `{0}` in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.pressKey.invocation.element">
+      <source xml:lang="en">Pressing key `{0}` in {1} in {2}</source>
+    </trans-unit>
+    <trans-unit id="browser.pressKey.past">
+      <source xml:lang="en">Pressed key `{0}` in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.pressKey.past.element">
+      <source xml:lang="en">Pressed key `{0}` in {1} in {2}</source>
+    </trans-unit>
+    <trans-unit id="browser.type.invocation">
+      <source xml:lang="en">Typing text in {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.type.invocation.element">
+      <source xml:lang="en">Typing text in {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.type.past">
+      <source xml:lang="en">Typed text in {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.type.past.element">
+      <source xml:lang="en">Typed text in {0} in {1}</source>
+    </trans-unit>
+    <trans-unit id="browser.typeAndSubmit.invocation">
+      <source xml:lang="en">Typing text in {0} and pressing Enter</source>
+    </trans-unit>
+    <trans-unit id="browser.typeAndSubmit.invocation.element">
+      <source xml:lang="en">Typing text in {0} in {1} and pressing Enter</source>
+    </trans-unit>
+    <trans-unit id="browser.typeAndSubmit.past">
+      <source xml:lang="en">Typed text in {0} and pressed Enter</source>
+    </trans-unit>
+    <trans-unit id="browser.typeAndSubmit.past.element">
+      <source xml:lang="en">Typed text in {0} in {1} and pressed Enter</source>
+    </trans-unit>
+    <trans-unit id="typeBrowserTool.displayName">
+      <source xml:lang="en">Type in Page</source>
+    </trans-unit>
+    <trans-unit id="typeBrowserTool.userDescription">
+      <source xml:lang="en">Type text or press keys in a browser page</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/widgets/browserUrlBarWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.address">
+      <source xml:lang="en">Address</source>
+    </trans-unit>
+    <trans-unit id="browser.addressLockedAriaLabel">
+      <source xml:lang="en">Address. This address cannot be changed because the browser is locked to a file resource.</source>
+    </trans-unit>
+    <trans-unit id="browser.addressLockedTooltip">
+      <source xml:lang="en">The address is read-only because the browser is locked to a file resource.</source>
+    </trans-unit>
+    <trans-unit id="browser.goTo">
+      <source xml:lang="en">Go to {0}</source>
+    </trans-unit>
+    <trans-unit id="browser.urlPlaceholder">
+      <source xml:lang="en">Enter a URL</source>
+    </trans-unit>
+</body></file>
+</xliff>

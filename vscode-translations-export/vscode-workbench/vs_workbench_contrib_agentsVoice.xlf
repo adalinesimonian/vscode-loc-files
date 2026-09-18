@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/agentsVoice/browser/agentsVoice.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agents.voice.agentProgress">
+      <source xml:lang="en">Allow Agent mode to speak brief semantic progress updates while it investigates, plans, edits, validates, or recovers from a problem.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.backendUrl">
+      <source xml:lang="en">Voice backend WebSocket URL. Leave empty to use the default hosted backend. Set to e.g. `ws://localhost:8000/api/v1/realtime/voice` to point at a backend running on your machine.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.enabled">
+      <source xml:lang="en">Enable the Voice Mode panel in the chat view for voice-driven coding conversations.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.handsFree">
+      <source xml:lang="en">When enabled, voice mode automatically re-enters listening after the assistant finishes speaking, so you can hold a hands-free back-and-forth conversation. When disabled, you start and end each turn manually, and ending the turn sends it. Turns are not ended automatically on trailing silence or a stop phrase unless {0} or {1} is explicitly configured.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.language">
+      <source xml:lang="en">The language used for speech recognition, dictation, and spoken responses. The selectable languages support native voice output. Automatic uses the configured display language for speech recognition and dictation when supported; otherwise, it follows the system or browser locale. English voice output is used when the detected language does not support native voice output. Changing this while voice mode is connected takes effect immediately.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.language.auto">
+      <source xml:lang="en">Automatic</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.language.de">
+      <source xml:lang="en">German</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.language.en">
+      <source xml:lang="en">English</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.language.es">
+      <source xml:lang="en">Spanish</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.language.fr">
+      <source xml:lang="en">French</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.language.it">
+      <source xml:lang="en">Italian</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.language.ja">
+      <source xml:lang="en">Japanese</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.language.ko">
+      <source xml:lang="en">Korean</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.language.pt">
+      <source xml:lang="en">Portuguese</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.language.zh">
+      <source xml:lang="en">Chinese</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.liveTranscript">
+      <source xml:lang="en">Show your speech as a live, word-by-word transcript while you are speaking. When disabled, your transcript appears only once you finish speaking. Requires `#agents.voice.showTranscript#` to be enabled to be visible.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.showButton">
+      <source xml:lang="en">Controls whether the Voice Mode button is shown in the chat input. When hidden, Voice Mode can still be started with its keyboard shortcut.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.showTranscript">
+      <source xml:lang="en">Show the voice transcript overlay in the chat input area while voice mode is active. Enable this to read responses as text when `#agents.voice.speakResponses#` is disabled.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.speakResponses">
+      <source xml:lang="en">When enabled, the assistant reads responses aloud. When disabled, responses are not spoken; enable `#agents.voice.showTranscript#` to read them as a text transcript instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.turn.silenceMs">
+      <source xml:lang="en">Trailing silence in milliseconds before the backend ends the turn automatically. Set to `-1` to disable ending the turn on silence, in which case the turn ends only via a stop phrase ({0}) or manually. When enabled, the backend clamps this to its supported range (currently 200-5000 ms) and is the source of truth. When hands-free mode ({1}) is disabled, the turn is not ended on silence by default unless this setting is explicitly configured, so you keep manual control over when a turn is sent.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.turn.silenceMs.disabled">
+      <source xml:lang="en">Do not end the turn on trailing silence.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.turn.stopPhrases">
+      <source xml:lang="en">Phrases that end the turn when spoken at the end of an utterance. Leave empty to disable ending the turn on a stop phrase, in which case the turn ends only on trailing silence ({0}) or manually. The backend strips the matched phrase from the transcript before it reaches the agent. When hands-free mode ({1}) is disabled, stop phrases do not end the turn by default unless this setting is explicitly configured, so you keep manual control over when a turn is sent.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.voice">
+      <source xml:lang="en">The voice used when the assistant reads responses aloud. Changing this while voice mode is connected takes effect immediately. Use [Voice Mode instructions](command:{0}) to customize Voice Mode behavior and terminology.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.voice.birch">
+      <source xml:lang="en">Birch.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.voice.harper">
+      <source xml:lang="en">Harper.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.voice.junho">
+      <source xml:lang="en">Junho.</source>
+    </trans-unit>
+    <trans-unit id="agents.voice.voice.oak">
+      <source xml:lang="en">Oak.</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.cancelActiveRequest">
+      <source xml:lang="en">Voice Mode: Cancel Request</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.connecting">
+      <source xml:lang="en">Connecting...</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.disconnect">
+      <source xml:lang="en">Disconnect Voice Mode</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.onboardingNeedsChat">
+      <source xml:lang="en">Open a chat to see the Voice Mode introduction.</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.openSettings">
+      <source xml:lang="en">Voice Mode Settings</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.pttStopInChat">
+      <source xml:lang="en">Voice Mode: Stop Recording</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.showOnboarding">
+      <source xml:lang="en">Voice Mode: Show Introduction</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.simulateConnection">
+      <source xml:lang="en">Voice: Simulate Connection (Dev)</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.startVoiceInChat">
+      <source xml:lang="en">Voice Mode</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.toggleMute">
+      <source xml:lang="en">Voice Mode: Toggle Mute Microphone</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.unmuteMic">
+      <source xml:lang="en">Unmute Microphone</source>
+    </trans-unit>
+    <trans-unit id="agentsVoiceConfigurationTitle">
+      <source xml:lang="en">Voice Mode</source>
+    </trans-unit>
+    <trans-unit id="agentsVoicePushToTalk">
+      <source xml:lang="en">Voice Mode: Push to Talk</source>
+    </trans-unit>
+    <trans-unit id="resetAgentsVoiceOnboarding">
+      <source xml:lang="en">Voice: Reset Onboarding</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/agentsVoice/browser/transcriptsView/voiceTranscripts.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsVoice.showTranscripts">
+      <source xml:lang="en">Show Voice Transcripts</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.showTranscripts.menu">
+      <source xml:lang="en">Show Voice Transcripts</source>
+    </trans-unit>
+    <trans-unit id="agentsVoiceCategory">
+      <source xml:lang="en">Agents Voice</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.archiveAll">
+      <source xml:lang="en">Archive All</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.deleteAll">
+      <source xml:lang="en">Delete All</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.deleteAllConfirm">
+      <source xml:lang="en">Delete all voice transcripts?</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.deleteAllConfirmButton">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.deleteAllDetail">
+      <source xml:lang="en">This permanently deletes the local transcript file for your user. There is no server-side copy.</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.focus">
+      <source xml:lang="en">Focus Voice Transcripts View</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.refresh">
+      <source xml:lang="en">Refresh</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscriptsContainer">
+      <source xml:lang="en">Voice Transcripts</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscriptsView">
+      <source xml:lang="en">Voice Transcripts</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscriptsViewIcon">
+      <source xml:lang="en">View icon of the Voice Transcripts view.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/agentsVoice/browser/transcriptsView/voiceTranscriptsView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="voiceTranscripts.archivedNote">
+      <source xml:lang="en">{0} archived turn{1} hidden.</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.earlierMonth">
+      <source xml:lang="en">Earlier this month</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.earlierWeek">
+      <source xml:lang="en">Earlier this week</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.empty">
+      <source xml:lang="en">No transcripts yet. Start a voice conversation to populate this view.</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.older">
+      <source xml:lang="en">Older</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.today">
+      <source xml:lang="en">Today</source>
+    </trans-unit>
+    <trans-unit id="voiceTranscripts.yesterday">
+      <source xml:lang="en">Yesterday</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/agentsVoice/browser/voiceModeOnboarding" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="voiceMode.onboarding.close">
+      <source xml:lang="en">Close the introduction</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.description">
+      <source xml:lang="en">Choose how your agent speaks to you. Adjust [[settings]] or [[how it's written]] anytime.</source>
+      <note>Preserve the double square brackets: they mark the text that becomes a link. Keep both links, in this order - the first opens Voice Mode settings, the second opens the voice.md customization file.</note>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.microphone">
+      <source xml:lang="en">Microphone</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.microphoneSelected">
+      <source xml:lang="en">{0} selected.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.region">
+      <source xml:lang="en">Voice Mode introduction</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.regionDescription">
+      <source xml:lang="en">Choose how your agent speaks to you. Adjust settings anytime.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.systemDefault">
+      <source xml:lang="en">System default</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.title">
+      <source xml:lang="en">Welcome to Voice Mode</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.ariaLabel">
+      <source xml:lang="en">{0}. Hear this voice and use it for every conversation.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.aruha">
+      <source xml:lang="en">Aruha</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.birch">
+      <source xml:lang="en">Birch (Default)</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.david">
+      <source xml:lang="en">David</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.eva">
+      <source xml:lang="en">Eva</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.gil">
+      <source xml:lang="en">Gil</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.harper">
+      <source xml:lang="en">Harper</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.jiyon">
+      <source xml:lang="en">Jiyon</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.junho">
+      <source xml:lang="en">Junho</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.localizedPlaying">
+      <source xml:lang="en">Playing {0} preview.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.localizedStopped">
+      <source xml:lang="en">{0} preview stopped.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.marc">
+      <source xml:lang="en">Marc</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.maria">
+      <source xml:lang="en">Maria</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.oak">
+      <source xml:lang="en">Oak</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.previewAriaLabel">
+      <source xml:lang="en">{0}. Hear how your agent will sound.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.previewStopped">
+      <source xml:lang="en">{0} preview stopped.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.selected">
+      <source xml:lang="en">{0} selected.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.stopPreview">
+      <source xml:lang="en">Stop {0} preview.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voice.wuzhi">
+      <source xml:lang="en">Wuzhi</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.onboarding.voices">
+      <source xml:lang="en">Agent Voice:</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/agentsVoice/common/agentsVoiceColors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsVoice.speakingBackground">
+      <source xml:lang="en">Background color for the speaking voice state row highlight</source>
+    </trans-unit>
+    <trans-unit id="agentsVoice.speakingForeground">
+      <source xml:lang="en">Color for the speaking/active voice state indicator</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/agentsVoice/common/voiceTranscriptStore" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="join.voiceTranscriptStore">
+      <source xml:lang="en">Saving voice transcript</source>
+    </trans-unit>
+</body></file>
+</xliff>

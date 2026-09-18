@@ -78,13 +78,25 @@
     <trans-unit id="suggestTrigger">
       <source xml:lang="en">The terminal request completions command can be invoked manually&lt;keybinding:{0}&gt;, but also appears while typing.</source>
     </trans-unit>
+    <trans-unit id="terminalDictation">
+      <source xml:lang="en">Start or stop dictation in the terminal&lt;keybinding:{0}&gt;.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/accessibility/common/terminalAccessibilityConfiguration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="terminal.integrated.accessibleViewFocusOnCommandExecution">
       <source xml:lang="en">Focus the terminal accessible view when a command is executed.</source>
     </trans-unit>
     <trans-unit id="terminal.integrated.accessibleViewPreserveCursorPosition">
-      <source xml:lang="en">Preserve the cursor position on reopen of the terminal's accessible view rather than setting it to the bottom of the buffer.</source>
+      <source xml:lang="en">Controls whether the cursor position is preserved in the terminal's accessible view.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.accessibleViewPreserveCursorPosition.always">
+      <source xml:lang="en">Always preserve the cursor position, including when new terminal content arrives.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.accessibleViewPreserveCursorPosition.false">
+      <source xml:lang="en">Always position the cursor at the bottom of the buffer.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.accessibleViewPreserveCursorPosition.true">
+      <source xml:lang="en">Preserve the cursor position on reopen until new terminal content arrives.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/autoReplies/common/terminalAutoRepliesConfiguration" source-language="en" datatype="plaintext"><body>
@@ -102,24 +114,6 @@ Remarks:
     </trans-unit>
     <trans-unit id="terminal.integrated.autoReplies.reply">
       <source xml:lang="en">The reply to send to the process.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chat/browser/terminal.initialHint.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="disableHint">
-      <source xml:lang="en"> Toggle {0} in settings to disable this hint.</source>
-    </trans-unit>
-    <trans-unit id="disableInitialHint">
-      <source xml:lang="en">Disable Initial Hint</source>
-    </trans-unit>
-    <trans-unit id="emptyHintText">
-      <source xml:lang="en">Open chat {0}. </source>
-    </trans-unit>
-    <trans-unit id="hintTextDismiss">
-      <source xml:lang="en">Start typing to dismiss.</source>
-    </trans-unit>
-    <trans-unit id="inlineChatHint">
-      <source xml:lang="en">[[Open chat]] or start typing to dismiss.</source>
-      <note>Preserve double-square brackets and their order</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chat/browser/terminalChat" source-language="en" datatype="plaintext"><body>
@@ -143,6 +137,9 @@ Remarks:
     </trans-unit>
     <trans-unit id="chatVisibleContextKey">
       <source xml:lang="en">Whether the chat view is visible.</source>
+    </trans-unit>
+    <trans-unit id="terminalChatUsesAgentHostContextKey">
+      <source xml:lang="en">Whether the terminal chat session is backed by the Agent Host.</source>
     </trans-unit>
     <trans-unit id="terminalHasChatTerminals">
       <source xml:lang="en">Whether there are any chat terminals.</source>
@@ -268,11 +265,6 @@ Remarks:
       <source xml:lang="en">Ask about commands</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chat/common/terminalInitialHintConfiguration" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="terminal.integrated.initialHint">
-      <source xml:lang="en">Controls if the first terminal without input will show a hint about available actions when it is focused.</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/runInTerminalHelpers" source-language="en" datatype="plaintext"><body>
     <trans-unit id="allowSession">
       <source xml:lang="en">Allow All Commands in this Session</source>
@@ -280,17 +272,17 @@ Remarks:
     <trans-unit id="allowSessionTooltip">
       <source xml:lang="en">Allow this tool to run in this session without confirmation.</source>
     </trans-unit>
-    <trans-unit id="autoApprove.baseCommand">
-      <source xml:lang="en">Always Allow Commands: {0}</source>
-    </trans-unit>
-    <trans-unit id="autoApprove.baseCommandSingle">
-      <source xml:lang="en">Always Allow Command: {0}</source>
-    </trans-unit>
     <trans-unit id="autoApprove.configure">
       <source xml:lang="en">Configure Auto Approve...</source>
     </trans-unit>
     <trans-unit id="autoApprove.exactCommand">
       <source xml:lang="en">Always Allow Exact Command Line</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.exactCommand1">
+      <source xml:lang="en">Allow Exact Command Line in this Session</source>
+    </trans-unit>
+    <trans-unit id="autoApprove.exactCommand2">
+      <source xml:lang="en">Allow Exact Command Line in this Workspace</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/terminal.chatAgentTools.contribution" source-language="en" datatype="plaintext"><body>
@@ -299,6 +291,11 @@ Remarks:
     </trans-unit>
     <trans-unit id="terminalSelection">
       <source xml:lang="en">Terminal Selection</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineAnalyzer/autoApprove/npmScriptAutoApprover" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="autoApprove.npmScript">
+      <source xml:lang="en">Auto approved as {0} is defined in package.json</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineAnalyzer/commandLineAutoApproveAnalyzer" source-language="en" datatype="plaintext"><body>
@@ -322,6 +319,9 @@ Remarks:
     </trans-unit>
     <trans-unit id="autoApproveDenied.rules">
       <source xml:lang="en">Auto approval denied by rules {0}</source>
+    </trans-unit>
+    <trans-unit id="autoApproveRule.sessionIndicator">
+      <source xml:lang="en">{0} (session)</source>
     </trans-unit>
     <trans-unit id="ruleTooltip">
       <source xml:lang="en">View rule in settings</source>
@@ -353,11 +353,11 @@ Remarks:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/getTerminalOutputTool" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="bg.past">
-      <source xml:lang="en">Checked background terminal output</source>
+    <trans-unit id="getTerminalOutput.past">
+      <source xml:lang="en">Checked terminal output</source>
     </trans-unit>
-    <trans-unit id="bg.progressive">
-      <source xml:lang="en">Checking background terminal output</source>
+    <trans-unit id="getTerminalOutput.progressive">
+      <source xml:lang="en">Checking terminal output</source>
     </trans-unit>
     <trans-unit id="getTerminalOutputTool.displayName">
       <source xml:lang="en">Get Terminal Output</source>
@@ -374,59 +374,262 @@ Remarks:
       <source xml:lang="en">Get Terminal Selection</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/killTerminalTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="kill.past">
+      <source xml:lang="en">Killed terminal</source>
+    </trans-unit>
+    <trans-unit id="kill.progressive">
+      <source xml:lang="en">Killing terminal</source>
+    </trans-unit>
+    <trans-unit id="killTerminalTool.displayName">
+      <source xml:lang="en">Kill Terminal</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/monitoring/outputMonitor" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="poll.terminal.accept">
-      <source xml:lang="en">Yes</source>
+    <trans-unit id="closeTerminal">
+      <source xml:lang="en">Terminal will be reused by tasks, press any key to close it.</source>
     </trans-unit>
-    <trans-unit id="poll.terminal.acceptRun">
-      <source xml:lang="en">Allow</source>
+    <trans-unit id="exitCode.closeTerminal">
+      <source xml:lang="en">Press any key to close the terminal.</source>
     </trans-unit>
-    <trans-unit id="poll.terminal.confirmRequired">
-      <source xml:lang="en">The terminal is awaiting input.</source>
+    <trans-unit id="exitCode.reuseTerminal">
+      <source xml:lang="en">Press any key to close the terminal.</source>
     </trans-unit>
-    <trans-unit id="poll.terminal.confirmRunDetail">
-      <source xml:lang="en">{0}
- Do you want to send `{1}`{2} followed by `Enter` to the terminal?</source>
+    <trans-unit id="reuseTerminal">
+      <source xml:lang="en">Terminal will be reused by tasks, press any key to close it.</source>
     </trans-unit>
-    <trans-unit id="poll.terminal.enterInput">
-      <source xml:lang="en">Focus terminal</source>
-    </trans-unit>
-    <trans-unit id="poll.terminal.inputRequest">
-      <source xml:lang="en">The terminal is awaiting input.</source>
-    </trans-unit>
-    <trans-unit id="poll.terminal.polling">
-      <source xml:lang="en">This will continue to poll for output to determine when the terminal becomes idle for up to 2 minutes.</source>
-    </trans-unit>
-    <trans-unit id="poll.terminal.reject">
-      <source xml:lang="en">No</source>
-    </trans-unit>
-    <trans-unit id="poll.terminal.rejectRun">
-      <source xml:lang="en">Focus Terminal</source>
-    </trans-unit>
-    <trans-unit id="poll.terminal.requireInput">
-      <source xml:lang="en">{0}
-Please provide the required input to the terminal.
-
-</source>
-    </trans-unit>
-    <trans-unit id="poll.terminal.waiting">
-      <source xml:lang="en">Continue waiting for `{0}`?</source>
+    <trans-unit id="reuseTerminal.pressClose">
+      <source xml:lang="en">The terminal will be reused by tasks. Press any key to close.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalConfirmationTool" source-language="en" datatype="plaintext"><body>
     <trans-unit id="confirmTerminalCommandTool.displayName">
       <source xml:lang="en">Confirm Terminal Command</source>
     </trans-unit>
+    <trans-unit id="confirmTerminalCommandTool.sandboxBypass.message">
+      <source xml:lang="en">This command will run outside the sandbox.</source>
+    </trans-unit>
+    <trans-unit id="confirmTerminalCommandTool.sandboxBypass.message.reason">
+      <source xml:lang="en">This command will run outside the sandbox.
+
+Reason: {0}</source>
+    </trans-unit>
+    <trans-unit id="confirmTerminalCommandTool.sandboxBypass.title">
+      <source xml:lang="en">Run in terminal outside the sandbox?</source>
+    </trans-unit>
     <trans-unit id="confirmTerminalCommandTool.userDescription">
       <source xml:lang="en">Tool for confirming terminal commands</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="allow">
+      <source xml:lang="en">Allow</source>
+    </trans-unit>
     <trans-unit id="runInTerminal">
       <source xml:lang="en">Run `{0}` command?</source>
     </trans-unit>
-    <trans-unit id="runInTerminal.background">
-      <source xml:lang="en">Run `{0}` command? (background terminal)</source>
+    <trans-unit id="runInTerminal.allowNetwork">
+      <source xml:lang="en">Allow {0} command to access the network?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.allowNetwork.autoRetry">
+      <source xml:lang="en">Retry `{0}` command in the sandbox by allowing network access?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.allowNetwork.autoRetry.confirmationMessage">
+      <source xml:lang="en">`{0}`</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.allowNetwork.autoRetry.domain">
+      <source xml:lang="en">Retry `{0}` command in the sandbox by allowing network access to {1}?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.allowNetwork.autoRetry.invocation">
+      <source xml:lang="en">Running `{0}` in the sandbox with unrestricted network access</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.allowNetwork.autoRetry.reason">
+      <source xml:lang="en">The sandboxed execution output indicated the sandbox blocked required network access.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.allowNetwork.confirmationMessage">
+      <source xml:lang="en">Explanation: {0}
+
+Goal: {1}
+
+Reason for allowing unrestricted network access in the sandbox: {2}</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.allowNetwork.confirmationMessage.defaultReason">
+      <source xml:lang="en">The model indicated that this sandboxed command needs unrestricted network access.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.allowNetwork.disabled.invocation">
+      <source xml:lang="en">Not running `{0}` because unrestricted network access in the sandbox is disabled</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.allowNetwork.disabled.result">
+      <source xml:lang="en">The command was not executed because it requested unrestricted network access in the terminal sandbox, but per-command network access is disabled by chat.agent.sandbox.retryWithAllowNetworkRequests. Run the command with restricted network access instead, or enable the setting to allow network access requests.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.bubblewrap.hostRestriction">
+      <source xml:lang="en">Sandbox creation failed due to host restrictions. Sandboxing can be disabled by setting `{0}` to `off`.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.bubblewrap.unsupportedEnvironment">
+      <source xml:lang="en">Sandboxing is not supported in this environment. To disable sandboxing, set `{0}` to `off`. The command was not executed.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.bubblewrap.unsupportedEnvironmentWithSettingsLink">
+      <source xml:lang="en">Sandboxing is not supported in this environment. [Open the `{0}` setting](command:workbench.action.openSettings?{1} "Open Settings") and set it to `off`. The command was not executed.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.bubblewrap.unusable">
+      <source xml:lang="en">Bubblewrap is installed but cannot create the required sandbox namespace on this system. The command was not executed.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.confirmationMessage">
+      <source xml:lang="en">Explanation: {0}
+
+Goal: {1}</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.defaultExplanation">
+      <source xml:lang="en">No explanation provided</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.defaultGoal">
+      <source xml:lang="en">No goal provided</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.inDirectory">
+      <source xml:lang="en">Run `{0}` command within `{1}`?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.invocation">
+      <source xml:lang="en">Running `{0}`</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.invocation.sandbox">
+      <source xml:lang="en">Running `{0}` in sandbox</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.bubblewrapFailed">
+      <source xml:lang="en">Sandbox dependencies were installed, but bubblewrap cannot create the required sandbox namespace. Run the command again to choose an available repair option.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.bubblewrapFailedNoRepair">
+      <source xml:lang="en">Sandbox dependencies were installed, but bubblewrap cannot create the required sandbox namespace on this system. The command was not executed.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.cancelled">
+      <source xml:lang="en">Sandbox dependency installation was cancelled by the user.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.failed">
+      <source xml:lang="en">Sandbox dependency installation failed (exit code {0}). The command was not executed.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.install">
+      <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.installed">
+      <source xml:lang="en">Sandbox dependencies were installed successfully. If the issue persists, reload the window and try running the command again.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.message">
+      <source xml:lang="en">The following dependencies required for sandboxed execution are not installed: {0}. Would you like to install them?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.recheckFailed">
+      <source xml:lang="en">Sandbox prerequisites are still not satisfied after installation. The command was not executed.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.title">
+      <source xml:lang="en">Missing Sandbox Dependencies</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.unknown">
+      <source xml:lang="en">Could not determine whether sandbox dependency installation succeeded. The command was not executed.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.unsupportedInstaller">
+      <source xml:lang="en">The following dependencies required for sandboxed execution are not installed: {0}. Install them using your system package manager, then run the command again.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.presentationOverride">
+      <source xml:lang="en">Run `{0}` command in `{1}`?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.presentationOverride.inDirectory">
+      <source xml:lang="en">Run `{0}` command in `{1}` within `{2}`?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.presentationOverride.inDirectory.withoutLanguage">
+      <source xml:lang="en">Run command in `{0}` within `{1}`?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.presentationOverride.withoutLanguage">
+      <source xml:lang="en">Run command in `{0}`?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.sandbox.fileAccessDenied">
+      <source xml:lang="en">Access Denied: The command was not executed because the terminal sandbox does not allow access to the requested file paths:
+{0}</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.sensitiveInput.autoCancelMessage">
+      <source xml:lang="en">The terminal command was prompting for a password or other secret. Auto-approve / autopilot mode cannot safely supply secrets, so the command was cancelled. Run the command interactively if you want to provide the secret.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.sensitiveInput.autoCancelTitle">
+      <source xml:lang="en">Terminal command cancelled — sensitive input required</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.sensitiveInput.cancel">
+      <source xml:lang="en">Cancel Command</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.sensitiveInput.dismiss">
+      <source xml:lang="en">Dismiss</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.sensitiveInput.focus">
+      <source xml:lang="en">Focus Terminal</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.sensitiveInput.message">
+      <source xml:lang="en">The terminal command appears to be prompting for a password or other sensitive value. Focus the terminal to type it directly — secrets must not be sent through chat.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.sensitiveInput.title">
+      <source xml:lang="en">Terminal is waiting for sensitive input</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.streaming">
+      <source xml:lang="en">Running `{0}`</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.streaming.default">
+      <source xml:lang="en">Running command</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed">
+      <source xml:lang="en">Run `{0}` command outside the [sandbox]({1})?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.autoRetry">
+      <source xml:lang="en">Run `{0}` command outside the sandbox?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.autoRetry.confirmationMessage">
+      <source xml:lang="en">`{0}`</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.autoRetry.domain">
+      <source xml:lang="en">Run `{0}` command outside the sandbox to access {1}?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.autoRetry.invocation">
+      <source xml:lang="en">Running `{0}` outside the sandbox</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.autoRetry.reason">
+      <source xml:lang="en">The sandboxed execution output indicated the sandbox blocked the command.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.confirmationMessage">
+      <source xml:lang="en">Explanation: {0}
+
+Goal: {1}
+
+Reason for leaving the sandbox: {2}</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.confirmationMessage.defaultReason">
+      <source xml:lang="en">The model indicated that this command needs unsandboxed access.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.disabled.invocation">
+      <source xml:lang="en">Not running `{0}` because unsandboxed execution is disabled</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.disabled.result">
+      <source xml:lang="en">The command was not executed because it requested to run outside the terminal sandbox, but running commands outside the sandbox is disabled by chat.agent.sandbox.allowUnsandboxedCommands. Run the command in the sandbox instead, or enable the setting to allow unsandboxed execution.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.domain">
+      <source xml:lang="en">Run `{0}` command outside the [sandbox]({1}) to access {2}?</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.domain.reason.denied.multi">
+      <source xml:lang="en">This command accesses {0} and {1} more domains that are blocked by chat.agent.deniedNetworkDomains.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.domain.reason.denied.single">
+      <source xml:lang="en">This command accesses {0}, which is blocked by chat.agent.deniedNetworkDomains.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.domain.reason.mixed.multi">
+      <source xml:lang="en">This command accesses {0} and {1} more domains that are blocked by chat.agent.deniedNetworkDomains or not added to chat.agent.allowedNetworkDomains.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.domain.reason.mixed.single">
+      <source xml:lang="en">This command accesses {0}, which is blocked by chat.agent.deniedNetworkDomains or not added to chat.agent.allowedNetworkDomains.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.domain.reason.multi">
+      <source xml:lang="en">This command accesses {0} and {1} more domains that are not permitted by the current chat.agent.sandbox configuration.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.domain.reason.single">
+      <source xml:lang="en">This command accesses {0}, which is not permitted by the current chat.agent.sandbox configuration.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.unsandboxed.domain.summary">
+      <source xml:lang="en">`{0}` and {1} more domains</source>
     </trans-unit>
     <trans-unit id="runInTerminalTool.altBufferMessage">
       <source xml:lang="en">The command opened the alternate buffer.</source>
@@ -436,6 +639,50 @@ Please provide the required input to the terminal.
     </trans-unit>
     <trans-unit id="runInTerminalTool.userDescription">
       <source xml:lang="en">Run commands in the terminal</source>
+    </trans-unit>
+    <trans-unit id="skip">
+      <source xml:lang="en">Skip</source>
+    </trans-unit>
+    <trans-unit id="terminalAssessingOutput">
+      <source xml:lang="en">{0} may need input</source>
+    </trans-unit>
+    <trans-unit id="terminalCommandCompleted">
+      <source xml:lang="en">{0} completed</source>
+    </trans-unit>
+    <trans-unit id="terminalProcessExited">
+      <source xml:lang="en">{0} terminal exited</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/sendToTerminalTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="focusTerminal">
+      <source xml:lang="en">Focus Terminal</source>
+    </trans-unit>
+    <trans-unit id="send.confirm.message">
+      <source xml:lang="en">Run {0} in terminal {1}</source>
+    </trans-unit>
+    <trans-unit id="send.confirm.message.enter">
+      <source xml:lang="en">Press `Enter` in terminal {0}</source>
+    </trans-unit>
+    <trans-unit id="send.confirm.title">
+      <source xml:lang="en">Send to Terminal</source>
+    </trans-unit>
+    <trans-unit id="send.past">
+      <source xml:lang="en">Sent {0} to terminal</source>
+    </trans-unit>
+    <trans-unit id="send.past.enter">
+      <source xml:lang="en">Pressed `Enter` in terminal</source>
+    </trans-unit>
+    <trans-unit id="send.progressive">
+      <source xml:lang="en">Sending {0} to terminal</source>
+    </trans-unit>
+    <trans-unit id="send.progressive.enter">
+      <source xml:lang="en">Pressing `Enter` in terminal</source>
+    </trans-unit>
+    <trans-unit id="send.replyingTo">
+      <source xml:lang="en">replying to: </source>
+    </trans-unit>
+    <trans-unit id="sendToTerminalTool.displayName">
+      <source xml:lang="en">Send to Terminal</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/task/createAndRunTaskTool" source-language="en" datatype="plaintext"><body>
@@ -546,6 +793,81 @@ Please provide the required input to the terminal.
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSandbox.allowAutoApprove">
+      <source xml:lang="en">Controls whether agent mode terminal commands that run inside the sandbox are auto-approved. When disabled, the run in terminal tool uses the existing approval flow. This applies only when {0} is enabled.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.allowNetwork">
+      <source xml:lang="en">When {0} is enabled, controls whether to allow all network domains in the sandbox. When enabled, the sandbox preserves file system restrictions while relaxing all network restrictions.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.allowUnsandboxedCommands">
+      <source xml:lang="en">Controls whether agent mode terminal commands can run outside the sandbox after user confirmation when a sandboxed command fails or when sandbox restrictions would block the command. This applies only when {0} is enabled.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.enabledSetting">
+      <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system. Use {0} to allow all network domains.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.enabledSetting.offDescription">
+      <source xml:lang="en">Disable sandboxing for agent mode tools.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.enabledSetting.onDescription">
+      <source xml:lang="en">Enable sandboxing for agent mode tools.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.linuxFileSystemSetting">
+      <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Linux. Paths do not support glob patterns, only literal paths (ex: ./src/, ~/.ssh, .env). **bubblewrap** and **socat** should be installed for this setting to work.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.linuxFileSystemSetting.allowRead">
+      <source xml:lang="en">Array of paths to re-allow read access within denied regions. Takes precedence over denyRead.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.linuxFileSystemSetting.allowWrite">
+      <source xml:lang="en">Array of additional paths to allow write access. Leave empty to disallow writes outside the workspace folders, workspace storage folder, and sandbox temp directory.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.linuxFileSystemSetting.denyRead">
+      <source xml:lang="en">Array of paths to deny read access. Leave empty to allow reading all paths.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.linuxFileSystemSetting.denyWrite">
+      <source xml:lang="en">Array of paths to deny write access within allowed paths (takes precedence over allowWrite).</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.macFileSystemSetting">
+      <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on macOS. Paths also support git-style glob patterns(ex: *.ts, ./src, ./src/**/*.ts, file?.txt).</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.macFileSystemSetting.allowRead">
+      <source xml:lang="en">Array of paths to re-allow read access within denied regions. Takes precedence over denyRead.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.macFileSystemSetting.allowWrite">
+      <source xml:lang="en">Array of additional paths to allow write access. Leave empty to disallow writes outside the workspace folders, workspace storage folder, and sandbox temp directory.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.macFileSystemSetting.denyRead">
+      <source xml:lang="en">Array of paths to deny read access. Leave empty to allow reading all paths.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.macFileSystemSetting.denyWrite">
+      <source xml:lang="en">Array of paths to deny write access within allowed paths (takes precedence over allowWrite).</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.retryWithAllowNetworkRequests">
+      <source xml:lang="en">Controls whether agent mode terminal commands can retry in the sandbox with unrestricted network access after user confirmation. This applies only when {0} is enabled and preserves file system sandboxing while relaxing network restrictions for an approved command.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.runtimeSetting">
+      <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Key/value pairs are passed through to the root of the sandbox runtime configuration.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.windowsEnabledSetting">
+      <source xml:lang="en">Controls whether agent mode uses sandboxing on Windows. Use {0} to allow all network domains.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.windowsEnabledSetting.offDescription">
+      <source xml:lang="en">Disable sandboxing for agent mode tools on Windows.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.windowsEnabledSetting.onDescription">
+      <source xml:lang="en">Enable sandboxing for agent mode tools on Windows.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.windowsFileSystemSetting">
+      <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Windows. Paths do not support glob patterns, only literal paths (ex: C:\src, C:\Users\me\.ssh, .env).</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.windowsFileSystemSetting.allowRead">
+      <source xml:lang="en">Array of additional paths to allow read-only access. Takes precedence over denyRead.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.windowsFileSystemSetting.allowWrite">
+      <source xml:lang="en">Array of additional paths to allow read/write access. Leave empty to disallow writes outside the workspace folders, workspace storage folder, and sandbox temp directory.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.windowsFileSystemSetting.denyRead">
+      <source xml:lang="en">Array of paths to deny access. Leave empty to allow reading all paths.</source>
+    </trans-unit>
     <trans-unit id="autoApprove.defaults">
       <source xml:lang="en">Note that there's a default set of rules to allow and also deny commands. Consider setting {0} to {1} to ignore all default rules to ensure there are no conflicts with your own rules. Do this at your own risk, the default denial rules are designed to protect you against running dangerous commands.</source>
     </trans-unit>
@@ -624,8 +946,14 @@ Please provide the required input to the terminal.
     <trans-unit id="autoApproveMode.description">
       <source xml:lang="en">Controls whether to allow auto approval in the run in terminal tool.</source>
     </trans-unit>
-    <trans-unit id="autoReplyToPrompts.key">
-      <source xml:lang="en">Whether to automatically respond to prompts in the terminal such as `Confirm? y/n`. This is an experimental feature and may not work in all scenarios.</source>
+    <trans-unit id="autoApproveWorkspaceNpmScripts.description">
+      <source xml:lang="en">Whether to automatically approve npm, yarn, and pnpm run commands when the script is defined in a workspace package.json file. Since the workspace is trusted, scripts defined in package.json are considered safe to run without explicit approval.</source>
+    </trans-unit>
+    <trans-unit id="backgroundNotifications.deprecated">
+      <source xml:lang="en">This setting is deprecated. Terminal completion and input-needed notifications are now always enabled.</source>
+    </trans-unit>
+    <trans-unit id="backgroundNotifications.description">
+      <source xml:lang="en">This setting is deprecated and no longer has any effect. Terminal completion and input-needed notifications are now always enabled for any command that continues running after the tool returns.</source>
     </trans-unit>
     <trans-unit id="blockFileWrites.all">
       <source xml:lang="en">Block all detected file writes.</source>
@@ -633,7 +961,8 @@ Please provide the required input to the terminal.
     <trans-unit id="blockFileWrites.description">
       <source xml:lang="en">Controls whether detected file write operations are blocked in the run in terminal tool. When detected, this will require explicit approval regardless of whether the command would normally be auto approved. Note that this cannot detect all possible methods of writing files, this is what is currently detected:
 
-- File redirection (detected via the bash or PowerShell tree sitter grammar)</source>
+- File redirection (detected via the bash or PowerShell tree sitter grammar)
+- `sed` in-place editing (`-i`, `-I`, `--in-place`)</source>
     </trans-unit>
     <trans-unit id="blockFileWrites.never">
       <source xml:lang="en">Allow all detected file writes.</source>
@@ -641,23 +970,56 @@ Please provide the required input to the terminal.
     <trans-unit id="blockFileWrites.outsideWorkspace">
       <source xml:lang="en">Block file writes detected outside the workspace. This depends on the shell integration feature working correctly to determine the current working directory of the terminal.</source>
     </trans-unit>
+    <trans-unit id="detachBackgroundProcesses.description">
+      <source xml:lang="en">Whether to detach persistent terminal processes so they survive when VS Code exits. When enabled, commands started with `mode: "async"` (legacy: `isBackground: true`) are wrapped with `nohup` (POSIX) or `Start-Process` (Windows) so the process continues running after the terminal is disposed.</source>
+    </trans-unit>
+    <trans-unit id="enforceTimeoutFromModel.description">
+      <source xml:lang="en">Whether to enforce the timeout value provided by the model in the run in terminal tool. When enabled, if the model provides a timeout parameter, the tool will stop tracking the command after that duration and return the output collected so far.</source>
+    </trans-unit>
+    <trans-unit id="idlePollInterval.description">
+      <source xml:lang="en">Configures the idle poll interval in milliseconds used by the run in terminal tool to detect when commands have finished executing. Lower values make command detection faster but may cause false positives on slow systems. This primarily affects terminals without shell integration where idle detection is used instead of shell integration events.</source>
+    </trans-unit>
+    <trans-unit id="idleSilenceTimeoutMs.description">
+      <source xml:lang="en">Number of milliseconds the run in terminal tool will wait for new output from a synchronous command before moving it to a background terminal and returning what was collected so far. The process is not killed — the tool returns the terminal ID so the model can poll, send input, or kill it. Set to {0} to disable.</source>
+    </trans-unit>
     <trans-unit id="ignoreDefaultAutoApproveRules.description">
       <source xml:lang="en">Whether to ignore the built-in default auto-approve rules used by the run in terminal tool as defined in {0}. When this setting is enabled, the run in terminal tool will ignore any rule that comes from the default set but still follow rules defined in the user, remote and workspace settings. Use this setting at your own risk; the default auto-approve rules are designed to protect you against running dangerous commands.</source>
     </trans-unit>
-    <trans-unit id="outputLocation.description">
-      <source xml:lang="en">Where to show the output from the run in terminal tool session.</source>
+    <trans-unit id="outputCompaction.description">
+      <source xml:lang="en">When enabled, the output of commands run by the run in terminal tool is compacted before being returned to the model, reducing the number of tokens spent on noisy output (for example progress bars or repeated log lines) while preserving the important information.</source>
     </trans-unit>
-    <trans-unit id="outputLocation.none">
-      <source xml:lang="en">Do not reveal the terminal automatically.</source>
+    <trans-unit id="outputDeltas.description">
+      <source xml:lang="en">When enabled, repeated get terminal output tool calls return only output added since the previous poll for the same terminal execution, or a short unchanged-output message when there is no new output.</source>
+    </trans-unit>
+    <trans-unit id="outputLocation.chat">
+      <source xml:lang="en">Reveal the terminal output within chat only.</source>
+    </trans-unit>
+    <trans-unit id="outputLocation.description">
+      <source xml:lang="en">Where to show the output from the run in terminal tool.</source>
     </trans-unit>
     <trans-unit id="outputLocation.terminal">
-      <source xml:lang="en">Reveal the terminal when running the command.</source>
+      <source xml:lang="en">Reveal the terminal in the panel or editor in addition to chat.</source>
+    </trans-unit>
+    <trans-unit id="preventShellHistory.description">
+      <source xml:lang="en">Whether to exclude commands run by the terminal tool from the shell history. See below for the supported shells and the method used for each:</source>
+    </trans-unit>
+    <trans-unit id="preventShellHistory.description.bash">
+      <source xml:lang="en">Sets `HISTCONTROL=ignorespace` and prepends the command with space</source>
+    </trans-unit>
+    <trans-unit id="preventShellHistory.description.fish">
+      <source xml:lang="en">Sets `fish_private_mode` to prevent any command from entering history</source>
+    </trans-unit>
+    <trans-unit id="preventShellHistory.description.pwsh">
+      <source xml:lang="en">Sets a custom history handler via PSReadLine's `AddToHistoryHandler` to prevent any command from entering history</source>
+    </trans-unit>
+    <trans-unit id="preventShellHistory.description.zsh">
+      <source xml:lang="en">Sets `HIST_IGNORE_SPACE` option and prepends the command with space</source>
     </trans-unit>
     <trans-unit id="shellIntegrationTimeout.deprecated">
       <source xml:lang="en">Use {0} instead</source>
     </trans-unit>
     <trans-unit id="shellIntegrationTimeout.description">
-      <source xml:lang="en">Configures the duration in milliseconds to wait for shell integration to be detected when the run in terminal tool launches a new terminal. Set to `0` to wait the minimum time, the default value `-1` means the wait time is variable based on the value of {0} and whether it's a remote window. A large value can be useful if your shell starts very slowly and a low value if you're intentionally not using shell integration.</source>
+      <source xml:lang="en">Configures the duration in milliseconds to wait for shell integration to be detected when the run in terminal tool launches a new terminal. Set to `0` to skip the wait entirely, the default value `-1` uses a variable wait time based on the value of {0} and whether it's a remote window. A large value can be useful if your shell starts very slowly.</source>
     </trans-unit>
     <trans-unit id="terminalChatAgentProfile.linux">
       <source xml:lang="en">The terminal profile to use on Linux for chat agent's run in terminal tool.</source>
@@ -670,6 +1032,20 @@ Please provide the required input to the terminal.
     </trans-unit>
     <trans-unit id="terminalChatAgentProfile.windows">
       <source xml:lang="en">The terminal profile to use on Windows for chat agent's run in terminal tool.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalSandboxService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="deleteFilesInSandboxTempDir">
+      <source xml:lang="en">Delete Files in Sandbox Temp Dir</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.focusTerminal">
+      <source xml:lang="en">Focus Terminal</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.passwordPromptMessage">
+      <source xml:lang="en">Applying sandbox prerequisites may prompt for your sudo password. Select Focus Terminal to type it in the terminal.</source>
+    </trans-unit>
+    <trans-unit id="runInTerminal.missingDeps.passwordPromptTitle">
+      <source xml:lang="en">The terminal is awaiting input.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/clipboard/browser/terminal.clipboard.contribution" source-language="en" datatype="plaintext"><body>
@@ -787,6 +1163,95 @@ Please provide the required input to the terminal.
       <source xml:lang="en">Toggle Find Using Whole Word</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/find/browser/terminalFindAccessibilityHelp" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="terminal.closingDesc">
+      <source xml:lang="en">Press Escape to close Terminal Find. Focus moves to the terminal command line, and your search history is available on next Find.</source>
+    </trans-unit>
+    <trans-unit id="terminal.closingHeader">
+      <source xml:lang="en">Closing:</source>
+    </trans-unit>
+    <trans-unit id="terminal.context">
+      <source xml:lang="en">You are in the Terminal Find input. This searches the entire terminal buffer: both the current output and the scrollback history.</source>
+    </trans-unit>
+    <trans-unit id="terminal.focusDesc1">
+      <source xml:lang="en">When you navigate from the Terminal Find input, the terminal buffer updates in the background while your focus stays in the input. This is intentional, so you can keep refining your search without losing your place.</source>
+    </trans-unit>
+    <trans-unit id="terminal.focusDesc2">
+      <source xml:lang="en">The terminal automatically scrolls to show the match you navigate to.</source>
+    </trans-unit>
+    <trans-unit id="terminal.focusDesc3">
+      <source xml:lang="en">If you want to close Find and return focus to the terminal command line, press Escape. Focus moves to the command input at the bottom of the terminal.</source>
+    </trans-unit>
+    <trans-unit id="terminal.focusHeader">
+      <source xml:lang="en">Focus Behavior (Important):</source>
+    </trans-unit>
+    <trans-unit id="terminal.header">
+      <source xml:lang="en">Accessibility Help: Terminal Find</source>
+    </trans-unit>
+    <trans-unit id="terminal.hear1">
+      <source xml:lang="en">1) The full line that contains the match is read first, so you get immediate context.</source>
+    </trans-unit>
+    <trans-unit id="terminal.hear2">
+      <source xml:lang="en">2) Your position among the matches is announced, so you know how far you are through the results.</source>
+    </trans-unit>
+    <trans-unit id="terminal.hear3">
+      <source xml:lang="en">3) The exact line and column are announced, so you know precisely where the match is in the buffer.</source>
+    </trans-unit>
+    <trans-unit id="terminal.hearDesc">
+      <source xml:lang="en">Each navigation step gives you a complete spoken update:</source>
+    </trans-unit>
+    <trans-unit id="terminal.hearHeader">
+      <source xml:lang="en">What You Hear Each Time You Move to a Match:</source>
+    </trans-unit>
+    <trans-unit id="terminal.inputDesc">
+      <source xml:lang="en">While you are in the Terminal Find input, your focus stays in the field. You can type, edit your search term, or navigate matches without leaving the input. When you navigate to a match, the terminal scrolls to show it, but your focus remains in the Find input.</source>
+    </trans-unit>
+    <trans-unit id="terminal.inputHeader">
+      <source xml:lang="en">Inside the Terminal Find Input (What It Does):</source>
+    </trans-unit>
+    <trans-unit id="terminal.keyEnter">
+      <source xml:lang="en">- Enter: Move to the next match while staying in the Find input.</source>
+    </trans-unit>
+    <trans-unit id="terminal.keyNavHeader">
+      <source xml:lang="en">While focused IN the Find input:</source>
+    </trans-unit>
+    <trans-unit id="terminal.keyNavNote">
+      <source xml:lang="en">Note: Terminal Find keeps focus in the Find input. If you need to return to the terminal command line, press Escape to close Find.</source>
+    </trans-unit>
+    <trans-unit id="terminal.keyShiftEnter">
+      <source xml:lang="en">- Shift+Enter: Move to the previous match while staying in the Find input.</source>
+    </trans-unit>
+    <trans-unit id="terminal.keyboardHeader">
+      <source xml:lang="en">Keyboard Navigation Summary:</source>
+    </trans-unit>
+    <trans-unit id="terminal.optionCase">
+      <source xml:lang="en">- Match Case: Only exact case matches are included.</source>
+    </trans-unit>
+    <trans-unit id="terminal.optionRegex">
+      <source xml:lang="en">- Regular Expression: Use pattern matching for advanced searches.</source>
+    </trans-unit>
+    <trans-unit id="terminal.optionWord">
+      <source xml:lang="en">- Whole Word: Only full words are matched.</source>
+    </trans-unit>
+    <trans-unit id="terminal.optionsHeader">
+      <source xml:lang="en">Find Options:</source>
+    </trans-unit>
+    <trans-unit id="terminal.settingVerbosity">
+      <source xml:lang="en">- `accessibility.verbosity.find`: Controls whether the Terminal Find input announces the Accessibility Help hint.</source>
+    </trans-unit>
+    <trans-unit id="terminal.settingsDesc">
+      <source xml:lang="en">Terminal Find has limited configuration options. Most behavior is controlled by the terminal itself.</source>
+    </trans-unit>
+    <trans-unit id="terminal.settingsHeader">
+      <source xml:lang="en">Settings You Can Adjust ({0} opens Settings):</source>
+    </trans-unit>
+    <trans-unit id="terminal.statusDesc">
+      <source xml:lang="en">You are searching the terminal buffer.</source>
+    </trans-unit>
+    <trans-unit id="terminal.statusHeader">
+      <source xml:lang="en">Current Search Status:</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/history/browser/terminal.history.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="goToRecentDirectory.metadata">
       <source xml:lang="en">Goes to a recent folder</source>
@@ -802,6 +1267,9 @@ Please provide the required input to the terminal.
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/history/browser/terminalRunRecentQuickPick" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="fuzzySearch">
+      <source xml:lang="en">Fuzzy search</source>
+    </trans-unit>
     <trans-unit id="openShellHistoryFile">
       <source xml:lang="en">Open File</source>
     </trans-unit>
@@ -830,6 +1298,43 @@ Please provide the required input to the terminal.
   <file original="src/vs/workbench/contrib/terminalContrib/history/common/terminal.history" source-language="en" datatype="plaintext"><body>
     <trans-unit id="terminal.integrated.shellIntegration.history">
       <source xml:lang="en">Controls the number of recently used commands to keep in the terminal command history. Set to 0 to disable terminal command history.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/inlineHint/browser/terminal.initialHint.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotCliHint">
+      <source xml:lang="en">Type [[copilot]] to use Copilot CLI.</source>
+      <note>Preserve double-square brackets and their order</note>
+    </trans-unit>
+    <trans-unit id="copilotCliHintAriaLabel">
+      <source xml:lang="en">Type copilot to use Copilot CLI.</source>
+    </trans-unit>
+    <trans-unit id="disableHint">
+      <source xml:lang="en"> Toggle {0} in settings to disable this hint.</source>
+    </trans-unit>
+    <trans-unit id="disableInitialHint">
+      <source xml:lang="en">Disable Initial Hint</source>
+    </trans-unit>
+    <trans-unit id="hintTextDismiss">
+      <source xml:lang="en">[[don't show]] this again.</source>
+      <note>Preserve double-square brackets and their order</note>
+    </trans-unit>
+    <trans-unit id="hintTextDismissAriaLabel">
+      <source xml:lang="en">Start typing to dismiss or don't show this again.</source>
+    </trans-unit>
+    <trans-unit id="hintTextDismissCompact">
+      <source xml:lang="en">[[Don't show this again]]</source>
+      <note>Preserve double-square brackets and their order</note>
+    </trans-unit>
+    <trans-unit id="hintTextDismissProse">
+      <source xml:lang="en"> Start typing to dismiss or </source>
+    </trans-unit>
+    <trans-unit id="showSuggestHint">
+      <source xml:lang="en">Show suggestions {0}. </source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/inlineHint/common/terminalInitialHintConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="terminal.integrated.initialHint">
+      <source xml:lang="en">Controls if the first terminal without input will show a hint about available actions when it is focused. This will only show when {0} is disabled.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/links/browser/terminal.links.contribution" source-language="en" datatype="plaintext"><body>
@@ -909,6 +1414,22 @@ Please provide the required input to the terminal.
       <source xml:lang="en">Url</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/notification/browser/terminalNotificationHandler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="terminalNotificationDisable">
+      <source xml:lang="en">Disable Terminal Notifications</source>
+    </trans-unit>
+    <trans-unit id="terminalNotificationDismiss">
+      <source xml:lang="en">Dismiss</source>
+    </trans-unit>
+    <trans-unit id="terminalNotificationSource">
+      <source xml:lang="en">Terminal</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/notification/common/terminalNotificationConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="terminal.integrated.enableNotifications">
+      <source xml:lang="en">Controls whether notifications sent from the terminal via OSC 99 are shown. This uses notifications inside the product instead of desktop notifications. Sounds, icons and filtering are not supported.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/quickAccess/browser/terminal.quickAccess.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="quickAccessTerminal">
       <source xml:lang="en">Switch Active Terminal</source>
@@ -980,6 +1501,11 @@ For example:
 
 `terminalCommand: 'git push --set-upstream origin ${group:branchName}';`
 </source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/terminalContrib/resizeDimensionsOverlay/common/terminalResizeDimensionsOverlayConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="resizeDimensionsOverlay.enabled">
+      <source xml:lang="en">Whether to show a visual overlay with the terminal's columns and rows when it is resized.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/sendSequence/browser/terminal.sendSequence.contribution" source-language="en" datatype="plaintext"><body>
@@ -1072,6 +1598,9 @@ For example:
     <trans-unit id="stickyScroll.enabled">
       <source xml:lang="en">Shows the current command at the top of the terminal. This feature requires [shell integration]({0}) to be activated. See {1}.</source>
     </trans-unit>
+    <trans-unit id="stickyScroll.ignoredCommands">
+      <source xml:lang="en">A list of commands that should not trigger sticky scroll. When a command from this list is detected, the sticky scroll overlay will be hidden.</source>
+    </trans-unit>
     <trans-unit id="stickyScroll.maxLineCount">
       <source xml:lang="en">Defines the maximum number of sticky lines to show. Sticky scroll lines will never exceed 40% of the viewport regardless of this setting.</source>
     </trans-unit>
@@ -1083,8 +1612,29 @@ For example:
     <trans-unit id="workbench.action.terminal.acceptSelectedSuggestionEnter">
       <source xml:lang="en">Accept Selected Suggestion (Enter)</source>
     </trans-unit>
+    <trans-unit id="workbench.action.terminal.changeSelectionMode.always">
+      <source xml:lang="en">Selection Mode: Always (Tab or Enter)</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.terminal.changeSelectionMode.always.tooltip">
+      <source xml:lang="en">Always select the top suggestion, Tab or Enter will accept a suggestion when visible. Activate to change.</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.terminal.changeSelectionMode.never">
+      <source xml:lang="en">Selection Mode: None</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.terminal.changeSelectionMode.never.tooltip">
+      <source xml:lang="en">Do not select the top suggestion until down is pressed, at which point Tab or Enter will accept the suggestion. Activate to change.</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.terminal.changeSelectionMode.partial">
+      <source xml:lang="en">Selection Mode: Partial (Tab)</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.terminal.changeSelectionMode.partial.tooltip">
+      <source xml:lang="en">Partially select the top suggestion, Tab will accept a suggestion when visible. Activate to change.</source>
+    </trans-unit>
     <trans-unit id="workbench.action.terminal.configureSuggestSettings">
       <source xml:lang="en">Configure</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.terminal.doNotShowSuggestOnType">
+      <source xml:lang="en">Don't show IntelliSense unless triggered explicitly. This disables the quick suggestions and suggest on trigger characters settings.</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.hideSuggestWidget">
       <source xml:lang="en">Hide Suggest Widget</source>
@@ -1109,6 +1659,9 @@ For example:
     </trans-unit>
     <trans-unit id="workbench.action.terminal.selectPrevSuggestion">
       <source xml:lang="en">Select the Previous Suggestion</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.terminal.showSuggestOnType">
+      <source xml:lang="en">Show IntelliSense while typing. This enables the quick suggestions for commands and arguments, and suggest on trigger characters settings.</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.suggestToggleDetails">
       <source xml:lang="en">Suggest Toggle Details</source>
@@ -1428,6 +1981,12 @@ To exclude an extension, set it to `false`
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/voice/browser/terminalVoice" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="terminalVoice.stopDictationHover">
+      <source xml:lang="en">Stop Dictation ({0})</source>
+    </trans-unit>
+    <trans-unit id="terminalVoice.stopDictationHoverNoKeybinding">
+      <source xml:lang="en">Stop Dictation</source>
+    </trans-unit>
     <trans-unit id="terminalVoiceTextInserted">
       <source xml:lang="en">{0} inserted</source>
     </trans-unit>
@@ -1447,6 +2006,9 @@ To exclude an extension, set it to `false`
     </trans-unit>
     <trans-unit id="terminal.voice.installSpeechExtension">
       <source xml:lang="en">Would you like to install 'VS Code Speech' extension from 'Microsoft'?</source>
+    </trans-unit>
+    <trans-unit id="voiceCategory">
+      <source xml:lang="en">Voice</source>
     </trans-unit>
     <trans-unit id="workbench.action.terminal.startDictation">
       <source xml:lang="en">Start Dictation in Terminal</source>

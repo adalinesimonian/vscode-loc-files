@@ -13,6 +13,9 @@
     <trans-unit id="promptOpenWith.configureDefault">
       <source xml:lang="en">Configure default editor for '{0}'...</source>
     </trans-unit>
+    <trans-unit id="promptOpenWith.configureDefaultDiff">
+      <source xml:lang="en">Configure default editor (diff only) for '{0}'...</source>
+    </trans-unit>
     <trans-unit id="promptOpenWith.currentDefault">
       <source xml:lang="en">Default</source>
     </trans-unit>
@@ -25,13 +28,25 @@
     <trans-unit id="promptOpenWith.placeHolder">
       <source xml:lang="en">Select editor for '{0}'</source>
     </trans-unit>
+    <trans-unit id="promptOpenWith.updateDefaultDiffPlaceHolder">
+      <source xml:lang="en">Select new default editor (diff only) for '{0}'</source>
+    </trans-unit>
     <trans-unit id="promptOpenWith.updateDefaultPlaceHolder">
       <source xml:lang="en">Select new default editor for '{0}'</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/services/editor/common/editorResolverService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="editor.diffEditorAssociations">
+      <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) to editors for diff views (for example `"*.md": "vscode.markdown.preview.editor"`). These override `workbench.editorAssociations` for diffs.</source>
+    </trans-unit>
     <trans-unit id="editor.editorAssociations">
       <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) to editors (for example `"*.hex": "hexEditor.hexedit"`). These have precedence over the default behavior.</source>
+    </trans-unit>
+    <trans-unit id="editor.hiddenEditorTypes">
+      <source xml:lang="en">Configure editor types that are hidden from the editor type picker. The active editor type remains visible.</source>
+    </trans-unit>
+    <trans-unit id="editor.markdownDefaultEditorInAgentsWindow">
+      <source xml:lang="en">Controls whether the Markdown editor is used as the default editor for Markdown files in the Agents window.</source>
     </trans-unit>
 </body></file>
 </xliff>
