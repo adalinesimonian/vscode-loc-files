@@ -157,6 +157,9 @@
     <trans-unit id="chatCompositeBar.reopenLastClosedChat">
       <source xml:lang="en">Reopen Last Closed Chat</source>
     </trans-unit>
+    <trans-unit id="chatCompositeBar.showChatTabs">
+      <source xml:lang="en">Show Chat Tabs</source>
+    </trans-unit>
     <trans-unit id="chatCompositeBar.sideChats">
       <source xml:lang="en">Side Chats</source>
     </trans-unit>
@@ -306,8 +309,14 @@
     <trans-unit id="showChatsPicker">
       <source xml:lang="en">Go to Chat in Session</source>
     </trans-unit>
+    <trans-unit id="showMultipleChatTabs">
+      <source xml:lang="en">Multiple</source>
+    </trans-unit>
     <trans-unit id="showSessionsPicker">
       <source xml:lang="en">Show Sessions Picker</source>
+    </trans-unit>
+    <trans-unit id="showSingleChat">
+      <source xml:lang="en">Single</source>
     </trans-unit>
     <trans-unit id="splitChatGroupDown">
       <source xml:lang="en">Split Chat Group Down</source>
@@ -381,6 +390,17 @@
     </trans-unit>
     <trans-unit id="sessions.notification.title">
       <source xml:lang="en">Session: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/automationCataloguePresentation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationsPartialUnavailable">
+      <source xml:lang="en">Some automations are unavailable.</source>
+    </trans-unit>
+    <trans-unit id="automationsUnavailableProvider">
+      <source xml:lang="en">Automations from {0} are unavailable.</source>
+    </trans-unit>
+    <trans-unit id="automationsUnavailableProviders">
+      <source xml:lang="en">Automations from these providers are unavailable: {0}.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/automationTemplates" source-language="en" datatype="plaintext"><body>
@@ -472,9 +492,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationsAccessibleView.partialLoading">
       <source xml:lang="en">Additional automations are loading.</source>
-    </trans-unit>
-    <trans-unit id="automationsAccessibleView.partialUnavailable">
-      <source xml:lang="en">Some automations are unavailable.</source>
     </trans-unit>
     <trans-unit id="automationsAccessibleView.pending">
       <source xml:lang="en">Pending</source>
@@ -772,9 +789,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsPartialLoading">
       <source xml:lang="en">Loading additional automations...</source>
     </trans-unit>
-    <trans-unit id="automationsPartialUnavailable">
-      <source xml:lang="en">Some automations are unavailable.</source>
-    </trans-unit>
     <trans-unit id="automationsTitle">
       <source xml:lang="en">Automations</source>
     </trans-unit>
@@ -852,6 +866,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="markAutomationRunSessionUnreadAction">
       <source xml:lang="en">Mark as Unread</source>
+    </trans-unit>
+    <trans-unit id="moreActions">
+      <source xml:lang="en">More Actions...</source>
     </trans-unit>
     <trans-unit id="moreActionsForAutomation">
       <source xml:lang="en">More Actions for {0}</source>

@@ -570,6 +570,9 @@
     <trans-unit id="newSessionPromptPlaceholder">
       <source xml:lang="en">Pitch your idea</source>
     </trans-unit>
+    <trans-unit id="newSessionWorkspacePicker.localQuickChat">
+      <source xml:lang="en">Local</source>
+    </trans-unit>
     <trans-unit id="newSessionWorkspacePicker.noWorkspaceDescription">
       <source xml:lang="en">Start without a backing workspace</source>
     </trans-unit>
@@ -890,6 +893,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionArtifacts" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionArtifacts.artifactRemoved">
+      <source xml:lang="en">{0} removed from session.</source>
+    </trans-unit>
     <trans-unit id="sessionArtifacts.commits">
       <source xml:lang="en">Commits</source>
     </trans-unit>
@@ -922,6 +928,12 @@
     </trans-unit>
     <trans-unit id="sessionArtifacts.pullRequests">
       <source xml:lang="en">Pull Requests</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.removeArtifact">
+      <source xml:lang="en">Remove {0} from Session</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.removeArtifactFailed">
+      <source xml:lang="en">Could not remove {0} from this session: {1}</source>
     </trans-unit>
     <trans-unit id="sessionArtifacts.resources">
       <source xml:lang="en">Resources</source>
@@ -1007,20 +1019,23 @@
     <trans-unit id="sessionChatPills.pullRequestOpen">
       <source xml:lang="en">open</source>
     </trans-unit>
-    <trans-unit id="sessionChatPills.pullRequestRemoved">
-      <source xml:lang="en">Pull request artifact removed from session.</source>
-    </trans-unit>
     <trans-unit id="sessionChatPills.pullRequestWithTitle">
       <source xml:lang="en">Pull Request #{0}: {1}</source>
     </trans-unit>
     <trans-unit id="sessionChatPills.pullRequests">
       <source xml:lang="en">Pull Requests</source>
     </trans-unit>
-    <trans-unit id="sessionChatPills.removePullRequest">
-      <source xml:lang="en">Remove Pull Request Artifact from Session</source>
+    <trans-unit id="sessionChatPills.referenceRemoved">
+      <source xml:lang="en">{0} removed from session.</source>
     </trans-unit>
-    <trans-unit id="sessionChatPills.removePullRequestFailed">
-      <source xml:lang="en">Could not remove pull request artifact: {0}</source>
+    <trans-unit id="sessionChatPills.removeIssue">
+      <source xml:lang="en">Remove Issue Reference from Session</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.removePullRequest">
+      <source xml:lang="en">Remove Pull Request Reference from Session</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.removeReferenceFailed">
+      <source xml:lang="en">Could not remove {0} from this session: {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionChatInputToolbarDebug" source-language="en" datatype="plaintext"><body>
@@ -1280,10 +1295,10 @@
       <source xml:lang="en">Type # in the chat input to attach context. Use #file to reference a file or folder, or #session to reference another agent session. Referencing a session together with the /troubleshoot command analyzes that session's logs instead of the current one. Accept a suggestion with Tab or Enter. Openable references appear as buttons above the input; activate one to open it, or use its Remove button to detach it.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.conversationsAsSessionView">
-      <source xml:lang="en">Chats open directly in the session view without a tab row. Side-by-side chat groups retain the session header.</source>
+      <source xml:lang="en">Chats open directly in the session view without a tab row. Side-by-side chat groups retain the session header. For sessions that support multiple chats, use Show Chat Tabs in the session overflow menu to show multiple tabs.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.conversationsAsTabs">
-      <source xml:lang="en">When multiple chats appear as tabs in a single group, the tab row replaces the session header and includes the session actions. Side-by-side chat groups retain the session header and keep their tab rows compact.</source>
+      <source xml:lang="en">When multiple chats appear as tabs in a single group, the tab row replaces the session header and includes the session actions. Side-by-side chat groups retain the session header and keep their tab rows compact. For sessions that support multiple chats, use Show Chat Tabs in the session overflow menu to show a single chat.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.copySessionLink">
       <source xml:lang="en">To copy a browser link that opens an Agent Host session in the Agents window, open the session's context menu and choose Copy Link.</source>
@@ -1408,8 +1423,8 @@
     <trans-unit id="sessionsChat.quickChat">
       <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. When consolidated remote workspaces are enabled, this opens the new-session composer, where you can choose No workspace. Otherwise, it starts a workspace-less chat directly. The Toggle Side Panel command is disabled for quick chats.</source>
     </trans-unit>
-    <trans-unit id="sessionsChat.removePullRequestArtifact">
-      <source xml:lang="en">For pull requests recorded as session artifacts, the pull request dropdown offers Remove Pull Request Artifact from Session on each row. Use Tab to reach its actions. When only one pull request is visible, use the pull request pill's context menu instead. Removal is immediate and only deletes the artifact record; it does not close the pull request or remove independent session associations.</source>
+    <trans-unit id="sessionsChat.removeSessionRecord">
+      <source xml:lang="en">Recorded artifacts and references offer Remove from Session for each row. Use Tab to reach row actions. When only one item is visible, use its pill hover actions or context menu instead. Removal waits for persistence and only deletes the session record; it does not delete the linked resource, close a pull request or issue, or remove independent session associations.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.renameChat">
       <source xml:lang="en">When Rename is available for a non-main chat, focus its nested row in the Sessions list and invoke Rename{0} or double-click its title to rename it inline. Type the new title, then press Enter to confirm or Escape to cancel. From the chat transcript or input, invoking Rename opens a prompt instead.</source>
@@ -1445,7 +1460,7 @@
       <source xml:lang="en">Activate a subagent pill in the chat transcript to open the subagent beside the current chat. With the keyboard, focus a pill and press Enter or Space; Alt+Enter also opens it to the side. You can also drag a pill to a chat group's edge to choose where it opens.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.syncChanges">
-      <source xml:lang="en">When available, Sync Changes appears with incoming and outgoing commit counts in the same repository toolbar as the worktree and branch controls below the input. Use Tab and the arrow keys to reach it, then Enter or Space to synchronize the session's repository. The action is disabled while synchronization is running.</source>
+      <source xml:lang="en">When available for a folder session with incoming or outgoing commits, Sync Changes appears with the commit counts in the same repository toolbar as the worktree and branch controls below the input. It is hidden when New Worktree is selected. Use Tab and the arrow keys to reach it, then Enter or Space to synchronize the session's repository. The action is disabled while synchronization is running.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.toggleSidePanel">
       <source xml:lang="en">Toggle the side panel (the editor area together with the auxiliary bar) open or closed{0}.</source>

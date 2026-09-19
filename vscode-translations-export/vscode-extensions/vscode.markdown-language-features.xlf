@@ -379,6 +379,14 @@ The left hand side (&apos;docs/*.md&apos;) is a glob that matches against a mark
     <trans-unit id="markdown.copyImage.title">
       <source xml:lang="en">Copy Image</source>
     </trans-unit>
+    <trans-unit id="markdown.editor.copyLinesDown.title">
+      <source xml:lang="en">Copy Line Down</source>
+      <note>Generated from @vscode/markdown-editor/commands. Do not edit manually.</note>
+    </trans-unit>
+    <trans-unit id="markdown.editor.copyLinesUp.title">
+      <source xml:lang="en">Copy Line Up</source>
+      <note>Generated from @vscode/markdown-editor/commands. Do not edit manually.</note>
+    </trans-unit>
     <trans-unit id="markdown.editor.deleteLineLeft.title">
       <source xml:lang="en">Delete All Left</source>
       <note>Generated from @vscode/markdown-editor/commands. Do not edit manually.</note>
@@ -389,6 +397,10 @@ The left hand side (&apos;docs/*.md&apos;) is a glob that matches against a mark
     </trans-unit>
     <trans-unit id="markdown.editor.deleteLeft.title">
       <source xml:lang="en">Delete Left</source>
+      <note>Generated from @vscode/markdown-editor/commands. Do not edit manually.</note>
+    </trans-unit>
+    <trans-unit id="markdown.editor.deleteLines.title">
+      <source xml:lang="en">Delete Line</source>
       <note>Generated from @vscode/markdown-editor/commands. Do not edit manually.</note>
     </trans-unit>
     <trans-unit id="markdown.editor.deleteRight.title">
@@ -473,6 +485,10 @@ The left hand side (&apos;docs/*.md&apos;) is a glob that matches against a mark
       <source xml:lang="en">Insert Tab</source>
       <note>Generated from @vscode/markdown-editor/commands. Do not edit manually.</note>
     </trans-unit>
+    <trans-unit id="markdown.editor.joinLines.title">
+      <source xml:lang="en">Join Lines</source>
+      <note>Generated from @vscode/markdown-editor/commands. Do not edit manually.</note>
+    </trans-unit>
     <trans-unit id="configuration.editor">
       <source xml:lang="en">Language Features</source>
     </trans-unit>
@@ -528,6 +544,14 @@ The left hand side (&apos;docs/*.md&apos;) is a glob that matches against a mark
     </trans-unit>
     <trans-unit id="markdown.editor.cursorVisualLineStart.title">
       <source xml:lang="en">Move Cursor to Visual Line Start</source>
+      <note>Generated from @vscode/markdown-editor/commands. Do not edit manually.</note>
+    </trans-unit>
+    <trans-unit id="markdown.editor.moveLinesDown.title">
+      <source xml:lang="en">Move Line Down</source>
+      <note>Generated from @vscode/markdown-editor/commands. Do not edit manually.</note>
+    </trans-unit>
+    <trans-unit id="markdown.editor.moveLinesUp.title">
+      <source xml:lang="en">Move Line Up</source>
       <note>Generated from @vscode/markdown-editor/commands. Do not edit manually.</note>
     </trans-unit>
     <trans-unit id="configuration.pasteUrlAsFormattedLink.never">
@@ -679,6 +703,10 @@ The left hand side (&apos;docs/*.md&apos;) is a glob that matches against a mark
     </trans-unit>
     <trans-unit id="configuration.markdown.updateLinksOnFileMove.include.property">
       <source xml:lang="en">The glob pattern to match file paths against. Set to true to enable the pattern.</source>
+    </trans-unit>
+    <trans-unit id="markdown.editor.toggleLocked.title">
+      <source xml:lang="en">Toggle Editing/Locked Mode</source>
+      <note>Generated from @vscode/markdown-editor/commands. Do not edit manually.</note>
     </trans-unit>
     <trans-unit id="markdown.togglePreview.title">
       <source xml:lang="en">Toggle Preview</source>

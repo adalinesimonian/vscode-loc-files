@@ -1918,7 +1918,7 @@ User: {2}</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostModePickerPresentation" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostModePicker.accessibilityHelp">
-      <source xml:lang="en">When the experimental combined picker is enabled for a Copilot Agent Host session, Tab reaches separate Mode and Permissions buttons. Press Enter or Space on Mode to open the picker with Agent Mode expanded, or on Permissions to open it with Permissions expanded. Each section header shows its current selection, and the opened section initially focuses that selection. Press Enter or Space on a section header to expand or collapse it, or use Right Arrow to expand and Left Arrow to collapse. Hover or keyboard navigation moves the single row highlight without changing the selection until you activate a choice. Focus the Permissions header and press Tab to reach Configure Permissions, which opens the related settings. Use Up and Down Arrow to navigate and Enter to select a mode, permission level, or terminal sandboxing. Escape closes the picker and returns focus to the button that opened it.</source>
+      <source xml:lang="en">When the experimental combined picker is enabled for a Copilot Agent Host session, Tab reaches separate Mode and Permissions buttons. Press Enter or Space on Mode to open the picker with Agent Mode expanded, or on Permissions to open it with Permissions expanded. Each section header shows its current selection, and the opened section initially focuses that selection. Press Enter or Space on a section header to expand or collapse it, or use Right Arrow to expand and Left Arrow to collapse. Hover or keyboard navigation moves the single row highlight without changing the selection until you activate a choice. Focus the Permissions header and press Tab to reach Configure Permissions, which opens the related settings. Use Up and Down Arrow to navigate and Enter to select a mode, permission level, or terminal sandboxing. Assisted permissions is experimental and evaluates risk before running tools. Enterprise policy can disable Assisted permissions and Allow all. Escape closes the picker and returns focus to the button that opened it.</source>
     </trans-unit>
     <trans-unit id="agentHostModePicker.agentMode">
       <source xml:lang="en">Agent mode</source>
@@ -1934,6 +1934,9 @@ User: {2}</source>
     </trans-unit>
     <trans-unit id="agentHostModePicker.currentMode">
       <source xml:lang="en">Current mode: {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHostModePicker.experimental">
+      <source xml:lang="en">Experimental</source>
     </trans-unit>
     <trans-unit id="agentHostModePicker.manual">
       <source xml:lang="en">Manual</source>
@@ -6207,9 +6210,6 @@ This setting is only used by the Local agent harness.</source>
     </trans-unit>
     <trans-unit id="chat.artifacts.rules.onlyShowGroup">
       <source xml:lang="en">When true, show only the group header instead of individual items.</source>
-    </trans-unit>
-    <trans-unit id="chat.assistedPermissions.enabled">
-      <source xml:lang="en">Controls whether Assisted permissions is shown in Agent Host approval pickers.</source>
     </trans-unit>
     <trans-unit id="chat.autoReply.description">
       <source xml:lang="en">Automatically skip question carousels by telling the agent that the user is not available and to use its best judgment. This is an advanced setting and can lead to unintended choices or actions based on incomplete context.</source>
@@ -10720,6 +10720,11 @@ Type anything below to get started!</source>
       <source xml:lang="en">Turn File Changes</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/editorChatUsage.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="savingEditorChatUsage">
+      <source xml:lang="en">Saving editor chat usage</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/enablementActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="disable">
       <source xml:lang="en">Disable</source>
@@ -13516,6 +13521,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.working.fun.1">
       <source xml:lang="en">Bribing the hamster</source>
     </trans-unit>
+    <trans-unit id="chat.working.fun.10">
+      <source xml:lang="en">Stirring the solution</source>
+    </trans-unit>
     <trans-unit id="chat.working.fun.2">
       <source xml:lang="en">Reticulating splines</source>
     </trans-unit>
@@ -13525,8 +13533,29 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.working.fun.4">
       <source xml:lang="en">Communing with the codebase</source>
     </trans-unit>
+    <trans-unit id="chat.working.fun.5">
+      <source xml:lang="en">Letting it cook</source>
+    </trans-unit>
+    <trans-unit id="chat.working.fun.6">
+      <source xml:lang="en">Thanking all the fish</source>
+    </trans-unit>
+    <trans-unit id="chat.working.fun.7">
+      <source xml:lang="en">Stabilizing the wormhole</source>
+    </trans-unit>
+    <trans-unit id="chat.working.fun.8">
+      <source xml:lang="en">Baking the ideas</source>
+    </trans-unit>
+    <trans-unit id="chat.working.fun.9">
+      <source xml:lang="en">Consulting the oracle</source>
+    </trans-unit>
     <trans-unit id="chat.working.fun.minecraft.1">
       <source xml:lang="en">Mining diamonds</source>
+    </trans-unit>
+    <trans-unit id="chat.working.fun.minecraft.2">
+      <source xml:lang="en">Digging straight down</source>
+    </trans-unit>
+    <trans-unit id="chat.working.fun.minecraft.3">
+      <source xml:lang="en">Mining at night</source>
     </trans-unit>
     <trans-unit id="chat.working.fun.ms.1">
       <source xml:lang="en">Summoning Clippy</source>

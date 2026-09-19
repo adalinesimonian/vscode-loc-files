@@ -441,7 +441,7 @@ A keybinding</note>
 </body></file>
   <file original="src/vs/platform/agentHost/common/agentHostSchema" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.config.activeAgentTitleGeneration.description">
-      <source xml:lang="en">Whether the active agent names sessions and chats with rename tools instead of utility-model title generation.</source>
+      <source xml:lang="en">Whether the active agent names sessions and chats with rename tools instead of immediate utility-model title generation. Deferred title generation takes precedence. Changes apply to new sessions.</source>
     </trans-unit>
     <trans-unit id="agentHost.config.activeAgentTitleGeneration.title">
       <source xml:lang="en">Active Agent Title Generation</source>
@@ -451,6 +451,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.artifactTools.title">
       <source xml:lang="en">Artifact Tools</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.artifactToolsCompactPrompts.description">
+      <source xml:lang="en">Whether artifact tools use compact prompt wording instead of the original guidance. Does not change tool availability or deferral.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.artifactToolsCompactPrompts.title">
+      <source xml:lang="en">Compact Artifact Tool Prompts</source>
     </trans-unit>
     <trans-unit id="agentHost.config.autoApprovePolicyRestricted">
       <source xml:lang="en">Auto Approve Policy Restricted</source>
@@ -508,6 +514,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.copilotMultiRootEnabled.title">
       <source xml:lang="en">Copilot Multiple Working Directories</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.deferredTitleGeneration.description">
+      <source xml:lang="en">Seed titles immediately and refine them in the background if the first response turn completes successfully, without asking the active agent to name chats. Explicit rename tools remain available. Overrides active agent title generation for new sessions; existing sessions and their chats retain their strategy.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.deferredTitleGeneration.title">
+      <source xml:lang="en">Deferred Title Generation</source>
     </trans-unit>
     <trans-unit id="agentHost.config.disableRepoInfoTelemetry.description">
       <source xml:lang="en">Whether repository information telemetry is disabled for Agent Host sessions.</source>
@@ -818,10 +830,13 @@ A keybinding</note>
       <source xml:lang="en">When enabled, Copilot agent-host sessions advertise support for multiple working directories, so a session created in a multi-root workspace can span every workspace folder. Experimental; newly created sessions pick up a change without restarting the agent host.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.experimental.activeAgentTitleGeneration">
-      <source xml:lang="en">When enabled, the active agent names new sessions and chats using rename tools. When disabled, a utility model generates titles. Changes apply to sessions and chats created afterward.</source>
+      <source xml:lang="en">When enabled, the active agent names new sessions and chats using rename tools. When disabled, a utility model generates titles immediately. Deferred title generation takes precedence. Changes apply to new sessions; existing sessions and their chats retain their strategy.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.experimental.autoAttachPullRequests">
       <source xml:lang="en">Controls whether the Agent Host automatically discovers and associates a pull request for the currently checked-out branch. When disabled, only pull requests recorded by the agent as artifacts or explicitly selected or created through session actions are considered.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.experimental.deferredTitleGeneration">
+      <source xml:lang="en">Seed titles immediately and refine them in the background if the first response turn completes successfully, without asking the active agent to name chats. Explicit rename tools remain available. Overrides active agent title generation for new sessions; existing sessions and their chats retain their strategy.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.experimental.markdownPlanRichLinks">
       <source xml:lang="en">When enabled, agents receive guidance for using rich links to issues, pull requests, commits, sessions, and chats, plus running task markers, when creating or editing Markdown plan documents.</source>
@@ -942,9 +957,6 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="chat.agentMerge.resolveConflicts">
       <source xml:lang="en">Controls whether enabled Agent Merge sessions ask the agent to update branches that are behind or resolve merge conflicts.</source>
-    </trans-unit>
-    <trans-unit id="chat.artifactTools.enabled">
-      <source xml:lang="en">When enabled, agents can record artifacts — pull requests, issues, commits, websites, files and other resources — which are surfaced above the chat input.</source>
     </trans-unit>
     <trans-unit id="chatAgentHostStarterConfigurationTitle">
       <source xml:lang="en">Chat Agent Host Starter</source>
@@ -1126,6 +1138,14 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="copilot.modelContextSize.title">
       <source xml:lang="en">Context Size</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/artifactToolsConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.artifactTools.compactPrompts">
+      <source xml:lang="en">Uses compact artifact tool guidance instead of the original wording. Does not change tool availability or deferral. Start a new chat to compare prompt formats.</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactTools.enabled">
+      <source xml:lang="en">When enabled, agents can record artifacts — pull requests, issues, commits, websites, files and other resources — which are surfaced above the chat input.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/autoModeTiers" source-language="en" datatype="plaintext"><body>
@@ -2686,6 +2706,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotAgent.description">
       <source xml:lang="en">Copilot SDK agent running in the local agent host process</source>
+    </trans-unit>
+    <trans-unit id="copilotAgent.modelNotAvailable">
+      <source xml:lang="en">Model '{0}' is not available.</source>
     </trans-unit>
     <trans-unit id="copilotAgent.pluginParseError">
       <source xml:lang="en">Error parsing plugin.</source>
@@ -4611,6 +4634,9 @@ OS: {10}</source>
     <trans-unit id="fileExists">
       <source xml:lang="en">File already exists</source>
     </trans-unit>
+    <trans-unit id="fileIsDirectory">
+      <source xml:lang="en">File is a directory</source>
+    </trans-unit>
     <trans-unit id="fileMoveCopyErrorExists">
       <source xml:lang="en">File at target already exists and thus will not be moved/copied to unless overwrite is specified</source>
     </trans-unit>
@@ -4619,6 +4645,9 @@ OS: {10}</source>
     </trans-unit>
     <trans-unit id="fileNotExists">
       <source xml:lang="en">File does not exist</source>
+    </trans-unit>
+    <trans-unit id="fileNotRegular">
+      <source xml:lang="en">File is not a regular file</source>
     </trans-unit>
     <trans-unit id="moveError">
       <source xml:lang="en">Unable to move '{0}' into '{1}' ({2}).</source>
