@@ -125,7 +125,7 @@
       <source xml:lang="en">Delete Chat</source>
     </trans-unit>
     <trans-unit id="renameChat">
-      <source xml:lang="en">Rename</source>
+      <source xml:lang="en">Rename...</source>
     </trans-unit>
     <trans-unit id="renameChat.aria">
       <source xml:lang="en">Rename chat</source>
@@ -412,6 +412,9 @@
     </trans-unit>
     <trans-unit id="sessionRemoteHost.retry">
       <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="sessionRemoteHost.showLog">
+      <source xml:lang="en">Show Log</source>
     </trans-unit>
     <trans-unit id="sessionRemoteHost.start">
       <source xml:lang="en">Start {0}</source>
@@ -915,6 +918,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/services/sessions/browser/sessionsManagementService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="newSession.sendFailed">
+      <source xml:lang="en">Failed to start session: {0}</source>
+    </trans-unit>
     <trans-unit id="sessions.cancelCurrentRequest.loadFailed">
       <source xml:lang="en">Failed to load chat session for cancellation.</source>
     </trans-unit>

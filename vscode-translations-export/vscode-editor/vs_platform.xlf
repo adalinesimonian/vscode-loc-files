@@ -2779,6 +2779,23 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">The /{0} command requires selecting a subcommand. Available options: {1}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotSandboxPolicyDisplay" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotSandboxPolicy.title">
+      <source xml:lang="en">Effective sandbox policy</source>
+    </trans-unit>
+    <trans-unit id="copilotSlashCommand.openSandboxPolicy">
+      <source xml:lang="en">Open Sandbox Policy</source>
+    </trans-unit>
+    <trans-unit id="copilotSlashCommand.sandboxPolicy">
+      <source xml:lang="en">Show the effective sandbox policy for this session</source>
+    </trans-unit>
+    <trans-unit id="copilotSlashCommand.sandboxPolicyNoArguments">
+      <source xml:lang="en">The /sandbox-policy command does not accept arguments.</source>
+    </trans-unit>
+    <trans-unit id="copilotSlashCommand.sandboxPolicyUnavailable">
+      <source xml:lang="en">The SDK did not return a sandbox policy.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSystemNotification" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.copilot.systemNotification.agentCompleted">
       <source xml:lang="en">Background agent {0} completed</source>

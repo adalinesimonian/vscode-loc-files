@@ -139,6 +139,12 @@
     <trans-unit id="chat.agentHostApprovalsPicker">
       <source xml:lang="en">When an agent session exposes approval presets, use Tab to reach the Approvals picker and choose how it handles workspace access, commands, and the internet.</source>
     </trans-unit>
+    <trans-unit id="chat.agentHostSandboxPolicy">
+      <source xml:lang="en">In Copilot agent-host sessions, use /sandbox-policy to view the effective sandbox policy. In the response, use Tab to focus Open Sandbox Policy and Enter to open the formatted report.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentsParallelWork">
+      <source xml:lang="en">When another Agent Host session is running, a new Agent Host chat may show an invitation to run agents side by side. Only one chat input shows the invitation at a time. Use Tab to reach Open Agents Window, Ignore, or Dismiss notification. Open Agents Window copies the current prompt and attachments from that input without sending them or clearing it. An existing draft in the Agents Window is kept. Ignore turns off future invitations; Dismiss notification only hides the invitation for this chat until the window reloads.</source>
+    </trans-unit>
     <trans-unit id="chat.announcement">
       <source xml:lang="en">Chat responses will be announced as they come in. A response will indicate the number of code blocks, if any, and then the rest of the response.</source>
     </trans-unit>
@@ -212,7 +218,7 @@
       <source xml:lang="en">To paste the clipboard as plain text, without converting it to Markdown or storing it as an attachment, invoke Paste as Text{0}.</source>
     </trans-unit>
     <trans-unit id="chat.persistentProgress">
-      <source xml:lang="en">The chat.experimental.persistentProgress setting defaults to Off, preserving the original thinking and progress UI. Choosing Weave, Draw, Orbit and Lock, Accordion, or Dial Rotation keeps a working progress indicator at the bottom until the response finishes. Tool chains stay expanded without a group header or an internal scrolling limit. Completed responses still follow chat.agent.collapseCompletedResponses; expanding the completed-steps disclosure reveals those same tool chains. Reasoning appears separately as collapsible previews; focus a reasoning header and press Enter or Space to expand or collapse it. Standalone tools keep their decorative icons. Terminal activity animations and subagent pills are unchanged. Reduced motion keeps the indicator visible without animation. Spoken progress updates are controlled by accessibility.verboseChatProgressUpdates.</source>
+      <source xml:lang="en">The chat.experimental.persistentProgress setting defaults to Off, preserving the original thinking and progress UI. Choosing Weave, Draw, Orbit and Lock, Accordion, or Dial Rotation keeps a working progress indicator at the bottom until the response finishes. Tool chains stay expanded without a group header or an internal scrolling limit. Completed responses still follow chat.agent.collapseCompletedResponses; expanding the completed-steps disclosure reveals those same tool chains. Reasoning appears separately as collapsible previews; focus a reasoning header and press Enter or Space to expand or collapse it. Standalone tools keep their decorative icons. Terminal activity animations and subagent pills are unchanged. While the response waits on subagents or background agents, the indicator reports how many subagents it is waiting for; while it waits on a background terminal, it reports that it is waiting for terminal output. Reduced motion keeps the indicator visible without animation. Spoken progress updates are controlled by accessibility.verboseChatProgressUpdates.</source>
     </trans-unit>
     <trans-unit id="chat.planReviewEditor">
       <source xml:lang="en">When a plan is ready for review, open it from the chat response to edit the plan and add line comments. Use the editor toolbar to navigate, clear, or submit feedback. Choose an implementation action from the plan review in Chat.</source>
@@ -237,6 +243,9 @@
     </trans-unit>
     <trans-unit id="chat.sessionDoneNudge">
       <source xml:lang="en">A mark as done suggestion appears above the chat input when the session's pull requests are merged. Use Tab or Shift+Tab to reach Mark as Done, Configure Automatic Cleanup, or Dismiss Mark as Done Suggestion, then press Enter or Space. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Mark as Done" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismissing the suggestion, including with Escape while it is focused, returns to the chat input. Marking the session as done hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Done" section of the sessions list. You can restore it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by restoring the session.</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionPreparation">
+      <source xml:lang="en">While a session is being prepared, a progress message appears in the transcript. Use Tab or Shift+Tab to reach Show Log, when available, and press Enter or Space to open the output log. Use Stop to cancel preparation. The chat input and attachment controls are disabled until preparation finishes.</source>
     </trans-unit>
     <trans-unit id="chat.sessionStatusPills">
       <source xml:lang="en">When session status pills appear above the input, use Tab to focus the toolbar, then use the left and right arrow keys to move between pills. Press Enter or Space to activate a pill. Open the context menu{0} to choose which optional pills are visible. Pull Requests Options lets you show all pull requests or only open and draft ones, remembered across sessions. If every pull request is filtered out, these options are also available in any other pill's context menu or the toolbar context menu.</source>
@@ -3014,6 +3023,12 @@ User: {2}</source>
     </trans-unit>
     <trans-unit id="autoMarkAsDoneMergedSessions.description">
       <source xml:lang="en">Controls the number of inactive days before agent sessions with a merged pull request are automatically marked as done. Marking a session as done safely removes its eligible worktree. Permanent deletion is controlled separately by {0}. Set to 0 to disable automatically marking sessions as done. The recommended value is 15.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentsParallelWorkBanner.enabled">
+      <source xml:lang="en">Show an invitation to work in parallel in the Agents Window when starting a new Agent Host chat while another Agent Host session is running.</source>
+    </trans-unit>
+    <trans-unit id="chat.openInAgentsWindow.transferDraft">
+      <source xml:lang="en">Copy the prompt and attachments from a new chat when opening the Agents Window. Existing drafts in the Agents Window are preserved.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.unifiedWorkspacePicker.enabled">
       <source xml:lang="en">Controls whether the Agents Window uses the unified workspace picker, which combines GitHub and remote workspaces, provides search, and, when supported, allows creating sessions with no workspace.</source>
@@ -14335,6 +14350,15 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="persistentProgress.waitingForResponse">
       <source xml:lang="en">Waiting for your response</source>
     </trans-unit>
+    <trans-unit id="persistentProgress.waitingForSubagent">
+      <source xml:lang="en">Waiting for 1 subagent</source>
+    </trans-unit>
+    <trans-unit id="persistentProgress.waitingForSubagents">
+      <source xml:lang="en">Waiting for {0} subagents</source>
+    </trans-unit>
+    <trans-unit id="persistentProgress.waitingForTerminal">
+      <source xml:lang="en">Waiting for terminal output</source>
+    </trans-unit>
     <trans-unit id="queuedDivider">
       <source xml:lang="en">Queued</source>
     </trans-unit>
@@ -15752,6 +15776,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chatSpeechToTextUsesMai">
       <source xml:lang="en">True when dictation uses the MAI cloud transcription backend.</source>
+    </trans-unit>
+    <trans-unit id="chatTranscriptProgressActive">
+      <source xml:lang="en">True while cancellable transcript preparation is running.</source>
     </trans-unit>
     <trans-unit id="enableRemoteCodingAgentPromptFileOverlay">
       <source xml:lang="en">Whether the remote coding agent prompt file overlay feature is enabled</source>
@@ -18240,6 +18267,18 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/electron-browser/agentSessions/agentSessionsActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsParallelWork.ignore">
+      <source xml:lang="en">Ignore</source>
+    </trans-unit>
+    <trans-unit id="agentsParallelWork.ignoreTooltip">
+      <source xml:lang="en">Don't Show Again</source>
+    </trans-unit>
+    <trans-unit id="agentsParallelWork.open">
+      <source xml:lang="en">Open Agents Window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindow.unsupportedDraftAttachment">
+      <source xml:lang="en">This draft contains context that is only available in this window. Your prompt and attachments have been kept here instead of copied to the Agents Window.</source>
+    </trans-unit>
     <trans-unit id="chat.agentsHandoff.tip.action">
       <source xml:lang="en">Open in Agents Window</source>
     </trans-unit>
@@ -18266,6 +18305,12 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="chat.agentsHandoff.tip.mute">
       <source xml:lang="en">Don't Show Again</source>
+    </trans-unit>
+    <trans-unit id="chat.agentsParallelWorkBanner.defaultDescription">
+      <source xml:lang="en">Run multiple tasks in the Agents Window, in one workspace or across projects.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentsParallelWorkBanner.defaultTitle">
+      <source xml:lang="en">Run agents side by side</source>
     </trans-unit>
     <trans-unit id="openAgentsWindow">
       <source xml:lang="en">Open Agents Window</source>

@@ -398,8 +398,17 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/devContainerAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="devContainerAgentHost.initializing">
+      <source xml:lang="en">Initializing Agent Host session...</source>
+    </trans-unit>
     <trans-unit id="devContainerAgentHost.noAgents">
       <source xml:lang="en">The Dev Container Agent Host did not advertise any agents.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.preparing">
+      <source xml:lang="en">Preparing Dev Container...</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.preparingWorktree">
+      <source xml:lang="en">Preparing worktree for Dev Container...</source>
     </trans-unit>
     <trans-unit id="devContainerAgentHost.providerUnavailable">
       <source xml:lang="en">Dev Container sessions provider '{0}' is not available.</source>
@@ -1128,6 +1137,9 @@
     </trans-unit>
     <trans-unit id="devContainerAgentHost.invalidWorkspaceUri">
       <source xml:lang="en">Dev Container workspace URI must use the '{0}' scheme and '{1}' authority.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.reconnectionFailed">
+      <source xml:lang="en">The Dev Container Agent Host disconnected while reconnecting.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/devContainerSource" source-language="en" datatype="plaintext"><body>
