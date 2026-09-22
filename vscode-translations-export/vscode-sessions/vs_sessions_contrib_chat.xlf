@@ -263,6 +263,15 @@
     <trans-unit id="chat.agentSessions.setBackground.title">
       <source xml:lang="en">Set Chat Background</source>
     </trans-unit>
+    <trans-unit id="sessions.chat.experimental.newSessionComposerLayout">
+      <source xml:lang="en">Controls whether new and running session composers use the experimental input control layout and groups new-session workspace, repository, and harness controls in a footer. This setting only applies when the unified workspace picker is enabled.</source>
+    </trans-unit>
+    <trans-unit id="sessions.focusNewSessionHarnessPicker">
+      <source xml:lang="en">Focus Harness Picker</source>
+    </trans-unit>
+    <trans-unit id="sessions.focusNewSessionWorkspacePicker">
+      <source xml:lang="en">Focus Workspace Picker</source>
+    </trans-unit>
     <trans-unit id="sessions.newSession.label">
       <source xml:lang="en">New Session</source>
     </trans-unit>
@@ -581,6 +590,9 @@
     <trans-unit id="newSessionFeedback.reveal">
       <source xml:lang="en">Reveal</source>
     </trans-unit>
+    <trans-unit id="newSessionHarnessPicker.tooltip">
+      <source xml:lang="en">Choose the harness for the new session</source>
+    </trans-unit>
     <trans-unit id="newSessionPromptPlaceholder">
       <source xml:lang="en">Pitch your idea</source>
     </trans-unit>
@@ -589,6 +601,9 @@
     </trans-unit>
     <trans-unit id="newSessionWorkspacePicker.noWorkspaceDescription">
       <source xml:lang="en">Start without a backing workspace</source>
+    </trans-unit>
+    <trans-unit id="newSessionWorkspacePicker.remoteQuickChat">
+      <source xml:lang="en">Chat [{0}]</source>
     </trans-unit>
     <trans-unit id="newSessionWorkspacePicker.workspace">
       <source xml:lang="en">Workspace</source>
@@ -1315,7 +1330,7 @@
       <source xml:lang="en">Type # in the chat input to attach context. Use #file to reference a file or folder, or #session to reference another agent session. Referencing a session together with the /troubleshoot command analyzes that session's logs instead of the current one. Accept a suggestion with Tab or Enter. Openable references appear as buttons above the input; activate one to open it, or use its Remove button to detach it.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.conversationsAsSessionView">
-      <source xml:lang="en">Chats open directly in the session view without a tab row. Side-by-side chat groups retain the session header. For sessions that support multiple chats, use Show Chat Tabs in the session overflow menu to show multiple tabs.</source>
+      <source xml:lang="en">Chats open directly in the session view without a tab row. Side-by-side chats each show a session header. Pin keeps that chat visible when another chat opens. Close removes that chat group. Closing the last group closes the session from the grid. Non-main chats are hidden and can be reopened later. For sessions that support multiple chats, use Show Chat Tabs in the session overflow menu to show multiple tabs.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.conversationsAsTabs">
       <source xml:lang="en">When multiple chats appear as tabs in a single group, the tab row replaces the session header and includes the session actions. Side-by-side chat groups retain the session header and keep their tab rows compact. For sessions that support multiple chats, use Show Chat Tabs in the session overflow menu to show a single chat.</source>
@@ -1327,7 +1342,7 @@
       <source xml:lang="en">When a session was created by another session, focus it in the Sessions list and use the Show Hover command{0}. Move focus to the Created by link, then press Enter or Space to open the creator session.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.customizations">
-      <source xml:lang="en">Focus the Customizations entry in the left sidebar{0}.</source>
+      <source xml:lang="en">Focus the Chat Customizations section at the bottom of the left sidebar{0}.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.delegatedMessage">
       <source xml:lang="en">Messages sent by another session or chat show a source annotation above the message. Press Tab to focus the annotation, then press Enter or Space to open the source chat.</source>
@@ -1412,6 +1427,9 @@
     </trans-unit>
     <trans-unit id="sessionsChat.navigatePreviousSession">
       <source xml:lang="en">Navigate to the previous session in the list{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.newSessionPickers">
+      <source xml:lang="en">In a new-session composer, open and focus the workspace picker{0} or the harness picker{1}. Focus either picker control and open its context menu{2} to configure its keybinding.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.openPullRequest">
       <source xml:lang="en">When the session is associated with GitHub pull requests, a status pill above the chat input shows the pull request number or count. Activate it to open a single pull request or choose from the associated pull requests{0}.</source>

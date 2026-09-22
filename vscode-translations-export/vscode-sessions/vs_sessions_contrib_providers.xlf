@@ -668,9 +668,46 @@
       <source xml:lang="en">GitHub Sandboxes</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxLegacySessionPreparation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sandbox.invalidCloneResult">
+      <source xml:lang="en">The cloud sandbox returned an invalid repository cloning response.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.invalidProjectDirectory">
+      <source xml:lang="en">The cloud sandbox did not return a usable repository directory.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.invalidRepository">
+      <source xml:lang="en">The cloud sandbox requires a GitHub repository URL without credentials, a query, or a fragment.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectChanged">
+      <source xml:lang="en">The cloud sandbox returned a different repository.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectFailed">
+      <source xml:lang="en">Repository cloning failed.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectFailedWithReason">
+      <source xml:lang="en">Repository cloning failed: {0}</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectManagementUnavailable">
+      <source xml:lang="en">The cloud sandbox no longer advertises repository preparation.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectRemoved">
+      <source xml:lang="en">The repository was removed from the cloud sandbox while it was being prepared.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectStateUnavailable">
+      <source xml:lang="en">The cloud sandbox's project state is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectTimedOut">
+      <source xml:lang="en">Repository cloning did not finish within five minutes.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxReadOnlySessionHandler" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cloudSandbox.truncatedHistory">
       <source xml:lang="en">This conversation is incomplete. Its recorded history ends mid-response, so the last exchange may be missing.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.sessionNotFound">
+      <source xml:lang="en">Sandbox session not found.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/connectionDiagnostics.contribution" source-language="en" datatype="plaintext"><body>

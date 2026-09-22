@@ -1332,12 +1332,6 @@ A keybinding</note>
     <trans-unit id="agentHost.config.skillCharBudget.title">
       <source xml:lang="en">Skill Character Budget</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.subagentModelGuidance.description">
-      <source xml:lang="en">When enabled, Copilot SDK sessions instruct the model to keep subagents on their default model unless the user explicitly names another one.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.subagentModelGuidance.title">
-      <source xml:lang="en">Subagent Model Guidance</source>
-    </trans-unit>
     <trans-unit id="agentHost.config.toolSearchDeferThreshold.description">
       <source xml:lang="en">Minimum number of tools before MCP and external tools are deferred behind tool search. Set to 0 to always defer external tools. Only effective when tool search is enabled.</source>
     </trans-unit>
@@ -2852,6 +2846,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilot.permission.mcp.defaultTool">
       <source xml:lang="en">MCP Tool</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.mcp.invocation">
+      <source xml:lang="en">{0}: {1}</source>
     </trans-unit>
     <trans-unit id="copilot.permission.mcp.title">
       <source xml:lang="en">Allow tool from {0}?</source>

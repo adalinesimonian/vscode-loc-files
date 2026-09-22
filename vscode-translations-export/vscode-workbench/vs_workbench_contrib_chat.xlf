@@ -1925,6 +1925,48 @@ User: {2}</source>
       <source xml:lang="en">{0}% discount</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostMcpServerSupportScope" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcpCompatibilityDefinitionNotLoaded">
+      <source xml:lang="en">Compatibility cannot be determined because the server definition has not loaded.
+Wait for MCP discovery to finish, then refresh this view. If the issue persists, check the server configuration for errors.</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilityDevelopmentModeIgnored">
+      <source xml:lang="en">MCP development mode is not supported by the Copilot harness.
+Remove the development mode setting and restart the server manually after configuration changes.</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilityEnvironmentFileIgnored">
+      <source xml:lang="en">Environment files are not supported by the Copilot harness.
+Move required variables from the environment file into the server env configuration.</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilityLaunchNotRepresentable">
+      <source xml:lang="en">The launch configuration for this server is not supported by the Copilot harness.
+Add a command for a local server or a valid URL for a remote server.</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilityOAuthClientConfigurationIgnored">
+      <source xml:lang="en">Custom OAuth client configuration is not supported by the Copilot harness.
+Remove the custom OAuth client configuration and sign in when the Copilot harness prompts for authentication.</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilityRequiresUserInteraction">
+      <source xml:lang="en">Input and command variables are not supported by the Copilot harness.
+Replace them with concrete values or environment variables defined directly in the server configuration.</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilitySandboxConfigurationIgnored">
+      <source xml:lang="en">Per-server sandbox settings are not supported by the Copilot harness.
+Remove the server sandbox setting to use the MCP server.</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilitySourceUnknown">
+      <source xml:lang="en">Compatibility cannot be determined because the server configuration source is unknown.
+Move the server configuration to a recognized location such as the workspace root .mcp.json file.</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilityUnresolvedConfiguration">
+      <source xml:lang="en">Unresolved configuration, environment, or workspace variables are not supported by the Copilot harness.
+Define the missing variables or replace them with concrete values.</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilityUnsupportedSourceLocation">
+      <source xml:lang="en">The current configuration location for this server is not supported by the Copilot harness.
+Move the server configuration to the workspace root .mcp.json file.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostModePickerPresentation" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostModePicker.accessibilityHelp">
       <source xml:lang="en">When the experimental combined picker is enabled for a Copilot Agent Host session, Tab reaches separate Mode and Permissions buttons. Press Enter or Space on Mode to open the picker with Agent Mode expanded, or on Permissions to open it with Permissions expanded. Each section header shows its current selection, and the opened section initially focuses that selection. Press Enter or Space on a section header to expand or collapse it, or use Right Arrow to expand and Left Arrow to collapse. Hover or keyboard navigation moves the single row highlight without changing the selection until you activate a choice. Focus the Permissions header and press Tab to reach Configure Permissions, which opens the related settings. Use Up and Down Arrow to navigate and Enter to select a mode, permission level, or terminal sandboxing. Assisted permissions is experimental and evaluates risk before running tools. Enterprise policy can disable Assisted permissions and Allow all. Escape closes the picker and returns focus to the button that opened it.</source>
@@ -2292,6 +2334,9 @@ User: {2}</source>
     </trans-unit>
     <trans-unit id="agentHost.elicit.url.title">
       <source xml:lang="en">Authorization Required</source>
+    </trans-unit>
+    <trans-unit id="agentHost.mcpServer.origin">
+      <source xml:lang="en">{0} (MCP Server)</source>
     </trans-unit>
     <trans-unit id="agentHost.otherClientTool.running">
       <source xml:lang="en">Running {0} on another client...</source>
@@ -3023,6 +3068,9 @@ User: {2}</source>
     </trans-unit>
     <trans-unit id="autoMarkAsDoneMergedSessions.description">
       <source xml:lang="en">Controls the number of inactive days before agent sessions with a merged pull request are automatically marked as done. Marking a session as done safely removes its eligible worktree. Permanent deletion is controlled separately by {0}. Set to 0 to disable automatically marking sessions as done. The recommended value is 15.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentsHandoffTip.delaySeconds">
+      <source xml:lang="en">Controls the delay, in seconds, after the latest user message before offering to continue an in-progress session in the Agents Window. Requires `#chat.agentsHandoffTip.mode#` to be `default` or `custom`.</source>
     </trans-unit>
     <trans-unit id="chat.agentsParallelWorkBanner.enabled">
       <source xml:lang="en">Show an invitation to work in parallel in the Agents Window when starting a new Agent Host chat while another Agent Host session is running.</source>
@@ -4970,6 +5018,18 @@ User: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/embeddedMcpServerDetail" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="currentHarness">
+      <source xml:lang="en">the current harness</source>
+    </trans-unit>
+    <trans-unit id="mcpCheckingCompatibility">
+      <source xml:lang="en">Checking compatibility with {0}</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilityUnknownForHarness">
+      <source xml:lang="en">Compatibility with {0} could not be determined</source>
+    </trans-unit>
+    <trans-unit id="mcpConfigurationSection">
+      <source xml:lang="en">Configuration</source>
+    </trans-unit>
     <trans-unit id="mcpDefinitionAvailableAfterInstall">
       <source xml:lang="en">Details are available after install when the MCP server can be inspected locally.</source>
     </trans-unit>
@@ -4990,6 +5050,30 @@ User: {2}</source>
     </trans-unit>
     <trans-unit id="mcpDetailEmpty">
       <source xml:lang="en">No MCP server selected.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrateServer">
+      <source xml:lang="en">Migrate MCP Server</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationAvailableDescription">
+      <source xml:lang="en">This MCP server needs to be migrated to keep working.</source>
+    </trans-unit>
+    <trans-unit id="mcpNoDiagnostics">
+      <source xml:lang="en">No diagnostics to show</source>
+    </trans-unit>
+    <trans-unit id="mcpPartiallySupportedByHarness">
+      <source xml:lang="en">Partially supported by {0}</source>
+    </trans-unit>
+    <trans-unit id="mcpReviewMigrations">
+      <source xml:lang="en">Review Migrations...</source>
+    </trans-unit>
+    <trans-unit id="mcpServerErrorSummary">
+      <source xml:lang="en">This server reported an error</source>
+    </trans-unit>
+    <trans-unit id="mcpUnsupportedByHarness">
+      <source xml:lang="en">Not supported by {0}</source>
+    </trans-unit>
+    <trans-unit id="openMcpServerSource">
+      <source xml:lang="en">Open {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/galleryItemRenderer" source-language="en" datatype="plaintext"><body>
@@ -5118,12 +5202,6 @@ User: {2}</source>
     <trans-unit id="mcpAuthenticationFailed">
       <source xml:lang="en">Unable to sign in to {0}: {1}</source>
     </trans-unit>
-    <trans-unit id="mcpErrorShowLess">
-      <source xml:lang="en">Show Less</source>
-    </trans-unit>
-    <trans-unit id="mcpErrorShowMore">
-      <source xml:lang="en">Show More</source>
-    </trans-unit>
     <trans-unit id="mcpInstallFailed">
       <source xml:lang="en">Unable to install MCP server: {0}</source>
     </trans-unit>
@@ -5133,14 +5211,11 @@ User: {2}</source>
     <trans-unit id="mcpNoDescription">
       <source xml:lang="en">No description provided.</source>
     </trans-unit>
+    <trans-unit id="mcpPartiallySupported">
+      <source xml:lang="en">Partially supported</source>
+    </trans-unit>
     <trans-unit id="mcpSearchMarketplaceUnavailable">
       <source xml:lang="en">Marketplace results are unavailable. Showing installed MCP servers only.</source>
-    </trans-unit>
-    <trans-unit id="mcpServerAriaLabelWithCollapsedError">
-      <source xml:lang="en">{0}, {1}, {2}. Use Show More to read the full error.</source>
-    </trans-unit>
-    <trans-unit id="mcpServerAriaLabelWithError">
-      <source xml:lang="en">{0}, {1}, {2}</source>
     </trans-unit>
     <trans-unit id="mcpServerAriaLabelWithStatus">
       <source xml:lang="en">{0}, {1}</source>
@@ -5165,6 +5240,12 @@ User: {2}</source>
     </trans-unit>
     <trans-unit id="mcpServersDescription">
       <source xml:lang="en">An open standard that lets AI use external tools and services. MCP servers provide tools for file operations, databases, APIs, and more.</source>
+    </trans-unit>
+    <trans-unit id="mcpSupportUnknown">
+      <source xml:lang="en">Support unknown</source>
+    </trans-unit>
+    <trans-unit id="mcpUnsupported">
+      <source xml:lang="en">Unsupported</source>
     </trans-unit>
     <trans-unit id="noAvailableMcpServers">
       <source xml:lang="en">No marketplace MCP servers are available.</source>
@@ -6076,23 +6157,17 @@ Changes may not take full effect until VS Code is restarted.</source>
 
 **Note**: This is an advanced setting for experimentation.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.sdkSandbox.enabled">
-      <source xml:lang="en">Sandbox mode for the Copilot SDK's built-in shell tool on macOS and Linux. Only takes effect when `#chat.agentHost.customTerminalTool.enabled#` is `false`; when the Agent Host's own terminal tool is enabled, the engine sandbox is controlled by `#chat.agent.sandbox.enabled#`. The sandbox applies to every permission mode. Unrestricted network is controlled by `#chat.agent.sandbox.allowNetwork#`. Use `#chat.agentHost.sdkSandbox.enabledWindows#` on Windows.</source>
+    <trans-unit id="chat.agentHost.sdkSandbox.enabled.deprecated">
+      <source xml:lang="en">This setting no longer has any effect. Use `#chat.agent.sandbox.enabled#` for both the SDK's built-in shell tool and the Agent Host's custom terminal tool.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.sdkSandbox.enabled.off">
-      <source xml:lang="en">No sandbox policy is forwarded for the SDK's built-in shell tool — commands run unsandboxed.</source>
+    <trans-unit id="chat.agentHost.sdkSandbox.enabled.description">
+      <source xml:lang="en">Deprecated sandbox mode for the Copilot SDK's built-in shell tool on macOS and Linux.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.sdkSandbox.enabled.on">
-      <source xml:lang="en">The SDK's built-in shell tool runs inside a sandbox using the configured filesystem policy with outbound network blocked.</source>
+    <trans-unit id="chat.agentHost.sdkSandbox.enabledWindows.deprecated">
+      <source xml:lang="en">This setting no longer has any effect. Use `#chat.agent.sandbox.enabledWindows#` for both the SDK's built-in shell tool and the Agent Host's custom terminal tool.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.sdkSandbox.enabledWindows">
-      <source xml:lang="en">Sandbox mode for the Copilot SDK's built-in shell tool on Windows. Only takes effect when `#chat.agentHost.customTerminalTool.enabled#` is `false`. This setting is independent of `#chat.agentHost.sdkSandbox.enabled#` so Windows sandbox support can be enabled separately. Unrestricted network is controlled by `#chat.agent.sandbox.allowNetwork#`.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentHost.sdkSandbox.enabledWindows.off">
-      <source xml:lang="en">No sandbox policy is forwarded for the SDK's built-in shell tool on Windows — commands run unsandboxed.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentHost.sdkSandbox.enabledWindows.on">
-      <source xml:lang="en">The SDK's built-in shell tool runs inside the Windows sandbox using the configured filesystem policy.</source>
+    <trans-unit id="chat.agentHost.sdkSandbox.enabledWindows.description">
+      <source xml:lang="en">Deprecated sandbox mode for the Copilot SDK's built-in shell tool on Windows.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.sessionCatalog">
       <source xml:lang="en">Controls whether the agent session list is served from the Agent host's session catalog. When disabled, sessions are listed from provider metadata and per-session storage instead, which is slower.
@@ -6277,9 +6352,6 @@ This setting is only used by the Local agent harness.</source>
     <trans-unit id="chat.copilot.skillCharBudget">
       <source xml:lang="en">Maximum number of characters available for skill descriptions in the Copilot SDK system message.</source>
     </trans-unit>
-    <trans-unit id="chat.copilot.subagentModelGuidance.enabled">
-      <source xml:lang="en">When enabled, Copilot SDK agent sessions instruct the model to keep subagents on their default model, setting the task tool's `model` parameter only when you explicitly name the model a subagent should run on. Applied when a session launches or resumes.</source>
-    </trans-unit>
     <trans-unit id="chat.customizations.locationsMigration.enabled">
       <source xml:lang="en">Controls whether the Chat Customizations editor offers to move agents, instructions, and skills from configured locations that are not supported by the active agent-host harness. When disabled, the migration card and sidebar shortcut are hidden.</source>
     </trans-unit>
@@ -6434,7 +6506,7 @@ This setting is only used by the Local agent harness.</source>
       <source xml:lang="en">Controls whether Open in Agents Window reveals the current local Agent Host session instead of opening a new session.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.permissionsSandboxToggle.enabled">
-      <source xml:lang="en">Controls whether the permissions picker shows a "Sandboxing for terminal" toggle. Local sessions show it on the Default permissions option. Copilot Agent Host sessions show it as a session-specific setting that applies to every permission mode; changing it saves the choice only for that session. New Copilot Agent Host sessions initially follow `#chat.agentHost.sdkSandbox.enabled#` or `#chat.agentHost.sdkSandbox.enabledWindows#` when using the SDK's built-in shell tool, and `#chat.agent.sandbox.enabled#` or `#chat.agent.sandbox.enabledWindows#` when using the Agent Host terminal tool.</source>
+      <source xml:lang="en">Controls whether the permissions picker shows a "Sandboxing for terminal" toggle. Local sessions show it on the Default permissions option. Copilot Agent Host sessions show it as a session-specific setting that applies to every permission mode; changing it saves the choice only for that session. New Copilot Agent Host sessions initially follow `#chat.agent.sandbox.enabled#` or `#chat.agent.sandbox.enabledWindows#` for both the SDK's built-in shell tool and the Agent Host terminal tool.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.richLinks.enabled">
       <source xml:lang="en">Controls whether supported links in chat are rendered as rich links with live metadata. Enabling this may make authenticated requests to services such as GitHub.</source>
@@ -16460,15 +16532,6 @@ To make this the starting permission level for new sessions, change the [{0}](co
     <trans-unit id="chatPluginsWhen">
       <source xml:lang="en">When</source>
     </trans-unit>
-    <trans-unit id="copilotCliPlugin.remove.confirm">
-      <source xml:lang="en">This plugin was installed by the Copilot CLI. Remove it from disk?</source>
-    </trans-unit>
-    <trans-unit id="copilotCliPlugin.remove.detail">
-      <source xml:lang="en">The plugin directory '{0}' will be moved to the trash. You can reinstall it later via the Copilot CLI.</source>
-    </trans-unit>
-    <trans-unit id="copilotCliPlugin.remove.primary">
-      <source xml:lang="en">Remove</source>
-    </trans-unit>
     <trans-unit id="extension.plugin.invalid.path">
       <source xml:lang="en">Extension '{0}' chatPlugins entry '{1}' resolves outside the extension.</source>
     </trans-unit>
@@ -18275,6 +18338,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="agentsParallelWork.open">
       <source xml:lang="en">Open Agents Window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindow.agentModeDisabled">
+      <source xml:lang="en">The Agents window is unavailable because agent mode is disabled.</source>
     </trans-unit>
     <trans-unit id="agentsWindow.unsupportedDraftAttachment">
       <source xml:lang="en">This draft contains context that is only available in this window. Your prompt and attachments have been kept here instead of copied to the Agents Window.</source>

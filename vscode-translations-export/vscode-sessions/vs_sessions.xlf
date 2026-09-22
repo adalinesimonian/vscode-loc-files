@@ -369,7 +369,7 @@
       <source xml:lang="en">1 file changed</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/browser/parts/sessionHeader" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/sessions/browser/parts/sessionHeaderBar" source-language="en" datatype="plaintext"><body>
     <trans-unit id="renameChat.aria">
       <source xml:lang="en">Rename chat</source>
     </trans-unit>
@@ -574,11 +574,17 @@
     <trans-unit id="multipleSessionsVisible">
       <source xml:lang="en">Whether more than one session is visible in the sessions part's grid</source>
     </trans-unit>
+    <trans-unit id="sessionActiveChatHasSideChats">
+      <source xml:lang="en">Whether the chat represented by the session or chat header has side chats</source>
+    </trans-unit>
     <trans-unit id="sessionActiveChatIsClosable">
-      <source xml:lang="en">Whether the session's active chat can be closed (hidden) from the tab strip, i.e. it is not the main chat. Includes read-only subagent chats. Used to scope the close-chat keybinding so it closes the tab instead of the session</source>
+      <source xml:lang="en">Whether the active chat surface can be closed, either by hiding a non-main chat or by removing a side-by-side chat group</source>
     </trans-unit>
     <trans-unit id="sessionActiveChatIsDeletable">
       <source xml:lang="en">Whether the session's active chat can be permanently deleted from the tab strip, i.e. it is a real, user-created non-main chat (not the main chat and not a tool-spawned subagent chat, which are transient children). Used to scope the delete-chat keybinding</source>
+    </trans-unit>
+    <trans-unit id="sessionActiveChatResource">
+      <source xml:lang="en">The resource of the chat represented by the session or chat header</source>
     </trans-unit>
     <trans-unit id="sessionAgentMergeEnabled">
       <source xml:lang="en">True when Agent Merge is enabled for the active agent session</source>
@@ -616,11 +622,14 @@
     <trans-unit id="sessionHasPullRequest">
       <source xml:lang="en">Whether the session view's session is associated with a GitHub pull request</source>
     </trans-unit>
-    <trans-unit id="sessionHasSideChats">
-      <source xml:lang="en">Whether the session has side chats, which are shown in the Side Chats dropdown</source>
-    </trans-unit>
     <trans-unit id="sessionHasWorkspace">
       <source xml:lang="en">Whether the session view's session has an associated workspace folder</source>
+    </trans-unit>
+    <trans-unit id="sessionHeaderActiveChatIsPinned">
+      <source xml:lang="en">Whether the chat represented by a side-by-side chat group header is pinned</source>
+    </trans-unit>
+    <trans-unit id="sessionHeaderShowsChat">
+      <source xml:lang="en">Whether the session-style header represents one chat in a side-by-side chat group rather than the whole session</source>
     </trans-unit>
     <trans-unit id="sessionId">
       <source xml:lang="en">The identifier of the session in scope (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>

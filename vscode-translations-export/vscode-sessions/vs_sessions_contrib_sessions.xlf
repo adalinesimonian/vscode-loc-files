@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/sessions/browser/aiCustomizationShortcutsWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizations">
+      <source xml:lang="en">Customizations</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/blockedSessionsIndicatorModel" source-language="en" datatype="plaintext"><body>
     <trans-unit id="nSessionsFailingCI">
       <source xml:lang="en">{0} sessions are failing CI</source>
@@ -46,9 +51,33 @@
       <source xml:lang="en">Sessions requiring input</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/sessions/browser/customizations.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="customizations">
-      <source xml:lang="en">Customizations</source>
+  <file original="src/vs/sessions/contrib/sessions/browser/customizationsToolbar.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agents">
+      <source xml:lang="en">Agents</source>
+    </trans-unit>
+    <trans-unit id="harnessSettings">
+      <source xml:lang="en">Codex</source>
+    </trans-unit>
+    <trans-unit id="hooks">
+      <source xml:lang="en">Hooks</source>
+    </trans-unit>
+    <trans-unit id="instructions">
+      <source xml:lang="en">Instructions</source>
+    </trans-unit>
+    <trans-unit id="mcpServers">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="overview">
+      <source xml:lang="en">Overview</source>
+    </trans-unit>
+    <trans-unit id="plugins">
+      <source xml:lang="en">Plugins</source>
+    </trans-unit>
+    <trans-unit id="skills">
+      <source xml:lang="en">Skills</source>
+    </trans-unit>
+    <trans-unit id="tools">
+      <source xml:lang="en">Tools</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/mobile/mobileOverlayContribution" source-language="en" datatype="plaintext"><body>
@@ -106,7 +135,7 @@
       <source xml:lang="en">The active chat is displayed as the session view.</source>
     </trans-unit>
     <trans-unit id="sessions.useWorktree">
-      <source xml:lang="en">Controls whether New Worktree is checked when no previous isolation choice has been saved. Once a choice is saved, it is used across workspaces instead of this setting.</source>
+      <source xml:lang="en">Controls whether New Worktree is checked for a workspace that has not started a session before. Each workspace otherwise uses the choice from its last started session.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/sessionsActions" source-language="en" datatype="plaintext"><body>
@@ -120,6 +149,9 @@
       <source xml:lang="en">Maximize</source>
     </trans-unit>
     <trans-unit id="chatCompositeBar.pin">
+      <source xml:lang="en">Pin</source>
+    </trans-unit>
+    <trans-unit id="chatCompositeBar.pinChat">
       <source xml:lang="en">Pin</source>
     </trans-unit>
     <trans-unit id="chatCompositeBar.pinView">
@@ -140,11 +172,14 @@
     <trans-unit id="chatCompositeBar.unpin">
       <source xml:lang="en">Unpin</source>
     </trans-unit>
+    <trans-unit id="chatCompositeBar.unpinChat">
+      <source xml:lang="en">Unpin</source>
+    </trans-unit>
     <trans-unit id="chatCompositeBar.unpinView">
       <source xml:lang="en">Unpin</source>
     </trans-unit>
     <trans-unit id="closeActiveChat">
-      <source xml:lang="en">Close Chat</source>
+      <source xml:lang="en">Close</source>
     </trans-unit>
     <trans-unit id="closeAllChats">
       <source xml:lang="en">Close All Chats</source>
@@ -939,9 +974,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="createGroupAction">
       <source xml:lang="en">Create Group</source>
     </trans-unit>
-    <trans-unit id="customizations">
-      <source xml:lang="en">Customizations</source>
-    </trans-unit>
     <trans-unit id="deleteGroupAction">
       <source xml:lang="en">Delete Group</source>
     </trans-unit>
@@ -1040,9 +1072,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="sessions.dragLabel">
       <source xml:lang="en">{0} sessions</source>
-    </trans-unit>
-    <trans-unit id="sessionsHeader">
-      <source xml:lang="en">Sessions</source>
     </trans-unit>
     <trans-unit id="sessionsList">
       <source xml:lang="en">Sessions</source>
