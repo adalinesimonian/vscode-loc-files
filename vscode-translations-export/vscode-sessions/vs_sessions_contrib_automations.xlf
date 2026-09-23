@@ -56,13 +56,19 @@
       <source xml:lang="en">Day of week</source>
     </trans-unit>
     <trans-unit id="automation.form.enabled">
-      <source xml:lang="en">Enabled (the scheduler runs this automation when due)</source>
+      <source xml:lang="en">Enabled</source>
     </trans-unit>
     <trans-unit id="automation.form.folderRequired">
       <source xml:lang="en">Workspace folder is required.</source>
     </trans-unit>
     <trans-unit id="automation.form.harnessChip.action">
       <source xml:lang="en">Automations Harness Chip</source>
+    </trans-unit>
+    <trans-unit id="automation.form.hostChanged">
+      <source xml:lang="en">To use another Agent Host, duplicate this automation. The original keeps its schedule until you disable it.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.hostUnavailable">
+      <source xml:lang="en">Choose an available Agent Host that supports automations.</source>
     </trans-unit>
     <trans-unit id="automation.form.interval">
       <source xml:lang="en">Schedule</source>
@@ -105,6 +111,9 @@
     </trans-unit>
     <trans-unit id="automation.form.promptRequired">
       <source xml:lang="en">Prompt is required.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.quickChatUnavailable">
+      <source xml:lang="en">The selected Agent Host and session type cannot run without a workspace. Choose a workspace or another session type.</source>
     </trans-unit>
     <trans-unit id="automation.form.saving">
       <source xml:lang="en">Saving automation…</source>
@@ -151,6 +160,9 @@
     <trans-unit id="automation.form.workspacePicker.selectedAriaLabel">
       <source xml:lang="en">Automation target, {0}</source>
     </trans-unit>
+    <trans-unit id="automation.form.workspaceTargetUnavailable">
+      <source xml:lang="en">The selected Agent Host and session type cannot use this workspace. Choose another workspace or session type.</source>
+    </trans-unit>
     <trans-unit id="automation.interval.daily">
       <source xml:lang="en">Daily</source>
     </trans-unit>
@@ -194,25 +206,35 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/automationRunner" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationDispatchFailed">
+      <source xml:lang="en">Automation '{0}' did not start a session: {1}</source>
+    </trans-unit>
+    <trans-unit id="automationDispatchNoSession">
+      <source xml:lang="en">The Agent Host ended the run without a session.</source>
+    </trans-unit>
+    <trans-unit id="automationHostLoadError">
+      <source xml:lang="en">Automations from {0} could not be loaded. Reconnect to the Agent Host and try again.</source>
+    </trans-unit>
+    <trans-unit id="automationHostLoading">
+      <source xml:lang="en">Automations from {0} are still loading. Wait for loading to finish, then try again.</source>
+    </trans-unit>
+    <trans-unit id="automationHostNotConnected">
+      <source xml:lang="en">Connect to this automation's Agent Host and try again.</source>
+    </trans-unit>
+    <trans-unit id="automationHostNotSelected">
+      <source xml:lang="en">This automation has no Agent Host. Duplicate it and select an Agent Host.</source>
+    </trans-unit>
+    <trans-unit id="automationHostUnavailable">
+      <source xml:lang="en">{0} is unavailable. Reconnect to the Agent Host and try again.</source>
+    </trans-unit>
+    <trans-unit id="automationProviderUnsupported">
+      <source xml:lang="en">{0} does not support automations. Use an Agent Host that supports automations.</source>
+    </trans-unit>
     <trans-unit id="automationRunFailed">
       <source xml:lang="en">Automation '{0}' failed: {1}</source>
     </trans-unit>
-    <trans-unit id="automationRunner.cancelled">
-      <source xml:lang="en">Cancelled</source>
-    </trans-unit>
-    <trans-unit id="automationRunner.sessionFailed">
-      <source xml:lang="en">Agent session failed.</source>
-    </trans-unit>
-    <trans-unit id="automationTargetUnavailable">
-      <source xml:lang="en">Automation '{0}' cannot start until its agent becomes available.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/sessions/contrib/automations/browser/automationScheduler" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="automation.timedOut">
-      <source xml:lang="en">Timed out after {0} minute(s).</source>
-    </trans-unit>
-    <trans-unit id="automations.crashRecoveryReason">
-      <source xml:lang="en">Interrupted by app shutdown</source>
+    <trans-unit id="automationRunUnavailable">
+      <source xml:lang="en">The automation's Agent Host is not ready to run it.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/automationTools" source-language="en" datatype="plaintext"><body>
@@ -352,8 +374,11 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/providerAutomationService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="automationActiveRunPreventsTransfer">
-      <source xml:lang="en">Wait for the active run to finish before changing this automation's agent.</source>
+    <trans-unit id="automationCreateUnavailable">
+      <source xml:lang="en">Connect to an Agent Host that supports automations before creating one.</source>
+    </trans-unit>
+    <trans-unit id="automationUnavailable">
+      <source xml:lang="en">Automation '{0}' is unavailable. Its Agent Host may be disconnected or the automation may have been deleted.</source>
     </trans-unit>
 </body></file>
 </xliff>

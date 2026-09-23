@@ -399,11 +399,20 @@
     <trans-unit id="automationsPartialUnavailable">
       <source xml:lang="en">Some automations are unavailable.</source>
     </trans-unit>
+    <trans-unit id="automationsProviderUnavailableReason">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
     <trans-unit id="automationsUnavailableProvider">
       <source xml:lang="en">Automations from {0} are unavailable.</source>
     </trans-unit>
+    <trans-unit id="automationsUnavailableProviderWithReason">
+      <source xml:lang="en">Automations from {0} are unavailable. {1}</source>
+    </trans-unit>
     <trans-unit id="automationsUnavailableProviders">
       <source xml:lang="en">Automations from these providers are unavailable: {0}.</source>
+    </trans-unit>
+    <trans-unit id="automationsUnavailableProvidersWithReasons">
+      <source xml:lang="en">Automations from these providers are unavailable: {0}. {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/automationTemplates" source-language="en" datatype="plaintext"><body>
@@ -540,6 +549,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationsCustomView.help.accessibleView">
       <source xml:lang="en">Use Open Accessible View to read the current automations and run history as text.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.authority">
+      <source xml:lang="en">Automations run on their selected Agent Host, not in this window. Creation and changes require a connected Agent Host that supports automations. Run now requests execution from that host; a disconnected or unsupported host never falls back to local execution. To use another host, duplicate the automation. The original history stays with its host, and an enabled original keeps scheduling until you disable it.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.builtInTemplatesCollapsed">
       <source xml:lang="en">The Built-in Templates section is collapsed by default because saved automations exist. Press Enter or Space on its disclosure control to expand it.</source>
@@ -974,6 +986,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="createGroupAction">
       <source xml:lang="en">Create Group</source>
     </trans-unit>
+    <trans-unit id="customizations">
+      <source xml:lang="en">Customizations</source>
+    </trans-unit>
     <trans-unit id="deleteGroupAction">
       <source xml:lang="en">Delete Group</source>
     </trans-unit>
@@ -1072,6 +1087,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="sessions.dragLabel">
       <source xml:lang="en">{0} sessions</source>
+    </trans-unit>
+    <trans-unit id="sessionsHeader">
+      <source xml:lang="en">Sessions</source>
     </trans-unit>
     <trans-unit id="sessionsList">
       <source xml:lang="en">Sessions</source>

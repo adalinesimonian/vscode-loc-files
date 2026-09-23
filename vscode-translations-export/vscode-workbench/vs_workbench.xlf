@@ -280,6 +280,9 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     <trans-unit id="mcp.enterpriseManaged.missingResource">
       <source xml:lang="en">The enterprise-managed MCP server '{0}' did not advertise a protected-resource metadata document with a 'resource' identifier.</source>
     </trans-unit>
+    <trans-unit id="mcpAuthRevalidationFailed">
+      <source xml:lang="en">Unable to revalidate authentication for {0}.</source>
+    </trans-unit>
     <trans-unit id="mcpAuthSessionRemoved">
       <source xml:lang="en">Authentication session for {0} removed, stopping server</source>
     </trans-unit>
@@ -818,6 +821,11 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     </trans-unit>
     <trans-unit id="worker">
       <source xml:lang="en">Extension Host (Worker)</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/api/common/extHostMcp" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcpUnsupportedDestination">
+      <source xml:lang="en">MCP server selected a non-http(s) destination ({0}), which is not allowed</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/api/common/extHostNotebook" source-language="en" datatype="plaintext"><body>

@@ -196,6 +196,12 @@
     <trans-unit id="chat.inspectResponseThinkingToggle">
       <source xml:lang="en">To include or exclude thinking content in the accessible view, run the Toggle Thinking Content in Accessible View command from the Command Palette.</source>
     </trans-unit>
+    <trans-unit id="chat.linkContextMenu">
+      <source xml:lang="en">Focus a link in the chat transcript and press Shift+F10 to open its context menu. Use Copy Link to copy its target. File links with additional editor choices also provide Open With.</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.autoCollapse">
+      <source xml:lang="en">When another model is available, turning Auto on collapses the provider tabs, search, and model list. Auto and its preferences remain available. Turn Auto off to restore the model controls and the previous model selection. Expansion and collapse are immediate when reduced motion is enabled.</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.optimizeFor">
       <source xml:lang="en">In the tabbed model picker, the selected model's details open beside the list. Moving between model rows updates the details immediately without selecting a model. The card stays visible when the pointer leaves a row. Press Right Arrow from a model row to focus its details, and Left Arrow to return. When Auto's "Optimize for" options are available, Efficiency, Balance, and Intelligence remain visible while Auto is off. They look muted while off but remain interactive. Use arrow keys to move between options, then Enter or Space to choose a preference and turn Auto on. Turning Auto off preserves the selected preference.</source>
     </trans-unit>
@@ -267,6 +273,9 @@
     </trans-unit>
     <trans-unit id="chat.systemNotificationDisclosure">
       <source xml:lang="en">Some session status messages have additional details. Use Tab to focus the status message and press Enter or Space to show or hide its details.</source>
+    </trans-unit>
+    <trans-unit id="chat.testApp.help">
+      <source xml:lang="en">After app UI changes, Test App appears to the right of the status pills above the chat input. After a testing request starts in this chat, the button is named Retest App whenever it reappears, including after restarting VS Code in the same profile. This remembers that testing was requested, not that tests passed. Press Shift+Tab from the input to focus it, then Enter or Space to ask the agent to review the diffs, test the app UI, fix issues found, and retest. Existing tool permissions still apply.</source>
     </trans-unit>
     <trans-unit id="chat.voiceInputMode.agentProgress">
       <source xml:lang="en">When the experimental agents.voice.agentProgress setting is enabled, Voice Mode Agent requests may speak brief progress updates while investigating, planning, editing, validating, or recovering from a problem.</source>
@@ -771,6 +780,9 @@ User: {2}</source>
     <trans-unit id="chat.copyKatexMathSource.label">
       <source xml:lang="en">Copy Math Source</source>
     </trans-unit>
+    <trans-unit id="chat.openLinkWith">
+      <source xml:lang="en">Open With...</source>
+    </trans-unit>
     <trans-unit id="interactive.copyAll.label">
       <source xml:lang="en">Copy All</source>
     </trans-unit>
@@ -1133,6 +1145,12 @@ User: {2}</source>
     <trans-unit id="openMarketplaceDirectory">
       <source xml:lang="en">Open Folder</source>
     </trans-unit>
+    <trans-unit id="pickPluginFolder">
+      <source xml:lang="en">Pick Folder</source>
+    </trans-unit>
+    <trans-unit id="pickPluginFolderTitle">
+      <source xml:lang="en">Select Plugin Folder</source>
+    </trans-unit>
     <trans-unit id="pluginSourcePlaceholder">
       <source xml:lang="en">owner/repo, git URL, or local folder path</source>
     </trans-unit>
@@ -1153,6 +1171,9 @@ User: {2}</source>
     </trans-unit>
     <trans-unit id="selectMarketplaceAction">
       <source xml:lang="en">Select an action for '{0}'</source>
+    </trans-unit>
+    <trans-unit id="selectPluginFolder">
+      <source xml:lang="en">Select Folder</source>
     </trans-unit>
     <trans-unit id="showPlugins">
       <source xml:lang="en">Show Plugins</source>
@@ -1657,6 +1678,9 @@ User: {2}</source>
     <trans-unit id="pluginPolicyBlocked">
       <source xml:lang="en">The plugin "{0}" has been disabled by your organization and cannot be enabled.</source>
     </trans-unit>
+    <trans-unit id="pluginPolicyForceEnabled">
+      <source xml:lang="en">The plugin "{0}" has been enabled by your organization and cannot be disabled.</source>
+    </trans-unit>
     <trans-unit id="uninstall">
       <source xml:lang="en">Uninstall</source>
     </trans-unit>
@@ -1925,46 +1949,78 @@ User: {2}</source>
       <source xml:lang="en">{0}% discount</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostMcpServerMigrationProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcpMigrationServerIneligible">
+      <source xml:lang="en">This server no longer meets the migration requirements.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationServerInvalidSource">
+      <source xml:lang="en">The source MCP configuration or server definition is invalid.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationServerNotApplicable">
+      <source xml:lang="en">This server is not associated with the current workspace.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationServerNotForwarded">
+      <source xml:lang="en">This server is not forwarded from its current configuration to the active agent.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationServerSourceUnavailable">
+      <source xml:lang="en">The source MCP configuration could not be read.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationServerUnrepresentable">
+      <source xml:lang="en">The server configuration cannot be moved without changing its behavior.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostMcpServerSupportScope" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcpCompatibilityDefinitionNotLoaded">
       <source xml:lang="en">Compatibility cannot be determined because the server definition has not loaded.
-Wait for MCP discovery to finish, then refresh this view. If the issue persists, check the server configuration for errors.</source>
+To migrate this server, wait for MCP discovery to finish, then refresh this view. If the issue persists, check the server configuration for errors.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityDevelopmentModeIgnored">
       <source xml:lang="en">MCP development mode is not supported by the Copilot harness.
-Remove the development mode setting and restart the server manually after configuration changes.</source>
+To migrate this server, remove the development mode setting and restart the server manually after configuration changes.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityEnvironmentFileIgnored">
       <source xml:lang="en">Environment files are not supported by the Copilot harness.
-Move required variables from the environment file into the server env configuration.</source>
+To migrate this server, move required variables from the environment file into the server env configuration.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityLaunchNotRepresentable">
       <source xml:lang="en">The launch configuration for this server is not supported by the Copilot harness.
-Add a command for a local server or a valid URL for a remote server.</source>
+To migrate this server, add a command for a local server or a valid URL for a remote server.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityOAuthClientConfigurationIgnored">
       <source xml:lang="en">Custom OAuth client configuration is not supported by the Copilot harness.
-Remove the custom OAuth client configuration and sign in when the Copilot harness prompts for authentication.</source>
+To migrate this server, remove the custom OAuth client configuration and sign in when the Copilot harness prompts for authentication.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityRequiresUserInteraction">
       <source xml:lang="en">Input and command variables are not supported by the Copilot harness.
-Replace them with concrete values or environment variables defined directly in the server configuration.</source>
+To migrate this server, replace them with concrete values or environment variables defined directly in the server configuration.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilitySandboxConfigurationIgnored">
       <source xml:lang="en">Per-server sandbox settings are not supported by the Copilot harness.
-Remove the server sandbox setting to use the MCP server.</source>
+To migrate this server, remove the server sandbox setting.</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilityServerVersionNotPortable">
+      <source xml:lang="en">Server version metadata cannot be migrated to the workspace root .mcp.json file.
+To migrate this server, remove the version property.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilitySourceUnknown">
       <source xml:lang="en">Compatibility cannot be determined because the server configuration source is unknown.
-Move the server configuration to a recognized location such as the workspace root .mcp.json file.</source>
+To migrate this server, move its configuration to a recognized location such as the workspace root .mcp.json file.</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilitySseTransportNotPortable">
+      <source xml:lang="en">SSE transport settings cannot be migrated to the workspace root .mcp.json file.
+To migrate this server, use the default HTTP transport.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityUnresolvedConfiguration">
       <source xml:lang="en">Unresolved configuration, environment, or workspace variables are not supported by the Copilot harness.
-Define the missing variables or replace them with concrete values.</source>
+To migrate this server, define the missing variables or replace them with concrete values.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityUnsupportedSourceLocation">
       <source xml:lang="en">The current configuration location for this server is not supported by the Copilot harness.
-Move the server configuration to the workspace root .mcp.json file.</source>
+To migrate this server, move its configuration to the workspace root .mcp.json file.</source>
+    </trans-unit>
+    <trans-unit id="mcpCompatibilityWorkingDirectoryNotPortable">
+      <source xml:lang="en">Working directory settings cannot be migrated to the workspace root .mcp.json file.
+To migrate this server, remove the cwd property.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostModePickerPresentation" source-language="en" datatype="plaintext"><body>
@@ -3010,6 +3066,20 @@ Move the server configuration to the workspace root .mcp.json file.</source>
       <source xml:lang="en">Recent</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/repositoryPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="repositoryPicker.clone">
+      <source xml:lang="en">Clone from URL</source>
+    </trans-unit>
+    <trans-unit id="repositoryPicker.loadFailed">
+      <source xml:lang="en">Could not load repositories. Check your GitHub sign-in and connection, then try searching again.</source>
+    </trans-unit>
+    <trans-unit id="repositoryPicker.search">
+      <source xml:lang="en">Search for a repository...</source>
+    </trans-unit>
+    <trans-unit id="repositoryPicker.searchOrUrl">
+      <source xml:lang="en">Search for a repository or paste a repository URL...</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/sessionSummaryHover" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionSummaryHover.branch">
       <source xml:lang="en">Branch</source>
@@ -3842,6 +3912,24 @@ Move the server configuration to the workspace root .mcp.json file.</source>
     <trans-unit id="localHarnessLabel">
       <source xml:lang="en">Local</source>
     </trans-unit>
+    <trans-unit id="mcpMigrationAccessibleExclusion">
+      <source xml:lang="en">{0} cannot be migrated: {1}</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationOpenDetailsAriaLabel">
+      <source xml:lang="en">Open details for {0}</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationOpenSourceAriaLabel">
+      <source xml:lang="en">Open source for {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationUnavailableGroup">
+      <source xml:lang="en">Not migratable</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationUnavailableGroupAriaLabel">
+      <source xml:lang="en">MCP servers that cannot be migrated</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationUnavailableItemAriaLabel">
+      <source xml:lang="en">{0}, cannot be migrated. Source: {1}</source>
+    </trans-unit>
     <trans-unit id="mcpServers">
       <source xml:lang="en">MCP Servers</source>
     </trans-unit>
@@ -3850,6 +3938,9 @@ Move the server configuration to the workspace root .mcp.json file.</source>
     </trans-unit>
     <trans-unit id="migrationAccessibleActivity">
       <source xml:lang="en">Migration activity: {0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="migrationAccessibleCandidate">
+      <source xml:lang="en">{0}: {1}</source>
     </trans-unit>
     <trans-unit id="migrationAccessibleCategory">
       <source xml:lang="en">{0}: {1}. {2}{3}</source>
@@ -3879,7 +3970,10 @@ Move the server configuration to the workspace root .mcp.json file.</source>
       <source xml:lang="en">MCP Servers</source>
     </trans-unit>
     <trans-unit id="migrationChecklistMcpDescription">
-      <source xml:lang="en">Move supported workspace servers to the root .mcp.json so agents can discover them directly.</source>
+      <source xml:lang="en">Move eligible workspace servers to the root .mcp.json and review servers that cannot be migrated.</source>
+    </trans-unit>
+    <trans-unit id="migrationChecklistMcpSupportCounts">
+      <source xml:lang="en">{0} migratable · {1} not migratable</source>
     </trans-unit>
     <trans-unit id="migrationChecklistOneAgent">
       <source xml:lang="en">1 agent</source>
@@ -3889,9 +3983,6 @@ Move the server configuration to the workspace root .mcp.json file.</source>
     </trans-unit>
     <trans-unit id="migrationChecklistOnePrompt">
       <source xml:lang="en">1 prompt</source>
-    </trans-unit>
-    <trans-unit id="migrationChecklistOneServer">
-      <source xml:lang="en">1 server</source>
     </trans-unit>
     <trans-unit id="migrationChecklistProfile">
       <source xml:lang="en">Your profile</source>
@@ -3904,9 +3995,6 @@ Move the server configuration to the workspace root .mcp.json file.</source>
     </trans-unit>
     <trans-unit id="migrationChecklistPromptsDescription">
       <source xml:lang="en">Convert reusable prompt files into skills so agents can discover and run them as supported customizations.</source>
-    </trans-unit>
-    <trans-unit id="migrationChecklistServersCount">
-      <source xml:lang="en">{0} servers</source>
     </trans-unit>
     <trans-unit id="migrationChecklistUserData">
       <source xml:lang="en">User Data</source>
@@ -4233,7 +4321,10 @@ Move the server configuration to the workspace root .mcp.json file.</source>
       <source xml:lang="en">Migration activity records successful changes locally. Expand an activity entry with Enter or Space to read its source and destination paths. Dismiss removes the activity record, not the migrated files.</source>
     </trans-unit>
     <trans-unit id="migrationHelpLocations">
-      <source xml:lang="en">Change destinations configures file migration locations. MCP servers always migrate to the workspace root .mcp.json.</source>
+      <source xml:lang="en">Change destinations configures file migration locations. MCP servers always migrate to the workspace root .mcp.json. Servers that cannot be migrated are listed separately with the reason.</source>
+    </trans-unit>
+    <trans-unit id="migrationHelpMcpDetails">
+      <source xml:lang="en">Open an MCP server that cannot be migrated to review its details. Edit Configuration opens the source file and selects that server's JSON configuration.</source>
     </trans-unit>
     <trans-unit id="migrationHelpNavigation">
       <source xml:lang="en">Use Tab and Shift+Tab to move between controls. Review opens the existing migration page filtered to that location. No files change until you confirm migration.</source>
@@ -4373,19 +4464,19 @@ Move the server configuration to the workspace root .mcp.json file.</source>
       <source xml:lang="en">{0}, {1}, {2}, and {3}</source>
     </trans-unit>
     <trans-unit id="mcpMigrationBannerMessage">
-      <source xml:lang="en">Eligible servers move from .vscode/mcp.json to .mcp.json at each workspace root so {0} can discover them directly. Unsupported and unselected servers stay in their current files.</source>
+      <source xml:lang="en">Eligible servers move from .vscode/mcp.json to .mcp.json at each workspace root so {0} can discover them directly. Servers that cannot be migrated and unselected servers stay in their current files.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationCardAction">
       <source xml:lang="en">Migrate...</source>
     </trans-unit>
     <trans-unit id="mcpMigrationCardActionAriaLabel">
-      <source xml:lang="en">Migrate supported workspace MCP servers</source>
+      <source xml:lang="en">Migrate eligible workspace MCP servers</source>
     </trans-unit>
     <trans-unit id="mcpMigrationCardDescriptionMultiple">
-      <source xml:lang="en">Found {0} supported servers in .vscode/mcp.json that can move to workspace root files so {1} can discover them directly.</source>
+      <source xml:lang="en">Found {0} eligible servers in .vscode/mcp.json that can move to workspace root files so {1} can discover them directly.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationCardDescriptionSingle">
-      <source xml:lang="en">Found 1 supported server in .vscode/mcp.json that can move to the workspace root so {0} can discover it directly.</source>
+      <source xml:lang="en">Found 1 eligible server in .vscode/mcp.json that can move to the workspace root so {0} can discover it directly.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationCardLabel">
       <source xml:lang="en">Migrate MCP Servers</source>
@@ -4400,7 +4491,7 @@ Move the server configuration to the workspace root .mcp.json file.</source>
       <source xml:lang="en">Migrate</source>
     </trans-unit>
     <trans-unit id="mcpMigrationConfirmDetail">
-      <source xml:lang="en">Selected entries are removed from .vscode/mcp.json after they are written and verified in .mcp.json. Unsupported and unselected entries stay in place.</source>
+      <source xml:lang="en">Selected entries are removed from .vscode/mcp.json after they are written and verified in .mcp.json. Entries that cannot be migrated and unselected entries stay in place.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationConfirmMessageMultiple">
       <source xml:lang="en">Migrate {0} MCP servers to .mcp.json?</source>
@@ -4442,13 +4533,13 @@ Move the server configuration to the workspace root .mcp.json file.</source>
       <source xml:lang="en">Move selected MCP servers to root .mcp.json files</source>
     </trans-unit>
     <trans-unit id="mcpMigrationPageDescriptionMultiple">
-      <source xml:lang="en">Select supported MCP servers to move so {0} can discover them directly. Unsupported and unselected servers stay in .vscode/mcp.json.</source>
+      <source xml:lang="en">Select eligible MCP servers to move so {0} can discover them directly. Servers that cannot be migrated and unselected servers stay in .vscode/mcp.json.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationPageDescriptionSingle">
-      <source xml:lang="en">Select the supported MCP server to move so {0} can discover it directly. Unsupported and unselected servers stay in .vscode/mcp.json.</source>
+      <source xml:lang="en">Select the eligible MCP server to move so {0} can discover it directly. Servers that cannot be migrated and unselected servers stay in .vscode/mcp.json.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationPageEmpty">
-      <source xml:lang="en">No supported workspace MCP servers are available to migrate.</source>
+      <source xml:lang="en">No workspace MCP servers are eligible to migrate.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationPageTitle">
       <source xml:lang="en">Migrate MCP Servers</source>
@@ -4472,7 +4563,7 @@ Move the server configuration to the workspace root .mcp.json file.</source>
       <source xml:lang="en">Migrate MCP Servers</source>
     </trans-unit>
     <trans-unit id="mcpMigrationShortcutTooltip">
-      <source xml:lang="en">Move supported workspace MCP servers to root .mcp.json files</source>
+      <source xml:lang="en">Move eligible workspace MCP servers to root .mcp.json files</source>
     </trans-unit>
     <trans-unit id="mcpMigrationSourceChanged">
       <source xml:lang="en">Could not migrate '{0}' because its source configuration changed.</source>
@@ -5021,11 +5112,23 @@ Move the server configuration to the workspace root .mcp.json file.</source>
     <trans-unit id="currentHarness">
       <source xml:lang="en">the current harness</source>
     </trans-unit>
+    <trans-unit id="editMcpConfiguration">
+      <source xml:lang="en">Edit Configuration</source>
+    </trans-unit>
     <trans-unit id="mcpCheckingCompatibility">
       <source xml:lang="en">Checking compatibility with {0}</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityUnknownForHarness">
       <source xml:lang="en">Compatibility with {0} could not be determined</source>
+    </trans-unit>
+    <trans-unit id="mcpConfigurationLocationNotFound">
+      <source xml:lang="en">Could not locate the configuration for '{0}'. Opening the source file instead.</source>
+    </trans-unit>
+    <trans-unit id="mcpConfigurationOpenFailed">
+      <source xml:lang="en">Could not open the configuration for '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="mcpConfigurationReadFailed">
+      <source xml:lang="en">Could not read the configuration for '{0}': {1}</source>
     </trans-unit>
     <trans-unit id="mcpConfigurationSection">
       <source xml:lang="en">Configuration</source>
@@ -5160,6 +5263,9 @@ Move the server configuration to the workspace root .mcp.json file.</source>
     <trans-unit id="error">
       <source xml:lang="en">Error</source>
     </trans-unit>
+    <trans-unit id="fromExtension">
+      <source xml:lang="en">Extension: {0}</source>
+    </trans-unit>
     <trans-unit id="fromPlugin">
       <source xml:lang="en">Plugin: {0}</source>
     </trans-unit>
@@ -5217,6 +5323,9 @@ Move the server configuration to the workspace root .mcp.json file.</source>
     <trans-unit id="mcpSearchMarketplaceUnavailable">
       <source xml:lang="en">Marketplace results are unavailable. Showing installed MCP servers only.</source>
     </trans-unit>
+    <trans-unit id="mcpServerAriaLabelWithSource">
+      <source xml:lang="en">{0}, configured in {1}</source>
+    </trans-unit>
     <trans-unit id="mcpServerAriaLabelWithStatus">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
@@ -5234,6 +5343,9 @@ Move the server configuration to the workspace root .mcp.json file.</source>
     </trans-unit>
     <trans-unit id="mcpServerManagedByPluginAria">
       <source xml:lang="en">{0} is disabled by its plugin</source>
+    </trans-unit>
+    <trans-unit id="mcpServerSigningInStatus">
+      <source xml:lang="en">Signing in to {0}.</source>
     </trans-unit>
     <trans-unit id="mcpServers">
       <source xml:lang="en">MCP Servers</source>
@@ -5256,6 +5368,12 @@ Move the server configuration to the workspace root .mcp.json file.</source>
     <trans-unit id="noMatchingServers">
       <source xml:lang="en">No servers match '{0}'</source>
     </trans-unit>
+    <trans-unit id="openExtensionDetails">
+      <source xml:lang="en">Open extension details for {0}</source>
+    </trans-unit>
+    <trans-unit id="openPluginDetails">
+      <source xml:lang="en">Open plugin details for {0}</source>
+    </trans-unit>
     <trans-unit id="output">
       <source xml:lang="en">Show Output</source>
     </trans-unit>
@@ -5276,6 +5394,12 @@ Move the server configuration to the workspace root .mcp.json file.</source>
     </trans-unit>
     <trans-unit id="signInToMcpServer">
       <source xml:lang="en">Sign in to {0}</source>
+    </trans-unit>
+    <trans-unit id="signingIn">
+      <source xml:lang="en">Signing In...</source>
+    </trans-unit>
+    <trans-unit id="signingInToMcpServer">
+      <source xml:lang="en">Signing in to {0}</source>
     </trans-unit>
     <trans-unit id="starting">
       <source xml:lang="en">Starting</source>
@@ -6356,7 +6480,7 @@ This setting is only used by the Local agent harness.</source>
       <source xml:lang="en">Controls whether the Chat Customizations editor offers to move agents, instructions, and skills from configured locations that are not supported by the active agent-host harness. When disabled, the migration card and sidebar shortcut are hidden.</source>
     </trans-unit>
     <trans-unit id="chat.customizations.mcpServerMigration.enabled">
-      <source xml:lang="en">Controls whether the Chat Customizations editor offers to move supported workspace MCP servers out of .vscode/mcp.json and into a .mcp.json file at the workspace root, where the active agent-host harness discovers them directly. When disabled, the migration card and sidebar shortcut are hidden.</source>
+      <source xml:lang="en">Controls whether VS Code shows MCP server migration actions, hints, compatibility badges, and compatibility details. Migration moves eligible workspace MCP servers out of .vscode/mcp.json and into a .mcp.json file at the workspace root, where the active agent-host harness discovers them directly.</source>
     </trans-unit>
     <trans-unit id="chat.customizations.migrationHint">
       <source xml:lang="en">Controls whether chat shows information about customizations that are not used by the active Agent Host harness.</source>
@@ -6506,7 +6630,7 @@ This setting is only used by the Local agent harness.</source>
       <source xml:lang="en">Controls whether Open in Agents Window reveals the current local Agent Host session instead of opening a new session.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.permissionsSandboxToggle.enabled">
-      <source xml:lang="en">Controls whether the permissions picker shows a "Sandboxing for terminal" toggle. Local sessions show it on the Default permissions option. Copilot Agent Host sessions show it as a session-specific setting that applies to every permission mode; changing it saves the choice only for that session. New Copilot Agent Host sessions initially follow `#chat.agent.sandbox.enabled#` or `#chat.agent.sandbox.enabledWindows#` for both the SDK's built-in shell tool and the Agent Host terminal tool.</source>
+      <source xml:lang="en">Controls whether the permissions picker shows a "Sandboxing for terminal" toggle. Local sessions show it on the Default permissions option. Local and remote Copilot Agent Host sessions show it as a session-specific setting that applies to every permission mode; changing it saves the choice only for that session. New Copilot Agent Host sessions initially follow `#chat.agent.sandbox.enabled#` or `#chat.agent.sandbox.enabledWindows#` based on the host's operating system, for both the SDK's built-in shell tool and the Agent Host terminal tool.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.richLinks.enabled">
       <source xml:lang="en">Controls whether supported links in chat are rendered as rich links with live metadata. Enabling this may make authenticated requests to services such as GitHub.</source>
@@ -9062,6 +9186,9 @@ Examples:
     <trans-unit id="chatInputPills.options">
       <source xml:lang="en">{0} Options</source>
     </trans-unit>
+    <trans-unit id="chatInputPills.subagentOptions">
+      <source xml:lang="en">Subagent Options</source>
+    </trans-unit>
     <trans-unit id="chatInputPills.viewChanges">
       <source xml:lang="en">View {0}</source>
     </trans-unit>
@@ -9404,6 +9531,9 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatParticipant.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.updateRequiredView">
+      <source xml:lang="en">Chat Update Requirement</source>
+    </trans-unit>
     <trans-unit id="chat.viewContainer.label">
       <source xml:lang="en">Chat</source>
     </trans-unit>
@@ -10683,6 +10813,9 @@ Type anything below to get started!</source>
     <trans-unit id="tip.autoAcceptDelay">
       <source xml:lang="en">Configure [{0}](command:workbench.action.openSettings?%5B%22chat.editing.autoAcceptDelay%22%5D "Open Settings") to automatically accept changes from the agent after a short countdown.</source>
     </trans-unit>
+    <trans-unit id="tip.btw">
+      <source xml:lang="en">Use `/btw &lt;question&gt;` to ask a side question without adding it to the current conversation.</source>
+    </trans-unit>
     <trans-unit id="tip.codeActions">
       <source xml:lang="en">Select a code block in the editor and right-click to access more AI actions.</source>
     </trans-unit>
@@ -11684,7 +11817,85 @@ Source: {0}</source>
       <source xml:lang="en">Slash Commands Discovery</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxLegacySessionPreparation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sandbox.invalidCloneResult">
+      <source xml:lang="en">The cloud sandbox returned an invalid repository cloning response.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.invalidProjectDirectory">
+      <source xml:lang="en">The cloud sandbox did not return a usable repository directory.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.invalidRepository">
+      <source xml:lang="en">The cloud sandbox requires a GitHub repository URL without credentials, a query, or a fragment.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectChanged">
+      <source xml:lang="en">The cloud sandbox returned a different repository.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectFailed">
+      <source xml:lang="en">Repository cloning failed.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectFailedWithReason">
+      <source xml:lang="en">Repository cloning failed: {0}</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectManagementUnavailable">
+      <source xml:lang="en">The cloud sandbox no longer advertises repository preparation.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectRemoved">
+      <source xml:lang="en">The repository was removed from the cloud sandbox while it was being prepared.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectStateUnavailable">
+      <source xml:lang="en">The cloud sandbox's project state is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.projectTimedOut">
+      <source xml:lang="en">Repository cloning did not finish within five minutes.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxReadOnlySessionHandler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.truncatedHistory">
+      <source xml:lang="en">This conversation is incomplete. Its recorded history ends mid-response, so the last exchange may be missing.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/editorCloudSandboxContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.discoveryDescription">
+      <source xml:lang="en">Existing cloud sandbox sessions.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.discoveryName">
+      <source xml:lang="en">GitHub Sandboxes</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.sessionName">
+      <source xml:lang="en">GitHub Sandbox</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/remoteAgentHost.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.agentHost.cloudSandbox.enabled">
+      <source xml:lang="en">Enable discovering and opening Copilot cloud sandbox sessions in the Editor Window and Agents Window over a live Agent Host Protocol relay. Also adds a Sandbox option when starting a cloud session in the Agents Window.</source>
+    </trans-unit>
+    <trans-unit id="chat.remoteAgentHosts.enabled">
+      <source xml:lang="en">Enable connecting to remote agent hosts.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/remoteAgentHostChatContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="remoteAgentHost.removeConfiguredPlugin">
+      <source xml:lang="en">Remove from Remote Host</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/remoteAgentHostCustomizationHarness" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="remoteAgentHost.addPlugin">
+      <source xml:lang="en">Add Remote Plugin</source>
+    </trans-unit>
+    <trans-unit id="remoteAgentHost.addPluginTooltip">
+      <source xml:lang="en">Add a plugin folder that already exists on this remote agent host.</source>
+    </trans-unit>
+    <trans-unit id="remoteAgentHost.pluginAlreadyConfigured">
+      <source xml:lang="en">'{0}' is already configured on {1}.</source>
+    </trans-unit>
+    <trans-unit id="remoteAgentHost.selectPluginFolder">
+      <source xml:lang="en">Select Plugin Folder on {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/sessionChatPillOptions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatInputPills.showAll">
+      <source xml:lang="en">Show All</source>
+    </trans-unit>
     <trans-unit id="sessionBrowsers.count">
       <source xml:lang="en">{0} Active Browsers</source>
     </trans-unit>
@@ -11773,13 +11984,10 @@ Source: {0}</source>
       <source xml:lang="en">Show 1 subagent</source>
     </trans-unit>
     <trans-unit id="sessionSubagents.title">
-      <source xml:lang="en">Background Activities</source>
+      <source xml:lang="en">Subagents</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/sessionPullRequestPill" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatInputPills.pullRequests.showAll">
-      <source xml:lang="en">Show All</source>
-    </trans-unit>
     <trans-unit id="chatInputPills.pullRequests.showOpen">
       <source xml:lang="en">Show Open/Draft</source>
     </trans-unit>
@@ -13263,6 +13471,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="addToChat">
       <source xml:lang="en">Add File to Chat</source>
     </trans-unit>
+    <trans-unit id="chat.copyLink.status">
+      <source xml:lang="en">Link copied to clipboard</source>
+    </trans-unit>
     <trans-unit id="chatCollapsibleList">
       <source xml:lang="en">Collapsible Chat References List</source>
     </trans-unit>
@@ -13343,6 +13554,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatSubagentContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.fusionPhase">
+      <source xml:lang="en">HydraFusion phase</source>
+    </trans-unit>
     <trans-unit id="chat.subagent.completedDefaultDescription">
       <source xml:lang="en">Ran subagent</source>
     </trans-unit>
@@ -13795,6 +14009,26 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="vulnerabilitiesSingular">
       <source xml:lang="en">{0} vulnerability</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/fusionPhasePillActionViewItem" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.phase.cancelled">
+      <source xml:lang="en">Phase cancelled</source>
+    </trans-unit>
+    <trans-unit id="chat.phase.completed">
+      <source xml:lang="en">Phase completed</source>
+    </trans-unit>
+    <trans-unit id="chat.phase.failed">
+      <source xml:lang="en">Phase failed</source>
+    </trans-unit>
+    <trans-unit id="chat.phase.modelTooltip">
+      <source xml:lang="en">Model: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.phase.running">
+      <source xml:lang="en">Phase is running</source>
+    </trans-unit>
+    <trans-unit id="chat.phase.title">
+      <source xml:lang="en">HydraFusion phase: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/abstractToolConfirmationSubPart" source-language="en" datatype="plaintext"><body>
@@ -14656,6 +14890,12 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.pendingRequests.steeringQueued">
       <source xml:lang="en">Steering</source>
     </trans-unit>
+    <trans-unit id="chat.submitSessionChanged">
+      <source xml:lang="en">The chat session changed or was closed before the request could be sent. Please try again in the original chat.</source>
+    </trans-unit>
+    <trans-unit id="chat.submitSessionReadOnly">
+      <source xml:lang="en">The chat session is read-only. The request was not sent.</source>
+    </trans-unit>
     <trans-unit id="chatDescription">
       <source xml:lang="en">Ask about your code</source>
     </trans-unit>
@@ -15228,6 +15468,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">Current model</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerModelConfig" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.modelPicker.automaticTier">
+      <source xml:lang="en">Automatic</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerPresentation" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.category.lightweight">
       <source xml:lang="en">Lightweight</source>
@@ -15654,6 +15899,12 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chatAgentModeDisabledByPolicy">
       <source xml:lang="en">True when agent mode is disabled by organization policy.</source>
     </trans-unit>
+    <trans-unit id="chatContextMenuHasAvailableEditors">
+      <source xml:lang="en">Whether the chat context menu link can be opened with an alternate editor.</source>
+    </trans-unit>
+    <trans-unit id="chatContextMenuHasLink">
+      <source xml:lang="en">Whether the chat context menu was opened on a link.</source>
+    </trans-unit>
     <trans-unit id="chatContextMenuIsBackground">
       <source xml:lang="en">Whether the chat context menu was opened from the transcript background rather than chat item content.</source>
     </trans-unit>
@@ -15949,6 +16200,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.attachmentSummary.image.one">
       <source xml:lang="en">Attached 1 image</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/automations/automationService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationHostChangeUnsupported">
+      <source xml:lang="en">An automation cannot move between Agent Hosts. Duplicate it on the new host to keep the original run history. The original continues scheduling until you disable it.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/automations/schedule" source-language="en" datatype="plaintext"><body>

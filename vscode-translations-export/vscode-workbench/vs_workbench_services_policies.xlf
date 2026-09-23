@@ -57,28 +57,68 @@ An error prevented the required policy from being retrieved, so AI features are 
     <trans-unit id="managedSettingsRefresh.notification.pending">
       <source xml:lang="en">{0} is resolving your organization's policy. AI features will remain unavailable until this completes.</source>
     </trans-unit>
-    <trans-unit id="managedSettingsUpdate.dialog.close">
-      <source xml:lang="en">Close</source>
+</body></file>
+  <file original="src/vs/workbench/services/policies/browser/managedSettingsUpdate.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="managedSettingsUpdate.actionHelp">
+      <source xml:lang="en">The available update action is {0}.</source>
     </trans-unit>
-    <trans-unit id="managedSettingsUpdate.dialog.learnMore">
-      <source xml:lang="en">Learn More</source>
+    <trans-unit id="managedSettingsUpdate.agentsHelp">
+      <source xml:lang="en">The Agents window is blocked by your organization's minimum-version requirement. The overlay explains the required update.</source>
     </trans-unit>
-    <trans-unit id="managedSettingsUpdate.dialog.title">
-      <source xml:lang="en">Update Required</source>
+    <trans-unit id="managedSettingsUpdate.availableActionsHelp">
+      <source xml:lang="en">Use Tab or Shift+Tab to move between available actions, then press Enter or Space to activate one.</source>
     </trans-unit>
-    <trans-unit id="managedSettingsUpdate.dialog.update">
-      <source xml:lang="en">Check for Updates</source>
+    <trans-unit id="managedSettingsUpdate.bannerHelp">
+      <source xml:lang="en">The window banner is also available with the Focus Banner command. In the banner, use the arrow keys to reach its actions. Closing the banner does not dismiss the explanation in Chat or change your organization's requirement.</source>
     </trans-unit>
-    <trans-unit id="managedSettingsUpdate.notification">
-      <source xml:lang="en">Your version of {0} cannot enforce your organization's managed settings. Update {0} to continue using AI features.</source>
+    <trans-unit id="managedSettingsUpdate.bannerWithStatus">
+      <source xml:lang="en">{0} {1}</source>
     </trans-unit>
-    <trans-unit id="managedSettingsUpdate.notificationWithMinimumVersion">
-      <source xml:lang="en">Your version of {0} cannot enforce your organization's managed settings. Update {0} to version {1} or later to continue using AI features.</source>
+    <trans-unit id="managedSettingsUpdate.editorWindowHelp">
+      <source xml:lang="en">Use Tab or Shift+Tab to reach Open Editor Window, then press Enter or Space. This opens a new editor window.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.help">
+      <source xml:lang="en">Chat is read-only while this requirement is active.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/services/policies/common/accountPolicyService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatAccountPolicyGateActive">
       <source xml:lang="en">True when account policy or managed-settings enforcement prevents this client from using AI features.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/services/policies/common/managedSettingsUpdate" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="managedSettingsUpdate.check">
+      <source xml:lang="en">Check for Updates</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.disabled">
+      <source xml:lang="en">Built-in updates are disabled by your organization. Contact your administrator for an approved update.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.download">
+      <source xml:lang="en">Download Update</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.initializing">
+      <source xml:lang="en">Update availability is not yet known.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.install">
+      <source xml:lang="en">Install Update</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.installed">
+      <source xml:lang="en">Installed: {0}</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.message">
+      <source xml:lang="en">Your organization requires an update to {0} to use AI features.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.minimumVersion">
+      <source xml:lang="en">Your organization requires {0} {1} or later to use AI features.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.progress">
+      <source xml:lang="en">An update operation is in progress.</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.restart">
+      <source xml:lang="en">Restart to Update</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsUpdate.title">
+      <source xml:lang="en">Update required by your organization</source>
     </trans-unit>
 </body></file>
 </xliff>

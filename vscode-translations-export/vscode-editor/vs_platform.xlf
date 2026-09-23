@@ -406,12 +406,6 @@ A keybinding</note>
     <trans-unit id="agentHost.config.githubEnterpriseUri.title">
       <source xml:lang="en">GitHub Enterprise URI</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.sessionCustomizationDiscoveryMode.description">
-      <source xml:lang="en">Controls whether session-scoped customizations are populated from local file scanning or from Copilot SDK discovery.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.sessionCustomizationDiscoveryMode.title">
-      <source xml:lang="en">Session Customization Discovery Mode</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/agentHostEnablementService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostEnabled">
@@ -1153,19 +1147,33 @@ A keybinding</note>
       <source xml:lang="en">Balance</source>
     </trans-unit>
     <trans-unit id="autoModeTier.balanceDescription">
-      <source xml:lang="en">Balances capability and cost</source>
+      <source xml:lang="en">Balances cost/speed and capability based on task complexity.</source>
     </trans-unit>
     <trans-unit id="autoModeTier.efficiency">
       <source xml:lang="en">Efficiency</source>
     </trans-unit>
     <trans-unit id="autoModeTier.efficiencyDescription">
-      <source xml:lang="en">Cheaper models for everyday tasks</source>
+      <source xml:lang="en">Optimizes for cost and speed, using more capable models only when needed.</source>
     </trans-unit>
     <trans-unit id="autoModeTier.intelligence">
       <source xml:lang="en">Intelligence</source>
     </trans-unit>
     <trans-unit id="autoModeTier.intelligenceDescription">
-      <source xml:lang="en">Most capable models, higher cost</source>
+      <source xml:lang="en">Optimizes for capability, using faster models only when the task allows it.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/automationConfig" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.automationRunTimeout">
+      <source xml:lang="en">Automation Run Timeout</source>
+    </trans-unit>
+    <trans-unit id="agentHost.automationRunTimeout.description">
+      <source xml:lang="en">Maximum duration of an automation run, in minutes.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.automationsEnabled">
+      <source xml:lang="en">Automations</source>
+    </trans-unit>
+    <trans-unit id="agentHost.automationsEnabled.description">
+      <source xml:lang="en">Whether this Agent Host may run automations.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/changesetUri" source-language="en" datatype="plaintext"><body>
@@ -2771,6 +2779,104 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotSlashCommand.selectSubcommandResult">
       <source xml:lang="en">The /{0} command requires selecting a subcommand. Available options: {1}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotFusionProgress" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.fusion.accepted">
+      <source xml:lang="en">Review accepted the result.</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.cascade">
+      <source xml:lang="en">Cascade</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.cascadeDescription">
+      <source xml:lang="en">Using Cascade: a solver will work on your request, then another model will review and fix up the result if needed.</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.completed">
+      <source xml:lang="en">HydraFusion workflow completed</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.completedDegraded">
+      <source xml:lang="en">HydraFusion workflow completed with a fallback</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.conditionalPhase">
+      <source xml:lang="en">{0} (if needed)</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.continuing">
+      <source xml:lang="en">Continuing the HydraFusion workflow...</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.critic">
+      <source xml:lang="en">Critique pass</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.critique">
+      <source xml:lang="en">Critique</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.critiqueDescription">
+      <source xml:lang="en">Using Critique: a solver will draft a result, another model will critique it, and the original solver will revise it if needed.</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.draft">
+      <source xml:lang="en">First pass</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.duration">
+      <source xml:lang="en">Duration: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.ended">
+      <source xml:lang="en">HydraFusion workflow ended: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.fallback">
+      <source xml:lang="en">Continuing with a fallback phase...</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.followUp">
+      <source xml:lang="en">Follow-up pass</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.interrupted">
+      <source xml:lang="en">HydraFusion workflow interrupted</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.judge">
+      <source xml:lang="en">Review pass</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.phaseCancelled">
+      <source xml:lang="en">{0} cancelled</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.phaseCompleted">
+      <source xml:lang="en">{0} completed</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.phaseFailed">
+      <source xml:lang="en">{0} failed</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.phaseRunning">
+      <source xml:lang="en">{0} running</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.preparing">
+      <source xml:lang="en">Preparing the {0} workflow...</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.primary">
+      <source xml:lang="en">Main pass</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.rejected">
+      <source xml:lang="en">Review requested changes.</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.repair">
+      <source xml:lang="en">Fix-up pass</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.revision">
+      <source xml:lang="en">Revision pass</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.routeFailed">
+      <source xml:lang="en">HydraFusion routing failed; continuing with {0}</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.routing">
+      <source xml:lang="en">Choosing a HydraFusion workflow...</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.selected">
+      <source xml:lang="en">Selected {0} workflow</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.single">
+      <source xml:lang="en">Single</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.singleDescription">
+      <source xml:lang="en">Using Single: one solver will work on your request.</source>
+    </trans-unit>
+    <trans-unit id="copilot.fusion.toolRunning">
+      <source xml:lang="en">{0}: running a tool</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSandboxPolicyDisplay" source-language="en" datatype="plaintext"><body>

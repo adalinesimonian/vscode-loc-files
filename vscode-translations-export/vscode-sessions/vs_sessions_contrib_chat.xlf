@@ -557,6 +557,23 @@
       <source xml:lang="en">Voice Input Mode</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/newChatMigrationNotice" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="dismissMigrationNotice">
+      <source xml:lang="en">Dismiss Migration Notice for This Workspace</source>
+    </trans-unit>
+    <trans-unit id="migrationNotice">
+      <source xml:lang="en">Customization migrations</source>
+    </trans-unit>
+    <trans-unit id="migrationNoticeMultiple">
+      <source xml:lang="en">{0} agent customizations need an update to keep working.</source>
+    </trans-unit>
+    <trans-unit id="migrationNoticeSingle">
+      <source xml:lang="en">1 agent customization needs an update to keep working.</source>
+    </trans-unit>
+    <trans-unit id="reviewMigrations">
+      <source xml:lang="en">Review Migrations</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/chat/browser/newChatVoice" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentsVoice.connecting">
       <source xml:lang="en">Connecting...</source>
@@ -604,6 +621,12 @@
     </trans-unit>
     <trans-unit id="newSessionWorkspacePicker.remoteQuickChat">
       <source xml:lang="en">Chat [{0}]</source>
+    </trans-unit>
+    <trans-unit id="newSessionWorkspacePicker.repository">
+      <source xml:lang="en">Select Repository</source>
+    </trans-unit>
+    <trans-unit id="newSessionWorkspacePicker.repositoryAriaLabel">
+      <source xml:lang="en">Choose a repository for the new session</source>
     </trans-unit>
     <trans-unit id="newSessionWorkspacePicker.workspace">
       <source xml:lang="en">Workspace</source>
@@ -975,8 +998,14 @@
     <trans-unit id="backgroundActivities.subagent">
       <source xml:lang="en">Subagent</source>
     </trans-unit>
-    <trans-unit id="backgroundActivities.subagents">
-      <source xml:lang="en">Subagents</source>
+    <trans-unit id="backgroundActivities.subagents.completed">
+      <source xml:lang="en">Subagents: Completed</source>
+    </trans-unit>
+    <trans-unit id="backgroundActivities.subagents.inProgress">
+      <source xml:lang="en">Subagents: In Progress</source>
+    </trans-unit>
+    <trans-unit id="backgroundActivities.subagents.showInProgress">
+      <source xml:lang="en">Show In Progress</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionBrowsersControl" source-language="en" datatype="plaintext"><body>
@@ -1160,6 +1189,37 @@
       <source xml:lang="en">Untitled session</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionTestAppButton" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="retestApp">
+      <source xml:lang="en">Retest App</source>
+    </trans-unit>
+    <trans-unit id="retestAppWithIcon">
+      <source xml:lang="en">{0} Retest App</source>
+    </trans-unit>
+    <trans-unit id="testApp">
+      <source xml:lang="en">Test App</source>
+    </trans-unit>
+    <trans-unit id="testAppNotStarted">
+      <source xml:lang="en">The app test request could not be started.</source>
+    </trans-unit>
+    <trans-unit id="testAppPrompt">
+      <source xml:lang="en">Test the UI of the app built or changed in this chat.
+
+First review the original requirements and the relevant implementation diffs, including added and deleted files. Identify the affected behavior and regression risks. Use the implementation changes in this chat as the scope, not unrelated workspace edits, and do not assume an unstaged git diff contains every change.
+
+Identify the actual app target from the project's instructions and configuration. Launch it and interact with its actual UI. Use browser/Playwright tools for web targets, or available computer-use, native, simulator/emulator, and project-specific UI tools for native or desktop targets. A browser preview does not verify a native target.
+
+Verify the requested features, the affected user flows, and relevant edge cases. Check for visible failures and console/runtime errors where available. Reading the code or running unit tests alone does not count as UI verification.
+
+Fix issues you find, then rerun the affected UI flows to confirm the fixes. Keep changes focused on issues uncovered by testing.</source>
+    </trans-unit>
+    <trans-unit id="testAppTooltip">
+      <source xml:lang="en">Review the changes, test the app UI, fix issues found, and retest</source>
+    </trans-unit>
+    <trans-unit id="testAppWithIcon">
+      <source xml:lang="en">{0} Test App</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionTurnChanges" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatTurnPills.changes.title">
       <source xml:lang="en">Turn File Changes</source>
@@ -1309,7 +1369,7 @@
       <source xml:lang="en">Outside high contrast themes, use Set Background to choose no background, the built-in theme-aware Codicons pattern, a new image, or one of the five most recently selected images. One randomly selected icon in the Codicons pattern is a Celebrate button; press Tab to find it, then press Enter or Space to activate it. Each activation selects another random icon as the next Celebrate button. Use Change Background Layout to choose whether an image repeats, stretches, or appears at an edge or corner for the current color theme. Moving through the layout picker previews each option; select one to save it, or press Escape to restore the previous layout. Both commands are available from the Command Palette and by right-clicking empty chat space. Change Background Layout is shown only for images. Background customization is unavailable while a high contrast theme is active.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.backgroundActivities">
-      <source xml:lang="en">Press Shift+Tab from the chat input to reach metadata and status pills above it, use the left and right arrows to move between pills, and press Enter or Space to activate one. Live browsers appear in their own pill, and the chat's subagents of any status appear in another. A pill with more than one entry opens a picker. Use the up and down arrows to move between entries. When an entry has details, Tab moves through its row actions and detail links; Shift+Tab returns to the row action, and the up and down arrows continue moving between entries. Press Enter to open an entry, or Escape to dismiss the picker and return focus to the pill.</source>
+      <source xml:lang="en">Press Shift+Tab from the chat input to reach metadata and status pills above it, use the left and right arrows to move between pills, and press Enter or Space to activate one. Live browsers appear in their own pill, and the chat's subagents appear in another. A pill with more than one entry opens a picker. Subagents are grouped under Subagents: In Progress and Subagents: Completed. In Progress includes subagents waiting for input; Completed includes failed subagents. Use the up and down arrows to move between entries. When an entry has details, Tab moves through its row actions and detail links; Shift+Tab returns to the row action, and the up and down arrows continue moving between entries. Press Enter to open an entry, or Escape to dismiss the picker and return focus to the pill.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.changes">
       <source xml:lang="en">Focus the Changes view{0}.</source>
@@ -1342,7 +1402,7 @@
       <source xml:lang="en">When a session was created by another session, focus it in the Sessions list and use the Show Hover command{0}. Move focus to the Created by link, then press Enter or Space to open the creator session.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.customizations">
-      <source xml:lang="en">Focus the Chat Customizations section at the bottom of the left sidebar{0}.</source>
+      <source xml:lang="en">Focus Chat Customizations in the left sidebar{0}.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.delegatedMessage">
       <source xml:lang="en">Messages sent by another session or chat show a source annotation above the message. Press Tab to focus the annotation, then press Enter or Space to open the source chat.</source>
@@ -1411,10 +1471,13 @@
       <source xml:lang="en">Press Alt+Enter to start the session in the background without navigating into it. The started session appears in the Chat Sessions view.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.inputPills">
-      <source xml:lang="en">When session metadata or active-turn status pills appear above the input, press Shift+Tab to reach them, use the Left and Right arrow keys to move between them, and press Enter or Space to activate one. Open the context menu{0} to choose which pills are shown. Pull Requests Options lets you show all pull requests or only open and draft ones, remembered across sessions. If every pull request is filtered out, these options are also available in any other pill's context menu or the toolbar context menu.</source>
+      <source xml:lang="en">When session metadata or active-turn status pills appear above the input, press Shift+Tab to reach them, use the Left and Right arrow keys to move between them, and press Enter or Space to activate one. Open the context menu{0} to choose which pills are shown. Pull Requests Options lets you show all pull requests or only open and draft ones. Subagent Options offers Show All and Show In Progress. These choices are remembered across sessions. If every entry of a pill is filtered out, its options are also available in any other pill's context menu or the toolbar context menu.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.micContextMenu">
       <source xml:lang="en">To choose a microphone or turn off dictation or Voice Mode, focus the microphone button in the input toolbar and open its context menu (for example Shift+F10).</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.migrations">
+      <source xml:lang="en">When agent customizations need an update, a notice below the new-session input shows how many need attention. Use Tab to reach Review Migrations and open the Migrations page. Dismiss Migration Notice for This Workspace hides the notice for that workspace, including after restarting, and returns focus to the input.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.mobileConfig">
       <source xml:lang="en">On mobile, the mode and model pickers appear as tappable chips below the input. Tap a chip to open a bottom sheet where you can change the selection.</source>
@@ -1472,6 +1535,12 @@
     </trans-unit>
     <trans-unit id="sessionsChat.renameSession">
       <source xml:lang="en">To rename a session inline, focus its row in the Sessions list and invoke Rename{0}, double-click its title, or open its context menu and choose Rename. Type the new title, then press Enter to confirm or Escape to cancel. From the main chat transcript or input, invoking Rename edits the header title inline when it is visible and opens a prompt otherwise.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.repositoryCreation">
+      <source xml:lang="en">This host creates a new environment for each session. Open Select Repository to choose its repository. Selecting a repository does not start an environment; sending your first message does. The harness label identifies the available agent, and Agent Default means the host chooses the model.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.repositorySelection">
+      <source xml:lang="en">When choosing a GitHub repository in the browser, search or enter a GitHub URL or owner/repository. Use the arrow keys to navigate results, Enter to select, and Escape to cancel. Sign in to GitHub if prompted.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionsListChatContextMenu">
       <source xml:lang="en">Open a nested chat's context menu to rename it, open it to the side, or, when supported, permanently delete it. Agent Host chats also offer Copy Link.</source>

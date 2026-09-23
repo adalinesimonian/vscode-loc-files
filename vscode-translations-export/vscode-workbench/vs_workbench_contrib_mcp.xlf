@@ -1139,7 +1139,7 @@
       <source xml:lang="en">The working directory for the server command. Defaults to the workspace folder when run in a workspace.</source>
     </trans-unit>
     <trans-unit id="app.mcp.json.headers">
-      <source xml:lang="en">Additional headers sent to the server.</source>
+      <source xml:lang="en">Additional headers sent to the server. These headers are not sent to a different origin, including across redirects.</source>
     </trans-unit>
     <trans-unit id="app.mcp.json.oauth">
       <source xml:lang="en">OAuth configuration for authenticating with the server.</source>

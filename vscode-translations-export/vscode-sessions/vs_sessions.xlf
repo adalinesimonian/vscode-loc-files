@@ -574,6 +574,9 @@
     <trans-unit id="multipleSessionsVisible">
       <source xml:lang="en">Whether more than one session is visible in the sessions part's grid</source>
     </trans-unit>
+    <trans-unit id="newSessionCreationProviderId">
+      <source xml:lang="en">The provider selected for new session creation before a draft exists</source>
+    </trans-unit>
     <trans-unit id="sessionActiveChatHasSideChats">
       <source xml:lang="en">Whether the chat represented by the session or chat header has side chats</source>
     </trans-unit>
@@ -927,6 +930,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/services/sessions/browser/sessionsManagementService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationProviderUnavailable">
+      <source xml:lang="en">The selected provider does not currently provide Automation configuration.</source>
+    </trans-unit>
     <trans-unit id="newSession.sendFailed">
       <source xml:lang="en">Failed to start session: {0}</source>
     </trans-unit>
