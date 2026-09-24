@@ -626,6 +626,9 @@
     <trans-unit id="edge.port.description">
       <source xml:lang="en">When debugging webviews, the port the webview debugger is listening on. Will be automatically discovered if not set.</source>
     </trans-unit>
+    <trans-unit id="configuration.resolveDebugEntrypoint">
+      <source xml:lang="en">When true (default), js-debug uses source maps to remap a non-`.js` `program` path to its compiled output before launching. Set to false to execute the `program` path exactly as written.</source>
+    </trans-unit>
     <trans-unit id="configuration.npmScriptLensLocation">
       <source xml:lang="en">Where a &quot;Run&quot; and &quot;Debug&quot; code lens should be shown in your npm scripts. It may be on &quot;all&quot;, scripts, on &quot;top&quot; of the script section, or &quot;never&quot;.</source>
     </trans-unit>

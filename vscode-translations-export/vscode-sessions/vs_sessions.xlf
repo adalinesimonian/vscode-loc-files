@@ -199,7 +199,7 @@
       <source xml:lang="en">modified</source>
     </trans-unit>
     <trans-unit id="changesView.empty">
-      <source xml:lang="en">No changes in this session yet.</source>
+      <source xml:lang="en">No changes yet.</source>
     </trans-unit>
     <trans-unit id="changesView.rowAria">
       <source xml:lang="en">{0}, {1}, +{2} -{3}</source>
@@ -211,7 +211,7 @@
       <source xml:lang="en">1 file</source>
     </trans-unit>
     <trans-unit id="changesView.title">
-      <source xml:lang="en">Session Changes</source>
+      <source xml:lang="en">Changes</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/browser/parts/mobile/contributions/mobileDiffColors" source-language="en" datatype="plaintext"><body>
@@ -929,6 +929,91 @@
       <source xml:lang="en">Celebrate</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/services/sessions/browser/sessionComparisonService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionComparison.additionalSynthesisInstructionsPrompt">
+      <source xml:lang="en">
+
+## Additional synthesis instructions
+{0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.attemptMissing">
+      <source xml:lang="en">The attempt session is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.harnessAndPermissions">
+      <source xml:lang="en">{0} · {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.insufficientSuccessfulAttempts">
+      <source xml:lang="en">Only {0} of {1} comparison attempts started. At least two must start successfully. Failed attempts: {2}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.judgeTitle">
+      <source xml:lang="en">Judge: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.judgeUnavailable">
+      <source xml:lang="en">The judge session did not start.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.launchCancelled">
+      <source xml:lang="en">The attempt was cancelled before it started.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.launchUnavailable">
+      <source xml:lang="en">The session did not start.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.legacyAttemptTitle">
+      <source xml:lang="en">Attempt {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.noJudgeExplanation">
+      <source xml:lang="en">No Judge explanation is available; use the selected attempt as the base.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.rationale.codeQuality">
+      <source xml:lang="en">Code quality: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.rationale.comparison">
+      <source xml:lang="en">Comparison: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.rationale.solution">
+      <source xml:lang="en">Solution: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.rationale.validation">
+      <source xml:lang="en">Validation: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.selectedApproachPrompt">
+      <source xml:lang="en">- **{0}**: Follow {1}. {2}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.selectedSynthesisApproachesPrompt">
+      <source xml:lang="en">
+
+## Selected synthesis approaches
+{0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.synthesisPrompt">
+      <source xml:lang="en">Synthesize the strongest parts of comparison `{0}` into a new implementation.
+
+## Process
+1. Call `#readAttemptComparison` exactly once with this comparison ID.
+2. Read implementation code only from the authoritative worktrees in the manifest. If `changedFilesStatus` is unavailable, read the Git diff from that worktree.
+3. Treat every selected synthesis approach and additional instruction below, plus the synthesis plan in the manifest, as explicit user requirements. Resolve cross-section dependencies coherently instead of copying hunks mechanically.
+4. Call `get_session_context` only with an exact `sessionContextTarget` returned by the manifest and only for rationale or validation evidence. Never recover implementation code or paths from a transcript.
+5. Do not inspect another checkout, discover sessions, or guess references. Preserve correct behavior and resolve the Judge's reported conflicts.
+
+## Judge recommendation
+{1}{2}
+
+## Completion
+- Run the relevant validation.
+- Respond concisely with **Changes**, **Validation**, and **Remaining issues** sections using bullet points.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.synthesisTitle">
+      <source xml:lang="en">Synthesis: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.synthesisUnavailable">
+      <source xml:lang="en">The synthesis session did not start.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.synthesizerSelectsApproachPrompt">
+      <source xml:lang="en">- **{0}**: Synthesizer decides.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.unknownWinningAttempt">
+      <source xml:lang="en">Winning attempt</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/services/sessions/browser/sessionsManagementService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="automationProviderUnavailable">
       <source xml:lang="en">The selected provider does not currently provide Automation configuration.</source>
@@ -944,6 +1029,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/services/sessions/browser/sessionsService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.emptyGrid">
+      <source xml:lang="en">No sessions are available to open.</source>
+    </trans-unit>
     <trans-unit id="sessionsService.trustFolderMessage">
       <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
     </trans-unit>
@@ -972,6 +1060,17 @@
     </trans-unit>
     <trans-unit id="working">
       <source xml:lang="en">Working...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/services/sessions/common/sessionComparison" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionComparison.attemptLabel">
+      <source xml:lang="en">Attempt {0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.harnessAndModel">
+      <source xml:lang="en">{0} · {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.harnessModelAndConfiguration">
+      <source xml:lang="en">{0} · {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/services/workspace/browser/workspaceContextService" source-language="en" datatype="plaintext"><body>

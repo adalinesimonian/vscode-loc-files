@@ -946,6 +946,12 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/actions/developerActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="excludedTelemetryContributions">
+      <source xml:lang="en">Telemetry contributions excluded by the selected block</source>
+    </trans-unit>
+    <trans-unit id="excludedTelemetryStatus">
+      <source xml:lang="en">Excluded by higher-priority telemetry block (value omitted)</source>
+    </trans-unit>
     <trans-unit id="global">
       <source xml:lang="en">Global</source>
     </trans-unit>
@@ -965,6 +971,12 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     </trans-unit>
     <trans-unit id="machine">
       <source xml:lang="en">Machine</source>
+    </trans-unit>
+    <trans-unit id="managedSettingsPrecedence">
+      <source xml:lang="en">Precedence is native MDM, then server, then file. Most settings resolve per key, filling gaps from lower channels. Telemetry selects one whole block: omitted leaves never inherit from weaker blocks. Empty or unknown-only server/file objects still select a block; native MDM exposes only declared flat keys. The internal telemetry presence marker is not a policy setting. For sandbox.enabled, any managed true wins regardless of channel precedence, matching the runtime sandbox floor.</source>
+    </trans-unit>
+    <trans-unit id="noSelectedManagedSettingsKeys">
+      <source xml:lang="en">The selected sources supply no managed-settings leaves.</source>
     </trans-unit>
     <trans-unit id="policyDiagnostics">
       <source xml:lang="en">Policy Diagnostics</source>
@@ -1073,6 +1085,9 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="syncAccountPolicy.success">
       <source xml:lang="en">Account policy has been synced.</source>
+    </trans-unit>
+    <trans-unit id="telemetryBlockSource">
+      <source xml:lang="en">Selected telemetry block</source>
     </trans-unit>
     <trans-unit id="toggle screencast mode">
       <source xml:lang="en">Toggle Screencast Mode</source>
@@ -1829,12 +1844,32 @@ This action is irreversible and may result in data loss!</source>
       <source xml:lang="en">{0} Files</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/browser/chatImagePreview" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.openImagePreview">
+      <source xml:lang="en">Open in Images Preview</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/browser/chatPills" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatPills.ariaLabel">
       <source xml:lang="en">Chat status</source>
     </trans-unit>
+    <trans-unit id="chatPills.copyHash">
+      <source xml:lang="en">Copy hash</source>
+    </trans-unit>
+    <trans-unit id="chatPills.copyUrl">
+      <source xml:lang="en">Copy URL</source>
+    </trans-unit>
+    <trans-unit id="chatPills.imagePreviewAlt">
+      <source xml:lang="en">Preview of {0}</source>
+    </trans-unit>
+    <trans-unit id="chatPills.imagePreviewUnavailable">
+      <source xml:lang="en">Image preview unavailable.</source>
+    </trans-unit>
     <trans-unit id="chatPills.open">
       <source xml:lang="en">Open {0}</source>
+    </trans-unit>
+    <trans-unit id="chatPills.removeReference">
+      <source xml:lang="en">Remove reference</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/chatResourcePill" source-language="en" datatype="plaintext"><body>
@@ -5775,6 +5810,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="commandCenter-inactiveForeground">
       <source xml:lang="en">Foreground color of the command center when the window is inactive</source>
+    </trans-unit>
+    <trans-unit id="connectedTabsContainerBackground">
+      <source xml:lang="en">Background color of connected tabs in editor group title headers. Editor groups are the containers of editors.</source>
     </trans-unit>
     <trans-unit id="editorBorder">
       <source xml:lang="en">Border color of the editor surface in the modern layout.</source>

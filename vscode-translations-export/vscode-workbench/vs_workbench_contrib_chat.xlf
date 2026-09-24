@@ -217,6 +217,9 @@
     <trans-unit id="chat.nextQuestionCarouselQuestion">
       <source xml:lang="en">When a chat question is focused, move to the next question{0}.</source>
     </trans-unit>
+    <trans-unit id="chat.openTerminalFullOutput">
+      <source xml:lang="en">When retained full output is available for a completed command, click the output preview to open it in a read-only editor. You can also use the Open Full Output (Read-Only) action in the command header or terminal output Accessible View, or focus the output region and press Enter.</source>
+    </trans-unit>
     <trans-unit id="chat.overview">
       <source xml:lang="en">The quick chat view is comprised of an input box and a request/response list. The input box is used to make requests and the list is used to display responses.</source>
     </trans-unit>
@@ -224,7 +227,16 @@
       <source xml:lang="en">To paste the clipboard as plain text, without converting it to Markdown or storing it as an attachment, invoke Paste as Text{0}.</source>
     </trans-unit>
     <trans-unit id="chat.persistentProgress">
-      <source xml:lang="en">The chat.experimental.persistentProgress setting defaults to Off, preserving the original thinking and progress UI. Choosing Weave, Draw, Orbit and Lock, Accordion, or Dial Rotation keeps a working progress indicator at the bottom until the response finishes. Tool chains stay expanded without a group header or an internal scrolling limit. Completed responses still follow chat.agent.collapseCompletedResponses; expanding the completed-steps disclosure reveals those same tool chains. Reasoning appears separately as collapsible previews; focus a reasoning header and press Enter or Space to expand or collapse it. Standalone tools keep their decorative icons. Terminal activity animations and subagent pills are unchanged. While the response waits on subagents or background agents, the indicator reports how many subagents it is waiting for; while it waits on a background terminal, it reports that it is waiting for terminal output. Reduced motion keeps the indicator visible without animation. Spoken progress updates are controlled by accessibility.verboseChatProgressUpdates.</source>
+      <source xml:lang="en">The chat.experimental.persistentProgress setting defaults to Draw, keeping a working progress indicator at the bottom until the response finishes. Choose Off to restore the original thinking and progress UI. The chat.experimental.persistentProgressVerbosity setting defaults to Compact: tool calls preview while running, then collapse in place to a single summary row when thinking or response text resumes, or the response finishes. Choose Verbose to keep tool chains expanded without a group header or an internal scrolling limit. Use Tab to focus a summary and press Enter or Space to expand or collapse its tool calls. Automatic collapse waits until keyboard focus leaves the group. Completed responses still follow chat.agent.collapseCompletedResponses. Reasoning appears separately as collapsible previews; focus a reasoning header and press Enter or Space to expand or collapse it. Standalone tools keep their decorative icons. Terminal activity animations and subagent pills are unchanged. While the response waits on subagents or background agents, the indicator reports how many subagents it is waiting for; while it waits on a background terminal, it reports that it is waiting for terminal output. Reduced motion disables the collapse animation and keeps the indicator visible without animation. Spoken progress updates are controlled by accessibility.verboseChatProgressUpdates.</source>
+    </trans-unit>
+    <trans-unit id="chat.persistentProgressHandoff">
+      <source xml:lang="en">When a reasoning or tool preview automatically collapses, content above it stays in place as the preview folds upward. The following response content appears after the collapse finishes. Scrolling to the bottom reveals the latest message and removes any space reserved for the collapse. Reduced motion skips this delay. If keyboard focus keeps a preview open, new content continues to appear without waiting for focus to move.</source>
+    </trans-unit>
+    <trans-unit id="chat.persistentProgressSimplifiedTools">
+      <source xml:lang="en">With Compact persistent progress, a single tool uses its normal rendering, icon, and details without a group summary or automatic group collapse. MCP tools use the MCP icon. The working indicator reports when chat is waiting for your answers instead of showing a separate question-tool progress row. Question controls remain available, answered questions remain in the response, and question-tool failures remain visible.</source>
+    </trans-unit>
+    <trans-unit id="chat.persistentReasoningTitles">
+      <source xml:lang="en">With persistent progress, reasoning headers say Thinking while content arrives. When reasoning finishes, a single heading becomes the header and is removed from the details. Multiple headings remain in the details, with a summary in the header when chat.agent.thinking.generateTitles is enabled and title generation is available.</source>
     </trans-unit>
     <trans-unit id="chat.planReviewEditor">
       <source xml:lang="en">When a plan is ready for review, open it from the chat response to edit the plan and add line comments. Use the editor toolbar to navigate, clear, or submit feedback. Choose an implementation action from the plan review in Chat.</source>
@@ -1948,6 +1960,12 @@ User: {2}</source>
     <trans-unit id="agentHost.auto.discount">
       <source xml:lang="en">{0}% discount</source>
     </trans-unit>
+    <trans-unit id="agentHost.hydraFusion.description">
+      <source xml:lang="en">HydraFusion routes the first eligible turn and may use multiple models. Premium usage varies with the selected route.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.hydraFusion.researchPreview">
+      <source xml:lang="en">Research preview</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostMcpServerMigrationProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcpMigrationServerIneligible">
@@ -2220,6 +2238,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="agentHostSessionPills.ariaLabel">
       <source xml:lang="en">Session status</source>
     </trans-unit>
+    <trans-unit id="agentHostSessionPills.artifactRemoved">
+      <source xml:lang="en">{0} removed from session.</source>
+    </trans-unit>
     <trans-unit id="agentHostSessionPills.artifacts.commits">
       <source xml:lang="en">Commits</source>
     </trans-unit>
@@ -2254,13 +2275,34 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Copy commit hash for {0}</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyCommitHash">
-      <source xml:lang="en">Copy Commit Hash</source>
+      <source xml:lang="en">Copy commit hash</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.copyCommitUrl">
+      <source xml:lang="en">Copy commit URL</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.copyFilePath">
+      <source xml:lang="en">Copy path</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.copyFileRelativePath">
+      <source xml:lang="en">Copy relative path</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyIssue">
-      <source xml:lang="en">Copy Issue URL</source>
+      <source xml:lang="en">Copy issue URL</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.copyIssueUrl">
+      <source xml:lang="en">Copy issue URL</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyPullRequest">
-      <source xml:lang="en">Copy Pull Request URL</source>
+      <source xml:lang="en">Copy pull request URL</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.copyPullRequestUrl">
+      <source xml:lang="en">Copy pull request URL</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.copyResourceUri">
+      <source xml:lang="en">Copy URI</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.copyWebsiteUrl">
+      <source xml:lang="en">Copy website URL</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.issue">
       <source xml:lang="en">Issue</source>
@@ -2285,6 +2327,21 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.pullRequests.section">
       <source xml:lang="en">Pull Requests</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.referenceDescription">
+      <source xml:lang="en">{0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.referenceDescriptionWithChecks">
+      <source xml:lang="en">{0}. {1}. {2}</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.removeArtifact">
+      <source xml:lang="en">Remove {0} from session</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.removeArtifactFailed">
+      <source xml:lang="en">Could not remove {0} from this session: {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.removeArtifactUnavailable">
+      <source xml:lang="en">Removing references is unavailable for this session.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSessionWorkingDirectorySynchronizer" source-language="en" datatype="plaintext"><body>
@@ -2353,6 +2410,11 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="chatAgentSessionSettings.saveHint">
       <source xml:lang="en">Edit values below and save to apply. Unknown or non-mutable properties are ignored.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/chatTerminalOutputTextModelContentProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatTerminalOutputUnavailable">
+      <source xml:lang="en">Terminal output is unavailable: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/importLocalConversationToAgentSession" source-language="en" datatype="plaintext"><body>
@@ -3096,6 +3158,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="sessionSummaryHover.filesChanged">
       <source xml:lang="en">{0} files changed</source>
     </trans-unit>
+    <trans-unit id="sessionSummaryHover.sessionSummary">
+      <source xml:lang="en">Session summary</source>
+    </trans-unit>
     <trans-unit id="sessionSummaryHover.workspace">
       <source xml:lang="en">Workspace</source>
     </trans-unit>
@@ -3158,6 +3223,258 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentSettings.unavailable">
       <source xml:lang="en">These harness settings are not available from the connected agent host.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationDiscoveryPage" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationDiscovery.accessibleAllSources">
+      <source xml:lang="en">Source: All sources</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.accessibleBrowse">
+      <source xml:lang="en">Browse mode.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.accessibleSearch">
+      <source xml:lang="en">Search: {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.accessibleSource">
+      <source xml:lang="en">Source: {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.addMcp">
+      <source xml:lang="en">Add MCP Server</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.addPlugin">
+      <source xml:lang="en">Add Plugin</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.agent">
+      <source xml:lang="en">Agent</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.allSources">
+      <source xml:lang="en">All sources</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.availableAriaLabel">
+      <source xml:lang="en">{0}, {1}, source {2}. {3}. {4}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.catalogDisabled">
+      <source xml:lang="en">Search your installed customizations, or enable a marketplace source to explore available items.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.clearSearch">
+      <source xml:lang="en">Clear Customization Search Results</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.configureMarketplaces">
+      <source xml:lang="en">Configure Marketplaces</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.description">
+      <source xml:lang="en">Find new ways to extend your agent with [[Plugins]], [[MCP Servers]], [[Skills]], [[Instructions]], [[Agents]], and [[Hooks]].</source>
+      <note>Preserve the double square brackets: they mark the customization types that become links. Keep all six links in this order: Plugins, MCP Servers, Skills, Instructions, Agents, and Hooks.</note>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.disabled">
+      <source xml:lang="en">Disabled</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.disabledAriaLabel">
+      <source xml:lang="en">, disabled</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.emptyCatalog">
+      <source xml:lang="en">No catalog customizations are available.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.error">
+      <source xml:lang="en">Could not load available customizations. {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.filter">
+      <source xml:lang="en">Filter Customizations...</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.filterInstalled">
+      <source xml:lang="en">Installed</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.filterMcpServers">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.filterPlugins">
+      <source xml:lang="en">Plugins</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.filterSkills">
+      <source xml:lang="en">Skills</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.hook">
+      <source xml:lang="en">Hook</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.import">
+      <source xml:lang="en">Import</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.importLabel">
+      <source xml:lang="en">Import a customization</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.install">
+      <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.installCancelled">
+      <source xml:lang="en">Installation cancelled for {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.installComplete">
+      <source xml:lang="en">Installed {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.installFailed">
+      <source xml:lang="en">Could not install {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.installLabel">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.installStarted">
+      <source xml:lang="en">Installing {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.installUnavailable">
+      <source xml:lang="en">Install {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.installed">
+      <source xml:lang="en">Installed</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.installedAriaLabel">
+      <source xml:lang="en">{0}, {1}, installed{2}{3}. {4}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.installedPluginDescription">
+      <source xml:lang="en">Installed agent plugin</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.installing">
+      <source xml:lang="en">Installing...</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.instructions">
+      <source xml:lang="en">Instructions</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.leadingSection">
+      <source xml:lang="en">Expand your agent's horizons</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.loadMore">
+      <source xml:lang="en">Load More</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.loading">
+      <source xml:lang="en">Loading customizations...</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.loadingMore">
+      <source xml:lang="en">Loading more customizations...</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.manualSetupAccessible">
+      <source xml:lang="en">Manual setup required. View Setup opens the publisher's instructions.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.mcp">
+      <source xml:lang="en">MCP server</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.mcpsSection">
+      <source xml:lang="en">MCP servers</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.moreResultsPossible">
+      <source xml:lang="en">More catalog results may match this search.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.newAgent">
+      <source xml:lang="en">New Agent</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.newInstructions">
+      <source xml:lang="en">New Instructions</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.newPrompt">
+      <source xml:lang="en">New Prompt</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.newSkill">
+      <source xml:lang="en">New Skill</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.noResults">
+      <source xml:lang="en">No customizations match this search.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.openError">
+      <source xml:lang="en">Could not open the customization resource. {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.plugin">
+      <source xml:lang="en">Plugin</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.pluginsSection">
+      <source xml:lang="en">Plugins</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.prompt">
+      <source xml:lang="en">Prompt</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.providerPluginsError">
+      <source xml:lang="en">Could not load installed plugins. {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.reloading">
+      <source xml:lang="en">Reloading customizations...</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.resultCount">
+      <source xml:lang="en">{0} customizations found.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.resultsLabel">
+      <source xml:lang="en">Customization search results</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.retry">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.retryInstall">
+      <source xml:lang="en">Retry Install</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.retryUninstall">
+      <source xml:lang="en">Retry Uninstall</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.searchActions">
+      <source xml:lang="en">Customization Search Actions</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.searchLabel">
+      <source xml:lang="en">Search customizations</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.searchPlaceholder">
+      <source xml:lang="en">Search customizations</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.searchWithHelp">
+      <source xml:lang="en">Search customizations. Use {0} for accessibility help.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.showAll">
+      <source xml:lang="en">Show All</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.skill">
+      <source xml:lang="en">Skill</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.skillsSection">
+      <source xml:lang="en">Skills</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.sourceAriaLabel">
+      <source xml:lang="en">, source {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.sourceButtonAriaLabel">
+      <source xml:lang="en">Customization source: {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.sourcesUnavailable">
+      <source xml:lang="en">Available customizations could not be fully loaded. Retry an unavailable source.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.stars">
+      <source xml:lang="en">{0} stars</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.title">
+      <source xml:lang="en">Discover customizations</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.uninstall">
+      <source xml:lang="en">Uninstall</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.uninstallCancelled">
+      <source xml:lang="en">Uninstallation cancelled for {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.uninstallComplete">
+      <source xml:lang="en">Uninstalled {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.uninstallFailed">
+      <source xml:lang="en">Could not uninstall {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.uninstallLabel">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.uninstallStarted">
+      <source xml:lang="en">Uninstalling {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.uninstalling">
+      <source xml:lang="en">Uninstalling...</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.viewSetup">
+      <source xml:lang="en">View Setup</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.viewSetupLabel">
+      <source xml:lang="en">View setup instructions for {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.vsCodeSource">
+      <source xml:lang="en">VS Code</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationIcons" source-language="en" datatype="plaintext"><body>
@@ -3864,6 +4181,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="delete">
       <source xml:lang="en">Delete</source>
     </trans-unit>
+    <trans-unit id="discoverButtonTooltip">
+      <source xml:lang="en">Back to Customizations</source>
+    </trans-unit>
     <trans-unit id="editorActionButtonFailed">
       <source xml:lang="en">Failed to finish the prompt action.</source>
     </trans-unit>
@@ -3885,11 +4205,8 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="editorViewRawButtonTooltip">
       <source xml:lang="en">Show the raw markdown file</source>
     </trans-unit>
-    <trans-unit id="homeButton">
-      <source xml:lang="en">Overview</source>
-    </trans-unit>
     <trans-unit id="homeButtonLabel">
-      <source xml:lang="en">Overview</source>
+      <source xml:lang="en">Discover</source>
     </trans-unit>
     <trans-unit id="homeButtonTooltip">
       <source xml:lang="en">Back to overview</source>
@@ -4053,6 +4370,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="openCustomizationFile">
       <source xml:lang="en">Open {0}, {1}</source>
     </trans-unit>
+    <trans-unit id="overviewButtonLabel">
+      <source xml:lang="en">Overview</source>
+    </trans-unit>
     <trans-unit id="plugins">
       <source xml:lang="en">Plugins</source>
     </trans-unit>
@@ -4181,6 +4501,12 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="configureCategoryAriaLabel">
       <source xml:lang="en">Configure {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace">
+      <source xml:lang="en">Marketplace</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplaceDesc">
+      <source xml:lang="en">Discover skills, MCP servers, and plugins for your agents. Review their sources before installing.</source>
     </trans-unit>
     <trans-unit id="customizationMigrationOverviewCardDescription">
       <source xml:lang="en">{0} customizations need an update before they can be used by {1}. Review what will change before migrating.</source>
@@ -4314,6 +4640,169 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="selectTargetDirectory">
       <source xml:lang="en">Select a directory for the new customization file</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplace.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationDiscovery.help.browse">
+      <source xml:lang="en">Clear the search to browse. Show All on a section applies its type filter and moves to search results.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.descriptionLinks">
+      <source xml:lang="en">The customization type links below the heading open their respective management sections.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.install">
+      <source xml:lang="en">Review an available item's source, then choose Install. MCP servers that require unsupported local prerequisites provide View Setup to open the publisher's instructions instead. Installed marketplace items provide an Uninstall action. VS Code continues to apply destination, trust, policy, and compatibility checks.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.links">
+      <source xml:lang="en">Available customization names open their external resource so you can review it before installing.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.navigation">
+      <source xml:lang="en">Use Tab and Shift+Tab between controls. In search results, use the arrow keys, Home, and End to navigate the list. Press Enter to open an installed item.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.overview">
+      <source xml:lang="en">Discover customizations searches installed agents, skills, instructions, prompts, hooks, MCP servers, and plugins, and can browse available marketplace items.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.paging">
+      <source xml:lang="en">Scrolling near the end of search results loads another page without removing loaded items. Retry repeats a failed marketplace request.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.ranking">
+      <source xml:lang="en">Available search results are ordered by source-assigned relevance, not trust or quality. Browsing without search text interleaves sources while preserving each catalog's order.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.search">
+      <source xml:lang="en">Type words or use @installed, @type:skill, @type:mcp, and @type:plugin. The search filter menu updates the same query and filters can be combined.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.sourceFailures">
+      <source xml:lang="en">Unavailable sources show a warning and Retry action above the results. Scrolling continues healthy sources. Retrying a source reloads all sources from the first page to restore relevance order.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.sourceRecovery">
+      <source xml:lang="en">A source that needs sign-in shows a Sign In action, not a warning. Sign-in starts only when you choose it; cancelling keeps the other results available.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.sources">
+      <source xml:lang="en">Use the source picker to search all available marketplace feeds or one feed. Configure Marketplaces opens the related settings.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.view">
+      <source xml:lang="en">Use {0} to read the current browse or search results in the Accessible View.</source>
+    </trans-unit>
+    <trans-unit id="customizationOverview.help.migrations">
+      <source xml:lang="en">When customizations need migration, choose Review Customization Migrations to see what will change.</source>
+    </trans-unit>
+    <trans-unit id="customizationOverview.help.navigation">
+      <source xml:lang="en">Use Tab and Shift+Tab to navigate the category cards, and Enter or Space to open a category.</source>
+    </trans-unit>
+    <trans-unit id="customizationOverview.help.overview">
+      <source xml:lang="en">The Customizations overview shows categories you can open to manage agents, skills, MCP servers, plugins, and other customizations.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplaceInstallService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationMarketplace.aiDisabled">
+      <source xml:lang="en">Enable AI features to install customizations.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.confirmSkill">
+      <source xml:lang="en">Install '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.confirmSkillDetail">
+      <source xml:lang="en">Skills can supply instructions and scripts that an agent may run. Only install resources from sources you trust.
+
+Source: {0}
+Revision: {1}
+Destination: {2}</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.cursorUnsupported">
+      <source xml:lang="en">Cursor plugins cannot be installed in VS Code. Open the resource to view its installation instructions.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.emptySkillFile">
+      <source xml:lang="en">The source's SKILL.md file is empty.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.installSkillButton">
+      <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.installingSkill">
+      <source xml:lang="en">Installing skill '{0}'</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.invalidSkillName">
+      <source xml:lang="en">The skill's folder name '{0}' is not supported. Open the source to review its installation instructions.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.invalidSkillSource">
+      <source xml:lang="en">The skill's installation source is invalid.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.mcpInstallIncomplete">
+      <source xml:lang="en">The MCP server could not be installed. Review the installation error and try again.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.mcpManualSetup">
+      <source xml:lang="en">This MCP server requires manual setup. Review the publisher's instructions before adding it.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.mcpManualSetupRequired">
+      <source xml:lang="en">This MCP server requires manual setup. Open the publisher's instructions to configure it.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.mcpManualSetupUnavailable">
+      <source xml:lang="en">This MCP server requires manual setup, but no publisher instructions are available.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.mcpUnavailable">
+      <source xml:lang="en">The MCP server '{0}' is no longer available from the GitHub Feed.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.missingSkillFile">
+      <source xml:lang="en">The source does not contain a regular SKILL.md file.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.missingStagedSkillFile">
+      <source xml:lang="en">The source changed before the skill was fully copied. Try installing it again.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.noSkillDestination">
+      <source xml:lang="en">The selected agent does not provide a writable skill installation location.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.pluginUninstallUnavailable">
+      <source xml:lang="en">This plugin cannot be uninstalled from the customization marketplace.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.pluginsDisabled">
+      <source xml:lang="en">Enable agent plugins to install this resource.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.skillExists">
+      <source xml:lang="en">A skill already exists at '{0}'. Remove or rename it before installing this resource.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.skillTooLarge">
+      <source xml:lang="en">The skill exceeds the 50 MB installation limit.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.sourceDisabled">
+      <source xml:lang="en">Enable this resource's marketplace source to install it.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.sourceUnavailable">
+      <source xml:lang="en">This resource does not provide a supported installation source.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.unsafeSkillContents">
+      <source xml:lang="en">The skill contains symbolic links or too many files. Review the source before installing it manually.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.unsafeSkillDirectory">
+      <source xml:lang="en">The skill must be a directory inside its repository, without symbolic links.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.unsupportedSkillFile">
+      <source xml:lang="en">The skill contains a file type that cannot be installed.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplaceSourceWarnings" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationMarketplace.recoverSourceLabel">
+      <source xml:lang="en">{0} for {1}. Reload all sources from the first page.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.retrySource">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.retrySourceLabel">
+      <source xml:lang="en">Retry {0}. Reload all sources from the first page.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.retrySourcesHint">
+      <source xml:lang="en">Results may be incomplete. Retry reloads all sources from the first page.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.signInSourceLabel">
+      <source xml:lang="en">{0} to view {1}.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.sourceError">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.sourceRecovery">
+      <source xml:lang="en">{0} Choose {1} to restore this source.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.sourceSignIn">
+      <source xml:lang="en">{0} Choose {1} to view {2}.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.sources">
+      <source xml:lang="en">Marketplace sources</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMigrationAccessibility" source-language="en" datatype="plaintext"><body>
@@ -4923,44 +5412,8 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMigrationServiceImpl" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="customizationMigrationHintCombined">
-      <source xml:lang="en">{0} {1}</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHintCombinedAll">
-      <source xml:lang="en">{0} {1} {2}</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHintMcpMultiple">
-      <source xml:lang="en">Found {0} MCP servers that are not fully supported by {1}.</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHintMcpSingle">
-      <source xml:lang="en">Found 1 MCP server that is not fully supported by {0}.</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHintMigratableMcpMultiple">
-      <source xml:lang="en">Found {0} workspace MCP servers that can be migrated for {1}.</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHintMigratableMcpSingle">
-      <source xml:lang="en">Found 1 workspace MCP server that can be migrated for {0}.</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHintMultiple">
-      <source xml:lang="en">Found {0} that are present but not used by {1} and could be migrated.</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHintSingle">
-      <source xml:lang="en">Found {0} that is present but not used by {1} and could be migrated.</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHintUserMultiple">
-      <source xml:lang="en">{0} user customizations</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHintUserSingle">
-      <source xml:lang="en">1 user customization</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHintWorkspaceAndUser">
-      <source xml:lang="en">{0} and {1}</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHintWorkspaceMultiple">
-      <source xml:lang="en">{0} workspace customizations</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHintWorkspaceSingle">
-      <source xml:lang="en">1 workspace customization</source>
+    <trans-unit id="customizationMigrationHintCounts">
+      <source xml:lang="en">{0} workspace and {1} user customizations need an update to keep working.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/embeddedAgentPluginDetail" source-language="en" datatype="plaintext"><body>
@@ -6032,9 +6485,6 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="chat.omittedNotebookImageAttachment">
       <source xml:lang="en">Omitted this Notebook ouput: {0}</source>
     </trans-unit>
-    <trans-unit id="chat.openImagePreview">
-      <source xml:lang="en">Open in Images Preview</source>
-    </trans-unit>
     <trans-unit id="chat.partiallyOmittedImageAttachment">
       <source xml:lang="en">Partially omitted this image: {0}</source>
     </trans-unit>
@@ -6276,11 +6726,6 @@ Changes may not take full effect until VS Code is restarted.</source>
     <trans-unit id="chat.agentHost.opus48Prompt.enabled">
       <source xml:lang="en">When enabled, Copilot SDK sessions running a Claude Opus 4.8 model apply Opus 4.8-tuned system-prompt section overrides on top of the default system message.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.reasoningEffortOverride">
-      <source xml:lang="en">Overrides the reasoning effort for Copilot SDK agent sessions regardless of the per-model picker value. Set it to a level the selected model supports (for example `low`, `medium`, `high`, or `xhigh`) — choosing a level the model does not support may be rejected by the model. A value that isn't a recognized effort level is ignored and the session falls back to the picker value. Applied when a session is created and when its model changes. Only affects Copilot CLI agent sessions.
-
-**Note**: This is an advanced setting for experimentation.</source>
-    </trans-unit>
     <trans-unit id="chat.agentHost.sdkSandbox.enabled.deprecated">
       <source xml:lang="en">This setting no longer has any effect. Use `#chat.agent.sandbox.enabled#` for both the SDK's built-in shell tool and the Agent Host's custom terminal tool.</source>
     </trans-unit>
@@ -6478,6 +6923,9 @@ This setting is only used by the Local agent harness.</source>
     </trans-unit>
     <trans-unit id="chat.customizations.locationsMigration.enabled">
       <source xml:lang="en">Controls whether the Chat Customizations editor offers to move agents, instructions, and skills from configured locations that are not supported by the active agent-host harness. When disabled, the migration card and sidebar shortcut are hidden.</source>
+    </trans-unit>
+    <trans-unit id="chat.customizations.marketplace.sources.publicFeed.enabled">
+      <source xml:lang="en">Enables the GitHub Feed as a source of skills, MCP servers, and plugins in the customization marketplace. When disabled, this source is not initialized or queried. The marketplace is hidden when no sources are enabled.</source>
     </trans-unit>
     <trans-unit id="chat.customizations.mcpServerMigration.enabled">
       <source xml:lang="en">Controls whether VS Code shows MCP server migration actions, hints, compatibility badges, and compatibility details. Migration moves eligible workspace MCP servers out of .vscode/mcp.json and into a .mcp.json file at the workspace root, where the active agent-host harness discovers them directly.</source>
@@ -9994,7 +10442,10 @@ Examples:
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatProgressConfiguration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.experimental.persistentProgress">
-      <source xml:lang="en">Keep a working progress indicator with an animated VS Code logo at the bottom until the response finishes. Selecting an animation shows tool calls in expanded, headerless chains without an internal scrolling limit. Reasoning is separated into collapsible previews that break the tool chain, and standalone tools retain their icons. Completed responses still follow the {0} setting. This replaces inner working progress; terminal activity animations and rich subagent pills are unchanged. Off preserves the original thinking, tool, and progress rendering. Changes apply immediately; reduced motion keeps the indicator visible without animation.</source>
+      <source xml:lang="en">Keep a working progress indicator with an animated VS Code logo at the bottom until the response finishes. Draw is the default animation. Tool calls follow {0}, and reasoning is separated into collapsible previews that break the tool chain. Standalone tools retain their icons. Completed responses still follow {1}. This replaces inner working progress; terminal activity animations and rich subagent pills are unchanged. Off preserves the original thinking, tool, and progress rendering. Changes apply immediately; reduced motion keeps the indicator visible without animation.</source>
+    </trans-unit>
+    <trans-unit id="chat.experimental.persistentProgressVerbosity">
+      <source xml:lang="en">Control tool call details when {0} is enabled. Compact is the default and collapses tool groups in place when thinking or response text resumes, or the response finishes. Expand a summary to inspect its tool calls. Has no effect when persistent progress is Off. Changes apply immediately.</source>
     </trans-unit>
     <trans-unit id="chat.progressAnimation.accordion">
       <source xml:lang="en">Compress the logo pieces toward the center, then open them back up.</source>
@@ -10031,6 +10482,18 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.progressAnimation.weave.label">
       <source xml:lang="en">Weave</source>
+    </trans-unit>
+    <trans-unit id="chat.progressVerbosity.compact">
+      <source xml:lang="en">Preview tool calls while they run, then collapse each group to a single expandable summary row when the response moves on.</source>
+    </trans-unit>
+    <trans-unit id="chat.progressVerbosity.compact.label">
+      <source xml:lang="en">Compact</source>
+    </trans-unit>
+    <trans-unit id="chat.progressVerbosity.verbose">
+      <source xml:lang="en">Keep tool calls in expanded, headerless chains without an internal scrolling limit.</source>
+    </trans-unit>
+    <trans-unit id="chat.progressVerbosity.verbose.label">
+      <source xml:lang="en">Verbose</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatPromoNotification" source-language="en" datatype="plaintext"><body>
@@ -11051,6 +11514,9 @@ Type anything below to get started!</source>
     <trans-unit id="installingPlugin">
       <source xml:lang="en">Installing plugin '{0}'...</source>
     </trans-unit>
+    <trans-unit id="invalidPluginSubdirectory">
+      <source xml:lang="en">The plugin's repository directory is invalid.</source>
+    </trans-unit>
     <trans-unit id="invalidSource">
       <source xml:lang="en">'{0}' is not a valid plugin source. Enter a GitHub repository (owner/repo), a git clone URL, or a local folder path.</source>
     </trans-unit>
@@ -11069,11 +11535,20 @@ Type anything below to get started!</source>
     <trans-unit id="pluginDirNotFound">
       <source xml:lang="en">Plugin source directory '{0}' not found in repository '{1}'.</source>
     </trans-unit>
+    <trans-unit id="pluginManifestNotFound">
+      <source xml:lang="en">No supported plugin manifest was found in '{0}'.</source>
+    </trans-unit>
     <trans-unit id="pluginNotFound">
       <source xml:lang="en">Plugin '{0}' not found in '{1}'.</source>
     </trans-unit>
+    <trans-unit id="pluginSourceInstallIncomplete">
+      <source xml:lang="en">The plugin could not be installed. Review the installation error and try again.</source>
+    </trans-unit>
     <trans-unit id="pluginSourceNotFound">
       <source xml:lang="en">Plugin source '{0}' not found after cloning.</source>
+    </trans-unit>
+    <trans-unit id="pluginSubdirectoryRequiresRepository">
+      <source xml:lang="en">Installing a plugin subdirectory requires a Git repository source.</source>
     </trans-unit>
     <trans-unit id="selectPlugin">
       <source xml:lang="en">Select a plugin to install from '{0}'</source>
@@ -11098,6 +11573,9 @@ Type anything below to get started!</source>
       <source xml:lang="en">Plugins can run code on your machine. Only install plugins from sources you trust.
 
 Source: {0}</source>
+    </trans-unit>
+    <trans-unit id="unsafePluginSubdirectory">
+      <source xml:lang="en">The plugin directory must be a directory inside its repository, without symbolic links.</source>
     </trans-unit>
     <trans-unit id="updateAllFailed">
       <source xml:lang="en">Failed to update: {0}</source>
@@ -13961,7 +14439,7 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">Created []({0})</source>
     </trans-unit>
     <trans-unit id="deleted">
-      <source xml:lang="en">Deleted `{0}`</source>
+      <source xml:lang="en">Deleted {0}</source>
     </trans-unit>
     <trans-unit id="renamedTo">
       <source xml:lang="en">Renamed {0} to []({1})</source>
@@ -14271,14 +14749,35 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.terminalOutputTerminalMissing">
       <source xml:lang="en">Terminal is no longer available.</source>
     </trans-unit>
+    <trans-unit id="chatTerminalFullOutputAriaLabel">
+      <source xml:lang="en">Terminal output for {0}. Press Enter to open the full output in a read-only editor.</source>
+    </trans-unit>
+    <trans-unit id="chatTerminalFullOutputAvailable">
+      <source xml:lang="en">Use Open Full Output (Read-Only) to view the captured output.</source>
+    </trans-unit>
+    <trans-unit id="chatTerminalFullOutputDescription">
+      <source xml:lang="en">Read-only</source>
+    </trans-unit>
+    <trans-unit id="chatTerminalFullOutputLabel">
+      <source xml:lang="en">Terminal Output · {0}</source>
+    </trans-unit>
+    <trans-unit id="chatTerminalFullOutputPreview">
+      <source xml:lang="en">Showing a preview. Use Open Full Output (Read-Only) to view the captured output.</source>
+    </trans-unit>
     <trans-unit id="chatTerminalOutputAccessibleViewHeader">
       <source xml:lang="en">Command: {0}</source>
     </trans-unit>
     <trans-unit id="chatTerminalOutputAriaLabel">
       <source xml:lang="en">Terminal output for {0}</source>
     </trans-unit>
+    <trans-unit id="chatTerminalOutputPreviewUnavailable">
+      <source xml:lang="en">A preview is not available.</source>
+    </trans-unit>
     <trans-unit id="chatTerminalOutputTruncated">
       <source xml:lang="en">Output truncated.</source>
+    </trans-unit>
+    <trans-unit id="chatTerminalOutputTruncatedClickPreview">
+      <source xml:lang="en">Output truncated. Click the output preview to view the full output.</source>
     </trans-unit>
     <trans-unit id="chatTerminalOutputUnavailable">
       <source xml:lang="en">Command output is no longer available.</source>
@@ -14291,6 +14790,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="hideTerminalOutput">
       <source xml:lang="en">Hide Output</source>
+    </trans-unit>
+    <trans-unit id="openTerminalFullOutputReadonly">
+      <source xml:lang="en">Open Full Output (Read-Only)</source>
     </trans-unit>
     <trans-unit id="showTerminal">
       <source xml:lang="en">Show and Focus Terminal</source>
@@ -14417,6 +14919,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="skip.post">
       <source xml:lang="en">Skip Results</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatToolProgressPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="toolExecutionFailed">
+      <source xml:lang="en">Tool execution failed</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/toolRiskBadgeWidget" source-language="en" datatype="plaintext"><body>
@@ -15503,6 +16010,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.addProvider">
       <source xml:lang="en">Add Models...</source>
     </trans-unit>
+    <trans-unit id="chat.modelPicker.hydraFusionToggle">
+      <source xml:lang="en">Use {0}</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.otherModels">
       <source xml:lang="en">Other Models</source>
     </trans-unit>
@@ -16562,13 +17072,13 @@ To make this the starting permission level for new sessions, change the [{0}](co
       <source xml:lang="en">*{0} {1} | {2}*</source>
     </trans-unit>
     <trans-unit id="customizationMigrationHint.dismiss">
-      <source xml:lang="en">Hide for this workspace</source>
+      <source xml:lang="en">Don't Show Again</source>
     </trans-unit>
     <trans-unit id="customizationMigrationHint.dismiss.tooltip">
-      <source xml:lang="en">Stop Showing Migration Hints for This Harness</source>
+      <source xml:lang="en">Do not show this migration hint again for this harness in this workspace</source>
     </trans-unit>
     <trans-unit id="customizationMigrationHint.review">
-      <source xml:lang="en">Review customizations</source>
+      <source xml:lang="en">Review Migrations</source>
     </trans-unit>
     <trans-unit id="customizationMigrationHint.review.tooltip">
       <source xml:lang="en">Open Chat Customizations</source>
@@ -16731,6 +17241,12 @@ To make this the starting permission level for new sessions, change the [{0}](co
     </trans-unit>
     <trans-unit id="filteredContentRetry">
       <source xml:lang="en">Response cleared due to content safety filters, retrying with modified prompt.</source>
+    </trans-unit>
+    <trans-unit id="toolExecutionFailed">
+      <source xml:lang="en">Tool execution failed</source>
+    </trans-unit>
+    <trans-unit id="toolExecutionFailedWithMessage">
+      <source xml:lang="en">Tool execution failed: {0}</source>
     </trans-unit>
     <trans-unit id="waitingAnswer">
       <source xml:lang="en">Answer questions to continue...</source>

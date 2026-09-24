@@ -82,13 +82,13 @@
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/mobile/mobileOverlayContribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mobileChangesNotAvailable">
-      <source xml:lang="en">File-level changes are not available for this session yet.</source>
+      <source xml:lang="en">File-level changes are not available yet.</source>
+    </trans-unit>
+    <trans-unit id="mobileOpenChanges">
+      <source xml:lang="en">Open Changes</source>
     </trans-unit>
     <trans-unit id="mobileOpenFileDiff">
       <source xml:lang="en">Open File Diff</source>
-    </trans-unit>
-    <trans-unit id="mobileOpenSessionChanges">
-      <source xml:lang="en">Open Session Changes</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/sessionDetailsAction" source-language="en" datatype="plaintext"><body>
@@ -97,6 +97,11 @@
     </trans-unit>
     <trans-unit id="sessions.showSessionDetails">
       <source xml:lang="en">Show Session Details</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/sessionHoverContent" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="untitledChat">
+      <source xml:lang="en">Untitled Chat</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/sessions.contribution" source-language="en" datatype="plaintext"><body>
@@ -983,6 +988,75 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="ci.fixCITooltip">
       <source xml:lang="en">Fix failing CI checks</source>
     </trans-unit>
+    <trans-unit id="comparisonArchive">
+      <source xml:lang="en">Archive Comparison</source>
+    </trans-unit>
+    <trans-unit id="comparisonArchived">
+      <source xml:lang="en">Comparison archived</source>
+    </trans-unit>
+    <trans-unit id="comparisonAttemptFailed">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="comparisonAttemptNeedsInput">
+      <source xml:lang="en">Input needed</source>
+    </trans-unit>
+    <trans-unit id="comparisonAttemptPending">
+      <source xml:lang="en">Pending</source>
+    </trans-unit>
+    <trans-unit id="comparisonAttemptStop">
+      <source xml:lang="en">Stop session</source>
+    </trans-unit>
+    <trans-unit id="comparisonAttemptStopAriaLabel">
+      <source xml:lang="en">Stop {0}</source>
+    </trans-unit>
+    <trans-unit id="comparisonAttemptStopped">
+      <source xml:lang="en">{0} stopped</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.attempts">
+      <source xml:lang="en">Comparison · {0} attempts</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.attemptsFinished">
+      <source xml:lang="en">Comparison · {0} attempts finished</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.attemptsNeedInput">
+      <source xml:lang="en">Comparison · {0} attempts need input</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.attemptsWorking">
+      <source xml:lang="en">Comparison · {0} attempts working</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.judgeNeedsInput">
+      <source xml:lang="en">Comparison · Judge needs input</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.oneAttemptNeedsInput">
+      <source xml:lang="en">Comparison · 1 attempt needs input</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.oneAttemptWorking">
+      <source xml:lang="en">Comparison · 1 attempt working</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.reviewFailed">
+      <source xml:lang="en">Comparison · Review failed</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.reviewIncomplete">
+      <source xml:lang="en">Comparison · Review incomplete</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.reviewReady">
+      <source xml:lang="en">Comparison · Review ready</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.reviewing">
+      <source xml:lang="en">Comparison · Reviewing attempts</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroupAria">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="comparisonSessionStopped">
+      <source xml:lang="en">1 comparison session stopped</source>
+    </trans-unit>
+    <trans-unit id="comparisonSessionsStopped">
+      <source xml:lang="en">{0} comparison sessions stopped</source>
+    </trans-unit>
+    <trans-unit id="comparisonStopAll">
+      <source xml:lang="en">Stop All</source>
+    </trans-unit>
     <trans-unit id="createGroupAction">
       <source xml:lang="en">Create Group</source>
     </trans-unit>
@@ -1043,11 +1117,17 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="renameSession.inputAriaLabel">
       <source xml:lang="en">Rename session. Press Enter to confirm or Escape to cancel.</source>
     </trans-unit>
+    <trans-unit id="retryComparisonJudge">
+      <source xml:lang="en">Retry Judge</source>
+    </trans-unit>
     <trans-unit id="secondsDuration">
       <source xml:lang="en">now</source>
     </trans-unit>
     <trans-unit id="sessionChatItemAria">
       <source xml:lang="en">{0}, chat, updated {1}, {2}</source>
+    </trans-unit>
+    <trans-unit id="sessionChatItemFolderAria">
+      <source xml:lang="en">{0}, chat in folder {1}, updated {2}, {3}</source>
     </trans-unit>
     <trans-unit id="sessionGroupName">
       <source xml:lang="en">Group name</source>

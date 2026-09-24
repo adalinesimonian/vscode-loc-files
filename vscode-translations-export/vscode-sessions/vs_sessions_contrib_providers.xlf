@@ -210,6 +210,77 @@
       <source xml:lang="en">Worktree</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSessionPermissions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionComparison.permissions.claude.acceptEdits">
+      <source xml:lang="en">Edit Automatically</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.claude.acceptEditsDescription">
+      <source xml:lang="en">Claude edits files without asking and asks before using other tools.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.claude.auto">
+      <source xml:lang="en">Auto Mode</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.claude.autoDescription">
+      <source xml:lang="en">Claude decides whether to ask for each tool operation.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.claude.bypass">
+      <source xml:lang="en">Bypass Permissions</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.claude.bypassDescription">
+      <source xml:lang="en">Claude runs all tools without asking.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.claude.default">
+      <source xml:lang="en">Ask Before Edits</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.claude.defaultDescription">
+      <source xml:lang="en">Claude asks before editing files.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.claude.plan">
+      <source xml:lang="en">Plan Mode</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.claude.planDescription">
+      <source xml:lang="en">Claude creates a plan before making changes.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.codex.autoReview">
+      <source xml:lang="en">Auto-Review</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.codex.autoReviewDescription">
+      <source xml:lang="en">Approval requests are routed through the auto-reviewer instead of prompting you.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.codex.default">
+      <source xml:lang="en">Default Permissions</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.codex.defaultDescription">
+      <source xml:lang="en">Codex works inside the workspace sandbox and asks before broader access.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.codex.fullAccess">
+      <source xml:lang="en">Full Access</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.codex.fullAccessDescription">
+      <source xml:lang="en">Codex can use the internet and edit files outside the workspace without asking.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.copilot.allowAll">
+      <source xml:lang="en">Allow all</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.copilot.allowAllDescription">
+      <source xml:lang="en">Runs all tool calls without asking for approval.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.copilot.assisted">
+      <source xml:lang="en">Assisted permissions</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.copilot.assistedDescription">
+      <source xml:lang="en">An LLM judge evaluates tool calls and asks when it does not approve them.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.copilot.default">
+      <source xml:lang="en">Manual permissions</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.copilot.defaultDescription">
+      <source xml:lang="en">Asks before running tools unless your configured approval settings allow them.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.permissions.policyLocked">
+      <source xml:lang="en">Disabled by your organization</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSettings.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostSettings.label">
       <source xml:lang="en">Host Settings</source>

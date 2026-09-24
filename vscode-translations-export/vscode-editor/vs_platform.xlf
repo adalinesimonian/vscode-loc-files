@@ -345,6 +345,43 @@ A keybinding</note>
       <source xml:lang="en">Hide '{0}'</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentFinder/common/agentFinderMcpRegistry" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentFinder.invalidMcpSource">
+      <source xml:lang="en">The MCP server's installation source is invalid.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentFinder/common/agentFinderRestProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentFinder.httpError">
+      <source xml:lang="en">The customization catalog could not complete the request (HTTP {0}). Try again later.</source>
+    </trans-unit>
+    <trans-unit id="agentFinder.invalidCursor">
+      <source xml:lang="en">The customization catalog page is invalid. Start a new search.</source>
+    </trans-unit>
+    <trans-unit id="agentFinder.invalidJson">
+      <source xml:lang="en">The customization catalog returned invalid JSON. Try again later.</source>
+    </trans-unit>
+    <trans-unit id="agentFinder.invalidQuery">
+      <source xml:lang="en">The customization catalog query is invalid.</source>
+    </trans-unit>
+    <trans-unit id="agentFinder.invalidResponse">
+      <source xml:lang="en">The customization catalog returned an invalid response. Try again later.</source>
+    </trans-unit>
+    <trans-unit id="agentFinder.rateLimited">
+      <source xml:lang="en">The customization catalog is receiving too many requests. Try again later.</source>
+    </trans-unit>
+    <trans-unit id="agentFinder.responseTooLarge">
+      <source xml:lang="en">The customization catalog response is too large. Try a smaller page.</source>
+    </trans-unit>
+    <trans-unit id="agentFinder.timeout">
+      <source xml:lang="en">The customization catalog took too long to respond. Try again.</source>
+    </trans-unit>
+    <trans-unit id="agentFinder.unavailable">
+      <source xml:lang="en">Unable to reach the customization catalog. Check your connection and try again.</source>
+    </trans-unit>
+    <trans-unit id="agentFinder.unsupportedPages">
+      <source xml:lang="en">The customization catalog returned too many unsupported entries. Try a different search.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/browser/agentHostConnectionsService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.connection.ambient">
       <source xml:lang="en">Local</source>
@@ -445,12 +482,6 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.artifactTools.title">
       <source xml:lang="en">Artifact Tools</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.artifactToolsCompactPrompts.description">
-      <source xml:lang="en">Whether artifact tools use compact prompt wording instead of the original guidance. Does not change tool availability or deferral.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.artifactToolsCompactPrompts.title">
-      <source xml:lang="en">Compact Artifact Tool Prompts</source>
     </trans-unit>
     <trans-unit id="agentHost.config.autoApprovePolicyRestricted">
       <source xml:lang="en">Auto Approve Policy Restricted</source>
@@ -823,14 +854,8 @@ A keybinding</note>
     <trans-unit id="chat.agentHost.copilotAgent.multiRootEnabled">
       <source xml:lang="en">When enabled, Copilot agent-host sessions advertise support for multiple working directories, so a session created in a multi-root workspace can span every workspace folder. Experimental; newly created sessions pick up a change without restarting the agent host.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.experimental.activeAgentTitleGeneration">
-      <source xml:lang="en">When enabled, the active agent names new sessions and chats using rename tools. When disabled, a utility model generates titles immediately. Deferred title generation takes precedence. Changes apply to new sessions; existing sessions and their chats retain their strategy.</source>
-    </trans-unit>
     <trans-unit id="chat.agentHost.experimental.autoAttachPullRequests">
       <source xml:lang="en">Controls whether the Agent Host automatically discovers and associates a pull request for the currently checked-out branch. When disabled, only pull requests recorded by the agent as artifacts or explicitly selected or created through session actions are considered.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentHost.experimental.deferredTitleGeneration">
-      <source xml:lang="en">Seed titles immediately and refine them in the background if the first response turn completes successfully, without asking the active agent to name chats. Explicit rename tools remain available. Overrides active agent title generation for new sessions; existing sessions and their chats retain their strategy.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.experimental.markdownPlanRichLinks">
       <source xml:lang="en">When enabled, agents receive guidance for using rich links to issues, pull requests, commits, sessions, and chats, plus running task markers, when creating or editing Markdown plan documents.</source>
@@ -843,6 +868,9 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="chat.agentHost.otel.captureContent.policy">
       <source xml:lang="en">Controls whether Copilot OpenTelemetry export captures prompt, response, and tool content.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.otel.captureIdentity.policy">
+      <source xml:lang="en">Controls whether Copilot OpenTelemetry captures the authenticated account name, operating system username, and machine hostname. Independent of content capture.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.otel.dbSpanExporter.enabled">
       <source xml:lang="en">When enabled, the agent host persists every emitted OTel span to a local SQLite database. Configurable in user settings only. Spans can be inspected via the `Export Agent Host Traces Database` command. Compatible with external exporters: spans are written to SQLite *and* forwarded to the user-configured sink.</source>
@@ -979,16 +1007,19 @@ A keybinding</note>
       <source xml:lang="en">Resolve Conflicts</source>
     </trans-unit>
     <trans-unit id="agentMerge.disabled.branchChanged">
-      <source xml:lang="en">Agent Merge was disabled because the checked-out branch changed from {0} to {1}.</source>
+      <source xml:lang="en">Agent Merge was disabled because the checked-out branch changed from {0} to {1}. To resume, check out the branch you want to monitor and enable Agent Merge again.</source>
     </trans-unit>
-    <trans-unit id="agentMerge.disabled.branchChangedWhileRefreshing">
-      <source xml:lang="en">Agent Merge was disabled because the checked-out branch changed while its pull request state was refreshing.</source>
+    <trans-unit id="agentMerge.disabled.branchUnavailable">
+      <source xml:lang="en">Agent Merge was disabled because it could not confirm that {0} is still checked out. To resume, check out the branch you want to monitor and enable Agent Merge again.</source>
     </trans-unit>
     <trans-unit id="agentMerge.disabled.differentGitHubHost">
       <source xml:lang="en">Agent Merge was disabled because its pull request belongs to a different GitHub host than the signed-in account.</source>
     </trans-unit>
     <trans-unit id="agentMerge.disabled.differentPullRequest">
       <source xml:lang="en">Agent Merge was disabled because this session became associated with a different pull request.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.disabled.folderWithoutChat">
+      <source xml:lang="en">Agent Merge was disabled for a folder because no chat in this session works in it any more.</source>
     </trans-unit>
     <trans-unit id="agentMerge.disabled.indeterminate">
       <source xml:lang="en">Agent Merge was disabled because its pull request state could not be evaluated for {0} minutes.</source>
@@ -1015,10 +1046,10 @@ A keybinding</note>
       <source xml:lang="en">It will now address new pull request review comments.</source>
     </trans-unit>
     <trans-unit id="agentMerge.notice.configuration.changed.global">
-      <source xml:lang="en">Agent Merge default settings changed for all sessions.</source>
+      <source xml:lang="en">Agent Merge default settings changed for all sessions. For this session: {0}</source>
     </trans-unit>
     <trans-unit id="agentMerge.notice.configuration.changed.session">
-      <source xml:lang="en">Agent Merge settings changed for this session.</source>
+      <source xml:lang="en">Agent Merge settings changed for this session. {0}</source>
     </trans-unit>
     <trans-unit id="agentMerge.notice.configuration.fixCI.disabled">
       <source xml:lang="en">It will no longer fix failing CI checks.</source>
@@ -1063,7 +1094,7 @@ A keybinding</note>
       <source xml:lang="en">Agent Merge was disabled for this session.</source>
     </trans-unit>
     <trans-unit id="agentMerge.notice.enabled">
-      <source xml:lang="en">Agent Merge is enabled for {0}. It will wait for a pull request on this branch, then monitor it.</source>
+      <source xml:lang="en">It will wait for a pull request on this branch, then monitor it.</source>
     </trans-unit>
     <trans-unit id="agentMerge.notice.enabled.addressReviews">
       <source xml:lang="en">It will ask the agent to address new pull request review comments.</source>
@@ -1083,6 +1114,9 @@ A keybinding</note>
     <trans-unit id="agentMerge.notice.enabled.resolveConflicts">
       <source xml:lang="en">It will ask the agent to resolve merge conflicts and update the branch when it falls behind.</source>
     </trans-unit>
+    <trans-unit id="agentMerge.notice.enabled.summary">
+      <source xml:lang="en">Agent Merge is enabled for {0}. {1}</source>
+    </trans-unit>
     <trans-unit id="agentMerge.notice.enabled.waiting">
       <source xml:lang="en">After each update, it will wait for new CI results and review comments.</source>
     </trans-unit>
@@ -1090,7 +1124,7 @@ A keybinding</note>
       <source xml:lang="en">After each update, it will wait for new CI results.</source>
     </trans-unit>
     <trans-unit id="agentMerge.notice.enabled.withPullRequest">
-      <source xml:lang="en">Agent Merge is enabled for {0} and is monitoring its pull request.</source>
+      <source xml:lang="en">It is monitoring the pull request for this branch.</source>
     </trans-unit>
     <trans-unit id="agentMerge.notice.merge.always">
       <source xml:lang="en">When the pull request is ready, Agent Merge will merge it automatically.</source>
@@ -1119,6 +1153,15 @@ A keybinding</note>
     <trans-unit id="agentMerge.pullRequestMerged">
       <source xml:lang="en">Agent Merge merged pull request [#{0}]({1}).</source>
     </trans-unit>
+    <trans-unit id="agentMerge.summary.merge.always">
+      <source xml:lang="en">Automatic merge is on.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.summary.merge.ifUnchanged">
+      <source xml:lang="en">Automatic merge is on only while unchanged.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.summary.merge.never">
+      <source xml:lang="en">Monitoring only; automatic merge is off.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/agentModelConfiguration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copilot.modelContextSize.default">
@@ -1135,9 +1178,6 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/artifactToolsConfiguration" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.artifactTools.compactPrompts">
-      <source xml:lang="en">Uses compact artifact tool guidance instead of the original wording. Does not change tool availability or deferral. Start a new chat to compare prompt formats.</source>
-    </trans-unit>
     <trans-unit id="chat.artifactTools.enabled">
       <source xml:lang="en">When enabled, agents can record artifacts — pull requests, issues, commits, websites, files and other resources — which are surfaced above the chat input.</source>
     </trans-unit>
@@ -1231,6 +1271,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.claudeAdvisor.title">
       <source xml:lang="en">Claude Advisor Tool</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.claudeDefaultReasoningEffort.description">
+      <source xml:lang="en">Overrides the default thinking level shown in the model picker for Claude models. Empty uses the built-in default. Ignored for models that do not support the chosen level.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.claudeDefaultReasoningEffort.title">
+      <source xml:lang="en">Claude Default Thinking Level</source>
     </trans-unit>
     <trans-unit id="agentHost.config.copilotSdkLogLevel.description">
       <source xml:lang="en">Controls logging from the Copilot SDK runtime. Agent host trace logging always enables trace output.</source>
@@ -1557,6 +1603,21 @@ A keybinding</note>
       <source xml:lang="en">Windows Sandbox Filesystem</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/common/sessionComparisonPrompts" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionComparison.judgePrompt">
+      <source xml:lang="en">Judge implementation comparison `{0}`.
+
+1. Call `#readAttemptComparison` exactly once with this comparison ID.
+2. Review every attempt's code changes and validation evidence. Use `get_session_context` with the exact manifest target to identify validation that the attempt already completed. Terminal commands start in the Judge worktree, not an attempt worktree, so explicitly `cd` to the exact `worktree.workingDirectory` from the manifest in every command that inspects or validates an attempt.
+3. Do not rerun a validation category when the attempt report contains a clear result. Run only missing targeted tests, build, lint, or diagnostics needed to make a reliable recommendation. If required dependencies or build artifacts are unavailable, record that validation as unavailable; do not install or build dependencies, and do not substitute a different validation category.
+4. For each validation category, record one consistent `state` and `source` evidence pair. Known `passed` or `failed` results must use `attemptReport` or `judgeRun`; use `unavailable` only with `notRun` or `unknown`, and use `notApplicable` for both fields when the category genuinely does not apply.
+5. Keep `explanation` to one sentence. Fill `rationale` with exactly four concise points in this order: `comparison`, `validation`, `codeQuality`, and `solution`. Each point must cite concrete evidence, contain no line breaks, and stay within the tool schema length limit. For every other attempt, record its strongest reusable points in `notableDifferences`.
+6. Identify semantic `decisionSections` where attempts make meaningfully different implementation choices. Each section may span related files. Give it a stable ID, short title, plain-language summary, affected repository-relative files, one concise option per relevant `attemptNumber`, and a recommended `attemptNumber`. Rate every option as `better`, `neutral`, or `worse` relative to the other approaches using concrete code and validation evidence; the recommended option must be rated `better`. Return an empty array when there are no meaningful choices. Do not use raw line numbers as section identity.
+7. Do not modify, merge, apply, or delete any attempt.
+8. Call `#completeAttemptComparison` with the recommendation and supporting evidence. Refer to attempts only by the `attemptNumber` values returned by `#readAttemptComparison`; do not copy participant or session UUIDs. If it rejects invalid input, correct the reported fields and retry; do not submit again after success.
+9. After the tool returns, identify the winner as `Attempt N (agent, model, effort)` and use the same rationale order, followed by the strongest reusable points from every other attempt.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/common/streamingToolCallDisplay" source-language="en" datatype="plaintext"><body>
     <trans-unit id="toolStream.create">
       <source xml:lang="en">Creating file</source>
@@ -1667,6 +1728,14 @@ A keybinding</note>
       <source xml:lang="en">Replacing 1 line with 1 line in {0}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/common/titleGenerationConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.agentHost.experimental.activeAgentTitleGeneration">
+      <source xml:lang="en">When enabled, the active agent names new sessions and chats using rename tools. When disabled, a utility model generates titles immediately. Deferred title generation takes precedence. Changes apply to new sessions; existing sessions and their chats retain their strategy.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.experimental.deferredTitleGeneration">
+      <source xml:lang="en">Seed titles immediately and refine them in the background if the first response turn completes successfully, without asking the active agent to name chats. Explicit rename tools remain available. Overrides active agent title generation for new sessions; existing sessions and their chats retain their strategy.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/electron-browser/localAgentHostService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.startFailed">
       <source xml:lang="en">The Agent Host failed to start. Restart the application to try again. See the logs for details.</source>
@@ -1725,6 +1794,32 @@ Verify this fingerprint matches the host before continuing.</source>
   <file original="src/vs/platform/agentHost/node/agentHostAutomationService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostAutomation.runTimedOut">
       <source xml:lang="en">Automation run timed out.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/agentHostChangesetService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="ambiguousTurnDiff">
+      <source xml:lang="en">Cannot compute turn changes because the turn belongs to more than one chat.</source>
+    </trans-unit>
+    <trans-unit id="sessionGitDiffUnavailable">
+      <source xml:lang="en">Git diff is unavailable for the session changeset.</source>
+    </trans-unit>
+    <trans-unit id="turnGitDiffCheckpointsUnavailable">
+      <source xml:lang="en">No checkpoint pair is available to compute turn changes using Git.</source>
+    </trans-unit>
+    <trans-unit id="turnGitDiffNonGitFolders">
+      <source xml:lang="en">Cannot compute all turn changes using Git because the session includes non-Git folders.</source>
+    </trans-unit>
+    <trans-unit id="turnGitDiffRepositoryCheckpointsUnavailable">
+      <source xml:lang="en">No checkpoint pair is available to compute turn changes in '{0}' using Git.</source>
+    </trans-unit>
+    <trans-unit id="turnGitDiffRepositoryUnavailable">
+      <source xml:lang="en">Git diff is unavailable for the requested turn in '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="turnGitDiffUnavailable">
+      <source xml:lang="en">Git diff is unavailable for the requested turn.</source>
+    </trans-unit>
+    <trans-unit id="turnGitDiffWorkingDirectoryUnavailable">
+      <source xml:lang="en">No working directory is available to compute turn changes using Git.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentHostCheckoutOperationHandler" source-language="en" datatype="plaintext"><body>
@@ -1788,6 +1883,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="agentHost.changeset.commit.noChanges">
       <source xml:lang="en">No uncommitted changes to commit.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.commit.notGitRepository">
+      <source xml:lang="en">Changeset owner's working directory is not a Git repository: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentHostCommitOperationProvider" source-language="en" datatype="plaintext"><body>
@@ -2759,6 +2857,12 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.unsandboxedCommandConfirmation.title.generic">
       <source xml:lang="en">Run Command Outside the Sandbox?</source>
     </trans-unit>
+    <trans-unit id="copilot.historyChanged">
+      <source xml:lang="en">Session history changed while it was loading. Reopen the session to try again.</source>
+    </trans-unit>
+    <trans-unit id="copilot.invalidHistoryCursor">
+      <source xml:lang="en">The Copilot runtime returned an invalid history cursor. Reopen the session to try again.</source>
+    </trans-unit>
     <trans-unit id="copilotAgent.compactionCompleted">
       <source xml:lang="en">Compaction completed</source>
     </trans-unit>
@@ -3365,6 +3469,48 @@ stderr: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/shared/agentMergeServerTools" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentMerge.tool.configure">
+      <source xml:lang="en">Configure Agent Merge</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.addressReviews.off">
+      <source xml:lang="en">Do not address pull request review comments.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.addressReviews.on">
+      <source xml:lang="en">Address new pull request review comments.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.confirmationMessage">
+      <source xml:lang="en">Allow Agent Merge to monitor the pull request for this chat's folder and work autonomously with these option changes? Unspecified options stay unchanged.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.confirmationTitle">
+      <source xml:lang="en">Configure Agent Merge?</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.disabled.confirmationMessage">
+      <source xml:lang="en">Stop Agent Merge monitoring and autonomous work for this chat's folder, and save these option changes? Unspecified options stay unchanged.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.fixCI.off">
+      <source xml:lang="en">Do not fix failing CI checks.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.fixCI.on">
+      <source xml:lang="en">Fix failing CI checks.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.merge.always">
+      <source xml:lang="en">Merge the pull request automatically when it is ready, including changes made by Agent Merge.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.merge.ifUnchanged">
+      <source xml:lang="en">Merge the pull request automatically when it is ready, only if Agent Merge has not made changes.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.merge.never">
+      <source xml:lang="en">Do not merge the pull request automatically.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.resolveConflicts.off">
+      <source xml:lang="en">Do not resolve merge conflicts or update a behind branch.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.resolveConflicts.on">
+      <source xml:lang="en">Resolve merge conflicts and update the branch when it falls behind.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.configure.running">
+      <source xml:lang="en">Configuring Agent Merge</source>
+    </trans-unit>
     <trans-unit id="agentMerge.tool.disable">
       <source xml:lang="en">Disable Agent Merge</source>
     </trans-unit>
@@ -3372,7 +3518,7 @@ stderr: {2}</source>
       <source xml:lang="en">Disabled Agent Merge</source>
     </trans-unit>
     <trans-unit id="agentMerge.tool.disable.confirmationMessage">
-      <source xml:lang="en">Stop Agent Merge monitoring and autonomous work for this session?</source>
+      <source xml:lang="en">Stop Agent Merge monitoring and autonomous work for this chat's folder?</source>
     </trans-unit>
     <trans-unit id="agentMerge.tool.disable.confirmationTitle">
       <source xml:lang="en">Disable Agent Merge?</source>
@@ -3386,11 +3532,17 @@ stderr: {2}</source>
     <trans-unit id="agentMerge.tool.enable.complete">
       <source xml:lang="en">Enabled Agent Merge</source>
     </trans-unit>
+    <trans-unit id="agentMerge.tool.enable.configured">
+      <source xml:lang="en">Agent Merge enabled. {0}</source>
+    </trans-unit>
     <trans-unit id="agentMerge.tool.enable.confirmationMessage">
-      <source xml:lang="en">Allow Agent Merge to monitor this session's pull request and work autonomously using its existing options, including merging if configured?</source>
+      <source xml:lang="en">Allow Agent Merge to monitor the pull request for this chat's folder and work autonomously using its existing options, including merging if configured?</source>
     </trans-unit>
     <trans-unit id="agentMerge.tool.enable.confirmationTitle">
       <source xml:lang="en">Enable Agent Merge?</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.enable.pending">
+      <source xml:lang="en">Agent Merge enabled; monitoring starts after this turn. {0}</source>
     </trans-unit>
     <trans-unit id="agentMerge.tool.enable.running">
       <source xml:lang="en">Enabling Agent Merge</source>
@@ -3642,6 +3794,9 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="sshKnownHostsResolutionFailed">
       <source xml:lang="en">Failed to resolve SSH known-hosts files: {0}</source>
+    </trans-unit>
+    <trans-unit id="sshUnsupportedHostKeyDirective">
+      <source xml:lang="en">SSH configuration directive {0} is not supported for remote agent host connections.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/sshProxyCommand" source-language="en" datatype="plaintext"><body>
@@ -3997,6 +4152,25 @@ Received: '{1}'.</source>
     </trans-unit>
     <trans-unit id="contextkey.scanner.hint.didYouMean3">
       <source xml:lang="en">Did you mean {0}, {1} or {2}?</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/customizationMarketplace/common/customizationMarketplaceService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationMarketplace.invalidCursor">
+      <source xml:lang="en">The marketplace page is invalid. Start a new search.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.invalidQuery">
+      <source xml:lang="en">The marketplace query is invalid.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.invalidSourcePage">
+      <source xml:lang="en">The marketplace source '{0}' returned an invalid page.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.invalidSourceScore">
+      <source xml:lang="en">The marketplace source '{0}' returned invalid relevance ordering.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/customizationMarketplace/common/customizationMarketplaceSources" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationMarketplace.githubFeed">
+      <source xml:lang="en">GitHub Feed</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/dialogs/common/dialogs" source-language="en" datatype="plaintext"><body>
@@ -4982,6 +5156,12 @@ A keybinding label</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/mcp/common/mcpGalleryService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcpGallery.invalidResponse">
+      <source xml:lang="en">The MCP registry returned invalid server metadata.</source>
+    </trans-unit>
+    <trans-unit id="mcpGallery.responseTooLarge">
+      <source xml:lang="en">The MCP registry response is too large to install.</source>
+    </trans-unit>
     <trans-unit id="noReadme">
       <source xml:lang="en">No README available</source>
     </trans-unit>
