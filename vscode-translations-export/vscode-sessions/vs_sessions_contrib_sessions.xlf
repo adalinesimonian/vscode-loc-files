@@ -118,6 +118,12 @@
     <trans-unit id="sessions.automations.newBadgeStyle">
       <source xml:lang="en">Controls the visual style of the Automations first-use badge.</source>
     </trans-unit>
+    <trans-unit id="sessions.list.groupExternalSessions">
+      <source xml:lang="en">Controls whether external sessions are shown in a separate External section instead of workspace or time groups. Pinned sessions and custom groups keep their placement.</source>
+    </trans-unit>
+    <trans-unit id="sessions.list.showArchivedByDefault">
+      <source xml:lang="en">Controls whether the Done or Archived section is shown by default in the sessions list. This default is ignored after the corresponding filter is changed.</source>
+    </trans-unit>
     <trans-unit id="sessions.list.showEmptyDefaultGroups">
       <source xml:lang="en">Controls whether the Chats group is shown in the sessions list even when it is empty.</source>
     </trans-unit>
@@ -339,6 +345,9 @@
   <file original="src/vs/sessions/contrib/sessions/browser/sessionsTitleBarWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentSessionsControl">
       <source xml:lang="en">Agent Sessions</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsSessionWithBranchAccessible">
+      <source xml:lang="en">{0}, branch {1}</source>
     </trans-unit>
     <trans-unit id="agentSessionsSessionWithContext">
       <source xml:lang="en">{0} · {1}</source>
@@ -566,6 +575,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationsCustomView.help.cards">
       <source xml:lang="en">For saved automations, Tab to a card's Edit control and action buttons. Use Left Arrow and Right Arrow to move between Run now and Delete. Press Enter or Space to activate a control. Edit, or clicking anywhere else on the card, opens the automation dialog. Open a card's context menu{0} (for example Shift+F10). Duplicate opens a prefilled New automation dialog, Disable prevents scheduled runs, and Delete asks for confirmation. Run now starts a session immediately.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.dialog">
+      <source xml:lang="en">In the automation dialog, Target controls are above the prompt. Agent and model pickers are inside the prompt input, and execution mode and permission controls are below it. Use Tab and Shift+Tab to move between fields and pickers.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.history">
       <source xml:lang="en">Run history is grouped by date. While a run is waiting for its session, a lightweight row shows the automation name with a Working... description. Once the session is available, use Up Arrow and Down Arrow to navigate the Sessions list, Enter to open, and Tab to reach Stop, the configured Archive or Mark as Done action, or Delete when available. Open a row's context menu, for example with Shift+F10, to rename it, change its active or read state, or delete it. Delete permanently deletes the session and removes it from run history after confirmation.</source>
@@ -988,83 +1000,29 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="ci.fixCITooltip">
       <source xml:lang="en">Fix failing CI checks</source>
     </trans-unit>
-    <trans-unit id="comparisonArchive">
-      <source xml:lang="en">Archive Comparison</source>
-    </trans-unit>
-    <trans-unit id="comparisonArchived">
-      <source xml:lang="en">Comparison archived</source>
-    </trans-unit>
-    <trans-unit id="comparisonAttemptFailed">
-      <source xml:lang="en">Failed</source>
-    </trans-unit>
-    <trans-unit id="comparisonAttemptNeedsInput">
-      <source xml:lang="en">Input needed</source>
-    </trans-unit>
-    <trans-unit id="comparisonAttemptPending">
-      <source xml:lang="en">Pending</source>
-    </trans-unit>
-    <trans-unit id="comparisonAttemptStop">
-      <source xml:lang="en">Stop session</source>
-    </trans-unit>
-    <trans-unit id="comparisonAttemptStopAriaLabel">
-      <source xml:lang="en">Stop {0}</source>
-    </trans-unit>
-    <trans-unit id="comparisonAttemptStopped">
-      <source xml:lang="en">{0} stopped</source>
-    </trans-unit>
-    <trans-unit id="comparisonGroup.attempts">
-      <source xml:lang="en">Comparison · {0} attempts</source>
-    </trans-unit>
-    <trans-unit id="comparisonGroup.attemptsFinished">
-      <source xml:lang="en">Comparison · {0} attempts finished</source>
-    </trans-unit>
-    <trans-unit id="comparisonGroup.attemptsNeedInput">
-      <source xml:lang="en">Comparison · {0} attempts need input</source>
-    </trans-unit>
-    <trans-unit id="comparisonGroup.attemptsWorking">
-      <source xml:lang="en">Comparison · {0} attempts working</source>
-    </trans-unit>
-    <trans-unit id="comparisonGroup.judgeNeedsInput">
-      <source xml:lang="en">Comparison · Judge needs input</source>
-    </trans-unit>
-    <trans-unit id="comparisonGroup.oneAttemptNeedsInput">
-      <source xml:lang="en">Comparison · 1 attempt needs input</source>
-    </trans-unit>
-    <trans-unit id="comparisonGroup.oneAttemptWorking">
-      <source xml:lang="en">Comparison · 1 attempt working</source>
-    </trans-unit>
-    <trans-unit id="comparisonGroup.reviewFailed">
-      <source xml:lang="en">Comparison · Review failed</source>
-    </trans-unit>
-    <trans-unit id="comparisonGroup.reviewIncomplete">
-      <source xml:lang="en">Comparison · Review incomplete</source>
-    </trans-unit>
-    <trans-unit id="comparisonGroup.reviewReady">
-      <source xml:lang="en">Comparison · Review ready</source>
-    </trans-unit>
-    <trans-unit id="comparisonGroup.reviewing">
-      <source xml:lang="en">Comparison · Reviewing attempts</source>
-    </trans-unit>
-    <trans-unit id="comparisonGroupAria">
-      <source xml:lang="en">{0}, {1}</source>
-    </trans-unit>
-    <trans-unit id="comparisonSessionStopped">
-      <source xml:lang="en">1 comparison session stopped</source>
-    </trans-unit>
-    <trans-unit id="comparisonSessionsStopped">
-      <source xml:lang="en">{0} comparison sessions stopped</source>
-    </trans-unit>
-    <trans-unit id="comparisonStopAll">
-      <source xml:lang="en">Stop All</source>
-    </trans-unit>
     <trans-unit id="createGroupAction">
       <source xml:lang="en">Create Group</source>
+    </trans-unit>
+    <trans-unit id="customizationCountAria">
+      <source xml:lang="en">1 customization</source>
     </trans-unit>
     <trans-unit id="customizations">
       <source xml:lang="en">Customizations</source>
     </trans-unit>
+    <trans-unit id="customizationsAria">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationsCountAria">
+      <source xml:lang="en">{0} customizations</source>
+    </trans-unit>
+    <trans-unit id="customizationsMigrationAvailableAria">
+      <source xml:lang="en">{0}, {1}, customization migrations available</source>
+    </trans-unit>
     <trans-unit id="deleteGroupAction">
       <source xml:lang="en">Delete Group</source>
+    </trans-unit>
+    <trans-unit id="externalSessionsSection">
+      <source xml:lang="en">External</source>
     </trans-unit>
     <trans-unit id="inlineRename.empty">
       <source xml:lang="en">Title cannot be empty</source>
@@ -1116,9 +1074,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="renameSession.inputAriaLabel">
       <source xml:lang="en">Rename session. Press Enter to confirm or Escape to cancel.</source>
-    </trans-unit>
-    <trans-unit id="retryComparisonJudge">
-      <source xml:lang="en">Retry Judge</source>
     </trans-unit>
     <trans-unit id="secondsDuration">
       <source xml:lang="en">now</source>
@@ -1292,6 +1247,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="collapseAllGroups">
       <source xml:lang="en">Collapse All Groups</source>
     </trans-unit>
+    <trans-unit id="configureExternalSessions">
+      <source xml:lang="en">Configure External Sessions</source>
+    </trans-unit>
     <trans-unit id="deleteEmptyGroup">
       <source xml:lang="en">Delete Group</source>
     </trans-unit>
@@ -1333,6 +1291,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="groupByWorkspace">
       <source xml:lang="en">Group by Workspace</source>
+    </trans-unit>
+    <trans-unit id="importSession">
+      <source xml:lang="en">Import</source>
     </trans-unit>
     <trans-unit id="manageAutomations">
       <source xml:lang="en">Manage Automations</source>
@@ -1414,6 +1375,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="resetAutomationsNewBadge">
       <source xml:lang="en">Reset Automations New Badge</source>
+    </trans-unit>
+    <trans-unit id="sessionImported">
+      <source xml:lang="en">Imported {0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsImported">
+      <source xml:lang="en">Imported {0} sessions.</source>
     </trans-unit>
     <trans-unit id="showAllSessions">
       <source xml:lang="en">Show All Sessions</source>

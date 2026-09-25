@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/onboarding/browser/guidedTryoutPresentation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="onboarding.tryout.guidanceUnavailable">
+      <source xml:lang="en">The example opened, but its highlighted control is not available.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.invalidGuidedPayload">
+      <source xml:lang="en">The guided feature example '{0}' has an invalid presentation.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/onboarding/browser/onboarding.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="onboarding.developerMode">
       <source xml:lang="en">Map of onboarding scenario/tour id to whether developer mode is enabled for it. When enabled for a scenario, that onboarding tour ignores usage-based eligibility checks (such as how many sessions you have started), previously persisted shown state, and any linked experiment (so it is shown even if the experiment is not running or you are in the control group). It does not override the {0} setting. The tour is still shown at most once per window session, so reload the window to show it again.</source>
@@ -12,6 +20,95 @@
     </trans-unit>
     <trans-unit id="onboarding.resetShownState">
       <source xml:lang="en">Reset Onboarding Shown State</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/onboarding/browser/onboardingSamplePresentation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="onboarding.tryout.languageUnavailable">
+      <source xml:lang="en">Language support for this example is not available yet.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.sampleFailed">
+      <source xml:lang="en">The example editor could not be opened.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.sampleUnavailable">
+      <source xml:lang="en">This sample is no longer available. Open its feature example from the release notes again.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/onboarding/browser/onboardingTryout.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="onboarding.tryout.copyLink">
+      <source xml:lang="en">Copy Feature Example Link</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.pick">
+      <source xml:lang="en">Select a feature example</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.run">
+      <source xml:lang="en">Try Feature Example</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/onboarding/browser/onboardingTryoutActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="onboarding.tryout.commandUnavailable">
+      <source xml:lang="en">This command is not available in the current context.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.targetUnavailable">
+      <source xml:lang="en">The example opened, but its target is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.viewFailed">
+      <source xml:lang="en">The example's view could not be opened.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.viewUnavailable">
+      <source xml:lang="en">This view is not available in the current window.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/onboarding/browser/onboardingTryoutRunner" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="onboarding.tryout.setupChanged">
+      <source xml:lang="en">The example's availability changed. Try opening it again.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/onboarding/browser/onboardingTryoutService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="onboarding.tryout.agentsUnavailable">
+      <source xml:lang="en">This example requires the desktop Agents window.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.aiHidden">
+      <source xml:lang="en">AI features are disabled.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.chatDisabledInWorkspace">
+      <source xml:lang="en">Chat is disabled in this workspace.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.chatSetupRequired">
+      <source xml:lang="en">Set up Chat before trying this example.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.notAvailableHere">
+      <source xml:lang="en">This example is not available in the current context.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.setUpChat">
+      <source xml:lang="en">Set Up Chat</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.unavailable">
+      <source xml:lang="en">This feature example is not available in this version.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.unknown">
+      <source xml:lang="en">The feature example '{0}' is not available in this version.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/onboarding/browser/onboardingTryoutUrlHandler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="onboarding.tryout.external.confirm.detail">
+      <source xml:lang="en">An external link requested this feature example in {0}.
+
+{1}
+
+Only continue if you initiated this request.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.external.confirm.open">
+      <source xml:lang="en">&amp;&amp;Open Example</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.external.confirm.title">
+      <source xml:lang="en">Open '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.external.unavailable.detail">
+      <source xml:lang="en">This external link does not identify a feature example available in this version of {0}.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.external.unavailable.title">
+      <source xml:lang="en">Feature example unavailable</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/onboarding/browser/spotlight/spotlightOverlay" source-language="en" datatype="plaintext"><body>
@@ -32,6 +129,25 @@
     </trans-unit>
     <trans-unit id="spotlight.next">
       <source xml:lang="en">Next</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/onboarding/common/onboardingTryout" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="onboarding.tryout.invalidArguments">
+      <source xml:lang="en">Expected exactly one valid feature example identifier.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.invalidPayload">
+      <source xml:lang="en">The feature example '{0}' has an invalid presentation.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/onboarding/electron-browser/onboardingTryoutWindow" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="onboarding.tryout.agentsRejected">
+      <source xml:lang="en">The Agents window could not start the feature example.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.invalidNativeRequest">
+      <source xml:lang="en">The feature example request is invalid.</source>
+    </trans-unit>
+    <trans-unit id="onboarding.tryout.notInAgentsWindow">
+      <source xml:lang="en">The feature example '{0}' is not available in the Agents window.</source>
     </trans-unit>
 </body></file>
 </xliff>

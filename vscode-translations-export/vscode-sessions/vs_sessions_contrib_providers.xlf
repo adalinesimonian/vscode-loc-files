@@ -210,77 +210,6 @@
       <source xml:lang="en">Worktree</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSessionPermissions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sessionComparison.permissions.claude.acceptEdits">
-      <source xml:lang="en">Edit Automatically</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.claude.acceptEditsDescription">
-      <source xml:lang="en">Claude edits files without asking and asks before using other tools.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.claude.auto">
-      <source xml:lang="en">Auto Mode</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.claude.autoDescription">
-      <source xml:lang="en">Claude decides whether to ask for each tool operation.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.claude.bypass">
-      <source xml:lang="en">Bypass Permissions</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.claude.bypassDescription">
-      <source xml:lang="en">Claude runs all tools without asking.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.claude.default">
-      <source xml:lang="en">Ask Before Edits</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.claude.defaultDescription">
-      <source xml:lang="en">Claude asks before editing files.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.claude.plan">
-      <source xml:lang="en">Plan Mode</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.claude.planDescription">
-      <source xml:lang="en">Claude creates a plan before making changes.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.codex.autoReview">
-      <source xml:lang="en">Auto-Review</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.codex.autoReviewDescription">
-      <source xml:lang="en">Approval requests are routed through the auto-reviewer instead of prompting you.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.codex.default">
-      <source xml:lang="en">Default Permissions</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.codex.defaultDescription">
-      <source xml:lang="en">Codex works inside the workspace sandbox and asks before broader access.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.codex.fullAccess">
-      <source xml:lang="en">Full Access</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.codex.fullAccessDescription">
-      <source xml:lang="en">Codex can use the internet and edit files outside the workspace without asking.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.copilot.allowAll">
-      <source xml:lang="en">Allow all</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.copilot.allowAllDescription">
-      <source xml:lang="en">Runs all tool calls without asking for approval.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.copilot.assisted">
-      <source xml:lang="en">Assisted permissions</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.copilot.assistedDescription">
-      <source xml:lang="en">An LLM judge evaluates tool calls and asks when it does not approve them.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.copilot.default">
-      <source xml:lang="en">Manual permissions</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.copilot.defaultDescription">
-      <source xml:lang="en">Asks before running tools unless your configured approval settings allow them.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.policyLocked">
-      <source xml:lang="en">Disabled by your organization</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSettings.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostSettings.label">
       <source xml:lang="en">Host Settings</source>
@@ -444,6 +373,9 @@
     <trans-unit id="deleteChat.detail">
       <source xml:lang="en">This action cannot be undone.</source>
     </trans-unit>
+    <trans-unit id="importSessionUnavailable">
+      <source xml:lang="en">Importing is unavailable for this session.</source>
+    </trans-unit>
     <trans-unit id="new chat">
       <source xml:lang="en">New Chat</source>
     </trans-unit>
@@ -479,22 +411,25 @@
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/devContainerAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="devContainerAgentHost.initializing">
-      <source xml:lang="en">Initializing Agent Host session...</source>
+      <source xml:lang="en">Initializing Agent Host session</source>
     </trans-unit>
     <trans-unit id="devContainerAgentHost.noAgents">
       <source xml:lang="en">The Dev Container Agent Host did not advertise any agents.</source>
     </trans-unit>
     <trans-unit id="devContainerAgentHost.preparing">
-      <source xml:lang="en">Preparing Dev Container...</source>
+      <source xml:lang="en">Preparing Dev Container</source>
     </trans-unit>
     <trans-unit id="devContainerAgentHost.preparingWorktree">
-      <source xml:lang="en">Preparing worktree for Dev Container...</source>
+      <source xml:lang="en">Preparing worktree for Dev Container</source>
     </trans-unit>
     <trans-unit id="devContainerAgentHost.providerUnavailable">
       <source xml:lang="en">Dev Container sessions provider '{0}' is not available.</source>
     </trans-unit>
+    <trans-unit id="devContainerAgentHost.requiredUnavailable">
+      <source xml:lang="en">The selected Dev Container is not available. Restore its configuration and connection, or explicitly select the host workspace to continue without a container.</source>
+    </trans-unit>
     <trans-unit id="devContainerAgentHost.starting">
-      <source xml:lang="en">Starting Dev Container...</source>
+      <source xml:lang="en">Starting Dev Container</source>
     </trans-unit>
     <trans-unit id="devContainerAgentHost.trustFolder">
       <source xml:lang="en">Starting the Dev Container can run lifecycle commands from this workspace.</source>
@@ -541,35 +476,7 @@
       <source xml:lang="en">Update this Agent Host to a newer version, then reconnect to use automations.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/branchPicker" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="branchPicker.select">
-      <source xml:lang="en">Branch</source>
-    </trans-unit>
-    <trans-unit id="isolationMode.worktree">
-      <source xml:lang="en">New Worktree</source>
-    </trans-unit>
-    <trans-unit id="isolationPicker.checkboxAriaLabel">
-      <source xml:lang="en">Worktree isolation</source>
-    </trans-unit>
-    <trans-unit id="isolationPicker.noGitRepo">
-      <source xml:lang="en">Git repository required for worktree isolation</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessions.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sessions.github.copilot.multiChatSessions">
-      <source xml:lang="en">Whether to enable multiple chats within a single session in the Copilot Chat sessions provider.</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="branchPicker">
-      <source xml:lang="en">Branch</source>
-    </trans-unit>
-    <trans-unit id="modePicker">
-      <source xml:lang="en">Mode</source>
-    </trans-unit>
-    <trans-unit id="permissionPicker">
-      <source xml:lang="en">Permissions</source>
-    </trans-unit>
     <trans-unit id="sandbox.agentDefaultModel">
       <source xml:lang="en">Agent Default</source>
     </trans-unit>
@@ -599,23 +506,8 @@
     <trans-unit id="lastTurnChangesDescription">
       <source xml:lang="en">Show only changes made in the last turn</source>
     </trans-unit>
-    <trans-unit id="uncommittedChanges">
-      <source xml:lang="en">Uncommitted Changes</source>
-    </trans-unit>
-    <trans-unit id="uncommittedChangesDescription">
-      <source xml:lang="en">Show uncommitted changes in this session</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsProvider" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="automationAgentResolutionTimeout">
-      <source xml:lang="en">Timed out resolving the Automation's custom agent. Check the provider connection and try again.</source>
-    </trans-unit>
-    <trans-unit id="automationAgentUnavailable">
-      <source xml:lang="en">The Automation's selected agent '{0}' is unavailable. Choose another agent or restore it before running the Automation.</source>
-    </trans-unit>
-    <trans-unit id="automationAgentUriInvalid">
-      <source xml:lang="en">The Automation's selected agent must have an absolute URI.</source>
-    </trans-unit>
     <trans-unit id="automationCloudAgentUnsupported">
       <source xml:lang="en">This provider does not support custom agents in Automation session templates.</source>
     </trans-unit>
@@ -631,20 +523,8 @@
     <trans-unit id="copilotSandbox">
       <source xml:lang="en">Copilot</source>
     </trans-unit>
-    <trans-unit id="deleteChat.confirm">
-      <source xml:lang="en">Are you sure you want to delete this chat?</source>
-    </trans-unit>
-    <trans-unit id="deleteChat.delete">
-      <source xml:lang="en">Delete</source>
-    </trans-unit>
-    <trans-unit id="deleteChat.detail">
-      <source xml:lang="en">This action cannot be undone.</source>
-    </trans-unit>
     <trans-unit id="issue">
       <source xml:lang="en">Issue...</source>
-    </trans-unit>
-    <trans-unit id="new chat">
-      <source xml:lang="en">New Chat</source>
     </trans-unit>
     <trans-unit id="new session">
       <source xml:lang="en">New Session</source>

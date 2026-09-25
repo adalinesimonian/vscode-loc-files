@@ -326,6 +326,9 @@
     <trans-unit id="mcp.confirmPublish">
       <source xml:lang="en">Install {0}{1} from {2}?</source>
     </trans-unit>
+    <trans-unit id="mcp.copilotGlobal.added">
+      <source xml:lang="en">Added MCP server '{0}' to {1}. Set any referenced environment variables on the agent-host machine before starting a new Copilot session. VS Code input variables are not supported in this file.</source>
+    </trans-unit>
     <trans-unit id="mcp.docker.placeholder">
       <source xml:lang="en">Image name (e.g., mcp/imagename)</source>
     </trans-unit>
@@ -456,8 +459,11 @@
     <trans-unit id="mcp.target.agentHost">
       <source xml:lang="en">Add to Current Agent Session</source>
     </trans-unit>
-    <trans-unit id="mcp.target.local">
-      <source xml:lang="en">Install Server Locally...</source>
+    <trans-unit id="mcp.target.copilotGlobal">
+      <source xml:lang="en">Copilot Global</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.global.placeholder">
+      <source xml:lang="en">Select the global configuration</source>
     </trans-unit>
     <trans-unit id="mcp.target.placeholder">
       <source xml:lang="en">Select the configuration target</source>
@@ -474,6 +480,9 @@
     <trans-unit id="mcp.target.user.description">
       <source xml:lang="en">Available in all workspaces, runs locally</source>
     </trans-unit>
+    <trans-unit id="mcp.target.userConfigurationDeprecated">
+      <source xml:lang="en">User Configuration (deprecated)</source>
+    </trans-unit>
     <trans-unit id="mcp.target.workspace">
       <source xml:lang="en">Workspace</source>
     </trans-unit>
@@ -485,6 +494,9 @@
     </trans-unit>
     <trans-unit id="mcp.target.workspaceFolder">
       <source xml:lang="en">Workspace Folder</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.workspaceFolderLabel">
+      <source xml:lang="en">Workspace ({0})</source>
     </trans-unit>
     <trans-unit id="mcp.url.placeholder">
       <source xml:lang="en">URL of the MCP server (e.g., http://localhost:3000)</source>
@@ -844,6 +856,9 @@
     </trans-unit>
     <trans-unit id="mcp.target.workspace">
       <source xml:lang="en">Workspace</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.workspaceFolderLabel">
+      <source xml:lang="en">Workspace ({0})</source>
     </trans-unit>
     <trans-unit id="mcpServerInstallation">
       <source xml:lang="en">Installing MCP Server {0} started. An editor is now open with more details on this MCP Server</source>

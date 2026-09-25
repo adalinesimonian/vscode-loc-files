@@ -199,17 +199,26 @@
     <trans-unit id="chat.linkContextMenu">
       <source xml:lang="en">Focus a link in the chat transcript and press Shift+F10 to open its context menu. Use Copy Link to copy its target. File links with additional editor choices also provide Open With.</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.autoCollapse">
-      <source xml:lang="en">When another model is available, turning Auto on collapses the provider tabs, search, and model list. Auto and its preferences remain available. Turn Auto off to restore the model controls and the previous model selection. Expansion and collapse are immediate when reduced motion is enabled.</source>
+    <trans-unit id="chat.mcpStartupSkip">
+      <source xml:lang="en">When a chat turn is waiting for MCP servers to start, a Skip link may appear. Use Tab to focus Skip and press Enter or Space to continue the turn while those servers start in the background. The current startup message disappears immediately and focus returns to the chat input. New server startups may show another message.</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.autoMode">
+      <source xml:lang="en">In the tabbed model picker, the active Copilot tab has an Auto switch beside the provider name. The provider button and switch are separate keyboard targets. Turning Auto on replaces Copilot's individual models with automatic routing choices; provider tabs and search remain available. Turn Auto off to restore the previous manual Copilot model. The switch is disabled when no individual Copilot model is available. Browsing another provider does not change the selected model.</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.detailsPage">
+      <source xml:lang="en">In the tabbed model picker, thinking effort and context appear as a configuration button on the hovered, selected, or keyboard-focused model. Use Up and Down Arrow to focus a model, then Tab to reach its configuration button and Enter or Space to open its information and configuration page without selecting it. The button shows Details when no readout is available. Models without configurable settings still open their information page. The thinking effort and context readout beside the model name in the chat input opens the same page for the current model. Opening a configuration button focuses its configuration controls when available. Known values are shown even at their defaults. The Back to Models arrow is beside the model name; navigation and model actions stay at the top while details scroll. Back to Models returns to the previous provider, search, and model list. Escape closes the picker from any page and restores focus.</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.managedDefault">
+      <source xml:lang="en">In the tabbed model picker, Org default identifies the model your organization sets for new chats. It remains on that model when you choose another model for this chat; the checkmark identifies your current selection. The Auto section carries the same label when Auto is the organization default.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.optimizeFor">
-      <source xml:lang="en">In the tabbed model picker, the selected model's details open beside the list. Moving between model rows updates the details immediately without selecting a model. The card stays visible when the pointer leaves a row. Press Right Arrow from a model row to focus its details, and Left Arrow to return. When Auto's "Optimize for" options are available, Efficiency, Balance, and Intelligence remain visible while Auto is off. They look muted while off but remain interactive. Use arrow keys to move between options, then Enter or Space to choose a preference and turn Auto on. Turning Auto off preserves the selected preference.</source>
+      <source xml:lang="en">In Auto mode, use Up and Down Arrow to focus an "Optimize for" preference: Efficiency, Balance, or Intelligence. Enter or Space applies the preference and keeps the picker open. HydraFusion, when available, is an alternative routing choice, not an additional toggle. Selecting it clears the active Auto tier; selecting a tier returns to Auto. Turning Auto off preserves the preference and routing choice. Auto has no separate details page: both the Auto name and preference readout in the chat input open these routing choices.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.pricingDetails">
       <source xml:lang="en">Pricing Details expands in place without moving the model's controls. Expansion and collapse are immediate when reduced motion is enabled. If the details exceed the available space, use Page Up or Page Down while the model details have focus to scroll.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.resetToDefault">
-      <source xml:lang="en">In a model's details, use Tab to reach thinking effort, context, and model actions. Use arrow keys to move between options, then Enter or Space to choose one. Reset to Default appears beside Pin Model when thinking effort or context has been changed. It restores both settings to the model's defaults without changing its pinned state. Choosing an option or resetting the settings selects that model and keeps its details open. Pinning or unpinning moves the model in the list without moving its details or keyboard focus. Press Escape to return to the list, and Escape again to close the picker.</source>
+      <source xml:lang="en">In a model's details, use Tab to reach thinking effort, context, and model actions. Use arrow keys to move between options, then Enter or Space to choose one. Reset to Default appears beside Pin Model when thinking effort or context has been changed. It restores both settings to the model's defaults without changing its pinned state. Choosing an option or resetting the settings selects that model and keeps its details open. Pinning or unpinning updates the model list without moving its details or keyboard focus. Back does not undo saved settings, but a save that finishes after leaving details does not override a newer model selection.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.search">
       <source xml:lang="en">Type while the model list is focused to search across all providers. In the search field, use Up and Down Arrow to navigate results, Enter to select a model, and Escape to close the picker. Left and Right Arrow move the text cursor.</source>
@@ -230,7 +239,7 @@
       <source xml:lang="en">The chat.experimental.persistentProgress setting defaults to Draw, keeping a working progress indicator at the bottom until the response finishes. Choose Off to restore the original thinking and progress UI. The chat.experimental.persistentProgressVerbosity setting defaults to Compact: tool calls preview while running, then collapse in place to a single summary row when thinking or response text resumes, or the response finishes. Choose Verbose to keep tool chains expanded without a group header or an internal scrolling limit. Use Tab to focus a summary and press Enter or Space to expand or collapse its tool calls. Automatic collapse waits until keyboard focus leaves the group. Completed responses still follow chat.agent.collapseCompletedResponses. Reasoning appears separately as collapsible previews; focus a reasoning header and press Enter or Space to expand or collapse it. Standalone tools keep their decorative icons. Terminal activity animations and subagent pills are unchanged. While the response waits on subagents or background agents, the indicator reports how many subagents it is waiting for; while it waits on a background terminal, it reports that it is waiting for terminal output. Reduced motion disables the collapse animation and keeps the indicator visible without animation. Spoken progress updates are controlled by accessibility.verboseChatProgressUpdates.</source>
     </trans-unit>
     <trans-unit id="chat.persistentProgressHandoff">
-      <source xml:lang="en">When a reasoning or tool preview automatically collapses, content above it stays in place as the preview folds upward. The following response content appears after the collapse finishes. Scrolling to the bottom reveals the latest message and removes any space reserved for the collapse. Reduced motion skips this delay. If keyboard focus keeps a preview open, new content continues to appear without waiting for focus to move.</source>
+      <source xml:lang="en">While a response is running, automatically collapsing a reasoning or tool preview keeps a visible header in place. If the header is above the visible content but its details are visible, it moves below the pinned prompt, or to the top of the viewport when there is no pinned prompt. Only the space needed for the visible viewport is reserved. That space is removed when the response finishes or is stopped, after any pending transition and content rendering finish. Expanding a preview consumes reserved space as its content grows. Scrolling to the bottom removes the reserved space. Manual collapses do not add padding. The following response content appears after an automatic collapse finishes. Reduced motion skips this delay. If keyboard focus keeps a preview open, new content continues to appear without waiting for focus to move.</source>
     </trans-unit>
     <trans-unit id="chat.persistentProgressSimplifiedTools">
       <source xml:lang="en">With Compact persistent progress, a single tool uses its normal rendering, icon, and details without a group summary or automatic group collapse. MCP tools use the MCP icon. The working indicator reports when chat is waiting for your answers instead of showing a separate question-tool progress row. Question controls remain available, answered questions remain in the response, and question-tool failures remain visible.</source>
@@ -288,6 +297,9 @@
     </trans-unit>
     <trans-unit id="chat.testApp.help">
       <source xml:lang="en">After app UI changes, Test App appears to the right of the status pills above the chat input. After a testing request starts in this chat, the button is named Retest App whenever it reappears, including after restarting VS Code in the same profile. This remembers that testing was requested, not that tests passed. Press Shift+Tab from the input to focus it, then Enter or Space to ask the agent to review the diffs, test the app UI, fix issues found, and retest. Existing tool permissions still apply.</source>
+    </trans-unit>
+    <trans-unit id="chat.toolFailureIcon">
+      <source xml:lang="en">Failed tool calls use an error icon in place of their normal tool icon. Their content and available actions stay the same. The Accessible View includes the failure reason or terminal exit code when available.</source>
     </trans-unit>
     <trans-unit id="chat.voiceInputMode.agentProgress">
       <source xml:lang="en">When the experimental agents.voice.agentProgress setting is enabled, Voice Mode Agent requests may speak brief progress updates while investigating, planning, editing, validating, or recovering from a problem.</source>
@@ -542,6 +554,9 @@
     </trans-unit>
     <trans-unit id="generateSkill.short">
       <source xml:lang="en">Generate Skill</source>
+    </trans-unit>
+    <trans-unit id="githubUrlUnavailable">
+      <source xml:lang="en">The GitHub Enterprise URL is unavailable. Sign in and try again.</source>
     </trans-unit>
     <trans-unit id="insertForkConversationSlashCommand">
       <source xml:lang="en">Insert Fork Command</source>
@@ -2272,37 +2287,37 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Session Changes</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyCommit">
-      <source xml:lang="en">Copy commit hash for {0}</source>
+      <source xml:lang="en">Copy Commit Hash for {0}</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyCommitHash">
-      <source xml:lang="en">Copy commit hash</source>
+      <source xml:lang="en">Copy Commit Hash</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyCommitUrl">
-      <source xml:lang="en">Copy commit URL</source>
+      <source xml:lang="en">Copy Commit URL</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyFilePath">
-      <source xml:lang="en">Copy path</source>
+      <source xml:lang="en">Copy Path</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyFileRelativePath">
-      <source xml:lang="en">Copy relative path</source>
+      <source xml:lang="en">Copy Relative Path</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyIssue">
-      <source xml:lang="en">Copy issue URL</source>
+      <source xml:lang="en">Copy Issue URL</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyIssueUrl">
-      <source xml:lang="en">Copy issue URL</source>
+      <source xml:lang="en">Copy Issue URL</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyPullRequest">
-      <source xml:lang="en">Copy pull request URL</source>
+      <source xml:lang="en">Copy Pull Request URL</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyPullRequestUrl">
-      <source xml:lang="en">Copy pull request URL</source>
+      <source xml:lang="en">Copy Pull Request URL</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyResourceUri">
       <source xml:lang="en">Copy URI</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.copyWebsiteUrl">
-      <source xml:lang="en">Copy website URL</source>
+      <source xml:lang="en">Copy Website URL</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.issue">
       <source xml:lang="en">Issue</source>
@@ -2335,7 +2350,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">{0}. {1}. {2}</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.removeArtifact">
-      <source xml:lang="en">Remove {0} from session</source>
+      <source xml:lang="en">Remove {0} from Session</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.removeArtifactFailed">
       <source xml:lang="en">Could not remove {0} from this session: {1}</source>
@@ -3256,6 +3271,12 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.catalogDisabled">
       <source xml:lang="en">Search your installed customizations, or enable a marketplace source to explore available items.</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.checking">
+      <source xml:lang="en">Checking installation</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.checkingProgress">
+      <source xml:lang="en">Checking...</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.clearSearch">
       <source xml:lang="en">Clear Customization Search Results</source>
     </trans-unit>
@@ -3323,11 +3344,14 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.installUnavailable">
       <source xml:lang="en">Install {0}. {1}</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.installVerificationError">
+      <source xml:lang="en">{0}. {1}</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.installed">
       <source xml:lang="en">Installed</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.installedAriaLabel">
-      <source xml:lang="en">{0}, {1}, installed{2}{3}. {4}</source>
+      <source xml:lang="en">{0}, {1}, {2}{3}{4}. {5}</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.installedPluginDescription">
       <source xml:lang="en">Installed agent plugin</source>
@@ -3358,6 +3382,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.mcpsSection">
       <source xml:lang="en">MCP servers</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.missingFiles">
+      <source xml:lang="en">Missing files</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.moreResultsPossible">
       <source xml:lang="en">More catalog results may match this search.</source>
@@ -3395,6 +3422,33 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.reloading">
       <source xml:lang="en">Reloading customizations...</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.repair">
+      <source xml:lang="en">Repair</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.repairCancelled">
+      <source xml:lang="en">Repair cancelled for {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.repairComplete">
+      <source xml:lang="en">Repaired {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.repairFailed">
+      <source xml:lang="en">Could not repair {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.repairLabel">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.repairStarted">
+      <source xml:lang="en">Repairing {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.repairUnavailableLabel">
+      <source xml:lang="en">Repair {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.repairing">
+      <source xml:lang="en">Repairing</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.repairingProgress">
+      <source xml:lang="en">Repairing...</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.resultCount">
       <source xml:lang="en">{0} customizations found.</source>
     </trans-unit>
@@ -3406,6 +3460,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.retryInstall">
       <source xml:lang="en">Retry Install</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.retryRepair">
+      <source xml:lang="en">Retry Repair</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.retryUninstall">
       <source xml:lang="en">Retry Uninstall</source>
@@ -3446,6 +3503,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.title">
       <source xml:lang="en">Discover customizations</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.unavailable">
+      <source xml:lang="en">Unavailable</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.uninstall">
       <source xml:lang="en">Uninstall</source>
     </trans-unit>
@@ -3466,6 +3526,15 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.uninstalling">
       <source xml:lang="en">Uninstalling...</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.uninstallingState">
+      <source xml:lang="en">Uninstalling</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.verificationErrorDetail">
+      <source xml:lang="en">, {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.verificationFailed">
+      <source xml:lang="en">Could not verify installation</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.viewSetup">
       <source xml:lang="en">View Setup</source>
@@ -3547,9 +3616,6 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="builtinSource">
       <source xml:lang="en">Built-in</source>
-    </trans-unit>
-    <trans-unit id="collapsed">
-      <source xml:lang="en">collapsed</source>
     </trans-unit>
     <trans-unit id="copyFullPath">
       <source xml:lang="en">Copy Full Path</source>
@@ -3668,6 +3734,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationCardAriaLabelDisabled">
       <source xml:lang="en">{0}. {1}. Disabled</source>
     </trans-unit>
+    <trans-unit id="customizationGroups">
+      <source xml:lang="en">Customization Groups</source>
+    </trans-unit>
     <trans-unit id="customizationMoreActionsAria">
       <source xml:lang="en">More actions for {0}</source>
     </trans-unit>
@@ -3685,9 +3754,6 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationStatusLoading">
       <source xml:lang="en">Loading</source>
-    </trans-unit>
-    <trans-unit id="expanded">
-      <source xml:lang="en">expanded</source>
     </trans-unit>
     <trans-unit id="extensionGroup">
       <source xml:lang="en">Extensions</source>
@@ -3708,7 +3774,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Generate with AI</source>
     </trans-unit>
     <trans-unit id="groupAriaLabel">
-      <source xml:lang="en">{0}, {1} items, {2}</source>
+      <source xml:lang="en">{0}, {1} items</source>
     </trans-unit>
     <trans-unit id="hook">
       <source xml:lang="en">Hook</source>
@@ -4280,6 +4346,15 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="migrationChecklistAgentsCount">
       <source xml:lang="en">{0} agents</source>
     </trans-unit>
+    <trans-unit id="migrationChecklistConfiguredLocationCustomizationsCount">
+      <source xml:lang="en">{0} customizations</source>
+    </trans-unit>
+    <trans-unit id="migrationChecklistConfiguredLocations">
+      <source xml:lang="en">Custom location settings</source>
+    </trans-unit>
+    <trans-unit id="migrationChecklistConfiguredLocationsDescription">
+      <source xml:lang="en">Move customizations out of locations configured in settings that the active agent no longer uses.</source>
+    </trans-unit>
     <trans-unit id="migrationChecklistInstructionsCount">
       <source xml:lang="en">{0} instructions</source>
     </trans-unit>
@@ -4294,6 +4369,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="migrationChecklistOneAgent">
       <source xml:lang="en">1 agent</source>
+    </trans-unit>
+    <trans-unit id="migrationChecklistOneConfiguredLocationCustomization">
+      <source xml:lang="en">1 customization</source>
     </trans-unit>
     <trans-unit id="migrationChecklistOneInstruction">
       <source xml:lang="en">1 instruction</source>
@@ -4650,10 +4728,10 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">The customization type links below the heading open their respective management sections.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.install">
-      <source xml:lang="en">Review an available item's source, then choose Install. MCP servers that require unsupported local prerequisites provide View Setup to open the publisher's instructions instead. Installed marketplace items provide an Uninstall action. VS Code continues to apply destination, trust, policy, and compatibility checks.</source>
+      <source xml:lang="en">Review an available item's source, then choose Install. VS Code records the exact installed target instead of associating same-name local items. If recorded skill files are missing, choose Repair to restore only those files without overwriting existing files. Installed marketplace items provide an Uninstall action. MCP servers that require unsupported local prerequisites provide View Setup. VS Code continues to apply destination, trust, policy, and compatibility checks.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.links">
-      <source xml:lang="en">Available customization names open their external resource so you can review it before installing.</source>
+      <source xml:lang="en">When a source provides an external resource, its available customization name opens that resource so you can review it before installing.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.navigation">
       <source xml:lang="en">Use Tab and Shift+Tab between controls. In search results, use the arrow keys, Home, and End to navigate the list. Press Enter to open an installed item.</source>
@@ -4665,7 +4743,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Scrolling near the end of search results loads another page without removing loaded items. Retry repeats a failed marketplace request.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.ranking">
-      <source xml:lang="en">Available search results are ordered by source-assigned relevance, not trust or quality. Browsing without search text interleaves sources while preserving each catalog's order.</source>
+      <source xml:lang="en">Available search results are ordered by source-assigned relevance, not trust or quality. Feed priority breaks equal relevance scores. Browsing without search text shows higher-priority custom entries first and interleaves entries at the same priority while preserving each catalog's order.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.search">
       <source xml:lang="en">Type words or use @installed, @type:skill, @type:mcp, and @type:plugin. The search filter menu updates the same query and filters can be combined.</source>
@@ -4692,37 +4770,32 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">The Customizations overview shows categories you can open to manage agents, skills, MCP servers, plugins, and other customizations.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplaceConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.customizations.marketplace.enabled">
+      <source xml:lang="en">Shows Discover instead of Overview when a customization marketplace source is enabled. When disabled, marketplace discovery remains in the existing customization management pages.</source>
+    </trans-unit>
+    <trans-unit id="chat.customizations.marketplace.sources.publicFeed.enabled">
+      <source xml:lang="en">Enables the GitHub Feed as a source of skills, MCP servers, and plugins when Marketplace is shown. If Marketplace or this setting is disabled, the GitHub Feed is not queried.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplaceInstallService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="customizationMarketplace.aiDisabled">
       <source xml:lang="en">Enable AI features to install customizations.</source>
     </trans-unit>
-    <trans-unit id="customizationMarketplace.confirmSkill">
-      <source xml:lang="en">Install '{0}'?</source>
-    </trans-unit>
-    <trans-unit id="customizationMarketplace.confirmSkillDetail">
-      <source xml:lang="en">Skills can supply instructions and scripts that an agent may run. Only install resources from sources you trust.
-
-Source: {0}
-Revision: {1}
-Destination: {2}</source>
-    </trans-unit>
     <trans-unit id="customizationMarketplace.cursorUnsupported">
       <source xml:lang="en">Cursor plugins cannot be installed in VS Code. Open the resource to view its installation instructions.</source>
     </trans-unit>
-    <trans-unit id="customizationMarketplace.emptySkillFile">
-      <source xml:lang="en">The source's SKILL.md file is empty.</source>
+    <trans-unit id="customizationMarketplace.disabled">
+      <source xml:lang="en">Enable the customization marketplace to install this resource.</source>
     </trans-unit>
-    <trans-unit id="customizationMarketplace.installSkillButton">
-      <source xml:lang="en">Install</source>
+    <trans-unit id="customizationMarketplace.installationVerificationFailed">
+      <source xml:lang="en">Could not verify this customization installation. {0}</source>
     </trans-unit>
-    <trans-unit id="customizationMarketplace.installingSkill">
-      <source xml:lang="en">Installing skill '{0}'</source>
+    <trans-unit id="customizationMarketplace.mcpGalleryChanged">
+      <source xml:lang="en">The MCP registry changed after '{0}' was discovered. Refresh Discover and try again.</source>
     </trans-unit>
-    <trans-unit id="customizationMarketplace.invalidSkillName">
-      <source xml:lang="en">The skill's folder name '{0}' is not supported. Open the source to review its installation instructions.</source>
-    </trans-unit>
-    <trans-unit id="customizationMarketplace.invalidSkillSource">
-      <source xml:lang="en">The skill's installation source is invalid.</source>
+    <trans-unit id="customizationMarketplace.mcpGalleryUnavailable">
+      <source xml:lang="en">The MCP server '{0}' is not available in the configured registry.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.mcpInstallIncomplete">
       <source xml:lang="en">The MCP server could not be installed. Review the installation error and try again.</source>
@@ -4739,6 +4812,81 @@ Destination: {2}</source>
     <trans-unit id="customizationMarketplace.mcpUnavailable">
       <source xml:lang="en">The MCP server '{0}' is no longer available from the GitHub Feed.</source>
     </trans-unit>
+    <trans-unit id="customizationMarketplace.pluginInstallIncomplete">
+      <source xml:lang="en">The plugin could not be installed. Review the installation error and try again.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.pluginRevisionMismatch">
+      <source xml:lang="en">The recorded plugin revision is no longer available from its source.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.pluginUninstallUnavailable">
+      <source xml:lang="en">This plugin cannot be uninstalled from the customization marketplace.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.pluginsDisabled">
+      <source xml:lang="en">Enable agent plugins to install this resource.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.repairIncomplete">
+      <source xml:lang="en">The customization could not be fully repaired. Review the installation and try again.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.sourceDisabled">
+      <source xml:lang="en">Enable this resource's marketplace source to install it.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.sourceUnavailable">
+      <source xml:lang="en">This resource does not provide a supported installation source.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.sourceUnavailableForRepair">
+      <source xml:lang="en">This resource's marketplace source is no longer available, so it cannot be repaired.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplaceInstallationRecordStore" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationMarketplace.installationRecordTooLarge">
+      <source xml:lang="en">The customization installation contains too much metadata to record safely.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.tooManyInstallationRecords">
+      <source xml:lang="en">Too many customization marketplace installations are recorded. Uninstall an existing marketplace customization before installing another.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplaceSkillInstaller" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationMarketplace.confirmSkill">
+      <source xml:lang="en">Install '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.confirmSkillDetail">
+      <source xml:lang="en">Skills can supply instructions and scripts that an agent may run. Only install resources from sources you trust.
+
+Source: {0}
+Revision: {1}
+Destination: {2}</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.confirmSkillRepair">
+      <source xml:lang="en">Repair '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.confirmSkillRepairDetail">
+      <source xml:lang="en">Missing files will be restored without overwriting existing files.
+
+Source: {0}
+Revision: {1}
+Destination: {2}</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.emptySkillFile">
+      <source xml:lang="en">The source's SKILL.md file is empty.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.installSkillButton">
+      <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.installingSkill">
+      <source xml:lang="en">Installing skill '{0}'</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.invalidSkillName">
+      <source xml:lang="en">The skill's folder name '{0}' is not supported. Open the source to review its installation instructions.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.invalidSkillRecord">
+      <source xml:lang="en">The recorded skill installation is invalid.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.invalidSkillRevision">
+      <source xml:lang="en">The skill source did not resolve to an immutable Git revision.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.invalidSkillSource">
+      <source xml:lang="en">The skill's installation source is invalid.</source>
+    </trans-unit>
     <trans-unit id="customizationMarketplace.missingSkillFile">
       <source xml:lang="en">The source does not contain a regular SKILL.md file.</source>
     </trans-unit>
@@ -4748,23 +4896,38 @@ Destination: {2}</source>
     <trans-unit id="customizationMarketplace.noSkillDestination">
       <source xml:lang="en">The selected agent does not provide a writable skill installation location.</source>
     </trans-unit>
-    <trans-unit id="customizationMarketplace.pluginUninstallUnavailable">
-      <source xml:lang="en">This plugin cannot be uninstalled from the customization marketplace.</source>
+    <trans-unit id="customizationMarketplace.repairSkillButton">
+      <source xml:lang="en">Repair</source>
     </trans-unit>
-    <trans-unit id="customizationMarketplace.pluginsDisabled">
-      <source xml:lang="en">Enable agent plugins to install this resource.</source>
+    <trans-unit id="customizationMarketplace.repairingSkill">
+      <source xml:lang="en">Repairing skill '{0}'</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.skillExists">
       <source xml:lang="en">A skill already exists at '{0}'. Remove or rename it before installing this resource.</source>
     </trans-unit>
+    <trans-unit id="customizationMarketplace.skillInstallIncomplete">
+      <source xml:lang="en">The skill could not be installed. Review the installation error and try again.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.skillMetadataTooLarge">
+      <source xml:lang="en">The skill contains too much file metadata to install safely.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.skillRepairConflict">
+      <source xml:lang="en">A recorded skill file cannot be repaired because its destination is occupied by another file type.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.skillRepairRevisionMismatch">
+      <source xml:lang="en">The recorded skill revision is no longer available from its source.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.skillRepairSourceChanged">
+      <source xml:lang="en">The recorded skill files are no longer available from the original source.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.skillRepairUnsafeDestination">
+      <source xml:lang="en">The skill cannot be repaired because its destination contains a symbolic link or non-directory path.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.skillRevisionChangedDuringInstall">
+      <source xml:lang="en">The skill source changed while it was being copied. Try installing it again.</source>
+    </trans-unit>
     <trans-unit id="customizationMarketplace.skillTooLarge">
       <source xml:lang="en">The skill exceeds the 50 MB installation limit.</source>
-    </trans-unit>
-    <trans-unit id="customizationMarketplace.sourceDisabled">
-      <source xml:lang="en">Enable this resource's marketplace source to install it.</source>
-    </trans-unit>
-    <trans-unit id="customizationMarketplace.sourceUnavailable">
-      <source xml:lang="en">This resource does not provide a supported installation source.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.unsafeSkillContents">
       <source xml:lang="en">The skill contains symbolic links or too many files. Review the source before installing it manually.</source>
@@ -5415,6 +5578,32 @@ Destination: {2}</source>
     <trans-unit id="customizationMigrationHintCounts">
       <source xml:lang="en">{0} workspace and {1} user customizations need an update to keep working.</source>
     </trans-unit>
+    <trans-unit id="customizationMigrationHintUserCountPlural">
+      <source xml:lang="en">{0} user customizations need an update to keep working.</source>
+    </trans-unit>
+    <trans-unit id="customizationMigrationHintUserCountSingular">
+      <source xml:lang="en">{0} user customization needs an update to keep working.</source>
+    </trans-unit>
+    <trans-unit id="customizationMigrationHintWorkspaceCountPlural">
+      <source xml:lang="en">{0} workspace customizations need an update to keep working.</source>
+    </trans-unit>
+    <trans-unit id="customizationMigrationHintWorkspaceCountSingular">
+      <source xml:lang="en">{0} workspace customization needs an update to keep working.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationTree" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="collapsed">
+      <source xml:lang="en">collapsed</source>
+    </trans-unit>
+    <trans-unit id="customizationTabAriaLabel">
+      <source xml:lang="en">{0}, {1} items. {2}</source>
+    </trans-unit>
+    <trans-unit id="customizationTreeGroupAriaLabel">
+      <source xml:lang="en">{0}, {1} items, {2}</source>
+    </trans-unit>
+    <trans-unit id="expanded">
+      <source xml:lang="en">expanded</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/embeddedAgentPluginDetail" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copiedPluginPath">
@@ -5701,6 +5890,12 @@ Destination: {2}</source>
     <trans-unit id="builtinMcpServerEnableForWorkspace">
       <source xml:lang="en">Enable (Workspace)</source>
     </trans-unit>
+    <trans-unit id="builtinMcpServersGroup">
+      <source xml:lang="en">Built-In</source>
+    </trans-unit>
+    <trans-unit id="builtinMcpServersGroupDescription">
+      <source xml:lang="en">MCP servers built into the application or active agent host.</source>
+    </trans-unit>
     <trans-unit id="confirmUninstallPluginMcp">
       <source xml:lang="en">This MCP server is provided by the plugin '{0}'</source>
     </trans-unit>
@@ -5715,6 +5910,12 @@ Destination: {2}</source>
     </trans-unit>
     <trans-unit id="error">
       <source xml:lang="en">Error</source>
+    </trans-unit>
+    <trans-unit id="extensionMcpServersGroup">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="extensionMcpServersGroupDescription">
+      <source xml:lang="en">MCP servers provided by installed extensions.</source>
     </trans-unit>
     <trans-unit id="fromExtension">
       <source xml:lang="en">Extension: {0}</source>
@@ -5731,17 +5932,14 @@ Destination: {2}</source>
     <trans-unit id="installedMcpServersSection">
       <source xml:lang="en">Installed</source>
     </trans-unit>
-    <trans-unit id="installedSearchHeader">
-      <source xml:lang="en">Installed</source>
+    <trans-unit id="installedMcpServersSectionDescription">
+      <source xml:lang="en">MCP servers installed or provided by the active workspace, plugins, extensions, and agent host.</source>
     </trans-unit>
     <trans-unit id="installing">
       <source xml:lang="en">Installing...</source>
     </trans-unit>
     <trans-unit id="learnMoreMcp">
       <source xml:lang="en">Learn more about MCP servers</source>
-    </trans-unit>
-    <trans-unit id="loadingMcpMarketplace">
-      <source xml:lang="en">Loading marketplace MCP servers...</source>
     </trans-unit>
     <trans-unit id="marketplaceMcpServerRowAriaLabel">
       <source xml:lang="en">{0}. Available to install from the MCP marketplace.</source>
@@ -5760,6 +5958,9 @@ Destination: {2}</source>
     </trans-unit>
     <trans-unit id="mcpAuthenticationFailed">
       <source xml:lang="en">Unable to sign in to {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="mcpGroupAriaLabel">
+      <source xml:lang="en">{0}, {1} items</source>
     </trans-unit>
     <trans-unit id="mcpInstallFailed">
       <source xml:lang="en">Unable to install MCP server: {0}</source>
@@ -5791,6 +5992,9 @@ Destination: {2}</source>
     <trans-unit id="mcpServerErrorWithoutDetails">
       <source xml:lang="en">The server reported an error without additional details.</source>
     </trans-unit>
+    <trans-unit id="mcpServerGroups">
+      <source xml:lang="en">MCP Server Groups</source>
+    </trans-unit>
     <trans-unit id="mcpServerInstalledStatus">
       <source xml:lang="en">{0} installed.</source>
     </trans-unit>
@@ -5806,20 +6010,20 @@ Destination: {2}</source>
     <trans-unit id="mcpServersDescription">
       <source xml:lang="en">An open standard that lets AI use external tools and services. MCP servers provide tools for file operations, databases, APIs, and more.</source>
     </trans-unit>
+    <trans-unit id="mcpServersListAriaLabel">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
     <trans-unit id="mcpSupportUnknown">
       <source xml:lang="en">Support unknown</source>
     </trans-unit>
     <trans-unit id="mcpUnsupported">
       <source xml:lang="en">Unsupported</source>
     </trans-unit>
-    <trans-unit id="noAvailableMcpServers">
-      <source xml:lang="en">No marketplace MCP servers are available.</source>
-    </trans-unit>
-    <trans-unit id="noInstalledMcpServers">
-      <source xml:lang="en">No MCP servers are installed.</source>
-    </trans-unit>
     <trans-unit id="noMatchingServers">
       <source xml:lang="en">No servers match '{0}'</source>
+    </trans-unit>
+    <trans-unit id="noMcpServersInGroup">
+      <source xml:lang="en">No MCP servers in this group</source>
     </trans-unit>
     <trans-unit id="openExtensionDetails">
       <source xml:lang="en">Open extension details for {0}</source>
@@ -5829,6 +6033,12 @@ Destination: {2}</source>
     </trans-unit>
     <trans-unit id="output">
       <source xml:lang="en">Show Output</source>
+    </trans-unit>
+    <trans-unit id="pluginMcpServersGroup">
+      <source xml:lang="en">Plugins</source>
+    </trans-unit>
+    <trans-unit id="pluginMcpServersGroupDescription">
+      <source xml:lang="en">MCP servers provided by installed plugins.</source>
     </trans-unit>
     <trans-unit id="running">
       <source xml:lang="en">Running</source>
@@ -5869,25 +6079,28 @@ Destination: {2}</source>
     <trans-unit id="uninstallPluginBtn">
       <source xml:lang="en">Uninstall Plugin</source>
     </trans-unit>
+    <trans-unit id="userMcpServersGroup">
+      <source xml:lang="en">User</source>
+    </trans-unit>
+    <trans-unit id="userMcpServersGroupDescription">
+      <source xml:lang="en">MCP servers configured for your profile and available across workspaces.</source>
+    </trans-unit>
+    <trans-unit id="workspaceMcpServersGroup">
+      <source xml:lang="en">Workspace</source>
+    </trans-unit>
+    <trans-unit id="workspaceMcpServersGroupDescription">
+      <source xml:lang="en">MCP servers configured by this workspace.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/pluginListWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="addPlugin">
       <source xml:lang="en">Add Plugin</source>
-    </trans-unit>
-    <trans-unit id="allMarketplaceGroup">
-      <source xml:lang="en">All plugins</source>
-    </trans-unit>
-    <trans-unit id="allMarketplaceGroupDescription">
-      <source xml:lang="en">Plugins available from configured marketplaces.</source>
     </trans-unit>
     <trans-unit id="availablePluginsSection">
       <source xml:lang="en">Available</source>
     </trans-unit>
     <trans-unit id="availablePluginsSectionDescription">
       <source xml:lang="en">Browse and install plugins from your marketplaces.</source>
-    </trans-unit>
-    <trans-unit id="availableSearchHeader">
-      <source xml:lang="en">Available to install</source>
     </trans-unit>
     <trans-unit id="backToInstalledPlugins">
       <source xml:lang="en">Back to Installed</source>
@@ -5899,10 +6112,7 @@ Destination: {2}</source>
       <source xml:lang="en">Browse Marketplace is not available in VS Code for the Web.</source>
     </trans-unit>
     <trans-unit id="checkForAndApplyPluginUpdates">
-      <source xml:lang="en">Check for and apply updates</source>
-    </trans-unit>
-    <trans-unit id="collapsed">
-      <source xml:lang="en">collapsed</source>
+      <source xml:lang="en">Check for and Apply Updates</source>
     </trans-unit>
     <trans-unit id="createPlugin">
       <source xml:lang="en">Create Plugin</source>
@@ -5913,9 +6123,6 @@ Destination: {2}</source>
     <trans-unit id="disablePlugin">
       <source xml:lang="en">Disable {0} from sync</source>
     </trans-unit>
-    <trans-unit id="emptyMarketplace">
-      <source xml:lang="en">No plugins available</source>
-    </trans-unit>
     <trans-unit id="enablePlugin">
       <source xml:lang="en">Enable {0} for sync</source>
     </trans-unit>
@@ -5924,9 +6131,6 @@ Destination: {2}</source>
     </trans-unit>
     <trans-unit id="excludePluginWorkspaceAria">
       <source xml:lang="en">Exclude {0} from Workspace</source>
-    </trans-unit>
-    <trans-unit id="expanded">
-      <source xml:lang="en">expanded</source>
     </trans-unit>
     <trans-unit id="hookCommandCount">
       <source xml:lang="en">{0} commands</source>
@@ -5958,8 +6162,8 @@ Destination: {2}</source>
     <trans-unit id="installedPluginsSection">
       <source xml:lang="en">Installed</source>
     </trans-unit>
-    <trans-unit id="installedSearchHeader">
-      <source xml:lang="en">Installed</source>
+    <trans-unit id="installedPluginsSectionDescription">
+      <source xml:lang="en">Plugins installed locally or configured by the active remote session.</source>
     </trans-unit>
     <trans-unit id="installing">
       <source xml:lang="en">Installing...</source>
@@ -5994,17 +6198,11 @@ Destination: {2}</source>
     <trans-unit id="marketplacePluginRowAriaLabel">
       <source xml:lang="en">{0}. Available to install from {1}.</source>
     </trans-unit>
-    <trans-unit id="noAvailablePlugins">
-      <source xml:lang="en">No marketplace plugins are available.</source>
-    </trans-unit>
-    <trans-unit id="noInstalledPlugins">
-      <source xml:lang="en">No plugins are installed.</source>
-    </trans-unit>
-    <trans-unit id="noMarketplaceResults">
-      <source xml:lang="en">No plugins match '{0}'</source>
-    </trans-unit>
     <trans-unit id="noMatchingPlugins">
       <source xml:lang="en">No plugins match '{0}'</source>
+    </trans-unit>
+    <trans-unit id="noPluginsInGroup">
+      <source xml:lang="en">No plugins in this group</source>
     </trans-unit>
     <trans-unit id="oneAgentContribution">
       <source xml:lang="en">1 agent</source>
@@ -6025,7 +6223,10 @@ Destination: {2}</source>
       <source xml:lang="en">1 skill</source>
     </trans-unit>
     <trans-unit id="pluginGroupAriaLabel">
-      <source xml:lang="en">{0}, {1} items, {2}</source>
+      <source xml:lang="en">{0}, {1} items</source>
+    </trans-unit>
+    <trans-unit id="pluginGroups">
+      <source xml:lang="en">Plugin Groups</source>
     </trans-unit>
     <trans-unit id="pluginInclusionChanged">
       <source xml:lang="en">{0}. {1}.</source>
@@ -6105,12 +6306,6 @@ Destination: {2}</source>
     <trans-unit id="recommendedBadge">
       <source xml:lang="en">Recommended</source>
     </trans-unit>
-    <trans-unit id="recommendedGroup">
-      <source xml:lang="en">Recommended for this workspace</source>
-    </trans-unit>
-    <trans-unit id="recommendedGroupDescription">
-      <source xml:lang="en">Plugins recommended by workspace configuration.</source>
-    </trans-unit>
     <trans-unit id="remotePluginConfigurationSource">
       <source xml:lang="en">Configured on the active remote agent host</source>
     </trans-unit>
@@ -6133,7 +6328,7 @@ Destination: {2}</source>
       <source xml:lang="en">Remote</source>
     </trans-unit>
     <trans-unit id="remotePluginsSection">
-      <source xml:lang="en">Remote session plugins</source>
+      <source xml:lang="en">Remote Session</source>
     </trans-unit>
     <trans-unit id="remotePluginsSectionDescription">
       <source xml:lang="en">Plugins configured directly on the active remote agent host.</source>
@@ -6152,6 +6347,18 @@ Destination: {2}</source>
     </trans-unit>
     <trans-unit id="updatePlugins">
       <source xml:lang="en">Update Plugins</source>
+    </trans-unit>
+    <trans-unit id="userPluginsGroup">
+      <source xml:lang="en">User</source>
+    </trans-unit>
+    <trans-unit id="userPluginsGroupDescription">
+      <source xml:lang="en">Plugins installed for your profile and available across workspaces.</source>
+    </trans-unit>
+    <trans-unit id="workspacePluginsGroup">
+      <source xml:lang="en">Workspace</source>
+    </trans-unit>
+    <trans-unit id="workspacePluginsGroupDescription">
+      <source xml:lang="en">Plugins included or excluded specifically for this workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/promptsServiceCustomizationItemProvider" source-language="en" datatype="plaintext"><body>
@@ -6292,6 +6499,9 @@ Destination: {2}</source>
     <trans-unit id="toolsBrowseTryAgain">
       <source xml:lang="en">Check your connection and try again</source>
     </trans-unit>
+    <trans-unit id="toolsGroups">
+      <source xml:lang="en">Tool Groups</source>
+    </trans-unit>
     <trans-unit id="toolsListSubtitle">
       <source xml:lang="en">Enable or disable the tools available to chat. Disabled tools are not advertised to the agent. Tools other than Copilot's built-in tools run on the client and require it to be connected.</source>
     </trans-unit>
@@ -6324,6 +6534,9 @@ Destination: {2}</source>
     </trans-unit>
     <trans-unit id="toolsToolCheckbox">
       <source xml:lang="en">Enable {0}</source>
+    </trans-unit>
+    <trans-unit id="toolsTreeAriaLabel">
+      <source xml:lang="en">Tools</source>
     </trans-unit>
     <trans-unit id="tryDifferentSearch">
       <source xml:lang="en">Try a different search term</source>
@@ -6696,6 +6909,9 @@ Changes may not take full effect until VS Code is restarted.</source>
     <trans-unit id="chat.agentHost.copilot.modelCapabilityOverrides.reasoningEffort">
       <source xml:lang="en">Reasoning effort for sessions on this model, overriding the model picker's thinking level. Use the `*` entry to set it for every model. Unrecognized values are ignored.</source>
     </trans-unit>
+    <trans-unit id="chat.agentHost.copilot.runtimePath">
+      <source xml:lang="en">Absolute path to a local `copilot-runtime` executable. The bundled Copilot SDK wrapper remains in use. Empty uses the bundled runtime. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
+    </trans-unit>
     <trans-unit id="chat.agentHost.copilot.toolSearch.deferThreshold">
       <source xml:lang="en">Minimum number of tools before MCP and external tools are deferred behind tool search. Set to 0 to always defer external tools. Only effective when tool search is enabled.</source>
     </trans-unit>
@@ -6758,7 +6974,7 @@ Changing this setting requires a restart to take effect.</source>
 Changing this setting requires a restart to take effect.</source>
     </trans-unit>
     <trans-unit id="chat.agentSessions.showExternal">
-      <source xml:lang="en">Controls which external agent sessions, created outside VS Code's Agent Host, are shown.</source>
+      <source xml:lang="en">Controls which external agent sessions are shown. External sessions are sessions that were created in a different application and have not received a message from this application yet.</source>
     </trans-unit>
     <trans-unit id="chat.agentSessions.showExternal.last24Hours">
       <source xml:lang="en">Show external sessions updated in the last 24 hours.</source>
@@ -6776,7 +6992,7 @@ Changing this setting requires a restart to take effect.</source>
       <source xml:lang="en">Show up to the 2 most recent external sessions updated in the last 7 days. At startup, external sessions older than the second-most-recently updated local session are hidden.</source>
     </trans-unit>
     <trans-unit id="chat.agentSkillsLocations.deprecated">
-      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Use {0} in the Agent Customizations editor to move skills into supported locations.</source>
+      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Review the {0} in the Agent Customizations editor to move skills into supported locations.</source>
     </trans-unit>
     <trans-unit id="chat.agentSkillsLocations.description">
       <source xml:lang="en">Specify location(s) of agent skills (`{0}`) that can be used in Chat Sessions. [Learn More]({1}).
@@ -6792,7 +7008,7 @@ This setting is only used by the Local agent harness.</source>
       <source xml:lang="en">Agent Skills Locations</source>
     </trans-unit>
     <trans-unit id="chat.agents.config.locations.deprecated">
-      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Use {0} in the Agent Customizations editor to move agents into supported locations.</source>
+      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Review the {0} in the Agent Customizations editor to move agents into supported locations.</source>
     </trans-unit>
     <trans-unit id="chat.agents.config.locations.description">
       <source xml:lang="en">Specify location(s) of custom agent files (`*{0}`). [Learn More]({1}).
@@ -6873,6 +7089,9 @@ This setting is only used by the Local agent harness.</source>
     <trans-unit id="chat.autopilot.advanced.enabled">
       <source xml:lang="en">Enables **Advanced Autopilot**, a single switch that turns on all advanced Autopilot behaviors that delegate more of the loop to the agent. Currently, after each Autopilot turn a small, fast model evaluates whether your original request is complete; if not, Autopilot keeps working using that evaluation as guidance for the next turn, instead of relying on the agent to signal completion itself.</source>
     </trans-unit>
+    <trans-unit id="chat.btwTip.enabled">
+      <source xml:lang="en">Controls whether the Agents Window shows a tip about using `/btw` to ask side questions.</source>
+    </trans-unit>
     <trans-unit id="chat.byokUtilityModelDefault.copilot.description">
       <source xml:lang="en">Use the default GitHub Copilot utility models.</source>
     </trans-unit>
@@ -6900,6 +7119,21 @@ This setting is only used by the Local agent harness.</source>
     <trans-unit id="chat.checkpoints.showFileChanges">
       <source xml:lang="en">Controls whether to show chat checkpoint file changes.</source>
     </trans-unit>
+    <trans-unit id="chat.closedPromoNotification">
+      <source xml:lang="en">Controls whether a live model promo is shown on the Copilot icon when Chat is closed. When explicitly set, this overrides the experiment without an experiment lookup. Otherwise, eligible promos use the experiment treatment.</source>
+    </trans-unit>
+    <trans-unit id="chat.closedPromoNotification.copilotIconPopup.description">
+      <source xml:lang="en">Show a promo tooltip when hovering or clicking the Copilot status icon while Chat is closed. Viewing the offer clears its indicator; the offer remains available for the current window session. Choosing Try dismisses the offer and its chat banner.</source>
+    </trans-unit>
+    <trans-unit id="chat.closedPromoNotification.copilotIconPopup.label">
+      <source xml:lang="en">Copilot Icon Popup</source>
+    </trans-unit>
+    <trans-unit id="chat.closedPromoNotification.none.description">
+      <source xml:lang="en">Do not show a promo on the Copilot icon when Chat is closed.</source>
+    </trans-unit>
+    <trans-unit id="chat.closedPromoNotification.none.label">
+      <source xml:lang="en">None</source>
+    </trans-unit>
     <trans-unit id="chat.codeBlock.showProgressAnimation.description">
       <source xml:lang="en">When applying edits, show a progress animation in the code block pill. If disabled, shows the progress percentage instead.</source>
     </trans-unit>
@@ -6921,11 +7155,11 @@ This setting is only used by the Local agent harness.</source>
     <trans-unit id="chat.copilot.skillCharBudget">
       <source xml:lang="en">Maximum number of characters available for skill descriptions in the Copilot SDK system message.</source>
     </trans-unit>
+    <trans-unit id="chat.copilot.tgrep.enabled">
+      <source xml:lang="en">When enabled, local Copilot Agent Host sessions force-enable tgrep indexed search, bypassing the repository-size threshold. Requires a local Git repository on a non-virtual filesystem. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
+    </trans-unit>
     <trans-unit id="chat.customizations.locationsMigration.enabled">
       <source xml:lang="en">Controls whether the Chat Customizations editor offers to move agents, instructions, and skills from configured locations that are not supported by the active agent-host harness. When disabled, the migration card and sidebar shortcut are hidden.</source>
-    </trans-unit>
-    <trans-unit id="chat.customizations.marketplace.sources.publicFeed.enabled">
-      <source xml:lang="en">Enables the GitHub Feed as a source of skills, MCP servers, and plugins in the customization marketplace. When disabled, this source is not initialized or queried. The marketplace is hidden when no sources are enabled.</source>
     </trans-unit>
     <trans-unit id="chat.customizations.mcpServerMigration.enabled">
       <source xml:lang="en">Controls whether VS Code shows MCP server migration actions, hints, compatibility badges, and compatibility details. Migration moves eligible workspace MCP servers out of .vscode/mcp.json and into a .mcp.json file at the workspace root, where the active agent-host harness discovers them directly.</source>
@@ -7029,6 +7263,24 @@ This setting is only used by the Local agent harness.</source>
     <trans-unit id="chat.experimental.collectInstructionsInExtension">
       <source xml:lang="en">When enabled, automatic instruction collection (.instructions.md, agent instructions, customizations index) is performed by the GitHub Copilot Chat extension instead of the core workbench.</source>
     </trans-unit>
+    <trans-unit id="chat.experimental.customizations.listLayout">
+      <source xml:lang="en">Controls how groups are presented in customization management lists.</source>
+    </trans-unit>
+    <trans-unit id="chat.experimental.customizations.listLayout.tabs">
+      <source xml:lang="en">Show customization groups as tabs above a flat tree.</source>
+    </trans-unit>
+    <trans-unit id="chat.experimental.customizations.listLayout.tree">
+      <source xml:lang="en">Show customization groups as collapsible parent nodes in a tree.</source>
+    </trans-unit>
+    <trans-unit id="chat.experimental.customizations.toggleStyle">
+      <source xml:lang="en">Controls whether Plugin, MCP, and Tools customization pages use checkboxes or switches for enablement.</source>
+    </trans-unit>
+    <trans-unit id="chat.experimental.customizations.toggleStyle.checkbox">
+      <source xml:lang="en">Use checkboxes for customization enablement controls.</source>
+    </trans-unit>
+    <trans-unit id="chat.experimental.customizations.toggleStyle.switch">
+      <source xml:lang="en">Use switches for customization enablement controls.</source>
+    </trans-unit>
     <trans-unit id="chat.experimental.detectParticipant.enabled">
       <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
     </trans-unit>
@@ -7102,7 +7354,7 @@ This setting is only used by the Local agent harness.</source>
       <source xml:lang="en">Shows mode and permissions in a combined picker with expandable permission choices for Copilot Agent Host sessions.</source>
     </trans-unit>
     <trans-unit id="chat.experimentalModelPicker">
-      <source xml:lang="en">When enabled, the model picker uses a tab per model provider and configures thinking effort and context from a detail card next to each model, instead of a separate configuration button.</source>
+      <source xml:lang="en">When enabled, the model picker uses provider tabs and a model details page for information and configuration. Open details from a model's information button or the thinking effort and context readout in the chat input.</source>
     </trans-unit>
     <trans-unit id="chat.experimentalSessionsWindowOverride">
       <source xml:lang="en">When true, enables sessions-window-specific behavior for extensions.</source>
@@ -7192,7 +7444,7 @@ Note: this setting currently only applies to Agent Host sessions (such as Copilo
       <source xml:lang="en">Display file and symbol references as simple blue links without icons.</source>
     </trans-unit>
     <trans-unit id="chat.instructions.config.locations.deprecated">
-      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Use {0} in the Agent Customizations editor to move instructions into supported locations.</source>
+      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Review the {0} in the Agent Customizations editor to move instructions into supported locations.</source>
     </trans-unit>
     <trans-unit id="chat.instructions.config.locations.description">
       <source xml:lang="en">Specify location(s) of instructions files (`*{0}`) that can be attached in Chat sessions. [Learn More]({1}).
@@ -7208,10 +7460,10 @@ This setting is only used by the Local agent harness.</source>
       <source xml:lang="en">Paths must be relative or start with '~/'. Absolute paths and '\' separators are not supported. Glob patterns are deprecated and will be removed in future versions.</source>
     </trans-unit>
     <trans-unit id="chat.locations.migrate">
-      <source xml:lang="en">Migrate Location Settings</source>
+      <source xml:lang="en">Migrations tab</source>
     </trans-unit>
     <trans-unit id="chat.locations.migrate.tooltip">
-      <source xml:lang="en">Open Migrate Location Settings</source>
+      <source xml:lang="en">Open the Migrations Tab</source>
     </trans-unit>
     <trans-unit id="chat.mathEnabled.description">
       <source xml:lang="en">Enable math rendering in chat responses using KaTeX.</source>
@@ -7310,7 +7562,7 @@ This setting is only used by the Local agent harness.</source>
       <source xml:lang="en">When enabled, sign-in dialogs offer "Continue with Microsoft". Signing in with Microsoft exchanges your Microsoft account for the GitHub access your organization has linked to it. The resulting GitHub sign-in lasts for the current window session only and is not saved.</source>
     </trans-unit>
     <trans-unit id="chat.mode.config.locations.deprecated">
-      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Chat modes are now called custom agents and are located in `.github/agents`. Use {0} in the Agent Customizations editor to move them into supported locations.</source>
+      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Chat modes are now called custom agents and are located in `.github/agents`. Review the {0} in the Agent Customizations editor to move them into supported locations.</source>
     </trans-unit>
     <trans-unit id="chat.mode.config.locations.description">
       <source xml:lang="en">Specify location(s) of custom chat mode files (`*{0}`). [Learn More]({1}).
@@ -7409,12 +7661,6 @@ This setting is only used by the Local agent harness.</source>
     <trans-unit id="chat.promptFileLocations.invalidPath">
       <source xml:lang="en">Paths must be relative or start with '~/'. Absolute paths and '\' separators are not supported. Glob patterns are deprecated and will be removed in future versions.</source>
     </trans-unit>
-    <trans-unit id="chat.promptFiles.migrate">
-      <source xml:lang="en">Migrate Prompt Files</source>
-    </trans-unit>
-    <trans-unit id="chat.promptFiles.migrate.tooltip">
-      <source xml:lang="en">Open Migrate Prompt Files</source>
-    </trans-unit>
     <trans-unit id="chat.promptFilesRecommendations.description">
       <source xml:lang="en">Configure which prompt files to recommend in the chat welcome view. Each key is a prompt file name, and the value can be `true` to always recommend, `false` to never recommend, or a [when clause](https://aka.ms/vscode-when-clause) expression like `resourceExtname == .js` or `resourceLangId == markdown`.</source>
     </trans-unit>
@@ -7434,7 +7680,7 @@ This setting is only used by the Local agent harness.</source>
       <source xml:lang="en">Controls whether the last session is restored in panel after restart.</source>
     </trans-unit>
     <trans-unit id="chat.reusablePrompts.config.locations.deprecated">
-      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Use {0} in the Agent Customizations editor to convert prompt files into skills.</source>
+      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Review the {0} in the Agent Customizations editor to convert prompt files into skills.</source>
     </trans-unit>
     <trans-unit id="chat.reusablePrompts.config.locations.description">
       <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be run in Chat sessions. [Learn More]({1}).
@@ -10757,6 +11003,9 @@ Examples:
     <trans-unit id="forceSignIn">
       <source xml:lang="en">Sign in to use GitHub Copilot</source>
     </trans-unit>
+    <trans-unit id="githubUrlUnavailable">
+      <source xml:lang="en">The GitHub Enterprise URL is unavailable. Sign in and try again.</source>
+    </trans-unit>
     <trans-unit id="hideChatSetup">
       <source xml:lang="en">Learn How to Hide AI Features</source>
     </trans-unit>
@@ -10955,6 +11204,13 @@ Type anything below to get started!</source>
 {Locked="]({1})"}
 {Locked="]({2})"}</note>
     </trans-unit>
+    <trans-unit id="settingsWithoutLink">
+      <source xml:lang="en">By continuing, you agree to {0}'s [Terms]({1}) and [Privacy Statement]({2}). {3} Copilot may show [public code]({4}) suggestions and use your data to improve the product. You can change these settings anytime.</source>
+      <note>{Locked="["}
+{Locked="]({1})"}
+{Locked="]({2})"}
+{Locked="]({4})"}</note>
+    </trans-unit>
     <trans-unit id="setupAIButton">
       <source xml:lang="en">Use AI Features</source>
     </trans-unit>
@@ -11095,6 +11351,9 @@ Type anything below to get started!</source>
     </trans-unit>
     <trans-unit id="enableMoreDescription">
       <source xml:lang="en">Sign in to enable more Copilot AI features.</source>
+    </trans-unit>
+    <trans-unit id="githubUrlUnavailable">
+      <source xml:lang="en">The GitHub Enterprise URL is unavailable. Sign in and try again.</source>
     </trans-unit>
     <trans-unit id="includedPremiumChatsLabel">
       <source xml:lang="en">Included premium requests</source>
@@ -11253,6 +11512,20 @@ Type anything below to get started!</source>
     </trans-unit>
     <trans-unit id="signIn">
       <source xml:lang="en">Sign In</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatStatus/chatStatusPromo" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.promo.modelUnavailable">
+      <source xml:lang="en">The promoted model is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="chat.promo.openFailed">
+      <source xml:lang="en">Unable to open Chat to try this model.</source>
+    </trans-unit>
+    <trans-unit id="chat.promo.pipAria">
+      <source xml:lang="en">{0}. Open the sale offer.</source>
+    </trans-unit>
+    <trans-unit id="chat.promo.tryModel">
+      <source xml:lang="en">Try {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatTerminalCommandPaste" source-language="en" datatype="plaintext"><body>
@@ -11456,6 +11729,29 @@ Type anything below to get started!</source>
   <file original="src/vs/workbench/contrib/chat/browser/languageModelsConfigurationService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="settings.perModelConfig">
       <source xml:lang="en">Per-model settings</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/onboarding/modelPickerTryout.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.tryout.modelPicker.description">
+      <source xml:lang="en">Open a safe, unsent Agents draft and compare available models, providers, and billing information.</source>
+    </trans-unit>
+    <trans-unit id="chat.tryout.modelPicker.guidanceUnavailable">
+      <source xml:lang="en">The Agents draft opened, but its model picker could not be highlighted. Use Models in Chat or Agents after setting up a provider.</source>
+    </trans-unit>
+    <trans-unit id="chat.tryout.modelPicker.setup">
+      <source xml:lang="en">Set Up Chat</source>
+    </trans-unit>
+    <trans-unit id="chat.tryout.modelPicker.step.description">
+      <source xml:lang="en">Models can come from different providers and vary in capability, speed, and billing or premium request usage. Review the details for your provider and plan before choosing.</source>
+    </trans-unit>
+    <trans-unit id="chat.tryout.modelPicker.step.title">
+      <source xml:lang="en">Choose a Model and Provider</source>
+    </trans-unit>
+    <trans-unit id="chat.tryout.modelPicker.title">
+      <source xml:lang="en">Try Model and Provider Selection</source>
+    </trans-unit>
+    <trans-unit id="chat.tryout.modelPicker.unavailable">
+      <source xml:lang="en">The Agents draft opened, but its model picker is unavailable. Set up Chat or a model provider, then use Models in Chat or Agents to compare options and billing.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/planReviewFeedback/planReviewFeedbackEditorOverlay" source-language="en" datatype="plaintext"><body>
@@ -12681,6 +12977,12 @@ Source: {0}</source>
     <trans-unit id="clientToolSet.notebooks.detail">
       <source xml:lang="en">Create and edit Jupyter notebooks and run their cells.</source>
     </trans-unit>
+    <trans-unit id="clientToolSet.remoteSessions.description">
+      <source xml:lang="en">Remote Sessions</source>
+    </trans-unit>
+    <trans-unit id="clientToolSet.remoteSessions.detail">
+      <source xml:lang="en">Find remote agent hosts, delegate and inspect work, and send messages between hosts.</source>
+    </trans-unit>
     <trans-unit id="clientToolSet.tasks.description">
       <source xml:lang="en">Tasks and Problems</source>
     </trans-unit>
@@ -13658,6 +13960,12 @@ Note: This setting only controls tool approval and does not prevent the agent fr
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatMcpServersStartingContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcp.starting.servers">
       <source xml:lang="en">Starting MCP servers {0}...</source>
+    </trans-unit>
+    <trans-unit id="mcp.starting.withSkip">
+      <source xml:lang="en">{0} [Skip](#skip)</source>
+    </trans-unit>
+    <trans-unit id="mcp.waiting.for.servers">
+      <source xml:lang="en">Waiting for MCP servers {0}...</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatMultiDiffContentPart" source-language="en" datatype="plaintext"><body>
@@ -14921,11 +15229,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">Skip Results</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatToolProgressPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="toolExecutionFailed">
-      <source xml:lang="en">Tool execution failed</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/toolRiskBadgeWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="toolRisk.aiGenerated">
       <source xml:lang="en">Risk assessments are AI-generated and may be inaccurate.</source>
@@ -15762,20 +16065,18 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">{0} • Sign in to GitHub Copilot to choose a model.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerAutoRow" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.modelPicker.autoTier">
-      <source xml:lang="en">Optimize for</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.autoToggle">
-      <source xml:lang="en">Choose a model automatically</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerBadges" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.modelPicker.badge.deprecated">
       <source xml:lang="en">Retiring</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.badge.promo">
       <source xml:lang="en">{0}% off</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.organizationDefault">
+      <source xml:lang="en">Org default</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.organizationDefaultDescription">
+      <source xml:lang="en">Your organization sets {0} as the default for new chats. You can choose another model for this chat.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerCard" source-language="en" datatype="plaintext"><body>
@@ -15787,6 +16088,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.modelPicker.modelActions">
       <source xml:lang="en">Model Actions</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.optionDescription">
+      <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.pin">
       <source xml:lang="en">Pin Model</source>
@@ -15823,8 +16127,14 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.effort.header">
       <source xml:lang="en">Thinking Effort</source>
     </trans-unit>
+    <trans-unit id="chat.modelPicker.autoOptionsAriaLabel">
+      <source xml:lang="en">{0} options, {1}</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.configureLabel">
       <source xml:lang="en">Configure</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.detailsAriaLabel">
+      <source xml:lang="en">{0} details, {1}</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.effortAriaLabel">
       <source xml:lang="en">Thinking Effort: {0}</source>
@@ -15976,8 +16286,20 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerModelConfig" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.context.header">
+      <source xml:lang="en">Context</source>
+    </trans-unit>
+    <trans-unit id="chat.effort.header">
+      <source xml:lang="en">Thinking Effort</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.automaticTier">
       <source xml:lang="en">Automatic</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.configValue">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.maxContext">
+      <source xml:lang="en">Max context: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerPresentation" source-language="en" datatype="plaintext"><body>
@@ -16010,8 +16332,38 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.addProvider">
       <source xml:lang="en">Add Models...</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.hydraFusionToggle">
-      <source xml:lang="en">Use {0}</source>
+    <trans-unit id="chat.modelPicker.alternativeRouting">
+      <source xml:lang="en">Alternative routing</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.auto">
+      <source xml:lang="en">Auto</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.autoHeading">
+      <source xml:lang="en">{0} · {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.autoModeToggle">
+      <source xml:lang="en">Use Auto mode in {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.autoOnly">
+      <source xml:lang="en">No individual Copilot models are available. You can still browse other providers.</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.backToModels">
+      <source xml:lang="en">Back to Models</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.configurationDetails">
+      <source xml:lang="en">{0} Details, {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.details">
+      <source xml:lang="en">Details</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.dismissConfigurationHint">
+      <source xml:lang="en">Dismiss Hint</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.modelDetails">
+      <source xml:lang="en">{0} Details</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.optimizeFor">
+      <source xml:lang="en">Optimize for</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.otherModels">
       <source xml:lang="en">Other Models</source>
@@ -16038,14 +16390,14 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.cacheBreak.learnMore">
       <source xml:lang="en">Learn more</source>
     </trans-unit>
+    <trans-unit id="chat.config.cacheBreakHint">
+      <source xml:lang="en">Changing these options mid-session resets the prompt cache and may increase cost.</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.activating">
       <source xml:lang="en">Activating...</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.ariaLabel">
       <source xml:lang="en">Models, {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.ariaLabelConfigured">
-      <source xml:lang="en">Models, {0}, {1}</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.ariaLabelRestricted">
       <source xml:lang="en">Models, unavailable while in Restricted mode</source>
@@ -17055,6 +17407,15 @@ To make this the starting permission level for new sessions, change the [{0}](co
     <trans-unit id="seconds">
       <source xml:lang="en">{0}s</source>
     </trans-unit>
+    <trans-unit id="toolExecutionFailed">
+      <source xml:lang="en">Tool execution failed</source>
+    </trans-unit>
+    <trans-unit id="toolExecutionFailedWithExitCode">
+      <source xml:lang="en">Tool execution failed with exit code {0}</source>
+    </trans-unit>
+    <trans-unit id="toolExecutionFailedWithMessage">
+      <source xml:lang="en">Tool execution failed: {0}</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatService/chatService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.credit">
@@ -17241,12 +17602,6 @@ To make this the starting permission level for new sessions, change the [{0}](co
     </trans-unit>
     <trans-unit id="filteredContentRetry">
       <source xml:lang="en">Response cleared due to content safety filters, retrying with modified prompt.</source>
-    </trans-unit>
-    <trans-unit id="toolExecutionFailed">
-      <source xml:lang="en">Tool execution failed</source>
-    </trans-unit>
-    <trans-unit id="toolExecutionFailedWithMessage">
-      <source xml:lang="en">Tool execution failed: {0}</source>
     </trans-unit>
     <trans-unit id="waitingAnswer">
       <source xml:lang="en">Answer questions to continue...</source>
@@ -19108,6 +19463,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="agentsParallelWork.ignoreTooltip">
       <source xml:lang="en">Don't Show Again</source>
     </trans-unit>
+    <trans-unit id="agentsParallelWork.learnMore">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
     <trans-unit id="agentsParallelWork.open">
       <source xml:lang="en">Open Agents Window</source>
     </trans-unit>
@@ -19143,6 +19501,12 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="chat.agentsHandoff.tip.mute">
       <source xml:lang="en">Don't Show Again</source>
+    </trans-unit>
+    <trans-unit id="chat.agentsParallelWorkBanner.copilotHarnessDescription">
+      <source xml:lang="en">The Copilot harness connects your model to tools and keeps your session state as work progresses.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentsParallelWorkBanner.copilotHarnessTitle">
+      <source xml:lang="en">You're using the Copilot harness</source>
     </trans-unit>
     <trans-unit id="chat.agentsParallelWorkBanner.defaultDescription">
       <source xml:lang="en">Run multiple tasks in the Agents Window, in one workspace or across projects.</source>
