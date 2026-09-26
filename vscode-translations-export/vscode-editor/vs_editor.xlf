@@ -1555,6 +1555,18 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="selectSubwords">
       <source xml:lang="en">Whether subwords (like 'foo' in 'fooBar' or 'foo_bar') should be selected.</source>
     </trans-unit>
+    <trans-unit id="selectedTextMatchMode">
+      <source xml:lang="en">Controls how occurrences of selected text are matched when selecting the next, previous, or all occurrences and when highlighting selection matches. `caseSensitive` and `caseInsensitive` match substrings independently of the Find widget. An empty selection always starts a whole-word, case-sensitive search.</source>
+    </trans-unit>
+    <trans-unit id="selectedTextMatchMode.caseInsensitive">
+      <source xml:lang="en">Match occurrences case-insensitively and independently of the Find widget.</source>
+    </trans-unit>
+    <trans-unit id="selectedTextMatchMode.caseSensitive">
+      <source xml:lang="en">Match occurrences case-sensitively and independently of the Find widget.</source>
+    </trans-unit>
+    <trans-unit id="selectedTextMatchMode.findOptions">
+      <source xml:lang="en">Use the Find widget's match case and whole word settings.</source>
+    </trans-unit>
     <trans-unit id="selectionClipboard">
       <source xml:lang="en">Controls whether the Linux primary clipboard should be supported.</source>
     </trans-unit>

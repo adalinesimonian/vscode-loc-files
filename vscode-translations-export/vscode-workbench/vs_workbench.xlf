@@ -1833,15 +1833,17 @@ This action is irreversible and may result in data loss!</source>
       <source xml:lang="en">Select workspace folder</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/browser/changesStatsWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="changesStatsWidget.file">
+      <source xml:lang="en">{0} File</source>
+    </trans-unit>
+    <trans-unit id="changesStatsWidget.files">
+      <source xml:lang="en">{0} Files</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/browser/chatChangesPill" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatChangesPill.ariaLabel">
       <source xml:lang="en">{0}: {1}, +{2}, -{3}</source>
-    </trans-unit>
-    <trans-unit id="chatChangesPill.file">
-      <source xml:lang="en">{0} File</source>
-    </trans-unit>
-    <trans-unit id="chatChangesPill.files">
-      <source xml:lang="en">{0} Files</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/chatImagePreview" source-language="en" datatype="plaintext"><body>
@@ -1867,6 +1869,9 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="chatPills.open">
       <source xml:lang="en">Open {0}</source>
+    </trans-unit>
+    <trans-unit id="chatPills.removeArtifact">
+      <source xml:lang="en">Remove Artifact</source>
     </trans-unit>
     <trans-unit id="chatPills.removeReference">
       <source xml:lang="en">Remove Reference</source>

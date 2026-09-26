@@ -109,6 +109,9 @@
     <trans-unit id="accessibilitySignals.codeActionRequestTriggered">
       <source xml:lang="en">Code Action Request Triggered</source>
     </trans-unit>
+    <trans-unit id="accessibilitySignals.confetti">
+      <source xml:lang="en">Confetti</source>
+    </trans-unit>
     <trans-unit id="accessibilitySignals.diffLineDeleted">
       <source xml:lang="en">Diff Line Deleted</source>
     </trans-unit>
@@ -471,11 +474,17 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/agentHostSchema" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentHost.config.activeAgentTitleGeneration.description">
-      <source xml:lang="en">Whether the active agent names sessions and chats with rename tools instead of immediate utility-model title generation. Deferred title generation takes precedence. Changes apply to new sessions.</source>
+    <trans-unit id="agentHost.config.agentOrchestrationLimits.description">
+      <source xml:lang="en">Controls creation, messaging, and recursion safety limits for Agent Host session tools.</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.activeAgentTitleGeneration.title">
-      <source xml:lang="en">Active Agent Title Generation</source>
+    <trans-unit id="agentHost.config.agentOrchestrationLimits.off">
+      <source xml:lang="en">Do not enforce agent orchestration safety limits.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.agentOrchestrationLimits.on">
+      <source xml:lang="en">Enforce agent orchestration safety limits.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.agentOrchestrationLimits.title">
+      <source xml:lang="en">Agent Orchestration Limits</source>
     </trans-unit>
     <trans-unit id="agentHost.config.artifactTools.description">
       <source xml:lang="en">Whether agents can record artifacts — pull requests, issues, commits, websites, files and other resources — with the artifact tools.</source>
@@ -539,12 +548,6 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.copilotMultiRootEnabled.title">
       <source xml:lang="en">Copilot Multiple Working Directories</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.deferredTitleGeneration.description">
-      <source xml:lang="en">Seed titles immediately and refine them in the background if the first response turn completes successfully, without asking the active agent to name chats. Explicit rename tools remain available. Overrides active agent title generation for new sessions; existing sessions and their chats retain their strategy.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.deferredTitleGeneration.title">
-      <source xml:lang="en">Deferred Title Generation</source>
     </trans-unit>
     <trans-unit id="agentHost.config.disableRepoInfoTelemetry.description">
       <source xml:lang="en">Whether repository information telemetry is disabled for Agent Host sessions.</source>
@@ -821,6 +824,15 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/agentHostStarter.config.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.agentHost.agentOrchestrationLimits">
+      <source xml:lang="en">Controls process-wide limits on sessions and chats created, messages sent, and recursive session spawning by Agent Host session tools. Confirmation requirements and input validation are unchanged.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.agentOrchestrationLimits.off">
+      <source xml:lang="en">Do not enforce the limits.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.agentOrchestrationLimits.on">
+      <source xml:lang="en">Enforce the limits.</source>
+    </trans-unit>
     <trans-unit id="chat.agentHost.byokModels.enabled">
       <source xml:lang="en">When enabled, extension-provided BYOK ('bring your own key') models can run in agent-host sessions. Changes are synchronized to the running agent host and do not require a restart.</source>
     </trans-unit>
@@ -1726,14 +1738,6 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="toolStream.replaceOneLineWithOneLineInFile">
       <source xml:lang="en">Replacing 1 line with 1 line in {0}</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/platform/agentHost/common/titleGenerationConfiguration" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.agentHost.experimental.activeAgentTitleGeneration">
-      <source xml:lang="en">When enabled, the active agent names new sessions and chats using rename tools. When disabled, a utility model generates titles immediately. Deferred title generation takes precedence. Changes apply to new sessions; existing sessions and their chats retain their strategy.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentHost.experimental.deferredTitleGeneration">
-      <source xml:lang="en">Seed titles immediately and refine them in the background if the first response turn completes successfully, without asking the active agent to name chats. Explicit rename tools remain available. Overrides active agent title generation for new sessions; existing sessions and their chats retain their strategy.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/electron-browser/localAgentHostService" source-language="en" datatype="plaintext"><body>
@@ -2890,6 +2894,38 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">The /{0} command requires selecting a subcommand. Available options: {1}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotCustomizationCommandDisplay" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotMcp.serverNameUsage">
+      <source xml:lang="en">Usage: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.servers">
+      <source xml:lang="en">MCP servers</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugins.disabled">
+      <source xml:lang="en">disabled</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugins.installed">
+      <source xml:lang="en">Installed plugins</source>
+    </trans-unit>
+    <trans-unit id="copilotSkills.availableSkills">
+      <source xml:lang="en">Available skills</source>
+    </trans-unit>
+    <trans-unit id="copilotSkills.disabled">
+      <source xml:lang="en">disabled</source>
+    </trans-unit>
+    <trans-unit id="copilotSkills.infoExample">
+      <source xml:lang="en">Example: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotSkills.infoUsage">
+      <source xml:lang="en">Usage: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotSkills.oneSkillFound">
+      <source xml:lang="en">1 skill found.</source>
+    </trans-unit>
+    <trans-unit id="copilotSkills.skillsFound">
+      <source xml:lang="en">{0} skills found.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotFusionProgress" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copilot.fusion.accepted">
       <source xml:lang="en">Review accepted the result.</source>
@@ -3761,7 +3797,7 @@ stderr: {2}</source>
       <source xml:lang="en">Worktree Include Files</source>
     </trans-unit>
     <trans-unit id="agentHost.sessionConfig.worktreeIncludeFilesDescription">
-      <source xml:lang="en">Glob patterns for git-ignored files to copy into the isolated worktree.</source>
+      <source xml:lang="en">Patterns, in .gitignore syntax, for git-ignored files to copy into the isolated worktree.</source>
     </trans-unit>
     <trans-unit id="agentHost.sessionConfig.worktreeIncludeFilesItem">
       <source xml:lang="en">Pattern</source>
@@ -4197,6 +4233,9 @@ Received: '{1}'.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.mcpGallery">
       <source xml:lang="en">MCP Gallery</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.pluginMarketplaces">
+      <source xml:lang="en">Configured Plugin Marketplaces</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/customizationMarketplace/common/mcpGalleryMarketplaceProvider" source-language="en" datatype="plaintext"><body>

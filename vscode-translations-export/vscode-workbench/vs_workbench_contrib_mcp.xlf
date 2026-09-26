@@ -317,6 +317,9 @@
     <trans-unit id="install.title">
       <source xml:lang="en">Install MCP server {0}</source>
     </trans-unit>
+    <trans-unit id="mcp.agentHost.inputsUnsupported">
+      <source xml:lang="en">This server requires VS Code input variables. Add it to a VS Code configuration file instead of the current agent session.</source>
+    </trans-unit>
     <trans-unit id="mcp.command.placeholder">
       <source xml:lang="en">Command to run (with optional arguments)</source>
     </trans-unit>
@@ -389,6 +392,9 @@
     </trans-unit>
     <trans-unit id="mcp.nuget.title">
       <source xml:lang="en">Enter NuGet Package Name</source>
+    </trans-unit>
+    <trans-unit id="mcp.package.loadFailed">
+      <source xml:lang="en">Unable to load MCP package details. Try again.</source>
     </trans-unit>
     <trans-unit id="mcp.pip.placeholder">
       <source xml:lang="en">Package name (e.g., package-name)</source>
@@ -482,6 +488,9 @@
     </trans-unit>
     <trans-unit id="mcp.target.userConfigurationDeprecated">
       <source xml:lang="en">User Configuration (deprecated)</source>
+    </trans-unit>
+    <trans-unit id="mcp.target.vscodeRequired">
+      <source xml:lang="en">This server requires VS Code configuration</source>
     </trans-unit>
     <trans-unit id="mcp.target.workspace">
       <source xml:lang="en">Workspace</source>
@@ -795,7 +804,7 @@
       <source xml:lang="en">Disable this MCP server only in this workspace</source>
     </trans-unit>
     <trans-unit id="disableGlobally">
-      <source xml:lang="en">Disable</source>
+      <source xml:lang="en">Disable (Globally)</source>
     </trans-unit>
     <trans-unit id="disableGloballyTooltip">
       <source xml:lang="en">Disable this MCP server</source>
@@ -1201,6 +1210,9 @@
     <trans-unit id="app.mcp.json.title">
       <source xml:lang="en">Model Context Protocol Servers</source>
     </trans-unit>
+    <trans-unit id="app.mcp.json.transport">
+      <source xml:lang="en">The HTTP transport to preserve when sharing this configuration with other MCP clients.</source>
+    </trans-unit>
     <trans-unit id="app.mcp.json.type">
       <source xml:lang="en">The type of the server.</source>
     </trans-unit>
@@ -1260,6 +1272,14 @@
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.mcp.when">
       <source xml:lang="en">Condition which must be true to enable this collection.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/common/mcpConfigurationGeneration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp.generation.formatMismatch">
+      <source xml:lang="en">The MCP setup extension returned an unexpected configuration format. Update the Copilot extension and try again.</source>
+    </trans-unit>
+    <trans-unit id="mcp.generation.invalid">
+      <source xml:lang="en">The generated MCP server configuration is invalid. Try again or add the server manually.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpContextKeys" source-language="en" datatype="plaintext"><body>

@@ -1683,7 +1683,7 @@ Please make sure there is no space between the right bracket and left parenthesi
       <source xml:lang="en">Compute Conflicts With Git (Diff3)</source>
     </trans-unit>
     <trans-unit id="config.worktreeIncludeFiles">
-      <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) for files and folders that are included when creating a new worktree. Only files and folders that match the patterns and are listed in `.gitignore` will be copied to the newly created worktree.</source>
+      <source xml:lang="en">Configure patterns, using `.gitignore` syntax, for files and folders that are included when creating a new worktree. Only files and folders that match the patterns and are ignored by git (for example, listed in `.gitignore`) will be copied to the newly created worktree.</source>
     </trans-unit>
     <trans-unit id="config.autoRepositoryDetection">
       <source xml:lang="en">Configures when repositories should be automatically detected.</source>

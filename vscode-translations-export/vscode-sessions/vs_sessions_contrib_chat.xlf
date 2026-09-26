@@ -272,6 +272,27 @@
     <trans-unit id="sessions.chat.experimental.newSessionComposerLayout">
       <source xml:lang="en">Controls whether the new-session composer groups workspace, repository, and harness controls above the chat input. This setting only applies when the unified workspace picker is enabled.</source>
     </trans-unit>
+    <trans-unit id="sessions.chat.experimental.welcomeName">
+      <source xml:lang="en">Specifies the name used in new-session welcome messages. Only the first name is shown. Leave empty to use the first name from your signed-in GitHub profile when available; otherwise, welcome messages omit the name.</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.experimental.welcomePhrases">
+      <source xml:lang="en">Controls whether rotating welcome phrases are shown above the new-session composer.</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.setWelcomeName">
+      <source xml:lang="en">Set Welcome Name...</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.setWelcomeName.cleared">
+      <source xml:lang="en">Welcome name reset to your GitHub first name when available.</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.setWelcomeName.placeholder">
+      <source xml:lang="en">Leave empty to use your GitHub first name when available</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.setWelcomeName.prompt">
+      <source xml:lang="en">Enter the name to use in new-session welcome messages</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.setWelcomeName.updated">
+      <source xml:lang="en">Welcome name set to {0}.</source>
+    </trans-unit>
     <trans-unit id="sessions.focusNewSessionHarnessPicker">
       <source xml:lang="en">Focus Harness Picker</source>
     </trans-unit>
@@ -608,6 +629,43 @@
     </trans-unit>
     <trans-unit id="newSession.sendFailed">
       <source xml:lang="en">Failed to start session: {0}</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.actions">
+      <source xml:lang="en">Welcome message actions</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.announcement">
+      <source xml:lang="en">{0}
+To disable this announcement, set {1} to false.</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.building">
+      <source xml:lang="en">What are we building?</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.cook">
+      <source xml:lang="en">Let’s cook</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.lockIn">
+      <source xml:lang="en">Time to lock in</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.move">
+      <source xml:lang="en">What’s the move?</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.named.building">
+      <source xml:lang="en">What are we building, {0}?</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.named.cook">
+      <source xml:lang="en">Let’s cook, {0}</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.named.lockIn">
+      <source xml:lang="en">Time to lock in, {0}</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.named.move">
+      <source xml:lang="en">What’s the move, {0}?</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.named.ship">
+      <source xml:lang="en">Let’s ship something, {0}</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.ship">
+      <source xml:lang="en">Let’s ship something</source>
     </trans-unit>
     <trans-unit id="newSessionFeedback.many">
       <source xml:lang="en">{0} comments</source>
@@ -1034,10 +1092,13 @@
       <source xml:lang="en">Pull Requests</source>
     </trans-unit>
     <trans-unit id="sessionArtifacts.removeArtifact">
-      <source xml:lang="en">Remove {0} from Session</source>
+      <source xml:lang="en">Remove Artifact {0} from Session</source>
     </trans-unit>
     <trans-unit id="sessionArtifacts.removeArtifactFailed">
       <source xml:lang="en">Could not remove {0} from this session: {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.removeReference">
+      <source xml:lang="en">Remove Reference {0} from Session</source>
     </trans-unit>
     <trans-unit id="sessionArtifacts.resources">
       <source xml:lang="en">Resources</source>
@@ -1139,10 +1200,10 @@
       <source xml:lang="en">{0} removed from session.</source>
     </trans-unit>
     <trans-unit id="sessionChatPills.removeIssue">
-      <source xml:lang="en">Remove issue reference from session</source>
+      <source xml:lang="en">Remove Issue Artifact from Session</source>
     </trans-unit>
     <trans-unit id="sessionChatPills.removePullRequest">
-      <source xml:lang="en">Remove pull request reference from session</source>
+      <source xml:lang="en">Remove Pull Request Artifact from Session</source>
     </trans-unit>
     <trans-unit id="sessionChatPills.removeReferenceFailed">
       <source xml:lang="en">Could not remove {0} from this session: {1}</source>
@@ -1239,37 +1300,6 @@
     </trans-unit>
     <trans-unit id="untitledSession">
       <source xml:lang="en">Untitled session</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/sessionTestAppButton" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="retestApp">
-      <source xml:lang="en">Retest App</source>
-    </trans-unit>
-    <trans-unit id="retestAppWithIcon">
-      <source xml:lang="en">{0} Retest App</source>
-    </trans-unit>
-    <trans-unit id="testApp">
-      <source xml:lang="en">Test App</source>
-    </trans-unit>
-    <trans-unit id="testAppNotStarted">
-      <source xml:lang="en">The app test request could not be started.</source>
-    </trans-unit>
-    <trans-unit id="testAppPrompt">
-      <source xml:lang="en">Test the UI of the app built or changed in this chat.
-
-First review the original requirements and the relevant implementation diffs, including added and deleted files. Identify the affected behavior and regression risks. Use the implementation changes in this chat as the scope, not unrelated workspace edits, and do not assume an unstaged git diff contains every change.
-
-Identify the actual app target from the project's instructions and configuration. Launch it and interact with its actual UI. Use browser/Playwright tools for web targets, or available computer-use, native, simulator/emulator, and project-specific UI tools for native or desktop targets. A browser preview does not verify a native target.
-
-Verify the requested features, the affected user flows, and relevant edge cases. Check for visible failures and console/runtime errors where available. Reading the code or running unit tests alone does not count as UI verification.
-
-Fix issues you find, then rerun the affected UI flows to confirm the fixes. Keep changes focused on issues uncovered by testing.</source>
-    </trans-unit>
-    <trans-unit id="testAppTooltip">
-      <source xml:lang="en">Review the changes, test the app UI, fix issues found, and retest</source>
-    </trans-unit>
-    <trans-unit id="testAppWithIcon">
-      <source xml:lang="en">{0} Test App</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionTurnChanges" source-language="en" datatype="plaintext"><body>
@@ -1408,6 +1438,9 @@ Fix issues you find, then rerun the affected UI flows to confirm the fixes. Keep
     <trans-unit id="sessionsChat.aquariumAction">
       <source xml:lang="en">To show or hide the aquarium action on the new-session view, use the checked Aquarium item in the context menu outside the composer, or run the Toggle Aquarium Action Visibility command.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.archiveChat">
+      <source xml:lang="en">To archive an individual nested chat without archiving its session, open the chat's context menu in the Sessions list or chat tab and choose Archive. The chat is hidden from the Sessions list and closed, but is not deleted. Open the parent session's context menu and choose Show Archived Chats to show it again, then open the chat's context menu and choose Unarchive.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.archiveNudge">
       <source xml:lang="en">When all GitHub pull requests associated with the session have merged and no chat is working or waiting for input, an archive suggestion may appear above the chat input. Use Tab or Shift+Tab to reach Archive, Configure Automatic Cleanup, or Dismiss Archive Suggestion, then Enter or Space to activate it. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Archive" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismiss Archive Suggestion, or Escape while the suggestion is focused, hides the suggestion for this session, including after a reload, until it is archived or deleted, and returns focus to the chat input. Archiving the session hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Archived" section of the sessions list. You can unarchive it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by unarchiving the session.</source>
     </trans-unit>
@@ -1476,6 +1509,9 @@ Fix issues you find, then rerun the affected UI flows to confirm the fixes. Keep
     </trans-unit>
     <trans-unit id="sessionsChat.dictation">
       <source xml:lang="en">When dictation is configured, dictate your message into the input{0}. Tap to start and stop, or hold to dictate only while pressed. If the speech-to-text model is still preparing, activate the dictation control again to cancel.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.doneChat">
+      <source xml:lang="en">To mark an individual nested chat as done without marking its session as done, open the chat's context menu in the Sessions list or chat tab and choose Mark as Done. The chat is hidden from the Sessions list and closed, but is not deleted. Open the parent session's context menu and choose Show Done Chats to show it again, then open the chat's context menu and choose Restore.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.doneNudge">
       <source xml:lang="en">When all GitHub pull requests associated with the session have merged and no chat is working or waiting for input, a mark as done suggestion may appear above the chat input. Use Tab or Shift+Tab to reach Mark as Done, Configure Automatic Cleanup, or Dismiss Mark as Done Suggestion, then Enter or Space to activate it. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Mark as Done" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismiss Mark as Done Suggestion, or Escape while the suggestion is focused, hides the suggestion for this session, including after a reload, until it is marked as done or deleted, and returns focus to the chat input. Marking the session as done hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Done" section of the sessions list. You can restore it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by restoring the session.</source>
@@ -1648,6 +1684,12 @@ Fix issues you find, then rerun the affected UI flows to confirm the fixes. Keep
     <trans-unit id="sessionsChat.sessionsView">
       <source xml:lang="en">Focus the Chat Sessions view{0}.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.showArchivedChats">
+      <source xml:lang="en">Open a session's context menu and toggle Show Archived Chats to control whether its archived chats are shown. This action is always available, and a check mark means those chats are shown.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.showDoneChats">
+      <source xml:lang="en">Open a session's context menu and toggle Show Done Chats to control whether its Done chats are shown. This action is always available, and a check mark means those chats are shown.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.subagentPills">
       <source xml:lang="en">Activate a subagent pill in the chat transcript to open the subagent beside the current chat. With the keyboard, focus a pill and press Enter or Space; Alt+Enter also opens it to the side. You can also drag a pill to a chat group's edge to choose where it opens.</source>
     </trans-unit>
@@ -1668,6 +1710,9 @@ Fix issues you find, then rerun the affected UI flows to confirm the fixes. Keep
     </trans-unit>
     <trans-unit id="sessionsChat.vscodePetAchievements">
       <source xml:lang="en">When the pet is enabled, the user account menu lists unlocked achievement badges before locked badges and provides a View Achievements button. A gold star on the pet announces a newly unlocked achievement; activate the pet while the star is visible to open Achievements.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.welcomeName">
+      <source xml:lang="en">In a new session, the welcome heading is announced when shown. To disable this announcement, set accessibility.verbosity.newSessionWelcome to false. Press Tab to reach Set Welcome Name beside the welcome heading, or open its context menu{0}. Enter a custom name, or clear it to use your GitHub first name when available.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.workspace">
       <source xml:lang="en">Shift+Tab to navigate to the workspace picker and choose a workspace for your session. When consolidated remote workspaces are enabled, opening the picker focuses its search input so you can immediately type to filter workspaces. If quick chats are available, you can also choose No workspace to start a workspace-less chat.</source>

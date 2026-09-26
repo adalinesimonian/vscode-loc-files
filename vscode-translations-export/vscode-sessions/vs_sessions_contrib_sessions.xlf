@@ -577,7 +577,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">For saved automations, Tab to a card's Edit control and action buttons. Use Left Arrow and Right Arrow to move between Run now and Delete. Press Enter or Space to activate a control. Edit, or clicking anywhere else on the card, opens the automation dialog. Open a card's context menu{0} (for example Shift+F10). Duplicate opens a prefilled New automation dialog, Disable prevents scheduled runs, and Delete asks for confirmation. Run now starts a session immediately.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.dialog">
-      <source xml:lang="en">In the automation dialog, Target controls are above the prompt. Agent and model pickers are inside the prompt input, and execution mode and permission controls are below it. Use Tab and Shift+Tab to move between fields and pickers.</source>
+      <source xml:lang="en">In the automation dialog, Target controls are above the prompt. Agent and model pickers are inside the prompt input, and execution mode and permission controls are below it. Use Tab and Shift+Tab to move between fields and pickers. When creating an automation, you only need to enter a prompt. An empty name is derived from the prompt, and the target defaults to No workspace unless one is already supplied. An available Agent Host that supports the target is still required.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.history">
       <source xml:lang="en">Run history is grouped by date. While a run is waiting for its session, a lightweight row shows the automation name with a Working... description. Once the session is available, use Up Arrow and Down Arrow to navigate the Sessions list, Enter to open, and Tab to reach Stop, the configured Archive or Mark as Done action, or Delete when available. Open a row's context menu, for example with Shift+F10, to rename it, change its active or read state, or delete it. Delete permanently deletes the session and removes it from run history after confirmation.</source>
@@ -1078,6 +1078,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="secondsDuration">
       <source xml:lang="en">now</source>
     </trans-unit>
+    <trans-unit id="sessionChatItemArchivedAria">
+      <source xml:lang="en">{0}, archived</source>
+    </trans-unit>
     <trans-unit id="sessionChatItemAria">
       <source xml:lang="en">{0}, chat, updated {1}, {2}</source>
     </trans-unit>
@@ -1384,6 +1387,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="showAllSessions">
       <source xml:lang="en">Show All Sessions</source>
+    </trans-unit>
+    <trans-unit id="showArchivedChats">
+      <source xml:lang="en">Show Archived Chats</source>
+    </trans-unit>
+    <trans-unit id="showDoneChats">
+      <source xml:lang="en">Show Done Chats</source>
     </trans-unit>
     <trans-unit id="showRecentSessions">
       <source xml:lang="en">Show Recent Sessions</source>
