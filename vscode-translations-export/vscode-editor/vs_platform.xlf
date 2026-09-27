@@ -391,6 +391,9 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/browser/agentHostProtocolClient" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.reconnectTimedOut">
+      <source xml:lang="en">Automatic reconnect timed out after {0}ms.</source>
+    </trans-unit>
     <trans-unit id="agentHost.trustWorkspaceMessage">
       <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
     </trans-unit>
@@ -407,6 +410,11 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHostSandboxToggle.title">
       <source xml:lang="en">Run this session's terminal commands inside a sandbox that restricts file system and network access. This choice is saved for this session only.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/browser/remoteAgentHostServiceImpl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="remoteAgentHost.recoveryClosed">
+      <source xml:lang="en">Connection to {0} closed before recovery completed.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/agentHostCustomizationConfig" source-language="en" datatype="plaintext"><body>
@@ -605,6 +613,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.markdownPlanRichLinks.title">
       <source xml:lang="en">Markdown Plan Rich Links</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.mcpConnectorsEnabled.description">
+      <source xml:lang="en">Whether Copilot agent sessions expose MCP servers provided by connected Copilot Connectors.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.mcpConnectorsEnabled.title">
+      <source xml:lang="en">Copilot Connectors</source>
     </trans-unit>
     <trans-unit id="agentHost.config.mcpServers.arg.title">
       <source xml:lang="en">Argument</source>
@@ -2933,9 +2947,6 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="copilot.fusion.cascade">
       <source xml:lang="en">Cascade</source>
     </trans-unit>
-    <trans-unit id="copilot.fusion.cascadeDescription">
-      <source xml:lang="en">Using Cascade: a solver will work on your request, then another model will review and fix up the result if needed.</source>
-    </trans-unit>
     <trans-unit id="copilot.fusion.completedDegraded">
       <source xml:lang="en">HydraFusion workflow completed with a fallback</source>
     </trans-unit>
@@ -2947,9 +2958,6 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilot.fusion.critique">
       <source xml:lang="en">Critique</source>
-    </trans-unit>
-    <trans-unit id="copilot.fusion.critiqueDescription">
-      <source xml:lang="en">Using Critique: a solver will draft a result, another model will critique it, and the original solver will revise it if needed.</source>
     </trans-unit>
     <trans-unit id="copilot.fusion.draft">
       <source xml:lang="en">First pass</source>
@@ -3022,9 +3030,6 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilot.fusion.single">
       <source xml:lang="en">Single</source>
-    </trans-unit>
-    <trans-unit id="copilot.fusion.singleDescription">
-      <source xml:lang="en">Using Single: one solver will work on your request.</source>
     </trans-unit>
     <trans-unit id="copilot.fusion.toolRunning">
       <source xml:lang="en">{0}: running a tool</source>
@@ -4210,6 +4215,26 @@ Received: '{1}'.</source>
       <source xml:lang="en">Did you mean {0}, {1} or {2}?</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/copilotConnectors/common/copilotConnectorsRequestService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotConnectors.httpError">
+      <source xml:lang="en">Copilot connectors could not complete the request (HTTP {0}).</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.invalidJson">
+      <source xml:lang="en">Copilot connectors returned an invalid response.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.requestFailed">
+      <source xml:lang="en">Copilot connectors could not be reached. Check your connection and try again.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.responseTooLarge">
+      <source xml:lang="en">The Copilot connectors response is too large.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.timeout">
+      <source xml:lang="en">The Copilot connectors request timed out. Try again.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.unavailable">
+      <source xml:lang="en">Copilot connectors are not available in this product.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/customizationMarketplace/common/customizationMarketplaceService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="customizationMarketplace.invalidCursor">
       <source xml:lang="en">The marketplace page is invalid. Start a new search.</source>
@@ -4228,6 +4253,9 @@ Received: '{1}'.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/customizationMarketplace/common/customizationMarketplaceSources" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationMarketplace.copilotConnectors">
+      <source xml:lang="en">Copilot Connectors</source>
+    </trans-unit>
     <trans-unit id="customizationMarketplace.githubFeed">
       <source xml:lang="en">GitHub Feed</source>
     </trans-unit>

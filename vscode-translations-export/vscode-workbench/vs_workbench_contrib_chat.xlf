@@ -218,7 +218,7 @@
       <source xml:lang="en">In the tabbed model picker, Org default identifies the model your organization sets for new chats. It remains on that model when you choose another model for this chat; the checkmark identifies your current selection. The Auto section carries the same label when Auto is the organization default.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.optimizeFor">
-      <source xml:lang="en">In Auto mode, use Up and Down Arrow to focus an "Optimize for" preference: Efficiency, Balance, or Intelligence. Enter or Space applies the preference and keeps the picker open. HydraFusion, when available, is an alternative routing choice, not an additional toggle. Selecting it clears the active Auto tier; selecting a tier returns to Auto. Turning Auto off preserves the preference and routing choice. Auto has no separate details page: both the Auto name and preference readout in the chat input open these routing choices.</source>
+      <source xml:lang="en">In Auto mode, use Up and Down Arrow to focus an "Optimize for" preference: Efficiency, Balance, or Intelligence. Enter or Space applies the preference and keeps the picker open. HydraFusion, when available, is an alternative routing choice, not an additional toggle. Focus HydraFusion and press Right Arrow to open its description and focus Learn more. Selecting it clears the active Auto tier; selecting a tier returns to Auto. Turning Auto off preserves the preference and routing choice. Auto has no separate details page: both the Auto name and preference readout in the chat input open these routing choices.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.pricingDetails">
       <source xml:lang="en">Pricing Details expands in place without moving the model's controls. Expansion and collapse are immediate when reduced motion is enabled. If the details exceed the available space, use Page Up or Page Down while the model details have focus to scroll.</source>
@@ -297,6 +297,9 @@
     </trans-unit>
     <trans-unit id="chat.subagentPill">
       <source xml:lang="en">When a subagent pill appears in a response, use Tab to focus it and press Enter or Space to open that subagent chat.</source>
+    </trans-unit>
+    <trans-unit id="chat.subagentPills">
+      <source xml:lang="en">Subagents appear as pills in the response. Use Tab to focus a subagent pill, then Enter or Space to open its chat. If the subagent has no separate chat, Enter or Space expands or collapses its inline details instead. The pill announces its running state and any pending confirmations.</source>
     </trans-unit>
     <trans-unit id="chat.systemNotificationDisclosure">
       <source xml:lang="en">Some session status messages have additional details. Use Tab to focus the status message and press Enter or Space to show or hide its details.</source>
@@ -3306,6 +3309,12 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.availableAriaLabel">
       <source xml:lang="en">{0}, {1}, source {2}. {3}. {4}</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.cancelConnectorOperationLabel">
+      <source xml:lang="en">Cancel connecting {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.cancelConnectorRepairLabel">
+      <source xml:lang="en">Cancel reconnecting {0}</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.catalogDisabled">
       <source xml:lang="en">Search your installed customizations, or enable a marketplace source to explore available items.</source>
     </trans-unit>
@@ -3321,6 +3330,81 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.configureMarketplaces">
       <source xml:lang="en">Configure Marketplaces</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorCancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorChecking">
+      <source xml:lang="en">Checking connection</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorCheckingProgress">
+      <source xml:lang="en">Checking...</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorConnect">
+      <source xml:lang="en">Connect</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorConnectCancelled">
+      <source xml:lang="en">Connection cancelled for {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorConnectComplete">
+      <source xml:lang="en">Connected {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorConnectFailed">
+      <source xml:lang="en">Could not connect {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorConnectStarted">
+      <source xml:lang="en">Connecting {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorConnected">
+      <source xml:lang="en">Connected</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorDisconnect">
+      <source xml:lang="en">Disconnect</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorDisconnectCancelled">
+      <source xml:lang="en">Disconnection cancelled for {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorDisconnectComplete">
+      <source xml:lang="en">Disconnected {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorDisconnectFailed">
+      <source xml:lang="en">Could not disconnect {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorDisconnectStarted">
+      <source xml:lang="en">Disconnecting {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorDisconnected">
+      <source xml:lang="en">Disconnected</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorDisconnecting">
+      <source xml:lang="en">Disconnecting</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorDisconnectingProgress">
+      <source xml:lang="en">Disconnecting...</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorReconnect">
+      <source xml:lang="en">Reconnect</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorReconnectCancelled">
+      <source xml:lang="en">Reconnection cancelled for {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorReconnectComplete">
+      <source xml:lang="en">Reconnected {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorReconnectFailed">
+      <source xml:lang="en">Could not reconnect {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorReconnectStarted">
+      <source xml:lang="en">Reconnecting {0}.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorReconnecting">
+      <source xml:lang="en">Reconnecting</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorRetry">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.connectorVerificationFailed">
+      <source xml:lang="en">Could not verify connection</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.description">
       <source xml:lang="en">Find new ways to extend your agent with [[Plugins]], [[MCP Servers]], [[Skills]], [[Instructions]], [[Agents]], and [[Hooks]].</source>
       <note>Preserve the double square brackets: they mark the customization types that become links. Keep all six links in this order: Plugins, MCP Servers, Skills, Instructions, Agents, and Hooks.</note>
@@ -3330,6 +3414,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.disabledAriaLabel">
       <source xml:lang="en">, disabled</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.disconnectConnectorLabel">
+      <source xml:lang="en">Disconnect {0}</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.emptyCatalog">
       <source xml:lang="en">No catalog customizations are available.</source>
@@ -3463,6 +3550,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.repair">
       <source xml:lang="en">Repair</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.repairActionUnavailableLabel">
+      <source xml:lang="en">{0} {1}. {2}</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.repairCancelled">
       <source xml:lang="en">Repair cancelled for {0}.</source>
     </trans-unit>
@@ -3477,9 +3567,6 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.repairStarted">
       <source xml:lang="en">Repairing {0}.</source>
-    </trans-unit>
-    <trans-unit id="customizationDiscovery.repairUnavailableLabel">
-      <source xml:lang="en">Repair {0}. {1}</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.repairing">
       <source xml:lang="en">Repairing</source>
@@ -4082,6 +4169,12 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Back to MCP servers</source>
     </trans-unit>
     <trans-unit id="backToMcpListTooltip">
+      <source xml:lang="en">Back to MCP servers</source>
+    </trans-unit>
+    <trans-unit id="backToMcpServersList">
+      <source xml:lang="en">Back to MCP servers</source>
+    </trans-unit>
+    <trans-unit id="backToMcpServersListTooltip">
       <source xml:lang="en">Back to MCP servers</source>
     </trans-unit>
     <trans-unit id="backToOverview">
@@ -4702,6 +4795,106 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Review Migrations</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/connectorPresentation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="connectors.action.check">
+      <source xml:lang="en">Check Connection</source>
+    </trans-unit>
+    <trans-unit id="connectors.action.connect">
+      <source xml:lang="en">Connect</source>
+    </trans-unit>
+    <trans-unit id="connectors.action.disconnect">
+      <source xml:lang="en">Disconnect</source>
+    </trans-unit>
+    <trans-unit id="connectors.action.reconnect">
+      <source xml:lang="en">Reconnect</source>
+    </trans-unit>
+    <trans-unit id="connectors.action.refresh">
+      <source xml:lang="en">Refresh</source>
+    </trans-unit>
+    <trans-unit id="connectors.action.review">
+      <source xml:lang="en">Review</source>
+    </trans-unit>
+    <trans-unit id="connectors.action.signIn">
+      <source xml:lang="en">Sign in</source>
+    </trans-unit>
+    <trans-unit id="connectors.action.tryAgain">
+      <source xml:lang="en">Try Again</source>
+    </trans-unit>
+    <trans-unit id="connectors.status.connected">
+      <source xml:lang="en">Connected</source>
+    </trans-unit>
+    <trans-unit id="connectors.status.error">
+      <source xml:lang="en">Needs attention</source>
+    </trans-unit>
+    <trans-unit id="connectors.status.notConnected">
+      <source xml:lang="en">Not connected</source>
+    </trans-unit>
+    <trans-unit id="connectors.status.pending">
+      <source xml:lang="en">Connection pending</source>
+    </trans-unit>
+    <trans-unit id="connectors.status.reconnectRequired">
+      <source xml:lang="en">Reconnect required</source>
+    </trans-unit>
+    <trans-unit id="connectors.status.retryableError">
+      <source xml:lang="en">Connection failed</source>
+    </trans-unit>
+    <trans-unit id="connectors.status.reviewRequired">
+      <source xml:lang="en">Review required</source>
+    </trans-unit>
+    <trans-unit id="connectors.status.signInRequired">
+      <source xml:lang="en">Sign in required</source>
+    </trans-unit>
+    <trans-unit id="connectors.status.unavailable">
+      <source xml:lang="en">Currently unavailable</source>
+    </trans-unit>
+    <trans-unit id="connectors.status.unknown">
+      <source xml:lang="en">Connection status not checked</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/copilotConnectorsService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotConnectors.catalogScopeRollout">
+      <source xml:lang="en">The connector catalog is unavailable (HTTP 403). Browsing without connector authorization may not yet be available for this account.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.connectionTimedOut">
+      <source xml:lang="en">Connector authorization did not finish in time. Complete authorization in the browser, then try again.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.defaultDescription">
+      <source xml:lang="en">Connect {0} to GitHub Copilot.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.disconnectionTimedOut">
+      <source xml:lang="en">The connector did not disconnect in time. Try again.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.enterpriseUnavailable">
+      <source xml:lang="en">Copilot connectors are not available for this GitHub Enterprise account.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.invalidCursor">
+      <source xml:lang="en">The Copilot connectors page is invalid. Start a new search.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.invalidQuery">
+      <source xml:lang="en">Use a positive page size and at most {0} characters and {1} words to search Copilot connectors.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.invalidResponse">
+      <source xml:lang="en">Copilot connectors returned an invalid response.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.openConsentFailed">
+      <source xml:lang="en">The connector authorization page could not be opened.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.permissionNotGranted">
+      <source xml:lang="en">GitHub did not grant permission to manage Copilot connectors. Try authorizing connectors again.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.publisher">
+      <source xml:lang="en">GitHub Copilot</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.signInRequired">
+      <source xml:lang="en">Sign in to view connectors.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.unavailable">
+      <source xml:lang="en">Copilot connectors are not available in this product.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.wrongAccount">
+      <source xml:lang="en">Authorize connectors with the same GitHub account that you use for GitHub Copilot.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationCardList" source-language="en" datatype="plaintext"><body>
     <trans-unit id="collapseCustomizationSection">
       <source xml:lang="en">Collapse {0}</source>
@@ -4785,6 +4978,33 @@ To migrate this server, remove the cwd property.</source>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplaceInstallService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="customizationMarketplace.aiDisabled">
       <source xml:lang="en">Enable AI features to install customizations.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.connectorAccountUnavailable">
+      <source xml:lang="en">The GitHub account used to connect this resource is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.connectorInstallTargetUnavailable">
+      <source xml:lang="en">Copilot connectors do not have a local installation target.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.connectorInstallationMetadataUnavailable">
+      <source xml:lang="en">Copilot connector installation metadata is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.connectorNoLongerAvailable">
+      <source xml:lang="en">This connector is no longer available from the Copilot Connectors catalog.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.connectorNotActionable">
+      <source xml:lang="en">This connector cannot be connected while its status is '{0}'. Refresh and try again.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.connectorRepairIncomplete">
+      <source xml:lang="en">The connector could not be reconnected. Refresh its status and try again.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.connectorRepairUnavailable">
+      <source xml:lang="en">This connector cannot be reconnected while its status is '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.connectorStatusUnavailable">
+      <source xml:lang="en">This connector is no longer available. Refresh Discover and try again.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.connectorsDisabled">
+      <source xml:lang="en">Enable the Copilot connectors experiment to connect this resource.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.cursorUnsupported">
       <source xml:lang="en">Cursor plugins cannot be installed in VS Code. Open the resource to view its installation instructions.</source>
@@ -4976,6 +5196,14 @@ Destination: {2}</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.sources">
       <source xml:lang="en">Marketplace sources</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplaceWorkbenchService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationMarketplace.authorizeConnectors">
+      <source xml:lang="en">Authorize Connectors</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.signIn">
+      <source xml:lang="en">Sign In</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMigrationAccessibility" source-language="en" datatype="plaintext"><body>
@@ -5761,6 +5989,77 @@ Disabled servers may become enabled.</source>
       <source xml:lang="en">Unable to uninstall plugin: {0}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/embeddedConnectorDetail" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="connectorAuthorFact">
+      <source xml:lang="en">Author</source>
+    </trans-unit>
+    <trans-unit id="connectorAuthorWebsiteFact">
+      <source xml:lang="en">Author Website</source>
+    </trans-unit>
+    <trans-unit id="connectorContainsTitle">
+      <source xml:lang="en">Contains</source>
+    </trans-unit>
+    <trans-unit id="connectorDetailActionAriaLabel">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+    <trans-unit id="connectorDetailActionComplete">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="connectorDetailActionFailed">
+      <source xml:lang="en">Unable to update {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="connectorDetailEmpty">
+      <source xml:lang="en">No connector selected.</source>
+    </trans-unit>
+    <trans-unit id="connectorDetailRefreshFailed">
+      <source xml:lang="en">Unable to refresh connector details: {0}</source>
+    </trans-unit>
+    <trans-unit id="connectorDetailsTitle">
+      <source xml:lang="en">Details</source>
+    </trans-unit>
+    <trans-unit id="connectorExportSupportedFact">
+      <source xml:lang="en">Export Supported</source>
+    </trans-unit>
+    <trans-unit id="connectorHomepageFact">
+      <source xml:lang="en">Homepage</source>
+    </trans-unit>
+    <trans-unit id="connectorIdentifierFact">
+      <source xml:lang="en">Identifier</source>
+    </trans-unit>
+    <trans-unit id="connectorKeywordsFact">
+      <source xml:lang="en">Keywords</source>
+    </trans-unit>
+    <trans-unit id="connectorLicenseFact">
+      <source xml:lang="en">License</source>
+    </trans-unit>
+    <trans-unit id="connectorMcpServerWithUrl">
+      <source xml:lang="en">{0} · {1}</source>
+    </trans-unit>
+    <trans-unit id="connectorMcpServersFact">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="connectorNo">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="connectorOtherInformationTitle">
+      <source xml:lang="en">Other Information</source>
+    </trans-unit>
+    <trans-unit id="connectorRepositoryFact">
+      <source xml:lang="en">Repository</source>
+    </trans-unit>
+    <trans-unit id="connectorStatusFact">
+      <source xml:lang="en">Status</source>
+    </trans-unit>
+    <trans-unit id="connectorTierFact">
+      <source xml:lang="en">Tier</source>
+    </trans-unit>
+    <trans-unit id="connectorVersionFact">
+      <source xml:lang="en">Version</source>
+    </trans-unit>
+    <trans-unit id="connectorYes">
+      <source xml:lang="en">Yes</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/embeddedExtensionToolsDetail" source-language="en" datatype="plaintext"><body>
     <trans-unit id="toolDetailBy">
       <source xml:lang="en">by {0}</source>
@@ -5933,6 +6232,15 @@ Disabled servers may become enabled.</source>
     <trans-unit id="confirmUninstallPluginMcpDetail">
       <source xml:lang="en">Individual MCP servers from a plugin cannot be removed separately. Would you like to uninstall the entire plugin?</source>
     </trans-unit>
+    <trans-unit id="connectorMcpServerAriaLabel">
+      <source xml:lang="en">{0}. Connector: {1}.</source>
+    </trans-unit>
+    <trans-unit id="connectors.actionComplete">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="connectors.actionFailed">
+      <source xml:lang="en">Unable to update {0}: {1}</source>
+    </trans-unit>
     <trans-unit id="disableMcpServerAria">
       <source xml:lang="en">Disable {0}</source>
     </trans-unit>
@@ -6023,6 +6331,9 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="mcpServerErrorWithoutDetails">
       <source xml:lang="en">The server reported an error without additional details.</source>
+    </trans-unit>
+    <trans-unit id="mcpServerFromConnector">
+      <source xml:lang="en">Connector: {0}</source>
     </trans-unit>
     <trans-unit id="mcpServerInstalledStatus">
       <source xml:lang="en">{0} installed.</source>
@@ -7142,6 +7453,9 @@ This setting is only used by the Local agent harness.</source>
     <trans-unit id="chat.copilot.tgrep.enabled">
       <source xml:lang="en">When enabled, local Copilot Agent Host sessions force-enable tgrep indexed search, bypassing the repository-size threshold. Requires a local Git repository on a non-virtual filesystem. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
     </trans-unit>
+    <trans-unit id="chat.customizations.copilotConnectors.enabled">
+      <source xml:lang="en">Enables Copilot connectors in the unified marketplace and exposes connected connector MCP servers in Chat Customizations and Copilot agent sessions.</source>
+    </trans-unit>
     <trans-unit id="chat.customizations.locationsMigration.enabled">
       <source xml:lang="en">Controls whether the Chat Customizations editor offers to move agents, instructions, and skills from configured locations that are not supported by the active agent-host harness. When disabled, the migration card and sidebar shortcut are hidden.</source>
     </trans-unit>
@@ -7690,9 +8004,6 @@ This setting is only used by the Local agent harness.</source>
     </trans-unit>
     <trans-unit id="chat.subagents.showCreditUsage">
       <source xml:lang="en">Controls whether AI credit usage is shown next to the duration for subagents.</source>
-    </trans-unit>
-    <trans-unit id="chat.subagents.useRichRendering">
-      <source xml:lang="en">Controls whether subagents in chat editors use a rich presentation that opens each subagent in its own editor instead of rendering its full activity inline in the parent chat.</source>
     </trans-unit>
     <trans-unit id="chat.terminal.agentHost.enabled">
       <source xml:lang="en">Controls whether Terminal Chat is backed by the Agent Host instead of the extension host. Applied on startup.</source>
@@ -12566,6 +12877,14 @@ Source: {0}</source>
       <source xml:lang="en">Slash Commands Discovery</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxAgentHostService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.connectionTimedOut">
+      <source xml:lang="en">Connecting to the sandbox timed out after {0} seconds.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.retryExceedsDeadline">
+      <source xml:lang="en">The sandbox requested a retry beyond the connection deadline.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxLegacySessionPreparation" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sandbox.invalidCloneResult">
       <source xml:lang="en">The cloud sandbox returned an invalid repository cloning response.</source>
@@ -14318,26 +14637,20 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatSubagentContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.fusionPhase">
-      <source xml:lang="en">HydraFusion phase</source>
-    </trans-unit>
     <trans-unit id="chat.subagent.completedDefaultDescription">
       <source xml:lang="en">Ran subagent</source>
     </trans-unit>
     <trans-unit id="chat.subagent.defaultDescription">
       <source xml:lang="en">Running subagent</source>
     </trans-unit>
-    <trans-unit id="chat.subagent.modelTooltip">
-      <source xml:lang="en">Model: {0}</source>
+    <trans-unit id="chat.subagent.openChat">
+      <source xml:lang="en">Open Subagent</source>
     </trans-unit>
     <trans-unit id="chat.subagent.pendingConfirmation">
       <source xml:lang="en">1 pending confirmation</source>
     </trans-unit>
     <trans-unit id="chat.subagent.pendingConfirmations">
       <source xml:lang="en">{0} pending confirmations</source>
-    </trans-unit>
-    <trans-unit id="chat.subagent.prefix">
-      <source xml:lang="en">Subagent</source>
     </trans-unit>
     <trans-unit id="chat.subagent.prompt">
       <source xml:lang="en">Prompt</source>
@@ -14383,6 +14696,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.subagent.agentTypeTooltip">
       <source xml:lang="en">Subagent type: {0}</source>
     </trans-unit>
+    <trans-unit id="chat.subagent.hideDetails">
+      <source xml:lang="en">Hide subagent details: {0}</source>
+    </trans-unit>
     <trans-unit id="chat.subagent.modelAria">
       <source xml:lang="en">Model {0}</source>
     </trans-unit>
@@ -14409,6 +14725,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.subagent.pendingChat.aria">
       <source xml:lang="en">Subagent: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.subagent.showDetails">
+      <source xml:lang="en">Show subagent details: {0}</source>
     </trans-unit>
     <trans-unit id="chat.subagent.status.completed">
       <source xml:lang="en">Subagent completed</source>
@@ -15205,6 +15524,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="skip.post">
       <source xml:lang="en">Skip Results</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatToolProgressPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="toolExecutionFailed">
+      <source xml:lang="en">Tool execution failed</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/toolRiskBadgeWidget" source-language="en" datatype="plaintext"><body>
@@ -16146,6 +16470,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerDetails" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.modelPicker.learnMore">
+      <source xml:lang="en">Learn more</source>
+    </trans-unit>
     <trans-unit id="models.cacheCostLabel">
       <source xml:lang="en">Cache Read</source>
     </trans-unit>
@@ -16337,9 +16664,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.autoModeToggle">
       <source xml:lang="en">Use Auto mode in {0}</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.autoOnly">
-      <source xml:lang="en">No individual Copilot models are available. You can still browse other providers.</source>
-    </trans-unit>
     <trans-unit id="chat.modelPicker.backToModels">
       <source xml:lang="en">Back to Models</source>
     </trans-unit>
@@ -16351,6 +16675,12 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.modelPicker.dismissConfigurationHint">
       <source xml:lang="en">Dismiss Hint</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.hydraFusionDescription">
+      <source xml:lang="en">HydraFusion picks a workflow for each task, using one or more models to draft, review, or escalate when needed.</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.hydraFusionDetail">
+      <source xml:lang="en">May use multiple models</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.modelDetails">
       <source xml:lang="en">{0} Details</source>
