@@ -346,6 +346,9 @@
     <trans-unit id="++CODE++0f3a49fcaf6c54014760f45d81e1d2c624b78f5756060f4830bb3023067b0201">
       <source xml:lang="en">Failed to copy {0} folder(s)/file(s) to the worktree.</source>
     </trans-unit>
+    <trans-unit id="++CODE++83986ad4758d455cfd1298a6da60f949f7d8dd54d3ced37eab9f0c02c8a9b080">
+      <source xml:lang="en">Failed to create {0} worktree folder symlink(s).</source>
+    </trans-unit>
     <trans-unit id="++CODE++f131c35dd2bf15b59e6f92bb51a1f3b2973074be9aaa7c350ad353c39d5573b4">
       <source xml:lang="en">Failed to delete using the Recycle Bin. Do you want to permanently delete instead?</source>
     </trans-unit>
@@ -1684,6 +1687,9 @@ Please make sure there is no space between the right bracket and left parenthesi
     </trans-unit>
     <trans-unit id="config.worktreeIncludeFiles">
       <source xml:lang="en">Configure patterns, using `.gitignore` syntax, for files and folders that are included when creating a new worktree. Only files and folders that match the patterns and are ignored by git (for example, listed in `.gitignore`) will be copied to the newly created worktree.</source>
+    </trans-unit>
+    <trans-unit id="config.worktreeSymlinkFolders">
+      <source xml:lang="en">Configure patterns, using `.gitignore` syntax, for folders to symlink from the current checkout into newly created worktrees. Only folders that match the patterns and are ignored by git (for example, listed in `.gitignore`) will be symlinked. Changes made through a symlink affect the folder in the current checkout.</source>
     </trans-unit>
     <trans-unit id="config.autoRepositoryDetection">
       <source xml:lang="en">Configures when repositories should be automatically detected.</source>

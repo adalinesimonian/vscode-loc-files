@@ -399,11 +399,11 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/browser/agentHostSandboxToggle" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentHostSandboxToggle.editableManagedTitle">
-      <source xml:lang="en">Sandboxing is enabled by your organization, but you may disable it</source>
-    </trans-unit>
     <trans-unit id="agentHostSandboxToggle.label">
       <source xml:lang="en">Sandboxing for terminal</source>
+    </trans-unit>
+    <trans-unit id="agentHostSandboxToggle.reenableManagedTitle">
+      <source xml:lang="en">Sandboxing was disabled for this session through an approved bypass. You can enable it again.</source>
     </trans-unit>
     <trans-unit id="agentHostSandboxToggle.requiredTitle">
       <source xml:lang="en">Sandboxing is required by your organization</source>
@@ -3430,8 +3430,20 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Dev Container command failed (exit {0}): {1}
 stderr: {2}</source>
     </trans-unit>
+    <trans-unit id="devContainerAgentHost.containerLifecycleFailed">
+      <source xml:lang="en">Docker failed to {0} Dev Container '{1}' (exit {2}): {3}</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.containerSessionCheckFailed">
+      <source xml:lang="en">Unable to check active VS Code sessions in Dev Container '{0}' (exit {1}): {2}</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.containerSuspended">
+      <source xml:lang="en">Dev Container for '{0}' is stopped.</source>
+    </trans-unit>
     <trans-unit id="devContainerAgentHost.dockerInspectFailed">
       <source xml:lang="en">Docker inspect failed (exit {0}): {1}</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.dockerUnavailable">
+      <source xml:lang="en">Docker is not available.</source>
     </trans-unit>
     <trans-unit id="devContainerAgentHost.invalidMountJson">
       <source xml:lang="en">Unable to parse Docker mount information: {0}</source>
@@ -3807,6 +3819,15 @@ stderr: {2}</source>
     <trans-unit id="agentHost.sessionConfig.worktreeIncludeFilesItem">
       <source xml:lang="en">Pattern</source>
     </trans-unit>
+    <trans-unit id="agentHost.sessionConfig.worktreeSymlinkFolders">
+      <source xml:lang="en">Worktree Symlink Folders</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sessionConfig.worktreeSymlinkFoldersDescription">
+      <source xml:lang="en">Patterns, in .gitignore syntax, for git-ignored folders to symlink into the isolated worktree.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sessionConfig.worktreeSymlinkFoldersItem">
+      <source xml:lang="en">Pattern</source>
+    </trans-unit>
     <trans-unit id="agentHost.worktreeCheckingOut">
       <source xml:lang="en">Creating isolated worktree (checking out files)</source>
     </trans-unit>
@@ -3835,6 +3856,9 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="agentHost.worktreeNamingBranch">
       <source xml:lang="en">Creating isolated worktree (naming branch)</source>
+    </trans-unit>
+    <trans-unit id="agentHost.worktreeSymlinkingFolders">
+      <source xml:lang="en">Creating isolated worktree (symlinking folders)</source>
     </trans-unit>
     <trans-unit id="sessionWorkingDirectoryMissing">
       <source xml:lang="en">This session couldn't be loaded because its working directory no longer exists: {0}</source>

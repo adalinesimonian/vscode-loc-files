@@ -304,6 +304,9 @@
     <trans-unit id="chat.systemNotificationDisclosure">
       <source xml:lang="en">Some session status messages have additional details. Use Tab to focus the status message and press Enter or Space to show or hide its details.</source>
     </trans-unit>
+    <trans-unit id="chat.terminalOutputReflow">
+      <source xml:lang="en">Terminal output reflows to fit the chat width by default. Set {0} to false to keep fixed-width previews with horizontal scrolling. This only changes the preview, not the terminal running the command.</source>
+    </trans-unit>
     <trans-unit id="chat.toolFailureIcon">
       <source xml:lang="en">Failed tool calls use an error icon in place of their normal tool icon. Their content and available actions stay the same. The Accessible View includes the failure reason or terminal exit code when available.</source>
     </trans-unit>
@@ -2067,7 +2070,7 @@ To migrate this server, remove the cwd property.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostModePickerPresentation" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostModePicker.accessibilityHelp">
-      <source xml:lang="en">When the experimental combined picker is enabled for a Copilot Agent Host session, Tab reaches separate Mode and Permissions buttons. Press Enter or Space on Mode to open the picker with Agent Mode expanded, or on Permissions to open it with Permissions expanded. Each section header shows its current selection, and the opened section initially focuses that selection. Press Enter or Space on a section header to expand or collapse it, or use Right Arrow to expand and Left Arrow to collapse. Hover or keyboard navigation moves the single row highlight without changing the selection until you activate a choice. Focus the Permissions header and press Tab to reach Configure Permissions, which opens the related settings. Use Up and Down Arrow to navigate and Enter to select a mode, permission level, or terminal sandboxing. Assisted permissions is experimental and evaluates risk before running tools. Enterprise policy can disable Assisted permissions and Allow all. Escape closes the picker and returns focus to the button that opened it.</source>
+      <source xml:lang="en">When the experimental combined picker is enabled for a Copilot Agent Host session, Tab reaches separate Mode and Permissions buttons. Press Enter or Space on Mode to open the picker with Agent Mode expanded, or on Permissions to open it with Permissions expanded. Each section header shows its current selection, and the opened section initially focuses that selection. Press Enter or Space on a section header to expand or collapse it, or use Right Arrow to expand and Left Arrow to collapse. Hover or keyboard navigation moves the single row highlight without changing the selection until you activate a choice. Focus the Permissions header and press Tab to reach Configure Permissions, which opens the related settings. Use Up and Down Arrow to navigate and Enter to select a mode, permission level, or terminal sandboxing. Assisted permissions is experimental and evaluates risk before running tools. Enterprise policy can disable Assisted permissions and Allow all. When the session's host requires terminal sandboxing, its sandbox toggle is checked and disabled. If your organization permits bypassing, a supported outside-sandbox permission prompt can offer Allow in this Session. After that action succeeds, you can use the toggle to enable sandboxing again. This restriction applies only to that session. Escape closes the picker and returns focus to the button that opened it.</source>
     </trans-unit>
     <trans-unit id="agentHostModePicker.agentMode">
       <source xml:lang="en">Agent mode</source>
@@ -2147,6 +2150,11 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="promptCacheExpiration.title">
       <source xml:lang="en">This chat's prompt cache is stale</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSandboxNotifications" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.sandboxUpdateFailed">
+      <source xml:lang="en">Could not change terminal sandboxing. Try the action again. {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSdkSetupNotification" source-language="en" datatype="plaintext"><body>
@@ -8050,6 +8058,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.tools.riskAssessment.model">
       <source xml:lang="en">The language model id used to generate tool risk assessments. Should be a small, fast model.</source>
+    </trans-unit>
+    <trans-unit id="chat.tools.terminal.outputReflow">
+      <source xml:lang="en">Controls whether terminal output in chat reflows to fit the available width. When disabled, previews use the terminal's column count, or 80 columns when no terminal is available, and scroll horizontally when needed. This does not resize the terminal running the command.</source>
     </trans-unit>
     <trans-unit id="chat.tools.terminal.simpleCollapsible">
       <source xml:lang="en">When enabled, terminal tool calls are always displayed in a collapsible container with a simplified view.</source>

@@ -68,6 +68,11 @@
       <source xml:lang="en">Help me complete {0} in this project. First, inspect the relevant files and explain your approach briefly. Then implement the solution using existing project conventions, avoid unrelated changes, and run the most relevant tests or checks. If anything is unclear, make a reasonable assumption and state it. When finished, summarize what changed and mention any remaining issues.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/onboardingTours/browser/parallelWorkOnboarding" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="parallelWorkOnboarding.listUnavailable">
+      <source xml:lang="en">The sessions list could not be opened. Try again.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/onboardingTours/browser/tours/newSessionTour" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessions.onboarding.isolation.description">
       <source xml:lang="en">Use a worktree to work on multiple tasks in the same project without conflicts. Each task stays isolated, so you can experiment freely and safely.</source>
@@ -125,6 +130,12 @@
     </trans-unit>
     <trans-unit id="sessions.onboarding.newSessionViewV2.model.title">
       <source xml:lang="en">Choose a model</source>
+    </trans-unit>
+    <trans-unit id="sessions.onboarding.newSessionViewV2.runningSession.description">
+      <source xml:lang="en">Keep track of your running session in the sessions list while you start another task. Your agent can keep working in parallel.</source>
+    </trans-unit>
+    <trans-unit id="sessions.onboarding.newSessionViewV2.runningSession.title">
+      <source xml:lang="en">Your session is here</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/onboardingTours/browser/tours/sessionArchiveTour" source-language="en" datatype="plaintext"><body>

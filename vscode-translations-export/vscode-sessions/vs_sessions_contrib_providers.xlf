@@ -1503,6 +1503,27 @@
     <trans-unit id="connectFailed">
       <source xml:lang="en">Failed to connect to remote agent host '{0}': {1}</source>
     </trans-unit>
+    <trans-unit id="devContainerAgentHost.archiveDisconnected">
+      <source xml:lang="en">Unable to archive Dev Container session '{0}' while disconnected.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.archiveRejected">
+      <source xml:lang="en">Unable to archive Dev Container session '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.archiveTimeout">
+      <source xml:lang="en">Timed out waiting for Dev Container session '{0}' to be archived.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.reconnectFailed">
+      <source xml:lang="en">Dev Container Agent Host '{0}' did not reconnect.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.unarchiveDisconnected">
+      <source xml:lang="en">Unable to unarchive Dev Container session '{0}' while disconnected.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.unarchiveRejected">
+      <source xml:lang="en">Unable to unarchive Dev Container session '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.unarchiveTimeout">
+      <source xml:lang="en">Timed out waiting for Dev Container session '{0}' to be unarchived.</source>
+    </trans-unit>
     <trans-unit id="folders">
       <source xml:lang="en">Folders</source>
     </trans-unit>
@@ -1617,6 +1638,18 @@ Address: {0}</source>
     <trans-unit id="workspacePicker.removeRemote">
       <source xml:lang="en">Remove Remote</source>
     </trans-unit>
+    <trans-unit id="workspacePicker.renameRemote">
+      <source xml:lang="en">Rename...</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.renameRemoteFailed">
+      <source xml:lang="en">Failed to rename {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.renameRemotePrompt">
+      <source xml:lang="en">Enter a display name for this remote agent host in this client. Leave empty to use the default name.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.renameRemoteTitle">
+      <source xml:lang="en">Rename Remote Agent Host</source>
+    </trans-unit>
     <trans-unit id="workspacePicker.statusConnecting">
       <source xml:lang="en">Connecting</source>
     </trans-unit>
@@ -1670,6 +1703,9 @@ Address: {0}</source>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/electron-browser/devContainerAgentHostConnector.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.agentHost.devContainer.enabled">
       <source xml:lang="en">Enable running Agent Host sessions in Dev Containers.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.devContainer.idleTimeout">
+      <source xml:lang="en">Number of seconds with no Agent Host sessions actively working, waiting for input, or holding unsent drafts before automatically stopping a Dev Container. Set to 0 to disable automatic shutdown. Archiving or deleting sessions can still remove the container.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.devContainer.worktree.enabled">
       <source xml:lang="en">Enable running Dev Container Agent Host sessions in new worktrees.</source>

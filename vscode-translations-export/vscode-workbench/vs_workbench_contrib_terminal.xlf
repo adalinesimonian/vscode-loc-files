@@ -1073,6 +1073,15 @@ This will typically result in better rendering with continuous lines, even when 
     <trans-unit id="terminal.integrated.fontLigatures.featureSettings">
       <source xml:lang="en">Controls what font feature settings are used when ligatures are enabled, in the format of the `font-feature-settings` CSS property. Some examples which may be valid depending on the font:</source>
     </trans-unit>
+    <trans-unit id="terminal.integrated.fontRendering">
+      <source xml:lang="en">Controls how terminal text is antialiased on high-DPI displays.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.fontRendering.grayscale">
+      <source xml:lang="en">Use grayscale antialiasing, which can make text look sharper. With GPU acceleration, this may require **Developer: Reload Window** to take effect.</source>
+    </trans-unit>
+    <trans-unit id="terminal.integrated.fontRendering.inherit">
+      <source xml:lang="en">Follow {0}.</source>
+    </trans-unit>
     <trans-unit id="terminal.integrated.fontSize">
       <source xml:lang="en">Controls the font size in pixels of the terminal.</source>
     </trans-unit>
