@@ -413,20 +413,26 @@
     <trans-unit id="automationsPartialUnavailable">
       <source xml:lang="en">Some automations are unavailable.</source>
     </trans-unit>
-    <trans-unit id="automationsProviderUnavailableReason">
-      <source xml:lang="en">{0}: {1}</source>
+    <trans-unit id="automationsProvidersCustomReason">
+      <source xml:lang="en">Automations are unavailable on {0}. {1}</source>
     </trans-unit>
-    <trans-unit id="automationsUnavailableProvider">
-      <source xml:lang="en">Automations from {0} are unavailable.</source>
+    <trans-unit id="automationsProvidersDisabled">
+      <source xml:lang="en">Automations are disabled on {0}.</source>
     </trans-unit>
-    <trans-unit id="automationsUnavailableProviderWithReason">
-      <source xml:lang="en">Automations from {0} are unavailable. {1}</source>
+    <trans-unit id="automationsProvidersDisconnected">
+      <source xml:lang="en">The agent host is disconnected on {0}.</source>
     </trans-unit>
-    <trans-unit id="automationsUnavailableProviders">
-      <source xml:lang="en">Automations from these providers are unavailable: {0}.</source>
+    <trans-unit id="automationsProvidersIncompatible">
+      <source xml:lang="en">The agent host needs to be updated to use automations on {0}.</source>
     </trans-unit>
-    <trans-unit id="automationsUnavailableProvidersWithReasons">
-      <source xml:lang="en">Automations from these providers are unavailable: {0}. {1}</source>
+    <trans-unit id="automationsProvidersInitializing">
+      <source xml:lang="en">The agent host is still connecting on {0}.</source>
+    </trans-unit>
+    <trans-unit id="automationsProvidersUnavailable">
+      <source xml:lang="en">Automations are unavailable on {0}.</source>
+    </trans-unit>
+    <trans-unit id="automationsProvidersUnsupported">
+      <source xml:lang="en">Automations are not supported on {0}.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/automationTemplates" source-language="en" datatype="plaintext"><body>
@@ -821,6 +827,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsPartialLoading">
       <source xml:lang="en">Loading additional automations...</source>
     </trans-unit>
+    <trans-unit id="automationsPartialUnavailable">
+      <source xml:lang="en">Some automations are unavailable.</source>
+    </trans-unit>
     <trans-unit id="automationsTitle">
       <source xml:lang="en">Automations</source>
     </trans-unit>
@@ -955,6 +964,23 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="yesterday">
       <source xml:lang="en">Yesterday</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/sessionStorageCleanupNotice" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionStorageCleanupNotice.announcement">
+      <source xml:lang="en">{0} Run Clean Up Agent Worktrees to review it. To stop these suggestions, run Disable Session Storage Cleanup Suggestions.</source>
+    </trans-unit>
+    <trans-unit id="sessionStorageCleanupNotice.ariaLabel">
+      <source xml:lang="en">Session Storage Cleanup Suggestion</source>
+    </trans-unit>
+    <trans-unit id="sessionStorageCleanupNotice.disable">
+      <source xml:lang="en">Don't Show Again</source>
+    </trans-unit>
+    <trans-unit id="sessionStorageCleanupNotice.dismiss">
+      <source xml:lang="en">Dismiss Session Storage Suggestion</source>
+    </trans-unit>
+    <trans-unit id="sessionStorageCleanupNotice.manage">
+      <source xml:lang="en">Clean Up Agent Worktrees</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsList" source-language="en" datatype="plaintext"><body>
@@ -1172,6 +1198,29 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Untitled Chat</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsListNotification" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="dismiss">
+      <source xml:lang="en">Dismiss</source>
+    </trans-unit>
+    <trans-unit id="notificationHelp">
+      <source xml:lang="en">{0}
+This notice appears after marking sessions done or archiving them. Use Tab and Shift+Tab to reach Undo and Dismiss. Press Enter or Space to activate them, or Escape to dismiss the notice.
+Undo restores the sessions and their previous custom groups, if those groups still exist. It does not restart stopped requests.
+The notice disappears after 10 seconds. The countdown pauses while the notice is hovered, focused, or this help is open. The bar along the bottom shows the remaining time.</source>
+    </trans-unit>
+    <trans-unit id="notificationHelpHint">
+      <source xml:lang="en">Press {0} for accessibility help.</source>
+    </trans-unit>
+    <trans-unit id="undo">
+      <source xml:lang="en">Undo</source>
+    </trans-unit>
+    <trans-unit id="undoAvailable">
+      <source xml:lang="en">{0}. Undo is available in the sessions list for 10 seconds.</source>
+    </trans-unit>
+    <trans-unit id="undoSessions">
+      <source xml:lang="en">Undo: {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsView" source-language="en" datatype="plaintext"><body>
     <trans-unit id="filterEmptyGroups">
       <source xml:lang="en">Empty Groups</source>
@@ -1382,17 +1431,20 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionImported">
       <source xml:lang="en">Imported {0}.</source>
     </trans-unit>
+    <trans-unit id="sessionsArchived">
+      <source xml:lang="en">{0} archived</source>
+    </trans-unit>
     <trans-unit id="sessionsImported">
       <source xml:lang="en">Imported {0} sessions.</source>
     </trans-unit>
+    <trans-unit id="sessionsMarkedDone">
+      <source xml:lang="en">{0} marked done</source>
+    </trans-unit>
+    <trans-unit id="sessionsRestored">
+      <source xml:lang="en">Sessions restored.</source>
+    </trans-unit>
     <trans-unit id="showAllSessions">
       <source xml:lang="en">Show All Sessions</source>
-    </trans-unit>
-    <trans-unit id="showArchivedChats">
-      <source xml:lang="en">Show Archived Chats</source>
-    </trans-unit>
-    <trans-unit id="showDoneChats">
-      <source xml:lang="en">Show Done Chats</source>
     </trans-unit>
     <trans-unit id="showRecentSessions">
       <source xml:lang="en">Show Recent Sessions</source>

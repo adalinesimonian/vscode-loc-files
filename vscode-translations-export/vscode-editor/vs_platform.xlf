@@ -2909,6 +2909,12 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotCustomizationCommandDisplay" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotMcp.error">
+      <source xml:lang="en">Error</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.lastStderr">
+      <source xml:lang="en">Last stderr</source>
+    </trans-unit>
     <trans-unit id="copilotMcp.serverNameUsage">
       <source xml:lang="en">Usage: {0}</source>
     </trans-unit>
@@ -3035,6 +3041,14 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">{0}: running a tool</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotSandboxDiagnostics" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.sandbox.capabilityUnavailable">
+      <source xml:lang="en">The sandbox capability '{0}' is unavailable on this host.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandbox.unsupported">
+      <source xml:lang="en">The sandbox backend is unavailable on this host.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSandboxPolicyDisplay" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copilotSandboxPolicy.title">
       <source xml:lang="en">Effective sandbox policy</source>
@@ -3062,18 +3076,6 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.copilot.systemNotification.agentIdle">
       <source xml:lang="en">Background agent {0} is complete</source>
     </trans-unit>
-    <trans-unit id="agentHost.copilot.systemNotification.factoryCancelled">
-      <source xml:lang="en">Factory {0} was cancelled</source>
-    </trans-unit>
-    <trans-unit id="agentHost.copilot.systemNotification.factoryCompleted">
-      <source xml:lang="en">Factory {0} completed</source>
-    </trans-unit>
-    <trans-unit id="agentHost.copilot.systemNotification.factoryFailed">
-      <source xml:lang="en">Factory {0} failed</source>
-    </trans-unit>
-    <trans-unit id="agentHost.copilot.systemNotification.factoryHalted">
-      <source xml:lang="en">Factory {0} was halted</source>
-    </trans-unit>
     <trans-unit id="agentHost.copilot.systemNotification.instructionDiscovered">
       <source xml:lang="en">Instruction discovered: {0}</source>
     </trans-unit>
@@ -3094,6 +3096,18 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="agentHost.copilot.systemNotification.unnamedAgentIdle">
       <source xml:lang="en">Background agent is complete</source>
+    </trans-unit>
+    <trans-unit id="agentHost.copilot.systemNotification.workflowCancelled">
+      <source xml:lang="en">Workflow {0} was cancelled</source>
+    </trans-unit>
+    <trans-unit id="agentHost.copilot.systemNotification.workflowCompleted">
+      <source xml:lang="en">Workflow {0} completed</source>
+    </trans-unit>
+    <trans-unit id="agentHost.copilot.systemNotification.workflowFailed">
+      <source xml:lang="en">Workflow {0} failed</source>
+    </trans-unit>
+    <trans-unit id="agentHost.copilot.systemNotification.workflowHalted">
+      <source xml:lang="en">Workflow {0} was halted</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotToolDisplay" source-language="en" datatype="plaintext"><body>

@@ -164,7 +164,7 @@
       <source xml:lang="en">When completed response collapsing is enabled, the final response remains visible while earlier work is collapsed. Use Tab to focus the work disclosure and press Enter or Space to show or hide that work. With persistent progress enabled, a separate file changes button shows lines added and deleted when the collapsed work includes edits. Activate it to open those file changes without expanding the work.</source>
     </trans-unit>
     <trans-unit id="chat.copilotHarnessIntroduction">
-      <source xml:lang="en">Depending on the active experiment, a new Copilot harness chat may show an introduction to the new Copilot experience when the session starts or after the first request is submitted. Once shown, sending messages does not dismiss it. Use Tab to reach let us know, Learn More, Got it!, or Not Helpful. Learn More opens documentation without hiding the introduction. Got it! hides the introduction for this chat. Not Helpful turns off future introductions.</source>
+      <source xml:lang="en">Depending on the active experiment, a new Copilot harness chat may show an introduction to the new Copilot experience when the session starts or after the first request is submitted. Once shown, sending messages does not dismiss it. Use Tab to reach let us know, Learn More, Got it!, or Not Helpful. Learn More opens documentation without hiding the introduction. Got it! and Not Helpful turn off future introductions.</source>
     </trans-unit>
     <trans-unit id="chat.customizationMigrations">
       <source xml:lang="en">When workspace customizations need an update, a notice above the new-chat input shows how many need attention. Use Tab to reach Review Migrations and open the Migrations page. Dismiss Migration Notice for This Workspace hides the notice for that workspace, including after restarting, and returns focus to the input. The Customizations toolbar button also announces when migrations are available.</source>
@@ -195,6 +195,12 @@
     </trans-unit>
     <trans-unit id="chat.focusQuestionCarousel">
       <source xml:lang="en">When a chat question appears, toggle focus between the question and the chat input{0}.</source>
+    </trans-unit>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey">
+      <source xml:lang="en">After you switch from Copilot to Local, a two-step feedback survey may appear above the chat input. Use Shift+Tab to reach it. In the first step, use Up and Down Arrow to choose why you switched, then press Enter or Space. In the second step, enter any optional feedback and use Tab to reach Submit. Dismiss Survey or Escape closes the survey. After submission, the questions are replaced above the input by a message that your feedback was recorded. Use Dismiss Feedback Acknowledgement or Escape to close it.</source>
+    </trans-unit>
+    <trans-unit id="chat.inputBlocked">
+      <source xml:lang="en">When another Codex app is using a conversation, a banner above the input explains how to release it. You can keep editing your draft, but sending is disabled. Quit the app holding the conversation, such as ChatGPT, or exit the Codex CLI session. Use Tab to focus Retry in the banner, then press Enter or Space to check again. Retry does not send your draft.</source>
     </trans-unit>
     <trans-unit id="chat.inspectResponse">
       <source xml:lang="en">In the input box, inspect the last response in the accessible view{0}. Thinking content is included in order by default.</source>
@@ -242,7 +248,7 @@
       <source xml:lang="en">To paste the clipboard as plain text, without converting it to Markdown or storing it as an attachment, invoke Paste as Text{0}.</source>
     </trans-unit>
     <trans-unit id="chat.persistentProgress">
-      <source xml:lang="en">The chat.experimental.persistentProgress setting defaults to Off unless an experiment enables it. Choose an animation to keep a working progress indicator at the bottom until the response finishes. The chat.experimental.persistentProgressVerbosity setting defaults to Compact: tool calls preview while running, then collapse in place to a single summary row when thinking or response text resumes, or the response finishes. Choose Verbose to keep tool chains expanded without a group header or an internal scrolling limit. Use Tab to focus a summary and press Enter or Space to expand or collapse its tool calls. Automatic collapse waits until keyboard focus leaves the group. Completed responses still follow chat.agent.collapseCompletedResponses. Reasoning appears separately as collapsible previews; focus a reasoning header and press Enter or Space to expand or collapse it. Standalone tools keep their decorative icons. Terminal activity animations and subagent pills are unchanged. While the response waits on subagents or background commands, the indicator reports what it is waiting for, including work started in an earlier turn. After 90 seconds without response activity or known background work, it reports that the response is taking longer than usual. Reduced motion disables the collapse animation and keeps the indicator visible without animation. Spoken progress updates are controlled by accessibility.verboseChatProgressUpdates.</source>
+      <source xml:lang="en">The chat.experimental.persistentProgress setting defaults to Draw in VS Code Insiders and Off in Stable. Experiments can override either default; an explicit setting takes precedence. Choose Draw, Draw (Monochrome), or Draw (Monochrome, No Icon) to keep a working progress indicator at the bottom until the response finishes. The No Icon variant hides only the decorative VS Code icon; progress text and spoken updates are unchanged. The chat.experimental.persistentProgressVerbosity setting defaults to Compact: tool calls preview while running, then collapse in place to a single summary row when thinking or response text resumes, or the response finishes. Choose Verbose to keep tool chains expanded without a group header or an internal scrolling limit. Use Tab to focus a summary and press Enter or Space to expand or collapse its tool calls. Automatic collapse waits until keyboard focus leaves the group. Completed responses still follow chat.agent.collapseCompletedResponses. Reasoning appears separately as collapsible previews; focus a reasoning header and press Enter or Space to expand or collapse it. Standalone tools keep their decorative icons. Terminal activity animations and subagent pills are unchanged. The indicator reports counts of running subagents and background commands, including work started in earlier requests, whether the main response is progressing or idle. Requests for your input, approval, plan review, or authentication take priority over these counts. After 90 seconds without response activity or known background work, it reports that the response is taking longer than usual. Reduced motion disables the collapse animation and keeps the indicator visible without animation. Spoken progress updates are controlled by accessibility.verboseChatProgressUpdates.</source>
     </trans-unit>
     <trans-unit id="chat.persistentProgressHandoff">
       <source xml:lang="en">While a response is running, automatically collapsing a reasoning or tool preview keeps a visible header in place. If the header is above the visible content but its details are visible, it moves below the pinned prompt, or to the top of the viewport when there is no pinned prompt. Only the space needed for the visible viewport is reserved. That space is removed when the response finishes or is stopped, after any pending transition and content rendering finish. Expanding a preview consumes reserved space as its content grows. Scrolling to the bottom removes the reserved space. Manual collapses do not add padding. The following response content appears after an automatic collapse finishes. Reduced motion skips this delay. If keyboard focus keeps a preview open, new content continues to appear without waiting for focus to move.</source>
@@ -270,6 +276,9 @@
     </trans-unit>
     <trans-unit id="chat.requestHistory">
       <source xml:lang="en">In the input box, use up and down arrows to navigate your request history. Edit input and use enter or the submit button to run a new request.</source>
+    </trans-unit>
+    <trans-unit id="chat.sandboxUnavailable">
+      <source xml:lang="en">If the agent host cannot support the configured sandbox, a notification above the input explains why. Use Tab to reach Dismiss notification. Dismissing hides the warning for this session until the window reloads, without changing sandboxing or preventing messages.</source>
     </trans-unit>
     <trans-unit id="chat.sessionArchiveNudge">
       <source xml:lang="en">An archive suggestion appears above the chat input when the session's pull requests are merged. Use Tab or Shift+Tab to reach Archive, Configure Automatic Cleanup, or Dismiss Archive Suggestion, then press Enter or Space. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Archive" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismissing the suggestion, including with Escape while it is focused, returns to the chat input. Archiving the session hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Archived" section of the sessions list. You can unarchive it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by unarchiving the session.</source>
@@ -1933,6 +1942,35 @@ User: {2}</source>
       <source xml:lang="en">Approvals</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostChatInputState" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.checkingConversation">
+      <source xml:lang="en">Checking whether this conversation is available…</source>
+    </trans-unit>
+    <trans-unit id="agentHost.checkingConversationTitle">
+      <source xml:lang="en">Checking Conversation</source>
+    </trans-unit>
+    <trans-unit id="agentHost.codexWriterLock">
+      <source xml:lang="en">This conversation is in use by another Codex app. Let any running task finish, then quit the app holding it open, such as ChatGPT, or exit the Codex CLI session.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.codexWriterLockExplanation">
+      <source xml:lang="en">The other app has locked this chat. It must release the lock before you can continue here.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.codexWriterLockRetry">
+      <source xml:lang="en">Quit the other app (e.g. ChatGPT, Codex CLI), then retry.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.conversationInUse">
+      <source xml:lang="en">This chat is open in another app</source>
+    </trans-unit>
+    <trans-unit id="agentHost.conversationUnavailable">
+      <source xml:lang="en">Conversation Unavailable</source>
+    </trans-unit>
+    <trans-unit id="agentHost.prepareChatFailed">
+      <source xml:lang="en">Couldn't prepare this conversation. Select Retry to try again. {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.retryPreparation">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostCustomizationService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.mcpServer.authRequired">
       <source xml:lang="en">Server '{0}' requires authentication ({1})</source>
@@ -2152,6 +2190,11 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">This chat's prompt cache is stale</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSandboxNotification" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.sandboxUnsupported">
+      <source xml:lang="en">Sandboxing is unavailable in this environment</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSandboxNotifications" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.sandboxUpdateFailed">
       <source xml:lang="en">Could not change terminal sandboxing. Try the action again. {0}</source>
@@ -2213,6 +2256,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHost.clientTool.unknown">
       <source xml:lang="en">Tool "{0}" is not available on this client.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.codexThreadInUse">
+      <source xml:lang="en">{0} Then send your message again in VS Code. Your message has not been sent.</source>
     </trans-unit>
     <trans-unit id="agentHost.continueInterruptedTurn">
       <source xml:lang="en">Keep Going</source>
@@ -2955,6 +3001,41 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">now</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/copilotHarnessIntroduction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotHarnessAgentDescription">
+      <source xml:lang="en">Continue your sessions across windows and apps, without changing how you work. [Let us know]({0}) how it goes.</source>
+    </trans-unit>
+    <trans-unit id="copilotHarnessAgentTitle">
+      <source xml:lang="en">You're using a new Copilot agent</source>
+    </trans-unit>
+    <trans-unit id="copilotHarnessCapabilitiesDescription">
+      <source xml:lang="en">This agent harness brings new capabilities to the way you already work. If anything seems off, [let us know]({0}).</source>
+    </trans-unit>
+    <trans-unit id="copilotHarnessDescription">
+      <source xml:lang="en">This agent harness opens up new ways to work across windows and apps. Continue as usual, and [let us know]({0}) how it goes.</source>
+    </trans-unit>
+    <trans-unit id="copilotHarnessOriginalDescription">
+      <source xml:lang="en">This new implementation unlocks exciting new capabilities, while previous agent harnesses remain available. If anything seems off, [let us know]({0}).</source>
+    </trans-unit>
+    <trans-unit id="copilotHarnessTitle">
+      <source xml:lang="en">You're using a new Copilot experience</source>
+    </trans-unit>
+    <trans-unit id="gotIt">
+      <source xml:lang="en">{0} Got it!</source>
+    </trans-unit>
+    <trans-unit id="gotItAriaLabel">
+      <source xml:lang="en">Got it!</source>
+    </trans-unit>
+    <trans-unit id="learnMore">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
+    <trans-unit id="unhelpful">
+      <source xml:lang="en">Not Helpful</source>
+    </trans-unit>
+    <trans-unit id="unhelpfulTooltip">
+      <source xml:lang="en">Not Helpful</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/experiments/agentSessionProjection" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatInAgentSessionProjection">
       <source xml:lang="en">True when the workbench is in agent session projection mode for reviewing an agent session.</source>
@@ -3268,6 +3349,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="chat.copilotHarnessIntroduction.off">
       <source xml:lang="en">Do not show the Copilot harness introduction.</source>
+    </trans-unit>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.enabled">
+      <source xml:lang="en">Show a one-time feedback survey after switching from Copilot to Local.</source>
     </trans-unit>
     <trans-unit id="chat.openInAgentsWindow.transferDraft">
       <source xml:lang="en">Copy the prompt and attachments from a new chat when opening the Agents Window. Existing drafts in the Agents Window are preserved.</source>
@@ -10985,22 +11069,10 @@ Examples:
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatProgressConfiguration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.experimental.persistentProgress">
-      <source xml:lang="en">Keep a working progress indicator with an animated VS Code logo at the bottom until the response finishes. Off is the default without an experiment; choose an animation to enable the indicator explicitly. Tool calls follow {0}, and reasoning is separated into collapsible previews that break the tool chain. Standalone tools retain their icons. Completed responses still follow {1}. This replaces inner working progress; terminal activity animations and rich subagent pills are unchanged. Changes apply immediately; reduced motion keeps the indicator visible without animation.</source>
+      <source xml:lang="en">Keep a working progress indicator at the bottom until the response finishes, with a colored or monochrome Draw animation, or without an icon. The indicator reports running subagents and background commands from the current or earlier requests, even while the main response progresses. The default is Draw in VS Code Insiders and Off in Stable. Experiments can override either default; an explicit setting takes precedence. Tool calls follow {0}, and reasoning is separated into collapsible previews that break the tool chain. Standalone tools retain their icons. Completed responses still follow {1}. This replaces inner working progress; terminal activity animations and rich subagent pills are unchanged. Changes apply immediately; reduced motion keeps the indicator visible without animation.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.persistentProgressVerbosity">
       <source xml:lang="en">Control tool call details when {0} is enabled. Compact is the default and collapses tool groups in place when thinking or response text resumes, or the response finishes. Expand a summary to inspect its tool calls. Has no effect when persistent progress is Off. Changes apply immediately.</source>
-    </trans-unit>
-    <trans-unit id="chat.progressAnimation.accordion">
-      <source xml:lang="en">Compress the logo pieces toward the center, then open them back up.</source>
-    </trans-unit>
-    <trans-unit id="chat.progressAnimation.accordion.label">
-      <source xml:lang="en">Accordion</source>
-    </trans-unit>
-    <trans-unit id="chat.progressAnimation.dial">
-      <source xml:lang="en">Rotate the logo in three steps, then pause upright.</source>
-    </trans-unit>
-    <trans-unit id="chat.progressAnimation.dial.label">
-      <source xml:lang="en">Dial Rotation</source>
     </trans-unit>
     <trans-unit id="chat.progressAnimation.draw">
       <source xml:lang="en">Draw the right-slanting ribbon, right edge, and left-slanting ribbon in sequence, then erase them in the same counterclockwise direction and order.</source>
@@ -11008,23 +11080,23 @@ Examples:
     <trans-unit id="chat.progressAnimation.draw.label">
       <source xml:lang="en">Draw</source>
     </trans-unit>
+    <trans-unit id="chat.progressAnimation.drawMonochrome">
+      <source xml:lang="en">Use the Draw animation with the same grayscale treatment as the VS Code icon in the Agents window. High contrast themes retain their contrast color.</source>
+    </trans-unit>
+    <trans-unit id="chat.progressAnimation.drawMonochrome.label">
+      <source xml:lang="en">Draw (Monochrome)</source>
+    </trans-unit>
+    <trans-unit id="chat.progressAnimation.drawMonochromeNoIcon">
+      <source xml:lang="en">Keep the same persistent progress text and tool rendering as Draw (Monochrome), but hide the VS Code icon.</source>
+    </trans-unit>
+    <trans-unit id="chat.progressAnimation.drawMonochromeNoIcon.label">
+      <source xml:lang="en">Draw (Monochrome, No Icon)</source>
+    </trans-unit>
     <trans-unit id="chat.progressAnimation.off">
       <source xml:lang="en">Keep the original thinking, tool, and working progress rendering without a persistent indicator or VS Code logo.</source>
     </trans-unit>
     <trans-unit id="chat.progressAnimation.off.label">
       <source xml:lang="en">Off</source>
-    </trans-unit>
-    <trans-unit id="chat.progressAnimation.orbit">
-      <source xml:lang="en">Loop the diagonal ribbons around the moving right edge, then lock the logo back together.</source>
-    </trans-unit>
-    <trans-unit id="chat.progressAnimation.orbit.label">
-      <source xml:lang="en">Orbit and Lock</source>
-    </trans-unit>
-    <trans-unit id="chat.progressAnimation.weave">
-      <source xml:lang="en">Move the three logo pieces in quick beats, then reset them together.</source>
-    </trans-unit>
-    <trans-unit id="chat.progressAnimation.weave.label">
-      <source xml:lang="en">Weave</source>
     </trans-unit>
     <trans-unit id="chat.progressVerbosity.compact">
       <source xml:lang="en">Preview tool calls while they run, then collapse each group to a single expandable summary row when the response moves on.</source>
@@ -12001,6 +12073,41 @@ Type anything below to get started!</source>
     </trans-unit>
     <trans-unit id="pluginDisabledWorkspace">
       <source xml:lang="en">This plugin is disabled for this workspace.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/feedbackSurvey/chatHarnessSwitchFeedbackSurveyService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.acknowledgement">
+      <source xml:lang="en">Thanks, your feedback has been recorded.</source>
+    </trans-unit>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.dismiss">
+      <source xml:lang="en">Dismiss Survey</source>
+    </trans-unit>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.dismissAcknowledgement">
+      <source xml:lang="en">Dismiss Feedback Acknowledgement</source>
+    </trans-unit>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.feedback">
+      <source xml:lang="en">Any feedback?</source>
+    </trans-unit>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.feedbackDescription">
+      <source xml:lang="en">Share any additional feedback (optional).</source>
+    </trans-unit>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.reason">
+      <source xml:lang="en">Why did you switch harnesses?</source>
+    </trans-unit>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.reason.missingFeature">
+      <source xml:lang="en">A feature I need was unavailable</source>
+    </trans-unit>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.reason.other">
+      <source xml:lang="en">Something else</source>
+    </trans-unit>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.reason.performance">
+      <source xml:lang="en">Copilot was too slow</source>
+    </trans-unit>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.reason.preferLocal">
+      <source xml:lang="en">I prefer the Local experience</source>
+    </trans-unit>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.reason.reliability">
+      <source xml:lang="en">Copilot did not work as expected</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/feedbackSurvey/chatModelFeedbackSurveyWidget" source-language="en" datatype="plaintext"><body>
@@ -15776,35 +15883,38 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="persistentProgress.backgroundCommands">
       <source xml:lang="en">{0} background commands</source>
     </trans-unit>
+    <trans-unit id="persistentProgress.backgroundCommandsRunning">
+      <source xml:lang="en">{0} background commands running</source>
+    </trans-unit>
     <trans-unit id="persistentProgress.oneBackgroundCommand">
       <source xml:lang="en">1 background command</source>
+    </trans-unit>
+    <trans-unit id="persistentProgress.oneBackgroundCommandRunning">
+      <source xml:lang="en">1 background command running</source>
     </trans-unit>
     <trans-unit id="persistentProgress.oneSubagent">
       <source xml:lang="en">1 subagent</source>
     </trans-unit>
+    <trans-unit id="persistentProgress.oneSubagentRunning">
+      <source xml:lang="en">1 subagent running</source>
+    </trans-unit>
     <trans-unit id="persistentProgress.planReviewRequired">
       <source xml:lang="en">Plan review required</source>
+    </trans-unit>
+    <trans-unit id="persistentProgress.runningBackgroundWork">
+      <source xml:lang="en">{0} and {1} running</source>
     </trans-unit>
     <trans-unit id="persistentProgress.subagents">
       <source xml:lang="en">{0} subagents</source>
     </trans-unit>
-    <trans-unit id="persistentProgress.waitingForBackgroundCommand">
-      <source xml:lang="en">Waiting for 1 background command</source>
-    </trans-unit>
-    <trans-unit id="persistentProgress.waitingForBackgroundCommands">
-      <source xml:lang="en">Waiting for {0} background commands</source>
-    </trans-unit>
-    <trans-unit id="persistentProgress.waitingForBackgroundWork">
-      <source xml:lang="en">Waiting for {0} and {1}</source>
+    <trans-unit id="persistentProgress.subagentsRunning">
+      <source xml:lang="en">{0} subagents running</source>
     </trans-unit>
     <trans-unit id="persistentProgress.waitingForResponse">
       <source xml:lang="en">Waiting for your response</source>
     </trans-unit>
     <trans-unit id="persistentProgress.waitingForSubagent">
       <source xml:lang="en">Waiting for 1 subagent</source>
-    </trans-unit>
-    <trans-unit id="persistentProgress.waitingForSubagents">
-      <source xml:lang="en">Waiting for {0} subagents</source>
     </trans-unit>
     <trans-unit id="persistentProgress.waitingForTerminal">
       <source xml:lang="en">Waiting for terminal output</source>
@@ -17172,6 +17282,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chatHasUsedCreateSlashCommands">
       <source xml:lang="en">True when the user has used any of the /create-* slash commands.</source>
+    </trans-unit>
+    <trans-unit id="chatInputBlocked">
+      <source xml:lang="en">True when sending to the current chat is temporarily blocked.</source>
     </trans-unit>
     <trans-unit id="chatIsAgentHostSession">
       <source xml:lang="en">True when the chat widget is locked to an Agent Host session.</source>
@@ -19808,29 +19921,14 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/electron-browser/agentSessions/agentSessionsActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentsParallelWork.gotIt">
-      <source xml:lang="en">{0} Got it!</source>
-    </trans-unit>
-    <trans-unit id="agentsParallelWork.gotItAriaLabel">
-      <source xml:lang="en">Got it!</source>
-    </trans-unit>
     <trans-unit id="agentsParallelWork.ignore">
       <source xml:lang="en">Ignore</source>
     </trans-unit>
     <trans-unit id="agentsParallelWork.ignoreTooltip">
       <source xml:lang="en">Don't Show Again</source>
     </trans-unit>
-    <trans-unit id="agentsParallelWork.learnMore">
-      <source xml:lang="en">Learn More</source>
-    </trans-unit>
     <trans-unit id="agentsParallelWork.open">
       <source xml:lang="en">Open Agents Window</source>
-    </trans-unit>
-    <trans-unit id="agentsParallelWork.unhelpful">
-      <source xml:lang="en">Not Helpful</source>
-    </trans-unit>
-    <trans-unit id="agentsParallelWork.unhelpfulTooltip">
-      <source xml:lang="en">Not Helpful</source>
     </trans-unit>
     <trans-unit id="agentsWindow.agentModeDisabled">
       <source xml:lang="en">The Agents window is unavailable because agent mode is disabled.</source>
@@ -19864,12 +19962,6 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="chat.agentsHandoff.tip.mute">
       <source xml:lang="en">Don't Show Again</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsParallelWorkBanner.copilotHarnessDescription">
-      <source xml:lang="en">This new implementation unlocks exciting new capabilities, while previous agent harnesses remain available. If anything seems off, [let us know]({0}).</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsParallelWorkBanner.copilotHarnessTitle">
-      <source xml:lang="en">You're using a new Copilot experience</source>
     </trans-unit>
     <trans-unit id="chat.agentsParallelWorkBanner.defaultDescription">
       <source xml:lang="en">Run multiple tasks in the Agents Window, in one workspace or across projects.</source>
