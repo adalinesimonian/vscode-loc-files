@@ -155,11 +155,20 @@
     <trans-unit id="agentHostSessionConfig.filter">
       <source xml:lang="en">Filter options...</source>
     </trans-unit>
+    <trans-unit id="agentHostSessionConfig.isolation.branch">
+      <source xml:lang="en">Branch</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.isolation.branchDescription">
+      <source xml:lang="en">Works in the repository already on your machine</source>
+    </trans-unit>
     <trans-unit id="agentHostSessionConfig.isolation.devContainerDisabled">
       <source xml:lang="en">New Worktree cannot be combined with Dev Container execution.</source>
     </trans-unit>
     <trans-unit id="agentHostSessionConfig.isolation.worktree">
       <source xml:lang="en">New Worktree</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.isolation.worktreeDescription">
+      <source xml:lang="en">Creates a separate copy for this session</source>
     </trans-unit>
     <trans-unit id="agentHostSessionConfig.itemAriaLabelWithBadge">
       <source xml:lang="en">{0}, {1}</source>
@@ -361,6 +370,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/baseAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.sessionConfigUnavailable">
+      <source xml:lang="en">Could not resolve the Agent Host session configuration. Please try again.</source>
+    </trans-unit>
     <trans-unit id="chatArchiveUnavailable">
       <source xml:lang="en">Archiving this chat is unavailable.</source>
     </trans-unit>

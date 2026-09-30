@@ -150,6 +150,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/sessionsActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="arrangeSessions">
+      <source xml:lang="en">Arrange Sessions in a Balanced Grid</source>
+    </trans-unit>
     <trans-unit id="chatCompositeBar.addChat">
       <source xml:lang="en">New Chat in This Session</source>
     </trans-unit>
@@ -222,8 +225,23 @@
     <trans-unit id="focusPreviousChatGroup">
       <source xml:lang="en">Focus Previous Chat Group</source>
     </trans-unit>
+    <trans-unit id="focusSessionAbove">
+      <source xml:lang="en">Focus Session Above</source>
+    </trans-unit>
+    <trans-unit id="focusSessionBelow">
+      <source xml:lang="en">Focus Session Below</source>
+    </trans-unit>
     <trans-unit id="focusSessionInGrid">
       <source xml:lang="en">Focus Session {0} in Grid</source>
+    </trans-unit>
+    <trans-unit id="focusSessionLeft">
+      <source xml:lang="en">Focus Session to the Left</source>
+    </trans-unit>
+    <trans-unit id="focusSessionRight">
+      <source xml:lang="en">Focus Session to the Right</source>
+    </trans-unit>
+    <trans-unit id="heightenSession">
+      <source xml:lang="en">Increase Session Height</source>
     </trans-unit>
     <trans-unit id="miSessionsBack">
       <source xml:lang="en">&amp;&amp;Back</source>
@@ -238,6 +256,21 @@
     </trans-unit>
     <trans-unit id="moveChatToPreviousGroup">
       <source xml:lang="en">Move Chat to Previous Group</source>
+    </trans-unit>
+    <trans-unit id="moveSessionDown">
+      <source xml:lang="en">Move Session Below</source>
+    </trans-unit>
+    <trans-unit id="moveSessionLeft">
+      <source xml:lang="en">Move Session Left</source>
+    </trans-unit>
+    <trans-unit id="moveSessionRight">
+      <source xml:lang="en">Move Session Right</source>
+    </trans-unit>
+    <trans-unit id="moveSessionUp">
+      <source xml:lang="en">Move Session Above</source>
+    </trans-unit>
+    <trans-unit id="narrowSession">
+      <source xml:lang="en">Decrease Session Width</source>
     </trans-unit>
     <trans-unit id="navigateNextChat">
       <source xml:lang="en">Go to Next Chat</source>
@@ -302,6 +335,9 @@
     <trans-unit id="searchSessions">
       <source xml:lang="en">Search sessions by name or folder</source>
     </trans-unit>
+    <trans-unit id="sessionGridLayout">
+      <source xml:lang="en">Session Layout</source>
+    </trans-unit>
     <trans-unit id="sessionsGoBack">
       <source xml:lang="en">Go Back</source>
     </trans-unit>
@@ -319,6 +355,9 @@
     </trans-unit>
     <trans-unit id="sessionsPickerUnread">
       <source xml:lang="en">unread</source>
+    </trans-unit>
+    <trans-unit id="shortenSession">
+      <source xml:lang="en">Decrease Session Height</source>
     </trans-unit>
     <trans-unit id="showChatsPicker">
       <source xml:lang="en">Go to Chat in Session</source>
@@ -340,6 +379,9 @@
     </trans-unit>
     <trans-unit id="untitledChat">
       <source xml:lang="en">Untitled Chat</source>
+    </trans-unit>
+    <trans-unit id="widenSession">
+      <source xml:lang="en">Increase Session Width</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/sessionsTitleBarWidget" source-language="en" datatype="plaintext"><body>
@@ -1406,6 +1448,21 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     </trans-unit>
     <trans-unit id="newSessionInGroup">
       <source xml:lang="en">New Session</source>
+    </trans-unit>
+    <trans-unit id="openInGrid">
+      <source xml:lang="en">Open in Grid</source>
+    </trans-unit>
+    <trans-unit id="openSessionAbove">
+      <source xml:lang="en">Above Active Session</source>
+    </trans-unit>
+    <trans-unit id="openSessionBelow">
+      <source xml:lang="en">Below Active Session</source>
+    </trans-unit>
+    <trans-unit id="openSessionLeft">
+      <source xml:lang="en">Left of Active Session</source>
+    </trans-unit>
+    <trans-unit id="openSessionRight">
+      <source xml:lang="en">Right of Active Session</source>
     </trans-unit>
     <trans-unit id="openToTheSide">
       <source xml:lang="en">Open to the Side</source>

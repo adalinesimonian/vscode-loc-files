@@ -4780,6 +4780,14 @@ If {1} did not launch, try again below.</source>
     <trans-unit id="modernUIEditorTabStyle.pill">
       <source xml:lang="en">Show editor tabs as separate rounded pills.</source>
     </trans-unit>
+    <trans-unit id="modernUIFrostedGlass">
+      <source xml:lang="en">Adds a softly blurred background to menus, the Command Palette, and other pop-ups. Available in the Agents window and in editor windows with {0} enabled. Always respects reduced transparency in your operating system's accessibility settings, as well as {1}. Uses solid backgrounds in high contrast themes or when the effect isn't supported. Turn this off if you notice display or performance issues. Your operating system's own menus and dialogs are unchanged.</source>
+      <note>{0} and {1} are placeholders for setting identifiers.</note>
+    </trans-unit>
+    <trans-unit id="modernUIFrostedGlassOpacity">
+      <source xml:lang="en">Controls how see-through frosted glass backgrounds are, from 50% to 100%. Lower values reveal more of the blurred content behind them; higher values make the background more solid. Text and controls stay unchanged. Requires {0} and does not override reduced transparency settings in your operating system or VS Code.</source>
+      <note>{0} is a placeholder for a setting identifier.</note>
+    </trans-unit>
     <trans-unit id="modernUIUppercaseViewHeaders">
       <source xml:lang="en">Controls whether view headers, side bar titles, and panel tabs use uppercase text when {0} is enabled.</source>
       <note>{0} is a placeholder for a setting identifier.</note>
@@ -5405,6 +5413,163 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="zenModeConfigurationTitle">
       <source xml:lang="en">Zen Mode</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/common/agentsColors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="activeSessionView.background">
+      <source xml:lang="en">Background color of an active session view in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="activeSessionView.foreground">
+      <source xml:lang="en">Foreground color of an active session view in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentFeedbackEditorWidget.background">
+      <source xml:lang="en">Background color of the agent feedback widget shown in the editor.</source>
+    </trans-unit>
+    <trans-unit id="agentFeedbackEditorWidget.border">
+      <source xml:lang="en">Border color of the agent feedback widget shown in the editor.</source>
+    </trans-unit>
+    <trans-unit id="agentFeedbackInputWidget.border">
+      <source xml:lang="en">Border color of the agent feedback input widget shown in the editor.</source>
+    </trans-unit>
+    <trans-unit id="agents.background">
+      <source xml:lang="en">Background color of the agent sessions window shell and gradient base.</source>
+    </trans-unit>
+    <trans-unit id="agentsBadge.background">
+      <source xml:lang="en">Background color of badges in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsBadge.foreground">
+      <source xml:lang="en">Foreground color of badges in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsBottomPanel.border">
+      <source xml:lang="en">Border color of the bottom panel in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsCard.border">
+      <source xml:lang="en">Border color of the floating content card (sessions grid and custom view grid) in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsChatInput.background">
+      <source xml:lang="en">Background color of the chat input field in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsChatInput.border">
+      <source xml:lang="en">Border color of the chat input field in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsChatInput.focusBorder">
+      <source xml:lang="en">Border color of the chat input field when focused in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsChatInput.foreground">
+      <source xml:lang="en">Foreground color of the chat input field in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsChatInput.placeholderForeground">
+      <source xml:lang="en">Placeholder text color in the chat input field in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsDetail.background">
+      <source xml:lang="en">Background color of the docked details pane in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsGradient.tintColor">
+      <source xml:lang="en">Tint color used in the background gradient of the agent sessions window shell.</source>
+    </trans-unit>
+    <trans-unit id="agentsNewSessionButton.background">
+      <source xml:lang="en">Background color of the New Session button in the agent sessions sidebar.</source>
+    </trans-unit>
+    <trans-unit id="agentsNewSessionButton.border">
+      <source xml:lang="en">Border color of the New Session button in the agent sessions sidebar.</source>
+    </trans-unit>
+    <trans-unit id="agentsNewSessionButton.foreground">
+      <source xml:lang="en">Foreground color of the New Session button in the agent sessions sidebar.</source>
+    </trans-unit>
+    <trans-unit id="agentsNewSessionButton.hoverBackground">
+      <source xml:lang="en">Background color of the New Session button when hovered in the agent sessions sidebar.</source>
+    </trans-unit>
+    <trans-unit id="agentsPanel.background">
+      <source xml:lang="en">Background color of the card panels (chat, files, terminal) in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsPanel.border">
+      <source xml:lang="en">Border color of the card panels (chat, files, terminal) in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsPanel.foreground">
+      <source xml:lang="en">Foreground color of the card panels (chat, files, terminal) in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsUnreadBadge.background">
+      <source xml:lang="en">Background color of the unread sessions count badge on the sidebar toggle.</source>
+    </trans-unit>
+    <trans-unit id="agentsUnreadBadge.foreground">
+      <source xml:lang="en">Foreground color of the unread sessions count badge on the sidebar toggle.</source>
+    </trans-unit>
+    <trans-unit id="agentsUpdateButton.downloadedBackground">
+      <source xml:lang="en">Background color of the update button when download is complete in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsUpdateButton.downloadingBackground">
+      <source xml:lang="en">Background color of the update button to show download progress in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="inactiveSessionView.background">
+      <source xml:lang="en">Background color of an inactive session view in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="inactiveSessionView.foreground">
+      <source xml:lang="en">Foreground color of an inactive session view in the agent sessions window.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/common/agentsSizes" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agents.fontSize.body1">
+      <source xml:lang="en">Primary body font size for the agents window.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.body1.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.body1` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.body2">
+      <source xml:lang="en">Secondary body font size for the agents window.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.body2.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.body2` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.heading1">
+      <source xml:lang="en">Heading 1 font size for the agents window (welcome screen title).</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.heading1.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.heading1` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.heading2">
+      <source xml:lang="en">Heading 2 font size for the agents window (title).</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.heading2.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.heading2` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.heading3">
+      <source xml:lang="en">Heading 3 font size for the agents window (subtitle).</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.heading3.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.heading3` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.label1">
+      <source xml:lang="en">Label 1 font size for the agents window (section title, tabs).</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.label1.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.label1` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.label2">
+      <source xml:lang="en">Label 2 font size for the agents window (metadata).</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.label2.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.label2` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.label3">
+      <source xml:lang="en">Label 3 font size for the agents window (badge).</source>
+    </trans-unit>
+    <trans-unit id="agents.fontSize.label3.deprecated">
+      <source xml:lang="en">Deprecated: use `fontSize.label3` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontWeight.regular">
+      <source xml:lang="en">Regular font weight (400) for the agents window.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontWeight.regular.deprecated">
+      <source xml:lang="en">Deprecated: use `fontWeight.regular` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontWeight.semiBold">
+      <source xml:lang="en">SemiBold font weight (600) for the agents window.</source>
+    </trans-unit>
+    <trans-unit id="agents.fontWeight.semiBold.deprecated">
+      <source xml:lang="en">Deprecated: use `fontWeight.semiBold` instead.</source>
+    </trans-unit>
+    <trans-unit id="agents.layout.floatingPanelGap">
+      <source xml:lang="en">Gap between floating panels in the Agents window.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/common/configuration" source-language="en" datatype="plaintext"><body>
