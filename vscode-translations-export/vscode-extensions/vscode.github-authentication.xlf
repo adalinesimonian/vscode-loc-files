@@ -4,8 +4,8 @@
     <trans-unit id="++CODE++120ec0ffa190a8e7759483f35d54a335e265693733bd681f5edf54448861ffcf">
       <source xml:lang="en">A reload is required for the fetch setting change to take effect.</source>
     </trans-unit>
-    <trans-unit id="++CODE++bd3012fa327dcffbaba6432a03d6e7df3e791e32cfb9cef37913bec31e68a66e">
-      <source xml:lang="en">Configure github-enterprise.uri before signing in to GitHub Enterprise.</source>
+    <trans-unit id="++CODE++84ac74915f3ca0aa4d4994268f3578c5fecf85d2aea35059171d528392d311bb">
+      <source xml:lang="en">Configure {0} before signing in to GitHub Enterprise.</source>
     </trans-unit>
     <trans-unit id="++CODE++401c9d5938a3808b7f0f056710e8fea7bcceaca69b428cd9247eadda3b40be6b">
       <source xml:lang="en">Continue to GitHub</source>
@@ -34,8 +34,8 @@
     <trans-unit id="++CODE++87fb8c7a5a4e4a2001d3556350d50560cd5f0d6423f0c780e0b447f0aefb0583">
       <source xml:lang="en">GitHub Authentication - Reload required</source>
     </trans-unit>
-    <trans-unit id="++CODE++ec19f01de52b36689edfccd0fc86e8521bab59d83a3d611b35882f044d54d833">
-      <source xml:lang="en">GitHub Enterprise Server URI is not a valid URI: {0}</source>
+    <trans-unit id="++CODE++c8906ab6713a9d22084d974a0d2f91a983b4d4a844bf6889373b744f942aef52">
+      <source xml:lang="en">GitHub Enterprise URIs must be an array of instance URLs.</source>
     </trans-unit>
     <trans-unit id="++CODE++d6bd67ed66b5863983aaaf606ba312e82fa0683cc027d478d8191a6542ac05e1">
       <source xml:lang="en">GitHub did not accept your Microsoft account for sign in.</source>
@@ -52,6 +52,9 @@
     <trans-unit id="++CODE++2c1355b1b52e1bb108a7d638522f74ca3b7fe8aebbae36fda7902ccbdbe9e335">
       <source xml:lang="en">Having trouble logging in? Would you like to try a different way? ({0})</source>
     </trans-unit>
+    <trans-unit id="++CODE++6bf61ae2c24ed08d2e0089270e0459ee8653e1b57e0d93c0a75169c9aa861a82">
+      <source xml:lang="en">Invalid GitHub Enterprise instance URI: {0}</source>
+    </trans-unit>
     <trans-unit id="++CODE++cdc2b28354c2406e11ea7a47c8256cd6b26f363efdd1768d66ee47961393506d">
       <source xml:lang="en">Multiple saved authentication stores match {0}. Set {1} to the previously used URI before migrating its saved sign-in.</source>
     </trans-unit>
@@ -66,8 +69,17 @@
     <trans-unit id="++CODE++423e44de44431caef68c0c61968777e088fd50d2577feea60b9ba4a14b28a827">
       <source xml:lang="en">Reload Window</source>
     </trans-unit>
+    <trans-unit id="++CODE++8d2da4149bfd8ddf03581deaaa061b16c27a4a94a21dc75530ce00e8d29a8a5b">
+      <source xml:lang="en">Saved authentication for {0} does not identify its URL scheme. Set {1} to the original instance before migrating its saved sign-in.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++cb9e2ed44c8eed283a6b936e53759e90273c87282543c59a62a9676df61deb91">
+      <source xml:lang="en">Select the GitHub Enterprise instance to sign in to</source>
+    </trans-unit>
     <trans-unit id="++CODE++c7bd7105f7c2bf98654930d6271e164cb935b377cf2d167bdb4fe8fff95d9336">
       <source xml:lang="en">Sign in failed: {0}</source>
+    </trans-unit>
+    <trans-unit id="++CODE++d3f1cb086e430a4403e5b6a210fd8a215fbc4e53086e7a90bd27c6753f37d0a7">
+      <source xml:lang="en">Sign in to GitHub Enterprise</source>
     </trans-unit>
     <trans-unit id="++CODE++73e984e9b4809573e6fde6f4e40d79d0c982e26b46accba7aafdf6138b6e019d">
       <source xml:lang="en">Sign in with SSO</source>
@@ -81,6 +93,21 @@
     <trans-unit id="++CODE++483548c44e4bd1ccd117f8087f641c1a392885d1378106b2a20e63cd2f23a4d2">
       <source xml:lang="en">Signing in to {0}...</source>
       <note>The {0} will be a url, e.g. github.com</note>
+    </trans-unit>
+    <trans-unit id="++CODE++a91398a0351bc9451b892151515eb9f59c3dce280b147f7be0a2996b27c313fa">
+      <source xml:lang="en">The GitHub Enterprise account and authorization server belong to different instances.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++a38526ce313a31e12ed6407f6ec0c40ae049757704022861567f2d691506b81a">
+      <source xml:lang="en">The GitHub Enterprise session ID matches more than one configured instance.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++787f1cbed55b645ac246b71ae2a4303ed07bce142169f8bb9a7375a87131edac">
+      <source xml:lang="en">The GitHub Enterprise session does not belong to a configured instance.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++01b9d11f7c10bcc2c40c86eed1964fe1f59fec7e0cd2c51c0906da80ad8f6925">
+      <source xml:lang="en">The GitHub session does not belong to the requested authorization server.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++ab3adf801d49b086fa0c418ba10ad7a0186646c360275b9a152e662274b24f5a">
+      <source xml:lang="en">The requested GitHub Enterprise authorization server is not configured.</source>
     </trans-unit>
     <trans-unit id="++CODE++68893d6c1ded4fdbc32c12d8d2327c764f31442f68308a90b0ad193c9246be80">
       <source xml:lang="en">The selected GitHub Enterprise instance is no longer configured.</source>
@@ -138,6 +165,12 @@
     </trans-unit>
     <trans-unit id="config.github-enterprise.uri.description">
       <source xml:lang="en">The URI for your GHE.com or GitHub Enterprise Server instance.&#10;&#10;Examples:&#10;* GHE.com: `https://octocat.ghe.com`&#10;* GitHub Enterprise Server: `https://github.octocat.com`&#10;&#10;&gt; **Note:** This should _not_ be set to a GitHub.com URI. If your account exists on GitHub.com or is a GitHub Enterprise Managed User, you do not need any additional configuration and can simply log in to GitHub.</source>
+    </trans-unit>
+    <trans-unit id="config.github-enterprise.uris.description">
+      <source xml:lang="en">The URIs of your GHE.com or GitHub Enterprise Server instances, such as `https://octocat.ghe.com` or `https://github.octocat.com`. Order does not select a default instance. When signing in, choose an instance if more than one is configured.&#10;&#10;This setting takes precedence over `#github-enterprise.uri#`. An explicitly configured empty array disables enterprise instances, even if the deprecated setting is set.&#10;&#10;GitHub.com accounts do not need this setting and use the GitHub authentication provider.</source>
+    </trans-unit>
+    <trans-unit id="config.github-enterprise.uri.deprecation">
+      <source xml:lang="en">Use `#github-enterprise.uris#` instead. This setting is used only when that setting is not configured.</source>
     </trans-unit>
     <trans-unit id="config.github-authentication.preferDeviceCodeFlow.description">
       <source xml:lang="en">When true, prioritize the device code flow for authentication instead of other available flows. This is useful for environments like WSL where the local server or URL handler flows may not work as expected.</source>

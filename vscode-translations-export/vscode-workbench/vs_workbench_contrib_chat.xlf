@@ -224,7 +224,7 @@
       <source xml:lang="en">In the tabbed model picker, Org default identifies the model your organization sets for new chats. It remains on that model when you choose another model for this chat; the checkmark identifies your current selection. The Auto section carries the same label when Auto is the organization default.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.optimizeFor">
-      <source xml:lang="en">In Auto mode, use Up and Down Arrow to focus an "Optimize for" preference: Efficiency, Balance, or Intelligence. Enter or Space applies the preference and keeps the picker open. HydraFusion, when available, is an alternative routing choice, not an additional toggle. Focus HydraFusion and press Right Arrow to open its description and focus Learn more. Selecting it clears the active Auto tier; selecting a tier returns to Auto. Turning Auto off preserves the preference and routing choice. Auto has no separate details page: both the Auto name and preference readout in the chat input open these routing choices.</source>
+      <source xml:lang="en">In Auto mode, use Up and Down Arrow to focus an "Optimize for" preference: Efficiency, Balance, or Intelligence. Enter or Space applies the preference and keeps the picker open. HydraFusion, when available, is an alternative routing choice, not an additional toggle. Focus HydraFusion and press Tab to reach Learn more. Selecting it clears the active Auto tier; selecting a tier returns to Auto. Turning Auto off preserves the preference and routing choice. Auto has no separate details page: both the Auto name and preference readout in the chat input open these routing choices.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.pricingDetails">
       <source xml:lang="en">Pricing Details expands in place without moving the model's controls. Expansion and collapse are immediate when reduced motion is enabled. If the details exceed the available space, use Page Up or Page Down while the model details have focus to scroll.</source>
@@ -2059,15 +2059,15 @@ To migrate this server, wait for MCP discovery to finish, then refresh this view
     </trans-unit>
     <trans-unit id="mcpCompatibilityDevelopmentModeIgnored">
       <source xml:lang="en">MCP development mode is not supported by the Copilot harness.
-To migrate this server, remove the development mode setting and restart the server manually after configuration changes.</source>
+Migration can remove dev after you confirm the loss of development-mode auto-start, file-watch restarts, debugging, and logging.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityEnvironmentFileIgnored">
       <source xml:lang="en">Environment files are not supported by the Copilot harness.
 To migrate this server, move required variables from the environment file into the server env configuration.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityGalleryMetadataNotPortable">
-      <source xml:lang="en">Gallery metadata cannot be migrated to the destination MCP configuration.
-To migrate this server, remove the gallery property.</source>
+      <source xml:lang="en">Gallery metadata is not supported in the destination MCP configuration.
+Migration can remove the gallery property. After migration, this MCP server will not receive automatic updates from the registry.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityLaunchNotRepresentable">
       <source xml:lang="en">The launch configuration for this server is not supported by the Copilot harness.
@@ -2083,11 +2083,11 @@ To migrate this server, replace them with concrete values or environment variabl
     </trans-unit>
     <trans-unit id="mcpCompatibilitySandboxConfigurationIgnored">
       <source xml:lang="en">Per-server sandbox settings are not supported by the Copilot harness.
-To migrate this server, remove the server sandbox setting.</source>
+Migration can remove sandboxEnabled after you confirm that VS Code's per-server sandbox restrictions will no longer be applied.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityServerVersionNotPortable">
-      <source xml:lang="en">Server version metadata cannot be migrated to the destination MCP configuration.
-To migrate this server, remove the version property.</source>
+      <source xml:lang="en">Server version metadata is not supported in the destination MCP configuration.
+Migration can remove the version property after you confirm the loss of version metadata. Version pins in the command, arguments, or URL will not change.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilitySourceUnknown">
       <source xml:lang="en">Compatibility cannot be determined because the server configuration source is unknown.
@@ -3390,6 +3390,12 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.accessibleSource">
       <source xml:lang="en">Source: {0}</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.addCustomization">
+      <source xml:lang="en">Add Customization {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.addCustomizationLabel">
+      <source xml:lang="en">Add a customization</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.addMcp">
       <source xml:lang="en">Add MCP Server</source>
     </trans-unit>
@@ -3537,12 +3543,6 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.hook">
       <source xml:lang="en">Hook</source>
-    </trans-unit>
-    <trans-unit id="customizationDiscovery.import">
-      <source xml:lang="en">Import</source>
-    </trans-unit>
-    <trans-unit id="customizationDiscovery.importLabel">
-      <source xml:lang="en">Import a customization</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.install">
       <source xml:lang="en">Install</source>
@@ -4369,6 +4369,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationMigrationItemAriaLabel">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
+    <trans-unit id="customizationMigrationItemWithChangesAriaLabel">
+      <source xml:lang="en">{0}, {1}. {2}</source>
+    </trans-unit>
     <trans-unit id="customizationMigrationLoadError">
       <source xml:lang="en">Customizations could not be loaded</source>
     </trans-unit>
@@ -4524,6 +4527,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="migrationAccessibleCandidate">
       <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="migrationAccessibleCandidateWithChanges">
+      <source xml:lang="en">{0}: {1}. {2}</source>
     </trans-unit>
     <trans-unit id="migrationAccessibleCategory">
       <source xml:lang="en">{0}: {1}. {2}{3}</source>
@@ -5171,9 +5177,6 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationMarketplace.pluginUnavailable">
       <source xml:lang="en">This plugin is no longer available from a configured marketplace. Refresh Discover and try again.</source>
     </trans-unit>
-    <trans-unit id="customizationMarketplace.pluginUninstallUnavailable">
-      <source xml:lang="en">This plugin cannot be uninstalled from the customization marketplace.</source>
-    </trans-unit>
     <trans-unit id="customizationMarketplace.pluginWebUnsupported">
       <source xml:lang="en">Installing configured marketplace plugins is not available in VS Code for the Web.</source>
     </trans-unit>
@@ -5334,6 +5337,9 @@ Destination: {2}</source>
     <trans-unit id="migrationHelpMcpDetails">
       <source xml:lang="en">Open an MCP server that cannot be migrated to review its details. Edit Configuration opens the source file and selects that server's JSON configuration.</source>
     </trans-unit>
+    <trans-unit id="migrationHelpMcpSections">
+      <source xml:lang="en">MCP servers are grouped into Ready to migrate, Migrates with changes, and Not migratable. Servers that migrate with changes explain each property removal in their row. Each migratable section has its own Select all checkbox. Review the row warnings before confirming migration.</source>
+    </trans-unit>
     <trans-unit id="migrationHelpNavigation">
       <source xml:lang="en">Use Tab and Shift+Tab to move between controls. Review opens the existing migration page filtered to that location. No files change until you confirm migration.</source>
     </trans-unit>
@@ -5492,6 +5498,9 @@ Destination: {2}</source>
     <trans-unit id="mcpMigrationCardLabel">
       <source xml:lang="en">Migrate MCP Servers</source>
     </trans-unit>
+    <trans-unit id="mcpMigrationChangesGroup">
+      <source xml:lang="en">Migrates with changes</source>
+    </trans-unit>
     <trans-unit id="mcpMigrationCompletedMultiple">
       <source xml:lang="en">Migrated {0} MCP servers.</source>
     </trans-unit>
@@ -5528,8 +5537,8 @@ Destination: {2}</source>
     <trans-unit id="mcpMigrationInvalidTarget">
       <source xml:lang="en">Could not migrate '{0}' because the destination MCP configuration is invalid.</source>
     </trans-unit>
-    <trans-unit id="mcpMigrationItemPath">
-      <source xml:lang="en">{0} to {1}</source>
+    <trans-unit id="mcpMigrationItemScopedPath">
+      <source xml:lang="en">{0}: {1} to {2}</source>
     </trans-unit>
     <trans-unit id="mcpMigrationLearnMore">
       <source xml:lang="en">Learn more about MCP servers</source>
@@ -5560,6 +5569,27 @@ Disabled user servers may become enabled.</source>
     <trans-unit id="mcpMigrationPageTitle">
       <source xml:lang="en">Migrate MCP Servers</source>
     </trans-unit>
+    <trans-unit id="mcpMigrationReadyGroup">
+      <source xml:lang="en">Ready to migrate</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationRemoveDev">
+      <source xml:lang="en">The 'dev' property will be removed. VS Code will no longer auto-start this server in development mode, restart it when watched files change, attach a debugger, or enable development-mode logging.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationRemoveDisabledGallery">
+      <source xml:lang="en">The 'gallery' property will be removed. Automatic updates from the registry are already disabled for this MCP server.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationRemoveDisabledSandbox">
+      <source xml:lang="en">The 'sandboxEnabled' property will be removed. VS Code sandboxing is already disabled for this server. Any sandboxing after migration is controlled by {0}.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationRemoveGallery">
+      <source xml:lang="en">The 'gallery' property will be removed. This MCP server will no longer be automatically updated from the registry.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationRemoveSandbox">
+      <source xml:lang="en">The 'sandboxEnabled' property will be removed. VS Code's per-server sandbox and its filesystem and network restrictions will no longer be applied to this server. Any sandboxing after migration is controlled by {0}.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationRemoveVersion">
+      <source xml:lang="en">The 'version' property will be removed. The migrated configuration will no longer record version metadata. Version pins in the command, arguments, or URL will not change.</source>
+    </trans-unit>
     <trans-unit id="mcpMigrationRollbackFailed">
       <source xml:lang="en">Could not safely complete or roll back the migration for '{0}'. Review both MCP configuration files.</source>
     </trans-unit>
@@ -5568,6 +5598,9 @@ Disabled user servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationSelectAriaLabel">
       <source xml:lang="en">Select {0} from {1}</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationSelectWithChangesAriaLabel">
+      <source xml:lang="en">Select {0} from {1}. {2}</source>
     </trans-unit>
     <trans-unit id="mcpMigrationShortcutAriaLabelSingle">
       <source xml:lang="en">MCP servers, 1 server can be migrated</source>
@@ -5606,10 +5639,10 @@ Disabled servers may become enabled.</source>
     <trans-unit id="mcpMigrationUserConfirmMessageSingle">
       <source xml:lang="en">Migrate 1 MCP server?</source>
     </trans-unit>
-    <trans-unit id="mcpMigrationUserGroup">
+    <trans-unit id="mcpMigrationUserScope">
       <source xml:lang="en">User</source>
     </trans-unit>
-    <trans-unit id="mcpMigrationWorkspaceGroup">
+    <trans-unit id="mcpMigrationWorkspaceScope">
       <source xml:lang="en">Workspace</source>
     </trans-unit>
     <trans-unit id="promptMigrationBannerMessage">
@@ -6214,9 +6247,6 @@ Disabled servers may become enabled.</source>
     <trans-unit id="marketplaceDetail.availableState">
       <source xml:lang="en">Available to install</source>
     </trans-unit>
-    <trans-unit id="marketplaceDetail.capabilities">
-      <source xml:lang="en">Capabilities</source>
-    </trans-unit>
     <trans-unit id="marketplaceDetail.checkingState">
       <source xml:lang="en">Checking installation</source>
     </trans-unit>
@@ -6247,6 +6277,12 @@ Disabled servers may become enabled.</source>
     <trans-unit id="marketplaceDetail.installingState">
       <source xml:lang="en">Installation in progress</source>
     </trans-unit>
+    <trans-unit id="marketplaceDetail.location">
+      <source xml:lang="en">Location</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.locationAccessible">
+      <source xml:lang="en">Location: {0}</source>
+    </trans-unit>
     <trans-unit id="marketplaceDetail.mcp">
       <source xml:lang="en">MCP server</source>
     </trans-unit>
@@ -6256,14 +6292,15 @@ Disabled servers may become enabled.</source>
     <trans-unit id="marketplaceDetail.noDescription">
       <source xml:lang="en">No description provided.</source>
     </trans-unit>
-    <trans-unit id="marketplaceDetail.openRepository">
-      <source xml:lang="en">Open Repository</source>
-    </trans-unit>
-    <trans-unit id="marketplaceDetail.openResource">
-      <source xml:lang="en">Open Resource</source>
-    </trans-unit>
     <trans-unit id="marketplaceDetail.plugin">
       <source xml:lang="en">Plugin</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.pluginReadme">
+      <source xml:lang="en">Plugin README</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.pluginReadmeAccessible">
+      <source xml:lang="en">Plugin README:
+{0}</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.publisher">
       <source xml:lang="en">Publisher</source>
@@ -6272,10 +6309,25 @@ Disabled servers may become enabled.</source>
       <source xml:lang="en">Publisher: {0}</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.queries">
-      <source xml:lang="en">Representative queries</source>
+      <source xml:lang="en">Try this</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.readmeEmpty">
+      <source xml:lang="en">The plugin README is empty.</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.readmeLoadError">
+      <source xml:lang="en">The plugin README could not be loaded.</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.readmeLoading">
+      <source xml:lang="en">Loading plugin README...</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.repairingState">
       <source xml:lang="en">Repair in progress</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.repository">
+      <source xml:lang="en">Repository</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.repositoryAccessible">
+      <source xml:lang="en">Repository: {0}</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.skill">
       <source xml:lang="en">Skill</source>
@@ -6283,17 +6335,20 @@ Disabled servers may become enabled.</source>
     <trans-unit id="marketplaceDetail.source">
       <source xml:lang="en">Source</source>
     </trans-unit>
-    <trans-unit id="marketplaceDetail.stars">
-      <source xml:lang="en">Stars</source>
-    </trans-unit>
-    <trans-unit id="marketplaceDetail.starsAccessible">
-      <source xml:lang="en">Stars: {0}</source>
+    <trans-unit id="marketplaceDetail.sourceAccessible">
+      <source xml:lang="en">Source: {0}</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.tags">
       <source xml:lang="en">Tags</source>
     </trans-unit>
+    <trans-unit id="marketplaceDetail.tryThis">
+      <source xml:lang="en">Try this</source>
+    </trans-unit>
     <trans-unit id="marketplaceDetail.type">
       <source xml:lang="en">Type</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.typeAccessible">
+      <source xml:lang="en">Type: {0}</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.unavailableState">
       <source xml:lang="en">Unavailable: {0}</source>
@@ -7720,26 +7775,8 @@ This setting is only used by the Local agent harness.</source>
     <trans-unit id="chat.customizations.copilotConnectors.enabled">
       <source xml:lang="en">Enables Copilot connectors in the unified marketplace and exposes connected connector MCP servers in Chat Customizations and Copilot agent sessions.</source>
     </trans-unit>
-    <trans-unit id="chat.customizations.locationsMigration.enabled">
-      <source xml:lang="en">Controls whether the Chat Customizations editor offers to move agents, instructions, and skills from configured locations that are not supported by the active agent-host harness. When disabled, the migration card and sidebar shortcut are hidden.</source>
-    </trans-unit>
-    <trans-unit id="chat.customizations.mcpServerMigration.enabled">
-      <source xml:lang="en">Controls whether VS Code shows MCP server migration actions, hints, compatibility badges, and compatibility details. Migration moves eligible workspace MCP servers out of .vscode/mcp.json and into a .mcp.json file at the workspace root, where the active agent-host harness discovers them directly.</source>
-    </trans-unit>
-    <trans-unit id="chat.customizations.migrationHint">
-      <source xml:lang="en">Controls whether chat shows information about customizations that are not used by the active Agent Host harness.</source>
-    </trans-unit>
-    <trans-unit id="chat.customizations.migrationHint.always">
-      <source xml:lang="en">Show a customization migration hint for every chat request.</source>
-    </trans-unit>
-    <trans-unit id="chat.customizations.migrationHint.never">
-      <source xml:lang="en">Never show customization migration hints in chat.</source>
-    </trans-unit>
-    <trans-unit id="chat.customizations.migrationHint.once">
-      <source xml:lang="en">Show a customization migration hint once per chat session.</source>
-    </trans-unit>
-    <trans-unit id="chat.customizations.promptMigration.enabled">
-      <source xml:lang="en">Controls whether the Chat Customizations editor offers to convert prompt files into skills for agent-host harnesses, which ignore prompt files. When disabled, the migration card and sidebar shortcut are hidden.</source>
+    <trans-unit id="chat.customizations.migration.enabled">
+      <source xml:lang="en">Controls whether VS Code shows customization migration actions, hints, compatibility badges, and compatibility details for the active Agent Host harness.</source>
     </trans-unit>
     <trans-unit id="chat.customizations.strictPluginOnlyCustomization">
       <source xml:lang="en">Blocks standalone user and workspace skills, agents, hooks, instructions, and MCP servers while keeping eligible plugin customizations available.</source>
@@ -7749,9 +7786,6 @@ This setting is only used by the Local agent harness.</source>
     </trans-unit>
     <trans-unit id="chat.customizations.structuredPreview.enabled">
       <source xml:lang="en">Controls whether the Chat Customizations editor shows a structured preview for markdown customization files (agents, skills, instructions, prompts). When disabled, the editor always opens the raw markdown in the embedded code editor.</source>
-    </trans-unit>
-    <trans-unit id="chat.customizations.userDataMigration.enabled">
-      <source xml:lang="en">Controls whether the Chat Customizations editor offers to move agents and instructions stored in user data to the active agent-host harness, which ignores the user data location. When disabled, the migration card and sidebar shortcut are hidden.</source>
     </trans-unit>
     <trans-unit id="chat.defaultConfiguration.approvals.allowAll">
       <source xml:lang="en">Allow All — runs tool calls without asking.</source>
@@ -11601,7 +11635,7 @@ Examples:
       <source xml:lang="en">i.e. "octocat" or "https://octocat.ghe.com"...</source>
     </trans-unit>
     <trans-unit id="invalidEnterpriseInstance">
-      <source xml:lang="en">You must enter a valid {0} instance (i.e. "octocat" or "https://octocat.ghe.com")</source>
+      <source xml:lang="en">Enter a GHE.com instance name or HTTPS URL.</source>
     </trans-unit>
     <trans-unit id="retry">
       <source xml:lang="en">Retry</source>
@@ -17028,10 +17062,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">Dismiss Hint</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.hydraFusionDescription">
-      <source xml:lang="en">HydraFusion picks a workflow for each task, using one or more models to draft, review, or escalate when needed.</source>
+      <source xml:lang="en">Picks a workflow per task, using one or more models to draft, review, or escalate.</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.hydraFusionDetail">
-      <source xml:lang="en">May use multiple models</source>
+    <trans-unit id="chat.modelPicker.learnMore">
+      <source xml:lang="en">Learn more</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.modelDetails">
       <source xml:lang="en">{0} Details</source>

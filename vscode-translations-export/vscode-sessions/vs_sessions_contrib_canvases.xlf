@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/canvases/common/sessionCanvas" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="canvas.editorDescription">
+      <source xml:lang="en">Closing this tab hides the canvas until the agent opens it again.</source>
+    </trans-unit>
+    <trans-unit id="canvas.editorName">
+      <source xml:lang="en">Canvas</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/canvases/electron-browser/sessionCanvasEditor" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="canvas.closed">
+      <source xml:lang="en">This canvas is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="canvas.content">
+      <source xml:lang="en">Canvas content. Use Accessibility Help for keyboard navigation.</source>
+    </trans-unit>
+    <trans-unit id="canvas.help.close">
+      <source xml:lang="en">Closing the tab hides the canvas until the agent opens that instance again.</source>
+    </trans-unit>
+    <trans-unit id="canvas.help.navigation">
+      <source xml:lang="en">Tab moves through page controls. Use &lt;keybinding:workbench.action.focusNextPart&gt; to leave the page.</source>
+    </trans-unit>
+    <trans-unit id="canvas.help.overview">
+      <source xml:lang="en">This canvas is a private page owned by the active conversation.</source>
+    </trans-unit>
+    <trans-unit id="canvas.loadFailed">
+      <source xml:lang="en">The canvas could not be loaded.</source>
+    </trans-unit>
+    <trans-unit id="canvas.loading">
+      <source xml:lang="en">Loading canvas…</source>
+    </trans-unit>
+    <trans-unit id="canvas.noPage">
+      <source xml:lang="en">No canvas page is currently attached.</source>
+    </trans-unit>
+    <trans-unit id="canvas.noSemantics">
+      <source xml:lang="en">This canvas exposes no named accessible content.</source>
+    </trans-unit>
+    <trans-unit id="canvas.ownerUnavailable">
+      <source xml:lang="en">This canvas is only shown beside its owning conversation.</source>
+    </trans-unit>
+    <trans-unit id="canvas.pageFailed">
+      <source xml:lang="en">The canvas page failed to load.</source>
+    </trans-unit>
+    <trans-unit id="canvas.pageLoading">
+      <source xml:lang="en">Loading canvas page…</source>
+    </trans-unit>
+    <trans-unit id="canvas.reading">
+      <source xml:lang="en">Reading accessible canvas content…</source>
+    </trans-unit>
+    <trans-unit id="canvas.semanticChanged">
+      <source xml:lang="en">The canvas changed. Reopen Accessible View to read its current content.</source>
+    </trans-unit>
+    <trans-unit id="canvas.semanticError">
+      <source xml:lang="en">The canvas accessible content could not be read.</source>
+    </trans-unit>
+    <trans-unit id="canvas.truncated">
+      <source xml:lang="en">The bounded accessible snapshot is incomplete.</source>
+    </trans-unit>
+    <trans-unit id="canvas.unavailable">
+      <source xml:lang="en">The canvas provider is temporarily unavailable.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/canvases/electron-browser/sessionCanvases.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="canvas.editor">
+      <source xml:lang="en">Canvas</source>
+    </trans-unit>
+</body></file>
+</xliff>

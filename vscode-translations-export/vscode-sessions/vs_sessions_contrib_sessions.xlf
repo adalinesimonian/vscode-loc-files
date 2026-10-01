@@ -960,13 +960,10 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">New Automation</source>
     </trans-unit>
     <trans-unit id="noAutomationsDesc">
-      <source xml:lang="en">Create an automation to schedule an agent session to run on a cadence you choose.</source>
+      <source xml:lang="en">Describe what you want to automate, then choose when it runs.</source>
     </trans-unit>
     <trans-unit id="noAutomationsYet">
       <source xml:lang="en">No automations yet</source>
-    </trans-unit>
-    <trans-unit id="quickChat">
-      <source xml:lang="en">No workspace</source>
     </trans-unit>
     <trans-unit id="renameAutomationRunSessionAction">
       <source xml:lang="en">Rename...</source>
@@ -1010,7 +1007,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionStorageCleanupNotice" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionStorageCleanupNotice.announcement">
-      <source xml:lang="en">{0} Run Clean Up Agent Worktrees to review it. To stop these suggestions, run Disable Session Storage Cleanup Suggestions.</source>
+      <source xml:lang="en">{0} Run Open Worktree Cleanup to review it. To stop these suggestions, run Disable Session Storage Cleanup Suggestions.</source>
     </trans-unit>
     <trans-unit id="sessionStorageCleanupNotice.ariaLabel">
       <source xml:lang="en">Session Storage Cleanup Suggestion</source>
@@ -1022,7 +1019,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Dismiss Session Storage Suggestion</source>
     </trans-unit>
     <trans-unit id="sessionStorageCleanupNotice.manage">
-      <source xml:lang="en">Clean Up Agent Worktrees</source>
+      <source xml:lang="en">Open Worktree Cleanup</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsList" source-language="en" datatype="plaintext"><body>
@@ -1068,6 +1065,66 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="ci.fixCITooltip">
       <source xml:lang="en">Fix failing CI checks</source>
     </trans-unit>
+    <trans-unit id="comparisonArchive">
+      <source xml:lang="en">Archive Comparison</source>
+    </trans-unit>
+    <trans-unit id="comparisonArchived">
+      <source xml:lang="en">Comparison archived</source>
+    </trans-unit>
+    <trans-unit id="comparisonAttemptFailed">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="comparisonAttemptNeedsInput">
+      <source xml:lang="en">Input needed</source>
+    </trans-unit>
+    <trans-unit id="comparisonAttemptPending">
+      <source xml:lang="en">Pending</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.attempts">
+      <source xml:lang="en">Comparison · {0} attempts</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.attemptsFinished">
+      <source xml:lang="en">Comparison · {0} attempts finished</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.attemptsNeedInput">
+      <source xml:lang="en">Comparison · {0} attempts need input</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.attemptsWorking">
+      <source xml:lang="en">Comparison · {0} attempts working</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.judgeNeedsInput">
+      <source xml:lang="en">Comparison · Judge needs input</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.oneAttemptNeedsInput">
+      <source xml:lang="en">Comparison · 1 attempt needs input</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.oneAttemptWorking">
+      <source xml:lang="en">Comparison · 1 attempt working</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.reviewFailed">
+      <source xml:lang="en">Comparison · Review failed</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.reviewIncomplete">
+      <source xml:lang="en">Comparison · Review incomplete</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.reviewReady">
+      <source xml:lang="en">Comparison · Review ready</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.reviewing">
+      <source xml:lang="en">Comparison · Reviewing attempts</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.startingAttempts">
+      <source xml:lang="en">Comparison · Starting {0} attempts</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroup.startingAttemptsProgress">
+      <source xml:lang="en">Comparison · Starting attempts · {0} of {1} ready</source>
+    </trans-unit>
+    <trans-unit id="comparisonGroupAria">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="comparisonPartiallyArchived">
+      <source xml:lang="en">Some comparison sessions could not be archived, so the comparison was kept.</source>
+    </trans-unit>
     <trans-unit id="createGroupAction">
       <source xml:lang="en">Create Group</source>
     </trans-unit>
@@ -1101,8 +1158,17 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="moveToGroupAction">
       <source xml:lang="en">Move to Group</source>
     </trans-unit>
+    <trans-unit id="new">
+      <source xml:lang="en">New</source>
+    </trans-unit>
     <trans-unit id="newGroupName">
       <source xml:lang="en">New Group</source>
+    </trans-unit>
+    <trans-unit id="newSessionAria">
+      <source xml:lang="en">New Session ({0})</source>
+    </trans-unit>
+    <trans-unit id="newSessionAriaWithoutKeybinding">
+      <source xml:lang="en">New Session</source>
     </trans-unit>
     <trans-unit id="newSessionForWorkspaceMoreActions">
       <source xml:lang="en">More Actions</source>
@@ -1143,6 +1209,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="renameSession.inputAriaLabel">
       <source xml:lang="en">Rename session. Press Enter to confirm or Escape to cancel.</source>
     </trans-unit>
+    <trans-unit id="retryComparisonJudge">
+      <source xml:lang="en">Retry Judge</source>
+    </trans-unit>
     <trans-unit id="secondsDuration">
       <source xml:lang="en">now</source>
     </trans-unit>
@@ -1154,6 +1223,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="sessionChatItemFolderAria">
       <source xml:lang="en">{0}, chat in folder {1}, updated {2}, {3}</source>
+    </trans-unit>
+    <trans-unit id="sessionChatItemFolderWithoutTimeAria">
+      <source xml:lang="en">{0}, chat in folder {1}, {2}</source>
+    </trans-unit>
+    <trans-unit id="sessionChatItemWithoutTimeAria">
+      <source xml:lang="en">{0}, chat, {1}</source>
     </trans-unit>
     <trans-unit id="sessionGroupName">
       <source xml:lang="en">Group name</source>
@@ -1167,6 +1242,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionItemQuickChatAria">
       <source xml:lang="en">{0}, chat, updated {1}</source>
     </trans-unit>
+    <trans-unit id="sessionItemQuickChatWithoutTimeAria">
+      <source xml:lang="en">{0}, chat</source>
+    </trans-unit>
     <trans-unit id="sessionItemStatusAria">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
@@ -1175,6 +1253,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="sessionItemWorktreePendingAria">
       <source xml:lang="en">{0}, creating worktree, updated {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionItemWorktreePendingWithoutTimeAria">
+      <source xml:lang="en">{0}, creating worktree</source>
     </trans-unit>
     <trans-unit id="sessionPlaceholderAria">
       <source xml:lang="en">{0}. {1}</source>

@@ -105,10 +105,10 @@
       <source xml:lang="en">Use the Untouched For selector to choose how long a session must be inactive to be eligible. Changing it re-measures storage and updates the table and summary.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.overview">
-      <source xml:lang="en">You are in the Clean Up Agent Worktrees editor. It lists agent session worktrees that are inactive and eligible for cleanup so you can reclaim the disk space they use. Cleaning up a session marks it as done and deletes its worktree; you can restore the session later to recreate it.</source>
+      <source xml:lang="en">You are in the Open worktree cleanup editor. It lists agent session worktrees that are inactive and eligible for cleanup so you can reclaim the disk space they use. Cleaning up a session marks it as done and deletes its worktree; you can restore the session later to recreate it.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.reopen">
-      <source xml:lang="en">Return to this editor any time by running Clean Up Agent Worktrees from the Command Palette, the Sessions More Actions menu, or a session's context menu.</source>
+      <source xml:lang="en">Return to this editor any time by running Open Worktree Cleanup from the Command Palette, the Sessions More Actions menu, or a session's context menu.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.summary">
       <source xml:lang="en">A summary line above the table reports how many worktrees are eligible and about how much storage they use. A nearby info button explains why sessions are included or excluded.</source>
@@ -161,13 +161,16 @@
       <source xml:lang="en">Why these sessions can be marked as done</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.heading">
-      <source xml:lang="en">Clean Up Agent Worktrees</source>
+      <source xml:lang="en">Open worktree cleanup</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.intro">
       <source xml:lang="en">Inactive, unpinned sessions older than the selected period can be cleaned up to reclaim the disk space their worktrees use. Cleaning up a session marks it as done and deletes its worktree; you can restore the session later to recreate it. Active, running, needs-input, and pinned sessions are always protected.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.lastUsedColumn">
       <source xml:lang="en">Last Used</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.loadCanceled">
+      <source xml:lang="en">Worktree measurement canceled.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.loadFailed">
       <source xml:lang="en">Worktree storage could not be measured.</source>
@@ -217,15 +220,24 @@
 </body></file>
   <file original="src/vs/sessions/contrib/sessionInputBanners/browser/sessionWorktreeCleanupEditorInput" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionWorktreeCleanupEditor.name">
-      <source xml:lang="en">Clean Up Agent Worktrees</source>
+      <source xml:lang="en">Open worktree cleanup</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessionInputBanners/browser/sessionWorktreeCleanupService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="worktreeCleanup.archived.many">
-      <source xml:lang="en">Cleaning up {0} worktrees in the background.</source>
+      <source xml:lang="en">Started cleanup for {0} worktrees.</source>
     </trans-unit>
     <trans-unit id="worktreeCleanup.archived.one">
-      <source xml:lang="en">Cleaning up 1 worktree in the background.</source>
+      <source xml:lang="en">Started cleanup for 1 worktree.</source>
+    </trans-unit>
+    <trans-unit id="worktreeCleanup.cleaning.many">
+      <source xml:lang="en">Scheduling cleanup for {0} agent session worktrees...</source>
+    </trans-unit>
+    <trans-unit id="worktreeCleanup.cleaning.one">
+      <source xml:lang="en">Scheduling cleanup for 1 agent session worktree...</source>
+    </trans-unit>
+    <trans-unit id="worktreeCleanup.cleaningProgress">
+      <source xml:lang="en">Scheduled {0} of {1} worktrees</source>
     </trans-unit>
     <trans-unit id="worktreeCleanup.confirm.detail">
       <source xml:lang="en">This reclaims about {0} and marks the selected sessions as done. You can restore a session later to recreate its worktree.</source>

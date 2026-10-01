@@ -59,6 +59,14 @@
       <source xml:lang="en">Sign In</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/browser/desktopWorkbench" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sidePaneHidden">
+      <source xml:lang="en">Side pane hidden</source>
+    </trans-unit>
+    <trans-unit id="sidePaneVisible">
+      <source xml:lang="en">Side pane shown</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/browser/layoutActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentPanelCloseIcon">
       <source xml:lang="en">Icon to close the panel.</source>
@@ -78,9 +86,6 @@
     <trans-unit id="hidePanel">
       <source xml:lang="en">Hide Panel</source>
     </trans-unit>
-    <trans-unit id="hideSecondarySideBar">
-      <source xml:lang="en">Hide Secondary Side Bar</source>
-    </trans-unit>
     <trans-unit id="openAndCloseSidebar">
       <source xml:lang="en">Open/Show and Close/Hide Sidebar</source>
     </trans-unit>
@@ -89,9 +94,6 @@
     </trans-unit>
     <trans-unit id="showPanel">
       <source xml:lang="en">Show Panel</source>
-    </trans-unit>
-    <trans-unit id="showSecondarySideBar">
-      <source xml:lang="en">Show Secondary Side Bar</source>
     </trans-unit>
     <trans-unit id="sidebarHidden">
       <source xml:lang="en">Primary Side Bar hidden</source>
@@ -517,14 +519,6 @@
       <source xml:lang="en">Please complete sign-in in the browser.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/browser/singlePaneWorkbench" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sidePaneHidden">
-      <source xml:lang="en">Side pane hidden</source>
-    </trans-unit>
-    <trans-unit id="sidePaneVisible">
-      <source xml:lang="en">Side pane shown</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/sessions/browser/widget/openInVSCodeWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="openInVSCodeHover">
       <source xml:lang="en">Open in VS Code Editor Window</source>
@@ -550,29 +544,29 @@
     <trans-unit id="agentHostSessionTypesAvailable">
       <source xml:lang="en">Whether at least one connected agent-host provider has advertised session types</source>
     </trans-unit>
+    <trans-unit id="agentSessionsDesktopChangesEditorTransition">
+      <source xml:lang="en">Whether the desktop Changes editor is being replaced during a session switch</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsDesktopChangesTabAvailable">
+      <source xml:lang="en">Whether the desktop session supports a Changes editor</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsDesktopChangesTabMissing">
+      <source xml:lang="en">Whether the desktop session supports a Changes editor but its tab is not currently open</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsDesktopDiffEditorInputActive">
+      <source xml:lang="en">Whether the active desktop editor input is a diff, independent of the editor used to render it</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsDesktopFilesTabAvailable">
+      <source xml:lang="en">Whether the desktop session supports a Files editor</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsDesktopFilesTabMissing">
+      <source xml:lang="en">Whether the desktop session supports a Files tab but its tab is not currently open</source>
+    </trans-unit>
+    <trans-unit id="agentSessionsDesktopLayout">
+      <source xml:lang="en">Whether the Agents window is using the desktop layout</source>
+    </trans-unit>
     <trans-unit id="agentSessionsHasDockedDetails">
-      <source xml:lang="en">Whether the single-pane active editor has a docked detail panel (a managed Changes/Files tab or a text file editor)</source>
-    </trans-unit>
-    <trans-unit id="agentSessionsSinglePaneChangesEditorTransition">
-      <source xml:lang="en">Whether the single-pane Changes editor is being replaced during a session switch</source>
-    </trans-unit>
-    <trans-unit id="agentSessionsSinglePaneChangesTabAvailable">
-      <source xml:lang="en">Whether the single-pane session supports a Changes editor</source>
-    </trans-unit>
-    <trans-unit id="agentSessionsSinglePaneChangesTabMissing">
-      <source xml:lang="en">Whether the single-pane session supports a Changes editor but its tab is not currently open</source>
-    </trans-unit>
-    <trans-unit id="agentSessionsSinglePaneDiffEditorInputActive">
-      <source xml:lang="en">Whether the active single-pane editor input is a diff, independent of the editor used to render it</source>
-    </trans-unit>
-    <trans-unit id="agentSessionsSinglePaneFilesTabAvailable">
-      <source xml:lang="en">Whether the single-pane session supports a Files editor</source>
-    </trans-unit>
-    <trans-unit id="agentSessionsSinglePaneFilesTabMissing">
-      <source xml:lang="en">Whether the single-pane session supports a Files tab but its tab is not currently open</source>
-    </trans-unit>
-    <trans-unit id="agentSessionsSinglePaneLayoutEnabled">
-      <source xml:lang="en">Whether the Agents window is using the single-pane (docked detail panel) layout. Single source of truth for gating single-pane behaviour — set once by the workbench from the layout it was constructed with; features must read this instead of the underlying setting</source>
+      <source xml:lang="en">Whether the desktop active editor has a docked detail panel (a managed Changes/Files tab or a text file editor)</source>
     </trans-unit>
     <trans-unit id="automationsCustomViewFocus">
       <source xml:lang="en">Whether the Automations custom view has keyboard focus</source>
@@ -609,6 +603,9 @@
     </trans-unit>
     <trans-unit id="sessionAgentMergeEnabled">
       <source xml:lang="en">True when Agent Merge is enabled for the active agent session</source>
+    </trans-unit>
+    <trans-unit id="sessionAgentPickerInAttachContext">
+      <source xml:lang="en">Whether the active session's Agent picker is shown in Add Context instead of the input toolbar</source>
     </trans-unit>
     <trans-unit id="sessionChatsPickerVisible">
       <source xml:lang="en">Whether the chats picker (chats within the active session) is visible</source>
@@ -719,7 +716,7 @@
       <source xml:lang="en">Whether the new-session view's workspace picker is rendered (as opposed to being replaced by the no-agent-host empty state)</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupEditorFocused">
-      <source xml:lang="en">Whether the Clean Up Agent Worktrees editor is focused</source>
+      <source xml:lang="en">Whether the Open worktree cleanup editor is focused</source>
     </trans-unit>
     <trans-unit id="sessionsAquariumActive">
       <source xml:lang="en">Whether the sessions aquarium overlay is active</source>
@@ -756,6 +753,9 @@
     </trans-unit>
     <trans-unit id="sessionsListPromoteNewChatAction">
       <source xml:lang="en">Whether New Chat in This Session replaces Pin or Unpin as the primary action on session rows (A/B experiment)</source>
+    </trans-unit>
+    <trans-unit id="sessionsListRearrange">
+      <source xml:lang="en">Whether the sessions list uses the experimental navigation arrangement</source>
     </trans-unit>
     <trans-unit id="sessionsPickerVisible">
       <source xml:lang="en">Whether the sessions picker is visible</source>
@@ -797,6 +797,94 @@
   <file original="src/vs/sessions/services/chatBackground/browser/chatBackgroundRenderer" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionsChatBackground.confettiButton">
       <source xml:lang="en">Celebrate</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/services/sessions/browser/sessionComparisonService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionComparison.additionalSynthesisInstructionsPrompt">
+      <source xml:lang="en">
+
+## Additional synthesis instructions
+{0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.attemptInterrupted">
+      <source xml:lang="en">The attempt was interrupted before it started.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.attemptMissing">
+      <source xml:lang="en">The attempt session is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.harnessAndPermissions">
+      <source xml:lang="en">{0} · {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.insufficientSuccessfulAttempts">
+      <source xml:lang="en">Only {0} of {1} comparison attempts started. At least two must start successfully. Failed attempts: {2}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.judgeTitle">
+      <source xml:lang="en">Judge: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.judgeUnavailable">
+      <source xml:lang="en">The judge session did not start.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.launchCancelled">
+      <source xml:lang="en">The attempt was cancelled before it started.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.launchUnavailable">
+      <source xml:lang="en">The session did not start.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.legacyAttemptTitle">
+      <source xml:lang="en">Attempt {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.noJudgeExplanation">
+      <source xml:lang="en">No Judge explanation is available; use the selected attempt as the base.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.rationale.codeQuality">
+      <source xml:lang="en">Code quality: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.rationale.comparison">
+      <source xml:lang="en">Comparison: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.rationale.solution">
+      <source xml:lang="en">Solution: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.rationale.validation">
+      <source xml:lang="en">Validation: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.selectedApproachPrompt">
+      <source xml:lang="en">- **{0}**: Follow {1}. {2}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.selectedSynthesisApproachesPrompt">
+      <source xml:lang="en">
+
+## Selected synthesis approaches
+{0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.synthesisPrompt">
+      <source xml:lang="en">Synthesize the strongest parts of comparison `{0}` into a new implementation.
+
+## Process
+1. Call `#readAttemptComparison` exactly once with this comparison ID.
+2. Read implementation code only from the authoritative worktrees in the manifest. If `changedFilesStatus` is unavailable, read the Git diff from that worktree.
+3. Treat every selected synthesis approach and additional instruction below, plus the synthesis plan in the manifest, as explicit user requirements. Resolve cross-section dependencies coherently instead of copying hunks mechanically.
+4. Call `get_session_context` only with an exact `sessionContextTarget` returned by the manifest and only for rationale or validation evidence. Never recover implementation code or paths from a transcript.
+5. Do not inspect another checkout, discover sessions, or guess references. Preserve correct behavior and resolve the Judge's reported conflicts.
+
+## Judge recommendation
+{1}{2}
+
+## Completion
+- Run the relevant validation.
+- Respond concisely with **Changes**, **Validation**, and **Remaining issues** sections using bullet points.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.synthesisTitle">
+      <source xml:lang="en">Synthesis: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.synthesisUnavailable">
+      <source xml:lang="en">The synthesis session did not start.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.synthesizerSelectsApproachPrompt">
+      <source xml:lang="en">- **{0}**: Synthesizer decides.</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.unknownWinningAttempt">
+      <source xml:lang="en">Winning attempt</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/services/sessions/browser/sessionsManagementService" source-language="en" datatype="plaintext"><body>
@@ -845,6 +933,17 @@
     </trans-unit>
     <trans-unit id="working">
       <source xml:lang="en">Working...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/services/sessions/common/sessionComparison" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionComparison.attemptLabel">
+      <source xml:lang="en">Attempt {0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.harnessAndModel">
+      <source xml:lang="en">{0} · {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.harnessModelAndConfiguration">
+      <source xml:lang="en">{0} · {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/services/workspace/browser/workspaceContextService" source-language="en" datatype="plaintext"><body>
