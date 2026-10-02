@@ -111,8 +111,11 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/editor/browser/widget/codeEditor/codeEditorWidget" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="cursors.maximum">
-      <source xml:lang="en">The number of cursors has been limited to {0}. Consider using [find and replace](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace) for larger changes or increase the editor multi cursor limit setting.</source>
+    <trans-unit id="cursors.findAndReplaceLink">
+      <source xml:lang="en">find and replace</source>
+    </trans-unit>
+    <trans-unit id="cursors.maximumLinked">
+      <source xml:lang="en">The number of cursors has been limited to {0}. Consider using {1} for larger changes or increase the editor multi cursor limit setting.</source>
     </trans-unit>
     <trans-unit id="goToSetting">
       <source xml:lang="en">Increase Multi Cursor Limit</source>

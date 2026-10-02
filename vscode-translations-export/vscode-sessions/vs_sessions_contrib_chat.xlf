@@ -290,6 +290,24 @@
     <trans-unit id="sessions.chat.compareAgents.hideInactiveInputs">
       <source xml:lang="en">When enabled, hides the chat input in inactive panes when three or more parallel comparison attempts are shown in a grid. This behavior is disabled when screen-reader optimized mode is active.</source>
     </trans-unit>
+    <trans-unit id="sessions.chat.customizeWelcomeMessage">
+      <source xml:lang="en">Customize Welcome Message...</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.customizeWelcomeMessage.name">
+      <source xml:lang="en">Name</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.customizeWelcomeMessage.nameDescription">
+      <source xml:lang="en">Set the name used in welcome messages</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.customizeWelcomeMessage.phrases">
+      <source xml:lang="en">Phrases</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.customizeWelcomeMessage.phrasesDescription">
+      <source xml:lang="en">Add to or replace the welcome phrases</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.customizeWelcomeMessage.placeholder">
+      <source xml:lang="en">Choose what to customize</source>
+    </trans-unit>
     <trans-unit id="sessions.chat.experimental.agentsPickerInAttachContextMenu">
       <source xml:lang="en">Controls whether the Agent picker starts in Add Context for Agents Window chat inputs. After an agent is selected, the picker returns to its usual position.</source>
     </trans-unit>
@@ -302,14 +320,23 @@
     <trans-unit id="sessions.chat.experimental.newSessionComposerOptionsExpanded">
       <source xml:lang="en">Controls whether session options are expanded before you first expand or collapse them. Your last choice takes precedence afterward. This setting only applies when the new-session composer layout is enabled.</source>
     </trans-unit>
+    <trans-unit id="sessions.chat.experimental.welcomeMessages">
+      <source xml:lang="en">Customize the welcome phrases shown above the new-session composer. Use `"mode": "replace"` to use only your phrases, or `"mode": "append"` to add them to the defaults. Use `{name}` inside a phrase to position the welcome name.</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.experimental.welcomeMessages.mode">
+      <source xml:lang="en">'replace' uses only your phrases; 'append' adds your phrases to the defaults.</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.experimental.welcomeMessages.phrases">
+      <source xml:lang="en">Welcome phrases shown above the new-session composer. Use `{name}` to position the welcome name, for example `Back at it, {name}`. When no name is known, `{name}` and its surrounding separator are removed.</source>
+    </trans-unit>
     <trans-unit id="sessions.chat.experimental.welcomeName">
       <source xml:lang="en">Specifies the name used in new-session welcome messages. Leave empty to use the first name from your signed-in GitHub profile when available; otherwise, welcome messages omit the name.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.welcomePhrases">
       <source xml:lang="en">Controls whether rotating welcome phrases are shown above the new-session composer.</source>
     </trans-unit>
-    <trans-unit id="sessions.chat.setWelcomeName">
-      <source xml:lang="en">Set Welcome Name...</source>
+    <trans-unit id="sessions.chat.hideWelcomeMessage">
+      <source xml:lang="en">Hide Welcome Message</source>
     </trans-unit>
     <trans-unit id="sessions.chat.setWelcomeName.cleared">
       <source xml:lang="en">Welcome name reset to your GitHub first name when available.</source>
@@ -667,36 +694,6 @@
     <trans-unit id="newSession.welcome.announcement">
       <source xml:lang="en">{0}
 To disable this announcement, set {1} to false.</source>
-    </trans-unit>
-    <trans-unit id="newSession.welcome.building">
-      <source xml:lang="en">What are we building?</source>
-    </trans-unit>
-    <trans-unit id="newSession.welcome.cook">
-      <source xml:lang="en">Let’s cook</source>
-    </trans-unit>
-    <trans-unit id="newSession.welcome.lockIn">
-      <source xml:lang="en">Time to lock in</source>
-    </trans-unit>
-    <trans-unit id="newSession.welcome.move">
-      <source xml:lang="en">What’s the move?</source>
-    </trans-unit>
-    <trans-unit id="newSession.welcome.named.building">
-      <source xml:lang="en">What are we building, {0}?</source>
-    </trans-unit>
-    <trans-unit id="newSession.welcome.named.cook">
-      <source xml:lang="en">Let’s cook, {0}</source>
-    </trans-unit>
-    <trans-unit id="newSession.welcome.named.lockIn">
-      <source xml:lang="en">Time to lock in, {0}</source>
-    </trans-unit>
-    <trans-unit id="newSession.welcome.named.move">
-      <source xml:lang="en">What’s the move, {0}?</source>
-    </trans-unit>
-    <trans-unit id="newSession.welcome.named.ship">
-      <source xml:lang="en">Let’s ship something, {0}</source>
-    </trans-unit>
-    <trans-unit id="newSession.welcome.ship">
-      <source xml:lang="en">Let’s ship something</source>
     </trans-unit>
     <trans-unit id="newSessionFeedback.many">
       <source xml:lang="en">{0} comments</source>
@@ -1180,20 +1177,6 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionArtifacts.websites">
       <source xml:lang="en">Websites</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/sessionBackgroundActivitiesControl" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="backgroundActivities.subagent">
-      <source xml:lang="en">Subagent</source>
-    </trans-unit>
-    <trans-unit id="backgroundActivities.subagents.completed">
-      <source xml:lang="en">Subagents: Completed</source>
-    </trans-unit>
-    <trans-unit id="backgroundActivities.subagents.inProgress">
-      <source xml:lang="en">Subagents: In Progress</source>
-    </trans-unit>
-    <trans-unit id="backgroundActivities.subagents.showInProgress">
-      <source xml:lang="en">Show In Progress</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionBrowsersControl" source-language="en" datatype="plaintext"><body>
@@ -1779,29 +1762,6 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Each attempt runs in an isolated worktree. Nothing is applied automatically.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/sessionCustomizations" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sessionCustomizations.agents">
-      <source xml:lang="en">Agents</source>
-    </trans-unit>
-    <trans-unit id="sessionCustomizations.hooks">
-      <source xml:lang="en">Hooks</source>
-    </trans-unit>
-    <trans-unit id="sessionCustomizations.instructions">
-      <source xml:lang="en">Instructions</source>
-    </trans-unit>
-    <trans-unit id="sessionCustomizations.mcpServers">
-      <source xml:lang="en">MCP Servers</source>
-    </trans-unit>
-    <trans-unit id="sessionCustomizations.plugins">
-      <source xml:lang="en">Plugins</source>
-    </trans-unit>
-    <trans-unit id="sessionCustomizations.prompts">
-      <source xml:lang="en">Prompts</source>
-    </trans-unit>
-    <trans-unit id="sessionCustomizations.skills">
-      <source xml:lang="en">Skills</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionReferenceCompletions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="currentSessionLabel">
       <source xml:lang="en">{0} (current)</source>
@@ -1892,6 +1852,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="workspacePicker.devContainer.remote">
       <source xml:lang="en">Use Remote Host</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.devContainer.samples">
+      <source xml:lang="en">Dev Container Sample</source>
     </trans-unit>
     <trans-unit id="workspacePicker.devContainer.use">
       <source xml:lang="en">Use Dev Container</source>
@@ -2027,11 +1990,17 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.deleteChat">
       <source xml:lang="en">To permanently delete a chat, open the chat tab's context menu and choose Delete Chat. This is destructive and cannot be undone.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.deleteSandboxSession">
+      <source xml:lang="en">For a Cloud sandbox session, Delete removes its Mission Control task and stored conversation even when the environment is offline. A failed deletion leaves the session in the list.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.deleteSession">
       <source xml:lang="en">To permanently delete a session, open its context menu and choose Delete. This is destructive and cannot be undone.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.devContainer">
       <source xml:lang="en">When Dev Container Agent Host sessions are enabled, Docker is available on the host, and a local, SSH, Tunnel, or WSL folder contains a Dev Container configuration, open the folder's submenu and choose Use Dev Container. For remote folders, first connect to a host that supports Dev Container sessions. For WSL folders, Docker must be available in the WSL distribution. Use the arrow keys to navigate submenus and Enter to select. The workspace picker then identifies the folder with a Dev Container suffix. Choose Use Local or Use Remote Host to switch back.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.devContainerSamples">
+      <source xml:lang="en">The workspace picker includes Dev Container Sample. Open its submenu and choose a sample with the arrow keys and Enter. Selecting a sample does not start Docker or clone the repository. The sample is prepared in a Docker volume when you send your first prompt.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.dictation">
       <source xml:lang="en">When dictation is configured, dictate your message into the input{0}. Tap to start and stop, or hold to dictate only while pressed. If the speech-to-text model is still preparing, activate the dictation control again to cancel.</source>
@@ -2131,6 +2100,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.navigatePreviousSession">
       <source xml:lang="en">Navigate to the previous session in the list{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.nestedSubagentActivity">
+      <source xml:lang="en">When a subagent starts another subagent, its activity row identifies the nested subagent by name. Focus that link with Tab and press Enter or Space to open the nested subagent's chat beside the current chat. The enclosing pill still opens the parent subagent.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.newSessionInputControls.agentInAttachContext">
       <source xml:lang="en">When an Agent picker is available in a new or running session, it initially appears in Add Context. Open Add Context and choose Agent to select an agent. After you select an agent, the Agent picker returns to its usual position. Other new-session controls remain in their layout-specific positions. Use Tab to reach toolbar controls, arrow keys to navigate toolbar items, and Enter or Space to open a picker.</source>
@@ -2246,6 +2218,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.showDoneChats">
       <source xml:lang="en">Use Done in the Sessions list Filter menu to control whether done sessions and nested chats are shown. A check mark means done content is shown.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.subagentPillDetails">
+      <source xml:lang="en">Subagent pills announce their model settings when available. Use Tab to focus file and markdown links in the activity row, then Enter to open them independently of the subagent chat.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.subagentPills">
       <source xml:lang="en">Activate a subagent pill in the chat transcript to open the subagent beside the current chat. With the keyboard, focus a pill and press Enter or Space; Alt+Enter also opens it to the side. You can also drag a pill to a chat group's edge to choose where it opens.</source>
     </trans-unit>
@@ -2271,7 +2246,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">When the pet is enabled, the user account menu lists unlocked achievement badges before locked badges and provides a View Achievements button. A gold star on the pet announces a newly unlocked achievement; activate the pet while the star is visible to open Achievements.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.welcomeName">
-      <source xml:lang="en">In a new session, the welcome heading is announced when shown. To disable this announcement, set accessibility.verbosity.newSessionWelcome to false. Press Tab to reach Set Welcome Name beside the welcome heading, or open its context menu{0}. Enter a custom name, or clear it to use your GitHub first name when available.</source>
+      <source xml:lang="en">In a new session, the welcome heading is announced when shown. To disable this announcement, set accessibility.verbosity.newSessionWelcome to false. Press Tab to reach Customize Welcome Message beside the welcome heading, or open its context menu{0}. Choose Name to enter a custom name, or clear it to use your GitHub first name when available. Choose Phrases to open the setting where you add or replace welcome phrases, using {1} to position the name.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.workspace">
       <source xml:lang="en">Use Tab or Shift+Tab to navigate to the workspace picker and choose a workspace for your session. When consolidated remote workspaces are enabled, opening the picker focuses its search input so you can immediately type to filter workspaces. If quick chats are available, you can also choose No workspace to start a workspace-less chat.</source>
@@ -2314,6 +2289,38 @@ To disable this announcement, set {1} to false.</source>
   <file original="src/vs/sessions/contrib/chat/browser/webWorkspacePicker" source-language="en" datatype="plaintext"><body>
     <trans-unit id="scopedWorkspacePicker.githubLoading">
       <source xml:lang="en">GitHub repositories are still loading</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/common/welcomePhrases" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="newSession.welcome.building">
+      <source xml:lang="en">What are we building?</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.cook">
+      <source xml:lang="en">Let’s cook</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.lockIn">
+      <source xml:lang="en">Time to lock in</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.move">
+      <source xml:lang="en">What’s the move?</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.named.building">
+      <source xml:lang="en">What are we building, {0}?</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.named.cook">
+      <source xml:lang="en">Let’s cook, {0}</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.named.lockIn">
+      <source xml:lang="en">Time to lock in, {0}</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.named.move">
+      <source xml:lang="en">What’s the move, {0}?</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.named.ship">
+      <source xml:lang="en">Let’s ship something, {0}</source>
+    </trans-unit>
+    <trans-unit id="newSession.welcome.ship">
+      <source xml:lang="en">Let’s ship something</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/electron-browser/chat.contribution" source-language="en" datatype="plaintext"><body>

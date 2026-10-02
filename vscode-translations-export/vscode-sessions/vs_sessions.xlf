@@ -108,6 +108,11 @@
       <source xml:lang="en">Toggle Always on Top</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/browser/openInVSCodeUtils" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="devContainerSample.notPrepared">
+      <source xml:lang="en">Send the first prompt to prepare this Dev Container sample before opening it in the editor.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/browser/parts/auxiliaryBarPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="auxiliaryBarAriaLabel">
       <source xml:lang="en">Session Details</source>
@@ -699,6 +704,9 @@
     </trans-unit>
     <trans-unit id="sessionSupportsSideChat">
       <source xml:lang="en">Whether the session view's session supports creating a side chat from a turn (via /btw)</source>
+    </trans-unit>
+    <trans-unit id="sessionToolbarShowsSession">
+      <source xml:lang="en">Whether the session toolbar represents the whole session rather than a side-by-side chat group</source>
     </trans-unit>
     <trans-unit id="sessionType">
       <source xml:lang="en">The session type of the session in scope (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>

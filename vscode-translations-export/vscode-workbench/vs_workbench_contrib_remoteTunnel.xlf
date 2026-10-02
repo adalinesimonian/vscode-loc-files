@@ -17,9 +17,8 @@
       <source xml:lang="en">&amp;&amp;Enable</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
-    <trans-unit id="initialize.progress.title">
-      <source xml:lang="en">[Looking for remote tunnel](command:{0})</source>
-      <note>Only translate 'Looking for remote tunnel', do not change the format of the rest (markdown link format)</note>
+    <trans-unit id="initialize.progress.titleLabel">
+      <source xml:lang="en">Looking for remote tunnel</source>
     </trans-unit>
     <trans-unit id="manage.placeholder">
       <source xml:lang="en">Select a command to invoke</source>
@@ -44,15 +43,21 @@
     <trans-unit id="others">
       <source xml:lang="en">Others</source>
     </trans-unit>
+    <trans-unit id="progress.turnOn.configureLink">
+      <source xml:lang="en">configure</source>
+    </trans-unit>
     <trans-unit id="progress.turnOn.failed">
       <source xml:lang="en">Unable to turn on the remote tunnel access. Check the Remote Tunnel Service log for details.</source>
     </trans-unit>
-    <trans-unit id="progress.turnOn.final">
-      <source xml:lang="en">You can now access this machine anywhere via the secure tunnel [{0}](command:{4}). To connect via a different machine, use the generated [{1}]({2}) link or use the [{6}]({7}) extension in the desktop or web. You can [configure](command:{3}) or [turn off](command:{5}) this access via the VS Code Accounts menu.</source>
-      <note>{0} will be the tunnel name, {1} will the link address to the web UI, {6} an extension name, {7} a link to the extension documentation. [label](command:commandId) is a markdown link. Only translate the label, do not modify the format</note>
+    <trans-unit id="progress.turnOn.final.noLinkLinked">
+      <source xml:lang="en">Remote Tunnel Access is enabled for {0}. You can {1} or {2} this access via the VS Code Accounts menu.</source>
     </trans-unit>
-    <trans-unit id="progress.turnOn.final.noLink">
-      <source xml:lang="en">Remote Tunnel Access is enabled for {0}. You can [configure](command:{1}) or [turn off](command:{2}) this access via the VS Code Accounts menu.</source>
+    <trans-unit id="progress.turnOn.finalLinked">
+      <source xml:lang="en">You can now access this machine anywhere via the secure tunnel {0}. To connect via a different machine, use the generated {1} link or use the {2} extension in the desktop or web. You can {3} or {4} this access via the VS Code Accounts menu.</source>
+      <note>{0} is a link with the tunnel name, {1} a link to the web UI, {2} a link with an extension name, {3} a configure link, and {4} a turn off link.</note>
+    </trans-unit>
+    <trans-unit id="progress.turnOn.turnOffLink">
+      <source xml:lang="en">turn off</source>
     </trans-unit>
     <trans-unit id="recommend.remoteExtension">
       <source xml:lang="en">Tunnel '{0}' is avaiable for remote access. The {1} extension can be used to connect to it.</source>
@@ -88,9 +93,11 @@
     <trans-unit id="remoteTunnel.category">
       <source xml:lang="en">Remote Tunnels</source>
     </trans-unit>
-    <trans-unit id="remoteTunnel.serviceInstallFailed">
-      <source xml:lang="en">Installation as a service failed, and we fell back to running the tunnel for this session. See the [error log](command:{0}) for details.</source>
-      <note>{Locked="](command:{0})"}</note>
+    <trans-unit id="remoteTunnel.errorLogLink">
+      <source xml:lang="en">error log</source>
+    </trans-unit>
+    <trans-unit id="remoteTunnel.serviceInstallFailedLinked">
+      <source xml:lang="en">Installation as a service failed, and we fell back to running the tunnel for this session. See the {0} for details.</source>
     </trans-unit>
     <trans-unit id="remoteTunnel.turnOff.confirm">
       <source xml:lang="en">Do you want to turn off Remote Tunnel Access?</source>
@@ -129,9 +136,8 @@
     <trans-unit id="signed in">
       <source xml:lang="en">Signed In</source>
     </trans-unit>
-    <trans-unit id="startTunnel.progress.title">
-      <source xml:lang="en">[Starting remote tunnel](command:{0})</source>
-      <note>Only translate 'Starting remote tunnel', do not change the format of the rest (markdown link format)</note>
+    <trans-unit id="startTunnel.progress.titleLabel">
+      <source xml:lang="en">Starting remote tunnel</source>
     </trans-unit>
     <trans-unit id="tunnel.enable.placeholder">
       <source xml:lang="en">Select how you want to enable access</source>

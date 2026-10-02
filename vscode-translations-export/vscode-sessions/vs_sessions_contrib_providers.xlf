@@ -15,11 +15,23 @@
     <trans-unit id="agentHostAutomation.createUnavailable">
       <source xml:lang="en">The Agent Host is not ready to create automations.</source>
     </trans-unit>
+    <trans-unit id="agentHostAutomation.customizationVersion">
+      <source xml:lang="en">Version {0}</source>
+    </trans-unit>
     <trans-unit id="agentHostAutomation.interruptedLegacyRun">
       <source xml:lang="en">Legacy run tracking was interrupted.</source>
     </trans-unit>
     <trans-unit id="agentHostAutomation.operationUnavailable">
       <source xml:lang="en">Automation operation '{0}' is not available for '{1}'.</source>
+    </trans-unit>
+    <trans-unit id="agentHostAutomation.savedCustomization">
+      <source xml:lang="en">Not available locally. The saved copy is kept.</source>
+    </trans-unit>
+    <trans-unit id="agentHostAutomation.syncedCustomizationDescription">
+      <source xml:lang="en">Customizations synced from VS Code.</source>
+    </trans-unit>
+    <trans-unit id="agentHostAutomation.syncedCustomizations">
+      <source xml:lang="en">VS Code Customizations</source>
     </trans-unit>
     <trans-unit id="agentHostAutomation.wrongHost">
       <source xml:lang="en">The automation target must belong to this Agent Host.</source>
@@ -79,6 +91,9 @@
     </trans-unit>
     <trans-unit id="agentHostPermissionPicker.defaultApprovalsHover">
       <source xml:lang="en">Copilot asks before running tools unless your configured settings allow the tool.</source>
+    </trans-unit>
+    <trans-unit id="agentHostPermissionPicker.effectiveApprovalsHover">
+      <source xml:lang="en">Effective permissions: {0}. Requested permissions: {1}.</source>
     </trans-unit>
     <trans-unit id="agentHostPermissionPicker.manual.label">
       <source xml:lang="en">Manual permissions</source>
@@ -541,6 +556,12 @@
     <trans-unit id="devContainerAgentHost.worktreePreparationUnsupported">
       <source xml:lang="en">The source Agent Host does not support preparing a worktree for a Dev Container.</source>
     </trans-unit>
+    <trans-unit id="devContainerSample.containerRequired">
+      <source xml:lang="en">Dev Container samples must run in a container.</source>
+    </trans-unit>
+    <trans-unit id="devContainerSample.trust">
+      <source xml:lang="en">Starting this sample clones {0} into a Docker volume and runs its Dev Container lifecycle commands.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/exportDebugLogsAction" source-language="en" datatype="plaintext"><body>
     <trans-unit id="exportAgentHostDebugLogs">
@@ -548,6 +569,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/localAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="devContainerSample.workspaceLabel">
+      <source xml:lang="en">{0} Sample</source>
+    </trans-unit>
     <trans-unit id="localAgentHostLabel">
       <source xml:lang="en">Local Agent Host</source>
     </trans-unit>
@@ -1634,6 +1658,9 @@
     <trans-unit id="notConnectedSession">
       <source xml:lang="en">Cannot create session: not connected to remote agent host '{0}'.</source>
     </trans-unit>
+    <trans-unit id="remoteAgentHost.deleteSessionNotFound">
+      <source xml:lang="en">Session not found.</source>
+    </trans-unit>
     <trans-unit id="selectRemoteFolder">
       <source xml:lang="en">Select Folder on {0}</source>
     </trans-unit>
@@ -1802,8 +1829,14 @@ Address: {0}</source>
     <trans-unit id="chat.agentHost.devContainer.idleTimeout">
       <source xml:lang="en">Number of seconds with no Agent Host sessions actively working, waiting for input, or holding unsent drafts before automatically stopping a Dev Container. Set to 0 to disable automatic shutdown. Archiving or deleting sessions can still remove the container.</source>
     </trans-unit>
+    <trans-unit id="chat.agentHost.devContainer.samples.enabled">
+      <source xml:lang="en">Show Dev Container samples in the Agents window workspace picker. The sample is cloned into a Docker volume and started when you send the first prompt. Requires Dev Container Agent Host sessions to be enabled.</source>
+    </trans-unit>
     <trans-unit id="chat.agentHost.devContainer.worktree.enabled">
       <source xml:lang="en">Enable running Dev Container Agent Host sessions in new worktrees.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.aiDisabled">
+      <source xml:lang="en">AI features are disabled.</source>
     </trans-unit>
     <trans-unit id="devContainerAgentHost.disabled">
       <source xml:lang="en">Dev Container Agent Host connections are not enabled.</source>

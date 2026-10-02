@@ -4,13 +4,11 @@
     <trans-unit id="alreadyOpen">
       <source xml:lang="en">This workspace is already open.</source>
     </trans-unit>
-    <trans-unit id="foundWorkspace">
-      <source xml:lang="en">This folder contains a workspace file '{0}'. Do you want to open it? [Learn more]({1}) about workspace files.</source>
-      <note>{Locked="]({1})"}</note>
+    <trans-unit id="foundWorkspaceLinked">
+      <source xml:lang="en">This folder contains a workspace file '{0}'. Do you want to open it? {1} about workspace files.</source>
     </trans-unit>
-    <trans-unit id="foundWorkspaces">
-      <source xml:lang="en">This folder contains multiple workspace files. Do you want to open one? [Learn more]({0}) about workspace files.</source>
-      <note>{Locked="]({0})"}</note>
+    <trans-unit id="foundWorkspacesLinked">
+      <source xml:lang="en">This folder contains multiple workspace files. Do you want to open one? {0} about workspace files.</source>
     </trans-unit>
     <trans-unit id="openWorkspace">
       <source xml:lang="en">Open Workspace</source>
@@ -20,6 +18,9 @@
     </trans-unit>
     <trans-unit id="selectWorkspace">
       <source xml:lang="en">Select Workspace</source>
+    </trans-unit>
+    <trans-unit id="workspaceFilesLearnMore">
+      <source xml:lang="en">Learn more</source>
     </trans-unit>
 </body></file>
 </xliff>

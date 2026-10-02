@@ -159,6 +159,9 @@
     <trans-unit id="chatCompositeBar.close">
       <source xml:lang="en">Close</source>
     </trans-unit>
+    <trans-unit id="chatCompositeBar.closeTooltip">
+      <source xml:lang="en">Close Session</source>
+    </trans-unit>
     <trans-unit id="chatCompositeBar.maximize">
       <source xml:lang="en">Maximize</source>
     </trans-unit>
@@ -200,6 +203,12 @@
     </trans-unit>
     <trans-unit id="closeAllSessions">
       <source xml:lang="en">Close All Sessions</source>
+    </trans-unit>
+    <trans-unit id="closeChatGroup">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="closeChatGroupTooltip">
+      <source xml:lang="en">Close Chat Group</source>
     </trans-unit>
     <trans-unit id="closeEditorArea">
       <source xml:lang="en">Close Editor Area</source>
@@ -764,9 +773,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationExportedStatus">
       <source xml:lang="en">Exported automation {0}</source>
     </trans-unit>
-    <trans-unit id="automationImportFailed">
-      <source xml:lang="en">Failed to import automation.</source>
-    </trans-unit>
     <trans-unit id="automationImportReadFailed">
       <source xml:lang="en">Failed to import automation.</source>
     </trans-unit>
@@ -829,6 +835,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationUpdatedStatus">
       <source xml:lang="en">Updated automation {0}</source>
+    </trans-unit>
+    <trans-unit id="automationViewClosedBeforeSave">
+      <source xml:lang="en">The automations view was closed before the automation could be saved.</source>
     </trans-unit>
     <trans-unit id="automationsDescription">
       <source xml:lang="en">Schedule agent sessions to run automatically on a cadence you choose.</source>
@@ -1226,6 +1235,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="sessionChatItemFolderWithoutTimeAria">
       <source xml:lang="en">{0}, chat in folder {1}, {2}</source>
+    </trans-unit>
+    <trans-unit id="sessionChatItemStatusMessageAria">
+      <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
     <trans-unit id="sessionChatItemWithoutTimeAria">
       <source xml:lang="en">{0}, chat, {1}</source>

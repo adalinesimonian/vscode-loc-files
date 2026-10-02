@@ -38,7 +38,7 @@
       <source xml:lang="en">1 table </source>
     </trans-unit>
     <trans-unit id="toolAuthenticationHint">
-      <source xml:lang="en">MCP authentication required for {0}. Use the Authenticate button in the tool call.</source>
+      <source xml:lang="en">MCP authentication required for {0}. Use the tool call buttons to authenticate, cancel, or disable the server for this session.</source>
     </trans-unit>
     <trans-unit id="toolInvocationsHint">
       <source xml:lang="en">Chat confirmation required: {0}</source>
@@ -107,6 +107,9 @@
     </trans-unit>
     <trans-unit id="toolPostApprovalA11yView">
       <source xml:lang="en">Approve results of {0}? Result: </source>
+    </trans-unit>
+    <trans-unit id="warningContent">
+      <source xml:lang="en">Warning: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatAccessibilityActions" source-language="en" datatype="plaintext"><body>
@@ -235,6 +238,9 @@
     <trans-unit id="chat.modelPicker.search">
       <source xml:lang="en">Type while the model list is focused to search across all providers. In the search field, use Up and Down Arrow to navigate results, Enter to select a model, and Escape to close the picker. Left and Right Arrow move the text cursor.</source>
     </trans-unit>
+    <trans-unit id="chat.nestedSubagentActivity">
+      <source xml:lang="en">When a subagent starts another subagent, its activity row identifies the nested subagent by name. Focus that link with Tab and press Enter or Space to open the nested subagent's chat to the side. The enclosing pill still opens the parent subagent.</source>
+    </trans-unit>
     <trans-unit id="chat.nextQuestionCarouselQuestion">
       <source xml:lang="en">When a chat question is focused, move to the next question{0}.</source>
     </trans-unit>
@@ -248,7 +254,7 @@
       <source xml:lang="en">To paste the clipboard as plain text, without converting it to Markdown or storing it as an attachment, invoke Paste as Text{0}.</source>
     </trans-unit>
     <trans-unit id="chat.persistentProgress">
-      <source xml:lang="en">The chat.experimental.persistentProgress setting defaults to Draw in VS Code Insiders and Off in Stable. Experiments can override either default; an explicit setting takes precedence. Choose Draw, Draw (Monochrome), or Draw (Monochrome, No Icon) to keep a working progress indicator at the bottom until the response finishes. Draw ties and unravels the VS Code mark with fast parabolic ribbon motion and a brief rest between loops. The No Icon variant hides only the decorative VS Code icon; progress text and spoken updates are unchanged. The chat.experimental.persistentProgressVerbosity setting defaults to Compact: tool calls preview while running, then collapse in place to a single summary row when thinking or response text resumes, or the response finishes. Choose Verbose to keep tool chains expanded without a group header or an internal scrolling limit. Use Tab to focus a summary and press Enter or Space to expand or collapse its tool calls. Automatic collapse waits until keyboard focus leaves the group. Completed responses still follow chat.agent.collapseCompletedResponses. Reasoning appears separately as collapsible previews; focus a reasoning header and press Enter or Space to expand or collapse it. Standalone tools keep their decorative icons. Terminal activity animations and subagent pills are unchanged. The indicator reports counts of running subagents and background commands, including work started in earlier requests, whether the main response is progressing or idle. Requests for your input, approval, plan review, or authentication take priority over these counts. After 90 seconds without response activity or known background work, it reports that the response is taking longer than usual. Reduced motion disables the collapse animation and keeps the indicator visible without animation. Spoken progress updates are controlled by accessibility.verboseChatProgressUpdates.</source>
+      <source xml:lang="en">The chat.experimental.persistentProgress setting defaults to Draw in VS Code Insiders and Off in Stable. Experiments can override either default; an explicit setting takes precedence. Choose Draw, Draw (Monochrome), or Draw (Monochrome, No Icon) to keep a working progress indicator at the bottom until the response finishes. When the response finishes, its toolbar takes the indicator's place. Draw ties and unravels the VS Code mark with fast parabolic ribbon motion and a brief rest between loops. The No Icon variant hides only the decorative VS Code icon; progress text and spoken updates are unchanged. The chat.experimental.persistentProgressVerbosity setting defaults to Compact: tool calls preview while running, then collapse in place to a single summary row when thinking or response text resumes, or the response finishes. Choose Verbose to keep tool chains expanded without a group header or an internal scrolling limit. Use Tab to focus a summary and press Enter or Space to expand or collapse its tool calls. Automatic collapse waits until keyboard focus leaves the group. Completed responses still follow chat.agent.collapseCompletedResponses. Reasoning appears separately as collapsible previews; focus a reasoning header and press Enter or Space to expand or collapse it. Standalone tools keep their decorative icons. Terminal activity animations and subagent pills are unchanged. The indicator reports counts of running subagents and background commands, including work started in earlier requests, whether the main response is progressing or idle. Requests for your input, approval, plan review, or authentication take priority over these counts. After 90 seconds without response activity and with no active tools, progress tasks, or known background work, it reports that the response is taking longer than usual. Long-running foreground terminal commands do not trigger this message. Reduced motion disables the collapse animation and keeps the indicator visible without animation. Spoken progress updates are controlled by accessibility.verboseChatProgressUpdates.</source>
     </trans-unit>
     <trans-unit id="chat.persistentProgressHandoff">
       <source xml:lang="en">While a response is running, automatically collapsing a reasoning or tool preview keeps a visible header in place. If the header is above the visible content but its details are visible, it moves below the pinned prompt, or to the top of the viewport when there is no pinned prompt. Only the space needed for the visible viewport is reserved. That space is removed when the response finishes or is stopped, after any pending transition and content rendering finish. Expanding a preview consumes reserved space as its content grows. Scrolling to the bottom removes the reserved space. Manual collapses do not add padding. The following response content appears after an automatic collapse finishes. Reduced motion skips this delay. If keyboard focus keeps a preview open, new content continues to appear without waiting for focus to move.</source>
@@ -278,7 +284,10 @@
       <source xml:lang="en">In the input box, use up and down arrows to navigate your request history. Edit input and use enter or the submit button to run a new request.</source>
     </trans-unit>
     <trans-unit id="chat.sandboxUnavailable">
-      <source xml:lang="en">If the agent host cannot support the configured sandbox, a notification above the input explains why. Use Tab to reach Dismiss notification. Dismissing hides the warning for this session until the window reloads, without changing sandboxing or preventing messages.</source>
+      <source xml:lang="en">If the agent host cannot support the configured sandbox, a notification above the input explains why. You can select and copy the warning text. Use Tab to reach support links or Dismiss notification, and Enter to open a focused link. Dismissing hides the warning for this session until the window reloads, without changing sandboxing or preventing messages.</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionActivityPills">
+      <source xml:lang="en">Subagents and Customizations are available in both the Agents Window and editor window, and are hidden by default. Enable them from the session status toolbar context menu. Subagents lists the current chat's direct subagents, grouped into in-progress and completed chats. Activate an entry to open its chat to the side. Subagent Options lets you show all subagents or only those in progress, remembered across windows. Customizations lists the agents, skills, instructions, hooks, prompts, MCP servers, and plugins used by the current chat. Activate an entry to reveal it in the Customizations editor.</source>
     </trans-unit>
     <trans-unit id="chat.sessionArchiveNudge">
       <source xml:lang="en">An archive suggestion appears above the chat input when the session's pull requests are merged. Use Tab or Shift+Tab to reach Archive, Configure Automatic Cleanup, or Dismiss Archive Suggestion, then press Enter or Space. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Archive" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismissing the suggestion, including with Escape while it is focused, returns to the chat input. Archiving the session hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Archived" section of the sessions list. You can unarchive it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by unarchiving the session.</source>
@@ -291,6 +300,9 @@
     </trans-unit>
     <trans-unit id="chat.sessionStatusPills">
       <source xml:lang="en">When session status pills appear above the input, use Tab to focus the toolbar, then use the left and right arrow keys to move between pills. Press Enter or Space to activate a pill. Open the context menu{0} to choose which optional pills are visible. Pull Requests Options lets you show all pull requests or only open and draft ones, remembered across sessions. If every pull request is filtered out, these options are also available in any other pill's context menu or the toolbar context menu.</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionStatusPillsCompact">
+      <source xml:lang="en">When space is limited, session status pills collapse to icons one at a time from right to left. Their full labels remain available to screen readers and in tooltips. Labels return as space becomes available. If the icons still do not fit, the row scrolls horizontally; use the arrow keys to reach every pill.</source>
     </trans-unit>
     <trans-unit id="chat.showHiddenTerminals">
       <source xml:lang="en">If there are any hidden chat terminals, you can view them by invoking the View Hidden Chat Terminals command{0}.</source>
@@ -305,10 +317,10 @@
       <source xml:lang="en">The prompt you have scrolled past is pinned to the top of the transcript. Activate its title to jump back to that prompt.</source>
     </trans-unit>
     <trans-unit id="chat.subagentPill">
-      <source xml:lang="en">When a subagent pill appears in a response, use Tab to focus it and press Enter or Space to open that subagent chat.</source>
+      <source xml:lang="en">When a subagent pill appears in a response, use Tab to focus it and press Enter or Space to open that subagent chat to the side.</source>
     </trans-unit>
     <trans-unit id="chat.subagentPills">
-      <source xml:lang="en">Subagents appear as pills in the response. Use Tab to focus a subagent pill, then Enter or Space to open its chat. If the subagent has no separate chat, Enter or Space expands or collapses its inline details instead. The pill announces its running state and any pending confirmations.</source>
+      <source xml:lang="en">Subagents appear as pills in the response. Use Tab to focus a subagent pill, then Enter or Space to open its chat to the side. If the subagent has no separate chat, Enter or Space expands or collapses its inline details instead. The pill announces its running state, model settings, and any pending confirmations. File and markdown links in its activity row can be focused with Tab and opened independently with Enter.</source>
     </trans-unit>
     <trans-unit id="chat.systemNotificationDisclosure">
       <source xml:lang="en">Some session status messages have additional details. Use Tab to focus the status message and press Enter or Space to show or hide its details.</source>
@@ -1870,6 +1882,9 @@ User: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostChatInputPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostChatInputPicker.allowAllPermissions">
+      <source xml:lang="en">Allow all</source>
+    </trans-unit>
     <trans-unit id="agentHostChatInputPicker.approvalsHover">
       <source xml:lang="en">Controls whether the agent asks before running tools in this session.</source>
     </trans-unit>
@@ -1884,6 +1899,9 @@ User: {2}</source>
     </trans-unit>
     <trans-unit id="agentHostChatInputPicker.assistedApprovalsHover">
       <source xml:lang="en">An LLM judge evaluates each tool call. Tools it doesn't approve require your approval.</source>
+    </trans-unit>
+    <trans-unit id="agentHostChatInputPicker.assistedPermissions">
+      <source xml:lang="en">Assisted permissions</source>
     </trans-unit>
     <trans-unit id="agentHostChatInputPicker.autoApproveHover">
       <source xml:lang="en">Copilot runs all tools without asking for approval.</source>
@@ -1906,11 +1924,17 @@ User: {2}</source>
     <trans-unit id="agentHostChatInputPicker.defaultApprovalsHover">
       <source xml:lang="en">Copilot asks before running tools unless your configured settings allow the tool.</source>
     </trans-unit>
+    <trans-unit id="agentHostChatInputPicker.effectivePermissions">
+      <source xml:lang="en">Effective permissions: {0}. Requested permissions: {1}.</source>
+    </trans-unit>
     <trans-unit id="agentHostChatInputPicker.filter">
       <source xml:lang="en">Filter...</source>
     </trans-unit>
     <trans-unit id="agentHostChatInputPicker.learnMorePermissions">
       <source xml:lang="en">Learn more about permissions</source>
+    </trans-unit>
+    <trans-unit id="agentHostChatInputPicker.manualPermissions">
+      <source xml:lang="en">Manual permissions</source>
     </trans-unit>
     <trans-unit id="agentHostChatInputPicker.policyDisabledHover">
       <source xml:lang="en">Disabled by your organization. Contact your administrator.</source>
@@ -2317,9 +2341,6 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSessionInputPills" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentHostSessionPills.ariaLabel">
-      <source xml:lang="en">Session status</source>
-    </trans-unit>
     <trans-unit id="agentHostSessionPills.artifactRemoved">
       <source xml:lang="en">{0} removed from session.</source>
     </trans-unit>
@@ -2531,6 +2552,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHost.askUser.waiting">
       <source xml:lang="en">Waiting for answer...</source>
+    </trans-unit>
+    <trans-unit id="agentHost.byokToolLimitExceeded.configureTools">
+      <source xml:lang="en">Configure Tools</source>
     </trans-unit>
     <trans-unit id="agentHost.elicit.url.instruction">
       <source xml:lang="en">Open this URL?</source>
@@ -3379,7 +3403,7 @@ To migrate this server, remove the cwd property.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationDiscoveryPage" source-language="en" datatype="plaintext"><body>
     <trans-unit id="customizationDiscovery.accessibleAllSources">
-      <source xml:lang="en">Source: All sources</source>
+      <source xml:lang="en">Source: All Sources</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.accessibleBrowse">
       <source xml:lang="en">Browse mode.</source>
@@ -3406,7 +3430,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Agent</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.allSources">
-      <source xml:lang="en">All sources</source>
+      <source xml:lang="en">All Sources</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.availableAriaLabel">
       <source xml:lang="en">{0}, {1}, source {2}. {3}. {4}</source>
@@ -3838,6 +3862,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="agentsDescription">
       <source xml:lang="en">Configure the AI to adopt different personas tailored to specific development tasks. Each agent has its own instructions, tools, and behavior.</source>
     </trans-unit>
+    <trans-unit id="browseSkills">
+      <source xml:lang="en">Browse Skills</source>
+    </trans-unit>
     <trans-unit id="builtinGroup">
       <source xml:lang="en">Built-in</source>
     </trans-unit>
@@ -4261,14 +4288,8 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="backToCustomizationDiscoveryTooltip">
       <source xml:lang="en">Back to Discover</source>
     </trans-unit>
-    <trans-unit id="backToCustomizationMigration">
-      <source xml:lang="en">Back to migration</source>
-    </trans-unit>
-    <trans-unit id="backToCustomizationMigrationDashboard">
-      <source xml:lang="en">Back to customization migrations</source>
-    </trans-unit>
-    <trans-unit id="backToCustomizationMigrationDashboardTooltip">
-      <source xml:lang="en">Back to customization migrations</source>
+    <trans-unit id="backToCustomizationMigrations">
+      <source xml:lang="en">Back to migrations</source>
     </trans-unit>
     <trans-unit id="backToCustomizationSection">
       <source xml:lang="en">Back to {0}</source>
@@ -4306,6 +4327,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="changeCustomizationMigrationDestination">
       <source xml:lang="en">Change destination for {0}, currently {1}</source>
     </trans-unit>
+    <trans-unit id="changeMigrationGroupDestination">
+      <source xml:lang="en">Change destination for {0} {1} migrations, currently {2}</source>
+    </trans-unit>
     <trans-unit id="chooseAnotherMigrationFolder">
       <source xml:lang="en">Choose another folder...</source>
     </trans-unit>
@@ -4325,10 +4349,16 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Configure destination for {0}</source>
     </trans-unit>
     <trans-unit id="confirmDeleteCustomizationFile">
-      <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
+      <source xml:lang="en">Delete '{0}'?</source>
     </trans-unit>
     <trans-unit id="confirmDeleteDetail">
       <source xml:lang="en">This action cannot be undone.</source>
+    </trans-unit>
+    <trans-unit id="confirmDeleteMigrationMcpServer">
+      <source xml:lang="en">Delete MCP server '{0}'?</source>
+    </trans-unit>
+    <trans-unit id="confirmDeleteMigrationMcpServerDetail">
+      <source xml:lang="en">This removes the server from its current MCP configuration. This action cannot be undone.</source>
     </trans-unit>
     <trans-unit id="customizationDetailPreviewTitle">
       <source xml:lang="en">Preview</source>
@@ -4336,41 +4366,14 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationMigrationAgentsDestination">
       <source xml:lang="en">{0} agents</source>
     </trans-unit>
-    <trans-unit id="customizationMigrationAllTooltip">
-      <source xml:lang="en">Migrate all customizations</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationClearSettings">
-      <source xml:lang="en">Clear unused location settings after migration</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationClearSettingsDescription">
-      <source xml:lang="en">Remove deprecated settings that are no longer needed after the selected customizations migrate successfully.</source>
-    </trans-unit>
     <trans-unit id="customizationMigrationClearSettingsFailed">
       <source xml:lang="en">Customizations were migrated, but the custom location settings could not be cleared: {0}</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationClearSettingsLabel">
-      <source xml:lang="en">Clear unused location settings</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationConvert">
-      <source xml:lang="en">Convert to Skills</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationConvertWithCount">
-      <source xml:lang="en">Convert {0} to Skills</source>
     </trans-unit>
     <trans-unit id="customizationMigrationDestinationNotConfigured">
       <source xml:lang="en">Not configured</source>
     </trans-unit>
-    <trans-unit id="customizationMigrationGroupEmpty">
-      <source xml:lang="en">No customizations are available to migrate from {0}.</source>
-    </trans-unit>
     <trans-unit id="customizationMigrationInstructionsDestination">
       <source xml:lang="en">{0} instructions</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationItemAriaLabel">
-      <source xml:lang="en">{0}, {1}</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationItemWithChangesAriaLabel">
-      <source xml:lang="en">{0}, {1}. {2}</source>
     </trans-unit>
     <trans-unit id="customizationMigrationLoadError">
       <source xml:lang="en">Customizations could not be loaded</source>
@@ -4383,33 +4386,6 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationMigrationLoadingDescription">
       <source xml:lang="en">Checking the active harness and available destinations.</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationManagedSettingsDisabled">
-      <source xml:lang="en">The custom location settings are managed and cannot be cleared</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationMoreActions">
-      <source xml:lang="en">More actions for {0}</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationOneSelected">
-      <source xml:lang="en">1 selected</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationPageButton">
-      <source xml:lang="en">Migrate</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationPageButtonWithCount">
-      <source xml:lang="en">Migrate {0}</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationSelectAll">
-      <source xml:lang="en">Select all</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationSelectGroupAriaLabel">
-      <source xml:lang="en">Select all customizations in {0}</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationSelectedCount">
-      <source xml:lang="en">{0} selected</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationSettingsGroup">
-      <source xml:lang="en">Settings</source>
     </trans-unit>
     <trans-unit id="customizationMigrationShortcut">
       <source xml:lang="en">Migrations</source>
@@ -4439,6 +4415,9 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Customization preview</source>
     </trans-unit>
     <trans-unit id="delete">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="deleteCustomization">
       <source xml:lang="en">Delete</source>
     </trans-unit>
     <trans-unit id="discoverButtonTooltip">
@@ -4471,6 +4450,11 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="editorViewRawButtonTooltip">
       <source xml:lang="en">Show the raw markdown file</source>
     </trans-unit>
+    <trans-unit id="fileMigrationConfirmationChange">
+      <source xml:lang="en">• {0}
+  From: {1}
+  Destination: {2}</source>
+    </trans-unit>
     <trans-unit id="homeButtonLabel">
       <source xml:lang="en">Discover</source>
     </trans-unit>
@@ -4482,6 +4466,18 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="hooksDesc">
       <source xml:lang="en">Configure automated actions triggered by events like saving files or running tasks.</source>
+    </trans-unit>
+    <trans-unit id="ignoreMigrationCategoryConfirmation">
+      <source xml:lang="en">Ignore {0} ({1}) migrations?</source>
+    </trans-unit>
+    <trans-unit id="ignoreMigrationCategoryDetail">
+      <source xml:lang="en">This migration group stays hidden until you restore it from Show Ignored Migrations.</source>
+    </trans-unit>
+    <trans-unit id="ignoreMigrationGroup">
+      <source xml:lang="en">Ignore</source>
+    </trans-unit>
+    <trans-unit id="ignoredMigrationGroup">
+      <source xml:lang="en">{0} ({1})</source>
     </trans-unit>
     <trans-unit id="instructions">
       <source xml:lang="en">Instructions</source>
@@ -4498,23 +4494,10 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="marketplaceDetail.openError">
       <source xml:lang="en">Could not open the customization resource. {0}</source>
     </trans-unit>
-    <trans-unit id="mcpMigrationAccessibleExclusion">
-      <source xml:lang="en">{0} cannot be migrated: {1}</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationOpenDetailsAriaLabel">
-      <source xml:lang="en">Open details for {0}</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationOpenSourceAriaLabel">
-      <source xml:lang="en">Open source for {0}: {1}</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationUnavailableGroup">
-      <source xml:lang="en">Not migratable</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationUnavailableGroupAriaLabel">
-      <source xml:lang="en">MCP servers that cannot be migrated</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationUnavailableItemAriaLabel">
-      <source xml:lang="en">{0}, cannot be migrated. Source: {1}</source>
+    <trans-unit id="mcpMigrationConfirmationChange">
+      <source xml:lang="en">• {0}
+  From: {1}
+  To: {2}</source>
     </trans-unit>
     <trans-unit id="mcpServers">
       <source xml:lang="en">MCP Servers</source>
@@ -4522,32 +4505,44 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="mcpServersDesc">
       <source xml:lang="en">Connect external tool servers that extend AI capabilities with custom tools and data sources.</source>
     </trans-unit>
+    <trans-unit id="migrateThisCustomization">
+      <source xml:lang="en">Migrate This Item</source>
+    </trans-unit>
     <trans-unit id="migrationAccessibleActivity">
       <source xml:lang="en">Migration activity: {0}, {1}</source>
     </trans-unit>
-    <trans-unit id="migrationAccessibleCandidate">
-      <source xml:lang="en">{0}: {1}</source>
-    </trans-unit>
-    <trans-unit id="migrationAccessibleCandidateWithChanges">
-      <source xml:lang="en">{0}: {1}. {2}</source>
-    </trans-unit>
     <trans-unit id="migrationAccessibleCategory">
-      <source xml:lang="en">{0}: {1}. {2}{3}</source>
+      <source xml:lang="en">{0} ({1}): {2}. {3}{4}</source>
     </trans-unit>
-    <trans-unit id="migrationAccessibleComplete">
-      <source xml:lang="en">No remaining migrations.</source>
+    <trans-unit id="migrationAccessibleDestination">
+      <source xml:lang="en">Destination: {0}</source>
     </trans-unit>
     <trans-unit id="migrationAccessibleHighRisk">
       <source xml:lang="en">High risk. </source>
     </trans-unit>
+    <trans-unit id="migrationAccessibleItemWithStatus">
+      <source xml:lang="en">{0}, needs manual review: {1}, source {2}</source>
+    </trans-unit>
+    <trans-unit id="migrationAccessibleManualReview">
+      <source xml:lang="en">Needs manual review</source>
+    </trans-unit>
     <trans-unit id="migrationAccessiblePaths">
       <source xml:lang="en">{0}: from {1} to {2}</source>
     </trans-unit>
-    <trans-unit id="migrationAccessibleSkipped">
-      <source xml:lang="en">Skipped</source>
+    <trans-unit id="migrationAccessibleSelectableItem">
+      <source xml:lang="en">{0}, {1}, source {2}</source>
+    </trans-unit>
+    <trans-unit id="migrationAccessibleSelectableItemWithChanges">
+      <source xml:lang="en">{0}, {1}, source {2}. Migration changes: {3}</source>
     </trans-unit>
     <trans-unit id="migrationAccessibleTitle">
-      <source xml:lang="en">Your migration checklist</source>
+      <source xml:lang="en">Customization migrations</source>
+    </trans-unit>
+    <trans-unit id="migrationAccessibleUser">
+      <source xml:lang="en">User</source>
+    </trans-unit>
+    <trans-unit id="migrationAccessibleWorkspace">
+      <source xml:lang="en">Workspace</source>
     </trans-unit>
     <trans-unit id="migrationChecklistAgentsCount">
       <source xml:lang="en">{0} agents</source>
@@ -4568,10 +4563,10 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">MCP Servers</source>
     </trans-unit>
     <trans-unit id="migrationChecklistMcpDescription">
-      <source xml:lang="en">Move eligible workspace servers to the root .mcp.json and review servers that cannot be migrated.</source>
+      <source xml:lang="en">Move eligible workspace servers to the root .mcp.json.</source>
     </trans-unit>
-    <trans-unit id="migrationChecklistMcpSupportCounts">
-      <source xml:lang="en">{0} migratable · {1} not migratable</source>
+    <trans-unit id="migrationChecklistMcpServers">
+      <source xml:lang="en">{0} servers</source>
     </trans-unit>
     <trans-unit id="migrationChecklistOneAgent">
       <source xml:lang="en">1 agent</source>
@@ -4582,6 +4577,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="migrationChecklistOneInstruction">
       <source xml:lang="en">1 instruction</source>
     </trans-unit>
+    <trans-unit id="migrationChecklistOneMcpServer">
+      <source xml:lang="en">1 server</source>
+    </trans-unit>
     <trans-unit id="migrationChecklistOnePrompt">
       <source xml:lang="en">1 prompt</source>
     </trans-unit>
@@ -4589,7 +4587,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Your profile</source>
     </trans-unit>
     <trans-unit id="migrationChecklistPrompts">
-      <source xml:lang="en">Prompts to skills</source>
+      <source xml:lang="en">Convert Prompt to Skills</source>
     </trans-unit>
     <trans-unit id="migrationChecklistPromptsCount">
       <source xml:lang="en">{0} prompts</source>
@@ -4604,10 +4602,19 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Move agents and instructions to shared locations so they remain available to supported agent experiences.</source>
     </trans-unit>
     <trans-unit id="migrationChecklistUserMcpDescription">
-      <source xml:lang="en">Move eligible user servers to mcp-config.json in Copilot home and review servers that cannot be migrated.</source>
+      <source xml:lang="en">Move eligible user servers to mcp-config.json in Copilot home.</source>
     </trans-unit>
     <trans-unit id="migrationChecklistWorkspace">
       <source xml:lang="en">Workspace</source>
+    </trans-unit>
+    <trans-unit id="migrationConfirmationWithChanges">
+      <source xml:lang="en">{0}
+
+Planned changes:
+{1}</source>
+    </trans-unit>
+    <trans-unit id="migrationNeedsManualReviewReason">
+      <source xml:lang="en">This server cannot be migrated automatically. Update it by hand in its configuration file.</source>
     </trans-unit>
     <trans-unit id="migrationNoEditableDestinations">
       <source xml:lang="en">There are no file migration destinations to configure. Workspace MCP servers migrate to the root .mcp.json; user MCP servers migrate to mcp-config.json in Copilot home.</source>
@@ -4630,6 +4637,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="migrationNoWorkspaceSkillFolder">
       <source xml:lang="en">No workspace skills folder is configured for the active harness.</source>
     </trans-unit>
+    <trans-unit id="migrationNotSelected">
+      <source xml:lang="en">not selected</source>
+    </trans-unit>
     <trans-unit id="migrationPickAgentFolder">
       <source xml:lang="en">Select a destination folder for migrated agents</source>
     </trans-unit>
@@ -4642,6 +4652,15 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="migrationPickSkillFolder">
       <source xml:lang="en">Select a destination folder for migrated skills</source>
     </trans-unit>
+    <trans-unit id="migrationSelected">
+      <source xml:lang="en">selected</source>
+    </trans-unit>
+    <trans-unit id="migrationUserScope">
+      <source xml:lang="en">User</source>
+    </trans-unit>
+    <trans-unit id="migrationWorkspaceScope">
+      <source xml:lang="en">Workspace</source>
+    </trans-unit>
     <trans-unit id="models">
       <source xml:lang="en">Models</source>
     </trans-unit>
@@ -4650,12 +4669,6 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="modelsDescription">
       <source xml:lang="en">Browse and manage language models from different providers. Select models for use in chat, code completion, and other AI features.</source>
-    </trans-unit>
-    <trans-unit id="moreActions">
-      <source xml:lang="en">More Actions</source>
-    </trans-unit>
-    <trans-unit id="openCustomizationFile">
-      <source xml:lang="en">Open {0}, {1}</source>
     </trans-unit>
     <trans-unit id="openCustomizationSourceAriaLabel">
       <source xml:lang="en">Open {0} in the editor</source>
@@ -4702,11 +4715,8 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="recommendedCustomizationMigrationFolder">
       <source xml:lang="en">{0} (Recommended)</source>
     </trans-unit>
-    <trans-unit id="retry">
-      <source xml:lang="en">Retry</source>
-    </trans-unit>
-    <trans-unit id="retryCustomizationMigration">
-      <source xml:lang="en">Retry loading customizations</source>
+    <trans-unit id="restoreIgnoredMigrationGroups">
+      <source xml:lang="en">Select migration groups to restore</source>
     </trans-unit>
     <trans-unit id="saveBuiltinCopyAndChooseLocation">
       <source xml:lang="en">Save override</source>
@@ -5328,73 +5338,43 @@ Destination: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMigrationAccessibility" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="migrationHelpActions">
+      <source xml:lang="en">Migrate applies to the selected items in one group and shows the planned source and destination changes before modifying files. Ignore permanently hides a group. Show Ignored Migrations restores hidden groups.</source>
+    </trans-unit>
     <trans-unit id="migrationHelpActivity">
       <source xml:lang="en">Migration activity records successful changes locally. Expand an activity entry with Enter or Space to read its source and destination paths. Dismiss removes the activity record, not the migrated files.</source>
     </trans-unit>
     <trans-unit id="migrationHelpLocations">
-      <source xml:lang="en">Change destinations configures file migration locations. Workspace MCP servers migrate to the root .mcp.json. User MCP servers migrate to mcp-config.json in Copilot home. Disabled user servers may become enabled after migration. Servers that cannot be migrated are listed separately with the reason.</source>
+      <source xml:lang="en">Activate a destination path to change the destination. Workspace MCP servers migrate to the root .mcp.json. User MCP servers migrate to mcp-config.json in Copilot home. Disabled user servers may become enabled after migration.</source>
+    </trans-unit>
+    <trans-unit id="migrationHelpMcpChanges">
+      <source xml:lang="en">MCP servers that migrate with changes explain each property removal in their row. Review these warnings before confirming migration.</source>
     </trans-unit>
     <trans-unit id="migrationHelpMcpDetails">
-      <source xml:lang="en">Open an MCP server that cannot be migrated to review its details. Edit Configuration opens the source file and selects that server's JSON configuration.</source>
-    </trans-unit>
-    <trans-unit id="migrationHelpMcpSections">
-      <source xml:lang="en">MCP servers are grouped into Ready to migrate, Migrates with changes, and Not migratable. Servers that migrate with changes explain each property removal in their row. Each migratable section has its own Select all checkbox. Review the row warnings before confirming migration.</source>
+      <source xml:lang="en">MCP servers that cannot migrate automatically appear in the Needs manual review group. Open a server to review its details; Edit Configuration opens its source file and selects the server's JSON configuration.</source>
     </trans-unit>
     <trans-unit id="migrationHelpNavigation">
-      <source xml:lang="en">Use Tab and Shift+Tab to move between controls. Review opens the existing migration page filtered to that location. No files change until you confirm migration.</source>
+      <source xml:lang="en">Use the arrow keys to move through and expand the tree. Use each row's checkbox to include or exclude it. Open a customization to view its editor or details. The More Actions menu can migrate or delete one item.</source>
     </trans-unit>
     <trans-unit id="migrationHelpOverview">
-      <source xml:lang="en">The migration checklist groups supported migrations by your profile and workspace.</source>
-    </trans-unit>
-    <trans-unit id="migrationHelpSkip">
-      <source xml:lang="en">Skip Workspace excludes workspace migrations from the checklist count without changing files. Include Workspace restores them.</source>
+      <source xml:lang="en">The migrations tree groups each migration type by workspace or user. Expand a group to inspect each customization, its source location, and its destination.</source>
     </trans-unit>
     <trans-unit id="migrationHelpView">
-      <source xml:lang="en">Use {0} to read the checklist and activity in the Accessible View.</source>
+      <source xml:lang="en">Use {0} to read the migrations and activity in the Accessible View.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMigrationCategories" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="backToConfiguredLocationsMigration">
-      <source xml:lang="en">Back to Migrate Location Settings</source>
-    </trans-unit>
-    <trans-unit id="backToMcpMigration">
-      <source xml:lang="en">Back to Migrate MCP Servers</source>
-    </trans-unit>
-    <trans-unit id="backToPromptMigration">
-      <source xml:lang="en">Back to Migrate Prompt Files</source>
-    </trans-unit>
-    <trans-unit id="backToUserDataMigration">
-      <source xml:lang="en">Back to Migrate User Data Customizations</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationAgentsGroup">
-      <source xml:lang="en">Agents</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationBannerConsequence">
-      <source xml:lang="en">The option to clear unused location settings after migration is selected by default.</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationBannerSettings">
-      <source xml:lang="en">The settings {0} are no longer read by {1}. Move the customizations into supported harness folders so both VS Code and {1} can use them.</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationBannerSettingsWithDestination">
-      <source xml:lang="en">The settings {0} are no longer read by {1}. Move the customizations to '{2}' so both VS Code and {1} can use them.</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationBannerSingleSetting">
-      <source xml:lang="en">The setting {0} is no longer read by {1}. Move the customizations into supported harness folders so both VS Code and {1} can use them.</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationBannerSingleSettingWithDestination">
-      <source xml:lang="en">The setting {0} is no longer read by {1}. Move the customizations to '{2}' so both VS Code and {1} can use them.</source>
-    </trans-unit>
     <trans-unit id="configuredLocationsMigrationCardAction">
       <source xml:lang="en">Migrate...</source>
     </trans-unit>
     <trans-unit id="configuredLocationsMigrationCardActionAriaLabel">
-      <source xml:lang="en">Migrate customizations from unsupported configured locations</source>
+      <source xml:lang="en">Migrate customizations from VS Code-configured locations</source>
     </trans-unit>
     <trans-unit id="configuredLocationsMigrationCardDescription">
-      <source xml:lang="en">Found {0} customizations in configured locations that {1} does not use. Move them to keep them available.</source>
+      <source xml:lang="en">Found {0} customizations in locations observed only by the Local agent harness. {1} picks them up when running in VS Code. Move them to supported locations for use outside VS Code.</source>
     </trans-unit>
     <trans-unit id="configuredLocationsMigrationCardDescriptionSingle">
-      <source xml:lang="en">Found 1 customization in a configured location that {0} does not use. Move it to keep it available.</source>
+      <source xml:lang="en">Found 1 customization in a location observed only by the Local agent harness. {0} picks it up when running in VS Code. Move it to a supported location for use outside VS Code.</source>
     </trans-unit>
     <trans-unit id="configuredLocationsMigrationCardLabel">
       <source xml:lang="en">Migrate Location Settings</source>
@@ -5409,10 +5389,10 @@ Destination: {2}</source>
       <source xml:lang="en">Migrate</source>
     </trans-unit>
     <trans-unit id="configuredLocationsMigrationConfirmDetail">
-      <source xml:lang="en">This moves {0} customizations out of unsupported configured locations.</source>
+      <source xml:lang="en">This moves {0} customizations out of VS Code-configured locations. If all customizations that use the affected location settings migrate successfully, those settings are cleared.</source>
     </trans-unit>
     <trans-unit id="configuredLocationsMigrationConfirmDetailSingle">
-      <source xml:lang="en">This moves 1 customization out of an unsupported configured location.</source>
+      <source xml:lang="en">This moves 1 customization out of a VS Code-configured location. If all customizations that use the affected location setting migrate successfully, that setting is cleared.</source>
     </trans-unit>
     <trans-unit id="configuredLocationsMigrationConfirmMessage">
       <source xml:lang="en">Migrate customizations to {0}?</source>
@@ -5432,29 +5412,8 @@ Destination: {2}</source>
     <trans-unit id="configuredLocationsMigrationFilesFailedWithRemainder">
       <source xml:lang="en">Failed to migrate {0} customizations: {1}, and {2} more.</source>
     </trans-unit>
-    <trans-unit id="configuredLocationsMigrationInstructionsGroup">
-      <source xml:lang="en">Instructions</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationLearnMore">
-      <source xml:lang="en">Learn more about agent customizations</source>
-    </trans-unit>
     <trans-unit id="configuredLocationsMigrationNoFilesMigrated">
       <source xml:lang="en">No customizations from configured locations were migrated.</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationPageButtonTooltip">
-      <source xml:lang="en">Move the selected customizations to locations supported by the active harness</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationPageDescription">
-      <source xml:lang="en">Found {0} customizations in locations configured through VS Code settings that {1} does not use. Move them to supported harness locations.</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationPageDescriptionEmpty">
-      <source xml:lang="en">Select customizations to move to locations supported by the active harness.</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationPageEmpty">
-      <source xml:lang="en">No customizations in unsupported configured locations are available to migrate.</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationPageTitle">
-      <source xml:lang="en">Migrate Location Settings</source>
     </trans-unit>
     <trans-unit id="configuredLocationsMigrationShortcutAriaLabelSingle">
       <source xml:lang="en">Locations, 1 customization needs migration</source>
@@ -5466,19 +5425,7 @@ Destination: {2}</source>
       <source xml:lang="en">Migrate Location Settings</source>
     </trans-unit>
     <trans-unit id="configuredLocationsMigrationShortcutTooltip">
-      <source xml:lang="en">Move customizations from locations unsupported by the active harness</source>
-    </trans-unit>
-    <trans-unit id="configuredLocationsMigrationSkillsGroup">
-      <source xml:lang="en">Skills</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationSelectAriaLabel">
-      <source xml:lang="en">Select {0}</source>
-    </trans-unit>
-    <trans-unit id="fourConfiguredLocationSettings">
-      <source xml:lang="en">{0}, {1}, {2}, and {3}</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationBannerMessage">
-      <source xml:lang="en">Eligible servers move from .vscode/mcp.json to .mcp.json at each workspace root so {0} can discover them directly. Servers that cannot be migrated and unselected servers stay in their current files.</source>
+      <source xml:lang="en">Move customizations from VS Code-configured locations to locations supported by the active harness</source>
     </trans-unit>
     <trans-unit id="mcpMigrationCardAction">
       <source xml:lang="en">Migrate...</source>
@@ -5498,9 +5445,6 @@ Destination: {2}</source>
     <trans-unit id="mcpMigrationCardLabel">
       <source xml:lang="en">Migrate MCP Servers</source>
     </trans-unit>
-    <trans-unit id="mcpMigrationChangesGroup">
-      <source xml:lang="en">Migrates with changes</source>
-    </trans-unit>
     <trans-unit id="mcpMigrationCompletedMultiple">
       <source xml:lang="en">Migrated {0} MCP servers.</source>
     </trans-unit>
@@ -5511,7 +5455,7 @@ Destination: {2}</source>
       <source xml:lang="en">Migrate</source>
     </trans-unit>
     <trans-unit id="mcpMigrationConfirmDetail">
-      <source xml:lang="en">Selected entries are removed from .vscode/mcp.json after they are written and verified in .mcp.json. Entries that cannot be migrated and unselected entries stay in place.</source>
+      <source xml:lang="en">Eligible entries are removed from .vscode/mcp.json after they are written and verified in .mcp.json. Entries that cannot be migrated stay in place.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationConfirmMessageMultiple">
       <source xml:lang="en">Migrate {0} MCP servers to .mcp.json?</source>
@@ -5537,12 +5481,6 @@ Destination: {2}</source>
     <trans-unit id="mcpMigrationInvalidTarget">
       <source xml:lang="en">Could not migrate '{0}' because the destination MCP configuration is invalid.</source>
     </trans-unit>
-    <trans-unit id="mcpMigrationItemScopedPath">
-      <source xml:lang="en">{0}: {1} to {2}</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationLearnMore">
-      <source xml:lang="en">Learn more about MCP servers</source>
-    </trans-unit>
     <trans-unit id="mcpMigrationMixedConfirmDetail">
       <source xml:lang="en">Move user servers to Copilot home and workspace servers to .mcp.json. The original entries will be removed.
 
@@ -5553,24 +5491,6 @@ Disabled user servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationNoneMigrated">
       <source xml:lang="en">No MCP servers were migrated.</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationPageButtonTooltip">
-      <source xml:lang="en">Move selected MCP servers to workspace root or Copilot home configuration files</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationPageDescriptionMultiple">
-      <source xml:lang="en">Select eligible MCP servers to move so {0} can discover them directly. Servers that cannot be migrated and unselected servers stay in their current files.</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationPageDescriptionSingle">
-      <source xml:lang="en">Select the eligible MCP server to move so {0} can discover it directly. Servers that cannot be migrated and unselected servers stay in their current files.</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationPageEmpty">
-      <source xml:lang="en">No MCP servers are eligible to migrate.</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationPageTitle">
-      <source xml:lang="en">Migrate MCP Servers</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationReadyGroup">
-      <source xml:lang="en">Ready to migrate</source>
     </trans-unit>
     <trans-unit id="mcpMigrationRemoveDev">
       <source xml:lang="en">The 'dev' property will be removed. VS Code will no longer auto-start this server in development mode, restart it when watched files change, attach a debugger, or enable development-mode logging.</source>
@@ -5596,12 +5516,6 @@ Disabled user servers may become enabled.</source>
     <trans-unit id="mcpMigrationRollbackFailedMultiple">
       <source xml:lang="en">Some MCP server migrations could not be safely completed or rolled back. Review the affected source and destination MCP configuration files.</source>
     </trans-unit>
-    <trans-unit id="mcpMigrationSelectAriaLabel">
-      <source xml:lang="en">Select {0} from {1}</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationSelectWithChangesAriaLabel">
-      <source xml:lang="en">Select {0} from {1}. {2}</source>
-    </trans-unit>
     <trans-unit id="mcpMigrationShortcutAriaLabelSingle">
       <source xml:lang="en">MCP servers, 1 server can be migrated</source>
     </trans-unit>
@@ -5620,9 +5534,6 @@ Disabled user servers may become enabled.</source>
     <trans-unit id="mcpMigrationTargetConflict">
       <source xml:lang="en">Could not migrate '{0}' because the destination already contains a different server with that name.</source>
     </trans-unit>
-    <trans-unit id="mcpMigrationUserBannerMessage">
-      <source xml:lang="en">User servers move to mcp-config.json in Copilot home, making them available across profiles and workspaces. Disabled user servers may become enabled after migration. Workspace servers move to the root .mcp.json. Unselected servers and servers that cannot be migrated stay in their current files.</source>
-    </trans-unit>
     <trans-unit id="mcpMigrationUserConfirmDetail">
       <source xml:lang="en">Move to Copilot home for use across profiles and workspaces. The original entries will be removed.
 
@@ -5638,15 +5549,6 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationUserConfirmMessageSingle">
       <source xml:lang="en">Migrate 1 MCP server?</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationUserScope">
-      <source xml:lang="en">User</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationWorkspaceScope">
-      <source xml:lang="en">Workspace</source>
-    </trans-unit>
-    <trans-unit id="promptMigrationBannerMessage">
-      <source xml:lang="en">Prompts are no longer supported by {0}. Convert them to skills to keep them available in both VS Code and this harness.</source>
     </trans-unit>
     <trans-unit id="promptMigrationCardAction">
       <source xml:lang="en">Convert to Skills...</source>
@@ -5696,32 +5598,8 @@ Disabled servers may become enabled.</source>
     <trans-unit id="promptMigrationFilesFailedWithRemainder">
       <source xml:lang="en">Failed to migrate {0} prompt files: {1}, and {2} more.</source>
     </trans-unit>
-    <trans-unit id="promptMigrationLearnMore">
-      <source xml:lang="en">Learn more about agent skills</source>
-    </trans-unit>
     <trans-unit id="promptMigrationNoFilesConverted">
       <source xml:lang="en">No prompt files were converted.</source>
-    </trans-unit>
-    <trans-unit id="promptMigrationPageButtonTooltip">
-      <source xml:lang="en">Convert selected prompt files to skills</source>
-    </trans-unit>
-    <trans-unit id="promptMigrationPageDescription">
-      <source xml:lang="en">Select prompt files to convert into skills for the active harness.</source>
-    </trans-unit>
-    <trans-unit id="promptMigrationPageDescriptionUser">
-      <source xml:lang="en">Prompt files are not supported for this harness. Found {0} user prompt files that local VS Code can still run, but {1} ignores. Convert them to skills to keep them available.</source>
-    </trans-unit>
-    <trans-unit id="promptMigrationPageDescriptionWorkspace">
-      <source xml:lang="en">Prompt files are not supported for this harness. Found {0} workspace prompt files that local VS Code can still run, but {1} ignores. Convert them to skills to keep them available.</source>
-    </trans-unit>
-    <trans-unit id="promptMigrationPageDescriptionWorkspaceAndUser">
-      <source xml:lang="en">Prompt files are not supported for this harness. Found {0} prompt files ({1} workspace, {2} user) that local VS Code can still run, but {3} ignores. Convert them to skills to keep them available.</source>
-    </trans-unit>
-    <trans-unit id="promptMigrationPageEmpty">
-      <source xml:lang="en">No prompt files are available to migrate.</source>
-    </trans-unit>
-    <trans-unit id="promptMigrationPageTitle">
-      <source xml:lang="en">Migrate Prompt Files</source>
     </trans-unit>
     <trans-unit id="promptMigrationShortcutAriaLabelWithCount">
       <source xml:lang="en">Prompts, {0} deprecated prompt files need migration</source>
@@ -5731,30 +5609,6 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="promptMigrationShortcutTooltip">
       <source xml:lang="en">Convert deprecated prompt files to skills</source>
-    </trans-unit>
-    <trans-unit id="promptMigrationUserGroup">
-      <source xml:lang="en">User</source>
-    </trans-unit>
-    <trans-unit id="promptMigrationWorkspaceGroup">
-      <source xml:lang="en">Workspace</source>
-    </trans-unit>
-    <trans-unit id="threeConfiguredLocationSettings">
-      <source xml:lang="en">{0}, {1}, and {2}</source>
-    </trans-unit>
-    <trans-unit id="twoConfiguredLocationSettings">
-      <source xml:lang="en">{0} and {1}</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationAgentsGroup">
-      <source xml:lang="en">Agents</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationBannerConsequence">
-      <source xml:lang="en">Migrated files aren't currently included in Settings Sync.</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationBannerMessage">
-      <source xml:lang="en">They are stored in user data, which only VS Code reads. Migrating moves them into the folders {0} reads, keeping their name, type, and content, so you can keep using them.</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationBannerMessageWithDestination">
-      <source xml:lang="en">They are stored in user data, which only VS Code reads. Move them to '{0}' so both VS Code and this harness can use them, keeping their name, type, and content.</source>
     </trans-unit>
     <trans-unit id="userDataMigrationCardAction">
       <source xml:lang="en">Migrate...</source>
@@ -5822,41 +5676,8 @@ Disabled servers may become enabled.</source>
     <trans-unit id="userDataMigrationFilesFailedWithRemainder">
       <source xml:lang="en">Failed to migrate {0} user data customizations: {1}, and {2} more.</source>
     </trans-unit>
-    <trans-unit id="userDataMigrationInstructionsGroup">
-      <source xml:lang="en">Instructions</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationLearnMore">
-      <source xml:lang="en">Learn more about agent customizations</source>
-    </trans-unit>
     <trans-unit id="userDataMigrationNoFilesMigrated">
       <source xml:lang="en">No user data customizations were migrated.</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationPageButtonTooltip">
-      <source xml:lang="en">Move the selected user data customizations to the active harness</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationPageDescription">
-      <source xml:lang="en">Select user data customizations to move to the active harness.</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationPageDescriptionAgent">
-      <source xml:lang="en">Found 1 agent in user data that local VS Code can still use, but {0} ignores. Move it to the harness agents folder to keep it available.</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationPageDescriptionAgents">
-      <source xml:lang="en">Found {0} agents in user data that local VS Code can still use, but {1} ignores. Move them to the harness agents folder to keep them available.</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationPageDescriptionAgentsAndInstructions">
-      <source xml:lang="en">Found {0} customizations in user data that local VS Code can still use, but {1} ignores. Move them to the harness folders to keep their type and content.</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationPageDescriptionInstruction">
-      <source xml:lang="en">Found 1 instruction file in user data that local VS Code can still use, but {0} ignores. Move it to the harness instructions folder to keep it available.</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationPageDescriptionInstructions">
-      <source xml:lang="en">Found {0} instruction files in user data that local VS Code can still use, but {1} ignores. Move them to the harness instructions folder to keep them available.</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationPageEmpty">
-      <source xml:lang="en">No user data customizations are available to migrate.</source>
-    </trans-unit>
-    <trans-unit id="userDataMigrationPageTitle">
-      <source xml:lang="en">Migrate User Data Customizations</source>
     </trans-unit>
     <trans-unit id="userDataMigrationShortcutAriaLabelSingle">
       <source xml:lang="en">User data, 1 customization needs migration</source>
@@ -5875,7 +5696,7 @@ Disabled servers may become enabled.</source>
     <trans-unit id="activityMigrations">
       <source xml:lang="en">{0} items migrated</source>
     </trans-unit>
-    <trans-unit id="changeDestinations">
+    <trans-unit id="changeMigrationDestinations">
       <source xml:lang="en">Change destinations for {0}</source>
     </trans-unit>
     <trans-unit id="convertedToSkill">
@@ -5890,23 +5711,28 @@ Disabled servers may become enabled.</source>
     <trans-unit id="dismissMigrationResult">
       <source xml:lang="en">Dismiss migration result</source>
     </trans-unit>
-    <trans-unit id="highRisk">
-      <source xml:lang="en">High risk</source>
+    <trans-unit id="highRiskMigrationDescription">
+      <source xml:lang="en">High risk. {0}</source>
     </trans-unit>
-    <trans-unit id="highRiskDescription">
-      <source xml:lang="en">Conversion can remove prompt-only metadata and change how prompts are invoked.</source>
+    <trans-unit id="ignoreMigrationCategory">
+      <source xml:lang="en">Ignore {0}</source>
     </trans-unit>
-    <trans-unit id="inProgress">
-      <source xml:lang="en">In progress</source>
+    <trans-unit id="ignoreMigrationGroup">
+      <source xml:lang="en">Ignore</source>
     </trans-unit>
-    <trans-unit id="includeWorkspace">
-      <source xml:lang="en">Include Workspace</source>
+    <trans-unit id="manualReviewItemHover">
+      <source xml:lang="en">{0}
+
+{1}</source>
     </trans-unit>
-    <trans-unit id="includeWorkspaceLabel">
-      <source xml:lang="en">Include workspace {0}</source>
+    <trans-unit id="migrate">
+      <source xml:lang="en">Migrate</source>
     </trans-unit>
-    <trans-unit id="migrated">
-      <source xml:lang="en">Migrated</source>
+    <trans-unit id="migrateMigrationCategory">
+      <source xml:lang="en">Migrate {0}</source>
+    </trans-unit>
+    <trans-unit id="migrateSelectedCount">
+      <source xml:lang="en">Migrate {0}</source>
     </trans-unit>
     <trans-unit id="migrationActivity">
       <source xml:lang="en">Migration activity</source>
@@ -5914,26 +5740,56 @@ Disabled servers may become enabled.</source>
     <trans-unit id="migrationActivityTitle">
       <source xml:lang="en">{0} · {1}</source>
     </trans-unit>
-    <trans-unit id="migrationChecklist">
-      <source xml:lang="en">Your migration checklist</source>
-    </trans-unit>
     <trans-unit id="migrationComplete">
       <source xml:lang="en">Migration complete</source>
+    </trans-unit>
+    <trans-unit id="migrationDestinationPath">
+      <source xml:lang="en">Destination: {0}</source>
     </trans-unit>
     <trans-unit id="migrationFrom">
       <source xml:lang="en">From</source>
     </trans-unit>
-    <trans-unit id="migrationProgress">
-      <source xml:lang="en">{0} of {1} complete</source>
+    <trans-unit id="migrationGroupAriaLabel">
+      <source xml:lang="en">{0}, {1} migrations</source>
+    </trans-unit>
+    <trans-unit id="migrationGroupWithScope">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="migrationItemActions">
+      <source xml:lang="en">More actions for {0}</source>
+    </trans-unit>
+    <trans-unit id="migrationItemAriaLabel">
+      <source xml:lang="en">{0}, {1}, source {2}</source>
+    </trans-unit>
+    <trans-unit id="migrationItemWithChangesAriaLabel">
+      <source xml:lang="en">{0}, {1}, source {2}. Migration changes: {3}</source>
+    </trans-unit>
+    <trans-unit id="migrationItemWithStatusAriaLabel">
+      <source xml:lang="en">{0}, needs manual review, {1}, {2}, source {3}</source>
+    </trans-unit>
+    <trans-unit id="migrationManualReviewGroup">
+      <source xml:lang="en">Needs manual review</source>
+    </trans-unit>
+    <trans-unit id="migrationManualReviewGroupDescription">
+      <source xml:lang="en">These customizations cannot be migrated automatically. Open their details or use the item menu to resolve them.</source>
     </trans-unit>
     <trans-unit id="migrationTo">
       <source xml:lang="en">To</source>
+    </trans-unit>
+    <trans-unit id="migrationTreeAriaLabel">
+      <source xml:lang="en">Customization migrations</source>
+    </trans-unit>
+    <trans-unit id="migrationUserScope">
+      <source xml:lang="en">User</source>
+    </trans-unit>
+    <trans-unit id="migrationWorkspaceScope">
+      <source xml:lang="en">Workspace</source>
     </trans-unit>
     <trans-unit id="migrationsComplete">
       <source xml:lang="en">{0} customizations migrated</source>
     </trans-unit>
     <trans-unit id="migrationsCompletedDescription">
-      <source xml:lang="en">Your file migrations are complete. See the checklist below for the status of each location.</source>
+      <source xml:lang="en">Your customizations use supported formats and locations.</source>
     </trans-unit>
     <trans-unit id="migrationsDescription">
       <source xml:lang="en">Some of your agent customizations need an update to keep working. Review and migrate them to the new formats and locations.</source>
@@ -5941,17 +5797,20 @@ Disabled servers may become enabled.</source>
     <trans-unit id="migrationsTitle">
       <source xml:lang="en">Migrations</source>
     </trans-unit>
+    <trans-unit id="moreActions">
+      <source xml:lang="en">More Actions</source>
+    </trans-unit>
     <trans-unit id="movedFile">
       <source xml:lang="en">Moved file</source>
     </trans-unit>
     <trans-unit id="movedServer">
       <source xml:lang="en">Moved server</source>
     </trans-unit>
+    <trans-unit id="noActiveMigrations">
+      <source xml:lang="en">No active migrations. Restore ignored migrations to review them.</source>
+    </trans-unit>
     <trans-unit id="noMigrations">
       <source xml:lang="en">No migrations are needed.</source>
-    </trans-unit>
-    <trans-unit id="noRemainingMigrations">
-      <source xml:lang="en">No remaining migrations.</source>
     </trans-unit>
     <trans-unit id="oneActivityMigration">
       <source xml:lang="en">1 item migrated</source>
@@ -5959,38 +5818,32 @@ Disabled servers may become enabled.</source>
     <trans-unit id="oneMigrationComplete">
       <source xml:lang="en">1 customization migrated</source>
     </trans-unit>
-    <trans-unit id="profileMigrations">
-      <source xml:lang="en">Personal customizations</source>
-    </trans-unit>
     <trans-unit id="retry">
       <source xml:lang="en">Retry</source>
     </trans-unit>
     <trans-unit id="retryMigrations">
       <source xml:lang="en">Retry loading migrations</source>
     </trans-unit>
-    <trans-unit id="review">
+    <trans-unit id="reviewMigrationItem">
       <source xml:lang="en">Review</source>
     </trans-unit>
-    <trans-unit id="reviewMigrationCategory">
-      <source xml:lang="en">Review {0} from {1}</source>
+    <trans-unit id="reviewMigrationItemAriaLabel">
+      <source xml:lang="en">Review {0}</source>
     </trans-unit>
-    <trans-unit id="skipWorkspace">
-      <source xml:lang="en">Skip Workspace</source>
+    <trans-unit id="selectMigrationItem">
+      <source xml:lang="en">Select {0} for migration</source>
     </trans-unit>
-    <trans-unit id="skipWorkspaceLabel">
-      <source xml:lang="en">Skip workspace {0}</source>
+    <trans-unit id="showIgnoredMigrations">
+      <source xml:lang="en">Show Ignored Migrations</source>
     </trans-unit>
-    <trans-unit id="skipped">
-      <source xml:lang="en">Skipped</source>
+    <trans-unit id="showIgnoredMigrationsAriaLabel">
+      <source xml:lang="en">Show and restore ignored migrations</source>
     </trans-unit>
     <trans-unit id="viewChanges">
       <source xml:lang="en">View Changes</source>
     </trans-unit>
     <trans-unit id="viewMigrationChanges">
       <source xml:lang="en">View migration changes</source>
-    </trans-unit>
-    <trans-unit id="workspaceMigrations">
-      <source xml:lang="en">Workspace customizations. Skip this workspace if you do not own it.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMigrationServiceImpl" source-language="en" datatype="plaintext"><body>
@@ -6467,9 +6320,6 @@ Disabled servers may become enabled.</source>
     <trans-unit id="addServer">
       <source xml:lang="en">Add Server</source>
     </trans-unit>
-    <trans-unit id="addServerNarrow">
-      <source xml:lang="en">Add</source>
-    </trans-unit>
     <trans-unit id="agentHostMcpServerDisable">
       <source xml:lang="en">Disable (Globally)</source>
     </trans-unit>
@@ -6496,6 +6346,9 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="availableMcpServersSectionDescription">
       <source xml:lang="en">Browse and install MCP servers from the marketplace.</source>
+    </trans-unit>
+    <trans-unit id="browseMcps">
+      <source xml:lang="en">Browse MCPs</source>
     </trans-unit>
     <trans-unit id="builtinMcpServerDisable">
       <source xml:lang="en">Disable (Globally)</source>
@@ -6742,6 +6595,9 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="browseMarketplace">
       <source xml:lang="en">Browse Marketplace</source>
+    </trans-unit>
+    <trans-unit id="browsePlugins">
+      <source xml:lang="en">Browse Plugins</source>
     </trans-unit>
     <trans-unit id="checkForAndApplyPluginUpdates">
       <source xml:lang="en">Check for and Apply Updates</source>
@@ -7496,9 +7352,6 @@ Changes may not take full effect until VS Code is restarted.</source>
     <trans-unit id="chat.agentHost.allowSignedOutWhenUsable">
       <source xml:lang="en">When enabled, Agent Host sessions remain available while signed out. The Agents window opens without forcing GitHub sign-in, and editor chat lets you select the Copilot harness. Agents usable without GitHub (for example Codex with ChatGPT authentication or Claude in native mode with your own Anthropic credentials) work while signed out; agents that require GitHub prompt you to add a model or sign in. When disabled (the default), GitHub sign-in is required before the Agents window opens.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.copilot.mapLegacySettingsToManagedSettings">
-      <source xml:lang="en">When enabled, maps supported legacy VS Code settings to equivalent Copilot SDK managed settings for local Agent Host sessions. Only restrictions are mapped, and only from globally-scoped values — workspace and folder values are ignored. Applies to local sessions using the Copilot agent; remote hosts and other agents are unaffected. This compatibility bridge is temporary and is not used for new settings.</source>
-    </trans-unit>
     <trans-unit id="chat.agentHost.copilot.modelCapabilityOverrides">
       <source xml:lang="en">Per-model overrides for Copilot Agent Host sessions. Use `*` to match every model. Supports model family, reasoning effort, tool filters, model capabilities, and YAML prompt overrides.</source>
     </trans-unit>
@@ -7605,15 +7458,12 @@ Changing this setting requires a restart to take effect.</source>
     <trans-unit id="chat.agentSessions.showExternal.recent">
       <source xml:lang="en">Show up to the 2 most recent external sessions updated in the last 7 days. At startup, external sessions older than the second-most-recently updated local session are hidden.</source>
     </trans-unit>
-    <trans-unit id="chat.agentSkillsLocations.deprecated">
-      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Review the {0} in the Agent Customizations editor to move skills into supported locations.</source>
-    </trans-unit>
     <trans-unit id="chat.agentSkillsLocations.description">
       <source xml:lang="en">Specify location(s) of agent skills (`{0}`) that can be used in Chat Sessions. [Learn More]({1}).
 
 Each path should contain skill subfolders with SKILL.md files (e.g., add `my-skills` if you have `my-skills/skillA/SKILL.md`). Relative paths are resolved from the root folder(s) of your workspace.
 
-This setting is only used by the Local agent harness.</source>
+Locations configured here are only observed by the Local agent harness. Other harnesses running in VS Code receive skills from all additional locations configured here, in addition to their built-in locations. To use skills with independent agent harnesses, such as Copilot CLI, review the {2} in the Agent Customizations editor to migrate them to supported locations.</source>
     </trans-unit>
     <trans-unit id="chat.agentSkillsLocations.invalidPath">
       <source xml:lang="en">Paths must be relative or start with '~/'. Absolute paths and '\' separators are not supported.</source>
@@ -7621,15 +7471,12 @@ This setting is only used by the Local agent harness.</source>
     <trans-unit id="chat.agentSkillsLocations.title">
       <source xml:lang="en">Agent Skills Locations</source>
     </trans-unit>
-    <trans-unit id="chat.agents.config.locations.deprecated">
-      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Review the {0} in the Agent Customizations editor to move agents into supported locations.</source>
-    </trans-unit>
     <trans-unit id="chat.agents.config.locations.description">
       <source xml:lang="en">Specify location(s) of custom agent files (`*{0}`). [Learn More]({1}).
 
 Relative paths are resolved from the root folder(s) of your workspace.
 
-This setting is only used by the Local agent harness.</source>
+Locations configured here are only observed by the Local agent harness. Other harnesses running in VS Code receive agents from all additional locations configured here, in addition to their built-in locations. To use agents with independent agent harnesses, such as Copilot CLI, review the {2} in the Agent Customizations editor to migrate them to supported locations.</source>
     </trans-unit>
     <trans-unit id="chat.agents.config.locations.title">
       <source xml:lang="en">Agent File Locations</source>
@@ -7770,13 +7617,22 @@ This setting is only used by the Local agent harness.</source>
       <source xml:lang="en">Maximum number of characters available for skill descriptions in the Copilot SDK system message.</source>
     </trans-unit>
     <trans-unit id="chat.copilot.tgrep.enabled">
-      <source xml:lang="en">When enabled, local Copilot Agent Host sessions force-enable tgrep indexed search, bypassing the repository-size threshold. Requires a local Git repository on a non-virtual filesystem. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
+      <source xml:lang="en">When enabled, local Copilot Agent Host sessions use tgrep indexed search for eligible large repositories. Requires a local Git repository on a non-virtual filesystem. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
     </trans-unit>
     <trans-unit id="chat.customizations.copilotConnectors.enabled">
       <source xml:lang="en">Enables Copilot connectors in the unified marketplace and exposes connected connector MCP servers in Chat Customizations and Copilot agent sessions.</source>
     </trans-unit>
+    <trans-unit id="chat.customizations.locationsMigration.enabled">
+      <source xml:lang="en">Controls whether the Chat Customizations editor offers to move agents, instructions, and skills from configured locations that are not supported by the active agent-host harness. When disabled, the migration card and sidebar shortcut are hidden.</source>
+    </trans-unit>
+    <trans-unit id="chat.customizations.mcpServerMigration.enabled">
+      <source xml:lang="en">Controls whether VS Code shows MCP server migration actions, hints, compatibility badges, and compatibility details. Migration moves eligible workspace MCP servers out of .vscode/mcp.json and into a .mcp.json file at the workspace root, where the active agent-host harness discovers them directly.</source>
+    </trans-unit>
     <trans-unit id="chat.customizations.migration.enabled">
       <source xml:lang="en">Controls whether VS Code shows customization migration actions, hints, compatibility badges, and compatibility details for the active Agent Host harness.</source>
+    </trans-unit>
+    <trans-unit id="chat.customizations.promptMigration.enabled">
+      <source xml:lang="en">Controls whether the Chat Customizations editor offers to convert prompt files into skills for agent-host harnesses, which ignore prompt files. When disabled, the migration card and sidebar shortcut are hidden.</source>
     </trans-unit>
     <trans-unit id="chat.customizations.strictPluginOnlyCustomization">
       <source xml:lang="en">Blocks standalone user and workspace skills, agents, hooks, instructions, and MCP servers while keeping eligible plugin customizations available.</source>
@@ -7786,6 +7642,9 @@ This setting is only used by the Local agent harness.</source>
     </trans-unit>
     <trans-unit id="chat.customizations.structuredPreview.enabled">
       <source xml:lang="en">Controls whether the Chat Customizations editor shows a structured preview for markdown customization files (agents, skills, instructions, prompts). When disabled, the editor always opens the raw markdown in the embedded code editor.</source>
+    </trans-unit>
+    <trans-unit id="chat.customizations.userDataMigration.enabled">
+      <source xml:lang="en">Controls whether the Chat Customizations editor offers to move agents and instructions stored in user data to the active agent-host harness, which ignores the user data location. When disabled, the migration card and sidebar shortcut are hidden.</source>
     </trans-unit>
     <trans-unit id="chat.defaultConfiguration.approvals.allowAll">
       <source xml:lang="en">Allow All — runs tool calls without asking.</source>
@@ -8021,15 +7880,12 @@ Note: this setting currently only applies to Agent Host sessions (such as Copilo
     <trans-unit id="chat.inlineReferences.style.link">
       <source xml:lang="en">Display file and symbol references as simple blue links without icons.</source>
     </trans-unit>
-    <trans-unit id="chat.instructions.config.locations.deprecated">
-      <source xml:lang="en">This setting and the Local agent harness will be removed in a future release. Review the {0} in the Agent Customizations editor to move instructions into supported locations.</source>
-    </trans-unit>
     <trans-unit id="chat.instructions.config.locations.description">
       <source xml:lang="en">Specify location(s) of instructions files (`*{0}`) that can be attached in Chat sessions. [Learn More]({1}).
 
 Relative paths are resolved from the root folder(s) of your workspace.
 
-This setting is only used by the Local agent harness.</source>
+Locations configured here are only observed by the Local agent harness. Other harnesses running in VS Code receive instructions from all additional locations configured here, in addition to their built-in locations. To use instructions with independent agent harnesses, such as Copilot CLI, review the {2} in the Agent Customizations editor to migrate them to supported locations.</source>
     </trans-unit>
     <trans-unit id="chat.instructions.config.locations.title">
       <source xml:lang="en">Instructions File Locations</source>
@@ -10461,6 +10317,9 @@ Examples:
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatInputPills" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatInputPills.ariaLabel">
+      <source xml:lang="en">Session status</source>
+    </trans-unit>
     <trans-unit id="chatInputPills.configure">
       <source xml:lang="en">Configure Session Status Pills</source>
     </trans-unit>
@@ -13304,6 +13163,16 @@ Source: {0}</source>
       <source xml:lang="en">This conversation is incomplete. Its recorded history ends mid-response, so the last exchange may be missing.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxSessionContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.deleteSessionNotFound">
+      <source xml:lang="en">Mission Control sandbox session not found.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxSessionListController" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.deleteInvalidSession">
+      <source xml:lang="en">The session does not belong to this sandbox.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/editorCloudSandboxContribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cloudSandbox.discoveryDescription">
       <source xml:lang="en">Existing cloud sandbox sessions.</source>
@@ -13342,9 +13211,64 @@ Source: {0}</source>
       <source xml:lang="en">Select Plugin Folder on {0}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/sessionBackgroundShellsControl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="backgroundShells.accessibilityHelp">
+      <source xml:lang="en">The Background Shells pill opens a picker above the chat input, including for a single shell. Each entry includes its elapsed time, and is marked Detached when the shell runs independently of the agent. Use the arrow keys to choose a shell, then Enter or Right Arrow to open its live command details beside the picker. Left Arrow or Escape returns to the list; Escape from the list returns focus to the pill. Elapsed time continues updating while details are open, and a shell disappears when it finishes. This list does not stop commands or stream their output.</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.active">
+      <source xml:lang="en">Active background shells</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.attachmentWithDuration">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.command">
+      <source xml:lang="en">Command: {0}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.detached">
+      <source xml:lang="en">Detached</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.details">
+      <source xml:lang="en">{0}
+
+{1}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.facts">
+      <source xml:lang="en">Command: {0}
+Shell ID: {1}
+Started: {2}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.factsWithoutId">
+      <source xml:lang="en">Command: {0}
+Started: {1}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.id">
+      <source xml:lang="en">Shell ID: {0}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.showDetails">
+      <source xml:lang="en">Show details for background shell {0}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.startedAt">
+      <source xml:lang="en">Started: {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/sessionChatPillOptions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatInputPills.showAll">
       <source xml:lang="en">Show All</source>
+    </trans-unit>
+    <trans-unit id="sessionBackgroundShells.count">
+      <source xml:lang="en">{0} Background Shells</source>
+    </trans-unit>
+    <trans-unit id="sessionBackgroundShells.countSingle">
+      <source xml:lang="en">1 Background Shell</source>
+    </trans-unit>
+    <trans-unit id="sessionBackgroundShells.show">
+      <source xml:lang="en">Show {0} background shells</source>
+    </trans-unit>
+    <trans-unit id="sessionBackgroundShells.showSingle">
+      <source xml:lang="en">Show 1 background shell</source>
+    </trans-unit>
+    <trans-unit id="sessionBackgroundShells.title">
+      <source xml:lang="en">Background Shells</source>
     </trans-unit>
     <trans-unit id="sessionBrowsers.count">
       <source xml:lang="en">{0} Active Browsers</source>
@@ -13437,9 +13361,46 @@ Source: {0}</source>
       <source xml:lang="en">Subagents</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/sessionCustomizations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionCustomizations.agents">
+      <source xml:lang="en">Agents</source>
+    </trans-unit>
+    <trans-unit id="sessionCustomizations.hooks">
+      <source xml:lang="en">Hooks</source>
+    </trans-unit>
+    <trans-unit id="sessionCustomizations.instructions">
+      <source xml:lang="en">Instructions</source>
+    </trans-unit>
+    <trans-unit id="sessionCustomizations.mcpServers">
+      <source xml:lang="en">MCP Servers</source>
+    </trans-unit>
+    <trans-unit id="sessionCustomizations.plugins">
+      <source xml:lang="en">Plugins</source>
+    </trans-unit>
+    <trans-unit id="sessionCustomizations.prompts">
+      <source xml:lang="en">Prompts</source>
+    </trans-unit>
+    <trans-unit id="sessionCustomizations.skills">
+      <source xml:lang="en">Skills</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/sessionPullRequestPill" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatInputPills.pullRequests.showOpen">
       <source xml:lang="en">Show Open/Draft</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/sessionSubagentsPill" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="backgroundActivities.subagent">
+      <source xml:lang="en">Subagent</source>
+    </trans-unit>
+    <trans-unit id="backgroundActivities.subagents.completed">
+      <source xml:lang="en">Subagents: Completed</source>
+    </trans-unit>
+    <trans-unit id="backgroundActivities.subagents.inProgress">
+      <source xml:lang="en">Subagents: In Progress</source>
+    </trans-unit>
+    <trans-unit id="backgroundActivities.subagents.showInProgress">
+      <source xml:lang="en">Show In Progress</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/speechToText/chatSpeechToTextService" source-language="en" datatype="plaintext"><body>
@@ -15025,6 +14986,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.subagent.defaultDescription">
       <source xml:lang="en">Running subagent</source>
     </trans-unit>
+    <trans-unit id="chat.subagent.nestedActivity">
+      <source xml:lang="en">Subagent: {0}</source>
+    </trans-unit>
     <trans-unit id="chat.subagent.openChat">
       <source xml:lang="en">Open Subagent</source>
     </trans-unit>
@@ -15078,14 +15042,26 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.subagent.agentTypeTooltip">
       <source xml:lang="en">Subagent type: {0}</source>
     </trans-unit>
+    <trans-unit id="chat.subagent.contextWindow">
+      <source xml:lang="en">Context window: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.subagent.defaultContext">
+      <source xml:lang="en">Default</source>
+    </trans-unit>
     <trans-unit id="chat.subagent.hideDetails">
       <source xml:lang="en">Hide subagent details: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.subagent.longContext">
+      <source xml:lang="en">Long context</source>
     </trans-unit>
     <trans-unit id="chat.subagent.modelAria">
       <source xml:lang="en">Model {0}</source>
     </trans-unit>
     <trans-unit id="chat.subagent.modelTooltip">
       <source xml:lang="en">Model: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.subagent.nestedActivity">
+      <source xml:lang="en">Subagent: {0}</source>
     </trans-unit>
     <trans-unit id="chat.subagent.openChat">
       <source xml:lang="en">Open Subagent</source>
@@ -15105,8 +15081,14 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.subagent.openChat.unavailable">
       <source xml:lang="en">Subagent chat is not available yet.</source>
     </trans-unit>
+    <trans-unit id="chat.subagent.openNestedChat">
+      <source xml:lang="en">Open subagent chat to the side: {0}</source>
+    </trans-unit>
     <trans-unit id="chat.subagent.pendingChat.aria">
       <source xml:lang="en">Subagent: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.subagent.reasoningEffort">
+      <source xml:lang="en">Reasoning effort: {0}</source>
     </trans-unit>
     <trans-unit id="chat.subagent.showDetails">
       <source xml:lang="en">Show subagent details: {0}</source>
@@ -15797,6 +15779,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.toolAuthentication.cancel">
       <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="chat.toolAuthentication.disableForSession">
+      <source xml:lang="en">Disable for This Session</source>
     </trans-unit>
     <trans-unit id="chat.toolAuthentication.message">
       <source xml:lang="en">The MCP server {0} requires authentication to continue this tool call.</source>
@@ -17088,6 +17073,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.searchToggle">
       <source xml:lang="en">Search Models</source>
     </trans-unit>
+    <trans-unit id="chat.modelPicker.upgradeForMoreModels">
+      <source xml:lang="en">Upgrade for More Models</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerTabs" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.modelPicker.builtInProvider">
@@ -18042,6 +18030,9 @@ Error Code: {3}</source>
     <trans-unit id="chatError.unknown">
       <source xml:lang="en">Sorry, no response was returned.</source>
     </trans-unit>
+    <trans-unit id="copilotError.learnMore">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/chatImageExtraction" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatImageExtraction.defaultTitle">
@@ -18148,21 +18139,6 @@ To make this the starting permission level for new sessions, change the [{0}](co
   <file original="src/vs/workbench/contrib/chat/common/chatService/chatServiceImpl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentDebugLog.troubleshootDisabled">
       <source xml:lang="en">The `{0}` skill requires `{1}` to be enabled. After enabling, reload the window to apply. [Enable in Settings](command:workbench.action.openSettings?{2})</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHint">
-      <source xml:lang="en">*{0} {1} | {2}*</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHint.dismiss">
-      <source xml:lang="en">Don't Show Again</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHint.dismiss.tooltip">
-      <source xml:lang="en">Do not show this migration hint again for this harness in this workspace</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHint.review">
-      <source xml:lang="en">Review Migrations</source>
-    </trans-unit>
-    <trans-unit id="customizationMigrationHint.review.tooltip">
-      <source xml:lang="en">Open Chat Customizations</source>
     </trans-unit>
     <trans-unit id="emptyResponse">
       <source xml:lang="en">Provider returned null response</source>
@@ -19568,6 +19544,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
   <file original="src/vs/workbench/contrib/chat/common/sessionChatPills" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionChatPills.artifacts">
       <source xml:lang="en">Artifacts</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.backgroundShells">
+      <source xml:lang="en">Background Shells</source>
     </trans-unit>
     <trans-unit id="sessionChatPills.browsers">
       <source xml:lang="en">Browsers</source>

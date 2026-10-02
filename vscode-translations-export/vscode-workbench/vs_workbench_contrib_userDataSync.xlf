@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/userDataSync/browser/userDataSync" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="accept failed">
-      <source xml:lang="en">Error while accepting changes. Please check [logs]({0}) for more details.</source>
+    <trans-unit id="accept failed linked">
+      <source xml:lang="en">Error while accepting changes. Please check {0} for more details.</source>
     </trans-unit>
     <trans-unit id="auth failed">
       <source xml:lang="en">Error while turning on Settings Sync: Authentication failed.</source>
@@ -151,6 +151,12 @@
     <trans-unit id="sync settings">
       <source xml:lang="en">Show Settings</source>
     </trans-unit>
+    <trans-unit id="syncDocumentationLink">
+      <source xml:lang="en">Settings Sync Documentation</source>
+    </trans-unit>
+    <trans-unit id="syncLogLink">
+      <source xml:lang="en">logs</source>
+    </trans-unit>
     <trans-unit id="synced with time">
       <source xml:lang="en">synced {0}</source>
     </trans-unit>
@@ -170,8 +176,8 @@
       <source xml:lang="en">&amp;&amp;Turn off</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
-    <trans-unit id="turn off failed">
-      <source xml:lang="en">Error while turning off Settings Sync. Please check [logs]({0}) for more details.</source>
+    <trans-unit id="turn off failed linked">
+      <source xml:lang="en">Error while turning off Settings Sync. Please check {0} for more details.</source>
     </trans-unit>
     <trans-unit id="turn off sync confirmation">
       <source xml:lang="en">Do you want to turn off sync?</source>
@@ -186,8 +192,8 @@
       <source xml:lang="en">Error while turning on Settings Sync. {0}</source>
       <note>Substitution is for error reason</note>
     </trans-unit>
-    <trans-unit id="turn on failed with user data sync error">
-      <source xml:lang="en">Error while turning on Settings Sync. Please check [logs]({0}) for more details.</source>
+    <trans-unit id="turn on failed with user data sync error linked">
+      <source xml:lang="en">Error while turning on Settings Sync. Please check {0} for more details.</source>
     </trans-unit>
     <trans-unit id="turn on sync">
       <source xml:lang="en">Turn on Settings Sync...</source>
@@ -201,8 +207,8 @@
     <trans-unit id="turning on syncing">
       <source xml:lang="en">Turning on Settings Sync...</source>
     </trans-unit>
-    <trans-unit id="using separate service">
-      <source xml:lang="en">Settings sync now uses a separate service, more information is available in the [Settings Sync Documentation](https://aka.ms/vscode-settings-sync-help#_syncing-stable-versus-insiders).</source>
+    <trans-unit id="using separate service linked">
+      <source xml:lang="en">Settings sync now uses a separate service, more information is available in the {0}.</source>
     </trans-unit>
     <trans-unit id="workbench.actions.syncData.reset">
       <source xml:lang="en">Clear Data in Cloud...</source>

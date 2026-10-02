@@ -409,7 +409,7 @@ A keybinding</note>
       <source xml:lang="en">Sandboxing is required by your organization</source>
     </trans-unit>
     <trans-unit id="agentHostSandboxToggle.title">
-      <source xml:lang="en">Run this session's terminal commands inside a sandbox that restricts file system and network access. This choice is saved for this session only.</source>
+      <source xml:lang="en">Run this session's terminal commands inside a sandbox that restricts file system and network access. The applied setting is saved for this session and checked against current organization policy when restored.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/browser/remoteAgentHostServiceImpl" source-language="en" datatype="plaintext"><body>
@@ -479,6 +479,65 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="chatAgentHostConfigurationTitle">
       <source xml:lang="en">Chat Agent Host</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/agentHostPolicyReadiness" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="policyGap.agentMode">
+      <source xml:lang="en">Agent Host session targets can remain available in the editor even when agent mode is disabled by policy.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.customizations">
+      <source xml:lang="en">The workbench filters synchronized customizations, but runtime discovery and standalone instructions do not have equivalent coverage across policy sources.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.hooks">
+      <source xml:lang="en">The Local-only hooks switch does not disable runtime-discovered Agent Host hooks.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.managedHooks">
+      <source xml:lang="en">Shared prompt discovery filters hooks, but the VS Code-only requirement is not delivered to runtime file hooks. Runtime-native managed-hook and SDK callback behavior needs separate verification.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.marketplaces">
+      <source xml:lang="en">Shared marketplace discovery and installation honor these controls. Runtime-owned marketplace operations do not receive VS Code-only values and need separate verification. Strict marketplace rules do not retroactively disable installed plugins.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.mcpAccess">
+      <source xml:lang="en">The workbench filters forwarded MCP collections, but Agent Host can independently discover and run MCP servers despite the VS Code MCP access restriction.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.mcpAuth">
+      <source xml:lang="en">Forwarded MCP authentication does not use Local's enterprise-managed identity-provider lookup. Enterprise single sign-on may be unavailable; runtime-owned authentication paths are not certified by this check.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.mcpLists">
+      <source xml:lang="en">VS Code-only server restrictions are not delivered to all Agent Host discovery paths. Runtime managed settings have separate enforcement; this report does not assume the two sources are equivalent.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.network">
+      <source xml:lang="en">Shared browser tools and custom terminal sandboxing honor domain lists, but native SDK sandboxing does not apply those lists. The bridge covers only supported runtime URL denies. Access may be allowed or blocked differently from Local.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.otelEnabled">
+      <source xml:lang="en">A policy disabling OpenTelemetry can be overridden by a separately configured export destination or database recorder in the host's telemetry configuration.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.otelHeaders">
+      <source xml:lang="en">VS Code-only exporter headers do not reach Agent Host. Export requiring those headers may fail; runtime-managed telemetry does not establish coverage of the host's own exporter.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.otelIdentity">
+      <source xml:lang="en">The Agent Host pipeline honors identity capture and suppression. Authenticated runtime account attribution still requires a runtime update and end-to-end verification; direct runtime exports use their own identity controls.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.otelProtocol">
+      <source xml:lang="en">Inherited OTLP protocol configuration can override the policy-selected exporter type.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.plugins">
+      <source xml:lang="en">The workbench filters synchronized plugins, but runtime discovery and more specific customization decisions do not have equivalent policy coverage.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.sandbox">
+      <source xml:lang="en">Policy-required sandboxing blocks direct session Off overrides on macOS/Linux. Verify delayed policy loading and loss/reapplication of the last client's requirement across disconnect-grace expiry.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.sandboxApproval">
+      <source xml:lang="en">Sandboxed commands can be approved automatically even when this policy requires confirmation.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.terminalApproval">
+      <source xml:lang="en">Native shell commands require approval through the bridge. Custom terminal tools do not have equivalent managed-ask coverage in every approval mode.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.toolApproval">
+      <source xml:lang="en">Allow All is disabled session-wide, but tools excluded by policy can still be approved automatically through other approval paths.</source>
+    </trans-unit>
+    <trans-unit id="policyGap.unknown">
+      <source xml:lang="en">Agent Host does not fully enforce this configured requirement. Review its policy support before migrating.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/agentHostSchema" source-language="en" datatype="plaintext"><body>
@@ -677,11 +736,23 @@ A keybinding</note>
     <trans-unit id="agentHost.config.mcpServers.url.title">
       <source xml:lang="en">URL</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.mcpToolRoutingEnabled.description">
+      <source xml:lang="en">Whether Copilot agent sessions use cached MCP tool metadata for routing.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.mcpToolRoutingEnabled.title">
+      <source xml:lang="en">MCP Tool Routing</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.migrateLegacyCopilotCliEnabled.description">
       <source xml:lang="en">Whether un-adopted extension-host Copilot CLI sessions are surfaced as adoptable agent-host sessions and migrated in place when opened.</source>
     </trans-unit>
     <trans-unit id="agentHost.config.migrateLegacyCopilotCliEnabled.title">
       <source xml:lang="en">Migrate Legacy Copilot CLI Sessions</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.overlapProviderPreparation.description">
+      <source xml:lang="en">Whether agents prepare their session for a turn while the turn-start checkpoint is captured, instead of after it.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.overlapProviderPreparation.title">
+      <source xml:lang="en">Overlap Provider Preparation</source>
     </trans-unit>
     <trans-unit id="agentHost.config.sessionCatalogEnabled.description">
       <source xml:lang="en">Whether the session list is served from the central catalog. When disabled, sessions are listed from provider metadata and per-session storage instead.</source>
@@ -739,6 +810,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.terminalAutoApproveRules.title">
       <source xml:lang="en">Terminal Auto Approve Rules</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.workspaceSnapshot.description">
+      <source xml:lang="en">Whether the first turn of a new Copilot chat includes a bounded file-name snapshot of its working directories.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.workspaceSnapshot.title">
+      <source xml:lang="en">Initial Workspace Snapshot</source>
     </trans-unit>
     <trans-unit id="agentHost.config.workspaceTrust">
       <source xml:lang="en">Workspace Trust</source>
@@ -886,6 +963,12 @@ A keybinding</note>
     <trans-unit id="chat.agentHost.experimental.markdownPlanRichLinks">
       <source xml:lang="en">When enabled, agents receive guidance for using rich links to issues, pull requests, commits, sessions, and chats, plus running task markers, when creating or editing Markdown plan documents.</source>
     </trans-unit>
+    <trans-unit id="chat.agentHost.experimental.mcpToolRouting">
+      <source xml:lang="en">When enabled, agent-host sessions use cached MCP tool metadata to route requests and only prompt for MCP authentication when a server is relevant. Newly created sessions pick up changes to this setting.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.experimental.overlapProviderPreparation">
+      <source xml:lang="en">When enabled, agents prepare their session for a new turn, such as starting the runtime session, while the turn-start checkpoint is captured instead of after it. This can shorten the time to the first response, especially on the first turn of a session.</source>
+    </trans-unit>
     <trans-unit id="chat.agentHost.githubMcpServer.enabled">
       <source xml:lang="en">When enabled, agent-host sessions include the GitHub MCP server.</source>
     </trans-unit>
@@ -1006,6 +1089,9 @@ A keybinding</note>
     <trans-unit id="chat.agentMerge.resolveConflicts">
       <source xml:lang="en">Controls whether enabled Agent Merge sessions ask the agent to update branches that are behind or resolve merge conflicts.</source>
     </trans-unit>
+    <trans-unit id="chat.experimental.workspaceSnapshot">
+      <source xml:lang="en">When enabled, the first turn of a new Copilot agent host chat includes a bounded file-name snapshot of its working directories, so the agent can orient itself without listing the workspace first. File contents are never included.</source>
+    </trans-unit>
     <trans-unit id="chatAgentHostStarterConfigurationTitle">
       <source xml:lang="en">Chat Agent Host Starter</source>
     </trans-unit>
@@ -1052,6 +1138,9 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentMerge.disabled.invalidPullRequestUrl">
       <source xml:lang="en">Agent Merge was disabled because the associated pull request URL is invalid.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.disabled.pendingReviewReply">
+      <source xml:lang="en">Agent Merge was disabled for this folder because a review reply is unpublished in your pending GitHub review. Handle the pending review on GitHub, then enable Agent Merge again to resume.</source>
     </trans-unit>
     <trans-unit id="agentMerge.disabled.pullRequestAlreadyMerged">
       <source xml:lang="en">Pull request [#{0}]({1}) was merged. Agent Merge is now disabled.</source>
@@ -1340,6 +1429,12 @@ A keybinding</note>
     <trans-unit id="agentHost.config.hydraFusion.title">
       <source xml:lang="en">HydraFusion</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.localIndexEnabled.description">
+      <source xml:lang="en">Whether Copilot SDK sessions use the local cross-session store for Chronicle indexing and retrieval.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.localIndexEnabled.title">
+      <source xml:lang="en">Local Session Index</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.modelCapabilityOverrides.availableTools.description">
       <source xml:lang="en">When set, only matching tools are available to sessions on this model. Patterns: bare tool names, `builtin:*` or `builtin:&lt;name&gt;` (Copilot runtime tools), `mcp:*` or `mcp:&lt;name&gt;` (MCP server tools), and `custom:*` or `custom:&lt;name&gt;` (every tool VS Code registers with the SDK, including the agent host's own terminal tools); a bare `*` expands to all three sources. Applied when the session launches or resumes.</source>
     </trans-unit>
@@ -1419,7 +1514,7 @@ A keybinding</note>
       <source xml:lang="en">Skill Character Budget</source>
     </trans-unit>
     <trans-unit id="agentHost.config.tgrep.description">
-      <source xml:lang="en">When enabled, Copilot SDK sessions force-enable tgrep indexed search, bypassing the repository-size threshold. Requires a local Git repository on a non-virtual filesystem.</source>
+      <source xml:lang="en">When enabled, Copilot SDK sessions use tgrep indexed search for eligible large repositories. Requires a local Git repository on a non-virtual filesystem.</source>
     </trans-unit>
     <trans-unit id="agentHost.config.tgrep.title">
       <source xml:lang="en">Indexed Search (tgrep)</source>
@@ -1463,7 +1558,696 @@ A keybinding</note>
       <source xml:lang="en">Set permissions to bypass approvals</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/platform/agentHost/common/meta/agentPullRequestOperationMeta" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/platform/agentHost/common/meta/copilotd/toolPresentation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotd.annotate.completed">
+      <source xml:lang="en">Added review comment</source>
+    </trans-unit>
+    <trans-unit id="copilotd.annotate.failed">
+      <source xml:lang="en">Add review comment failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.annotate.running">
+      <source xml:lang="en">Adding review comment</source>
+    </trans-unit>
+    <trans-unit id="copilotd.archive.completed">
+      <source xml:lang="en">Archived session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.archive.failed">
+      <source xml:lang="en">Archive session failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.archive.running">
+      <source xml:lang="en">Archiving session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.archivePriority.completed">
+      <source xml:lang="en">Removed priority</source>
+    </trans-unit>
+    <trans-unit id="copilotd.archivePriority.failed">
+      <source xml:lang="en">Remove priority failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.archivePriority.running">
+      <source xml:lang="en">Removing priority</source>
+    </trans-unit>
+    <trans-unit id="copilotd.ask.completed">
+      <source xml:lang="en">Asked a question</source>
+    </trans-unit>
+    <trans-unit id="copilotd.ask.failed">
+      <source xml:lang="en">Ask question failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.ask.running">
+      <source xml:lang="en">Asking a question</source>
+    </trans-unit>
+    <trans-unit id="copilotd.canvas.completed">
+      <source xml:lang="en">Opened canvas</source>
+    </trans-unit>
+    <trans-unit id="copilotd.canvas.failed">
+      <source xml:lang="en">Open canvas failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.canvas.running">
+      <source xml:lang="en">Opening canvas</source>
+    </trans-unit>
+    <trans-unit id="copilotd.canvasCommand.completed">
+      <source xml:lang="en">Sent canvas command</source>
+    </trans-unit>
+    <trans-unit id="copilotd.canvasCommand.failed">
+      <source xml:lang="en">Send canvas command failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.canvasCommand.running">
+      <source xml:lang="en">Sending canvas command</source>
+    </trans-unit>
+    <trans-unit id="copilotd.changes.completed">
+      <source xml:lang="en">Reviewed changes</source>
+    </trans-unit>
+    <trans-unit id="copilotd.changes.failed">
+      <source xml:lang="en">Review changes failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.changes.running">
+      <source xml:lang="en">Reviewing changes</source>
+    </trans-unit>
+    <trans-unit id="copilotd.clearWidget.completed">
+      <source xml:lang="en">Cleared widget</source>
+    </trans-unit>
+    <trans-unit id="copilotd.clearWidget.failed">
+      <source xml:lang="en">Clear widget failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.clearWidget.running">
+      <source xml:lang="en">Clearing widget</source>
+    </trans-unit>
+    <trans-unit id="copilotd.createIssue.completed">
+      <source xml:lang="en">Created issue</source>
+    </trans-unit>
+    <trans-unit id="copilotd.createIssue.failed">
+      <source xml:lang="en">Create issue failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.createIssue.running">
+      <source xml:lang="en">Creating issue</source>
+    </trans-unit>
+    <trans-unit id="copilotd.createPr.completed">
+      <source xml:lang="en">Created pull request</source>
+    </trans-unit>
+    <trans-unit id="copilotd.createPr.failed">
+      <source xml:lang="en">Create pull request failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.createPr.running">
+      <source xml:lang="en">Creating pull request</source>
+    </trans-unit>
+    <trans-unit id="copilotd.createSession.completed">
+      <source xml:lang="en">Created session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.createSession.failed">
+      <source xml:lang="en">Create session failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.createSession.running">
+      <source xml:lang="en">Creating session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.delete.completed">
+      <source xml:lang="en">Deleted item</source>
+    </trans-unit>
+    <trans-unit id="copilotd.delete.failed">
+      <source xml:lang="en">Delete item failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.delete.running">
+      <source xml:lang="en">Deleting item</source>
+    </trans-unit>
+    <trans-unit id="copilotd.deleteScheduled.completed">
+      <source xml:lang="en">Deleted scheduled task</source>
+    </trans-unit>
+    <trans-unit id="copilotd.deleteScheduled.failed">
+      <source xml:lang="en">Delete scheduled task failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.deleteScheduled.running">
+      <source xml:lang="en">Deleting scheduled task</source>
+    </trans-unit>
+    <trans-unit id="copilotd.edit.completed">
+      <source xml:lang="en">Edited</source>
+    </trans-unit>
+    <trans-unit id="copilotd.edit.failed">
+      <source xml:lang="en">Edit failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.edit.running">
+      <source xml:lang="en">Editing</source>
+    </trans-unit>
+    <trans-unit id="copilotd.editComment.completed">
+      <source xml:lang="en">Edited PR review comment</source>
+    </trans-unit>
+    <trans-unit id="copilotd.editComment.failed">
+      <source xml:lang="en">Edit PR review comment failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.editComment.running">
+      <source xml:lang="en">Editing PR review comment</source>
+    </trans-unit>
+    <trans-unit id="copilotd.getSchedule.completed">
+      <source xml:lang="en">Looked up schedule</source>
+    </trans-unit>
+    <trans-unit id="copilotd.getSchedule.failed">
+      <source xml:lang="en">Look up schedule failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.getSchedule.running">
+      <source xml:lang="en">Looking up schedule</source>
+    </trans-unit>
+    <trans-unit id="copilotd.getScheduled.completed">
+      <source xml:lang="en">Read scheduled task</source>
+    </trans-unit>
+    <trans-unit id="copilotd.getScheduled.failed">
+      <source xml:lang="en">Read scheduled task failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.getScheduled.running">
+      <source xml:lang="en">Reading scheduled task</source>
+    </trans-unit>
+    <trans-unit id="copilotd.getSession.completed">
+      <source xml:lang="en">Looked up session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.getSession.failed">
+      <source xml:lang="en">Look up session failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.getSession.running">
+      <source xml:lang="en">Looking up session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.githubItem.completed">
+      <source xml:lang="en">Opened GitHub item</source>
+    </trans-unit>
+    <trans-unit id="copilotd.githubItem.failed">
+      <source xml:lang="en">Open GitHub item failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.githubItem.running">
+      <source xml:lang="en">Opening GitHub item</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listAgents.completed">
+      <source xml:lang="en">Listed agents</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listAgents.failed">
+      <source xml:lang="en">List agents failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listAgents.running">
+      <source xml:lang="en">Listing agents</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listItems.completed">
+      <source xml:lang="en">Listed items</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listItems.failed">
+      <source xml:lang="en">List items failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listItems.running">
+      <source xml:lang="en">Listing items</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listProjects.completed">
+      <source xml:lang="en">Listed projects</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listProjects.failed">
+      <source xml:lang="en">List projects failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listProjects.running">
+      <source xml:lang="en">Listing projects</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listSessions.completed">
+      <source xml:lang="en">Listed sessions</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listSessions.failed">
+      <source xml:lang="en">List sessions failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listSessions.running">
+      <source xml:lang="en">Listing sessions</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listShell.completed">
+      <source xml:lang="en">Listed shell sessions</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listShell.failed">
+      <source xml:lang="en">List shell sessions failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listShell.running">
+      <source xml:lang="en">Listing shell sessions</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listWorkflows.completed">
+      <source xml:lang="en">Listed automations</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listWorkflows.failed">
+      <source xml:lang="en">List automations failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.listWorkflows.running">
+      <source xml:lang="en">Listing automations</source>
+    </trans-unit>
+    <trans-unit id="copilotd.manageDynamic.completed">
+      <source xml:lang="en">Managed workflows</source>
+    </trans-unit>
+    <trans-unit id="copilotd.manageDynamic.failed">
+      <source xml:lang="en">Manage workflows failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.manageDynamic.running">
+      <source xml:lang="en">Managing workflows</source>
+    </trans-unit>
+    <trans-unit id="copilotd.memory.completed">
+      <source xml:lang="en">Saved memory</source>
+    </trans-unit>
+    <trans-unit id="copilotd.memory.failed">
+      <source xml:lang="en">Save memory failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.memory.running">
+      <source xml:lang="en">Saving memory</source>
+    </trans-unit>
+    <trans-unit id="copilotd.navigate.completed">
+      <source xml:lang="en">Navigated</source>
+    </trans-unit>
+    <trans-unit id="copilotd.navigate.failed">
+      <source xml:lang="en">Navigation failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.navigate.running">
+      <source xml:lang="en">Navigating</source>
+    </trans-unit>
+    <trans-unit id="copilotd.openIssue.completed">
+      <source xml:lang="en">Opened issue session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.openIssue.failed">
+      <source xml:lang="en">Open issue session failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.openIssue.running">
+      <source xml:lang="en">Opening issue session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.openPr.completed">
+      <source xml:lang="en">Opened PR session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.openPr.failed">
+      <source xml:lang="en">Open PR session failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.openPr.running">
+      <source xml:lang="en">Opening PR session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.patch.completed">
+      <source xml:lang="en">Applied patch</source>
+    </trans-unit>
+    <trans-unit id="copilotd.patch.failed">
+      <source xml:lang="en">Apply patch failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.patch.running">
+      <source xml:lang="en">Applying patch</source>
+    </trans-unit>
+    <trans-unit id="copilotd.plan.completed">
+      <source xml:lang="en">Finished plan</source>
+    </trans-unit>
+    <trans-unit id="copilotd.plan.failed">
+      <source xml:lang="en">Finish plan failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.plan.running">
+      <source xml:lang="en">Finishing plan</source>
+    </trans-unit>
+    <trans-unit id="copilotd.prComment.completed">
+      <source xml:lang="en">Added PR review comment</source>
+    </trans-unit>
+    <trans-unit id="copilotd.prComment.failed">
+      <source xml:lang="en">Add PR review comment failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.prComment.running">
+      <source xml:lang="en">Adding PR review comment</source>
+    </trans-unit>
+    <trans-unit id="copilotd.priorities.completed">
+      <source xml:lang="en">Reviewed priorities</source>
+    </trans-unit>
+    <trans-unit id="copilotd.priorities.failed">
+      <source xml:lang="en">Review priorities failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.priorities.running">
+      <source xml:lang="en">Reviewing priorities</source>
+    </trans-unit>
+    <trans-unit id="copilotd.priority.completed">
+      <source xml:lang="en">Read priority</source>
+    </trans-unit>
+    <trans-unit id="copilotd.priority.failed">
+      <source xml:lang="en">Read priority failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.priority.running">
+      <source xml:lang="en">Reading priority</source>
+    </trans-unit>
+    <trans-unit id="copilotd.profile.completed">
+      <source xml:lang="en">Updated profile</source>
+    </trans-unit>
+    <trans-unit id="copilotd.profile.failed">
+      <source xml:lang="en">Update profile failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.profile.running">
+      <source xml:lang="en">Updating profile</source>
+    </trans-unit>
+    <trans-unit id="copilotd.read.completed">
+      <source xml:lang="en">Read</source>
+    </trans-unit>
+    <trans-unit id="copilotd.read.failed">
+      <source xml:lang="en">Read failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.read.running">
+      <source xml:lang="en">Reading</source>
+    </trans-unit>
+    <trans-unit id="copilotd.readAgent.completed">
+      <source xml:lang="en">Read agent activity</source>
+    </trans-unit>
+    <trans-unit id="copilotd.readAgent.failed">
+      <source xml:lang="en">Read agent activity failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.readAgent.running">
+      <source xml:lang="en">Reading agent activity</source>
+    </trans-unit>
+    <trans-unit id="copilotd.readShell.completed">
+      <source xml:lang="en">Read shell output</source>
+    </trans-unit>
+    <trans-unit id="copilotd.readShell.failed">
+      <source xml:lang="en">Read shell output failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.readShell.running">
+      <source xml:lang="en">Reading shell output</source>
+    </trans-unit>
+    <trans-unit id="copilotd.removeComment.completed">
+      <source xml:lang="en">Removed PR review comment</source>
+    </trans-unit>
+    <trans-unit id="copilotd.removeComment.failed">
+      <source xml:lang="en">Remove PR review comment failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.removeComment.running">
+      <source xml:lang="en">Removing PR review comment</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renameBranch.completed">
+      <source xml:lang="en">Renamed branch</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renameBranch.failed">
+      <source xml:lang="en">Rename branch failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renameBranch.running">
+      <source xml:lang="en">Renaming branch</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renameSession.completed">
+      <source xml:lang="en">Renamed session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renameSession.failed">
+      <source xml:lang="en">Rename session failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renameSession.running">
+      <source xml:lang="en">Renaming session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renameWorkspace.completed">
+      <source xml:lang="en">Renamed session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renameWorkspace.failed">
+      <source xml:lang="en">Rename session failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renameWorkspace.running">
+      <source xml:lang="en">Renaming session</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renderInbox.completed">
+      <source xml:lang="en">Rendered inbox</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renderInbox.failed">
+      <source xml:lang="en">Render inbox failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renderInbox.running">
+      <source xml:lang="en">Rendering inbox</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renderWidget.completed">
+      <source xml:lang="en">Rendered widget</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renderWidget.failed">
+      <source xml:lang="en">Render widget failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.renderWidget.running">
+      <source xml:lang="en">Rendering widget</source>
+    </trans-unit>
+    <trans-unit id="copilotd.reorderPriorities.completed">
+      <source xml:lang="en">Reordered priorities</source>
+    </trans-unit>
+    <trans-unit id="copilotd.reorderPriorities.failed">
+      <source xml:lang="en">Reorder priorities failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.reorderPriorities.running">
+      <source xml:lang="en">Reordering priorities</source>
+    </trans-unit>
+    <trans-unit id="copilotd.resolveThread.completed">
+      <source xml:lang="en">Replied and resolved review thread</source>
+    </trans-unit>
+    <trans-unit id="copilotd.resolveThread.failed">
+      <source xml:lang="en">Resolve review thread failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.resolveThread.running">
+      <source xml:lang="en">Replying and resolving review thread</source>
+    </trans-unit>
+    <trans-unit id="copilotd.respondPlan.completed">
+      <source xml:lang="en">Responded to plan</source>
+    </trans-unit>
+    <trans-unit id="copilotd.respondPlan.failed">
+      <source xml:lang="en">Respond to plan failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.respondPlan.running">
+      <source xml:lang="en">Responding to plan</source>
+    </trans-unit>
+    <trans-unit id="copilotd.runDynamic.completed">
+      <source xml:lang="en">Ran workflow</source>
+    </trans-unit>
+    <trans-unit id="copilotd.runDynamic.failed">
+      <source xml:lang="en">Workflow failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.runDynamic.running">
+      <source xml:lang="en">Running workflow</source>
+    </trans-unit>
+    <trans-unit id="copilotd.runScheduled.completed">
+      <source xml:lang="en">Started scheduled task</source>
+    </trans-unit>
+    <trans-unit id="copilotd.runScheduled.failed">
+      <source xml:lang="en">Start scheduled task failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.runScheduled.running">
+      <source xml:lang="en">Starting scheduled task</source>
+    </trans-unit>
+    <trans-unit id="copilotd.runWorkflow.completed">
+      <source xml:lang="en">Ran automation</source>
+    </trans-unit>
+    <trans-unit id="copilotd.runWorkflow.failed">
+      <source xml:lang="en">Run automation failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.runWorkflow.running">
+      <source xml:lang="en">Running automation</source>
+    </trans-unit>
+    <trans-unit id="copilotd.savePriority.completed">
+      <source xml:lang="en">Updated priority</source>
+    </trans-unit>
+    <trans-unit id="copilotd.savePriority.failed">
+      <source xml:lang="en">Update priority failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.savePriority.running">
+      <source xml:lang="en">Updating priority</source>
+    </trans-unit>
+    <trans-unit id="copilotd.saveSchedule.completed">
+      <source xml:lang="en">Saved schedule</source>
+    </trans-unit>
+    <trans-unit id="copilotd.saveSchedule.failed">
+      <source xml:lang="en">Save schedule failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.saveSchedule.running">
+      <source xml:lang="en">Saving schedule</source>
+    </trans-unit>
+    <trans-unit id="copilotd.saveScheduled.completed">
+      <source xml:lang="en">Updated scheduled task</source>
+    </trans-unit>
+    <trans-unit id="copilotd.saveScheduled.failed">
+      <source xml:lang="en">Update scheduled task failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.saveScheduled.running">
+      <source xml:lang="en">Updating scheduled task</source>
+    </trans-unit>
+    <trans-unit id="copilotd.saveWorkflow.completed">
+      <source xml:lang="en">Saved automation</source>
+    </trans-unit>
+    <trans-unit id="copilotd.saveWorkflow.failed">
+      <source xml:lang="en">Save automation failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.saveWorkflow.running">
+      <source xml:lang="en">Saving automation</source>
+    </trans-unit>
+    <trans-unit id="copilotd.schedules.completed">
+      <source xml:lang="en">Reviewed scheduled tasks</source>
+    </trans-unit>
+    <trans-unit id="copilotd.schedules.failed">
+      <source xml:lang="en">Review scheduled tasks failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.schedules.running">
+      <source xml:lang="en">Reviewing scheduled tasks</source>
+    </trans-unit>
+    <trans-unit id="copilotd.search.completed">
+      <source xml:lang="en">Searched</source>
+    </trans-unit>
+    <trans-unit id="copilotd.search.failed">
+      <source xml:lang="en">Search failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.search.running">
+      <source xml:lang="en">Searching</source>
+    </trans-unit>
+    <trans-unit id="copilotd.sendSession.completed">
+      <source xml:lang="en">Sent session message</source>
+    </trans-unit>
+    <trans-unit id="copilotd.sendSession.failed">
+      <source xml:lang="en">Send session message failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.sendSession.running">
+      <source xml:lang="en">Sending session message</source>
+    </trans-unit>
+    <trans-unit id="copilotd.sessionStatus.completed">
+      <source xml:lang="en">Checked session status</source>
+    </trans-unit>
+    <trans-unit id="copilotd.sessionStatus.failed">
+      <source xml:lang="en">Check session status failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.sessionStatus.running">
+      <source xml:lang="en">Checking session status</source>
+    </trans-unit>
+    <trans-unit id="copilotd.shell.completed">
+      <source xml:lang="en">Ran command</source>
+    </trans-unit>
+    <trans-unit id="copilotd.shell.failed">
+      <source xml:lang="en">Command failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.shell.running">
+      <source xml:lang="en">Running command</source>
+    </trans-unit>
+    <trans-unit id="copilotd.showFile.completed">
+      <source xml:lang="en">Showed file</source>
+    </trans-unit>
+    <trans-unit id="copilotd.showFile.failed">
+      <source xml:lang="en">Show file failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.showFile.running">
+      <source xml:lang="en">Showing file</source>
+    </trans-unit>
+    <trans-unit id="copilotd.skill.completed">
+      <source xml:lang="en">Read skill</source>
+    </trans-unit>
+    <trans-unit id="copilotd.skill.failed">
+      <source xml:lang="en">Read skill failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.skill.running">
+      <source xml:lang="en">Reading skill</source>
+    </trans-unit>
+    <trans-unit id="copilotd.sql.completed">
+      <source xml:lang="en">Ran SQL</source>
+    </trans-unit>
+    <trans-unit id="copilotd.sql.failed">
+      <source xml:lang="en">SQL failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.sql.running">
+      <source xml:lang="en">Running SQL</source>
+    </trans-unit>
+    <trans-unit id="copilotd.stopShell.completed">
+      <source xml:lang="en">Stopped shell</source>
+    </trans-unit>
+    <trans-unit id="copilotd.stopShell.failed">
+      <source xml:lang="en">Stop shell failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.stopShell.running">
+      <source xml:lang="en">Stopping shell</source>
+    </trans-unit>
+    <trans-unit id="copilotd.suggest.completed">
+      <source xml:lang="en">Suggested items</source>
+    </trans-unit>
+    <trans-unit id="copilotd.suggest.failed">
+      <source xml:lang="en">Suggest items failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.suggest.running">
+      <source xml:lang="en">Suggesting items</source>
+    </trans-unit>
+    <trans-unit id="copilotd.task.completed">
+      <source xml:lang="en">Delegated task</source>
+    </trans-unit>
+    <trans-unit id="copilotd.task.failed">
+      <source xml:lang="en">Task failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.task.running">
+      <source xml:lang="en">Delegating task</source>
+    </trans-unit>
+    <trans-unit id="copilotd.taskComplete.completed">
+      <source xml:lang="en">Task complete</source>
+    </trans-unit>
+    <trans-unit id="copilotd.taskComplete.failed">
+      <source xml:lang="en">Task completion failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.taskComplete.running">
+      <source xml:lang="en">Marking task complete</source>
+    </trans-unit>
+    <trans-unit id="copilotd.todo.completed">
+      <source xml:lang="en">Updated todo list</source>
+    </trans-unit>
+    <trans-unit id="copilotd.todo.failed">
+      <source xml:lang="en">Update todo list failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.todo.running">
+      <source xml:lang="en">Updating todo list</source>
+    </trans-unit>
+    <trans-unit id="copilotd.tool.subject">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+    <trans-unit id="copilotd.toolSearch.completed">
+      <source xml:lang="en">Searched tools</source>
+    </trans-unit>
+    <trans-unit id="copilotd.toolSearch.failed">
+      <source xml:lang="en">Tool search failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.toolSearch.running">
+      <source xml:lang="en">Searching tools</source>
+    </trans-unit>
+    <trans-unit id="copilotd.transcript.completed">
+      <source xml:lang="en">Read session transcript</source>
+    </trans-unit>
+    <trans-unit id="copilotd.transcript.failed">
+      <source xml:lang="en">Read session transcript failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.transcript.running">
+      <source xml:lang="en">Reading session transcript</source>
+    </trans-unit>
+    <trans-unit id="copilotd.webFetch.completed">
+      <source xml:lang="en">Fetched webpage</source>
+    </trans-unit>
+    <trans-unit id="copilotd.webFetch.failed">
+      <source xml:lang="en">Fetch webpage failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.webFetch.running">
+      <source xml:lang="en">Fetching webpage</source>
+    </trans-unit>
+    <trans-unit id="copilotd.webSearch.completed">
+      <source xml:lang="en">Searched the web</source>
+    </trans-unit>
+    <trans-unit id="copilotd.webSearch.failed">
+      <source xml:lang="en">Web search failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.webSearch.running">
+      <source xml:lang="en">Searching the web</source>
+    </trans-unit>
+    <trans-unit id="copilotd.widgets.completed">
+      <source xml:lang="en">Discovered widgets</source>
+    </trans-unit>
+    <trans-unit id="copilotd.widgets.failed">
+      <source xml:lang="en">Discover widgets failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.widgets.running">
+      <source xml:lang="en">Discovering widgets</source>
+    </trans-unit>
+    <trans-unit id="copilotd.write.completed">
+      <source xml:lang="en">Created file</source>
+    </trans-unit>
+    <trans-unit id="copilotd.write.failed">
+      <source xml:lang="en">Create file failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.write.running">
+      <source xml:lang="en">Creating file</source>
+    </trans-unit>
+    <trans-unit id="copilotd.writeAgent.completed">
+      <source xml:lang="en">Sent message to agent</source>
+    </trans-unit>
+    <trans-unit id="copilotd.writeAgent.failed">
+      <source xml:lang="en">Send message to agent failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.writeAgent.running">
+      <source xml:lang="en">Sending message to agent</source>
+    </trans-unit>
+    <trans-unit id="copilotd.writeShell.completed">
+      <source xml:lang="en">Sent input to shell</source>
+    </trans-unit>
+    <trans-unit id="copilotd.writeShell.failed">
+      <source xml:lang="en">Send input to shell failed</source>
+    </trans-unit>
+    <trans-unit id="copilotd.writeShell.running">
+      <source xml:lang="en">Sending input to shell</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/meta/vscode/agentPullRequestOperationMeta" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.pr.agentMergeOptionsWithoutEnablement">
       <source xml:lang="en">Enable Agent Merge to configure it for this pull request.</source>
     </trans-unit>
@@ -1822,6 +2606,11 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="wslProgressHandshake">
       <source xml:lang="en">Establishing connection to {0}...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/agentHostAutomationCustomizations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationActiveClient">
+      <source xml:lang="en">Automation</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentHostAutomationService" source-language="en" datatype="plaintext"><body>
@@ -2833,6 +3622,9 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="copilot.modelThinkingLevel.title">
       <source xml:lang="en">Thinking Level</source>
     </trans-unit>
+    <trans-unit id="copilotAgent.autoModelName">
+      <source xml:lang="en">Auto</source>
+    </trans-unit>
     <trans-unit id="copilotAgent.connectionClosed">
       <source xml:lang="en">Copilot stopped unexpectedly. Retry your request.</source>
     </trans-unit>
@@ -2847,6 +3639,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotAgentSession" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.byokToolLimitExceeded">
+      <source xml:lang="en">The model only supports {0} tools, {1} tools were not provided to the model.</source>
+    </trans-unit>
     <trans-unit id="agentHost.planReview.autopilot.description">
       <source xml:lang="en">Continue autonomously until done, using the selected approval level.</source>
     </trans-unit>
@@ -2901,6 +3696,9 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="copilot.invalidHistoryCursor">
       <source xml:lang="en">The Copilot runtime returned an invalid history cursor. Reopen the session to try again.</source>
     </trans-unit>
+    <trans-unit id="copilot.mcpRouting.connect">
+      <source xml:lang="en">Connect to {0}</source>
+    </trans-unit>
     <trans-unit id="copilotAgent.compactionCompleted">
       <source xml:lang="en">Compaction completed</source>
     </trans-unit>
@@ -2935,6 +3733,168 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotMcp.servers">
       <source xml:lang="en">MCP servers</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.alreadyDisabled">
+      <source xml:lang="en">Plugin {0} is already disabled.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.alreadyEnabled">
+      <source xml:lang="en">Plugin {0} is already enabled.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.ambiguous">
+      <source xml:lang="en">Multiple plugins are named {0}. Use the full plugin@marketplace name.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.commandFailed">
+      <source xml:lang="en">Plugin command failed</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.directEnablementUnsupported">
+      <source xml:lang="en">Plugin {0} is installed directly and cannot be enabled or disabled. Uninstall it instead.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.disabled">
+      <source xml:lang="en">Disabled plugin {0}.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.disabling">
+      <source xml:lang="en">Disabling plugin…</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.enabled">
+      <source xml:lang="en">Enabled plugin {0}.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.enablementUsage">
+      <source xml:lang="en">Usage: /plugin {0} &lt;plugin&gt;</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.enabling">
+      <source xml:lang="en">Enabling plugin…</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.includedMarketplaces">
+      <source xml:lang="en">Included with GitHub Copilot</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.installManifestLocations">
+      <source xml:lang="en">Expected one of:</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.installManifestMissing">
+      <source xml:lang="en">Could not install a plugin from {0}.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.installManifestMissingDetail">
+      <source xml:lang="en">No {0} manifest was found in the repository.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.installUsage">
+      <source xml:lang="en">Usage: /plugin install &lt;source&gt;</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.installed">
+      <source xml:lang="en">Installed plugin {0}.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.installedOneSkill">
+      <source xml:lang="en">Installed 1 skill.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.installedSkills">
+      <source xml:lang="en">Installed {0} skills.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.installedVersion">
+      <source xml:lang="en">Version: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.installing">
+      <source xml:lang="en">Installing plugin…</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.managed">
+      <source xml:lang="en">managed</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceAddUsage">
+      <source xml:lang="en">Usage: /plugin marketplace add &lt;source&gt;</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceAdded">
+      <source xml:lang="en">Added plugin marketplace {0}.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceAdding">
+      <source xml:lang="en">Adding plugin marketplace…</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceBrowseUsage">
+      <source xml:lang="en">Usage: /plugin marketplace browse &lt;name&gt;</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceEmpty">
+      <source xml:lang="en">Marketplace {0} contains no plugins.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceListGuidance">
+      <source xml:lang="en">Run {0} to see the available marketplaces.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceNotFound">
+      <source xml:lang="en">Marketplace {0} was not found.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceNotRemoved">
+      <source xml:lang="en">Marketplace {0} was not removed because it has installed plugins.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplacePlugins">
+      <source xml:lang="en">Plugins in {0}:</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceRemoveForce">
+      <source xml:lang="en">Run /plugin marketplace remove {0} --force to uninstall them and remove the marketplace.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceRemoveUsage">
+      <source xml:lang="en">Usage: /plugin marketplace remove &lt;name&gt; [--force]</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceRemoved">
+      <source xml:lang="en">Removed plugin marketplace {0}.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceRemoving">
+      <source xml:lang="en">Removing plugin marketplace…</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceUpdateFailedEntry">
+      <source xml:lang="en">Failed to update {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceUpdateFailures">
+      <source xml:lang="en">Marketplace update completed with errors.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceUpdateUsage">
+      <source xml:lang="en">Usage: /plugin marketplace update [name]</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceUpdated">
+      <source xml:lang="en">Updated plugin marketplaces.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceUpdatedEntry">
+      <source xml:lang="en">Updated {0}.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaceUpdating">
+      <source xml:lang="en">Updating plugin marketplaces…</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.marketplaces">
+      <source xml:lang="en">Plugin marketplaces</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.noMarketplaces">
+      <source xml:lang="en">No plugin marketplaces are registered.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.notFound">
+      <source xml:lang="en">Plugin {0} is not installed.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.registeredMarketplaces">
+      <source xml:lang="en">Registered marketplaces</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.unavailable">
+      <source xml:lang="en">unavailable</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.uninstallUsage">
+      <source xml:lang="en">Usage: /plugin uninstall &lt;plugin&gt;</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.uninstalled">
+      <source xml:lang="en">Uninstalled plugin {0}.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.uninstalling">
+      <source xml:lang="en">Uninstalling plugin…</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.unknownError">
+      <source xml:lang="en">Unknown error</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.updateUsage">
+      <source xml:lang="en">Usage: /plugin update &lt;plugin&gt;</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.updated">
+      <source xml:lang="en">Updated plugin {0}.{1}</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.updatedVersion">
+      <source xml:lang="en"> Updated version: {0}.</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.updating">
+      <source xml:lang="en">Updating plugin…</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.usage">
+      <source xml:lang="en">Plugin command usage:</source>
     </trans-unit>
     <trans-unit id="copilotPlugins.disabled">
       <source xml:lang="en">disabled</source>
@@ -3079,6 +4039,44 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotSlashCommand.sandboxPolicyUnavailable">
       <source xml:lang="en">The SDK did not return a sandbox policy.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotPlugin.completion.disable">
+      <source xml:lang="en">Disable a plugin</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.completion.enable">
+      <source xml:lang="en">Enable a plugin</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.completion.install">
+      <source xml:lang="en">Install a plugin</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.completion.list">
+      <source xml:lang="en">List installed plugins</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.completion.marketplace">
+      <source xml:lang="en">Manage plugin marketplaces</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.completion.marketplaceAdd">
+      <source xml:lang="en">Add a plugin marketplace</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.completion.marketplaceBrowse">
+      <source xml:lang="en">Browse a plugin marketplace</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.completion.marketplaceList">
+      <source xml:lang="en">List plugin marketplaces</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.completion.marketplaceRemove">
+      <source xml:lang="en">Remove a plugin marketplace</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.completion.marketplaceUpdate">
+      <source xml:lang="en">Update plugin marketplaces</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.completion.uninstall">
+      <source xml:lang="en">Uninstall a plugin</source>
+    </trans-unit>
+    <trans-unit id="copilotPlugin.completion.update">
+      <source xml:lang="en">Update a plugin</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSystemNotification" source-language="en" datatype="plaintext"><body>
@@ -3476,6 +4474,9 @@ stderr: {2}</source>
     <trans-unit id="devContainerAgentHost.dockerUnavailable">
       <source xml:lang="en">Docker is not available.</source>
     </trans-unit>
+    <trans-unit id="devContainerAgentHost.emptySampleResponse">
+      <source xml:lang="en">Empty response while downloading the Dev Container sample: {0}</source>
+    </trans-unit>
     <trans-unit id="devContainerAgentHost.invalidMountJson">
       <source xml:lang="en">Unable to parse Docker mount information: {0}</source>
     </trans-unit>
@@ -3488,8 +4489,47 @@ stderr: {2}</source>
     <trans-unit id="devContainerAgentHost.ownerLookupFailed">
       <source xml:lang="en">Unable to check the owner of {0}: {1}</source>
     </trans-unit>
+    <trans-unit id="devContainerAgentHost.sampleCleanupFailed">
+      <source xml:lang="en">Failed to stop the sample container after preparation failed: {0}
+</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.unknownSample">
+      <source xml:lang="en">Unknown Dev Container sample: {0}</source>
+    </trans-unit>
     <trans-unit id="devContainerAgentHost.unsupportedPlatform">
       <source xml:lang="en">Unsupported Dev Container platform: {0} {1}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/devContainerSamples" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="devContainerSample.buildUnsupported">
+      <source xml:lang="en">This sample requires an image build. Samples using Dockerfiles, Docker Compose, or Features are not supported yet.</source>
+    </trans-unit>
+    <trans-unit id="devContainerSample.commandFailed">
+      <source xml:lang="en">{0} failed (exit {1}): {2}</source>
+    </trans-unit>
+    <trans-unit id="devContainerSample.hostConfigUnsupported">
+      <source xml:lang="en">This sample requires host commands or custom mounts, which are not supported yet.</source>
+    </trans-unit>
+    <trans-unit id="devContainerSample.imageChanged">
+      <source xml:lang="en">The sample's image has changed. Rebuild the container with the Dev Containers extension before opening it in Agents.</source>
+    </trans-unit>
+    <trans-unit id="devContainerSample.invalidCache">
+      <source xml:lang="en">The cached sample configuration is invalid: {0}</source>
+    </trans-unit>
+    <trans-unit id="devContainerSample.invalidCommit">
+      <source xml:lang="en">GitHub returned an invalid sample revision.</source>
+    </trans-unit>
+    <trans-unit id="devContainerSample.invalidConfig">
+      <source xml:lang="en">The sample must have a valid image-based Dev Container configuration.</source>
+    </trans-unit>
+    <trans-unit id="devContainerSample.invalidUpResult">
+      <source xml:lang="en">The Dev Container CLI returned an invalid sample container.</source>
+    </trans-unit>
+    <trans-unit id="devContainerSample.lifecycleFailed">
+      <source xml:lang="en">The sample's Dev Container lifecycle commands failed: {0}</source>
+    </trans-unit>
+    <trans-unit id="devContainerSample.volumeConflict">
+      <source xml:lang="en">The Docker volume '{0}' does not belong to this sample.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/localCommands/bangLocalCommand" source-language="en" datatype="plaintext"><body>
@@ -3671,6 +4711,12 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="agentMerge.tool.replyReview.failed">
       <source xml:lang="en">Failed to reply to review feedback</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.replyReview.indeterminate">
+      <source xml:lang="en">Could not confirm review reply publication</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.tool.replyReview.pending">
+      <source xml:lang="en">Saved an unpublished review reply</source>
     </trans-unit>
     <trans-unit id="agentMerge.tool.replyReview.running">
       <source xml:lang="en">Replying to review feedback</source>
@@ -3961,9 +5007,6 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="sshProgressDownloadingCLI">
       <source xml:lang="en">Installing VS Code CLI on remote...</source>
-    </trans-unit>
-    <trans-unit id="sshProgressForwarding">
-      <source xml:lang="en">Connecting to remote agent host...</source>
     </trans-unit>
     <trans-unit id="sshProgressInstallingCLI">
       <source xml:lang="en">Checking remote CLI installation...</source>
@@ -5111,6 +6154,9 @@ OS: {10}</source>
     </trans-unit>
     <trans-unit id="pluginsInvalidPinnedCommit">
       <source xml:lang="en">Pinned plugin commit '{0}' is not a full SHA-1 hash.</source>
+    </trans-unit>
+    <trans-unit id="pluginsPinnedCloneCleanupFailed">
+      <source xml:lang="en">Failed to prepare and clean up the plugin repository at '{0}'.</source>
     </trans-unit>
     <trans-unit id="pluginsPinnedCommitCheckoutMismatch">
       <source xml:lang="en">Pinned plugin commit '{0}' was not checked out. The repository is at commit '{1}'.</source>

@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/sessions/contrib/automations/browser/automationDialog" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automation.advanced">
+      <source xml:lang="en">Advanced</source>
+    </trans-unit>
+    <trans-unit id="automation.customizations.description">
+      <source xml:lang="en">Choose which plugins and customizations runs of this automation can use.</source>
+    </trans-unit>
+    <trans-unit id="automation.customizations.empty">
+      <source xml:lang="en">No customizations are available for this target.</source>
+    </trans-unit>
+    <trans-unit id="automation.customizations.heading">
+      <source xml:lang="en">Customizations</source>
+    </trans-unit>
+    <trans-unit id="automation.customizations.loading">
+      <source xml:lang="en">Loading customizations…</source>
+    </trans-unit>
+    <trans-unit id="automation.customizations.loadingSummary">
+      <source xml:lang="en">Loading…</source>
+    </trans-unit>
+    <trans-unit id="automation.customizations.outdated">
+      <source xml:lang="en">Outdated</source>
+    </trans-unit>
+    <trans-unit id="automation.customizations.outdatedHint">
+      <source xml:lang="en">Outdated customizations will be updated when the automation is saved.</source>
+    </trans-unit>
+    <trans-unit id="automation.customizations.summary">
+      <source xml:lang="en">{0} of {1} customizations</source>
+    </trans-unit>
+    <trans-unit id="automation.customizations.summaryOutdated">
+      <source xml:lang="en">{0} of {1} customizations · {2} outdated</source>
+    </trans-unit>
     <trans-unit id="automation.form.branch.capabilityLoadingReason">
       <source xml:lang="en">Session capabilities are loading.</source>
     </trans-unit>
@@ -129,6 +159,9 @@
     </trans-unit>
     <trans-unit id="automation.form.sessionTypeRequired">
       <source xml:lang="en">Session type is required.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.syncingCustomizations">
+      <source xml:lang="en">Syncing customizations…</source>
     </trans-unit>
     <trans-unit id="automation.form.target">
       <source xml:lang="en">Target</source>

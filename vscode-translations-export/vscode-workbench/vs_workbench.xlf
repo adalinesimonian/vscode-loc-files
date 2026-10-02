@@ -1606,6 +1606,53 @@ This action is irreversible and may result in data loss!</source>
       <source xml:lang="en">Navigate to the View Above</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/browser/actions/policyDiagnosticsMarkdown" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="policyReadiness.conditional">
+      <source xml:lang="en">These policies have incomplete coverage for some paths or delivery sources. This is not a finding that your current source or session fails to enforce them. Check the conditions below; a runtime-managed value may already be enforced even when its VS Code-only equivalent is not.</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.harnessPolicy">
+      <source xml:lang="en">ChatEditorPreferCopilotHarness controls chat.editor.preferCopilotHarness: enabling it prefers Copilot when a new chat would otherwise use Local. It is a preference, not a harness lock; disabling it does not require Local or prohibit explicit or remembered Copilot choices. Existing sessions and the enterprise-required sandbox behavior are unchanged. Requiring a particular harness needs a separate enforcement contract, not an inference from this readiness report.</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.impact">
+      <source xml:lang="en">Impact / What to Verify</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.needsVerification">
+      <source xml:lang="en">Applied requirements needing verification</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.noGaps">
+      <source xml:lang="en">No known unsupported requirements were found in the applied VS Code policies. This does not establish full runtime policy parity; user settings and unprojected runtime managed settings are outside this check.</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.notEnforced">
+      <source xml:lang="en">Applied requirements not enforced by Agent Host</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.policy">
+      <source xml:lang="en">Policy</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.reportOnly">
+      <source xml:lang="en">These findings are report-only: they do not hold users on Local, change experiment enrollment or harness selection, block messages, or add Chat banners. Existing rollout, preferences, explicit choices, and sessions are unchanged. Opening this report has no effect on selection. Supported bridge restrictions remain enforced.</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.rollout">
+      <source xml:lang="en">Rollout and harness selection</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.runtimeSandboxNotRequired">
+      <source xml:lang="en">No enterprise-required Agent Host sandbox is active.</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.runtimeSandboxRequired">
+      <source xml:lang="en">An enterprise-required Agent Host sandbox is active. Local cannot satisfy this runtime sandbox requirement.</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.scope">
+      <source xml:lang="en">Only requirements from your currently applied enterprise policies are shown here. Unconfigured policies and known permissive values are excluded. This check covers Copilot Agent Host on this machine, not remote hosts, Claude, or Codex.</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.setting">
+      <source xml:lang="en">Setting</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.source">
+      <source xml:lang="en">Applied Source</source>
+    </trans-unit>
+    <trans-unit id="policyReadiness.title">
+      <source xml:lang="en">Agent Host Policy Readiness</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/browser/actions/quickAccessActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="quickNavigateNext">
       <source xml:lang="en">Navigate Next in Quick Open</source>
