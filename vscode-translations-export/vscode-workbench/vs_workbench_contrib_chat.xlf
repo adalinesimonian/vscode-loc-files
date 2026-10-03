@@ -143,7 +143,7 @@
       <source xml:lang="en">When an agent session exposes approval presets, use Tab to reach the Approvals picker and choose how it handles workspace access, commands, and the internet.</source>
     </trans-unit>
     <trans-unit id="chat.agentHostSandboxPolicy">
-      <source xml:lang="en">In Copilot agent-host sessions, use /sandbox-policy to view the effective sandbox policy. In the response, use Tab to focus Open Sandbox Policy and Enter to open the formatted report.</source>
+      <source xml:lang="en">In Copilot agent-host sessions, use /sandbox policy to view the effective sandbox policy. In the response, use Tab to focus Open Sandbox Policy and Enter to open the formatted report.</source>
     </trans-unit>
     <trans-unit id="chat.agentsParallelWork">
       <source xml:lang="en">When another Agent Host session is running, a new Agent Host chat may show an invitation to run agents side by side. Only one chat input notification is shown at a time. Use Tab to reach Open Agents Window, Ignore, or Dismiss notification. Open Agents Window copies the current prompt and attachments from that input without sending them or clearing it. An existing draft in the Agents Window is kept. Ignore turns off future invitations; Dismiss notification only hides the invitation for this chat until the window reloads.</source>
@@ -162,6 +162,9 @@
     </trans-unit>
     <trans-unit id="chat.attachments.removal">
       <source xml:lang="en">To remove attached contexts, focus an attachment and press Delete or Backspace.</source>
+    </trans-unit>
+    <trans-unit id="chat.codexContinuation">
+      <source xml:lang="en">A ChatGPT limit suggestion may offer Continue with Copilot. If the eligible Codex session is not active, the guide highlights its row in the Sessions list. Activate Open Session in the guide or open the row using the list's usual keyboard shortcut: by default, Command+Down Arrow on macOS or Enter on Windows and Linux. The next step opens its model picker with a matching Copilot model in the search. Activate Use Copilot in the guide or use Up and Down Arrow and Enter in the picker to select the Copilot model. Use Tab or Shift+Tab to reach the guide's buttons and Enter or Space to activate them. An already-active eligible session goes directly to the picker. End Tour or Escape cancels the remaining guidance; it does not undo a model selection.</source>
     </trans-unit>
     <trans-unit id="chat.completedResponseDisclosure">
       <source xml:lang="en">When completed response collapsing is enabled, the final response remains visible while earlier work is collapsed. Use Tab to focus the work disclosure and press Enter or Space to show or hide that work. With persistent progress enabled, a separate file changes button shows lines added and deleted when the collapsed work includes edits. Activate it to open those file changes without expanding the work.</source>
@@ -200,7 +203,7 @@
       <source xml:lang="en">When a chat question appears, toggle focus between the question and the chat input{0}.</source>
     </trans-unit>
     <trans-unit id="chat.harnessSwitchFeedbackSurvey">
-      <source xml:lang="en">After you switch from Copilot to Local, a two-step feedback survey may appear above the chat input. Use Shift+Tab to reach it. In the first step, use Up and Down Arrow to choose why you switched, then press Enter or Space. In the second step, enter any optional feedback and use Tab to reach Submit. Dismiss Survey or Escape closes the survey. After submission, the questions are replaced above the input by a message that your feedback was recorded. Use Dismiss Feedback Acknowledgement or Escape to close it.</source>
+      <source xml:lang="en">After you switch from Copilot to Local, a feedback survey may appear above the chat input. Use Shift+Tab to reach it. Use Up and Down Arrow to choose why you switched, then press Enter or Space to submit. Dismiss Survey or Escape closes the survey. After submission, a message confirms that your feedback was recorded. Use Tab to reach Share it on GitHub to provide specific feedback in a GitHub issue. Use Dismiss Feedback Acknowledgement or Escape to close the message.</source>
     </trans-unit>
     <trans-unit id="chat.inputBlocked">
       <source xml:lang="en">When another Codex app is using a conversation, a banner above the input explains how to release it. You can keep editing your draft, but sending is disabled. Quit the app holding the conversation, such as ChatGPT, or exit the Codex CLI session. Use Tab to focus Retry in the banner, then press Enter or Space to check again. Retry does not send your draft.</source>
@@ -245,7 +248,7 @@
       <source xml:lang="en">When a chat question is focused, move to the next question{0}.</source>
     </trans-unit>
     <trans-unit id="chat.openTerminalFullOutput">
-      <source xml:lang="en">When retained full output is available for a completed command, click the output preview to open it in a read-only editor. You can also use the Open Full Output (Read-Only) action in the command header or terminal output Accessible View, or focus the output region and press Enter.</source>
+      <source xml:lang="en">When retained full output is available for a completed command, use the View Full Output link below the output preview, or the Open Full Output (Read-Only) action in the command header or terminal output Accessible View, to open it in a read-only editor. You can also focus the output region and press Enter.</source>
     </trans-unit>
     <trans-unit id="chat.overview">
       <source xml:lang="en">The quick chat view is comprised of an input box and a request/response list. The input box is used to make requests and the list is used to display responses.</source>
@@ -297,6 +300,9 @@
     </trans-unit>
     <trans-unit id="chat.sessionPreparation">
       <source xml:lang="en">While a session is being prepared, a progress message appears in the transcript. Use Tab or Shift+Tab to reach Show Log, when available, and press Enter or Space to open the output log. Use Stop to cancel preparation. The chat input and attachment controls are disabled until preparation finishes.</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionStatusPillCopy">
+      <source xml:lang="en">When a pill represents a single item, its context menu offers the item's copy actions, such as copying its URL or file path. For a collection, open the dropdown and use the individual row actions instead.</source>
     </trans-unit>
     <trans-unit id="chat.sessionStatusPills">
       <source xml:lang="en">When session status pills appear above the input, use Tab to focus the toolbar, then use the left and right arrow keys to move between pills. Press Enter or Space to activate a pill. Open the context menu{0} to choose which optional pills are visible. Pull Requests Options lets you show all pull requests or only open and draft ones, remembered across sessions. If every pull request is filtered out, these options are also available in any other pill's context menu or the toolbar context menu.</source>
@@ -2082,16 +2088,14 @@ User: {2}</source>
 To migrate this server, wait for MCP discovery to finish, then refresh this view. If the issue persists, check the server configuration for errors.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityDevelopmentModeIgnored">
-      <source xml:lang="en">MCP development mode is not supported by the Copilot harness.
-Migration can remove dev after you confirm the loss of development-mode auto-start, file-watch restarts, debugging, and logging.</source>
+      <source xml:lang="en">Development mode isn't supported. Migrating removes dev.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityEnvironmentFileIgnored">
       <source xml:lang="en">Environment files are not supported by the Copilot harness.
 To migrate this server, move required variables from the environment file into the server env configuration.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityGalleryMetadataNotPortable">
-      <source xml:lang="en">Gallery metadata is not supported in the destination MCP configuration.
-Migration can remove the gallery property. After migration, this MCP server will not receive automatic updates from the registry.</source>
+      <source xml:lang="en">Gallery metadata isn't supported. Migrating removes it and stops registry updates.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityLaunchNotRepresentable">
       <source xml:lang="en">The launch configuration for this server is not supported by the Copilot harness.
@@ -2106,12 +2110,10 @@ To migrate this server, remove the custom OAuth client configuration and sign in
 To migrate this server, replace them with concrete values or environment variables defined directly in the server configuration.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilitySandboxConfigurationIgnored">
-      <source xml:lang="en">Per-server sandbox settings are not supported by the Copilot harness.
-Migration can remove sandboxEnabled after you confirm that VS Code's per-server sandbox restrictions will no longer be applied.</source>
+      <source xml:lang="en">Per-server sandboxing isn't supported. Migrating removes sandboxEnabled.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityServerVersionNotPortable">
-      <source xml:lang="en">Server version metadata is not supported in the destination MCP configuration.
-Migration can remove the version property after you confirm the loss of version metadata. Version pins in the command, arguments, or URL will not change.</source>
+      <source xml:lang="en">Version metadata isn't supported. Migrating removes it; version pins are kept.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilitySourceUnknown">
       <source xml:lang="en">Compatibility cannot be determined because the server configuration source is unknown.
@@ -2249,6 +2251,18 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHost.sdkSetup.noAccountDescription">
       <source xml:lang="en">Sign in to GitHub to use GitHub Copilot models or [reload the configuration]({1}) if you have set up {0} elsewhere.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sdkSetup.noAccountDescription.agent">
+      <source xml:lang="en">[Reload the configuration]({1}) if you have set up {0} elsewhere.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sdkSetup.noAccountDescription.agentAll">
+      <source xml:lang="en">Sign in to {2} to use your {2} subscription, or [reload the configuration]({1}) if you have set up {0} elsewhere. For other ways to set up {0}, [learn more]({3}) on their docs.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sdkSetup.noAccountDescription.agentDocs">
+      <source xml:lang="en">[Reload the configuration]({1}) if you have set up {0} elsewhere. For other ways to set up {0}, [learn more]({2}) on their docs.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sdkSetup.noAccountDescription.agentSignIn">
+      <source xml:lang="en">Sign in to {2} to use your {2} subscription, or [reload the configuration]({1}) if you have set up {0} elsewhere.</source>
     </trans-unit>
     <trans-unit id="agentHost.sdkSetup.noAccountDescription.all">
       <source xml:lang="en">Sign in to GitHub to use GitHub Copilot models, sign in to {2} to use your {2} subscription, or [reload the configuration]({1}) if you have set up {0} elsewhere. For other ways to set up {0}, [learn more]({3}) on their docs.</source>
@@ -2521,6 +2535,35 @@ To migrate this server, remove the cwd property.</source>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/chatTerminalOutputTextModelContentProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatTerminalOutputUnavailable">
       <source xml:lang="en">Terminal output is unavailable: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/codexContinuationGuide" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codexContinuation.continue">
+      <source xml:lang="en">Continue with Copilot</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.disable">
+      <source xml:lang="en">Don't Show Again</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.guide">
+      <source xml:lang="en">Select {0} from GitHub Copilot to continue this session.</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.message">
+      <source xml:lang="en">You're nearing your ChatGPT limit. Continue your Codex sessions with your Copilot subscription.</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.openSession">
+      <source xml:lang="en">Open a Codex Session</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.openSession.action">
+      <source xml:lang="en">Open Session</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.openSession.description">
+      <source xml:lang="en">This Codex session uses your ChatGPT subscription. Open it to continue with your Copilot subscription.</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.unavailable">
+      <source xml:lang="en">This Copilot continuation is no longer available. Review the session's model picker to continue.</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.useCopilot">
+      <source xml:lang="en">Use Copilot</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/importLocalConversationToAgentSession" source-language="en" datatype="plaintext"><body>
@@ -3282,6 +3325,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentSessions.filter.external.recent">
       <source xml:lang="en">Recent</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.filter.external.selected">
+      <source xml:lang="en">{0} ({1})</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/repositoryPicker" source-language="en" datatype="plaintext"><body>
@@ -5067,7 +5113,7 @@ Planned changes:
       <source xml:lang="en">The customization type links below the heading open their respective management sections.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.install">
-      <source xml:lang="en">Review an available item's source, then choose Install. VS Code records the exact installed target instead of associating same-name local items. If recorded skill files are missing, choose Repair to restore only those files without overwriting existing files. Installed marketplace items provide an Uninstall action. MCP servers that require unsupported local prerequisites provide View Setup to open the publisher's instructions instead. VS Code continues to apply destination, trust, policy, and compatibility checks.</source>
+      <source xml:lang="en">Review an available item's source, then choose Install. For connectors, choose Connect, Reconnect, or Disconnect to manage the connection. VS Code records the exact installed target instead of associating same-name local items. If recorded skill files are missing, choose Repair to restore only those files without overwriting existing files. Installed marketplace items provide an Uninstall action. MCP servers that require unsupported local prerequisites provide View Setup to open the publisher's instructions instead. VS Code continues to apply destination, trust, policy, and compatibility checks.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.links">
       <source xml:lang="en">Available customization names no longer open external resources. Open an item's details to review its metadata, then use the explicitly labeled resource or repository actions for external navigation. Back or Escape returns to Discover and restores focus.</source>
@@ -5463,12 +5509,6 @@ Destination: {2}</source>
     <trans-unit id="mcpMigrationConfirmMessageSingle">
       <source xml:lang="en">Migrate 1 MCP server to .mcp.json?</source>
     </trans-unit>
-    <trans-unit id="mcpMigrationCrossRootConflict">
-      <source xml:lang="en">Could not migrate '{0}' because another workspace root defines an MCP server with the same name. Rename or remove the duplicate before migrating.</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationCrossRootConflicts">
-      <source xml:lang="en">Some MCP servers could not be migrated because their names conflict across workspace roots. Rename or remove the duplicates before migrating.</source>
-    </trans-unit>
     <trans-unit id="mcpMigrationFailedMultiple">
       <source xml:lang="en">Failed to migrate {0} MCP servers: {1}.</source>
     </trans-unit>
@@ -5493,28 +5533,28 @@ Disabled user servers may become enabled.</source>
       <source xml:lang="en">No MCP servers were migrated.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationRemoveDev">
-      <source xml:lang="en">The 'dev' property will be removed. VS Code will no longer auto-start this server in development mode, restart it when watched files change, attach a debugger, or enable development-mode logging.</source>
+      <source xml:lang="en">Removes 'dev'. Development mode will stop.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationRemoveDisabledGallery">
-      <source xml:lang="en">The 'gallery' property will be removed. Automatic updates from the registry are already disabled for this MCP server.</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationRemoveDisabledSandbox">
-      <source xml:lang="en">The 'sandboxEnabled' property will be removed. VS Code sandboxing is already disabled for this server. Any sandboxing after migration is controlled by {0}.</source>
+      <source xml:lang="en">Removes 'gallery'. Registry updates are already off.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationRemoveGallery">
-      <source xml:lang="en">The 'gallery' property will be removed. This MCP server will no longer be automatically updated from the registry.</source>
+      <source xml:lang="en">Removes 'gallery'. Registry updates will stop.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationRemoveSandbox">
-      <source xml:lang="en">The 'sandboxEnabled' property will be removed. VS Code's per-server sandbox and its filesystem and network restrictions will no longer be applied to this server. Any sandboxing after migration is controlled by {0}.</source>
+      <source xml:lang="en">Removes 'sandboxEnabled'. Sandboxing is handled by {0}.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationRemoveVersion">
-      <source xml:lang="en">The 'version' property will be removed. The migrated configuration will no longer record version metadata. Version pins in the command, arguments, or URL will not change.</source>
+      <source xml:lang="en">Removes 'version'. Version pins are kept.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationRollbackFailed">
       <source xml:lang="en">Could not safely complete or roll back the migration for '{0}'. Review both MCP configuration files.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationRollbackFailedMultiple">
       <source xml:lang="en">Some MCP server migrations could not be safely completed or rolled back. Review the affected source and destination MCP configuration files.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationShadowedServerNotMigrated">
+      <source xml:lang="en">Could not migrate '{0}' because another workspace folder defines an MCP server with the same name. Migrate both servers together so the same configuration stays active.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationShortcutAriaLabelSingle">
       <source xml:lang="en">MCP servers, 1 server can be migrated</source>
@@ -6097,17 +6137,38 @@ Disabled servers may become enabled.</source>
     <trans-unit id="marketplaceDetail.actionAria">
       <source xml:lang="en">{0} {1}</source>
     </trans-unit>
-    <trans-unit id="marketplaceDetail.availableState">
-      <source xml:lang="en">Available to install</source>
+    <trans-unit id="marketplaceDetail.checkingConnection">
+      <source xml:lang="en">Checking...</source>
     </trans-unit>
-    <trans-unit id="marketplaceDetail.checkingState">
-      <source xml:lang="en">Checking installation</source>
+    <trans-unit id="marketplaceDetail.connect">
+      <source xml:lang="en">Connect</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.connectError">
+      <source xml:lang="en">Could not connect {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.connectedStatus">
+      <source xml:lang="en">Connected {0}.</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.connecting">
+      <source xml:lang="en">Connecting...</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.details">
       <source xml:lang="en">Details</source>
     </trans-unit>
-    <trans-unit id="marketplaceDetail.errorState">
-      <source xml:lang="en">Installation error: {0}</source>
+    <trans-unit id="marketplaceDetail.disconnect">
+      <source xml:lang="en">Disconnect</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.disconnectError">
+      <source xml:lang="en">Could not disconnect {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.disconnectedStatus">
+      <source xml:lang="en">Disconnected {0}.</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.disconnecting">
+      <source xml:lang="en">Disconnecting...</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.errorSummary">
+      <source xml:lang="en">This customization has an error</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.install">
       <source xml:lang="en">Install</source>
@@ -6118,17 +6179,11 @@ Disabled servers may become enabled.</source>
     <trans-unit id="marketplaceDetail.installed">
       <source xml:lang="en">Installed</source>
     </trans-unit>
-    <trans-unit id="marketplaceDetail.installedState">
-      <source xml:lang="en">Installed</source>
-    </trans-unit>
     <trans-unit id="marketplaceDetail.installedStatus">
       <source xml:lang="en">Installed {0}.</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.installing">
       <source xml:lang="en">Installing...</source>
-    </trans-unit>
-    <trans-unit id="marketplaceDetail.installingState">
-      <source xml:lang="en">Installation in progress</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.location">
       <source xml:lang="en">Location</source>
@@ -6139,8 +6194,8 @@ Disabled servers may become enabled.</source>
     <trans-unit id="marketplaceDetail.mcp">
       <source xml:lang="en">MCP server</source>
     </trans-unit>
-    <trans-unit id="marketplaceDetail.missingState">
-      <source xml:lang="en">Installation needs repair</source>
+    <trans-unit id="marketplaceDetail.missingSummary">
+      <source xml:lang="en">This customization needs repair</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.noDescription">
       <source xml:lang="en">No description provided.</source>
@@ -6173,8 +6228,29 @@ Disabled servers may become enabled.</source>
     <trans-unit id="marketplaceDetail.readmeLoading">
       <source xml:lang="en">Loading plugin README...</source>
     </trans-unit>
-    <trans-unit id="marketplaceDetail.repairingState">
-      <source xml:lang="en">Repair in progress</source>
+    <trans-unit id="marketplaceDetail.reconnect">
+      <source xml:lang="en">Reconnect</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.reconnectError">
+      <source xml:lang="en">Could not reconnect {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.reconnectedStatus">
+      <source xml:lang="en">Reconnected {0}.</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.reconnecting">
+      <source xml:lang="en">Reconnecting...</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.repair">
+      <source xml:lang="en">Repair</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.repairError">
+      <source xml:lang="en">Could not repair {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.repairedStatus">
+      <source xml:lang="en">Repaired {0}.</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.repairing">
+      <source xml:lang="en">Repairing...</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.repository">
       <source xml:lang="en">Repository</source>
@@ -6203,14 +6279,14 @@ Disabled servers may become enabled.</source>
     <trans-unit id="marketplaceDetail.typeAccessible">
       <source xml:lang="en">Type: {0}</source>
     </trans-unit>
-    <trans-unit id="marketplaceDetail.unavailableState">
-      <source xml:lang="en">Unavailable: {0}</source>
+    <trans-unit id="marketplaceDetail.unavailable">
+      <source xml:lang="en">Unavailable</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.unavailableSummary">
+      <source xml:lang="en">This customization is unavailable</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.uninstalling">
       <source xml:lang="en">Uninstalling...</source>
-    </trans-unit>
-    <trans-unit id="marketplaceDetail.uninstallingState">
-      <source xml:lang="en">Uninstall in progress</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.version">
       <source xml:lang="en">Version</source>
@@ -7409,18 +7485,6 @@ Changes may not take full effect until VS Code is restarted.</source>
     <trans-unit id="chat.agentHost.opus48Prompt.enabled">
       <source xml:lang="en">When enabled, Copilot SDK sessions running a Claude Opus 4.8 model apply Opus 4.8-tuned system-prompt section overrides on top of the default system message.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.sdkSandbox.enabled.deprecated">
-      <source xml:lang="en">This setting no longer has any effect. Use `#chat.agent.sandbox.enabled#` for both the SDK's built-in shell tool and the Agent Host's custom terminal tool.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentHost.sdkSandbox.enabled.description">
-      <source xml:lang="en">Deprecated sandbox mode for the Copilot SDK's built-in shell tool on macOS and Linux.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentHost.sdkSandbox.enabledWindows.deprecated">
-      <source xml:lang="en">This setting no longer has any effect. Use `#chat.agent.sandbox.enabledWindows#` for both the SDK's built-in shell tool and the Agent Host's custom terminal tool.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentHost.sdkSandbox.enabledWindows.description">
-      <source xml:lang="en">Deprecated sandbox mode for the Copilot SDK's built-in shell tool on Windows.</source>
-    </trans-unit>
     <trans-unit id="chat.agentHost.sessionCatalog">
       <source xml:lang="en">Controls whether the agent session list is served from the Agent host's session catalog. When disabled, sessions are listed from provider metadata and per-session storage instead, which is slower.
 
@@ -7765,9 +7829,6 @@ Locations configured here are only observed by the Local agent harness. Other ha
     </trans-unit>
     <trans-unit id="chat.experimental.openInAgentsWindow.revealCurrentSession">
       <source xml:lang="en">Controls whether Open in Agents Window reveals the current local Agent Host session instead of opening a new session.</source>
-    </trans-unit>
-    <trans-unit id="chat.experimental.permissionsSandboxToggle.enabled">
-      <source xml:lang="en">Controls whether the permissions picker shows a "Sandboxing for terminal" toggle. Local sessions show it on the Default permissions option. Local and remote Copilot Agent Host sessions show it as a session-specific setting that applies to every permission mode; changing it saves the choice only for that session. New Copilot Agent Host sessions initially follow `#chat.agent.sandbox.enabled#` or `#chat.agent.sandbox.enabledWindows#` based on the host's operating system, for both the SDK's built-in shell tool and the Agent Host terminal tool.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.richLinks.enabled">
       <source xml:lang="en">Controls whether supported links in chat are rendered as rich links with live metadata. Enabling this may make authenticated requests to services such as GitHub.</source>
@@ -12208,11 +12269,8 @@ Type anything below to get started!</source>
     <trans-unit id="chat.harnessSwitchFeedbackSurvey.dismissAcknowledgement">
       <source xml:lang="en">Dismiss Feedback Acknowledgement</source>
     </trans-unit>
-    <trans-unit id="chat.harnessSwitchFeedbackSurvey.feedback">
-      <source xml:lang="en">Any feedback?</source>
-    </trans-unit>
-    <trans-unit id="chat.harnessSwitchFeedbackSurvey.feedbackDescription">
-      <source xml:lang="en">Share any additional feedback (optional).</source>
+    <trans-unit id="chat.harnessSwitchFeedbackSurvey.feedbackLink">
+      <source xml:lang="en">Have specific feedback? [Share it on GitHub]({0}).</source>
     </trans-unit>
     <trans-unit id="chat.harnessSwitchFeedbackSurvey.reason">
       <source xml:lang="en">Why did you switch harnesses?</source>
@@ -12405,6 +12463,9 @@ Source: {0}</source>
     </trans-unit>
     <trans-unit id="updateAllSuccess">
       <source xml:lang="en">Updated plugins: {0}</source>
+    </trans-unit>
+    <trans-unit id="updatedPluginSourceNotFound">
+      <source xml:lang="en">Plugin source directory for '{0}' not found after updating.</source>
     </trans-unit>
     <trans-unit id="updatingAllPlugins">
       <source xml:lang="en">Updating plugins...</source>
@@ -13167,6 +13228,9 @@ Source: {0}</source>
     <trans-unit id="cloudSandbox.deleteSessionNotFound">
       <source xml:lang="en">Mission Control sandbox session not found.</source>
     </trans-unit>
+    <trans-unit id="cloudSandbox.renameSessionNotFound">
+      <source xml:lang="en">Mission Control sandbox session not found.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxSessionListController" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cloudSandbox.deleteInvalidSession">
@@ -13211,9 +13275,47 @@ Source: {0}</source>
       <source xml:lang="en">Select Plugin Folder on {0}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/sessionBackgroundShellOutputView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="backgroundShells.accessibleCommand">
+      <source xml:lang="en">Command: {0}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.accessibleStatus">
+      <source xml:lang="en">Status: {0}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.exited">
+      <source xml:lang="en">Exited</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.exitedWithCode">
+      <source xml:lang="en">Exited with code {0}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.loadingOutput">
+      <source xml:lang="en">Waiting for output...</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.noOutput">
+      <source xml:lang="en">No output.</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.noOutputYet">
+      <source xml:lang="en">No output yet.</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.outputRegion">
+      <source xml:lang="en">Terminal output for {0}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.outputRegionWithHint">
+      <source xml:lang="en">Terminal output for {0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.outputUnavailable">
+      <source xml:lang="en">Output unavailable: {0}</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.running">
+      <source xml:lang="en">Running</source>
+    </trans-unit>
+    <trans-unit id="backgroundShells.statusUnknown">
+      <source xml:lang="en">Status unknown</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/sessionBackgroundShellsControl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="backgroundShells.accessibilityHelp">
-      <source xml:lang="en">The Background Shells pill opens a picker above the chat input, including for a single shell. Each entry includes its elapsed time, and is marked Detached when the shell runs independently of the agent. Use the arrow keys to choose a shell, then Enter or Right Arrow to open its live command details beside the picker. Left Arrow or Escape returns to the list; Escape from the list returns focus to the pill. Elapsed time continues updating while details are open, and a shell disappears when it finishes. This list does not stop commands or stream their output.</source>
+      <source xml:lang="en">The Background Shells pill opens a picker above the chat input, including for a single shell. Each entry includes its elapsed time, and is marked Detached when the shell runs independently of the agent. Use the arrow keys to choose a shell, then Enter or Right Arrow to open its live command details beside the picker. Left Arrow or Escape returns to the list; Escape from the list returns focus to the pill. Elapsed time continues updating while details are open, and a shell disappears when it finishes. When a shell's output is available, its details show the command and its status above a read-only terminal that streams the output. Press Tab to move to the output, then use Open Accessible View{0} to read the command, its status, and its output as text. This list does not stop commands.</source>
     </trans-unit>
     <trans-unit id="backgroundShells.active">
       <source xml:lang="en">Active background shells</source>
@@ -15396,11 +15498,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.turnChanges.oneFile">
       <source xml:lang="en">1 file changed</source>
     </trans-unit>
-    <trans-unit id="chat.turnChanges.viewAllAccessible">
-      <source xml:lang="en">View all file changes: {0}, {1} lines added, {2} lines deleted</source>
+    <trans-unit id="chat.turnChanges.viewTurnAccessible">
+      <source xml:lang="en">View turn changes: {0}, {1} lines added, {2} lines deleted</source>
     </trans-unit>
     <trans-unit id="chat.viewTurnFileChangesSummary">
-      <source xml:lang="en">View All File Changes</source>
+      <source xml:lang="en">View Turn Changes</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatWorkspaceEditContentPart" source-language="en" datatype="plaintext"><body>
@@ -15745,11 +15847,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chatTerminalOutputTruncated">
       <source xml:lang="en">Output truncated.</source>
     </trans-unit>
-    <trans-unit id="chatTerminalOutputTruncatedClickPreview">
-      <source xml:lang="en">Output truncated. Click the output preview to view the full output.</source>
-    </trans-unit>
     <trans-unit id="chatTerminalOutputUnavailable">
       <source xml:lang="en">Command output is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="chatTerminalViewFullOutputLink">
+      <source xml:lang="en">View Full Output</source>
     </trans-unit>
     <trans-unit id="continueInBackground">
       <source xml:lang="en">Continue in Background</source>
@@ -16974,6 +17076,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.currentModel">
       <source xml:lang="en">Current model</source>
     </trans-unit>
+    <trans-unit id="chat.modelPicker.selectedModel">
+      <source xml:lang="en">Selected</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerModelConfig" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.context.header">
@@ -17075,6 +17180,18 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.modelPicker.upgradeForMoreModels">
       <source xml:lang="en">Upgrade for More Models</source>
+    </trans-unit>
+    <trans-unit id="modelPicker.workflow.back">
+      <source xml:lang="en">{0} Back</source>
+    </trans-unit>
+    <trans-unit id="modelPicker.workflow.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="modelPicker.workflow.done">
+      <source xml:lang="en">Done</source>
+    </trans-unit>
+    <trans-unit id="modelPicker.workflow.next">
+      <source xml:lang="en">Next {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerTabs" source-language="en" datatype="plaintext"><body>
@@ -17690,6 +17807,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="inChat">
       <source xml:lang="en">True when focus is in the chat widget, false otherwise.</source>
+    </trans-unit>
+    <trans-unit id="inChatBackgroundShellOutput">
+      <source xml:lang="en">True when focus is in a background shell's output in the Background Shells details.</source>
     </trans-unit>
     <trans-unit id="inChatComposer">
       <source xml:lang="en">True when focus is in an Agents window chat composer or one of the notices above it.</source>

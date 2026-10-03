@@ -524,12 +524,6 @@ A keybinding</note>
     <trans-unit id="policyGap.plugins">
       <source xml:lang="en">The workbench filters synchronized plugins, but runtime discovery and more specific customization decisions do not have equivalent policy coverage.</source>
     </trans-unit>
-    <trans-unit id="policyGap.sandbox">
-      <source xml:lang="en">Policy-required sandboxing blocks direct session Off overrides on macOS/Linux. Verify delayed policy loading and loss/reapplication of the last client's requirement across disconnect-grace expiry.</source>
-    </trans-unit>
-    <trans-unit id="policyGap.sandboxApproval">
-      <source xml:lang="en">Sandboxed commands can be approved automatically even when this policy requires confirmation.</source>
-    </trans-unit>
     <trans-unit id="policyGap.terminalApproval">
       <source xml:lang="en">Native shell commands require approval through the bridge. Custom terminal tools do not have equivalent managed-ask coverage in every approval mode.</source>
     </trans-unit>
@@ -591,6 +585,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.byokModelsEnabled.title">
       <source xml:lang="en">BYOK Models</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.canvases.description">
+      <source xml:lang="en">Whether Copilot sessions can use Canvas extensions to present interactive content.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.canvases.title">
+      <source xml:lang="en">Canvases</source>
     </trans-unit>
     <trans-unit id="agentHost.config.claudeMultiRootEnabled.description">
       <source xml:lang="en">Whether the Claude provider advertises support for multiple working directories, letting a session span every folder of a multi-root workspace.</source>
@@ -1088,6 +1088,9 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="chat.agentMerge.resolveConflicts">
       <source xml:lang="en">Controls whether enabled Agent Merge sessions ask the agent to update branches that are behind or resolve merge conflicts.</source>
+    </trans-unit>
+    <trans-unit id="chat.canvases.enabled">
+      <source xml:lang="en">Controls whether agents can open Canvases with interactive content in the Agents Window. Newly created sessions pick up changes to this setting.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.workspaceSnapshot">
       <source xml:lang="en">When enabled, the first turn of a new Copilot agent host chat includes a bounded file-name snapshot of its working directories, so the agent can orient itself without listing the workspace first. File contents are never included.</source>
@@ -2391,6 +2394,12 @@ A keybinding</note>
     <trans-unit id="agentHost.config.sandbox.advancedRuntime.title">
       <source xml:lang="en">Advanced Sandbox Runtime</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.allowDevToolAccess.title">
+      <source xml:lang="en">Allow Dev Tool Access</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.allowLocalNetwork.title">
+      <source xml:lang="en">Allow Local Network</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.sandbox.allowNetwork.title">
       <source xml:lang="en">Allow Network</source>
     </trans-unit>
@@ -2409,6 +2418,9 @@ A keybinding</note>
     <trans-unit id="agentHost.config.sandbox.deniedDomains.title">
       <source xml:lang="en">Denied Network Domains</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.deniedPaths.title">
+      <source xml:lang="en">Denied</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.sandbox.enabled.title">
       <source xml:lang="en">Sandbox Enabled</source>
     </trans-unit>
@@ -2418,11 +2430,26 @@ A keybinding</note>
     <trans-unit id="agentHost.config.sandbox.macFileSystem.title">
       <source xml:lang="en">macOS Sandbox Filesystem</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.path.title">
+      <source xml:lang="en">Path</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.readonlyPaths.title">
+      <source xml:lang="en">Read-Only</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.readwritePaths.title">
+      <source xml:lang="en">Read/Write</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.sandboxLspServers.title">
+      <source xml:lang="en">Sandbox LSP Servers</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.sandboxMcpServers.title">
+      <source xml:lang="en">Sandbox MCP Servers</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.sandbox.title">
       <source xml:lang="en">Agent Sandbox</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.sandbox.windowsEnabled.title">
-      <source xml:lang="en">Sandbox Enabled (Windows)</source>
+    <trans-unit id="agentHost.config.sandbox.userConfiguredPaths.title">
+      <source xml:lang="en">User-Configured Paths</source>
     </trans-unit>
     <trans-unit id="agentHost.config.sandbox.windowsFileSystem.title">
       <source xml:lang="en">Windows Sandbox Filesystem</source>
@@ -2437,10 +2464,9 @@ A keybinding</note>
 3. Do not rerun a validation category when the attempt report contains a clear result. Run only missing targeted tests, build, lint, or diagnostics needed to make a reliable recommendation. If required dependencies or build artifacts are unavailable, record that validation as unavailable; do not install or build dependencies, and do not substitute a different validation category.
 4. For each validation category, record one consistent `state` and `source` evidence pair. Known `passed` or `failed` results must use `attemptReport` or `judgeRun`; use `unavailable` only with `notRun` or `unknown`, and use `notApplicable` for both fields when the category genuinely does not apply.
 5. Keep `explanation` to one sentence. Fill `rationale` with exactly four concise points in this order: `comparison`, `validation`, `codeQuality`, and `solution`. Each point must cite concrete evidence, contain no line breaks, and stay within the tool schema length limit. For every other attempt, record its strongest reusable points in `notableDifferences`.
-6. Identify semantic `decisionSections` where attempts make meaningfully different implementation choices. Each section may span related files. Give it a stable ID, short title, plain-language summary, affected repository-relative files, one concise option per relevant `attemptNumber`, and a recommended `attemptNumber`. Rate every option as `better`, `neutral`, or `worse` relative to the other approaches using concrete code and validation evidence; the recommended option must be rated `better`. Return an empty array when there are no meaningful choices. Do not use raw line numbers as section identity.
-7. Do not modify, merge, apply, or delete any attempt.
-8. Call `#completeAttemptComparison` with the recommendation and supporting evidence. Refer to attempts only by the `attemptNumber` values returned by `#readAttemptComparison`; do not copy participant or session UUIDs. If it rejects invalid input, correct the reported fields and retry; do not submit again after success.
-9. After the tool returns, identify the winner as `Attempt N (agent, model, effort)` and use the same rationale order, followed by the strongest reusable points from every other attempt.</source>
+6. Do not modify, merge, apply, or delete any attempt.
+7. Call `#completeAttemptComparison` with the recommendation and supporting evidence. Refer to attempts only by the `attemptNumber` values returned by `#readAttemptComparison`; do not copy participant or session UUIDs. If it rejects invalid input, correct the reported fields and retry; do not submit again after success.
+8. After the tool returns, identify the winner as `Attempt N (agent, model, effort)` and use the same rationale order, followed by the strongest reusable points from every other attempt.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/streamingToolCallDisplay" source-language="en" datatype="plaintext"><body>
@@ -3331,6 +3357,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/codex/codexAgent" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codex.legacyThreadTruncation">
+      <source xml:lang="en">This version of Codex cannot remove messages from legacy chats.</source>
+    </trans-unit>
     <trans-unit id="codex.modelThinkingLevel.description">
       <source xml:lang="en">Controls how much reasoning effort Codex uses.</source>
     </trans-unit>
@@ -4033,9 +4062,6 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotSlashCommand.sandboxPolicy">
       <source xml:lang="en">Show the effective sandbox policy for this session</source>
-    </trans-unit>
-    <trans-unit id="copilotSlashCommand.sandboxPolicyNoArguments">
-      <source xml:lang="en">The /sandbox-policy command does not accept arguments.</source>
     </trans-unit>
     <trans-unit id="copilotSlashCommand.sandboxPolicyUnavailable">
       <source xml:lang="en">The SDK did not return a sandbox policy.</source>
@@ -4744,6 +4770,9 @@ stderr: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/shared/sessionServerTools" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="toolComplete.cancelMessage">
+      <source xml:lang="en">Processed message cancellation</source>
+    </trans-unit>
     <trans-unit id="toolComplete.createChatInCurrentSession">
       <source xml:lang="en">Created chat in the current session</source>
     </trans-unit>
@@ -4758,6 +4787,9 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="toolComplete.renameChat">
       <source xml:lang="en">Requested chat rename</source>
+    </trans-unit>
+    <trans-unit id="toolComplete.replaceMessage">
+      <source xml:lang="en">Processed message replacement</source>
     </trans-unit>
     <trans-unit id="toolComplete.setWorkspace">
       <source xml:lang="en">Scheduled workspace change</source>
@@ -4776,6 +4808,9 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="toolConfirm.setWorkspace.title">
       <source xml:lang="en">Continue in {0}?</source>
+    </trans-unit>
+    <trans-unit id="toolInvoke.cancelMessage">
+      <source xml:lang="en">Cancelling message</source>
     </trans-unit>
     <trans-unit id="toolInvoke.createChat">
       <source xml:lang="en">Create chat</source>
@@ -4804,11 +4839,17 @@ stderr: {2}</source>
     <trans-unit id="toolInvoke.renameChat">
       <source xml:lang="en">Renaming chat</source>
     </trans-unit>
+    <trans-unit id="toolInvoke.replaceMessage">
+      <source xml:lang="en">Replacing message</source>
+    </trans-unit>
     <trans-unit id="toolInvoke.sendMessage">
       <source xml:lang="en">Send message</source>
     </trans-unit>
     <trans-unit id="toolInvoke.setWorkspace">
       <source xml:lang="en">Setting workspace</source>
+    </trans-unit>
+    <trans-unit id="toolName.cancelMessage">
+      <source xml:lang="en">Cancel Message</source>
     </trans-unit>
     <trans-unit id="toolName.createChat">
       <source xml:lang="en">Create Chat</source>
@@ -4836,6 +4877,9 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="toolName.renameChat">
       <source xml:lang="en">Rename Chat</source>
+    </trans-unit>
+    <trans-unit id="toolName.replaceMessage">
+      <source xml:lang="en">Replace Message</source>
     </trans-unit>
     <trans-unit id="toolName.sendMessage">
       <source xml:lang="en">Send Message</source>
@@ -5453,7 +5497,7 @@ OS: {10}</source>
       <source xml:lang="en">Adds a Model Context Protocol server definition to the user profile. Accepts JSON input in the form '{"name":"server-name","command":...}'</source>
     </trans-unit>
     <trans-unit id="agents">
-      <source xml:lang="en">Opens the agents window.</source>
+      <source xml:lang="en">Opens the agents window. If a folder is provided, opens a new session with that folder selected.</source>
     </trans-unit>
     <trans-unit id="category">
       <source xml:lang="en">Filters installed extensions by provided category, when using --list-extensions.</source>

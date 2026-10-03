@@ -170,6 +170,12 @@
     <trans-unit id="agentHostSessionConfig.branchItemUncommittedSingular">
       <source xml:lang="en">1 uncommitted file</source>
     </trans-unit>
+    <trans-unit id="agentHostSessionConfig.currentBranchGroup">
+      <source xml:lang="en">Current Branch</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.defaultBranchGroup">
+      <source xml:lang="en">Default Branch</source>
+    </trans-unit>
     <trans-unit id="agentHostSessionConfig.filter">
       <source xml:lang="en">Filter options...</source>
     </trans-unit>
@@ -182,9 +188,6 @@
     <trans-unit id="agentHostSessionConfig.isolation.devContainerDisabled">
       <source xml:lang="en">New Worktree cannot be combined with Dev Container execution.</source>
     </trans-unit>
-    <trans-unit id="agentHostSessionConfig.isolation.worktree">
-      <source xml:lang="en">New Worktree</source>
-    </trans-unit>
     <trans-unit id="agentHostSessionConfig.isolation.worktreeDescription">
       <source xml:lang="en">Creates a separate copy for this session</source>
     </trans-unit>
@@ -193,6 +196,12 @@
     </trans-unit>
     <trans-unit id="agentHostSessionConfig.itemAriaLabelWithDescription">
       <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.itemAriaLabelWithGroup">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.otherBranchesGroup">
+      <source xml:lang="en">Branches</source>
     </trans-unit>
     <trans-unit id="agentHostSessionConfig.policyDisabled">
       <source xml:lang="en">Disabled by your organization. Contact your administrator.</source>
@@ -459,17 +468,23 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/baseAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.initialConfigFailed">
+      <source xml:lang="en">The initial session configuration could not be resolved.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.initialModeRejected">
+      <source xml:lang="en">The selected session mode '{0}' could not be applied.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.initialPermissionRejected">
+      <source xml:lang="en">The selected session permissions could not be applied: the agent host did not apply '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.initialPermissionUnsupported">
+      <source xml:lang="en">The selected session permissions could not be applied: agent '{0}' does not support permission '{1}'.</source>
+    </trans-unit>
     <trans-unit id="agentHost.sessionConfigUnavailable">
       <source xml:lang="en">Could not resolve the Agent Host session configuration. Please try again.</source>
     </trans-unit>
-    <trans-unit id="agentHostCanvas.disconnected">
-      <source xml:lang="en">The canvas runtime is disconnected.</source>
-    </trans-unit>
-    <trans-unit id="agentHostCanvas.invalidSource">
-      <source xml:lang="en">The canvas returned an unsupported source.</source>
-    </trans-unit>
-    <trans-unit id="agentHostCanvas.unavailable">
-      <source xml:lang="en">The canvas runtime is unavailable.</source>
+    <trans-unit id="canvas.pendingTitle">
+      <source xml:lang="en">Canvas</source>
     </trans-unit>
     <trans-unit id="chatArchiveUnavailable">
       <source xml:lang="en">Archiving this chat is unavailable.</source>
@@ -572,6 +587,9 @@
     <trans-unit id="devContainerSample.workspaceLabel">
       <source xml:lang="en">{0} Sample</source>
     </trans-unit>
+    <trans-unit id="environment.local">
+      <source xml:lang="en">Local</source>
+    </trans-unit>
     <trans-unit id="localAgentHostLabel">
       <source xml:lang="en">Local Agent Host</source>
     </trans-unit>
@@ -647,6 +665,9 @@
     </trans-unit>
     <trans-unit id="copilotSandbox">
       <source xml:lang="en">Copilot</source>
+    </trans-unit>
+    <trans-unit id="environment.cloud">
+      <source xml:lang="en">Cloud</source>
     </trans-unit>
     <trans-unit id="issue">
       <source xml:lang="en">Issue...</source>
@@ -807,8 +828,14 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.renameUnavailable">
+      <source xml:lang="en">Connect to the environment to rename this session.</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.sessionNotFound">
       <source xml:lang="en">Sandbox session not found.</source>
+    </trans-unit>
+    <trans-unit id="environment.cloud">
+      <source xml:lang="en">Cloud</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/connectionDiagnostics.contribution" source-language="en" datatype="plaintext"><body>

@@ -73,6 +73,9 @@
     <trans-unit id="branchPicker.loading">
       <source xml:lang="en">Loading branches…</source>
     </trans-unit>
+    <trans-unit id="branchPicker.newWorktree">
+      <source xml:lang="en">New Worktree</source>
+    </trans-unit>
     <trans-unit id="branchPicker.retry">
       <source xml:lang="en">Retry Loading Branches</source>
     </trans-unit>
@@ -290,6 +293,9 @@
     <trans-unit id="sessions.chat.compareAgents.hideInactiveInputs">
       <source xml:lang="en">When enabled, hides the chat input in inactive panes when three or more parallel comparison attempts are shown in a grid. This behavior is disabled when screen-reader optimized mode is active.</source>
     </trans-unit>
+    <trans-unit id="sessions.chat.compareAgents.openInGrid">
+      <source xml:lang="en">Automatically opens comparison attempts in a grid when they start. When disabled, the attempts start in the background; select their comparison group to open the grid.</source>
+    </trans-unit>
     <trans-unit id="sessions.chat.customizeWelcomeMessage">
       <source xml:lang="en">Customize Welcome Message...</source>
     </trans-unit>
@@ -369,6 +375,12 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/chatView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionComparison.judgeInstructions">
+      <source xml:lang="en">Judge Instructions</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.synthesisInstructions">
+      <source xml:lang="en">Synthesis Instructions</source>
+    </trans-unit>
     <trans-unit id="sessionPreparation.attachUnavailable">
       <source xml:lang="en">Wait for session preparation to finish before adding attachments.</source>
     </trans-unit>
@@ -573,6 +585,9 @@
     <trans-unit id="chatInput.accessibilityHelpNoKb">
       <source xml:lang="en">Chat input. Press Enter to send out the request. Use the Chat Accessibility Help command for more information.</source>
     </trans-unit>
+    <trans-unit id="comparisonTokenWarning">
+      <source xml:lang="en">This will use tokens for each session.</source>
+    </trans-unit>
     <trans-unit id="initializing">
       <source xml:lang="en">Initializing...</source>
     </trans-unit>
@@ -682,6 +697,27 @@
     <trans-unit id="aquariumAction">
       <source xml:lang="en">Aquarium</source>
     </trans-unit>
+    <trans-unit id="comparisonPicker.finishSetup">
+      <source xml:lang="en">Finish configuring the comparison in the model picker.</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.modelUnavailable">
+      <source xml:lang="en">A selected comparison model is no longer available. Update the model picker selection.</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.permissionsUnavailable">
+      <source xml:lang="en">The current permissions are unavailable for comparison. Update the draft permissions and try again.</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.runAttempts">
+      <source xml:lang="en">Run {0} Attempts</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.unavailable">
+      <source xml:lang="en">Comparison is no longer available for this draft. Check its workspace and agent configuration.</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.workspaceRequired">
+      <source xml:lang="en">Select a workspace for the comparison.</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.worktreesRequired">
+      <source xml:lang="en">The selected agent no longer supports worktree comparisons.</source>
+    </trans-unit>
     <trans-unit id="newSession.agentContextAction">
       <source xml:lang="en">Agent...</source>
     </trans-unit>
@@ -739,42 +775,6 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="petAction">
       <source xml:lang="en">Pet (/vscode-pet)</source>
-    </trans-unit>
-    <trans-unit id="runMultipleAgents.description">
-      <source xml:lang="en">Compares results and lets you synthesize the best concepts</source>
-    </trans-unit>
-    <trans-unit id="runMultipleAgents.label">
-      <source xml:lang="en">Run and Compare Agents...</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.harnessUnavailable">
-      <source xml:lang="en">One or more selected agents no longer support this workspace or worktree isolation. Edit the comparison setup and choose another agent.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.judgeHarnessUnavailable">
-      <source xml:lang="en">The selected Judge agent no longer supports this workspace or worktree isolation. Edit the comparison setup and choose another agent.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.judgeModelUnavailable">
-      <source xml:lang="en">The selected Judge model is no longer available. Edit the comparison setup and choose another model.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.minimumAttempts">
-      <source xml:lang="en">Configure at least two attempts to start a comparison.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.modelUnavailable">
-      <source xml:lang="en">The selected model for {0} is no longer available. Edit the comparison setup and choose another model.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.synthesisHarnessUnavailable">
-      <source xml:lang="en">The selected Synthesizer agent no longer supports this workspace or worktree isolation. Edit the comparison setup and choose another agent.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.synthesisModelUnavailable">
-      <source xml:lang="en">The selected Synthesizer model is no longer available. Edit the comparison setup and choose another model.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.workspace">
-      <source xml:lang="en">Workspace</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.workspaceAriaLabel">
-      <source xml:lang="en">Choose the workspace for this comparison</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.workspaceTooltip">
-      <source xml:lang="en">Choose the workspace for this comparison</source>
     </trans-unit>
     <trans-unit id="workspacePicker.signInGitHub">
       <source xml:lang="en">Sign in to GitHub</source>
@@ -1266,6 +1266,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionChatPills.removeReferenceFailed">
       <source xml:lang="en">Could not remove {0} from this session: {1}</source>
     </trans-unit>
+    <trans-unit id="sessionChatPills.sessionChanges">
+      <source xml:lang="en">Session Changes</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionChatInputToolbarDebug" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessions.debug.chatPills.agentFeedback">
@@ -1329,24 +1332,41 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Whether a session chat view is active and can show fake status pills</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/sessionComparisonResult" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sessionComparisonAccessibleView.affectedFiles">
-      <source xml:lang="en">Affected files: {0}</source>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionComparisonModelSelection" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="comparisonPicker.attempts">
+      <source xml:lang="en">Attempts</source>
     </trans-unit>
+    <trans-unit id="comparisonPicker.attemptsDescription">
+      <source xml:lang="en">Choose 2 to 10 models, or run one model 2 to 10 times.</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.compare">
+      <source xml:lang="en">Compare Models</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.judge">
+      <source xml:lang="en">Judge</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.judgeDescription">
+      <source xml:lang="en">Optionally choose a model to review the attempts and recommend a winner. Leave unselected to run attempts only.</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.runs">
+      <source xml:lang="en">Number of Runs</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.summary">
+      <source xml:lang="en">{0} Attempts</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.synthesizer">
+      <source xml:lang="en">Synthesizer</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.synthesizerDescription">
+      <source xml:lang="en">Optionally choose a model to combine the best parts after review. Synthesis starts only when you request it.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionComparisonResult" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionComparisonAccessibleView.attemptMetrics">
       <source xml:lang="en">{0}: Total time {1}{2}; Tokens used {3}{4}</source>
     </trans-unit>
-    <trans-unit id="sessionComparisonAccessibleView.decisionOption">
-      <source xml:lang="en">{0}: {1}. {2}{3}</source>
-    </trans-unit>
     <trans-unit id="sessionComparisonAccessibleView.labelValue">
       <source xml:lang="en">{0}: {1}</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonAccessibleView.selected">
-      <source xml:lang="en"> Selected.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonAccessibleView.synthesizerSelected">
-      <source xml:lang="en">Synthesizer decides. Selected.</source>
     </trans-unit>
     <trans-unit id="sessionComparisonAccessibleView.title">
       <source xml:lang="en">Comparison result</source>
@@ -1364,16 +1384,13 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Additional Synthesis Instructions...</source>
     </trans-unit>
     <trans-unit id="sessionComparisonResult.additionalInstructionsDescription">
-      <source xml:lang="en">Add requirements for recommended or custom synthesis, then use Start Synthesis with Instructions or press Ctrl+Enter (Cmd+Enter on macOS).</source>
+      <source xml:lang="en">Add requirements for synthesis, then use Start Synthesis with Instructions or press Ctrl+Enter (Cmd+Enter on macOS).</source>
     </trans-unit>
     <trans-unit id="sessionComparisonResult.additionalInstructionsInputAriaLabel">
       <source xml:lang="en">Additional synthesis instructions</source>
     </trans-unit>
     <trans-unit id="sessionComparisonResult.additionalInstructionsPlaceholder">
       <source xml:lang="en">For example: preserve the public API and add focused tests</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.affectedFileCount">
-      <source xml:lang="en">{0} files affected</source>
     </trans-unit>
     <trans-unit id="sessionComparisonResult.ariaLabelWithAccessibleViewHint">
       <source xml:lang="en">{0}. Use {1} to open the comparison result in the Accessible View.</source>
@@ -1386,21 +1403,6 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionComparisonResult.attemptMetricsDescription">
       <source xml:lang="en">Time is the provider-reported duration of the terminal first turn. Token counts marked 'at least' are partial and are not considered for the token usage winner.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.betterChoice">
-      <source xml:lang="en">Better choice</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.customSynthesis">
-      <source xml:lang="en">Custom Synthesis</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.customSynthesisAriaLabel">
-      <source xml:lang="en">Customize synthesis decisions</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.customizeSynthesisDescription">
-      <source xml:lang="en">Choose which attempt's approach the synthesis agent should follow for each implementation decision. The agent will reconcile dependencies and validate the combined result in a new worktree.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.decision">
-      <source xml:lang="en">Decision</source>
     </trans-unit>
     <trans-unit id="sessionComparisonResult.focusAttempt">
       <source xml:lang="en">Focus {0}</source>
@@ -1423,20 +1425,8 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionComparisonResult.minutesSeconds">
       <source xml:lang="en">{0}m {1}s</source>
     </trans-unit>
-    <trans-unit id="sessionComparisonResult.neutralChoice">
-      <source xml:lang="en">Neutral choice</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.noDistinctApproach">
-      <source xml:lang="en">No distinct approach</source>
-    </trans-unit>
     <trans-unit id="sessionComparisonResult.noStrengths">
       <source xml:lang="en">No distinct strong points reported</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.notSelected">
-      <source xml:lang="en">Not selected</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.oneAffectedFile">
-      <source xml:lang="en">1 file affected</source>
     </trans-unit>
     <trans-unit id="sessionComparisonResult.otherStrengths">
       <source xml:lang="en">Strong points from other attempts</source>
@@ -1462,18 +1452,6 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionComparisonResult.seconds">
       <source xml:lang="en">{0}s</source>
     </trans-unit>
-    <trans-unit id="sessionComparisonResult.selectAttemptApproachAriaLabel">
-      <source xml:lang="en">{0} for {1}. {2}. {3} {4}</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.selected">
-      <source xml:lang="en">Selected</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.startCustomSynthesis">
-      <source xml:lang="en">Start Custom Synthesis</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.startCustomSynthesisAriaLabel">
-      <source xml:lang="en">Start custom synthesis with the selected approaches</source>
-    </trans-unit>
     <trans-unit id="sessionComparisonResult.startWithInstructions">
       <source xml:lang="en">Start Synthesis with Instructions</source>
     </trans-unit>
@@ -1498,18 +1476,6 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionComparisonResult.synthesizeAriaLabel">
       <source xml:lang="en">Synthesize using the Judge recommendation</source>
     </trans-unit>
-    <trans-unit id="sessionComparisonResult.synthesizer">
-      <source xml:lang="en">Synthesizer</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.synthesizerDecides">
-      <source xml:lang="en">Synthesizer Decides</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.synthesizerDecidesAriaLabel">
-      <source xml:lang="en">Let the Synthesizer decide for {0}. {1}</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.synthesizerDecidesDescription">
-      <source xml:lang="en">Reconcile the available approaches.</source>
-    </trans-unit>
     <trans-unit id="sessionComparisonResult.timeWinner">
       <source xml:lang="en">Time winner</source>
     </trans-unit>
@@ -1525,241 +1491,11 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionComparisonResult.unavailable">
       <source xml:lang="en">Unavailable</source>
     </trans-unit>
-    <trans-unit id="sessionComparisonResult.useAttemptNumber">
-      <source xml:lang="en">Use Attempt {0}</source>
-    </trans-unit>
     <trans-unit id="sessionComparisonResult.whyWinner">
       <source xml:lang="en">Why it won</source>
     </trans-unit>
     <trans-unit id="sessionComparisonResult.winner">
       <source xml:lang="en">{0} won</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonResult.worseChoice">
-      <source xml:lang="en">Worse choice</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/sessionComparisonSetupDialog" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sessionComparisonSetup.actions">
-      <source xml:lang="en">Actions</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.addAttempt">
-      <source xml:lang="en">Add attempt</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.addAttemptAriaLabel">
-      <source xml:lang="en">Add another comparison attempt</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.agent">
-      <source xml:lang="en">Agent</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.agentForAttempt">
-      <source xml:lang="en">Agent for attempt {0}</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.agentForJudge">
-      <source xml:lang="en">Agent for the Judge</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.agentForSynthesizer">
-      <source xml:lang="en">Agent for the Synthesizer</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.agentReset">
-      <source xml:lang="en">The agent for attempt {0} is no longer available. The first available agent will be used.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.attachedContextCount">
-      <source xml:lang="en">{0} context items</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.attempt">
-      <source xml:lang="en">Attempt {0}</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.attempts">
-      <source xml:lang="en">Attempts</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.back">
-      <source xml:lang="en">Back</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.backAriaLabel">
-      <source xml:lang="en">Go to the previous comparison setup step</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.branchUnavailable">
-      <source xml:lang="en">No branch</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.cancel">
-      <source xml:lang="en">Cancel</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.cancelAriaLabel">
-      <source xml:lang="en">Cancel comparison setup</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.confirm">
-      <source xml:lang="en">Start {0} sessions in parallel</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.gitRemoteRequired">
-      <source xml:lang="en">Comparisons require a Git remote.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.gitRepositoryRequired">
-      <source xml:lang="en">Run and Compare Agents requires a Git repository with at least one commit.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.judge">
-      <source xml:lang="en">Judge</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.judgeAgentReset">
-      <source xml:lang="en">The Judge agent is no longer available. The first available agent will be used.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.judgeConfiguration">
-      <source xml:lang="en">Judge configuration</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.judgeDescription">
-      <source xml:lang="en">Reviews the finished attempts and recommends a result.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.judgeInfo">
-      <source xml:lang="en">About the Judge</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.judgeModelConfigurationReset">
-      <source xml:lang="en">The selected Judge model configuration is no longer supported. The model defaults will be used.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.judgeModelReset">
-      <source xml:lang="en">The selected Judge model is no longer available. The agent default will be used.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.judgePermissionReset">
-      <source xml:lang="en">The selected Judge permission is no longer available. The agent default will be used.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.minimumSelection">
-      <source xml:lang="en">Add at least two attempts.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.model">
-      <source xml:lang="en">Model</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.modelConfigurationReset">
-      <source xml:lang="en">The selected model configuration for attempt {0} is no longer supported. The model defaults will be used.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.modelForAttempt">
-      <source xml:lang="en">Model for attempt {0}</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.modelForJudge">
-      <source xml:lang="en">Model for the Judge</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.modelForSynthesizer">
-      <source xml:lang="en">Model for the Synthesizer</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.modelReset">
-      <source xml:lang="en">The selected model for attempt {0} is no longer available. The agent default will be used.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.next">
-      <source xml:lang="en">Next</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.nextEvaluationAriaLabel">
-      <source xml:lang="en">Continue to evaluation configuration</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.noAvailableAgents">
-      <source xml:lang="en">No agents that support worktree isolation are available.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.noHarnesses">
-      <source xml:lang="en">No agents that support worktree isolation are available.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.optional">
-      <source xml:lang="en">Optional</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.permissionReset">
-      <source xml:lang="en">The selected permission for attempt {0} is no longer available. The agent default will be used.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.permissions">
-      <source xml:lang="en">Permissions</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.permissions.allowAllParticipants">
-      <source xml:lang="en">Allow all permissions for every participant</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.permissions.allowAllParticipantsDescription">
-      <source xml:lang="en">Uses each selected agent's Allow all, Bypass Permissions, or Full Access option. Uncheck to restore every participant's default.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.permissions.allowAllParticipantsInfo">
-      <source xml:lang="en">About allowing all permissions for every participant</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.permissions.allowAllParticipantsUnavailable">
-      <source xml:lang="en">Unavailable for one or more selected agents or disabled by your organization.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.permissions.unavailable">
-      <source xml:lang="en">Unavailable</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.permissions.unavailableDetail">
-      <source xml:lang="en">This agent does not expose configurable permissions.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.permissionsForAttempt">
-      <source xml:lang="en">Permissions for attempt {0}</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.permissionsForJudge">
-      <source xml:lang="en">Permissions for the Judge</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.permissionsForSynthesizer">
-      <source xml:lang="en">Permissions for the Synthesizer</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.prompt">
-      <source xml:lang="en">Prompt</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.promptAriaLabel">
-      <source xml:lang="en">Prompt shared by every comparison attempt</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.promptRequired">
-      <source xml:lang="en">Enter a prompt to run the attempts.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.removeAttemptAriaLabel">
-      <source xml:lang="en">Remove attempt {0}</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.resizeHeight">
-      <source xml:lang="en">Resize dialog height</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.resizeWidth">
-      <source xml:lang="en">Resize dialog width</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.runAriaLabel">
-      <source xml:lang="en">Start the configured sessions in parallel</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.runTokenWarning">
-      <source xml:lang="en">This will use tokens for each session.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.startSessionCount">
-      <source xml:lang="en">Start {0} sessions in parallel</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.startingFrom">
-      <source xml:lang="en">Starting from</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.stepAttempts">
-      <source xml:lang="en">Attempts</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.stepEvaluation">
-      <source xml:lang="en">Evaluation</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.stepLabel">
-      <source xml:lang="en">{0}. {1}</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.stepsAriaLabel">
-      <source xml:lang="en">Comparison setup steps</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.synthesisConfiguration">
-      <source xml:lang="en">Optional Synthesizer configuration</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.synthesizer">
-      <source xml:lang="en">Synthesizer</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.synthesizerAgentReset">
-      <source xml:lang="en">The Synthesizer agent is no longer available. The first available agent will be used.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.synthesizerDescription">
-      <source xml:lang="en">Combines the strongest parts of the attempts after the Judge recommends a result.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.synthesizerInfo">
-      <source xml:lang="en">About the Synthesizer</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.synthesizerModelConfigurationReset">
-      <source xml:lang="en">The selected Synthesizer model configuration is no longer supported. The model defaults will be used.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.synthesizerModelReset">
-      <source xml:lang="en">The selected Synthesizer model is no longer available. The agent default will be used.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.synthesizerPermissionReset">
-      <source xml:lang="en">The selected Synthesizer permission is no longer available. The agent default will be used.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.title">
-      <source xml:lang="en">Run and Compare Agents</source>
-    </trans-unit>
-    <trans-unit id="sessionComparisonSetup.usage">
-      <source xml:lang="en">Each attempt runs in an isolated worktree. Nothing is applied automatically.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionReferenceCompletions" source-language="en" datatype="plaintext"><body>
@@ -1931,7 +1667,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">When a background image is set, use Tint Window to Match Background in the Command Palette or the background context menu to turn matching window colors on or off. A check mark means tinting is enabled. Turning it off keeps the background image and restores the original window colors.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.branchPickerUpstream">
-      <source xml:lang="en">For a new Agent Host session in a Git repository, use Tab to reach the branch picker and press Enter or Space to choose a base branch. With New Worktree selected, the current branch's tracked upstream is selected by default when available; otherwise the default branch is selected. When either the current branch or its upstream is selected, both appear together at the top with the upstream first and focused when the picker opens. Use the arrow keys to choose a branch and press Enter to select it.</source>
+      <source xml:lang="en">For a new Agent Host session in a Git repository, use Tab to reach the branch picker and press Enter or Space to choose a base branch. With New Worktree selected, the current branch's tracked upstream is selected by default when available; otherwise the default branch is selected. The picker lists the current branch's upstream and the current branch when it is not the default branch, then the default branch's remote-tracking branch and the default branch, then the other branches, with a separator between each group, and focuses the selected branch when it opens. Each branch is announced with its group name: Current Branch, Default Branch, or Branches. With Branch selected, the checked-out branch, which is the selected branch, is listed first when it is not the default branch, followed by the default branch in its own group, then the other branches. Use the arrow keys to choose a branch and press Enter to select it.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.changes">
       <source xml:lang="en">Focus the Changes view{0}.</source>
@@ -1952,16 +1688,31 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">When space is limited, the new-session pickers show icons instead of labels without moving to another row. The workspace name remains visible. Icon-only pickers retain their accessible names and tooltips; activate them to view and change the current selection.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.compareAgents">
-      <source xml:lang="en">In the new-session input, open the agent picker and activate Run and Compare Agents to open a two-step comparison setup. Use Tab to reach the Attempts and Evaluation step buttons and activate either button to move directly to that step. In Attempts, choose a Git repository with at least one commit and a remote, choose the base branch, then edit the shared prompt or each attempt's agent, model, supported reasoning effort, and provider-specific Permissions selection. The Permissions picker uses the exact choices advertised by that agent, such as Manual permissions and Allow all for Copilot, Ask Before Edits and Bypass Permissions for Claude, or Default Permissions and Full Access for Codex. In comparisons, choosing Allow all for Copilot also uses Autopilot mode. Check Allow all permissions for every participant to select each agent's allow-all choice for every attempt, the Judge, and the Synthesizer; uncheck it to restore every participant's provider default. Activate the adjacent information button for details about these choices. Organization policy may disable elevated choices or the bulk checkbox. Activate Next to configure the Judge and optional Synthesizer together on the Evaluation step, and use Back to revisit Attempts. Their information buttons describe each role. Use Add attempt for another run; Remove appears when more than two attempts exist. On the Evaluation step, activate Start sessions in parallel to submit, hover it for a token-usage warning, or press Escape to cancel. Open the comparison parent in the Sessions list to open every available attempt in a resizable grid. With two attempt panes, both chat inputs remain visible. With three or more, only the active attempt pane shows its chat input; focus another attempt pane to show its input. Screen-reader optimized mode keeps every attempt input visible. After the Judge finishes, its chat shows the winning attempt and a concise categorized list covering the decisive comparison evidence, validation, code quality, and solution, followed by strong points from other attempts. Focus the comparison result and use Open Accessible View{0} to read its verdict, attempt metrics, and synthesis decisions as plain text. Use Tab to reach an attempt name and activate its link to reveal that session. Use Tab to reach Attempt time and token usage, then press Enter or Space to expand the table of total time and total tokens. Activate Focus Winning Session to open the recommended attempt, or use its adjacent dropdown to focus another attempt. When synthesis is available, Synthesize Attempts starts the Judge's default plan. Open its More Actions menu and choose Additional Synthesis Instructions to enter requirements that are remembered and applied to either recommended or custom synthesis. Activate Start Synthesis with Instructions, or press Ctrl+Enter (Cmd+Enter on macOS) in that field, to start the recommended plan with those requirements. When the Judge reports multiple implementation decisions, activate Custom Synthesis to reveal a decision table. Each row describes one implementation decision and rates the attempts as a better, neutral, or worse choice. The table scrolls when its decisions or attempt columns exceed the available space. Use Tab to move between the choice buttons, select one attempt per row or let the Synthesizer decide, then activate Start Custom Synthesis. The instructions and choices guide a new synthesis session and do not modify the original attempts.</source>
+      <source xml:lang="en">In the new-session input, open the experimental model picker and activate Compare Models. In Attempts, choose two to ten distinct models, or choose one model and set Number of Runs from two to ten. Attempts inherit the current workspace, branch, agent, and permissions. Use Tab to reach Back and Next. In Judge, optionally select a model to review the attempts and recommend a winner. Leave Judge unselected and activate Done to run attempts without review. With a Judge selected, activate Next to choose an optional Synthesizer. Without a Synthesizer, review is available but synthesis is not. Activate a selected model again to clear it. Back preserves your choices. Done returns to the composer; activate Run N Attempts to launch. Escape closes the picker without launching. Open the comparison parent in the Sessions list to open every available attempt in a resizable grid. With two attempt panes, both chat inputs remain visible. With three or more, only the active attempt pane shows its chat input; focus another attempt pane to show its input. Screen-reader optimized mode keeps every attempt input visible. After the Judge finishes, its chat shows the winning attempt and a concise categorized list covering the decisive comparison evidence, validation, code quality, and solution, followed by strong points from other attempts. Focus the comparison result and use Open Accessible View{0} to read its verdict and attempt metrics as plain text. Use Tab to reach an attempt name and activate its link to reveal that session. Use Tab to reach Attempt time and token usage, then press Enter or Space to expand the table of total time and total tokens. Activate Focus Winning Session to open the recommended attempt, or use its adjacent dropdown to focus another attempt. When synthesis is available, Synthesize Attempts starts the Judge's default plan. Open its More Actions menu and choose Additional Synthesis Instructions to enter requirements that are remembered and applied to recommended synthesis. Activate Start Synthesis with Instructions, or press Ctrl+Enter (Cmd+Enter on macOS) in that field, to start the recommended plan with those requirements. The additional instructions guide a new synthesis session and do not modify the original attempts.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.compareAgentsConfiguration">
+      <source xml:lang="en">Comparison selections are kept while draft permissions or mode are updating. Run N Attempts is unavailable until the update finishes.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.compareAgentsGroupActions">
-      <source xml:lang="en">When every comparison session is idle, activate the check-mark Archive Comparison action in the comparison header to archive its sessions without deleting them. Delete Group remains available from the comparison header context menu.</source>
+      <source xml:lang="en">Use the comparison header's Mark All as Done action to mark its sessions done, with the same confirmation and Undo as other groups. When every participant is done, the automatically created group is removed. Undo restores the group and its sessions. Delete Group remains available from the comparison header context menu.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.compareAgentsInactivePaneNotification">
       <source xml:lang="en">When a question tool needs input in an inactive visible pane, the confirmation notification setting can show an operating system notification even while another pane in the Agents window is active.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.compareAgentsInstructions">
+      <source xml:lang="en">The initial Judge and synthesis messages are collapsed under Judge Instructions or Synthesis Instructions. Use Tab to reach the summary, then press Enter or Space to expand or collapse the full instructions. The complete instructions remain in the conversation and in its Accessible View.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.compareAgentsOpenInGrid">
+      <source xml:lang="en">Attempts open in a grid when they start by default. Turn off sessions.chat.compareAgents.openInGrid to start them without automatic navigation. You can still select the comparison group to open its grid.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.compareAgentsRationaleOrder">
       <source xml:lang="en">Judge results identify candidates as Attempt N with agent, model, and effort, then present Why it won in this order: Comparison, Validation, Code quality, Solution.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.compareAgentsSetup">
+      <source xml:lang="en">Comparison setup is a working copy until you activate Done. Cancel is available at every step. Cancel, Escape, or clicking outside the picker discards setup changes and keeps your previous single-model or configured comparison ready to send. Unfinished setup does not resume when you reopen the picker. Done commits your choices and changes the model label to N Attempts and Send to Run N Attempts. Reopening a configured comparison starts a working copy of those choices.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.compareAgentsTokenWarning">
+      <source xml:lang="en">Running a comparison uses tokens for each session. The Run N Attempts button shows this warning immediately on hover.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.connectionLog">
       <source xml:lang="en">While connecting to a Dev Container for an existing session, use Tab to reach Show Log and press Enter to open the Dev Container output channel.</source>
@@ -1978,6 +1729,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.copySessionLink">
       <source xml:lang="en">To copy a browser link that opens an Agent Host session in the Agents window, open the session's context menu and choose Copy Link.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.copySessionRecord">
+      <source xml:lang="en">When a pill represents a single item, its context menu offers the item's copy actions, such as copying its URL or file path. For a collection, open the dropdown and use the individual row actions instead.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.createdBySession">
       <source xml:lang="en">When a session was created by another session, focus it in the Sessions list and use the Show Hover command{0}. Move focus to the Created by link, then press Enter or Space to open the creator session.</source>
     </trans-unit>
@@ -1988,7 +1742,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Messages sent by another session or chat show a source annotation above the message. Press Tab to focus the annotation, then press Enter or Space to open the source chat.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.deleteChat">
-      <source xml:lang="en">To permanently delete a chat, open the chat tab's context menu and choose Delete Chat. This is destructive and cannot be undone.</source>
+      <source xml:lang="en">Before a new nested session is committed, its session header and Sessions list row offer Delete without confirmation. After it is committed, those controls offer Archive or Mark as Done instead. To permanently delete a committed nested session, open the chat tab's context menu and choose Delete Chat. This is destructive and cannot be undone.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.deleteSandboxSession">
       <source xml:lang="en">For a Cloud sandbox session, Delete removes its Mission Control task and stored conversation even when the environment is offline. A failed deletion leaves the session in the list.</source>
@@ -2021,7 +1775,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">When you first open a session created in another application, a banner explains that you can continue it here. Codex sessions can use your ChatGPT or Copilot subscription, selected in the model picker. Claude sessions use your Copilot subscription. Use Tab to reach Close and press Enter or Space to permanently dismiss the banner for all external sessions and return focus to the chat input.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.externalSessionFilter">
-      <source xml:lang="en">The Sessions list Filter menu includes an External submenu. Choose None, Recent, Last 24 Hours, Last 7 Days, or Last 30 Days to control which sessions from other applications are shown.</source>
+      <source xml:lang="en">The Sessions list Filter Sessions menu includes a Created Externally submenu. Choose None, Recent, Last 24 Hours, Last 7 Days, or Last 30 Days to control which sessions from other applications are shown. Last 7 Days is the default, and the submenu label includes the selected option. Show in External Section places these sessions in their own External section. This option is off by default, so external sessions appear alongside other sessions in their normal groups.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.externalSessionImport">
       <source xml:lang="en">To make an external session a regular session without sending a message, use Import in its row toolbar, before Archive or Mark as Done, or focus the session and choose Import from its context menu{0}. This action is available when the host supports importing sessions.</source>
@@ -2066,7 +1820,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Go forward through visited sessions{0}.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.harnessSwitchFeedbackSurvey">
-      <source xml:lang="en">After you switch from Copilot to Local, a two-step feedback survey may appear above the chat input. Use Shift+Tab to reach it. In the first step, use Up and Down Arrow to choose why you switched, then press Enter or Space. In the second step, enter any optional feedback and use Tab to reach Submit. Dismiss Survey or Escape closes the survey. After submission, the questions are replaced above the input by a message that your feedback was recorded. Use Dismiss Feedback Acknowledgement or Escape to close it.</source>
+      <source xml:lang="en">After you switch from Copilot to Local, a feedback survey may appear above the chat input. Use Shift+Tab to reach it. Use Up and Down Arrow to choose why you switched, then press Enter or Space to submit. Dismiss Survey or Escape closes the survey. After submission, a message confirms that your feedback was recorded. Use Tab to reach Share it on GitHub to provide specific feedback in a GitHub issue. Use Dismiss Feedback Acknowledgement or Escape to close the message.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.history">
       <source xml:lang="en">Use up and down arrows to navigate your request history in the input box.</source>
@@ -2079,6 +1833,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.inputPills">
       <source xml:lang="en">When session metadata or active-turn status pills appear above the input, press Shift+Tab to reach them, use the Left and Right arrow keys to move between them, and press Enter or Space to activate one. Open the context menu{0} to choose which pills are shown. Pull Requests Options lets you show all pull requests or only open and draft ones. Subagent Options offers Show All and Show In Progress. These choices are remembered across sessions. If every entry of a pill is filtered out, its options are also available in any other pill's context menu or the toolbar context menu.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.layoutDensity">
+      <source xml:lang="en">Choose Default or Compact from View &gt; Layout Density, or change the window.density.layout setting. Default uses a taller title bar. Compact uses a shorter title bar, removes the gaps between parts, and reduces pane spacing. Changes apply immediately.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.mainChatToSide">
       <source xml:lang="en">To open the main chat beside a peer chat, choose Open to the Side from the session row's context menu. You can also Alt-click (Option-click on macOS) the row or drag it to a chat pane's edge.</source>
@@ -2179,6 +1936,12 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.responseSelectionMenu">
       <source xml:lang="en">When you select assistant response text, an action menu appears. Press Tab to focus the menu, use the Up Arrow and Down Arrow keys to move between actions, and press Enter to activate one. Press Escape to dismiss the menu. Ask in a Side Chat opens a question input anchored to the selected text. Quote appends the selection as a blockquote in the chat input when the conversation is interactive. Copy copies the selected text.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.sessionCreationFilters">
+      <source xml:lang="en">Created In lists the applications that created sessions, grouped by Local, Cloud, and each remote host, with the environment in each application's name. Only applications from included environments are listed. Excluding an environment hides its applications without changing their selections; including it again restores them. Other list filters do not remove application choices. Included remote hosts retain their applications while cached sessions remain, even when disconnected. If no environments are included, select an environment first. If none of the included environments have known applications, No Applications Found is shown.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.sessionFilters">
+      <source xml:lang="en">The Environment, Created In, and Harness submenus filter the Sessions list. The Environment label summarizes your selection when not all environments are included. Checked options are included. Local applications other than VS Code are hidden by default. Slack and Teams applications in Cloud are also hidden by default. Reset Filters restores these defaults. Show Done, or Show Archived depending on your settings, includes archived sessions. Compact View and Collapse All Groups are also available in the menu. On phone, use Sort and Find to navigate the list.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.sessionGrid">
       <source xml:lang="en">Session panes form a separate grid from the chat groups inside each session. Focus the session to the left{0}, right{1}, above{2}, or below{3}. The Session Layout menu and Command Palette offer Move Session Left, Right, Above, and Below, Increase or Decrease Session Width and Height, and Arrange Sessions in a Balanced Grid. Use Open in Grid in a sidebar session's context menu to open it beside, above, or below the active session. Arranging preserves the conversations and does not change side panels. On a phone, only the active session is shown; returning to a wider window restores the desktop arrangement.</source>
     </trans-unit>
@@ -2187,6 +1950,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionOptions.screenReader">
       <source xml:lang="en">Above the new-session input, the workspace, repository and harness pickers are shown. As the chat narrows, picker labels are replaced by icons one at a time from right to left, except for the workspace name. Labels return when more space is available. Use Tab and Shift+Tab, or the Left and Right Arrow keys, to move between these controls. Press Enter or Space to open a picker, use the Up and Down Arrow keys to navigate its options, and press Escape to close it and return focus to its control. The isolation picker offers New Worktree to create a separate copy for the session, or Branch to work in the existing repository. The branch picker chooses the base branch for a new worktree or checks out a branch in the existing repository. These controls stay expanded while a screen reader is active.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.sessionOrdering">
+      <source xml:lang="en">On desktop, the Filter Sessions menu offers Ordering and Grouping submenus. When grouping by Workspace, Show switches between Recent and All sessions. These submenu labels include the current choice. Use the Right arrow key to open a submenu, the Left arrow key to return, and Enter or Space to choose an option.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionsListChatContextMenu">
       <source xml:lang="en">Open a nested chat's context menu to rename it, open it to the side, or, when supported, permanently delete it. Agent Host chats also offer Copy Link.</source>
@@ -2204,10 +1970,10 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">The session row toolbar offers Pin or Unpin before Mark as Done. For sessions that support multiple chats, open the session's context menu to start a new chat.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionsListPromotedNewChatArchiveActions">
-      <source xml:lang="en">For sessions that support multiple chats, the session row toolbar offers New Chat in This Session before Archive. Open the session's context menu to pin or unpin it.</source>
+      <source xml:lang="en">For sessions that support multiple chats, the session row toolbar offers New Nested Session before Archive. Open the session's context menu to pin or unpin it.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionsListPromotedNewChatDoneActions">
-      <source xml:lang="en">For sessions that support multiple chats, the session row toolbar offers New Chat in This Session before Mark as Done. Open the session's context menu to pin or unpin it.</source>
+      <source xml:lang="en">For sessions that support multiple chats, the session row toolbar offers New Nested Session before Mark as Done. Open the session's context menu to pin or unpin it.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionsView">
       <source xml:lang="en">Focus the Chat Sessions view{0}.</source>

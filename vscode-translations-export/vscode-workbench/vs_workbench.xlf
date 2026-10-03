@@ -811,6 +811,9 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     <trans-unit id="chatAccessWithJustification">
       <source xml:lang="en">Justification: {1}</source>
     </trans-unit>
+    <trans-unit id="selectedModelUnavailable">
+      <source xml:lang="en">The selected model '{0}' is not available. Select a different model and try again.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/api/common/extHostLogService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="local">
@@ -1572,6 +1575,14 @@ This action is irreversible and may result in data loss!</source>
     </trans-unit>
     <trans-unit id="zenModeIcon">
       <source xml:lang="en">Represents zen mode</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/browser/actions/layoutDensityActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="layoutDensityCompact">
+      <source xml:lang="en">Compact</source>
+    </trans-unit>
+    <trans-unit id="layoutDensityDefault">
+      <source xml:lang="en">Default</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/actions/listCommands" source-language="en" datatype="plaintext"><body>
@@ -5106,14 +5117,14 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <source xml:lang="en">Separator used by {0}.</source>
     </trans-unit>
     <trans-unit id="windowDensityLayout">
-      <source xml:lang="en">Controls the spacing density of the workbench layout. Only applies when {0} is enabled.</source>
+      <source xml:lang="en">Controls the spacing density of the workbench layout. Applies in the Agents window and when {0} is enabled in the editor window.</source>
       <note>{0} is a placeholder for a setting identifier.</note>
     </trans-unit>
     <trans-unit id="windowDensityLayout.compact">
-      <source xml:lang="en">Removes the gaps between workbench parts and reduces their internal spacing to provide more room for content.</source>
+      <source xml:lang="en">Removes the gaps between workbench parts and reduces their internal spacing to provide more room for content. Uses a shorter title bar in the Agents window.</source>
     </trans-unit>
     <trans-unit id="windowDensityLayout.default">
-      <source xml:lang="en">Uses the standard spacing between workbench parts.</source>
+      <source xml:lang="en">Uses the standard spacing between workbench parts and a taller title bar in the Agents window.</source>
     </trans-unit>
     <trans-unit id="windowTitle">
       <source xml:lang="en">Controls the window title based on the current context such as the opened workspace or active editor. Variables are substituted based on the context:</source>
@@ -6458,7 +6469,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <source xml:lang="en">Border to the top of an active tab in an unfocused group. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.</source>
     </trans-unit>
     <trans-unit id="tabBorder">
-      <source xml:lang="en">Border to separate tabs from each other. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.</source>
+      <source xml:lang="en">Border around tabs. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.</source>
+    </trans-unit>
+    <trans-unit id="tabDivider">
+      <source xml:lang="en">Color of dividers between editor tabs.</source>
     </trans-unit>
     <trans-unit id="tabDragAndDropBorder">
       <source xml:lang="en">Border between tabs to indicate that a tab can be inserted between two tabs. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.</source>

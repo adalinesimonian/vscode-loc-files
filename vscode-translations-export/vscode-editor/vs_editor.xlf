@@ -1352,13 +1352,13 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <source xml:lang="en">Maps to `Control` on Windows and Linux and to `Command` on macOS.</source>
     </trans-unit>
     <trans-unit id="multiCursorPaste">
-      <source xml:lang="en">Controls pasting when the line count of the pasted text matches the cursor count.</source>
+      <source xml:lang="en">Controls pasting when the line count of the pasted text matches the cursor count, or when pasting column selections into a single cursor.</source>
     </trans-unit>
     <trans-unit id="multiCursorPaste.full">
       <source xml:lang="en">Each cursor pastes the full text.</source>
     </trans-unit>
     <trans-unit id="multiCursorPaste.spread">
-      <source xml:lang="en">Each cursor pastes a single line of the text.</source>
+      <source xml:lang="en">Each cursor pastes a single line of the text. When pasting column selections into a single cursor, each copied line is pasted on a successive destination line and padded with spaces to form a rectangle.</source>
     </trans-unit>
     <trans-unit id="occurrencesHighlight">
       <source xml:lang="en">Controls whether occurrences should be highlighted across open files.</source>

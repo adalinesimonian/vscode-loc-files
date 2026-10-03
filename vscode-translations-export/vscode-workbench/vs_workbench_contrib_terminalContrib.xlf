@@ -793,23 +793,38 @@ Reason for leaving the sandbox: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentSandbox.allowAutoApprove">
-      <source xml:lang="en">Controls whether agent mode terminal commands that run inside the sandbox are auto-approved. When disabled, the run in terminal tool uses the existing approval flow. This applies only when {0} is enabled.</source>
+    <trans-unit id="agentSandbox.allowDevToolAccess">
+      <source xml:lang="en">Grant read access to the tool directories found on PATH, in toolchain env vars (CARGO_HOME, GOROOT, and similar) and under your user profile, plus dev-tool config and caches (including registry tokens), and read-write to shared build caches.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.allowLocalNetwork">
+      <source xml:lang="en">Allow the sandboxed process to reach hosts on the local network. Windows needs this on when a proxy, host rules, or credential masking is used: it reaches the local listener over host loopback, and a sandboxed command will not launch without it. The local proxy checks destination addresses for direct connections. An upstream proxy resolves its own destinations.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.allowNetwork">
-      <source xml:lang="en">When {0} is enabled, controls whether to allow all network domains in the sandbox. When enabled, the sandbox preserves file system restrictions while relaxing all network restrictions.</source>
+      <source xml:lang="en">Allow the sandboxed process to reach the Internet.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.allowNetworkPolicy">
+      <source xml:lang="en">Deprecated. Controls whether the Local agent sandbox allows outbound connections to all network domains while preserving file system restrictions. Use the sandbox.userPolicy.network.allowOutbound managed setting to enforce outbound network restrictions in Copilot Agent Host.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.allowUnsandboxedCommands">
-      <source xml:lang="en">Controls whether agent mode terminal commands can run outside the sandbox after user confirmation when a sandboxed command fails or when sandbox restrictions would block the command. This applies only when {0} is enabled.</source>
+      <source xml:lang="en">Controls whether agent mode terminal commands can run outside the sandbox after user confirmation when a sandboxed command fails or when sandbox restrictions would block the command.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.allowUnsandboxedCommandsPolicy">
+      <source xml:lang="en">Deprecated. Controls whether Local agent terminal commands can run outside the sandbox after user confirmation when sandbox restrictions would block the command. Use the sandbox.allowBypass managed setting to control sandbox bypass in Copilot Agent Host.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.enabledPolicy">
+      <source xml:lang="en">Deprecated. Controls whether the Local agent uses sandboxing to restrict what tools can do. In Copilot Agent Host, this legacy policy supplies an overridable sandbox default, not a mandatory requirement. Use the runtime-native sandbox.enabled managed setting to require sandboxing in Copilot Agent Host.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.enabledSetting">
-      <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system. Use {0} to allow all network domains.</source>
+      <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.enabledSetting.offDescription">
       <source xml:lang="en">Disable sandboxing for agent mode tools.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.enabledSetting.onDescription">
       <source xml:lang="en">Enable sandboxing for agent mode tools.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.fileSystem.deprecated">
+      <source xml:lang="en">This setting will be deprecated soon. For the Copilot Agent Host sandbox, use {0} instead.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.linuxFileSystemSetting">
       <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Linux. Paths do not support glob patterns, only literal paths (ex: ./src/, ~/.ssh, .env). **bubblewrap** and **socat** should be installed for this setting to work.</source>
@@ -826,6 +841,9 @@ Reason for leaving the sandbox: {2}</source>
     <trans-unit id="agentSandbox.linuxFileSystemSetting.denyWrite">
       <source xml:lang="en">Array of paths to deny write access within allowed paths (takes precedence over allowWrite).</source>
     </trans-unit>
+    <trans-unit id="agentSandbox.lspServers">
+      <source xml:lang="en">Controls whether LSP servers run in the sandbox when sandboxing is enabled.</source>
+    </trans-unit>
     <trans-unit id="agentSandbox.macFileSystemSetting">
       <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on macOS. Paths also support git-style glob patterns(ex: *.ts, ./src, ./src/**/*.ts, file?.txt).</source>
     </trans-unit>
@@ -841,20 +859,32 @@ Reason for leaving the sandbox: {2}</source>
     <trans-unit id="agentSandbox.macFileSystemSetting.denyWrite">
       <source xml:lang="en">Array of paths to deny write access within allowed paths (takes precedence over allowWrite).</source>
     </trans-unit>
+    <trans-unit id="agentSandbox.mcpServers">
+      <source xml:lang="en">Controls whether MCP servers run in the sandbox when sandboxing is enabled.</source>
+    </trans-unit>
     <trans-unit id="agentSandbox.retryWithAllowNetworkRequests">
       <source xml:lang="en">Controls whether agent mode terminal commands can retry in the sandbox with unrestricted network access after user confirmation. This applies only when {0} is enabled and preserves file system sandboxing while relaxing network restrictions for an approved command.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.retryWithAllowNetworkRequests.deprecated">
+      <source xml:lang="en">This setting will be deprecated soon. It does not apply to the Copilot Agent Host sandbox.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.runtimeSetting">
       <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Key/value pairs are passed through to the root of the sandbox runtime configuration.</source>
     </trans-unit>
-    <trans-unit id="agentSandbox.windowsEnabledSetting">
-      <source xml:lang="en">Controls whether agent mode uses sandboxing on Windows. Use {0} to allow all network domains.</source>
+    <trans-unit id="agentSandbox.runtimeSetting.deprecated">
+      <source xml:lang="en">This setting will be deprecated soon. It does not apply to the Copilot Agent Host sandbox.</source>
     </trans-unit>
-    <trans-unit id="agentSandbox.windowsEnabledSetting.offDescription">
-      <source xml:lang="en">Disable sandboxing for agent mode tools on Windows.</source>
+    <trans-unit id="agentSandbox.userConfiguredPaths">
+      <source xml:lang="en">Customize file path permissions in the sandbox.</source>
     </trans-unit>
-    <trans-unit id="agentSandbox.windowsEnabledSetting.onDescription">
-      <source xml:lang="en">Enable sandboxing for agent mode tools on Windows.</source>
+    <trans-unit id="agentSandbox.userConfiguredPaths.deniedPaths">
+      <source xml:lang="en">Denied: paths the Copilot Agent Host sandbox cannot access.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.userConfiguredPaths.readonlyPaths">
+      <source xml:lang="en">Read-Only: paths the Copilot Agent Host sandbox can read but not write.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.userConfiguredPaths.readwritePaths">
+      <source xml:lang="en">Read/Write: paths the Copilot Agent Host sandbox can read and write.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.windowsFileSystemSetting">
       <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Windows. Paths do not support glob patterns, only literal paths (ex: C:\src, C:\Users\me\.ssh, .env).</source>

@@ -154,7 +154,7 @@
       <source xml:lang="en">Arrange Sessions in a Balanced Grid</source>
     </trans-unit>
     <trans-unit id="chatCompositeBar.addChat">
-      <source xml:lang="en">New Chat in This Session</source>
+      <source xml:lang="en">New Nested Session</source>
     </trans-unit>
     <trans-unit id="chatCompositeBar.close">
       <source xml:lang="en">Close</source>
@@ -1074,12 +1074,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="ci.fixCITooltip">
       <source xml:lang="en">Fix failing CI checks</source>
     </trans-unit>
-    <trans-unit id="comparisonArchive">
-      <source xml:lang="en">Archive Comparison</source>
-    </trans-unit>
-    <trans-unit id="comparisonArchived">
-      <source xml:lang="en">Comparison archived</source>
-    </trans-unit>
     <trans-unit id="comparisonAttemptFailed">
       <source xml:lang="en">Failed</source>
     </trans-unit>
@@ -1131,9 +1125,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="comparisonGroupAria">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
-    <trans-unit id="comparisonPartiallyArchived">
-      <source xml:lang="en">Some comparison sessions could not be archived, so the comparison was kept.</source>
-    </trans-unit>
     <trans-unit id="createGroupAction">
       <source xml:lang="en">Create Group</source>
     </trans-unit>
@@ -1167,11 +1158,11 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="moveToGroupAction">
       <source xml:lang="en">Move to Group</source>
     </trans-unit>
-    <trans-unit id="new">
-      <source xml:lang="en">New</source>
-    </trans-unit>
     <trans-unit id="newGroupName">
       <source xml:lang="en">New Group</source>
+    </trans-unit>
+    <trans-unit id="newSession">
+      <source xml:lang="en">New Session</source>
     </trans-unit>
     <trans-unit id="newSessionAria">
       <source xml:lang="en">New Session ({0})</source>
@@ -1230,6 +1221,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionChatItemAria">
       <source xml:lang="en">{0}, chat, updated {1}, {2}</source>
     </trans-unit>
+    <trans-unit id="sessionChatItemChangesAria">
+      <source xml:lang="en">{0}, {1} lines added, {2} lines removed</source>
+    </trans-unit>
     <trans-unit id="sessionChatItemFolderAria">
       <source xml:lang="en">{0}, chat in folder {1}, updated {2}, {3}</source>
     </trans-unit>
@@ -1287,14 +1281,14 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessions.dragLabel">
       <source xml:lang="en">{0} sessions</source>
     </trans-unit>
-    <trans-unit id="sessionsHeader">
-      <source xml:lang="en">Sessions</source>
-    </trans-unit>
     <trans-unit id="sessionsList">
       <source xml:lang="en">Sessions</source>
     </trans-unit>
     <trans-unit id="sessionsList.archiveOnboardingUnavailable">
       <source xml:lang="en">The session could not be revealed in the sessions list. Try again.</source>
+    </trans-unit>
+    <trans-unit id="sessionsNavigation">
+      <source xml:lang="en">Sessions Navigation</source>
     </trans-unit>
     <trans-unit id="showLessAria">
       <source xml:lang="en">Show fewer sessions</source>
@@ -1333,6 +1327,31 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Untitled Chat</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsListFilters" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="application.environment">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="environment.cloud">
+      <source xml:lang="en">Cloud</source>
+    </trans-unit>
+    <trans-unit id="environment.local">
+      <source xml:lang="en">Local</source>
+    </trans-unit>
+    <trans-unit id="harness.claude">
+      <source xml:lang="en">Claude</source>
+    </trans-unit>
+    <trans-unit id="harness.codex">
+      <source xml:lang="en">Codex</source>
+    </trans-unit>
+    <trans-unit id="harness.copilot">
+      <source xml:lang="en">Copilot</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsListNotice" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsListNotice.dismiss">
+      <source xml:lang="en">Dismiss Suggestion</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsListNotification" source-language="en" datatype="plaintext"><body>
     <trans-unit id="dismiss">
       <source xml:lang="en">Dismiss</source>
@@ -1357,11 +1376,17 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsView" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="filterEmptyGroups">
-      <source xml:lang="en">Empty Groups</source>
+    <trans-unit id="environment">
+      <source xml:lang="en">Environment</source>
     </trans-unit>
-    <trans-unit id="filterRead">
-      <source xml:lang="en">Read</source>
+    <trans-unit id="environment.multiple">
+      <source xml:lang="en">Environment ({0} Selected)</source>
+    </trans-unit>
+    <trans-unit id="environment.none">
+      <source xml:lang="en">Environment (None)</source>
+    </trans-unit>
+    <trans-unit id="environment.selected">
+      <source xml:lang="en">Environment ({0})</source>
     </trans-unit>
     <trans-unit id="groupByTime">
       <source xml:lang="en">Group by Time</source>
@@ -1369,11 +1394,23 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     <trans-unit id="groupByWorkspace">
       <source xml:lang="en">Group by Workspace</source>
     </trans-unit>
+    <trans-unit id="noCreatingApplications">
+      <source xml:lang="en">No Applications Found</source>
+    </trans-unit>
     <trans-unit id="resetFilters">
-      <source xml:lang="en">Reset</source>
+      <source xml:lang="en">Reset Filters</source>
+    </trans-unit>
+    <trans-unit id="selectEnvironmentFirst">
+      <source xml:lang="en">Select an Environment First</source>
     </trans-unit>
     <trans-unit id="sessionsHeader">
       <source xml:lang="en">Sessions</source>
+    </trans-unit>
+    <trans-unit id="showArchived">
+      <source xml:lang="en">Show Archived</source>
+    </trans-unit>
+    <trans-unit id="showDone">
+      <source xml:lang="en">Show Done</source>
     </trans-unit>
     <trans-unit id="sortByCreated">
       <source xml:lang="en">Sort by Created</source>
@@ -1390,20 +1427,11 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     <trans-unit id="sortGroupSheet.title">
       <source xml:lang="en">Sort</source>
     </trans-unit>
-    <trans-unit id="statusCompleted">
-      <source xml:lang="en">Completed</source>
-    </trans-unit>
-    <trans-unit id="statusFailed">
-      <source xml:lang="en">Failed</source>
-    </trans-unit>
-    <trans-unit id="statusInProgress">
-      <source xml:lang="en">In Progress</source>
-    </trans-unit>
-    <trans-unit id="statusNeedsInput">
-      <source xml:lang="en">Input Needed</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsViewActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="all">
+      <source xml:lang="en">All</source>
+    </trans-unit>
     <trans-unit id="archiveGroupSession.confirmSingle">
       <source xml:lang="en">Are you sure you want to archive 1 session from '{0}'?</source>
     </trans-unit>
@@ -1437,6 +1465,15 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     <trans-unit id="configureExternalSessions">
       <source xml:lang="en">Configure External Sessions</source>
     </trans-unit>
+    <trans-unit id="created">
+      <source xml:lang="en">Created</source>
+    </trans-unit>
+    <trans-unit id="createdExternally">
+      <source xml:lang="en">Created Externally</source>
+    </trans-unit>
+    <trans-unit id="createdIn">
+      <source xml:lang="en">Created In</source>
+    </trans-unit>
     <trans-unit id="deleteEmptyGroup">
       <source xml:lang="en">Delete Group</source>
     </trans-unit>
@@ -1464,20 +1501,17 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     <trans-unit id="doNotAskAgain">
       <source xml:lang="en">Do not ask me again</source>
     </trans-unit>
-    <trans-unit id="filter">
-      <source xml:lang="en">Filter</source>
-    </trans-unit>
     <trans-unit id="filterSessions">
       <source xml:lang="en">Filter Sessions</source>
     </trans-unit>
     <trans-unit id="find">
       <source xml:lang="en">Find Session</source>
     </trans-unit>
-    <trans-unit id="groupByTime">
-      <source xml:lang="en">Group by Time</source>
+    <trans-unit id="grouping">
+      <source xml:lang="en">Grouping ({0})</source>
     </trans-unit>
-    <trans-unit id="groupByWorkspace">
-      <source xml:lang="en">Group by Workspace</source>
+    <trans-unit id="harness">
+      <source xml:lang="en">Harness</source>
     </trans-unit>
     <trans-unit id="importSession">
       <source xml:lang="en">Import</source>
@@ -1560,8 +1594,14 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     <trans-unit id="openToTheSide">
       <source xml:lang="en">Open to the Side</source>
     </trans-unit>
+    <trans-unit id="ordering">
+      <source xml:lang="en">Ordering ({0})</source>
+    </trans-unit>
     <trans-unit id="pinSession">
       <source xml:lang="en">Pin</source>
+    </trans-unit>
+    <trans-unit id="recent">
+      <source xml:lang="en">Recent</source>
     </trans-unit>
     <trans-unit id="refresh">
       <source xml:lang="en">Refresh Sessions</source>
@@ -1593,23 +1633,26 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     <trans-unit id="sessionsRestored">
       <source xml:lang="en">Sessions restored.</source>
     </trans-unit>
-    <trans-unit id="showAllSessions">
-      <source xml:lang="en">Show All Sessions</source>
+    <trans-unit id="showInExternalSection">
+      <source xml:lang="en">Show in External Section</source>
     </trans-unit>
-    <trans-unit id="showRecentSessions">
-      <source xml:lang="en">Show Recent Sessions</source>
+    <trans-unit id="showSessions">
+      <source xml:lang="en">Show ({0})</source>
     </trans-unit>
-    <trans-unit id="sortByCreated">
-      <source xml:lang="en">Sort by Created</source>
-    </trans-unit>
-    <trans-unit id="sortByUpdated">
-      <source xml:lang="en">Sort by Updated</source>
+    <trans-unit id="time">
+      <source xml:lang="en">Time</source>
     </trans-unit>
     <trans-unit id="toggleCompactSessionsView">
       <source xml:lang="en">Compact View</source>
     </trans-unit>
     <trans-unit id="unpinSession">
       <source xml:lang="en">Unpin</source>
+    </trans-unit>
+    <trans-unit id="updated">
+      <source xml:lang="en">Updated</source>
+    </trans-unit>
+    <trans-unit id="workspace">
+      <source xml:lang="en">Workspace</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/electron-browser/sessions.contribution" source-language="en" datatype="plaintext"><body>
