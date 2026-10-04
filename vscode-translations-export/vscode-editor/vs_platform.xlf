@@ -1841,6 +1841,9 @@ A keybinding</note>
     <trans-unit id="copilotd.patch.running">
       <source xml:lang="en">Applying patch</source>
     </trans-unit>
+    <trans-unit id="copilotd.permission.editFile">
+      <source xml:lang="en">Edit {0}</source>
+    </trans-unit>
     <trans-unit id="copilotd.plan.completed">
       <source xml:lang="en">Finished plan</source>
     </trans-unit>
@@ -4179,6 +4182,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilot.permission.shell.bypass.title">
       <source xml:lang="en">Run in terminal outside the sandbox?</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.shell.permissive.title">
+      <source xml:lang="en">Retry by allowing filesystem access inside the sandbox?</source>
     </trans-unit>
     <trans-unit id="copilot.permission.shell.title">
       <source xml:lang="en">Run in terminal?</source>

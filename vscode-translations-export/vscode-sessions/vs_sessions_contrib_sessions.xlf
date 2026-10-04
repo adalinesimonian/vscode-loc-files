@@ -1233,6 +1233,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionChatItemStatusMessageAria">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
+    <trans-unit id="sessionChatItemUnreadAria">
+      <source xml:lang="en">{0}, unread</source>
+    </trans-unit>
     <trans-unit id="sessionChatItemWithoutTimeAria">
       <source xml:lang="en">{0}, chat, {1}</source>
     </trans-unit>
@@ -1253,6 +1256,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="sessionItemStatusAria">
       <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionItemUnreadAria">
+      <source xml:lang="en">{0}, unread</source>
     </trans-unit>
     <trans-unit id="sessionItemWorkspaceAria">
       <source xml:lang="en">{0}, in {1}</source>
@@ -1345,11 +1351,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="harness.copilot">
       <source xml:lang="en">Copilot</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsListNotice" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sessionsListNotice.dismiss">
-      <source xml:lang="en">Dismiss Suggestion</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsListNotification" source-language="en" datatype="plaintext"><body>
