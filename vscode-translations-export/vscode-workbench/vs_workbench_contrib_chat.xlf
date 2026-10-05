@@ -163,6 +163,9 @@
     <trans-unit id="chat.attachments.removal">
       <source xml:lang="en">To remove attached contexts, focus an attachment and press Delete or Backspace.</source>
     </trans-unit>
+    <trans-unit id="chat.blobby">
+      <source xml:lang="en">Type /blobby to unlock the True Name achievement without sending a chat request. If Blobby is off, the command turns it on; if it is already on, it opens the Color tab in Customize Blobby. Change Color in the pet's context menu always opens Color, where Stable and Insiders are free choices. True Name unlocks solid presets and custom colors; activating that achievement also opens Color. Use the color picker or enter an opaque hex color such as #ff8800, then activate Apply Color. Unapplied custom colors are discarded when you leave the tab or close the modal.</source>
+    </trans-unit>
     <trans-unit id="chat.completedResponseDisclosure">
       <source xml:lang="en">When completed response collapsing is enabled, the final response remains visible while earlier work is collapsed. Use Tab to focus the work disclosure and press Enter or Space to show or hide that work. With persistent progress enabled, a separate file changes button shows lines added and deleted when the collapsed work includes edits. Activate it to open those file changes without expanding the work.</source>
     </trans-unit>
@@ -347,7 +350,7 @@
       <source xml:lang="en">The first time Voice Mode starts, an introduction appears above the input box. Tab to reach it, then use the arrow keys to move between the available voices; Enter or Space plays a voice and keeps it for future conversations. Its description also contains two links: Settings, which opens the Voice Mode settings, and How It Responds, which opens a file for customizing what the agent says back. Voice Mode stays connected but does not listen while the introduction is open. Press Escape, or activate the Close button, to dismiss it and return to the input box.</source>
     </trans-unit>
     <trans-unit id="chat.vscodePet">
-      <source xml:lang="en">Type /vscode-pet to show or hide the VS Code pet above the input. One pet appears in whichever editor or Agents window is active. Drag it around the chat with the mouse and release it to drop it, or flick it in any direction to throw it along the gesture before gravity pulls it down. Pointer collisions are ignored for half a second after a drag release. After that, while the pet is falling, move the pointer into it to bounce it upward; pointer movement and where it catches the pet affect the bounce. Sideways and upward travel do not start the bounce counter. A counter beside the pet tracks consecutive bounces and remains for up to five seconds after landing, or until the pet next reacts or interacts. Landing with at least twenty bounces triggers confetti unless reduced motion is enabled. If it falls past the input, a despawn effect appears at the bottom and a respawn effect appears at the top before it automatically returns to the input. Moving the pointer rapidly between the pet’s left and right sides makes it dizzy. With the keyboard, use Tab to focus the pet, then the left and right arrows to make it hop along the input until it reaches an edge. Hold Shift with the left or right arrow to throw it toward a wall; while it is airborne, press Enter or Space to bounce it upward. Rapidly alternate the unmodified arrows to make it dizzy. Press Enter or Space while it is resting to interact with it. When an achievement unlocks, the pet shows a gold star for ten seconds; activate the pet during that time to open Achievements. Open its context menu{0} (for example Shift+F10), use the up and down arrow keys to choose Achievements, Go on the Run, Come Back, Grow, Shrink, Reset Size, Stable Colors, or Insiders Colors, and press Enter to activate the choice. Grow and Shrink change its size in twenty-percent steps, while Reset Size restores its default size. The pet position and selected size are shared across chats and windows and remembered after you restart.</source>
+      <source xml:lang="en">Type /vscode-pet to show or hide Blobby, the VS Code pet, above the input. One pet appears in whichever editor or Agents window is active. Drag it around the chat with the mouse and release it to drop it, or flick it in any direction to throw it along the gesture before gravity pulls it down. Pointer collisions are ignored for half a second after a drag release. After that, while the pet is falling, move the pointer into it to bounce it upward; pointer movement and where it catches the pet affect the bounce. Sideways and upward travel do not start the bounce counter. A counter beside the pet tracks consecutive bounces and remains for up to five seconds after landing, or until the pet next reacts or interacts. Landing with at least twenty bounces triggers confetti unless reduced motion is enabled. If it falls past the input, a despawn effect appears at the bottom and a respawn effect appears at the top before it automatically returns to the input. Moving the pointer rapidly between the pet’s left and right sides makes it dizzy. With the keyboard, use Tab to focus the pet, then the left and right arrows to make it hop along the input until it reaches an edge. Hold Shift with the left or right arrow to throw it toward a wall; while it is airborne, press Enter or Space to bounce it upward. Rapidly alternate the unmodified arrows to make it dizzy. Press Enter or Space while it is resting to interact with it. When an achievement unlocks, the pet shows a gold star for ten seconds; activate the pet during that time to open Achievements. Open its context menu{0} (for example Shift+F10), use the up and down arrow keys to choose Achievements, Go on the Run, Come Back, Grow, Shrink, Reset Size, or Change Color, and press Enter to activate the choice. Grow and Shrink change its size in twenty-percent steps, while Reset Size restores its default size. The pet position, size, and color are shared across chats and windows and remembered after you restart.</source>
     </trans-unit>
     <trans-unit id="chatAgent.acceptTool">
       <source xml:lang="en">To accept a tool action, use the Accept Tool Confirmation command{0}. When the confirmation carousel is shown, this activates the primary button of the selected confirmation. Disabled actions cannot be accepted.</source>
@@ -2002,6 +2005,9 @@ User: {2}</source>
     <trans-unit id="agentHost.mcpServer.authRequired">
       <source xml:lang="en">Server '{0}' requires authentication ({1})</source>
     </trans-unit>
+    <trans-unit id="agentHost.mcpServer.connectorDisplayName">
+      <source xml:lang="en">{0} (Connector)</source>
+    </trans-unit>
     <trans-unit id="agentHost.mcpServer.disabled">
       <source xml:lang="en">Server '{0}' is disabled</source>
     </trans-unit>
@@ -2319,6 +2325,12 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHost.mcpToolAuthentication.cancelledError">
       <source xml:lang="en">MCP authentication was cancelled</source>
+    </trans-unit>
+    <trans-unit id="agentHost.openSandboxPolicyFailed">
+      <source xml:lang="en">Could not open the sandbox policy in the editor.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.openedSandboxPolicy">
+      <source xml:lang="en">Opened the sandbox policy in the editor.</source>
     </trans-unit>
     <trans-unit id="agentHost.otherClientTool.skipped">
       <source xml:lang="en">Skipped {0}</source>
@@ -4768,6 +4780,9 @@ Planned changes:
     <trans-unit id="skillsDesc">
       <source xml:lang="en">Create reusable skill files that provide domain-specific knowledge and workflows.</source>
     </trans-unit>
+    <trans-unit id="startAgentMigrationFailed">
+      <source xml:lang="en">Could not start the agent-guided customization migration.</source>
+    </trans-unit>
     <trans-unit id="tools">
       <source xml:lang="en">Tools</source>
     </trans-unit>
@@ -5358,6 +5373,9 @@ Destination: {2}</source>
     <trans-unit id="migrationHelpActivity">
       <source xml:lang="en">Migration activity records successful changes locally. Expand an activity entry with Enter or Space to read its source and destination paths. Dismiss removes the activity record, not the migrated files.</source>
     </trans-unit>
+    <trans-unit id="migrationHelpAgent">
+      <source xml:lang="en">Use Migrate to have VS Code update the selected customizations. Migrate with Agent closes Agent Customizations and focuses a guided migration in chat for the selected harness. Agent migration uses credits.</source>
+    </trans-unit>
     <trans-unit id="migrationHelpLocations">
       <source xml:lang="en">Activate a destination path to change the destination. Workspace MCP servers migrate to the root .mcp.json. User MCP servers migrate to mcp-config.json in Copilot home. Disabled user servers may become enabled after migration.</source>
     </trans-unit>
@@ -5742,6 +5760,12 @@ Disabled servers may become enabled.</source>
     <trans-unit id="migrateSelectedCount">
       <source xml:lang="en">Migrate {0}</source>
     </trans-unit>
+    <trans-unit id="migrateWithAgent">
+      <source xml:lang="en">Migrate with Agent</source>
+    </trans-unit>
+    <trans-unit id="migrateWithAgentAriaLabel">
+      <source xml:lang="en">Start an agent-guided customization migration</source>
+    </trans-unit>
     <trans-unit id="migrationActivity">
       <source xml:lang="en">Migration activity</source>
     </trans-unit>
@@ -5801,6 +5825,9 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="migrationsDescription">
       <source xml:lang="en">Some of your agent customizations need an update to keep working. Review and migrate them to the new formats and locations.</source>
+    </trans-unit>
+    <trans-unit id="migrationsDescriptionWithAgent">
+      <source xml:lang="en">Some of your agent customizations need an update to keep working. Use Migrate to have VS Code update selected customizations, or Migrate with Agent for a guided migration in chat. Agent migration uses credits.</source>
     </trans-unit>
     <trans-unit id="migrationsTitle">
       <source xml:lang="en">Migrations</source>
@@ -7321,18 +7348,8 @@ Note: This setting only controls tool approval and does not prevent the agent fr
     <trans-unit id="chat">
       <source xml:lang="en">Chat</source>
     </trans-unit>
-    <trans-unit id="chat.agent.allowedNetworkDomains">
-      <source xml:lang="en">Allowed domains for network access by agent tools (fetch tool, integrated browser). Applies when {0} or {1} is enabled. When {2} is enabled, all domains are allowed. Supports wildcards like {3}. When both allowed and denied lists are empty, all domains are blocked. Denied domains (see {4}) take precedence.
-
-Changes may not take full effect until VS Code is restarted.</source>
-    </trans-unit>
     <trans-unit id="chat.agent.collapseCompletedResponses">
       <source xml:lang="en">Controls whether completed chat responses collapse intermediate work while keeping the final response visible.</source>
-    </trans-unit>
-    <trans-unit id="chat.agent.deniedNetworkDomains">
-      <source xml:lang="en">Denied domains for network access by agent tools (fetch tool, integrated browser). Applies when {0} or {1} is enabled. This does not apply when {2} is enabled. Takes precedence over {3}. Supports wildcards like {4}.
-
-Changes may not take full effect until VS Code is restarted.</source>
     </trans-unit>
     <trans-unit id="chat.agent.enabled.description">
       <source xml:lang="en">When enabled, agent mode can be activated from chat and tools in agentic contexts with side effects can be used.</source>
@@ -10677,6 +10694,18 @@ Examples:
       <source xml:lang="en">Visible Models</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatNetworkConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.agent.allowedNetworkDomains">
+      <source xml:lang="en">Allowed domains for network access by agent tools (fetch tool, integrated browser) when {0} is enabled. In Copilot Agent Host sessions with sandboxing ({1}) enabled, also restricts the integrated browser when outbound network access ({2}) is allowed; an empty allow list adds no sandbox restriction. This list does not enable outbound access. Supports wildcards like {3}. Outside sandboxing, when both allowed and denied lists are empty, all domains are blocked. Denied domains (see {4}) take precedence.
+
+Changes may not take full effect until VS Code is restarted.</source>
+    </trans-unit>
+    <trans-unit id="chat.agent.deniedNetworkDomains">
+      <source xml:lang="en">Denied domains for network access by agent tools (fetch tool, integrated browser) when {0} is enabled. Also applies to the integrated browser in sandboxed Copilot Agent Host sessions ({1}); allowing outbound network access ({2}) does not bypass this list. Takes precedence over {3}. Supports wildcards like {4}.
+
+Changes may not take full effect until VS Code is restarted.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatOutline" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatOutline">
       <source xml:lang="en">Chat Outline</source>
@@ -10886,6 +10915,15 @@ Examples:
     <trans-unit id="chatPet.achievement.autopilotEnabled.title">
       <source xml:lang="en">Party Mode</source>
     </trans-unit>
+    <trans-unit id="chatPet.achievement.blobby.description">
+      <source xml:lang="en">Blob the Builder? Blobby McBlobface? Nope, my name is Blobby.</source>
+    </trans-unit>
+    <trans-unit id="chatPet.achievement.blobby.hint">
+      <source xml:lang="en">This little blob has a name. Try calling it in Chat.</source>
+    </trans-unit>
+    <trans-unit id="chatPet.achievement.blobby.title">
+      <source xml:lang="en">True Name</source>
+    </trans-unit>
     <trans-unit id="chatPet.achievement.chatOutputCopied.description">
       <source xml:lang="en">You copied output from chat.</source>
     </trans-unit>
@@ -10903,6 +10941,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chatPet.achievement.chatReferenceOpened.title">
       <source xml:lang="en">Follow the Trail</source>
+    </trans-unit>
+    <trans-unit id="chatPet.achievement.colorCustomization">
+      <source xml:lang="en">Color Customization</source>
     </trans-unit>
     <trans-unit id="chatPet.achievement.createPullRequest.description">
       <source xml:lang="en">You used Create PR in the Agents window.</source>
@@ -11009,10 +11050,13 @@ Examples:
       <source xml:lang="en">Use Tab and Shift+Tab to move through No Hat and the achievement cards. Press Enter or Space on No Hat or an unlocked achievement to change what the pet wears. Newly unlocked cards are announced as New until you activate them. Locked achievements announce their hint and reward and cannot be selected.</source>
     </trans-unit>
     <trans-unit id="chatPet.achievements.accessibilityHelp.close">
-      <source xml:lang="en">Press Escape to close the Achievements modal.</source>
+      <source xml:lang="en">Press Escape to close Customize Blobby. Unapplied custom color changes are discarded.</source>
+    </trans-unit>
+    <trans-unit id="chatPet.achievements.accessibilityHelp.colors">
+      <source xml:lang="en">Change Color in Blobby's context menu always opens the Color tab. Stable and Insiders are available without an achievement. Use /blobby in Chat to unlock True Name and its solid and custom colors. If the pet is off, the command turns it on; if it is already on, it opens the Color tab. Activating the True Name achievement also opens Color. Use Tab to reach a color card, then Enter or Space to apply it. For a custom color, use the color picker or enter an opaque hex value such as #ff8800, then activate Apply Color or press Enter in the hex input. The preview does not change the pet until you apply it.</source>
     </trans-unit>
     <trans-unit id="chatPet.achievements.accessibilityHelp.overview">
-      <source xml:lang="en">The Achievements modal lists agent-feature achievements and their pet hat rewards. Locked cards reveal a hint and reward while keeping the achievement name and exact unlock requirement hidden.</source>
+      <source xml:lang="en">Customize Blobby has Achievements and Color tabs. When the page opens, press Tab to focus the selected tab. Use the Left and Right Arrow keys, Home, or End while a tab is focused to switch tabs. Press Tab again to reach the selected tab's content. The Achievements tab lists agent-feature achievements and their pet hat and color rewards. Locked cards reveal a hint and reward while keeping the achievement name and exact unlock requirement hidden.</source>
     </trans-unit>
     <trans-unit id="chatPet.achievements.accessibilityHelp.roadmap">
       <source xml:lang="en">The final TBD card is informational and lists upcoming pet ideas. The VS Code pet and achievements are experimental and may change.</source>
@@ -11030,10 +11074,16 @@ Examples:
       <source xml:lang="en">All enabled pet achievements unlocked</source>
     </trans-unit>
     <trans-unit id="chatPet.achievements.editor">
-      <source xml:lang="en">Achievements Editor</source>
+      <source xml:lang="en">Blobby Customization Editor</source>
     </trans-unit>
     <trans-unit id="chatPet.achievements.open">
       <source xml:lang="en">Open Achievements</source>
+    </trans-unit>
+    <trans-unit id="chatPet.blobby">
+      <source xml:lang="en">Customize Blobby</source>
+    </trans-unit>
+    <trans-unit id="chatPet.changeColor">
+      <source xml:lang="en">Change Blobby's Color</source>
     </trans-unit>
     <trans-unit id="chatPet.developer.resetSize">
       <source xml:lang="en">Reset Pet Size</source>
@@ -11044,12 +11094,24 @@ Examples:
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatPetAchievementsEditor" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatPet.achievements.context.focused">
-      <source xml:lang="en">Whether the chat pet Achievements modal is focused</source>
+      <source xml:lang="en">Whether the Blobby customization modal is focused</source>
+    </trans-unit>
+    <trans-unit id="chatPet.customization.achievements">
+      <source xml:lang="en">Achievements</source>
+    </trans-unit>
+    <trans-unit id="chatPet.customization.color">
+      <source xml:lang="en">Color</source>
+    </trans-unit>
+    <trans-unit id="chatPet.customization.label">
+      <source xml:lang="en">Customize Blobby</source>
+    </trans-unit>
+    <trans-unit id="chatPet.customization.tabs">
+      <source xml:lang="en">Blobby customization</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatPetAchievementsEditorInput" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatPet.achievements.editorName">
-      <source xml:lang="en">Achievements</source>
+      <source xml:lang="en">Customize Blobby</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatPetAchievementsWidget" source-language="en" datatype="plaintext"><body>
@@ -11058,6 +11120,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chatPet.achievement.cardNewAriaLabel">
       <source xml:lang="en">{0}. New</source>
+    </trans-unit>
+    <trans-unit id="chatPet.achievement.changeColor">
+      <source xml:lang="en">Change Color</source>
     </trans-unit>
     <trans-unit id="chatPet.achievement.hint">
       <source xml:lang="en">Hint</source>
@@ -11108,7 +11173,7 @@ Examples:
       <source xml:lang="en">VS Code pet is now wearing {0}</source>
     </trans-unit>
     <trans-unit id="chatPet.achievements.intro">
-      <source xml:lang="en">Unlock hats as you explore agent features, then choose what your pet wears by selecting an unlocked card.</source>
+      <source xml:lang="en">Unlock hats and colors as you explore agent features, then customize Blobby by selecting an unlocked card.</source>
     </trans-unit>
     <trans-unit id="chatPet.achievements.noHat">
       <source xml:lang="en">No Hat</source>
@@ -11121,9 +11186,6 @@ Examples:
     </trans-unit>
     <trans-unit id="chatPet.achievements.roadmap.moreAchievements">
       <source xml:lang="en">More achievements and built-in hats</source>
-    </trans-unit>
-    <trans-unit id="chatPet.achievements.roadmap.namingCompetition">
-      <source xml:lang="en">A naming competition</source>
     </trans-unit>
     <trans-unit id="chatPet.achievements.roadmap.preview">
       <source xml:lang="en">TBD</source>
@@ -11138,7 +11200,89 @@ Examples:
       <source xml:lang="en">Achievements</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatPetColors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatPet.color.black">
+      <source xml:lang="en">Black</source>
+    </trans-unit>
+    <trans-unit id="chatPet.color.exploration">
+      <source xml:lang="en">Exploration</source>
+    </trans-unit>
+    <trans-unit id="chatPet.color.green">
+      <source xml:lang="en">Green</source>
+    </trans-unit>
+    <trans-unit id="chatPet.color.insiders">
+      <source xml:lang="en">Insiders</source>
+    </trans-unit>
+    <trans-unit id="chatPet.color.pink">
+      <source xml:lang="en">Pink</source>
+    </trans-unit>
+    <trans-unit id="chatPet.color.purple">
+      <source xml:lang="en">Purple</source>
+    </trans-unit>
+    <trans-unit id="chatPet.color.red">
+      <source xml:lang="en">Red</source>
+    </trans-unit>
+    <trans-unit id="chatPet.color.stable">
+      <source xml:lang="en">Stable</source>
+    </trans-unit>
+    <trans-unit id="chatPet.color.white">
+      <source xml:lang="en">White</source>
+    </trans-unit>
+    <trans-unit id="chatPet.color.yellow">
+      <source xml:lang="en">Yellow</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatPetColorsWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatPet.color.invalid">
+      <source xml:lang="en">Enter a hex color such as #ff8800 or #f80.</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.apply">
+      <source xml:lang="en">Apply Color</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.chooseCustom">
+      <source xml:lang="en">Choose Blobby's custom color</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.custom">
+      <source xml:lang="en">Custom color</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.customDescription">
+      <source xml:lang="en">Choose any color or enter a hex value. Apply it when it feels right.</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.hex">
+      <source xml:lang="en">Custom hex color</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.intro">
+      <source xml:lang="en">A little more you. Pick a classic look or give Blobby a color of its own.</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.locked">
+      <source xml:lang="en">Locked</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.lockedLabel">
+      <source xml:lang="en">{0}, locked. Discover Blobby's True Name to unlock.</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.presets">
+      <source xml:lang="en">Blobby color presets</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.selected">
+      <source xml:lang="en">Selected</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.selectedLabel">
+      <source xml:lang="en">{0}, selected</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.title">
+      <source xml:lang="en">Color</source>
+    </trans-unit>
+    <trans-unit id="chatPet.colors.unlockHint">
+      <source xml:lang="en">Discover Blobby's True Name to unlock solid colors and custom colors.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatPetService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatPet.color.changed">
+      <source xml:lang="en">Blobby's color changed to {0}</source>
+    </trans-unit>
+    <trans-unit id="chatPet.color.locked">
+      <source xml:lang="en">Use /blobby in Chat to unlock color customization.</source>
+    </trans-unit>
     <trans-unit id="chatPet.context.enabled">
       <source xml:lang="en">Whether the VS Code pet is enabled</source>
     </trans-unit>
@@ -11153,12 +11297,6 @@ Examples:
     </trans-unit>
     <trans-unit id="chatPet.restored">
       <source xml:lang="en">The VS Code pet is back</source>
-    </trans-unit>
-    <trans-unit id="chatPet.variant.insiders">
-      <source xml:lang="en">VS Code pet changed to the Insiders colors</source>
-    </trans-unit>
-    <trans-unit id="chatPet.variant.stable">
-      <source xml:lang="en">VS Code pet changed to the Stable colors</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatProgressConfiguration" source-language="en" datatype="plaintext"><body>
@@ -11699,6 +11837,9 @@ Type anything below to get started!</source>
     </trans-unit>
     <trans-unit id="autopilot">
       <source xml:lang="en">Set permissions to autopilot mode</source>
+    </trans-unit>
+    <trans-unit id="blobby">
+      <source xml:lang="en">Show Blobby or open its color customization</source>
     </trans-unit>
     <trans-unit id="chatSessionOption.slashCommand.detail">
       <source xml:lang="en">Switch to '{0}'</source>
@@ -13155,6 +13296,11 @@ Source: {0}</source>
       <source xml:lang="en">The sandbox requested a retry beyond the connection deadline.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxApiService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.reasoningEffort">
+      <source xml:lang="en">Reasoning Effort</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxLegacySessionPreparation" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sandbox.invalidCloneResult">
       <source xml:lang="en">The cloud sandbox returned an invalid repository cloning response.</source>
@@ -13187,12 +13333,26 @@ Source: {0}</source>
       <source xml:lang="en">Repository cloning did not finish within five minutes.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxModels" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.modelsFailed">
+      <source xml:lang="en">Could not load models for GitHub sandboxes.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.modelsProvider">
+      <source xml:lang="en">GitHub Sandboxes</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.retryModels">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxReadOnlySessionHandler" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cloudSandbox.truncatedHistory">
       <source xml:lang="en">This conversation is incomplete. Its recorded history ends mid-response, so the last exchange may be missing.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxSessionContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.archiveSessionNotFound">
+      <source xml:lang="en">Mission Control sandbox session not found.</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.deleteSessionNotFound">
       <source xml:lang="en">Mission Control sandbox session not found.</source>
     </trans-unit>
@@ -13201,6 +13361,12 @@ Source: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxSessionListController" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.archiveFailed">
+      <source xml:lang="en">Unable to change the sandbox session's archive state: {0}</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.archiveInvalidSession">
+      <source xml:lang="en">The session does not belong to this sandbox.</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.deleteInvalidSession">
       <source xml:lang="en">The session does not belong to this sandbox.</source>
     </trans-unit>
@@ -16305,6 +16471,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chatPet.bouncedOffRightWallAndFell">
       <source xml:lang="en">The VS Code pet bounced off the right wall, fell off, and will respawn automatically</source>
     </trans-unit>
+    <trans-unit id="chatPet.changeColor.action">
+      <source xml:lang="en">Change Color</source>
+    </trans-unit>
     <trans-unit id="chatPet.comeBack.action">
       <source xml:lang="en">Come Back</source>
     </trans-unit>
@@ -16382,12 +16551,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chatPet.thrownRight">
       <source xml:lang="en">The VS Code pet was thrown toward the right wall</source>
-    </trans-unit>
-    <trans-unit id="chatPet.variant.insiders.action">
-      <source xml:lang="en">Insiders Colors</source>
-    </trans-unit>
-    <trans-unit id="chatPet.variant.stable.action">
-      <source xml:lang="en">Stable Colors</source>
     </trans-unit>
     <trans-unit id="chatPet.wokeUp">
       <source xml:lang="en">The VS Code pet woke up</source>

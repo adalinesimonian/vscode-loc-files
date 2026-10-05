@@ -619,9 +619,38 @@
       <source xml:lang="en">Update this Agent Host to a newer version, then reconnect to use automations.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/cloudSandboxSessionConfig" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.approvals">
+      <source xml:lang="en">Approvals</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.autopilot">
+      <source xml:lang="en">Autopilot</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.autopilotDescription">
+      <source xml:lang="en">Continues working until the task is done.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.interactive">
+      <source xml:lang="en">Interactive</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.interactiveDescription">
+      <source xml:lang="en">Works with you and asks for input when needed.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.mode">
+      <source xml:lang="en">Agent Mode</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.plan">
+      <source xml:lang="en">Plan</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.planDescription">
+      <source xml:lang="en">Plans the task before making changes.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sandbox.agentDefaultModel">
-      <source xml:lang="en">Agent Default</source>
+    <trans-unit id="sandbox.approvalPicker">
+      <source xml:lang="en">Approvals</source>
+    </trans-unit>
+    <trans-unit id="sandbox.modePicker">
+      <source xml:lang="en">Agent Mode</source>
     </trans-unit>
     <trans-unit id="sandboxPicker">
       <source xml:lang="en">Sandbox</source>
@@ -693,11 +722,14 @@
     <trans-unit id="sandbox.disabled">
       <source xml:lang="en">GitHub sandbox sessions are not enabled.</source>
     </trans-unit>
-    <trans-unit id="sandbox.draftNotFound">
-      <source xml:lang="en">The GitHub sandbox draft is no longer available.</source>
+    <trans-unit id="sandbox.modelConfigurationUnavailable">
+      <source xml:lang="en">The sandbox does not support the selected {0} for {1}.</source>
     </trans-unit>
-    <trans-unit id="sandbox.starting">
-      <source xml:lang="en">Starting GitHub sandbox...</source>
+    <trans-unit id="sandbox.provisioningContainer">
+      <source xml:lang="en">Setting up cloud container</source>
+    </trans-unit>
+    <trans-unit id="sandbox.startingAgent">
+      <source xml:lang="en">Starting Copilot agent</source>
     </trans-unit>
     <trans-unit id="sandbox.unavailable">
       <source xml:lang="en">GitHub sandbox creation is no longer available. Enable the feature and choose a repository to try again.</source>
@@ -826,8 +858,41 @@
     <trans-unit id="githubSandbox.hostGroup">
       <source xml:lang="en">GitHub Sandboxes</source>
     </trans-unit>
+    <trans-unit id="sandbox.cloningFailed">
+      <source xml:lang="en">Repository cloning failed</source>
+    </trans-unit>
+    <trans-unit id="sandbox.cloningRepository">
+      <source xml:lang="en">Cloning repository</source>
+    </trans-unit>
+    <trans-unit id="sandbox.cloningRepositoryProgress">
+      <source xml:lang="en">Cloning repository ({0}%)</source>
+    </trans-unit>
+    <trans-unit id="sandbox.connectingContainer">
+      <source xml:lang="en">Connecting to cloud container</source>
+    </trans-unit>
+    <trans-unit id="sandbox.connectionUnavailable">
+      <source xml:lang="en">The cloud sandbox connection is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.preparationUnavailable">
+      <source xml:lang="en">Cloud sandbox repository preparation is not registered.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.provisioningContainer">
+      <source xml:lang="en">Setting up cloud container</source>
+    </trans-unit>
+    <trans-unit id="sandbox.startingAgent">
+      <source xml:lang="en">Starting Copilot agent</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.archiveUnavailable">
+      <source xml:lang="en">Connect to the environment to change this session's archive state.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.configNotApplied">
+      <source xml:lang="en">The sandbox could not apply the selected {0}. Your prompt was not sent.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.configUnavailable">
+      <source xml:lang="en">The sandbox connection is unavailable. Your prompt was not sent.</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.renameUnavailable">
       <source xml:lang="en">Connect to the environment to rename this session.</source>
     </trans-unit>

@@ -2,10 +2,18 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/sessions/contrib/canvases/common/sessionCanvas" source-language="en" datatype="plaintext"><body>
     <trans-unit id="canvas.editorDescription">
-      <source xml:lang="en">Closing this tab hides the canvas until the agent opens it again.</source>
+      <source xml:lang="en">Closing this tab hides the canvas. Reopen it from the Add Tab menu while it remains available.</source>
     </trans-unit>
     <trans-unit id="canvas.editorName">
       <source xml:lang="en">Canvas</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/canvases/electron-browser/sessionCanvasActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="canvas.instanceTitle">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="canvas.instanceTitleCollision">
+      <source xml:lang="en">{0} ({1}, {2})</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/canvases/electron-browser/sessionCanvasEditor" source-language="en" datatype="plaintext"><body>
@@ -16,7 +24,7 @@
       <source xml:lang="en">Canvas content. Use Accessibility Help for keyboard navigation.</source>
     </trans-unit>
     <trans-unit id="canvas.help.close">
-      <source xml:lang="en">Closing the tab hides this canvas. A newly created canvas can open another tab.</source>
+      <source xml:lang="en">Closing the tab hides this canvas. Use the Add Tab menu in the editor toolbar and choose its title to reopen it while it remains available.</source>
     </trans-unit>
     <trans-unit id="canvas.help.navigation">
       <source xml:lang="en">Tab moves through page controls. Use &lt;keybinding:workbench.action.focusNextPart&gt; to leave the page.</source>

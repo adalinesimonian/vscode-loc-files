@@ -2415,6 +2415,12 @@ A keybinding</note>
     <trans-unit id="agentHost.config.sandbox.allowedDomains.title">
       <source xml:lang="en">Allowed Network Domains</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.authenticateGh.title">
+      <source xml:lang="en">Authenticate gh</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.authenticateGit.title">
+      <source xml:lang="en">Authenticate git</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.sandbox.deniedDomains.item.title">
       <source xml:lang="en">Domain</source>
     </trans-unit>
@@ -3749,6 +3755,9 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="copilotAgent.interruptedTurn">
       <source xml:lang="en">The agent was interrupted before this request finished.</source>
     </trans-unit>
+    <trans-unit id="copilotAgent.subagentFailed">
+      <source xml:lang="en">Subagent failed.</source>
+    </trans-unit>
     <trans-unit id="copilotSlashCommand.selectSubcommandResult">
       <source xml:lang="en">The /{0} command requires selecting a subcommand. Available options: {1}</source>
     </trans-unit>
@@ -4064,7 +4073,7 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Open Sandbox Policy</source>
     </trans-unit>
     <trans-unit id="copilotSlashCommand.sandboxPolicy">
-      <source xml:lang="en">Show the effective sandbox policy for this session</source>
+      <source xml:lang="en">Open the latest effective sandbox policy for this session in the editor</source>
     </trans-unit>
     <trans-unit id="copilotSlashCommand.sandboxPolicyUnavailable">
       <source xml:lang="en">The SDK did not return a sandbox policy.</source>

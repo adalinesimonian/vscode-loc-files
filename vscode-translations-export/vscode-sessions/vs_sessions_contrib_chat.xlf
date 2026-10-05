@@ -1666,6 +1666,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.backgroundTint">
       <source xml:lang="en">When a background image is set, use Tint Window to Match Background in the Command Palette or the background context menu to turn matching window colors on or off. A check mark means tinting is enabled. Turning it off keeps the background image and restores the original window colors.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.blobby">
+      <source xml:lang="en">Type /blobby to unlock True Name without sending a chat request. If Blobby is off, it turns on; if it is already on, the Color tab opens. Change Color in the pet's context menu always opens Color. Stable and Insiders are free choices; True Name unlocks solid and custom colors. Activating the True Name achievement card or account badge also opens Color. Use the color picker or enter an opaque hex color such as #ff8800, then activate Apply Color. Unapplied custom colors are discarded when you leave the tab or close the modal.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.branchPickerUpstream">
       <source xml:lang="en">For a new Agent Host session in a Git repository, use Tab to reach the branch picker and press Enter or Space to choose a base branch. With New Worktree selected, the current branch's tracked upstream is selected by default when available; otherwise the default branch is selected. The picker lists the current branch's upstream and the current branch when it is not the default branch, then the default branch's remote-tracking branch and the default branch, then the other branches, with a separator between each group, and focuses the selected branch when it opens. Each branch is announced with its group name: Current Branch, Default Branch, or Branches. With Branch selected, the checked-out branch, which is the selected branch, is listed first when it is not the default branch, followed by the default branch in its own group, then the other branches. Use the arrow keys to choose a branch and press Enter to select it.</source>
     </trans-unit>
@@ -1925,7 +1928,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">To rename a session inline, focus its row in the Sessions list and invoke Rename{0}, double-click its title, or open its context menu and choose Rename. Type the new title, then press Enter to confirm or Escape to cancel. From the main chat transcript or input, invoking Rename edits the header title inline when it is visible and opens a prompt otherwise.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.repositoryCreation">
-      <source xml:lang="en">This host creates a new environment for each session. Open Select Repository to choose its repository. Selecting a repository does not start an environment; sending your first message does. The harness label identifies the available agent, and Agent Default means the host chooses the model.</source>
+      <source xml:lang="en">This host creates a new environment for each session. Open Select Repository to choose its repository. Selecting a repository does not start an environment; sending your first message does. Before sending, use the mode picker to choose Interactive, Plan, or Autopilot, and the permissions picker to configure tool approvals. Open the model picker to choose a cloud model and its supported reasoning effort. Use the arrow keys to navigate options, Enter to select, and Escape to close a picker.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.repositorySelection">
       <source xml:lang="en">When choosing a GitHub repository in the browser, search or enter a GitHub URL or owner/repository. Use the arrow keys to navigate results, Enter to select, and Escape to cancel. Sign in to GitHub if prompted.</source>
@@ -2027,6 +2030,9 @@ To disable this announcement, set {1} to false.</source>
   <file original="src/vs/sessions/contrib/chat/browser/slashCommands" source-language="en" datatype="plaintext"><body>
     <trans-unit id="slashCommand.agents">
       <source xml:lang="en">View and manage custom agents</source>
+    </trans-unit>
+    <trans-unit id="slashCommand.blobby">
+      <source xml:lang="en">Show Blobby or open its color customization</source>
     </trans-unit>
     <trans-unit id="slashCommand.hooks">
       <source xml:lang="en">View and manage hooks</source>
