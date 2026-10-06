@@ -1197,6 +1197,12 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionChatPills.allChangesOnBranch">
       <source xml:lang="en">All Changes ({0})</source>
     </trans-unit>
+    <trans-unit id="sessionChatPills.copied">
+      <source xml:lang="en">Copied</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.copiedToClipboard">
+      <source xml:lang="en">Copied to clipboard</source>
+    </trans-unit>
     <trans-unit id="sessionChatPills.copyIssue">
       <source xml:lang="en">Copy issue URL</source>
     </trans-unit>
@@ -1565,6 +1571,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="workspacePicker.attachedContextCountAriaLabel">
       <source xml:lang="en">{0}, {1} attached</source>
     </trans-unit>
+    <trans-unit id="workspacePicker.browseHostDescription">
+      <source xml:lang="en">{0} · {1}</source>
+    </trans-unit>
     <trans-unit id="workspacePicker.browseSelectLocal">
       <source xml:lang="en">Select...</source>
     </trans-unit>
@@ -1603,6 +1612,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="workspacePicker.githubLoading">
       <source xml:lang="en">GitHub repositories are still loading</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.hostDescription">
+      <source xml:lang="en">{0}. {1}</source>
     </trans-unit>
     <trans-unit id="workspacePicker.manageRemoteHost">
       <source xml:lang="en">Manage {0}</source>
@@ -1650,6 +1662,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.archiveNudge">
       <source xml:lang="en">When all GitHub pull requests associated with the session have merged and no chat is working or waiting for input, an archive suggestion may appear above the chat input. Use Tab or Shift+Tab to reach Archive, Configure Automatic Cleanup, or Dismiss Archive Suggestion, then Enter or Space to activate it. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Archive" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismiss Archive Suggestion, or Escape while the suggestion is focused, hides the suggestion for this session, including after a reload, until it is archived or deleted, and returns focus to the chat input. Archiving the session hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Archived" section of the sessions list. You can unarchive it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by unarchiving the session.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.archiveNudgeContinuation">
+      <source xml:lang="en">Sending a new message after the suggestion appears hides it for those pull requests, including after a reload. It can appear again when a new pull request is added to the session and all its pull requests have merged.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.archiveNudgeOnboarding">
       <source xml:lang="en">The first time you activate the suggestion's Archive or Mark as Done button, a spotlight may reveal that session's action in the sessions list. It briefly waits for the list action to appear. The action waits until you activate the highlighted action, activate Understood, or press Escape to end the spotlight. Use Tab or Shift+Tab to move between the highlighted action and Understood, and Enter or Space to activate either. If the spotlight cannot be shown or is interrupted, the session is still archived or marked as done as long as the suggestion remains available. Once completed or skipped, the spotlight will not appear again.</source>
@@ -1849,6 +1864,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.migrations">
       <source xml:lang="en">When agent customizations need an update, a notice below the new-session input shows how many need attention. Use Tab to reach Review Migrations and open the Migrations page. Dismiss Migration Notice for This Workspace hides the notice for that workspace, including after restarting, and returns focus to the input.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.missionControlHosts">
+      <source xml:lang="en">In Manage Remote Agent Hosts or the workspace picker, choose Mission Control to discover your user-local hosts without starting compute or sessions. Use the arrow keys to choose a host and Enter to connect. Tab reaches Refresh Hosts and each row's Hide in This Profile or Restore Host button. Hidden hosts remain in the Hidden in This Profile section; Enter restores one. A previously open chat may reconnect on restoration. Escape returns to the previous control. Host options offer Reconnect, Disconnect, Rename, and Hide in This Profile. Rename changes only this profile's label, not the remote machine's name. Offline hosts require their owning application to be running; relay connection state is separate from session activity.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.mobileConfig">
       <source xml:lang="en">On mobile, the mode and model pickers appear as tappable chips below the input. Tap a chip to open a bottom sheet where you can change the selection.</source>
     </trans-unit>
@@ -1875,6 +1893,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.newSessionPickers">
       <source xml:lang="en">In a new-session composer, open and focus the workspace picker{0} or the harness picker{1}. Focus either picker control and open its context menu{2} to configure its keybinding.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.offlineDraft">
+      <source xml:lang="en">Opening a cloud sandbox conversation does not resume its environment. You can read its history and compose a draft while offline. Typing, pasting, or adding an attachment starts a connection attempt. Send, mode, and permissions are unavailable until the session is ready. Connection progress and failures appear in a banner. If connecting fails, your draft stays in the input; use Retry in the banner to try again. Connecting never sends your draft automatically.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.openPullRequest">
       <source xml:lang="en">When the session is associated with GitHub pull requests, a status pill above the chat input shows the pull request number or count. Activate it to open a single pull request or choose from the associated pull requests{0}.</source>

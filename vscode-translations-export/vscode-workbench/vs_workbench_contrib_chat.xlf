@@ -166,6 +166,9 @@
     <trans-unit id="chat.blobby">
       <source xml:lang="en">Type /blobby to unlock the True Name achievement without sending a chat request. If Blobby is off, the command turns it on; if it is already on, it opens the Color tab in Customize Blobby. Change Color in the pet's context menu always opens Color, where Stable and Insiders are free choices. True Name unlocks solid presets and custom colors; activating that achievement also opens Color. Use the color picker or enter an opaque hex color such as #ff8800, then activate Apply Color. Unapplied custom colors are discarded when you leave the tab or close the modal.</source>
     </trans-unit>
+    <trans-unit id="chat.codexContinuation">
+      <source xml:lang="en">A ChatGPT limit suggestion may offer Continue with Copilot. If the eligible Codex session is not active, the guide highlights its row in the Sessions list. Activate Open Session in the guide or open the row using the list's usual keyboard shortcut: by default, Command+Down Arrow on macOS or Enter on Windows and Linux. The next step opens its model picker with a matching Copilot model in the search. Activate Use Copilot in the guide or use Up and Down Arrow and Enter in the picker to select the Copilot model. Use Tab or Shift+Tab to reach the guide's buttons and Enter or Space to activate them. An already-active eligible session goes directly to the picker. End Tour or Escape cancels the remaining guidance; it does not undo a model selection.</source>
+    </trans-unit>
     <trans-unit id="chat.completedResponseDisclosure">
       <source xml:lang="en">When completed response collapsing is enabled, the final response remains visible while earlier work is collapsed. Use Tab to focus the work disclosure and press Enter or Space to show or hide that work. With persistent progress enabled, a separate file changes button shows lines added and deleted when the collapsed work includes edits. Activate it to open those file changes without expanding the work.</source>
     </trans-unit>
@@ -202,6 +205,12 @@
     <trans-unit id="chat.focusQuestionCarousel">
       <source xml:lang="en">When a chat question appears, toggle focus between the question and the chat input{0}.</source>
     </trans-unit>
+    <trans-unit id="chat.generatedImageCancellation">
+      <source xml:lang="en">Stopping image generation shows Image generation cancelled, not a generation error. Cancelled image tools keep their cancelled status when you reopen the chat.</source>
+    </trans-unit>
+    <trans-unit id="chat.generatedImages">
+      <source xml:lang="en">Image generation appears separately from thinking and tool-call groups. Copilot and Codex agent sessions share this presentation. Completed steps collapse only before the first image-generation tool, keeping image tools in their original position. While generation runs, expand the tool dropdown to inspect the submitted prompt. Its title says Using the image model to generate an image when the model is available, and does not shimmer. The image model can differ from the selected conversation model. A compact decorative band of shifting glyphs remains visible below the dropdown and reveals a single image when its bytes are available. Overlapping image-generation attempts each keep their own input dropdown and share one animation while any attempt is running. The animation does not indicate a percentage complete and stays still when reduced motion is enabled or a high contrast theme is active. The reveal is skipped in those modes and when reopening a chat. Only the persistent progress line rotates through painting-themed phrases, without repeatedly announcing them. These phrases are decorative, not individual generation stages. Use Tab to focus the dropdown and Enter or Space to expand or collapse it. Successful generation shows the Generated image dropdown, including the image model when available, with a single image below it even when collapsed. If generation fails, the Generated image failed row can be expanded to inspect the error. Completed and failed image tools keep their final status when you reopen the chat. Image previews start loading as soon as generation succeeds, even if the response is still in progress. A preview is marked as busy while its bytes load. Unable to load image indicates a problem loading the preview, not a failed generation. Use Tab or Shift+Tab to focus an image and Enter to open it. Use the Save action to the right of the image to save generated images.</source>
+    </trans-unit>
     <trans-unit id="chat.harnessSwitchFeedbackSurvey">
       <source xml:lang="en">After you switch from Copilot to Local, a feedback survey may appear above the chat input. Use Shift+Tab to reach it. Use Up and Down Arrow to choose why you switched, then press Enter or Space to submit. Dismiss Survey or Escape closes the survey. After submission, a message confirms that your feedback was recorded. Use Tab to reach Share it on GitHub to provide specific feedback in a GitHub issue. Use Dismiss Feedback Acknowledgement or Escape to close the message.</source>
     </trans-unit>
@@ -219,6 +228,9 @@
     </trans-unit>
     <trans-unit id="chat.mcpStartupSkip">
       <source xml:lang="en">When a chat turn is waiting for MCP servers to start, a Skip link may appear. Use Tab to focus Skip and press Enter or Space to continue the turn while those servers start in the background. The current startup message disappears immediately and focus returns to the chat input. New server startups may show another message.</source>
+    </trans-unit>
+    <trans-unit id="chat.missionControl.help">
+      <source xml:lang="en">Connect to Mission Control Environment opens a list of existing user-local hosts. Cached hosts are shown while the list refreshes in the background without clearing your search. Use Up and Down Arrow to choose a host and Enter to connect, or Escape to cancel. The owning application must be running; connecting does not create replacement compute. Passive connections are read-only, and local sessions continue using the local host.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.autoMode">
       <source xml:lang="en">In the tabbed model picker, the active Copilot tab has an Auto switch beside the provider name. The provider button and switch are separate keyboard targets. Turning Auto on replaces Copilot's individual models with automatic routing choices; provider tabs and search remain available. Turn Auto off to restore the previous manual Copilot model. The switch is disabled when no individual Copilot model is available. Browsing another provider does not change the selected model.</source>
@@ -2546,6 +2558,40 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Terminal output is unavailable: {0}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/codexContinuation.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codexContinuation.previewUnavailable">
+      <source xml:lang="en">To preview the suggestion, open a Codex conversation that uses ChatGPT and has a matching model available through GitHub Copilot.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/codexContinuationGuide" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codexContinuation.continue">
+      <source xml:lang="en">Continue with Copilot</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.disable">
+      <source xml:lang="en">Don't Show Again</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.guide">
+      <source xml:lang="en">Select {0} from GitHub Copilot to continue this session.</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.message">
+      <source xml:lang="en">You're nearing your ChatGPT limit. Continue your Codex sessions with your Copilot subscription.</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.openSession">
+      <source xml:lang="en">Open a Codex Session</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.openSession.action">
+      <source xml:lang="en">Open Session</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.openSession.description">
+      <source xml:lang="en">This Codex session uses your ChatGPT subscription. Open it to continue with your Copilot subscription.</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.unavailable">
+      <source xml:lang="en">This Copilot continuation is no longer available. Review the session's model picker to continue.</source>
+    </trans-unit>
+    <trans-unit id="codexContinuation.useCopilot">
+      <source xml:lang="en">Use Copilot</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/importLocalConversationToAgentSession" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.importConversation.subagent">
       <source xml:lang="en">Subagent</source>
@@ -2635,6 +2681,18 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="contextAttribution.label.toolResults">
       <source xml:lang="en">Tool Results</source>
+    </trans-unit>
+    <trans-unit id="imageGenerationCancelled">
+      <source xml:lang="en">Image generation cancelled</source>
+    </trans-unit>
+    <trans-unit id="imageGenerationFailed">
+      <source xml:lang="en">Generated image failed</source>
+    </trans-unit>
+    <trans-unit id="imageGenerationModelCompleted">
+      <source xml:lang="en">Generated image with {0}</source>
+    </trans-unit>
+    <trans-unit id="imageGenerationModelProgress">
+      <source xml:lang="en">Generating image with {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionHoverWidget" source-language="en" datatype="plaintext"><body>
@@ -4446,6 +4504,15 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="deleteCustomization">
       <source xml:lang="en">Delete</source>
     </trans-unit>
+    <trans-unit id="deleteCustomizationActionAriaLabel">
+      <source xml:lang="en">Delete customization</source>
+    </trans-unit>
+    <trans-unit id="deleteCustomizationFailed">
+      <source xml:lang="en">Could not delete the customization: {0}</source>
+    </trans-unit>
+    <trans-unit id="deleteNamedCustomization">
+      <source xml:lang="en">Delete {0}</source>
+    </trans-unit>
     <trans-unit id="discoverButtonTooltip">
       <source xml:lang="en">Back to Customizations</source>
     </trans-unit>
@@ -4530,6 +4597,18 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="mcpServersDesc">
       <source xml:lang="en">Connect external tool servers that extend AI capabilities with custom tools and data sources.</source>
+    </trans-unit>
+    <trans-unit id="migrate">
+      <source xml:lang="en">Migrate</source>
+    </trans-unit>
+    <trans-unit id="migrateCustomization">
+      <source xml:lang="en">Migrate customization</source>
+    </trans-unit>
+    <trans-unit id="migrateCustomizationFailed">
+      <source xml:lang="en">Could not migrate the customization: {0}</source>
+    </trans-unit>
+    <trans-unit id="migrateNamedCustomization">
+      <source xml:lang="en">Migrate {0}</source>
     </trans-unit>
     <trans-unit id="migrateThisCustomization">
       <source xml:lang="en">Migrate This Item</source>
@@ -5386,7 +5465,7 @@ Destination: {2}</source>
       <source xml:lang="en">MCP servers that cannot migrate automatically appear in the Needs manual review group. Open a server to review its details; Edit Configuration opens its source file and selects the server's JSON configuration.</source>
     </trans-unit>
     <trans-unit id="migrationHelpNavigation">
-      <source xml:lang="en">Use the arrow keys to move through and expand the tree. Use each row's checkbox to include or exclude it. Open a customization to view its editor or details. The More Actions menu can migrate or delete one item.</source>
+      <source xml:lang="en">Use the arrow keys to move through and expand the tree. Use each row's checkbox to include or exclude it. Open a customization to view its editor or details. Use the header actions or the row's More Actions menu to migrate or delete one item.</source>
     </trans-unit>
     <trans-unit id="migrationHelpOverview">
       <source xml:lang="en">The migrations tree groups each migration type by workspace or user. Expand a group to inspect each customization, its source location, and its destination.</source>
@@ -6348,6 +6427,12 @@ Disabled servers may become enabled.</source>
     <trans-unit id="mcpNoDiagnostics">
       <source xml:lang="en">No diagnostics to show</source>
     </trans-unit>
+    <trans-unit id="mcpOpenServerSettings">
+      <source xml:lang="en">Open Settings</source>
+    </trans-unit>
+    <trans-unit id="mcpOpenServerSettingsAria">
+      <source xml:lang="en">Open Settings for {0}</source>
+    </trans-unit>
     <trans-unit id="mcpPartiallySupportedByHarness">
       <source xml:lang="en">Partially supported by {0}</source>
     </trans-unit>
@@ -6509,6 +6594,12 @@ Disabled servers may become enabled.</source>
       <source xml:lang="en">{0}. See [[Migrations]] for details.</source>
       <note>Preserve the double square brackets: they mark Migrations as a link.</note>
     </trans-unit>
+    <trans-unit id="mcpDefinitionBuiltin">
+      <source xml:lang="en">{0} configures this server automatically, so its definition can't be viewed or edited.</source>
+    </trans-unit>
+    <trans-unit id="mcpDefinitionManaged">
+      <source xml:lang="en">{0} manages this server, so its definition can't be viewed or edited.</source>
+    </trans-unit>
     <trans-unit id="mcpDisabledGlobally">
       <source xml:lang="en">Disabled (Globally)</source>
     </trans-unit>
@@ -6566,6 +6657,24 @@ Disabled servers may become enabled.</source>
     <trans-unit id="mcpServersListAriaLabel">
       <source xml:lang="en">MCP Servers</source>
     </trans-unit>
+    <trans-unit id="mcpSourceAgentHost">
+      <source xml:lang="en">Agent host configuration</source>
+    </trans-unit>
+    <trans-unit id="mcpSourceBuiltin">
+      <source xml:lang="en">Built-in: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcpSourceBuiltinPlugin">
+      <source xml:lang="en">Built-in plugin: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcpSourceManaged">
+      <source xml:lang="en">Managed by {0}</source>
+    </trans-unit>
+    <trans-unit id="mcpSourceUser">
+      <source xml:lang="en">User configuration</source>
+    </trans-unit>
+    <trans-unit id="mcpSourceWorkspace">
+      <source xml:lang="en">Workspace configuration</source>
+    </trans-unit>
     <trans-unit id="mcpSupportUnknown">
       <source xml:lang="en">Support unknown</source>
     </trans-unit>
@@ -6591,7 +6700,7 @@ Disabled servers may become enabled.</source>
       <source xml:lang="en">Plugins</source>
     </trans-unit>
     <trans-unit id="pluginMcpServersGroupDescription">
-      <source xml:lang="en">MCP servers provided by installed plugins.</source>
+      <source xml:lang="en">MCP servers provided by installed plugins or connected connectors.</source>
     </trans-unit>
     <trans-unit id="running">
       <source xml:lang="en">Running</source>
@@ -6601,6 +6710,12 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="searchingMcpMarketplace">
       <source xml:lang="en">Searching the MCP marketplace...</source>
+    </trans-unit>
+    <trans-unit id="showMcpServerConfiguration">
+      <source xml:lang="en">Show Configuration</source>
+    </trans-unit>
+    <trans-unit id="showMcpServerExtension">
+      <source xml:lang="en">Show Extension</source>
     </trans-unit>
     <trans-unit id="showMcpServerOutput">
       <source xml:lang="en">Show output for {0}</source>
@@ -7227,8 +7342,18 @@ Disabled servers may become enabled.</source>
     <trans-unit id="chat.imageLimitExceededHoverUnknownLimit">
       <source xml:lang="en">This image was not sent because this model's image limit was exceeded.</source>
     </trans-unit>
+    <trans-unit id="chat.imagePreviewLoadError">
+      <source xml:lang="en">Unable to load image: {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.imagePreviewLoadErrorDetails">
+      <source xml:lang="en">{0}
+{1}</source>
+    </trans-unit>
     <trans-unit id="chat.instructionsAttachment">
       <source xml:lang="en">Instructions attachment, {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.loadingImage">
+      <source xml:lang="en">Loading image...</source>
     </trans-unit>
     <trans-unit id="chat.omittedFileAttachment">
       <source xml:lang="en">Omitted this file: {0}</source>
@@ -7763,6 +7888,12 @@ Locations configured here are only observed by the Local agent harness. Other ha
     </trans-unit>
     <trans-unit id="chat.exitAfterDelegation">
       <source xml:lang="en">Controls whether the chat panel automatically exits after delegating a request to another session.</source>
+    </trans-unit>
+    <trans-unit id="chat.experimental.codexContinuation.enabled">
+      <source xml:lang="en">Offer to continue eligible Codex conversations with GitHub Copilot when nearing a ChatGPT usage limit.</source>
+    </trans-unit>
+    <trans-unit id="chat.experimental.codexContinuation.thresholdPercent">
+      <source xml:lang="en">Minimum percentage of the five-hour or weekly ChatGPT usage limit consumed before offering to continue eligible Codex conversations with GitHub Copilot.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.collectInstructionsInExtension">
       <source xml:lang="en">When enabled, automatic instruction collection (.instructions.md, agent instructions, customizations index) is performed by the GitHub Copilot Chat extension instead of the core workbench.</source>
@@ -13382,12 +13513,97 @@ Source: {0}</source>
       <source xml:lang="en">GitHub Sandbox</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/missionControlEnvironmentActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="connectMissionControlEnvironment">
+      <source xml:lang="en">Connect to Mission Control Environment...</source>
+    </trans-unit>
+    <trans-unit id="missionControl.connectProgress">
+      <source xml:lang="en">Connecting to {0}...</source>
+    </trans-unit>
+    <trans-unit id="missionControl.connected">
+      <source xml:lang="en">Relay connected</source>
+    </trans-unit>
+    <trans-unit id="missionControl.connecting">
+      <source xml:lang="en">Relay connecting</source>
+    </trans-unit>
+    <trans-unit id="missionControl.connectionsDisabled">
+      <source xml:lang="en">User-local Mission Control connections are development-only and require remote AI features.</source>
+    </trans-unit>
+    <trans-unit id="missionControl.disconnected">
+      <source xml:lang="en">Relay disconnected</source>
+    </trans-unit>
+    <trans-unit id="missionControl.duplicateDetail">
+      <source xml:lang="en">Mission Control · {0} · Host {1}</source>
+    </trans-unit>
+    <trans-unit id="missionControl.empty">
+      <source xml:lang="en">No other user-local hosts found. Start Mission Control in the owning application on another machine, then refresh.</source>
+    </trans-unit>
+    <trans-unit id="missionControl.hidden">
+      <source xml:lang="en">Hidden</source>
+    </trans-unit>
+    <trans-unit id="missionControl.hiddenHosts">
+      <source xml:lang="en">Hidden in This Profile</source>
+    </trans-unit>
+    <trans-unit id="missionControl.hide">
+      <source xml:lang="en">Hide in This Profile</source>
+    </trans-unit>
+    <trans-unit id="missionControl.hostDetail">
+      <source xml:lang="en">Mission Control · {0}</source>
+    </trans-unit>
+    <trans-unit id="missionControl.offline">
+      <source xml:lang="en">Offline or unavailable; start its owning application</source>
+    </trans-unit>
+    <trans-unit id="missionControl.online">
+      <source xml:lang="en">Last reported online</source>
+    </trans-unit>
+    <trans-unit id="missionControl.refresh">
+      <source xml:lang="en">Refresh Hosts</source>
+    </trans-unit>
+    <trans-unit id="missionControl.refreshFailed">
+      <source xml:lang="en">Could not refresh hosts. Retained hosts are still available. {0}</source>
+    </trans-unit>
+    <trans-unit id="missionControl.restore">
+      <source xml:lang="en">Restore Host</source>
+    </trans-unit>
+    <trans-unit id="missionControl.signIn">
+      <source xml:lang="en">Sign in with your GitHub account to discover Mission Control hosts.</source>
+    </trans-unit>
+    <trans-unit id="missionControlEnvironments">
+      <source xml:lang="en">Mission Control Hosts</source>
+    </trans-unit>
+    <trans-unit id="selectMissionControlEnvironment">
+      <source xml:lang="en">Select a host to connect; its owning application must be running</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/missionControlEnvironmentService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="missionControl.connectInProgress">
+      <source xml:lang="en">A connection to {0} is already in progress.</source>
+    </trans-unit>
+    <trans-unit id="missionControl.connectTimedOut">
+      <source xml:lang="en">Connecting to the Mission Control host timed out. Ensure its owning application is running, then reconnect.</source>
+    </trans-unit>
+    <trans-unit id="missionControl.hostOffline">
+      <source xml:lang="en">{0} is not online. Start its owning application before connecting. Mission Control will not start or replace this machine.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/remoteAgentHost.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.agentHost.cloudSandbox.enabled">
       <source xml:lang="en">Enable discovering and opening Copilot cloud sandbox sessions in the Editor Window and Agents Window over a live Agent Host Protocol relay. Also adds a Sandbox option when starting a cloud session in the Agents Window.</source>
     </trans-unit>
     <trans-unit id="chat.remoteAgentHosts.enabled">
       <source xml:lang="en">Enable connecting to remote agent hosts.</source>
+    </trans-unit>
+    <trans-unit id="missionControlEnabled">
+      <source xml:lang="en">Register the native Agent Host as a discoverable Mission Control environment so other clients can connect through Azure Web PubSub. Local VS Code continues using local IPC. Remote clients receive trusted-owner access including sessions, tools, and workspace resources. Native session actions are mirrored to Mission Control for catalog/history storage; conversation content is not end-to-end encrypted.</source>
+    </trans-unit>
+    <trans-unit id="missionControlEndpoint">
+      <source xml:lang="en">HTTPS Mission Control API origin. The local GitHub credential is sent to this origin; only configure an endpoint you trust.</source>
+    </trans-unit>
+    <trans-unit id="missionControlFakeEndpoint">
+      <source xml:lang="en">Register this Agent Host with a local Mission Control test server. Only loopback HTTP URLs are accepted. The local GitHub credential is sent to this endpoint; only use a test server you trust. Leave empty when using the real Mission Control service.</source>
+    </trans-unit>
+    <trans-unit id="missionControlRequireBinding">
+      <source xml:lang="en">Require remote relay clients to bind sealed authentication tokens to the current handshake challenge. Clients using Mission Control's pre-sealed tokens may not support this. Supplied bindings are always verified.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/remoteAgentHostChatContribution" source-language="en" datatype="plaintext"><body>
@@ -14953,6 +15169,30 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatProgressContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="imageProgress.brushstrokes">
+      <source xml:lang="en">Laying down the brushstrokes</source>
+    </trans-unit>
+    <trans-unit id="imageProgress.canvas">
+      <source xml:lang="en">Giving imagination a canvas</source>
+    </trans-unit>
+    <trans-unit id="imageProgress.color">
+      <source xml:lang="en">Adding a splash of color</source>
+    </trans-unit>
+    <trans-unit id="imageProgress.ideas">
+      <source xml:lang="en">Turning ideas into pixels</source>
+    </trans-unit>
+    <trans-unit id="imageProgress.mixing">
+      <source xml:lang="en">Mixing the colors</source>
+    </trans-unit>
+    <trans-unit id="imageProgress.pixels">
+      <source xml:lang="en">Bringing pixels to life</source>
+    </trans-unit>
+    <trans-unit id="imageProgress.possibilities">
+      <source xml:lang="en">Painting the possibilities</source>
+    </trans-unit>
+    <trans-unit id="imageProgress.sketching">
+      <source xml:lang="en">Sketching the scene</source>
+    </trans-unit>
     <trans-unit id="persistentProgress.takingLonger">
       <source xml:lang="en">This is taking a little longer than usual</source>
     </trans-unit>
@@ -15776,6 +16016,14 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">Click the Install button on the extension and then press Allow when finished.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatImageGenerationProgressPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.imageGeneration.placeholder">
+      <source xml:lang="en">Generating image</source>
+    </trans-unit>
+    <trans-unit id="imageGeneration.inputUnavailable">
+      <source xml:lang="en">The image prompt is not available yet.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatMcpAppModel" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcpAppTitle">
       <source xml:lang="en">MCP App</source>
@@ -16084,6 +16332,17 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">Proceed without running this tool</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatToolInvocationPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="imageGeneration.cancelled">
+      <source xml:lang="en">Image generation cancelled</source>
+    </trans-unit>
+    <trans-unit id="imageGeneration.failed">
+      <source xml:lang="en">Generated image failed</source>
+    </trans-unit>
+    <trans-unit id="imageGeneration.generated">
+      <source xml:lang="en">Generated image</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatToolOutputPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.toolOutputError">
       <source xml:lang="en">Error rendering the tool output</source>
@@ -16110,6 +16369,12 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="editToolApproval.tooltip">
       <source xml:lang="en">Edit tool approval settings</source>
+    </trans-unit>
+    <trans-unit id="imageGeneration.progress">
+      <source xml:lang="en">Generating image</source>
+    </trans-unit>
+    <trans-unit id="imageGeneration.usingModel">
+      <source xml:lang="en">Using {0} to generate an image</source>
     </trans-unit>
     <trans-unit id="openSettings.tooltip">
       <source xml:lang="en">Open settings</source>
@@ -18620,6 +18885,14 @@ To make this the starting permission level for new sessions, change the [{0}](co
     </trans-unit>
     <trans-unit id="uninstallExtensionForPlugin">
       <source xml:lang="en">This plugin is provided by the extension '{0}'. Do you want to uninstall the extension?</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/plugins/marketplaceReference" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="invalidPluginCachePath">
+      <source xml:lang="en">Invalid plugin cache path '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="invalidPluginCacheSegments">
+      <source xml:lang="en">Invalid plugin cache path '{0}'.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/plugins/pluginMarketplaceService" source-language="en" datatype="plaintext"><body>

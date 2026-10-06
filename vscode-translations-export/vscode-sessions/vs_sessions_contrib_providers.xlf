@@ -899,6 +899,12 @@
     <trans-unit id="cloudSandbox.sessionNotFound">
       <source xml:lang="en">Sandbox session not found.</source>
     </trans-unit>
+    <trans-unit id="cloudSandbox.settingsReadOnly">
+      <source xml:lang="en">This connection is read-only. Session settings cannot be changed.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.settingsUnavailable">
+      <source xml:lang="en">Connect to the environment before changing session settings.</source>
+    </trans-unit>
     <trans-unit id="environment.cloud">
       <source xml:lang="en">Cloud</source>
     </trans-unit>
@@ -1384,8 +1390,17 @@
     <trans-unit id="manageHosts.actionsHeader">
       <source xml:lang="en">Add or Manage</source>
     </trans-unit>
+    <trans-unit id="manageHosts.connectionStatus">
+      <source xml:lang="en">Connection: {0}</source>
+    </trans-unit>
     <trans-unit id="manageHosts.placeholder">
       <source xml:lang="en">Select a remote to manage or pick an action</source>
+    </trans-unit>
+    <trans-unit id="manageHosts.refresh">
+      <source xml:lang="en">Refresh Hosts</source>
+    </trans-unit>
+    <trans-unit id="manageHosts.refreshFailed">
+      <source xml:lang="en">Could not refresh all hosts. Retained hosts are still available; use Refresh Hosts to retry.</source>
     </trans-unit>
     <trans-unit id="manageHosts.remoteHostsHeader">
       <source xml:lang="en">Remote Agent Hosts</source>
@@ -1398,6 +1413,56 @@
     </trans-unit>
     <trans-unit id="manageRemoteAgentHosts">
       <source xml:lang="en">Manage Remote Agent Hosts...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/missionControlAgentHostContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="connectMissionControlHost">
+      <source xml:lang="en">Mission Control</source>
+    </trans-unit>
+    <trans-unit id="missionControl.available">
+      <source xml:lang="en">Last reported online</source>
+    </trans-unit>
+    <trans-unit id="missionControl.connectingBanner">
+      <source xml:lang="en">Connecting to the Mission Control relay...</source>
+    </trans-unit>
+    <trans-unit id="missionControl.connectingTitle">
+      <source xml:lang="en">Connecting to Mission Control Host</source>
+    </trans-unit>
+    <trans-unit id="missionControl.disconnectHost">
+      <source xml:lang="en">Disconnect</source>
+    </trans-unit>
+    <trans-unit id="missionControl.hideHost">
+      <source xml:lang="en">Hide in This Profile</source>
+    </trans-unit>
+    <trans-unit id="missionControl.hostDescription">
+      <source xml:lang="en">Mission Control · {0}</source>
+    </trans-unit>
+    <trans-unit id="missionControl.hostDescriptionDuplicate">
+      <source xml:lang="en">Mission Control · {0} · Host {1}</source>
+    </trans-unit>
+    <trans-unit id="missionControl.incompatibleBanner">
+      <source xml:lang="en">The host's Agent Host Protocol version is incompatible.</source>
+    </trans-unit>
+    <trans-unit id="missionControl.incompatibleTitle">
+      <source xml:lang="en">Mission Control Host Incompatible</source>
+    </trans-unit>
+    <trans-unit id="missionControl.reconnectingBanner">
+      <source xml:lang="en">Reconnecting to the Mission Control relay...</source>
+    </trans-unit>
+    <trans-unit id="missionControl.reconnectingIn">
+      <source xml:lang="en">Reconnecting to the Mission Control relay in {0}s...</source>
+    </trans-unit>
+    <trans-unit id="missionControl.unavailable">
+      <source xml:lang="en">Offline or unavailable; start its owning application</source>
+    </trans-unit>
+    <trans-unit id="missionControl.unavailableBanner">
+      <source xml:lang="en">Mission Control relay disconnected.</source>
+    </trans-unit>
+    <trans-unit id="missionControl.unavailableDescription">
+      <source xml:lang="en">Start the host's owning application, then reconnect. This does not start or replace its compute.</source>
+    </trans-unit>
+    <trans-unit id="missionControl.unavailableTitle">
+      <source xml:lang="en">Mission Control Host Disconnected</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHost.contribution" source-language="en" datatype="plaintext"><body>

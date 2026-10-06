@@ -115,9 +115,6 @@
       <source xml:lang="en">&amp;&amp;Sessions</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
-    <trans-unit id="sessions.automations.newBadgeStyle">
-      <source xml:lang="en">Controls the visual style of the Automations first-use badge.</source>
-    </trans-unit>
     <trans-unit id="sessions.list.groupExternalSessions">
       <source xml:lang="en">Controls whether external sessions are shown in a separate External section instead of workspace or time groups. Pinned sessions and custom groups keep their placement.</source>
     </trans-unit>
@@ -399,12 +396,6 @@
     </trans-unit>
     <trans-unit id="agentSessionsSessionWithBranchAccessible">
       <source xml:lang="en">{0}, branch {1}</source>
-    </trans-unit>
-    <trans-unit id="agentSessionsSessionWithContext">
-      <source xml:lang="en">{0} · {1}</source>
-    </trans-unit>
-    <trans-unit id="agentSessionsSessionWithContextAccessible">
-      <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
     <trans-unit id="agentSessionsShowSessions">
       <source xml:lang="en">Show Sessions</source>
@@ -1053,12 +1044,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsNeedsInputAria">
       <source xml:lang="en">{0}, run needs input</source>
     </trans-unit>
-    <trans-unit id="automationsNewBadge">
-      <source xml:lang="en">New</source>
-    </trans-unit>
-    <trans-unit id="automationsNewFeatureAria">
-      <source xml:lang="en">{0}, new feature</source>
-    </trans-unit>
     <trans-unit id="automationsUnreadRunAria">
       <source xml:lang="en">{0}, unread run</source>
     </trans-unit>
@@ -1353,6 +1338,11 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Copilot</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsListNotice" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsListNotice.dismiss">
+      <source xml:lang="en">Dismiss Suggestion</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsListNotification" source-language="en" datatype="plaintext"><body>
     <trans-unit id="dismiss">
       <source xml:lang="en">Dismiss</source>
@@ -1615,9 +1605,6 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     </trans-unit>
     <trans-unit id="renameSession.prompt">
       <source xml:lang="en">New agent session title</source>
-    </trans-unit>
-    <trans-unit id="resetAutomationsNewBadge">
-      <source xml:lang="en">Reset Automations New Badge</source>
     </trans-unit>
     <trans-unit id="sessionImported">
       <source xml:lang="en">Imported {0}.</source>

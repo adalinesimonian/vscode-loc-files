@@ -535,6 +535,12 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/agentHostSchema" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.config.activeAgentTitleGeneration.description">
+      <source xml:lang="en">Whether the active agent names sessions and chats with rename tools instead of immediate utility-model title generation. Deferred title generation takes precedence. Changes apply to new sessions.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.activeAgentTitleGeneration.title">
+      <source xml:lang="en">Active Agent Title Generation</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.agentOrchestrationLimits.description">
       <source xml:lang="en">Controls creation, messaging, and recursion safety limits for Agent Host session tools.</source>
     </trans-unit>
@@ -615,6 +621,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.copilotMultiRootEnabled.title">
       <source xml:lang="en">Copilot Multiple Working Directories</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.deferredTitleGeneration.description">
+      <source xml:lang="en">Seed titles immediately and refine them in the background if the first response turn completes successfully, without asking the active agent to name chats. Explicit rename tools remain available. Overrides active agent title generation for new sessions; existing sessions and their chats retain their strategy.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.deferredTitleGeneration.title">
+      <source xml:lang="en">Deferred Title Generation</source>
     </trans-unit>
     <trans-unit id="agentHost.config.disableRepoInfoTelemetry.description">
       <source xml:lang="en">Whether repository information telemetry is disabled for Agent Host sessions.</source>
@@ -2588,6 +2600,14 @@ A keybinding</note>
       <source xml:lang="en">Replacing 1 line with 1 line in {0}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/common/titleGenerationConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.agentHost.experimental.activeAgentTitleGeneration">
+      <source xml:lang="en">When enabled, the active agent names new sessions and chats using rename tools. When disabled, a utility model generates titles immediately. Deferred title generation takes precedence. Changes apply to new sessions; existing sessions and their chats retain their strategy.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.experimental.deferredTitleGeneration">
+      <source xml:lang="en">Seed titles immediately and refine them in the background if the first response turn completes successfully, without asking the active agent to name chats. Explicit rename tools remain available. Overrides active agent title generation for new sessions; existing sessions and their chats retain their strategy.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/electron-browser/localAgentHostService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.startFailed">
       <source xml:lang="en">The Agent Host failed to start. Restart the application to try again. See the logs for details.</source>
@@ -3004,6 +3024,27 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.cannotArchiveChatWorkspaceChange">
+      <source xml:lang="en">Cannot archive a chat while its workspace is changing.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.cannotArchiveSessionWorkspaceChange">
+      <source xml:lang="en">Cannot archive a session while a workspace is changing.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.cannotCancelWorkspaceChange">
+      <source xml:lang="en">Cannot cancel while the workspace is changing.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.cannotStartTurnWorkspaceChange">
+      <source xml:lang="en">Cannot send a message while the workspace is changing.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.cannotSteerWorkspaceChange">
+      <source xml:lang="en">Cannot steer while the workspace is changing.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.cannotTruncateWorkspaceChange">
+      <source xml:lang="en">Cannot clear history while the workspace is changing.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.chatWorkspaceTargetChanged">
+      <source xml:lang="en">The chat was removed or replaced while changing its workspace.</source>
+    </trans-unit>
     <trans-unit id="agentHost.download.agentSdkTitle">
       <source xml:lang="en">Downloading {0} Agent</source>
     </trans-unit>
@@ -3015,6 +3056,11 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="agentHost.importedSessionFallback">
       <source xml:lang="en">New Session</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/agentServiceComposition" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.chatIsolationClientRequired">
+      <source xml:lang="en">Moving a chat to a worktree with this tool requires a turn initiated by a connected client.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentSideEffects" source-language="en" datatype="plaintext"><body>
@@ -3033,11 +3079,53 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/chatContributions/sessionWorkspaceConversion/sessionWorkspaceConversionService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.chatIsolationRequirements">
+      <source xml:lang="en">This chat's workspace cannot be changed to a new worktree. It must work in one local folder and must not already use a worktree or be changing workspace.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.chatIsolationRequiresTurn">
+      <source xml:lang="en">Changing a chat's workspace with this tool requires an active turn initiated by a connected client.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.chatIsolationTransitionLabel">
+      <source xml:lang="en">Workspace changed to a new worktree of {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.chatWorkspaceAndQuarantineFailed">
+      <source xml:lang="en">Changing the chat's workspace failed: {0}; failed to clear quarantine: {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.chatWorkspaceChanged">
+      <source xml:lang="en">The chat changed while preparing its new workspace.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.chatWorkspaceFinalizeAndQuarantineFailed">
+      <source xml:lang="en">The workspace change could not be finalized: {0}; failed to persist quarantine: {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.chatWorkspaceFinalizeFailed">
+      <source xml:lang="en">The workspace change could not be finalized: {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.chatWorkspaceInvalid">
+      <source xml:lang="en">Select an existing folder on the chat's host.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.chatWorkspaceIsolationUnavailable">
+      <source xml:lang="en">This chat's workspace cannot be changed to a new worktree of {0}. The chat already uses a worktree of it, or worktrees are not available for it.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.chatWorkspaceSiblingRestoreFailed">
+      <source xml:lang="en">The workspace cannot be changed because another chat in this session could not be restored: {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.chatWorkspaceSiblingUnavailable">
+      <source xml:lang="en">The workspace cannot be changed because another chat in this session could not be restored.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.chatWorkspaceUnavailable">
+      <source xml:lang="en">This chat's workspace cannot be changed.</source>
+    </trans-unit>
     <trans-unit id="agentHost.continueInWorkspaceLabel">
       <source xml:lang="en">Continue in Requested Workspace</source>
     </trans-unit>
     <trans-unit id="agentHost.continueInWorkspaceMessage">
       <source xml:lang="en">Continue in the requested workspace.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.continueIsolatedLabel">
+      <source xml:lang="en">Continue in Worktree</source>
+    </trans-unit>
+    <trans-unit id="agentHost.continueIsolatedMessage">
+      <source xml:lang="en">Continue the task in the worktree.</source>
     </trans-unit>
     <trans-unit id="agentHost.workspaceSetLabel">
       <source xml:lang="en">Workspace Set</source>
@@ -3046,7 +3134,7 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Workspace Setup Failed</source>
     </trans-unit>
     <trans-unit id="agentHost.workspaceTransitionLabel">
-      <source xml:lang="en">Now working in {0}</source>
+      <source xml:lang="en">Workspace changed to {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/claude/claudeAgent" source-language="en" datatype="plaintext"><body>
@@ -4210,6 +4298,12 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="toolComplete.failed">
       <source xml:lang="en">"{0}" failed</source>
     </trans-unit>
+    <trans-unit id="toolComplete.imageGeneration">
+      <source xml:lang="en">Generated image</source>
+    </trans-unit>
+    <trans-unit id="toolComplete.imageGenerationModel">
+      <source xml:lang="en">Generated image with {0}</source>
+    </trans-unit>
     <trans-unit id="toolComplete.readTerminal">
       <source xml:lang="en">Read Terminal</source>
     </trans-unit>
@@ -4260,6 +4354,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="toolInvoke.grepPattern">
       <source xml:lang="en">Search for {0}</source>
+    </trans-unit>
+    <trans-unit id="toolInvoke.imageGeneration">
+      <source xml:lang="en">Generating image</source>
     </trans-unit>
     <trans-unit id="toolInvoke.insert">
       <source xml:lang="en">Insert text</source>
@@ -4398,6 +4495,9 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="toolName.ghAdvisoryDatabase">
       <source xml:lang="en">Check Dependencies</source>
     </trans-unit>
+    <trans-unit id="toolName.imageGeneration">
+      <source xml:lang="en">Generate Image</source>
+    </trans-unit>
     <trans-unit id="toolName.invokeSkill">
       <source xml:lang="en">Invoke Skill</source>
     </trans-unit>
@@ -4515,9 +4615,6 @@ stderr: {2}</source>
     <trans-unit id="devContainerAgentHost.dockerUnavailable">
       <source xml:lang="en">Docker is not available.</source>
     </trans-unit>
-    <trans-unit id="devContainerAgentHost.emptySampleResponse">
-      <source xml:lang="en">Empty response while downloading the Dev Container sample: {0}</source>
-    </trans-unit>
     <trans-unit id="devContainerAgentHost.invalidMountJson">
       <source xml:lang="en">Unable to parse Docker mount information: {0}</source>
     </trans-unit>
@@ -4556,9 +4653,6 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="devContainerSample.invalidCache">
       <source xml:lang="en">The cached sample configuration is invalid: {0}</source>
-    </trans-unit>
-    <trans-unit id="devContainerSample.invalidCommit">
-      <source xml:lang="en">GitHub returned an invalid sample revision.</source>
     </trans-unit>
     <trans-unit id="devContainerSample.invalidConfig">
       <source xml:lang="en">The sample must have a valid image-based Dev Container configuration.</source>
@@ -4784,6 +4878,26 @@ stderr: {2}</source>
       <source xml:lang="en">Failed to update Agent Merge</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/shared/sessionIsolationTools" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="isolateSession.activeTurnRequired">
+      <source xml:lang="en">Changing a chat's workspace with this tool requires an active turn.</source>
+    </trans-unit>
+    <trans-unit id="isolateSession.complete">
+      <source xml:lang="en">Requested a workspace change to a new worktree</source>
+    </trans-unit>
+    <trans-unit id="isolateSession.confirm">
+      <source xml:lang="en">Change only this chat's workspace to a new worktree? Other chats and the original folder are left unchanged. Uncommitted edits are not copied, except configured worktree include-files.</source>
+    </trans-unit>
+    <trans-unit id="isolateSession.confirmTitle">
+      <source xml:lang="en">Change Workspace?</source>
+    </trans-unit>
+    <trans-unit id="isolateSession.invocation">
+      <source xml:lang="en">Requesting a workspace change to a new worktree</source>
+    </trans-unit>
+    <trans-unit id="isolateSession.name">
+      <source xml:lang="en">Change Workspace to a New Worktree</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/shared/sessionServerTools" source-language="en" datatype="plaintext"><body>
     <trans-unit id="toolComplete.cancelMessage">
       <source xml:lang="en">Processed message cancellation</source>
@@ -4809,20 +4923,23 @@ stderr: {2}</source>
     <trans-unit id="toolComplete.setWorkspace">
       <source xml:lang="en">Scheduled workspace change</source>
     </trans-unit>
+    <trans-unit id="toolComplete.setWorkspace.unchanged">
+      <source xml:lang="en">Workspace unchanged</source>
+    </trans-unit>
     <trans-unit id="toolConfirm.setWorkspace.direct">
-      <source xml:lang="en">Continue this session in {0} and make changes directly in that folder?</source>
+      <source xml:lang="en">Change this chat's workspace to {0} and make changes directly in that folder? Other chats keep their workspaces.</source>
     </trans-unit>
     <trans-unit id="toolConfirm.setWorkspace.generic">
-      <source xml:lang="en">Continue this session in {0}?</source>
+      <source xml:lang="en">Change this chat's workspace to {0}?</source>
     </trans-unit>
     <trans-unit id="toolConfirm.setWorkspace.isolated">
-      <source xml:lang="en">Continue this session in {0} with changes isolated from the existing folder?</source>
+      <source xml:lang="en">Change this chat's workspace to a new worktree of {0}? Other chats keep their workspaces.</source>
     </trans-unit>
     <trans-unit id="toolConfirm.setWorkspace.selectedWorkspace">
       <source xml:lang="en">the selected workspace</source>
     </trans-unit>
     <trans-unit id="toolConfirm.setWorkspace.title">
-      <source xml:lang="en">Continue in {0}?</source>
+      <source xml:lang="en">Change Workspace to {0}?</source>
     </trans-unit>
     <trans-unit id="toolInvoke.cancelMessage">
       <source xml:lang="en">Cancelling message</source>
@@ -4861,7 +4978,7 @@ stderr: {2}</source>
       <source xml:lang="en">Send message</source>
     </trans-unit>
     <trans-unit id="toolInvoke.setWorkspace">
-      <source xml:lang="en">Setting workspace</source>
+      <source xml:lang="en">Requesting a workspace change</source>
     </trans-unit>
     <trans-unit id="toolName.cancelMessage">
       <source xml:lang="en">Cancel Message</source>
@@ -4900,7 +5017,7 @@ stderr: {2}</source>
       <source xml:lang="en">Send Message</source>
     </trans-unit>
     <trans-unit id="toolName.setWorkspace">
-      <source xml:lang="en">Set Workspace</source>
+      <source xml:lang="en">Change Workspace</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/shared/worktreeIsolation" source-language="en" datatype="plaintext"><body>
