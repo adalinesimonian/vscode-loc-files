@@ -228,10 +228,10 @@
       <source xml:lang="en">Declare the set of supported capabilities by the extension.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.capabilities.agentsWindow">
-      <source xml:lang="en">Declares whether the extension should be enabled in the Agents window. Requires the `agentsWindowActivation` API proposal and the experimental Agents window capability setting.</source>
+      <source xml:lang="en">Declares whether the extension should be enabled in the Agents window. Requires the `agentsWindowActivation` API proposal. Non-built-in extensions also require the experimental Agents window capability setting.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.capabilities.agentsWindow.supported">
-      <source xml:lang="en">Declares whether the extension supports running in the Agents window. The extension must enable the `agentsWindowActivation` API proposal and the `extensions.experimental.enableAgentsWindowCapability` setting for this property to take effect.</source>
+      <source xml:lang="en">Declares whether the extension supports running in the Agents window. The extension must enable the `agentsWindowActivation` API proposal. Non-built-in extensions also require the `extensions.experimental.enableAgentsWindowCapability` setting for this property to take effect.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.capabilities.untrustedWorkspaces">
       <source xml:lang="en">Declares how the extension should be handled in untrusted workspaces.</source>

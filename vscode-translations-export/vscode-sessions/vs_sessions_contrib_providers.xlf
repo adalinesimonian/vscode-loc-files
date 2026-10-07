@@ -480,6 +480,9 @@
     <trans-unit id="agentHost.initialPermissionUnsupported">
       <source xml:lang="en">The selected session permissions could not be applied: agent '{0}' does not support permission '{1}'.</source>
     </trans-unit>
+    <trans-unit id="agentHost.pullRequestSessionsUnsupported">
+      <source xml:lang="en">This agent host does not support creating sessions from pull requests.</source>
+    </trans-unit>
     <trans-unit id="agentHost.sessionConfigUnavailable">
       <source xml:lang="en">Could not resolve the Agent Host session configuration. Please try again.</source>
     </trans-unit>
@@ -652,9 +655,6 @@
     <trans-unit id="sandbox.modePicker">
       <source xml:lang="en">Agent Mode</source>
     </trans-unit>
-    <trans-unit id="sandboxPicker">
-      <source xml:lang="en">Sandbox</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsChangesets" source-language="en" datatype="plaintext"><body>
     <trans-unit id="allChanges">
@@ -817,17 +817,6 @@
     </trans-unit>
     <trans-unit id="permissions.policyDescription">
       <source xml:lang="en">Disabled by enterprise policy</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/sandboxPicker" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sandboxPicker.checkboxAriaLabel">
-      <source xml:lang="en">Run in a GitHub-managed sandbox</source>
-    </trans-unit>
-    <trans-unit id="sandboxPicker.label">
-      <source xml:lang="en">Sandbox</source>
-    </trans-unit>
-    <trans-unit id="sandboxPicker.noRepository">
-      <source xml:lang="en">A repository is required to run in a sandbox</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxAgentHostContribution" source-language="en" datatype="plaintext"><body>
@@ -1417,52 +1406,43 @@
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/missionControlAgentHostContribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="connectMissionControlHost">
-      <source xml:lang="en">Mission Control</source>
+      <source xml:lang="en">Environments</source>
     </trans-unit>
     <trans-unit id="missionControl.available">
-      <source xml:lang="en">Last reported online</source>
+      <source xml:lang="en">Online</source>
     </trans-unit>
     <trans-unit id="missionControl.connectingBanner">
-      <source xml:lang="en">Connecting to the Mission Control relay...</source>
+      <source xml:lang="en">Connecting to the environment...</source>
     </trans-unit>
     <trans-unit id="missionControl.connectingTitle">
-      <source xml:lang="en">Connecting to Mission Control Host</source>
+      <source xml:lang="en">Connecting to Environment</source>
     </trans-unit>
     <trans-unit id="missionControl.disconnectHost">
       <source xml:lang="en">Disconnect</source>
     </trans-unit>
-    <trans-unit id="missionControl.hideHost">
-      <source xml:lang="en">Hide in This Profile</source>
-    </trans-unit>
-    <trans-unit id="missionControl.hostDescription">
-      <source xml:lang="en">Mission Control · {0}</source>
-    </trans-unit>
-    <trans-unit id="missionControl.hostDescriptionDuplicate">
-      <source xml:lang="en">Mission Control · {0} · Host {1}</source>
-    </trans-unit>
     <trans-unit id="missionControl.incompatibleBanner">
-      <source xml:lang="en">The host's Agent Host Protocol version is incompatible.</source>
+      <source xml:lang="en">The environment's Agent Host Protocol version is incompatible.</source>
     </trans-unit>
     <trans-unit id="missionControl.incompatibleTitle">
-      <source xml:lang="en">Mission Control Host Incompatible</source>
+      <source xml:lang="en">Environment Incompatible</source>
     </trans-unit>
     <trans-unit id="missionControl.reconnectingBanner">
-      <source xml:lang="en">Reconnecting to the Mission Control relay...</source>
+      <source xml:lang="en">Reconnecting to the environment...</source>
     </trans-unit>
     <trans-unit id="missionControl.reconnectingIn">
-      <source xml:lang="en">Reconnecting to the Mission Control relay in {0}s...</source>
+      <source xml:lang="en">Reconnecting to the environment in {0}s...</source>
     </trans-unit>
     <trans-unit id="missionControl.unavailable">
-      <source xml:lang="en">Offline or unavailable; start its owning application</source>
+      <source xml:lang="en">Offline</source>
     </trans-unit>
     <trans-unit id="missionControl.unavailableBanner">
-      <source xml:lang="en">Mission Control relay disconnected.</source>
+      <source xml:lang="en">Environment disconnected.</source>
     </trans-unit>
     <trans-unit id="missionControl.unavailableDescription">
-      <source xml:lang="en">Start the host's owning application, then reconnect. This does not start or replace its compute.</source>
+      <source xml:lang="en">Start the environment's owning application, then reconnect. This does not start or replace its compute.</source>
     </trans-unit>
     <trans-unit id="missionControl.unavailableTitle">
-      <source xml:lang="en">Mission Control Host Disconnected</source>
+      <source xml:lang="en">Environment Disconnected</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHost.contribution" source-language="en" datatype="plaintext"><body>
@@ -1776,6 +1756,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browseRemoteFolderFailed">
+      <source xml:lang="en">Failed to browse folders on '{0}': {1}</source>
+    </trans-unit>
     <trans-unit id="connectFailed">
       <source xml:lang="en">Failed to connect to remote agent host '{0}': {1}</source>
     </trans-unit>
@@ -1815,6 +1798,9 @@
     <trans-unit id="notConnectedSession">
       <source xml:lang="en">Cannot create session: not connected to remote agent host '{0}'.</source>
     </trans-unit>
+    <trans-unit id="remoteAgentHost.cannotRemove">
+      <source xml:lang="en">This host cannot be removed locally.</source>
+    </trans-unit>
     <trans-unit id="remoteAgentHost.deleteSessionNotFound">
       <source xml:lang="en">Session not found.</source>
     </trans-unit>
@@ -1831,6 +1817,9 @@
     </trans-unit>
     <trans-unit id="agentHostIncompatibleUpdate">
       <source xml:lang="en">Update Server</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.cannotRemoveRemote">
+      <source xml:lang="en">This host cannot be removed locally.</source>
     </trans-unit>
     <trans-unit id="workspacePicker.changeLocationPreference">
       <source xml:lang="en">Change Preferred Agent Location</source>

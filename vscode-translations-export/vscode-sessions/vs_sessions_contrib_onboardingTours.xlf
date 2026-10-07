@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/onboardingTours/browser/agentsWindowInvitationOnboarding" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindowInvitation.listUnavailable">
+      <source xml:lang="en">The sessions list could not be opened. Try again.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/onboardingTours/browser/newSessionViewV3Prompt" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessions.onboarding.newSessionViewV3.githubPrompt.ciFailure">
       <source xml:lang="en">The following pull request has failing CI checks: "{0}" ({1}). Investigate the failures and resolve them.</source>
@@ -68,9 +73,21 @@
       <source xml:lang="en">Help me complete {0} in this project. First, inspect the relevant files and explain your approach briefly. Then implement the solution using existing project conventions, avoid unrelated changes, and run the most relevant tests or checks. If anything is unclear, make a reasonable assumption and state it. When finished, summarize what changed and mention any remaining issues.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/onboardingTours/browser/parallelWorkOnboarding" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="parallelWorkOnboarding.listUnavailable">
-      <source xml:lang="en">The sessions list could not be opened. Try again.</source>
+  <file original="src/vs/sessions/contrib/onboardingTours/browser/tours/agentsWindowInvitationTour" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindowInvitation.newSession.description">
+      <source xml:lang="en">Start another task while your other sessions keep running.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowInvitation.newSession.title">
+      <source xml:lang="en">Create a new session from here</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowInvitation.session.description">
+      <source xml:lang="en">Find this session here alongside your other agent sessions.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowInvitation.session.title">
+      <source xml:lang="en">Your session is here</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowInvitation.understood">
+      <source xml:lang="en">Understood</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/onboardingTours/browser/tours/newSessionTour" source-language="en" datatype="plaintext"><body>
@@ -130,12 +147,6 @@
     </trans-unit>
     <trans-unit id="sessions.onboarding.newSessionViewV2.model.title">
       <source xml:lang="en">Choose a model</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.newSessionViewV2.runningSession.description">
-      <source xml:lang="en">Keep track of your running session in the sessions list while you start another task. Your agent can keep working in parallel.</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.newSessionViewV2.runningSession.title">
-      <source xml:lang="en">Your session is here</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/onboardingTours/browser/tours/sessionArchiveTour" source-language="en" datatype="plaintext"><body>

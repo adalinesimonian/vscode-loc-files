@@ -145,8 +145,8 @@
     <trans-unit id="chat.agentHostSandboxPolicy">
       <source xml:lang="en">In Copilot agent-host sessions, use /sandbox policy to view the effective sandbox policy. In the response, use Tab to focus Open Sandbox Policy and Enter to open the formatted report.</source>
     </trans-unit>
-    <trans-unit id="chat.agentsParallelWork">
-      <source xml:lang="en">When another Agent Host session is running, a new Agent Host chat may show an invitation to run agents side by side. Only one chat input notification is shown at a time. Use Tab to reach Open Agents Window, Ignore, or Dismiss notification. Open Agents Window copies the current prompt and attachments from that input without sending them or clearing it. An existing draft in the Agents Window is kept. Ignore turns off future invitations; Dismiss notification only hides the invitation for this chat until the window reloads.</source>
+    <trans-unit id="chat.agentsWindowInvitation">
+      <source xml:lang="en">A running Agent Host chat may show an invitation to continue or view your sessions in the Agents Window. Only one invitation is shown across editor windows at a time. Use Tab or Shift+Tab to reach its action, Don't Show Again, or Dismiss notification. The action opens the Agents Window and highlights this session's row in the sessions list when onboarding is enabled. By default, it also opens this chat. Choose Next to highlight the New Session button, which you can activate to start another task. Disable chat.agentsWindowBanner.revealCurrentSession to open the New Session view instead and only highlight the invited session's row. Use Tab or Shift+Tab to move between the tour actions and any interactive highlighted control. Choose Understood to finish the tour, or press Escape to dismiss it. Sending another message or completing a task does not dismiss the invitation. It is temporarily hidden while the session needs input. Dismiss notification snoozes invitations until you have created five more Agent Host sessions in editor windows and at least 24 hours have passed since the invitation appeared. Don't Show Again turns off all future Agents Window invitations.</source>
     </trans-unit>
     <trans-unit id="chat.announcement">
       <source xml:lang="en">Chat responses will be announced as they come in. A response will indicate the number of code blocks, if any, and then the rest of the response.</source>
@@ -291,6 +291,9 @@
     </trans-unit>
     <trans-unit id="chat.readOnlyThinking">
       <source xml:lang="en">In read-only chats, thinking details preview while streaming and collapse when finished, regardless of your thinking-style setting. Focus a thinking header and press Enter or Space to expand or collapse its details.</source>
+    </trans-unit>
+    <trans-unit id="chat.remoteByokNotification">
+      <source xml:lang="en">If you have bring your own key (BYOK) models configured and select Copilot on a connected remote host, the first eligible chat input in this editor window shows a warning that these models are not supported. The warning does not repeat in other chats in the same window. Use Tab to reach Dismiss notification or Don't Show Again, then Enter or Space to activate it. Dismiss notification hides the warning until the window reloads. Don't Show Again permanently hides this warning for your profile, including when new models are added.</source>
     </trans-unit>
     <trans-unit id="chat.renameSession">
       <source xml:lang="en">To rename the current chat session when supported, invoke the Rename command{0}. Agent Host sessions can be renamed after sending the first request.</source>
@@ -2235,6 +2238,17 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">This chat's prompt cache is stale</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostRemoteByokNotification" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.remoteByok.description">
+      <source xml:lang="en">Use a GitHub Copilot model for this session, or switch to the local agent harness to use your own models.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.remoteByok.dontShowAgain">
+      <source xml:lang="en">Don't Show Again</source>
+    </trans-unit>
+    <trans-unit id="agentHost.remoteByok.message">
+      <source xml:lang="en">Bring your own key (BYOK) models aren't supported in remote Copilot sessions.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSandboxNotification" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.sandboxUnsupported">
       <source xml:lang="en">Sandboxing is unavailable in this environment</source>
@@ -3444,11 +3458,26 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="autoMarkAsDoneMergedSessions.description">
       <source xml:lang="en">Controls the number of inactive days before agent sessions with a merged pull request are automatically marked as done. Marking a session as done safely removes its eligible worktree. Permanent deletion is controlled separately by {0}. Set to 0 to disable automatically marking sessions as done. The recommended value is 15.</source>
     </trans-unit>
+    <trans-unit id="chat.agentsHandoffTip.delayDeprecated">
+      <source xml:lang="en">Agents Window invitation delays are now controlled independently for each scenario.</source>
+    </trans-unit>
     <trans-unit id="chat.agentsHandoffTip.delaySeconds">
       <source xml:lang="en">Controls the delay, in seconds, after the latest user message before offering to continue an in-progress session in the Agents Window. Requires `#chat.agentsHandoffTip.mode#` to be `default` or `custom`.</source>
     </trans-unit>
+    <trans-unit id="chat.agentsParallelWorkBanner.deprecated">
+      <source xml:lang="en">Use chat.agentsWindowBanner.enabled instead.</source>
+    </trans-unit>
     <trans-unit id="chat.agentsParallelWorkBanner.enabled">
       <source xml:lang="en">Show an invitation to work in parallel in the Agents Window when starting a new Agent Host chat while another Agent Host session is running.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentsWindowBanner.developerMode">
+      <source xml:lang="en">Preview one Agents Window invitation per window reload, ignoring experiment enablement, previous dismissals, frequency limits, and Agents Window usage. Activity requirements and delays still apply. Previews do not update invitation history or experiment telemetry.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentsWindowBanner.enabled">
+      <source xml:lang="en">Show occasional invitations to continue or manage running Agent Host chats in the Agents Window. Invitations are hidden for users who have created at least three sessions in the Agents Window and created their latest session within the past 30 days.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentsWindowBanner.revealCurrentSession">
+      <source xml:lang="en">Open the invited chat when using an Agents Window invitation. When disabled, show the New Session view instead. When `#onboarding.enabled#` is enabled, highlight the invited session in the sessions list, followed by the New Session button if this setting is enabled.</source>
     </trans-unit>
     <trans-unit id="chat.copilotHarnessIntroduction.afterRequest">
       <source xml:lang="en">Show the introduction after the first request is submitted in a new Copilot harness session.</source>
@@ -6497,6 +6526,9 @@ Disabled servers may become enabled.</source>
     <trans-unit id="authRequired">
       <source xml:lang="en">Authentication required</source>
     </trans-unit>
+    <trans-unit id="authenticating">
+      <source xml:lang="en">Authenticating</source>
+    </trans-unit>
     <trans-unit id="availableMcpServersSection">
       <source xml:lang="en">Available</source>
     </trans-unit>
@@ -6689,6 +6721,12 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="openExtensionDetails">
       <source xml:lang="en">Open extension details for {0}</source>
+    </trans-unit>
+    <trans-unit id="openMcpServerDetails">
+      <source xml:lang="en">Show details for {0}</source>
+    </trans-unit>
+    <trans-unit id="openMcpServerSource">
+      <source xml:lang="en">Open {0}</source>
     </trans-unit>
     <trans-unit id="openPluginDetails">
       <source xml:lang="en">Open plugin details for {0}</source>
@@ -7056,14 +7094,23 @@ Disabled servers may become enabled.</source>
     <trans-unit id="confirmUninstallToolExtensionDetail">
       <source xml:lang="en">This extension may contribute more than tools. Uninstalling it removes all of its contributions.</source>
     </trans-unit>
+    <trans-unit id="connectedToolsEmpty">
+      <source xml:lang="en">No tools</source>
+    </trans-unit>
+    <trans-unit id="connectedToolsError">
+      <source xml:lang="en">Unable to list tools</source>
+    </trans-unit>
+    <trans-unit id="connectedToolsLoading">
+      <source xml:lang="en">Loading tools...</source>
+    </trans-unit>
     <trans-unit id="connectedToolsSection">
       <source xml:lang="en">Connected Sources</source>
     </trans-unit>
     <trans-unit id="connectedToolsSectionDescription">
-      <source xml:lang="en">Tool sets provided by MCP servers and user configuration.</source>
+      <source xml:lang="en">Plugins and MCP servers available to the agent.</source>
     </trans-unit>
     <trans-unit id="connectedToolsSectionEmpty">
-      <source xml:lang="en">No connected tool sources are available.</source>
+      <source xml:lang="en">No plugins or MCP servers are available.</source>
     </trans-unit>
     <trans-unit id="copilotCliTool.applyPatch">
       <source xml:lang="en">Apply patches (used by some models instead of edit/create)</source>
@@ -7128,6 +7175,9 @@ Disabled servers may become enabled.</source>
     <trans-unit id="learnMoreTools">
       <source xml:lang="en">Learn more about tools</source>
     </trans-unit>
+    <trans-unit id="mcpAuthenticationFailed">
+      <source xml:lang="en">Unable to sign in to {0}: {1}</source>
+    </trans-unit>
     <trans-unit id="noMatchingTools">
       <source xml:lang="en">No tools match '{0}'</source>
     </trans-unit>
@@ -7157,6 +7207,15 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="toolsBrowseTryAgain">
       <source xml:lang="en">Check your connection and try again</source>
+    </trans-unit>
+    <trans-unit id="toolsConnectedServerAriaLabel">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="toolsConnectedServerSource">
+      <source xml:lang="en">MCP server from {0}</source>
+    </trans-unit>
+    <trans-unit id="toolsConnectedServerToggle">
+      <source xml:lang="en">Enable {0}</source>
     </trans-unit>
     <trans-unit id="toolsListSubtitle">
       <source xml:lang="en">Enable or disable the tools available to chat. Disabled tools are not advertised to the agent. Tools other than Copilot's built-in tools run on the client and require it to be connected.</source>
@@ -7667,6 +7726,9 @@ Locations configured here are only observed by the Local agent harness. Other ha
     <trans-unit id="chat.agentsControl.hidden">
       <source xml:lang="en">The agent status indicator is hidden from the title bar.</source>
     </trans-unit>
+    <trans-unit id="chat.agentsHandoffTip.deprecated">
+      <source xml:lang="en">Use chat.agentsWindowBanner.enabled instead.</source>
+    </trans-unit>
     <trans-unit id="chat.agentsHandoffTip.mode">
       <source xml:lang="en">Controls the tip shown above the chat input offering to continue eligible agent sessions in the Agents Window.</source>
     </trans-unit>
@@ -7783,6 +7845,12 @@ Locations configured here are only observed by the Local agent harness. Other ha
     </trans-unit>
     <trans-unit id="chat.copilot.hydraFusion.enabled">
       <source xml:lang="en">When enabled, makes the experimental HydraFusion model available to local Copilot Agent Host sessions. Changing this setting restarts the local Copilot runtime.</source>
+    </trans-unit>
+    <trans-unit id="chat.copilot.memory.enabled">
+      <source xml:lang="en">When enabled, local Copilot Agent Host sessions can store and recall [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory). Applies to sessions created or resumed after the setting changes.</source>
+    </trans-unit>
+    <trans-unit id="chat.copilot.memory.local.enabled">
+      <source xml:lang="en">When enabled together with {0}, local Copilot Agent Host sessions store Copilot Memory in the repository's `.github/copilot-memories.jsonl` file instead of GitHub's cloud memory service. The file is part of the working tree, so commits made by the agent or the Agents window can include it. Requires a GitHub-hosted repository; user-scoped memories and Copilot Memory policies configured on GitHub do not apply. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
     </trans-unit>
     <trans-unit id="chat.copilot.semanticSearch.enabled">
       <source xml:lang="en">Controls whether Copilot Agent Host sessions can use VS Code's semantic workspace search. When disabled, semantic search is unavailable.</source>
@@ -13515,64 +13583,49 @@ Source: {0}</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/missionControlEnvironmentActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="connectMissionControlEnvironment">
-      <source xml:lang="en">Connect to Mission Control Environment...</source>
+      <source xml:lang="en">Connect to Environment...</source>
     </trans-unit>
     <trans-unit id="missionControl.connectProgress">
       <source xml:lang="en">Connecting to {0}...</source>
     </trans-unit>
     <trans-unit id="missionControl.connected">
-      <source xml:lang="en">Relay connected</source>
+      <source xml:lang="en">Connected</source>
     </trans-unit>
     <trans-unit id="missionControl.connecting">
-      <source xml:lang="en">Relay connecting</source>
+      <source xml:lang="en">Connecting</source>
     </trans-unit>
     <trans-unit id="missionControl.connectionsDisabled">
-      <source xml:lang="en">User-local Mission Control connections are development-only and require remote AI features.</source>
-    </trans-unit>
-    <trans-unit id="missionControl.disconnected">
-      <source xml:lang="en">Relay disconnected</source>
-    </trans-unit>
-    <trans-unit id="missionControl.duplicateDetail">
-      <source xml:lang="en">Mission Control · {0} · Host {1}</source>
+      <source xml:lang="en">Environment connections require remote agent hosts and AI features to be enabled.</source>
     </trans-unit>
     <trans-unit id="missionControl.empty">
-      <source xml:lang="en">No other user-local hosts found. Start Mission Control in the owning application on another machine, then refresh.</source>
+      <source xml:lang="en">No environments found.</source>
     </trans-unit>
-    <trans-unit id="missionControl.hidden">
-      <source xml:lang="en">Hidden</source>
-    </trans-unit>
-    <trans-unit id="missionControl.hiddenHosts">
-      <source xml:lang="en">Hidden in This Profile</source>
-    </trans-unit>
-    <trans-unit id="missionControl.hide">
-      <source xml:lang="en">Hide in This Profile</source>
-    </trans-unit>
-    <trans-unit id="missionControl.hostDetail">
-      <source xml:lang="en">Mission Control · {0}</source>
+    <trans-unit id="missionControl.hostStatus">
+      <source xml:lang="en">{0} · {1}</source>
     </trans-unit>
     <trans-unit id="missionControl.offline">
-      <source xml:lang="en">Offline or unavailable; start its owning application</source>
+      <source xml:lang="en">Offline</source>
     </trans-unit>
     <trans-unit id="missionControl.online">
-      <source xml:lang="en">Last reported online</source>
+      <source xml:lang="en">Online</source>
+    </trans-unit>
+    <trans-unit id="missionControl.reconnecting">
+      <source xml:lang="en">Reconnecting</source>
     </trans-unit>
     <trans-unit id="missionControl.refresh">
-      <source xml:lang="en">Refresh Hosts</source>
+      <source xml:lang="en">Refresh Environments</source>
     </trans-unit>
     <trans-unit id="missionControl.refreshFailed">
-      <source xml:lang="en">Could not refresh hosts. Retained hosts are still available. {0}</source>
-    </trans-unit>
-    <trans-unit id="missionControl.restore">
-      <source xml:lang="en">Restore Host</source>
+      <source xml:lang="en">Could not refresh environments. Showing the last known environments. {0}</source>
     </trans-unit>
     <trans-unit id="missionControl.signIn">
-      <source xml:lang="en">Sign in with your GitHub account to discover Mission Control hosts.</source>
+      <source xml:lang="en">Sign in with your GitHub account to discover environments.</source>
     </trans-unit>
     <trans-unit id="missionControlEnvironments">
-      <source xml:lang="en">Mission Control Hosts</source>
+      <source xml:lang="en">Environments</source>
     </trans-unit>
     <trans-unit id="selectMissionControlEnvironment">
-      <source xml:lang="en">Select a host to connect; its owning application must be running</source>
+      <source xml:lang="en">Select an environment to connect</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/missionControlEnvironmentService" source-language="en" datatype="plaintext"><body>
@@ -13580,30 +13633,21 @@ Source: {0}</source>
       <source xml:lang="en">A connection to {0} is already in progress.</source>
     </trans-unit>
     <trans-unit id="missionControl.connectTimedOut">
-      <source xml:lang="en">Connecting to the Mission Control host timed out. Ensure its owning application is running, then reconnect.</source>
+      <source xml:lang="en">Connecting to the environment timed out. Ensure its owning application is running, then reconnect.</source>
     </trans-unit>
     <trans-unit id="missionControl.hostOffline">
-      <source xml:lang="en">{0} is not online. Start its owning application before connecting. Mission Control will not start or replace this machine.</source>
+      <source xml:lang="en">{0} is not online. Start its owning application before connecting. Connecting will not start or replace this machine.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/remoteAgentHost.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.agentHost.cloudSandbox.enabled">
-      <source xml:lang="en">Enable discovering and opening Copilot cloud sandbox sessions in the Editor Window and Agents Window over a live Agent Host Protocol relay. Also adds a Sandbox option when starting a cloud session in the Agents Window.</source>
+      <source xml:lang="en">Use GitHub Cloud for new Cloud sessions in the Agents Window instead of Copilot coding agent on GitHub Actions. Also enables discovering and opening GitHub Cloud sessions.</source>
     </trans-unit>
     <trans-unit id="chat.remoteAgentHosts.enabled">
       <source xml:lang="en">Enable connecting to remote agent hosts.</source>
     </trans-unit>
     <trans-unit id="missionControlEnabled">
       <source xml:lang="en">Register the native Agent Host as a discoverable Mission Control environment so other clients can connect through Azure Web PubSub. Local VS Code continues using local IPC. Remote clients receive trusted-owner access including sessions, tools, and workspace resources. Native session actions are mirrored to Mission Control for catalog/history storage; conversation content is not end-to-end encrypted.</source>
-    </trans-unit>
-    <trans-unit id="missionControlEndpoint">
-      <source xml:lang="en">HTTPS Mission Control API origin. The local GitHub credential is sent to this origin; only configure an endpoint you trust.</source>
-    </trans-unit>
-    <trans-unit id="missionControlFakeEndpoint">
-      <source xml:lang="en">Register this Agent Host with a local Mission Control test server. Only loopback HTTP URLs are accepted. The local GitHub credential is sent to this endpoint; only use a test server you trust. Leave empty when using the real Mission Control service.</source>
-    </trans-unit>
-    <trans-unit id="missionControlRequireBinding">
-      <source xml:lang="en">Require remote relay clients to bind sealed authentication tokens to the current handshake challenge. Clients using Mission Control's pre-sealed tokens may not support this. Supplied bindings are always verified.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/remoteAgentHostChatContribution" source-language="en" datatype="plaintext"><body>
@@ -13736,6 +13780,21 @@ Started: {1}</source>
     </trans-unit>
     <trans-unit id="sessionBrowsers.title">
       <source xml:lang="en">Browsers</source>
+    </trans-unit>
+    <trans-unit id="sessionCanvases.count">
+      <source xml:lang="en">{0} Canvases</source>
+    </trans-unit>
+    <trans-unit id="sessionCanvases.countSingle">
+      <source xml:lang="en">1 Canvas</source>
+    </trans-unit>
+    <trans-unit id="sessionCanvases.show">
+      <source xml:lang="en">Show {0} canvases</source>
+    </trans-unit>
+    <trans-unit id="sessionCanvases.showSingle">
+      <source xml:lang="en">Show 1 canvas</source>
+    </trans-unit>
+    <trans-unit id="sessionCanvases.title">
+      <source xml:lang="en">Canvases</source>
     </trans-unit>
     <trans-unit id="sessionCustomizations.count">
       <source xml:lang="en">{0} Customizations</source>
@@ -15663,6 +15722,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.thinking.finished.withStepsSingular">
       <source xml:lang="en">Finished with 1 step</source>
+    </trans-unit>
+    <trans-unit id="chat.thinking.finishedThinking">
+      <source xml:lang="en">Finished thinking</source>
     </trans-unit>
     <trans-unit id="chat.thinking.header">
       <source xml:lang="en">Thinking</source>
@@ -18271,6 +18333,35 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">True when the chat widget dispatches to the edit session chat.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/common/agentsWindowInvitation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindowInvitation.allWindows.action">
+      <source xml:lang="en">View All in Agents Window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowInvitation.allWindows.description">
+      <source xml:lang="en">Keep track of agent sessions from all your editor windows in one place.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowInvitation.allWindows.title">
+      <source xml:lang="en">View all your sessions in the Agents Window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowInvitation.continue.action">
+      <source xml:lang="en">Continue in Agents Window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowInvitation.continue.description">
+      <source xml:lang="en">View this and other agent sessions across your projects in the Agents Window.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowInvitation.continue.title">
+      <source xml:lang="en">Continue in the Agents Window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowInvitation.sameWindow.action">
+      <source xml:lang="en">View in Agents Window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowInvitation.sameWindow.description">
+      <source xml:lang="en">Keep track of your parallel tasks and switch between agent sessions in one place.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowInvitation.sameWindow.title">
+      <source xml:lang="en">View all your sessions in the Agents Window</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/common/attachments/chatVariableEntries" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.attachment.problems.all">
       <source xml:lang="en">All Problems</source>
@@ -20078,6 +20169,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="sessionChatPills.browsers">
       <source xml:lang="en">Browsers</source>
     </trans-unit>
+    <trans-unit id="sessionChatPills.canvases">
+      <source xml:lang="en">Canvases</source>
+    </trans-unit>
     <trans-unit id="sessionChatPills.changes">
       <source xml:lang="en">Changes</source>
     </trans-unit>
@@ -20690,54 +20784,17 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
       <source xml:lang="en">Stop Reading Aloud</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/electron-browser/agentSessions/agentHostEditorActivity" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="savingAgentHostEditorActivity">
+      <source xml:lang="en">Saving Agent Host editor activity</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/electron-browser/agentSessions/agentSessionsActions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentsParallelWork.ignore">
-      <source xml:lang="en">Ignore</source>
-    </trans-unit>
-    <trans-unit id="agentsParallelWork.ignoreTooltip">
-      <source xml:lang="en">Don't Show Again</source>
-    </trans-unit>
-    <trans-unit id="agentsParallelWork.open">
-      <source xml:lang="en">Open Agents Window</source>
-    </trans-unit>
     <trans-unit id="agentsWindow.agentModeDisabled">
       <source xml:lang="en">The Agents window is unavailable because agent mode is disabled.</source>
     </trans-unit>
     <trans-unit id="agentsWindow.unsupportedDraftAttachment">
       <source xml:lang="en">This draft contains context that is only available in this window. Your prompt and attachments have been kept here instead of copied to the Agents Window.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsHandoff.tip.action">
-      <source xml:lang="en">Open in Agents Window</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsHandoff.tip.action.custom">
-      <source xml:lang="en">Give your agent more room?</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsHandoff.tip.action.default">
-      <source xml:lang="en">Continue in Agents Window</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsHandoff.tip.description">
-      <source xml:lang="en">Get a dedicated, multi-pane view alongside your workspace.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsHandoff.tip.description.copilot">
-      <source xml:lang="en">Free with your Copilot plan — get a dedicated, multi-pane view alongside your workspace.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsHandoff.tip.emptyWorkspace.description">
-      <source xml:lang="en">Open the Agents Window to start a Copilot session.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsHandoff.tip.emptyWorkspace.message">
-      <source xml:lang="en">Copilot isn't available without an open folder</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsHandoff.tip.message">
-      <source xml:lang="en">Continue this session in the Agents Window</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsHandoff.tip.mute">
-      <source xml:lang="en">Don't Show Again</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsParallelWorkBanner.defaultDescription">
-      <source xml:lang="en">Run multiple tasks in the Agents Window, in one workspace or across projects.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentsParallelWorkBanner.defaultTitle">
-      <source xml:lang="en">Run agents side by side</source>
     </trans-unit>
     <trans-unit id="chat.resetCopilotHarnessIntroduction">
       <source xml:lang="en">Reset Copilot Harness Introduction</source>
@@ -20759,6 +20816,11 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="toggle.openInAgentsWindowDescription">
       <source xml:lang="en">Toggle visibility of the Open in Agents Window button in title bar</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/electron-browser/agentSessions/agentsWindowInvitation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindowInvitation.mute">
+      <source xml:lang="en">Don't Show Again</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/electron-browser/builtInTools/fetchPageTool" source-language="en" datatype="plaintext"><body>

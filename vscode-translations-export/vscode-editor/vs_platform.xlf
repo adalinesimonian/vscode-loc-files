@@ -1450,6 +1450,18 @@ A keybinding</note>
     <trans-unit id="agentHost.config.localIndexEnabled.title">
       <source xml:lang="en">Local Session Index</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.localMemory.description">
+      <source xml:lang="en">When enabled together with Copilot Memory, Copilot SDK sessions store memories in the repository's .github/copilot-memories.jsonl file instead of GitHub's cloud memory service. Requires a GitHub-hosted repository; Copilot Memory policies configured on GitHub do not apply.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.localMemory.title">
+      <source xml:lang="en">Local Copilot Memory</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.memory.description">
+      <source xml:lang="en">When enabled, Copilot SDK sessions can store and recall Copilot Memory.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.memory.title">
+      <source xml:lang="en">Copilot Memory</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.modelCapabilityOverrides.availableTools.description">
       <source xml:lang="en">When set, only matching tools are available to sessions on this model. Patterns: bare tool names, `builtin:*` or `builtin:&lt;name&gt;` (Copilot runtime tools), `mcp:*` or `mcp:&lt;name&gt;` (MCP server tools), and `custom:*` or `custom:&lt;name&gt;` (every tool VS Code registers with the SDK, including the agent host's own terminal tools); a bare `*` expands to all three sources. Applied when the session launches or resumes.</source>
     </trans-unit>
@@ -4878,6 +4890,26 @@ stderr: {2}</source>
       <source xml:lang="en">Failed to update Agent Merge</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/shared/pullRequestResolver" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.pullRequest.fork">
+      <source xml:lang="en">Pull request #{0} comes from a fork, which is not supported yet.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.pullRequest.hostMismatch">
+      <source xml:lang="en">Pull request #{0} is not on the GitHub instance of the signed-in account.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.pullRequest.invalidUrl">
+      <source xml:lang="en">'{0}' is not a valid pull request URL.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.pullRequest.merged">
+      <source xml:lang="en">Pull request #{0} has already been merged.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.pullRequest.unavailable">
+      <source xml:lang="en">Pull request #{0} could not be loaded.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.pullRequest.unavailableWithReason">
+      <source xml:lang="en">Pull request #{0} could not be loaded: {1}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/shared/sessionIsolationTools" source-language="en" datatype="plaintext"><body>
     <trans-unit id="isolateSession.activeTurnRequired">
       <source xml:lang="en">Changing a chat's workspace with this tool requires an active turn.</source>
@@ -5024,6 +5056,18 @@ stderr: {2}</source>
     <trans-unit id="agentHost.noIsolatedWorktree">
       <source xml:lang="en">No isolated worktree was created.</source>
     </trans-unit>
+    <trans-unit id="agentHost.pullRequest.fetchFailed">
+      <source xml:lang="en">Couldn't fetch branch '{0}' of pull request #{1} from remote '{2}': {3}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.pullRequest.noMatchingRemote">
+      <source xml:lang="en">Pull request #{0} belongs to {1}/{2}, but the workspace repository has no remote for it.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.pullRequest.noWorkingDirectory">
+      <source xml:lang="en">A session for a pull request needs a workspace folder.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.pullRequest.notGitRepository">
+      <source xml:lang="en">The workspace folder '{0}' is not a Git repository.</source>
+    </trans-unit>
     <trans-unit id="agentHost.sessionConfig.branch">
       <source xml:lang="en">Branch</source>
     </trans-unit>
@@ -5048,23 +5092,17 @@ stderr: {2}</source>
     <trans-unit id="agentHost.sessionConfig.isolationDescription">
       <source xml:lang="en">Where the agent should make changes</source>
     </trans-unit>
+    <trans-unit id="agentHost.sessionConfig.pullRequestUrl">
+      <source xml:lang="en">Pull Request</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sessionConfig.pullRequestUrlDescription">
+      <source xml:lang="en">URL of the pull request to check out into an isolated worktree.</source>
+    </trans-unit>
     <trans-unit id="agentHost.sessionConfig.worktreeBranchPrefix">
       <source xml:lang="en">Worktree Branch Prefix</source>
     </trans-unit>
     <trans-unit id="agentHost.sessionConfig.worktreeBranchPrefixDescription">
       <source xml:lang="en">Prefix applied to the branch created for an isolated worktree.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.sessionConfig.worktreeBranchTrack">
-      <source xml:lang="en">Worktree Branch Tracking</source>
-    </trans-unit>
-    <trans-unit id="agentHost.sessionConfig.worktreeBranchTrackDescription">
-      <source xml:lang="en">Whether the branch created for an isolated worktree tracks its upstream.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.sessionConfig.worktreeCreateNewBranch">
-      <source xml:lang="en">Create New Worktree Branch</source>
-    </trans-unit>
-    <trans-unit id="agentHost.sessionConfig.worktreeCreateNewBranchDescription">
-      <source xml:lang="en">Whether to create a new branch for the isolated worktree.</source>
     </trans-unit>
     <trans-unit id="agentHost.sessionConfig.worktreeIncludeFiles">
       <source xml:lang="en">Worktree Include Files</source>
@@ -5109,6 +5147,9 @@ stderr: {2}</source>
       <source xml:lang="en">Couldn't create the isolated worktree. This session is continuing in the original folder.
 
 {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.worktreeFetchingPullRequest">
+      <source xml:lang="en">Creating isolated worktree (fetching pull request)</source>
     </trans-unit>
     <trans-unit id="agentHost.worktreeNamingBranch">
       <source xml:lang="en">Creating isolated worktree (naming branch)</source>

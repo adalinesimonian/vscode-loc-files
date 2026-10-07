@@ -142,6 +142,9 @@
     <trans-unit id="sessions.showChatTabs.single">
       <source xml:lang="en">The active chat is displayed as the session view.</source>
     </trans-unit>
+    <trans-unit id="sessions.sidebar.separateNavigation">
+      <source xml:lang="en">Controls whether New Session, Automations, and Customizations are shown in a separate navigation list above the Sessions header. When disabled, Automations is shown inside the sessions tree, New Session remains a toolbar button, and Customizations remains a separate section.</source>
+    </trans-unit>
     <trans-unit id="sessions.useWorktree">
       <source xml:lang="en">Controls whether New Worktree is checked for a workspace that has not started a session before. Each workspace otherwise uses the choice from its last started session.</source>
     </trans-unit>
@@ -1370,15 +1373,6 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     <trans-unit id="environment">
       <source xml:lang="en">Environment</source>
     </trans-unit>
-    <trans-unit id="environment.multiple">
-      <source xml:lang="en">Environment ({0} Selected)</source>
-    </trans-unit>
-    <trans-unit id="environment.none">
-      <source xml:lang="en">Environment (None)</source>
-    </trans-unit>
-    <trans-unit id="environment.selected">
-      <source xml:lang="en">Environment ({0})</source>
-    </trans-unit>
     <trans-unit id="groupByTime">
       <source xml:lang="en">Group by Time</source>
     </trans-unit>
@@ -1499,7 +1493,7 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
       <source xml:lang="en">Find Session</source>
     </trans-unit>
     <trans-unit id="grouping">
-      <source xml:lang="en">Grouping ({0})</source>
+      <source xml:lang="en">Grouping</source>
     </trans-unit>
     <trans-unit id="harness">
       <source xml:lang="en">Harness</source>
@@ -1586,7 +1580,7 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
       <source xml:lang="en">Open to the Side</source>
     </trans-unit>
     <trans-unit id="ordering">
-      <source xml:lang="en">Ordering ({0})</source>
+      <source xml:lang="en">Ordering</source>
     </trans-unit>
     <trans-unit id="pinSession">
       <source xml:lang="en">Pin</source>
@@ -1625,7 +1619,7 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
       <source xml:lang="en">Show in External Section</source>
     </trans-unit>
     <trans-unit id="showSessions">
-      <source xml:lang="en">Show ({0})</source>
+      <source xml:lang="en">Show</source>
     </trans-unit>
     <trans-unit id="time">
       <source xml:lang="en">Time</source>
