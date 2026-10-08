@@ -42,13 +42,13 @@
       <source xml:lang="en">Ignore CI Failure</source>
     </trans-unit>
     <trans-unit id="ignoreInputNeeded">
-      <source xml:lang="en">Ignore Input Needed</source>
+      <source xml:lang="en">Ignore Needs Attention Alert</source>
     </trans-unit>
     <trans-unit id="inputNeededIgnored">
-      <source xml:lang="en">Input needed ignored until this session needs input again.</source>
+      <source xml:lang="en">Needs attention alert ignored until this session needs attention again.</source>
     </trans-unit>
     <trans-unit id="sessionsRequiringInput">
-      <source xml:lang="en">Sessions requiring input</source>
+      <source xml:lang="en">Sessions needing attention</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/customizationsToolbar.contribution" source-language="en" datatype="plaintext"><body>
@@ -125,7 +125,7 @@
       <source xml:lang="en">Controls whether the Chats group is shown in the sessions list even when it is empty.</source>
     </trans-unit>
     <trans-unit id="sessions.list.showUnreadInCollapsedSections">
-      <source xml:lang="en">Controls whether collapsed sections in the sessions list show needs-input, CI-failure, or unread indicators for the unarchived sessions they contain.</source>
+      <source xml:lang="en">Controls whether collapsed sections in the sessions list show needs-attention, CI-failure, or unread indicators for the unarchived sessions they contain.</source>
     </trans-unit>
     <trans-unit id="sessions.markAsDoneConfetti">
       <source xml:lang="en">Controls whether a confetti animation is shown when marking a session as done.</source>
@@ -360,7 +360,7 @@
       <source xml:lang="en">Go Forward One Session</source>
     </trans-unit>
     <trans-unit id="sessionsPickerNeedsInput">
-      <source xml:lang="en">needs input</source>
+      <source xml:lang="en">needs attention</source>
     </trans-unit>
     <trans-unit id="sessionsPickerUnread">
       <source xml:lang="en">unread</source>
@@ -410,7 +410,7 @@
       <source xml:lang="en">Close</source>
     </trans-unit>
     <trans-unit id="ignoreAllInputNeeded">
-      <source xml:lang="en">Ignore All Input Needed</source>
+      <source xml:lang="en">Ignore All Needs Attention Alerts</source>
     </trans-unit>
     <trans-unit id="nSessionsApproved">
       <source xml:lang="en">Approved {0} sessions</source>
@@ -442,10 +442,10 @@
       <source xml:lang="en">Failed in {0}.</source>
     </trans-unit>
     <trans-unit id="sessions.notification.needsInput">
-      <source xml:lang="en">Input needed.</source>
+      <source xml:lang="en">Attention needed.</source>
     </trans-unit>
     <trans-unit id="sessions.notification.needsInputWithWorkspace">
-      <source xml:lang="en">Input needed in {0}.</source>
+      <source xml:lang="en">Attention needed in {0}.</source>
     </trans-unit>
     <trans-unit id="sessions.notification.openSession">
       <source xml:lang="en">Open Session</source>
@@ -1045,7 +1045,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">{0}, run in progress</source>
     </trans-unit>
     <trans-unit id="automationsNeedsInputAria">
-      <source xml:lang="en">{0}, run needs input</source>
+      <source xml:lang="en">{0}, run needs attention</source>
     </trans-unit>
     <trans-unit id="automationsUnreadRunAria">
       <source xml:lang="en">{0}, unread run</source>
@@ -1066,7 +1066,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Failed</source>
     </trans-unit>
     <trans-unit id="comparisonAttemptNeedsInput">
-      <source xml:lang="en">Input needed</source>
+      <source xml:lang="en">Attention needed</source>
     </trans-unit>
     <trans-unit id="comparisonAttemptPending">
       <source xml:lang="en">Pending</source>
@@ -1078,16 +1078,16 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Comparison · {0} attempts finished</source>
     </trans-unit>
     <trans-unit id="comparisonGroup.attemptsNeedInput">
-      <source xml:lang="en">Comparison · {0} attempts need input</source>
+      <source xml:lang="en">Comparison · {0} attempts need attention</source>
     </trans-unit>
     <trans-unit id="comparisonGroup.attemptsWorking">
       <source xml:lang="en">Comparison · {0} attempts working</source>
     </trans-unit>
     <trans-unit id="comparisonGroup.judgeNeedsInput">
-      <source xml:lang="en">Comparison · Judge needs input</source>
+      <source xml:lang="en">Comparison · Judge needs attention</source>
     </trans-unit>
     <trans-unit id="comparisonGroup.oneAttemptNeedsInput">
-      <source xml:lang="en">Comparison · 1 attempt needs input</source>
+      <source xml:lang="en">Comparison · 1 attempt needs attention</source>
     </trans-unit>
     <trans-unit id="comparisonGroup.oneAttemptWorking">
       <source xml:lang="en">Comparison · 1 attempt working</source>
@@ -1130,6 +1130,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="customizationsMigrationAvailableAria">
       <source xml:lang="en">{0}, {1}, customization migrations available</source>
+    </trans-unit>
+    <trans-unit id="customizationsMigrationHover">
+      <source xml:lang="en">Some customizations need an update to keep working.</source>
     </trans-unit>
     <trans-unit id="deleteGroupAction">
       <source xml:lang="en">Delete Group</source>
@@ -1267,7 +1270,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">{0}, {1}, session has failing CI checks</source>
     </trans-unit>
     <trans-unit id="sessionSectionNeedsInputAria">
-      <source xml:lang="en">{0}, {1}, session needs input</source>
+      <source xml:lang="en">{0}, {1}, session needs attention</source>
     </trans-unit>
     <trans-unit id="sessionSectionUnreadAria">
       <source xml:lang="en">{0}, {1}, contains unread sessions</source>
@@ -1645,7 +1648,7 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
       <source xml:lang="en">Count sessions with failing CI checks on an open, non-draft pull request that are no longer in progress and are not being handled by Agent Merge.</source>
     </trans-unit>
     <trans-unit id="sessions.applicationBadge.inputNeeded">
-      <source xml:lang="en">Count sessions that need input or approval.</source>
+      <source xml:lang="en">Count sessions that need attention or approval.</source>
     </trans-unit>
     <trans-unit id="sessions.applicationBadge.unread">
       <source xml:lang="en">Count unread sessions that are no longer in progress.</source>

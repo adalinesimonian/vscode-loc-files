@@ -1375,6 +1375,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="occurrencesHighlightDelay">
       <source xml:lang="en">Controls the delay in milliseconds after which occurrences are highlighted.</source>
     </trans-unit>
+    <trans-unit id="occurrencesHighlightFromAllProviders">
+      <source xml:lang="en">Controls whether single-document highlights from all matching providers are merged. When enabled, basic word-based highlighting is only used if no other provider matches.</source>
+    </trans-unit>
     <trans-unit id="off">
       <source xml:lang="en">Quick suggestions are disabled</source>
     </trans-unit>

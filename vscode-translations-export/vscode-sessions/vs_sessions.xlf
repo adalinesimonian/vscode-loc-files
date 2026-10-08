@@ -77,9 +77,6 @@
     <trans-unit id="agentSidebarToggleOpenIcon">
       <source xml:lang="en">Icon for the sessions sidebar when open.</source>
     </trans-unit>
-    <trans-unit id="alignPanelWithChat">
-      <source xml:lang="en">Align Panel with Chat</source>
-    </trans-unit>
     <trans-unit id="closePanel">
       <source xml:lang="en">Hide Panel</source>
     </trans-unit>
@@ -379,6 +376,11 @@
       <source xml:lang="en">1 file changed</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/browser/parts/panelPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="alignPanel">
+      <source xml:lang="en">Align Panel</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/browser/parts/sessionHeaderBar" source-language="en" datatype="plaintext"><body>
     <trans-unit id="renameChat.aria">
       <source xml:lang="en">Rename chat</source>
@@ -469,7 +471,7 @@
       <source xml:lang="en">In Progress</source>
     </trans-unit>
     <trans-unit id="sessionConversationStatus.needsInput">
-      <source xml:lang="en">Input Needed</source>
+      <source xml:lang="en">Attention Needed</source>
     </trans-unit>
     <trans-unit id="sessionConversationStatus.new">
       <source xml:lang="en">New</source>
@@ -670,7 +672,7 @@
       <source xml:lang="en">The identifier of the session in scope (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>
     </trans-unit>
     <trans-unit id="sessionIsActive">
-      <source xml:lang="en">Whether the session in scope is in progress or needs input</source>
+      <source xml:lang="en">Whether the session in scope is in progress or needs attention</source>
     </trans-unit>
     <trans-unit id="sessionIsArchived">
       <source xml:lang="en">Whether the session in scope is archived/marked as done (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>
@@ -967,7 +969,7 @@
       <source xml:lang="en">Failed</source>
     </trans-unit>
     <trans-unit id="needsInput">
-      <source xml:lang="en">Input needed</source>
+      <source xml:lang="en">Attention needed</source>
     </trans-unit>
     <trans-unit id="sessionWorkspaceGroup.github">
       <source xml:lang="en">GitHub</source>

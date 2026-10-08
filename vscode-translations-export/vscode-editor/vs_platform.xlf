@@ -823,6 +823,21 @@ A keybinding</note>
     <trans-unit id="agentHost.config.terminalAutoApproveRules.title">
       <source xml:lang="en">Terminal Auto Approve Rules</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.titleGeneration.activeAgent">
+      <source xml:lang="en">The active agent names sessions and chats with rename tools.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.titleGeneration.agentReview">
+      <source xml:lang="en">Seed titles immediately, refine them in the background after the first response turn completes successfully, and remind the active agent that it may rename a chat when the generated title is inaccurate or no longer reflects the user's goal.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.titleGeneration.description">
+      <source xml:lang="en">Controls how new sessions and chats get an automatic title. Takes precedence over the legacy active agent and deferred title generation keys. Changes apply to new sessions; existing sessions and their chats retain their strategy.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.titleGeneration.title">
+      <source xml:lang="en">Title Generation</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.titleGeneration.utility">
+      <source xml:lang="en">A utility model generates titles immediately.</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.workspaceSnapshot.description">
       <source xml:lang="en">Whether the first turn of a new Copilot chat includes a bounded file-name snapshot of its working directories.</source>
     </trans-unit>
@@ -1444,6 +1459,12 @@ A keybinding</note>
     <trans-unit id="agentHost.config.hydraFusion.title">
       <source xml:lang="en">HydraFusion</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.hydraFusionV2.description">
+      <source xml:lang="en">When enabled together with HydraFusion, Copilot SDK sessions use HydraFusion v2.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.hydraFusionV2.title">
+      <source xml:lang="en">HydraFusion V2</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.localIndexEnabled.description">
       <source xml:lang="en">Whether Copilot SDK sessions use the local cross-session store for Chronicle indexing and retrieval.</source>
     </trans-unit>
@@ -1539,6 +1560,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.skillCharBudget.title">
       <source xml:lang="en">Skill Character Budget</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.stabilityOrderedPrompt.description">
+      <source xml:lang="en">When enabled, Copilot SDK sessions order the system prompt by how often each section changes, so sessions with the same tools and workspace can reuse each other's prompt cache. This moves per-session sections, such as the environment and session folder, to the end of the system prompt.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.stabilityOrderedPrompt.title">
+      <source xml:lang="en">Stability-Ordered System Prompt</source>
     </trans-unit>
     <trans-unit id="agentHost.config.tgrep.description">
       <source xml:lang="en">When enabled, Copilot SDK sessions use tgrep indexed search for eligible large repositories. Requires a local Git repository on a non-virtual filesystem.</source>
@@ -2329,7 +2356,7 @@ A keybinding</note>
       <source xml:lang="en">Error</source>
     </trans-unit>
     <trans-unit id="agentSessionLink.needsInput">
-      <source xml:lang="en">Needs input</source>
+      <source xml:lang="en">Needs attention</source>
     </trans-unit>
     <trans-unit id="agentSessionLink.notStarted">
       <source xml:lang="en">Not started</source>
@@ -2418,6 +2445,9 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/sandboxConfigSchema" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.config.sandbox.addCurrentWorkingDirectory.title">
+      <source xml:lang="en">Add Current Working Directory</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.sandbox.advancedRuntime.title">
       <source xml:lang="en">Advanced Sandbox Runtime</source>
     </trans-unit>
@@ -2613,11 +2643,17 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/titleGenerationConfiguration" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.agentHost.experimental.activeAgentTitleGeneration">
-      <source xml:lang="en">When enabled, the active agent names new sessions and chats using rename tools. When disabled, a utility model generates titles immediately. Deferred title generation takes precedence. Changes apply to new sessions; existing sessions and their chats retain their strategy.</source>
+    <trans-unit id="chat.agentHost.experimental.titleGeneration">
+      <source xml:lang="en">Controls how new sessions and chats get an automatic title. Changes apply to new sessions; existing sessions and their chats retain their strategy.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.experimental.deferredTitleGeneration">
-      <source xml:lang="en">Seed titles immediately and refine them in the background if the first response turn completes successfully, without asking the active agent to name chats. Explicit rename tools remain available. Overrides active agent title generation for new sessions; existing sessions and their chats retain their strategy.</source>
+    <trans-unit id="chat.agentHost.experimental.titleGeneration.activeAgent">
+      <source xml:lang="en">The active agent names new sessions and chats using rename tools.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.experimental.titleGeneration.agentReview">
+      <source xml:lang="en">Seed titles immediately and refine them in the background if the first response turn completes successfully. On later turns, remind the active agent that it may rename a chat when the generated title is inaccurate or no longer reflects the user's goal.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.experimental.titleGeneration.utility">
+      <source xml:lang="en">A utility model generates titles immediately.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/electron-browser/localAgentHostService" source-language="en" datatype="plaintext"><body>
@@ -3777,6 +3813,12 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotAgentSession" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.askUser.false">
+      <source xml:lang="en">False</source>
+    </trans-unit>
+    <trans-unit id="agentHost.askUser.true">
+      <source xml:lang="en">True</source>
+    </trans-unit>
     <trans-unit id="agentHost.byokToolLimitExceeded">
       <source xml:lang="en">The model only supports {0} tools, {1} tools were not provided to the model.</source>
     </trans-unit>
