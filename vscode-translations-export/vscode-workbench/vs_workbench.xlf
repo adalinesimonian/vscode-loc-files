@@ -1925,8 +1925,29 @@ This action is irreversible and may result in data loss!</source>
     <trans-unit id="chatPills.imagePreviewUnavailable">
       <source xml:lang="en">Image preview unavailable.</source>
     </trans-unit>
+    <trans-unit id="chatPills.issue">
+      <source xml:lang="en">Issue</source>
+    </trans-unit>
     <trans-unit id="chatPills.open">
       <source xml:lang="en">Open {0}</source>
+    </trans-unit>
+    <trans-unit id="chatPills.openReference">
+      <source xml:lang="en">{0}, Open {1}</source>
+    </trans-unit>
+    <trans-unit id="chatPills.openReferenceWithTitle">
+      <source xml:lang="en">{0}, Open {1}: {2}</source>
+    </trans-unit>
+    <trans-unit id="chatPills.openResource">
+      <source xml:lang="en">Open {0}</source>
+    </trans-unit>
+    <trans-unit id="chatPills.pullRequest">
+      <source xml:lang="en">Pull Request</source>
+    </trans-unit>
+    <trans-unit id="chatPills.reference">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+    <trans-unit id="chatPills.referenceWithTitle">
+      <source xml:lang="en">{0} {1}: {2}</source>
     </trans-unit>
     <trans-unit id="chatPills.removeArtifact">
       <source xml:lang="en">Remove Artifact</source>
@@ -5755,6 +5776,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="editorPartModal">
       <source xml:lang="en">Whether focus is in a modal editor part</source>
+    </trans-unit>
+    <trans-unit id="editorPartModalCanMoveToEditorArea">
+      <source xml:lang="en">Whether the modal editor can move into an editor area</source>
     </trans-unit>
     <trans-unit id="editorPartModalMaximized">
       <source xml:lang="en">Whether the modal editor part is maximized</source>

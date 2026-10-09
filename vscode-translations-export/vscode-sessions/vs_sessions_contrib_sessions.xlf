@@ -418,6 +418,9 @@
     <trans-unit id="noWorkspace">
       <source xml:lang="en">No workspace</source>
     </trans-unit>
+    <trans-unit id="noWorkspaceOnRemoteHost">
+      <source xml:lang="en">No workspace [{0}]</source>
+    </trans-unit>
     <trans-unit id="oneSessionApproved">
       <source xml:lang="en">Approved 1 session</source>
     </trans-unit>
@@ -537,17 +540,29 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsAccessibleView.completed">
       <source xml:lang="en">Completed</source>
     </trans-unit>
+    <trans-unit id="automationsAccessibleView.custom">
+      <source xml:lang="en">Custom schedule</source>
+    </trans-unit>
     <trans-unit id="automationsAccessibleView.daily">
       <source xml:lang="en">Daily at {0}</source>
     </trans-unit>
     <trans-unit id="automationsAccessibleView.empty">
       <source xml:lang="en">No automations.</source>
     </trans-unit>
+    <trans-unit id="automationsAccessibleView.externalRun">
+      <source xml:lang="en">Open on GitHub: {0}</source>
+    </trans-unit>
     <trans-unit id="automationsAccessibleView.failed">
       <source xml:lang="en">Failed</source>
     </trans-unit>
     <trans-unit id="automationsAccessibleView.history">
       <source xml:lang="en">Run history</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.historyError">
+      <source xml:lang="en">Run history could not be refreshed. Use Refresh to try again.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.historyLoading">
+      <source xml:lang="en">Refreshing run history.</source>
     </trans-unit>
     <trans-unit id="automationsAccessibleView.hourly">
       <source xml:lang="en">Hourly</source>
@@ -609,6 +624,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsAccessibleView.unknown">
       <source xml:lang="en">Unknown automation</source>
     </trans-unit>
+    <trans-unit id="automationsAccessibleView.weekdays">
+      <source xml:lang="en">Weekdays at {0}</source>
+    </trans-unit>
     <trans-unit id="automationsAccessibleView.weekly">
       <source xml:lang="en">{0} at {1}</source>
     </trans-unit>
@@ -616,7 +634,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Use Open Accessible View to read the current automations and run history as text.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.authority">
-      <source xml:lang="en">Automations run on their selected Agent Host, not in this window. Creation and changes require a connected Agent Host that supports automations. Run now requests execution from that host; a disconnected or unsupported host never falls back to local execution. To use another host, duplicate the automation. The original history stays with its host, and an enabled original keeps scheduling until you disable it.</source>
+      <source xml:lang="en">Automations run on their selected provider, not in this window. Creation and changes require an available provider that supports automations. Run now requests execution from that provider; a disconnected or unsupported provider never falls back to local execution. To use another provider, duplicate the automation. The original history stays with its provider, and an enabled original keeps scheduling until you disable it.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.builtInTemplatesCollapsed">
       <source xml:lang="en">The Built-in Templates section is collapsed by default because saved automations exist. Press Enter or Space on its disclosure control to expand it.</source>
@@ -625,10 +643,19 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">The Built-in Templates section is expanded by default while there are no saved automations. Tab to a template and press Enter or Space to open a New automation dialog with an editable name, prompt, and schedule.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.cards">
-      <source xml:lang="en">For saved automations, Tab to a card's Edit control and action buttons. Use Left Arrow and Right Arrow to move between Run now and Delete. Press Enter or Space to activate a control. Edit, or clicking anywhere else on the card, opens the automation dialog. Open a card's context menu{0} (for example Shift+F10). Duplicate opens a prefilled New automation dialog, Disable prevents scheduled runs, and Delete asks for confirmation. Run now starts a session immediately.</source>
+      <source xml:lang="en">For saved automations, Tab to a card's Edit control and action buttons. Use Left Arrow and Right Arrow to move between Run now and More Actions. Press Enter or Space to activate a control. Edit, or clicking anywhere else on the card, opens the automation dialog. More Actions opens the automation menu. Duplicate opens a prefilled New automation dialog, Disable prevents scheduled runs, and Delete asks for confirmation. Run now requests execution from the selected provider.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.cloudDialog">
+      <source xml:lang="en">Choose Work in GitHub in the workspace picker to search for a private repository or paste its URL. A matching local folder is retained and Cloud is selected by default. Use the session type picker to choose another agent supported by the workspace. Eligible local folders also support selecting Cloud directly. When creating an automation, changing to a public repository switches Cloud back to Copilot when available. Non-private repositories chosen through Work in GitHub are rejected with an error notification. Cloud models are configured in the prompt section. In the Tools section, use Configure allowed tools to open a searchable checklist of the tools GitHub offers, grouped by category; press Space to toggle a tool, Enter to apply changes, or Escape to cancel. New automations start with every listed tool selected. Built-in tools are always available. While the list loads the button is unavailable, and if it cannot be loaded a Retry button appears. These are followed by the schedule in your local time zone. GitHub stores a fixed UTC schedule, so the local run time may shift when daylight saving time changes. When editing a cloud automation, the workspace picker is disabled because changing the repository or provider requires duplication. Editing preserves enabled state; enable or disable an automation from its card. When Cloud is selected, a note beside the Create button explains that the automation runs even when your computer is off, triggered on a schedule.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.cloudHistory">
+      <source xml:lang="en">Cloud history shows the repository, status, and last updated time even when no local session is available. Tab to a row's toolbar and use Left Arrow and Right Arrow to reach Open on GitHub and Stop when supported. Stop requests cancellation; the status changes when GitHub reports it. Use Refresh in the view header to reload definitions and history. Active cloud runs refresh every 15 seconds without moving the history rows; idle definitions do not poll.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.dialog">
       <source xml:lang="en">In the automation dialog, Target controls are above the prompt. Agent and model pickers are inside the prompt input, and execution mode and permission controls are below it. Use Tab and Shift+Tab to move between fields and pickers. When creating an automation, you only need to enter a prompt. An empty name is derived from the prompt, and the target defaults to No workspace unless one is already supplied. An available Agent Host that supports the target is still required.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.externalDefinition">
+      <source xml:lang="en">For cloud automation cards, More Actions also offers Open on GitHub to open the automation's details in your browser.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.history">
       <source xml:lang="en">Run history is grouped by date. While a run is waiting for its session, a lightweight row shows the automation name with a Working... description. Once the session is available, use Up Arrow and Down Arrow to navigate the Sessions list, Enter to open, and Tab to reach Stop, the configured Archive or Mark as Done action, or Delete when available. Open a row's context menu, for example with Shift+F10, to rename it, change its active or read state, or delete it. Delete permanently deletes the session and removes it from run history after confirmation.</source>
@@ -645,8 +672,14 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsCustomView.help.sharing">
       <source xml:lang="en">Use Import Automation in the view header, or drop one .automation.md file anywhere in the view, to review a shared Automation blueprint. Imported Automations start disabled. Open a saved Automation's context menu and choose Export to save a portable blueprint.</source>
     </trans-unit>
+    <trans-unit id="automationsCustomView.help.weekdays">
+      <source xml:lang="en">For Agent Host automations, choose Weekdays to run Monday through Friday at the same local time, without choosing a day of the week. Weekdays is not available for Cloud automations.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/automationsView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationAcceptedStatus">
+      <source xml:lang="en">Run requested for {0}. Its history will update when available.</source>
+    </trans-unit>
     <trans-unit id="automationActions">
       <source xml:lang="en">Actions for {0}</source>
     </trans-unit>
@@ -767,6 +800,15 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationExportedStatus">
       <source xml:lang="en">Exported automation {0}</source>
     </trans-unit>
+    <trans-unit id="automationExternalOpenFailed">
+      <source xml:lang="en">Failed to open the automation on GitHub.</source>
+    </trans-unit>
+    <trans-unit id="automationExternalOpenRejected">
+      <source xml:lang="en">The link could not be opened.</source>
+    </trans-unit>
+    <trans-unit id="automationExternalUnavailable">
+      <source xml:lang="en">This automation is no longer available on GitHub.</source>
+    </trans-unit>
     <trans-unit id="automationImportReadFailed">
       <source xml:lang="en">Failed to import automation.</source>
     </trans-unit>
@@ -781,6 +823,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationNotStartedStatus">
       <source xml:lang="en">Automation {0} did not start</source>
+    </trans-unit>
+    <trans-unit id="automationOpenExternal">
+      <source xml:lang="en">Open on GitHub</source>
     </trans-unit>
     <trans-unit id="automationPluginTemplateBadge">
       <source xml:lang="en">Plugin</source>
@@ -800,8 +845,29 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationRunActionFailed">
       <source xml:lang="en">Failed to run automation.</source>
     </trans-unit>
+    <trans-unit id="automationRunCloudCompleted">
+      <source xml:lang="en">Completed on GitHub</source>
+    </trans-unit>
+    <trans-unit id="automationRunCloudFailed">
+      <source xml:lang="en">Failed on GitHub: {0}</source>
+    </trans-unit>
+    <trans-unit id="automationRunCloudRunning">
+      <source xml:lang="en">Running on GitHub</source>
+    </trans-unit>
+    <trans-unit id="automationRunDetails">
+      <source xml:lang="en">{0}, {1}, {2}</source>
+    </trans-unit>
+    <trans-unit id="automationRunExternalFailed">
+      <source xml:lang="en">Failed to open the run on GitHub.</source>
+    </trans-unit>
     <trans-unit id="automationRunOpenFailed">
       <source xml:lang="en">Failed to open automation run.</source>
+    </trans-unit>
+    <trans-unit id="automationRunOpenRejected">
+      <source xml:lang="en">The link could not be opened.</source>
+    </trans-unit>
+    <trans-unit id="automationRunQueued">
+      <source xml:lang="en">Queued on GitHub</source>
     </trans-unit>
     <trans-unit id="automationRunSessionStopFailed">
       <source xml:lang="en">Failed to stop the automation run session.</source>
@@ -809,11 +875,17 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationRunSessionStoppedStatus">
       <source xml:lang="en">Stopped the session for {0}</source>
     </trans-unit>
+    <trans-unit id="automationRunState">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="automationRunStopFailed">
+      <source xml:lang="en">Failed to stop the automation run.</source>
+    </trans-unit>
+    <trans-unit id="automationRunStopRequested">
+      <source xml:lang="en">Stop requested for {0}. History will update when available.</source>
+    </trans-unit>
     <trans-unit id="automationRunWorking">
       <source xml:lang="en">Working...</source>
-    </trans-unit>
-    <trans-unit id="automationRunWorkingAriaLabel">
-      <source xml:lang="en">{0}, Working...</source>
     </trans-unit>
     <trans-unit id="automationStartedStatus">
       <source xml:lang="en">Started automation {0}</source>
@@ -869,11 +941,11 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsPartialLoadError">
       <source xml:lang="en">Some automations could not be loaded.</source>
     </trans-unit>
-    <trans-unit id="automationsPartialLoading">
-      <source xml:lang="en">Loading additional automations...</source>
-    </trans-unit>
     <trans-unit id="automationsPartialUnavailable">
       <source xml:lang="en">Some automations are unavailable.</source>
+    </trans-unit>
+    <trans-unit id="automationsRefreshFailed">
+      <source xml:lang="en">Could not refresh automations: {0}</source>
     </trans-unit>
     <trans-unit id="automationsTitle">
       <source xml:lang="en">Automations</source>
@@ -923,8 +995,17 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="exportAutomationDialogTitle">
       <source xml:lang="en">Export Automation</source>
     </trans-unit>
+    <trans-unit id="historyEmpty">
+      <source xml:lang="en">No runs yet. Run an automation now or wait for its next scheduled run.</source>
+    </trans-unit>
     <trans-unit id="historyHeader">
       <source xml:lang="en">History</source>
+    </trans-unit>
+    <trans-unit id="historyLoadFailed">
+      <source xml:lang="en">Run history could not be loaded. Use Refresh to try again.</source>
+    </trans-unit>
+    <trans-unit id="historyRefreshFailed">
+      <source xml:lang="en">Run history could not be refreshed. Showing the last available history. Use Refresh to try again.</source>
     </trans-unit>
     <trans-unit id="importAutomation">
       <source xml:lang="en">Import Automation</source>
@@ -968,6 +1049,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="noAutomationsYet">
       <source xml:lang="en">No automations yet</source>
     </trans-unit>
+    <trans-unit id="openAutomationOnGitHub">
+      <source xml:lang="en">Open on GitHub</source>
+    </trans-unit>
+    <trans-unit id="refreshAutomations">
+      <source xml:lang="en">Refresh</source>
+    </trans-unit>
     <trans-unit id="renameAutomationRunSessionAction">
       <source xml:lang="en">Rename...</source>
     </trans-unit>
@@ -977,6 +1064,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="running">
       <source xml:lang="en">Running</source>
     </trans-unit>
+    <trans-unit id="scheduleCustom">
+      <source xml:lang="en">Custom schedule</source>
+    </trans-unit>
     <trans-unit id="scheduleDailyAt">
       <source xml:lang="en">Daily at {0}</source>
     </trans-unit>
@@ -985,6 +1075,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="scheduleManual">
       <source xml:lang="en">Manual</source>
+    </trans-unit>
+    <trans-unit id="scheduleWeekdaysAt">
+      <source xml:lang="en">Weekdays at {0}</source>
     </trans-unit>
     <trans-unit id="scheduleWeeklyAt">
       <source xml:lang="en">{0} at {1}</source>

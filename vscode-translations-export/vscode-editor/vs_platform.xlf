@@ -307,6 +307,11 @@
       <source xml:lang="en">Toggle section</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/actionWidget/browser/tabbedActionListWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="tabbedActionList.backWithKeybinding">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/actions/browser/buttonbar" source-language="en" datatype="plaintext"><body>
     <trans-unit id="moreActions">
       <source xml:lang="en">More Actions</source>
@@ -346,43 +351,6 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="hide.label">
       <source xml:lang="en">Hide '{0}'</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/platform/agentFinder/common/agentFinderMcpRegistry" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentFinder.invalidMcpSource">
-      <source xml:lang="en">The MCP server's installation source is invalid.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/platform/agentFinder/common/agentFinderRestProvider" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentFinder.httpError">
-      <source xml:lang="en">The customization catalog could not complete the request (HTTP {0}). Try again later.</source>
-    </trans-unit>
-    <trans-unit id="agentFinder.invalidCursor">
-      <source xml:lang="en">The customization catalog page is invalid. Start a new search.</source>
-    </trans-unit>
-    <trans-unit id="agentFinder.invalidJson">
-      <source xml:lang="en">The customization catalog returned invalid JSON. Try again later.</source>
-    </trans-unit>
-    <trans-unit id="agentFinder.invalidQuery">
-      <source xml:lang="en">The customization catalog query is invalid.</source>
-    </trans-unit>
-    <trans-unit id="agentFinder.invalidResponse">
-      <source xml:lang="en">The customization catalog returned an invalid response. Try again later.</source>
-    </trans-unit>
-    <trans-unit id="agentFinder.rateLimited">
-      <source xml:lang="en">The customization catalog is receiving too many requests. Try again later.</source>
-    </trans-unit>
-    <trans-unit id="agentFinder.responseTooLarge">
-      <source xml:lang="en">The customization catalog response is too large. Try a smaller page.</source>
-    </trans-unit>
-    <trans-unit id="agentFinder.timeout">
-      <source xml:lang="en">The customization catalog took too long to respond. Try again.</source>
-    </trans-unit>
-    <trans-unit id="agentFinder.unavailable">
-      <source xml:lang="en">Unable to reach the customization catalog. Check your connection and try again.</source>
-    </trans-unit>
-    <trans-unit id="agentFinder.unsupportedPages">
-      <source xml:lang="en">The customization catalog returned too many unsupported entries. Try a different search.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/browser/agentHostConnectionsService" source-language="en" datatype="plaintext"><body>
@@ -1117,7 +1085,7 @@ A keybinding</note>
       <source xml:lang="en">Controls whether enabled Agent Merge sessions ask the agent to update branches that are behind or resolve merge conflicts.</source>
     </trans-unit>
     <trans-unit id="chat.canvases.enabled">
-      <source xml:lang="en">Controls whether agents can open Canvases with interactive content in the Agents Window. Newly created sessions pick up changes to this setting.</source>
+      <source xml:lang="en">Controls whether local Agent Host Copilot sessions can open Canvases with interactive content in the Agents Window and the Editor Window. Newly created sessions pick up changes to this setting.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.workspaceSnapshot">
       <source xml:lang="en">When enabled, the first turn of a new Copilot agent host chat includes a bounded file-name snapshot of its working directories, so the agent can orient itself without listing the workspace first. File contents are never included.</source>
@@ -1442,7 +1410,7 @@ A keybinding</note>
       <source xml:lang="en">Trace</source>
     </trans-unit>
     <trans-unit id="agentHost.config.enableCustomTerminalTool.description">
-      <source xml:lang="en">When enabled, Copilot SDK sessions use Agent Host's terminal tool override instead of the SDK's default terminal behavior.</source>
+      <source xml:lang="en">When enabled, Copilot SDK sessions use Agent Host's terminal tool override instead of the SDK's default terminal behavior. Not supported on Windows, where sessions use the SDK's terminal and sandbox runtime.</source>
     </trans-unit>
     <trans-unit id="agentHost.config.enableCustomTerminalTool.title">
       <source xml:lang="en">Use Agent Host Terminal Tool</source>
@@ -3904,6 +3872,17 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">The /{0} command requires selecting a subcommand. Available options: {1}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotApprovalPolicy" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.approvalMode">
+      <source xml:lang="en">Permission Mode</source>
+    </trans-unit>
+    <trans-unit id="copilot.availableApprovals">
+      <source xml:lang="en">Available Permissions</source>
+    </trans-unit>
+    <trans-unit id="copilot.effectiveApprovals">
+      <source xml:lang="en">Effective Permissions</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotCustomizationCommandDisplay" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copilotMcp.error">
       <source xml:lang="en">Error</source>
@@ -4647,6 +4626,89 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="toolName.writePowerShell">
       <source xml:lang="en">Write to PowerShell</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/customizations/copilotCustomizationInstallations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.customizationInstallation.catalogChanged">
+      <source xml:lang="en">The SDK catalog no longer contains this exact customization. Refresh Discover and try again.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.catalogVersionChanged">
+      <source xml:lang="en">The SDK catalog version changed after discovery. Refresh Discover and try again.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.expired">
+      <source xml:lang="en">This customization installation review expired. Start the operation again.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.installFailed">
+      <source xml:lang="en">The SDK could not install this customization.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.installNotCompleted">
+      <source xml:lang="en">The SDK did not complete this customization installation.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.invalidOperation">
+      <source xml:lang="en">The SDK returned an invalid customization installation operation.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpInputsRequired">
+      <source xml:lang="en">This MCP server requires an installation choice or additional values that Discover cannot collect yet.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpInventoryFailed">
+      <source xml:lang="en">The SDK could not list installed MCP servers.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpPlanFailed">
+      <source xml:lang="en">The SDK could not prepare this MCP server installation.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpPrepareFailed">
+      <source xml:lang="en">The SDK could not prepare this MCP server installation.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpUnavailable">
+      <source xml:lang="en">The SDK cannot install this MCP server in the selected session.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpUninstallPlanFailed">
+      <source xml:lang="en">The SDK could not prepare this MCP server removal.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.notFound">
+      <source xml:lang="en">The SDK no longer owns this customization installation.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.runtimeChanged">
+      <source xml:lang="en">The customization runtime restarted. Start the operation again.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.sessionRequired">
+      <source xml:lang="en">Start a Copilot agent session before managing SDK installations.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.skillInventoryFailed">
+      <source xml:lang="en">The SDK could not list installed skills.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.skillPlanFailed">
+      <source xml:lang="en">The SDK could not prepare this skill installation.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.skillUnavailable">
+      <source xml:lang="en">The SDK cannot install this skill in the selected session.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.skillUninstallPlanFailed">
+      <source xml:lang="en">The SDK could not prepare this skill removal.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.uninstallFailed">
+      <source xml:lang="en">The SDK could not remove this customization.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.uninstallNotCompleted">
+      <source xml:lang="en">The SDK did not complete this customization removal.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.unsupported">
+      <source xml:lang="en">This customization does not provide an SDK installation identity.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationMarketplace.cursorExpired">
+      <source xml:lang="en">This catalog page expired. Start the search again.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationMarketplace.invalidPagination">
+      <source xml:lang="en">The Copilot customization catalog returned invalid pagination.</source>
+    </trans-unit>
+    <trans-unit id="copilot.featuredPlugin.azure.description">
+      <source xml:lang="en">Plan, deploy, troubleshoot, and manage Azure resources with skills and MCP tools.</source>
+    </trans-unit>
+    <trans-unit id="copilot.featuredPlugin.securityBestPractices.description">
+      <source xml:lang="en">Build secure, accessible, reliable software.</source>
+    </trans-unit>
+    <trans-unit id="copilot.featuredPlugin.workiq.description">
+      <source xml:lang="en">Find answers across Microsoft 365 emails, meetings, documents, and Teams messages.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/devContainerAgentHostService" source-language="en" datatype="plaintext"><body>
@@ -6687,6 +6749,9 @@ A keybinding label</note>
     </trans-unit>
     <trans-unit id="invalidCopilotGlobalMcpServerForWrite">
       <source xml:lang="en">Cannot add Copilot Global MCP server '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="mcpServerToUpdateNotFound">
+      <source xml:lang="en">The MCP server '{0}' no longer exists in {1}.</source>
     </trans-unit>
     <trans-unit id="reservedWorkspaceRootMcpServerName">
       <source xml:lang="en">To add a server named 'mcpServers', first wrap the existing servers in an 'mcpServers' object in .mcp.json.</source>

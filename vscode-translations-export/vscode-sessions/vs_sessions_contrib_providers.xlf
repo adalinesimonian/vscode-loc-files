@@ -15,6 +15,9 @@
     <trans-unit id="agentHostAutomation.createUnavailable">
       <source xml:lang="en">The Agent Host is not ready to create automations.</source>
     </trans-unit>
+    <trans-unit id="agentHostAutomation.customSchedule">
+      <source xml:lang="en">This automation uses a schedule that cannot be edited in VS Code.</source>
+    </trans-unit>
     <trans-unit id="agentHostAutomation.customizationVersion">
       <source xml:lang="en">Version {0}</source>
     </trans-unit>
@@ -35,6 +38,9 @@
     </trans-unit>
     <trans-unit id="agentHostAutomation.wrongHost">
       <source xml:lang="en">The automation target must belong to this Agent Host.</source>
+    </trans-unit>
+    <trans-unit id="automationUnsupportedSchedule">
+      <source xml:lang="en">Choose a local-time schedule for this Agent Host automation.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostClaudePermissionModePicker" source-language="en" datatype="plaintext"><body>
@@ -486,9 +492,6 @@
     <trans-unit id="agentHost.sessionConfigUnavailable">
       <source xml:lang="en">Could not resolve the Agent Host session configuration. Please try again.</source>
     </trans-unit>
-    <trans-unit id="canvas.pendingTitle">
-      <source xml:lang="en">Canvas</source>
-    </trans-unit>
     <trans-unit id="chatArchiveUnavailable">
       <source xml:lang="en">Archiving this chat is unavailable.</source>
     </trans-unit>
@@ -622,6 +625,74 @@
       <source xml:lang="en">Update this Agent Host to a newer version, then reconnect to use automations.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/cloudAutomationStore" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudAutomations.customSchedule">
+      <source xml:lang="en">This automation uses triggers that cannot be edited in VS Code.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.description">
+      <source xml:lang="en">Runs even when your computer is off, triggered on a schedule.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.githubRequired">
+      <source xml:lang="en">Select a private repository on GitHub.com.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.invalidSchedule">
+      <source xml:lang="en">Choose a daily or weekly UTC schedule with minutes 00, 15, 30, or 45.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.invalidTarget">
+      <source xml:lang="en">Select a GitHub repository with default isolation for this cloud automation.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.localConfiguration">
+      <source xml:lang="en">Cloud automations do not support local mode or approval settings.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.missing">
+      <source xml:lang="en">This cloud automation is no longer available. Refresh the catalogue.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.needsInput">
+      <source xml:lang="en">Needs input on GitHub</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.refreshFailed">
+      <source xml:lang="en">Cloud automations could not be refreshed.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.refreshRequired">
+      <source xml:lang="en">Refresh cloud automations before submitting another request.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.repositoryImmutable">
+      <source xml:lang="en">Duplicate this automation to use another repository.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.requiredFields">
+      <source xml:lang="en">An automation name and prompt are required.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.resetUnsupported">
+      <source xml:lang="en">Resetting cloud automation configuration is not supported.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.searchPrivateRepository">
+      <source xml:lang="en">Search for a private repository or paste a repository URL...</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.stopUnavailable">
+      <source xml:lang="en">Unable to stop this cloud automation run.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.targetImmutable">
+      <source xml:lang="en">The repository and provider cannot be changed for an existing cloud automation. Duplicate this automation to use another target.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.targetUnavailable">
+      <source xml:lang="en">Cloud automations are unavailable.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.toolsLoadFailed">
+      <source xml:lang="en">Available tools could not be loaded.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.toolsUnavailable">
+      <source xml:lang="en">Cloud automations are unavailable.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.unavailable">
+      <source xml:lang="en">Sign in to GitHub.com and enable cloud automations before continuing.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.unsupportedConfiguration">
+      <source xml:lang="en">This session configuration is not supported by cloud automations.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.unsupportedEdit">
+      <source xml:lang="en">This automation uses triggers that cannot be edited in VS Code.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/cloudSandboxSessionConfig" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cloudSandbox.approvals">
       <source xml:lang="en">Approvals</source>
@@ -686,6 +757,9 @@
     <trans-unit id="cloneRepository.workspaceFile">
       <source xml:lang="en">The selected clone is a workspace file. Choose the repository again to select a repository folder.</source>
     </trans-unit>
+    <trans-unit id="cloudAutomationConfigurationUnsupported">
+      <source xml:lang="en">Cloud automations do not support local mode, approval, or model-specific settings. Remove those settings before saving.</source>
+    </trans-unit>
     <trans-unit id="copilotChatSessionsProvider">
       <source xml:lang="en">Copilot Chat</source>
     </trans-unit>
@@ -728,11 +802,17 @@
     <trans-unit id="sandbox.provisioningContainer">
       <source xml:lang="en">Setting up cloud container</source>
     </trans-unit>
+    <trans-unit id="sandbox.quickChatUnavailable">
+      <source xml:lang="en">The sandbox could not start a chat without a workspace. Your prompt was not sent.</source>
+    </trans-unit>
+    <trans-unit id="sandbox.repositoryRequired">
+      <source xml:lang="en">GitHub sandbox creation requires a repository for this session. Please choose a repository to try again.</source>
+    </trans-unit>
     <trans-unit id="sandbox.startingAgent">
       <source xml:lang="en">Starting Copilot agent</source>
     </trans-unit>
     <trans-unit id="sandbox.unavailable">
-      <source xml:lang="en">GitHub sandbox creation is no longer available. Enable the feature and choose a repository to try again.</source>
+      <source xml:lang="en">GitHub sandbox creation is no longer available. Enable the feature to try again.</source>
     </trans-unit>
     <trans-unit id="sandbox.unsupportedConfiguration">
       <source xml:lang="en">This configuration is not supported for a new GitHub sandbox session.</source>
@@ -745,6 +825,47 @@
     </trans-unit>
     <trans-unit id="workInRepository">
       <source xml:lang="en">Work in Repository...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/githubCloudAutomationStore" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudAutomations.catalogueLimit">
+      <source xml:lang="en">This repository has more cloud automations than can be loaded. Its catalogue is incomplete.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.checkingRepository">
+      <source xml:lang="en">Checking repository access...</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.dotcomRequired">
+      <source xml:lang="en">Cloud automations require a GitHub.com account.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.invalidRepositories">
+      <source xml:lang="en">Invalid stored cloud automation repositories.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.invalidRepository">
+      <source xml:lang="en">Invalid stored cloud automation repository.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.partialRefreshFailed">
+      <source xml:lang="en">Some GitHub repositories could not be refreshed. Check the logs for details.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.privateRepositoryRequired">
+      <source xml:lang="en">Cloud automations currently require a private GitHub repository.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.privateRepositoryTargetRequired">
+      <source xml:lang="en">This repository must be private</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.repositoryCheckFailed">
+      <source xml:lang="en">Unable to verify repository access. Refresh automations to try again.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.repositoryRecheckRequired">
+      <source xml:lang="en">Repository access must be verified again.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.repositoryRequired">
+      <source xml:lang="en">Select a GitHub.com repository for this cloud automation.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.repositoryTargetRequired">
+      <source xml:lang="en">Choose a private GitHub.com repository.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.signIn">
+      <source xml:lang="en">Sign in to GitHub.com with repository access to manage cloud automations.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/mobilePermissionPicker" source-language="en" datatype="plaintext"><body>
@@ -1471,7 +1592,7 @@
       <source xml:lang="en">The WebSocket address of the remote agent host (e.g. "localhost:3000").</source>
     </trans-unit>
     <trans-unit id="chat.remoteAgentHosts.autoConnect">
-      <source xml:lang="en">Automatically connect to online dev tunnel, SSH, and WSL remote agent hosts on startup. When disabled, cached sessions are still shown but connections are established only on demand.</source>
+      <source xml:lang="en">Automatically connect to online dev tunnel, SSH, and WSL remote agent hosts on startup, and to online GitHub environments in the web Agents window. When disabled, cached sessions are still shown but connections are established only on demand.</source>
     </trans-unit>
     <trans-unit id="chat.remoteAgentHosts.connectionToken">
       <source xml:lang="en">An optional connection token for authenticating with the remote agent host.</source>
@@ -1514,6 +1635,9 @@
     <trans-unit id="configureSSHHosts">
       <source xml:lang="en">Configure SSH Hosts...</source>
     </trans-unit>
+    <trans-unit id="connectMissionControlHost">
+      <source xml:lang="en">Environments</source>
+    </trans-unit>
     <trans-unit id="connectViaSSH">
       <source xml:lang="en">Connect to Remote Agent Host via SSH</source>
     </trans-unit>
@@ -1543,6 +1667,12 @@
     </trans-unit>
     <trans-unit id="nameRemoteValidationEmpty">
       <source xml:lang="en">Enter a name for this remote agent host.</source>
+    </trans-unit>
+    <trans-unit id="remoteFolderBrowsingUnavailable">
+      <source xml:lang="en">The connected environment does not support folder browsing.</source>
+    </trans-unit>
+    <trans-unit id="remoteFolderProviderUnavailable">
+      <source xml:lang="en">The connected environment is not available for folder browsing.</source>
     </trans-unit>
     <trans-unit id="sshAddNewHost">
       <source xml:lang="en">Add New SSH Host...</source>

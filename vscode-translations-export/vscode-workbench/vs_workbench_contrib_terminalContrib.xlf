@@ -821,7 +821,7 @@ Reason for leaving the sandbox: {2}</source>
       <source xml:lang="en">Deprecated. Controls whether the Local agent uses sandboxing to restrict what tools can do. In Copilot Agent Host, this legacy policy supplies an overridable sandbox default, not a mandatory requirement. Use the runtime-native sandbox.enabled managed setting to require sandboxing in Copilot Agent Host.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.enabledSetting">
-      <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system.</source>
+      <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system. The Local harness supports sandboxing on Linux and macOS only. The Copilot Agent Host harness uses the SDK runtime's sandbox, including on supported Windows hosts.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.enabledSetting.offDescription">
       <source xml:lang="en">Disable sandboxing for agent mode tools.</source>
@@ -891,18 +891,6 @@ Reason for leaving the sandbox: {2}</source>
     </trans-unit>
     <trans-unit id="agentSandbox.userConfiguredPaths.readwritePaths">
       <source xml:lang="en">Read/Write: paths the Copilot Agent Host sandbox can read and write.</source>
-    </trans-unit>
-    <trans-unit id="agentSandbox.windowsFileSystemSetting">
-      <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Windows. Paths do not support glob patterns, only literal paths (ex: C:\src, C:\Users\me\.ssh, .env).</source>
-    </trans-unit>
-    <trans-unit id="agentSandbox.windowsFileSystemSetting.allowRead">
-      <source xml:lang="en">Array of additional paths to allow read-only access. Takes precedence over denyRead.</source>
-    </trans-unit>
-    <trans-unit id="agentSandbox.windowsFileSystemSetting.allowWrite">
-      <source xml:lang="en">Array of additional paths to allow read/write access. Leave empty to disallow writes outside the workspace folders, workspace storage folder, and sandbox temp directory.</source>
-    </trans-unit>
-    <trans-unit id="agentSandbox.windowsFileSystemSetting.denyRead">
-      <source xml:lang="en">Array of paths to deny access. Leave empty to allow reading all paths.</source>
     </trans-unit>
     <trans-unit id="autoApprove.defaults">
       <source xml:lang="en">Note that there's a default set of rules to allow and also deny commands. Consider setting {0} to {1} to ignore all default rules to ensure there are no conflicts with your own rules. Do this at your own risk, the default denial rules are designed to protect you against running dangerous commands.</source>

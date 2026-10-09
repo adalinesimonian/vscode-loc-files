@@ -4,6 +4,12 @@
     <trans-unit id="automation.advanced">
       <source xml:lang="en">Advanced</source>
     </trans-unit>
+    <trans-unit id="automation.allowedToolsTitle">
+      <source xml:lang="en">Allowed Tools</source>
+    </trans-unit>
+    <trans-unit id="automation.configureAllowedTools">
+      <source xml:lang="en">Configure allowed tools</source>
+    </trans-unit>
     <trans-unit id="automation.customizations.description">
       <source xml:lang="en">Choose which plugins and customizations runs of this automation can use.</source>
     </trans-unit>
@@ -82,6 +88,15 @@
     <trans-unit id="automation.form.branchRequired">
       <source xml:lang="en">A branch is required for Worktree isolation.</source>
     </trans-unit>
+    <trans-unit id="automation.form.cloudScheduleMinute">
+      <source xml:lang="en">Choose a time that corresponds to minute 00, 15, 30, or 45 in UTC.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.cloudUnavailable">
+      <source xml:lang="en">Cloud automations are unavailable.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.cloudWeekdays">
+      <source xml:lang="en">Weekdays is only available for local automations. Choose a supported schedule for Cloud.</source>
+    </trans-unit>
     <trans-unit id="automation.form.day">
       <source xml:lang="en">Day of week</source>
     </trans-unit>
@@ -124,6 +139,9 @@
     <trans-unit id="automation.form.noWorkspace.description">
       <source xml:lang="en">Run without a backing workspace</source>
     </trans-unit>
+    <trans-unit id="automation.form.privateRepositoryRequired">
+      <source xml:lang="en">The repository must be private.</source>
+    </trans-unit>
     <trans-unit id="automation.form.prompt.placeholder">
       <source xml:lang="en">Describe what you want to automate</source>
     </trans-unit>
@@ -135,6 +153,9 @@
     </trans-unit>
     <trans-unit id="automation.form.saving">
       <source xml:lang="en">Saving automation…</source>
+    </trans-unit>
+    <trans-unit id="automation.form.scheduleRequired">
+      <source xml:lang="en">Choose a supported schedule.</source>
     </trans-unit>
     <trans-unit id="automation.form.selectWorkspace">
       <source xml:lang="en">Select workspace</source>
@@ -154,6 +175,9 @@
     <trans-unit id="automation.form.sessionTypeRequired">
       <source xml:lang="en">Session type is required.</source>
     </trans-unit>
+    <trans-unit id="automation.form.switchingTarget">
+      <source xml:lang="en">Saving the current session configuration...</source>
+    </trans-unit>
     <trans-unit id="automation.form.syncingCustomizations">
       <source xml:lang="en">Syncing customizations…</source>
     </trans-unit>
@@ -166,11 +190,20 @@
     <trans-unit id="automation.form.time">
       <source xml:lang="en">Time</source>
     </trans-unit>
+    <trans-unit id="automation.form.timeLocal">
+      <source xml:lang="en">Time (Local)</source>
+    </trans-unit>
     <trans-unit id="automation.form.trustFolderMessage">
       <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
     </trans-unit>
+    <trans-unit id="automation.form.workInGitHub">
+      <source xml:lang="en">Work in GitHub</source>
+    </trans-unit>
     <trans-unit id="automation.form.workspacePicker.action">
       <source xml:lang="en">Automations Workspace Picker</source>
+    </trans-unit>
+    <trans-unit id="automation.form.workspacePicker.disabledAriaLabel">
+      <source xml:lang="en">Automation target, {0}. {1}</source>
     </trans-unit>
     <trans-unit id="automation.form.workspacePicker.pickAriaLabel">
       <source xml:lang="en">Pick a workspace for this automation</source>
@@ -181,6 +214,9 @@
     <trans-unit id="automation.form.workspaceTargetUnavailable">
       <source xml:lang="en">The selected Agent Host and session type cannot use this workspace. Choose another workspace or session type.</source>
     </trans-unit>
+    <trans-unit id="automation.interval.choose">
+      <source xml:lang="en">Choose a schedule</source>
+    </trans-unit>
     <trans-unit id="automation.interval.daily">
       <source xml:lang="en">Daily</source>
     </trans-unit>
@@ -190,8 +226,35 @@
     <trans-unit id="automation.interval.manual">
       <source xml:lang="en">Manual</source>
     </trans-unit>
+    <trans-unit id="automation.interval.weekdays">
+      <source xml:lang="en">Weekdays</source>
+    </trans-unit>
     <trans-unit id="automation.interval.weekly">
       <source xml:lang="en">Weekly</source>
+    </trans-unit>
+    <trans-unit id="automation.retryTools">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="automation.savedToolsNotInCatalog">
+      <source xml:lang="en">Other Saved Tools</source>
+    </trans-unit>
+    <trans-unit id="automation.searchTools">
+      <source xml:lang="en">Search tools</source>
+    </trans-unit>
+    <trans-unit id="automation.tools">
+      <source xml:lang="en">Tools</source>
+    </trans-unit>
+    <trans-unit id="automation.toolsDescription">
+      <source xml:lang="en">Select which tools the agent can use. Built-in tools are always available.</source>
+    </trans-unit>
+    <trans-unit id="automation.toolsLoading">
+      <source xml:lang="en">Loading available tools...</source>
+    </trans-unit>
+    <trans-unit id="automation.toolsNotReported">
+      <source xml:lang="en">GitHub did not report the saved tool selection. Unchanged permissions will be preserved. Select tools to replace it explicitly.</source>
+    </trans-unit>
+    <trans-unit id="automation.toolsSelectedCount">
+      <source xml:lang="en">{0} of {1} tools selected</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/automationDialogService" source-language="en" datatype="plaintext"><body>
@@ -244,6 +307,9 @@
     </trans-unit>
     <trans-unit id="automationHostUnavailable">
       <source xml:lang="en">{0} is unavailable. Reconnect to the Agent Host and try again.</source>
+    </trans-unit>
+    <trans-unit id="automationProviderDisabled">
+      <source xml:lang="en">Automations from {0} are disabled.</source>
     </trans-unit>
     <trans-unit id="automationProviderUnsupported">
       <source xml:lang="en">{0} does not support automations. Use an Agent Host that supports automations.</source>
@@ -349,6 +415,9 @@
     <trans-unit id="automation.tool.list.userDescription">
       <source xml:lang="en">List scheduled agent automations</source>
     </trans-unit>
+    <trans-unit id="automation.tool.run.accepted">
+      <source xml:lang="en">Requested automation {0}; the provider has not returned a run.</source>
+    </trans-unit>
     <trans-unit id="automation.tool.run.alreadyRunning">
       <source xml:lang="en">Automation {0} is already running</source>
     </trans-unit>
@@ -384,6 +453,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/automations.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.automations.cloud.enabled">
+      <source xml:lang="en">Enables managing user-owned cloud automations in known private GitHub repositories. Disabling this setting does not stop schedules already running on GitHub.</source>
+    </trans-unit>
     <trans-unit id="chat.automations.enabled">
       <source xml:lang="en">Enables the Automations feature: scheduling agent sessions to run on a cadence. When disabled, the Automations entry in the Customizations sidebar, the Automations section in the Customizations editor, and the Automation option in the new-session composer are hidden, and scheduled automations are not dispatched.</source>
     </trans-unit>
@@ -394,6 +466,9 @@
   <file original="src/vs/sessions/contrib/automations/browser/providerAutomationService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="automationCreateUnavailable">
       <source xml:lang="en">Connect to an Agent Host that supports automations before creating one.</source>
+    </trans-unit>
+    <trans-unit id="automationStopUnavailable">
+      <source xml:lang="en">This automation run cannot be stopped from VS Code.</source>
     </trans-unit>
     <trans-unit id="automationUnavailable">
       <source xml:lang="en">Automation '{0}' is unavailable. Its Agent Host may be disconnected or the automation may have been deleted.</source>

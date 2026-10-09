@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/chat/browser/agentHostInputCompletions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.completion.providerUnavailable">
+      <source xml:lang="en">Agent Host session provider is not available.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/chat/browser/agentsWindowWorkspaceHandoff" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentsHandoff.chooseWorkspace">
       <source xml:lang="en">Choose Workspace</source>
@@ -781,6 +786,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/newSessionAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.newSession.chatUnavailable">
+      <source xml:lang="en">The new session chat is unavailable.</source>
+    </trans-unit>
     <trans-unit id="sessions.newSession.label">
       <source xml:lang="en">New Session</source>
     </trans-unit>
@@ -1145,8 +1153,8 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionArtifacts.files">
       <source xml:lang="en">Files</source>
     </trans-unit>
-    <trans-unit id="sessionArtifacts.imageCarouselTitle">
-      <source xml:lang="en">Artifact Images</source>
+    <trans-unit id="sessionArtifacts.generatedImages">
+      <source xml:lang="en">Generated Images</source>
     </trans-unit>
     <trans-unit id="sessionArtifacts.images">
       <source xml:lang="en">Images</source>
@@ -1159,6 +1167,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionArtifacts.openImage">
       <source xml:lang="en">Open {0} in Images Preview</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.openImageFailed">
+      <source xml:lang="en">Could not open image: {0}</source>
     </trans-unit>
     <trans-unit id="sessionArtifacts.pullRequests">
       <source xml:lang="en">Pull Requests</source>
@@ -1209,20 +1220,11 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionChatPills.copyPullRequest">
       <source xml:lang="en">Copy pull request URL</source>
     </trans-unit>
-    <trans-unit id="sessionChatPills.issue">
-      <source xml:lang="en">Issue #{0}</source>
-    </trans-unit>
     <trans-unit id="sessionChatPills.issueDescription">
       <source xml:lang="en">{0}. {1}</source>
     </trans-unit>
-    <trans-unit id="sessionChatPills.issueWithTitle">
-      <source xml:lang="en">Issue #{0}: {1}</source>
-    </trans-unit>
     <trans-unit id="sessionChatPills.issues">
       <source xml:lang="en">Issues</source>
-    </trans-unit>
-    <trans-unit id="sessionChatPills.pullRequest">
-      <source xml:lang="en">Pull Request #{0}</source>
     </trans-unit>
     <trans-unit id="sessionChatPills.pullRequestAttention">
       <source xml:lang="en">failing checks or merge conflicts</source>
@@ -1253,9 +1255,6 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionChatPills.pullRequestOpen">
       <source xml:lang="en">open</source>
-    </trans-unit>
-    <trans-unit id="sessionChatPills.pullRequestWithTitle">
-      <source xml:lang="en">Pull Request #{0}: {1}</source>
     </trans-unit>
     <trans-unit id="sessionChatPills.pullRequests">
       <source xml:lang="en">Pull Requests</source>
@@ -1792,6 +1791,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.doneNudge">
       <source xml:lang="en">When all GitHub pull requests associated with the session have merged and no chat is working or waiting for input, a mark as done suggestion may appear above the chat input. Use Tab or Shift+Tab to reach Mark as Done, Configure Automatic Cleanup, or Dismiss Mark as Done Suggestion, then Enter or Space to activate it. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Mark as Done" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismiss Mark as Done Suggestion, or Escape while the suggestion is focused, hides the suggestion for this session, including after a reload, until it is marked as done or deleted, and returns focus to the chat input. Marking the session as done hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Done" section of the sessions list. You can restore it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by restoring the session.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.environmentFolders">
+      <source xml:lang="en">Choose Environments in the workspace picker to connect to a GitHub environment, then select a folder on that host. Use the arrow keys to navigate, Enter to select, and Escape to cancel either picker.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.externalSessionAdoption">
       <source xml:lang="en">Once you send a message to an external session's agent, it becomes a regular session. Its banner and External hover label disappear, and it is no longer grouped or filtered as external.</source>
     </trans-unit>
@@ -1833,6 +1835,12 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.forkToSide">
       <source xml:lang="en">Alt-click, or Option-click on macOS, the Fork Conversation button at a checkpoint to open the fork beside its source. Ordinary activation keeps its existing behavior. With the keyboard, activate Fork Conversation, reopen the source from the Sessions list, then choose Open to the Side from the fork's context menu.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.generatedImageArtifacts">
+      <source xml:lang="en">Generated images from this chat automatically appear in the Generated Images section of the Artifacts pill, separate from other images and files. When Images Preview is enabled for chat, open an image and use the Left and Right Arrow keys to browse generated images and user attachments from the conversation. Images shown from the transcript do not offer Remove from Session unless they were also recorded as artifacts.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.generatedImageDetails">
+      <source xml:lang="en">Expand a completed image-generation dropdown to inspect its duration, total image byte size, and tokens. A dash means the value was not reported; token usage is not yet available. Generated image downloads include a stable hash suffix so different images have distinct filenames.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.githubContext">
       <source xml:lang="en">Use Add Context to attach files, images, and, when available, GitHub issues or pull requests.</source>
@@ -1904,7 +1912,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">In a new-session composer, open and focus the workspace picker{0} or the harness picker{1}. Focus either picker control and open its context menu{2} to configure its keybinding.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.offlineDraft">
-      <source xml:lang="en">Opening a cloud sandbox conversation does not resume its environment. You can read its history and compose a draft while offline. Typing, pasting, or adding an attachment starts a connection attempt. Send, mode, and permissions are unavailable until the session is ready. Connection progress and failures appear in a banner. If connecting fails, your draft stays in the input; use Retry in the banner to try again. Connecting never sends your draft automatically.</source>
+      <source xml:lang="en">By default, opening a cloud sandbox conversation connects or wakes its environment in the background. Turn off chat.agentHost.cloudSandbox.autoConnectOnOpen to wait until you start composing or explicitly connect instead. You can read its history and compose a draft while it connects. Connection progress and failures appear in a banner only after you type, paste, or add an attachment. If the session is ready before you start composing, no connection banner appears. Send, mode, and permissions are unavailable until the session is ready. If connecting fails, your draft stays in the input; use Retry in the banner to try again. Connecting never sends your draft automatically.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.openPullRequest">
       <source xml:lang="en">When the session is associated with GitHub pull requests, a status pill above the chat input shows the pull request number or count. Activate it to open a single pull request or choose from the associated pull requests{0}.</source>
@@ -1937,10 +1945,10 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">In a repository section where New Session is a split button, focus New Session and press Right Arrow to reach its dropdown, then activate New Session from Pull Request to open a searchable pull request picker. Pull requests are grouped by review and assignment status. Use the arrow keys to navigate, Enter to create the session, and Escape to close the picker.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.quickChat">
-      <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. When consolidated remote workspaces are enabled, this opens the new-session composer, where you can choose No workspace. Otherwise, it starts a workspace-less chat directly. The Toggle Side Panel command is disabled for quick chats.</source>
+      <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. When consolidated remote workspaces are enabled, this opens the new-session composer, where you can choose No workspace. Otherwise, it starts a workspace-less chat directly. When GitHub sandboxes are enabled, choose Cloud in the harness picker to chat without a repository or pull request. The Toggle Side Panel command is disabled for quick chats.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.remoteConnections">
-      <source xml:lang="en">On desktop, the title bar offers Allow Remote Connections. Use Tab to reach the title bar, arrow keys to reach the toggle, and Enter or Space to enable or disable sharing. The chat.agentHost.remoteConnections setting chooses Dev Tunnel or Mission Control. Selecting a backend does not enable sharing; changing it turns sharing off. With Mission Control selected, enabling the toggle registers your local environment for remote owner access. Local sessions continue using local IPC.</source>
+      <source xml:lang="en">On desktop, the title bar offers Allow Remote Connections. Use Tab to reach the title bar, arrow keys to reach the toggle, and Enter or Space to enable or disable sharing. The chat.agentHost.remoteConnections setting chooses Dev Tunnel or GitHub environment. Selecting a backend does not enable sharing; changing it turns sharing off. With GitHub environment selected, enabling the toggle registers your local environment for remote owner access. Local sessions continue using local IPC.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.remoteDelegation">
       <source xml:lang="en">Ask the agent to list remote agent hosts or create a remote session with platform and resource requirements. Creation uses the standard tool confirmation and does not change the focused chat. The result includes a link to the remote session. Remote sessions can send messages back to the originating chat while this Agents window remains connected.</source>
@@ -2047,6 +2055,12 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.vscodePetAchievements">
       <source xml:lang="en">When the pet is enabled, the user account menu lists unlocked achievement badges before locked badges and provides a View Achievements button. A gold star on the pet announces a newly unlocked achievement; activate the pet while the star is visible to open Achievements.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.vscodePetPainting">
+      <source xml:lang="en">While an image-generation tool is running, the pet paints at a small easel, then returns to its normal activity. Reduced motion shows a still painting pose.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.webMissionControlHosts">
+      <source xml:lang="en">On the web, the host picker includes Dev Tunnels and GitHub environments. Online GitHub environments connect automatically when {0} is enabled, so their sessions appear in the Sessions list. An explicit Disconnect keeps that environment disconnected until you connect it again. Use Tab to reach the host picker, Enter or Space to open it, and arrow keys and Enter to choose a host, Connect, Disconnect, or Re-discover Hosts. On phones, the Hosts sheet offers Re-discover hosts and Open Connection Information for connection controls.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.welcomeName">
       <source xml:lang="en">In a new session, the welcome heading is announced when shown. To disable this announcement, set accessibility.verbosity.newSessionWelcome to false. Press Tab to reach Customize Welcome Message beside the welcome heading, or open its context menu{0}. Choose Name to enter a custom name, or clear it to use your GitHub first name when available. Choose Phrases to open the setting where you add or replace welcome phrases, using {1} to position the name.</source>
     </trans-unit>
@@ -2054,7 +2068,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Use Tab or Shift+Tab to navigate to the workspace picker and choose a workspace for your session. When consolidated remote workspaces are enabled, opening the picker focuses its search input so you can immediately type to filter workspaces. If quick chats are available, you can also choose No workspace to start a workspace-less chat.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.workspaceHandoff">
-      <source xml:lang="en">Opening Agents from an editor can suggest that editor's folder for a fresh session. Choosing a workspace yourself or starting another session cancels a pending suggestion. If an explicitly requested workspace cannot be selected, a notification offers Retry and Choose Workspace actions.</source>
+      <source xml:lang="en">Opening Agents from an editor can suggest that editor's folder for a fresh session. An already-open window keeps its active and visible sessions unless a session or New Session is explicitly requested. Revealing New Session preserves any unsent draft. Choosing a workspace yourself or starting another session cancels a pending suggestion. If an explicitly requested workspace cannot be selected, a notification offers Retry and Choose Workspace actions.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.worktreeCleanupSuggestion">
       <source xml:lang="en">When at least 20 inactive session worktrees are eligible for cleanup or eligible inactive worktrees can reclaim at least 5 GiB, a storage suggestion may appear below the Sessions list and is announced with the Open Worktree Cleanup Command Palette command. The command is also available from the Sessions More Actions menu. Active, running, needs-input, pinned, and recently used sessions are excluded. Use Tab or Shift+Tab to reach Open Worktree Cleanup, Don't Show Again, or Dismiss Session Storage Suggestion, then Enter or Space to activate it. Don't Show Again disables future suggestions and announcements across restarts. Press Escape while focus is in the suggestion to dismiss it for the current window. To stop these suggestions and announcements without using the suggestion itself, run Disable Session Storage Cleanup Suggestions from the Command Palette, or run Open Worktree Cleanup and clear the Suggest Cleaning Up Session Storage When It Grows Large checkbox.</source>
