@@ -115,6 +115,21 @@
       <source xml:lang="en">&amp;&amp;Sessions</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
+    <trans-unit id="sessions.list.externalApplicationBadge">
+      <source xml:lang="en">Controls where external sessions created in another application show the creating application.</source>
+    </trans-unit>
+    <trans-unit id="sessions.list.externalApplicationBadge.details">
+      <source xml:lang="en">Show the creating application first in the session details.</source>
+    </trans-unit>
+    <trans-unit id="sessions.list.externalApplicationBadge.off">
+      <source xml:lang="en">Do not show the creating application.</source>
+    </trans-unit>
+    <trans-unit id="sessions.list.externalApplicationBadge.showFrom">
+      <source xml:lang="en">Controls whether external session application badges include the word 'From'.</source>
+    </trans-unit>
+    <trans-unit id="sessions.list.externalApplicationBadge.title">
+      <source xml:lang="en">Show the creating application next to the session title.</source>
+    </trans-unit>
     <trans-unit id="sessions.list.groupExternalSessions">
       <source xml:lang="en">Controls whether external sessions are shown in a separate External section instead of workspace or time groups. Pinned sessions and custom groups keep their placement.</source>
     </trans-unit>
@@ -1323,11 +1338,17 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionChatItemWithoutTimeAria">
       <source xml:lang="en">{0}, chat, {1}</source>
     </trans-unit>
+    <trans-unit id="sessionExternalApplicationBadge">
+      <source xml:lang="en">From {0}</source>
+    </trans-unit>
     <trans-unit id="sessionGroupName">
       <source xml:lang="en">Group name</source>
     </trans-unit>
     <trans-unit id="sessionItemAria">
       <source xml:lang="en">{0}, updated {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionItemExternalAria">
+      <source xml:lang="en">{0}, created in {1}</source>
     </trans-unit>
     <trans-unit id="sessionItemInputNeededMessageAria">
       <source xml:lang="en">{0}, {1}</source>

@@ -898,6 +898,15 @@
     <trans-unit id="mcpForm.args.hint">
       <source xml:lang="en">Separate arguments with spaces, or enter a JSON array if an argument contains spaces or is empty.</source>
     </trans-unit>
+    <trans-unit id="mcpForm.ariaLabel">
+      <source xml:lang="en">MCP server configuration</source>
+    </trans-unit>
+    <trans-unit id="mcpForm.ariaLabelWithHelp">
+      <source xml:lang="en">{0}, use {1} for accessibility help</source>
+    </trans-unit>
+    <trans-unit id="mcpForm.ariaLabelWithHelpNoKeybinding">
+      <source xml:lang="en">{0}, run the command Open Accessibility Help which is currently not triggerable via keybinding</source>
+    </trans-unit>
     <trans-unit id="mcpForm.command">
       <source xml:lang="en">Command</source>
     </trans-unit>
@@ -1017,6 +1026,32 @@
     </trans-unit>
     <trans-unit id="mcpForm.url.aria">
       <source xml:lang="en">Server URL</source>
+    </trans-unit>
+    <trans-unit id="mcpServerConfigurationFormFocus">
+      <source xml:lang="en">Whether focus is in an MCP server configuration form</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpServerConfigurationFormAccessibility" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcpFormHelp.arguments">
+      <source xml:lang="en">Arguments are separated by spaces. If an argument contains spaces or is empty, enter all arguments as a JSON array of strings instead, for example ["--path", "My Documents"].</source>
+    </trans-unit>
+    <trans-unit id="mcpFormHelp.otherProperties">
+      <source xml:lang="en">Other Properties opens the configuration file at the server's entry, to edit properties the form does not show.</source>
+    </trans-unit>
+    <trans-unit id="mcpFormHelp.overview">
+      <source xml:lang="en">You are in the configuration form of an MCP server. It edits the server's entry in its configuration file, and only offers the fields that file can store.</source>
+    </trans-unit>
+    <trans-unit id="mcpFormHelp.rows">
+      <source xml:lang="en">Environment variables and headers are rows of a name field, a value field and a Remove button. Use Add Variable or Add Header to add a row; focus moves to its name field. Removing a row moves focus to the next row, or to the add button when no rows remain.</source>
+    </trans-unit>
+    <trans-unit id="mcpFormHelp.save">
+      <source xml:lang="en">Save writes only the changed properties to the configuration file and is unavailable until there is a valid change. Discard Changes restores the configuration from the file.</source>
+    </trans-unit>
+    <trans-unit id="mcpFormHelp.type">
+      <source xml:lang="en">Server Type is a group of options: stdio runs a local process, http connects to a remote server, and sse connects using Server-Sent Events. Use the arrow keys to change the type; the fields below change to match it.</source>
+    </trans-unit>
+    <trans-unit id="mcpFormHelp.validation">
+      <source xml:lang="en">Invalid fields are marked as invalid and announce their error. Errors that apply to the whole form, such as a value the configuration file does not support, are announced below the fields.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServerEditor" source-language="en" datatype="plaintext"><body>

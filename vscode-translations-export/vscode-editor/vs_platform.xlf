@@ -367,6 +367,18 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/browser/agentHostSandboxToggle" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostSandboxToggle.devContainerLabel">
+      <source xml:lang="en">Sandboxing in Dev Container</source>
+    </trans-unit>
+    <trans-unit id="agentHostSandboxToggle.devContainerTitle">
+      <source xml:lang="en">Start the Dev Container with the Docker options needed for terminal sandboxing: unconfined seccomp, AppArmor and system paths, and access to /dev/net/tun. This relaxes the outer container's isolation; terminal commands still run inside their own sandbox.</source>
+    </trans-unit>
+    <trans-unit id="agentHostSandboxToggle.devContainerUnavailableEnabledTitle">
+      <source xml:lang="en">Sandboxing is requested for this session, but this Dev Container was started without the required Docker options. Recreate it with sandboxing enabled, or turn sandboxing off for this session if your organization permits it.</source>
+    </trans-unit>
+    <trans-unit id="agentHostSandboxToggle.devContainerUnavailableTitle">
+      <source xml:lang="en">This Dev Container was started without the Docker options required for sandboxing. Recreate it with sandboxing enabled to use this option.</source>
+    </trans-unit>
     <trans-unit id="agentHostSandboxToggle.label">
       <source xml:lang="en">Sandboxing for terminal</source>
     </trans-unit>
@@ -560,6 +572,21 @@ A keybinding</note>
     <trans-unit id="agentHost.config.byokModelsEnabled.title">
       <source xml:lang="en">BYOK Models</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.byokUtilityModelDefault.copilot">
+      <source xml:lang="en">Use the default GitHub Copilot utility model.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.byokUtilityModelDefault.description">
+      <source xml:lang="en">The default model for utility flows when the chat's selected main agent model is a BYOK model. A configured utility model takes precedence.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.byokUtilityModelDefault.mainAgent">
+      <source xml:lang="en">Use the selected BYOK main agent model.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.byokUtilityModelDefault.none">
+      <source xml:lang="en">Do not use a default utility model.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.byokUtilityModelDefault.title">
+      <source xml:lang="en">BYOK Utility Model Default</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.canvases.description">
       <source xml:lang="en">Whether Copilot sessions can use Canvas extensions to present interactive content.</source>
     </trans-unit>
@@ -658,6 +685,15 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.mcpConnectorsEnabled.title">
       <source xml:lang="en">Copilot Connectors</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.mcpSamplingAllowedServers.description">
+      <source xml:lang="en">MCP server identities whose sampling requests are automatically approved in all sessions on this agent host. Approvals include known configuration and source identity, or the exact server name when no other identity is available. Remove an entry to require confirmation again. This does not approve its tool calls.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.mcpSamplingAllowedServers.item">
+      <source xml:lang="en">MCP Server Identity</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.mcpSamplingAllowedServers.title">
+      <source xml:lang="en">MCP Sampling Allowed Servers</source>
     </trans-unit>
     <trans-unit id="agentHost.config.mcpServers.arg.title">
       <source xml:lang="en">Argument</source>
@@ -805,6 +841,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.titleGeneration.utility">
       <source xml:lang="en">A utility model generates titles immediately.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.utilitySmallModel.description">
+      <source xml:lang="en">The `vendor/id` of a BYOK model that overrides the default model for utility flows such as title and pull request generation. Empty uses the default behavior.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.utilitySmallModel.title">
+      <source xml:lang="en">Utility Model</source>
     </trans-unit>
     <trans-unit id="agentHost.config.workspaceSnapshot.description">
       <source xml:lang="en">Whether the first turn of a new Copilot chat includes a bounded file-name snapshot of its working directories.</source>
@@ -1522,6 +1564,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.rubberDuck.title">
       <source xml:lang="en">Rubber Duck Agent</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.searchSubagent.description">
+      <source xml:lang="en">When enabled, Copilot SDK sessions are offered the runtime's search subagent tool for codebase search. Applied when a session launches or resumes.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.searchSubagent.title">
+      <source xml:lang="en">Search Subagent</source>
     </trans-unit>
     <trans-unit id="agentHost.config.skillCharBudget.description">
       <source xml:lang="en">Maximum number of characters available for skill descriptions in the Copilot SDK system message.</source>
@@ -2967,11 +3015,17 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.changeset.pr.generationAuthRequired">
       <source xml:lang="en">Sign in to Copilot to generate a pull request title and description, or enter them manually.</source>
     </trans-unit>
+    <trans-unit id="agentHost.changeset.pr.generationByokModelUnavailable">
+      <source xml:lang="en">The BYOK model used to generate a pull request title and description is unavailable. Enter them manually.</source>
+    </trans-unit>
     <trans-unit id="agentHost.changeset.pr.generationInvalidResponse">
       <source xml:lang="en">The model did not return a pull request title and description. Enter them manually.</source>
     </trans-unit>
     <trans-unit id="agentHost.changeset.pr.generationNoContext">
       <source xml:lang="en">There is no conversation or change context to generate a pull request title and description.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.pr.generationUtilityModelNotConfigured">
+      <source xml:lang="en">No utility model is configured for the selected BYOK model. Configure {0} or {1} to generate a pull request title and description, or enter them manually.</source>
     </trans-unit>
     <trans-unit id="agentHost.changeset.pr.noChanges">
       <source xml:lang="en">There are no branch changes to create a pull request for.</source>
@@ -3870,6 +3924,30 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotSlashCommand.selectSubcommandResult">
       <source xml:lang="en">The /{0} command requires selecting a subcommand. Available options: {1}</source>
+    </trans-unit>
+    <trans-unit id="mcpSamplingAllowAlways">
+      <source xml:lang="en">Always Allow for This Server</source>
+    </trans-unit>
+    <trans-unit id="mcpSamplingAllowOnce">
+      <source xml:lang="en">Allow Once</source>
+    </trans-unit>
+    <trans-unit id="mcpSamplingCompleted">
+      <source xml:lang="en">Sampled for {0}</source>
+    </trans-unit>
+    <trans-unit id="mcpSamplingConfirmation">
+      <source xml:lang="en">Allow Sampling from {0}?</source>
+    </trans-unit>
+    <trans-unit id="mcpSamplingDisplayName">
+      <source xml:lang="en">MCP Sampling</source>
+    </trans-unit>
+    <trans-unit id="mcpSamplingNotCompleted">
+      <source xml:lang="en">Sampling for {0} did not complete</source>
+    </trans-unit>
+    <trans-unit id="mcpSamplingRequest">
+      <source xml:lang="en">MCP server '{0}' wants to send a {1}-character long message to the language model.</source>
+    </trans-unit>
+    <trans-unit id="mcpSamplingSkip">
+      <source xml:lang="en">Skip</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotApprovalPolicy" source-language="en" datatype="plaintext"><body>

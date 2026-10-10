@@ -98,6 +98,9 @@
     <trans-unit id="agentHostPermissionPicker.defaultApprovalsHover">
       <source xml:lang="en">Copilot asks before running tools unless your configured settings allow the tool.</source>
     </trans-unit>
+    <trans-unit id="agentHostPermissionPicker.devContainerSandboxUnavailable">
+      <source xml:lang="en">Recreate the Dev Container with sandboxing enabled before enabling sandboxing for this session.</source>
+    </trans-unit>
     <trans-unit id="agentHostPermissionPicker.effectiveApprovalsHover">
       <source xml:lang="en">Effective permissions: {0}. Requested permissions: {1}.</source>
     </trans-unit>
@@ -492,6 +495,9 @@
     <trans-unit id="agentHost.sessionConfigUnavailable">
       <source xml:lang="en">Could not resolve the Agent Host session configuration. Please try again.</source>
     </trans-unit>
+    <trans-unit id="canvasChatNotFound">
+      <source xml:lang="en">The chat could not be found.</source>
+    </trans-unit>
     <trans-unit id="chatArchiveUnavailable">
       <source xml:lang="en">Archiving this chat is unavailable.</source>
     </trans-unit>
@@ -527,6 +533,9 @@
     </trans-unit>
     <trans-unit id="notConnectedSend">
       <source xml:lang="en">Cannot send request: not connected to agent host.</source>
+    </trans-unit>
+    <trans-unit id="openCanvasUnavailable">
+      <source xml:lang="en">Opening canvases is unavailable for this session.</source>
     </trans-unit>
     <trans-unit id="removeSessionArtifactUnavailable">
       <source xml:lang="en">Removing artifacts is unavailable for this session.</source>

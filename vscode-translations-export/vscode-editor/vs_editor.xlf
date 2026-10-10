@@ -1116,7 +1116,7 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <source xml:lang="en">Render full-width characters using the width defined by the font.</source>
     </trans-unit>
     <trans-unit id="fullwidthCharacterWidth.twoCells">
-      <source xml:lang="en">Render full-width characters centered in exactly two character cells. Only applies to monospace fonts. Does not apply to multi codepoint full-width characters or to GPU rendering. This has a performance impact on line rendering.</source>
+      <source xml:lang="en">Render full-width characters centered in exactly two character cells. Only applies to monospace fonts when font ligatures are disabled. Does not apply to multi codepoint full-width characters or to GPU rendering. This has a performance impact on line rendering.</source>
     </trans-unit>
     <trans-unit id="glyphMargin">
       <source xml:lang="en">Controls whether the editor should render the vertical glyph margin. Glyph margin is mostly used for debugging.</source>

@@ -184,6 +184,9 @@
     <trans-unit id="chat.differenceQuick">
       <source xml:lang="en">The quick chat view is a transient interface for making and viewing requests, while the panel chat view is a persistent interface that also supports navigating suggested follow-up questions.</source>
     </trans-unit>
+    <trans-unit id="chat.editorArtifactsPill">
+      <source xml:lang="en">The editor window uses the same compact Artifacts pill as the Agents Window, rather than an expanded list above the input. Generated images appear automatically. In a subagent chat, the Artifacts pill shows that chat's transcript artifacts without the parent session's metadata. A single file pill opens directly; multiple artifacts open a dropdown with a Generated Images section. Use the pill's hover or context menu, or a dropdown row's actions, to save an artifact or copy its path.</source>
+    </trans-unit>
     <trans-unit id="chat.externalSessionFilter">
       <source xml:lang="en">The agent sessions filter includes an External submenu. Use it to choose whether external sessions from another application are shown for the last 24 hours, the last 7 days, always, or not at all.</source>
     </trans-unit>
@@ -205,6 +208,9 @@
     <trans-unit id="chat.focusQuestionCarousel">
       <source xml:lang="en">When a chat question appears, toggle focus between the question and the chat input{0}.</source>
     </trans-unit>
+    <trans-unit id="chat.generatedImageBatch">
+      <source xml:lang="en">Multiple image-generation calls in a response share one batch preview. Select any thumbnail, including one still generating, to show its image or progress and its tool dropdown above the preview. Use Tab to focus the selected thumbnail, then Left or Right Arrow, Home, or End to select another image or its progress. Expand the selected tool dropdown to inspect its prompt and output, including timing and size. The selected thumbnail has a highlighted border. The thumbnail row follows the selected preview's size. Generating images show only the compact glyph band, while cancelled or failed images show their status in the tool dropdown without an empty preview. The Image batch status below the thumbnails shows how many images are ready out of the total, along with any that need attention, failed, or were cancelled. Later results arrive without changing your selection, and only the selected preview animates. Focus the main image and press Enter to open the carousel. Approval and authentication requests remain visible even when another image is selected.</source>
+    </trans-unit>
     <trans-unit id="chat.generatedImageCancellation">
       <source xml:lang="en">Stopping image generation shows Image generation cancelled, not a generation error. Cancelled image tools keep their cancelled status when you reopen the chat.</source>
     </trans-unit>
@@ -214,14 +220,20 @@
     <trans-unit id="chat.generatedImageDetails">
       <source xml:lang="en">Expand a completed image-generation dropdown to inspect its duration, total image byte size, and tokens. A dash means the value was not reported; token usage is not yet available. Generated image downloads include a stable hash suffix so different images have distinct filenames.</source>
     </trans-unit>
+    <trans-unit id="chat.generatedImagePreparation">
+      <source xml:lang="en">Image-generation tool entries, previews, and batch counts stay hidden while the model assembles the tool arguments. If approval is required, the confirmation is the first tool UI shown. Generating image, the glyph animation, painting progress phrases, and the painting pet start only when the tool executes, after any required confirmation. Confirmation and authentication waits pause image-generation progress.</source>
+    </trans-unit>
     <trans-unit id="chat.generatedImageTransition">
       <source xml:lang="en">Once an image is ready, the preview begins resizing immediately, followed by the glyph-to-image reveal. Reduced motion and high contrast skip this transition.</source>
     </trans-unit>
     <trans-unit id="chat.generatedImages">
-      <source xml:lang="en">Image generation appears separately from thinking and tool-call groups. Copilot and Codex agent sessions share this presentation. Completed steps collapse only before the first image-generation tool, keeping image tools in their original position. While generation runs, expand the tool dropdown to inspect the submitted prompt. Its title says Using the image model to generate an image when the model is available, and does not shimmer. The image model can differ from the selected conversation model. A compact decorative band of shifting glyphs remains visible below the dropdown and reveals a single image when its bytes are available. Overlapping image-generation attempts each keep their own input dropdown and share one animation while any attempt is running. The animation does not indicate a percentage complete and stays still when reduced motion is enabled or a high contrast theme is active. The reveal is skipped in those modes and when reopening a chat. Only the persistent progress line rotates through painting-themed phrases, without repeatedly announcing them. These phrases are decorative, not individual generation stages. Use Tab to focus the dropdown and Enter or Space to expand or collapse it. Successful generation shows the Generated image dropdown, including the image model when available, with a single image below it even when collapsed. If generation fails, the Generated image failed row can be expanded to inspect the error. Completed and failed image tools keep their final status when you reopen the chat. Image previews start loading as soon as generation succeeds, even if the response is still in progress. A preview is marked as busy while its bytes load. Unable to load image indicates a problem loading the preview, not a failed generation. Use Tab or Shift+Tab to focus an image and Enter to open it. Use the Save action to the right of the image to save generated images.</source>
+      <source xml:lang="en">Image generation appears separately from thinking and tool-call groups. Copilot and Codex agent sessions share this presentation. Completed steps collapse only before the first image-generation tool, keeping image tools in their original position. While generation runs, expand the tool dropdown to inspect the submitted prompt. Its title says Generating image with the image model when the model is available, and does not shimmer. The image model can differ from the selected conversation model. A compact decorative band of shifting glyphs remains visible below the dropdown and reveals a single image when its bytes are available. The animation does not indicate a percentage complete and stays still when reduced motion is enabled or a high contrast theme is active. The reveal is skipped in those modes and when reopening a chat. Only the persistent progress line rotates through painting-themed phrases, without repeatedly announcing them. These phrases are decorative, not individual generation stages. Use Tab to focus the dropdown and Enter or Space to expand or collapse it. Successful generation shows the Generated image dropdown, including the image model when available, with a single image below it even when collapsed. If generation fails, the Generated image failed row can be expanded to inspect the error. Completed and failed image tools keep their final status when you reopen the chat. Image previews start loading as soon as generation succeeds, even if the response is still in progress. A preview is marked as busy while its bytes load. Unable to load image indicates a problem loading the preview, not a failed generation. Use Tab or Shift+Tab to focus an image and Enter to open it. Use the Save action to the right of the image to save generated images.</source>
     </trans-unit>
     <trans-unit id="chat.harnessSwitchFeedbackSurvey">
       <source xml:lang="en">After you switch from Copilot to Local, a feedback survey may appear above the chat input. Use Shift+Tab to reach it. Use Up and Down Arrow to choose why you switched, then press Enter or Space to submit. Dismiss Survey or Escape closes the survey. After submission, a message confirms that your feedback was recorded. Use Tab to reach Share it on GitHub to provide specific feedback in a GitHub issue. Use Dismiss Feedback Acknowledgement or Escape to close the message.</source>
+    </trans-unit>
+    <trans-unit id="chat.historyRefresh">
+      <source xml:lang="en">Cloud sandbox conversations can show previously loaded messages while refreshing silently. If recent messages cannot be loaded, use Tab to reach Refresh in the banner and press Enter or Space. Refresh retries recorded history without restarting the session, waking its environment, or sending your draft.</source>
     </trans-unit>
     <trans-unit id="chat.inputBlocked">
       <source xml:lang="en">When another Codex app is using a conversation, a banner above the input explains how to release it. You can keep editing your draft, but sending is disabled. Quit the app holding the conversation, such as ChatGPT, or exit the Codex CLI session. Use Tab to focus Retry in the banner, then press Enter or Space to check again. Retry does not send your draft.</source>
@@ -242,16 +254,16 @@
       <source xml:lang="en">Connect to Mission Control Environment opens a list of existing user-local hosts. Cached hosts are shown while the list refreshes in the background without clearing your search. Use Up and Down Arrow to choose a host and Enter to connect, or Escape to cancel. The owning application must be running; connecting does not create replacement compute. Passive connections are read-only, and local sessions continue using the local host.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.autoMode">
-      <source xml:lang="en">In the model picker, the active Copilot tab has an Auto switch beside the provider name. The provider button and switch are separate keyboard targets. Turning Auto on replaces Copilot's individual models with automatic routing choices; provider tabs and search remain available. Turn Auto off to restore the previous manual Copilot model. The switch is disabled when no individual Copilot model is available. Browsing another provider does not change the selected model.</source>
+      <source xml:lang="en">In the model picker, Auto is the first model in the Copilot tab and is selected like any other model. Provider tabs and search remain available. Browsing another provider does not change the selected model.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.detailsPage">
       <source xml:lang="en">In the model picker, thinking effort and context appear as a configuration button on the hovered, selected, or keyboard-focused model. Use Up and Down Arrow to focus a model and Enter to select it. To open its information and configuration page without selecting it, press Right Arrow, or use Tab to reach its configuration button and press Enter or Space. The button shows Details when no readout is available. Models without configurable settings still open their information page. The thinking effort and context readout beside the model name in the chat input opens the same page for the current model. Opening the page focuses its configuration controls when available. Known values are shown even at their defaults. The Back to Models arrow is beside the model name; navigation and model actions stay at the top while details scroll. Back to Models, or {0}, returns to the previous provider, search, and model list with focus on that model. Escape closes the picker from any page and restores focus.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.managedDefault">
-      <source xml:lang="en">In the model picker, Org default identifies the model your organization sets for new chats. It remains on that model when you choose another model for this chat; the checkmark identifies your current selection. The Auto section carries the same label when Auto is the organization default.</source>
+      <source xml:lang="en">In the model picker, Org default identifies the model your organization sets for new chats. It remains on that model when you choose another model for this chat; the checkmark identifies your current selection. Auto carries the same label when it is the organization default.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.optimizeFor">
-      <source xml:lang="en">In Auto mode, use Up and Down Arrow to focus an "Optimize for" preference: Efficiency, Balance, or Intelligence. Enter or Space applies the preference and keeps the picker open. HydraFusion, when available, is an alternative routing choice, not an additional toggle. Focus HydraFusion and press Tab to reach Learn more. Selecting it clears the active Auto tier; selecting a tier returns to Auto. Turning Auto off preserves the preference and routing choice. Auto has no separate details page: both the Auto name and preference readout in the chat input open these routing choices.</source>
+      <source xml:lang="en">Auto's details hold its "Optimize for" preference: Efficiency, Balance, or Intelligence, followed by HydraFusion when available. Open them from Auto like any model's details, then use arrow keys to move between preferences and Enter or Space to choose one. Choosing a preference selects Auto and keeps its details open. When Auto has a discount, it is described below the preferences. HydraFusion is a research preview: choosing it selects HydraFusion and shows its description below the preferences in place of Auto's discount, with Learn more reachable by Tab. While HydraFusion is in use, Auto stays checked in the model list with HydraFusion as its preference; choosing another preference returns to Auto. The preference readout beside Auto in the chat input opens the same details.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.pricingDetails">
       <source xml:lang="en">Pricing Details expands in place without moving the model's controls. Expansion and collapse are immediate when reduced motion is enabled. If the details exceed the available space, use Page Up or Page Down while the model details have focus to scroll.</source>
@@ -1253,6 +1265,9 @@ User: {2}</source>
     <trans-unit id="defaultMarketplace">
       <source xml:lang="en">Default</source>
     </trans-unit>
+    <trans-unit id="disabledMarketplace">
+      <source xml:lang="en">Disabled by Organization</source>
+    </trans-unit>
     <trans-unit id="installFromSourceFailed">
       <source xml:lang="en">Failed to install plugin: {0}</source>
     </trans-unit>
@@ -1275,13 +1290,10 @@ User: {2}</source>
       <source xml:lang="en">Manage Plugin Marketplaces</source>
     </trans-unit>
     <trans-unit id="managedMarketplace">
-      <source xml:lang="en">Managed by Enterprise Policy</source>
+      <source xml:lang="en">Managed by Organization</source>
     </trans-unit>
     <trans-unit id="marketplaceAlreadyConfigured">
       <source xml:lang="en">This marketplace is already configured.</source>
-    </trans-unit>
-    <trans-unit id="marketplaceNotAllowed">
-      <source xml:lang="en">This marketplace is not allowed by enterprise policy.</source>
     </trans-unit>
     <trans-unit id="marketplaceTrustPrompt">
       <source xml:lang="en">Only add marketplaces you trust.</source>
@@ -4695,6 +4707,18 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationMigrationLoadingDescription">
       <source xml:lang="en">Checking the active harness and available destinations.</source>
     </trans-unit>
+    <trans-unit id="customizationMigrationNameConflict">
+      <source xml:lang="en">Could not migrate {0} because a customization already exists at {1}. Rename or remove the existing customization, then try again.</source>
+    </trans-unit>
+    <trans-unit id="customizationMigrationNameConflictEntry">
+      <source xml:lang="en">{0} to {1}</source>
+    </trans-unit>
+    <trans-unit id="customizationMigrationNameConflicts">
+      <source xml:lang="en">Could not migrate {0} files because customizations already exist at their destinations: {1}. Rename or remove the existing customizations, then try again.</source>
+    </trans-unit>
+    <trans-unit id="customizationMigrationNameConflictsWithRemainder">
+      <source xml:lang="en">{0}, and {1} more</source>
+    </trans-unit>
     <trans-unit id="customizationMigrationShortcut">
       <source xml:lang="en">Migrations</source>
     </trans-unit>
@@ -4767,11 +4791,6 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="editorViewRawButtonTooltip">
       <source xml:lang="en">Show the raw markdown file</source>
     </trans-unit>
-    <trans-unit id="fileMigrationConfirmationChange">
-      <source xml:lang="en">• {0}
-  From: {1}
-  Destination: {2}</source>
-    </trans-unit>
     <trans-unit id="homeButtonLabel">
       <source xml:lang="en">Discover</source>
     </trans-unit>
@@ -4813,11 +4832,6 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.openError">
       <source xml:lang="en">Could not open the customization resource. {0}</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationConfirmationChange">
-      <source xml:lang="en">• {0}
-  From: {1}
-  To: {2}</source>
     </trans-unit>
     <trans-unit id="mcpServers">
       <source xml:lang="en">MCP Servers</source>
@@ -4918,9 +4932,6 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="migrationChecklistPromptsCount">
       <source xml:lang="en">{0} prompts</source>
     </trans-unit>
-    <trans-unit id="migrationChecklistPromptsDescription">
-      <source xml:lang="en">Convert reusable prompt files into skills so agents can discover and run them as supported customizations.</source>
-    </trans-unit>
     <trans-unit id="migrationChecklistUserData">
       <source xml:lang="en">User Data</source>
     </trans-unit>
@@ -4932,12 +4943,6 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="migrationChecklistWorkspace">
       <source xml:lang="en">Workspace</source>
-    </trans-unit>
-    <trans-unit id="migrationConfirmationWithChanges">
-      <source xml:lang="en">{0}
-
-Planned changes:
-{1}</source>
     </trans-unit>
     <trans-unit id="migrationNeedsManualReviewReason">
       <source xml:lang="en">This server cannot be migrated automatically. Update it by hand in its configuration file.</source>
@@ -5031,6 +5036,9 @@ Planned changes:
     </trans-unit>
     <trans-unit id="previewUnknownFieldDescription">
       <source xml:lang="en">Custom metadata field `{0}`.</source>
+    </trans-unit>
+    <trans-unit id="promptMigrationWarningSummary">
+      <source xml:lang="en">Prompt-to-skill conversion changes</source>
     </trans-unit>
     <trans-unit id="prompts">
       <source xml:lang="en">Prompts</source>
@@ -5580,7 +5588,7 @@ Planned changes:
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMigrationAccessibility" source-language="en" datatype="plaintext"><body>
     <trans-unit id="migrationHelpActions">
-      <source xml:lang="en">Migrate applies to the selected items in one group and shows the planned source and destination changes before modifying files. Ignore permanently hides a group. Show Ignored Migrations restores hidden groups.</source>
+      <source xml:lang="en">Migrate applies to the selected items in one group and asks for confirmation before modifying files. Ignore permanently hides a group. Show Ignored Migrations restores hidden groups.</source>
     </trans-unit>
     <trans-unit id="migrationHelpAgent">
       <source xml:lang="en">Use Migrate to have VS Code update the selected customizations. Migrate with Agent closes Agent Customizations and focuses a guided migration in chat for the selected harness. Agent migration uses credits.</source>
@@ -5785,6 +5793,9 @@ Disabled servers may become enabled.</source>
     <trans-unit id="mcpMigrationUserConfirmMessageSingle">
       <source xml:lang="en">Migrate 1 MCP server?</source>
     </trans-unit>
+    <trans-unit id="promptFileMigrationConsequences">
+      <source xml:lang="en">Unsupported prompt-only headers are removed. Converted skills set disable-model-invocation: true, so the agent will not load them automatically; invoke them manually with /name.</source>
+    </trans-unit>
     <trans-unit id="promptMigrationCardAction">
       <source xml:lang="en">Convert to Skills...</source>
     </trans-unit>
@@ -5808,6 +5819,11 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="promptMigrationConfirmDetailUser">
       <source xml:lang="en">This converts {0} user prompt files into skills.</source>
+    </trans-unit>
+    <trans-unit id="promptMigrationConfirmDetailWithConsequences">
+      <source xml:lang="en">{0}
+
+{1}</source>
     </trans-unit>
     <trans-unit id="promptMigrationConfirmDetailWorkspace">
       <source xml:lang="en">This converts {0} workspace prompt files into skills.</source>
@@ -5932,7 +5948,7 @@ Disabled servers may become enabled.</source>
       <source xml:lang="en">Change destinations for {0}</source>
     </trans-unit>
     <trans-unit id="highRiskMigrationDescription">
-      <source xml:lang="en">High risk. {0}</source>
+      <source xml:lang="en">High risk</source>
     </trans-unit>
     <trans-unit id="ignoreMigrationCategory">
       <source xml:lang="en">Ignore {0}</source>
@@ -6016,6 +6032,9 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="noMigrations">
       <source xml:lang="en">No migrations are needed.</source>
+    </trans-unit>
+    <trans-unit id="promptMigrationWarningSummary">
+      <source xml:lang="en">Prompt-to-skill conversion changes</source>
     </trans-unit>
     <trans-unit id="retry">
       <source xml:lang="en">Retry</source>
@@ -7895,6 +7914,9 @@ Locations configured here are only observed by the Local agent harness. Other ha
     <trans-unit id="chat.copilot.memory.local.enabled">
       <source xml:lang="en">When enabled together with {0}, local Copilot Agent Host sessions store Copilot Memory in the repository's `.github/copilot-memories.jsonl` file instead of GitHub's cloud memory service. The file is part of the working tree, so commits made by the agent or the Agents window can include it. Requires a GitHub-hosted repository; user-scoped memories and Copilot Memory policies configured on GitHub do not apply. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
     </trans-unit>
+    <trans-unit id="chat.copilot.searchSubagent.enabled">
+      <source xml:lang="en">When enabled, local Copilot Agent Host sessions are offered the Copilot runtime's search subagent tool for codebase search. Applies to sessions when they launch or resume.</source>
+    </trans-unit>
     <trans-unit id="chat.copilot.semanticSearch.enabled">
       <source xml:lang="en">Controls whether Copilot Agent Host sessions can use VS Code's semantic workspace search. When disabled, semantic search is unavailable.</source>
     </trans-unit>
@@ -8693,6 +8715,41 @@ Examples:
     </trans-unit>
     <trans-unit id="mcp.workspaceRootConfig.enabled">
       <source xml:lang="en">Offer the workspace root `.mcp.json` file when adding MCP servers manually. When `.vscode/mcp.json` exists, choose which file to add to. Marketplace installations continue to use `.vscode/mcp.json`. Existing `.mcp.json` files can be opened and read independently of this setting.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatArtifactPillSource" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.artifactPill.agent">
+      <source xml:lang="en">Agent</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactPill.clearSource">
+      <source xml:lang="en">Clear {0} Artifacts</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactPill.copy">
+      <source xml:lang="en">Copy Path</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactPill.files">
+      <source xml:lang="en">Files</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactPill.group">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactPill.images">
+      <source xml:lang="en">Images</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactPill.rules">
+      <source xml:lang="en">Rules</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactPill.save">
+      <source xml:lang="en">Save Artifact</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactPill.subagent">
+      <source xml:lang="en">Subagent</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactPill.unresolvedMemory">
+      <source xml:lang="en">The memory artifact could not be resolved.</source>
+    </trans-unit>
+    <trans-unit id="chat.artifacts.saveDialog.title">
+      <source xml:lang="en">Save Artifact</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatDebug/agentHostChatDebugProvider" source-language="en" datatype="plaintext"><body>
@@ -13593,6 +13650,12 @@ Source: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxReadOnlySessionHandler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.chatHistoryMissing">
+      <source xml:lang="en">Recorded history for this conversation is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.incompleteHistoryRefresh">
+      <source xml:lang="en">The latest recorded conversation is unavailable or incomplete.</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.truncatedHistory">
       <source xml:lang="en">This conversation is incomplete. Its recorded history ends mid-response, so the last exchange may be missing.</source>
     </trans-unit>
@@ -13606,6 +13669,23 @@ Source: {0}</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.renameSessionNotFound">
       <source xml:lang="en">Mission Control sandbox session not found.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxSessionHandler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.historyLoadFailed">
+      <source xml:lang="en">Couldn't load recorded conversation</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.historyRefreshFailed">
+      <source xml:lang="en">Couldn't refresh this conversation. Recent messages may be missing.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.liveHistoryFailed">
+      <source xml:lang="en">Couldn't load the live conversation. Try again to continue.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.refreshHistory">
+      <source xml:lang="en">Refresh</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.retryLiveHistory">
+      <source xml:lang="en">Retry</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxSessionListController" source-language="en" datatype="plaintext"><body>
@@ -14847,9 +14927,6 @@ Note: This setting only controls tool approval and does not prevent the agent fr
     <trans-unit id="chat.artifacts.save">
       <source xml:lang="en">Save artifact</source>
     </trans-unit>
-    <trans-unit id="chat.artifacts.saveDialog.title">
-      <source xml:lang="en">Save Artifact</source>
-    </trans-unit>
     <trans-unit id="chat.artifacts.source.agent">
       <source xml:lang="en">Agent</source>
     </trans-unit>
@@ -15060,6 +15137,44 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       <source xml:lang="en">Warning for {0} - {1} hook</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatImageGenerationBatchPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.imageBatch.attention">
+      <source xml:lang="en">Image {0}, needs attention</source>
+    </trans-unit>
+    <trans-unit id="chat.imageBatch.cancelled">
+      <source xml:lang="en">{0} cancelled</source>
+    </trans-unit>
+    <trans-unit id="chat.imageBatch.cancelledImage">
+      <source xml:lang="en">Image {0}, cancelled</source>
+    </trans-unit>
+    <trans-unit id="chat.imageBatch.failed">
+      <source xml:lang="en">{0} failed</source>
+    </trans-unit>
+    <trans-unit id="chat.imageBatch.failedImage">
+      <source xml:lang="en">Image {0}, failed</source>
+    </trans-unit>
+    <trans-unit id="chat.imageBatch.oneWaiting">
+      <source xml:lang="en">1 needs attention</source>
+    </trans-unit>
+    <trans-unit id="chat.imageBatch.pending">
+      <source xml:lang="en">Image {0}, generating</source>
+    </trans-unit>
+    <trans-unit id="chat.imageBatch.previewUnavailable">
+      <source xml:lang="en">Image {0}, preview unavailable</source>
+    </trans-unit>
+    <trans-unit id="chat.imageBatch.readyCount">
+      <source xml:lang="en">Image batch · {0} of {1} ready</source>
+    </trans-unit>
+    <trans-unit id="chat.imageBatch.select">
+      <source xml:lang="en">Show image {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.imageBatch.thumbnails">
+      <source xml:lang="en">Generated image previews</source>
+    </trans-unit>
+    <trans-unit id="chat.imageBatch.waiting">
+      <source xml:lang="en">{0} need attention</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatInlineAnchorWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="actions.attach.label">
       <source xml:lang="en">Add File to Chat</source>
@@ -15209,6 +15324,9 @@ Note: This setting only controls tool approval and does not prevent the agent fr
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatPlanReviewPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.planReview.approvalFailed">
+      <source xml:lang="en">Unable to approve the plan: {0}</source>
+    </trans-unit>
     <trans-unit id="chat.planReview.ariaLabel">
       <source xml:lang="en">Plan review: {0}</source>
     </trans-unit>
@@ -15253,6 +15371,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.planReview.expand">
       <source xml:lang="en">Expand</source>
     </trans-unit>
+    <trans-unit id="chat.planReview.feedbackFailed">
+      <source xml:lang="en">Unable to submit plan feedback: {0}</source>
+    </trans-unit>
     <trans-unit id="chat.planReview.feedbackLabel">
       <source xml:lang="en">Feedback</source>
     </trans-unit>
@@ -15286,6 +15407,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.planReview.reject">
       <source xml:lang="en">Reject</source>
     </trans-unit>
+    <trans-unit id="chat.planReview.rejectionFailed">
+      <source xml:lang="en">Unable to reject the plan: {0}</source>
+    </trans-unit>
     <trans-unit id="chat.planReview.removeComment">
       <source xml:lang="en">Remove comment on line {0}</source>
     </trans-unit>
@@ -15294,6 +15418,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.planReview.reviewTooltip">
       <source xml:lang="en">Review {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.planReview.saveFailed">
+      <source xml:lang="en">The plan file could not be saved.</source>
     </trans-unit>
     <trans-unit id="chat.planReview.submitFeedback">
       <source xml:lang="en">Submit Feedback</source>
@@ -16652,11 +16779,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="editToolApproval.tooltip">
       <source xml:lang="en">Edit tool approval settings</source>
     </trans-unit>
+    <trans-unit id="imageGeneration.generatingWithModel">
+      <source xml:lang="en">Generating image with {0}</source>
+    </trans-unit>
     <trans-unit id="imageGeneration.progress">
       <source xml:lang="en">Generating image</source>
-    </trans-unit>
-    <trans-unit id="imageGeneration.usingModel">
-      <source xml:lang="en">Using {0} to generate an image</source>
     </trans-unit>
     <trans-unit id="openSettings.tooltip">
       <source xml:lang="en">Open settings</source>
@@ -16973,7 +17100,7 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">Steering message will be sent after the next tool call happens</source>
     </trans-unit>
     <trans-unit id="systemNotificationDivider">
-      <source xml:lang="en">System Notification</source>
+      <source xml:lang="en">System notification</source>
     </trans-unit>
     <trans-unit id="systemNotificationDividerTooltip">
       <source xml:lang="en">System notification will be sent after the next tool call happens</source>
@@ -17580,6 +17707,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.effort.header">
       <source xml:lang="en">Thinking Effort</source>
     </trans-unit>
+    <trans-unit id="chat.modelPicker.alternativeDescription">
+      <source xml:lang="en">{0}, {1} {2}</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.modelActions">
       <source xml:lang="en">Model Actions</source>
     </trans-unit>
@@ -17615,9 +17745,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerConfiguration" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.modelPicker.autoOptionsAriaLabel">
-      <source xml:lang="en">{0} options, {1}</source>
-    </trans-unit>
     <trans-unit id="chat.modelPicker.configureLabel">
       <source xml:lang="en">Configure</source>
     </trans-unit>
@@ -17767,17 +17894,8 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.addProvider">
       <source xml:lang="en">Add Models...</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.alternativeRouting">
-      <source xml:lang="en">Alternative routing</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.auto">
-      <source xml:lang="en">Auto</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.autoHeading">
-      <source xml:lang="en">{0} · {1}</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.autoModeToggle">
-      <source xml:lang="en">Use Auto mode in {0}</source>
+    <trans-unit id="chat.modelPicker.autoTierValue">
+      <source xml:lang="en">{0}: {1}</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.backToModels">
       <source xml:lang="en">Back to Models</source>
@@ -17793,6 +17911,12 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.modelPicker.hydraFusionDescription">
       <source xml:lang="en">Picks a workflow per task, using one or more models to draft, review, or escalate.</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.hydraFusionTierDescription">
+      <source xml:lang="en">{0} is a research preview.</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.hydraFusionTierTooltip">
+      <source xml:lang="en">It picks a workflow per task, using one or more models to draft, review, or escalate.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.learnMore">
       <source xml:lang="en">Learn more</source>
@@ -19020,6 +19144,9 @@ To make this the starting permission level for new sessions, change the [{0}](co
     </trans-unit>
     <trans-unit id="autoModel.learnMore">
       <source xml:lang="en">[Learn More]({0})</source>
+    </trans-unit>
+    <trans-unit id="autoModel.tierDiscount">
+      <source xml:lang="en">Models routed via Auto {0} receive a {1}% discount.</source>
     </trans-unit>
     <trans-unit id="chat.languageModelNameWithProvider">
       <source xml:lang="en">{0}/{1}</source>

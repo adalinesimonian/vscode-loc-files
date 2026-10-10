@@ -1839,8 +1839,14 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.generatedImageArtifacts">
       <source xml:lang="en">Generated images from this chat automatically appear in the Generated Images section of the Artifacts pill, separate from other images and files. When Images Preview is enabled for chat, open an image and use the Left and Right Arrow keys to browse generated images and user attachments from the conversation. Images shown from the transcript do not offer Remove from Session unless they were also recorded as artifacts.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.generatedImageBatch">
+      <source xml:lang="en">Multiple image-generation calls in a response share one batch preview. Select any thumbnail, including one still generating, to show its image or progress and its tool dropdown above the preview. Use Tab to focus the selected thumbnail, then Left or Right Arrow, Home, or End to select another image or its progress. Expand the selected tool dropdown to inspect its prompt and output. The selected thumbnail has a highlighted border. The thumbnail row follows the selected preview's size. Generating images show only the compact glyph band, while cancelled or failed images show their status in the tool dropdown without an empty preview. The Image batch status below the thumbnails shows how many images are ready out of the total, along with any that need attention, failed, or were cancelled. Later results arrive without changing your selection, and only the selected preview animates. Focus the main image and press Enter to open the carousel. Approval and authentication requests remain visible even when another image is selected.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.generatedImageDetails">
       <source xml:lang="en">Expand a completed image-generation dropdown to inspect its duration, total image byte size, and tokens. A dash means the value was not reported; token usage is not yet available. Generated image downloads include a stable hash suffix so different images have distinct filenames.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.generatedImagePreparation">
+      <source xml:lang="en">Image-generation tool entries, previews, and batch counts stay hidden while the model assembles the tool arguments. If approval is required, the confirmation is the first tool UI shown. Generating image, the glyph animation, painting progress phrases, and the painting pet start only when the tool executes, after any required confirmation. Confirmation and authentication waits pause image-generation progress.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.githubContext">
       <source xml:lang="en">Use Add Context to attach files, images, and, when available, GitHub issues or pull requests.</source>
@@ -1859,6 +1865,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.history">
       <source xml:lang="en">Use up and down arrows to navigate your request history in the input box.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.historyRefresh">
+      <source xml:lang="en">Previously loaded conversations refresh silently. If recent messages cannot be loaded, a banner offers Refresh. Use Tab to reach Refresh and press Enter or Space to retry loading recorded messages without restarting the session or waking its environment. Your draft is preserved.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.input">
       <source xml:lang="en">You are in the chat input. Type a message and press Enter to send it.</source>

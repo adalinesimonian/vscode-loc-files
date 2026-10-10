@@ -451,6 +451,9 @@ The left hand side (&apos;docs/*.md&apos;) is a glob that matches against a mark
     <trans-unit id="configuration.markdown.experimental.richLinks.enabled">
       <source xml:lang="en">Controls whether supported links in the Markdown editor are rendered as rich links with live metadata. Enabling this may make authenticated requests to services such as GitHub.</source>
     </trans-unit>
+    <trans-unit id="configuration.markdown.editor.highlightActiveBlock">
+      <source xml:lang="en">Controls whether the active block in the rich Markdown editor is highlighted. Does not affect source markers or editing behavior.</source>
+    </trans-unit>
     <trans-unit id="configuration.markdown.editor.quickSuggestions">
       <source xml:lang="en">Controls whether typing automatically requests suggestions in the rich Markdown editor. Also requires `#editor.quickSuggestions#` to be enabled for Markdown. Does not affect manually invoking Trigger Suggest or suggestions in the Markdown code editor.</source>
     </trans-unit>
