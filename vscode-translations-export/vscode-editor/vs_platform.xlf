@@ -1350,6 +1350,9 @@ A keybinding</note>
     <trans-unit id="autoModeTier.efficiencyDescription">
       <source xml:lang="en">Optimizes for cost and speed, using more capable models only when needed.</source>
     </trans-unit>
+    <trans-unit id="autoModeTier.ensembleIntelligence">
+      <source xml:lang="en">High</source>
+    </trans-unit>
     <trans-unit id="autoModeTier.intelligence">
       <source xml:lang="en">Intelligence</source>
     </trans-unit>
@@ -1462,6 +1465,18 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.enableShellInitScript.title">
       <source xml:lang="en">Shell Init Script</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.ensemble.description">
+      <source xml:lang="en">When enabled, Auto is presented as Ensemble, optimizing for Balance, High, or Max.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.ensemble.title">
+      <source xml:lang="en">Ensemble</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.ensembleIntelligenceUsesHydraFusion.description">
+      <source xml:lang="en">When enabled together with Ensemble and HydraFusion, Ensemble's High tier uses HydraFusion.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.ensembleIntelligenceUsesHydraFusion.title">
+      <source xml:lang="en">Ensemble High Uses HydraFusion</source>
     </trans-unit>
     <trans-unit id="agentHost.config.hydraFusion.description">
       <source xml:lang="en">When enabled, Copilot SDK sessions can use the experimental HydraFusion model.</source>
@@ -2834,6 +2849,17 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Commit</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/agentHostDebugLogs" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="debugLogs.collectHost">
+      <source xml:lang="en">Collecting Agent Host process and transport logs...</source>
+    </trans-unit>
+    <trans-unit id="debugLogs.collectProvider">
+      <source xml:lang="en">Collecting {0} session logs...</source>
+    </trans-unit>
+    <trans-unit id="debugLogs.compress">
+      <source xml:lang="en">Compressing {0}: {1} / {2}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/agentHostDiscardChangesOperationHandler" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.changeset.discardChanges.cancelled">
       <source xml:lang="en">Discard changes operation was cancelled.</source>
@@ -3826,6 +3852,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotAgent.description">
       <source xml:lang="en">Copilot SDK agent running in the local agent host process</source>
+    </trans-unit>
+    <trans-unit id="copilotAgent.ensembleModelName">
+      <source xml:lang="en">Ensemble</source>
     </trans-unit>
     <trans-unit id="copilotAgent.modelNotAvailable">
       <source xml:lang="en">Model '{0}' is not available.</source>
