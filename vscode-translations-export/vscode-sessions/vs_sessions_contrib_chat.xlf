@@ -755,7 +755,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Show Session Options</source>
     </trans-unit>
     <trans-unit id="newSessionWorkspacePicker.localQuickChat">
-      <source xml:lang="en">Local</source>
+      <source xml:lang="en">This Computer</source>
     </trans-unit>
     <trans-unit id="newSessionWorkspacePicker.noWorkspaceDescription">
       <source xml:lang="en">Start without a backing workspace</source>
@@ -1592,7 +1592,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">{0} - Dev Container</source>
     </trans-unit>
     <trans-unit id="workspacePicker.devContainer.local">
-      <source xml:lang="en">Use Local</source>
+      <source xml:lang="en">Use This Computer</source>
     </trans-unit>
     <trans-unit id="workspacePicker.devContainer.remote">
       <source xml:lang="en">Use Remote Host</source>
@@ -1777,7 +1777,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">To permanently delete a session, open its context menu and choose Delete. This is destructive and cannot be undone.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.devContainer">
-      <source xml:lang="en">When Dev Container Agent Host sessions are enabled, Docker is available on the host, and a local, SSH, Tunnel, or WSL folder contains a Dev Container configuration, open the folder's submenu and choose Use Dev Container. For remote folders, first connect to a host that supports Dev Container sessions. For WSL folders, Docker must be available in the WSL distribution. Use the arrow keys to navigate submenus and Enter to select. The workspace picker then identifies the folder with a Dev Container suffix. Choose Use Local or Use Remote Host to switch back.</source>
+      <source xml:lang="en">When Dev Container Agent Host sessions are enabled, Docker is available on the host, and a local, SSH, Tunnel, or WSL folder contains a Dev Container configuration, open the folder's submenu and choose Use Dev Container. For remote folders, first connect to a host that supports Dev Container sessions. For WSL folders, Docker must be available in the WSL distribution. Use the arrow keys to navigate submenus and Enter to select. The workspace picker then identifies the folder with a Dev Container suffix. Choose Use This Computer or Use Remote Host to switch back.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.devContainerSamples">
       <source xml:lang="en">The workspace picker includes Dev Container Sample. Open its submenu and choose a sample with the arrow keys and Enter. Selecting a sample does not start Docker or clone the repository. The sample is prepared in a Docker volume when you send your first prompt.</source>
@@ -1883,6 +1883,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.mainChatToSide">
       <source xml:lang="en">To open the main chat beside a peer chat, choose Open to the Side from the session row's context menu. You can also Alt-click (Option-click on macOS) the row or drag it to a chat pane's edge.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.markNestedSessionsRead">
+      <source xml:lang="en">When a parent session has unread nested sessions, open its context menu and choose Mark All as Read.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.micContextMenu">
       <source xml:lang="en">To choose a microphone or turn off dictation or Voice Mode, focus the microphone button in the input toolbar and open its context menu (for example Shift+F10).</source>
@@ -1990,10 +1993,10 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">When you select assistant response text, an action menu appears. Press Tab to focus the menu, use the Up Arrow and Down Arrow keys to move between actions, and press Enter to activate one. Press Escape to dismiss the menu. Ask in a Side Chat opens a question input anchored to the selected text. Quote appends the selection as a blockquote in the chat input when the conversation is interactive. Copy copies the selected text.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionCreationFilters">
-      <source xml:lang="en">Created In lists the applications that created sessions, grouped by Local, Cloud, and each remote host, with the environment in each application's name. VS Code is always offered for each available environment, even before you create a session there. Other applications are listed after a session created in them is discovered. Only applications from included environments are listed. Excluding an environment hides its applications without changing their selections; including it again restores them. Other list filters do not remove application choices. Included remote hosts retain their applications while cached sessions remain, even when disconnected. If no environments are included, select an environment first.</source>
+      <source xml:lang="en">Created In lists the applications that created sessions, grouped by This Computer, Cloud, and each remote host, with the environment in each application's name. VS Code is always offered for each available environment, even before you create a session there. Other applications are listed after a session created in them is discovered. Only applications from included environments are listed. Excluding an environment hides its applications without changing their selections; including it again restores them. Other list filters do not remove application choices. Included remote hosts retain their applications while cached sessions remain, even when disconnected. If no environments are included, select an environment first.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionFilters">
-      <source xml:lang="en">The Environment, Created In, and Harness submenus filter the Sessions list. Checked options are included. In Local and on remote hosts, applications other than VS Code are hidden by default. Slack and Teams applications in Cloud are also hidden by default. Reset Filters restores these defaults. Show Done, or Show Archived depending on your settings, includes archived sessions. On desktop, Compact View and Collapse All Groups are available from the Sessions More Actions menu. On phone, use Sort and Find to navigate the list.</source>
+      <source xml:lang="en">The Environment, Created In, and Harness submenus filter the Sessions list. Checked options are included. On This Computer and remote hosts, applications other than VS Code are hidden by default. Slack and Teams applications in Cloud are also hidden by default. Reset Filters restores these defaults. Show Done, or Show Archived depending on your settings, includes archived sessions. On desktop, Compact View and Collapse All Groups are available from the Sessions More Actions menu. On phone, use Sort and Find to navigate the list.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionGrid">
       <source xml:lang="en">Session panes form a separate grid from the chat groups inside each session. Focus the session to the left{0}, right{1}, above{2}, or below{3}. The generic Navigate to the View on the Left{4}, Navigate to the View on the Right{5}, Navigate to the View Above{6}, and Navigate to the View Below{7} commands do the same while focus is in the session grid. The Session Layout menu and Command Palette offer Move Session Left, Right, Above, and Below, Increase or Decrease Session Width and Height, and Arrange Sessions in a Balanced Grid. Use Open in Grid in a sidebar session's context menu to open it beside, above, or below the active session. Arranging preserves the conversations and does not change side panels. On a phone, only the active session is shown; returning to a wider window restores the desktop arrangement.</source>

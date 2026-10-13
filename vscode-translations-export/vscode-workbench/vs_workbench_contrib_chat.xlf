@@ -266,13 +266,16 @@
       <source xml:lang="en">In the model picker, thinking effort and context appear as a configuration button on the hovered, selected, or keyboard-focused model. Use Up and Down Arrow to focus a model and Enter to select it. To open its information and configuration page without selecting it, press Right Arrow, or use Tab to reach its configuration button and press Enter or Space. The button shows Details when no readout is available. Models without configurable settings still open their information page. The thinking effort and context readout beside the model name in the chat input opens the same page for the current model. Opening the page focuses its configuration controls when available. Known values are shown even at their defaults. The Back to Models arrow is beside the model name; navigation and model actions stay at the top while details scroll. Back to Models, or {0}, returns to the previous provider, search, and model list with focus on that model. Escape closes the picker from any page and restores focus.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.ensemble">
-      <source xml:lang="en">When Auto is presented as Ensemble, its "Optimize for" preferences are Balance and High, followed by Max when HydraFusion is available. Max uses HydraFusion Max, and High can use HydraFusion; choosing either keeps Ensemble checked with that preference.</source>
+      <source xml:lang="en">When Auto is presented as Ensemble, its details hold a "Thinking Level" setting instead: Balance and High, followed by Max when HydraFusion is available. Max uses HydraFusion Max, and High can use HydraFusion; choosing either keeps Ensemble checked with that thinking level.</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.hydraFusion">
+      <source xml:lang="en">HydraFusion, a research preview, is listed after Auto as a model of its own. When HydraFusion Max is available, HydraFusion's details offer two tiers, Default and Max, along with a Learn more link. Choosing one selects it and keeps HydraFusion's details open. HydraFusion stays in the model list with that tier as its readout, and the readout beside HydraFusion in the chat input opens the same details.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.managedDefault">
       <source xml:lang="en">In the model picker, Org default identifies the model your organization sets for new chats. It remains on that model when you choose another model for this chat; the checkmark identifies your current selection. Auto carries the same label when it is the organization default.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.optimizeFor">
-      <source xml:lang="en">Auto's details hold its "Optimize for" preference: Efficiency, Balance, or Intelligence, followed by HydraFusion and HydraFusion Max when available. Open them from Auto like any model's details, then use arrow keys to move between preferences and Enter or Space to choose one. Choosing a preference selects Auto and keeps its details open. When Auto has a discount, it is described below the preferences. HydraFusion and HydraFusion Max are research previews: choosing one selects it and shows its description below the preferences in place of Auto's discount, with Learn more reachable by Tab. While HydraFusion or HydraFusion Max is in use, Auto stays checked in the model list with it as its preference; choosing another preference returns to Auto. The preference readout beside Auto in the chat input opens the same details.</source>
+      <source xml:lang="en">Auto's details hold its "Optimize for" preference: Efficiency, Balance, or Intelligence. Open them from Auto like any model's details, then use arrow keys to move between preferences and Enter or Space to choose one. Choosing a preference selects Auto and keeps its details open. When Auto has a discount, it is described below the preferences. The preference readout beside Auto in the chat input opens the same details.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.pricingDetails">
       <source xml:lang="en">Pricing Details expands in place without moving the model's controls. Expansion and collapse are immediate when reduced motion is enabled. If the details exceed the available space, use Page Up or Page Down while the model details have focus to scroll.</source>
@@ -2331,12 +2334,12 @@ Size: {3} bytes</source>
       <source xml:lang="en">Research preview</source>
     </trans-unit>
     <trans-unit id="agentHost.hydraFusion.routingDescription">
-      <source xml:lang="en">{0} routes the first eligible turn and may use multiple models. Premium usage varies with the selected route.</source>
+      <source xml:lang="en">{0} routes the first eligible turn and may use multiple models.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostMcpServerMigrationProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcpMigrationServerEnvironmentVariableInName">
-      <source xml:lang="en">Environment variable references ('${env:...}') in environment variable or header names are not supported in the destination MCP configuration. Use a fixed name to migrate this server.</source>
+      <source xml:lang="en">Variables ('${env:...}' or '${input:...}') in environment variable or header names are not supported in the destination MCP configuration. Use a fixed name to migrate this server.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationServerEnvironmentVariableValueTooLong">
       <source xml:lang="en">A value that references an environment variable is too long for the destination to expand it. Shorten the value to migrate this server.</source>
@@ -2346,6 +2349,9 @@ Size: {3} bytes</source>
     </trans-unit>
     <trans-unit id="mcpMigrationServerInvalidEnvironmentVariableName">
       <source xml:lang="en">The destination MCP configuration only supports environment variable names made of letters, digits and underscores that do not start with a digit. Rename the variable to migrate this server.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationServerInvalidInputName">
+      <source xml:lang="en">Inputs are migrated to environment variables named after their IDs, and an input of this server has an empty ID. Give the input an ID to migrate this server.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationServerInvalidSource">
       <source xml:lang="en">The source MCP configuration or server definition is invalid.</source>
@@ -2368,6 +2374,18 @@ Size: {3} bytes</source>
     <trans-unit id="mcpMigrationServerUnsupportedEnvironmentVariableInUrl">
       <source xml:lang="en">The destination MCP configuration does not support environment variables in the scheme or port of a URL, or as the whole URL. Use a fixed value there to migrate this server.</source>
     </trans-unit>
+    <trans-unit id="mcpMigrationServerUnsupportedInputDefault">
+      <source xml:lang="en">The default value of an input contains a variable or cannot be represented in the destination MCP configuration, or the default of a pick input is not one of its options. Change the default value to migrate this server.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationServerUnsupportedInputType">
+      <source xml:lang="en">Inputs are migrated to environment variables, except password and command inputs, and inputs that are not fully declared in the 'inputs' of the same file. Use an environment variable ('${env:...}') instead to migrate this server.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationServerUnsupportedVariable">
+      <source xml:lang="en">This server uses a variable that cannot be migrated, such as a command variable, or a workspace variable in a user configuration. Replace it with a fixed value or an environment variable ('${env:...}') to migrate this server.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationServerVariableNameCollision">
+      <source xml:lang="en">Inputs are migrated to environment variables named after their IDs, and an input of this server would use the same environment variable as a different input or environment variable reference ('${env:...}') in the same file, or as an entry of its 'env'. Rename the input to migrate this server.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostMcpServerSupportScope" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcpCompatibilityCopilotHomeNotForwarded">
@@ -2385,9 +2403,6 @@ To migrate this server, wait for MCP discovery to finish, then refresh this view
       <source xml:lang="en">Environment files are not supported by the Copilot harness.
 To migrate this server, move required variables from the environment file into the server env configuration.</source>
     </trans-unit>
-    <trans-unit id="mcpCompatibilityGalleryMetadataNotPortable">
-      <source xml:lang="en">Gallery metadata isn't supported. Migrating removes it and stops registry updates.</source>
-    </trans-unit>
     <trans-unit id="mcpCompatibilityLaunchNotRepresentable">
       <source xml:lang="en">The launch configuration for this server is not supported by the Copilot harness.
 To migrate this server, add a command for a local server or a valid URL for a remote server.</source>
@@ -2402,9 +2417,6 @@ To migrate this server, replace them with concrete values or environment variabl
     </trans-unit>
     <trans-unit id="mcpCompatibilitySandboxConfigurationIgnored">
       <source xml:lang="en">Per-server sandboxing isn't supported. Migrating removes sandboxEnabled.</source>
-    </trans-unit>
-    <trans-unit id="mcpCompatibilityServerVersionNotPortable">
-      <source xml:lang="en">Version metadata isn't supported. Migrating removes it; version pins are kept.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilitySourceUnknown">
       <source xml:lang="en">Compatibility cannot be determined because the server configuration source is unknown.
@@ -2807,7 +2819,7 @@ To migrate this server, remove the cwd property.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostTerminalContribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostTerminal.local">
-      <source xml:lang="en">Local</source>
+      <source xml:lang="en">This Computer</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentSessionSettings.contribution" source-language="en" datatype="plaintext"><body>
@@ -3011,7 +3023,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Work with OpenAI's Codex agent using your ChatGPT or GitHub Copilot subscription.</source>
     </trans-unit>
     <trans-unit id="chat.session.providerDescription.agentHostCopilot">
-      <source xml:lang="en">Run a Copilot SDK agent in the local agent host process.</source>
+      <source xml:lang="en">Run tasks using the Copilot SDK, which is the agent experience shared consistently across GitHub Copilot products. The agent works in the Agent Host, which lets sessions continue in the background, independently of an editor window.</source>
     </trans-unit>
     <trans-unit id="chat.session.providerDescription.background">
       <source xml:lang="en">Delegate tasks to a background agent running locally on your machine. The agent iterates via chat and works asynchronously in a Git worktree to implement changes isolated from your main workspace using the GitHub Copilot CLI.</source>
@@ -3029,7 +3041,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Learn about Copilot features.</source>
     </trans-unit>
     <trans-unit id="chat.session.providerDescription.local">
-      <source xml:lang="en">Run tasks within VS Code chat. The agent iterates via chat and works interactively to implement changes on your main workspace.</source>
+      <source xml:lang="en">Run tasks within VS Code's long-standing proprietary agent harness. The agent works in VS Code's extension host, iterates via chat, and works interactively to implement changes on your main workspace.</source>
     </trans-unit>
     <trans-unit id="chat.session.providerLabel.agentHostCopilot">
       <source xml:lang="en">Copilot</source>
@@ -4133,7 +4145,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">{0} stars</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.title">
-      <source xml:lang="en">Discover customizations</source>
+      <source xml:lang="en">Browse customizations</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.unavailable">
       <source xml:lang="en">Unavailable</source>
@@ -4499,7 +4511,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Reusable prompts for common development tasks like generating code, performing reviews, or scaffolding components.</source>
     </trans-unit>
     <trans-unit id="remoteClientGroupShort">
-      <source xml:lang="en">Local</source>
+      <source xml:lang="en">This Computer</source>
     </trans-unit>
     <trans-unit id="remoteHostGroupShort">
       <source xml:lang="en">Remote</source>
@@ -4661,10 +4673,10 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Define custom agents with specialized personas, tool access, and instructions for specific tasks.</source>
     </trans-unit>
     <trans-unit id="backToCustomizationDiscovery">
-      <source xml:lang="en">Back to Discover</source>
+      <source xml:lang="en">Back to Browse</source>
     </trans-unit>
     <trans-unit id="backToCustomizationDiscoveryTooltip">
-      <source xml:lang="en">Back to Discover</source>
+      <source xml:lang="en">Back to Browse</source>
     </trans-unit>
     <trans-unit id="backToCustomizationMigrations">
       <source xml:lang="en">Back to migrations</source>
@@ -4844,7 +4856,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Show the raw markdown file</source>
     </trans-unit>
     <trans-unit id="homeButtonLabel">
-      <source xml:lang="en">Discover</source>
+      <source xml:lang="en">Browse</source>
     </trans-unit>
     <trans-unit id="homeButtonTooltip">
       <source xml:lang="en">Back to overview</source>
@@ -5462,13 +5474,13 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Review an available item's source, then choose Install. For connectors, choose Connect, Reconnect, or Disconnect to manage the connection. When the selected agent provides SDK installation management, its inventory is authoritative and its exact review is shown before installation or removal. Copilot SDK search omits candidates that the runtime does not mark installable. Installing a public Browse result through Copilot prompts for GitHub sign-in first when needed. Repair asks the owning SDK or local implementation to recover missing content. Installed marketplace items provide an Uninstall action. MCP servers that require unsupported local prerequisites provide View Setup to open the publisher's instructions instead. VS Code continues to apply destination, trust, policy, and compatibility checks.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.links">
-      <source xml:lang="en">Available customization names no longer open external resources. Open an item's details to review its metadata, then use the explicitly labeled resource or repository actions for external navigation. Back or Escape returns to Discover and restores focus.</source>
+      <source xml:lang="en">Available customization names no longer open external resources. Open an item's details to review its metadata, then use the explicitly labeled resource or repository actions for external navigation. Back or Escape returns to Browse and restores focus.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.navigation">
       <source xml:lang="en">Use Tab and Shift+Tab between controls. In search results, use the arrow keys, Home, and End to navigate the list. Press Enter or Space on an available item to open its in-product details. Press Enter to open an installed item.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.overview">
-      <source xml:lang="en">Discover customizations searches installed agents, skills, instructions, prompts, hooks, MCP servers, and plugins, and can browse available marketplace items.</source>
+      <source xml:lang="en">Browse customizations searches installed agents, skills, instructions, prompts, hooks, MCP servers, and plugins, and can browse available marketplace items.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.paging">
       <source xml:lang="en">Scrolling near the end of search results loads another page without removing loaded items. Retry repeats a failed marketplace request.</source>
@@ -5503,7 +5515,7 @@ To migrate this server, remove the cwd property.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplaceConfiguration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.customizations.marketplace.enabled">
-      <source xml:lang="en">Shows Discover instead of Overview when a customization marketplace source is enabled. When disabled, marketplace discovery remains in the existing customization management pages.</source>
+      <source xml:lang="en">Shows Browse instead of Overview when a customization marketplace source is enabled. When disabled, marketplace discovery remains in the existing customization management pages.</source>
     </trans-unit>
     <trans-unit id="chat.customizations.marketplace.sources.publicFeed.enabled">
       <source xml:lang="en">Enables the SDK-backed GitHub Feed for agent harnesses that provide marketplace search. Local does not provide this source. If Marketplace or this setting is disabled, or a strict marketplace policy is configured, the GitHub Feed is not queried.</source>
@@ -5535,7 +5547,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">This connector cannot be reconnected while its status is '{0}'.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.connectorStatusUnavailable">
-      <source xml:lang="en">This connector is no longer available. Refresh Discover and try again.</source>
+      <source xml:lang="en">This connector is no longer available. Refresh Browse and try again.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.connectorsDisabled">
       <source xml:lang="en">Enable the Copilot connectors experiment to connect this resource.</source>
@@ -5550,7 +5562,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Could not verify this customization installation. {0}</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.mcpGalleryChanged">
-      <source xml:lang="en">The MCP registry changed after '{0}' was discovered. Refresh Discover and try again.</source>
+      <source xml:lang="en">The MCP registry changed after '{0}' was discovered. Refresh Browse and try again.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.mcpGalleryUnavailable">
       <source xml:lang="en">The MCP server '{0}' is not available in the configured registry.</source>
@@ -5559,7 +5571,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">The MCP server could not be installed. Review the installation error and try again.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.pluginIdentityChanged">
-      <source xml:lang="en">This plugin's marketplace identity changed after discovery. Refresh Discover and try again.</source>
+      <source xml:lang="en">This plugin's marketplace identity changed after discovery. Refresh Browse and try again.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.pluginIdentityUnavailable">
       <source xml:lang="en">This plugin does not provide configured marketplace identity.</source>
@@ -5568,7 +5580,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">The plugin could not be installed. Review the installation error and try again.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.pluginUnavailable">
-      <source xml:lang="en">This plugin is no longer available from a configured marketplace. Refresh Discover and try again.</source>
+      <source xml:lang="en">This plugin is no longer available from a configured marketplace. Refresh Browse and try again.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.pluginWebUnsupported">
       <source xml:lang="en">Installing configured marketplace plugins is not available in VS Code for the Web.</source>
@@ -5583,7 +5595,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">This plugin does not provide provider marketplace identity.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.providerPluginUnavailable">
-      <source xml:lang="en">This featured plugin is no longer available from a registered marketplace. Refresh Discover and try again.</source>
+      <source xml:lang="en">This featured plugin is no longer available from a registered marketplace. Refresh Browse and try again.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.repairIncomplete">
       <source xml:lang="en">The customization could not be fully repaired. Review the installation and try again.</source>
@@ -5773,6 +5785,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="mcpMigrationFailedWithRemainder">
       <source xml:lang="en">Failed to migrate {0} MCP servers: {1}, and {2} more.</source>
     </trans-unit>
+    <trans-unit id="mcpMigrationInputsToEnvironmentVariables">
+      <source xml:lang="en">Inputs will become environment variables. Configure them in the MCP server details after migrating.</source>
+    </trans-unit>
     <trans-unit id="mcpMigrationInvalidTarget">
       <source xml:lang="en">Could not migrate '{0}' because the destination MCP configuration is invalid.</source>
     </trans-unit>
@@ -5790,17 +5805,8 @@ Disabled user servers may become enabled.</source>
     <trans-unit id="mcpMigrationRemoveDev">
       <source xml:lang="en">Removes 'dev'. Development mode will stop.</source>
     </trans-unit>
-    <trans-unit id="mcpMigrationRemoveDisabledGallery">
-      <source xml:lang="en">Removes 'gallery'. Registry updates are already off.</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationRemoveGallery">
-      <source xml:lang="en">Removes 'gallery'. Registry updates will stop.</source>
-    </trans-unit>
     <trans-unit id="mcpMigrationRemoveSandbox">
       <source xml:lang="en">Removes 'sandboxEnabled'. Sandboxing is handled by {0}.</source>
-    </trans-unit>
-    <trans-unit id="mcpMigrationRemoveVersion">
-      <source xml:lang="en">Removes 'version'. Version pins are kept.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationRollbackFailed">
       <source xml:lang="en">Could not safely complete or roll back the migration for '{0}'. Review both MCP configuration files.</source>
@@ -5825,6 +5831,9 @@ Disabled user servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationSourceChanged">
       <source xml:lang="en">Could not migrate '{0}' because its source configuration changed.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationStopsRegistryUpdates">
+      <source xml:lang="en">Migrating will stop auto-updates from the MCP registry.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationTargetConflict">
       <source xml:lang="en">Could not migrate '{0}' because the destination already contains a different server with that name.</source>
@@ -7759,11 +7768,6 @@ Changes may not take full effect until VS Code is restarted.</source>
     <trans-unit id="chat.agentHost.opus48Prompt.enabled">
       <source xml:lang="en">When enabled, Copilot SDK sessions running a Claude Opus 4.8 model apply Opus 4.8-tuned system-prompt section overrides on top of the default system message.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.sessionCatalog">
-      <source xml:lang="en">Controls whether the agent session list is served from the Agent host's session catalog. When disabled, sessions are listed from provider metadata and per-session storage instead, which is slower.
-
-Changing this setting requires a restart to take effect.</source>
-    </trans-unit>
     <trans-unit id="chat.agentHost.shellTool.initScript.enabled">
       <source xml:lang="en">When enabled, Copilot SDK sessions load your shell profile (`~/.bashrc` on macOS and Linux, PowerShell profiles on Windows) and activate the Python environment selected for the workspace before each shell command. Python activation requires the Python Environments extension with `#python-envs.terminal.autoActivationType#` set to `shellStartup`. Local windows only.</source>
     </trans-unit>
@@ -7974,9 +7978,6 @@ Locations configured here are only observed by the Local agent harness. Other ha
     </trans-unit>
     <trans-unit id="chat.copilot.searchSubagent.enabled">
       <source xml:lang="en">When enabled, local Copilot Agent Host sessions are offered the Copilot runtime's search subagent tool for codebase search. Applies to sessions when they launch or resume.</source>
-    </trans-unit>
-    <trans-unit id="chat.copilot.semanticSearch.enabled">
-      <source xml:lang="en">Controls whether Copilot Agent Host sessions can use VS Code's semantic workspace search. When disabled, semantic search is unavailable.</source>
     </trans-unit>
     <trans-unit id="chat.copilot.skillCharBudget">
       <source xml:lang="en">Maximum number of characters available for skill descriptions in the Copilot SDK system message.</source>
@@ -8520,9 +8521,6 @@ This setting is only used by the Local agent harness.</source>
     </trans-unit>
     <trans-unit id="chat.subagents.allowInvocationsFromSubagents.md">
       <source xml:lang="en">Controls whether subagents can invoke other subagents. When enabled, nesting is limited to a maximum depth of 5.</source>
-    </trans-unit>
-    <trans-unit id="chat.subagents.defaultToAuto">
-      <source xml:lang="en">Controls whether local subagents use the Auto model when neither the tool call nor the selected agent specifies a model. Explicit tool and agent model selections take precedence. Subagents of a BYOK main model continue to use that model. Auto routing is not constrained by the main model's fixed cost tier.</source>
     </trans-unit>
     <trans-unit id="chat.subagents.showCreditUsage">
       <source xml:lang="en">Controls whether AI credit usage is shown next to the duration for subagents.</source>
@@ -17935,6 +17933,12 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.ensembleMax">
       <source xml:lang="en">Max</source>
     </trans-unit>
+    <trans-unit id="chat.modelPicker.hydraFusionDefaultTier">
+      <source xml:lang="en">Default</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.hydraFusionMaxTier">
+      <source xml:lang="en">Max</source>
+    </trans-unit>
     <trans-unit id="chat.priceCategory.high">
       <source xml:lang="en">High cost</source>
     </trans-unit>
@@ -17976,17 +17980,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.ensembleMaxDescription">
       <source xml:lang="en">Max uses multiple models on every task for the most thorough results.</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.hydraFusionDescription">
-      <source xml:lang="en">Picks a workflow per task, using one or more models to draft, review, or escalate.</source>
+    <trans-unit id="chat.modelPicker.hydraFusionTierValue">
+      <source xml:lang="en">Tier: {0}</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.hydraFusionTierDescription">
-      <source xml:lang="en">{0} is a research preview.</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.hydraFusionTierTooltip">
-      <source xml:lang="en">It picks a workflow per task, using one or more models to draft, review, or escalate.</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.learnMore">
-      <source xml:lang="en">Learn more</source>
+    <trans-unit id="chat.modelPicker.hydraFusionTiers">
+      <source xml:lang="en">HydraFusion tier</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.modelDetails">
       <source xml:lang="en">{0} Details</source>
