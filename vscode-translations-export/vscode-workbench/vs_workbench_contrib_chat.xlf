@@ -193,6 +193,12 @@
     <trans-unit id="chat.editorArtifactsPill">
       <source xml:lang="en">The editor window uses the same compact Artifacts pill as the Agents Window, rather than an expanded list above the input. Generated images appear automatically. In a subagent chat, the Artifacts pill shows that chat's transcript artifacts without the parent session's metadata. A single file pill opens directly; multiple artifacts open a dropdown with a Generated Images section. Use the pill's hover or context menu, or a dropdown row's actions, to save an artifact or copy its path.</source>
     </trans-unit>
+    <trans-unit id="chat.editorCanvasesPill">
+      <source xml:lang="en">In local Copilot agent-host sessions with chat.canvases.enabled turned on, the chat's canvases appear in their own pill in the main window. A single canvas shows its title and opens directly; multiple canvases show a count and open a picker. Activating a canvas focuses its tab beside the chat, or reopens it if it was closed.</source>
+    </trans-unit>
+    <trans-unit id="chat.editorCopySessionLink">
+      <source xml:lang="en">For an Agent Host chat editor, open the editor tab context menu and choose Copy Link to copy a session URL that renders as a session link in Markdown. Selecting multiple chat tabs copies one link per line.</source>
+    </trans-unit>
     <trans-unit id="chat.externalSessionFilter">
       <source xml:lang="en">The agent sessions filter includes an External submenu. Use it to choose whether external sessions from another application are shown for the last 24 hours, the last 7 days, always, or not at all.</source>
     </trans-unit>
@@ -252,6 +258,15 @@
     </trans-unit>
     <trans-unit id="chat.linkContextMenu">
       <source xml:lang="en">Focus a link in the chat transcript and press Shift+F10 to open its context menu. Use Copy Link to copy its target. File links with additional editor choices also provide Open With.</source>
+    </trans-unit>
+    <trans-unit id="chat.localModel.details">
+      <source xml:lang="en">A model's detail page has a heading for each section; the first, the model's name, also gives the model's state, such as Ready or Downloading 41%. Its header has icon buttons named after the model; Tab reaches them and Left and Right Arrow move between them. The first shows the state and what it does: Load for a model that isn't loaded, which loads it right away; Resume while it is paused; Stop while it is loaded; and while the model is busy, an in-progress indicator named with the state and the action that stops it, such as Loading, Cancel, or Downloading 41%, Pause, or Cancel while a model change waits for running responses, which keeps the loaded model. Once chosen, it reads Pausing, Cancelling or Stopping and can't be chosen again until the state changes. Then come Update, when an update is available, with its size, and Remove, which asks first. Use Tab and Shift+Tab to move between its links, buttons, choices and switches, Back to Models to return to the list, and Escape to close the picker. A warning at the top says when this device doesn't have the GPU memory for the model at its context size. To download a model, its page states the download size, the free space needed, the source and the license; choosing Download, or Set Up for model files already on this device, agrees to exactly what the page shows and downloads it in the background. Downloading doesn't need llama.cpp, but loading a model does, and VS Code doesn't install it. When no llama-server is set, or the one set doesn't support the model or is too old, loading the model shows an error on its page and in the notice above the chat input, with Get llama.cpp, which opens directions for getting a build that supports the model, Open Settings, which opens the Llama Server Path setting (chat.copilot.localModel.llamaServerPath) to point to its llama-server, and Retry. While a model downloads, its page shows a progress bar and the time remaining. While it loads, the page shows Loading model or Warming up, or Reloading when a new context size loads it again, or Retrying without speculative decoding, and why, when this llama.cpp build crashed with it, and, when an earlier load of the same model and context size took a known time, a progress bar and the time remaining estimated from it, which counts down and reads Almost done once that time has passed; a screen reader hears when the step changes. An installed model's page has a Thinking choice when the model supports it, which sets its thinking level for this chat, like a cloud model's thinking effort, without reloading it; the row and the readout show the new level. It also has a Context choice of the model's context sizes, each read with the GPU memory it needs. Changing the context size of a loaded model reloads it right away without asking, once its running responses finish; for a model that isn't loaded, it applies the next time it loads. In these choices, use the arrow keys to move between options, then Enter or Space to choose one. The page also has the Use in Auto switch, which lets Auto run some requests on this device with cloud fallback. The page updates in place as the model's state changes, and a change of state is announced.</source>
+    </trans-unit>
+    <trans-unit id="chat.localModel.notice">
+      <source xml:lang="en">While an on-device model is selected, the readout beside the model name in the chat input shows its state while it isn't ready, such as Loading, Reloading or Not loaded, and its thinking level and context size once it is; a screen reader hears all of them, and the readout opens the model's detail page. On-device models show no notifications. Instead, one notice above the chat input shows an error, a running download, a model loading or reloading or another step with a progress bar and the busy indicator of an active session, or a pause, with its actions, such as the Pause, Cancel or Stop Now button, Retry, Resume or Review, which opens the model's detail page; use Tab or Shift+Tab to reach them. The notice has no Details action: the model's detail page opens from the readout or the model picker. A load's progress is estimated from the last comparable load, with a time remaining that counts down on screen and then reads almost done; the first load shows no estimate. After Pause, Cancel or Stop Now, the notice says Pausing, Cancelling or Stopping right away, and so does the button, which can't be chosen again. While a selected model waits for the loaded model's running responses, the notice says how many it waits for, with Stop Now, which asks first, and Cancel, which keeps the loaded model; a load always has Cancel. For a screen reader its text updates are throttled, and it hears when the step changes, pauses or fails. When an on-device model is ready, the same notice offers to switch to it. Use in Auto is off until you turn it on in the model's detail page, where its description also says that local models may not use the same safety filters as GitHub Copilot-provided models. With Auto selected and Use in Auto on, Auto may run some requests on this device and uses a cloud model when the device can't respond; a reply that ran on this device shows On-device after the model name, and a notice tells you the first time a cloud model was used instead in a chat. The Command Palette also has Set Up On-Device Model, which opens the detail page of the model to set up, and Cancel On-Device Model Download, Resume On-Device Model Download, Retry On-Device Model Setup, Update On-Device Model, Remove On-Device Model, Start On-Device Model, Stop On-Device Model and Make On-Device Model Active.</source>
+    </trans-unit>
+    <trans-unit id="chat.localModel.rows">
+      <source xml:lang="en">On-device models: when this device has an NVIDIA GPU that can run one, the model picker lists it in its On This Device tab, right after the Copilot tab, in Copilot chats that run on the local agent host. From the model list, use Left and Right Arrow to switch tabs and Up and Down Arrow to focus a model's row. Each model has a single row, like a cloud model's: its name, an Active badge while it is loaded or loading, and the thinking level and context size, such as Medium and 128K. A screen reader also reads the model's state while it isn't ready, such as Downloading 42% or Not loaded; the detail page and the notice above the chat input show it too. Tab reaches the row's only button, labelled with the model's thinking level and context size, or, for a model that isn't downloaded, Download (Set Up for model files already on this device), the download's progress, such as 42%, or Paused; it opens the model's detail page; Right Arrow on the row opens it too. Actions such as Retry, Pause, Resume, Download and Set Up are on the detail page, and those for a running, paused or failed step also in the notice above the chat input. Pause stops a download or update so it can be resumed later; Cancel takes back a model change, keeping the loaded model while the change waits for running responses, or stops loading a model, and Stop Now ends the responses a model change is waiting for. Once chosen, these read Pausing, Cancelling or Stopping and can't be chosen again until the model's state changes. A model that isn't downloaded can't be selected: a screen reader reads Not downloaded with its row, and Enter opens its detail page, which has its license, size and Download button. Enter on an installed model selects it and starts loading it right away, without asking. Only one on-device model is loaded at a time: selecting another one unloads the loaded one once its running responses finish, and the notice above the chat input shows how many responses it is waiting for, then the load, with Cancel.</source>
     </trans-unit>
     <trans-unit id="chat.mcpStartupSkip">
       <source xml:lang="en">When a chat turn is waiting for MCP servers to start, a Skip link may appear. Use Tab to focus Skip and press Enter or Space to continue the turn while those servers start in the background. The current startup message disappears immediately and focus returns to the chat input. New server startups may show another message.</source>
@@ -918,6 +933,18 @@ User: {2}</source>
     <trans-unit id="chat.copyKatexMathSource.label">
       <source xml:lang="en">Copy Math Source</source>
     </trans-unit>
+    <trans-unit id="chat.copySessionLink">
+      <source xml:lang="en">Copy Link</source>
+    </trans-unit>
+    <trans-unit id="chat.copySessionLink.notCreated">
+      <source xml:lang="en">Send a message in this chat before copying its link.</source>
+    </trans-unit>
+    <trans-unit id="chat.copySessionLink.status">
+      <source xml:lang="en">Chat link copied to clipboard</source>
+    </trans-unit>
+    <trans-unit id="chat.copySessionLink.unavailable">
+      <source xml:lang="en">This chat does not have an Agent Host session link.</source>
+    </trans-unit>
     <trans-unit id="chat.openLinkWith">
       <source xml:lang="en">Open With...</source>
     </trans-unit>
@@ -1283,6 +1310,23 @@ User: {2}</source>
     <trans-unit id="disabledMarketplace">
       <source xml:lang="en">Disabled by Organization</source>
     </trans-unit>
+    <trans-unit id="forceRemoveMarketplace">
+      <source xml:lang="en">Remove marketplace '{0}' and uninstall its plugins?</source>
+    </trans-unit>
+    <trans-unit id="forceRemoveMarketplaceButton">
+      <source xml:lang="en">Remove Marketplace and Plugins</source>
+    </trans-unit>
+    <trans-unit id="forceRemoveMarketplaceDetail">
+      <source xml:lang="en">The following plugins depend on this marketplace and will be uninstalled:
+
+{0}</source>
+    </trans-unit>
+    <trans-unit id="forceRemoveMarketplaceFailed">
+      <source xml:lang="en">Marketplace '{0}' could not be removed.</source>
+    </trans-unit>
+    <trans-unit id="forceRemoveMarketplaceUnknownDetail">
+      <source xml:lang="en">The marketplace could not be removed normally. Forced removal may uninstall plugins from it.</source>
+    </trans-unit>
     <trans-unit id="installFromSourceFailed">
       <source xml:lang="en">Failed to install plugin: {0}</source>
     </trans-unit>
@@ -1337,6 +1381,12 @@ User: {2}</source>
     <trans-unit id="plugins">
       <source xml:lang="en">Plugins</source>
     </trans-unit>
+    <trans-unit id="refreshMarketplace">
+      <source xml:lang="en">Refresh Marketplace</source>
+    </trans-unit>
+    <trans-unit id="refreshMarketplaceFailed">
+      <source xml:lang="en">Failed to refresh marketplace '{0}': {1}</source>
+    </trans-unit>
     <trans-unit id="removeMarketplace">
       <source xml:lang="en">Remove Marketplace</source>
     </trans-unit>
@@ -1351,6 +1401,12 @@ User: {2}</source>
     </trans-unit>
     <trans-unit id="showPlugins">
       <source xml:lang="en">Show Plugins</source>
+    </trans-unit>
+    <trans-unit id="unavailableMarketplace">
+      <source xml:lang="en">Unavailable</source>
+    </trans-unit>
+    <trans-unit id="unknownError">
+      <source xml:lang="en">Unknown error</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatPromptNavigationActions" source-language="en" datatype="plaintext"><body>
@@ -1972,6 +2028,9 @@ User: {2}</source>
     <trans-unit id="agent-plugins">
       <source xml:lang="en">Agent Plugins</source>
     </trans-unit>
+    <trans-unit id="agent-plugins-installed">
+      <source xml:lang="en">Agent Plugins - Installed</source>
+    </trans-unit>
     <trans-unit id="agentPlugins">
       <source xml:lang="en">Agent Plugins</source>
     </trans-unit>
@@ -2275,6 +2334,21 @@ Size: {3} bytes</source>
     <trans-unit id="agentHost.customizationSearch.unsupported">
       <source xml:lang="en">The active Copilot runtime does not support GitHub Feed search.</source>
     </trans-unit>
+    <trans-unit id="agentHost.marketplaceManagement.addUnavailable">
+      <source xml:lang="en">The selected agent does not support adding marketplaces.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.marketplaceManagement.browseUnavailable">
+      <source xml:lang="en">The selected agent does not support browsing marketplaces.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.marketplaceManagement.listUnavailable">
+      <source xml:lang="en">The selected agent does not support marketplace management.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.marketplaceManagement.refreshUnavailable">
+      <source xml:lang="en">The selected agent does not support refreshing marketplaces.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.marketplaceManagement.removeUnavailable">
+      <source xml:lang="en">The selected agent does not support removing marketplaces.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostCustomizationService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.mcpServer.authRequired">
@@ -2337,9 +2411,69 @@ Size: {3} bytes</source>
       <source xml:lang="en">{0} routes the first eligible turn and may use multiple models.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostLocalModelSupport" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.localModel.cloudModel">
+      <source xml:lang="en">a cloud model</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.fallbackHover">
+      <source xml:lang="en">The on-device model was unavailable, so a cloud model was used.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.fallbackNotice">
+      <source xml:lang="en">{0} couldn't respond, so Auto used a cloud model.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.fallbackReason">
+      <source xml:lang="en">Auto routed task to {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.labelFallback">
+      <source xml:lang="en">Auto ({0})</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.labelLocal">
+      <source xml:lang="en">Auto ({0})</source>
+      <note>{0} is a model name followed by "On-device", e.g. "MAI Code 1.1 Flash · On-device"</note>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.labelMixed">
+      <source xml:lang="en">Auto (On-device + {0})</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.load">
+      <source xml:lang="en">Load {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.loadUnloads">
+      <source xml:lang="en">Load {0} (unloads {1})</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.loading">
+      <source xml:lang="en">Loading {0}…</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.loadingDescription">
+      <source xml:lang="en">Your message will be sent when it's ready.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.mixedReason">
+      <source xml:lang="en">Auto ran part of this task on this device and part on {0}.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.noUsageLimit">
+      <source xml:lang="en">No usage limit</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.notLoaded">
+      <source xml:lang="en">{0} isn't loaded.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.switchTo">
+      <source xml:lang="en">Switch to {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.unknownNameCapitalized">
+      <source xml:lang="en">The on-device model</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.unnamedOnDevice">
+      <source xml:lang="en">On-device model</source>
+    </trans-unit>
+    <trans-unit id="agentHost.localModel.useAuto">
+      <source xml:lang="en">Use Auto</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostMcpServerMigrationProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcpMigrationServerEnterpriseManagedOAuth">
+      <source xml:lang="en">This server uses enterprise-managed sign-in, which relies on a VS Code setting that Copilot does not have.</source>
+    </trans-unit>
     <trans-unit id="mcpMigrationServerEnvironmentVariableInName">
-      <source xml:lang="en">Variables ('${env:...}' or '${input:...}') in environment variable or header names are not supported in the destination MCP configuration. Use a fixed name to migrate this server.</source>
+      <source xml:lang="en">Variables ('${env:...}', '${input:...}' or '${config:...}') in environment variable or header names are not supported in the destination MCP configuration. Use a fixed name to migrate this server.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationServerEnvironmentVariableValueTooLong">
       <source xml:lang="en">A value that references an environment variable is too long for the destination to expand it. Shorten the value to migrate this server.</source>
@@ -2365,6 +2499,9 @@ Size: {3} bytes</source>
     <trans-unit id="mcpMigrationServerNullEnvironment">
       <source xml:lang="en">Environment variables with null values are not supported in the destination MCP configuration. Remove or replace the null value to migrate this server.</source>
     </trans-unit>
+    <trans-unit id="mcpMigrationServerOAuthClientSecret">
+      <source xml:lang="en">This server's OAuth client uses a client secret stored in VS Code, which Copilot cannot use.</source>
+    </trans-unit>
     <trans-unit id="mcpMigrationServerSourceUnavailable">
       <source xml:lang="en">The source MCP configuration could not be read.</source>
     </trans-unit>
@@ -2384,7 +2521,7 @@ Size: {3} bytes</source>
       <source xml:lang="en">This server uses a variable that cannot be migrated, such as a command variable, or a workspace variable in a user configuration. Replace it with a fixed value or an environment variable ('${env:...}') to migrate this server.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationServerVariableNameCollision">
-      <source xml:lang="en">Inputs are migrated to environment variables named after their IDs, and an input of this server would use the same environment variable as a different input or environment variable reference ('${env:...}') in the same file, or as an entry of its 'env'. Rename the input to migrate this server.</source>
+      <source xml:lang="en">Inputs and settings are migrated to environment variables named after their IDs or keys, and an input or setting of this server would use the same environment variable as a different input, setting or environment variable reference ('${env:...}') in the same file, or as an entry of its 'env'. Rename the input or use a different setting to migrate this server.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostMcpServerSupportScope" source-language="en" datatype="plaintext"><body>
@@ -2408,8 +2545,8 @@ To migrate this server, move required variables from the environment file into t
 To migrate this server, add a command for a local server or a valid URL for a remote server.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityOAuthClientConfigurationIgnored">
-      <source xml:lang="en">Custom OAuth client configuration is not supported by the Copilot harness.
-To migrate this server, remove the custom OAuth client configuration and sign in when the Copilot harness prompts for authentication.</source>
+      <source xml:lang="en">The Copilot harness does not receive this server's custom OAuth client configuration from VS Code.
+Migrate this server to keep its OAuth client ID. Servers that use a client secret or enterprise-managed sign-in cannot be migrated.</source>
     </trans-unit>
     <trans-unit id="mcpCompatibilityRequiresUserInteraction">
       <source xml:lang="en">Input and command variables are not supported by the Copilot harness.
@@ -2592,6 +2729,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSessionHandler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.askUnavailable">
+      <source xml:lang="en">Agent mode is disabled and this host does not provide the selected read-only Ask agent.</source>
+    </trans-unit>
     <trans-unit id="agentHost.authRequired">
       <source xml:lang="en">Authentication is required to start a session. Please sign in and try again.</source>
     </trans-unit>
@@ -2889,6 +3029,451 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="chat.importConversation.toolFailed">
       <source xml:lang="en">Tool failed.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/localModelActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatLocalModelActive">
+      <source xml:lang="en">True when an on-device model is active.</source>
+    </trans-unit>
+    <trans-unit id="chatLocalModelCanSetUp">
+      <source xml:lang="en">True when an on-device model can be set up.</source>
+    </trans-unit>
+    <trans-unit id="chatLocalModelHasFailedOperation">
+      <source xml:lang="en">True when an on-device model operation failed.</source>
+    </trans-unit>
+    <trans-unit id="chatLocalModelHasInstalled">
+      <source xml:lang="en">True when an on-device model is installed.</source>
+    </trans-unit>
+    <trans-unit id="chatLocalModelHasOperation">
+      <source xml:lang="en">True when an on-device model operation is running or paused.</source>
+    </trans-unit>
+    <trans-unit id="chatLocalModelHasPausedOperation">
+      <source xml:lang="en">True when an on-device model operation is paused.</source>
+    </trans-unit>
+    <trans-unit id="chatLocalModelHasUpdate">
+      <source xml:lang="en">True when an installed on-device model has an update.</source>
+    </trans-unit>
+    <trans-unit id="chatLocalModelVisible">
+      <source xml:lang="en">True when the current chat runs on the local agent host and it lists on-device models.</source>
+    </trans-unit>
+    <trans-unit id="localModel.command.cancel">
+      <source xml:lang="en">Cancel On-Device Model Download</source>
+    </trans-unit>
+    <trans-unit id="localModel.command.makeActive">
+      <source xml:lang="en">Make On-Device Model Active…</source>
+    </trans-unit>
+    <trans-unit id="localModel.command.remove">
+      <source xml:lang="en">Remove On-Device Model…</source>
+    </trans-unit>
+    <trans-unit id="localModel.command.resume">
+      <source xml:lang="en">Resume On-Device Model Download</source>
+    </trans-unit>
+    <trans-unit id="localModel.command.retry">
+      <source xml:lang="en">Retry On-Device Model Setup</source>
+    </trans-unit>
+    <trans-unit id="localModel.command.setUp">
+      <source xml:lang="en">Set Up On-Device Model…</source>
+    </trans-unit>
+    <trans-unit id="localModel.command.showDetails">
+      <source xml:lang="en">Show On-Device Model Details</source>
+    </trans-unit>
+    <trans-unit id="localModel.command.start">
+      <source xml:lang="en">Start On-Device Model</source>
+    </trans-unit>
+    <trans-unit id="localModel.command.stop">
+      <source xml:lang="en">Stop On-Device Model</source>
+    </trans-unit>
+    <trans-unit id="localModel.command.update">
+      <source xml:lang="en">Update On-Device Model</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.cancel">
+      <source xml:lang="en">Select the on-device model operation to cancel</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.error">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.installed">
+      <source xml:lang="en">Installed</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.makeActive">
+      <source xml:lang="en">Select the on-device model to load</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.paused">
+      <source xml:lang="en">Paused</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.preparing">
+      <source xml:lang="en">Setting up</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.ready">
+      <source xml:lang="en">Ready</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.remove">
+      <source xml:lang="en">Select the on-device model to remove</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.requiresSetup">
+      <source xml:lang="en">Not set up</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.resume">
+      <source xml:lang="en">Select the on-device model download to resume</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.retry">
+      <source xml:lang="en">Select the on-device model operation to retry</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.setUp">
+      <source xml:lang="en">Select an on-device model to set up</source>
+    </trans-unit>
+    <trans-unit id="localModel.pick.update">
+      <source xml:lang="en">Select the on-device model to update</source>
+    </trans-unit>
+    <trans-unit id="localModel.showDetails.unavailable">
+      <source xml:lang="en">On-device model details can't be shown: no chat that runs on this device's agent host is available.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/localModelErrorActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.errorAction.getLlamaCpp">
+      <source xml:lang="en">Get llama.cpp</source>
+    </trans-unit>
+    <trans-unit id="localModel.errorAction.openSettings">
+      <source xml:lang="en">Open Settings</source>
+    </trans-unit>
+    <trans-unit id="localModel.errorAction.retry">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="localModel.errorAction.stopPrevious">
+      <source xml:lang="en">Stop Previous Server</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/localModelReadyNotification" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.ready.activeFallback">
+      <source xml:lang="en">the active model</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready.auto">
+      <source xml:lang="en">Auto can now run some requests on this device, with cloud fallback. New Auto chats will use it.</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready.directOnly">
+      <source xml:lang="en">Select it directly to run on your device.</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready.installedMessage">
+      <source xml:lang="en">{0} is installed.</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready.load">
+      <source xml:lang="en">Load {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready.message">
+      <source xml:lang="en">{0} is ready on this device.</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready.newAutoChat">
+      <source xml:lang="en">New Auto Chat</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready.notNow">
+      <source xml:lang="en">Not Now</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready.secondInstall">
+      <source xml:lang="en">Loading it unloads {0}.</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready.server">
+      <source xml:lang="en">Run this chat on your device, or let Auto choose between local and cloud.</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready.switchTo">
+      <source xml:lang="en">Switch to {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready.tooSlow">
+      <source xml:lang="en">It's too slow on this device for Auto, but you can select it directly.</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready.useAuto">
+      <source xml:lang="en">Use Auto</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/localModelSetupFlow" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.consent.alreadyPresent">
+      <source xml:lang="en">Uses {0}, which is already on this device.</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.download">
+      <source xml:lang="en">Download</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.downloadSize">
+      <source xml:lang="en">Download size: {0}. Free space needed during setup: {1}.</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.downloadSizeOnVolume">
+      <source xml:lang="en">Download size: {0}. Free space needed during setup: {1} on {2}.</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.keepWorking">
+      <source xml:lang="en">You can keep using Copilot while it downloads.</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.nearFit">
+      <source xml:lang="en">This device has about {0} of GPU memory; the model needs about {1}. Part of it will run from system memory, so responses may be slower.</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.nearFitUnknown">
+      <source xml:lang="en">The model needs about {0} of GPU memory, a little more than this device has. Part of it will run from system memory, so responses may be slower.</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.notEnoughDisk">
+      <source xml:lang="en">Not enough free space on {0} ({1} available, {2} needed).</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.notEnoughDiskDetail">
+      <source xml:lang="en">Free up space on {0}, then download {1} again.</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.notEnoughDiskTitle">
+      <source xml:lang="en">Not Enough Disk Space</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.runtimeNeeded">
+      <source xml:lang="en">Loading {0} needs llama.cpp, which VS Code doesn't install.</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.runtimeNeededDownload">
+      <source xml:lang="en">Loading {0} needs llama.cpp, which VS Code doesn't install. You can get it while the model downloads.</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.setUp">
+      <source xml:lang="en">Set Up</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.source">
+      <source xml:lang="en">Source: Azure ML registry.</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.sourceLicense">
+      <source xml:lang="en">Source: Azure ML registry. License: {0}.</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.storage">
+      <source xml:lang="en">Stored in ~/.copilot/azureml-models and shared with other Copilot apps.</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.titleDownload">
+      <source xml:lang="en">Download</source>
+    </trans-unit>
+    <trans-unit id="localModel.consent.titleSetUp">
+      <source xml:lang="en">Set Up</source>
+    </trans-unit>
+    <trans-unit id="localModel.duration.hours">
+      <source xml:lang="en">{0} hr</source>
+    </trans-unit>
+    <trans-unit id="localModel.duration.hoursMinutes">
+      <source xml:lang="en">{0} hr {1} min</source>
+    </trans-unit>
+    <trans-unit id="localModel.duration.lessThanMinute">
+      <source xml:lang="en">less than a minute</source>
+    </trans-unit>
+    <trans-unit id="localModel.duration.minutes">
+      <source xml:lang="en">{0} min</source>
+    </trans-unit>
+    <trans-unit id="localModel.duration.seconds">
+      <source xml:lang="en">{0} s</source>
+    </trans-unit>
+    <trans-unit id="localModel.remove.notOwned">
+      <source xml:lang="en">VS Code didn't download these model files, so they stay on this device.</source>
+    </trans-unit>
+    <trans-unit id="localModel.remove.owned">
+      <source xml:lang="en">Its model files are deleted from this device.</source>
+    </trans-unit>
+    <trans-unit id="localModel.remove.partial">
+      <source xml:lang="en">Files downloaded so far are deleted.</source>
+    </trans-unit>
+    <trans-unit id="localModel.remove.remove">
+      <source xml:lang="en">Remove</source>
+    </trans-unit>
+    <trans-unit id="localModel.remove.title">
+      <source xml:lang="en">Remove {0}?</source>
+    </trans-unit>
+    <trans-unit id="localModel.size.gb">
+      <source xml:lang="en">{0} GB</source>
+    </trans-unit>
+    <trans-unit id="localModel.size.kb">
+      <source xml:lang="en">{0} KB</source>
+    </trans-unit>
+    <trans-unit id="localModel.size.mb">
+      <source xml:lang="en">{0} MB</source>
+    </trans-unit>
+    <trans-unit id="localModel.stopNow.detail">
+      <source xml:lang="en">They will end without finishing.</source>
+    </trans-unit>
+    <trans-unit id="localModel.stopNow.stop">
+      <source xml:lang="en">Stop Now</source>
+    </trans-unit>
+    <trans-unit id="localModel.stopNow.title">
+      <source xml:lang="en">Stop {0} running responses?</source>
+    </trans-unit>
+    <trans-unit id="localModel.stopNow.titleOne">
+      <source xml:lang="en">Stop 1 running response?</source>
+    </trans-unit>
+    <trans-unit id="localModel.usage.chats">
+      <source xml:lang="en">{0} chats are using it. Running responses will finish first.</source>
+    </trans-unit>
+    <trans-unit id="localModel.usage.oneChat">
+      <source xml:lang="en">1 chat is using it. Running responses will finish first.</source>
+    </trans-unit>
+    <trans-unit id="localModel.usage.oneStream">
+      <source xml:lang="en">1 running response will finish first.</source>
+    </trans-unit>
+    <trans-unit id="localModel.usage.streams">
+      <source xml:lang="en">{0} running responses will finish first.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/localModelSetupProgress" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.cancelled.swap">
+      <source xml:lang="en">Loading {0} was cancelled.</source>
+    </trans-unit>
+    <trans-unit id="localModel.cancelled.swapKept">
+      <source xml:lang="en">Loading {0} was cancelled. {1} stays loaded.</source>
+    </trans-unit>
+    <trans-unit id="localModel.completed.remove">
+      <source xml:lang="en">{0} was removed.</source>
+    </trans-unit>
+    <trans-unit id="localModel.completed.setup">
+      <source xml:lang="en">{0} is set up.</source>
+    </trans-unit>
+    <trans-unit id="localModel.completed.swap">
+      <source xml:lang="en">{0} is loaded.</source>
+    </trans-unit>
+    <trans-unit id="localModel.completed.update">
+      <source xml:lang="en">{0} is updated.</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.generic">
+      <source xml:lang="en">Setting up {0} failed.</source>
+    </trans-unit>
+    <trans-unit id="localModel.paused.consentChanged">
+      <source xml:lang="en">Paused: {0} changed since you agreed to set it up. Review the details to continue.</source>
+    </trans-unit>
+    <trans-unit id="localModel.paused.diskFull">
+      <source xml:lang="en">Paused: there isn't enough free disk space to continue downloading {0}.</source>
+    </trans-unit>
+    <trans-unit id="localModel.paused.network">
+      <source xml:lang="en">Paused: the download of {0} was interrupted.</source>
+    </trans-unit>
+    <trans-unit id="localModel.paused.resume">
+      <source xml:lang="en">Resume</source>
+    </trans-unit>
+    <trans-unit id="localModel.paused.review">
+      <source xml:lang="en">Review…</source>
+    </trans-unit>
+    <trans-unit id="localModel.paused.userSetup">
+      <source xml:lang="en">Setting up {0} is paused.</source>
+    </trans-unit>
+    <trans-unit id="localModel.paused.userUpdate">
+      <source xml:lang="en">Updating {0} is paused.</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.cancellingAction">
+      <source xml:lang="en">Cancelling…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.cancellingLoad">
+      <source xml:lang="en">Cancelling loading {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.cancellingReload">
+      <source xml:lang="en">Cancelling reloading {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.checkingDevice">
+      <source xml:lang="en">Setting up {0}: Checking this device…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.deviceInsufficient">
+      <source xml:lang="en">This device doesn't have enough GPU memory for {0}.</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.disconnected">
+      <source xml:lang="en">Setting up {0} was interrupted because the agent host stopped.</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.downloading">
+      <source xml:lang="en">Downloading {0}: {1} of {2}, about {3} remaining</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.downloadingIndeterminate">
+      <source xml:lang="en">Downloading {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.downloadingNoRate">
+      <source xml:lang="en">Downloading {0}: {1} of {2}</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.draining">
+      <source xml:lang="en">Waiting for {0} responses to finish…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.drainingOne">
+      <source xml:lang="en">Waiting for 1 response to finish…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.drainingOneReload">
+      <source xml:lang="en">Waiting for 1 response to finish before reloading {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.drainingOneSwap">
+      <source xml:lang="en">Waiting for 1 response to finish before loading {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.drainingReload">
+      <source xml:lang="en">Waiting for {0} responses to finish before reloading {1}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.drainingSwap">
+      <source xml:lang="en">Waiting for {0} responses to finish before loading {1}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.loading">
+      <source xml:lang="en">Loading {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.loadingAlmostDone">
+      <source xml:lang="en">Loading {0}, almost done…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.loadingRemaining">
+      <source xml:lang="en">Loading {0}, about {1} remaining</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.loadingStep">
+      <source xml:lang="en">Loading {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.pause">
+      <source xml:lang="en">Pause</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.pausing">
+      <source xml:lang="en">Pausing {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.pausingAction">
+      <source xml:lang="en">Pausing…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.placing">
+      <source xml:lang="en">Setting up {0}: Finishing…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.reloading">
+      <source xml:lang="en">Reloading {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.reloadingAlmostDone">
+      <source xml:lang="en">Reloading {0}, almost done…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.reloadingRemaining">
+      <source xml:lang="en">Reloading {0}, about {1} remaining</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.remove">
+      <source xml:lang="en">Removing {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.resolving">
+      <source xml:lang="en">Setting up {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.retrying">
+      <source xml:lang="en">Retrying {0} without speculative decoding…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.retryingAlmostDone">
+      <source xml:lang="en">Retrying {0} without speculative decoding, almost done…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.retryingRemaining">
+      <source xml:lang="en">Retrying {0} without speculative decoding, about {1} remaining</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.setup">
+      <source xml:lang="en">Setting up {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.stopNow">
+      <source xml:lang="en">Stop Now</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.stoppingAction">
+      <source xml:lang="en">Stopping…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.stoppingResponses">
+      <source xml:lang="en">Stopping the running responses…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.swap">
+      <source xml:lang="en">Loading {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.update">
+      <source xml:lang="en">Updating {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.verifying">
+      <source xml:lang="en">Setting up {0}: Verifying…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.warmingUp">
+      <source xml:lang="en">Warming up {0}…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.warmingUpAlmostDone">
+      <source xml:lang="en">Warming up {0}, almost done…</source>
+    </trans-unit>
+    <trans-unit id="localModel.progress.warmingUpRemaining">
+      <source xml:lang="en">Warming up {0}, about {1} remaining</source>
+    </trans-unit>
+    <trans-unit id="localModel.updateAvailable">
+      <source xml:lang="en">An update for {0} is available ({1}).</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/stateToProgressAdapter" source-language="en" datatype="plaintext"><body>
@@ -5802,6 +6387,9 @@ Disabled user servers may become enabled.</source>
     <trans-unit id="mcpMigrationNoneMigrated">
       <source xml:lang="en">No MCP servers were migrated.</source>
     </trans-unit>
+    <trans-unit id="mcpMigrationOAuthSignIn">
+      <source xml:lang="en">You may need to sign in again after migration.</source>
+    </trans-unit>
     <trans-unit id="mcpMigrationRemoveDev">
       <source xml:lang="en">Removes 'dev'. Development mode will stop.</source>
     </trans-unit>
@@ -5813,6 +6401,9 @@ Disabled user servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationRollbackFailedMultiple">
       <source xml:lang="en">Some MCP server migrations could not be safely completed or rolled back. Review the affected source and destination MCP configuration files.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationSettingsToEnvironmentVariables">
+      <source xml:lang="en">Configs will become environment variables. Later changes won't apply.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationShadowedServerNotMigrated">
       <source xml:lang="en">Could not migrate '{0}' because another workspace folder defines an MCP server with the same name. Migrate both servers together so the same configuration stays active.</source>
@@ -5837,6 +6428,9 @@ Disabled user servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationTargetConflict">
       <source xml:lang="en">Could not migrate '{0}' because the destination already contains a different server with that name.</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationTrustAgain">
+      <source xml:lang="en">VS Code will ask you to trust this server again after migration.</source>
     </trans-unit>
     <trans-unit id="mcpMigrationUserConfirmDetail">
       <source xml:lang="en">Move to Copilot home for use across profiles and workspaces. The original entries will be removed.
@@ -7969,6 +8563,15 @@ Locations configured here are only observed by the Local agent harness. Other ha
     </trans-unit>
     <trans-unit id="chat.copilot.hydraFusion.enabled.v2">
       <source xml:lang="en">Make HydraFusion v2 available, which plans with per-step reasoning effort and a wider set of models.</source>
+    </trans-unit>
+    <trans-unit id="chat.copilot.localModel.enabled">
+      <source xml:lang="en">When enabled, offers on-device models to download and run on this device with llama.cpp. Offered only on devices with a GPU that has about {0} GB of memory or more. Changing this setting restarts the local Copilot runtime after active turns finish. {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.copilot.localModel.llamaServerPath">
+      <source xml:lang="en">Absolute path to a `llama-server` executable for on-device models. VS Code doesn't install llama.cpp: install a build that supports your model, then set this to its `llama-server`.</source>
+    </trans-unit>
+    <trans-unit id="chat.copilot.localModel.useInAuto">
+      <source xml:lang="en">When enabled, Auto can route turns to the active on-device model, with cloud fallback. Takes effect immediately. {0}</source>
     </trans-unit>
     <trans-unit id="chat.copilot.memory.enabled">
       <source xml:lang="en">When enabled, local Copilot Agent Host sessions can store and recall [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory). Applies to sessions created or resumed after the setting changes.</source>
@@ -13905,7 +14508,7 @@ Source: {0}</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/sessionBackgroundShellsControl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="backgroundShells.accessibilityHelp">
-      <source xml:lang="en">The Background Shells pill opens a picker above the chat input, including for a single shell. Each entry includes its elapsed time, and is marked Detached when the shell runs independently of the agent. Use the arrow keys to choose a shell, then Enter or Right Arrow to open its live command details beside the picker. Left Arrow or Escape returns to the list; Escape from the list returns focus to the pill. Elapsed time continues updating while details are open, and a shell disappears when it finishes. The details start with the shell's full description, unless it only repeats the command. When a shell's output is available, its details show the command and its status above a read-only terminal that streams the output. A shell that can be stopped shows a Stop Shell button beside its command. Press Tab to move through the details to the output, then use Open Accessible View{0} to read the command, its status, and its output as text.</source>
+      <source xml:lang="en">The Background Shells pill opens a picker above the chat input, including for a single shell. Each entry includes its elapsed time, and is marked Detached when the shell runs independently of the agent. Use the arrow keys to choose a shell, then Enter or Right Arrow to open its live command details beside the picker. Left Arrow or Escape returns to the list; Escape from the list returns focus to the pill. Elapsed time continues updating while details are open, and a shell disappears when it finishes. The details start with the shell's full description, unless it only repeats the command, followed by the command and its status. When a shell's output is available, a read-only terminal below the command streams it. A shell that can be stopped shows a Stop Shell button beside its command. Press Tab to move through the details to the output, then use Open Accessible View{0} to read the command, its status, and its output as text.</source>
     </trans-unit>
     <trans-unit id="backgroundShells.active">
       <source xml:lang="en">Active background shells</source>
@@ -13915,9 +14518,6 @@ Source: {0}</source>
     </trans-unit>
     <trans-unit id="backgroundShells.attachmentWithDuration">
       <source xml:lang="en">{0}, {1}</source>
-    </trans-unit>
-    <trans-unit id="backgroundShells.command">
-      <source xml:lang="en">Command: {0}</source>
     </trans-unit>
     <trans-unit id="backgroundShells.detached">
       <source xml:lang="en">Detached</source>
@@ -13936,14 +14536,8 @@ Started: {2}</source>
       <source xml:lang="en">Command: {0}
 Started: {1}</source>
     </trans-unit>
-    <trans-unit id="backgroundShells.id">
-      <source xml:lang="en">Shell ID: {0}</source>
-    </trans-unit>
     <trans-unit id="backgroundShells.showDetails">
       <source xml:lang="en">Show details for background shell {0}</source>
-    </trans-unit>
-    <trans-unit id="backgroundShells.startedAt">
-      <source xml:lang="en">Started: {0}</source>
     </trans-unit>
     <trans-unit id="backgroundShells.stop">
       <source xml:lang="en">Stop Shell</source>
@@ -17903,6 +18497,383 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">Selected</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerLocalModelCard" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.action.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.cancelling">
+      <source xml:lang="en">Cancelling…</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.loadModel">
+      <source xml:lang="en">Load {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.removeModel">
+      <source xml:lang="en">Remove {0}...</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.resumeModel">
+      <source xml:lang="en">Resume {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.stopModel">
+      <source xml:lang="en">Stop {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.updateModel">
+      <source xml:lang="en">Update {0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.actions">
+      <source xml:lang="en">Model Actions</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.almostDone">
+      <source xml:lang="en">Almost done…</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.downloading">
+      <source xml:lang="en">Downloading {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.downloadingPercent">
+      <source xml:lang="en">Downloading {0} {1}%</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.draining">
+      <source xml:lang="en">Waiting for {0} responses to finish</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.drainingOne">
+      <source xml:lang="en">Waiting for 1 response to finish</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.loading">
+      <source xml:lang="en">Loading {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.reloading">
+      <source xml:lang="en">Reloading {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.removing">
+      <source xml:lang="en">Removing {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.retrying">
+      <source xml:lang="en">Retrying {0} without speculative decoding</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.settingUp">
+      <source xml:lang="en">Setting up {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.stopping">
+      <source xml:lang="en">Stopping {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.updating">
+      <source xml:lang="en">Updating {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.verifying">
+      <source xml:lang="en">Verifying {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busy.warmingUp">
+      <source xml:lang="en">Warming up {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.busyAction">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.consentChanged">
+      <source xml:lang="en">{0} changed since you agreed to set it up. Review the details to continue.</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.context">
+      <source xml:lang="en">Context</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.contextMemory">
+      <source xml:lang="en">About {0} of GPU memory</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.contextNextLoad">
+      <source xml:lang="en">A change applies the next time the model loads.</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.contextReduced">
+      <source xml:lang="en">Running with {0}: not enough GPU memory for {1} right now.</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.contextReloading">
+      <source xml:lang="en">Running with {0} until it reloads with {1}.</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.contextReloads">
+      <source xml:lang="en">Changing it reloads the model. Running responses finish first.</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.contextSelected">
+      <source xml:lang="en">{0} uses about {1} of GPU memory.</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.contextSize">
+      <source xml:lang="en">{0} tokens.</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.downloading">
+      <source xml:lang="en">Downloading: {0} of {1}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.memoryWarning">
+      <source xml:lang="en">{0} needs about {1} of GPU memory. This device has about {2}.</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.memoryWarningContext">
+      <source xml:lang="en">{0} needs about {1} of GPU memory at {2}. This device has about {3}.</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.memoryWarningSmaller">
+      <source xml:lang="en">{0} needs about {1} of GPU memory at {2}. This device has about {3}. Choose a smaller context.</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.pausedWithReason">
+      <source xml:lang="en">{0} · {1}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.progress">
+      <source xml:lang="en">{0} progress</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.remaining">
+      <source xml:lang="en">About {0} remaining</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.remainingUnderMinute">
+      <source xml:lang="en">Less than a minute remaining</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.retryWithoutSpeculativeDecoding">
+      <source xml:lang="en">This llama.cpp build crashed with speculative decoding, so {0} loads without it.</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.retryingWithoutSpeculativeDecoding">
+      <source xml:lang="en">Retrying without speculative decoding…</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.stateChanged">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.status">
+      <source xml:lang="en">Status</source>
+    </trans-unit>
+    <trans-unit id="localModel.card.viewLicense">
+      <source xml:lang="en">View the {0} license</source>
+    </trans-unit>
+    <trans-unit id="localModel.useInAuto">
+      <source xml:lang="en">Use in Auto</source>
+    </trans-unit>
+    <trans-unit id="localModel.useInAuto.description">
+      <source xml:lang="en">Let Auto route turns to this on-device model, with cloud fallback.</source>
+    </trans-unit>
+    <trans-unit id="localModel.useInAuto.tooSlow">
+      <source xml:lang="en">{0} runs on this device but is too slow for Auto. You can still select it directly.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerLocalModelItems" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.action.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.cancelling">
+      <source xml:lang="en">Cancelling…</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.details">
+      <source xml:lang="en">Details</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.detailsTooltip">
+      <source xml:lang="en">{0} Details</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.detailsTooltipWithSummary">
+      <source xml:lang="en">{0} Details, {1}</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.download">
+      <source xml:lang="en">Download</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.downloadTooltip">
+      <source xml:lang="en">Download {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.pause">
+      <source xml:lang="en">Pause</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.pausing">
+      <source xml:lang="en">Pausing…</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.setUp">
+      <source xml:lang="en">Set Up</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.setUpTooltip">
+      <source xml:lang="en">Set Up {0}</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.stopNow">
+      <source xml:lang="en">Stop Now</source>
+    </trans-unit>
+    <trans-unit id="localModel.action.stopping">
+      <source xml:lang="en">Stopping…</source>
+    </trans-unit>
+    <trans-unit id="localModel.badge.active">
+      <source xml:lang="en">Active</source>
+    </trans-unit>
+    <trans-unit id="localModel.context">
+      <source xml:lang="en">Context</source>
+    </trans-unit>
+    <trans-unit id="localModel.downloadSize">
+      <source xml:lang="en">{0} download</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.accessExpired">
+      <source xml:lang="en">Download link expired</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.crashed">
+      <source xml:lang="en">Stopped unexpectedly</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.diskFull">
+      <source xml:lang="en">Not enough disk space</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.filesInUse">
+      <source xml:lang="en">Files in use</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.generic">
+      <source xml:lang="en">{0} ran into a problem.</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.gpuRuntimeMissing">
+      <source xml:lang="en">GPU driver needed</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.identityChanged">
+      <source xml:lang="en">Model was updated</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.insufficientMemory">
+      <source xml:lang="en">Not enough GPU memory</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.integrity">
+      <source xml:lang="en">Download didn't verify</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.memoryBusy">
+      <source xml:lang="en">GPU memory busy</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.modelNotActive">
+      <source xml:lang="en">Not loaded</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.network">
+      <source xml:lang="en">Download interrupted</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.notImplemented">
+      <source xml:lang="en">Not available yet</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.orphan">
+      <source xml:lang="en">Previous server still running</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.ownedElsewhere">
+      <source xml:lang="en">Running in another window</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.runtimeBlocked">
+      <source xml:lang="en">Blocked by policy</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.runtimeLibraryMissing">
+      <source xml:lang="en">Missing system library</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.runtimeNotFound">
+      <source xml:lang="en">Needs llama.cpp</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.runtimeTooOld">
+      <source xml:lang="en">llama.cpp is too old</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.runtimeUnsupportedModel">
+      <source xml:lang="en">Needs a newer llama.cpp</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.startFailed">
+      <source xml:lang="en">Couldn't start</source>
+    </trans-unit>
+    <trans-unit id="localModel.error.unknown">
+      <source xml:lang="en">Error</source>
+    </trans-unit>
+    <trans-unit id="localModel.foundOnDevice">
+      <source xml:lang="en">Found on this device</source>
+    </trans-unit>
+    <trans-unit id="localModel.loadingModel">
+      <source xml:lang="en">Loading model…</source>
+    </trans-unit>
+    <trans-unit id="localModel.memoryWarning.short">
+      <source xml:lang="en">Needs more GPU memory than this device has</source>
+    </trans-unit>
+    <trans-unit id="localModel.nearFit">
+      <source xml:lang="en">May run slower on this device</source>
+    </trans-unit>
+    <trans-unit id="localModel.noUsageLimit">
+      <source xml:lang="en">No usage limit</source>
+    </trans-unit>
+    <trans-unit id="localModel.notAutoCapable">
+      <source xml:lang="en">Not available for Auto yet</source>
+    </trans-unit>
+    <trans-unit id="localModel.notDownloaded">
+      <source xml:lang="en">Not downloaded</source>
+    </trans-unit>
+    <trans-unit id="localModel.notLoaded">
+      <source xml:lang="en">Not loaded</source>
+    </trans-unit>
+    <trans-unit id="localModel.notSetUp">
+      <source xml:lang="en">Not set up</source>
+    </trans-unit>
+    <trans-unit id="localModel.onDeviceName">
+      <source xml:lang="en">{0} · On-device</source>
+      <note>{0} is the name of a model that runs on this device</note>
+    </trans-unit>
+    <trans-unit id="localModel.paused">
+      <source xml:lang="en">Paused</source>
+    </trans-unit>
+    <trans-unit id="localModel.paused.consentChanged">
+      <source xml:lang="en">Needs your approval again</source>
+    </trans-unit>
+    <trans-unit id="localModel.paused.diskFull">
+      <source xml:lang="en">Not enough disk space</source>
+    </trans-unit>
+    <trans-unit id="localModel.paused.network">
+      <source xml:lang="en">Connection lost</source>
+    </trans-unit>
+    <trans-unit id="localModel.paused.quit">
+      <source xml:lang="en">Interrupted</source>
+    </trans-unit>
+    <trans-unit id="localModel.pausedAt">
+      <source xml:lang="en">Paused at {0}%</source>
+    </trans-unit>
+    <trans-unit id="localModel.phase.checkingDevice">
+      <source xml:lang="en">Checking this device…</source>
+    </trans-unit>
+    <trans-unit id="localModel.phase.downloading">
+      <source xml:lang="en">Downloading {0}%</source>
+    </trans-unit>
+    <trans-unit id="localModel.phase.downloadingUnknown">
+      <source xml:lang="en">Downloading…</source>
+    </trans-unit>
+    <trans-unit id="localModel.phase.draining">
+      <source xml:lang="en">Waiting for {0} responses…</source>
+    </trans-unit>
+    <trans-unit id="localModel.phase.drainingOne">
+      <source xml:lang="en">Waiting for 1 response…</source>
+    </trans-unit>
+    <trans-unit id="localModel.phase.preparing">
+      <source xml:lang="en">Preparing…</source>
+    </trans-unit>
+    <trans-unit id="localModel.phase.removing">
+      <source xml:lang="en">Removing…</source>
+    </trans-unit>
+    <trans-unit id="localModel.phase.verifying">
+      <source xml:lang="en">Verifying…</source>
+    </trans-unit>
+    <trans-unit id="localModel.readout.loading">
+      <source xml:lang="en">Loading…</source>
+    </trans-unit>
+    <trans-unit id="localModel.ready">
+      <source xml:lang="en">Ready</source>
+    </trans-unit>
+    <trans-unit id="localModel.reloading">
+      <source xml:lang="en">Reloading…</source>
+    </trans-unit>
+    <trans-unit id="localModel.retrying">
+      <source xml:lang="en">Retrying…</source>
+    </trans-unit>
+    <trans-unit id="localModel.setting">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="localModel.slot.percent">
+      <source xml:lang="en">{0}%</source>
+    </trans-unit>
+    <trans-unit id="localModel.startsWhenNeeded">
+      <source xml:lang="en">Starts when needed</source>
+    </trans-unit>
+    <trans-unit id="localModel.state.error">
+      <source xml:lang="en">Error</source>
+    </trans-unit>
+    <trans-unit id="localModel.state.requiresSetup">
+      <source xml:lang="en">Not set up</source>
+    </trans-unit>
+    <trans-unit id="localModel.stopping">
+      <source xml:lang="en">Stopping…</source>
+    </trans-unit>
+    <trans-unit id="localModel.thinking">
+      <source xml:lang="en">Thinking</source>
+    </trans-unit>
+    <trans-unit id="localModel.tooSlowForAuto">
+      <source xml:lang="en">Too slow for Auto</source>
+    </trans-unit>
+    <trans-unit id="localModel.updateAvailable">
+      <source xml:lang="en">Update available ({0})</source>
+    </trans-unit>
+    <trans-unit id="localModel.warmingUp">
+      <source xml:lang="en">Warming up…</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerModelConfig" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.context.header">
       <source xml:lang="en">Context</source>
@@ -17988,6 +18959,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.modelPicker.modelDetails">
       <source xml:lang="en">{0} Details</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.onDevice">
+      <source xml:lang="en">On This Device</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.optimizeFor">
       <source xml:lang="en">Optimize for</source>
@@ -21363,6 +22337,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="missionControlSharing.enabled">
       <source xml:lang="en">Remote Connections via GitHub environment are enabled</source>
+    </trans-unit>
+    <trans-unit id="missionControlSharing.fileSystemAccess">
+      <source xml:lang="en">Enabling remote connections allows clients authenticated as your GitHub account to read and modify files across this machine's accessible file systems, including sensitive files. Operating system permissions still apply.</source>
     </trans-unit>
     <trans-unit id="tunnelHost.ariaLabel.remoteTunnelAccess">
       <source xml:lang="en">Remote Tunnel Access is enabled via tunnel '{0}'</source>

@@ -591,6 +591,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsAccessibleView.manual">
       <source xml:lang="en">Manual</source>
     </trans-unit>
+    <trans-unit id="automationsAccessibleView.needsInput">
+      <source xml:lang="en">Needs input</source>
+    </trans-unit>
     <trans-unit id="automationsAccessibleView.noRuns">
       <source xml:lang="en">No runs.</source>
     </trans-unit>
@@ -664,7 +667,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Choose Work in GitHub in the workspace picker to search for a private repository or paste its URL. A matching local folder is retained and Cloud is selected by default. Use the session type picker to choose another agent supported by the workspace. Eligible local folders also support selecting Cloud directly. When creating an automation, changing to a public repository switches Cloud back to Copilot when available. Non-private repositories chosen through Work in GitHub are rejected with an error notification. Cloud models are configured in the prompt section. In the Tools section, use Configure allowed tools to open a searchable checklist of the tools GitHub offers, grouped by category; press Space to toggle a tool, Enter to apply changes, or Escape to cancel. New automations start with every listed tool selected. Built-in tools are always available. While the list loads the button is unavailable, and if it cannot be loaded a Retry button appears. These are followed by the schedule in your local time zone. GitHub stores a fixed UTC schedule, so the local run time may shift when daylight saving time changes. When editing a cloud automation, the workspace picker is disabled because changing the repository or provider requires duplication. Editing preserves enabled state; enable or disable an automation from its card. When Cloud is selected, a note beside the Create button explains that the automation runs even when your computer is off, triggered on a schedule.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.cloudHistory">
-      <source xml:lang="en">Cloud history shows the repository, status, and last updated time even when no local session is available. Tab to a row's toolbar and use Left Arrow and Right Arrow to reach Open on GitHub and Stop when supported. Stop requests cancellation; the status changes when GitHub reports it. Use Refresh in the view header to reload definitions and history. Active cloud runs refresh every 15 seconds without moving the history rows; idle definitions do not poll.</source>
+      <source xml:lang="en">Cloud history shows the repository, status, and last updated time even when no local session is available. When a cloud run has a session on GitHub that is not yet loaded in VS Code, click its row, or Tab to its title and press Enter or Space, to open that exact session. Tab to a row's toolbar and use Left Arrow and Right Arrow to reach Open on GitHub and Stop when supported. Archive or Mark as Done is unavailable until the cloud run and its conversation have finished. It changes local session state, not the task on GitHub. Stop requests remote cancellation; the status changes when GitHub reports it. Follow-up requests show conversation progress and restart bounded history discovery. Use Refresh in the view header to reload definitions and history. Active cloud runs refresh every 15 seconds without moving the history rows; idle definitions do not poll.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.dialog">
       <source xml:lang="en">In the automation dialog, Target controls are above the prompt. Agent and model pickers are inside the prompt input, and execution mode and permission controls are below it. Use Tab and Shift+Tab to move between fields and pickers. When creating an automation, you only need to enter a prompt. An empty name is derived from the prompt, and the target defaults to No workspace unless one is already supplied. An available Agent Host that supports the target is still required.</source>
@@ -842,6 +845,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationOpenExternal">
       <source xml:lang="en">Open on GitHub</source>
     </trans-unit>
+    <trans-unit id="automationOpenRunSession">
+      <source xml:lang="en">Open session: {0}, {1}</source>
+    </trans-unit>
     <trans-unit id="automationPluginTemplateBadge">
       <source xml:lang="en">Plugin</source>
     </trans-unit>
@@ -859,6 +865,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationRunActionFailed">
       <source xml:lang="en">Failed to run automation.</source>
+    </trans-unit>
+    <trans-unit id="automationRunArchiveActive">
+      <source xml:lang="en">Wait for the cloud run to finish before marking it as done. Use Stop to cancel it.</source>
+    </trans-unit>
+    <trans-unit id="automationRunArchiveFailed">
+      <source xml:lang="en">Failed to archive the automation run.</source>
     </trans-unit>
     <trans-unit id="automationRunCloudCompleted">
       <source xml:lang="en">Completed on GitHub</source>
@@ -890,6 +902,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationRunSessionStoppedStatus">
       <source xml:lang="en">Stopped the session for {0}</source>
     </trans-unit>
+    <trans-unit id="automationRunSessionUnavailable">
+      <source xml:lang="en">The cloud session is not available yet. Try again or open it on GitHub.</source>
+    </trans-unit>
     <trans-unit id="automationRunState">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
@@ -898,6 +913,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationRunStopRequested">
       <source xml:lang="en">Stop requested for {0}. History will update when available.</source>
+    </trans-unit>
+    <trans-unit id="automationRunStopUnavailable">
+      <source xml:lang="en">This automation run cannot be stopped from VS Code.</source>
     </trans-unit>
     <trans-unit id="automationRunWorking">
       <source xml:lang="en">Working...</source>
@@ -1349,6 +1367,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="sessionItemExternalAria">
       <source xml:lang="en">{0}, created in {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionItemHistoryStatusAria">
+      <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
     <trans-unit id="sessionItemInputNeededMessageAria">
       <source xml:lang="en">{0}, {1}</source>

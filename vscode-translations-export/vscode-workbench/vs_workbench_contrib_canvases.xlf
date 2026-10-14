@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/canvases/browser/canvasesPillControl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="canvasesPill.open">
+      <source xml:lang="en">Open canvas {0}</source>
+    </trans-unit>
+    <trans-unit id="canvasesPill.openFailed">
+      <source xml:lang="en">Could not open canvas {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="canvasesPill.title">
+      <source xml:lang="en">Canvases</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/canvases/common/agentHostCanvas" source-language="en" datatype="plaintext"><body>
     <trans-unit id="canvas.pendingTitle">
       <source xml:lang="en">Canvas</source>
@@ -9,8 +20,17 @@
     <trans-unit id="canvas.editorDescription">
       <source xml:lang="en">Closing this tab hides the canvas. Reopen it from the Canvas submenu in Add Tab, use its canvas pill, or ask the agent to open it again.</source>
     </trans-unit>
+    <trans-unit id="canvas.editorDescriptionEditorWindow">
+      <source xml:lang="en">Closing this tab hides the canvas. Reopen it from its canvas pill or ask the agent to open it again.</source>
+    </trans-unit>
     <trans-unit id="canvas.editorName">
       <source xml:lang="en">Canvas</source>
+    </trans-unit>
+    <trans-unit id="canvas.instanceTitle">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="canvas.instanceTitleCollision">
+      <source xml:lang="en">{0} ({1}, {2})</source>
     </trans-unit>
     <trans-unit id="canvas.mainWindowOnly">
       <source xml:lang="en">Canvases can only be shown in the main window beside their owning conversation.</source>
@@ -25,6 +45,9 @@
     </trans-unit>
     <trans-unit id="canvas.help.close">
       <source xml:lang="en">Closing the tab hides this canvas. Use the Add Tab menu in the editor toolbar, then Canvas, to open any available canvas or reopen a hidden canvas.</source>
+    </trans-unit>
+    <trans-unit id="canvas.help.closeEditorWindow">
+      <source xml:lang="en">Closing the tab hides this canvas. Reopen it from its canvas pill or ask the agent to open it again.</source>
     </trans-unit>
     <trans-unit id="canvas.help.navigation">
       <source xml:lang="en">Tab moves through page controls. Use &lt;keybinding:workbench.action.focusNextPart&gt; to leave the page.</source>

@@ -935,6 +935,21 @@ A keybinding</note>
     <trans-unit id="agentHost.sessionConfig.sandboxEnabledDescription">
       <source xml:lang="en">Sandbox behavior for this session. Default follows the global setting.</source>
     </trans-unit>
+    <trans-unit id="agentHost.sessionConfig.sensitiveEditLocations">
+      <source xml:lang="en">Sensitive Edit Locations</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sessionConfig.sensitiveEditLocations.isDirectory">
+      <source xml:lang="en">Directory</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sessionConfig.sensitiveEditLocations.item">
+      <source xml:lang="en">Sensitive Edit Location</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sessionConfig.sensitiveEditLocations.path">
+      <source xml:lang="en">Path</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sessionConfig.sensitiveEditLocationsDescription">
+      <source xml:lang="en">Workspace-relative customization locations whose edits always require confirmation.</source>
+    </trans-unit>
     <trans-unit id="agentHost.sessionConfig.shellInitScripts">
       <source xml:lang="en">Shell Init Script</source>
     </trans-unit>
@@ -1496,6 +1511,30 @@ A keybinding</note>
     <trans-unit id="agentHost.config.localMemory.title">
       <source xml:lang="en">Local Copilot Memory</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.localModelAccountGate.description">
+      <source xml:lang="en">Whether the signed-in account allows on-device models. Set by the client.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.localModelAccountGate.title">
+      <source xml:lang="en">On-Device Models Allowed for Account</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.localModelEnabled.description">
+      <source xml:lang="en">When enabled, Copilot SDK sessions can download and run on-device models. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.localModelEnabled.title">
+      <source xml:lang="en">On-Device Models</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.localModelLlamaServerPath.description">
+      <source xml:lang="en">Absolute path to the llama-server executable that serves on-device models. VS Code doesn't install llama.cpp.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.localModelLlamaServerPath.title">
+      <source xml:lang="en">llama-server Path</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.localModelUseInAuto.description">
+      <source xml:lang="en">When enabled, Auto can route turns to the active on-device model, with cloud fallback. {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.localModelUseInAuto.title">
+      <source xml:lang="en">Use On-Device Model in Auto</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.memory.description">
       <source xml:lang="en">When enabled, Copilot SDK sessions can store and recall Copilot Memory.</source>
     </trans-unit>
@@ -1635,6 +1674,11 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="copilotConfigSlash.yolo">
       <source xml:lang="en">Set permissions to bypass approvals</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/localModel" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.safetyDisclosure">
+      <source xml:lang="en">Local models may not use the same safety filters as GitHub Copilot-provided models and may be more susceptible to malicious instructions, especially when actions are automatically approved.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/meta/copilotd/toolPresentation" source-language="en" datatype="plaintext"><body>
@@ -3826,6 +3870,21 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotAgent" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.localModelThinking.description">
+      <source xml:lang="en">Controls whether the model thinks before it answers.</source>
+    </trans-unit>
+    <trans-unit id="copilot.localModelThinking.off">
+      <source xml:lang="en">Off</source>
+    </trans-unit>
+    <trans-unit id="copilot.localModelThinking.offDescription">
+      <source xml:lang="en">Answers without thinking first</source>
+    </trans-unit>
+    <trans-unit id="copilot.localModelThinking.on">
+      <source xml:lang="en">On</source>
+    </trans-unit>
+    <trans-unit id="copilot.localModelThinking.onDescription">
+      <source xml:lang="en">Thinks before it answers</source>
+    </trans-unit>
     <trans-unit id="copilot.modelAutoTier.description">
       <source xml:lang="en">Biases which models Auto routes this session to.</source>
     </trans-unit>
@@ -3947,6 +4006,21 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotAgent.subagentFailed">
       <source xml:lang="en">Subagent failed.</source>
+    </trans-unit>
+    <trans-unit id="copilotAgentSession.localModelLoading">
+      <source xml:lang="en">Loading {0}…</source>
+    </trans-unit>
+    <trans-unit id="copilotAgentSession.localModelLoadingUnnamed">
+      <source xml:lang="en">Loading the local model…</source>
+    </trans-unit>
+    <trans-unit id="copilotAgentSession.localModelProcessing">
+      <source xml:lang="en">Reading the conversation…</source>
+    </trans-unit>
+    <trans-unit id="copilotAgentSession.localModelProcessingPercent">
+      <source xml:lang="en">Reading the conversation… {0}%</source>
+    </trans-unit>
+    <trans-unit id="copilotAgentSession.localModelQueued">
+      <source xml:lang="en">Waiting for the local model ({0} in queue)…</source>
     </trans-unit>
     <trans-unit id="copilotSlashCommand.selectSubcommandResult">
       <source xml:lang="en">The /{0} command requires selecting a subcommand. Available options: {1}</source>
@@ -4821,6 +4895,177 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilot.featuredPlugin.workiq.description">
       <source xml:lang="en">Find answers across Microsoft 365 emails, meetings, documents, and Teams messages.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/localModelBridge/shim/copilotRequestHandler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.invalidRequest">
+      <source xml:lang="en">The on-device model received a request it could not read.</source>
+    </trans-unit>
+    <trans-unit id="localModel.modelNotActive">
+      <source xml:lang="en">{0} isn't loaded.</source>
+    </trans-unit>
+    <trans-unit id="localModel.sentinelUnavailable">
+      <source xml:lang="en">The on-device model is not available. Start a new chat or pick another model.</source>
+    </trans-unit>
+    <trans-unit id="localModel.unavailable">
+      <source xml:lang="en">{0} is unavailable. Start a new chat or pick another model.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/localModelBridge/shim/downloader" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.catalogUnavailable">
+      <source xml:lang="en">Couldn't reach the model catalog. Check your connection and select Retry.</source>
+    </trans-unit>
+    <trans-unit id="localModel.download.accessExpired">
+      <source xml:lang="en">The download link expired before the download finished. Select Retry to continue.</source>
+    </trans-unit>
+    <trans-unit id="localModel.download.cancelled">
+      <source xml:lang="en">The download was cancelled.</source>
+    </trans-unit>
+    <trans-unit id="localModel.download.diskFull">
+      <source xml:lang="en">{0} needs {1} of free space on {2}; {3} is available.</source>
+    </trans-unit>
+    <trans-unit id="localModel.download.filesInUse">
+      <source xml:lang="en">Some files are in use. Close other apps using this model and try again.</source>
+    </trans-unit>
+    <trans-unit id="localModel.download.identityChanged">
+      <source xml:lang="en">The model was updated on the server. Select Retry to download the latest files.</source>
+    </trans-unit>
+    <trans-unit id="localModel.download.integrity">
+      <source xml:lang="en">The downloaded file didn't match its SHA-256 checksum and was discarded. Select Retry to download it again.</source>
+    </trans-unit>
+    <trans-unit id="localModel.download.lockedElsewhere">
+      <source xml:lang="en">{0} is downloading in another VS Code window.</source>
+    </trans-unit>
+    <trans-unit id="localModel.download.network">
+      <source xml:lang="en">The download was interrupted. Select Retry to resume.</source>
+    </trans-unit>
+    <trans-unit id="localModel.download.noChecksum">
+      <source xml:lang="en">This model version doesn't publish a SHA-256 checksum, so it can't be verified or downloaded.</source>
+    </trans-unit>
+    <trans-unit id="localModel.download.notPublished">
+      <source xml:lang="en">{0} isn't available yet.</source>
+    </trans-unit>
+    <trans-unit id="localModel.download.staleLock">
+      <source xml:lang="en">A previous download of {0} didn't finish cleanly. Select Retry to continue.</source>
+    </trans-unit>
+    <trans-unit id="localModel.download.storage">
+      <source xml:lang="en">Couldn't write the model files. Check that the disk is available and select Retry.</source>
+    </trans-unit>
+    <trans-unit id="localModel.insufficientMemory">
+      <source xml:lang="en">This device doesn't have enough GPU memory for {0} ({1} available, {2} needed).</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/localModelBridge/shim/llamaCppRuntime" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.gpuRuntimeMissing">
+      <source xml:lang="en">llama.cpp didn't find a GPU it can use. Install or update your GPU driver (Vulkan or Metal), then select Retry.</source>
+    </trans-unit>
+    <trans-unit id="localModel.llamaServerPathSetting">
+      <source xml:lang="en">Chat › Copilot › Local Model: Llama Server Path ({0})</source>
+    </trans-unit>
+    <trans-unit id="localModel.runtimeBlocked">
+      <source xml:lang="en">Your organization's policy blocked llama.cpp. Set `{0}` to a build it allows.</source>
+    </trans-unit>
+    <trans-unit id="localModel.runtimeLibraryMissing">
+      <source xml:lang="en">llama.cpp couldn't start because a required system library is missing ({0}). Set `{1}` to a compatible build.</source>
+    </trans-unit>
+    <trans-unit id="localModel.runtimeMissing">
+      <source xml:lang="en">{0} needs llama.cpp to run. Install a llama.cpp build that supports it, then set {1} to its llama-server and select Retry.</source>
+    </trans-unit>
+    <trans-unit id="localModel.runtimeNotFound">
+      <source xml:lang="en">`{0}` must be the absolute path of an existing llama-server executable. Install a llama.cpp build, then set it to its llama-server and select Retry.</source>
+    </trans-unit>
+    <trans-unit id="localModel.runtimeProbeFailed">
+      <source xml:lang="en">The llama-server at {0} didn't respond as expected. Set `{1}` to a working build.</source>
+    </trans-unit>
+    <trans-unit id="localModel.runtimeTooOld">
+      <source xml:lang="en">The llama-server at {0} is missing features VS Code needs ({1}). Install a newer llama.cpp build, then set {2} to its llama-server and select Retry.</source>
+    </trans-unit>
+    <trans-unit id="localModel.runtimeUnpackagedModel">
+      <source xml:lang="en">This llama.cpp build ({0}) can't run {1}. Install a llama.cpp build that includes {2}, then set {3} to its llama-server and select Retry.</source>
+    </trans-unit>
+    <trans-unit id="localModel.runtimeUnpackagedModelNoVersion">
+      <source xml:lang="en">This llama.cpp build can't run {0}. Install a llama.cpp build that includes {1}, then set {2} to its llama-server and select Retry.</source>
+    </trans-unit>
+    <trans-unit id="localModel.runtimeUnsupportedModel">
+      <source xml:lang="en">This llama.cpp build ({0}) can't run {1}. Install a llama.cpp build that supports it, then set {2} to its llama-server and select Retry.</source>
+    </trans-unit>
+    <trans-unit id="localModel.runtimeUnsupportedModelNoVersion">
+      <source xml:lang="en">This llama.cpp build can't run {0}. Install a llama.cpp build that supports it, then set {1} to its llama-server and select Retry.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/localModelBridge/shim/serverSupervisor" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.server.crashed">
+      <source xml:lang="en">{0} stopped unexpectedly. Auto is using cloud models. Select Retry to restart it.</source>
+    </trans-unit>
+    <trans-unit id="localModel.server.insufficientMemory">
+      <source xml:lang="en">{0} couldn't start because this device ran out of GPU memory.</source>
+    </trans-unit>
+    <trans-unit id="localModel.server.loadTimeout">
+      <source xml:lang="en">{0} took too long to load. Select Retry to try again.</source>
+    </trans-unit>
+    <trans-unit id="localModel.server.orphan">
+      <source xml:lang="en">A previous on-device model server may still be running. Select Stop Previous Server to stop it.</source>
+    </trans-unit>
+    <trans-unit id="localModel.server.ownedElsewhere">
+      <source xml:lang="en">{0} can't start while another VS Code instance is running an on-device model.</source>
+    </trans-unit>
+    <trans-unit id="localModel.server.recordFailed">
+      <source xml:lang="en">{0} was stopped because VS Code couldn't record its server process on disk. Select Retry to try again.</source>
+    </trans-unit>
+    <trans-unit id="localModel.server.startFailed">
+      <source xml:lang="en">{0} couldn't start. Select Retry to try again.</source>
+    </trans-unit>
+    <trans-unit id="localModel.server.stillRunning">
+      <source xml:lang="en">{0}'s server didn't stop and may still be running. Select Stop Previous Server to stop it.</source>
+    </trans-unit>
+    <trans-unit id="localModel.server.unavailable">
+      <source xml:lang="en">{0} is unavailable. Start a new chat or pick another model.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/localModelBridge/shim/servingAccessImpl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.busyTimeout">
+      <source xml:lang="en">The local model is busy. Try again, or use Auto.</source>
+    </trans-unit>
+    <trans-unit id="localModel.serving.loadTimeout">
+      <source xml:lang="en">{0} took too long to load. Try again, or use Auto.</source>
+    </trans-unit>
+    <trans-unit id="localModel.serving.loadTimeoutGeneric">
+      <source xml:lang="en">The on-device model took too long to load. Try again, or use Auto.</source>
+    </trans-unit>
+    <trans-unit id="localModel.serving.notActive">
+      <source xml:lang="en">{0} isn't loaded.</source>
+    </trans-unit>
+    <trans-unit id="localModel.serving.notActiveGeneric">
+      <source xml:lang="en">The on-device model isn't loaded.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/localModelBridge/shim/shimLocalModelProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.deviceGone">
+      <source xml:lang="en">The GPU this model was set up for is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="localModel.deviceUnsupported">
+      <source xml:lang="en">{0} can't load: on-device models run only on NVIDIA GPUs.</source>
+    </trans-unit>
+    <trans-unit id="localModel.invalidGguf">
+      <source xml:lang="en">{0} couldn't start because its model file can't be read.</source>
+    </trans-unit>
+    <trans-unit id="localModel.memoryBusy">
+      <source xml:lang="en">Not enough free GPU memory right now ({0} free, {1} needed). Close other apps and try again.</source>
+    </trans-unit>
+    <trans-unit id="localModel.noPrimary">
+      <source xml:lang="en">{0} couldn't start because its model file is missing. Set it up again.</source>
+    </trans-unit>
+    <trans-unit id="localModel.notActive">
+      <source xml:lang="en">{0} isn't loaded.</source>
+    </trans-unit>
+    <trans-unit id="localModel.notActiveGeneric">
+      <source xml:lang="en">The on-device model isn't loaded.</source>
+    </trans-unit>
+    <trans-unit id="localModel.setupFailed">
+      <source xml:lang="en">Setting up {0} failed. Select Retry to try again.</source>
+    </trans-unit>
+    <trans-unit id="localModel.startFailed">
+      <source xml:lang="en">{0} couldn't start. Select Retry to try again.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/devContainerAgentHostService" source-language="en" datatype="plaintext"><body>

@@ -937,6 +937,9 @@
     <trans-unit id="mcpForm.env.nameAria">
       <source xml:lang="en">Environment variable {0} name</source>
     </trans-unit>
+    <trans-unit id="mcpForm.env.namePlaceholder">
+      <source xml:lang="en">Key</source>
+    </trans-unit>
     <trans-unit id="mcpForm.env.removeAria">
       <source xml:lang="en">Remove environment variable {0}</source>
     </trans-unit>
@@ -950,7 +953,7 @@
       <source xml:lang="en">Environment variable {0} value</source>
     </trans-unit>
     <trans-unit id="mcpForm.env.valuePlaceholder">
-      <source xml:lang="en">your-api-key</source>
+      <source xml:lang="en">Value</source>
     </trans-unit>
     <trans-unit id="mcpForm.envFile">
       <source xml:lang="en">Environment File</source>
@@ -1213,6 +1216,9 @@
     <trans-unit id="mcp servers">
       <source xml:lang="en">MCP Servers</source>
     </trans-unit>
+    <trans-unit id="mcp-installed">
+      <source xml:lang="en">MCP Servers - Installed</source>
+    </trans-unit>
     <trans-unit id="mcp.welcome.descriptionWithLink">
       <source xml:lang="en">Browse and install [Model Context Protocol (MCP) servers](https://code.visualstudio.com/docs/agent-customization/mcp-servers) from the Customizations marketplace.</source>
     </trans-unit>
@@ -1326,7 +1332,7 @@
       <source xml:lang="en">(Preview) When set to `true`, this MCP server authenticates through the SSO issuer configured by `#mcp.enterpriseManagedAuth.idp#` using OAuth Identity Assertion Authorization Grant (ID-JAG). After a one-time sign-in, subsequent enterprise-managed servers connect silently. The IdP issuer and client credentials are read from the `#mcp.enterpriseManagedAuth.idp#` setting; the `clientId` on this server entry is passed to the resource authorization server.</source>
     </trans-unit>
     <trans-unit id="app.mcp.json.sandbox">
-      <source xml:lang="en">Sandbox config that determines file system and network access. Sandboxing is enabled when sandboxEnabled property is set at the server level on Mac OS and Linux only.</source>
+      <source xml:lang="en">Sandbox deny rules shared by all servers in this file. Allow rules are only supported in a server's sandbox property; root-level allow rules are ignored. Sandboxing requires sandboxEnabled at the server level on macOS or Linux.</source>
     </trans-unit>
     <trans-unit id="app.mcp.json.sandbox.filesystem">
       <source xml:lang="en">Filesystem access settings for the sandboxed server. Glob patterns are supported for Mac OS only.</source>
@@ -1351,6 +1357,9 @@
     </trans-unit>
     <trans-unit id="app.mcp.json.sandboxEnabled">
       <source xml:lang="en">Whether to run the server in a sandboxed environment.</source>
+    </trans-unit>
+    <trans-unit id="app.mcp.json.serverSandbox">
+      <source xml:lang="en">Sandbox filesystem and network permissions for this server only. Root-level sandbox deny rules also apply. Dialog approvals are saved here. Requires sandboxEnabled on macOS or Linux.</source>
     </trans-unit>
     <trans-unit id="app.mcp.json.title">
       <source xml:lang="en">Model Context Protocol Servers</source>
@@ -1550,14 +1559,17 @@
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpSandboxService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mcpSandboxSuggestion.allowWrite">
-      <source xml:lang="en">Add to `sandbox.filesystem.allowWrite`: {0}</source>
+      <source xml:lang="en">Add to this server's `sandbox.filesystem.allowWrite`: {0}</source>
     </trans-unit>
     <trans-unit id="mcpSandboxSuggestion.allowedDomains">
-      <source xml:lang="en">Add to `sandbox.network.allowedDomains`: {0}</source>
+      <source xml:lang="en">Add to this server's `sandbox.network.allowedDomains`: {0}</source>
     </trans-unit>
     <trans-unit id="mcpSandboxSuggestion.message">
       <source xml:lang="en">The MCP server {0} reported potential sandbox blocks. VS Code found possible sandbox configuration updates:
 {1}</source>
+    </trans-unit>
+    <trans-unit id="mcpSandboxSuggestion.serverUnavailable">
+      <source xml:lang="en">The stdio MCP server {0} is no longer available in this configuration.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpServer" source-language="en" datatype="plaintext"><body>
