@@ -11,12 +11,29 @@
       <source xml:lang="en">Canvases</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/canvases/browser/editorCanvasActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="editorCanvas.openFailed">
+      <source xml:lang="en">Could not open canvas {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="editorCanvas.submenu">
+      <source xml:lang="en">Canvas</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/canvases/common/agentHostCanvas" source-language="en" datatype="plaintext"><body>
     <trans-unit id="canvas.pendingTitle">
       <source xml:lang="en">Canvas</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/canvases/common/canvas" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="canvas.definitionTitle">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="canvas.definitionTitleCollision">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="canvas.definitionTitleWithId">
+      <source xml:lang="en">{0} ({1}, {2})</source>
+    </trans-unit>
     <trans-unit id="canvas.editorDescription">
       <source xml:lang="en">Closing this tab hides the canvas. Reopen it from the Canvas submenu in Add Tab, use its canvas pill, or ask the agent to open it again.</source>
     </trans-unit>

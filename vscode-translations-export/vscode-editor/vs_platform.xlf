@@ -1429,7 +1429,7 @@ A keybinding</note>
       <source xml:lang="en">Controls how much reasoning effort Claude uses.</source>
     </trans-unit>
     <trans-unit id="claude.modelThinkingLevel.title">
-      <source xml:lang="en">Thinking Level</source>
+      <source xml:lang="en">Effort Level</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/copilotCliConfig" source-language="en" datatype="plaintext"><body>
@@ -1492,6 +1492,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.hydraFusion.title">
       <source xml:lang="en">HydraFusion</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.hydraFusionMultiRoot.description">
+      <source xml:lang="en">When enabled together with HydraFusion v2, Copilot SDK sessions ask the service to keep reusing the previous turn's root model when it fits the next turn's workflow.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.hydraFusionMultiRoot.title">
+      <source xml:lang="en">HydraFusion Multi-Root</source>
     </trans-unit>
     <trans-unit id="agentHost.config.hydraFusionV2.description">
       <source xml:lang="en">When enabled together with HydraFusion, Copilot SDK sessions use HydraFusion v2.</source>
@@ -1593,7 +1599,7 @@ A keybinding</note>
       <source xml:lang="en">Prompt Override String</source>
     </trans-unit>
     <trans-unit id="agentHost.config.modelCapabilityOverrides.reasoningEffort.description">
-      <source xml:lang="en">Reasoning effort for sessions on this model; overrides the model picker's thinking level. Unrecognized values are ignored.</source>
+      <source xml:lang="en">Reasoning effort for sessions on this model; overrides the model picker's effort level. Unrecognized values are ignored.</source>
     </trans-unit>
     <trans-unit id="agentHost.config.modelCapabilityOverrides.reasoningEffort.title">
       <source xml:lang="en">Reasoning Effort</source>
@@ -3191,6 +3197,9 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.importedSessionFallback">
       <source xml:lang="en">New Session</source>
     </trans-unit>
+    <trans-unit id="agentHost.sessionArchivedWhilePreparingChat">
+      <source xml:lang="en">The session was archived while preparing the new chat. Unarchive it before trying again.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentServiceComposition" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.chatIsolationClientRequired">
@@ -3315,6 +3324,11 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Claude</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/claude/claudeAgentSdkService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="claude.historyReaderNotInstalled">
+      <source xml:lang="en">The Claude history reader is not installed.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/claude/claudeInteractiveTools" source-language="en" datatype="plaintext"><body>
     <trans-unit id="claude.exitPlanMode.approve">
       <source xml:lang="en">Approve</source>
@@ -3329,6 +3343,26 @@ Verify this fingerprint matches the host before continuing.</source>
   <file original="src/vs/platform/agentHost/node/claude/claudeReplayMapper" source-language="en" datatype="plaintext"><body>
     <trans-unit id="claude.replay.missingPrompt">
       <source xml:lang="en">Message content could not be retrieved</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/claude/claudeSavedChatReader" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="claude.savedChat.invalidBacking">
+      <source xml:lang="en">The saved Claude chat backing is missing or invalid.</source>
+    </trans-unit>
+    <trans-unit id="claude.savedChat.missingParent">
+      <source xml:lang="en">The saved Claude subagent transcript has no parent backing.</source>
+    </trans-unit>
+    <trans-unit id="claude.savedChat.missingSubagent">
+      <source xml:lang="en">The saved Claude subagent transcript could not be located.</source>
+    </trans-unit>
+    <trans-unit id="claude.savedChat.sdkUnavailable">
+      <source xml:lang="en">The local Claude history reader is not available.</source>
+    </trans-unit>
+    <trans-unit id="claude.savedChat.unreadableSubagent">
+      <source xml:lang="en">The saved Claude subagent transcript could not be read.</source>
+    </trans-unit>
+    <trans-unit id="claude.savedChat.unreadableTranscript">
+      <source xml:lang="en">The saved Claude transcript could not be read.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/claude/claudeToolDisplay" source-language="en" datatype="plaintext"><body>
@@ -3595,7 +3629,7 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Controls how much reasoning effort Codex uses.</source>
     </trans-unit>
     <trans-unit id="codex.modelThinkingLevel.title">
-      <source xml:lang="en">Thinking Level</source>
+      <source xml:lang="en">Effort Level</source>
     </trans-unit>
     <trans-unit id="codex.serverToolConfirmation.title">
       <source xml:lang="en">Allow tool call?</source>
@@ -3864,6 +3898,42 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Codex</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/codex/codexSavedChatReader" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codex.savedChat.invalidBacking">
+      <source xml:lang="en">The saved Codex chat backing is missing or invalid.</source>
+    </trans-unit>
+    <trans-unit id="codex.savedChat.missingThread">
+      <source xml:lang="en">The saved Codex chat has no recorded native thread.</source>
+    </trans-unit>
+    <trans-unit id="codex.savedChat.sdkUnavailable">
+      <source xml:lang="en">The local Codex history reader is not available.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/codex/codexSavedHistoryStore" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codex.savedChat.incompleteHistory">
+      <source xml:lang="en">The saved Codex transcript is incomplete and could not be read.</source>
+    </trans-unit>
+    <trans-unit id="codex.savedChat.nativeRequirements">
+      <source xml:lang="en">The saved Codex transcript cannot be read without starting its managed native runtime.</source>
+    </trans-unit>
+    <trans-unit id="codex.savedChat.storageConfiguration">
+      <source xml:lang="en">The saved Codex storage location could not be resolved from its configuration.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/codex/codexSavedThreadReader" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codex.savedChat.changedThread">
+      <source xml:lang="en">The saved Codex transcript changed while it was being read. Try again.</source>
+    </trans-unit>
+    <trans-unit id="codex.savedChat.incompleteHistory">
+      <source xml:lang="en">The saved Codex transcript is incomplete and could not be read.</source>
+    </trans-unit>
+    <trans-unit id="codex.savedChat.timedOut">
+      <source xml:lang="en">Reading the saved Codex transcript timed out.</source>
+    </trans-unit>
+    <trans-unit id="codex.savedChat.unexpectedThread">
+      <source xml:lang="en">The Codex history reader returned an unexpected thread.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/codexCompactCommand" source-language="en" datatype="plaintext"><body>
     <trans-unit id="codex.compact.description">
       <source xml:lang="en">Compact this conversation's context</source>
@@ -3895,7 +3965,7 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Controls how much reasoning effort the model uses.</source>
     </trans-unit>
     <trans-unit id="copilot.modelThinkingLevel.title">
-      <source xml:lang="en">Thinking Level</source>
+      <source xml:lang="en">Effort Level</source>
     </trans-unit>
     <trans-unit id="copilotAgent.autoModelName">
       <source xml:lang="en">Auto</source>
@@ -3910,7 +3980,7 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Ensemble</source>
     </trans-unit>
     <trans-unit id="copilotAgent.ensembleTier.title">
-      <source xml:lang="en">Thinking Level</source>
+      <source xml:lang="en">Effort Level</source>
     </trans-unit>
     <trans-unit id="copilotAgent.modelNotAvailable">
       <source xml:lang="en">Model '{0}' is not available.</source>
@@ -4365,11 +4435,23 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSandboxDiagnostics" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="copilot.sandbox.capabilityUnavailable">
-      <source xml:lang="en">The sandbox capability '{0}' is unavailable on this host.</source>
+    <trans-unit id="copilot.sandbox.missingDeniedPaths">
+      <source xml:lang="en">Missing sandbox dependencies may prevent blocked files and folders from being protected.</source>
     </trans-unit>
-    <trans-unit id="copilot.sandbox.unsupported">
-      <source xml:lang="en">The sandbox backend is unavailable on this host.</source>
+    <trans-unit id="copilot.sandbox.missingDependencies">
+      <source xml:lang="en">Missing sandbox dependencies may prevent terminal commands from running.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandbox.missingFilesystemEnumeration">
+      <source xml:lang="en">Missing sandbox dependencies may prevent terminal commands from accessing folders.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandbox.missingNetwork">
+      <source xml:lang="en">Missing sandbox dependencies may prevent terminal commands from connecting to the network.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandbox.missingNetworkFiltering">
+      <source xml:lang="en">Missing sandbox dependencies may prevent network access restrictions from working.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandbox.missingShell">
+      <source xml:lang="en">Missing sandbox dependencies may prevent terminal commands from running.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSandboxPolicyDisplay" source-language="en" datatype="plaintext"><body>
@@ -4384,6 +4466,20 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotSlashCommand.sandboxPolicyUnavailable">
       <source xml:lang="en">The SDK did not return a sandbox policy.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotSessionSandbox" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.permission.grant.expired">
+      <source xml:lang="en">The sandbox permission request is no longer pending.</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.grant.rejected">
+      <source xml:lang="en">The SDK did not grant sandbox access for this request.</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.grant.savedButFailed">
+      <source xml:lang="en">The path was saved to your sandbox settings, but this request could not be retried. {0}</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.grant.unsupportedClient">
+      <source xml:lang="en">This client did not save the sandbox path grant. Update VS Code and retry.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider" source-language="en" datatype="plaintext"><body>
@@ -4477,6 +4573,30 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilot.permission.default.title">
       <source xml:lang="en">Allow tool call?</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.grant.denied">
+      <source xml:lang="en">The blocked path was {0}. Access will cover the granted path above, including its contents if it is a folder.</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.grant.read">
+      <source xml:lang="en">Allow read access to {0} and retry inside the sandbox.</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.grant.save">
+      <source xml:lang="en">Allow</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.grant.scope">
+      <source xml:lang="en">Access will be saved to your user sandbox settings and shared with connected agent hosts across workspaces and sessions.</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.grant.skip">
+      <source xml:lang="en">Skip</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.grant.title">
+      <source xml:lang="en">Add to user sandbox settings and retry?</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.grant.upgrade">
+      <source xml:lang="en">Change access to {0} from read-only to read/write and retry inside the sandbox.</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.grant.write">
+      <source xml:lang="en">Allow read/write access to {0} and retry inside the sandbox.</source>
     </trans-unit>
     <trans-unit id="copilot.permission.mcp.defaultTool">
       <source xml:lang="en">MCP Tool</source>

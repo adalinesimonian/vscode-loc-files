@@ -96,7 +96,7 @@
 </body></file>
   <file original="src/vs/sessions/contrib/sessionInputBanners/browser/sessionWorktreeCleanupAccessibilityHelp" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionWorktreeCleanupHelp.automatic">
-      <source xml:lang="en">The Cleanup Settings section can automatically mark merged pull request sessions as done and optionally delete them after a retention period. It also includes a setting to turn the storage cleanup suggestion on or off. Each setting has a Configure in Settings button that opens the Settings editor filtered to that setting.</source>
+      <source xml:lang="en">Changes in the Cleanup Settings section are saved immediately. Background cleanup evaluates existing and future sessions after confirming their eligibility. The settings can automatically mark merged pull request sessions as done, optionally delete them after a retention period, and turn the storage cleanup suggestion on or off. Each setting has a Configure in Settings button that opens the Settings editor filtered to that setting.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.cleanup">
       <source xml:lang="en">Activate Clean Up Worktrees to delete the selected sessions' worktrees and mark those sessions as done after confirmation. It is disabled until at least one session is selected, and its label reports how many worktrees will be cleaned up.</source>
@@ -105,13 +105,13 @@
       <source xml:lang="en">Use the Untouched For selector to choose how long a session must be inactive to be eligible. Changing it re-measures storage and updates the table and summary.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.overview">
-      <source xml:lang="en">You are in the Open worktree cleanup editor. It lists agent session worktrees that are inactive and eligible for cleanup so you can reclaim the disk space they use. Cleaning up a session marks it as done and deletes its worktree; you can restore the session later to recreate it.</source>
+      <source xml:lang="en">You are in the Worktree Cleanup editor. It lists agent session worktrees that are inactive and eligible for cleanup so you can reclaim the disk space they use. Any uncommitted changes are committed before a worktree is removed. Cleaning up a session marks it as done; you can restore the session later to recreate its worktree.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.reopen">
       <source xml:lang="en">Return to this editor any time by running Open Worktree Cleanup from the Command Palette or the Sessions More Actions menu.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.summary">
-      <source xml:lang="en">A summary line above the table reports how many worktrees are eligible and about how much storage they use. A nearby info button explains why sessions are included or excluded.</source>
+      <source xml:lang="en">When worktrees are eligible, a summary line above the table reports how many can be cleaned up and about how much storage they use. A nearby info button explains why sessions are included or excluded. When none are eligible, an informational message replaces the summary, action, and table.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.table">
       <source xml:lang="en">The table lists one row per eligible session with its title, when it was last used, and its worktree size. Use Tab to move into the table. Each row has a checkbox to select it and a session title link that opens the session, and a Select All checkbox in the header toggles every eligible row.</source>
@@ -134,7 +134,7 @@
       <source xml:lang="en">Automatically mark merged sessions as done</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.automaticDescription">
-      <source xml:lang="en">These options change your settings. For merged pull requests, automatically mark inactive sessions as done first, then optionally delete them after an additional retention period.</source>
+      <source xml:lang="en">Changes to these settings are saved immediately. Background cleanup evaluates existing and future sessions after confirming their eligibility. For merged pull requests, inactive sessions are marked as done first, then optionally deleted after an additional retention period.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.automaticHeading">
       <source xml:lang="en">Cleanup Settings</source>
@@ -158,13 +158,13 @@
       <source xml:lang="en">Includes sessions untouched for at least {0} days that are not active, running, waiting for input, pinned, already done, untitled, or in an error state.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.eligibilityInfo">
-      <source xml:lang="en">Why these sessions can be marked as done</source>
+      <source xml:lang="en">Show cleanup eligibility details</source>
     </trans-unit>
-    <trans-unit id="sessionWorktreeCleanup.heading">
-      <source xml:lang="en">Open worktree cleanup</source>
+    <trans-unit id="sessionWorktreeCleanup.empty">
+      <source xml:lang="en">No worktrees are eligible for cleanup with the selected inactivity period.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.intro">
-      <source xml:lang="en">Inactive, unpinned sessions older than the selected period can be cleaned up to reclaim the disk space their worktrees use. Cleaning up a session marks it as done and deletes its worktree; you can restore the session later to recreate it. Active, running, needs-input, and pinned sessions are always protected.</source>
+      <source xml:lang="en">Inactive, unpinned sessions older than the selected period can be cleaned up to reclaim the disk space their worktrees use. Any uncommitted changes are committed before the worktree is removed. Cleaning up a session marks it as done; you can restore the session later to recreate its worktree. Active, running, needs-input, and pinned sessions are always protected.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.lastUsedColumn">
       <source xml:lang="en">Last Used</source>
@@ -202,6 +202,9 @@
     <trans-unit id="sessionWorktreeCleanup.suggestionDescription">
       <source xml:lang="en">Checked when the Agents window opens and after sessions change, measuring disk usage at most once an hour. A suggestion appears below the Sessions list when at least {0} inactive worktrees are eligible for cleanup or eligible worktrees use at least {1}. Dismissing it hides it until the window reloads.</source>
     </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.suggestionInfo">
+      <source xml:lang="en">Show storage cleanup suggestion details</source>
+    </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.tableLabel">
       <source xml:lang="en">Agent session worktrees</source>
     </trans-unit>
@@ -220,7 +223,7 @@
 </body></file>
   <file original="src/vs/sessions/contrib/sessionInputBanners/browser/sessionWorktreeCleanupEditorInput" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionWorktreeCleanupEditor.name">
-      <source xml:lang="en">Open worktree cleanup</source>
+      <source xml:lang="en">Worktree Cleanup</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessionInputBanners/browser/sessionWorktreeCleanupService" source-language="en" datatype="plaintext"><body>

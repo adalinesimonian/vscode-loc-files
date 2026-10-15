@@ -708,6 +708,18 @@ language refers to a programming language</note>
     <trans-unit id="schema.autoClosingPairs">
       <source xml:lang="en">Defines the bracket pairs. When a opening bracket is entered, the closing bracket is inserted automatically.</source>
     </trans-unit>
+    <trans-unit id="schema.autoClosingPairs.beforeText">
+      <source xml:lang="en">This pair will only auto close if the text on the current line before the cursor, including the just-typed opening string, matches this regular expression.</source>
+    </trans-unit>
+    <trans-unit id="schema.autoClosingPairs.beforeText.errorMessage">
+      <source xml:lang="en">Must match the pattern `/^([gimuy]+)$/`.</source>
+    </trans-unit>
+    <trans-unit id="schema.autoClosingPairs.beforeText.flags">
+      <source xml:lang="en">The RegExp flags for beforeText.</source>
+    </trans-unit>
+    <trans-unit id="schema.autoClosingPairs.beforeText.pattern">
+      <source xml:lang="en">The RegExp pattern for beforeText.</source>
+    </trans-unit>
     <trans-unit id="schema.autoClosingPairs.notIn">
       <source xml:lang="en">Defines a list of scopes where the auto pairs are disabled.</source>
     </trans-unit>

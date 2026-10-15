@@ -108,6 +108,11 @@
       <source xml:lang="en">Manual permissions</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostPolicyContinuationPresenter" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.policyContinuation.providerMissing">
+      <source xml:lang="en">The local agent host is unavailable. Try again to open the copied conversation.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSessionBranchActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copyAgentHostChatLink">
       <source xml:lang="en">Copy Link</source>
@@ -477,6 +482,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/baseAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentDisabledByPolicy">
+      <source xml:lang="en">Your organization has disabled this agent.</source>
+    </trans-unit>
     <trans-unit id="agentHost.initialConfigFailed">
       <source xml:lang="en">The initial session configuration could not be resolved.</source>
     </trans-unit>
@@ -599,6 +607,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/localAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.createdSessionMissing">
+      <source xml:lang="en">The agent host hasn't listed the new conversation yet. Try again to open it.</source>
+    </trans-unit>
     <trans-unit id="devContainerSample.workspaceLabel">
       <source xml:lang="en">{0} Sample</source>
     </trans-unit>
@@ -677,6 +688,9 @@
     <trans-unit id="cloudAutomations.resetUnsupported">
       <source xml:lang="en">Resetting cloud automation configuration is not supported.</source>
     </trans-unit>
+    <trans-unit id="cloudAutomations.runUnavailable">
+      <source xml:lang="en">Only enabled cloud automations can run. Refresh automations before trying again.</source>
+    </trans-unit>
     <trans-unit id="cloudAutomations.searchPrivateRepository">
       <source xml:lang="en">Search for a private repository or paste a repository URL...</source>
     </trans-unit>
@@ -703,32 +717,6 @@
     </trans-unit>
     <trans-unit id="cloudAutomations.unsupportedEdit">
       <source xml:lang="en">This automation uses triggers that cannot be edited in VS Code.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/cloudSandboxSessionConfig" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="cloudSandbox.approvals">
-      <source xml:lang="en">Approvals</source>
-    </trans-unit>
-    <trans-unit id="cloudSandbox.autopilot">
-      <source xml:lang="en">Autopilot</source>
-    </trans-unit>
-    <trans-unit id="cloudSandbox.autopilotDescription">
-      <source xml:lang="en">Continues working until the task is done.</source>
-    </trans-unit>
-    <trans-unit id="cloudSandbox.interactive">
-      <source xml:lang="en">Interactive</source>
-    </trans-unit>
-    <trans-unit id="cloudSandbox.interactiveDescription">
-      <source xml:lang="en">Works with you and asks for input when needed.</source>
-    </trans-unit>
-    <trans-unit id="cloudSandbox.mode">
-      <source xml:lang="en">Agent Mode</source>
-    </trans-unit>
-    <trans-unit id="cloudSandbox.plan">
-      <source xml:lang="en">Plan</source>
-    </trans-unit>
-    <trans-unit id="cloudSandbox.planDescription">
-      <source xml:lang="en">Plans the task before making changes.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsActions" source-language="en" datatype="plaintext"><body>
@@ -830,7 +818,7 @@
       <source xml:lang="en">This configuration is not supported for a new GitHub sandbox session.</source>
     </trans-unit>
     <trans-unit id="sandboxCreationProvider">
-      <source xml:lang="en">GitHub Sandboxes</source>
+      <source xml:lang="en">Cloud</source>
     </trans-unit>
     <trans-unit id="sandboxModelNotApplied">
       <source xml:lang="en">Couldn't use {0} for this session. The agent's default model will be used instead.</source>
@@ -854,6 +842,12 @@
     </trans-unit>
     <trans-unit id="cloudAutomations.invalidRepository">
       <source xml:lang="en">Invalid stored cloud automation repository.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.missing">
+      <source xml:lang="en">This cloud automation is no longer available. Refresh the catalogue.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.mutationUncertain">
+      <source xml:lang="en">The automation request may have been accepted. Refresh automations before submitting again.</source>
     </trans-unit>
     <trans-unit id="cloudAutomations.partialRefreshFailed">
       <source xml:lang="en">Some GitHub repositories could not be refreshed. Check the logs for details.</source>
@@ -959,6 +953,9 @@
     <trans-unit id="cloudSandbox.connectingTitle">
       <source xml:lang="en">Connecting to the Environment</source>
     </trans-unit>
+    <trans-unit id="cloudSandbox.hostGroup">
+      <source xml:lang="en">Cloud</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.incompatible">
       <source xml:lang="en">This environment is incompatible with this version of Visual Studio Code.</source>
     </trans-unit>
@@ -977,40 +974,16 @@
     <trans-unit id="cloudSandbox.reconnectingIn">
       <source xml:lang="en">Reconnecting in {0}s</source>
     </trans-unit>
-    <trans-unit id="githubSandbox.hostGroup">
-      <source xml:lang="en">GitHub Sandboxes</source>
-    </trans-unit>
-    <trans-unit id="sandbox.cloningFailed">
-      <source xml:lang="en">Repository cloning failed</source>
-    </trans-unit>
-    <trans-unit id="sandbox.cloningRepository">
-      <source xml:lang="en">Cloning repository</source>
-    </trans-unit>
-    <trans-unit id="sandbox.cloningRepositoryProgress">
-      <source xml:lang="en">Cloning repository ({0}%)</source>
-    </trans-unit>
-    <trans-unit id="sandbox.connectingContainer">
-      <source xml:lang="en">Connecting to cloud container</source>
-    </trans-unit>
     <trans-unit id="sandbox.connectionUnavailable">
       <source xml:lang="en">The cloud sandbox connection is no longer available.</source>
     </trans-unit>
     <trans-unit id="sandbox.preparationUnavailable">
       <source xml:lang="en">Cloud sandbox repository preparation is not registered.</source>
     </trans-unit>
-    <trans-unit id="sandbox.provisioningContainer">
-      <source xml:lang="en">Setting up cloud container</source>
-    </trans-unit>
-    <trans-unit id="sandbox.startingAgent">
-      <source xml:lang="en">Starting Copilot agent</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxSessionsProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cloudSandbox.archiveUnavailable">
       <source xml:lang="en">Connect to the environment to change this session's archive state.</source>
-    </trans-unit>
-    <trans-unit id="cloudSandbox.configNotApplied">
-      <source xml:lang="en">The sandbox could not apply the selected {0}. Your prompt was not sent.</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.configUnavailable">
       <source xml:lang="en">The sandbox connection is unavailable. Your prompt was not sent.</source>

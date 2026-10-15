@@ -4,6 +4,9 @@
     <trans-unit id="automation.advanced">
       <source xml:lang="en">Advanced</source>
     </trans-unit>
+    <trans-unit id="automation.allToolsAllowed">
+      <source xml:lang="en">All tools allowed</source>
+    </trans-unit>
     <trans-unit id="automation.allowedToolsTitle">
       <source xml:lang="en">Allowed Tools</source>
     </trans-unit>
@@ -36,6 +39,9 @@
     </trans-unit>
     <trans-unit id="automation.customizations.summaryOutdated">
       <source xml:lang="en">{0} of {1} customizations · {2} outdated</source>
+    </trans-unit>
+    <trans-unit id="automation.dialog.editDescription">
+      <source xml:lang="en">Update the schedule, prompt, or run target for this automation.</source>
     </trans-unit>
     <trans-unit id="automation.form.branch.capabilityLoadingReason">
       <source xml:lang="en">Session capabilities are loading.</source>
@@ -235,6 +241,9 @@
     <trans-unit id="automation.interval.weekly">
       <source xml:lang="en">Weekly</source>
     </trans-unit>
+    <trans-unit id="automation.oneToolAllowed">
+      <source xml:lang="en">1 tool allowed</source>
+    </trans-unit>
     <trans-unit id="automation.retryTools">
       <source xml:lang="en">Retry</source>
     </trans-unit>
@@ -247,8 +256,8 @@
     <trans-unit id="automation.tools">
       <source xml:lang="en">Tools</source>
     </trans-unit>
-    <trans-unit id="automation.toolsDescription">
-      <source xml:lang="en">Select which tools the agent can use. Built-in tools are always available.</source>
+    <trans-unit id="automation.toolsAllowedCount">
+      <source xml:lang="en">{0} tools allowed</source>
     </trans-unit>
     <trans-unit id="automation.toolsLoading">
       <source xml:lang="en">Loading available tools...</source>
@@ -270,14 +279,8 @@
     <trans-unit id="automation.dialog.create">
       <source xml:lang="en">Create</source>
     </trans-unit>
-    <trans-unit id="automation.dialog.createDescription">
-      <source xml:lang="en">Define a prompt that will run on a schedule against the selected target.</source>
-    </trans-unit>
     <trans-unit id="automation.dialog.createTitle">
       <source xml:lang="en">New automation</source>
-    </trans-unit>
-    <trans-unit id="automation.dialog.editDescription">
-      <source xml:lang="en">Update the schedule, prompt, or run target for this automation.</source>
     </trans-unit>
     <trans-unit id="automation.dialog.editTitle">
       <source xml:lang="en">Edit automation</source>
@@ -397,6 +400,9 @@
     <trans-unit id="automation.tool.error">
       <source xml:lang="en">Automation request failed</source>
     </trans-unit>
+    <trans-unit id="automation.tool.list.cancelled">
+      <source xml:lang="en">Listing automations cancelled</source>
+    </trans-unit>
     <trans-unit id="automation.tool.list.displayName">
       <source xml:lang="en">List Automations</source>
     </trans-unit>
@@ -453,6 +459,9 @@
     </trans-unit>
     <trans-unit id="automation.tool.run.wasAlreadyRunning">
       <source xml:lang="en">Automation {0} was already running</source>
+    </trans-unit>
+    <trans-unit id="automation.tool.unknown">
+      <source xml:lang="en">The request outcome is unknown. Refresh automations before submitting another request.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/automations.contribution" source-language="en" datatype="plaintext"><body>

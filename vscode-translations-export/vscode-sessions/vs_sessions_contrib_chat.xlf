@@ -293,7 +293,7 @@
       <source xml:lang="en">Open worktree cleanup editor</source>
     </trans-unit>
     <trans-unit id="sessions.chat.compareAgents.enabled">
-      <source xml:lang="en">Controls whether the Run and Compare Agents action is shown in eligible new-session agent pickers.</source>
+      <source xml:lang="en">Controls whether the Compare Models action is shown in the model picker for eligible new Agent sessions.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.compareAgents.hideInactiveInputs">
       <source xml:lang="en">When enabled, hides the chat input in inactive panes when three or more parallel comparison attempts are shown in a grid. This behavior is disabled when screen-reader optimized mode is active.</source>
@@ -332,13 +332,13 @@
       <source xml:lang="en">Controls whether session options are expanded before you first expand or collapse them. Your last choice takes precedence afterward. This setting only applies when the new-session composer layout is enabled.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.welcomeMessages">
-      <source xml:lang="en">Customize the welcome phrases shown above the new-session composer. Use `"mode": "replace"` to use only your phrases, or `"mode": "append"` to add them to the defaults. Use `{name}` inside a phrase to position the welcome name.</source>
+      <source xml:lang="en">Customize the welcome phrases shown above the new-session composer. Use `"mode": "replace"` to use only your phrases, or `"mode": "append"` to add them to the defaults. Use `${name}` inside a phrase to position the welcome name.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.welcomeMessages.mode">
       <source xml:lang="en">'replace' uses only your phrases; 'append' adds your phrases to the defaults.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.welcomeMessages.phrases">
-      <source xml:lang="en">Welcome phrases shown above the new-session composer. Use `{name}` to position the welcome name, for example `Back at it, {name}`. When no name is known, `{name}` and its surrounding separator are removed.</source>
+      <source xml:lang="en">Welcome phrases shown above the new-session composer. Use `${name}` to position the welcome name, for example `Back at it, ${name}`. When no name is known, `${name}` and its surrounding separator are removed.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.welcomeName">
       <source xml:lang="en">Specifies the name used in new-session welcome messages. Leave empty to use the first name from your signed-in GitHub profile when available; otherwise, welcome messages omit the name.</source>
@@ -380,6 +380,12 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/chatView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatView.historyLoadFailed">
+      <source xml:lang="en">Couldn't load this conversation.</source>
+    </trans-unit>
+    <trans-unit id="chatView.retryHistoryLoad">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
     <trans-unit id="sessionComparison.judgeInstructions">
       <source xml:lang="en">Judge Instructions</source>
     </trans-unit>
@@ -1940,6 +1946,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.pickFolderQuickPick">
       <source xml:lang="en">To choose a folder from a searchable list instead, use the New Session in Folder command{0}.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.policyContinuation">
+      <source xml:lang="en">If your organization disables Claude or Codex and requires the new Copilot experience, an open, idle conversation automatically moves to Copilot with its title, history, and draft. Nothing is sent automatically. The original is archived only after the copy opens and other conversations in its session can still be reached. Opening an archived original does not move it again. If moving needs a workspace or trust decision, or fails, use Tab to focus Continue in Copilot in the banner, then press Enter or Space. This action reopens an existing copy when available. Subagent chats and other policy restrictions use the manual action. For a managed checkout, choose an independent workspace; uncommitted files stay in the original checkout.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.preparation">
       <source xml:lang="en">While a new session is being prepared, the transcript shows your submitted prompt and attachments followed by startup progress. Use Tab to reach Show Log beside the progress message and press Enter to open the Dev Container output channel. The chat input and attachment controls are disabled until preparation finishes. Use the input's Stop action or Cancel Chat command{0} to cancel preparation. If preparation fails or is canceled, your original prompt and attachments remain in the new-session composer.</source>
