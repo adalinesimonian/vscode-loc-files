@@ -292,8 +292,14 @@
     <trans-unit id="chat.modelPicker.managedDefault">
       <source xml:lang="en">In the model picker, Org default identifies the model your organization sets for new chats. It remains on that model when you choose another model for this chat; the checkmark identifies your current selection. Auto carries the same label when it is the organization default.</source>
     </trans-unit>
+    <trans-unit id="chat.modelPicker.managedOptions">
+      <source xml:lang="en">An agent host can make effort level or context read-only. Its value is announced as managed by the agent host and cannot be changed. An overridable default remains selectable. Changing models uses the options available for the newly selected model.</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.optimizeFor">
       <source xml:lang="en">Auto's details hold its "Optimize for" preference: Efficiency, Balance, or Intelligence. Open them from Auto like any model's details, then use arrow keys to move between preferences and Enter or Space to choose one. Choosing a preference selects Auto and keeps its details open. When Auto has a discount, it is described below the preferences. The preference readout beside Auto in the chat input opens the same details.</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.otherModelsSection">
+      <source xml:lang="en">In the model picker, less common models are grouped under Other Models, which reports whether it is expanded. With Other Models focused, press Right Arrow or Enter to expand it. Press Left Arrow on Other Models or on any model in it to collapse it and return focus to Other Models.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.pricingDetails">
       <source xml:lang="en">Pricing Details expands in place without moving the model's controls. Expansion and collapse are immediate when reduced motion is enabled. If the details exceed the available space, use Page Up or Page Down while the model details have focus to scroll.</source>
@@ -430,6 +436,12 @@
     <trans-unit id="chat.voiceInputMode.segmented">
       <source xml:lang="en">When the segmented voice input control is enabled, the input toolbar offers Dictation and Voice Mode. A connected hands-free session also offers Mute or Unmute Microphone; manual Voice Mode instead offers Start or Stop Listening, where stopping sends the completed turn. Each button can be focused and activated with Enter or Space.</source>
     </trans-unit>
+    <trans-unit id="chat.voiceMode.byokAnswers">
+      <source xml:lang="en">In OpenAI BYOK Voice Mode, say approve, approved, accept, accepted, allow, yes, I approve, or I accept to approve the current prompt, and reject, deny, or no to reject it. These approval commands must be complete, unqualified English replies. For questions, say an exact displayed choice or its number; for multiple selections, separate choices with commas or and. Answer text questions directly. To give a custom answer to a selection question that permits it, say other followed by your answer. Forms collect one answer at a time and submit when complete. Say skip only when the form permits skipping. Ambiguous replies ask for clarification without approving anything or sending a new chat request.</source>
+    </trans-unit>
+    <trans-unit id="chat.voiceMode.byokSession">
+      <source xml:lang="en">When using configured OpenAI BYOK Voice Mode, only the bound chat input's prompts and responses are read. Voice Mode belongs to the input where you start it, including chat editor tabs and the chat sidebar. Switching the bound input or discarding a recording stops Voice Mode to prevent buffered audio from acting on another session. Start Voice Mode again in the intended input; creating the session from the same draft does not require a restart.</source>
+    </trans-unit>
     <trans-unit id="chat.voiceMode.introduction">
       <source xml:lang="en">The first time Voice Mode starts, an introduction appears above the input box. Tab to reach it, then use the arrow keys to move between the available voices; Enter or Space plays a voice and keeps it for future conversations. Its description also contains two links: Settings, which opens the Voice Mode settings, and How It Responds, which opens a file for customizing what the agent says back. Voice Mode stays connected but does not listen while the introduction is open. Press Escape, or activate the Close button, to dismiss it and return to the input box.</source>
     </trans-unit>
@@ -536,7 +548,7 @@
       <source xml:lang="en">When you select text within an assistant response, an Ask Question input appears near the selection. Type a question and press Enter to start a new side chat scoped to that selection.</source>
     </trans-unit>
     <trans-unit id="sessions.threadCoordinationResult">
-      <source xml:lang="en">Completed create-chat and send-message operations can include a target chat button in the response. Use Tab to focus it, then Enter or Space to open that chat.</source>
+      <source xml:lang="en">Completed create-session, create-chat, and send-message operations can include a target session or chat button in the response. Use Tab to focus it, Enter or Space to open it normally, or Alt+Enter (Option+Enter on macOS) to open it to the side.</source>
     </trans-unit>
     <trans-unit id="workbench.action.chat.announceConfirmation">
       <source xml:lang="en">To focus pending chat confirmation dialogs, invoke the Focus Chat Confirmation Status command{0}.</source>
@@ -2251,6 +2263,9 @@ User: {2}</source>
     <trans-unit id="agentHost.customizationInstall.inventoryError">
       <source xml:lang="en">The SDK could not verify this installation.</source>
     </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.mcpGalleryIdentityUnavailable">
+      <source xml:lang="en">This MCP Gallery entry does not provide the server card URL required for Copilot installation.</source>
+    </trans-unit>
     <trans-unit id="agentHost.customizationInstall.mcpInstallDetail">
       <source xml:lang="en">MCP servers can run tools and access external services. Only install resources from sources you trust.
 
@@ -2354,6 +2369,9 @@ Size: {3} bytes</source>
     </trans-unit>
     <trans-unit id="agentHost.marketplaceManagement.removeUnavailable">
       <source xml:lang="en">The selected agent does not support removing marketplaces.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.mcpConfiguration.addUnavailable">
+      <source xml:lang="en">The selected agent does not support global MCP configuration.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostCustomizationService" source-language="en" datatype="plaintext"><body>
@@ -8510,9 +8528,6 @@ Changes may not take full effect until VS Code is restarted.</source>
     <trans-unit id="chat.agentHost.agentDebugLog.maxEventsInMemory">
       <source xml:lang="en">Maximum number of debug events kept in memory per agent host session for the agent debug panel. Older events beyond this limit are dropped from the in-memory buffer, which also lowers the totals (such as token usage) shown in the panel overview.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.ahpJsonlLogging">
-      <source xml:lang="en">When enabled, logs all AHP transport messages for agent host connections to JSONL files under the window's log directory.</source>
-    </trans-unit>
     <trans-unit id="chat.agentHost.allowSignedOutWhenUsable">
       <source xml:lang="en">When enabled, Agent Host sessions remain available while signed out. The Agents window opens without forcing GitHub sign-in, and editor chat lets you select the Copilot harness. Agents usable without GitHub (for example Codex with ChatGPT authentication or Claude in native mode with your own Anthropic credentials) work while signed out; agents that require GitHub prompt you to add a model or sign in. When disabled (the default), GitHub sign-in is required before the Agents window opens.</source>
     </trans-unit>
@@ -8804,6 +8819,12 @@ Locations configured here are only observed by the Local agent harness. Other ha
     </trans-unit>
     <trans-unit id="chat.copilot.tgrep.enabled">
       <source xml:lang="en">When enabled, local Copilot Agent Host sessions use tgrep indexed search for eligible large repositories. Requires a local Git repository on a non-virtual filesystem. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
+    </trans-unit>
+    <trans-unit id="chat.copilotCliCommand.enabled">
+      <source xml:lang="en">Controls whether integrated terminals include the `copilot` command that ships with VS Code. The command runs GitHub Copilot CLI and offers to install it when it's missing. A GitHub Copilot CLI that you installed yourself isn't affected.</source>
+    </trans-unit>
+    <trans-unit id="chat.copilotCliCommand.enabled.policy">
+      <source xml:lang="en">Controls whether VS Code provides the copilot command for GitHub Copilot CLI. When disabled, VS Code setup on Windows doesn't add the command to PATH and removes the entry it added, VS Code doesn't install GitHub Copilot CLI, and integrated terminals don't include the command. A GitHub Copilot CLI that was installed separately isn't affected.</source>
     </trans-unit>
     <trans-unit id="chat.customizations.copilotConnectors.enabled">
       <source xml:lang="en">Enables Copilot connectors in the unified marketplace and exposes connected connector MCP servers in Chat Customizations and Copilot agent sessions.</source>
@@ -9278,12 +9299,6 @@ This setting is only used by the Local agent harness.</source>
     <trans-unit id="chat.plugins.marketplaces">
       <source xml:lang="en">Plugin marketplaces to query. Entries may be GitHub shorthand (`owner/repo` or `owner/repo#ref`), direct Git repository URIs (`https://...git`, `ssh://...git`, or `git@host:path.git`, each optionally suffixed with `#ref`), or local repository URIs (`file:///...`). Equivalent GitHub shorthand and URI entries are deduplicated.</source>
     </trans-unit>
-    <trans-unit id="chat.plugins.strictMarketplaces">
-      <source xml:lang="en">Enterprise-managed allowlist of plugin marketplace sources. When set, only marketplaces matching one of these entries can be installed; an empty array blocks all marketplaces. This does not retroactively disable already-installed plugins. Each entry is an object with a `source` discriminator (`github`, `git`, `url`, `npm`, `file`, `directory`, `hostPattern`, or `pathPattern`) and the corresponding fields. Typically delivered via enterprise policy.</source>
-    </trans-unit>
-    <trans-unit id="chat.plugins.strictMarketplaces.policy">
-      <source xml:lang="en">Allowlist of plugin marketplace sources. When set, only marketplaces matching an entry are trusted; an empty array blocks all marketplaces.</source>
-    </trans-unit>
     <trans-unit id="chat.progressBorder.enabled">
       <source xml:lang="en">Show an animated gradient border around the chat input while the agent is working or thinking. Has no effect when reduced motion is enabled.</source>
     </trans-unit>
@@ -9599,6 +9614,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.artifactPill.copy">
       <source xml:lang="en">Copy Path</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactPill.downloadImage">
+      <source xml:lang="en">Download Image</source>
     </trans-unit>
     <trans-unit id="chat.artifactPill.files">
       <source xml:lang="en">Files</source>
@@ -11136,6 +11154,9 @@ Examples:
     <trans-unit id="chatDebug.wireLog.frameId">
       <source xml:lang="en">id: {0}</source>
     </trans-unit>
+    <trans-unit id="chatDebug.wireLog.hostCaptureHint">
+      <source xml:lang="en">Mission Control AHP logs are captured on the host. Configure {0} in the host's owning VS Code window.</source>
+    </trans-unit>
     <trans-unit id="chatDebug.wireLog.inbound">
       <source xml:lang="en">Agent Host → VS Code</source>
     </trans-unit>
@@ -11153,6 +11174,9 @@ Examples:
     </trans-unit>
     <trans-unit id="chatDebug.wireLog.noFrames">
       <source xml:lang="en">No AHP log was found yet for this session. Interact with the agent to capture protocol frames.</source>
+    </trans-unit>
+    <trans-unit id="chatDebug.wireLog.noHostFrames">
+      <source xml:lang="en">No host AHP log is available. Verify logging is enabled in the host's owning VS Code window and that the host allows reading its logs.</source>
     </trans-unit>
     <trans-unit id="chatDebug.wireLog.noMatches">
       <source xml:lang="en">No frames match '{0}'.</source>
@@ -12611,6 +12635,11 @@ Changes may not take full effect until VS Code is restarted.</source>
       <source xml:lang="en">Chat Repository Info</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSessions/chatSessionCommit" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatEditorContributionName">
+      <source xml:lang="en">{0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSessions/chatSessionDescription" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.sessions.description.thinking">
       <source xml:lang="en">Thinking...</source>
@@ -13754,9 +13783,6 @@ Source: {0}</source>
     <trans-unit id="updatingAllPlugins">
       <source xml:lang="en">Updating plugins...</source>
     </trans-unit>
-    <trans-unit id="viewPolicySettings">
-      <source xml:lang="en">View Policy Settings</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/pluginSources" source-language="en" datatype="plaintext"><body>
     <trans-unit id="checkoutPluginSourceFailed">
@@ -14635,17 +14661,26 @@ Source: {0}</source>
     <trans-unit id="cloudSandbox.creationDescription">
       <source xml:lang="en">Run the agent in a new cloud sandbox.</source>
     </trans-unit>
+    <trans-unit id="cloudSandbox.creationStep">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.repositoryGroup">
       <source xml:lang="en">Repository</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.repositoryGroupDescription">
-      <source xml:lang="en">The GitHub repository to clone into the sandbox</source>
+      <source xml:lang="en">Select repository...</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.requestRejected">
+      <source xml:lang="en">The cloud session did not accept the request: {0}</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.selectRepository">
       <source xml:lang="en">Select repository...</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.sessionName">
       <source xml:lang="en">Cloud</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.sessionUnavailable">
+      <source xml:lang="en">The cloud session could not be opened.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/missionControlEnvironmentActions" source-language="en" datatype="plaintext"><body>
@@ -14701,8 +14736,17 @@ Source: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/missionControlSharingService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="missionControlSharing.accountMismatch">
+      <source xml:lang="en">Sign in with the selected Copilot account to enable GitHub environment sharing.</source>
+    </trans-unit>
     <trans-unit id="missionControlSharing.accountRequired">
-      <source xml:lang="en">Mission Control requires exactly one local GitHub account with Copilot scopes.</source>
+      <source xml:lang="en">Select a GitHub account for Copilot and sign in with the required permissions to enable environment sharing.</source>
+    </trans-unit>
+    <trans-unit id="missionControlSharing.accountUnavailable">
+      <source xml:lang="en">The selected Copilot account is unavailable. Sign in to GitHub again to enable environment sharing.</source>
+    </trans-unit>
+    <trans-unit id="missionControlSharing.githubAccountRequired">
+      <source xml:lang="en">GitHub environment sharing requires a GitHub.com Copilot account.</source>
     </trans-unit>
     <trans-unit id="missionControlSharing.unavailable">
       <source xml:lang="en">GitHub environment sharing is unavailable.</source>
@@ -15564,6 +15608,65 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       <source xml:lang="en">Microphone access was denied. Grant microphone permission in your system settings to use Voice Mode.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/voiceClient/voiceClientService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="voice.gptLive.availabilityCheckFailed">
+      <source xml:lang="en">Couldn't verify the configured OpenAI GPT-Live model. Check your OpenAI API key and model setting, then try again.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.connectionLost">
+      <source xml:lang="en">The OpenAI GPT-Live connection was lost.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.error">
+      <source xml:lang="en">OpenAI GPT-Live reported an error.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.eventChannelClosed">
+      <source xml:lang="en">The OpenAI GPT-Live event channel closed.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.iceTimeout">
+      <source xml:lang="en">Timed out while gathering ICE candidates for OpenAI GPT-Live.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.noMediaStream">
+      <source xml:lang="en">Microphone capture did not provide a media stream.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.noSdpOffer">
+      <source xml:lang="en">OpenAI GPT-Live connection did not produce an SDP offer.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.playbackFailed">
+      <source xml:lang="en">Voice playback could not start. Restart Voice Mode from the chat input.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.requestFailed">
+      <source xml:lang="en">Your request was not sent. Please review the chat input and send it from there.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.responseFailed">
+      <source xml:lang="en">The prompt could not be answered. Please check the current prompt in the chat input.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.responseSubmitted">
+      <source xml:lang="en">Your response was submitted.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.selectedSession">
+      <source xml:lang="en">the selected session</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.sessionClosed">
+      <source xml:lang="en">The OpenAI GPT-Live session ended.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.sessionInfoFailed">
+      <source xml:lang="en">I couldn't retrieve the requested session information. Please try again.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.switchSessionFailed">
+      <source xml:lang="en">I couldn't switch sessions. Please try again.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.switchedSession">
+      <source xml:lang="en">Switched to session {0}.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.unavailable">
+      <source xml:lang="en">OpenAI GPT-Live became unavailable while creating the session.</source>
+    </trans-unit>
+    <trans-unit id="voice.gptLive.unavailableConfiguredModel">
+      <source xml:lang="en">The configured OpenAI GPT-Live model '{0}' is unavailable. Check your OpenAI API key and model setting, then try again.</source>
+    </trans-unit>
+    <trans-unit id="voice.live.ambiguousTurn">
+      <source xml:lang="en">I could not identify the voice turn for this request. Please repeat it in the intended chat input.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/voiceClient/voiceInputDecorations" source-language="en" datatype="plaintext"><body>
     <trans-unit id="voiceMode.bargeInHint">
       <source xml:lang="en">Speak or use {0}</source>
@@ -15741,14 +15844,26 @@ Note: This setting only controls tool approval and does not prevent the agent fr
     <trans-unit id="voice.unreachableToast">
       <source xml:lang="en">Couldn't reach the voice service. Check your connection and try again.</source>
     </trans-unit>
+    <trans-unit id="voiceMode.audioInitializationFailed">
+      <source xml:lang="en">Voice audio could not be initialized. Please try starting Voice Mode again.</source>
+    </trans-unit>
     <trans-unit id="voiceMode.disabled">
       <source xml:lang="en">Voice Mode is disabled.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.gptLiveAvailabilityCheckFailed">
+      <source xml:lang="en">Couldn't verify the configured OpenAI GPT-Live model. Check your OpenAI API key and model setting, then try again.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.gptLiveUnavailable">
+      <source xml:lang="en">The configured OpenAI GPT-Live model '{0}' is unavailable. Check your OpenAI API key and model setting, then try again.</source>
     </trans-unit>
     <trans-unit id="voiceMode.organizationUnavailable">
       <source xml:lang="en">Voice Mode is not available for GitHub Copilot Business or Enterprise accounts.</source>
     </trans-unit>
     <trans-unit id="voiceMode.requiresPaidPlan">
       <source xml:lang="en">Voice Mode requires a paid GitHub Copilot plan.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.usingOpenAIModel">
+      <source xml:lang="en">Using {0} from your OpenAI provider for Voice Mode.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/voiceClient/voiceToolDispatchService" source-language="en" datatype="plaintext"><body>
@@ -18359,6 +18474,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">, {0}. </source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/input/chatModelConfigurationLogic" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.modelConfiguration.readOnly">
+      <source xml:lang="en">{0} is managed by the agent host and cannot be changed.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/chatPhoneInputPresenter" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatPhoneInput.autoLabel">
       <source xml:lang="en">Auto</source>
@@ -19171,6 +19291,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.modelPicker.configValue">
       <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.managedConfigValue">
+      <source xml:lang="en">{0}: {1}, managed by the agent host</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.maxContext">
       <source xml:lang="en">Max context: {0}</source>
@@ -20552,6 +20675,18 @@ To make this the starting permission level for new sessions, change the [{0}](co
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.languageModels.emptyVendor">
       <source xml:lang="en">The vendor field cannot be empty.</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.contributes.languageModels.icon">
+      <source xml:lang="en">An icon that represents this language model chat provider, shown in the chat model picker. Either a theme icon reference, like `\$(zap)`, a file path relative to the extension, or an object with file paths for light and dark themes.</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.contributes.languageModels.icon.dark">
+      <source xml:lang="en">Icon path when a dark theme is used.</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.contributes.languageModels.icon.light">
+      <source xml:lang="en">Icon path when a light theme is used.</source>
+    </trans-unit>
+    <trans-unit id="vscode.extension.contributes.languageModels.invalidIcon">
+      <source xml:lang="en">The icon of vendor '{0}' must be a theme icon reference, a file path, or an object with 'light' and 'dark' file paths. File paths must stay inside the extension's folder, use '/' as the separator, and not contain '%'.</source>
     </trans-unit>
     <trans-unit id="vscode.extension.contributes.languageModels.managementCommand">
       <source xml:lang="en">A command to manage the language model chat provider, e.g. 'Manage Copilot models'. This is used in the chat model picker. If not provided, a gear icon is not rendered during vendor selection.</source>
@@ -22169,6 +22304,35 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
   <file original="src/vs/workbench/contrib/chat/common/voiceChatService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="voiceChatInProgress">
       <source xml:lang="en">A speech-to-text session is in progress for chat.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/voiceClient/voiceLiveInputRouter" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="voice.live.chooseAnswer">
+      <source xml:lang="en">Please say an exact choice or its number. {0}</source>
+    </trans-unit>
+    <trans-unit id="voice.live.chooseOrCustomAnswer">
+      <source xml:lang="en">Please say an exact choice or its number, or say other followed by a custom answer. {0}</source>
+    </trans-unit>
+    <trans-unit id="voice.live.emptyReply">
+      <source xml:lang="en">I did not receive a voice reply. Please try again in the intended chat input.</source>
+    </trans-unit>
+    <trans-unit id="voice.live.explicitApproval">
+      <source xml:lang="en">Please say approve or reject for this prompt, or respond in the chat input.</source>
+    </trans-unit>
+    <trans-unit id="voice.live.questionPrompt">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+    <trans-unit id="voice.live.skipNotAllowed">
+      <source xml:lang="en">This form cannot be skipped. Please answer its questions or respond in the chat input.</source>
+    </trans-unit>
+    <trans-unit id="voice.live.stalePrompt">
+      <source xml:lang="en">The voice input or pending prompt changed. Please focus the intended chat input and answer its current prompt again.</source>
+    </trans-unit>
+    <trans-unit id="voice.live.unsupportedPrompt">
+      <source xml:lang="en">This prompt cannot be answered by voice. Please respond in the chat input.</source>
+    </trans-unit>
+    <trans-unit id="voice.live.unsupportedPromptLanguage">
+      <source xml:lang="en">This prompt cannot be safely answered by voice in the selected language. Please respond in the chat input.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/widget/chatColors" source-language="en" datatype="plaintext"><body>

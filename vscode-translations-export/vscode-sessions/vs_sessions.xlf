@@ -86,8 +86,19 @@
     <trans-unit id="hidePanel">
       <source xml:lang="en">Hide Panel</source>
     </trans-unit>
+    <trans-unit id="hideSessionToolbar">
+      <source xml:lang="en">Hide Session Toolbar</source>
+    </trans-unit>
     <trans-unit id="layoutDensity">
       <source xml:lang="en">Layout Density</source>
+    </trans-unit>
+    <trans-unit id="miAppearance">
+      <source xml:lang="en">&amp;&amp;Appearance</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="miSessionToolbar">
+      <source xml:lang="en">Session &amp;&amp;Toolbar</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
     <trans-unit id="openAndCloseSidebar">
       <source xml:lang="en">Open/Show and Close/Hide Sidebar</source>
@@ -103,6 +114,9 @@
     </trans-unit>
     <trans-unit id="sidebarVisible">
       <source xml:lang="en">Primary Side Bar shown</source>
+    </trans-unit>
+    <trans-unit id="toggleSessionToolbar">
+      <source xml:lang="en">Toggle Session Toolbar</source>
     </trans-unit>
     <trans-unit id="toggleSidebar">
       <source xml:lang="en">Toggle Side Bar</source>
@@ -453,6 +467,14 @@
     </trans-unit>
     <trans-unit id="sessionRemoteHost.waitingForConnection">
       <source xml:lang="en">Waiting for agent host connection...</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/browser/parts/sessionToolbar" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionToolbar">
+      <source xml:lang="en">Session Toolbar</source>
+    </trans-unit>
+    <trans-unit id="sessionToolbar.dragHandle">
+      <source xml:lang="en">Drag to move. Double-click to reset the position.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/browser/parts/sessionView" source-language="en" datatype="plaintext"><body>

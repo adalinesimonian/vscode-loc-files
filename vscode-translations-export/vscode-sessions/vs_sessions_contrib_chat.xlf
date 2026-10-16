@@ -289,6 +289,9 @@
     <trans-unit id="sessionStorageCleanupSuggestionsDisabled">
       <source xml:lang="en">Session storage cleanup suggestions disabled.</source>
     </trans-unit>
+    <trans-unit id="sessionToolbar">
+      <source xml:lang="en">Session Toolbar</source>
+    </trans-unit>
     <trans-unit id="sessionWorktreeCleanupEditor">
       <source xml:lang="en">Open worktree cleanup editor</source>
     </trans-unit>
@@ -324,6 +327,9 @@
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.collapsedSessionOptionsShowIcons">
       <source xml:lang="en">Controls whether the collapsed session options above the new-session input keep the repository and harness pickers as icons, so they stay accessible without their labels. When disabled, collapsing hides these controls entirely. This setting only applies when the new-session composer layout is enabled.</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.experimental.connectorRecommendations">
+      <source xml:lang="en">Controls whether the new-session composer recommends connectors that can add work context to chats.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.newSessionComposerLayout">
       <source xml:lang="en">Controls whether the new-session composer groups workspace, repository, and harness controls above the chat input. This setting only applies when the unified workspace picker is enabled.</source>
@@ -538,6 +544,20 @@
   <file original="src/vs/sessions/contrib/chat/browser/modelPicker" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionsModelPicker">
       <source xml:lang="en">Model</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/newChatConnectorRecommendations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="newSession.connectorRecommendations.ariaLabel">
+      <source xml:lang="en">Recommended connectors</source>
+    </trans-unit>
+    <trans-unit id="newSession.connectorRecommendations.dismissOne">
+      <source xml:lang="en">Dismiss {0} Connector Recommendation for This Session</source>
+    </trans-unit>
+    <trans-unit id="newSession.connectorRecommendations.open">
+      <source xml:lang="en">Review the {0} connector. {1}</source>
+    </trans-unit>
+    <trans-unit id="newSession.connectorRecommendations.openError">
+      <source xml:lang="en">Unable to open the {0} connector.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/newChatContextAttachments" source-language="en" datatype="plaintext"><body>
@@ -1156,6 +1176,12 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionArtifacts.copyWebsiteUrl">
       <source xml:lang="en">Copy Website URL</source>
     </trans-unit>
+    <trans-unit id="sessionArtifacts.downloadImage">
+      <source xml:lang="en">Download Image</source>
+    </trans-unit>
+    <trans-unit id="sessionArtifacts.downloadImageFailed">
+      <source xml:lang="en">Failed to download {0}: {1}</source>
+    </trans-unit>
     <trans-unit id="sessionArtifacts.files">
       <source xml:lang="en">Files</source>
     </trans-unit>
@@ -1749,6 +1775,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.connectionLog">
       <source xml:lang="en">While connecting to a Dev Container for an existing session, use Tab to reach Show Log and press Enter to open the Dev Container output channel.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.connectorRecommendations">
+      <source xml:lang="en">Near the new-session input, three connector cards offer Linear, Notion, and WorkIQ. On phones the cards appear above the input; on wider layouts they appear below it. Use Tab and Shift+Tab to move between each card and its dismiss button. Press Enter or Space on a card to review that connector in the Copilot Connectors marketplace. Dismissing a recommendation moves focus to the next card; dismissing the last card returns focus to the input.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.contextReferences">
       <source xml:lang="en">Type # in the chat input to attach context. Use #file to reference a file or folder, or #session to reference another agent session. Referencing a session together with the /troubleshoot command analyzes that session's logs instead of the current one. Accept a suggestion with Tab or Enter. Openable references appear as buttons above the input; activate one to open it, or use its Remove button to detach it.</source>
     </trans-unit>
@@ -1796,6 +1825,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.doneNudge">
       <source xml:lang="en">When all GitHub pull requests associated with the session have merged and no chat is working or waiting for input, a mark as done suggestion may appear above the chat input. Use Tab or Shift+Tab to reach Mark as Done, Configure Automatic Cleanup, or Dismiss Mark as Done Suggestion, then Enter or Space to activate it. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Mark as Done" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismiss Mark as Done Suggestion, or Escape while the suggestion is focused, hides the suggestion for this session, including after a reload, until it is marked as done or deleted, and returns focus to the chat input. Marking the session as done hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Done" section of the sessions list. You can restore it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by restoring the session.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.emptyEditorAddTab">
+      <source xml:lang="en">When the side panel's editor has no open tabs, it shows Add Tab at the top and lists the Add Tab actions, such as Changes, Files, Browser, and Search, with their keybindings. Press Tab to reach the list, use the Up and Down arrow keys to move between actions, and press Enter or Space to open one. For an action with a submenu, such as Canvas, press Enter, Space, or the Right arrow key to open the submenu, the Up and Down arrow keys to choose an item, and the Left arrow key or Escape to return to the list.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.environmentFolders">
       <source xml:lang="en">Choose Environments in the workspace picker to connect to a GitHub environment, then select a folder on that host. The picker starts in the host's home directory. Enter a folder path to browse another location or drive. Use the arrow keys to navigate, Enter to select, and Escape to cancel either picker.</source>
@@ -1874,6 +1906,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.historyRefresh">
       <source xml:lang="en">Previously loaded conversations refresh silently. If recent messages cannot be loaded, a banner offers Refresh. Use Tab to reach Refresh and press Enter or Space to retry loading recorded messages without restarting the session or waking its environment. Your draft is preserved.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.imageDownloads">
+      <source xml:lang="en">Images Preview offers Download for the selected image. Image rows in Artifacts and References offer Download Image. Use Tab to reach these actions and Enter or Space to download. When a pill contains a single image, its download action is also available in the pill hover and context menu. Opening an image in the new-session composer includes all images attached to that draft.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.input">
       <source xml:lang="en">You are in the chat input. Type a message and press Enter to send it.</source>
@@ -2018,6 +2053,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionOrdering">
       <source xml:lang="en">On desktop, the Filter Sessions menu offers Ordering and Grouping submenus. When grouping by Workspace, Show switches between Recent and All sessions. Current choices are checked inside the submenus. Use the Right arrow key to open a submenu, the Left arrow key to return, and Enter or Space to choose an option.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.sessionToolbar">
+      <source xml:lang="en">The Session Toolbar beside the active chat opens the Changes, Files, Browser, and Canvas tabs. Press Tab past the chat input's controls to reach it, use the Up and Down Arrow keys to move between its entries, and press Enter or Space to open one. Canvas opens a submenu: press Enter, Space, or Left Arrow to open it, and Right Arrow or Escape to close it. Open the context menu{1} on an entry to hide that entry or the whole toolbar. Toggle the toolbar from the chat background's context menu, View &gt; Appearance &gt; Session Toolbar, or the {0} setting.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionsListChatContextMenu">
       <source xml:lang="en">Open a nested chat's context menu to rename it, open it to the side, or, when supported, permanently delete it. Agent Host chats also offer Copy Link.</source>

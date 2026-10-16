@@ -382,8 +382,8 @@ A keybinding</note>
     <trans-unit id="agentHostSandboxToggle.label">
       <source xml:lang="en">Sandboxing for terminal</source>
     </trans-unit>
-    <trans-unit id="agentHostSandboxToggle.reenableManagedTitle">
-      <source xml:lang="en">Sandboxing was disabled for this session through an approved bypass. You can enable it again.</source>
+    <trans-unit id="agentHostSandboxToggle.managedBypassTitle">
+      <source xml:lang="en">Your organization allows you to turn sandboxing off for this session. Changes are subject to runtime approval.</source>
     </trans-unit>
     <trans-unit id="agentHostSandboxToggle.requiredTitle">
       <source xml:lang="en">Sandboxing is required by your organization</source>
@@ -481,7 +481,7 @@ A keybinding</note>
       <source xml:lang="en">Shared prompt discovery filters hooks, but the VS Code-only requirement is not delivered to runtime file hooks. Runtime-native managed-hook and SDK callback behavior needs separate verification.</source>
     </trans-unit>
     <trans-unit id="policyGap.marketplaces">
-      <source xml:lang="en">Shared marketplace discovery and installation honor these controls. Runtime-owned marketplace operations do not receive VS Code-only values and need separate verification. Strict marketplace rules do not retroactively disable installed plugins.</source>
+      <source xml:lang="en">Shared marketplace discovery and installation honor additional marketplaces. Runtime-owned marketplace operations do not receive VS Code-only values and need separate verification.</source>
     </trans-unit>
     <trans-unit id="policyGap.mcpAccess">
       <source xml:lang="en">The workbench filters forwarded MCP collections, but Agent Host can independently discover and run MCP servers despite the VS Code MCP access restriction.</source>
@@ -538,6 +538,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.agentOrchestrationLimits.title">
       <source xml:lang="en">Agent Orchestration Limits</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.ahpJsonlLogging.description">
+      <source xml:lang="en">Capture Mission Control AHP transport messages on the host.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.ahpJsonlLogging.title">
+      <source xml:lang="en">AHP Transport Logging</source>
     </trans-unit>
     <trans-unit id="agentHost.config.artifactTools.description">
       <source xml:lang="en">Whether agents can record artifacts — pull requests, issues, commits, websites, files and other resources — with the artifact tools.</source>
@@ -776,6 +782,12 @@ A keybinding</note>
     <trans-unit id="agentHost.config.overlapProviderPreparation.title">
       <source xml:lang="en">Overlap Provider Preparation</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.prewarmSessions.description">
+      <source xml:lang="en">Whether new Copilot chats start their runtime and MCP servers before the first message.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.prewarmSessions.title">
+      <source xml:lang="en">Prewarm Sessions</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.sessionSyncEnabled.description">
       <source xml:lang="en">Whether remote session sync is enabled for the copilot-sdk CLI.</source>
     </trans-unit>
@@ -976,6 +988,9 @@ A keybinding</note>
     <trans-unit id="chat.agentHost.agentOrchestrationLimits.on">
       <source xml:lang="en">Enforce the limits.</source>
     </trans-unit>
+    <trans-unit id="chat.agentHost.ahpJsonlLogging">
+      <source xml:lang="en">When enabled, captures AHP transport messages once: in the window for local and remote connections, or on the host for Mission Control connections. Enabled by default only in Insiders. Each logging process stops capture after writing 500 MiB across all connections, including reconnects. Existing per-connection rotation still applies. Restart the window or host process to reset its budget. Mission Control host capture follows the host's owning window setting, including live changes.</source>
+    </trans-unit>
     <trans-unit id="chat.agentHost.byokModels.enabled">
       <source xml:lang="en">When enabled, extension-provided BYOK ('bring your own key') models can run in agent-host sessions. Changes are synchronized to the running agent host and do not require a restart.</source>
     </trans-unit>
@@ -1020,6 +1035,9 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="chat.agentHost.experimental.overlapProviderPreparation">
       <source xml:lang="en">When enabled, agents prepare their session for a new turn, such as starting the runtime session, while the turn-start checkpoint is captured instead of after it. This can shorten the time to the first response, especially on the first turn of a session.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.experimental.prewarmSessions">
+      <source xml:lang="en">When enabled, new Agent Host Copilot chats start their runtime and MCP servers before the first message is sent, so connectors are ready sooner. Changes apply to new chats.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.githubMcpServer.enabled">
       <source xml:lang="en">When enabled, agent-host sessions include the GitHub MCP server.</source>
@@ -2800,6 +2818,12 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="ambiguousTurnDiff">
       <source xml:lang="en">Cannot compute turn changes because the turn belongs to more than one chat.</source>
     </trans-unit>
+    <trans-unit id="branchChangesNoRepository">
+      <source xml:lang="en">Branch changes are unavailable because the session's folder is not a Git repository or no longer exists.</source>
+    </trans-unit>
+    <trans-unit id="branchChangesUnavailable">
+      <source xml:lang="en">Branch changes could not be computed.</source>
+    </trans-unit>
     <trans-unit id="sessionGitDiffUnavailable">
       <source xml:lang="en">Git diff is unavailable for the session changeset.</source>
     </trans-unit>
@@ -3967,6 +3991,9 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="copilot.modelThinkingLevel.title">
       <source xml:lang="en">Effort Level</source>
     </trans-unit>
+    <trans-unit id="copilot.runtimeModelConfiguration">
+      <source xml:lang="en">Runtime Model Configuration</source>
+    </trans-unit>
     <trans-unit id="copilotAgent.autoModelName">
       <source xml:lang="en">Auto</source>
     </trans-unit>
@@ -4468,6 +4495,11 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">The SDK did not return a sandbox policy.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotSessionLauncher" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.customizationPolicyAuthenticationFailed">
+      <source xml:lang="en">The customization policy session could not apply GitHub authentication.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSessionSandbox" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copilot.permission.grant.expired">
       <source xml:lang="en">The sandbox permission request is no longer pending.</source>
@@ -4480,6 +4512,12 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilot.permission.grant.unsupportedClient">
       <source xml:lang="en">This client did not save the sandbox path grant. Update VS Code and retry.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandbox.agentActive">
+      <source xml:lang="en">Wait for the agent to finish executing, then try again.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandbox.changeRejected">
+      <source xml:lang="en">Copilot SDK did not confirm the sandbox change for this session.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider" source-language="en" datatype="plaintext"><body>
@@ -4962,8 +5000,14 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="copilot.customizationInstallation.mcpPlanFailed">
       <source xml:lang="en">The SDK could not prepare this MCP server installation.</source>
     </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpPolicyBlocked">
+      <source xml:lang="en">Policy blocked this MCP server installation.</source>
+    </trans-unit>
     <trans-unit id="copilot.customizationInstallation.mcpPrepareFailed">
       <source xml:lang="en">The SDK could not prepare this MCP server installation.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpProvisionalUnsupported">
+      <source xml:lang="en">This MCP server requires configuration that provisional Gallery installation cannot preserve.</source>
     </trans-unit>
     <trans-unit id="copilot.customizationInstallation.mcpUnavailable">
       <source xml:lang="en">The SDK cannot install this MCP server in the selected session.</source>
@@ -5292,6 +5336,9 @@ stderr: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/sessionPermissions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionPermissions.allow">
+      <source xml:lang="en">Allow</source>
+    </trans-unit>
     <trans-unit id="sessionPermissions.allowOnce">
       <source xml:lang="en">Allow Once</source>
     </trans-unit>
@@ -6656,6 +6703,14 @@ OS: {10}</source>
     </trans-unit>
     <trans-unit id="useId">
       <source xml:lang="en">Make sure you use the full extension ID, including the publisher, e.g.: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/extensionManagement/common/extensionManagementUtil" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="blocked by marketplace">
+      <source xml:lang="en">This extension has been blocked by the Extension Marketplace and must not be used.</source>
+    </trans-unit>
+    <trans-unit id="blocked by organization policy">
+      <source xml:lang="en">This extension is not permitted by your organization's policy.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/extensionManagement/common/extensionNls" source-language="en" datatype="plaintext"><body>

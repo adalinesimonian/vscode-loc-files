@@ -67,6 +67,9 @@
     <trans-unit id="agents.voice.turn.stopPhrases">
       <source xml:lang="en">Phrases that end the turn when spoken at the end of an utterance. Leave empty to disable ending the turn on a stop phrase, in which case the turn ends only on trailing silence ({0}) or manually. The backend strips the matched phrase from the transcript before it reaches the agent. When hands-free mode ({1}) is disabled, stop phrases do not end the turn by default unless this setting is explicitly configured, so you keep manual control over when a turn is sent.</source>
     </trans-unit>
+    <trans-unit id="agents.voice.useBYOKVoiceModel">
+      <source xml:lang="en">The OpenAI live model ID to use for Voice Mode with your configured API key. Add the key in Models Management. Voice Mode uses this model when client BYOK is allowed and the key has access to it; leave empty to use the hosted voice model, which requires a paid Copilot plan.</source>
+    </trans-unit>
     <trans-unit id="agents.voice.voice">
       <source xml:lang="en">The voice used when the assistant reads responses aloud. Changing this while voice mode is connected takes effect immediately. Use [Voice Mode instructions](command:{0}) to customize Voice Mode behavior and terminology.</source>
     </trans-unit>

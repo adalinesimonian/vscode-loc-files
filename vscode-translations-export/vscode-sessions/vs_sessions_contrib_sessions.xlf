@@ -472,6 +472,20 @@
       <source xml:lang="en">Session: {0}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/updateSessionFoldersAction" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.updateSessionFoldersWithChats">
+      <source xml:lang="en">Update Session Folders with Chats</source>
+    </trans-unit>
+    <trans-unit id="sessions.updateSessionFoldersWithChats.done">
+      <source xml:lang="en">Updated folders for {0} archived chats.</source>
+    </trans-unit>
+    <trans-unit id="sessions.updateSessionFoldersWithChats.doneOne">
+      <source xml:lang="en">Updated folders for 1 archived chat.</source>
+    </trans-unit>
+    <trans-unit id="sessions.updateSessionFoldersWithChats.partial">
+      <source xml:lang="en">Updated folders for {0} archived chat(s). {1} chat(s) could not be updated; see the log for details.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/automationCataloguePresentation" source-language="en" datatype="plaintext"><body>
     <trans-unit id="automationsPartialUnavailable">
       <source xml:lang="en">Some automations are unavailable.</source>
@@ -685,7 +699,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">The Templates from Plugins section is available whenever enabled plugins provide templates. Press Enter or Space on its disclosure control to expand or collapse it. A blue marker indicates templates added since the section was last expanded. Plugin templates start disabled.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.read">
-      <source xml:lang="en">Completed and failed runs that have not been opened are announced as unread. Use Mark all as read to clear all available unread runs.</source>
+      <source xml:lang="en">Completed and failed runs that have not been opened are announced as unread. Use Mark all as read in the history header, or focus the Automations sidebar shortcut and press Shift+F10 to choose Mark All as Read from its context menu. This marks available completed and failed runs as read, except cloud runs with an active follow-up.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.sharing">
       <source xml:lang="en">Use Import Automation in the view header, or drop one .automation.md file anywhere in the view, to review a shared Automation blueprint. Imported Automations start disabled. Open a saved Automation's context menu and choose Export to save a portable blueprint.</source>
@@ -923,6 +937,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationStartedStatus">
       <source xml:lang="en">Started automation {0}</source>
     </trans-unit>
+    <trans-unit id="automationStarting">
+      <source xml:lang="en">Starting run...</source>
+    </trans-unit>
+    <trans-unit id="automationStartingStatus">
+      <source xml:lang="en">Starting automation {0}</source>
+    </trans-unit>
     <trans-unit id="automationTemplateBadge">
       <source xml:lang="en">Template</source>
     </trans-unit>
@@ -1057,6 +1077,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="loadingAutomationsDescription">
       <source xml:lang="en">You can create a new automation while existing automations load.</source>
+    </trans-unit>
+    <trans-unit id="markAllAutomationRunsRead">
+      <source xml:lang="en">Mark All as Read</source>
     </trans-unit>
     <trans-unit id="markAllRead">
       <source xml:lang="en">Mark all as read</source>

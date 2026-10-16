@@ -36,6 +36,12 @@
     <trans-unit id="timeline.aria.item">
       <source xml:lang="en">{0}: {1}</source>
     </trans-unit>
+    <trans-unit id="timeline.compareSelected">
+      <source xml:lang="en">Compare Selected</source>
+    </trans-unit>
+    <trans-unit id="timeline.compareSelectedLabel">
+      <source xml:lang="en">{0} ({1}) ↔ {2} ({3})</source>
+    </trans-unit>
     <trans-unit id="timeline.editorCannotProvideTimeline">
       <source xml:lang="en">The active editor cannot provide timeline information.</source>
     </trans-unit>
@@ -47,6 +53,9 @@
     </trans-unit>
     <trans-unit id="timeline.loadingMore">
       <source xml:lang="en">Loading...</source>
+    </trans-unit>
+    <trans-unit id="timeline.loadingWorkspace">
+      <source xml:lang="en">Loading workspace timeline...</source>
     </trans-unit>
     <trans-unit id="timeline.noLocalHistoryYet">
       <source xml:lang="en">Local History will track recent changes as you save them unless the file has been excluded or is too large.</source>
@@ -63,11 +72,17 @@
     <trans-unit id="timeline.noTimelineSourcesEnabled">
       <source xml:lang="en">All timeline sources have been filtered out.</source>
     </trans-unit>
+    <trans-unit id="timeline.showWorkspaceTimeline">
+      <source xml:lang="en">Show Workspace Timeline</source>
+    </trans-unit>
     <trans-unit id="timeline.toggleFollowActiveEditorCommand.follow">
       <source xml:lang="en">Pin the Current Timeline</source>
     </trans-unit>
     <trans-unit id="timeline.toggleFollowActiveEditorCommand.unfollow">
       <source xml:lang="en">Unpin the Current Timeline</source>
+    </trans-unit>
+    <trans-unit id="timeline.workspace">
+      <source xml:lang="en">Workspace</source>
     </trans-unit>
     <trans-unit id="timelineInputAriaLabel">
       <source xml:lang="en">Type timeline item name. Press Enter to confirm or Escape to cancel.</source>

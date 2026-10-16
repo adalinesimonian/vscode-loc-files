@@ -19,6 +19,111 @@
     <trans-unit id="ConfirmUninstall">
       <source xml:lang="en">Are you sure you want to completely remove %1 and all of its components?</source>
     </trans-unit>
+    <trans-unit id="CopilotCliAdd">
+      <source xml:lang="en">&amp;Add the copilot command</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliAddAllUsers">
+      <source xml:lang="en">&amp;Add the copilot command for all users</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliAddAllUsersDescription">
+      <source xml:lang="en">Adds copilot to PATH for all users. Each user is asked before GitHub Copilot CLI is downloaded the first time they run copilot.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliAddDescription">
+      <source xml:lang="en">Adds copilot to PATH. GitHub Copilot CLI is installed the first time you run copilot. This requires an internet connection.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliChecking">
+      <source xml:lang="en">Checking for GitHub Copilot CLI...</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliDontAdd">
+      <source xml:lang="en">&amp;Don't add the copilot command</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliDontAddAllUsersDescription">
+      <source xml:lang="en">copilot isn't added to PATH. Users can still run it in the %1 terminal.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliDontAddDescription">
+      <source xml:lang="en">copilot isn't added to PATH. You can still run it in the %1 terminal.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliDownloadingPhase">
+      <source xml:lang="en">Downloading...</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliDownloadingProgress">
+      <source xml:lang="en">Downloading... %1 MB of %2 MB</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliFinishedHint">
+      <source xml:lang="en">Open a new terminal to use the copilot command.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliFirstUse">
+      <source xml:lang="en">Install GitHub Copilot CLI when I &amp;first run copilot</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliFirstUseDescription">
+      <source xml:lang="en">Adds copilot to PATH. Nothing is downloaded until you run it and confirm.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliInstallFailed">
+      <source xml:lang="en">%1 was installed, but GitHub Copilot CLI couldn't be installed. The copilot command will offer to install it the first time you run it.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliInstallNow">
+      <source xml:lang="en">&amp;Install GitHub Copilot CLI now</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliInstallNowDescription">
+      <source xml:lang="en">Adds copilot to PATH and downloads about %1 MB from GitHub after %2 is installed.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliInstallNowDescriptionNoSize">
+      <source xml:lang="en">Adds copilot to PATH and downloads GitHub Copilot CLI from GitHub after %1 is installed.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliInstallingCaption">
+      <source xml:lang="en">Installing GitHub Copilot CLI</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliInstallingDescription">
+      <source xml:lang="en">Setup is downloading and installing GitHub Copilot CLI.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliInstallingPhase">
+      <source xml:lang="en">Installing...</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliLearnMore">
+      <source xml:lang="en">Learn more</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliLicenseNote">
+      <source xml:lang="en">GitHub Copilot CLI is a separate GitHub product with its own license terms, and it requires a GitHub Copilot subscription.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliMemoAdd">
+      <source xml:lang="en">Add copilot to PATH</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliMemoDontAdd">
+      <source xml:lang="en">Don't add copilot to PATH</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliMemoFound">
+      <source xml:lang="en">Already installed at %1</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliMemoHeading">
+      <source xml:lang="en">GitHub Copilot CLI:</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliMemoInstallNow">
+      <source xml:lang="en">Add copilot to PATH and install now (about %1 MB download)</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliMemoInstallNowNoSize">
+      <source xml:lang="en">Add copilot to PATH and install now</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliPageCaption">
+      <source xml:lang="en">GitHub Copilot CLI</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliPageDescription">
+      <source xml:lang="en">Use GitHub Copilot from any terminal with the copilot command.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliPrompt">
+      <source xml:lang="en">GitHub Copilot CLI isn't installed on this computer. How would you like to set up the copilot command?</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliPromptAllUsers">
+      <source xml:lang="en">How would you like to set up the copilot command for users of this computer?</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliPromptBasic">
+      <source xml:lang="en">How would you like to set up the copilot command?</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliPwshRecommended">
+      <source xml:lang="en">It works with Windows PowerShell, and PowerShell 7 or later is recommended.</source>
+    </trans-unit>
+    <trans-unit id="CopilotCliVerifyingPhase">
+      <source xml:lang="en">Verifying...</source>
+    </trans-unit>
     <trans-unit id="CreateDesktopIcon">
       <source xml:lang="en">Create a &amp;desktop icon</source>
     </trans-unit>

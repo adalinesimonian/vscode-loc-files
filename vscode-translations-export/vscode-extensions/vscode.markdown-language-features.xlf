@@ -112,12 +112,6 @@
     <trans-unit id="++CODE++88ad7b25bc7024185aeb3f5b4d74d2de6c3c393c8f165dce416196aa75bdcff4">
       <source xml:lang="en">Header does not exist in file: {0}</source>
     </trans-unit>
-    <trans-unit id="++CODE++fb5958bd28957d9fc0f5252c49b0272f3809156062e175eec00dc54b87ed8a2d">
-      <source xml:lang="en">Image paste is disabled by editor.pasteAs.enabled.</source>
-    </trans-unit>
-    <trans-unit id="++CODE++235d315f6c255f90f578e4a31843c093f9286443e0119227ae57fd2edf5ad30c">
-      <source xml:lang="en">Image paste requires markdown.editor.paste.copyIntoWorkspace to be mediaFiles.</source>
-    </trans-unit>
     <trans-unit id="++CODE++1a8c938f20cae54358e672a29e5d8ef41186e90ea8243842fbc5fe4f3e32c97d">
       <source xml:lang="en">Insert Markdown Audio</source>
     </trans-unit>
@@ -154,11 +148,11 @@
     <trans-unit id="++CODE++421eaa9e095dc28ce033298d5e18930edc92e272e315193668309d22513b8ae6">
       <source xml:lang="en">Insert link</source>
     </trans-unit>
-    <trans-unit id="++CODE++7483b3b5fc8c5993f856472117dd39d17473bfcf9a6007cf819cd62ade00926a">
-      <source xml:lang="en">Invalid clipboard image.</source>
+    <trans-unit id="++CODE++ae53c1f1d86bf04513eec101b43b03585e90fc260723ce59e1ce94cbe9cfcd85">
+      <source xml:lang="en">Invalid clipboard media.</source>
     </trans-unit>
-    <trans-unit id="++CODE++0b7d0ae2171f54f63dc5117e15e91079cdde854d10ad2a51bd164ba7fd065c94">
-      <source xml:lang="en">Invalid image paste range or empty clipboard image list.</source>
+    <trans-unit id="++CODE++b63208809186fc955ee816ef179d3ab9dfa468d28f41dabf5431f7fa4a8f3653">
+      <source xml:lang="en">Invalid media paste range or empty clipboard media list.</source>
     </trans-unit>
     <trans-unit id="++CODE++9de33fc6486581d6c14b270e682a82a8948d8ab049dddbcecc3445681231d4fc">
       <source xml:lang="en">Link definition for &apos;{0}&apos; already exists</source>
@@ -187,17 +181,23 @@
     <trans-unit id="++CODE++997ca95a484dc4ff449238f0f85348de5975ced6e575aa2c1bf37563793f7ebc">
       <source xml:lang="en">Markdown Language Server</source>
     </trans-unit>
-    <trans-unit id="++CODE++2462e0189cf5c033f41003995ce5795c4c67dabe0fcaf7b1dafcf475760d07f3">
-      <source xml:lang="en">Markdown image paste is disabled by markdown.editor.paste.enabled.</source>
-    </trans-unit>
     <trans-unit id="++CODE++f8f2732f4a508aa2ca0df1d5fa68855514e2efefd7c4535eff9a24485c307171">
       <source xml:lang="en">Markdown link validation disabled</source>
     </trans-unit>
     <trans-unit id="++CODE++73dc6e5c870d29213b604f3fa1fbb197ab33d066a925d35722803b6299e19491">
       <source xml:lang="en">Markdown link validation enabled</source>
     </trans-unit>
+    <trans-unit id="++CODE++5f82c8c7a19135d237dba7465883f95b897d7ea6b12f932e66068aa1fa0db496">
+      <source xml:lang="en">Markdown media paste is disabled by markdown.editor.paste.enabled.</source>
+    </trans-unit>
     <trans-unit id="++CODE++d357175cfe8978d39b0f86552dcd9404973493e2816101d9ff6c05ee248ef6bd">
       <source xml:lang="en">Media</source>
+    </trans-unit>
+    <trans-unit id="++CODE++b94b4e05c7f8790f378c1d6d9bd3d3960ef85d1fc6568c73479fbf2ca02f03b6">
+      <source xml:lang="en">Media paste is disabled by editor.pasteAs.enabled.</source>
+    </trans-unit>
+    <trans-unit id="++CODE++6cb4be9bdbf2135de0ce850739f2b7eee97626ca1760b02667aa662e917cb4c6">
+      <source xml:lang="en">Media paste requires markdown.editor.paste.copyIntoWorkspace to be mediaFiles.</source>
     </trans-unit>
     <trans-unit id="++CODE++db544175508b84f83a649639af65ff9746d5de83269f817ebb589ebcc147f0ba">
       <source xml:lang="en">More Information</source>
@@ -259,8 +259,8 @@
     <trans-unit id="++CODE++c44b47d48a32d90d92536fad38a0c412729873d0b3c57a8d51cbe62c18f6198a">
       <source xml:lang="en">Request suggestions again before accepting a completion.</source>
     </trans-unit>
-    <trans-unit id="++CODE++0034534277ac6ed2f207878cc8c6be25463753baa9c46d8c3a48c949795c926b">
-      <source xml:lang="en">Save the Markdown document before pasting an image.</source>
+    <trans-unit id="++CODE++b897d1d6ae60f7408b49b7e0f2dfb25e475435925bedf20c91af2528ad52f72c">
+      <source xml:lang="en">Save the Markdown document before pasting media.</source>
     </trans-unit>
     <trans-unit id="++CODE++42827543c5312d91c4c10bb931e58a4717517eeb21e3ec1e9f9376037e3cf98c">
       <source xml:lang="en">Select security settings for Markdown previews in this workspace</source>
@@ -301,8 +301,8 @@
     <trans-unit id="++CODE++4f98becbead476c6964e0da713b597120ada8896eeee27389f951d244eadbad9">
       <source xml:lang="en">The document changed. Start rename again.</source>
     </trans-unit>
-    <trans-unit id="++CODE++e3640c319fe6e91b8bcfd21ce34b85d0d5ac31bded04b2e194fca0a7b6075f40">
-      <source xml:lang="en">The editor changed. Paste the image again.</source>
+    <trans-unit id="++CODE++df185200c73722657d828f8f76150524bf2d11892ee823668d29b9eb50db7f89">
+      <source xml:lang="en">The editor changed. Paste the media again.</source>
     </trans-unit>
     <trans-unit id="++CODE++79a9dc47f7a0c6313aafcdfa393da74c60356c8508a9f10cc8d06067f264b818">
       <source xml:lang="en">The rename provider returned no changes.</source>
@@ -310,8 +310,8 @@
     <trans-unit id="++CODE++8ab2aa3335d48b9f23cf5c4bd3d5e1168e03e792a6f1e08ab1633c9079779d1d">
       <source xml:lang="en">The workspace rejected the completion.</source>
     </trans-unit>
-    <trans-unit id="++CODE++6f49f928a2436c373de012a7a156801a4ecdfac88fb6e5fd326a4b2fe02ac745">
-      <source xml:lang="en">The workspace rejected the image paste.</source>
+    <trans-unit id="++CODE++0c8cc5583650a1426a156ff1685293b8c86af0bdf770b05b006c40ca7a97bcea">
+      <source xml:lang="en">The workspace rejected the media paste.</source>
     </trans-unit>
     <trans-unit id="++CODE++cca18dd5bd3916dd0e21c0d2b9792843533ee7bfa198acd6dc5d8f137b24818b">
       <source xml:lang="en">The workspace rejected the rename.</source>
