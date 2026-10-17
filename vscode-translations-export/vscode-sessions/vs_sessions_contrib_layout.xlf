@@ -26,8 +26,11 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/layout/browser/sessions.layout.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sessions.showSessionToolbar">
-      <source xml:lang="en">Controls whether the Session Toolbar, which opens the Changes, Files, Browser, and Canvas tabs, is shown at the right edge of the active chat in the Agents window.</source>
+    <trans-unit id="sessions.sessionActivityBar.showLayoutActions">
+      <source xml:lang="en">Controls whether the Session Activity Bar shows the Toggle Side Panel and Toggle Panel actions in place of their title bar buttons. Only applies when {0} is enabled.</source>
+    </trans-unit>
+    <trans-unit id="sessions.showSessionActivityBar">
+      <source xml:lang="en">Controls whether the Session Activity Bar is shown at the right edge of the active chat in the Agents window. It opens the Changes, Files, Browser, and Canvas tabs.</source>
     </trans-unit>
     <trans-unit id="sessionsConfigurationTitle">
       <source xml:lang="en">Sessions</source>

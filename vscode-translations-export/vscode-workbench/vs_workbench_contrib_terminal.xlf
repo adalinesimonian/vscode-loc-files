@@ -1507,6 +1507,29 @@ This setting applies only when terminals are created, so you will need to restar
       <source xml:lang="en">Toggle Size to Content Width</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/terminal/electron-browser/terminalInstallActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotInstallTerminal">
+      <source xml:lang="en">Install GitHub Copilot CLI</source>
+    </trans-unit>
+    <trans-unit id="copilotShimMissing">
+      <source xml:lang="en">GitHub Copilot CLI installation could not be started because the shipped installer was not found.</source>
+    </trans-unit>
+    <trans-unit id="copilotShimStartFailed">
+      <source xml:lang="en">GitHub Copilot CLI installation could not be started: {0}</source>
+    </trans-unit>
+    <trans-unit id="installCopilotPrompt">
+      <source xml:lang="en">Would you also like to install GitHub Copilot CLI?</source>
+    </trans-unit>
+    <trans-unit id="installWithCopilot">
+      <source xml:lang="en">Install '{0}' and optionally 'copilot' commands in PATH</source>
+    </trans-unit>
+    <trans-unit id="no">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="yes">
+      <source xml:lang="en">Yes</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/terminal/electron-browser/terminalRemote" source-language="en" datatype="plaintext"><body>
     <trans-unit id="workbench.action.terminal.newLocal">
       <source xml:lang="en">Create New Integrated Terminal (Local)</source>

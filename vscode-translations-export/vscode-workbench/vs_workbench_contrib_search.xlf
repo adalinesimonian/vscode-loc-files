@@ -19,8 +19,23 @@
     <trans-unit id="helpPickAriaLabel">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
+    <trans-unit id="invalidQuickOpenLink">
+      <source xml:lang="en">Invalid Link</source>
+    </trans-unit>
+    <trans-unit id="invalidQuickOpenLinkDescription">
+      <source xml:lang="en">Enter a valid link to open it from Quick Open.</source>
+    </trans-unit>
     <trans-unit id="noAnythingResults">
       <source xml:lang="en">No matching results</source>
+    </trans-unit>
+    <trans-unit id="openLinkToSide">
+      <source xml:lang="en">Open to the Side</source>
+    </trans-unit>
+    <trans-unit id="openQuickOpenLink">
+      <source xml:lang="en">Open Link</source>
+    </trans-unit>
+    <trans-unit id="openQuickOpenLinkHint">
+      <source xml:lang="en">Hold Alt while accepting to open to the side.</source>
     </trans-unit>
     <trans-unit id="openToBottom">
       <source xml:lang="en">Open to the Bottom</source>
@@ -29,6 +44,9 @@
     <trans-unit id="openToSide">
       <source xml:lang="en">Open to the Side</source>
       <note>Open this file in a split editor on the left/right side</note>
+    </trans-unit>
+    <trans-unit id="quickOpenLinkNotOpened">
+      <source xml:lang="en">The link could not be opened. It may be unsupported or opening it was canceled.</source>
     </trans-unit>
     <trans-unit id="recentlyOpenedSeparator">
       <source xml:lang="en">recently opened</source>
@@ -679,7 +697,7 @@
       <source xml:lang="en">Go to File</source>
     </trans-unit>
     <trans-unit id="anythingQuickAccessPlaceholder">
-      <source xml:lang="en">Search files by name (append {0} to go to line or {1} to go to symbol)</source>
+      <source xml:lang="en">Search files by name (append {0} to go to line or {1} to go to symbol), or paste a link</source>
     </trans-unit>
     <trans-unit id="symbolsQuickAccess">
       <source xml:lang="en">Go to Symbol in Workspace</source>

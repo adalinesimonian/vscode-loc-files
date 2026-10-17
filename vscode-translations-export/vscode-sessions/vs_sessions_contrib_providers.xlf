@@ -512,6 +512,9 @@
     <trans-unit id="chatNotFound">
       <source xml:lang="en">The chat could not be found.</source>
     </trans-unit>
+    <trans-unit id="closeCanvasUnavailable">
+      <source xml:lang="en">Closing canvases is unavailable for this session.</source>
+    </trans-unit>
     <trans-unit id="copilotCLI">
       <source xml:lang="en">Copilot</source>
     </trans-unit>
@@ -526,6 +529,12 @@
     </trans-unit>
     <trans-unit id="importSessionUnavailable">
       <source xml:lang="en">Importing is unavailable for this session.</source>
+    </trans-unit>
+    <trans-unit id="moveSessionAnchorNotFound">
+      <source xml:lang="en">The chat to place the session after could not be found.</source>
+    </trans-unit>
+    <trans-unit id="moveSessionUnavailable">
+      <source xml:lang="en">This session can't be moved.</source>
     </trans-unit>
     <trans-unit id="new chat">
       <source xml:lang="en">New Chat</source>
@@ -712,6 +721,9 @@
     <trans-unit id="cloudAutomations.unavailable">
       <source xml:lang="en">Sign in to GitHub.com and enable cloud automations before continuing.</source>
     </trans-unit>
+    <trans-unit id="cloudAutomations.unavailableMessage">
+      <source xml:lang="en">GitHub Cloud automations are unavailable.</source>
+    </trans-unit>
     <trans-unit id="cloudAutomations.unsupportedConfiguration">
       <source xml:lang="en">This session configuration is not supported by cloud automations.</source>
     </trans-unit>
@@ -828,14 +840,8 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/githubCloudAutomationStore" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="cloudAutomations.catalogueLimit">
-      <source xml:lang="en">This repository has more cloud automations than can be loaded. Its catalogue is incomplete.</source>
-    </trans-unit>
     <trans-unit id="cloudAutomations.checkingRepository">
       <source xml:lang="en">Checking repository access...</source>
-    </trans-unit>
-    <trans-unit id="cloudAutomations.dotcomRequired">
-      <source xml:lang="en">Cloud automations require a GitHub.com account.</source>
     </trans-unit>
     <trans-unit id="cloudAutomations.invalidRepositories">
       <source xml:lang="en">Invalid stored cloud automation repositories.</source>

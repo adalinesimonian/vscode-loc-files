@@ -865,6 +865,15 @@ Reason for leaving the sandbox: {2}</source>
     <trans-unit id="agentSandbox.macFileSystemSetting.denyWrite">
       <source xml:lang="en">Array of paths to deny write access within allowed paths (takes precedence over allowWrite).</source>
     </trans-unit>
+    <trans-unit id="agentSandbox.maskedEnvironmentVariables">
+      <source xml:lang="en">Choose environment variables and the HTTPS hosts allowed to receive their real values.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.maskedEnvironmentVariables.envVars">
+      <source xml:lang="en">Map environment variable names to the hosts where their values may be injected. Specify environment variable names, not secret values.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.maskedEnvironmentVariables.envVars.injectHosts">
+      <source xml:lang="en">Hosts where the credential may be injected.</source>
+    </trans-unit>
     <trans-unit id="agentSandbox.mcpServers">
       <source xml:lang="en">Controls whether MCP servers run in the sandbox when sandboxing is enabled.</source>
     </trans-unit>

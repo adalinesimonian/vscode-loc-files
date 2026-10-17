@@ -40,8 +40,8 @@
     <trans-unit id="automation.customizations.summaryOutdated">
       <source xml:lang="en">{0} of {1} customizations · {2} outdated</source>
     </trans-unit>
-    <trans-unit id="automation.dialog.editDescription">
-      <source xml:lang="en">Update the schedule, prompt, or run target for this automation.</source>
+    <trans-unit id="automation.form.addRepository">
+      <source xml:lang="en">Add repository</source>
     </trans-unit>
     <trans-unit id="automation.form.branch.capabilityLoadingReason">
       <source xml:lang="en">Session capabilities are loading.</source>
@@ -94,8 +94,14 @@
     <trans-unit id="automation.form.branchRequired">
       <source xml:lang="en">A branch is required for Worktree isolation.</source>
     </trans-unit>
+    <trans-unit id="automation.form.checkingRepository">
+      <source xml:lang="en">Checking repository access...</source>
+    </trans-unit>
     <trans-unit id="automation.form.checkingTarget">
       <source xml:lang="en">Checking target availability...</source>
+    </trans-unit>
+    <trans-unit id="automation.form.cloudDisabled">
+      <source xml:lang="en">Cloud automations are disabled. To create this automation, enable the {0} setting or turn off Run in the cloud.</source>
     </trans-unit>
     <trans-unit id="automation.form.cloudScheduleMinute">
       <source xml:lang="en">Choose a time that corresponds to minute 00, 15, 30, or 45 in UTC.</source>
@@ -103,14 +109,29 @@
     <trans-unit id="automation.form.cloudUnavailable">
       <source xml:lang="en">Cloud automations are unavailable.</source>
     </trans-unit>
+    <trans-unit id="automation.form.cloudUnavailableEdit">
+      <source xml:lang="en">Cloud automations are unavailable. Try again in a few moments.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.cloudUnavailableRetry">
+      <source xml:lang="en">Cloud automations are unavailable. Try again in a few moments, or turn off Run in the cloud.</source>
+    </trans-unit>
     <trans-unit id="automation.form.cloudWeekdays">
       <source xml:lang="en">Weekdays is only available for local automations. Choose a supported schedule for Cloud.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.connectingCloud">
+      <source xml:lang="en">Connecting to cloud automations...</source>
     </trans-unit>
     <trans-unit id="automation.form.day">
       <source xml:lang="en">Day of week</source>
     </trans-unit>
+    <trans-unit id="automation.form.disabledRepositoryAriaLabel">
+      <source xml:lang="en">{0}, unavailable. {1}</source>
+    </trans-unit>
     <trans-unit id="automation.form.folderRequired">
       <source xml:lang="en">Workspace folder is required.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.githubRepositoryRequired">
+      <source xml:lang="en">Cloud automations require a private repository on GitHub.com.</source>
     </trans-unit>
     <trans-unit id="automation.form.harnessChip.action">
       <source xml:lang="en">Automations Harness Chip</source>
@@ -145,6 +166,9 @@
     <trans-unit id="automation.form.nameRequired">
       <source xml:lang="en">Name is required.</source>
     </trans-unit>
+    <trans-unit id="automation.form.noGitRepositories">
+      <source xml:lang="en">No known Git repositories</source>
+    </trans-unit>
     <trans-unit id="automation.form.noWorkspace.description">
       <source xml:lang="en">Run without a backing workspace</source>
     </trans-unit>
@@ -157,14 +181,35 @@
     <trans-unit id="automation.form.promptRequired">
       <source xml:lang="en">Prompt is required.</source>
     </trans-unit>
+    <trans-unit id="automation.form.publicRepository">
+      <source xml:lang="en">Cloud automations require a private GitHub repository. This repository is public.</source>
+    </trans-unit>
     <trans-unit id="automation.form.quickChatUnavailable">
       <source xml:lang="en">The selected Agent Host and session type cannot run without a workspace. Choose a workspace or another session type.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.repositoryAriaLabel">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="automation.form.repositoryReasonDetails">
+      <source xml:lang="en">{0} — {1}</source>
+    </trans-unit>
+    <trans-unit id="automation.form.runInCloud">
+      <source xml:lang="en">Run in the cloud</source>
+    </trans-unit>
+    <trans-unit id="automation.form.runInCloudDescription">
+      <source xml:lang="en">Run even when your computer is off, triggered by events or on a schedule.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.runInCloudUnavailable">
+      <source xml:lang="en">Unable to load cloud automations. Please try again in a few moments.</source>
     </trans-unit>
     <trans-unit id="automation.form.saving">
       <source xml:lang="en">Saving automation…</source>
     </trans-unit>
     <trans-unit id="automation.form.scheduleRequired">
       <source xml:lang="en">Choose a supported schedule.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.selectRepository">
+      <source xml:lang="en">Select a repository</source>
     </trans-unit>
     <trans-unit id="automation.form.selectWorkspace">
       <source xml:lang="en">Select workspace</source>
@@ -205,9 +250,6 @@
     <trans-unit id="automation.form.trustFolderMessage">
       <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
     </trans-unit>
-    <trans-unit id="automation.form.workInGitHub">
-      <source xml:lang="en">Work in GitHub</source>
-    </trans-unit>
     <trans-unit id="automation.form.workspacePicker.action">
       <source xml:lang="en">Automations Workspace Picker</source>
     </trans-unit>
@@ -217,11 +259,17 @@
     <trans-unit id="automation.form.workspacePicker.pickAriaLabel">
       <source xml:lang="en">Pick a workspace for this automation</source>
     </trans-unit>
+    <trans-unit id="automation.form.workspacePicker.pickRepositoryAriaLabel">
+      <source xml:lang="en">Pick a repository for this automation</source>
+    </trans-unit>
     <trans-unit id="automation.form.workspacePicker.selectedAriaLabel">
       <source xml:lang="en">Automation target, {0}</source>
     </trans-unit>
     <trans-unit id="automation.form.workspaceTargetUnavailable">
       <source xml:lang="en">The selected Agent Host and session type cannot use this workspace. Choose another workspace or session type.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.workspaceUnavailable">
+      <source xml:lang="en">The workspace provider is unavailable.</source>
     </trans-unit>
     <trans-unit id="automation.interval.choose">
       <source xml:lang="en">Choose a schedule</source>
@@ -470,9 +518,6 @@
     </trans-unit>
     <trans-unit id="chat.automations.enabled">
       <source xml:lang="en">Enables the Automations feature: scheduling agent sessions to run on a cadence. When disabled, the Automations entry in the Customizations sidebar, the Automations section in the Customizations editor, and the Automation option in the new-session composer are hidden, and scheduled automations are not dispatched.</source>
-    </trans-unit>
-    <trans-unit id="chat.automations.runTimeoutMinutes">
-      <source xml:lang="en">Maximum number of minutes an automation run is allowed to take before it is ended. Prevents a single hung run from permanently blocking subsequent runs.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/providerAutomationService" source-language="en" datatype="plaintext"><body>

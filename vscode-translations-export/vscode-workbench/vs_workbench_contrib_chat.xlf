@@ -197,7 +197,7 @@
       <source xml:lang="en">The editor window uses the same compact Artifacts pill as the Agents Window, rather than an expanded list above the input. Generated images appear automatically. In a subagent chat, the Artifacts pill shows that chat's transcript artifacts without the parent session's metadata. A single file pill opens directly; multiple artifacts open a dropdown with a Generated Images section. Use the pill's hover or context menu, or a dropdown row's actions, to save an artifact or copy its path.</source>
     </trans-unit>
     <trans-unit id="chat.editorCanvasesPill">
-      <source xml:lang="en">In local Copilot agent-host sessions with chat.canvases.enabled turned on, a Canvas submenu appears in the final section of the New Chat menu, and the chat's open canvases appear in their own pill in the main window. Open the Canvas submenu to choose a registered or closed canvas by name. Use Up and Down Arrow, Right Arrow, and Enter to navigate the menus and open or refocus a canvas. A single canvas in the pill shows its title and opens directly; multiple canvases show a count and open a picker. Activating a canvas focuses its tab beside the chat, or reopens it if it was closed.</source>
+      <source xml:lang="en">In local Copilot agent-host sessions with chat.canvases.enabled turned on, a Canvas submenu appears in the final section of the New Chat menu, and the chat's open canvases appear in their own pill in the main window. Open the Canvas submenu to choose a registered or closed canvas by name. Use Up and Down Arrow, Right Arrow, and Enter to navigate the menus and open or refocus a canvas. A single canvas in the pill shows its title and opens directly; multiple canvases show a count and open a picker. Activating a canvas focuses its tab beside the chat, or reopens it if it was closed. To close a canvas rather than only its tab, use Close Canvas: the X on the pill of a single canvas or on a picker row, or the pill's context menu. Closing ends the canvas and notifies the extension that provides it.</source>
     </trans-unit>
     <trans-unit id="chat.editorCopySessionLink">
       <source xml:lang="en">For an Agent Host chat editor, open the editor tab context menu and choose Copy Link to copy a session URL that renders as a session link in Markdown. Selecting multiple chat tabs copies one link per line.</source>
@@ -224,7 +224,7 @@
       <source xml:lang="en">When a chat question appears, toggle focus between the question and the chat input{0}.</source>
     </trans-unit>
     <trans-unit id="chat.generatedImageBatch">
-      <source xml:lang="en">Multiple image-generation calls in a response share one batch preview. Select any thumbnail, including one still generating, to show its image or progress and its tool dropdown above the preview. Use Tab to focus the selected thumbnail, then Left or Right Arrow, Home, or End to select another image or its progress. Expand the selected tool dropdown to inspect its prompt and output, including timing and size. The selected thumbnail has a highlighted border. The thumbnail row follows the selected preview's size. Generating images show only the compact glyph band, while cancelled or failed images show their status in the tool dropdown without an empty preview. The Image batch status below the thumbnails shows how many images are ready out of the total, along with any that need attention, failed, or were cancelled. Later results arrive without changing your selection, and only the selected preview animates. Focus the main image and press Enter to open the carousel. Approval and authentication requests remain visible even when another image is selected.</source>
+      <source xml:lang="en">Each consecutive batch of image-generation calls has its own preview in conversation order. Select any thumbnail, including one still generating, to show its image or progress and its tool dropdown above the preview. Use Tab to focus the selected thumbnail, then Left or Right Arrow, Home, or End to select another image or its progress. Expand the selected tool dropdown to inspect its prompt and output, including timing and size. The selected thumbnail has a highlighted border. The thumbnail row follows the selected preview's size. Generating images show only the compact glyph band, while cancelled or failed images show their status in the tool dropdown without an empty preview. The Image batch status below the thumbnails shows how many images are ready out of the total, along with any that need attention, failed, or were cancelled. Later results arrive without changing your selection, and only the selected preview animates. Focus the main image and press Enter to open the carousel. Approval and authentication requests remain visible even when another image is selected.</source>
     </trans-unit>
     <trans-unit id="chat.generatedImageCancellation">
       <source xml:lang="en">Stopping image generation shows Image generation cancelled, not a generation error. Cancelled image tools keep their cancelled status when you reopen the chat.</source>
@@ -271,6 +271,9 @@
     <trans-unit id="chat.localModel.rows">
       <source xml:lang="en">On-device models: when this device has an NVIDIA GPU that can run one, the model picker lists it in its On This Device tab, right after the Copilot tab, in Copilot chats that run on the local agent host. From the model list, use Left and Right Arrow to switch tabs and Up and Down Arrow to focus a model's row. Each model has a single row, like a cloud model's: its name, an Active badge while it is loaded or loading, and the effort level and context size, such as Medium and 128K. A screen reader also reads the model's state while it isn't ready, such as Downloading 42% or Not loaded; the detail page and the notice above the chat input show it too. Tab reaches the row's only button, labelled with the model's effort level and context size, or, for a model that isn't downloaded, Download (Set Up for model files already on this device), the download's progress, such as 42%, or Paused; it opens the model's detail page; Right Arrow on the row opens it too. Actions such as Retry, Pause, Resume, Download and Set Up are on the detail page, and those for a running, paused or failed step also in the notice above the chat input. Pause stops a download or update so it can be resumed later; Cancel takes back a model change, keeping the loaded model while the change waits for running responses, or stops loading a model, and Stop Now ends the responses a model change is waiting for. Once chosen, these read Pausing, Cancelling or Stopping and can't be chosen again until the model's state changes. A model that isn't downloaded can't be selected: a screen reader reads Not downloaded with its row, and Enter opens its detail page, which has its license, size and Download button. Enter on an installed model selects it and starts loading it right away, without asking. Only one on-device model is loaded at a time: selecting another one unloads the loaded one once its running responses finish, and the notice above the chat input shows how many responses it is waiting for, then the load, with Cancel.</source>
     </trans-unit>
+    <trans-unit id="chat.managedSettingsRetry">
+      <source xml:lang="en">If loading your organization's managed settings fails, your request remains in the conversation. Use Tab to focus Retry below the error, then press Enter or Space to resend that request. While settings are loading, Stop cancels the pending request.</source>
+    </trans-unit>
     <trans-unit id="chat.mcpStartupSkip">
       <source xml:lang="en">When a chat turn is waiting for MCP servers to start, a Skip link may appear. Use Tab to focus Skip and press Enter or Space to continue the turn while those servers start in the background. The current startup message disappears immediately and focus returns to the chat input. New server startups may show another message.</source>
     </trans-unit>
@@ -283,8 +286,8 @@
     <trans-unit id="chat.modelPicker.detailsPage">
       <source xml:lang="en">In the model picker, effort level and context appear as a configuration button on the hovered, selected, or keyboard-focused model. Use Up and Down Arrow to focus a model and Enter to select it. To open its information and configuration page without selecting it, press Right Arrow, or use Tab to reach its configuration button and press Enter or Space. The button shows Details when no readout is available. Models without configurable settings still open their information page. The effort level and context readout beside the model name in the chat input opens the same page for the current model. Opening the page focuses its configuration controls when available. Known values are shown even at their defaults. The Back to Models arrow is beside the model name; navigation and model actions stay at the top while details scroll. Back to Models, or {0}, returns to the previous provider, search, and model list with focus on that model. Escape closes the picker from any page and restores focus.</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.ensemble">
-      <source xml:lang="en">When Auto is presented as Ensemble, its details hold an "Effort Level" setting instead: Balance and High, followed by Max when HydraFusion is available. Max uses HydraFusion Max, and High can use HydraFusion; choosing either keeps Ensemble checked with that effort level.</source>
+    <trans-unit id="chat.modelPicker.fusion">
+      <source xml:lang="en">When Auto is presented as Fusion, its details hold an "Effort Level" setting instead: Standard and High, followed by Max when HydraFusion is available. Max uses HydraFusion Max, and High can use HydraFusion; choosing either keeps Fusion checked with that effort level.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.hydraFusion">
       <source xml:lang="en">HydraFusion, a research preview, is listed after Auto as a model of its own. When HydraFusion Max is available, HydraFusion's details offer two tiers, Default and Max, along with a Learn more link. Choosing one selects it and keeps HydraFusion's details open. HydraFusion stays in the model list with that tier as its readout, and the readout beside HydraFusion in the chat input opens the same details.</source>
@@ -365,7 +368,7 @@
       <source xml:lang="en">If you have bring your own key (BYOK) models configured and select Copilot on a connected remote host, the first eligible chat input in this editor window shows a warning that these models are not supported. The warning does not repeat in other chats in the same window. Use Tab to reach Dismiss notification or Don't Show Again, then Enter or Space to activate it. Dismiss notification hides the warning until the window reloads. Don't Show Again permanently hides this warning for your profile, including when new models are added.</source>
     </trans-unit>
     <trans-unit id="chat.remoteConnections.help">
-      <source xml:lang="en">On desktop, Allow Remote Connections is available in the local Agent Host chat toolbar or the Agents window title bar. Use Tab to reach the toolbar, arrow keys to reach the toggle, and Enter or Space to enable or disable sharing. The chat.agentHost.remoteConnections setting selects Dev Tunnel or GitHub environment. Selecting a backend does not enable sharing; changing it turns sharing off. With GitHub environment selected, enabling the toggle registers your local environment for remote owner access. Local sessions continue using local IPC.</source>
+      <source xml:lang="en">On desktop, Allow Remote Connections is available in the local Agent Host chat toolbar or the Agents window title bar. Use Tab to reach the toggle in chat, or arrow keys in the title bar, and Enter or Space to enable or disable sharing. The preview setting chat.agentHost.remoteConnections selects the connection method. In VS Code Insiders and Code - OSS, the adjacent Select Remote Connection Method dropdown chooses Dev Tunnels or GitHub Environments and updates that setting. Use Tab to reach the dropdown in chat or the right arrow key from the title bar toggle, Enter or Space to open it, Up and Down Arrow to choose a method, Enter to select, and Escape to close. Selecting a method does not enable sharing; changing it turns sharing off. With GitHub environment selected, enabling the toggle registers your local environment for remote owner access. Local sessions continue using local IPC.</source>
     </trans-unit>
     <trans-unit id="chat.renameSession">
       <source xml:lang="en">To rename the current chat session when supported, invoke the Rename command{0}. Agent Host sessions can be renamed after sending the first request.</source>
@@ -399,6 +402,9 @@
     </trans-unit>
     <trans-unit id="chat.sessionStatusPillsCompact">
       <source xml:lang="en">When space is limited, session status pills collapse to icons one at a time from right to left. Their full labels remain available to screen readers and in tooltips. Labels return as space becomes available. If the icons still do not fit, the row scrolls horizontally; use the arrow keys to reach every pill.</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionWorkingSet">
+      <source xml:lang="en">The working set above the input lists changes across the whole session instead of showing a Changes pill. Use Tab or Shift+Tab to reach its heading and press Enter or Space to expand or collapse it. Use Tab to reach the file list, Up and Down Arrow to choose a file, and Enter to open its diff. Each file announces its path and added and removed line counts.</source>
     </trans-unit>
     <trans-unit id="chat.showHiddenTerminals">
       <source xml:lang="en">If there are any hidden chat terminals, you can view them by invoking the View Hidden Chat Terminals command{0}.</source>
@@ -2241,6 +2247,11 @@ User: {2}</source>
       <source xml:lang="en">Retry</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostChatMoveEditors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.chatMoved">
+      <source xml:lang="en">Chat moved to another session</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostCustomizationMarketplaceInstallProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.customizationInstall.applyUnavailable">
       <source xml:lang="en">The selected agent cannot apply this SDK installation.</source>
@@ -2759,6 +2770,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSandboxNotification" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.allowLocalNetworkAccess">
+      <source xml:lang="en">Allow</source>
+    </trans-unit>
     <trans-unit id="agentHost.disableSandboxing">
       <source xml:lang="en">Disable Sandboxing</source>
     </trans-unit>
@@ -2767,6 +2781,12 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHost.sandboxDisableUnavailable">
       <source xml:lang="en">Sandboxing cannot be disabled in settings for this session. It may be required by your organization.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxLocalNetworkManaged">
+      <source xml:lang="en">Your organization disables local network access, which some sandboxing features need. {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxLocalNetworkRequired">
+      <source xml:lang="en">Sandboxing requires access to local network. {0}</source>
     </trans-unit>
     <trans-unit id="agentHost.sandboxMayNotWorkAsExpected">
       <source xml:lang="en">Sandboxing might not work as expected</source>
@@ -2876,12 +2896,12 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="agentHost.elicit.url.title">
       <source xml:lang="en">Authorization Required</source>
     </trans-unit>
-    <trans-unit id="agentHost.ensembleTierResponseModel">
-      <source xml:lang="en">{0} {1}</source>
-      <note>{0} is the routing model, e.g. Ensemble, and {1} its tier, e.g. Max</note>
-    </trans-unit>
     <trans-unit id="agentHost.forkedSessionLabel">
       <source xml:lang="en">Forked Session</source>
+    </trans-unit>
+    <trans-unit id="agentHost.fusionTierResponseModel">
+      <source xml:lang="en">{0} {1}</source>
+      <note>{0} is the routing model, e.g. Fusion, and {1} its tier, e.g. Max</note>
     </trans-unit>
     <trans-unit id="agentHost.mcpToolAuthentication.cancelled">
       <source xml:lang="en">Cancelled tool call</source>
@@ -2912,6 +2932,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHost.resumeTurnUnavailable">
       <source xml:lang="en">This failed request can no longer be resumed.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.retryPolicyResolution">
+      <source xml:lang="en">Retry</source>
     </trans-unit>
     <trans-unit id="agentHost.sandboxGrant.missing">
       <source xml:lang="en">This permission request does not contain a valid sandbox path grant.</source>
@@ -4435,10 +4458,10 @@ To migrate this server, remove the cwd property.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessionsConfiguration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="autoDeleteMarkedAsDoneMergedSessions.description">
-      <source xml:lang="en">Controls the number of days after being automatically marked as done before agent sessions with a merged pull request are permanently deleted. Retained eligible worktrees are safely removed before deletion. Automatically marking sessions as done is controlled separately by {0}. Set to 0 to disable permanent deletion. The recommended value is 15.</source>
+      <source xml:lang="en">After a session with a merged pull request is automatically marked Done, wait this many additional days, then permanently delete the session. Eligible retained worktrees are safely removed first. Set to 0 to disable permanent deletion.</source>
     </trans-unit>
     <trans-unit id="autoMarkAsDoneMergedSessions.description">
-      <source xml:lang="en">Controls the number of inactive days before agent sessions with a merged pull request are automatically marked as done. Marking a session as done safely removes its eligible worktree. Permanent deletion is controlled separately by {0}. Set to 0 to disable automatically marking sessions as done. The recommended value is 15.</source>
+      <source xml:lang="en">After a session with a merged pull request has been inactive for this many days, mark it as Done. Eligible worktrees are safely removed. Set to 0 to disable automatic marking.</source>
     </trans-unit>
     <trans-unit id="chat.agentsHandoffTip.delayDeprecated">
       <source xml:lang="en">Agents Window invitation delays are now controlled independently for each scenario.</source>
@@ -7098,11 +7121,35 @@ Disabled servers may become enabled.</source>
     <trans-unit id="connectorDetailActionFailed">
       <source xml:lang="en">Unable to update {0}: {1}</source>
     </trans-unit>
+    <trans-unit id="connectorDetailChecking">
+      <source xml:lang="en">Checking...</source>
+    </trans-unit>
+    <trans-unit id="connectorDetailConnecting">
+      <source xml:lang="en">Connecting...</source>
+    </trans-unit>
+    <trans-unit id="connectorDetailConnectingStatus">
+      <source xml:lang="en">Connecting</source>
+    </trans-unit>
+    <trans-unit id="connectorDetailDisconnecting">
+      <source xml:lang="en">Disconnecting...</source>
+    </trans-unit>
+    <trans-unit id="connectorDetailDisconnectingStatus">
+      <source xml:lang="en">Disconnecting</source>
+    </trans-unit>
     <trans-unit id="connectorDetailEmpty">
       <source xml:lang="en">No connector selected.</source>
     </trans-unit>
+    <trans-unit id="connectorDetailReconnecting">
+      <source xml:lang="en">Reconnecting...</source>
+    </trans-unit>
+    <trans-unit id="connectorDetailReconnectingStatus">
+      <source xml:lang="en">Reconnecting</source>
+    </trans-unit>
     <trans-unit id="connectorDetailRefreshFailed">
       <source xml:lang="en">Unable to refresh connector details: {0}</source>
+    </trans-unit>
+    <trans-unit id="connectorDetailRefreshing">
+      <source xml:lang="en">Refreshing...</source>
     </trans-unit>
     <trans-unit id="connectorDetailsTitle">
       <source xml:lang="en">Details</source>
@@ -8772,11 +8819,8 @@ Locations configured here are only observed by the Local agent harness. Other ha
     <trans-unit id="chat.copilot.claudeAdvisor.enabled">
       <source xml:lang="en">When enabled, Copilot Agent Host sessions using a supported Claude model can call the provider-native Advisor tool. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
     </trans-unit>
-    <trans-unit id="chat.copilot.ensemble.enabled">
-      <source xml:lang="en">When enabled, local Copilot Agent Host sessions present Auto as Ensemble, which optimizes for Balance, High, or Max. Max uses HydraFusion Max, so Ensemble uses HydraFusion v2 unless `#{0}#` is off. Changing this setting can restart the local Copilot runtime.</source>
-    </trans-unit>
     <trans-unit id="chat.copilot.ensemble.intelligenceUsesHydraFusion">
-      <source xml:lang="en">When enabled together with `#{0}#`, Ensemble's High tier uses HydraFusion v2. When HydraFusion is unavailable, High routes like Auto's Intelligence.</source>
+      <source xml:lang="en">When enabled together with `#{0}#`, Fusion's High tier uses HydraFusion v2. When HydraFusion is unavailable, Fusion High routes like Auto's Intelligence.</source>
     </trans-unit>
     <trans-unit id="chat.copilot.hydraFusion.enabled">
       <source xml:lang="en">When enabled, makes the experimental HydraFusion model available to local Copilot Agent Host sessions. Changing this setting restarts the local Copilot runtime.</source>
@@ -8785,7 +8829,7 @@ Locations configured here are only observed by the Local agent harness. Other ha
       <source xml:lang="en">Do not make HydraFusion available.</source>
     </trans-unit>
     <trans-unit id="chat.copilot.hydraFusion.enabled.multiRoot">
-      <source xml:lang="en">Make HydraFusion v2 available and ask the service to keep reusing the previous turn's root model when it fits the next turn's workflow, which improves prompt cache reuse. Also applies to Ensemble High and Max.</source>
+      <source xml:lang="en">Make HydraFusion v2 available and ask the service to keep reusing the previous turn's root model when it fits the next turn's workflow, which improves prompt cache reuse. Also applies to Fusion High and Max.</source>
     </trans-unit>
     <trans-unit id="chat.copilot.hydraFusion.enabled.true">
       <source xml:lang="en">Make HydraFusion available.</source>
@@ -8803,10 +8847,10 @@ Locations configured here are only observed by the Local agent harness. Other ha
       <source xml:lang="en">When enabled, Auto can route turns to the active on-device model, with cloud fallback. Takes effect immediately. {0}</source>
     </trans-unit>
     <trans-unit id="chat.copilot.memory.enabled">
-      <source xml:lang="en">When enabled, local Copilot Agent Host sessions can store and recall [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory). Applies to sessions created or resumed after the setting changes.</source>
+      <source xml:lang="en">When enabled, local Copilot Agent Host sessions can store and recall [Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory). Your [Copilot Memory settings on GitHub](https://github.com/settings/copilot/memory) and organization policies still apply. Applies to sessions created or resumed after the setting changes.</source>
     </trans-unit>
     <trans-unit id="chat.copilot.memory.local.enabled">
-      <source xml:lang="en">When enabled together with {0}, local Copilot Agent Host sessions store Copilot Memory in the repository's `.github/copilot-memories.jsonl` file instead of GitHub's cloud memory service. The file is part of the working tree, so commits made by the agent or the Agents window can include it. Requires a GitHub-hosted repository; user-scoped memories and Copilot Memory policies configured on GitHub do not apply. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
+      <source xml:lang="en">When enabled together with {0}, local Copilot Agent Host sessions store Copilot Memory in the repository's `.github/copilot-memories.jsonl` file instead of GitHub's cloud memory service. The file is part of the working tree, so commits made by the agent or the Agents window can include it. Requires a GitHub-hosted repository. **Note:** your Copilot Memory settings and organization policies on GitHub don't apply, and user-scoped memories are unavailable. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
     </trans-unit>
     <trans-unit id="chat.copilot.searchSubagent.enabled">
       <source xml:lang="en">When enabled, local Copilot Agent Host sessions are offered the Copilot runtime's search subagent tool for codebase search. Applies to sessions when they launch or resume.</source>
@@ -8881,7 +8925,7 @@ Locations configured here are only observed by the Local agent harness. Other ha
       <source xml:lang="en">Controls the default configuration for new agent sessions (such as Copilot). You can still change the mode and approval behavior per session, and each session remembers what was used.</source>
     </trans-unit>
     <trans-unit id="chat.defaultModel.description">
-      <source xml:lang="en">The default model for new chat conversations. Use "auto" to let Copilot pick a model, a model family name (such as "opus" or "gemini") to use the latest available model in that family, or a full model id. You can still switch the model within a conversation; each new conversation starts at this model.</source>
+      <source xml:lang="en">The default model for new chat conversations. Use "auto" to let Copilot pick a model, a model family name (such as "opus" or "gemini") to use the latest available model in that family, or a full model id. An organization-managed default takes precedence over your saved preference. You can still switch the model within a conversation; each new conversation starts at the effective default.</source>
     </trans-unit>
     <trans-unit id="chat.defaultModel.policy">
       <source xml:lang="en">Sets the default chat model for new conversations. Accepts "auto", a model family name (such as "opus" or "gemini"), or a full model id. Users can still switch the model within a conversation.</source>
@@ -8915,6 +8959,9 @@ Locations configured here are only observed by the Local agent harness. Other ha
     </trans-unit>
     <trans-unit id="chat.editor.codex.preferAgentHost">
       <source xml:lang="en">When enabled, Codex sessions opened from the regular workbench (sidebar chat) run inside the agent host process using the Codex App Server instead of the OpenAI extension. Only one Codex implementation surfaces per window. Requires `#chat.agentHost.codexAgent.enabled#`.</source>
+    </trans-unit>
+    <trans-unit id="chat.editor.workingSet.enabled">
+      <source xml:lang="en">Show Copilot Agent Host session changes as a working set above the chat input instead of the Changes pill in the editor window. Select a file to open its diff. Hosts without a session changeset keep the Changes pill. Local and other chat harnesses are unaffected.</source>
     </trans-unit>
     <trans-unit id="chat.editorAssociations">
       <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) to editors for opening files from chat (for example `"*.md": "vscode.markdown.preview.editor"`).</source>
@@ -14763,13 +14810,13 @@ Source: {0}</source>
       <source xml:lang="en">Enable connecting to remote agent hosts.</source>
     </trans-unit>
     <trans-unit id="remoteConnections">
-      <source xml:lang="en">Choose the backend used by Allow Remote Connections. Selecting a backend does not enable sharing. Changing the backend turns sharing off.</source>
+      <source xml:lang="en">Choose the connection method used by Allow Remote Connections. In VS Code Insiders and Code - OSS, the dropdown next to the button updates this setting. Selecting a method does not enable sharing. Changing the method turns sharing off.</source>
     </trans-unit>
     <trans-unit id="remoteConnections.devTunnel">
-      <source xml:lang="en">Allow remote connections through a Dev Tunnel.</source>
+      <source xml:lang="en">Allow remote connections through a secure Dev Tunnel from VS Code or a browser.</source>
     </trans-unit>
     <trans-unit id="remoteConnections.githubEnvironment">
-      <source xml:lang="en">Register the native Agent Host as a GitHub environment through Azure Web PubSub. Remote clients receive trusted-owner access to sessions, tools, and workspace resources. Native session actions are mirrored for catalog/history storage; conversation content is not end-to-end encrypted.</source>
+      <source xml:lang="en">Register this machine as a GitHub environment for remote agent access (preview). Remote clients receive trusted-owner access to sessions, tools, and workspace resources. Session actions are mirrored to GitHub for catalog and history storage. Conversation content is not end-to-end encrypted.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/remoteAgentHostChatContribution" source-language="en" datatype="plaintext"><body>
@@ -16075,11 +16122,38 @@ Note: This setting only controls tool approval and does not prevent the agent fr
     <trans-unit id="chat.fileChanges.accessibleSummary">
       <source xml:lang="en">{0}, {1} lines added, {2} lines deleted</source>
     </trans-unit>
+    <trans-unit id="chat.fileChanges.createdFile">
+      <source xml:lang="en">{0}, added, {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.fileChanges.deletedFile">
+      <source xml:lang="en">{0}, deleted, {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.fileChanges.lineCounts">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.fileChanges.linesAdded">
+      <source xml:lang="en">{0} lines added</source>
+    </trans-unit>
+    <trans-unit id="chat.fileChanges.linesRemoved">
+      <source xml:lang="en">{0} lines removed</source>
+    </trans-unit>
+    <trans-unit id="chat.fileChanges.list">
+      <source xml:lang="en">Changed files</source>
+    </trans-unit>
     <trans-unit id="chat.fileChanges.manyFiles">
       <source xml:lang="en">{0} files changed</source>
     </trans-unit>
+    <trans-unit id="chat.fileChanges.modifiedFile">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
     <trans-unit id="chat.fileChanges.oneFile">
       <source xml:lang="en">1 file changed</source>
+    </trans-unit>
+    <trans-unit id="chat.fileChanges.oneLineAdded">
+      <source xml:lang="en">1 line added</source>
+    </trans-unit>
+    <trans-unit id="chat.fileChanges.oneLineRemoved">
+      <source xml:lang="en">1 line removed</source>
     </trans-unit>
     <trans-unit id="chat.viewFileChangesSummary">
       <source xml:lang="en">View All File Changes</source>
@@ -17458,6 +17532,12 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatInputOutputMarkdownProgressPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.imageGeneration.costUnavailable">
+      <source xml:lang="en">Unavailable</source>
+    </trans-unit>
+    <trans-unit id="chat.imageGeneration.credits">
+      <source xml:lang="en">AI credits</source>
+    </trans-unit>
     <trans-unit id="chat.imageGeneration.duration">
       <source xml:lang="en">Duration</source>
     </trans-unit>
@@ -17469,6 +17549,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.imageGeneration.sizeUnavailable">
       <source xml:lang="en">Unavailable</source>
+    </trans-unit>
+    <trans-unit id="chat.imageGeneration.tokenCounts">
+      <source xml:lang="en">{0} input / {1} output</source>
     </trans-unit>
     <trans-unit id="chat.imageGeneration.tokens">
       <source xml:lang="en">Tokens</source>
@@ -18581,6 +18664,20 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">The worktree created for this session will be deleted. You can recreate it by unarchiving the session.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/input/chatSessionWorkingSet" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.sessionWorkingSet.list">
+      <source xml:lang="en">Session changes</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionWorkingSet.manyFiles">
+      <source xml:lang="en">{0} files changed</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionWorkingSet.oneFile">
+      <source xml:lang="en">1 file changed</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionWorkingSet.summary">
+      <source xml:lang="en">Session changes, {0}, {1}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/delegationSessionPickerActionItem" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.learnMoreAgentHandOff">
       <source xml:lang="en">Learn about agent handoff...</source>
@@ -18722,8 +18819,16 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerActionItem" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.modelPicker.comparisonSummaryHover">
+      <source xml:lang="en">{0} • {1}</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.modelsLabel">
       <source xml:lang="en">Models</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.organizationDefaultHover">
+      <source xml:lang="en">{0}
+
+{1}</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.restrictedHover">
       <source xml:lang="en">{0} • Unavailable while in Restricted mode. Trust Workspace to enable models.</source>
@@ -18736,9 +18841,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.modelPicker.setupRequiredHover">
       <source xml:lang="en">{0} • Sign in to GitHub Copilot to choose a model.</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.workflowSummaryHover">
-      <source xml:lang="en">{0} • {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerBadges" source-language="en" datatype="plaintext"><body>
@@ -18762,8 +18864,14 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.effort.header">
       <source xml:lang="en">Effort Level</source>
     </trans-unit>
+    <trans-unit id="chat.modelPicker.addVariant">
+      <source xml:lang="en">Also compare at {0}</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.alternativeDescription">
       <source xml:lang="en">{0}, {1} {2}</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.compareEffort">
+      <source xml:lang="en">Compare at another effort</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.modelActions">
       <source xml:lang="en">Model Actions</source>
@@ -18773,6 +18881,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.modelPicker.pin">
       <source xml:lang="en">Pin Model</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.removeVariant">
+      <source xml:lang="en">Remove the {0} attempt</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.resetToDefault">
       <source xml:lang="en">Reset to Default</source>
@@ -19309,7 +19420,7 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.category.versatile">
       <source xml:lang="en">Versatile</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.ensembleMax">
+    <trans-unit id="chat.modelPicker.fusionMax">
       <source xml:lang="en">Max</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.hydraFusionDefaultTier">
@@ -19344,6 +19455,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.backToModels">
       <source xml:lang="en">Back to Models</source>
     </trans-unit>
+    <trans-unit id="chat.modelPicker.comparisonSummaryWithVariants">
+      <source xml:lang="en">{0} +{1}</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.configurationDetails">
       <source xml:lang="en">{0} Details, {1}</source>
     </trans-unit>
@@ -19353,10 +19467,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.dismissConfigurationHint">
       <source xml:lang="en">Dismiss Hint</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.ensembleIntelligenceDescription">
+    <trans-unit id="chat.modelPicker.fusionHighDescription">
       <source xml:lang="en">High picks a workflow per task, using one or more models.</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.ensembleMaxDescription">
+    <trans-unit id="chat.modelPicker.fusionMaxDescription">
       <source xml:lang="en">Max uses multiple models on every task for the most thorough results.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.hydraFusionTierValue">
@@ -19392,17 +19506,14 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.upgradeForMoreModels">
       <source xml:lang="en">Upgrade for More Models</source>
     </trans-unit>
-    <trans-unit id="modelPicker.workflow.back">
-      <source xml:lang="en">{0} Back</source>
+    <trans-unit id="modelPicker.comparison.back">
+      <source xml:lang="en">Back</source>
     </trans-unit>
-    <trans-unit id="modelPicker.workflow.cancel">
-      <source xml:lang="en">Cancel</source>
-    </trans-unit>
-    <trans-unit id="modelPicker.workflow.done">
+    <trans-unit id="modelPicker.comparison.done">
       <source xml:lang="en">Done</source>
     </trans-unit>
-    <trans-unit id="modelPicker.workflow.next">
-      <source xml:lang="en">Next {0}</source>
+    <trans-unit id="modelPicker.comparison.next">
+      <source xml:lang="en">Next</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerTabs" source-language="en" datatype="plaintext"><body>
@@ -19678,6 +19789,12 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="sessionCost">
       <source xml:lang="en">Session Cost</source>
     </trans-unit>
+    <trans-unit id="sessionCost.partial">
+      <source xml:lang="en">{0} (partial)</source>
+    </trans-unit>
+    <trans-unit id="sessionCost.unavailable">
+      <source xml:lang="en">Unavailable</source>
+    </trans-unit>
     <trans-unit id="sessionInfo">
       <source xml:lang="en">Session Info</source>
     </trans-unit>
@@ -19694,6 +19811,12 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="contextUsagePercentageLabel">
       <source xml:lang="en">Context window usage: {0}%</source>
+    </trans-unit>
+    <trans-unit id="sessionCostLabel">
+      <source xml:lang="en">Cost</source>
+    </trans-unit>
+    <trans-unit id="sessionInfoLabel">
+      <source xml:lang="en">Session Info</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widgetHosts/viewPane/chatViewPane" source-language="en" datatype="plaintext"><body>
@@ -20051,6 +20174,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="inChatQuestionCarousel">
       <source xml:lang="en">True when focus is in the chat question carousel.</source>
+    </trans-unit>
+    <trans-unit id="inChatSessionWorkingSet">
+      <source xml:lang="en">True when focus is in the session working set, false otherwise.</source>
     </trans-unit>
     <trans-unit id="inChatTerminalToolOutput">
       <source xml:lang="en">True when focus is in the chat terminal output region.</source>
@@ -20598,14 +20724,14 @@ To make this the starting permission level for new sessions, change the [{0}](co
     <trans-unit id="autoModel.discount">
       <source xml:lang="en">Models routed via auto receive a {0}% discount.</source>
     </trans-unit>
-    <trans-unit id="autoModel.ensembleDescription">
-      <source xml:lang="en">Ensemble routes based on your task and real-time system health and model performance.</source>
+    <trans-unit id="autoModel.fusionDescription">
+      <source xml:lang="en">Fusion routes based on your task and real-time system health and model performance.</source>
     </trans-unit>
-    <trans-unit id="autoModel.ensembleDiscount">
-      <source xml:lang="en">Models routed via Ensemble receive a {0}% discount.</source>
+    <trans-unit id="autoModel.fusionDiscount">
+      <source xml:lang="en">Models routed via Fusion receive a {0}% discount.</source>
     </trans-unit>
-    <trans-unit id="autoModel.ensembleTierDiscount">
-      <source xml:lang="en">Models routed via Ensemble {0} receive a {1}% discount.</source>
+    <trans-unit id="autoModel.fusionTierDiscount">
+      <source xml:lang="en">Models routed via Fusion {0} receive a {1}% discount.</source>
     </trans-unit>
     <trans-unit id="autoModel.learnMore">
       <source xml:lang="en">[Learn More]({0})</source>
@@ -20758,6 +20884,14 @@ To make this the starting permission level for new sessions, change the [{0}](co
     </trans-unit>
     <trans-unit id="reportIssue">
       <source xml:lang="en">Report Issue</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/modelSelection" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.defaultModel.policyOverrideDescription">
+      <source xml:lang="en">Your organization sets "{0}" as the default for new conversations. Your saved preference "{1}" is preserved but does not apply while this policy is in effect. You can choose another model for each conversation.</source>
+    </trans-unit>
+    <trans-unit id="chat.defaultModel.policyValueDescription">
+      <source xml:lang="en">Your organization sets "{0}" as the default for new conversations. You can choose another model for each conversation.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/plugins/agentPluginServiceImpl" source-language="en" datatype="plaintext"><body>
@@ -22799,6 +22933,41 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="missionControlSharing.fileSystemAccess">
       <source xml:lang="en">Enabling remote connections allows clients authenticated as your GitHub account to read and modify files across this machine's accessible file systems, including sensitive files. Operating system permissions still apply.</source>
     </trans-unit>
+    <trans-unit id="missionControlSharing.hover">
+      <source xml:lang="en">{0}
+
+{1}
+
+{2}</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.devTunnel">
+      <source xml:lang="en">Dev Tunnels</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.devTunnel.detail">
+      <source xml:lang="en">Connect from VS Code or a browser through a secure tunnel.</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.githubEnvironment">
+      <source xml:lang="en">GitHub Environments</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.githubEnvironment.dataHandling">
+      <source xml:lang="en">Session actions are mirrored to GitHub for catalog and history storage. Conversation content is not end-to-end encrypted.</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.githubEnvironment.detail">
+      <source xml:lang="en">Register this machine with GitHub for remote agent access.</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.label">
+      <source xml:lang="en">Remote Connections</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.preview">
+      <source xml:lang="en">Preview</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.selectMethod">
+      <source xml:lang="en">Select Remote Connection Method</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.selectMethod.tooltip">
+      <source xml:lang="en">Select Remote Connection Method
+Changing the method turns remote connections off.</source>
+    </trans-unit>
     <trans-unit id="tunnelHost.ariaLabel.remoteTunnelAccess">
       <source xml:lang="en">Remote Tunnel Access is enabled via tunnel '{0}'</source>
     </trans-unit>
@@ -22823,6 +22992,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="tunnelHost.hover.learnMore">
       <source xml:lang="en">Learn More</source>
     </trans-unit>
+    <trans-unit id="tunnelHost.hover.method">
+      <source xml:lang="en">Connection method: Dev Tunnels</source>
+    </trans-unit>
     <trans-unit id="tunnelHost.hover.renameTunnel">
       <source xml:lang="en">Rename Tunnel</source>
     </trans-unit>
@@ -22831,9 +23003,6 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="tunnelHost.hover.showOutput">
       <source xml:lang="en">Show Output</source>
-    </trans-unit>
-    <trans-unit id="tunnelHost.toast">
-      <source xml:lang="en">Remote session access is now enabled</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/electron-browser/tunnelHost.contribution" source-language="en" datatype="plaintext"><body>

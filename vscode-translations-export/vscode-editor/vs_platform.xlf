@@ -397,6 +397,11 @@ A keybinding</note>
       <source xml:lang="en">Connection to {0} closed before recovery completed.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/common/agentHostChatMove" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatMoves.config.enabled">
+      <source xml:lang="en">Move Chats</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/common/agentHostCustomizationConfig" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.config.allowSignedOutWhenUsable.description">
       <source xml:lang="en">Experimental. When enabled, Agent Host sessions remain available while signed out as long as the selected agent has a usable model and authentication (for example Codex with ChatGPT authentication or Claude in native mode with your own Anthropic credentials). When disabled (the default), GitHub sign-in is required.</source>
@@ -605,29 +610,11 @@ A keybinding</note>
     <trans-unit id="agentHost.config.canvases.title">
       <source xml:lang="en">Canvases</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.claudeMultiRootEnabled.description">
-      <source xml:lang="en">Whether the Claude provider advertises support for multiple working directories, letting a session span every folder of a multi-root workspace.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.claudeMultiRootEnabled.title">
-      <source xml:lang="en">Claude Multiple Working Directories</source>
-    </trans-unit>
     <trans-unit id="agentHost.config.codexAgentEnabled.description">
       <source xml:lang="en">Whether the Codex provider is enabled.</source>
     </trans-unit>
     <trans-unit id="agentHost.config.codexAgentEnabled.title">
       <source xml:lang="en">Codex Agent</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.codexMultiRootEnabled.description">
-      <source xml:lang="en">Whether the Codex provider advertises support for multiple working directories, letting a session span every folder of a multi-root workspace.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.codexMultiRootEnabled.title">
-      <source xml:lang="en">Codex Multiple Working Directories</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.copilotMultiRootEnabled.description">
-      <source xml:lang="en">Whether the Copilot provider advertises support for multiple working directories, letting a session span every folder of a multi-root workspace.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.copilotMultiRootEnabled.title">
-      <source xml:lang="en">Copilot Multiple Working Directories</source>
     </trans-unit>
     <trans-unit id="agentHost.config.deferredTitleGeneration.description">
       <source xml:lang="en">Seed titles immediately and refine them in the background if the first response turn completes successfully, without asking the active agent to name chats. Explicit rename tools remain available. Overrides active agent title generation for new sessions; existing sessions and their chats retain their strategy.</source>
@@ -1000,9 +987,6 @@ A keybinding</note>
     <trans-unit id="chat.agentHost.claudeAgent.enabled.policy">
       <source xml:lang="en">Enable Claude Agent sessions in VS Code. Start and resume agentic coding sessions powered by Anthropic Claude Agent SDK directly in the editor. Uses your existing Copilot subscription.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.claudeAgent.multiRootEnabled">
-      <source xml:lang="en">When enabled, Claude agent-host sessions advertise support for multiple working directories, so a session created in a multi-root workspace can span every workspace folder. Experimental; newly created sessions pick up a change without restarting the agent host.</source>
-    </trans-unit>
     <trans-unit id="chat.agentHost.codexAgent.binaryArgs">
       <source xml:lang="en">Additional command-line arguments passed to `codex app-server`. Primarily useful for debugging (for example, `--log-level=debug`).</source>
     </trans-unit>
@@ -1015,14 +999,8 @@ A keybinding</note>
     <trans-unit id="chat.agentHost.codexAgent.enabled.policy">
       <source xml:lang="en">Enable Codex Agent sessions in VS Code. Start and resume agentic coding sessions powered by OpenAI Codex. Usage can be routed through GitHub Copilot or authenticated directly with an OpenAI account.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.codexAgent.multiRootEnabled">
-      <source xml:lang="en">When enabled, Codex agent-host sessions advertise support for multiple working directories, so a session created in a multi-root workspace can span every workspace folder. Experimental; newly created sessions pick up a change without restarting the agent host.</source>
-    </trans-unit>
     <trans-unit id="chat.agentHost.codexAgent.sdkRoot">
       <source xml:lang="en">Experimental, for local SDK development only. Absolute path to a directory containing `node_modules/@openai/codex`. When set, the agent host spawns the Codex binary from this tree instead of downloading the SDK. Empty (the default) falls through to the SDK distribution shipped with this build. The agent host process must be restarted for changes to take effect.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentHost.copilotAgent.multiRootEnabled">
-      <source xml:lang="en">When enabled, Copilot agent-host sessions advertise support for multiple working directories, so a session created in a multi-root workspace can span every workspace folder. Experimental; newly created sessions pick up a change without restarting the agent host.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.experimental.autoAttachPullRequests">
       <source xml:lang="en">Controls whether the Agent Host automatically discovers and associates a pull request for the currently checked-out branch. When disabled, only pull requests recorded by the agent as artifacts or explicitly selected or created through session actions are considered.</source>
@@ -1041,6 +1019,9 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="chat.agentHost.githubMcpServer.enabled">
       <source xml:lang="en">When enabled, agent-host sessions include the GitHub MCP server.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.moveChats.enabled">
+      <source xml:lang="en">Enables moving chats between Agent Host sessions and into new sessions.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.otel.captureContent">
       <source xml:lang="en">When enabled, includes prompt and response content in OTel span attributes. Configurable in user settings only. Sets `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Privacy-sensitive: do not enable in environments that ship spans to shared sinks.</source>
@@ -1383,8 +1364,11 @@ A keybinding</note>
     <trans-unit id="autoModeTier.efficiencyDescription">
       <source xml:lang="en">Optimizes for cost and speed, using more capable models only when needed.</source>
     </trans-unit>
-    <trans-unit id="autoModeTier.ensembleIntelligence">
+    <trans-unit id="autoModeTier.fusionHigh">
       <source xml:lang="en">High</source>
+    </trans-unit>
+    <trans-unit id="autoModeTier.fusionStandard">
+      <source xml:lang="en">Standard</source>
     </trans-unit>
     <trans-unit id="autoModeTier.intelligence">
       <source xml:lang="en">Intelligence</source>
@@ -1394,12 +1378,6 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/automationConfig" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentHost.automationRunTimeout">
-      <source xml:lang="en">Automation Run Timeout</source>
-    </trans-unit>
-    <trans-unit id="agentHost.automationRunTimeout.description">
-      <source xml:lang="en">Maximum duration of an automation run, in minutes.</source>
-    </trans-unit>
     <trans-unit id="agentHost.automationsEnabled">
       <source xml:lang="en">Automations</source>
     </trans-unit>
@@ -1493,17 +1471,17 @@ A keybinding</note>
     <trans-unit id="agentHost.config.enableShellInitScript.title">
       <source xml:lang="en">Shell Init Script</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.ensemble.description">
-      <source xml:lang="en">When enabled, Auto is presented as Ensemble, optimizing for Balance, High, or Max.</source>
+    <trans-unit id="agentHost.config.fusion.description">
+      <source xml:lang="en">When enabled, Auto is presented as Fusion, optimizing for Standard, High, or Max.</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.ensemble.title">
-      <source xml:lang="en">Ensemble</source>
+    <trans-unit id="agentHost.config.fusion.title">
+      <source xml:lang="en">Fusion</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.ensembleIntelligenceUsesHydraFusion.description">
-      <source xml:lang="en">When enabled together with Ensemble and HydraFusion, Ensemble's High tier uses HydraFusion.</source>
+    <trans-unit id="agentHost.config.fusionHighUsesHydraFusion.description">
+      <source xml:lang="en">When enabled together with Fusion and HydraFusion, Fusion's High tier uses HydraFusion.</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.ensembleIntelligenceUsesHydraFusion.title">
-      <source xml:lang="en">Ensemble High Uses HydraFusion</source>
+    <trans-unit id="agentHost.config.fusionHighUsesHydraFusion.title">
+      <source xml:lang="en">Fusion High Uses HydraFusion</source>
     </trans-unit>
     <trans-unit id="agentHost.config.hydraFusion.description">
       <source xml:lang="en">When enabled, Copilot SDK sessions can use the experimental HydraFusion model.</source>
@@ -1523,6 +1501,18 @@ A keybinding</note>
     <trans-unit id="agentHost.config.hydraFusionV2.title">
       <source xml:lang="en">HydraFusion V2</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.imageGenerationEnabled.description">
+      <source xml:lang="en">Enable image generation and editing with **GPT Image 2.5 Sunburst** when available to your account. Prompts and selected images are sent to Sunburst. Account access and tool permissions still apply.
+
+**Sunburst preview rates (AI credits per 1 million tokens):**
+- **Text tokens:** 500 input / 0 output
+- **Image tokens:** 800 input / 3,000 output
+
+These charges are in addition to the conversation model. Rates may change; these are token rates, not per-image prices. Disabling this setting prevents future image tool calls.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.imageGenerationEnabled.title">
+      <source xml:lang="en">Image Generation</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.localIndexEnabled.description">
       <source xml:lang="en">Whether Copilot SDK sessions use the local cross-session store for Chronicle indexing and retrieval.</source>
     </trans-unit>
@@ -1530,7 +1520,7 @@ A keybinding</note>
       <source xml:lang="en">Local Session Index</source>
     </trans-unit>
     <trans-unit id="agentHost.config.localMemory.description">
-      <source xml:lang="en">When enabled together with Copilot Memory, Copilot SDK sessions store memories in the repository's .github/copilot-memories.jsonl file instead of GitHub's cloud memory service. Requires a GitHub-hosted repository; Copilot Memory policies configured on GitHub do not apply.</source>
+      <source xml:lang="en">When enabled together with Copilot Memory, Copilot SDK sessions store memories in the repository's .github/copilot-memories.jsonl file instead of GitHub's cloud memory service. Requires a GitHub-hosted repository; GitHub Copilot Memory settings and policies don't apply.</source>
     </trans-unit>
     <trans-unit id="agentHost.config.localMemory.title">
       <source xml:lang="en">Local Copilot Memory</source>
@@ -1560,7 +1550,7 @@ A keybinding</note>
       <source xml:lang="en">Use On-Device Model in Auto</source>
     </trans-unit>
     <trans-unit id="agentHost.config.memory.description">
-      <source xml:lang="en">When enabled, Copilot SDK sessions can store and recall Copilot Memory.</source>
+      <source xml:lang="en">When enabled, Copilot SDK sessions can store and recall Copilot Memory. GitHub Copilot Memory settings and policies still apply.</source>
     </trans-unit>
     <trans-unit id="agentHost.config.memory.title">
       <source xml:lang="en">Copilot Memory</source>
@@ -1698,6 +1688,11 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="copilotConfigSlash.yolo">
       <source xml:lang="en">Set permissions to bypass approvals</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/fusionConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.copilot.ensemble.enabled">
+      <source xml:lang="en">When enabled, Copilot Agent Host sessions present Auto as Fusion, which optimizes for Standard, High, or Max. Max uses HydraFusion Max, so Fusion uses HydraFusion v2 unless `#{0}#` is off. Changing this setting can restart the Copilot runtime.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/localModel" source-language="en" datatype="plaintext"><body>
@@ -2568,6 +2563,12 @@ A keybinding</note>
     <trans-unit id="agentHost.config.sandbox.authenticateGit.title">
       <source xml:lang="en">Authenticate git</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.credentials.envVars.description">
+      <source xml:lang="en">Maps environment variable names to objects with an injectHosts array of HTTPS destinations. Credential entries are validated by the runtime.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.credentials.envVars.title">
+      <source xml:lang="en">Environment Variables</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.sandbox.deniedDomains.item.title">
       <source xml:lang="en">Domain</source>
     </trans-unit>
@@ -2585,6 +2586,9 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.sandbox.macFileSystem.title">
       <source xml:lang="en">macOS Sandbox Filesystem</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.sandbox.maskedEnvironmentVariables.title">
+      <source xml:lang="en">Masked environment variables</source>
     </trans-unit>
     <trans-unit id="agentHost.config.sandbox.path.title">
       <source xml:lang="en">Path</source>
@@ -2809,11 +2813,6 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Automation</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/platform/agentHost/node/agentHostAutomationService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentHostAutomation.runTimedOut">
-      <source xml:lang="en">Automation run timed out.</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/platform/agentHost/node/agentHostChangesetService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="ambiguousTurnDiff">
       <source xml:lang="en">Cannot compute turn changes because the turn belongs to more than one chat.</source>
@@ -2935,6 +2934,39 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.changeset.discardChanges.discarded">
       <source xml:lang="en">Discarded changes to `{0}`.</source>
     </trans-unit>
+    <trans-unit id="agentHost.changeset.discardRecordedChanges.outsideWorkspace">
+      <source xml:lang="en">Changes can only be discarded for files in this session's workspace.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardTurnChanges.ambiguousTurn">
+      <source xml:lang="en">Changes from a turn that belongs to more than one chat can't be discarded.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardTurnChanges.changedDuringDiscard">
+      <source xml:lang="en">'{0}' changed while its changes were being discarded. Try again.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardTurnChanges.conflict">
+      <source xml:lang="en">Couldn't discard the last turn's changes to '{0}' because the same lines were changed after the turn.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardTurnChanges.createdFile">
+      <source xml:lang="en">The last turn created '{0}', which can't be discarded safely. Delete the file manually if it is no longer needed.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardTurnChanges.discarded">
+      <source xml:lang="en">Discarded the last turn's changes to `{0}`.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardTurnChanges.notInTurn">
+      <source xml:lang="en">'{0}' has no changes in the last turn.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardTurnChanges.notLatestTurn">
+      <source xml:lang="en">These changes are no longer from the last turn. Refresh the changes and try again.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardTurnChanges.otherChat">
+      <source xml:lang="en">Changes to '{0}' can't be discarded because another chat in this session also changed it.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardTurnChanges.renamed">
+      <source xml:lang="en">Changes to a renamed file can't be discarded.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardTurnChanges.turnInProgress">
+      <source xml:lang="en">Changes can't be discarded while the turn is running.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentHostDiscardChangesOperationProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.changeset.discardChanges">
@@ -2942,6 +2974,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="agentHost.changeset.discardChanges.confirmation">
       <source xml:lang="en">Are you sure you want to discard the changes in '{0}'? This action cannot be undone.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardTurnChanges.confirmation">
+      <source xml:lang="en">Are you sure you want to discard the last turn's changes to '{0}'? Changes made outside of the last turn will be kept. This action cannot be undone.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentHostMain" source-language="en" datatype="plaintext"><body>
@@ -4003,10 +4038,10 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="copilotAgent.description">
       <source xml:lang="en">Copilot SDK agent running in the local agent host process</source>
     </trans-unit>
-    <trans-unit id="copilotAgent.ensembleModelName">
-      <source xml:lang="en">Ensemble</source>
+    <trans-unit id="copilotAgent.fusionModelName">
+      <source xml:lang="en">Fusion</source>
     </trans-unit>
-    <trans-unit id="copilotAgent.ensembleTier.title">
+    <trans-unit id="copilotAgent.fusionTier.title">
       <source xml:lang="en">Effort Level</source>
     </trans-unit>
     <trans-unit id="copilotAgent.modelNotAvailable">
@@ -4097,6 +4132,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotAgent.fleet.notStarted">
       <source xml:lang="en">Fleet could not be started.</source>
+    </trans-unit>
+    <trans-unit id="copilotAgent.imageGenerationConfigurationFailed">
+      <source xml:lang="en">The image generation setting could not be applied. Try again before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotAgent.interruptedTurn">
       <source xml:lang="en">The agent was interrupted before this request finished.</source>
@@ -4267,7 +4305,7 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Marketplace {0} was not removed because it has installed plugins.</source>
     </trans-unit>
     <trans-unit id="copilotPlugin.marketplacePlugins">
-      <source xml:lang="en">Plugins in {0}:</source>
+      <source xml:lang="en">Plugins in {0}</source>
     </trans-unit>
     <trans-unit id="copilotPlugin.marketplaceRemoveForce">
       <source xml:lang="en">Run /plugin marketplace remove {0} --force to uninstall them and remove the marketplace.</source>
@@ -4459,6 +4497,20 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilot.fusion.toolRunning">
       <source xml:lang="en">{0}: running a tool</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotManagedSettings" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.managedSettings.changed">
+      <source xml:lang="en">Your account or organization settings changed while loading. Please try again.</source>
+    </trans-unit>
+    <trans-unit id="copilot.managedSettings.failed">
+      <source xml:lang="en">Unable to load your organization's managed settings. Please try again. {0}</source>
+    </trans-unit>
+    <trans-unit id="copilot.managedSettings.pending">
+      <source xml:lang="en">Loading your organization's managed settings</source>
+    </trans-unit>
+    <trans-unit id="copilot.managedSettings.timeout">
+      <source xml:lang="en">Loading your organization's managed settings took longer than {0} seconds. Please try again.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSandboxDiagnostics" source-language="en" datatype="plaintext"><body>
@@ -5135,6 +5187,12 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="localModel.runtimeMissing">
       <source xml:lang="en">{0} needs llama.cpp to run. Install a llama.cpp build that supports it, then set {1} to its llama-server and select Retry.</source>
     </trans-unit>
+    <trans-unit id="localModel.runtimeModelNeedsRelease">
+      <source xml:lang="en">This llama.cpp build ({0}) can't run {1}. Install llama.cpp {2} or later, then set {3} to its llama-server and select Retry.</source>
+    </trans-unit>
+    <trans-unit id="localModel.runtimeModelNeedsReleaseNoVersion">
+      <source xml:lang="en">This llama.cpp build can't run {0}. Install llama.cpp {1} or later, then set {2} to its llama-server and select Retry.</source>
+    </trans-unit>
     <trans-unit id="localModel.runtimeNotFound">
       <source xml:lang="en">`{0}` must be the absolute path of an existing llama-server executable. Install a llama.cpp build, then set it to its llama-server and select Retry.</source>
     </trans-unit>
@@ -5143,12 +5201,6 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="localModel.runtimeTooOld">
       <source xml:lang="en">The llama-server at {0} is missing features VS Code needs ({1}). Install a newer llama.cpp build, then set {2} to its llama-server and select Retry.</source>
-    </trans-unit>
-    <trans-unit id="localModel.runtimeUnpackagedModel">
-      <source xml:lang="en">This llama.cpp build ({0}) can't run {1}. Install a llama.cpp build that includes {2}, then set {3} to its llama-server and select Retry.</source>
-    </trans-unit>
-    <trans-unit id="localModel.runtimeUnpackagedModelNoVersion">
-      <source xml:lang="en">This llama.cpp build can't run {0}. Install a llama.cpp build that includes {1}, then set {2} to its llama-server and select Retry.</source>
     </trans-unit>
     <trans-unit id="localModel.runtimeUnsupportedModel">
       <source xml:lang="en">This llama.cpp build ({0}) can't run {1}. Install a llama.cpp build that supports it, then set {2} to its llama-server and select Retry.</source>

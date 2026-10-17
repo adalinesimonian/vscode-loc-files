@@ -86,8 +86,8 @@
     <trans-unit id="hidePanel">
       <source xml:lang="en">Hide Panel</source>
     </trans-unit>
-    <trans-unit id="hideSessionToolbar">
-      <source xml:lang="en">Hide Session Toolbar</source>
+    <trans-unit id="hideSessionActivityBar">
+      <source xml:lang="en">Hide Session Activity Bar</source>
     </trans-unit>
     <trans-unit id="layoutDensity">
       <source xml:lang="en">Layout Density</source>
@@ -96,8 +96,8 @@
       <source xml:lang="en">&amp;&amp;Appearance</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
-    <trans-unit id="miSessionToolbar">
-      <source xml:lang="en">Session &amp;&amp;Toolbar</source>
+    <trans-unit id="miSessionActivityBar">
+      <source xml:lang="en">Session &amp;&amp;Activity Bar</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
     <trans-unit id="openAndCloseSidebar">
@@ -109,14 +109,20 @@
     <trans-unit id="showPanel">
       <source xml:lang="en">Show Panel</source>
     </trans-unit>
+    <trans-unit id="showSessionActivityBarLayoutActions">
+      <source xml:lang="en">Show Layout Actions</source>
+    </trans-unit>
     <trans-unit id="sidebarHidden">
       <source xml:lang="en">Primary Side Bar hidden</source>
     </trans-unit>
     <trans-unit id="sidebarVisible">
       <source xml:lang="en">Primary Side Bar shown</source>
     </trans-unit>
-    <trans-unit id="toggleSessionToolbar">
-      <source xml:lang="en">Toggle Session Toolbar</source>
+    <trans-unit id="toggleSessionActivityBar">
+      <source xml:lang="en">Toggle Session Activity Bar</source>
+    </trans-unit>
+    <trans-unit id="toggleSessionActivityBarLayoutActions">
+      <source xml:lang="en">Toggle Layout Actions in Session Activity Bar</source>
     </trans-unit>
     <trans-unit id="toggleSidebar">
       <source xml:lang="en">Toggle Side Bar</source>
@@ -406,7 +412,18 @@
       <source xml:lang="en">Align Panel</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/browser/parts/sessionActivityBar" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionActivityBar">
+      <source xml:lang="en">Session Activity Bar</source>
+    </trans-unit>
+    <trans-unit id="sessionActivityBar.dragHandle">
+      <source xml:lang="en">Drag to move. Double-click to reset the position.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/browser/parts/sessionHeaderBar" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatHeaderLabel">
+      <source xml:lang="en">Chat: {0}</source>
+    </trans-unit>
     <trans-unit id="renameChat.aria">
       <source xml:lang="en">Rename chat</source>
     </trans-unit>
@@ -467,14 +484,6 @@
     </trans-unit>
     <trans-unit id="sessionRemoteHost.waitingForConnection">
       <source xml:lang="en">Waiting for agent host connection...</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/sessions/browser/parts/sessionToolbar" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sessionToolbar">
-      <source xml:lang="en">Session Toolbar</source>
-    </trans-unit>
-    <trans-unit id="sessionToolbar.dragHandle">
-      <source xml:lang="en">Drag to move. Double-click to reset the position.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/browser/parts/sessionView" source-language="en" datatype="plaintext"><body>
@@ -979,6 +988,9 @@
     <trans-unit id="sessions.cancelCurrentRequest.loadFailed">
       <source xml:lang="en">Failed to load chat session for cancellation.</source>
     </trans-unit>
+    <trans-unit id="sessions.closeCanvas.unsupported">
+      <source xml:lang="en">Closing canvases is not supported for this session.</source>
+    </trans-unit>
     <trans-unit id="sessions.importSession.unsupported">
       <source xml:lang="en">Importing is not supported for this session.</source>
     </trans-unit>
@@ -990,6 +1002,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/services/sessions/browser/sessionsService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.chatMoved">
+      <source xml:lang="en">Chat moved to {0}</source>
+    </trans-unit>
     <trans-unit id="sessionsService.trustFolderMessage">
       <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
     </trans-unit>
