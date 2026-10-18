@@ -500,9 +500,6 @@ A keybinding</note>
     <trans-unit id="policyGap.network">
       <source xml:lang="en">Shared browser tools and custom terminal sandboxing honor domain lists, but native SDK sandboxing does not apply those lists. The bridge covers only supported runtime URL denies. Access may be allowed or blocked differently from Local.</source>
     </trans-unit>
-    <trans-unit id="policyGap.otelEnabled">
-      <source xml:lang="en">A policy disabling OpenTelemetry can be overridden by a separately configured export destination or database recorder in the host's telemetry configuration.</source>
-    </trans-unit>
     <trans-unit id="policyGap.otelHeaders">
       <source xml:lang="en">VS Code-only exporter headers do not reach Agent Host. Export requiring those headers may fail; runtime-managed telemetry does not establish coverage of the host's own exporter.</source>
     </trans-unit>
@@ -510,7 +507,7 @@ A keybinding</note>
       <source xml:lang="en">The Agent Host pipeline honors identity capture and suppression. Authenticated runtime account attribution still requires a runtime update and end-to-end verification; direct runtime exports use their own identity controls.</source>
     </trans-unit>
     <trans-unit id="policyGap.otelProtocol">
-      <source xml:lang="en">Inherited OTLP protocol configuration can override the policy-selected exporter type.</source>
+      <source xml:lang="en">For this local Copilot/VS Code policy diagnostic, inherited OTLP protocol configuration can still override an active collector exporter. It does not certify remote hosts or independently fetched runtime policy.</source>
     </trans-unit>
     <trans-unit id="policyGap.plugins">
       <source xml:lang="en">The workbench filters synchronized plugins, but runtime discovery and more specific customization decisions do not have equivalent policy coverage.</source>
@@ -1063,10 +1060,10 @@ A keybinding</note>
       <source xml:lang="en">Controls the enterprise-managed OTLP wire protocol (protobuf vs JSON) for Copilot OpenTelemetry export.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.otel.outfile">
-      <source xml:lang="en">Output path for span JSON lines when exporter type is `file`. Configurable in user settings only. Sets `COPILOT_OTEL_FILE_EXPORTER_PATH`.</source>
+      <source xml:lang="en">Output path for span JSON lines when exporter type is `file`. An enterprise-managed telemetry file path takes precedence over user settings. Sets `COPILOT_OTEL_FILE_EXPORTER_PATH`.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.otel.outfile.policy">
-      <source xml:lang="en">Prevents local file export when enterprise-managed Copilot OpenTelemetry export is configured.</source>
+      <source xml:lang="en">Controls the enterprise-managed file export destination for Copilot OpenTelemetry and prevents local file export when an enterprise OTLP destination is configured.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.otel.protocol.policy">
       <source xml:lang="en">Controls the enterprise-managed OTLP protocol for Copilot OpenTelemetry export.</source>
@@ -1075,7 +1072,7 @@ A keybinding</note>
       <source xml:lang="en">Console exporter is not selected by enterprise managed settings.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.otel.protocol.policy.file">
-      <source xml:lang="en">File exporter is not selected by enterprise managed settings.</source>
+      <source xml:lang="en">Use the enterprise-managed file exporter.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.otel.protocol.policy.otlpGrpc">
       <source xml:lang="en">Use OTLP over gRPC.</source>
@@ -1367,6 +1364,9 @@ A keybinding</note>
     <trans-unit id="autoModeTier.fusionHigh">
       <source xml:lang="en">High</source>
     </trans-unit>
+    <trans-unit id="autoModeTier.fusionMax">
+      <source xml:lang="en">Max</source>
+    </trans-unit>
     <trans-unit id="autoModeTier.fusionStandard">
       <source xml:lang="en">Standard</source>
     </trans-unit>
@@ -1459,6 +1459,12 @@ A keybinding</note>
     <trans-unit id="agentHost.config.copilotSdkLogLevel.trace">
       <source xml:lang="en">Trace</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.dynamicAutoTiers.description">
+      <source xml:lang="en">When enabled, Auto's "Optimize for" tiers come from the Copilot service instead of the built-in list. Takes effect when the Copilot runtime restarts.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.dynamicAutoTiers.title">
+      <source xml:lang="en">Dynamic Auto Tiers</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.enableCustomTerminalTool.description">
       <source xml:lang="en">When enabled, Copilot SDK sessions use Agent Host's terminal tool override instead of the SDK's default terminal behavior. Not supported on Windows, where sessions use the SDK's terminal and sandbox runtime.</source>
     </trans-unit>
@@ -1470,6 +1476,30 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.enableShellInitScript.title">
       <source xml:lang="en">Shell Init Script</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.executionSubagent.description">
+      <source xml:lang="en">Opt into the Copilot runtime execution subagent in Copilot Agent Host sessions. Runtime experiment assignments may override this default. When available, the runtime implementation replaces the extension-native execution tool. Changing this setting restarts the Copilot runtime after active turns finish.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.executionSubagent.title">
+      <source xml:lang="en">Runtime Execution Subagent</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.executionSubagentDefaultControlled.description">
+      <source xml:lang="en">Whether the workbench execution subagent enablement setting has no explicit override. Used only to gate setting experiment telemetry.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.executionSubagentDefaultControlled.title">
+      <source xml:lang="en">Runtime Execution Subagent Default Control</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.executionSubagentModel.description">
+      <source xml:lang="en">Default model ID for the Copilot runtime execution subagent. Empty inherits the session model. Runtime experiment assignments may override this default. Changing this setting restarts the Copilot runtime after active turns finish.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.executionSubagentModel.title">
+      <source xml:lang="en">Runtime Execution Subagent Model</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.executionSubagentModelDefaultControlled.description">
+      <source xml:lang="en">Whether the workbench execution subagent model setting has no explicit override. Used only to gate setting experiment telemetry.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.executionSubagentModelDefaultControlled.title">
+      <source xml:lang="en">Runtime Execution Subagent Model Default Control</source>
     </trans-unit>
     <trans-unit id="agentHost.config.fusion.description">
       <source xml:lang="en">When enabled, Auto is presented as Fusion, optimizing for Standard, High, or Max.</source>
@@ -1691,6 +1721,9 @@ These charges are in addition to the conversation model. Rates may change; these
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/fusionConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.copilot.dynamicAutoTiers.enabled">
+      <source xml:lang="en">When enabled, Auto's "Optimize for" tiers in Copilot Agent Host sessions come from the Copilot service, which can include HydraFusion, instead of the built-in list. Changing this setting restarts the Copilot runtime after active turns finish.</source>
+    </trans-unit>
     <trans-unit id="chat.copilot.ensemble.enabled">
       <source xml:lang="en">When enabled, Copilot Agent Host sessions present Auto as Fusion, which optimizes for Standard, High, or Max. Max uses HydraFusion Max, so Fusion uses HydraFusion v2 unless `#{0}#` is off. Changing this setting can restart the Copilot runtime.</source>
     </trans-unit>
@@ -2937,6 +2970,27 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.changeset.discardRecordedChanges.outsideWorkspace">
       <source xml:lang="en">Changes can only be discarded for files in this session's workspace.</source>
     </trans-unit>
+    <trans-unit id="agentHost.changeset.discardSessionChanges.conflict">
+      <source xml:lang="en">Couldn't discard the session's changes to '{0}' because the same lines were changed outside of the session.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardSessionChanges.createdFile">
+      <source xml:lang="en">The session created '{0}', which can't be discarded safely. Delete the file manually if it is no longer needed.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardSessionChanges.discarded">
+      <source xml:lang="en">Discarded the session's changes to `{0}`.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardSessionChanges.multiRoot">
+      <source xml:lang="en">Session changes can't be discarded in a session with more than one folder.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardSessionChanges.notInSession">
+      <source xml:lang="en">'{0}' has no changes made by the session.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardSessionChanges.turnInProgress">
+      <source xml:lang="en">Changes can't be discarded while a turn is running.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardSessionChanges.turnRanDuringDiscard">
+      <source xml:lang="en">A turn ran while the session's changes to '{0}' were being discarded. Try again.</source>
+    </trans-unit>
     <trans-unit id="agentHost.changeset.discardTurnChanges.ambiguousTurn">
       <source xml:lang="en">Changes from a turn that belongs to more than one chat can't be discarded.</source>
     </trans-unit>
@@ -2974,6 +3028,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="agentHost.changeset.discardChanges.confirmation">
       <source xml:lang="en">Are you sure you want to discard the changes in '{0}'? This action cannot be undone.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardSessionChanges.confirmation">
+      <source xml:lang="en">Are you sure you want to discard the session's changes to '{0}'? Changes made outside of the session will be kept. This action cannot be undone.</source>
     </trans-unit>
     <trans-unit id="agentHost.changeset.discardTurnChanges.confirmation">
       <source xml:lang="en">Are you sure you want to discard the last turn's changes to '{0}'? Changes made outside of the last turn will be kept. This action cannot be undone.</source>
@@ -3086,9 +3143,6 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="agentHost.changeset.pr.autoMerge.merge">
       <source xml:lang="en">merge</source>
-    </trans-unit>
-    <trans-unit id="agentHost.changeset.pr.autoMerge.noNodeId">
-      <source xml:lang="en">the pull request identifier was not returned by GitHub.</source>
     </trans-unit>
     <trans-unit id="agentHost.changeset.pr.autoMerge.rebase">
       <source xml:lang="en">rebase</source>
@@ -4029,6 +4083,9 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="copilot.runtimeModelConfiguration">
       <source xml:lang="en">Runtime Model Configuration</source>
     </trans-unit>
+    <trans-unit id="copilot.sandboxCertificate.chatUnavailable">
+      <source xml:lang="en">The chat is no longer running. Reopen it before changing sandbox certificate trust.</source>
+    </trans-unit>
     <trans-unit id="copilotAgent.autoModelName">
       <source xml:lang="en">Auto</source>
     </trans-unit>
@@ -4513,6 +4570,35 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Loading your organization's managed settings took longer than {0} seconds. Please try again.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotSandboxCertificate" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.sandboxCertificate.changed">
+      <source xml:lang="en">The sandbox runtime changed. Review the certificate target and try again.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandboxCertificate.disabled">
+      <source xml:lang="en">Sandboxing must be enabled to set up the sandbox certificate.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandboxCertificate.installUnavailable">
+      <source xml:lang="en">The sandbox certificate cannot be installed for this configuration.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandboxCertificate.removeUnconfirmed">
+      <source xml:lang="en">The agent host did not confirm that the sandbox certificate was removed from OS trust.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandboxCertificate.replaceFailed">
+      <source xml:lang="en">The agent host could not replace the sandbox certificate.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandboxCertificate.rotateFailed">
+      <source xml:lang="en">The agent host could not rotate the sandbox certificate.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandboxCertificate.rotateUnavailable">
+      <source xml:lang="en">The sandbox certificate cannot be rotated for this configuration.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandboxCertificate.timeout">
+      <source xml:lang="en">Checking the sandbox certificate timed out.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandboxCertificate.trustUnconfirmed">
+      <source xml:lang="en">The agent host did not confirm that the sandbox certificate is trusted.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSandboxDiagnostics" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copilot.sandbox.missingDeniedPaths">
       <source xml:lang="en">Missing sandbox dependencies may prevent blocked files and folders from being protected.</source>
@@ -4570,6 +4656,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilot.sandbox.changeRejected">
       <source xml:lang="en">Copilot SDK did not confirm the sandbox change for this session.</source>
+    </trans-unit>
+    <trans-unit id="copilot.sandboxCertificate.chatUnavailable">
+      <source xml:lang="en">The chat is no longer running. Reopen it before changing sandbox certificate trust.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider" source-language="en" datatype="plaintext"><body>

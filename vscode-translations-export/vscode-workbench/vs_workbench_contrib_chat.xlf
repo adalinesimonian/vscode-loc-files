@@ -376,6 +376,21 @@
     <trans-unit id="chat.requestHistory">
       <source xml:lang="en">In the input box, use up and down arrows to navigate your request history. Edit input and use enter or the submit button to run a new request.</source>
     </trans-unit>
+    <trans-unit id="chat.sandboxCertificateCommands">
+      <source xml:lang="en">Open the Command Palette{0} and run Sandbox: Manage Trusted CA for the last-focused chat. Use Up and Down Arrow to choose Install, Rotate, or Remove, then Enter to continue or Escape to cancel. If there is no agent-host target for the last-focused chat, a dialog says No agent host detected.</source>
+    </trans-unit>
+    <trans-unit id="chat.sandboxCertificateInstall">
+      <source xml:lang="en">When the host supports certificate installation, use Tab to reach the Install link and Enter to activate it. You can also choose Install in Manage Trusted CA after dismissing the notice. A confirmation names the host. Install creates and trusts the certificate, replacing it if needed. Running tools may need to restart. Progress appears in the notice; failures are shown in a dialog.</source>
+    </trans-unit>
+    <trans-unit id="chat.sandboxCertificateMissing">
+      <source xml:lang="en">If the agent host reports a missing sandbox certificate that it can install, an informational notice appears above the focused chat input. Installation is optional and chatting is not blocked. Dependency warnings take priority over this notice. Use Tab to reach Dismiss notification and Enter or Space to hide certificate notices for that host runtime in this window.</source>
+    </trans-unit>
+    <trans-unit id="chat.sandboxCertificateRemove">
+      <source xml:lang="en">Choose Remove in Manage Trusted CA to remove OS trust. The stored certificate authority is kept. A confirmation explains that tools relying on OS trust may stop working. Progress appears in the notice; completion and failures are shown in a dialog.</source>
+    </trans-unit>
+    <trans-unit id="chat.sandboxCertificateRotate">
+      <source xml:lang="en">Choose Rotate in Manage Trusted CA to replace the installed sandbox CA and private key. A confirmation explains that the CA is shared and running tools may need to restart. Progress appears in the notice; completion and failures are shown in a dialog.</source>
+    </trans-unit>
     <trans-unit id="chat.sandboxPathGrant">
       <source xml:lang="en">When a sandbox confirmation offers path access, review the granted path and whether it allows reading or reading and writing. A grant may cover a folder rather than only the blocked file. The header asks to add access to user sandbox settings and retry. Allow saves access in your user settings and retries inside the sandbox. These settings are shared with connected agent hosts across workspaces and sessions. Skip declines access. Use Tab to reach these choices.</source>
     </trans-unit>
@@ -995,6 +1010,36 @@ User: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatDeveloperActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.sandboxCertificate.installChoice">
+      <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.installDescription">
+      <source xml:lang="en">Trust the sandbox CA</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.managePlaceholder">
+      <source xml:lang="en">Select an action for this chat's agent host</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.manageTitle">
+      <source xml:lang="en">Manage Trusted CA</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.noAgentHost">
+      <source xml:lang="en">No agent host detected.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.removeChoice">
+      <source xml:lang="en">Remove</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.removeDescription">
+      <source xml:lang="en">Remove OS trust; keep the certificate</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.rotateChoice">
+      <source xml:lang="en">Rotate</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.rotateDescription">
+      <source xml:lang="en">Replace and trust the sandbox CA</source>
+    </trans-unit>
+    <trans-unit id="sandbox">
+      <source xml:lang="en">Sandbox</source>
+    </trans-unit>
     <trans-unit id="workbench.action.chat.clearRecentlyUsedLanguageModels.label">
       <source xml:lang="en">Clear Recently Used Language Models</source>
     </trans-unit>
@@ -1007,14 +1052,26 @@ User: {2}</source>
     <trans-unit id="workbench.action.chat.inspectChatModelReferences.label">
       <source xml:lang="en">Inspect Chat Model References</source>
     </trans-unit>
+    <trans-unit id="workbench.action.chat.installTrustedCA.label">
+      <source xml:lang="en">Install Trusted CA</source>
+    </trans-unit>
     <trans-unit id="workbench.action.chat.logChatIndex.label">
       <source xml:lang="en">Log Chat Index</source>
     </trans-unit>
     <trans-unit id="workbench.action.chat.logInputHistory.label">
       <source xml:lang="en">Log Chat Input History</source>
     </trans-unit>
+    <trans-unit id="workbench.action.chat.manageTrustedCA.label">
+      <source xml:lang="en">Manage Trusted CA</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.chat.removeTrustedCA.label">
+      <source xml:lang="en">Remove Trusted CA</source>
+    </trans-unit>
     <trans-unit id="workbench.action.chat.resetPermissionWarningDialogs.label">
       <source xml:lang="en">Reset Permission Warning Dialogs (Autopilot, Bypass Approvals)</source>
+    </trans-unit>
+    <trans-unit id="workbench.action.chat.rotateTrustedCA.label">
+      <source xml:lang="en">Rotate Trusted CA</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatElicitationActions" source-language="en" datatype="plaintext"><body>
@@ -2439,6 +2496,9 @@ Size: {3} bytes</source>
     <trans-unit id="agentHost.auto.discount">
       <source xml:lang="en">{0}% discount</source>
     </trans-unit>
+    <trans-unit id="agentHost.autoTierUnavailable">
+      <source xml:lang="en">Not available for your account.</source>
+    </trans-unit>
     <trans-unit id="agentHost.hydraFusion.researchPreview">
       <source xml:lang="en">Research preview</source>
     </trans-unit>
@@ -2778,6 +2838,93 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHost.disableSandboxingDetail">
       <source xml:lang="en">Disable sandboxing for this session and in settings. Terminal commands may run without sandbox restrictions. Organization policy still applies.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.installSandboxCertificate">
+      <source xml:lang="en">Install</source>
+    </trans-unit>
+    <trans-unit id="agentHost.installSandboxCertificateTooltip">
+      <source xml:lang="en">Install the sandbox certificate on this chat's agent host</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.alreadyInstalled">
+      <source xml:lang="en">The sandbox certificate is already trusted for this chat.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.confirm">
+      <source xml:lang="en">Install the sandbox certificate on {0}?</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.confirmDetail">
+      <source xml:lang="en">Adds the sandbox CA to this host's OS trust store, replacing it if needed. Running tools may need to restart.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.confirmInstall">
+      <source xml:lang="en">&amp;&amp;Install</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.confirmRemove">
+      <source xml:lang="en">Remove sandbox certificate trust on {0}?</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.confirmRemoveDetail">
+      <source xml:lang="en">Removes OS trust for the shared sandbox CA but keeps its certificate and private key. Tools relying on OS trust may stop working.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.confirmRotate">
+      <source xml:lang="en">Rotate the sandbox certificate on {0}?</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.confirmRotateDetail">
+      <source xml:lang="en">Replaces the shared sandbox CA and private key and trusts the new CA. Running tools may need to restart.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.installFailed">
+      <source xml:lang="en">Could not install the sandbox certificate</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.localHost">
+      <source xml:lang="en">This Computer</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.removalUnavailable">
+      <source xml:lang="en">Sandbox certificate removal is no longer available for this chat. Make sure the chat has certificate status and the host supports removal.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.remove">
+      <source xml:lang="en">&amp;&amp;Remove</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.removeFailed">
+      <source xml:lang="en">Could not remove sandbox certificate trust</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.removed">
+      <source xml:lang="en">The sandbox certificate was removed from OS trust. The stored certificate authority was kept.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.rotate">
+      <source xml:lang="en">&amp;&amp;Rotate</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.rotateFailed">
+      <source xml:lang="en">Could not rotate the sandbox certificate</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.rotated">
+      <source xml:lang="en">The sandbox certificate was rotated and trusted. Running sandboxed tools may need to restart.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.rotationUnavailable">
+      <source xml:lang="en">Sandbox certificate rotation is no longer available for this chat. Make sure the certificate is installed and the host supports rotation.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.targetChanged">
+      <source xml:lang="en">The certificate target changed. Review the target and try again.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificate.unavailable">
+      <source xml:lang="en">Sandbox certificate installation is no longer available for this chat.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificateInstalling">
+      <source xml:lang="en">Installing sandbox certificate</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificateMissing">
+      <source xml:lang="en">Sandbox trusted CA is not installed</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificateMissingDetail">
+      <source xml:lang="en">Some tools running in this session's sandbox may need a trusted certificate on the agent host.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificateRemoving">
+      <source xml:lang="en">Removing sandbox certificate trust</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificateRemovingDetail">
+      <source xml:lang="en">Removing trust from the agent host's operating system trust store. The stored certificate authority is kept.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificateRotating">
+      <source xml:lang="en">Rotating sandbox certificate</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificateRotatingDetail">
+      <source xml:lang="en">Replacing the certificate authority and establishing operating system trust. Running sandboxed tools may need to restart.</source>
     </trans-unit>
     <trans-unit id="agentHost.sandboxDisableUnavailable">
       <source xml:lang="en">Sandboxing cannot be disabled in settings for this session. It may be required by your organization.</source>
@@ -8577,6 +8724,12 @@ Changes may not take full effect until VS Code is restarted.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.allowSignedOutWhenUsable">
       <source xml:lang="en">When enabled, Agent Host sessions remain available while signed out. The Agents window opens without forcing GitHub sign-in, and editor chat lets you select the Copilot harness. Agents usable without GitHub (for example Codex with ChatGPT authentication or Claude in native mode with your own Anthropic credentials) work while signed out; agents that require GitHub prompt you to add a model or sign in. When disabled (the default), GitHub sign-in is required before the Agents window opens.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.copilot.executionSubagent.enabled">
+      <source xml:lang="en">When enabled, local Copilot Agent Host sessions opt into the Copilot runtime's execution subagent. The runtime's experiment assignments may override this default. When the runtime implementation is available, the extension-native execution tool is excluded from that session. This is independent of `#github.copilot.chat.executionSubagent.enabled#`, which controls the extension-native implementation. Changing this setting restarts the Copilot runtime after active turns finish.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.copilot.executionSubagent.model">
+      <source xml:lang="en">Default model ID for the Copilot runtime's execution subagent. Empty inherits the parent session model. The runtime's experiment assignments may override this default. This does not affect the extension-native execution subagent's model. An unavailable model disables the runtime execution subagent. Changing this setting restarts the Copilot runtime after active turns finish.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.copilot.modelCapabilityOverrides">
       <source xml:lang="en">Per-model overrides for Copilot Agent Host sessions. Use `*` to match every model. Supports model family, reasoning effort, tool filters, model capabilities, and YAML prompt overrides.</source>
@@ -14602,6 +14755,9 @@ Source: {0}</source>
     <trans-unit id="cloudSandbox.incompleteHistoryRefresh">
       <source xml:lang="en">The latest recorded conversation is unavailable or incomplete.</source>
     </trans-unit>
+    <trans-unit id="cloudSandbox.sessionTaskMissing">
+      <source xml:lang="en">Recorded history for this session is unavailable.</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.truncatedHistory">
       <source xml:lang="en">This conversation is incomplete. Its recorded history ends mid-response, so the last exchange may be missing.</source>
     </trans-unit>
@@ -14641,6 +14797,9 @@ Source: {0}</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.deleteSessionNotFound">
       <source xml:lang="en">Mission Control sandbox session not found.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.environmentNotFound">
+      <source xml:lang="en">The sandbox environment is no longer available.</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.renameSessionNotFound">
       <source xml:lang="en">Mission Control sandbox session not found.</source>
@@ -18888,6 +19047,12 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.resetToDefault">
       <source xml:lang="en">Reset to Default</source>
     </trans-unit>
+    <trans-unit id="chat.modelPicker.unavailableOption">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.unavailableOptionNoReason">
+      <source xml:lang="en">{0} is not available.</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.unpin">
       <source xml:lang="en">Unpin Model</source>
     </trans-unit>
@@ -20750,6 +20915,9 @@ To make this the starting permission level for new sessions, change the [{0}](co
     </trans-unit>
     <trans-unit id="chat.promo.endsAt">
       <source xml:lang="en">Ends {0}.</source>
+    </trans-unit>
+    <trans-unit id="chat.promo.startsAt">
+      <source xml:lang="en">Starts {0}.</source>
     </trans-unit>
     <trans-unit id="chat.providerDeprecation.install">
       <source xml:lang="en">Install Extension</source>
