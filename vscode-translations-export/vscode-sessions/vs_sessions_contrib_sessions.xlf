@@ -332,6 +332,9 @@
     <trans-unit id="otherSessions">
       <source xml:lang="en">other sessions</source>
     </trans-unit>
+    <trans-unit id="promoteChatToSession">
+      <source xml:lang="en">Promote to Session</source>
+    </trans-unit>
     <trans-unit id="quickSwitchNextChat">
       <source xml:lang="en">Quick Switch to Next Chat</source>
     </trans-unit>
@@ -1445,6 +1448,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionsList.archiveOnboardingUnavailable">
       <source xml:lang="en">The session could not be revealed in the sessions list. Try again.</source>
     </trans-unit>
+    <trans-unit id="sessionsList.chatMovedDown">
+      <source xml:lang="en">Moved {0} down</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.chatMovedUp">
+      <source xml:lang="en">Moved {0} up</source>
+    </trans-unit>
     <trans-unit id="sessionsNavigation">
       <source xml:lang="en">Sessions Navigation</source>
     </trans-unit>
@@ -1483,6 +1492,51 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="untitledChat">
       <source xml:lang="en">Untitled Chat</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsListChatMove" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsMove.chatFailed">
+      <source xml:lang="en">Could not move '{0}'. {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.chatFailedUnexpectedly">
+      <source xml:lang="en">Could not move '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.confirmChat">
+      <source xml:lang="en">Are you sure you want to move '{0}' into '{1}'?</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.confirmPromote">
+      <source xml:lang="en">Are you sure you want to move '{0}' to a new session?</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.confirmSession">
+      <source xml:lang="en">Are you sure you want to move session '{0}' into '{1}'?</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.doNotAskAgain">
+      <source xml:lang="en">Do not ask me again</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.moveButtonLabel">
+      <source xml:lang="en">&amp;&amp;Move</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="sessionsMove.moved">
+      <source xml:lang="en">Moved '{0}' into '{1}'</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.movedSession">
+      <source xml:lang="en">Moved session '{0}' into '{1}'</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.promoted">
+      <source xml:lang="en">Moved '{0}' to a new session</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.reorderedAfter">
+      <source xml:lang="en">Moved '{0}' after '{1}'</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.reorderedFirst">
+      <source xml:lang="en">Moved '{0}' to the start</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.sessionFailed">
+      <source xml:lang="en">Could not move session '{0}'. {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.sessionFailedUnexpectedly">
+      <source xml:lang="en">Could not move session '{0}'.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsListFilters" source-language="en" datatype="plaintext"><body>
@@ -1706,6 +1760,12 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     </trans-unit>
     <trans-unit id="markUnread">
       <source xml:lang="en">Mark as Unread</source>
+    </trans-unit>
+    <trans-unit id="moveChatDown">
+      <source xml:lang="en">Move Down</source>
+    </trans-unit>
+    <trans-unit id="moveChatUp">
+      <source xml:lang="en">Move Up</source>
     </trans-unit>
     <trans-unit id="navigateNextSession">
       <source xml:lang="en">Go to Next Session</source>

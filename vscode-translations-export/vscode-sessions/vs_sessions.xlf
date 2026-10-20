@@ -96,6 +96,14 @@
       <source xml:lang="en">&amp;&amp;Appearance</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
+    <trans-unit id="miLayoutDensity">
+      <source xml:lang="en">Layout &amp;&amp;Density</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
+    <trans-unit id="miPrimarySideBar">
+      <source xml:lang="en">Primary &amp;&amp;Side Bar</source>
+      <note>&amp;&amp; denotes a mnemonic</note>
+    </trans-unit>
     <trans-unit id="miSessionActivityBar">
       <source xml:lang="en">Session &amp;&amp;Activity Bar</source>
       <note>&amp;&amp; denotes a mnemonic</note>
@@ -994,6 +1002,12 @@
     <trans-unit id="sessions.importSession.unsupported">
       <source xml:lang="en">Importing is not supported for this session.</source>
     </trans-unit>
+    <trans-unit id="sessions.moveChat.unsupported">
+      <source xml:lang="en">This chat can't be moved there.</source>
+    </trans-unit>
+    <trans-unit id="sessions.moveSession.unsupported">
+      <source xml:lang="en">This session can't be moved there.</source>
+    </trans-unit>
     <trans-unit id="sessions.openCanvas.unsupported">
       <source xml:lang="en">Opening canvases is not supported for this session.</source>
     </trans-unit>
@@ -1002,9 +1016,6 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/services/sessions/browser/sessionsService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sessions.chatMoved">
-      <source xml:lang="en">Chat moved to {0}</source>
-    </trans-unit>
     <trans-unit id="sessionsService.trustFolderMessage">
       <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
     </trans-unit>

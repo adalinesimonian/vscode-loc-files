@@ -392,6 +392,30 @@ A keybinding</note>
       <source xml:lang="en">Run this session's terminal commands inside a sandbox that restricts file system and network access. The applied setting is saved for this session and checked against current organization policy when restored.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/browser/codexApprovalsPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codexApprovals.applyNow">
+      <source xml:lang="en">Apply Now</source>
+    </trans-unit>
+    <trans-unit id="codexApprovals.continue">
+      <source xml:lang="en">Continue (I changed permissions from {0} to {1})</source>
+    </trans-unit>
+    <trans-unit id="codexApprovals.disableFullAccess.detail">
+      <source xml:lang="en">Applying now will stop the current turn and send a new message to disable Full Access and continue with {0}.
+
+Close this dialog to apply the change with your next message after the current turn finishes.</source>
+    </trans-unit>
+    <trans-unit id="codexApprovals.disableFullAccess.title">
+      <source xml:lang="en">Disable Full Access Now?</source>
+    </trans-unit>
+    <trans-unit id="codexApprovals.enableFullAccess.detail">
+      <source xml:lang="en">Applying now will stop the current turn and send a new message to continue with Full Access.
+
+Close this dialog to apply the change with your next message after the current turn finishes.</source>
+    </trans-unit>
+    <trans-unit id="codexApprovals.enableFullAccess.title">
+      <source xml:lang="en">Enable Full Access Now?</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/browser/remoteAgentHostServiceImpl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="remoteAgentHost.recoveryClosed">
       <source xml:lang="en">Connection to {0} closed before recovery completed.</source>
@@ -853,6 +877,9 @@ A keybinding</note>
     <trans-unit id="agentHost.config.workspaceTrust">
       <source xml:lang="en">Workspace Trust</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.workspaceTrust.connectionAuthorityTrusted">
+      <source xml:lang="en">Connection Authority Trusted</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.workspaceTrust.enabled">
       <source xml:lang="en">Enabled</source>
     </trans-unit>
@@ -1016,6 +1043,9 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="chat.agentHost.githubMcpServer.enabled">
       <source xml:lang="en">When enabled, agent-host sessions include the GitHub MCP server.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.moveChats.confirmDragAndDrop">
+      <source xml:lang="en">Controls whether the Agents window asks for confirmation before moving a chat or session to another session or into a new session via drag and drop. Reordering chats within a session is never confirmed.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.moveChats.enabled">
       <source xml:lang="en">Enables moving chats between Agent Host sessions and into new sessions.</source>
@@ -1201,6 +1231,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentMerge.disabled.repairBudgetExhausted">
       <source xml:lang="en">Agent Merge was disabled because the same pull request blockers remained after repeated repair attempts.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.disabled.repairLimitReached">
+      <source xml:lang="en">Agent Merge was disabled after {0} repair attempts on this pull request. Enable it again to continue.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.disabled.repairWithoutProgress">
+      <source xml:lang="en">Agent Merge was disabled because {0} repair attempts in a row made no progress on the pull request.</source>
     </trans-unit>
     <trans-unit id="agentMerge.disabled.sessionArchived">
       <source xml:lang="en">Agent Merge was disabled because this session was archived.</source>
@@ -1390,10 +1426,10 @@ A keybinding</note>
       <source xml:lang="en">Show changes made by Agent Merge since the last user message</source>
     </trans-unit>
     <trans-unit id="agentMergeChangeset.label">
-      <source xml:lang="en">Agent Merge Changes</source>
+      <source xml:lang="en">Agent Merge</source>
     </trans-unit>
     <trans-unit id="branchChangeset.label">
-      <source xml:lang="en">Branch Changes</source>
+      <source xml:lang="en">Branch</source>
     </trans-unit>
     <trans-unit id="compareTurnsChangeset.description">
       <source xml:lang="en">Show changes made between different turns</source>
@@ -1405,7 +1441,7 @@ A keybinding</note>
       <source xml:lang="en">Show all changes made in this session</source>
     </trans-unit>
     <trans-unit id="sessionChangeset.label">
-      <source xml:lang="en">Session Changes</source>
+      <source xml:lang="en">Session</source>
     </trans-unit>
     <trans-unit id="thisTurnChangeset.description">
       <source xml:lang="en">Show changes made in this turn</source>
@@ -1417,7 +1453,7 @@ A keybinding</note>
       <source xml:lang="en">Show uncommitted changes in this session</source>
     </trans-unit>
     <trans-unit id="uncommittedChangeset.label">
-      <source xml:lang="en">Uncommitted Changes</source>
+      <source xml:lang="en">Uncommitted</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/claudeModelConfig" source-language="en" datatype="plaintext"><body>
@@ -1426,6 +1462,17 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="claude.modelThinkingLevel.title">
       <source xml:lang="en">Effort Level</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/codexSessionConfigKeys" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="codex.sessionConfig.permissionsPreset.autoReview">
+      <source xml:lang="en">Auto-Review</source>
+    </trans-unit>
+    <trans-unit id="codex.sessionConfig.permissionsPreset.default">
+      <source xml:lang="en">Default Permissions</source>
+    </trans-unit>
+    <trans-unit id="codex.sessionConfig.permissionsPreset.fullAccess">
+      <source xml:lang="en">Full Access</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/copilotCliConfig" source-language="en" datatype="plaintext"><body>
@@ -1500,6 +1547,12 @@ A keybinding</note>
     </trans-unit>
     <trans-unit id="agentHost.config.executionSubagentModelDefaultControlled.title">
       <source xml:lang="en">Runtime Execution Subagent Model Default Control</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.exploreAgent.description">
+      <source xml:lang="en">When enabled, Copilot SDK sessions can use the runtime's built-in Explore agent, independently of the search subagent tool. Applied when a session launches or resumes. Does not disable custom agents named Explore.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.exploreAgent.title">
+      <source xml:lang="en">Explore Agent</source>
     </trans-unit>
     <trans-unit id="agentHost.config.fusion.description">
       <source xml:lang="en">When enabled, Auto is presented as Fusion, optimizing for Standard, High, or Max.</source>
@@ -1662,6 +1715,12 @@ These charges are in addition to the conversation model. Rates may change; these
     </trans-unit>
     <trans-unit id="agentHost.config.searchSubagent.title">
       <source xml:lang="en">Search Subagent</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.searchSubagentModel.description">
+      <source xml:lang="en">CAPI model ID to use for the search subagent. Empty uses the runtime default. An unavailable model makes the search tool unavailable. Changing this value restarts the Copilot SDK client after active turns finish.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.searchSubagentModel.title">
+      <source xml:lang="en">Search Subagent Model</source>
     </trans-unit>
     <trans-unit id="agentHost.config.skillCharBudget.description">
       <source xml:lang="en">Maximum number of characters available for skill descriptions in the Copilot SDK system message.</source>
@@ -3323,6 +3382,12 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.subagentUnavailable">
       <source xml:lang="en">A subagent could not be started or resumed. Its pending approval requests were cancelled. Start a new subagent to continue.</source>
     </trans-unit>
+    <trans-unit id="agentHost.toolResultDenied">
+      <source xml:lang="en">Tool result denied</source>
+    </trans-unit>
+    <trans-unit id="agentHost.toolResultDeniedMessage">
+      <source xml:lang="en">The user denied the tool result.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/chatContributions/pullRequest/pullRequestChatContribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.pullRequestChat.agentMergeDisabled">
@@ -3795,20 +3860,11 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="codex.sessionConfig.permissionsPreset">
       <source xml:lang="en">Approvals</source>
     </trans-unit>
-    <trans-unit id="codex.sessionConfig.permissionsPreset.autoReview">
-      <source xml:lang="en">Auto-Review</source>
-    </trans-unit>
     <trans-unit id="codex.sessionConfig.permissionsPreset.autoReviewDescription">
       <source xml:lang="en">Same sandboxed access as Default, but approval requests are routed through the auto-reviewer instead of prompting you.</source>
     </trans-unit>
-    <trans-unit id="codex.sessionConfig.permissionsPreset.default">
-      <source xml:lang="en">Default Permissions</source>
-    </trans-unit>
     <trans-unit id="codex.sessionConfig.permissionsPreset.defaultDescription">
       <source xml:lang="en">Codex can read and edit workspace files and run routine local commands under the platform sandbox. It asks before using the internet or requesting broader access.</source>
-    </trans-unit>
-    <trans-unit id="codex.sessionConfig.permissionsPreset.fullAccess">
-      <source xml:lang="en">Full Access</source>
     </trans-unit>
     <trans-unit id="codex.sessionConfig.permissionsPreset.fullAccessDescription">
       <source xml:lang="en">Codex can edit files outside the workspace and use the internet without asking. Use only when you want full machine access.</source>
@@ -3896,6 +3952,12 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="codex.sessionConfig.webSearchModeDescription">
       <source xml:lang="en">Web-search tool availability for the model.</source>
+    </trans-unit>
+    <trans-unit id="codex.turnApprovalsUpdateFailed">
+      <source xml:lang="en">Could not change approvals for the current turn. It will keep its previous permissions. {0}</source>
+    </trans-unit>
+    <trans-unit id="codex.turnSnapshotsTimeout">
+      <source xml:lang="en">Timed out waiting for Codex file snapshots.</source>
     </trans-unit>
     <trans-unit id="codexAgent.description">
       <source xml:lang="en">Codex agent using session-selected model providers</source>
@@ -4101,6 +4163,9 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="copilotAgent.fusionTier.title">
       <source xml:lang="en">Effort Level</source>
     </trans-unit>
+    <trans-unit id="copilotAgent.interruptedTurn">
+      <source xml:lang="en">The agent was interrupted before this request finished.</source>
+    </trans-unit>
     <trans-unit id="copilotAgent.modelNotAvailable">
       <source xml:lang="en">Model '{0}' is not available.</source>
     </trans-unit>
@@ -4166,12 +4231,6 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.unsandboxedCommandConfirmation.title.generic">
       <source xml:lang="en">Run Command Outside the Sandbox?</source>
     </trans-unit>
-    <trans-unit id="copilot.historyChanged">
-      <source xml:lang="en">Session history changed while it was loading. Reopen the session to try again.</source>
-    </trans-unit>
-    <trans-unit id="copilot.invalidHistoryCursor">
-      <source xml:lang="en">The Copilot runtime returned an invalid history cursor. Reopen the session to try again.</source>
-    </trans-unit>
     <trans-unit id="copilot.mcpRouting.connect">
       <source xml:lang="en">Connect to {0}</source>
     </trans-unit>
@@ -4195,6 +4254,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotAgent.interruptedTurn">
       <source xml:lang="en">The agent was interrupted before this request finished.</source>
+    </trans-unit>
+    <trans-unit id="copilotAgent.steeringFailed">
+      <source xml:lang="en">Failed to send the steering message: {0}</source>
     </trans-unit>
     <trans-unit id="copilotAgent.subagentFailed">
       <source xml:lang="en">Subagent failed.</source>
@@ -4631,6 +4693,14 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilotSlashCommand.sandboxPolicyUnavailable">
       <source xml:lang="en">The SDK did not return a sandbox policy.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotSessionHistory" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.historyChanged">
+      <source xml:lang="en">Session history changed while it was loading. Reopen the session to try again.</source>
+    </trans-unit>
+    <trans-unit id="copilot.invalidHistoryCursor">
+      <source xml:lang="en">The Copilot runtime returned an invalid history cursor. Reopen the session to try again.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSessionLauncher" source-language="en" datatype="plaintext"><body>
@@ -5159,11 +5229,11 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="copilot.customizationInstallation.notFound">
       <source xml:lang="en">The SDK no longer owns this customization installation.</source>
     </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.resultErrorDetail">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
     <trans-unit id="copilot.customizationInstallation.runtimeChanged">
       <source xml:lang="en">The customization runtime restarted. Start the operation again.</source>
-    </trans-unit>
-    <trans-unit id="copilot.customizationInstallation.sessionRequired">
-      <source xml:lang="en">Start a Copilot agent session before managing SDK installations.</source>
     </trans-unit>
     <trans-unit id="copilot.customizationInstallation.skillInventoryFailed">
       <source xml:lang="en">The SDK could not list installed skills.</source>
@@ -5476,6 +5546,11 @@ stderr: {2}</source>
       <source xml:lang="en">Renamed: {0}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/protocolServerHandler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.readOnlyConnection">
+      <source xml:lang="en">This connection is read-only. You can view sessions, but you cannot create sessions, send messages, or make changes.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/sessionPermissions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionPermissions.allow">
       <source xml:lang="en">Allow</source>
@@ -5697,6 +5772,101 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="isolateSession.name">
       <source xml:lang="en">Change Workspace to a New Worktree</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/shared/sessionMoveTools" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="toolComplete.moveSession">
+      <source xml:lang="en">Processed session move</source>
+    </trans-unit>
+    <trans-unit id="toolComplete.moveSession.move">
+      <source xml:lang="en">Moved nested session</source>
+    </trans-unit>
+    <trans-unit id="toolComplete.moveSession.promote">
+      <source xml:lang="en">Moved nested session to its own session</source>
+    </trans-unit>
+    <trans-unit id="toolComplete.moveSession.reorder">
+      <source xml:lang="en">Reordered nested session</source>
+    </trans-unit>
+    <trans-unit id="toolComplete.moveSession.scheduled">
+      <source xml:lang="en">Scheduled move</source>
+    </trans-unit>
+    <trans-unit id="toolComplete.moveSession.self">
+      <source xml:lang="en">Processed move of this chat</source>
+    </trans-unit>
+    <trans-unit id="toolComplete.moveSession.session">
+      <source xml:lang="en">Moved session</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession">
+      <source xml:lang="en">Move this session?</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.destination">
+      <source xml:lang="en">the destination session</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.move">
+      <source xml:lang="en">Move {0} into {1}? It keeps its history and folders.</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.move.title">
+      <source xml:lang="en">Move Nested Session?</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.nested">
+      <source xml:lang="en">this nested session</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.promote">
+      <source xml:lang="en">Make {0} its own session? It keeps its history and folders.</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.promote.title">
+      <source xml:lang="en">Move to Its Own Session?</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.reorder">
+      <source xml:lang="en">Move {0} to a new position in its session?</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.reorder.title">
+      <source xml:lang="en">Reorder Nested Session?</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.self">
+      <source xml:lang="en">Move this chat into {0} when this turn ends? It keeps its history and folders.</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.self.promote">
+      <source xml:lang="en">Make this chat its own session when this turn ends? It keeps its history and folders.</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.self.promote.title">
+      <source xml:lang="en">Move This Chat to Its Own Session?</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.self.title">
+      <source xml:lang="en">Move This Chat?</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.session">
+      <source xml:lang="en">Move {0} into {1} as a nested session? It keeps its history and folders.</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.session.title">
+      <source xml:lang="en">Move Session?</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.title">
+      <source xml:lang="en">Move Session?</source>
+    </trans-unit>
+    <trans-unit id="toolConfirm.moveSession.wholeSession">
+      <source xml:lang="en">this session</source>
+    </trans-unit>
+    <trans-unit id="toolInvoke.moveSession">
+      <source xml:lang="en">Moving session</source>
+    </trans-unit>
+    <trans-unit id="toolInvoke.moveSession.move">
+      <source xml:lang="en">Moving nested session</source>
+    </trans-unit>
+    <trans-unit id="toolInvoke.moveSession.promote">
+      <source xml:lang="en">Moving nested session to its own session</source>
+    </trans-unit>
+    <trans-unit id="toolInvoke.moveSession.reorder">
+      <source xml:lang="en">Reordering nested session</source>
+    </trans-unit>
+    <trans-unit id="toolInvoke.moveSession.self">
+      <source xml:lang="en">Scheduling a move of this chat</source>
+    </trans-unit>
+    <trans-unit id="toolInvoke.moveSession.session">
+      <source xml:lang="en">Moving session</source>
+    </trans-unit>
+    <trans-unit id="toolName.moveSession">
+      <source xml:lang="en">Move Session</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/shared/sessionServerTools" source-language="en" datatype="plaintext"><body>

@@ -43,6 +43,65 @@
       <source xml:lang="en">Choose a local-time schedule for this Agent Host automation.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostChatMoveErrors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatMoveRefusal.agentMergeOwner">
+      <source xml:lang="en">This chat runs Agent Merge for the session and can't be moved.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.conflict">
+      <source xml:lang="en">The chats changed while moving. Try again.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.conversionInProgress">
+      <source xml:lang="en">The chat is changing its workspace. Try again when it finishes.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.destinationNotFound">
+      <source xml:lang="en">The destination session is not available.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.destinationSingleFolder">
+      <source xml:lang="en">The destination session can't take another folder.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.differentCredentialOwner">
+      <source xml:lang="en">This chat uses a different account's credentials than the destination session.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.differentProvider">
+      <source xml:lang="en">Chats can only move between sessions of the same agent.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.disabled">
+      <source xml:lang="en">Moving chats is turned off.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.invalidAnchor">
+      <source xml:lang="en">The chat can't be placed at that position.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.legacyCatalog">
+      <source xml:lang="en">This session can't reorder or move its chats yet.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.notMovable">
+      <source xml:lang="en">This chat can't be moved.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.notSingleChat">
+      <source xml:lang="en">Only a session with a single chat can be moved into another session.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.notStarted">
+      <source xml:lang="en">Send a message in this chat before moving it to its own session.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.sessionArchived">
+      <source xml:lang="en">Chats can't be moved into or out of an archived session.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.sessionNotReady">
+      <source xml:lang="en">The session isn't ready yet. Try again in a moment.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.sessionQuarantined">
+      <source xml:lang="en">The session is changing its workspace or can't run requests right now.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.unsupported">
+      <source xml:lang="en">This chat can't be moved there.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.workspaceless">
+      <source xml:lang="en">Chats without a workspace folder can't be moved.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.worktreeFolder">
+      <source xml:lang="en">Chats that work in a worktree of their session can't be moved.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostClaudePermissionModePicker" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostClaudePermissionModePicker.ariaLabel">
       <source xml:lang="en">Approvals Picker</source>
@@ -63,6 +122,11 @@
     </trans-unit>
     <trans-unit id="codexApprovals.learnMore">
       <source xml:lang="en">Learn more about permissions</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostForkActions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.fork.targetDidNotAppear">
+      <source xml:lang="en">The forked chat did not appear, so it was most likely never created.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostModePicker" source-language="en" datatype="plaintext"><body>
@@ -123,7 +187,7 @@
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSessionChangesets" source-language="en" datatype="plaintext"><body>
     <trans-unit id="lastTurnChanges">
-      <source xml:lang="en">Last Turn Changes</source>
+      <source xml:lang="en">Last Turn</source>
     </trans-unit>
     <trans-unit id="lastTurnChangesDescription">
       <source xml:lang="en">Show only changes made in the last turn</source>
@@ -291,20 +355,11 @@
     <trans-unit id="sessionComparison.permissions.claude.planDescription">
       <source xml:lang="en">Claude creates a plan before making changes.</source>
     </trans-unit>
-    <trans-unit id="sessionComparison.permissions.codex.autoReview">
-      <source xml:lang="en">Auto-Review</source>
-    </trans-unit>
     <trans-unit id="sessionComparison.permissions.codex.autoReviewDescription">
       <source xml:lang="en">Approval requests are routed through the auto-reviewer instead of prompting you.</source>
     </trans-unit>
-    <trans-unit id="sessionComparison.permissions.codex.default">
-      <source xml:lang="en">Default Permissions</source>
-    </trans-unit>
     <trans-unit id="sessionComparison.permissions.codex.defaultDescription">
       <source xml:lang="en">Codex works inside the workspace sandbox and asks before broader access.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.permissions.codex.fullAccess">
-      <source xml:lang="en">Full Access</source>
     </trans-unit>
     <trans-unit id="sessionComparison.permissions.codex.fullAccessDescription">
       <source xml:lang="en">Codex can use the internet and edit files outside the workspace without asking.</source>
@@ -529,6 +584,15 @@
     </trans-unit>
     <trans-unit id="importSessionUnavailable">
       <source xml:lang="en">Importing is unavailable for this session.</source>
+    </trans-unit>
+    <trans-unit id="moveChatAnchorNotFound">
+      <source xml:lang="en">The chat to place the moved chat after could not be found.</source>
+    </trans-unit>
+    <trans-unit id="moveChatDestinationNotFound">
+      <source xml:lang="en">The destination session is not available.</source>
+    </trans-unit>
+    <trans-unit id="moveChatUnavailable">
+      <source xml:lang="en">This chat can't be moved.</source>
     </trans-unit>
     <trans-unit id="moveSessionAnchorNotFound">
       <source xml:lang="en">The chat to place the session after could not be found.</source>
@@ -772,6 +836,12 @@
     <trans-unit id="cloudAutomationConfigurationUnsupported">
       <source xml:lang="en">Cloud automations do not support local mode, approval, or model-specific settings. Remove those settings before saving.</source>
     </trans-unit>
+    <trans-unit id="copilotChatSessions.moveChatUnsupported">
+      <source xml:lang="en">Chats of this session can't be moved.</source>
+    </trans-unit>
+    <trans-unit id="copilotChatSessions.moveSessionUnsupported">
+      <source xml:lang="en">This session can't be moved into another session.</source>
+    </trans-unit>
     <trans-unit id="copilotChatSessionsProvider">
       <source xml:lang="en">Copilot Chat</source>
     </trans-unit>
@@ -993,6 +1063,9 @@
     </trans-unit>
     <trans-unit id="cloudSandbox.configUnavailable">
       <source xml:lang="en">The sandbox connection is unavailable. Your prompt was not sent.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.creationUnavailable">
+      <source xml:lang="en">Start new cloud sessions from the Cloud environment.</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.renameUnavailable">
       <source xml:lang="en">Connect to the environment to rename this session.</source>
