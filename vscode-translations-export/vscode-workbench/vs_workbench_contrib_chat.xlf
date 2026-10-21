@@ -175,6 +175,12 @@
     <trans-unit id="chat.blobby">
       <source xml:lang="en">Type /blobby to unlock the True Name achievement without sending a chat request. If Blobby is off, the command turns it on; if it is already on, it opens the Color tab in Customize Blobby. Change Color in the pet's context menu always opens Color, where Stable and Insiders are free choices. True Name unlocks solid presets and custom colors; activating that achievement also opens Color. Use the color picker or enter an opaque hex color such as #ff8800, then activate Apply Color. Unapplied custom colors are discarded when you leave the tab or close the modal.</source>
     </trans-unit>
+    <trans-unit id="chat.canvasesAddContext">
+      <source xml:lang="en">In local Copilot agent-host sessions with chat.canvases.enabled turned on, Add Context includes Canvas immediately after Sessions. Open Canvas to choose a registered or closed canvas by name. Activating one opens or refocuses its tab; it does not attach anything to the prompt.</source>
+    </trans-unit>
+    <trans-unit id="chat.cloudStartupError">
+      <source xml:lang="en">If cloud session creation or connection fails, the current response offers Show Details. Use Tab to focus Show Details and Enter or Space to open a dialog with the failed step and available request details. Opening details does not sign in or retry the request. As with other response buttons, Show Details is unavailable after the conversation is restored.</source>
+    </trans-unit>
     <trans-unit id="chat.codexContinuation">
       <source xml:lang="en">A ChatGPT limit suggestion may offer Continue with Copilot. If the eligible Codex session is not active, the guide highlights its row in the Sessions list. Activate Open Session in the guide or open the row using the list's usual keyboard shortcut: by default, Command+Down Arrow on macOS or Enter on Windows and Linux. The next step opens its model picker with a matching Copilot model in the search. Activate Use Copilot in the guide or use Up and Down Arrow and Enter in the picker to select the Copilot model. Use Tab or Shift+Tab to reach the guide's buttons and Enter or Space to activate them. An already-active eligible session goes directly to the picker. End Tour or Escape cancels the remaining guidance; it does not undo a model selection.</source>
     </trans-unit>
@@ -239,7 +245,7 @@
       <source xml:lang="en">Stopping image generation shows Image generation cancelled, not a generation error. Cancelled image tools keep their cancelled status when you reopen the chat.</source>
     </trans-unit>
     <trans-unit id="chat.generatedImageCarousel">
-      <source xml:lang="en">Generated images also appear in artifacts. When Images Preview is enabled for chat, opening an image lets you browse generated images and user-attached images from the same conversation. Use the Left and Right Arrow keys to move between images.</source>
+      <source xml:lang="en">Generated images also appear in artifacts. When Images Preview is enabled for chat, opening an image lets you browse generated images, user-attached images, and images shown in responses from the same conversation. Use the Left and Right Arrow keys to move between images.</source>
     </trans-unit>
     <trans-unit id="chat.generatedImageDetails">
       <source xml:lang="en">Expand a completed image-generation dropdown to inspect its duration, total image byte size, and tokens. A dash means the value was not reported; token usage is not yet available. Generated image downloads include a stable hash suffix so different images have distinct filenames.</source>
@@ -374,7 +380,7 @@
       <source xml:lang="en">When a plan is ready for review, open it from the chat response to edit the plan and add line comments. Use the editor toolbar to navigate, clear, or submit feedback. Choose an implementation action from the plan review in Chat.</source>
     </trans-unit>
     <trans-unit id="chat.policyInputBlocked">
-      <source xml:lang="en">If your organization configures managed permissions or requires sandboxing, opening an existing Local chat automatically moves its conversation and draft to Copilot without sending. The original chat is archived only after the new conversation opens. If moving fails, the original stays read-only. Use Tab to focus Move to Copilot in the banner, then press Enter or Space to try again. Archived originals remain available without moving again. Empty chats offer New Copilot Chat instead.</source>
+      <source xml:lang="en">If your organization configures managed permissions or requires sandboxing, opening an existing Local chat automatically moves its conversation and draft to Copilot without sending. The original chat is archived only after the new conversation opens with its history. If moving fails, the original stays read-only. Use Tab to focus Move to Copilot in the banner, then press Enter or Space to try again. Archived originals remain available without moving again. Empty chats offer New Copilot Chat instead. When the Agent Host cannot import history, such as in a remote window, nothing moves automatically. Use Tab to focus Continue in Copilot in the banner, then press Enter or Space to start a new Copilot chat with the conversation attached as context and your draft, without sending. The original chat stays available and is not archived.</source>
     </trans-unit>
     <trans-unit id="chat.previousQuestionCarouselQuestion">
       <source xml:lang="en">When a chat question is focused, move to the previous question{0}.</source>
@@ -396,6 +402,9 @@
     </trans-unit>
     <trans-unit id="chat.requestHistory">
       <source xml:lang="en">In the input box, use up and down arrows to navigate your request history. Edit input and use enter or the submit button to run a new request.</source>
+    </trans-unit>
+    <trans-unit id="chat.responseImages">
+      <source xml:lang="en">To open an image shown in a response, use Tab to focus it and press Enter or Space. To attach it to your next request, open its context menu{0} and choose Add File to Chat, or drag it into the chat input.</source>
     </trans-unit>
     <trans-unit id="chat.sandboxCertificateCommands">
       <source xml:lang="en">Open the Command Palette{0} and run Sandbox: Manage Trusted CA for the last-focused chat. Use Up and Down Arrow to choose Install, Rotate, or Remove, then Enter to continue or Escape to cancel. If there is no agent-host target for the last-focused chat, a dialog says No agent host detected.</source>
@@ -440,19 +449,19 @@
       <source xml:lang="en">When space is limited, session status pills collapse to icons one at a time from right to left. Their full labels remain available to screen readers and in tooltips. Labels return as space becomes available. If the icons still do not fit, the row scrolls horizontally; use the arrow keys to reach every pill.</source>
     </trans-unit>
     <trans-unit id="chat.sessionWorkingSet">
-      <source xml:lang="en">The working set above the input lists changes across the whole session instead of showing a Changes pill. Use Tab or Shift+Tab to reach its heading and press Enter or Space to expand or collapse it. {0} Use Tab to reach the file list, Up and Down Arrow to choose a file, and Enter to open its diff. Each file announces its path and added and removed line counts.</source>
+      <source xml:lang="en">The working set above the input lists changes across the whole session instead of showing a Changes pill. Use Tab or Shift+Tab to reach its heading and press Enter or Space to expand or collapse it. {0} Use Tab to reach the file list, Up and Down Arrow to choose a file, and Enter to open it. Each file announces its path and added and removed line counts.</source>
     </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.fileActions">
-      <source xml:lang="en">To keep or undo the session's changes to the chosen file, press Tab to reach its Keep button, Left and Right Arrow to move between Keep and Undo, and Enter or Space to activate one. Keep removes files from the working set until the session changes them again. Undo reverts the session's changes after any confirmation the session asks for. Undo is available only when the session supports it, and is unavailable while a request is running. The accessibility.signals.editsKept and accessibility.signals.editsUndone settings control the signals played when changes are kept or undone.</source>
+      <source xml:lang="en">To keep or undo the session's changes to the chosen file, or open them in a diff editor, press Tab to reach its Keep button, Left and Right Arrow to move between Keep, Undo, and Open Changes in Diff Editor, and Enter or Space to activate one. Keep removes files from the working set until the session changes them again, as does staging or committing them with Git. Undo reverts the session's changes after any confirmation the session asks for, and deletes a file the session created. Undo is available only when the session supports it, and is unavailable while a request is running. The accessibility.signals.editsKept and accessibility.signals.editsUndone settings control the signals played when changes are kept or undone.</source>
     </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.fileKeep">
-      <source xml:lang="en">To keep the session's changes to the chosen file, press Tab to reach its Keep button, and Enter or Space to activate it. Keep removes files from the working set until the session changes them again. The accessibility.signals.editsKept setting controls the signal played when changes are kept.</source>
+      <source xml:lang="en">To keep the session's changes to the chosen file, or open them in a diff editor, press Tab to reach its Keep button, Left and Right Arrow to move between Keep and Open Changes in Diff Editor, and Enter or Space to activate one. Keep removes files from the working set until the session changes them again, as does staging or committing them with Git. The accessibility.signals.editsKept setting controls the signal played when changes are kept.</source>
     </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.headingKeep">
       <source xml:lang="en">The Keep and View All Edits buttons after the heading keep the changes to every file in the working set, or open all of them in a diff editor.</source>
     </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.headingKeepUndo">
-      <source xml:lang="en">The Keep, Undo, and View All Edits buttons after the heading keep or undo the changes to every file in the working set, or open all of them in a diff editor.</source>
+      <source xml:lang="en">The Keep, Undo, and View All Edits buttons after the heading keep or undo the changes to every file in the working set, or open all of them in a diff editor. Undo in the heading asks for confirmation.</source>
     </trans-unit>
     <trans-unit id="chat.showHiddenTerminals">
       <source xml:lang="en">If there are any hidden chat terminals, you can view them by invoking the View Hidden Chat Terminals command{0}.</source>
@@ -966,6 +975,9 @@
     </trans-unit>
     <trans-unit id="chat.continueInCopilot.failed">
       <source xml:lang="en">Couldn't move this chat to Copilot. Your original conversation is still available.</source>
+    </trans-unit>
+    <trans-unit id="chat.continueInCopilot.historyMissing">
+      <source xml:lang="en">Copilot didn't load the moved conversation. Your original conversation is still available.</source>
     </trans-unit>
     <trans-unit id="chat.continueInCopilot.provider">
       <source xml:lang="en">Copilot</source>
@@ -2741,14 +2753,14 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="agentHostModePicker.currentMode">
       <source xml:lang="en">Current mode: {0}</source>
     </trans-unit>
-    <trans-unit id="agentHostModePicker.experimental">
-      <source xml:lang="en">Experimental</source>
-    </trans-unit>
     <trans-unit id="agentHostModePicker.manual">
       <source xml:lang="en">Manual</source>
     </trans-unit>
     <trans-unit id="agentHostModePicker.modeButton">
       <source xml:lang="en">Pick Mode, {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHostModePicker.new">
+      <source xml:lang="en">New</source>
     </trans-unit>
     <trans-unit id="agentHostModePicker.permissions">
       <source xml:lang="en">Permissions</source>
@@ -2963,7 +2975,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Sandbox trusted CA is not installed</source>
     </trans-unit>
     <trans-unit id="agentHost.sandboxCertificateMissingDetail">
-      <source xml:lang="en">Some tools running in this session's sandbox may need a trusted certificate on the agent host.</source>
+      <source xml:lang="en">Some tools in this session's sandbox might require the sandbox certificate authority (CA) to be trusted by the agent host's operating system. Install it in the OS trust store to enable those tools to connect securely.</source>
     </trans-unit>
     <trans-unit id="agentHost.sandboxCertificateRemoving">
       <source xml:lang="en">Removing sandbox certificate trust</source>
@@ -3231,6 +3243,15 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.issues.section">
       <source xml:lang="en">Issues</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.keepChanged">
+      <source xml:lang="en">'{0}' changed before its changes could be kept.</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.keepFailed">
+      <source xml:lang="en">Could not keep changes to {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.keepUnverified">
+      <source xml:lang="en">The session's changes couldn't be checked. Try again.</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.pullRequest">
       <source xml:lang="en">Pull Request</source>
@@ -6462,8 +6483,32 @@ Destination files created or changed by the agent are not removed.</source>
     <trans-unit id="copilotConnectors.catalogScopeRollout">
       <source xml:lang="en">The connector catalog is unavailable for this account (HTTP 403).</source>
     </trans-unit>
+    <trans-unit id="copilotConnectors.connectionDeclined">
+      <source xml:lang="en">Authorization for {0} was declined.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.connectionError">
+      <source xml:lang="en">{0} reported an error.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.connectionErrorWithMessage">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.connectionReconnectRequired">
+      <source xml:lang="en">Reconnect required: authorization for {0} did not complete. Reconnect to try again.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.connectionRetryableError">
+      <source xml:lang="en">Connection to {0} failed. Try again.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.connectionReviewRequired">
+      <source xml:lang="en">Review required: {0} needs to be reviewed before it can be connected.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.connectionSignInRequired">
+      <source xml:lang="en">Sign in required: sign in to {0}, then try again.</source>
+    </trans-unit>
     <trans-unit id="copilotConnectors.connectionTimedOut">
       <source xml:lang="en">Connector authorization did not finish in time. Complete authorization in the browser, then try again.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.connectionUnavailable">
+      <source xml:lang="en">{0} is currently unavailable.</source>
     </trans-unit>
     <trans-unit id="copilotConnectors.defaultDescription">
       <source xml:lang="en">Connect {0} to GitHub Copilot.</source>
@@ -8008,9 +8053,6 @@ Disabled servers may become enabled.</source>
     <trans-unit id="mcpServerManagedByPluginAria">
       <source xml:lang="en">{0} is disabled by its plugin</source>
     </trans-unit>
-    <trans-unit id="mcpServerSigningInStatus">
-      <source xml:lang="en">Signing in to {0}.</source>
-    </trans-unit>
     <trans-unit id="mcpServers">
       <source xml:lang="en">MCP Servers</source>
     </trans-unit>
@@ -8095,18 +8137,6 @@ Disabled servers may become enabled.</source>
     <trans-unit id="showPlugin">
       <source xml:lang="en">Show Plugin</source>
     </trans-unit>
-    <trans-unit id="signIn">
-      <source xml:lang="en">Sign In</source>
-    </trans-unit>
-    <trans-unit id="signInToMcpServer">
-      <source xml:lang="en">Sign in to {0}</source>
-    </trans-unit>
-    <trans-unit id="signingIn">
-      <source xml:lang="en">Signing In...</source>
-    </trans-unit>
-    <trans-unit id="signingInToMcpServer">
-      <source xml:lang="en">Signing in to {0}</source>
-    </trans-unit>
     <trans-unit id="start">
       <source xml:lang="en">Start</source>
     </trans-unit>
@@ -8142,6 +8172,23 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="workspaceMcpServersGroupDescription">
       <source xml:lang="en">MCP servers configured by this workspace.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/mcpServerSignInButton" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcpServerSigningInStatus">
+      <source xml:lang="en">Signing in to {0}.</source>
+    </trans-unit>
+    <trans-unit id="signIn">
+      <source xml:lang="en">Sign In</source>
+    </trans-unit>
+    <trans-unit id="signInToMcpServer">
+      <source xml:lang="en">Sign in to {0}</source>
+    </trans-unit>
+    <trans-unit id="signingIn">
+      <source xml:lang="en">Signing In...</source>
+    </trans-unit>
+    <trans-unit id="signingInToMcpServer">
+      <source xml:lang="en">Signing in to {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/pluginListWidget" source-language="en" datatype="plaintext"><body>
@@ -11624,6 +11671,20 @@ Examples:
       <source xml:lang="en">This AHP log is unavailable.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditing" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.editing.discardAll.confirmation.manyFiles">
+      <source xml:lang="en">This will undo changes made in {0} files. Do you want to proceed?</source>
+    </trans-unit>
+    <trans-unit id="chat.editing.discardAll.confirmation.oneFile">
+      <source xml:lang="en">This will undo changes made in {0}. Do you want to proceed?</source>
+    </trans-unit>
+    <trans-unit id="chat.editing.discardAll.confirmation.primaryButton">
+      <source xml:lang="en">Yes</source>
+    </trans-unit>
+    <trans-unit id="chat.editing.discardAll.confirmation.title">
+      <source xml:lang="en">Undo all edits?</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingActions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="accept">
       <source xml:lang="en">Keep</source>
@@ -11639,18 +11700,6 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.editRequests.label">
       <source xml:lang="en">Edit Request</source>
-    </trans-unit>
-    <trans-unit id="chat.editing.discardAll.confirmation.manyFiles">
-      <source xml:lang="en">This will undo changes made in {0} files. Do you want to proceed?</source>
-    </trans-unit>
-    <trans-unit id="chat.editing.discardAll.confirmation.oneFile">
-      <source xml:lang="en">This will undo changes made in {0}. Do you want to proceed?</source>
-    </trans-unit>
-    <trans-unit id="chat.editing.discardAll.confirmation.primaryButton">
-      <source xml:lang="en">Yes</source>
-    </trans-unit>
-    <trans-unit id="chat.editing.discardAll.confirmation.title">
-      <source xml:lang="en">Undo all edits?</source>
     </trans-unit>
     <trans-unit id="chat.openFileUpdatedBySnapshot.label">
       <source xml:lang="en">Open File</source>
@@ -14949,11 +14998,49 @@ Source: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxApiService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.identityNetworkError">
+      <source xml:lang="en">The sandbox identity-token request failed before a response was received.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.identityRequestFailed">
+      <source xml:lang="en">Sandbox identity-token acquisition failed: HTTP {0} (request {1}).</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.identityResponseFailed">
+      <source xml:lang="en">Could not read the sandbox identity-token response.</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.invalidRepository">
       <source xml:lang="en">The sandbox repository must be specified as owner/name.</source>
     </trans-unit>
+    <trans-unit id="cloudSandbox.invalidSealedToken">
+      <source xml:lang="en">The sandbox token-sealing response is invalid.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.invalidSealingRequest">
+      <source xml:lang="en">The sandbox token-sealing request is invalid.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.invalidSealingResource">
+      <source xml:lang="en">The sandbox token-sealing resource must be a valid URL.</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.reasoningEffort">
       <source xml:lang="en">Reasoning Effort</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.sealingNetworkError">
+      <source xml:lang="en">The sandbox token-sealing request failed before a response was received.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.sealingRequestFailed">
+      <source xml:lang="en">Sandbox token sealing failed: HTTP {0} (request {1}).</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.sealingResponseFailed">
+      <source xml:lang="en">Could not read the sandbox token-sealing response.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxIdentityTokenProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.identityExpiredDuringSealing">
+      <source xml:lang="en">The sandbox identity token expired while preparing authentication. Try connecting again.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.invalidIdentityToken">
+      <source xml:lang="en">The sandbox identity-token response is invalid.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.invalidIdentityTokenExpiry">
+      <source xml:lang="en">The sandbox identity token has an invalid or expired lifetime.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxLegacySessionPreparation" source-language="en" datatype="plaintext"><body>
@@ -15102,6 +15189,77 @@ Source: {0}</source>
       <source xml:lang="en">The session does not belong to this sandbox.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxStartupError" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.showStartupErrorDetails">
+      <source xml:lang="en">Show Details</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.accessDenied">
+      <source xml:lang="en">GitHub denied access. Check your repository access and your organization's cloud session settings.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.conflict">
+      <source xml:lang="en">GitHub reported a conflicting operation. Check your cloud sessions before trying again.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.connectionFailed">
+      <source xml:lang="en">Cloud setup started, but VS Code couldn't connect. {0}</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.connectionStep">
+      <source xml:lang="en">Step: Connect to cloud session</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.creationFailed">
+      <source xml:lang="en">Couldn't start the cloud session. {0}</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.creationStep">
+      <source xml:lang="en">Step: Create cloud session</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.creationUnconfirmed">
+      <source xml:lang="en">Couldn't confirm whether the cloud session was created. Check your cloud sessions before starting another.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.disabled">
+      <source xml:lang="en">Cloud sessions are not enabled for this account or organization.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.errorCode">
+      <source xml:lang="en">Error code: {0}</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.httpStatus">
+      <source xml:lang="en">HTTP status: {0}</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.invalid">
+      <source xml:lang="en">The cloud session request is not valid. Check your repository and session settings.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.invalidDetails">
+      <source xml:lang="en">Cloud session error details are unavailable.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.notFound">
+      <source xml:lang="en">GitHub couldn't find or allow access to a required resource.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.preparationFailed">
+      <source xml:lang="en">Couldn't prepare the cloud session. {0}</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.preparationStep">
+      <source xml:lang="en">Step: Prepare cloud session</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.preparationUnknown">
+      <source xml:lang="en">Check your session settings and GitHub sign-in before trying again.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.rateLimited">
+      <source xml:lang="en">GitHub is limiting requests. Wait before trying again.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.rateLimitedFor">
+      <source xml:lang="en">GitHub is limiting requests. Wait {0} seconds before trying again.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.requestId">
+      <source xml:lang="en">Request reference: {0}</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.retryAfter">
+      <source xml:lang="en">Requested wait: {0} seconds</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.signIn">
+      <source xml:lang="en">Sign in to GitHub to continue.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.startup.unknown">
+      <source xml:lang="en">Check your connection and your cloud sessions before trying again.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/editorCloudSandboxContribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cloudSandbox.connectionLost">
       <source xml:lang="en">The connection to the cloud sandbox was lost before the session could start.</source>
@@ -15215,6 +15373,9 @@ Source: {0}</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.cloudSandbox.enabled">
       <source xml:lang="en">Use GitHub Cloud for new Cloud sessions in the Agents Window instead of Copilot coding agent on GitHub Actions. Also enables discovering and opening GitHub Cloud sessions.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.cloudSandbox.sessionFeed.enabled">
+      <source xml:lang="en">Try Mission Control push notifications to discover and refresh cloud sandbox sessions when enabled for your GitHub account. If unavailable, use normal polling without repeated connection attempts until the window reloads, the account changes, or this setting is toggled. When disabled, do not request feed credentials or open a feed connection; use normal polling only.</source>
     </trans-unit>
     <trans-unit id="chat.remoteAgentHosts.enabled">
       <source xml:lang="en">Enable connecting to remote agent hosts.</source>
@@ -16803,6 +16964,9 @@ Note: This setting only controls tool approval and does not prevent the agent fr
     <trans-unit id="chat.codeblock.insertions.one">
       <source xml:lang="en">1 insertion</source>
     </trans-unit>
+    <trans-unit id="chat.markdownImage.open">
+      <source xml:lang="en">Open image {0}</source>
+    </trans-unit>
     <trans-unit id="chat.renderedCodeBlockLabel">
       <source xml:lang="en">Rendered code block {0}</source>
     </trans-unit>
@@ -18006,6 +18170,15 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="mcpAppError">
       <source xml:lang="en">Error loading MCP App: {0}</source>
     </trans-unit>
+    <trans-unit id="mcpAppSignIn">
+      <source xml:lang="en">Sign in to {0} to load this app.</source>
+    </trans-unit>
+    <trans-unit id="mcpAppWaitingForServer">
+      <source xml:lang="en">MCP server {0} isn't available yet. The app will load when it is.</source>
+    </trans-unit>
+    <trans-unit id="mcpAppWaitingForUnknownServer">
+      <source xml:lang="en">The MCP server for this app isn't available yet. The app will load when it is.</source>
+    </trans-unit>
     <trans-unit id="retry">
       <source xml:lang="en">Retry</source>
     </trans-unit>
@@ -18885,6 +19058,12 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chatReadOnlyBanner.continueInCopilot">
       <source xml:lang="en">Move to Copilot</source>
     </trans-unit>
+    <trans-unit id="chatReadOnlyBanner.continueWithTranscript">
+      <source xml:lang="en">Continue in Copilot</source>
+    </trans-unit>
+    <trans-unit id="chatReadOnlyBanner.continueWithTranscriptDescription">
+      <source xml:lang="en">Start a new Copilot chat with this conversation attached as context and your draft. This chat stays available. Nothing will be sent automatically.</source>
+    </trans-unit>
     <trans-unit id="chatReadOnlyBanner.managedPolicy">
       <source xml:lang="en">This chat is read-only because your organization requires the new Copilot experience.</source>
     </trans-unit>
@@ -19111,9 +19290,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.sessionWorkingSet.keepAll">
       <source xml:lang="en">Keep All Edits</source>
     </trans-unit>
-    <trans-unit id="chat.sessionWorkingSet.keepFile">
-      <source xml:lang="en">Keep</source>
-    </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.list">
       <source xml:lang="en">Session changes</source>
     </trans-unit>
@@ -19131,9 +19307,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.undoAll">
       <source xml:lang="en">Undo All Edits</source>
-    </trans-unit>
-    <trans-unit id="chat.sessionWorkingSet.undoFile">
-      <source xml:lang="en">Undo</source>
     </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.viewAll">
       <source xml:lang="en">View All Edits</source>
@@ -20300,12 +20473,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="sessionCost">
       <source xml:lang="en">Session Cost</source>
     </trans-unit>
-    <trans-unit id="sessionCost.partial">
-      <source xml:lang="en">{0} (partial)</source>
-    </trans-unit>
-    <trans-unit id="sessionCost.unavailable">
-      <source xml:lang="en">Unavailable</source>
-    </trans-unit>
     <trans-unit id="sessionInfo">
       <source xml:lang="en">Session Info</source>
     </trans-unit>
@@ -20322,12 +20489,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="contextUsagePercentageLabel">
       <source xml:lang="en">Context window usage: {0}%</source>
-    </trans-unit>
-    <trans-unit id="sessionCostLabel">
-      <source xml:lang="en">Cost</source>
-    </trans-unit>
-    <trans-unit id="sessionInfoLabel">
-      <source xml:lang="en">Session Info</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widgetHosts/viewPane/chatViewPane" source-language="en" datatype="plaintext"><body>
@@ -20637,6 +20798,15 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chatSessionType">
       <source xml:lang="en">The type of the current chat session.</source>
+    </trans-unit>
+    <trans-unit id="chatSessionWorkingSetHasUndo">
+      <source xml:lang="en">True when the session of the session working set supports undoing its changes to single files, false otherwise.</source>
+    </trans-unit>
+    <trans-unit id="chatSessionWorkingSetKeepEnabled">
+      <source xml:lang="en">True when the session working set can keep changes now, false otherwise.</source>
+    </trans-unit>
+    <trans-unit id="chatSessionWorkingSetUndoEnabled">
+      <source xml:lang="en">True when the session working set can undo changes now, false otherwise.</source>
     </trans-unit>
     <trans-unit id="chatSkipRequestInProgressMessage">
       <source xml:lang="en">True when the chat request in progress message should be skipped.</source>
@@ -21066,6 +21236,9 @@ Error Code: {3}</source>
     </trans-unit>
     <trans-unit id="chatImageExtraction.inlineReference">
       <source xml:lang="en">File</source>
+    </trans-unit>
+    <trans-unit id="chatImageExtraction.response">
+      <source xml:lang="en">Response</source>
     </trans-unit>
     <trans-unit id="chatImageExtraction.toolSource">
       <source xml:lang="en">Tool: {0}</source>
@@ -21566,6 +21739,12 @@ To make this the starting permission level for new sessions, change the [{0}](co
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/hookSchema" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="hook.allowedEnvVars">
+      <source xml:lang="en">Environment variable names whose values may be exposed to the HTTP hook.</source>
+    </trans-unit>
+    <trans-unit id="hook.args">
+      <source xml:lang="en">Arguments passed to the native executable.</source>
+    </trans-unit>
     <trans-unit id="hook.bash">
       <source xml:lang="en">Bash command for Linux and macOS.</source>
     </trans-unit>
@@ -21584,14 +21763,26 @@ To make this the starting permission level for new sessions, change the [{0}](co
     <trans-unit id="hook.env">
       <source xml:lang="en">Additional environment variables that are merged with the existing environment.</source>
     </trans-unit>
+    <trans-unit id="hook.exec">
+      <source xml:lang="en">Native executable path. Cannot be combined with a shell command.</source>
+    </trans-unit>
+    <trans-unit id="hook.headers">
+      <source xml:lang="en">HTTP headers sent with the request.</source>
+    </trans-unit>
     <trans-unit id="hook.linux">
       <source xml:lang="en">Linux-specific command. If specified and running on Linux, this overrides the "command" field.</source>
+    </trans-unit>
+    <trans-unit id="hook.matcher">
+      <source xml:lang="en">Regular expression selecting matching tools or events.</source>
     </trans-unit>
     <trans-unit id="hook.osx">
       <source xml:lang="en">macOS-specific command. If specified and running on macOS, this overrides the "command" field.</source>
     </trans-unit>
     <trans-unit id="hook.powershell">
       <source xml:lang="en">PowerShell command for Windows.</source>
+    </trans-unit>
+    <trans-unit id="hook.prompt">
+      <source xml:lang="en">Prompt text added when the session starts.</source>
     </trans-unit>
     <trans-unit id="hook.timeout">
       <source xml:lang="en">Maximum execution time in seconds (default: 30).</source>
@@ -21600,7 +21791,10 @@ To make this the starting permission level for new sessions, change the [{0}](co
       <source xml:lang="en">Maximum execution time in seconds (default: 10).</source>
     </trans-unit>
     <trans-unit id="hook.type">
-      <source xml:lang="en">Must be "command".</source>
+      <source xml:lang="en">Hook action type. Supported values depend on the active harness.</source>
+    </trans-unit>
+    <trans-unit id="hook.url">
+      <source xml:lang="en">HTTP or HTTPS URL invoked by the hook.</source>
     </trans-unit>
     <trans-unit id="hook.windows">
       <source xml:lang="en">Windows-specific command. If specified and running on Windows, this overrides the "command" field.</source>
@@ -21628,17 +21822,41 @@ To make this the starting permission level for new sessions, change the [{0}](co
     <trans-unit id="hookType.errorOccurred.label">
       <source xml:lang="en">Error Occurred</source>
     </trans-unit>
+    <trans-unit id="hookType.notification.description">
+      <source xml:lang="en">Executed when the agent emits a notification.</source>
+    </trans-unit>
+    <trans-unit id="hookType.notification.label">
+      <source xml:lang="en">Notification</source>
+    </trans-unit>
+    <trans-unit id="hookType.permissionRequest.description">
+      <source xml:lang="en">Executed when the agent requests permission.</source>
+    </trans-unit>
+    <trans-unit id="hookType.permissionRequest.label">
+      <source xml:lang="en">Permission Request</source>
+    </trans-unit>
     <trans-unit id="hookType.postToolUse.description">
       <source xml:lang="en">Executed after a tool completes execution successfully.</source>
     </trans-unit>
     <trans-unit id="hookType.postToolUse.label">
       <source xml:lang="en">Post-Tool Use</source>
     </trans-unit>
+    <trans-unit id="hookType.postToolUseFailure.description">
+      <source xml:lang="en">Executed after a tool invocation fails.</source>
+    </trans-unit>
+    <trans-unit id="hookType.postToolUseFailure.label">
+      <source xml:lang="en">Post-Tool Use Failure</source>
+    </trans-unit>
     <trans-unit id="hookType.preCompact.description">
       <source xml:lang="en">Executed before the agent compacts the conversation context.</source>
     </trans-unit>
     <trans-unit id="hookType.preCompact.label">
       <source xml:lang="en">Pre-Compact</source>
+    </trans-unit>
+    <trans-unit id="hookType.preMcpToolCall.description">
+      <source xml:lang="en">Executed before an MCP tool is called.</source>
+    </trans-unit>
+    <trans-unit id="hookType.preMcpToolCall.label">
+      <source xml:lang="en">Pre-MCP Tool Call</source>
     </trans-unit>
     <trans-unit id="hookType.preToolUse.description">
       <source xml:lang="en">Executed before the agent uses any tool.</source>
@@ -21681,6 +21899,12 @@ To make this the starting permission level for new sessions, change the [{0}](co
     </trans-unit>
     <trans-unit id="hookType.userPromptSubmit.label">
       <source xml:lang="en">User Prompt Submit</source>
+    </trans-unit>
+    <trans-unit id="hookType.userPromptTransformed.description">
+      <source xml:lang="en">Executed after the user's prompt is transformed.</source>
+    </trans-unit>
+    <trans-unit id="hookType.userPromptTransformed.label">
+      <source xml:lang="en">User Prompt Transformed</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptCodeActions" source-language="en" datatype="plaintext"><body>
@@ -21900,6 +22124,96 @@ Example: `['src/**/*.ts', 'test/**']`</source>
     <trans-unit id="promptHeader.agent.userInvocable">
       <source xml:lang="en">Whether the agent can be selected and invoked by users in the UI.</source>
     </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.deferredToolLoading">
+      <source xml:lang="en">Whether tools can be loaded on demand for this custom agent.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.description">
+      <source xml:lang="en">Describes what the custom agent does and when it should be used.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.disableModelInvocation">
+      <source xml:lang="en">Whether to prevent the model from selecting this custom agent.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.github">
+      <source xml:lang="en">Configures GitHub MCP toolsets and permission policies for this custom agent.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.github.permissions">
+      <source xml:lang="en">GitHub MCP permission policy.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.github.toolsets">
+      <source xml:lang="en">GitHub MCP toolsets available to the custom agent.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.hooks">
+      <source xml:lang="en">Lifecycle hooks that run while this custom agent is active.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.includeCustomInstructions">
+      <source xml:lang="en">Whether repository custom instructions are included in the custom agent context.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.infer">
+      <source xml:lang="en">Legacy inverse of `disable-model-invocation`. Set to false to prevent model-driven invocation.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.mcp.args">
+      <source xml:lang="en">Arguments passed to the MCP server command.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.mcp.command">
+      <source xml:lang="en">Command used to start the MCP server.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.mcp.cwd">
+      <source xml:lang="en">Working directory used to start the MCP server.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.mcp.deferTools">
+      <source xml:lang="en">Controls whether MCP tools are deferred.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.mcp.env">
+      <source xml:lang="en">Environment variables passed to the MCP server.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.mcp.headers">
+      <source xml:lang="en">HTTP headers sent to the MCP server.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.mcp.local.type">
+      <source xml:lang="en">Local MCP server transport type.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.mcp.remote.type">
+      <source xml:lang="en">Remote MCP server transport type.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.mcp.timeout">
+      <source xml:lang="en">Positive startup timeout.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.mcp.tools">
+      <source xml:lang="en">Tools exposed from the MCP server.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.mcp.url">
+      <source xml:lang="en">Remote MCP server URL.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.mcpServers">
+      <source xml:lang="en">Agent-scoped local or remote MCP server configurations.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.model">
+      <source xml:lang="en">The model to use. An array is treated as an ordered list of model preferences.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.modelPolicy">
+      <source xml:lang="en">Controls whether the configured model list is preferred or required.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.name">
+      <source xml:lang="en">The name of the custom agent. If omitted, the name is derived from the file name.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.reasoningEffort">
+      <source xml:lang="en">The reasoning-effort override for this custom agent. Supported values depend on the selected model.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.skills">
+      <source xml:lang="en">The skills to load into the custom agent context.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.strictToolsList">
+      <source xml:lang="en">Whether to omit standard required tools that are not listed explicitly.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.target">
+      <source xml:lang="en">Overrides the harness used to interpret this custom agent file.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.tools">
+      <source xml:lang="en">The tools available to the custom agent. Use a comma-separated string or an array of tool names.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilotAgent.userInvocable">
+      <source xml:lang="en">Whether users can select and invoke this custom agent.</source>
+    </trans-unit>
     <trans-unit id="promptHeader.instructions.applyToRange">
       <source xml:lang="en">One or more glob pattern (separated by comma) that describe for which files the instructions apply to. Based on these patterns, the file is automatically included in the prompt, when the context contains a file that matches one or more of these patterns. Use `**` when you want this file to always be added.
 Example: `**/*.ts`, `**/*.js`, `client/**`</source>
@@ -21973,10 +22287,22 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
       <source xml:lang="en">New Command</source>
     </trans-unit>
     <trans-unit id="promptHeaderAutocompletion.newCommand.description">
-      <source xml:lang="en">Add a new command entry to this hook.</source>
+      <source xml:lang="en">Add a new command action to this hook.</source>
     </trans-unit>
     <trans-unit id="promptHeaderAutocompletion.newHook">
       <source xml:lang="en">New Hook</source>
+    </trans-unit>
+    <trans-unit id="promptHeaderAutocompletion.newHttpHook">
+      <source xml:lang="en">New HTTP Action</source>
+    </trans-unit>
+    <trans-unit id="promptHeaderAutocompletion.newHttpHook.description">
+      <source xml:lang="en">Add a new HTTP action to this hook.</source>
+    </trans-unit>
+    <trans-unit id="promptHeaderAutocompletion.newPromptHook">
+      <source xml:lang="en">New Prompt Action</source>
+    </trans-unit>
+    <trans-unit id="promptHeaderAutocompletion.newPromptHook.description">
+      <source xml:lang="en">Add a startup prompt action to this hook.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptHovers" source-language="en" datatype="plaintext"><body>
@@ -21996,8 +22322,19 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptHeader.agent.handoffs.githubCopilot">
       <source xml:lang="en">Note: This attribute is not used in GitHub Copilot or Claude targets.</source>
     </trans-unit>
+    <trans-unit id="promptHeader.attribute.allowedValues.hover">
+      <source xml:lang="en">{0}
+
+Allowed values: {1}.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.attribute.infer.githubCopilot.hover">
+      <source xml:lang="en">Legacy: Use `disable-model-invocation` instead.</source>
+    </trans-unit>
     <trans-unit id="promptHeader.attribute.infer.hover">
       <source xml:lang="en">Deprecated: Use `user-invocable` and `disable-model-invocation` instead.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.attribute.notUsedByCopilot">
+      <source xml:lang="en">Note: This attribute is not used by the GitHub Copilot harness.</source>
     </trans-unit>
     <trans-unit id="promptHeader.prompt.agent.builtInDesc">
       <source xml:lang="en">Built-in agent</source>
@@ -22284,11 +22621,23 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.argumentHintShouldNotBeEmpty">
       <source xml:lang="en">The 'argument-hint' attribute should not be empty.</source>
     </trans-unit>
+    <trans-unit id="promptValidator.attributeInvalidValue">
+      <source xml:lang="en">The '{0}' attribute must be one of: {1}.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.attributeItemTypeMismatch">
+      <source xml:lang="en">Each item in the '{0}' attribute must be {1}.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.attributeMustBeBoolean">
+      <source xml:lang="en">The '{0}' attribute must be true or false.</source>
+    </trans-unit>
     <trans-unit id="promptValidator.attributeMustBeNonEmpty">
       <source xml:lang="en">The '{0}' attribute must be a non-empty string.</source>
     </trans-unit>
     <trans-unit id="promptValidator.attributeMustBeString">
       <source xml:lang="en">The '{0}' attribute must be a string.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.attributeTypeMismatch">
+      <source xml:lang="en">The '{0}' attribute must be {1}.</source>
     </trans-unit>
     <trans-unit id="promptValidator.chatModesRenamedToAgents">
       <source xml:lang="en">Chat modes have been renamed to agents. Please move this file to {0}</source>
@@ -22304,6 +22653,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="promptValidator.contextForkNotSupported">
       <source xml:lang="en">The 'context: fork' attribute requires the skill tool to be enabled (github.copilot.chat.skillTool.enabled).</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.copilotInferLegacy">
+      <source xml:lang="en">The 'infer' attribute is legacy. Use 'disable-model-invocation' instead.</source>
     </trans-unit>
     <trans-unit id="promptValidator.deprecatedVariableReference">
       <source xml:lang="en">Tool or toolset '{0}' has been renamed, use '{1}' instead.</source>
@@ -22347,6 +22699,12 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.githubMustBeMap">
       <source xml:lang="en">The 'github' attribute must be an object.</source>
     </trans-unit>
+    <trans-unit id="promptValidator.githubToolsetMustBeString">
+      <source xml:lang="en">Each GitHub toolset must be a string.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.githubToolsetsMustBeArray">
+      <source xml:lang="en">The 'toolsets' property must be an array of strings.</source>
+    </trans-unit>
     <trans-unit id="promptValidator.handoffAgentMustBeNonEmptyString">
       <source xml:lang="en">The 'agent' property in a handoff must be a non-empty string.</source>
     </trans-unit>
@@ -22371,11 +22729,20 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.handoffsMustBeArray">
       <source xml:lang="en">The 'handoffs' attribute must be an array.</source>
     </trans-unit>
+    <trans-unit id="promptValidator.hookActionTypeMustBeString">
+      <source xml:lang="en">The 'type' property in a hook action must be a string.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.hookArgsRequireExec">
+      <source xml:lang="en">The 'args' property requires 'exec'.</source>
+    </trans-unit>
     <trans-unit id="promptValidator.hookCommandFieldMustBeNonEmptyString">
       <source xml:lang="en">The '{0}' property in a hook command must be a non-empty string.</source>
     </trans-unit>
     <trans-unit id="promptValidator.hookCommandMustBeObject">
       <source xml:lang="en">Each hook command must be an object.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.hookCommandOrExec">
+      <source xml:lang="en">Hook command must specify either a shell command or 'exec', but not both.</source>
     </trans-unit>
     <trans-unit id="promptValidator.hookCwdMustBeString">
       <source xml:lang="en">The 'cwd' property in a hook command must be a string.</source>
@@ -22389,14 +22756,32 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.hookMissingCommand">
       <source xml:lang="en">Hook command must specify at least one of 'command', 'windows', 'linux', or 'osx'.</source>
     </trans-unit>
-    <trans-unit id="promptValidator.hookMissingCopilotCommand">
-      <source xml:lang="en">Hook command must specify at least one of 'bash' or 'powershell'.</source>
-    </trans-unit>
     <trans-unit id="promptValidator.hookMissingType">
       <source xml:lang="en">Hook command is missing required property 'type'.</source>
     </trans-unit>
+    <trans-unit id="promptValidator.hookPropertyItemMustBeString">
+      <source xml:lang="en">Each item in the '{0}' property must be a string.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.hookPropertyMustBeNonEmptyString">
+      <source xml:lang="en">The '{0}' property in a hook action must be a non-empty string.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.hookPropertyMustBeString">
+      <source xml:lang="en">The '{0}' property in a hook action must be a string.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.hookPropertyMustBeStringArray">
+      <source xml:lang="en">The '{0}' property in a hook action must be an array of strings.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.hookPropertyMustBeStringMap">
+      <source xml:lang="en">The '{0}' property in a hook action must be an object with string values.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.hookPropertyValueMustBeString">
+      <source xml:lang="en">Each value in the '{0}' property must be a string.</source>
+    </trans-unit>
     <trans-unit id="promptValidator.hookTimeoutMustBeNumber">
       <source xml:lang="en">The '{0}' property in a hook command must be a number.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.hookTimeoutMustBePositiveNumber">
+      <source xml:lang="en">The '{0}' property in a hook action must be a positive number.</source>
     </trans-unit>
     <trans-unit id="promptValidator.hookTypeMustBeCommand">
       <source xml:lang="en">The 'type' property in a hook command must be 'command'.</source>
@@ -22407,6 +22792,12 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.hooksMustBeMap">
       <source xml:lang="en">The 'hooks' attribute must be a map of hook event types to command arrays.</source>
     </trans-unit>
+    <trans-unit id="promptValidator.httpHookUrlInvalid">
+      <source xml:lang="en">The 'url' property in an HTTP hook action must be an HTTP or HTTPS URL.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.httpHookUrlRequired">
+      <source xml:lang="en">HTTP hook action requires the 'url' property.</source>
+    </trans-unit>
     <trans-unit id="promptValidator.ignoredAttribute.vscode-agent">
       <source xml:lang="en">Attribute '{0}' is ignored when running locally in VS Code.</source>
     </trans-unit>
@@ -22416,8 +22807,41 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.invalidFileReference">
       <source xml:lang="en">Invalid file reference '{0}'.</source>
     </trans-unit>
+    <trans-unit id="promptValidator.invalidMcpServerType">
+      <source xml:lang="en">The 'type' property for MCP server '{0}' must be one of: {1}.</source>
+    </trans-unit>
     <trans-unit id="promptValidator.invalidPermissionValue">
       <source xml:lang="en">Invalid permission value '{0}' for scope '{1}'. Allowed values: {2}.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.mapValueType">
+      <source xml:lang="en">an object</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.mcpServerDeferToolsInvalid">
+      <source xml:lang="en">The 'deferTools' property for MCP server '{0}' must be 'auto' or 'never'.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.mcpServerMustBeObject">
+      <source xml:lang="en">MCP server '{0}' must be an object.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.mcpServerPropertyItemMustBeString">
+      <source xml:lang="en">Each item in the '{0}' property for MCP server '{1}' must be a string.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.mcpServerPropertyMustBeString">
+      <source xml:lang="en">The '{0}' property for MCP server '{1}' must be a string.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.mcpServerPropertyMustBeStringArray">
+      <source xml:lang="en">The '{0}' property for MCP server '{1}' must be an array of strings.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.mcpServerPropertyMustBeStringMap">
+      <source xml:lang="en">The '{0}' property for MCP server '{1}' must be an object with string values.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.mcpServerPropertyRequired">
+      <source xml:lang="en">MCP server '{0}' requires the '{1}' property.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.mcpServerPropertyValueMustBeString">
+      <source xml:lang="en">Each value in the '{0}' property for MCP server '{1}' must be a string.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.mcpServerTimeoutMustBePositiveInteger">
+      <source xml:lang="en">The 'timeout' property for MCP server '{0}' must be a positive integer.</source>
     </trans-unit>
     <trans-unit id="promptValidator.missingGithubMcpServer">
       <source xml:lang="en">Tool alias '{0}' requires the GitHub MCP server. Enable the built-in server with setting 'github.copilot.chat.githubMcpServer.enabled' or install extension 'io.github.github/github-mcp-server' from Extensions (`@mcp github`).</source>
@@ -22464,6 +22888,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.nestedHooksMustBeArray">
       <source xml:lang="en">The 'hooks' property in a matcher must be an array of command objects.</source>
     </trans-unit>
+    <trans-unit id="promptValidator.nullValueType">
+      <source xml:lang="en">null</source>
+    </trans-unit>
     <trans-unit id="promptValidator.pathMustBeNonEmpty">
       <source xml:lang="en">Path entries must be non-empty glob patterns.</source>
     </trans-unit>
@@ -22478,6 +22905,24 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="promptValidator.permissionsMustBeMap">
       <source xml:lang="en">The 'permissions' property must be an object.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.promptHookOnlySessionStart">
+      <source xml:lang="en">Prompt hook actions are only supported for 'sessionStart'.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.promptHookValueRequired">
+      <source xml:lang="en">Prompt hook action requires the 'prompt' property.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.requiredAttributeMissing">
+      <source xml:lang="en">The '{0}' attribute is required.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.requiredModelPolicyNeedsModel">
+      <source xml:lang="en">The 'model-policy' attribute has no effect when 'model' is not specified.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.scalarValueType">
+      <source xml:lang="en">a scalar value</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.sequenceValueType">
+      <source xml:lang="en">an array</source>
     </trans-unit>
     <trans-unit id="promptValidator.skillDescriptionMissing">
       <source xml:lang="en">Skill should provide a description.</source>
@@ -22540,10 +22985,13 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
       <source xml:lang="en">Unknown extension tool '{0}'. It is likely to be a missing extension, please ensure it is installed and enabled.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownGithubProperty">
-      <source xml:lang="en">Unknown property '{0}' in 'github' object. Supported: 'permissions'.</source>
+      <source xml:lang="en">Unknown property '{0}' in 'github' object. Supported: 'permissions', 'toolsets'.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownHandoffProperty">
       <source xml:lang="en">Unknown property '{0}' in handoff object. Supported properties are 'label', 'agent', 'prompt' and optional 'send', 'showContinueOn', 'model'.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.unknownHookActionType">
+      <source xml:lang="en">Unknown hook action type '{0}'. Supported: command, http, prompt.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownHookProperty">
       <source xml:lang="en">Unknown property '{0}' in hook command.</source>
@@ -22551,14 +22999,23 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.unknownHookType">
       <source xml:lang="en">Unknown hook event type '{0}'. Supported: {1}.</source>
     </trans-unit>
+    <trans-unit id="promptValidator.unknownHttpHookProperty">
+      <source xml:lang="en">Unknown property '{0}' in HTTP hook action.</source>
+    </trans-unit>
     <trans-unit id="promptValidator.unknownMatcherProperty">
       <source xml:lang="en">Unknown property '{0}' in hook matcher.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.unknownMcpServerProperty">
+      <source xml:lang="en">Unknown property '{0}' in MCP server '{1}'.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownMcpServerReference">
       <source xml:lang="en">Unknown tool '{0}'. It is likely to be a missing MCP server, please ensure it is installed and enabled.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownPermissionScope">
       <source xml:lang="en">Unknown permission scope '{0}'. Valid scopes: {1}.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.unknownPromptHookProperty">
+      <source xml:lang="en">Unknown property '{0}' in prompt hook action.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownToolReference">
       <source xml:lang="en">Unknown tool '{0}' will be ignored.</source>

@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file original="src/vs/sessions/contrib/chat/browser/agentHostInputCompletions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentHost.completion.providerUnavailable">
-      <source xml:lang="en">Agent Host session provider is not available.</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/sessions/contrib/chat/browser/agentsWindowWorkspaceHandoff" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentsHandoff.chooseWorkspace">
       <source xml:lang="en">Choose Workspace</source>
@@ -305,7 +300,7 @@
       <source xml:lang="en">Automatically opens comparison attempts in a grid when they start. When disabled, the attempts start in the background; select their comparison group to open the grid.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.compareAgents.showPickerHint">
-      <source xml:lang="en">Show the experimental Send Query to Multiple Models action at the bottom of the model picker. Requires `#sessions.chat.compareAgents.enabled#`.</source>
+      <source xml:lang="en">Show the experimental Send Query to Multiple Models action at the bottom of the model picker until comparison setup is first opened. Requires `#sessions.chat.compareAgents.enabled#`.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.customizeWelcomeMessage">
       <source xml:lang="en">Customize Welcome Message...</source>
@@ -334,6 +329,12 @@
     <trans-unit id="sessions.chat.experimental.connectorRecommendations">
       <source xml:lang="en">Controls whether the new-session composer recommends connectors that can add work context to chats.</source>
     </trans-unit>
+    <trans-unit id="sessions.chat.experimental.environmentPicker">
+      <source xml:lang="en">Controls whether a separate Environment picker chooses where new sessions run in the desktop Agents Window. Requires the unified workspace picker and experimental new-session composer layout. When disabled, environment choices remain in the workspace and harness pickers.</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.experimental.environmentPickerBeforeWorkspace">
+      <source xml:lang="en">Controls whether Environment appears before Workspace in the new-session composer and stays visible when session options are collapsed. Requires the Environment picker to be enabled.</source>
+    </trans-unit>
     <trans-unit id="sessions.chat.experimental.newSessionComposerLayout">
       <source xml:lang="en">Controls whether the new-session composer groups workspace, repository, and harness controls above the chat input. This setting only applies when the unified workspace picker is enabled.</source>
     </trans-unit>
@@ -354,6 +355,9 @@
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.welcomePhrases">
       <source xml:lang="en">Controls whether rotating welcome phrases are shown above the new-session composer.</source>
+    </trans-unit>
+    <trans-unit id="sessions.chat.experimental.workspaceOptOut">
+      <source xml:lang="en">Controls whether hovering over or focusing the workspace picker shows a button to chat without a workspace. Requires the unified workspace picker, experimental new-session composer layout, and a compatible harness and environment. Chat remains available in the workspace list when this setting is disabled.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.hideWelcomeMessage">
       <source xml:lang="en">Hide Welcome Message</source>
@@ -552,47 +556,14 @@
       <source xml:lang="en">Model</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/newChatConnectorRecommendations" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="newSession.connectorRecommendations.ariaLabel">
-      <source xml:lang="en">Recommended connectors</source>
-    </trans-unit>
-    <trans-unit id="newSession.connectorRecommendations.dismissOne">
-      <source xml:lang="en">Dismiss {0} Connector Recommendation for This Session</source>
-    </trans-unit>
-    <trans-unit id="newSession.connectorRecommendations.open">
-      <source xml:lang="en">Review the {0} connector. {1}</source>
-    </trans-unit>
-    <trans-unit id="newSession.connectorRecommendations.openError">
-      <source xml:lang="en">Unable to open the {0} connector.</source>
+  <file original="src/vs/sessions/contrib/chat/browser/newChatComposerInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsChatInput.placeholder.pitchYourIdea">
+      <source xml:lang="en">Pitch your idea</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/newChatContextAttachments" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatContext.attach.placeholder">
-      <source xml:lang="en">Attach as context...</source>
-    </trans-unit>
-    <trans-unit id="files">
-      <source xml:lang="en">Files...</source>
-    </trans-unit>
-    <trans-unit id="imageFromClipboard">
-      <source xml:lang="en">Image from Clipboard</source>
-    </trans-unit>
-    <trans-unit id="openNamedAttachment">
-      <source xml:lang="en">Open {0}</source>
-    </trans-unit>
-    <trans-unit id="pastedImage">
-      <source xml:lang="en">Pasted Image</source>
-    </trans-unit>
-    <trans-unit id="pastedLines">
-      <source xml:lang="en">Pasted {0}</source>
-    </trans-unit>
-    <trans-unit id="removeAttachment">
-      <source xml:lang="en">Remove</source>
-    </trans-unit>
-    <trans-unit id="removeNamedAttachment">
-      <source xml:lang="en">Remove {0}</source>
-    </trans-unit>
-    <trans-unit id="selectFilesOrFolders">
-      <source xml:lang="en">Select Files or Folders</source>
+  <file original="src/vs/sessions/contrib/chat/browser/newChatConnectorRecommendations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="newSession.connectorRecommendations.tipPrefix">
+      <source xml:lang="en">**Tip:** </source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/newChatInSessionWidget" source-language="en" datatype="plaintext"><body>
@@ -609,130 +580,12 @@
       <source xml:lang="en">Start a parallel conversation to build on all the changes made in this session.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/newChatInput" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="addContext">
-      <source xml:lang="en">Add Context...</source>
-    </trans-unit>
-    <trans-unit id="chatInput">
-      <source xml:lang="en">Chat input</source>
-    </trans-unit>
-    <trans-unit id="chatInput.accessibilityHelp">
-      <source xml:lang="en">Chat input. Press Enter to send out the request. Use {0} for Chat Accessibility Help.</source>
-    </trans-unit>
-    <trans-unit id="chatInput.accessibilityHelpNoKb">
-      <source xml:lang="en">Chat input. Press Enter to send out the request. Use the Chat Accessibility Help command for more information.</source>
-    </trans-unit>
-    <trans-unit id="comparisonTokenWarning">
-      <source xml:lang="en">This will use tokens for each session.</source>
-    </trans-unit>
-    <trans-unit id="initializing">
-      <source xml:lang="en">Initializing...</source>
-    </trans-unit>
-    <trans-unit id="loading">
-      <source xml:lang="en">Loading...</source>
-    </trans-unit>
-    <trans-unit id="newChatInput.status.otel.learnMore">
-      <source xml:lang="en">Learn More</source>
-    </trans-unit>
-    <trans-unit id="newChatInput.status.otel.manage">
-      <source xml:lang="en">Manage</source>
-    </trans-unit>
-    <trans-unit id="newChatInput.status.otel.title">
-      <source xml:lang="en">Monitoring with OpenTelemetry enabled</source>
-    </trans-unit>
-    <trans-unit id="newSessionPromptOptions.closed">
-      <source xml:lang="en">Prompt options closed</source>
-    </trans-unit>
-    <trans-unit id="newSessionPromptOptions.inserted">
-      <source xml:lang="en">Inserted prompt: {0}</source>
-    </trans-unit>
-    <trans-unit id="send">
-      <source xml:lang="en">Send</source>
-    </trans-unit>
-    <trans-unit id="sendWithBackgroundHint">
-      <source xml:lang="en">Send (Alt-click to start in the background)</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.describeTheOutcome">
-      <source xml:lang="en">Describe the outcome you want</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.describeWhatYouWantToBuild">
-      <source xml:lang="en">Describe what you want to build</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.describeYourMission">
-      <source xml:lang="en">Describe your mission</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.pitchYourIdea">
-      <source xml:lang="en">Pitch your idea</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.whatAreYouBuilding">
-      <source xml:lang="en">What are you building?</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.whatAreYouTryingToAchieve">
-      <source xml:lang="en">What are you trying to achieve?</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.whatFeatureAreYouDreamingUp">
-      <source xml:lang="en">What feature are you dreaming up?</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.whatProblemAreYouSolving">
-      <source xml:lang="en">What problem are you solving?</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.whatWillYouCreate">
-      <source xml:lang="en">What will you create?</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.whatWillYouLaunch">
-      <source xml:lang="en">What will you launch?</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.whatWillYouShipToday">
-      <source xml:lang="en">What will you ship today?</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.whatWouldYouLikeToAutomate">
-      <source xml:lang="en">What would you like to automate?</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.whatsNextOnYourRoadmap">
-      <source xml:lang="en">What's next on your roadmap?</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.whatsTheGoal">
-      <source xml:lang="en">What's the goal?</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInput.placeholder.whatsYourNextMilestone">
-      <source xml:lang="en">What's your next milestone?</source>
-    </trans-unit>
-    <trans-unit id="sessionsChatInputHasDictationFocus">
-      <source xml:lang="en">True when focus is in an Agents window chat composer that supports dictation.</source>
-    </trans-unit>
-    <trans-unit id="sessionsStt.cancelPreparing">
-      <source xml:lang="en">Cancel Dictation. {0}</source>
-    </trans-unit>
-    <trans-unit id="sessionsStt.dictate">
-      <source xml:lang="en">Dictate (Speech to Text)</source>
-    </trans-unit>
-    <trans-unit id="sessionsStt.stop">
-      <source xml:lang="en">Stop Dictation</source>
-    </trans-unit>
-    <trans-unit id="voiceInputMode">
-      <source xml:lang="en">Voice Input Mode</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/newChatVoice" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentsVoice.connecting">
-      <source xml:lang="en">Connecting...</source>
-    </trans-unit>
-    <trans-unit id="agentsVoice.disconnect">
-      <source xml:lang="en">Disconnect Voice Mode</source>
-    </trans-unit>
-    <trans-unit id="agentsVoice.openSettings">
-      <source xml:lang="en">Voice Mode Settings</source>
-    </trans-unit>
-    <trans-unit id="agentsVoice.pttStopInChat">
-      <source xml:lang="en">Voice Mode: Stop Recording</source>
-    </trans-unit>
-    <trans-unit id="agentsVoice.startVoiceInChat">
-      <source xml:lang="en">Voice Mode</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/sessions/contrib/chat/browser/newChatWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="aquariumAction">
       <source xml:lang="en">Aquarium</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.devContainerUnavailable">
+      <source xml:lang="en">Compare Agents is not available for Dev Container sessions.</source>
     </trans-unit>
     <trans-unit id="comparisonPicker.finishSetup">
       <source xml:lang="en">Finish configuring the comparison in the model picker.</source>
@@ -755,8 +608,17 @@
     <trans-unit id="comparisonPicker.worktreesRequired">
       <source xml:lang="en">The selected agent no longer supports worktree comparisons.</source>
     </trans-unit>
-    <trans-unit id="newSession.agentContextAction">
-      <source xml:lang="en">Agent...</source>
+    <trans-unit id="environmentPicker.connectionFailed">
+      <source xml:lang="en">Failed to connect to {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="environmentPicker.container">
+      <source xml:lang="en">Dev Container</source>
+    </trans-unit>
+    <trans-unit id="environmentPicker.copilot">
+      <source xml:lang="en">Copilot</source>
+    </trans-unit>
+    <trans-unit id="environmentPicker.selected">
+      <source xml:lang="en">Environment: {0}</source>
     </trans-unit>
     <trans-unit id="newSession.sendFailed">
       <source xml:lang="en">Failed to start session: {0}</source>
@@ -767,6 +629,9 @@
     <trans-unit id="newSession.welcome.announcement">
       <source xml:lang="en">{0}
 To disable this announcement, set {1} to false.</source>
+    </trans-unit>
+    <trans-unit id="newSession.workspaceOptOutFailed">
+      <source xml:lang="en">Unable to start a chat without a workspace. Choose a workspace to continue.</source>
     </trans-unit>
     <trans-unit id="newSessionFeedback.many">
       <source xml:lang="en">{0} comments</source>
@@ -853,6 +718,12 @@ To disable this announcement, set {1} to false.</source>
   <file original="src/vs/sessions/contrib/chat/browser/newSessionPromptOptions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="newSessionPromptOptions.close">
       <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="newSessionPromptOptions.closed">
+      <source xml:lang="en">Prompt options closed</source>
+    </trans-unit>
+    <trans-unit id="newSessionPromptOptions.inserted">
+      <source xml:lang="en">Inserted prompt: {0}</source>
     </trans-unit>
     <trans-unit id="newSessionPromptOptions.optionAriaLabel">
       <source xml:lang="en">{0}: {1}</source>
@@ -1394,6 +1265,15 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="comparisonPicker.compare">
       <source xml:lang="en">Compare Models</source>
     </trans-unit>
+    <trans-unit id="comparisonPicker.configureAttempts">
+      <source xml:lang="en">Configure Attempts</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.configureJudge">
+      <source xml:lang="en">Configure Judge</source>
+    </trans-unit>
+    <trans-unit id="comparisonPicker.configureSynthesis">
+      <source xml:lang="en">Configure Synthesis</source>
+    </trans-unit>
     <trans-unit id="comparisonPicker.judge">
       <source xml:lang="en">Judge</source>
     </trans-unit>
@@ -1667,12 +1547,33 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Worth keeping</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/sessionReferenceCompletions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="currentSessionLabel">
-      <source xml:lang="en">{0} (current)</source>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionEnvironmentPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="environmentPicker.choose">
+      <source xml:lang="en">Environment</source>
     </trans-unit>
-    <trans-unit id="untitledSession">
-      <source xml:lang="en">Untitled session</source>
+    <trans-unit id="environmentPicker.cloud">
+      <source xml:lang="en">Cloud</source>
+    </trans-unit>
+    <trans-unit id="environmentPicker.connected">
+      <source xml:lang="en">Connected</source>
+    </trans-unit>
+    <trans-unit id="environmentPicker.connecting">
+      <source xml:lang="en">Connecting</source>
+    </trans-unit>
+    <trans-unit id="environmentPicker.disconnected">
+      <source xml:lang="en">Disconnected</source>
+    </trans-unit>
+    <trans-unit id="environmentPicker.item">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="environmentPicker.local">
+      <source xml:lang="en">This Computer</source>
+    </trans-unit>
+    <trans-unit id="environmentPicker.title">
+      <source xml:lang="en">Environment</source>
+    </trans-unit>
+    <trans-unit id="environmentPicker.trigger">
+      <source xml:lang="en">Choose Environment, {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionTurnChanges" source-language="en" datatype="plaintext"><body>
@@ -1746,11 +1647,32 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="workspacePicker.chat">
       <source xml:lang="en">Chat</source>
     </trans-unit>
+    <trans-unit id="workspacePicker.checkingContainers">
+      <source xml:lang="en">Checking Dev Container Folders...</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.chooseWorkspace">
+      <source xml:lang="en">Choose Workspace</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.clearWorkspace">
+      <source xml:lang="en">Chat without a workspace</source>
+    </trans-unit>
     <trans-unit id="workspacePicker.connectRemoteAgentHostFailed">
       <source xml:lang="en">Failed to connect to {0}.</source>
     </trans-unit>
     <trans-unit id="workspacePicker.connectingRemoteAgentHost">
       <source xml:lang="en">Connecting to {0}...</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.containerCheckFailed">
+      <source xml:lang="en">Could not check Dev Container support. Try again or choose another environment.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.containerChecksFailed">
+      <source xml:lang="en">Could Not Check Dev Container Folders</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.containerFoldersHint">
+      <source xml:lang="en">Open a folder with a Dev Container configuration, or choose another environment.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.containerRequired">
+      <source xml:lang="en">Choose a folder with an available Dev Container configuration.</source>
     </trans-unit>
     <trans-unit id="workspacePicker.devContainer.label">
       <source xml:lang="en">{0} - Dev Container</source>
@@ -1779,8 +1701,14 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="workspacePicker.hostDescription">
       <source xml:lang="en">{0} · {1}</source>
     </trans-unit>
+    <trans-unit id="workspacePicker.incompatibleEnvironment">
+      <source xml:lang="en">Choose a workspace available in {0}.</source>
+    </trans-unit>
     <trans-unit id="workspacePicker.manageRemoteHost">
       <source xml:lang="en">Manage {0}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.noContainerFolders">
+      <source xml:lang="en">No Compatible Dev Container Folders</source>
     </trans-unit>
     <trans-unit id="workspacePicker.noFolderDescription">
       <source xml:lang="en">Start the session in a temporary directory.</source>
@@ -1820,6 +1748,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="workspacePicker.statusWithActiveSessions">
       <source xml:lang="en">{0} · {1} active sessions</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.workspaceCleared">
+      <source xml:lang="en">Workspace cleared. You can chat without a workspace or choose another workspace.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionsChatAccessibilityHelp" source-language="en" datatype="plaintext"><body>
@@ -1868,11 +1799,17 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.chatHeaderHierarchy">
       <source xml:lang="en">In both single and multiple tab layouts, sub-sessions in separate panes show their title followed by a dot and parent context as a secondary description, like editor tabs. This includes panes split within the parent session and panes positioned independently in the window. Sub-sessions sharing their parent's tab strip show only their title. Drag a sub-session tab or header outside its parent area to place that chat independently beside another session, without moving its parent. The chat keeps its original parent relationship. Closing the parent pane leaves independent sub-session panes open. You can drag a sub-session from the sidebar into the grid while its parent pane is closed. In multiple tab mode, drop it onto its parent's tab strip to reattach it as a tab, without creating a split. The parent's tab strip stays visible while a sub-session is detached. In single tab mode, detached sub-sessions cannot be dropped back into their parent panel. You can also use the split and move chat commands described above; session grid navigation and movement commands operate on the focused independent pane.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.clearWorkspace">
+      <source xml:lang="en">When the current environment and harness support chatting without a workspace, hover over or focus the workspace picker to reveal Chat without a workspace. Use Tab or the Left and Right arrow keys to reach this button, then Enter or Space to switch to Chat without discarding your prompt. You can send without choosing a workspace. Focus returns to the workspace picker so you can choose a workspace later. Chat remains available in the workspace list.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.closeChat">
       <source xml:lang="en">Activate a chat tab's close button to close (hide) that chat from the tab strip without deleting it; reopen it later from the Chats menu. The session's main chat cannot be closed.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.closePane">
       <source xml:lang="en">When multiple session panes are visible, move focus to a pane header and activate Close to remove that pane from the grid. Closing a pane keeps the session and its worktree available in the Sessions list.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.cloudStartupError">
+      <source xml:lang="en">If cloud session creation or connection fails, the error notification offers Show Details. Focus the notification, then use Tab to reach Show Details and Enter or Space to open a dialog with the failed step and available request details. Opening details does not sign in or retry the request.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.compactArchiveNudge">
       <source xml:lang="en">After you successfully use the suggestion to archive or mark a session as done three times, future suggestions appear in a compact layout without the explanation. The buttons wrap below the title when space is limited, while Dismiss stays at the top right. The keyboard order is Archive or Mark as Done, Configure, then Dismiss. Configure opens the same automatic cleanup settings.</source>
@@ -1887,7 +1824,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Comparison selections are kept while draft permissions or mode are updating. Run N Attempts is unavailable until the update finishes.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.compareAgentsDiscovery">
-      <source xml:lang="en">The model picker offers Compare Models in the tab bar. Use Tab to reach it and Enter or Space to begin setup. Use Compare Models{0} from the new-session input or model picker to open comparison setup directly. Enable the experimental sessions.chat.compareAgents.showPickerHint setting to also show Send Query to Multiple Models at the bottom with your configured shortcut. The tab-bar toggle remains available to return to single-model selection.</source>
+      <source xml:lang="en">The model picker offers Compare Models in the tab bar. Use Tab to reach it and Enter or Space to begin setup. Use Compare Models{0} from the new-session input or model picker to open comparison setup directly. Enable the experimental sessions.chat.compareAgents.showPickerHint setting to also show Send Query to Multiple Models at the bottom with your configured shortcut until you first open comparison setup. The tab-bar toggle remains available to return to single-model selection.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.compareAgentsFolderless">
       <source xml:lang="en">In a Chat with no workspace, comparisons run the prompt in separate workspace-less chats. Select at least two attempts, activate Done, then Run N Attempts to compare their responses side by side. Folderless comparisons do not offer Judge or Synthesizer steps.</source>
@@ -1917,7 +1854,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">While connecting to a Dev Container for an existing session, use Tab to reach Show Log and press Enter to open the Dev Container output channel.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.connectorRecommendations">
-      <source xml:lang="en">Near the new-session input, three connector cards offer Linear, Notion, and WorkIQ. On phones the cards appear above the input; on wider layouts they appear below it. Use Tab and Shift+Tab to move between each card and its dismiss button. Press Enter or Space on a card to review that connector in the Copilot Connectors marketplace. Dismissing a recommendation moves focus to the next card; dismissing the last card returns focus to the input.</source>
+      <source xml:lang="en">When the new-session prompt contains known connector URLs, the standard chat tip can suggest matching connector tasks. Connector recommendations follow the same tip setting, eligibility, layout, navigation, and session visibility rules as other chat tips. No connector recommendation appears without a matching URL. When multiple connectors match, use the Previous Tip and Next Tip actions to browse every recommendation. Use Tab and Shift+Tab to reach the linked suggestion and the tip actions. Activate the link to review that connector in the Copilot Connectors marketplace. Dismissing the tip hides tips for the current session and prevents future URL-driven recommendations for that connector during this composer session.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.contextReferences">
       <source xml:lang="en">Type # in the chat input to attach context. Use #file to reference a file or folder, or #session to reference another agent session. Referencing a session together with the /troubleshoot command analyzes that session's logs instead of the current one. Accept a suggestion with Tab or Enter. Openable references appear as buttons above the input; activate one to open it, or use its Remove button to detach it.</source>
@@ -1975,6 +1912,15 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.environmentFolders">
       <source xml:lang="en">Choose Environments in the workspace picker to connect to a GitHub environment, then select a folder on that host. The picker starts in the host's home directory. Enter a folder path to browse another location or drive. Use the arrow keys to navigate, Enter to select, and Escape to cancel either picker.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.environmentPicker">
+      <source xml:lang="en">Choose This Computer, Cloud, a remote host, or an available Dev Container. The workspace and harness choices follow the selected environment. Choose Workspace is shown when no workspace is selected. Cloud uses Copilot. Dev Container lists only supported folders and requires a workspace; it does not fall back to Chat. Compare Agents is unavailable when Dev Container is selected. An incompatible workspace is cleared without sending or discarding your prompt. Use Tab or the Left and Right arrow keys to reach Environment, Enter or Space to open it, arrow keys and Enter to select, and Escape to dismiss. Screen-reader optimized mode keeps session options expanded.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.environmentPicker.afterWorkspace">
+      <source xml:lang="en">Above the new-session input, Environment is after Workspace. Collapsing session options hides Environment unless the collapsed icon rail is enabled.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.environmentPicker.beforeWorkspace">
+      <source xml:lang="en">Above the new-session input, Environment is before Workspace and remains visible when session options are collapsed.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.externalSessionAdoption">
       <source xml:lang="en">Once you send a message to an external session's agent, it becomes a regular session. Its banner and External hover label disappear, and it is no longer grouped or filtered as external.</source>
@@ -2094,7 +2040,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">On mobile, the mode and model pickers appear as tappable chips below the input. Tap a chip to open a bottom sheet where you can change the selection.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.moveNestedChat">
-      <source xml:lang="en">To reorder a session's nested chats in the Sessions list, focus a nested chat and invoke Move Up{0} or Move Down{1}, or choose them from its context menu. Focus stays on the moved chat.</source>
+      <source xml:lang="en">To reorder a session's nested chats in the Sessions list, focus a nested chat and invoke Move Up{0} or Move Down{1}, or choose them from its context menu. They are available only for nested chats that their provider can move. Focus stays on the moved chat.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.navigateChatTabs">
       <source xml:lang="en">When a chat tab is focused, use the left and right arrow keys to move to and activate an adjacent chat tab, or Home and End to activate the first and last tabs. Tabs that do not fit are scrolled into view when activated. You can also scroll the tab row with the mouse wheel or drag the horizontal scrollbar that appears when hovering over overflowing tabs.</source>
@@ -2105,8 +2051,14 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.navigatePreviousSession">
       <source xml:lang="en">Navigate to the previous session in the list{0}.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.nestedCustomGroups">
+      <source xml:lang="en">Custom groups can contain subgroups at any depth. Focus a group's heading and open the context menu{0} to choose Create Subgroup, which adds an empty group inside it and starts renaming it. Subgroups are listed above the group's own sessions, and each group's level is announced. Mark All as Done and Mark All as Read on a group include its subgroups' sessions. Delete Group also deletes the group's subgroups; when it deletes more than one group, an Undo notice appears at the bottom of the Sessions list that restores them. Create Group on sessions that are all in the same group creates the new group inside it.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.nestedSubagentActivity">
       <source xml:lang="en">When a subagent starts another subagent, its activity row identifies the nested subagent by name. Focus that link with Tab and press Enter or Space to open the nested subagent's chat beside the current chat. The enclosing pill still opens the parent subagent.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.newSessionDrag">
+      <source xml:lang="en">To move a new-session pane before sending a prompt, drag its blank top area beside another pane. The session grid movement commands also work on new-session panes.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.newSessionInputControls.agentInAttachContext">
       <source xml:lang="en">When an Agent picker is available in a new or running session, it initially appears in Add Context. Open Add Context and choose Agent to select an agent. After you select an agent, the Agent picker returns to its usual position. Other new-session controls remain in their layout-specific positions. Use Tab to reach toolbar controls, arrow keys to navigate toolbar items, and Enter or Space to open a picker.</source>
@@ -2186,6 +2138,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.repositoryCreation">
       <source xml:lang="en">This host creates a new environment for each session. Open Select Repository to choose its repository. Selecting a repository does not start an environment; sending your first message does. Before sending, use the mode picker to choose Interactive, Plan, or Autopilot, and the permissions picker to configure tool approvals. Open the model picker to choose a cloud model and its supported reasoning effort. Use the arrow keys to navigate options, Enter to select, and Escape to close a picker.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.repositorySectionNewSession">
+      <source xml:lang="en">In a repository section with sessions in several environments, the New Session dropdown can start a session in each environment, in the workspace of its most recently created session there. Session rows in a repository section name their environment, except for This Computer.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.repositorySelection">
       <source xml:lang="en">When choosing a GitHub repository in the browser, search or enter a GitHub URL or owner/repository. Use the arrow keys to navigate results, Enter to select, and Escape to cancel. Sign in to GitHub if prompted.</source>
     </trans-unit>
@@ -2202,10 +2157,10 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Created In lists the applications that created sessions, grouped by This Computer, Cloud, and each remote host, with the environment in each application's name. VS Code is always offered for each available environment, even before you create a session there. Other applications are listed after a session created in them is discovered. Only applications from included environments are listed. Excluding an environment hides its applications without changing their selections; including it again restores them. Other list filters do not remove application choices. Included remote hosts retain their applications while cached sessions remain, even when disconnected. If no environments are included, select an environment first.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionFilters">
-      <source xml:lang="en">The Environment, Created In, and Harness submenus filter the Sessions list. Checked options are included. On This Computer and remote hosts, applications other than VS Code are hidden by default. Slack and Teams applications in Cloud are also hidden by default. Reset Filters restores these defaults. Show Done, or Show Archived depending on your settings, includes archived sessions. On desktop, Compact View and Collapse All Groups are available from the Sessions More Actions menu. On phone, use Sort and Find to navigate the list.</source>
+      <source xml:lang="en">The Environment, Created In, and Harness submenus filter the Sessions list. Checked options are included. On This Computer and remote hosts, applications other than VS Code are hidden by default. Slack and Teams applications in Cloud are also hidden by default. Show Done, or Show Archived depending on your settings, includes archived sessions. Reset Filters restores these defaults and shows an Undo notice at the bottom of the Sessions list that restores your previous filters. On desktop, Compact View and Collapse All Groups are available from the Sessions More Actions menu. On phone, use Sort and Find to navigate the list.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionGrid">
-      <source xml:lang="en">Session panes form a separate grid from the chat groups inside each session. Focus the session to the left{0}, right{1}, above{2}, or below{3}. The generic Navigate to the View on the Left{4}, Navigate to the View on the Right{5}, Navigate to the View Above{6}, and Navigate to the View Below{7} commands do the same while focus is in the session grid. The Session Layout menu and Command Palette offer Move Session Left, Right, Above, and Below, Increase or Decrease Session Width and Height, and Arrange Sessions in a Balanced Grid. Use Open in Grid in a sidebar session's context menu to open it beside, above, or below the active session. Arranging preserves the conversations and does not change side panels. On a phone, only the active session is shown; returning to a wider window restores the desktop arrangement.</source>
+      <source xml:lang="en">Session panes form a separate grid from the chat groups inside each session. Focus the session to the left{0}, right{1}, above{2}, or below{3}. The generic Navigate to the View on the Left{4}, Navigate to the View on the Right{5}, Navigate to the View Above{6}, and Navigate to the View Below{7} commands do the same while focus is in the session grid. The Session Layout menu and Command Palette offer Move Session Left, Right, Above, and Below, Increase or Decrease Session Width and Height, and Arrange Sessions in a Balanced Grid. Arranging preserves the conversations and does not change side panels. On a phone, only the active session is shown; returning to a wider window restores the desktop arrangement.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionOptions">
       <source xml:lang="en">Above the new-session input, the workspace, repository and harness pickers are shown initially. As the chat narrows, picker labels are replaced by icons one at a time from right to left, except for the workspace name. Labels return when more space is available. Use Tab and Shift+Tab, or the Left and Right Arrow keys, to move between these controls. Press Enter or Space to open a picker, use the Up and Down Arrow keys to navigate its options, and press Escape to close it and return focus to its control. The isolation picker offers New Worktree to create a separate copy for the session, or Branch to work in the existing repository. The branch picker chooses the base branch for a new worktree or checks out a branch in the existing repository. Hide Session Options collapses these controls without changing your selections. Show Session Options or the Focus New Session Harness Picker command expands the controls again.</source>
@@ -2214,7 +2169,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Above the new-session input, the workspace, repository and harness pickers are shown. As the chat narrows, picker labels are replaced by icons one at a time from right to left, except for the workspace name. Labels return when more space is available. Use Tab and Shift+Tab, or the Left and Right Arrow keys, to move between these controls. Press Enter or Space to open a picker, use the Up and Down Arrow keys to navigate its options, and press Escape to close it and return focus to its control. The isolation picker offers New Worktree to create a separate copy for the session, or Branch to work in the existing repository. The branch picker chooses the base branch for a new worktree or checks out a branch in the existing repository. These controls stay expanded while a screen reader is active.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionOrdering">
-      <source xml:lang="en">On desktop, the Filter Sessions menu offers Ordering and Grouping submenus. When grouping by Workspace, Show switches between Recent and All sessions. Current choices are checked inside the submenus. Use the Right arrow key to open a submenu, the Left arrow key to return, and Enter or Space to choose an option.</source>
+      <source xml:lang="en">On desktop, the Filter Sessions menu offers Ordering and Grouping submenus. Grouping by Repository lists the sessions of each GitHub repository together, whether they run on This Computer, in Cloud, or on a remote host. Sessions without a GitHub repository stay in their workspace section. When grouping by Workspace or Repository, Show switches between Recent and All sessions. Current choices are checked inside the submenus. Use the Right arrow key to open a submenu, the Left arrow key to return, and Enter or Space to choose an option.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionsListChatContextMenu">
       <source xml:lang="en">Open a nested chat's context menu to rename it, open it to the side, or, when supported, permanently delete it. Agent Host chats also offer Copy Link.</source>
@@ -2292,35 +2247,29 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">When at least 20 inactive session worktrees are eligible for cleanup or eligible inactive worktrees can reclaim at least 5 GiB, a storage suggestion may appear below the Sessions list and is announced with the Open Worktree Cleanup Command Palette command. The command is also available from the Sessions More Actions menu. Active, running, needs-input, pinned, and recently used sessions are excluded. Use Tab or Shift+Tab to reach Open Worktree Cleanup, Don't Show Again, or Dismiss Session Storage Suggestion, then Enter or Space to activate it. Don't Show Again disables future suggestions and announcements across restarts. Press Escape while focus is in the suggestion to dismiss it for the current window. To stop these suggestions and announcements without using the suggestion itself, run Disable Session Storage Cleanup Suggestions from the Command Palette, or run Open Worktree Cleanup and clear the Suggest Cleaning Up Session Storage When It Grows Large checkbox.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/slashCommands" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="slashCommand.agents">
-      <source xml:lang="en">View and manage custom agents</source>
+  <file original="src/vs/sessions/contrib/chat/browser/sharedChatInputComposer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsSharedChatInput.sessionControlsRow">
+      <source xml:lang="en">Session controls</source>
     </trans-unit>
-    <trans-unit id="slashCommand.blobby">
-      <source xml:lang="en">Show Blobby or open its color customization</source>
-    </trans-unit>
-    <trans-unit id="slashCommand.hooks">
-      <source xml:lang="en">View and manage hooks</source>
-    </trans-unit>
-    <trans-unit id="slashCommand.instructions">
-      <source xml:lang="en">View and manage instructions</source>
-    </trans-unit>
-    <trans-unit id="slashCommand.models">
-      <source xml:lang="en">Open the model picker</source>
-    </trans-unit>
-    <trans-unit id="slashCommand.skills">
-      <source xml:lang="en">View and manage skills</source>
-    </trans-unit>
-    <trans-unit id="slashCommand.vscodePet">
-      <source xml:lang="en">Toggle an interactive VS Code pet (Experimental)</source>
+    <trans-unit id="sessionsSharedChatInputComposerBusy">
+      <source xml:lang="en">What the new-session composer is waiting on, if anything.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/variableCompletions" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="activeFile">
-      <source xml:lang="en">Active file</source>
+  <file original="src/vs/sessions/contrib/chat/browser/sharedChatInputComposer.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsSharedChatInput.addContext">
+      <source xml:lang="en">Add Context...</source>
     </trans-unit>
-    <trans-unit id="fileEntryDescription">
-      <source xml:lang="en">{0} ({1})</source>
+    <trans-unit id="sessionsSharedChatInput.initializing">
+      <source xml:lang="en">Initializing...</source>
+    </trans-unit>
+    <trans-unit id="sessionsSharedChatInput.sending">
+      <source xml:lang="en">Loading...</source>
+    </trans-unit>
+    <trans-unit id="sessionsSharedChatInput.sessionControls">
+      <source xml:lang="en">Session Controls</source>
+    </trans-unit>
+    <trans-unit id="sessionsSharedChatInput.sessionControlsAria">
+      <source xml:lang="en">Session controls</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/webWorkspacePicker" source-language="en" datatype="plaintext"><body>

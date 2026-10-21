@@ -186,9 +186,6 @@
     <trans-unit id="chatCompositeBar.pinChat">
       <source xml:lang="en">Pin</source>
     </trans-unit>
-    <trans-unit id="chatCompositeBar.pinView">
-      <source xml:lang="en">Pin</source>
-    </trans-unit>
     <trans-unit id="chatCompositeBar.reopenLastClosedChat">
       <source xml:lang="en">Reopen Last Closed Chat</source>
     </trans-unit>
@@ -205,9 +202,6 @@
       <source xml:lang="en">Unpin</source>
     </trans-unit>
     <trans-unit id="chatCompositeBar.unpinChat">
-      <source xml:lang="en">Unpin</source>
-    </trans-unit>
-    <trans-unit id="chatCompositeBar.unpinView">
       <source xml:lang="en">Unpin</source>
     </trans-unit>
     <trans-unit id="closeActiveChat">
@@ -493,6 +487,15 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/automationCataloguePresentation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automations.repositoryOwned">
+      <source xml:lang="en">Repository automations</source>
+    </trans-unit>
+    <trans-unit id="automations.repositoryOwnedDescription">
+      <source xml:lang="en">These automations are visible to anyone with repository access, and can be edited by anyone with write access.</source>
+    </trans-unit>
+    <trans-unit id="automations.yours">
+      <source xml:lang="en">Your automations</source>
+    </trans-unit>
     <trans-unit id="automationsPartialUnavailable">
       <source xml:lang="en">Some automations are unavailable.</source>
     </trans-unit>
@@ -582,6 +585,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Daily at {0}</source>
     </trans-unit>
     <trans-unit id="automationsAccessibleView.empty">
+      <source xml:lang="en">No automations.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.emptyOwnershipGroup">
       <source xml:lang="en">No automations.</source>
     </trans-unit>
     <trans-unit id="automationsAccessibleView.externalRun">
@@ -700,6 +706,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationsCustomView.help.overview">
       <source xml:lang="en">You are in the Automations view. It contains available automation cards followed by run history. Loading, unavailable, and error messages indicate that the catalogue may be incomplete.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.ownership">
+      <source xml:lang="en">Saved cards are grouped under collapsible Your automations and Repository automations sections. Press Enter or Space on a section header to expand or collapse it. The Repository automations info icon explains who can view and edit those automations. Cloud creation has an Owner control after Tools. Use the arrow keys to choose Only me or Repository; Only me is the default. Ownership cannot be changed when editing. Repository readers can view Repository automations; writers can manage them. A failed save leaves the dialog open with the server's explanation above Create.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.pluginTemplates">
       <source xml:lang="en">The Templates from Plugins section is available whenever enabled plugins provide templates. Press Enter or Space on its disclosure control to expand or collapse it. A blue marker indicates templates added since the section was last expanded. Plugin templates start disabled.</source>
@@ -1271,6 +1280,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="createGroupAction">
       <source xml:lang="en">Create Group</source>
     </trans-unit>
+    <trans-unit id="createSubgroupAction">
+      <source xml:lang="en">Create Subgroup</source>
+    </trans-unit>
     <trans-unit id="customizationCountAria">
       <source xml:lang="en">1 customization</source>
     </trans-unit>
@@ -1318,6 +1330,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="newSessionForWorkspaceMoreActions">
       <source xml:lang="en">More Actions</source>
+    </trans-unit>
+    <trans-unit id="newSessionInCloud">
+      <source xml:lang="en">New Session in {0}</source>
+    </trans-unit>
+    <trans-unit id="newSessionOnEnvironment">
+      <source xml:lang="en">New Session on {0}</source>
     </trans-unit>
     <trans-unit id="noChats">
       <source xml:lang="en">No chats</source>
@@ -1376,6 +1394,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionChatItemFolderWithoutTimeAria">
       <source xml:lang="en">{0}, chat in folder {1}, {2}</source>
     </trans-unit>
+    <trans-unit id="sessionChatItemStandaloneAria">
+      <source xml:lang="en">{0}, in session {1}</source>
+    </trans-unit>
     <trans-unit id="sessionChatItemStatusMessageAria">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
@@ -1390,6 +1411,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="sessionGroupName">
       <source xml:lang="en">Group name</source>
+    </trans-unit>
+    <trans-unit id="sessionGroupPathLabel">
+      <source xml:lang="en">{0} › {1}</source>
     </trans-unit>
     <trans-unit id="sessionItemAria">
       <source xml:lang="en">{0}, updated {1}</source>
@@ -1463,6 +1487,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="showLessCompact">
       <source xml:lang="en">Show less</source>
     </trans-unit>
+    <trans-unit id="showLessRepositoriesAria">
+      <source xml:lang="en">Show fewer repositories</source>
+    </trans-unit>
+    <trans-unit id="showLessRepositoriesCompact">
+      <source xml:lang="en">Show fewer repositories</source>
+    </trans-unit>
     <trans-unit id="showLessWorkspacesAria">
       <source xml:lang="en">Show fewer workspaces</source>
     </trans-unit>
@@ -1474,6 +1504,18 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="showMoreCompact">
       <source xml:lang="en">+{0} more</source>
+    </trans-unit>
+    <trans-unit id="showMoreRepositoriesAria">
+      <source xml:lang="en">Show {0} more repositories</source>
+    </trans-unit>
+    <trans-unit id="showMoreRepositoriesCompact">
+      <source xml:lang="en">+{0} more repositories</source>
+    </trans-unit>
+    <trans-unit id="showMoreRepositoryAria">
+      <source xml:lang="en">Show {0} more repository</source>
+    </trans-unit>
+    <trans-unit id="showMoreRepositoryCompact">
+      <source xml:lang="en">+{0} more repository</source>
     </trans-unit>
     <trans-unit id="showMoreWorkspaceAria">
       <source xml:lang="en">Show {0} more workspace</source>
@@ -1568,14 +1610,14 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="dismiss">
       <source xml:lang="en">Dismiss</source>
     </trans-unit>
-    <trans-unit id="notificationHelp">
-      <source xml:lang="en">{0}
-This notice appears after marking sessions done or archiving them. Use Tab and Shift+Tab to reach Undo and Dismiss. Press Enter or Space to activate them, or Escape to dismiss the notice.
-Undo restores the sessions and their previous custom groups, if those groups still exist. It does not restart stopped requests.
-The notice disappears after 10 seconds. The countdown pauses while the notice is hovered, focused, or this help is open. The bar along the bottom shows the remaining time.</source>
-    </trans-unit>
     <trans-unit id="notificationHelpHint">
       <source xml:lang="en">Press {0} for accessibility help.</source>
+    </trans-unit>
+    <trans-unit id="sessionsListNoticeHelp">
+      <source xml:lang="en">{0}
+{1}
+Use Tab and Shift+Tab to reach Undo and Dismiss. Press Enter or Space to activate them, or Escape to dismiss the notice.
+The notice disappears after 10 seconds. The countdown pauses while the notice is hovered, focused, or this help is open. The bar along the bottom shows the remaining time.</source>
     </trans-unit>
     <trans-unit id="undo">
       <source xml:lang="en">Undo</source>
@@ -1590,6 +1632,18 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsView" source-language="en" datatype="plaintext"><body>
     <trans-unit id="environment">
       <source xml:lang="en">Environment</source>
+    </trans-unit>
+    <trans-unit id="filtersReset">
+      <source xml:lang="en">Filters reset</source>
+    </trans-unit>
+    <trans-unit id="filtersResetHelp">
+      <source xml:lang="en">This notice appears after resetting the filters. Undo restores the previous filters, including which sessions are shown and how many each section lists.</source>
+    </trans-unit>
+    <trans-unit id="filtersRestored">
+      <source xml:lang="en">Filters restored.</source>
+    </trans-unit>
+    <trans-unit id="groupByRepository">
+      <source xml:lang="en">Group by Repository</source>
     </trans-unit>
     <trans-unit id="groupByTime">
       <source xml:lang="en">Group by Time</source>
@@ -1644,6 +1698,9 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     <trans-unit id="archiveGroupSessions.detail">
       <source xml:lang="en">You can unarchive sessions later if needed from the sessions view.</source>
     </trans-unit>
+    <trans-unit id="archiveNoticeHelp">
+      <source xml:lang="en">This notice appears after marking sessions done or archiving them. Undo restores the sessions and their previous custom groups, if those groups still exist. It does not restart stopped requests.</source>
+    </trans-unit>
     <trans-unit id="archivePinnedSectionSession.confirmSingle">
       <source xml:lang="en">Are you sure you want to archive 1 pinned session?</source>
     </trans-unit>
@@ -1679,6 +1736,9 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     </trans-unit>
     <trans-unit id="deleteEmptyGroup">
       <source xml:lang="en">Delete Group</source>
+    </trans-unit>
+    <trans-unit id="deleteGroupsNoticeHelp">
+      <source xml:lang="en">This notice appears after deleting a group that contains subgroups. Undo restores the groups, their order, and their sessions, except sessions that were marked done or moved to another group since.</source>
     </trans-unit>
     <trans-unit id="deleteSession">
       <source xml:lang="en">Delete...</source>
@@ -1788,20 +1848,8 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     <trans-unit id="newSessionInGroup">
       <source xml:lang="en">New Session</source>
     </trans-unit>
-    <trans-unit id="openInGrid">
-      <source xml:lang="en">Open in Grid</source>
-    </trans-unit>
-    <trans-unit id="openSessionAbove">
-      <source xml:lang="en">Above Active Session</source>
-    </trans-unit>
-    <trans-unit id="openSessionBelow">
-      <source xml:lang="en">Below Active Session</source>
-    </trans-unit>
-    <trans-unit id="openSessionLeft">
-      <source xml:lang="en">Left of Active Session</source>
-    </trans-unit>
-    <trans-unit id="openSessionRight">
-      <source xml:lang="en">Right of Active Session</source>
+    <trans-unit id="openParentSession">
+      <source xml:lang="en">Open Parent Session</source>
     </trans-unit>
     <trans-unit id="openToTheSide">
       <source xml:lang="en">Open to the Side</source>
@@ -1826,6 +1874,15 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     </trans-unit>
     <trans-unit id="renameSession.prompt">
       <source xml:lang="en">New agent session title</source>
+    </trans-unit>
+    <trans-unit id="repository">
+      <source xml:lang="en">Repository</source>
+    </trans-unit>
+    <trans-unit id="sessionGroupsDeleted">
+      <source xml:lang="en">{0} groups deleted</source>
+    </trans-unit>
+    <trans-unit id="sessionGroupsRestored">
+      <source xml:lang="en">Groups restored.</source>
     </trans-unit>
     <trans-unit id="sessionImported">
       <source xml:lang="en">Imported {0}.</source>

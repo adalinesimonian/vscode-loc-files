@@ -194,16 +194,10 @@
       <source xml:lang="en">{0} — {1}</source>
     </trans-unit>
     <trans-unit id="automation.form.runInCloud">
-      <source xml:lang="en">Run in the cloud</source>
-    </trans-unit>
-    <trans-unit id="automation.form.runInCloudDescription">
-      <source xml:lang="en">Run even when your computer is off, triggered by events or on a schedule.</source>
+      <source xml:lang="en">Run in the Cloud</source>
     </trans-unit>
     <trans-unit id="automation.form.runInCloudUnavailable">
       <source xml:lang="en">Unable to load cloud automations. Please try again in a few moments.</source>
-    </trans-unit>
-    <trans-unit id="automation.form.saving">
-      <source xml:lang="en">Saving automation…</source>
     </trans-unit>
     <trans-unit id="automation.form.scheduleRequired">
       <source xml:lang="en">Choose a supported schedule.</source>
@@ -231,9 +225,6 @@
     </trans-unit>
     <trans-unit id="automation.form.switchingTarget">
       <source xml:lang="en">Saving the current session configuration...</source>
-    </trans-unit>
-    <trans-unit id="automation.form.syncingCustomizations">
-      <source xml:lang="en">Syncing customizations…</source>
     </trans-unit>
     <trans-unit id="automation.form.target">
       <source xml:lang="en">Target</source>
@@ -292,6 +283,30 @@
     <trans-unit id="automation.oneToolAllowed">
       <source xml:lang="en">1 tool allowed</source>
     </trans-unit>
+    <trans-unit id="automation.owner">
+      <source xml:lang="en">Owner</source>
+    </trans-unit>
+    <trans-unit id="automation.owner.immutableDescription">
+      <source xml:lang="en">{0} Ownership can't be changed after creation.</source>
+    </trans-unit>
+    <trans-unit id="automation.owner.repository">
+      <source xml:lang="en">Repository</source>
+    </trans-unit>
+    <trans-unit id="automation.owner.repositoryActionDescription">
+      <source xml:lang="en">This automation will act as Copilot.</source>
+    </trans-unit>
+    <trans-unit id="automation.owner.repositoryDescription">
+      <source xml:lang="en">Anyone who can read the repository can see it, and anyone with write access can edit it. Runs act as Copilot.</source>
+    </trans-unit>
+    <trans-unit id="automation.owner.user">
+      <source xml:lang="en">Only me</source>
+    </trans-unit>
+    <trans-unit id="automation.owner.userActionDescription">
+      <source xml:lang="en">This automation will act as you.</source>
+    </trans-unit>
+    <trans-unit id="automation.owner.userDescription">
+      <source xml:lang="en">Only you can see and edit it. Runs act as you.</source>
+    </trans-unit>
     <trans-unit id="automation.retryTools">
       <source xml:lang="en">Retry</source>
     </trans-unit>
@@ -338,6 +353,12 @@
     </trans-unit>
     <trans-unit id="automation.dialog.saving">
       <source xml:lang="en">Saving…</source>
+    </trans-unit>
+    <trans-unit id="automation.owner.repositoryCreateWarning">
+      <source xml:lang="en">This automation will be visible to everyone with repository access, and can be edited by anyone with write access.</source>
+    </trans-unit>
+    <trans-unit id="automation.owner.repositoryEditWarning">
+      <source xml:lang="en">This automation is visible to everyone with repository access, and can be edited by anyone with write access.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/automationRunner" source-language="en" datatype="plaintext"><body>
@@ -514,7 +535,7 @@
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/automations.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.automations.cloud.enabled">
-      <source xml:lang="en">Enables managing user-owned cloud automations in known private GitHub repositories. Disabling this setting does not stop schedules already running on GitHub.</source>
+      <source xml:lang="en">Enables managing Only me and Repository cloud automations in known private GitHub repositories. Disabling this setting does not stop schedules already running on GitHub.</source>
     </trans-unit>
     <trans-unit id="chat.automations.enabled">
       <source xml:lang="en">Enables the Automations feature: scheduling agent sessions to run on a cadence. When disabled, the Automations entry in the Customizations sidebar, the Automations section in the Customizations editor, and the Automation option in the new-session composer are hidden, and scheduled automations are not dispatched.</source>

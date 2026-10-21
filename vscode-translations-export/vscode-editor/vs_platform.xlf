@@ -496,6 +496,32 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">Chat Agent Host</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/common/agentHostPlanReview" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.planReview.autopilot.description">
+      <source xml:lang="en">Continue autonomously until done, using the selected approval level.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.planReview.autopilot.label">
+      <source xml:lang="en">Implement with Autopilot</source>
+    </trans-unit>
+    <trans-unit id="agentHost.planReview.autopilotFleet.description">
+      <source xml:lang="en">Continue autonomously with fleet management, using the selected approval level.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.planReview.autopilotFleet.label">
+      <source xml:lang="en">Implement with Autopilot Fleet</source>
+    </trans-unit>
+    <trans-unit id="agentHost.planReview.exitOnly.description">
+      <source xml:lang="en">Approve the plan without executing it. I will implement it myself.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.planReview.exitOnly.label">
+      <source xml:lang="en">Approve Plan Only</source>
+    </trans-unit>
+    <trans-unit id="agentHost.planReview.interactive.description">
+      <source xml:lang="en">Implement the plan, asking for input and approval for each action.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.planReview.interactive.label">
+      <source xml:lang="en">Implement Plan</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/common/agentHostPolicyReadiness" source-language="en" datatype="plaintext"><body>
     <trans-unit id="policyGap.agentMode">
       <source xml:lang="en">Agent Host session targets can remain available in the editor even when agent mode is disabled by policy.</source>
@@ -636,6 +662,12 @@ Close this dialog to apply the change with your next message after the current t
     </trans-unit>
     <trans-unit id="agentHost.config.codexAgentEnabled.title">
       <source xml:lang="en">Codex Agent</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.computerUseEnabled.description">
+      <source xml:lang="en">Whether local Copilot agent sessions on macOS and Windows offer GitHub's Computer Use plugin.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.computerUseEnabled.title">
+      <source xml:lang="en">Computer Use</source>
     </trans-unit>
     <trans-unit id="agentHost.config.deferredTitleGeneration.description">
       <source xml:lang="en">Seed titles immediately and refine them in the background if the first response turn completes successfully, without asking the active agent to name chats. Explicit rename tools remain available. Overrides active agent title generation for new sessions; existing sessions and their chats retain their strategy.</source>
@@ -877,9 +909,6 @@ Close this dialog to apply the change with your next message after the current t
     <trans-unit id="agentHost.config.workspaceTrust">
       <source xml:lang="en">Workspace Trust</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.workspaceTrust.connectionAuthorityTrusted">
-      <source xml:lang="en">Connection Authority Trusted</source>
-    </trans-unit>
     <trans-unit id="agentHost.config.workspaceTrust.enabled">
       <source xml:lang="en">Enabled</source>
     </trans-unit>
@@ -1025,6 +1054,9 @@ Close this dialog to apply the change with your next message after the current t
     </trans-unit>
     <trans-unit id="chat.agentHost.codexAgent.sdkRoot">
       <source xml:lang="en">Experimental, for local SDK development only. Absolute path to a directory containing `node_modules/@openai/codex`. When set, the agent host spawns the Codex binary from this tree instead of downloading the SDK. Empty (the default) falls through to the SDK distribution shipped with this build. The agent host process must be restarted for changes to take effect.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentHost.computerUse.enabled">
+      <source xml:lang="en">When enabled, local Copilot agent sessions on macOS and Windows offer GitHub's Computer Use plugin, which can operate desktop applications. The plugin is downloaded on first use. Turn it on with `/computer on` in a Copilot chat; each application still requires your approval.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.experimental.autoAttachPullRequests">
       <source xml:lang="en">Controls whether the Agent Host automatically discovers and associates a pull request for the currently checked-out branch. When disabled, only pull requests recorded by the agent as artifacts or explicitly selected or created through session actions are considered.</source>
@@ -1455,6 +1487,12 @@ Close this dialog to apply the change with your next message after the current t
     <trans-unit id="uncommittedChangeset.label">
       <source xml:lang="en">Uncommitted</source>
     </trans-unit>
+    <trans-unit id="workingSetChangeset.description">
+      <source xml:lang="en">Show changes made in this session that have not been accepted</source>
+    </trans-unit>
+    <trans-unit id="workingSetChangeset.label">
+      <source xml:lang="en">Working Set</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/claudeModelConfig" source-language="en" datatype="plaintext"><body>
     <trans-unit id="claude.modelThinkingLevel.description">
@@ -1585,16 +1623,16 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">HydraFusion V2</source>
     </trans-unit>
     <trans-unit id="agentHost.config.imageGenerationEnabled.description">
-      <source xml:lang="en">Enable image generation and editing with **GPT Image 2.5 Sunburst** when available to your account. Prompts and selected images are sent to Sunburst. Account access and tool permissions still apply.
-
-**Sunburst preview rates (AI credits per 1 million tokens):**
-- **Text tokens:** 500 input / 0 output
-- **Image tokens:** 800 input / 3,000 output
-
-These charges are in addition to the conversation model. Rates may change; these are token rates, not per-image prices. Disabling this setting prevents future image tool calls.</source>
+      <source xml:lang="en">Enable image generation and editing when the runtime's image model is available to your account. Prompts and selected images are sent to that model, and its charges are in addition to the conversation model. Account access and tool permissions still apply. Disabling this setting prevents future image tool calls.</source>
     </trans-unit>
     <trans-unit id="agentHost.config.imageGenerationEnabled.title">
       <source xml:lang="en">Image Generation</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.imageGenerationWatermark.description">
+      <source xml:lang="en">Request a visible "Made with AI" label on images generated or edited by Copilot. Applies to new and existing Copilot sessions without enabling image generation. Labels are generated by the image model and are not guaranteed. Turning this off does not remove existing labels from input images.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.imageGenerationWatermark.title">
+      <source xml:lang="en">Image Watermark</source>
     </trans-unit>
     <trans-unit id="agentHost.config.localIndexEnabled.description">
       <source xml:lang="en">Whether Copilot SDK sessions use the local cross-session store for Chronicle indexing and retrieval.</source>
@@ -1787,9 +1825,37 @@ These charges are in addition to the conversation model. Rates may change; these
       <source xml:lang="en">When enabled, Copilot Agent Host sessions present Auto as Fusion, which optimizes for Standard, High, or Max. Max uses HydraFusion Max, so Fusion uses HydraFusion v2 unless `#{0}#` is off. Changing this setting can restart the Copilot runtime.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/common/imageGenerationConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.copilot.imageGeneration.enabled.deprecated">
+      <source xml:lang="en">Use {0} instead.</source>
+    </trans-unit>
+    <trans-unit id="chat.copilot.imageGeneration.model">
+      <source xml:lang="en">Selects the model Copilot uses to generate and edit images, or turns image generation off. Each model lists its rates. Account access and tool permissions still apply, and choosing **Off** prevents future image tool calls.</source>
+    </trans-unit>
+    <trans-unit id="chat.copilot.imageGeneration.model.gptImage25Flare">
+      <source xml:lang="en">Generate and edit images with **GPT Image 2.5 Flare** when it is available to your account. Prompts and selected images are sent to Flare.
+
+**Preview rates (AI credits per 1 million tokens):**
+- **Text tokens:** 500 input / 0 output
+- **Image tokens:** 800 input / 3,000 output
+
+These charges are in addition to the conversation model. Rates may change; these are token rates, not per-image prices.</source>
+    </trans-unit>
+    <trans-unit id="chat.copilot.imageGeneration.model.off">
+      <source xml:lang="en">Agents cannot generate or edit images.</source>
+    </trans-unit>
+    <trans-unit id="chat.copilot.imageGeneration.model.off.label">
+      <source xml:lang="en">Off</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/common/localModel" source-language="en" datatype="plaintext"><body>
     <trans-unit id="localModel.safetyDisclosure">
       <source xml:lang="en">Local models may not use the same safety filters as GitHub Copilot-provided models and may be more susceptible to malicious instructions, especially when actions are automatically approved.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/meta/copilotd/planReview" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.planReview.title">
+      <source xml:lang="en">Review Plan</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/meta/copilotd/toolPresentation" source-language="en" datatype="plaintext"><body>
@@ -2900,6 +2966,40 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Establishing connection to {0}...</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/agentHostAcceptChangesOperationHandler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.changeset.acceptChanges.accepted">
+      <source xml:lang="en">Accepted the changes to `{0}`.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.acceptChanges.cancelled">
+      <source xml:lang="en">Accept changes operation was cancelled.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.acceptChanges.changedDuringAccept">
+      <source xml:lang="en">'{0}' changed while its changes were being accepted. Try again.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.acceptChanges.notInRange">
+      <source xml:lang="en">'{0}' has no changes to accept in the given range.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.acceptChanges.notInWorkingSet">
+      <source xml:lang="en">'{0}' has no changes to accept.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.acceptChanges.otherChat">
+      <source xml:lang="en">Changes to '{0}' can't be accepted because another chat in this session also changed it.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.acceptChanges.renamed">
+      <source xml:lang="en">Changes to a renamed file can't be accepted.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.acceptChanges.turnInProgress">
+      <source xml:lang="en">Changes can't be accepted while a turn is running.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.acceptChanges.wholeFileOnly">
+      <source xml:lang="en">Changes to '{0}' can only be accepted for the whole file.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/agentHostAcceptChangesOperationProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.changeset.acceptChanges">
+      <source xml:lang="en">Accept Changes</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/agentHostAutomationCustomizations" source-language="en" datatype="plaintext"><body>
     <trans-unit id="automationActiveClient">
       <source xml:lang="en">Automation</source>
@@ -3032,9 +3132,6 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.changeset.discardSessionChanges.conflict">
       <source xml:lang="en">Couldn't discard the session's changes to '{0}' because the same lines were changed outside of the session.</source>
     </trans-unit>
-    <trans-unit id="agentHost.changeset.discardSessionChanges.createdFile">
-      <source xml:lang="en">The session created '{0}', which can't be discarded safely. Delete the file manually if it is no longer needed.</source>
-    </trans-unit>
     <trans-unit id="agentHost.changeset.discardSessionChanges.discarded">
       <source xml:lang="en">Discarded the session's changes to `{0}`.</source>
     </trans-unit>
@@ -3059,9 +3156,6 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.changeset.discardTurnChanges.conflict">
       <source xml:lang="en">Couldn't discard the last turn's changes to '{0}' because the same lines were changed after the turn.</source>
     </trans-unit>
-    <trans-unit id="agentHost.changeset.discardTurnChanges.createdFile">
-      <source xml:lang="en">The last turn created '{0}', which can't be discarded safely. Delete the file manually if it is no longer needed.</source>
-    </trans-unit>
     <trans-unit id="agentHost.changeset.discardTurnChanges.discarded">
       <source xml:lang="en">Discarded the last turn's changes to `{0}`.</source>
     </trans-unit>
@@ -3080,6 +3174,30 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.changeset.discardTurnChanges.turnInProgress">
       <source xml:lang="en">Changes can't be discarded while the turn is running.</source>
     </trans-unit>
+    <trans-unit id="agentHost.changeset.discardWorkingSetChanges.conflict">
+      <source xml:lang="en">Couldn't discard the changes to '{0}' that have not been accepted because the same lines were changed outside of the session.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardWorkingSetChanges.discarded">
+      <source xml:lang="en">Discarded the changes to `{0}` that have not been accepted.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardWorkingSetChanges.discardedRange">
+      <source xml:lang="en">Discarded the changes to `{0}` in the given range.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardWorkingSetChanges.multiRoot">
+      <source xml:lang="en">Changes that have not been accepted can't be discarded in a session with more than one folder.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardWorkingSetChanges.noChanges">
+      <source xml:lang="en">'{0}' has no changes that have not been accepted.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardWorkingSetChanges.notInRange">
+      <source xml:lang="en">'{0}' has no changes to discard in the given range.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardWorkingSetChanges.turnRanDuringDiscard">
+      <source xml:lang="en">A turn ran while the changes to '{0}' were being discarded. Try again.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardWorkingSetChanges.wholeFileOnly">
+      <source xml:lang="en">Changes to '{0}' can only be discarded for the whole file.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentHostDiscardChangesOperationProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.changeset.discardChanges">
@@ -3089,10 +3207,10 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Are you sure you want to discard the changes in '{0}'? This action cannot be undone.</source>
     </trans-unit>
     <trans-unit id="agentHost.changeset.discardSessionChanges.confirmation">
-      <source xml:lang="en">Are you sure you want to discard the session's changes to '{0}'? Changes made outside of the session will be kept. This action cannot be undone.</source>
+      <source xml:lang="en">Are you sure you want to discard the session's changes to '{0}'? Changes made outside of the session will be kept, except in a file the session created, which is deleted along with any later changes to it. This action cannot be undone.</source>
     </trans-unit>
     <trans-unit id="agentHost.changeset.discardTurnChanges.confirmation">
-      <source xml:lang="en">Are you sure you want to discard the last turn's changes to '{0}'? Changes made outside of the last turn will be kept. This action cannot be undone.</source>
+      <source xml:lang="en">Are you sure you want to discard the last turn's changes to '{0}'? Changes made outside of the last turn will be kept, except in a file the last turn created, which is deleted along with any later changes to it. This action cannot be undone.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentHostMain" source-language="en" datatype="plaintext"><body>
@@ -4183,32 +4301,8 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.byokToolLimitExceeded">
       <source xml:lang="en">The model only supports {0} tools, {1} tools were not provided to the model.</source>
     </trans-unit>
-    <trans-unit id="agentHost.planReview.autopilot.description">
-      <source xml:lang="en">Continue autonomously until done, using the selected approval level.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.planReview.autopilot.label">
-      <source xml:lang="en">Implement with Autopilot</source>
-    </trans-unit>
-    <trans-unit id="agentHost.planReview.autopilotFleet.description">
-      <source xml:lang="en">Continue autonomously with fleet management, using the selected approval level.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.planReview.autopilotFleet.label">
-      <source xml:lang="en">Implement with Autopilot Fleet</source>
-    </trans-unit>
-    <trans-unit id="agentHost.planReview.exitOnly.description">
-      <source xml:lang="en">Approve the plan without executing it. I will implement it myself.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.planReview.exitOnly.label">
-      <source xml:lang="en">Approve Plan Only</source>
-    </trans-unit>
     <trans-unit id="agentHost.planReview.fallbackSummary">
       <source xml:lang="en">A plan is ready for review.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.planReview.interactive.description">
-      <source xml:lang="en">Implement the plan, asking for input and approval for each action.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.planReview.interactive.label">
-      <source xml:lang="en">Implement Plan</source>
     </trans-unit>
     <trans-unit id="agentHost.planReview.questionMessage">
       <source xml:lang="en">How would you like to proceed?</source>
@@ -6283,6 +6377,9 @@ stderr: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/browserView/electron-main/browserViewMainService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.closeBeforeNetworkChange">
+      <source xml:lang="en">Close this workspace's open browser tabs, then open the page again to use the new network setting.</source>
+    </trans-unit>
     <trans-unit id="browser.contextMenu.addComment">
       <source xml:lang="en">Add Comment...</source>
     </trans-unit>

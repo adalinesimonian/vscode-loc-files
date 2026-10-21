@@ -185,9 +185,6 @@
     <trans-unit id="sessionHistoryStatus.archived">
       <source xml:lang="en">{0} {1}</source>
     </trans-unit>
-    <trans-unit id="sessionReadOnlyBanner.archived">
-      <source xml:lang="en">Archived sessions are read-only.</source>
-    </trans-unit>
     <trans-unit id="sessionReadOnlyBanner.message">
       <source xml:lang="en">This chat is read-only</source>
     </trans-unit>
@@ -432,11 +429,17 @@
     <trans-unit id="chatHeaderLabel">
       <source xml:lang="en">Chat: {0}</source>
     </trans-unit>
+    <trans-unit id="newSessionDragArea">
+      <source xml:lang="en">New Session</source>
+    </trans-unit>
     <trans-unit id="renameChat.aria">
       <source xml:lang="en">Rename chat</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/browser/parts/sessionReadOnlyBanner" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionReadOnlyBanner.archived">
+      <source xml:lang="en">Archived sessions are read-only.</source>
+    </trans-unit>
     <trans-unit id="sessionReadOnlyBanner.message">
       <source xml:lang="en">This chat is read-only</source>
     </trans-unit>
@@ -670,9 +673,6 @@
     <trans-unit id="sessionAgentMergeEnabled">
       <source xml:lang="en">True when Agent Merge is enabled for the active agent session</source>
     </trans-unit>
-    <trans-unit id="sessionAgentPickerInAttachContext">
-      <source xml:lang="en">Whether the active session's Agent picker is shown in Add Context instead of the input toolbar</source>
-    </trans-unit>
     <trans-unit id="sessionChatsPickerVisible">
       <source xml:lang="en">Whether the chats picker (chats within the active session) is visible</source>
     </trans-unit>
@@ -857,6 +857,15 @@
     </trans-unit>
     <trans-unit id="application.copilotCli">
       <source xml:lang="en">Copilot CLI</source>
+    </trans-unit>
+    <trans-unit id="application.github">
+      <source xml:lang="en">GitHub</source>
+    </trans-unit>
+    <trans-unit id="application.githubMobileAndroid">
+      <source xml:lang="en">GitHub Mobile (Android)</source>
+    </trans-unit>
+    <trans-unit id="application.githubMobileIOS">
+      <source xml:lang="en">GitHub Mobile (iOS)</source>
     </trans-unit>
     <trans-unit id="application.issuesAssignment">
       <source xml:lang="en">Issues Assignment</source>

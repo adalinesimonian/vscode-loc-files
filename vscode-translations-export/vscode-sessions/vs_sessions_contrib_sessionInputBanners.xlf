@@ -96,7 +96,7 @@
 </body></file>
   <file original="src/vs/sessions/contrib/sessionInputBanners/browser/sessionWorktreeCleanupAccessibilityHelp" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionWorktreeCleanupHelp.automatic">
-      <source xml:lang="en">Changes in the Cleanup Settings section are saved immediately. Background cleanup evaluates existing and future sessions after confirming their eligibility. The settings can automatically mark merged pull request sessions as done, optionally delete them after a retention period, and turn the storage cleanup suggestion on or off. Each setting has a Configure in Settings button that opens the Settings editor filtered to that setting.</source>
+      <source xml:lang="en">Changes in the Cleanup Settings section are saved immediately. Background cleanup evaluates existing and future sessions after confirming their eligibility. Use the checkboxes to enable automatic completion or deletion of merged pull request sessions, then adjust the number of days in the adjacent input. Another checkbox turns the storage cleanup suggestion on or off.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.cleanup">
       <source xml:lang="en">Activate Clean Up Worktrees to delete the selected sessions' worktrees and mark those sessions as done after confirmation. It is disabled until at least one session is selected, and its label reports how many worktrees will be cleaned up.</source>
@@ -145,9 +145,6 @@
     <trans-unit id="sessionWorktreeCleanup.cleanupSelection">
       <source xml:lang="en">Clean Up {0} Worktrees</source>
     </trans-unit>
-    <trans-unit id="sessionWorktreeCleanup.configureInSettings">
-      <source xml:lang="en">Configure {0} in Settings</source>
-    </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.days">
       <source xml:lang="en">{0} days</source>
     </trans-unit>
@@ -164,7 +161,7 @@
       <source xml:lang="en">No worktrees are eligible for cleanup with the selected inactivity period.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.intro">
-      <source xml:lang="en">Inactive, unpinned sessions older than the selected period can be cleaned up to reclaim the disk space their worktrees use. Any uncommitted changes are committed before the worktree is removed. Cleaning up a session marks it as done; you can restore the session later to recreate its worktree. Active, running, needs-input, and pinned sessions are always protected.</source>
+      <source xml:lang="en">Inactive, unpinned sessions older than the selected period can be cleaned up to reclaim the disk space their worktrees use. Any uncommitted changes are committed before the worktree is removed. Cleaning up a session marks it as done; you can restore the session later to recreate its worktree. Active, running, needs-input, and pinned sessions are never cleaned up.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.lastUsedColumn">
       <source xml:lang="en">Last Used</source>
@@ -180,6 +177,9 @@
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.openSession">
       <source xml:lang="en">Open {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.reopen">
+      <source xml:lang="en">You can return to this editor at any time by running Open Worktree Cleanup from the Command Palette.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.selectAll">
       <source xml:lang="en">Select all eligible sessions</source>

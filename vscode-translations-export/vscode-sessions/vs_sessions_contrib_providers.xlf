@@ -740,6 +740,9 @@
     <trans-unit id="cloudAutomations.localConfiguration">
       <source xml:lang="en">Cloud automations do not support local mode or approval settings.</source>
     </trans-unit>
+    <trans-unit id="cloudAutomations.manageUnavailable">
+      <source xml:lang="en">Repository write access is required to manage this automation.</source>
+    </trans-unit>
     <trans-unit id="cloudAutomations.missing">
       <source xml:lang="en">This cloud automation is no longer available. Refresh the catalogue.</source>
     </trans-unit>
@@ -948,6 +951,9 @@
     </trans-unit>
     <trans-unit id="cloudAutomations.signIn">
       <source xml:lang="en">Sign in to GitHub.com with repository access to manage cloud automations.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.writeAccessRequired">
+      <source xml:lang="en">Repository write access is required to manage cloud automations.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/mobilePermissionPicker" source-language="en" datatype="plaintext"><body>

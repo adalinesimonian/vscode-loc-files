@@ -82,6 +82,9 @@ Open the page in a new tab to share it with agents.</source>
     <trans-unit id="browser.networkFilteringEnabled">
       <source xml:lang="en">Agent access to browser tabs was revoked because network filtering was enabled.</source>
     </trans-unit>
+    <trans-unit id="browser.networkProxyUnavailable">
+      <source xml:lang="en">The browser network proxy did not start. Reload the window and try again.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserAutoReloadFeatures" source-language="en" datatype="plaintext"><body>
     <trans-unit id="browser.autoReloadOnFileChange">
@@ -628,7 +631,10 @@ Ensure the URL is correct and the server is accessible from the remote machine.<
       <source xml:lang="en">Connected via remote</source>
     </trans-unit>
     <trans-unit id="browser.enableRemoteProxy">
-      <source xml:lang="en">When enabled, browser requests in remote workspaces are proxied through the remote connection. This allows web pages to access resources available on the remote host.</source>
+      <source xml:lang="en">When enabled, browser requests in remote workspaces are proxied through the remote connection. This allows web pages to access resources available on the remote host. Browsers using global storage always use the local network.</source>
+    </trans-unit>
+    <trans-unit id="browser.localFallback.global">
+      <source xml:lang="en">Connected locally. Browsers using global storage load pages from your local network.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserSearchFeatures" source-language="en" datatype="plaintext"><body>
