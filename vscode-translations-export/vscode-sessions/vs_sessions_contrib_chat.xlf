@@ -15,11 +15,26 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/aiCustomizationWorkspaceService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="commitCustomizationMessage">
+      <source xml:lang="en">Update customization: {0}</source>
+    </trans-unit>
     <trans-unit id="commitToRepoFailed">
       <source xml:lang="en">Your customization was saved to this session's worktree, but we couldn't apply it to the default branch. You may need to apply it manually.</source>
     </trans-unit>
+    <trans-unit id="commitToRepoOnlyFailed">
+      <source xml:lang="en">Your customization was saved, but we couldn't commit it to the repository.</source>
+    </trans-unit>
+    <trans-unit id="commitToWorktreeFailed">
+      <source xml:lang="en">Your customization was saved, but we couldn't commit it to this session's worktree.</source>
+    </trans-unit>
     <trans-unit id="deleteFromRepoFailed">
       <source xml:lang="en">Your customization was removed from this session's worktree, but we couldn't apply the change to the default branch. You may need to remove it manually.</source>
+    </trans-unit>
+    <trans-unit id="deleteFromRepoOnlyFailed">
+      <source xml:lang="en">Your customization was removed, but we couldn't commit the removal to the repository.</source>
+    </trans-unit>
+    <trans-unit id="deleteFromWorktreeFailed">
+      <source xml:lang="en">Your customization was removed, but we couldn't commit the removal to this session's worktree.</source>
     </trans-unit>
     <trans-unit id="skillUI.actOnFeedback">
       <source xml:lang="en">Used by the Submit Feedback button in the Changes toolbar</source>
@@ -47,6 +62,334 @@
     </trans-unit>
     <trans-unit id="skillUI.updatePr">
       <source xml:lang="en">Used by the Update Pull Request button in the Changes toolbar</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/artifactActivities" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactActivities">
+      <source xml:lang="en">Activities</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/artifactActivitiesModel" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactActivitiesLoadError">
+      <source xml:lang="en">Could not load activities: {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactActivitiesLoadedCount">
+      <source xml:lang="en">{0} loaded</source>
+    </trans-unit>
+    <trans-unit id="artifactActivitiesLoading">
+      <source xml:lang="en">Loading activities...</source>
+    </trans-unit>
+    <trans-unit id="artifactActivitiesRetry">
+      <source xml:lang="en">Retry Loading Activities</source>
+    </trans-unit>
+    <trans-unit id="artifactActivityChatUnavailable">
+      <source xml:lang="en">The chat for this activity is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="artifactActivityCursorUnavailable">
+      <source xml:lang="en">Earlier activity is no longer available. Reopen the artifact details to refresh its history.</source>
+    </trans-unit>
+    <trans-unit id="artifactActivityDescription">
+      <source xml:lang="en">{0}
+{1}
+{2}
+{3}{4}</source>
+    </trans-unit>
+    <trans-unit id="artifactActivityLabel">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="artifactActivityNoChat">
+      <source xml:lang="en">This activity has no chat destination.</source>
+    </trans-unit>
+    <trans-unit id="artifactActivityRequestUnavailable">
+      <source xml:lang="en">The activity's message could not be found in its chat.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomaticActivity">
+      <source xml:lang="en">Automatic action</source>
+    </trans-unit>
+    <trans-unit id="artifactBlocked">
+      <source xml:lang="en">Waiting</source>
+    </trans-unit>
+    <trans-unit id="artifactCancelActivity">
+      <source xml:lang="en">Cancel {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactCancelRun">
+      <source xml:lang="en">Cancel Action</source>
+    </trans-unit>
+    <trans-unit id="artifactCancelled">
+      <source xml:lang="en">Cancelled</source>
+    </trans-unit>
+    <trans-unit id="artifactCompleted">
+      <source xml:lang="en">Completed</source>
+    </trans-unit>
+    <trans-unit id="artifactEarlierActivities">
+      <source xml:lang="en">Earlier Activities</source>
+    </trans-unit>
+    <trans-unit id="artifactFailed">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="artifactInterrupted">
+      <source xml:lang="en">Interrupted</source>
+    </trans-unit>
+    <trans-unit id="artifactManualActivity">
+      <source xml:lang="en">Manual action</source>
+    </trans-unit>
+    <trans-unit id="artifactPreparing">
+      <source xml:lang="en">Preparing</source>
+    </trans-unit>
+    <trans-unit id="artifactQueued">
+      <source xml:lang="en">Queued</source>
+    </trans-unit>
+    <trans-unit id="artifactReconcileActivity">
+      <source xml:lang="en">Reconcile {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactReconcileOutcome">
+      <source xml:lang="en">Reconcile Outcome</source>
+    </trans-unit>
+    <trans-unit id="artifactRevealActivityHint">
+      <source xml:lang="en">
+Select to reveal in chat.</source>
+    </trans-unit>
+    <trans-unit id="artifactRunning">
+      <source xml:lang="en">Running</source>
+    </trans-unit>
+    <trans-unit id="artifactSkipped">
+      <source xml:lang="en">Skipped</source>
+    </trans-unit>
+    <trans-unit id="artifactSubmitted">
+      <source xml:lang="en">Submitted</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/artifactAutopilot" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactEnumOption">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/artifactAutopilotModel" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactAutomationSaved">
+      <source xml:lang="en">Autopilot rule updated: {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.agentGrant">
+      <source xml:lang="en">Turned on at the agent's request after you confirmed.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.allRules">
+      <source xml:lang="en">All Available Autopilot Rules</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.confirm">
+      <source xml:lang="en">Enable these Autopilot rules?</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.confirmDetail">
+      <source xml:lang="en">{0}
+
+{1}
+
+Autopilot rules may run as soon as their conditions are met.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.enable">
+      <source xml:lang="en">Enable Autopilot</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.enabled">
+      <source xml:lang="en">{0} of {1} on</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.masterHelp">
+      <source xml:lang="en">Enable all available rules for this provider using the policies shown in their dropdowns, or turn off all enabled rules. Unavailable rules are not enabled. Enabling is confirmed before saving.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.providerRules">
+      <source xml:lang="en">All Available Autopilot Rules: {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.providerTitle">
+      <source xml:lang="en">{0} Autopilot</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.providerUnavailable">
+      <source xml:lang="en">This Autopilot provider is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.ruleChoice">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.ruleConsent">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.ruleUnavailable">
+      <source xml:lang="en">This Autopilot rule is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.saved">
+      <source xml:lang="en">Artifact Autopilot updated.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.title">
+      <source xml:lang="en">Autopilot</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.unavailable">
+      <source xml:lang="en">{0} on, {1} unavailable</source>
+    </trans-unit>
+    <trans-unit id="artifactAutopilot.unavailableRule">
+      <source xml:lang="en">This Autopilot rule is not available in the current resource state.</source>
+    </trans-unit>
+    <trans-unit id="artifactNoPolicyChoices">
+      <source xml:lang="en">No Available Policies</source>
+    </trans-unit>
+    <trans-unit id="artifactPolicyChanged">
+      <source xml:lang="en">This Autopilot rule changed while selecting a policy. Choose the policy again.</source>
+    </trans-unit>
+    <trans-unit id="artifactPolicyPreparation">
+      <source xml:lang="en">Choosing a policy while this rule is off does not enable it. Turning it on uses the displayed policy.</source>
+    </trans-unit>
+    <trans-unit id="artifactPolicySelected">
+      <source xml:lang="en">Selected {0} for {1}. This Autopilot rule remains off.</source>
+    </trans-unit>
+    <trans-unit id="artifactPolicyUnavailable">
+      <source xml:lang="en">No enabled policy is available for {0}.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/artifactButtons" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactButtonDescription">
+      <source xml:lang="en">{0}. {1}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/artifactDetailsContextView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactDetailsHelp.activities">
+      <source xml:lang="en">Activities appears below Autopilot when an artifact has activity. It starts collapsed. Its heading shows the number of loaded activities, which increases when Earlier Activities loads older history. Use Enter or Space on its heading to expand it, then arrow keys to read the newest activity first. Scrolling past either end of the list scrolls the surrounding panel. Only rows with a chat destination respond to clicking or Enter; they reveal the related message. Other rows are informational. Pending actions offer Cancel Action, and uncertain outcomes offer Reconcile Outcome. The Accessible View includes the activity count and text.</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsHelp.automationPill">
+      <source xml:lang="en">Artifacts with enabled Autopilot rules have a trailing pill section with an Autopilot icon and the number of enabled rules. Select it to open and focus Autopilot. This count includes saved enabled rules even when new enablement is temporarily unavailable.</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsHelp.autopilot">
+      <source xml:lang="en">All Available Autopilot Rules applies only to its provider's currently available rules. The enabled count describes partial enablement. Enabling a group requests confirmation and uses the policies shown in the dropdowns. Disabling a group revokes enabled rules without enabling unavailable ones.</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsHelp.controls">
+      <source xml:lang="en">Use Tab and Shift+Tab to move between controls. Buttons below the state lists run actions once. Enabled actions come first in provider order, and the first action is primary. List rows show a single line; their full text and state remain available to screen readers and in hovers. Use Space to change an Autopilot switch. Enabling a rule grants permission for future automatic runs; it can run immediately if its condition already holds. Turning it off prevents new runs, but does not cancel work already started.</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsHelp.description">
+      <source xml:lang="en">Descriptions show at most three lines. The Accessible View includes the full description. When a provider supplies more information about a list, use Tab to reach its information icon and Enter or Space to read the hover.</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsHelp.dismiss">
+      <source xml:lang="en">Escape or Close returns focus to the invoking pill. Clicking outside, including in the chat input, dismisses details without moving focus back. Clicking another artifact switches this panel; clicking its status section selects and focuses the corresponding list, or focuses its action.</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsHelp.focus">
+      <source xml:lang="en">A temporarily unavailable switch moves focus to its explanation, then back when available, unless you move focus elsewhere. Enabled automation remains available to turn off.</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsHelp.overview">
+      <source xml:lang="en">Artifact details show the full resource title and state icon, its description, tabbed state lists, actions, Autopilot, and Activities. Activate the linked title to open the resource. Copy Link and Remove Artifact are available in the footer.</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsHelp.tabs">
+      <source xml:lang="en">Left and Right Arrow, Home, and End select a state-list tab and keep keyboard focus on the full tab. Clicking a tab moves focus to the first item in its list. Tab moves through the information buttons beside each tab label and into the selected list. Enter or Space on an information button shows that list's details without selecting its tab. The list area keeps its height when you change tabs. Use arrow keys in a list and Enter to open its selected item. A pill's status section selects and focuses its list. Autopilot is collapsed by default; its heading expands or collapses its rules, and its separate switch enables all available rules or turns them off. Policy dropdowns remain visible while rules are off. Selecting a policy while off does not enable the rule; turning the switch on uses the displayed policy without asking again. Policy selections, selected tabs, and Autopilot expansion choices are remembered when reopening the artifact.</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsHelp.view">
+      <source xml:lang="en">Open the Accessible View{0} to read the full description and current lists as text. The chat accessibility verbosity setting controls the help hint.</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsHelpHint">
+      <source xml:lang="en">Use {0} for artifact details accessibility help.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/artifactDetailsModel" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactAccessibleAutomation">
+      <source xml:lang="en">{0}: {1}. {2}</source>
+    </trans-unit>
+    <trans-unit id="artifactAccessibleDisabled">
+      <source xml:lang="en">{0}: unavailable. {1}</source>
+    </trans-unit>
+    <trans-unit id="artifactActionUnavailable">
+      <source xml:lang="en">This action is not available in the current resource state.</source>
+    </trans-unit>
+    <trans-unit id="artifactActivities">
+      <source xml:lang="en">Activities</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationOff">
+      <source xml:lang="en">Off</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationOffWithPolicy">
+      <source xml:lang="en">Off; selected policy: {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationOn">
+      <source xml:lang="en">On</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsLoading">
+      <source xml:lang="en">Loading details...</source>
+    </trans-unit>
+    <trans-unit id="artifactListEmpty">
+      <source xml:lang="en">No items.</source>
+    </trans-unit>
+    <trans-unit id="artifactListIncomplete">
+      <source xml:lang="en">This list is incomplete.</source>
+    </trans-unit>
+    <trans-unit id="artifactListUnavailable">
+      <source xml:lang="en">This artifact list is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="artifactLoadMore">
+      <source xml:lang="en">Load More</source>
+    </trans-unit>
+    <trans-unit id="artifactNoDescription">
+      <source xml:lang="en">No description provided.</source>
+    </trans-unit>
+    <trans-unit id="artifactPartialList">
+      <source xml:lang="en">This list is incomplete. Open the resource to see all items.</source>
+    </trans-unit>
+    <trans-unit id="artifactResourceUnavailable">
+      <source xml:lang="en">This artifact is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="artifactRunAutomatic">
+      <source xml:lang="en">{0} automatically</source>
+    </trans-unit>
+    <trans-unit id="artifactRunOutcomeUnknown">
+      <source xml:lang="en">The outcome of the last run is unknown. Reconcile it in Activities.</source>
+    </trans-unit>
+    <trans-unit id="artifactRunWaiting">
+      <source xml:lang="en">Waiting: {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactUnsafeLink">
+      <source xml:lang="en">This artifact link cannot be opened.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/artifactDetailsPanel" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactCloseDetails">
+      <source xml:lang="en">Close Artifact Details</source>
+    </trans-unit>
+    <trans-unit id="artifactGeneralActions">
+      <source xml:lang="en">General Actions</source>
+    </trans-unit>
+    <trans-unit id="artifactOpenResource">
+      <source xml:lang="en">Open Resource</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/artifactIntegrationPresentation" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactActionRequested">
+      <source xml:lang="en">Artifact action requested: {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationEnabled">
+      <source xml:lang="en">1 Autopilot rule enabled</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationsEnabled">
+      <source xml:lang="en">{0} Autopilot rules enabled</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsTargetUnavailable">
+      <source xml:lang="en">The artifact details button is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="artifactInvokingChatUnavailable">
+      <source xml:lang="en">The chat that invoked this artifact action is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="artifactOperationFailed">
+      <source xml:lang="en">The artifact operation failed: {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactSectionDetails">
+      <source xml:lang="en">Show details: {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactShowAutomations">
+      <source xml:lang="en">Show Autopilot: {0} enabled</source>
+    </trans-unit>
+    <trans-unit id="artifactShowDetails">
+      <source xml:lang="en">Show artifact details: {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactSignIn">
+      <source xml:lang="en">Sign In</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/artifactStateLists" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactListInformation">
+      <source xml:lang="en">About {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactStateActions">
+      <source xml:lang="en">Artifact Actions</source>
+    </trans-unit>
+    <trans-unit id="artifactStateLists">
+      <source xml:lang="en">Artifact State Lists</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/branchChatSessionAction" source-language="en" datatype="plaintext"><body>
@@ -90,26 +433,6 @@
     </trans-unit>
     <trans-unit id="branchPicker.unavailableAriaLabel">
       <source xml:lang="en">{0}, unavailable locally</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/btwSlashCommand.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="btw">
-      <source xml:lang="en">Ask a side question without adding it to this conversation</source>
-    </trans-unit>
-    <trans-unit id="btw.createFailed">
-      <source xml:lang="en">The side chat could not be created.</source>
-    </trans-unit>
-    <trans-unit id="btw.missingPrompt">
-      <source xml:lang="en">Enter a question after `/btw`.</source>
-    </trans-unit>
-    <trans-unit id="btw.noTurn">
-      <source xml:lang="en">Send a message in this conversation before starting a side chat.</source>
-    </trans-unit>
-    <trans-unit id="btw.sessionUnavailable">
-      <source xml:lang="en">A side chat cannot be created from this conversation.</source>
-    </trans-unit>
-    <trans-unit id="btw.unsupported">
-      <source xml:lang="en">This conversation does not support side chats.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/chat.contribution" source-language="en" datatype="plaintext"><body>
@@ -249,7 +572,7 @@
       <source xml:lang="en">Controls whether chat input history in the Agents Window is scoped to the current session. Disable this to use shared input history across sessions.</source>
     </trans-unit>
     <trans-unit id="chat.agentSessions.sessionStorageCleanupSuggestion">
-      <source xml:lang="en">Controls whether the Agents Window suggests cleaning up session storage when inactive worktrees reach the count or reclaimable-storage threshold.</source>
+      <source xml:lang="en">Controls whether the Agents Window suggests cleaning up session storage when inactive worktrees reach the count or reclaimable-storage threshold, or a local worktree's disk has less than 5 GB available.</source>
     </trans-unit>
     <trans-unit id="chat.agentSessions.setBackground">
       <source xml:lang="en">Set Background...</source>
@@ -374,11 +697,23 @@
     <trans-unit id="sessions.chat.setWelcomeName.updated">
       <source xml:lang="en">Welcome name set to {0}.</source>
     </trans-unit>
+    <trans-unit id="sessions.focusNewSessionBranchPicker">
+      <source xml:lang="en">Focus Branch Picker</source>
+    </trans-unit>
+    <trans-unit id="sessions.focusNewSessionEnvironmentPicker">
+      <source xml:lang="en">Focus Environment Picker</source>
+    </trans-unit>
     <trans-unit id="sessions.focusNewSessionHarnessPicker">
       <source xml:lang="en">Focus Harness Picker</source>
     </trans-unit>
     <trans-unit id="sessions.focusNewSessionWorkspacePicker">
       <source xml:lang="en">Focus Workspace Picker</source>
+    </trans-unit>
+    <trans-unit id="sessions.focusNewSessionWorktreePicker">
+      <source xml:lang="en">Focus Worktree Picker</source>
+    </trans-unit>
+    <trans-unit id="sessions.focusSessionSyncAction">
+      <source xml:lang="en">Focus Sync Action</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/chatBackgroundTint" source-language="en" datatype="plaintext"><body>
@@ -514,6 +849,23 @@
       <source xml:lang="en">Show up to the 2 most recent external sessions updated in the last 7 days. Once at least 2 local sessions exist, external sessions older than the second-newest local session are hidden.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/isolationPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="isolationPicker.ariaLabel">
+      <source xml:lang="en">Isolation Picker</source>
+    </trans-unit>
+    <trans-unit id="isolationPicker.branch">
+      <source xml:lang="en">Branch</source>
+    </trans-unit>
+    <trans-unit id="isolationPicker.branchDescription">
+      <source xml:lang="en">Works in the repository already on this computer</source>
+    </trans-unit>
+    <trans-unit id="isolationPicker.triggerAriaLabel">
+      <source xml:lang="en">Isolation: {0}</source>
+    </trans-unit>
+    <trans-unit id="isolationPicker.worktreeDescription">
+      <source xml:lang="en">Creates a separate copy for this session</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/chat/browser/mobile/mobileSessionTypePicker" source-language="en" datatype="plaintext"><body>
     <trans-unit id="mobileSessionTypePicker.title">
       <source xml:lang="en">Session Type</source>
@@ -556,6 +908,41 @@
       <source xml:lang="en">Model</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/nestedChatWorkspacePicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="nestedChat.branch.default">
+      <source xml:lang="en">Default Branch</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.branches.error">
+      <source xml:lang="en">Couldn't load branches. Open the branch picker to retry.</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.branches.loaded">
+      <source xml:lang="en">{0} branches available</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.branches.loading">
+      <source xml:lang="en">Loading branches…</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.branches.none">
+      <source xml:lang="en">No branches available</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.folder.ariaLabel">
+      <source xml:lang="en">Pick Folder for the Nested Session, {0}</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.folder.staticAriaLabel">
+      <source xml:lang="en">Folder for the Nested Session, {0}</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.folderPicker.ariaLabel">
+      <source xml:lang="en">Nested Session Folder Picker</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.noWorkspace">
+      <source xml:lang="en">No Workspace</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.noWorkspace.description">
+      <source xml:lang="en">Start without a backing workspace</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.openFolder">
+      <source xml:lang="en">Open Folder...</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/chat/browser/newChatComposerInput" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionsChatInput.placeholder.pitchYourIdea">
       <source xml:lang="en">Pitch your idea</source>
@@ -567,6 +954,18 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/newChatInSessionWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="nestedChat.alreadyStarted">
+      <source xml:lang="en">The nested session already started, so its workspace can't change.</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.createFailed">
+      <source xml:lang="en">The nested session could not be created: {0}</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.noProvider">
+      <source xml:lang="en">The agent of this session is not available.</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.noSession">
+      <source xml:lang="en">There is no session to add a nested session to.</source>
+    </trans-unit>
     <trans-unit id="newChatInSessionPlaceholder">
       <source xml:lang="en">Ask a follow-up question or start a new topic within this session...</source>
     </trans-unit>
@@ -644,12 +1043,6 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="newSessionHarnessPicker.tooltip">
       <source xml:lang="en">Choose the harness for the new session</source>
-    </trans-unit>
-    <trans-unit id="newSessionOptions.collapse">
-      <source xml:lang="en">Hide Session Options</source>
-    </trans-unit>
-    <trans-unit id="newSessionOptions.expand">
-      <source xml:lang="en">Show Session Options</source>
     </trans-unit>
     <trans-unit id="newSessionWorkspacePicker.localQuickChat">
       <source xml:lang="en">This Computer</source>
@@ -757,53 +1150,6 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsPromptTemplatePlaceholderFocused">
       <source xml:lang="en">Whether the caret is inside an editable prompt template placeholder.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/sessions/contrib/chat/browser/responseSelectionSideChatController" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sessions.responseSelection.askWithBtw">
-      <source xml:lang="en">Ask in a Side Chat</source>
-    </trans-unit>
-    <trans-unit id="sessions.responseSelection.copied">
-      <source xml:lang="en">Selected response text copied.</source>
-    </trans-unit>
-    <trans-unit id="sessions.responseSelection.copy">
-      <source xml:lang="en">Copy</source>
-    </trans-unit>
-    <trans-unit id="sessions.responseSelection.copyFailed">
-      <source xml:lang="en">The selected response text could not be copied.</source>
-    </trans-unit>
-    <trans-unit id="sessions.responseSelection.menuAriaLabel">
-      <source xml:lang="en">Selected response text actions</source>
-    </trans-unit>
-    <trans-unit id="sessions.responseSelection.quote">
-      <source xml:lang="en">Quote</source>
-    </trans-unit>
-    <trans-unit id="sessions.responseSelection.quoted">
-      <source xml:lang="en">Quoted selection inserted.</source>
-    </trans-unit>
-    <trans-unit id="sessions.selectionSideChat.ariaLabel">
-      <source xml:lang="en">Ask a question about the selected response text</source>
-    </trans-unit>
-    <trans-unit id="sessions.selectionSideChat.ask">
-      <source xml:lang="en">Ask Question</source>
-    </trans-unit>
-    <trans-unit id="sessions.selectionSideChat.busy">
-      <source xml:lang="en">Asking question…</source>
-    </trans-unit>
-    <trans-unit id="sessions.selectionSideChat.createFailed">
-      <source xml:lang="en">The side chat could not be created.</source>
-    </trans-unit>
-    <trans-unit id="sessions.selectionSideChat.enter">
-      <source xml:lang="en">Enter</source>
-    </trans-unit>
-    <trans-unit id="sessions.selectionSideChat.placeholder">
-      <source xml:lang="en">Ask Question</source>
-    </trans-unit>
-    <trans-unit id="sessions.selectionSideChat.sessionUnavailable">
-      <source xml:lang="en">A side chat cannot be created from this conversation.</source>
-    </trans-unit>
-    <trans-unit id="sessions.selectionSideChat.unsupported">
-      <source xml:lang="en">This conversation does not support side chats.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/runScriptAction" source-language="en" datatype="plaintext"><body>
@@ -1551,6 +1897,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="environmentPicker.choose">
       <source xml:lang="en">Environment</source>
     </trans-unit>
+    <trans-unit id="environmentPicker.chooseEnvironment">
+      <source xml:lang="en">Choose Environment</source>
+    </trans-unit>
     <trans-unit id="environmentPicker.cloud">
       <source xml:lang="en">Cloud</source>
     </trans-unit>
@@ -1576,6 +1925,27 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Choose Environment, {0}</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionOptionsRow" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="newSessionOptions.collapse">
+      <source xml:lang="en">Hide Session Options</source>
+    </trans-unit>
+    <trans-unit id="newSessionOptions.expand">
+      <source xml:lang="en">Show Session Options</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionPickerToolbar" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionPickerToolbar">
+      <source xml:lang="en">Session Picker</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionReferenceCompletions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="currentSessionLabel">
+      <source xml:lang="en">{0} (current)</source>
+    </trans-unit>
+    <trans-unit id="untitledSession">
+      <source xml:lang="en">Untitled session</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionTurnChanges" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatTurnPills.changes.title">
       <source xml:lang="en">Turn File Changes</source>
@@ -1596,6 +1966,9 @@ To disable this announcement, set {1} to false.</source>
   <file original="src/vs/sessions/contrib/chat/browser/sessionTypePicker" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionTypePicker.ariaLabel">
       <source xml:lang="en">Session Type</source>
+    </trans-unit>
+    <trans-unit id="sessionTypePicker.choose">
+      <source xml:lang="en">Choose Harness</source>
     </trans-unit>
     <trans-unit id="sessionTypePicker.disabledTriggerAriaLabel">
       <source xml:lang="en">Session Type, {0}</source>
@@ -1772,6 +2145,30 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.archiveSession">
       <source xml:lang="en">To archive or mark one or more sessions as done, focus them in the Sessions list and invoke Archive or Mark as Done{0}.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.artifactActionDisclosure">
+      <source xml:lang="en">Artifact actions appear as collapsed request cards with an action and resource label. Use Tab to reach the card and Enter or Space to expand it. The details are a snapshot from when the action started. Use arrow keys within a details list and Enter to open an item. Agent Message switches between these details and the full prompt. Open the accessible view{0} while the request is focused to read its snapshot as text.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.artifactAutomationFocus">
+      <source xml:lang="en">If a focused automation control becomes temporarily unavailable, focus moves to its explanation and returns to the control when it becomes available, unless you have moved focus elsewhere.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.artifactAutomationNotices">
+      <source xml:lang="en">In Agent Host sessions, enabling, changing, or disabling an artifact automation adds a notice to the chat that recorded the artifact. Notices explain what will run automatically and why a rule was turned off, including unsuccessful attempts that caused automatic disablement. Use Tab to reach the notice and Enter or Space to expand or collapse its details. Notices raised while the agent is working appear after that turn finishes. Automatic repair prompts appear as messages in that chat without replacing your draft.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.artifactAutopilot">
+      <source xml:lang="en">Autopilot groups the opt-in rules for automatic actions. It starts collapsed. Activate its heading to expand the rules, or use its separate switch to enable all available rules or turn them off. The trailing artifact pill section shows the number of enabled Autopilot rules and opens this section.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.artifactIntegrationSetting">
+      <source xml:lang="en">The {0} setting enables live artifact details, actions, and Autopilot instead of Agent Merge. It is off by default. Switching pauses saved automation choices and stops automation-owned work without cancelling human-started work. Switching back can resume previously enabled rules; it does not grant new permission. Ordinary artifact links and recorded history remain available.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.artifactIntegrations">
+      <source xml:lang="en">Artifacts and references with an integration appear as individual pills above the input. Enter or Space on a main pill opens an input-width details panel above the pills without moving the conversation or draft. The selected pill has a highlighted border. Details show the linked title, state icon and up to three lines of the actual description. Copy Link and Remove Artifact appear in the footer. Left and Right Arrow, Home and End select a list tab. Clicking a tab focuses its first item; arrow keys navigate list rows and Enter opens an item. A pill's status section selects and focuses the corresponding list or action, including when already open. Lists show single-line rows, with full text available in hovers and the Accessible View. Actions below the lists run once; enabled actions come first in provider order, with the first action primary. Inapplicable actions are hidden and blocked actions explain why. Autopilot groups automatic rules below the lists, with an Activities card below it when history exists. Both cards start collapsed and remember expansion. Autopilot switches grant standing permission and may run immediately when conditions hold. Saved rules remain revocable while unavailable. Turning a rule off prevents new runs but does not cancel work already started. Some activity rows reveal their related chat message; others are informational. Clicking another artifact switches the panel. Clicking the active pill, Escape or Close dismisses it. Escape and Close restore pill focus; outside clicks dismiss without moving focus back. Use Tab and Shift+Tab between controls, Space to change a switch, and accessibility help or the Accessible View{0} to read the full content. Background prompts do not replace your draft, attachments or visible chat.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.artifactListInformation">
+      <source xml:lang="en">Artifact details remember the selected list tab when closed and reopened. A tab can offer an information icon; hover it or focus it and press Enter or Space to read the provider's explanation without changing tabs. The Comments tab describes which review comments it includes.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.artifactSignIn">
+      <source xml:lang="en">When an artifact needs authentication, open its details and use Tab to reach Sign In. Enter or Space starts authentication in this window. The resource remains available from the linked title. Signing in does not enable automation.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.background">
       <source xml:lang="en">Outside high contrast themes, use Set Background to choose no background, the built-in theme-aware Codicons pattern, a new image, or one of the five most recently selected images. One randomly selected icon in the Codicons pattern is a Celebrate button; press Tab to find it, then press Enter or Space to activate it. Each activation selects another random icon as the next Celebrate button. Use Change Background Layout to choose whether an image repeats, stretches, or appears at an edge or corner for the current color theme. Moving through the layout picker previews each option; select one to save it, or press Escape to restore the previous layout. Both commands are available from the Command Palette and by right-clicking empty chat space. Change Background Layout is shown only for images. Background customization is unavailable while a high contrast theme is active.</source>
     </trans-unit>
@@ -1901,6 +2298,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.dictation">
       <source xml:lang="en">When dictation is configured, dictate your message into the input{0}. Tap to start and stop, or hold to dictate only while pressed. If the speech-to-text model is still preparing, activate the dictation control again to cancel.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.disabledPickerNavigation">
+      <source xml:lang="en">The Left and Right arrow keys also reach disabled session controls, such as Copilot when Cloud is selected, so you can inspect their current value. Disabled controls cannot be activated and are skipped by Tab.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.doneChat">
       <source xml:lang="en">To mark an individual nested chat as done without marking its session as done, open the chat's context menu in the Sessions list or chat tab and choose Mark as Done. The chat is hidden from the Sessions list and closed, but is not deleted. Open the Sessions list Filter menu and enable Done to show it again, then open the chat's context menu and choose Restore.</source>
     </trans-unit>
@@ -1914,16 +2314,19 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Choose Environments in the workspace picker to connect to a GitHub environment, then select a folder on that host. The picker starts in the host's home directory. Enter a folder path to browse another location or drive. Use the arrow keys to navigate, Enter to select, and Escape to cancel either picker.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.environmentPicker">
-      <source xml:lang="en">Choose This Computer, Cloud, a remote host, or an available Dev Container. The workspace and harness choices follow the selected environment. Choose Workspace is shown when no workspace is selected. Cloud uses Copilot. Dev Container lists only supported folders and requires a workspace; it does not fall back to Chat. Compare Agents is unavailable when Dev Container is selected. An incompatible workspace is cleared without sending or discarding your prompt. Use Tab or the Left and Right arrow keys to reach Environment, Enter or Space to open it, arrow keys and Enter to select, and Escape to dismiss. Screen-reader optimized mode keeps session options expanded.</source>
+      <source xml:lang="en">Choose This Computer, Cloud, a remote host, or an available Dev Container. When Environment is first, the workspace choices follow the selected environment. Session Type choices always follow the environment. Local folders default to This Computer unless you explicitly choose or restore another environment. Choose Workspace is shown when no workspace is selected. Cloud uses Copilot. Dev Container lists only supported folders and requires a workspace; it does not fall back to Chat. Compare Agents is unavailable when Dev Container is selected. An incompatible workspace is cleared without sending or discarding your prompt. Use Tab or the Left and Right arrow keys to reach Environment, Enter or Space to open it, arrow keys and Enter to select, and Escape to dismiss. Screen-reader optimized mode keeps session options expanded.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.environmentPicker.afterWorkspace">
-      <source xml:lang="en">Above the new-session input, Environment is after Workspace. Collapsing session options hides Environment unless the collapsed icon rail is enabled.</source>
+      <source xml:lang="en">Above the new-session input, Environment is after Workspace. Choose from all recent workspaces, then choose an environment where that workspace or a known checkout of its repository is available. Collapsing session options hides Environment unless the collapsed icon rail is enabled.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.environmentPicker.beforeWorkspace">
       <source xml:lang="en">Above the new-session input, Environment is before Workspace and remains visible when session options are collapsed.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.extensionArtifactAutomation">
+      <source xml:lang="en">Extension-provided artifact actions and automation use the same controls and request cards. Their automatic prompts go to the chat that recorded the artifact. Extension automation runs on this computer while the extension and session connection are available. Hosts without support for automation notices pause automatic actions and explain why; manual actions remain available. A rule can prevent a new schedule while allowing an existing schedule to continue. You can still use Space on its switch to turn it off.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.externalSessionAdoption">
-      <source xml:lang="en">Once you send a message to an external session's agent, it becomes a regular session. Its banner and External hover label disappear, and it is no longer grouped or filtered as external.</source>
+      <source xml:lang="en">Once you send a message to an external session's agent, it becomes a regular session. Its banner disappears, and it is no longer grouped or filtered as external.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.externalSessionBanner">
       <source xml:lang="en">When you first open a session created in another application, a banner appears at the top of the chat. Use Tab to reach its external-session picker, choose an option, and activate Save. The Close action dismisses the banner without changing the setting. Saving or closing permanently dismisses the banner.</source>
@@ -1950,7 +2353,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">When a feedback comments attachment appears above the input, focus it and press Enter or Space. A single comment opens directly. Multiple comments open a tree grouped by file; use the arrow keys to navigate, Enter to reveal a comment, and Escape to close the tree.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.feedbackComments">
-      <source xml:lang="en">When pull requests have failing checks or unreviewed comments, one banner appears above the input. If several pull requests need attention, use the Previous Banner and Next Banner buttons to move between them. A pull request with both failing checks and comments uses a split button: activate the main action to address both, or use its More Actions button to address only the checks or comments. In-product agent review comments appear as their own carousel item.</source>
+      <source xml:lang="en">When pull requests have failing checks or unreviewed comments, one banner appears above the input. If several pull requests need attention, use the Previous Banner and Next Banner buttons to move between them. A pull request with both failing checks and comments uses a split button. Activate the main action to address both. Open its More Actions menu to choose Fix Checks or Address Comments separately. Choose Reveal Checks in the More Actions menu to open the pull request. Choose Reveal Comments in the same menu to view the first comment. In-product agent review comments appear as their own carousel item.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.filesView">
       <source xml:lang="en">Focus the Files Explorer view{0}.</source>
@@ -2054,6 +2457,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.nestedCustomGroups">
       <source xml:lang="en">Custom groups can contain subgroups at any depth. Focus a group's heading and open the context menu{0} to choose Create Subgroup, which adds an empty group inside it and starts renaming it. Subgroups are listed above the group's own sessions, and each group's level is announced. Mark All as Done and Mark All as Read on a group include its subgroups' sessions. Delete Group also deletes the group's subgroups; when it deletes more than one group, an Undo notice appears at the bottom of the Sessions list that restores them. Create Group on sessions that are all in the same group creates the new group inside it.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.nestedSessionWorkspace">
+      <source xml:lang="en">New Nested Session{0} opens a composer that uses the session's agent and host, so it has no agent or environment picker. Above the input, the folder picker preselects the session's folder, or No Workspace in a session without one. Pick another folder of the session, a recent folder, browse or open a folder, or pick No Workspace to give the nested chat its own scratch folder. For a Git folder, check New Worktree to give the nested chat its own worktree and pick the branch it starts from. An agent that supports only one folder offers only the session's folder. The choice applies when you send the first request.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.nestedSubagentActivity">
       <source xml:lang="en">When a subagent starts another subagent, its activity row identifies the nested subagent by name. Focus that link with Tab and press Enter or Space to open the nested subagent's chat beside the current chat. The enclosing pill still opens the parent subagent.</source>
     </trans-unit>
@@ -2090,6 +2496,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.pickFolderQuickPick">
       <source xml:lang="en">To choose a folder from a searchable list instead, use the New Session in Folder command{0}.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.pickerShortcuts">
+      <source xml:lang="en">While the new-session input has focus, open the environment picker{0}, branch picker{1}, or Branch/New Worktree picker{2}. Focus Sync Changes{3}, then press Enter to synchronize. These shortcuts are available only when the corresponding control is available and expand hidden session options before focusing them.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.policyContinuation">
       <source xml:lang="en">If your organization disables Claude or Codex and requires the new Copilot experience, an open, idle conversation automatically moves to Copilot with its title, history, and draft. Nothing is sent automatically. The original is archived only after the copy opens and other conversations in its session can still be reached. Opening an archived original does not move it again. If moving needs a workspace or trust decision, or fails, use Tab to focus Continue in Copilot in the banner, then press Enter or Space. This action reopens an existing copy when available. Subagent chats and other policy restrictions use the manual action. For a managed checkout, choose an independent workspace; uncommitted files stay in the original checkout.</source>
     </trans-unit>
@@ -2108,11 +2517,17 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.promptTimeline">
       <source xml:lang="en">When the prompt timeline is enabled, a handle on the left edge of the transcript lists your prompts. Activate it to expand the list, use the up and down arrows (or Home and End) to move between prompts, Enter or Space to jump to a prompt, and Escape to dismiss the list and return focus to the handle. When a prompt title is pinned above the transcript, activate its title to jump to that prompt.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.pullRequestArtifact">
+      <source xml:lang="en">Recorded GitHub pull request artifacts can show checks and unresolved review threads as additional pill sections. Their details offer repair actions and separate, opt-in automation controls. Repair prompts require a matching checkout and instruct the agent to commit and push the repair. Automatically Mark Ready can exclude check-name patterns configured in Settings; automatic merging still requires every check to pass. The main details offer Mark Ready, Merge, and branch-update controls. Branch-discovered pull requests and reference links do not gain these automations.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.pullRequestSession">
       <source xml:lang="en">In a repository section where New Session is a split button, focus New Session and press Right Arrow to reach its dropdown, then activate New Session from Pull Request to open a searchable pull request picker. Pull requests are grouped by review and assignment status. Use the arrow keys to navigate, Enter to create the session, and Escape to close the picker.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.quickChat">
       <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. When consolidated remote workspaces are enabled, this opens the new-session composer, where you can choose No workspace. Otherwise, it starts a workspace-less chat directly. When GitHub sandboxes are enabled, choose Cloud in the harness picker to chat without a repository or pull request. The Toggle Side Panel command is disabled for quick chats.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.quickChatNestedChats">
+      <source xml:lang="en">Quick chats can have nested chats: use New Nested Session{0} on a quick chat, and each nested chat works in its own scratch folder. Chats move between quick chats and workspace sessions and keep their folder. A quick chat stays in the Chats section, and those of its chats that have a folder of their own announce it. A chat that shares its folder with another chat in its session can't be moved on its own.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.remoteConnections">
       <source xml:lang="en">On desktop, the title bar offers Allow Remote Connections. Use Tab to reach the title bar, arrow keys to reach the toggle, and Enter or Space to enable or disable sharing. The preview setting chat.agentHost.remoteConnections selects the connection method. In VS Code Insiders and Code - OSS, the adjacent Select Remote Connection Method dropdown chooses Dev Tunnels or GitHub Environments and updates that setting. Use the right arrow key from the toggle to reach the dropdown, Enter or Space to open it, Up and Down Arrow to choose a method, Enter to select, and Escape to close. Selecting a method does not enable sharing; changing it turns sharing off. With GitHub environment selected, enabling the toggle registers your local environment for remote owner access and allows clients authenticated as your GitHub account to read and modify files across this machine's accessible file systems, including sensitive files. Operating system permissions still apply. Local sessions continue using local IPC.</source>
@@ -2152,6 +2567,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionActivityBar">
       <source xml:lang="en">The Session Activity Bar beside the active chat opens the Changes, Files, Browser, and Canvas tabs. Its layout actions, Toggle Side Panel above the tabs and Toggle Panel below them, replace the title bar buttons; turn them off with Show Layout Actions in its context menu. Press Tab past the chat input's controls to reach it, use the Up and Down Arrow keys to move between its entries, and press Enter or Space to open one. Canvas opens a submenu: press Enter, Space, or Left Arrow to open it, and Right Arrow or Escape to close it. Open the context menu{1} on an entry to hide that entry or the whole activity bar. Toggle the activity bar from the chat background's context menu, View &gt; Appearance &gt; Session Activity Bar, or the {0} setting.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.sessionApplicationHover">
+      <source xml:lang="en">A session created outside VS Code names its application in the session hover. Focus the hover, then use Tab to reach Created in and Enter or Space to open Filter Sessions with Created In focused. Use Right Arrow to open that submenu. The application remains visible after the session becomes a regular session.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionCreationFilters">
       <source xml:lang="en">Created In lists the applications that created sessions, grouped by This Computer, Cloud, and each remote host, with the environment in each application's name. VS Code is always offered for each available environment, even before you create a session there. Other applications are listed after a session created in them is discovered. Only applications from included environments are listed. Excluding an environment hides its applications without changing their selections; including it again restores them. Other list filters do not remove application choices. Included remote hosts retain their applications while cached sessions remain, even when disconnected. If no environments are included, select an environment first.</source>
@@ -2248,6 +2666,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sharedChatInputComposer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsSharedChatInput.repositoryControls">
+      <source xml:lang="en">Repository Controls</source>
+    </trans-unit>
     <trans-unit id="sessionsSharedChatInput.sessionControlsRow">
       <source xml:lang="en">Session controls</source>
     </trans-unit>

@@ -8,6 +8,35 @@
       <source xml:lang="en">Agent...</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostArtifactIntegrations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactAuthorityChanged">
+      <source xml:lang="en">The artifact coordinator changed. Existing local automations remain paused; they are not migrated automatically.</source>
+    </trans-unit>
+    <trans-unit id="artifactCoordinatorPending">
+      <source xml:lang="en">Waiting for artifact integration capabilities.</source>
+    </trans-unit>
+    <trans-unit id="artifactCoordinatorUnavailable">
+      <source xml:lang="en">The artifact integration coordinator is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="artifactHostPromptActionUnsupported">
+      <source xml:lang="en">The agent host can only run native artifact actions.</source>
+    </trans-unit>
+    <trans-unit id="artifactHostSignInUnsupported">
+      <source xml:lang="en">Sign in from the Agents window instead.</source>
+    </trans-unit>
+    <trans-unit id="artifactInvokingChatMissing">
+      <source xml:lang="en">The invoking chat has not been resolved on the agent host.</source>
+    </trans-unit>
+    <trans-unit id="artifactLocalRuntimeUnavailable">
+      <source xml:lang="en">Local artifact integrations could not be started.</source>
+    </trans-unit>
+    <trans-unit id="artifactSignInRejected">
+      <source xml:lang="en">The agent host did not accept the sign-in. Try an account with access to this resource.</source>
+    </trans-unit>
+    <trans-unit id="artifactTransportUnavailable">
+      <source xml:lang="en">The host advertises artifact integrations, but this connection cannot access them.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostAutomationStore" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostAutomation.cancelled">
       <source xml:lang="en">Cancelled</source>
@@ -74,6 +103,9 @@
     <trans-unit id="chatMoveRefusal.legacyCatalog">
       <source xml:lang="en">This session can't reorder or move its chats yet.</source>
     </trans-unit>
+    <trans-unit id="chatMoveRefusal.noFolder">
+      <source xml:lang="en">This chat's folder is missing, so it can't be moved.</source>
+    </trans-unit>
     <trans-unit id="chatMoveRefusal.notMovable">
       <source xml:lang="en">This chat can't be moved.</source>
     </trans-unit>
@@ -92,11 +124,11 @@
     <trans-unit id="chatMoveRefusal.sessionQuarantined">
       <source xml:lang="en">The session is changing its workspace or can't run requests right now.</source>
     </trans-unit>
+    <trans-unit id="chatMoveRefusal.sharedFolder">
+      <source xml:lang="en">This chat shares its folder with another chat in its session, so it can't be moved on its own.</source>
+    </trans-unit>
     <trans-unit id="chatMoveRefusal.unsupported">
       <source xml:lang="en">This chat can't be moved there.</source>
-    </trans-unit>
-    <trans-unit id="chatMoveRefusal.workspaceless">
-      <source xml:lang="en">Chats without a workspace folder can't be moved.</source>
     </trans-unit>
     <trans-unit id="chatMoveRefusal.worktreeFolder">
       <source xml:lang="en">Chats that work in a worktree of their session can't be moved.</source>
@@ -450,6 +482,9 @@
     <trans-unit id="agentMerge.action.updated">
       <source xml:lang="en">Agent Merge actions were updated for the active session.</source>
     </trans-unit>
+    <trans-unit id="agentMerge.artifactIntegrationsEnabled">
+      <source xml:lang="en">Agent Merge is unavailable while artifact integrations are enabled.</source>
+    </trans-unit>
     <trans-unit id="agentMerge.configure">
       <source xml:lang="en">Configure Agent Merge for Active Session</source>
     </trans-unit>
@@ -558,6 +593,9 @@
     <trans-unit id="agentHost.sessionConfigUnavailable">
       <source xml:lang="en">Could not resolve the Agent Host session configuration. Please try again.</source>
     </trans-unit>
+    <trans-unit id="artifactIntegrationSessionMissing">
+      <source xml:lang="en">The artifact's session is unavailable.</source>
+    </trans-unit>
     <trans-unit id="canvasChatNotFound">
       <source xml:lang="en">The chat could not be found.</source>
     </trans-unit>
@@ -599,6 +637,9 @@
     </trans-unit>
     <trans-unit id="moveSessionUnavailable">
       <source xml:lang="en">This session can't be moved.</source>
+    </trans-unit>
+    <trans-unit id="nestedChatWorkspace.newFolder">
+      <source xml:lang="en">a new folder</source>
     </trans-unit>
     <trans-unit id="new chat">
       <source xml:lang="en">New Chat</source>
@@ -722,14 +763,14 @@
     <trans-unit id="cloudAutomations.cancelled">
       <source xml:lang="en">Cancelled</source>
     </trans-unit>
-    <trans-unit id="cloudAutomations.customSchedule">
-      <source xml:lang="en">This automation uses triggers that cannot be edited in VS Code.</source>
+    <trans-unit id="cloudAutomations.conflictingTriggers">
+      <source xml:lang="en">Choose events or a schedule, not both.</source>
     </trans-unit>
     <trans-unit id="cloudAutomations.description">
-      <source xml:lang="en">Runs even when your computer is off, triggered on a schedule.</source>
+      <source xml:lang="en">Runs even when your computer is off, triggered by events or on a schedule.</source>
     </trans-unit>
     <trans-unit id="cloudAutomations.githubRequired">
-      <source xml:lang="en">Select a private repository on GitHub.com.</source>
+      <source xml:lang="en">Select a supported repository on GitHub.com.</source>
     </trans-unit>
     <trans-unit id="cloudAutomations.invalidSchedule">
       <source xml:lang="en">Choose a daily or weekly UTC schedule with minutes 00, 15, 30, or 45.</source>
@@ -767,8 +808,8 @@
     <trans-unit id="cloudAutomations.runUnavailable">
       <source xml:lang="en">Only enabled cloud automations can run. Refresh automations before trying again.</source>
     </trans-unit>
-    <trans-unit id="cloudAutomations.searchPrivateRepository">
-      <source xml:lang="en">Search for a private repository or paste a repository URL...</source>
+    <trans-unit id="cloudAutomations.searchRepository">
+      <source xml:lang="en">Search for a repository or paste a repository URL...</source>
     </trans-unit>
     <trans-unit id="cloudAutomations.stopUnavailable">
       <source xml:lang="en">Unable to stop this cloud automation run.</source>
@@ -785,6 +826,12 @@
     <trans-unit id="cloudAutomations.toolsUnavailable">
       <source xml:lang="en">Cloud automations are unavailable.</source>
     </trans-unit>
+    <trans-unit id="cloudAutomations.triggersLoading">
+      <source xml:lang="en">Available triggers are still loading. Try again when loading is complete.</source>
+    </trans-unit>
+    <trans-unit id="cloudAutomations.triggersUnavailable">
+      <source xml:lang="en">{0} Retry loading the trigger catalog before saving.</source>
+    </trans-unit>
     <trans-unit id="cloudAutomations.unavailable">
       <source xml:lang="en">Sign in to GitHub.com and enable cloud automations before continuing.</source>
     </trans-unit>
@@ -795,7 +842,7 @@
       <source xml:lang="en">This session configuration is not supported by cloud automations.</source>
     </trans-unit>
     <trans-unit id="cloudAutomations.unsupportedEdit">
-      <source xml:lang="en">This automation uses triggers that cannot be edited in VS Code.</source>
+      <source xml:lang="en">This automation uses triggers that cannot be edited in VS Code. Open it on GitHub.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsActions" source-language="en" datatype="plaintext"><body>
@@ -922,6 +969,9 @@
     <trans-unit id="cloudAutomations.invalidRepository">
       <source xml:lang="en">Invalid stored cloud automation repository.</source>
     </trans-unit>
+    <trans-unit id="cloudAutomations.manageabilityRequired">
+      <source xml:lang="en">Cloud automations cannot be managed for this repository.</source>
+    </trans-unit>
     <trans-unit id="cloudAutomations.missing">
       <source xml:lang="en">This cloud automation is no longer available. Refresh the catalogue.</source>
     </trans-unit>
@@ -931,14 +981,8 @@
     <trans-unit id="cloudAutomations.partialRefreshFailed">
       <source xml:lang="en">Some GitHub repositories could not be refreshed. Check the logs for details.</source>
     </trans-unit>
-    <trans-unit id="cloudAutomations.privateRepositoryRequired">
-      <source xml:lang="en">Cloud automations currently require a private GitHub repository.</source>
-    </trans-unit>
-    <trans-unit id="cloudAutomations.privateRepositoryTargetRequired">
-      <source xml:lang="en">This repository must be private</source>
-    </trans-unit>
     <trans-unit id="cloudAutomations.repositoryCheckFailed">
-      <source xml:lang="en">Unable to verify repository access. Refresh automations to try again.</source>
+      <source xml:lang="en">Unable to verify cloud automation access. Refresh automations to try again.</source>
     </trans-unit>
     <trans-unit id="cloudAutomations.repositoryRecheckRequired">
       <source xml:lang="en">Repository access must be verified again.</source>
@@ -947,13 +991,13 @@
       <source xml:lang="en">Select a GitHub.com repository for this cloud automation.</source>
     </trans-unit>
     <trans-unit id="cloudAutomations.repositoryTargetRequired">
-      <source xml:lang="en">Choose a private GitHub.com repository.</source>
+      <source xml:lang="en">Choose a GitHub.com repository that supports cloud automations.</source>
     </trans-unit>
     <trans-unit id="cloudAutomations.signIn">
       <source xml:lang="en">Sign in to GitHub.com with repository access to manage cloud automations.</source>
     </trans-unit>
-    <trans-unit id="cloudAutomations.writeAccessRequired">
-      <source xml:lang="en">Repository write access is required to manage cloud automations.</source>
+    <trans-unit id="cloudAutomations.triggersLoadFailed">
+      <source xml:lang="en">Available triggers could not be loaded.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/mobilePermissionPicker" source-language="en" datatype="plaintext"><body>
@@ -1023,9 +1067,6 @@
     </trans-unit>
     <trans-unit id="permissions.learnMore">
       <source xml:lang="en">Learn more about permissions</source>
-    </trans-unit>
-    <trans-unit id="permissions.policyDescription">
-      <source xml:lang="en">Disabled by enterprise policy</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxAgentHostContribution" source-language="en" datatype="plaintext"><body>

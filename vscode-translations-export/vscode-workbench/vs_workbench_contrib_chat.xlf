@@ -160,6 +160,9 @@
     <trans-unit id="chat.announcement">
       <source xml:lang="en">Chat responses will be announced as they come in. A response will indicate the number of code blocks, if any, and then the rest of the response.</source>
     </trans-unit>
+    <trans-unit id="chat.artifactActionDisclosure">
+      <source xml:lang="en">Artifact actions appear as collapsed request cards with an action and resource label. Use Tab to reach the card and Enter or Space to expand it. The details are a snapshot from when the action started. Use arrow keys within a details list and Enter to open an item. Agent Message switches between these details and the full prompt. Open the accessible view{0} while the request is focused to read its snapshot as text.</source>
+    </trans-unit>
     <trans-unit id="chat.attachments.inlineReferenceHover">
       <source xml:lang="en">To inspect an inline attachment reference, place the cursor on it and invoke Show or Focus Hover{0}. Image references include a preview, while file and folder references include their path.</source>
     </trans-unit>
@@ -175,8 +178,14 @@
     <trans-unit id="chat.blobby">
       <source xml:lang="en">Type /blobby to unlock the True Name achievement without sending a chat request. If Blobby is off, the command turns it on; if it is already on, it opens the Color tab in Customize Blobby. Change Color in the pet's context menu always opens Color, where Stable and Insiders are free choices. True Name unlocks solid presets and custom colors; activating that achievement also opens Color. Use the color picker or enter an opaque hex color such as #ff8800, then activate Apply Color. Unapplied custom colors are discarded when you leave the tab or close the modal.</source>
     </trans-unit>
+    <trans-unit id="chat.btw">
+      <source xml:lang="en">In a conversation that supports side chats, type /btw followed by a question to open a side chat with the prior conversation as context. You can ask while a response is in progress without stopping it.</source>
+    </trans-unit>
     <trans-unit id="chat.canvasesAddContext">
       <source xml:lang="en">In local Copilot agent-host sessions with chat.canvases.enabled turned on, Add Context includes Canvas immediately after Sessions. Open Canvas to choose a registered or closed canvas by name. Activating one opens or refocuses its tab; it does not attach anything to the prompt.</source>
+    </trans-unit>
+    <trans-unit id="chat.cloudSandboxEarlyPreparation">
+      <source xml:lang="en">When {0} is enabled, typing in a new Cloud chat, with or without a repository, can prepare cloud resources in the background. Your message is not sent and no conversation is added to the session list until you press Send. Send waits for pending preparation and reuses it when possible, otherwise it can continue without early preparation. While the window is running, VS Code attempts to release unused preparation after five minutes, when you change repositories, or when you turn the setting off.</source>
     </trans-unit>
     <trans-unit id="chat.cloudStartupError">
       <source xml:lang="en">If cloud session creation or connection fails, the current response offers Show Details. Use Tab to focus Show Details and Enter or Space to open a dialog with the failed step and available request details. Opening details does not sign in or retry the request. As with other response buttons, Show Details is unavailable after the conversation is restored.</source>
@@ -311,10 +320,7 @@
       <source xml:lang="en">In the model picker, effort level and context appear as a configuration button on the hovered, selected, or keyboard-focused model. Use Up and Down Arrow to focus a model and Enter to select it. To open its information and configuration page without selecting it, press Right Arrow, or use Tab to reach its configuration button and press Enter or Space. The button shows Details when no readout is available. Models without configurable settings still open their information page. The effort level and context readout beside the model name in the chat input opens the same page for the current model. Opening the page focuses its configuration controls when available. Known values are shown even at their defaults. The Back to Models arrow is beside the model name; navigation and model actions stay at the top while details scroll. Back to Models, or {0}, returns to the previous provider, search, and model list with focus on that model. Escape closes the picker from any page and restores focus.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.fusion">
-      <source xml:lang="en">When Auto is presented as Fusion, its details hold an "Effort Level" setting instead: Standard and High, followed by Max when HydraFusion is available. Max uses HydraFusion Max, and High can use HydraFusion; choosing either keeps Fusion checked with that effort level.</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.fusionInline">
-      <source xml:lang="en">When Fusion tiers are listed directly in the model picker, use Up and Down Arrow to focus Standard, High, or Max and Enter to select it. Each tier includes a description. A tier that is unavailable cannot be selected, and its description gives the reason. The chat input shows Fusion and the selected tier in a single model button, without a separate effort level button.</source>
+      <source xml:lang="en">When Auto's tiers come from the Copilot service, Auto is presented as Copilot Fusion, and its details hold an "Effort Level" setting instead, such as Standard, High, and Max. The selected effort level is described below the setting, and a Learn more link follows Copilot Fusion's description. Choosing an effort level keeps Copilot Fusion checked with that effort level.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.hydraFusion">
       <source xml:lang="en">HydraFusion, a research preview, is listed after Auto as a model of its own. When HydraFusion Max is available, HydraFusion's details offer two tiers, Default and Max, along with a Learn more link. Choosing one selects it and keeps HydraFusion's details open. HydraFusion stays in the model list with that tier as its readout, and the readout beside HydraFusion in the chat input opens the same details.</source>
@@ -364,8 +370,11 @@
     <trans-unit id="chat.paste.asText">
       <source xml:lang="en">To paste the clipboard as plain text, without converting it to Markdown or storing it as an attachment, invoke Paste as Text{0}.</source>
     </trans-unit>
+    <trans-unit id="chat.permissionLevelPolicy">
+      <source xml:lang="en">When Assisted permissions or Allow all is unavailable for a session, the option remains in the permissions picker as a disabled option with its reason, such as Disabled by policy when your organization's policy disables it. Its hover also explains the restriction. Disabled options cannot be selected.</source>
+    </trans-unit>
     <trans-unit id="chat.persistentProgress">
-      <source xml:lang="en">The chat.experimental.persistentProgress setting defaults to Draw in all versions of VS Code. Experiments can override the default; an explicit setting takes precedence. Choose Draw, Draw (Monochrome), or Draw (Monochrome, No Icon) to keep a working progress indicator at the bottom until the response finishes. When the response finishes, its toolbar takes the indicator's place. Draw ties and unravels the VS Code mark with fast parabolic ribbon motion and a brief rest between loops. The No Icon variant hides only the decorative VS Code icon; progress text and spoken updates are unchanged. The chat.experimental.persistentProgressVerbosity setting defaults to Compact: tool calls preview while running, then collapse in place to a single summary row when thinking or response text resumes, or the response finishes. Choose Verbose to keep tool chains expanded without a group header or an internal scrolling limit. Use Tab to focus a summary and press Enter or Space to expand or collapse its tool calls. Automatic collapse waits until keyboard focus leaves the group. Completed responses still follow chat.agent.collapseCompletedResponses. Reasoning appears separately as collapsible previews; focus a reasoning header and press Enter or Space to expand or collapse it. Standalone tools keep their decorative icons. Terminal activity animations and subagent pills are unchanged. The indicator reports counts of running subagents and background commands, including work started in earlier requests, whether the main response is progressing or idle. Requests for your input, approval, plan review, or authentication take priority over these counts. After 90 seconds without response activity and with no active tools, progress tasks, or known background work, it reports that the response is taking longer than usual. Long-running foreground terminal commands do not trigger this message. Reduced motion disables the collapse animation and keeps the indicator visible without animation. Spoken progress updates are controlled by accessibility.verboseChatProgressUpdates.</source>
+      <source xml:lang="en">The chat.experimental.persistentProgress setting defaults to Draw in all versions of VS Code. Experiments can override the default; an explicit setting takes precedence. Choose Draw, Draw (Monochrome), or Draw (Monochrome, No Icon) to keep a working progress indicator at the bottom until the response finishes. When the response finishes, its toolbar takes the indicator's place. Draw ties and unravels the VS Code mark with fast parabolic ribbon motion and a brief rest between loops. The No Icon variant hides only the decorative VS Code icon; progress text and spoken updates are unchanged. The chat.experimental.persistentProgressVerbosity setting defaults to Compact: tool calls preview while running, then collapse in place to a single summary row when thinking or response text resumes, or the response finishes. Choose Verbose to keep tool chains expanded without a group header or an internal scrolling limit. Choose Conversation to collapse reasoning and tool calls together into one section between response text; the section starts collapsed, its header names the current tool call, or the heading of the current reasoning summary (Thinking when the reasoning has no heading), while it runs, and reports how long it took once it finishes, such as Finished thinking after 5s, or Finished thinking when the time is unknown. Use Tab to focus a summary and press Enter or Space to expand or collapse its tool calls. Automatic collapse waits until keyboard focus leaves the group. Completed responses still follow chat.agent.collapseCompletedResponses. Except in Conversation, reasoning appears separately as collapsible previews; focus a reasoning header and press Enter or Space to expand or collapse it. Standalone tools keep their decorative icons. Terminal activity animations and subagent pills are unchanged. The indicator reports counts of running subagents and background commands, including work started in earlier requests, whether the main response is progressing or idle. Requests for your input, approval, plan review, or authentication take priority over these counts. After 90 seconds without response activity and with no active tools, progress tasks, or known background work, it reports that the response is taking longer than usual. Long-running foreground terminal commands do not trigger this message. Reduced motion disables the collapse animation and the Conversation header's transitions between steps, and keeps the indicator visible without animation. Spoken progress updates are controlled by accessibility.verboseChatProgressUpdates.</source>
     </trans-unit>
     <trans-unit id="chat.persistentProgressHandoff">
       <source xml:lang="en">While a response is running, automatically collapsing a reasoning or tool preview keeps a visible header in place. If the header is above the visible content but its details are visible, it moves below the pinned prompt, or to the top of the viewport when there is no pinned prompt. Only the space needed for the visible viewport is reserved. That space is removed when the response finishes or is stopped, after any pending transition and content rendering finish. Expanding a preview consumes reserved space as its content grows. Scrolling to the bottom removes the reserved space. Manual collapses do not add padding. The following response content appears after an automatic collapse finishes. Reduced motion skips this delay. If keyboard focus keeps a preview open, new content continues to appear without waiting for focus to move.</source>
@@ -374,13 +383,13 @@
       <source xml:lang="en">With Compact persistent progress, a single tool uses its normal rendering, icon, and details without a group summary or automatic group collapse. Group headers summarize up to three activity groups from Agent Host data, prioritizing edits and commands, without an additional model request. Remaining activity is counted as other steps; this counts tool calls and visible steps rather than unique files or search phrases. Expand the summary to inspect all calls. Repeated files and search phrases are counted once in named activity groups. Read summaries count files rather than requested lines. Edit summaries show filenames or file counts, with available additions and deletions in the existing diff badge. Failed, skipped, denied, and unfinished tool invocations remain explicit, including when folded into other steps. A completed shell invocation counts as a command even if its process continues in the background; group headers do not track later process status. Groups with no recognized activity or outcome retain a neutral step-count summary. MCP tools use the MCP icon. The working indicator reports when chat is waiting for your answers instead of showing a separate question-tool progress row. Question controls remain available, answered questions remain in the response, and question-tool failures remain visible.</source>
     </trans-unit>
     <trans-unit id="chat.persistentReasoningTitles">
-      <source xml:lang="en">With persistent progress, reasoning headers say Thinking while content arrives. When reasoning finishes, a single heading becomes the header and is removed from the details. Multiple headings remain in the details, with a summary in the header when chat.agent.thinking.generateTitles is enabled and title generation is available.</source>
+      <source xml:lang="en">With persistent progress, reasoning headers say Thinking while content arrives. When reasoning finishes, a single heading becomes the header and is removed from the details. Multiple headings remain in the details, with a summary in the header when chat.agent.thinking.generateTitles is enabled and title generation is available. Otherwise, the header says Finished thinking, followed by how long it took when that is known.</source>
     </trans-unit>
     <trans-unit id="chat.planReviewEditor">
       <source xml:lang="en">When a plan is ready for review, open it from the chat response to edit the plan and add line comments. Use the editor toolbar to navigate, clear, or submit feedback. Choose an implementation action from the plan review in Chat.</source>
     </trans-unit>
     <trans-unit id="chat.policyInputBlocked">
-      <source xml:lang="en">If your organization configures managed permissions or requires sandboxing, opening an existing Local chat automatically moves its conversation and draft to Copilot without sending. The original chat is archived only after the new conversation opens with its history. If moving fails, the original stays read-only. Use Tab to focus Move to Copilot in the banner, then press Enter or Space to try again. Archived originals remain available without moving again. Empty chats offer New Copilot Chat instead. When the Agent Host cannot import history, such as in a remote window, nothing moves automatically. Use Tab to focus Continue in Copilot in the banner, then press Enter or Space to start a new Copilot chat with the conversation attached as context and your draft, without sending. The original chat stays available and is not archived.</source>
+      <source xml:lang="en">If your organization configures managed permissions or requires sandboxing, opening an existing Local chat automatically moves its conversation and draft to Copilot without sending. The original chat is archived only after the new conversation opens with its history. If moving fails, the original stays read-only. Use Tab to focus Move to Copilot in the banner, then press Enter or Space to try again. Archived originals remain available without moving again, and in remote windows they still offer Move to Copilot so you can recover chats that an earlier move archived without copying their history. Empty chats offer New Copilot Chat instead. When the Agent Host cannot import history, nothing moves automatically. Use Tab to focus Continue in Copilot in the banner, then press Enter or Space to start a new Copilot chat with the conversation attached as context and your draft, without sending. The original chat stays available and is not archived, and archived chats offer this too.</source>
     </trans-unit>
     <trans-unit id="chat.previousQuestionCarouselQuestion">
       <source xml:lang="en">When a chat question is focused, move to the previous question{0}.</source>
@@ -427,6 +436,9 @@
     <trans-unit id="chat.sandboxUnavailable">
       <source xml:lang="en">If the agent host cannot support the configured sandbox, a notification above the input explains why. You can select and copy the warning text. Use Tab to reach support links or Dismiss notification, and Enter to open a focused link. Dismissing hides the warning for this session until the window reloads, without changing sandboxing or preventing messages.</source>
     </trans-unit>
+    <trans-unit id="chat.selectionSideChat">
+      <source xml:lang="en">Select text within an assistant response and open the context menu with Shift+F10 or the context menu key. Choose Ask in Side Chat... to open a small Ask Question input. Type a question and press Enter to open a side chat with conversation context through the selected response and its quoted text. Escape closes the input and returns focus to the response. Asking requires a writable conversation that supports side chats.</source>
+    </trans-unit>
     <trans-unit id="chat.sessionActivityPills">
       <source xml:lang="en">Subagents and Customizations are available in both the Agents Window and editor window, and are hidden by default. Enable them from the session status toolbar context menu. Subagents lists the current chat's direct subagents, grouped into in-progress and completed chats. Activate an entry to open its chat to the side. Subagent Options lets you show all subagents or only those in progress, remembered across windows. Customizations lists the agents, skills, instructions, hooks, prompts, MCP servers, and plugins used by the current chat. Activate an entry to reveal it in the Customizations editor.</source>
     </trans-unit>
@@ -451,17 +463,26 @@
     <trans-unit id="chat.sessionWorkingSet">
       <source xml:lang="en">The working set above the input lists changes across the whole session instead of showing a Changes pill. Use Tab or Shift+Tab to reach its heading and press Enter or Space to expand or collapse it. {0} Use Tab to reach the file list, Up and Down Arrow to choose a file, and Enter to open it. Each file announces its path and added and removed line counts.</source>
     </trans-unit>
+    <trans-unit id="chat.sessionWorkingSet.contextMenu">
+      <source xml:lang="en">Press Shift+F10 or the Context Menu key on the working set heading or a file to open its context menu. Keep and Undo is checked by default; toggle it to show or hide review controls in both the working set and open editors. View All Edits remains available. Show Pill replaces the working set with the Changes pill by turning off chat.editor.workingSet.enabled. The Changes pill's context menu offers Show Working Set to restore it.</source>
+    </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.fileActions">
       <source xml:lang="en">To keep or undo the session's changes to the chosen file, or open them in a diff editor, press Tab to reach its Keep button, Left and Right Arrow to move between Keep, Undo, and Open Changes in Diff Editor, and Enter or Space to activate one. Keep removes files from the working set until the session changes them again, as does staging or committing them with Git. Undo reverts the session's changes after any confirmation the session asks for, and deletes a file the session created. Undo is available only when the session supports it, and is unavailable while a request is running. The accessibility.signals.editsKept and accessibility.signals.editsUndone settings control the signals played when changes are kept or undone.</source>
     </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.fileKeep">
       <source xml:lang="en">To keep the session's changes to the chosen file, or open them in a diff editor, press Tab to reach its Keep button, Left and Right Arrow to move between Keep and Open Changes in Diff Editor, and Enter or Space to activate one. Keep removes files from the working set until the session changes them again, as does staging or committing them with Git. The accessibility.signals.editsKept setting controls the signal played when changes are kept.</source>
     </trans-unit>
+    <trans-unit id="chat.sessionWorkingSet.fileView">
+      <source xml:lang="en">To inspect the chosen file's changes, press Tab to reach Open Changes in Diff Editor, then Enter or Space.</source>
+    </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.headingKeep">
       <source xml:lang="en">The Keep and View All Edits buttons after the heading keep the changes to every file in the working set, or open all of them in a diff editor.</source>
     </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.headingKeepUndo">
       <source xml:lang="en">The Keep, Undo, and View All Edits buttons after the heading keep or undo the changes to every file in the working set, or open all of them in a diff editor. Undo in the heading asks for confirmation.</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionWorkingSet.headingView">
+      <source xml:lang="en">The View All Edits button after the heading opens all changed files in a diff editor. Keep and Undo are hidden in both the working set and the editor.</source>
     </trans-unit>
     <trans-unit id="chat.showHiddenTerminals">
       <source xml:lang="en">If there are any hidden chat terminals, you can view them by invoking the View Hidden Chat Terminals command{0}.</source>
@@ -608,7 +629,7 @@
       <source xml:lang="en">Some requests include a source chat button above the message. Use Tab to focus it, then Enter or Space to open the originating chat.</source>
     </trans-unit>
     <trans-unit id="sessions.selectionSideChat">
-      <source xml:lang="en">When you select text within an assistant response, an Ask Question input appears near the selection. Type a question and press Enter to start a new side chat scoped to that selection.</source>
+      <source xml:lang="en">When you select text within an assistant response, an Ask Question input or selected text actions appear near the selection. Choose Ask in a Side Chat if a menu appears. Type a question and press Enter to start a new side chat scoped to that selection. Escape closes the input and returns focus to the response.</source>
     </trans-unit>
     <trans-unit id="sessions.threadCoordinationResult">
       <source xml:lang="en">Completed create-session, create-chat, and send-message operations can include a target session or chat button in the response. Use Tab to focus it, Enter or Space to open it normally, or Alt+Enter (Option+Enter on macOS) to open it to the side.</source>
@@ -2367,6 +2388,9 @@ User: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostCustomizationMarketplaceInstallProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.customizationFeed.unavailable">
+      <source xml:lang="en">The selected agent cannot retrieve curated customizations.</source>
+    </trans-unit>
     <trans-unit id="agentHost.customizationInstall.applyUnavailable">
       <source xml:lang="en">The selected agent cannot apply this SDK installation.</source>
     </trans-unit>
@@ -2413,11 +2437,31 @@ Shared authentication is preserved: {2}</source>
     <trans-unit id="agentHost.customizationInstall.notApplicable">
       <source xml:lang="en">Not applicable</source>
     </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.pluginDisabled">
+      <source xml:lang="en">The plugin will be installed disabled.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.pluginEnabled">
+      <source xml:lang="en">The plugin will be installed enabled.</source>
+    </trans-unit>
     <trans-unit id="agentHost.customizationInstall.pluginIdentityUnavailable">
       <source xml:lang="en">The SDK plugin installation identity is unavailable.</source>
     </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.pluginInstallDetail">
+      <source xml:lang="en">Plugins can supply agents, skills, hooks, and MCP servers. Only install resources from sources you trust.
+
+Source: {0}
+Destination: {1}
+Files: {2}
+Size: {3} bytes
+
+{4}{5}</source>
+    </trans-unit>
     <trans-unit id="agentHost.customizationInstall.pluginInventoryTimeout">
       <source xml:lang="en">The SDK completed the plugin operation, but its installation inventory did not update.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.pluginMcpServers">
+      <source xml:lang="en">
+Declared MCP servers: {0}</source>
     </trans-unit>
     <trans-unit id="agentHost.customizationInstall.pluginRemovalUnavailable">
       <source xml:lang="en">The SDK plugin installation identity is unavailable.</source>
@@ -2542,6 +2586,53 @@ Size: {3} bytes</source>
       <source xml:lang="en">Downloading</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostEditReview" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostEditReview.busy">
+      <source xml:lang="en">Try again once the agent has finished working.</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.changed">
+      <source xml:lang="en">The changes were updated in the meantime. Try again.</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.editing">
+      <source xml:lang="en">The agent is editing this file. Try again once it has finished.</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.keepFailed">
+      <source xml:lang="en">Could not keep the changes to '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.mergeChanged">
+      <source xml:lang="en">The file changed again while it was being compared.</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.multiDiff">
+      <source xml:lang="en">Suggested Edits</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.noMergeBase">
+      <source xml:lang="en">A safe comparison with the saved file is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.notReady">
+      <source xml:lang="en">The session's changes couldn't be checked. Try again.</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.notSaved">
+      <source xml:lang="en">Its unsaved changes couldn't be saved. Save the file and try again.</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.overlappingEdits">
+      <source xml:lang="en">Both edits change the same text.</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.prepareChanged">
+      <source xml:lang="en">The document changed while its changes were being compared.</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.reconcileFailed">
+      <source xml:lang="en">Could not update editor review for '{0}': {1} Your text has been preserved. Resolve the file's changes and save or revert it to resume editor review.</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.undoFailed">
+      <source xml:lang="en">Could not undo the changes to '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.unmapped">
+      <source xml:lang="en">The change couldn't be matched with the session's changes. Keep or undo the whole file instead.</source>
+    </trans-unit>
+    <trans-unit id="agentHostEditReview.unsupported">
+      <source xml:lang="en">The agent host doesn't support this.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostFolderPickerActionItem" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.selectFolder">
       <source xml:lang="en">Folder</source>
@@ -2558,9 +2649,6 @@ Size: {3} bytes</source>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostLanguageModelProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.auto.discount">
       <source xml:lang="en">{0}% discount</source>
-    </trans-unit>
-    <trans-unit id="agentHost.autoTierUnavailable">
-      <source xml:lang="en">Not available for your account.</source>
     </trans-unit>
     <trans-unit id="agentHost.hydraFusion.researchPreview">
       <source xml:lang="en">Research preview</source>
@@ -2624,6 +2712,29 @@ Size: {3} bytes</source>
     </trans-unit>
     <trans-unit id="agentHost.localModel.useAuto">
       <source xml:lang="en">Use Auto</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostManagedPluginRetry" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.managedPluginRetry.deferred">
+      <source xml:lang="en">Some plugins required by your organization admin will be prepared before your next message.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.managedPluginRetry.error">
+      <source xml:lang="en">Could not retry plugins required by your organization admin: {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.managedPluginRetry.failed">
+      <source xml:lang="en">Some plugins required by your organization admin could not be prepared. {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.managedPluginRetry.progress">
+      <source xml:lang="en">Preparing plugins required by your organization admin...</source>
+    </trans-unit>
+    <trans-unit id="agentHost.managedPluginRetry.ready">
+      <source xml:lang="en">Plugins required by your organization admin are ready.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.managedPluginRetry.title">
+      <source xml:lang="en">Retry Plugins Required by Your Organization</source>
+    </trans-unit>
+    <trans-unit id="agentHost.managedPluginRetry.unsupported">
+      <source xml:lang="en">This agent host does not support retrying plugins.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostMcpServerMigrationProvider" source-language="en" datatype="plaintext"><body>
@@ -2736,7 +2847,7 @@ To migrate this server, remove the cwd property.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostModePickerPresentation" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostModePicker.accessibilityHelp">
-      <source xml:lang="en">When the experimental combined picker is enabled for a Copilot Agent Host session, Tab reaches separate Mode and Permissions buttons. Press Enter or Space on Mode to open the picker with Agent Mode expanded, or on Permissions to open it with Permissions expanded. Each section header shows its current selection, and the opened section initially focuses that selection. Press Enter or Space on a section header to expand or collapse it, or use Right Arrow to expand and Left Arrow to collapse. Hover or keyboard navigation moves the single row highlight without changing the selection until you activate a choice. Focus the Permissions header and press Tab to reach Configure Permissions, which opens the related settings. Use Up and Down Arrow to navigate and Enter to select a mode, permission level, or terminal sandboxing. Assisted permissions is experimental and evaluates risk before running tools. Enterprise policy can disable Assisted permissions and Allow all. When the session's host requires terminal sandboxing, its sandbox toggle is checked and disabled. If your organization permits bypassing, a supported outside-sandbox permission prompt can offer Allow in this Session. After that action succeeds, you can use the toggle to enable sandboxing again. This restriction applies only to that session. Escape closes the picker and returns focus to the button that opened it.</source>
+      <source xml:lang="en">When the experimental combined picker is enabled for a Copilot Agent Host session, Tab reaches separate Mode and Permissions buttons. Press Enter or Space on Mode to open the picker with Agent Mode expanded, or on Permissions to open it with Permissions expanded. Each section header shows its current selection, and the opened section initially focuses that selection. Press Enter or Space on a section header to expand or collapse it, or use Right Arrow to expand and Left Arrow to collapse. Hover or keyboard navigation moves the single row highlight without changing the selection until you activate a choice. Focus the Permissions header and press Tab to reach Configure Permissions, which opens the related settings. Use Up and Down Arrow to navigate and Enter to select a mode, permission level, or terminal sandboxing. Assisted permissions is experimental and evaluates risk before running tools. When Assisted permissions or Allow all is unavailable for a session, the option remains visible but cannot be selected, with a reason such as Disabled by policy. Its hover also explains the restriction. When the session's host requires terminal sandboxing, its sandbox toggle is checked and disabled. If your organization permits bypassing, a supported outside-sandbox permission prompt can offer Allow in this Session. After that action succeeds, you can use the toggle to enable sandboxing again. This restriction applies only to that session. Escape closes the picker and returns focus to the button that opened it.</source>
     </trans-unit>
     <trans-unit id="agentHostModePicker.agentMode">
       <source xml:lang="en">Agent mode</source>
@@ -2773,6 +2884,24 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHostModePicker.permissionsSandboxed">
       <source xml:lang="en">{0}, terminal sandboxed</source>
+    </trans-unit>
+    <trans-unit id="agentHostModePicker.policyDisabled">
+      <source xml:lang="en">Disabled by policy</source>
+    </trans-unit>
+    <trans-unit id="agentHostModePicker.policyDisabledHover">
+      <source xml:lang="en">Your organization's policy doesn't allow this permission level.</source>
+    </trans-unit>
+    <trans-unit id="agentHostModePicker.policyDisabledPlain">
+      <source xml:lang="en">Disabled by policy. Your organization's policy doesn't allow this permission level.</source>
+    </trans-unit>
+    <trans-unit id="agentHostModePicker.unavailable">
+      <source xml:lang="en">Unavailable</source>
+    </trans-unit>
+    <trans-unit id="agentHostModePicker.unavailableHover">
+      <source xml:lang="en">The agent host doesn't allow this permission level for this session.</source>
+    </trans-unit>
+    <trans-unit id="agentHostModePicker.unavailablePlain">
+      <source xml:lang="en">Unavailable. The agent host doesn't allow this permission level for this session.</source>
     </trans-unit>
     <trans-unit id="agentHostModePicker.withPermissions">
       <source xml:lang="en">Pick Mode and Permissions, {0}, {1}</source>
@@ -3094,6 +3223,12 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="agentHost.codexThreadInUse">
       <source xml:lang="en">{0} Then send your message again in VS Code. Your message has not been sent.</source>
     </trans-unit>
+    <trans-unit id="agentHost.computerUseSetup.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="agentHost.computerUseSetup.setUp">
+      <source xml:lang="en">Set Up Computer Use</source>
+    </trans-unit>
     <trans-unit id="agentHost.continueInterruptedTurn">
       <source xml:lang="en">Keep Going</source>
     </trans-unit>
@@ -3111,7 +3246,7 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHost.fusionTierResponseModel">
       <source xml:lang="en">{0} {1}</source>
-      <note>{0} is the routing model, e.g. Fusion, and {1} its tier, e.g. Max</note>
+      <note>{0} is the routing model, e.g. Copilot Fusion, and {1} its tier, e.g. Max</note>
     </trans-unit>
     <trans-unit id="agentHost.mcpToolAuthentication.cancelled">
       <source xml:lang="en">Cancelled tool call</source>
@@ -3157,6 +3292,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHost.sessionLoadFailedLabel">
       <source xml:lang="en">Couldn't open session</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sideChatLabel">
+      <source xml:lang="en">Side Chat</source>
     </trans-unit>
     <trans-unit id="agentHost.snapshotUnavailable">
       <source xml:lang="en">The turn's file changes could not be loaded.</source>
@@ -3276,6 +3414,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.removeReference">
       <source xml:lang="en">Remove Reference {0} from Session</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionPills.showWorkingSet">
+      <source xml:lang="en">Show Working Set</source>
     </trans-unit>
     <trans-unit id="agentHostSessionPills.uncommittedChangesEditor">
       <source xml:lang="en">Uncommitted Changes</source>
@@ -3404,6 +3545,129 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="codexContinuation.useCopilot">
       <source xml:lang="en">Use Copilot</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/computerUseSetup" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="computerUseSetup.card.message">
+      <source xml:lang="en">Copilot continues your task once macOS confirms both permissions.</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.card.title">
+      <source xml:lang="en">Computer Use needs permission to control apps and capture their windows.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/computerUseSetup.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.computerUse.setUp">
+      <source xml:lang="en">Set Up Computer Use</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/computerUseSetupDialog" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="computerUseSetup.accessibility">
+      <source xml:lang="en">Accessibility</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.accessibility.description">
+      <source xml:lang="en">Click and type in apps</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.action.openSettings">
+      <source xml:lang="en">Open Settings</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.action.openSettings.aria">
+      <source xml:lang="en">Open {0} in System Settings</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.action.recheck">
+      <source xml:lang="en">Check Again</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.action.recheck.aria">
+      <source xml:lang="en">Check Permissions Again</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.action.request">
+      <source xml:lang="en">Allow</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.action.request.aria">
+      <source xml:lang="en">Allow {0}</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.canContinue">
+      <source xml:lang="en">macOS turned on both permissions.</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.continue">
+      <source xml:lang="en">Continue</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.continueTask">
+      <source xml:lang="en">Continue</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.continueTask.aria">
+      <source xml:lang="en">Continue Your Task</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.description">
+      <source xml:lang="en">Copilot Computer Use needs these permissions to use apps on your Mac.</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.ended">
+      <source xml:lang="en">Setup was canceled. Ask Copilot to try again when you're ready.</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.helperApp.name">
+      <source xml:lang="en">Copilot Computer Use</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.helperApp.reveal">
+      <source xml:lang="en">Show in Finder</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.helperApp.reveal.aria">
+      <source xml:lang="en">Show Copilot Computer Use in Finder</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.idle">
+      <source xml:lang="en">Copilot checks these permissions the next time it needs Computer Use.</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.notNow">
+      <source xml:lang="en">Not Now</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.permissions">
+      <source xml:lang="en">Required permissions</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.ready">
+      <source xml:lang="en">Computer Use is ready.</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.row">
+      <source xml:lang="en">{0}, {1}. {2}</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.rowAnnouncement">
+      <source xml:lang="en">{0}: {1}.</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.screenRecording">
+      <source xml:lang="en">Screen Recording</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.screenRecording.description">
+      <source xml:lang="en">See app windows</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.settingsStep">
+      <source xml:lang="en">Turn on Copilot Computer Use under {0} in System Settings.</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.settingsStep.drag">
+      <source xml:lang="en">Turn on Copilot Computer Use under {0} in System Settings, or drag it into the list.</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.state.granted">
+      <source xml:lang="en">Granted</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.state.notGranted">
+      <source xml:lang="en">Not granted</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.state.unknown">
+      <source xml:lang="en">Not checked yet</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.title">
+      <source xml:lang="en">Set Up Computer Use</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.unavailable">
+      <source xml:lang="en">Computer Use setup is available when Computer Use is turned on for local Copilot sessions on this Mac.</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.working.openSettings">
+      <source xml:lang="en">Opening {0} in System Settings…</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.working.recheck">
+      <source xml:lang="en">Checking permissions…</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.working.request">
+      <source xml:lang="en">Waiting for macOS to ask about {0}…</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/importLocalConversationToAgentSession" source-language="en" datatype="plaintext"><body>
@@ -3890,6 +4154,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="agentHost.elicit.url.title">
       <source xml:lang="en">Authorization Required</source>
     </trans-unit>
+    <trans-unit id="agentHost.managedPluginPreparationFailure.retry">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
     <trans-unit id="agentHost.mcpServer.origin">
       <source xml:lang="en">{0} (MCP Server)</source>
     </trans-unit>
@@ -4369,6 +4636,26 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">now</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentsWindowGraphic" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindowGraphic.agentsWindow.description">
+      <source xml:lang="en">Run multiple tasks at the same time, isolated from each other.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowGraphic.agentsWindow.title">
+      <source xml:lang="en">Agents window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowGraphic.editorWindow.description">
+      <source xml:lang="en">Work on one task at a time, with AI at your side.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowGraphic.editorWindow.title">
+      <source xml:lang="en">Editor window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowGraphic.manyWindowsToOne.description">
+      <source xml:lang="en">All your projects and agents, in one window.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowGraphic.new">
+      <source xml:lang="en">New</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/copilotHarnessIntroduction" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copilotHarnessAgentDescription">
       <source xml:lang="en">Continue your sessions across windows and apps, without changing how you work. [Let us know]({0}) how it goes.</source>
@@ -4648,8 +4935,8 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="sessionSummaryHover.createdBy">
       <source xml:lang="en">Created by</source>
     </trans-unit>
-    <trans-unit id="sessionSummaryHover.externalSession">
-      <source xml:lang="en">External Session</source>
+    <trans-unit id="sessionSummaryHover.createdIn">
+      <source xml:lang="en">Created in</source>
     </trans-unit>
     <trans-unit id="sessionSummaryHover.fileChanged">
       <source xml:lang="en">1 file changed</source>
@@ -4793,6 +5080,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.addPlugin">
       <source xml:lang="en">Add Plugin</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.additionalItemsError">
+      <source xml:lang="en">Some additional customizations could not be loaded. {0}</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.agent">
       <source xml:lang="en">Agent</source>
     </trans-unit>
@@ -4801,6 +5091,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.alternative">
       <source xml:lang="en">1 alternative customization</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.available">
+      <source xml:lang="en">Available</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.availableAriaLabel">
       <source xml:lang="en">{0}, {1}, source {2}. {3}. {4}</source>
@@ -4995,6 +5288,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.loadingMore">
       <source xml:lang="en">Loading more customizations...</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.loadingProgress">
+      <source xml:lang="en">Loading customizations... {0} of {1} sources loaded.</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.manualSetupAccessible">
       <source xml:lang="en">Manual setup required. View Setup opens the publisher's instructions.</source>
     </trans-unit>
@@ -5054,6 +5350,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.providerPluginsError">
       <source xml:lang="en">Could not load installed plugins. {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.refreshingProgress">
+      <source xml:lang="en">Refreshing customizations... {0} of {1} sources refreshed.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.reloading">
       <source xml:lang="en">Reloading customizations...</source>
@@ -6216,6 +6515,9 @@ Destination files created or changed by the agent are not removed.</source>
     <trans-unit id="saveBuiltinCopyPlaceholder">
       <source xml:lang="en">Select Workspace, User, or Cancel</source>
     </trans-unit>
+    <trans-unit id="saveCustomizationFailed">
+      <source xml:lang="en">Could not save changes to {0}.</source>
+    </trans-unit>
     <trans-unit id="saveCustomizationOnExitFailed">
       <source xml:lang="en">Could not save changes to {0}.</source>
     </trans-unit>
@@ -6519,8 +6821,14 @@ Destination files created or changed by the agent are not removed.</source>
     <trans-unit id="copilotConnectors.enterpriseUnavailable">
       <source xml:lang="en">Copilot connectors are not available for this GitHub Enterprise account.</source>
     </trans-unit>
+    <trans-unit id="copilotConnectors.httpError">
+      <source xml:lang="en">Copilot connectors could not complete the request (HTTP {0}).</source>
+    </trans-unit>
     <trans-unit id="copilotConnectors.invalidCursor">
       <source xml:lang="en">The Copilot connectors page is invalid. Start a new search.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.invalidJson">
+      <source xml:lang="en">Copilot connectors returned an invalid response.</source>
     </trans-unit>
     <trans-unit id="copilotConnectors.invalidQuery">
       <source xml:lang="en">Use a positive page size and at most {0} characters and {1} words to search Copilot connectors.</source>
@@ -6537,8 +6845,17 @@ Destination files created or changed by the agent are not removed.</source>
     <trans-unit id="copilotConnectors.publisher">
       <source xml:lang="en">GitHub Copilot</source>
     </trans-unit>
+    <trans-unit id="copilotConnectors.requestFailed">
+      <source xml:lang="en">Copilot connectors could not be reached. Check your connection and try again.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.responseTooLarge">
+      <source xml:lang="en">The Copilot connectors response is too large.</source>
+    </trans-unit>
     <trans-unit id="copilotConnectors.signInRequired">
       <source xml:lang="en">Sign in to view connectors.</source>
+    </trans-unit>
+    <trans-unit id="copilotConnectors.timeout">
+      <source xml:lang="en">The Copilot connectors request timed out. Try again.</source>
     </trans-unit>
     <trans-unit id="copilotConnectors.unavailable">
       <source xml:lang="en">Copilot connectors are not available in this product.</source>
@@ -6571,7 +6888,7 @@ Destination files created or changed by the agent are not removed.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplace.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="customizationDiscovery.help.browse">
-      <source xml:lang="en">Clear the search to browse. Show All on a section applies its type filter and moves to search results.</source>
+      <source xml:lang="en">Clear the search to browse Editor's picks, Plan, build, and ship, and Connect your work when curated GitHub Feed sections are available. Otherwise, Browse groups catalog items by type. Show All on a type section applies its filter and moves to search results.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.descriptionLinks">
       <source xml:lang="en">The customization type links below the heading open their respective management sections.</source>
@@ -6595,7 +6912,7 @@ Destination files created or changed by the agent are not removed.</source>
       <source xml:lang="en">Scrolling near the end of search results loads another page without removing loaded items. Retry repeats a failed marketplace request.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.ranking">
-      <source xml:lang="en">Available search results are ordered by source-assigned relevance, not trust or quality. Feed priority breaks equal relevance scores. Browsing without search text shows higher-priority custom entries first and interleaves entries at the same priority while preserving each catalog's order.</source>
+      <source xml:lang="en">Available search results are ordered by source-assigned relevance, not trust or quality. Curated Browse sections preserve their saved editorial order. When curated sections are unavailable, Browse uses source priority and catalog order.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.search">
       <source xml:lang="en">Type words or use @installed, @type:skill, @type:mcp, and @type:plugin. The search filter menu updates the same query and filters can be combined.</source>
@@ -6743,6 +7060,21 @@ Destination files created or changed by the agent are not removed.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplaceWorkbenchService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationMarketplace.connectYourWork">
+      <source xml:lang="en">Connect your work</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.editorsPicks">
+      <source xml:lang="en">Editor's picks</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.feedTimeout">
+      <source xml:lang="en">The {0} section took too long to load.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.partialFeedsError">
+      <source xml:lang="en">Some curated customization sections could not be loaded. {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.planBuildAndShip">
+      <source xml:lang="en">Plan, build, and ship</source>
+    </trans-unit>
     <trans-unit id="customizationMarketplace.signIn">
       <source xml:lang="en">Sign In</source>
     </trans-unit>
@@ -8881,6 +9213,23 @@ Disabled servers may become enabled.</source>
       <source xml:lang="en">Pin selection</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/btwSlashCommand" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="btw">
+      <source xml:lang="en">Ask a side question without adding it to this conversation</source>
+    </trans-unit>
+    <trans-unit id="btw.failed">
+      <source xml:lang="en">The side chat could not be started: {0}</source>
+    </trans-unit>
+    <trans-unit id="btw.missingPrompt">
+      <source xml:lang="en">Enter a question after `/btw`.</source>
+    </trans-unit>
+    <trans-unit id="btw.noTurn">
+      <source xml:lang="en">Send a message in this conversation before starting a side chat.</source>
+    </trans-unit>
+    <trans-unit id="btw.unsupported">
+      <source xml:lang="en">This conversation does not support side chats.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chat.shared.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentPlugin">
       <source xml:lang="en">Agent Plugin</source>
@@ -9204,9 +9553,6 @@ Locations configured here are only observed by the Local agent harness. Other ha
     <trans-unit id="chat.copilot.claudeAdvisor.enabled">
       <source xml:lang="en">When enabled, Copilot Agent Host sessions using a supported Claude model can call the provider-native Advisor tool. Changing this setting restarts the Copilot SDK client after active turns finish.</source>
     </trans-unit>
-    <trans-unit id="chat.copilot.ensemble.intelligenceUsesHydraFusion">
-      <source xml:lang="en">When enabled together with `#{0}#`, Fusion's High tier uses HydraFusion v2. When HydraFusion is unavailable, Fusion High routes like Auto's Intelligence.</source>
-    </trans-unit>
     <trans-unit id="chat.copilot.exploreAgent.enabled">
       <source xml:lang="en">When enabled, local Copilot Agent Host sessions can use the runtime's built-in Explore agent, independently of `#chat.copilot.searchSubagent.enabled#`. Applies to sessions when they launch or resume. Does not disable custom agents named Explore.</source>
     </trans-unit>
@@ -9217,7 +9563,7 @@ Locations configured here are only observed by the Local agent harness. Other ha
       <source xml:lang="en">Do not make HydraFusion available.</source>
     </trans-unit>
     <trans-unit id="chat.copilot.hydraFusion.enabled.multiRoot">
-      <source xml:lang="en">Make HydraFusion v2 available and ask the service to keep reusing the previous turn's root model when it fits the next turn's workflow, which improves prompt cache reuse. Also applies to Fusion High and Max.</source>
+      <source xml:lang="en">Make HydraFusion v2 available and ask the service to keep reusing the previous turn's root model when it fits the next turn's workflow, which improves prompt cache reuse. Also applies to HydraFusion tiers that Auto offers.</source>
     </trans-unit>
     <trans-unit id="chat.copilot.hydraFusion.enabled.true">
       <source xml:lang="en">Make HydraFusion available.</source>
@@ -9352,7 +9698,7 @@ Locations configured here are only observed by the Local agent harness. Other ha
       <source xml:lang="en">When enabled, Codex sessions opened from the regular workbench (sidebar chat) run inside the agent host process using the Codex App Server instead of the OpenAI extension. Only one Codex implementation surfaces per window. Requires `#chat.agentHost.codexAgent.enabled#`.</source>
     </trans-unit>
     <trans-unit id="chat.editor.workingSet.enabled">
-      <source xml:lang="en">Show Copilot Agent Host session changes as a working set above the chat input instead of the Changes pill in the editor window. Select a file to open its diff, or keep its changes to remove it from the working set. The Keep and View All Edits buttons in its heading act on every file. Hosts without a session changeset keep the Changes pill. Local and other chat harnesses are unaffected.</source>
+      <source xml:lang="en">Show Agent Host session changes as a working set above the chat input instead of the Changes pill in the editor window. Use its context menu to enable or disable Keep and Undo in both the working set and the editor, or choose Show Pill to turn this setting off. View All Edits opens all changed files in a diff editor. Hosts without a session changeset keep the Changes pill. Local and other chat harnesses are unaffected.</source>
     </trans-unit>
     <trans-unit id="chat.editorAssociations">
       <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) to editors for opening files from chat (for example `"*.md": "vscode.markdown.preview.editor"`).</source>
@@ -9659,9 +10005,6 @@ This setting is only used by the Local agent harness.</source>
     <trans-unit id="chat.mode.config.locations.title">
       <source xml:lang="en">Mode File Locations</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.fusionInlineTiers">
-      <source xml:lang="en">Show Fusion tiers directly in the model picker when `#{0}#` is enabled.</source>
-    </trans-unit>
     <trans-unit id="chat.newSession.defaultMode">
       <source xml:lang="en">The default mode for new chat sessions. When empty, the chat view's default mode is used.</source>
     </trans-unit>
@@ -9945,6 +10288,43 @@ Examples:
     </trans-unit>
     <trans-unit id="chat.viewSessions.orientation.stacked">
       <source xml:lang="en">Display chat sessions vertically stacked above the chat input unless a chat session is visible.</source>
+    </trans-unit>
+    <trans-unit id="chat.welcomePage.agentsWindowGraphic">
+      <source xml:lang="en">Controls which graphic explains the Agents window above the Agents window button on the Welcome page.</source>
+    </trans-unit>
+    <trans-unit id="chat.welcomePage.agentsWindowGraphic.auto">
+      <source xml:lang="en">Show 'manyWindowsToOne' when more than one editor window is open, and 'windowComparison' otherwise.</source>
+      <note>Values surrounded by single quotes are not to be translated.</note>
+    </trans-unit>
+    <trans-unit id="chat.welcomePage.agentsWindowGraphic.manyWindowsToOne">
+      <source xml:lang="en">Show how editor windows for several projects become one Agents window.</source>
+    </trans-unit>
+    <trans-unit id="chat.welcomePage.agentsWindowGraphic.none">
+      <source xml:lang="en">Show no graphic.</source>
+    </trans-unit>
+    <trans-unit id="chat.welcomePage.agentsWindowGraphic.windowComparison">
+      <source xml:lang="en">Show the editor window and the Agents window side by side.</source>
+    </trans-unit>
+    <trans-unit id="chat.welcomePage.agentsWindowSectionStyle">
+      <source xml:lang="en">Controls how the Agents window graphic, its captions and the Agents window button are set apart from the rest of the Welcome page. Applies only while a graphic is shown.</source>
+    </trans-unit>
+    <trans-unit id="chat.welcomePage.agentsWindowSectionStyle.band">
+      <source xml:lang="en">Show the section on a subtle surface across the width of the page's content.</source>
+    </trans-unit>
+    <trans-unit id="chat.welcomePage.agentsWindowSectionStyle.card">
+      <source xml:lang="en">Show the section on a subtle surface, like the walkthrough tiles.</source>
+    </trans-unit>
+    <trans-unit id="chat.welcomePage.agentsWindowSectionStyle.none">
+      <source xml:lang="en">Don't set the section apart.</source>
+    </trans-unit>
+    <trans-unit id="chat.welcomePage.agentsWindowSectionStyle.outline">
+      <source xml:lang="en">Outline the section with a subtle border.</source>
+    </trans-unit>
+    <trans-unit id="chat.welcomePage.agentsWindowSectionStyle.separator">
+      <source xml:lang="en">Separate the section from the rest of the page with lines above and below it.</source>
+    </trans-unit>
+    <trans-unit id="chat.welcomePage.agentsWindowSectionStyle.tint">
+      <source xml:lang="en">Show the section on a surface tinted with the accent color.</source>
     </trans-unit>
     <trans-unit id="chat.welcomePage.signIn.enabled">
       <source xml:lang="en">Controls whether the Welcome page shows a GitHub sign-in button instead of the Agents window button when signed out.</source>
@@ -12940,10 +13320,10 @@ Changes may not take full effect until VS Code is restarted.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatProgressConfiguration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.experimental.persistentProgress">
-      <source xml:lang="en">Keep a working progress indicator at the bottom until the response finishes, with a colored or monochrome Draw animation, or without an icon. The indicator reports running subagents and background commands from the current or earlier requests, even while the main response progresses. The default is Draw in all versions of VS Code. Experiments can override the default; an explicit setting takes precedence. Tool calls follow {0}, and reasoning is separated into collapsible previews that break the tool chain. Standalone tools retain their icons. Completed responses still follow {1}. This replaces inner working progress; terminal activity animations and rich subagent pills are unchanged. Changes apply immediately; reduced motion keeps the indicator visible without animation.</source>
+      <source xml:lang="en">Keep a working progress indicator at the bottom until the response finishes, with a colored or monochrome Draw animation, or without an icon. The indicator reports running subagents and background commands from the current or earlier requests, even while the main response progresses. The default is Draw in all versions of VS Code. Experiments can override the default; an explicit setting takes precedence. Tool calls follow {0}. Except in Conversation mode, reasoning is separated into collapsible previews that break the tool chain. Standalone tools retain their icons. Completed responses still follow {1}. This replaces inner working progress; terminal activity animations and rich subagent pills are unchanged. Changes apply immediately; reduced motion keeps the indicator visible without animation.</source>
     </trans-unit>
     <trans-unit id="chat.experimental.persistentProgressVerbosity">
-      <source xml:lang="en">Control tool call details when {0} is enabled. Compact is the default and collapses tool groups in place when thinking or response text resumes, or the response finishes. When Agent Host activity data is available, headers summarize up to three activity groups, prioritizing edits and commands, without language model requests. Remaining activity is counted as other steps. Failed, skipped, denied, and unfinished tool invocations remain explicit, including in the other-steps count. Completed shell invocations count as commands without tracking later background process status. Groups with no recognized activity or outcome use a step count. Expand a summary to inspect all its tool calls. Has no effect when persistent progress is Off. Changes apply immediately.</source>
+      <source xml:lang="en">Control tool call details when {0} is enabled. Compact is the default and collapses tool groups in place when thinking or response text resumes, or the response finishes. When Agent Host activity data is available, headers summarize up to three activity groups, prioritizing edits and commands, without language model requests. Remaining activity is counted as other steps. Failed, skipped, denied, and unfinished tool invocations remain explicit, including in the other-steps count. Completed shell invocations count as commands without tracking later background process status. Groups with no recognized activity or outcome use a step count. Expand a summary to inspect all its tool calls. Conversation collapses reasoning and tool calls between response text into one section that starts collapsed, names the current tool call, or the heading of the current reasoning summary (Thinking when the reasoning has no heading), while it runs, and reports how long it took once it finishes. Has no effect when persistent progress is Off. Changes apply immediately.</source>
     </trans-unit>
     <trans-unit id="chat.progressAnimation.draw">
       <source xml:lang="en">Tie the VS Code mark with fast parabolic ribbon motion, hold it, then unravel it before a brief rest.</source>
@@ -12974,6 +13354,12 @@ Changes may not take full effect until VS Code is restarted.</source>
     </trans-unit>
     <trans-unit id="chat.progressVerbosity.compact.label">
       <source xml:lang="en">Compact</source>
+    </trans-unit>
+    <trans-unit id="chat.progressVerbosity.conversation">
+      <source xml:lang="en">Collapse reasoning and tool calls together into a single section that names the current tool call or reasoning heading while it runs, then how long it took once it finishes.</source>
+    </trans-unit>
+    <trans-unit id="chat.progressVerbosity.conversation.label">
+      <source xml:lang="en">Conversation</source>
     </trans-unit>
     <trans-unit id="chat.progressVerbosity.verbose">
       <source xml:lang="en">Keep tool calls in expanded, headerless chains without an internal scrolling limit.</source>
@@ -13111,6 +13497,9 @@ Changes may not take full effect until VS Code is restarted.</source>
     </trans-unit>
     <trans-unit id="chatEditorContributionName">
       <source xml:lang="en">{0}</source>
+    </trans-unit>
+    <trans-unit id="chatSessions.sideChatsUnsupported">
+      <source xml:lang="en">This conversation does not support side chats.</source>
     </trans-unit>
     <trans-unit id="chatSessionsExtPoint">
       <source xml:lang="en">Contributes chat session integrations to the chat widget.</source>
@@ -13470,6 +13859,17 @@ Type anything below to get started!</source>
     </trans-unit>
     <trans-unit id="startUsing">
       <source xml:lang="en">Start using AI Features</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatSideChatProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sideChat.openFailed">
+      <source xml:lang="en">The side chat could not be opened.</source>
+    </trans-unit>
+    <trans-unit id="sideChat.sourceOpenFailed">
+      <source xml:lang="en">The source conversation could not be opened.</source>
+    </trans-unit>
+    <trans-unit id="sideChat.unsupported">
+      <source xml:lang="en">This conversation does not support side chats.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/chatSlashCommands" source-language="en" datatype="plaintext"><body>
@@ -15007,8 +15407,17 @@ Source: {0}</source>
     <trans-unit id="cloudSandbox.identityResponseFailed">
       <source xml:lang="en">Could not read the sandbox identity-token response.</source>
     </trans-unit>
+    <trans-unit id="cloudSandbox.invalidEnvironment">
+      <source xml:lang="en">The prepared sandbox environment identifier is invalid.</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.invalidRepository">
       <source xml:lang="en">The sandbox repository must be specified as owner/name.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.invalidReservation">
+      <source xml:lang="en">The task reservation identifier must not be empty.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.invalidReservationSubmission">
+      <source xml:lang="en">The cloud service did not confirm the task reservation outcome.</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.invalidSealedToken">
       <source xml:lang="en">The sandbox token-sealing response is invalid.</source>
@@ -15019,8 +15428,17 @@ Source: {0}</source>
     <trans-unit id="cloudSandbox.invalidSealingResource">
       <source xml:lang="en">The sandbox token-sealing resource must be a valid URL.</source>
     </trans-unit>
+    <trans-unit id="cloudSandbox.invalidTaskReservation">
+      <source xml:lang="en">The cloud service did not return a usable task reservation.</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.reasoningEffort">
       <source xml:lang="en">Reasoning Effort</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.reservationAccountRequired">
+      <source xml:lang="en">The account that reserved the task is required to submit it.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.reservationEnvironmentConflict">
+      <source xml:lang="en">A task reservation cannot be combined with an existing environment.</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.sealingNetworkError">
       <source xml:lang="en">The sandbox token-sealing request failed before a response was received.</source>
@@ -15030,6 +15448,17 @@ Source: {0}</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.sealingResponseFailed">
       <source xml:lang="en">Could not read the sandbox token-sealing response.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxDraftPreparationService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.preparationAlreadyClaimed">
+      <source xml:lang="en">This draft's reservation has already been claimed by Send.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.submittedReservation">
+      <source xml:lang="en">A submitted cloud task cannot be released as unused preparation.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.unknownPreparedReservation">
+      <source xml:lang="en">This reservation was not handed off by draft preparation.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxIdentityTokenProvider" source-language="en" datatype="plaintext"><body>
@@ -15141,6 +15570,12 @@ Source: {0}</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.renameSessionNotFound">
       <source xml:lang="en">Mission Control sandbox session not found.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.submittedDraftChanged">
+      <source xml:lang="en">This draft already started a cloud session with different settings. Open that session or start a new chat.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.submittedTaskDeleted">
+      <source xml:lang="en">The cloud task created for this draft has been deleted. Start a new chat.</source>
     </trans-unit>
     <trans-unit id="sandbox.cloningFailed">
       <source xml:lang="en">Repository cloning failed</source>
@@ -15371,6 +15806,9 @@ Source: {0}</source>
     <trans-unit id="chat.agentHost.cloudSandbox.autoConnectOnOpen">
       <source xml:lang="en">Automatically connect to or wake a cloud sandbox environment in the background when opening or restoring its chat in the Agents Window. When disabled, connecting waits until you start composing or explicitly connect.</source>
     </trans-unit>
+    <trans-unit id="chat.agentHost.cloudSandbox.earlyPreparation">
+      <source xml:lang="en">Prepare an eligible cloud environment while typing in a new Cloud chat in the editor or Agents Window. This can allocate cloud compute before you send a message.</source>
+    </trans-unit>
     <trans-unit id="chat.agentHost.cloudSandbox.enabled">
       <source xml:lang="en">Use GitHub Cloud for new Cloud sessions in the Agents Window instead of Copilot coding agent on GitHub Actions. Also enables discovering and opening GitHub Cloud sessions.</source>
     </trans-unit>
@@ -15410,6 +15848,53 @@ Source: {0}</source>
     </trans-unit>
     <trans-unit id="remoteAgentHost.selectPluginFolder">
       <source xml:lang="en">Select Plugin Folder on {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/responseSelectionSideChatController" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.askInSideChat">
+      <source xml:lang="en">Ask in Side Chat...</source>
+    </trans-unit>
+    <trans-unit id="sessions.responseSelection.askWithBtw">
+      <source xml:lang="en">Ask in a Side Chat</source>
+    </trans-unit>
+    <trans-unit id="sessions.responseSelection.copied">
+      <source xml:lang="en">Selected response text copied.</source>
+    </trans-unit>
+    <trans-unit id="sessions.responseSelection.copy">
+      <source xml:lang="en">Copy</source>
+    </trans-unit>
+    <trans-unit id="sessions.responseSelection.copyFailed">
+      <source xml:lang="en">The selected response text could not be copied.</source>
+    </trans-unit>
+    <trans-unit id="sessions.responseSelection.menuAriaLabel">
+      <source xml:lang="en">Selected response text actions</source>
+    </trans-unit>
+    <trans-unit id="sessions.responseSelection.quote">
+      <source xml:lang="en">Quote</source>
+    </trans-unit>
+    <trans-unit id="sessions.responseSelection.quoted">
+      <source xml:lang="en">Quoted selection inserted.</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.ariaLabel">
+      <source xml:lang="en">Ask a question about the selected response text</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.ask">
+      <source xml:lang="en">Ask Question</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.busy">
+      <source xml:lang="en">Asking question…</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.createFailed">
+      <source xml:lang="en">The side chat could not be created.</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.enter">
+      <source xml:lang="en">Enter</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.placeholder">
+      <source xml:lang="en">Ask Question</source>
+    </trans-unit>
+    <trans-unit id="sessions.selectionSideChat.unsupported">
+      <source xml:lang="en">This conversation does not support side chats.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/sessionBackgroundShellOutputView" source-language="en" datatype="plaintext"><body>
@@ -15804,6 +16289,9 @@ Started: {1}</source>
     </trans-unit>
     <trans-unit id="voiceMode.hover">
       <source xml:lang="en">Talk with the agent and hear it reply. Uses the online real-time voice model.</source>
+    </trans-unit>
+    <trans-unit id="voiceMode.hover.gptLive">
+      <source xml:lang="en">Talk with the agent and hear it reply. Uses OpenAI GPT Live for real-time voice.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/speechToText/micButtonMenuActions" source-language="en" datatype="plaintext"><body>
@@ -16292,23 +16780,14 @@ Note: This setting only controls tool approval and does not prevent the agent fr
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/voiceClient/voiceInputDecorations" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="voiceMode.bargeInHint">
-      <source xml:lang="en">Speak or use {0}</source>
-    </trans-unit>
-    <trans-unit id="voiceMode.bargeInHintNoKb">
-      <source xml:lang="en">Speak to barge in</source>
-    </trans-unit>
-    <trans-unit id="voiceMode.clickMicOrBargeInHint">
-      <source xml:lang="en">Click voice mode to talk or barge in</source>
-    </trans-unit>
-    <trans-unit id="voiceMode.listening">
-      <source xml:lang="en">Listening...</source>
+    <trans-unit id="voiceMode.clickMicHint">
+      <source xml:lang="en">Click voice mode to talk</source>
     </trans-unit>
     <trans-unit id="voiceMode.mutedUnmuteToSpeak">
       <source xml:lang="en">Unmute to speak...</source>
     </trans-unit>
-    <trans-unit id="voiceMode.pttOrBargeInHint">
-      <source xml:lang="en">Press {0} to talk or barge in</source>
+    <trans-unit id="voiceMode.pttHint">
+      <source xml:lang="en">Hold {0} to talk</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/voiceClient/voiceSessionController" source-language="en" datatype="plaintext"><body>
@@ -16605,15 +17084,26 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       <source xml:lang="en">Chat Artifacts</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatActionRequestContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.actionRequest.agentMessage">
+      <source xml:lang="en">Agent Message</source>
+    </trans-unit>
+    <trans-unit id="chat.actionRequest.showAgentMessage">
+      <source xml:lang="en">Show Agent Message</source>
+    </trans-unit>
+    <trans-unit id="chat.actionRequest.showDetails">
+      <source xml:lang="en">Show Details</source>
+    </trans-unit>
+    <trans-unit id="chat.actionRequest.startedAt">
+      <source xml:lang="en">Started {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatAgentCommandContentPart" source-language="en" datatype="plaintext"><body>
     <trans-unit id="rerun">
       <source xml:lang="en">Rerun without {0}{1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatAgentMergeContentPart" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.agentMerge.agentMessage">
-      <source xml:lang="en">Agent Message</source>
-    </trans-unit>
     <trans-unit id="chat.agentMerge.behindBaseBranch">
       <source xml:lang="en">Behind Base Branch</source>
     </trans-unit>
@@ -16659,17 +17149,8 @@ Note: This setting only controls tool approval and does not prevent the agent fr
     <trans-unit id="chat.agentMerge.reviewComments">
       <source xml:lang="en">{0} Review Comments</source>
     </trans-unit>
-    <trans-unit id="chat.agentMerge.showAgentMessage">
-      <source xml:lang="en">Show Agent Message</source>
-    </trans-unit>
-    <trans-unit id="chat.agentMerge.showMergeDetails">
-      <source xml:lang="en">Show Merge Details</source>
-    </trans-unit>
     <trans-unit id="chat.agentMerge.source">
       <source xml:lang="en">Agent Merge</source>
-    </trans-unit>
-    <trans-unit id="chat.agentMerge.startedAt">
-      <source xml:lang="en">Started {0}</source>
     </trans-unit>
     <trans-unit id="chat.agentMerge.summaryLabel">
       <source xml:lang="en">{0}, {1}</source>
@@ -16687,6 +17168,29 @@ Note: This setting only controls tool approval and does not prevent the agent fr
     </trans-unit>
     <trans-unit id="enableMoreAIFeatures">
       <source xml:lang="en">Enable more AI features</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatArtifactActionContentPart" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.artifactAction.accessibleLabel">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactAction.automaticSource">
+      <source xml:lang="en">{0} (Automatic)</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactAction.fact">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactAction.loadingSnapshot">
+      <source xml:lang="en">Details were still loading when this action started.</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactAction.partial">
+      <source xml:lang="en">Partial snapshot. Open the artifact for more details.</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactAction.summary">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="chat.artifactAction.unsafeLink">
+      <source xml:lang="en">This artifact link cannot be opened.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatChangesSummaryPart" source-language="en" datatype="plaintext"><body>
@@ -17643,6 +18147,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.thinking.finishedThinking">
       <source xml:lang="en">Finished thinking</source>
+    </trans-unit>
+    <trans-unit id="chat.thinking.finishedThinkingAfter">
+      <source xml:lang="en">Finished thinking after {0}</source>
     </trans-unit>
     <trans-unit id="chat.thinking.header">
       <source xml:lang="en">Thinking</source>
@@ -18847,8 +19354,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatListWidget" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.scrollToBottom">
-      <source xml:lang="en">Scroll to Bottom</source>
+    <trans-unit id="chat.scrollToBottomIcon">
+      <source xml:lang="en">Icon for scrolling to the latest chat content.</source>
+    </trans-unit>
+    <trans-unit id="chat.scrollToLatest">
+      <source xml:lang="en">Scroll to Latest</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatPetWidget" source-language="en" datatype="plaintext"><body>
@@ -19290,6 +19800,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.sessionWorkingSet.keepAll">
       <source xml:lang="en">Keep All Edits</source>
     </trans-unit>
+    <trans-unit id="chat.sessionWorkingSet.keepUndo">
+      <source xml:lang="en">Keep and Undo</source>
+    </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.list">
       <source xml:lang="en">Session changes</source>
     </trans-unit>
@@ -19298,6 +19811,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.oneFile">
       <source xml:lang="en">1 file changed</source>
+    </trans-unit>
+    <trans-unit id="chat.sessionWorkingSet.showPill">
+      <source xml:lang="en">Show Pill</source>
     </trans-unit>
     <trans-unit id="chat.sessionWorkingSet.summary">
       <source xml:lang="en">Session changes, {0}, {1}</source>
@@ -19556,6 +20072,17 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="models.speed.standard">
       <source xml:lang="en">Standard</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerColors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.fusionBadgeForeground">
+      <source xml:lang="en">Foreground color of the Copilot Fusion discount badge in the model picker.</source>
+    </trans-unit>
+    <trans-unit id="chat.fusionBadgeGradientEnd">
+      <source xml:lang="en">End color of the gradient behind the Copilot Fusion discount badge in the model picker.</source>
+    </trans-unit>
+    <trans-unit id="chat.fusionBadgeGradientStart">
+      <source xml:lang="en">Start color of the gradient behind the Copilot Fusion discount badge in the model picker.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerConfiguration" source-language="en" datatype="plaintext"><body>
@@ -20068,20 +20595,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.category.versatile">
       <source xml:lang="en">Versatile</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.fusionHighDetail">
-      <source xml:lang="en">Everyday work, balanced compute</source>
-    </trans-unit>
     <trans-unit id="chat.modelPicker.fusionMax">
       <source xml:lang="en">Max</source>
     </trans-unit>
-    <trans-unit id="chat.modelPicker.fusionMaxDetail">
-      <source xml:lang="en">Complex tasks, maximum compute</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.fusionStandardDetail">
-      <source xml:lang="en">Quick tasks, lighter compute</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.fusionTierUnavailable">
-      <source xml:lang="en">Not available for your account.</source>
+    <trans-unit id="chat.modelPicker.fusionTierDiscountBadge">
+      <source xml:lang="en">{0}% discount</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.hydraFusionDefaultTier">
       <source xml:lang="en">Default</source>
@@ -20128,31 +20646,16 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">Dismiss Hint</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.fusionHighDescription">
-      <source xml:lang="en">High picks a workflow per task, using one or more models.</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.fusionManaged">
-      <source xml:lang="en">Managed by the agent host</source>
+      <source xml:lang="en">Prioritizes capable models for challenging tasks and deeper reasoning.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.fusionMaxDescription">
-      <source xml:lang="en">Max uses multiple models on every task for the most thorough results.</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.fusionSubtitle">
-      <source xml:lang="en">Choose the capability for your task</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.fusionTier">
-      <source xml:lang="en">Fusion {0}</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.fusionTierDiscount">
-      <source xml:lang="en">{0}% discount</source>
+      <source xml:lang="en">Prioritizes the most capable models for the most demanding tasks and complex reasoning.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.hydraFusionTierValue">
       <source xml:lang="en">Tier: {0}</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.hydraFusionTiers">
       <source xml:lang="en">HydraFusion tier</source>
-    </trans-unit>
-    <trans-unit id="chat.modelPicker.individualModels">
-      <source xml:lang="en">Individual models</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.modelDetails">
       <source xml:lang="en">{0} Details</source>
@@ -20231,7 +20734,7 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">Configure Model</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.fusionTier">
-      <source xml:lang="en">Fusion {0}</source>
+      <source xml:lang="en">Copilot Fusion {0}</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.loadingModels">
       <source xml:lang="en">Loading models...</source>
@@ -20375,12 +20878,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="permissions.learnMore">
       <source xml:lang="en">Learn more about permissions</source>
     </trans-unit>
-    <trans-unit id="permissions.policyDescription">
-      <source xml:lang="en">Disabled by enterprise policy</source>
-    </trans-unit>
-    <trans-unit id="permissions.policyDisabled">
-      <source xml:lang="en">Disabled by enterprise policy</source>
-    </trans-unit>
     <trans-unit id="permissions.sandboxed.label">
       <source xml:lang="en">{0} (sandboxed)</source>
     </trans-unit>
@@ -20507,26 +21004,14 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="sessions">
       <source xml:lang="en">Sessions</source>
     </trans-unit>
-    <trans-unit id="voiceMode.bargeInHint">
-      <source xml:lang="en">Speak or use {0}</source>
-    </trans-unit>
-    <trans-unit id="voiceMode.bargeInHintNoKb">
-      <source xml:lang="en">Speak to barge in</source>
-    </trans-unit>
-    <trans-unit id="voiceMode.clickMicOrBargeInHint">
-      <source xml:lang="en">Click voice mode to talk or barge in</source>
-    </trans-unit>
-    <trans-unit id="voiceMode.listening">
-      <source xml:lang="en">Listening...</source>
+    <trans-unit id="voiceMode.clickMicHint">
+      <source xml:lang="en">Click voice mode to talk</source>
     </trans-unit>
     <trans-unit id="voiceMode.mutedUnmuteToSpeak">
       <source xml:lang="en">Unmute to speak...</source>
     </trans-unit>
     <trans-unit id="voiceMode.pttHint">
       <source xml:lang="en">Hold {0} to talk</source>
-    </trans-unit>
-    <trans-unit id="voiceMode.pttOrBargeInHint">
-      <source xml:lang="en">Press {0} to talk or barge in</source>
     </trans-unit>
     <trans-unit id="voiceMode.simHint.buttonHold">
       <source xml:lang="en">Hold the button to talk, tap to turn off</source>
@@ -20612,6 +21097,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chatContextMenuHasLink">
       <source xml:lang="en">Whether the chat context menu was opened on a link.</source>
+    </trans-unit>
+    <trans-unit id="chatContextMenuHasResponseSelection">
+      <source xml:lang="en">Whether the chat context menu has selected assistant response text.</source>
     </trans-unit>
     <trans-unit id="chatContextMenuIsBackground">
       <source xml:lang="en">Whether the chat context menu was opened from the transcript background rather than chat item content.</source>
@@ -20796,6 +21284,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chatSessionSupportsRename">
       <source xml:lang="en">True when the current chat session supports renaming.</source>
     </trans-unit>
+    <trans-unit id="chatSessionSupportsSideChat">
+      <source xml:lang="en">True when the current chat session provider supports side chats.</source>
+    </trans-unit>
     <trans-unit id="chatSessionType">
       <source xml:lang="en">The type of the current chat session.</source>
     </trans-unit>
@@ -20804,6 +21295,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chatSessionWorkingSetKeepEnabled">
       <source xml:lang="en">True when the session working set can keep changes now, false otherwise.</source>
+    </trans-unit>
+    <trans-unit id="chatSessionWorkingSetReviewEnabled">
+      <source xml:lang="en">Whether Keep and Undo are shown in the session working set.</source>
     </trans-unit>
     <trans-unit id="chatSessionWorkingSetUndoEnabled">
       <source xml:lang="en">True when the session working set can undo changes now, false otherwise.</source>
@@ -20963,6 +21457,104 @@ You can stop the agent at any time by clicking the stop button. This applies to 
   <file original="src/vs/workbench/contrib/chat/common/automations/automationService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="automationHostChangeUnsupported">
       <source xml:lang="en">An automation cannot move between Agent Hosts. Duplicate it on the new host to keep the original run history. The original continues scheduling until you disable it.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/automations/automationTriggers" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automation.event.issueAssigned">
+      <source xml:lang="en">Issue assigned</source>
+    </trans-unit>
+    <trans-unit id="automation.event.issueClosed">
+      <source xml:lang="en">Issue closed</source>
+    </trans-unit>
+    <trans-unit id="automation.event.issueComment">
+      <source xml:lang="en">Issue comment</source>
+    </trans-unit>
+    <trans-unit id="automation.event.issueCreated">
+      <source xml:lang="en">Issue created</source>
+    </trans-unit>
+    <trans-unit id="automation.event.issueLabeled">
+      <source xml:lang="en">Issue labeled</source>
+    </trans-unit>
+    <trans-unit id="automation.event.issueReopened">
+      <source xml:lang="en">Issue reopened</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prAssigned">
+      <source xml:lang="en">Pull request assigned</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prClosed">
+      <source xml:lang="en">Pull request closed</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prConflict">
+      <source xml:lang="en">Pull request merge conflict</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prDraft">
+      <source xml:lang="en">Pull request converted to draft</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prLabeled">
+      <source xml:lang="en">Pull request labeled</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prMerged">
+      <source xml:lang="en">Pull request merged</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prOpened">
+      <source xml:lang="en">Pull request opened</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prReady">
+      <source xml:lang="en">Pull request ready for review</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prReopened">
+      <source xml:lang="en">Pull request reopened</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prReviewComment">
+      <source xml:lang="en">Review comment</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prReviewDismissed">
+      <source xml:lang="en">Review dismissed</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prReviewRequested">
+      <source xml:lang="en">Review requested</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prReviewSubmitted">
+      <source xml:lang="en">Review submitted</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prSynchronized">
+      <source xml:lang="en">Pull request synchronized</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prThreadResolved">
+      <source xml:lang="en">Review thread resolved</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prThreadUnresolved">
+      <source xml:lang="en">Review thread unresolved</source>
+    </trans-unit>
+    <trans-unit id="automation.event.prTimelineComment">
+      <source xml:lang="en">Timeline comment</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.assignees">
+      <source xml:lang="en">Assignees</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.body">
+      <source xml:lang="en">Comment text</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.invalid">
+      <source xml:lang="en">Choose a supported value for {0}.</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.labels">
+      <source xml:lang="en">Labels added</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.multiple">
+      <source xml:lang="en">Multiple</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.paths">
+      <source xml:lang="en">Changed paths</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.query">
+      <source xml:lang="en">Query</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.required">
+      <source xml:lang="en">{0} is required.</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.states">
+      <source xml:lang="en">Review states</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/automations/schedule" source-language="en" datatype="plaintext"><body>
@@ -21409,13 +22001,10 @@ To make this the starting permission level for new sessions, change the [{0}](co
       <source xml:lang="en">Models routed via auto receive a {0}% discount.</source>
     </trans-unit>
     <trans-unit id="autoModel.fusionDescription">
-      <source xml:lang="en">Fusion routes based on your task and real-time system health and model performance.</source>
+      <source xml:lang="en">Copilot Fusion chooses models and workflows based on your task.</source>
     </trans-unit>
-    <trans-unit id="autoModel.fusionDiscount">
-      <source xml:lang="en">Models routed via Fusion receive a {0}% discount.</source>
-    </trans-unit>
-    <trans-unit id="autoModel.fusionTierDiscount">
-      <source xml:lang="en">Models routed via Fusion {0} receive a {1}% discount.</source>
+    <trans-unit id="autoModel.fusionLearnMore">
+      <source xml:lang="en">[Learn more]({0})</source>
     </trans-unit>
     <trans-unit id="autoModel.learnMore">
       <source xml:lang="en">[Learn More]({0})</source>
@@ -21434,9 +22023,6 @@ To make this the starting permission level for new sessions, change the [{0}](co
     </trans-unit>
     <trans-unit id="chat.promo.endsAt">
       <source xml:lang="en">Ends {0}.</source>
-    </trans-unit>
-    <trans-unit id="chat.promo.startsAt">
-      <source xml:lang="en">Starts {0}.</source>
     </trans-unit>
     <trans-unit id="chat.providerDeprecation.install">
       <source xml:lang="en">Install Extension</source>
@@ -22079,6 +22665,27 @@ Example: `['src/**/*.ts', 'test/**']`</source>
     <trans-unit id="githubCopilot.search">
       <source xml:lang="en">Search files</source>
     </trans-unit>
+    <trans-unit id="promptBody.githubCopilot.configDir">
+      <source xml:lang="en">Copilot configuration directory.</source>
+    </trans-unit>
+    <trans-unit id="promptBody.githubCopilot.cwd">
+      <source xml:lang="en">Current working directory.</source>
+    </trans-unit>
+    <trans-unit id="promptBody.githubCopilot.globToolName">
+      <source xml:lang="en">Effective file-globbing tool name.</source>
+    </trans-unit>
+    <trans-unit id="promptBody.githubCopilot.grepToolName">
+      <source xml:lang="en">Effective file-content search tool name.</source>
+    </trans-unit>
+    <trans-unit id="promptBody.githubCopilot.homedir">
+      <source xml:lang="en">User's home directory.</source>
+    </trans-unit>
+    <trans-unit id="promptBody.githubCopilot.shellCommandExamples">
+      <source xml:lang="en">Shell-appropriate command examples.</source>
+    </trans-unit>
+    <trans-unit id="promptBody.githubCopilot.shellToolName">
+      <source xml:lang="en">Effective shell tool name.</source>
+    </trans-unit>
     <trans-unit id="promptHeader.agent.advancedOptions">
       <source xml:lang="en">Advanced options for custom agent behavior.</source>
     </trans-unit>
@@ -22319,8 +22926,25 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="modelVendor">
       <source xml:lang="en">- Vendor: {0}</source>
     </trans-unit>
+    <trans-unit id="promptBody.githubCopilot.fileReferenceUnsupported">
+      <source xml:lang="en">Local `#file:` references are not expanded by the GitHub Copilot harness.</source>
+    </trans-unit>
+    <trans-unit id="promptBody.githubCopilot.localReferenceUnsupported">
+      <source xml:lang="en">Local `#tool:` references are not expanded by the GitHub Copilot harness.</source>
+    </trans-unit>
+    <trans-unit id="promptBody.githubCopilot.toolSetUnsupported">
+      <source xml:lang="en">Tool sets are not supported by the GitHub Copilot harness. List individual tools in the `tools` frontmatter attribute.</source>
+    </trans-unit>
+    <trans-unit id="promptBody.githubCopilot.unknownPlaceholder">
+      <source xml:lang="en">This placeholder is not recognized by the GitHub Copilot harness.</source>
+    </trans-unit>
     <trans-unit id="promptHeader.agent.handoffs.githubCopilot">
       <source xml:lang="en">Note: This attribute is not used in GitHub Copilot or Claude targets.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.agent.reasoningEffort.supportedModels">
+      <source xml:lang="en">{0}
+
+Supported by: {1}.</source>
     </trans-unit>
     <trans-unit id="promptHeader.attribute.allowedValues.hover">
       <source xml:lang="en">{0}
@@ -22654,8 +23278,23 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.contextForkNotSupported">
       <source xml:lang="en">The 'context: fork' attribute requires the skill tool to be enabled (github.copilot.chat.skillTool.enabled).</source>
     </trans-unit>
+    <trans-unit id="promptValidator.copilotFileReferenceUnsupported">
+      <source xml:lang="en">Local '#file:' references are not expanded by the GitHub Copilot harness.</source>
+    </trans-unit>
     <trans-unit id="promptValidator.copilotInferLegacy">
       <source xml:lang="en">The 'infer' attribute is legacy. Use 'disable-model-invocation' instead.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.copilotModelUnavailable">
+      <source xml:lang="en">Model '{0}' is not available for the GitHub Copilot harness.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.copilotReasoningEffortUnavailable">
+      <source xml:lang="en">Reasoning effort '{0}' is not supported by the selected model.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.copilotToolReferenceUnsupported">
+      <source xml:lang="en">Local '#tool:' reference '{0}' is not expanded by the GitHub Copilot harness.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.copilotToolSetReferenceUnsupported">
+      <source xml:lang="en">Tool set '{0}' is not supported by the GitHub Copilot harness. List individual tools in the 'tools' frontmatter attribute.</source>
     </trans-unit>
     <trans-unit id="promptValidator.deprecatedVariableReference">
       <source xml:lang="en">Tool or toolset '{0}' has been renamed, use '{1}' instead.</source>
@@ -22980,6 +23619,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownAttribute.vscode-agent">
       <source xml:lang="en">Attribute '{0}' is not supported in VS Code agent files. Supported: {1}.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.unknownCopilotPlaceholder">
+      <source xml:lang="en">Unknown GitHub Copilot placeholder '{{{0}}}'.</source>
     </trans-unit>
     <trans-unit id="promptValidator.unknownExtensionReference">
       <source xml:lang="en">Unknown extension tool '{0}'. It is likely to be a missing extension, please ensure it is installed and enabled.</source>
@@ -23412,6 +24054,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/voiceClient/voiceLiveInputRouter" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="voice.live.approvalReply">
+      <source xml:lang="en">Please approve or reject by voice, or use the controls in chat.</source>
+    </trans-unit>
     <trans-unit id="voice.live.chooseAnswer">
       <source xml:lang="en">Please say an exact choice or its number. {0}</source>
     </trans-unit>
@@ -23421,11 +24066,17 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="voice.live.emptyReply">
       <source xml:lang="en">I did not receive a voice reply. Please try again in the intended chat input.</source>
     </trans-unit>
+    <trans-unit id="voice.live.englishApprovalReply">
+      <source xml:lang="en">Please approve or reject in English, or use the controls in chat.</source>
+    </trans-unit>
     <trans-unit id="voice.live.explicitApproval">
       <source xml:lang="en">Please say approve or reject for this prompt, or respond in the chat input.</source>
     </trans-unit>
     <trans-unit id="voice.live.questionPrompt">
       <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+    <trans-unit id="voice.live.questionReply">
+      <source xml:lang="en">Please answer by voice, or use the controls in chat.</source>
     </trans-unit>
     <trans-unit id="voice.live.skipNotAllowed">
       <source xml:lang="en">This form cannot be skipped. Please answer its questions or respond in the chat input.</source>
@@ -23435,9 +24086,6 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="voice.live.unsupportedPrompt">
       <source xml:lang="en">This prompt cannot be answered by voice. Please respond in the chat input.</source>
-    </trans-unit>
-    <trans-unit id="voice.live.unsupportedPromptLanguage">
-      <source xml:lang="en">This prompt cannot be safely answered by voice in the selected language. Please respond in the chat input.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/widget/chatColors" source-language="en" datatype="plaintext"><body>
@@ -23520,13 +24168,16 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
       <source xml:lang="en">Shimmer highlight for thinking/working labels.</source>
     </trans-unit>
     <trans-unit id="chat.voiceGlowBaseColor">
-      <source xml:lang="en">Base accent the Voice Mode ambient glow is derived from. The listening and speaking glows are hue-shifted from this color.</source>
+      <source xml:lang="en">Base accent for the connected Voice Mode ambient glow.</source>
     </trans-unit>
     <trans-unit id="chat.voiceListeningGlow">
-      <source xml:lang="en">Accent color of the Voice Mode glow while listening. Derived from {0} when unset.</source>
+      <source xml:lang="en">Accent color of the Voice Mode glow while connected, including listening and speaking. Derived from {0} when unset.</source>
     </trans-unit>
     <trans-unit id="chat.voiceSpeakingGlow">
-      <source xml:lang="en">Accent color of the Voice Mode glow while the agent is speaking. Derived from {0} when unset.</source>
+      <source xml:lang="en">Unused speaking accent color.</source>
+    </trans-unit>
+    <trans-unit id="chat.voiceSpeakingGlow.deprecated">
+      <source xml:lang="en">This color is no longer used. Use 'chat.voiceListeningGlow' to customize the connected Voice Mode glow.</source>
     </trans-unit>
     <trans-unit id="chat.workingProgressInsidersIconForeground">
       <source xml:lang="en">Foreground color of the Insiders VS Code icon in the chat working progress indicator.</source>

@@ -1,6 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/extensions/browser/agentsWindowExtensionsAccessibilityHelp" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindowExtensions.help.groups">
+      <source xml:lang="en">Extensions that support the Agents window are listed under Supported and are enabled by default. Other extensions are listed under Other Extensions and are disabled by default because they might not work as expected.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.help.navigation">
+      <source xml:lang="en">Use the search box to filter extensions by name, identifier, publisher, or description. Press Tab to move to the list, use the Up and Down Arrow keys to move between extensions, and press Space or Enter to enable or disable the focused extension. Use the Left and Right Arrow keys on a group to collapse or expand it.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.help.overview">
+      <source xml:lang="en">You are in the Extensions section of Agent Customizations. It lists the extensions installed in VS Code and whether each one runs in the Agents window. Enabling or disabling an extension here only affects the Agents window.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.help.restart">
+      <source xml:lang="en">When a change requires restarting extensions or reloading the window, the extension is marked as requiring a restart and a Restart Extensions or Reload Window button appears next to the section title.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/extensions/browser/agentsWindowExtensionsWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindowExtensions.description">
+      <source xml:lang="en">Choose which installed extensions run in the Agents window. Extensions that haven't declared support for the Agents window are disabled by default and might not work as expected. Changes only apply to the Agents window.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.disabled">
+      <source xml:lang="en">Disabled</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.disabledStatus">
+      <source xml:lang="en">{0} disabled in the Agents window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.empty">
+      <source xml:lang="en">No extensions installed</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.emptyHint">
+      <source xml:lang="en">Extensions you install in VS Code appear here.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.enabled">
+      <source xml:lang="en">Enabled</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.enabledStatus">
+      <source xml:lang="en">{0} enabled in the Agents window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.groupAriaLabel">
+      <source xml:lang="en">{0}, {1} extensions. {2}</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.noMatches">
+      <source xml:lang="en">No extensions match '{0}'</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.noMatchesHint">
+      <source xml:lang="en">Try a different search term.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.otherGroup">
+      <source xml:lang="en">Other Extensions</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.otherGroupDescription">
+      <source xml:lang="en">Extensions that haven't declared support for the Agents window. They are disabled by default and might not work as expected.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.reloadRequired">
+      <source xml:lang="en">Reload Required</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.reloadWindow">
+      <source xml:lang="en">Reload Window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.restartExtensions">
+      <source xml:lang="en">Restart Extensions</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.restartRequired">
+      <source xml:lang="en">Restart Required</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.rowAriaLabel">
+      <source xml:lang="en">{0}, {1}, {2}</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.rowAriaLabelWithRuntimeState">
+      <source xml:lang="en">{0}, {1}, {2}, {3}</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.searchAriaLabel">
+      <source xml:lang="en">Search extensions</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.searchAriaLabelWithHelp">
+      <source xml:lang="en">Search extensions. Use {0} for accessibility help.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.searchPlaceholder">
+      <source xml:lang="en">Type to search...</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.supportedGroup">
+      <source xml:lang="en">Supported</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.supportedGroupDescription">
+      <source xml:lang="en">Extensions that support the Agents window. They are enabled by default.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.title">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.toggle">
+      <source xml:lang="en">Run {0} in the Agents window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.toggleUnavailable">
+      <source xml:lang="en">{0} cannot be enabled or disabled in the Agents window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.treeAriaLabel">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/extensions/browser/extensions.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindowExtensions.navigationDescription">
+      <source xml:lang="en">Choose which installed extensions run in the Agents window.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.navigationLabel">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="extensions.experimental.agentsWindowManagement">
+      <source xml:lang="en">When enabled, you can choose which installed extensions run in the Agents window from the Extensions section of Agent Customizations. When disabled, extensions that don't support the Agents window stay disabled there, and your previous choices are kept but ignored.</source>
+    </trans-unit>
     <trans-unit id="extensions.experimental.enableAgentsWindowCapability">
       <source xml:lang="en">When enabled, non-built-in extensions can declare whether they support running in the Agents window. Built-in extensions can declare support without enabling this setting.</source>
     </trans-unit>

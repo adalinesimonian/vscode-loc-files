@@ -359,8 +359,14 @@ A keybinding</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/browser/agentHostProtocolClient" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.createChatWorkspaceUnsupported">
+      <source xml:lang="en">This agent host can't create a chat in its own workspace.</source>
+    </trans-unit>
     <trans-unit id="agentHost.reconnectTimedOut">
       <source xml:lang="en">Automatic reconnect timed out after {0}ms.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.setChatWorkspaceUnsupported">
+      <source xml:lang="en">This agent host can't move a chat into its own workspace.</source>
     </trans-unit>
     <trans-unit id="agentHost.trustWorkspaceMessage">
       <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
@@ -597,6 +603,12 @@ Close this dialog to apply the change with your next message after the current t
     <trans-unit id="agentHost.config.ahpJsonlLogging.title">
       <source xml:lang="en">AHP Transport Logging</source>
     </trans-unit>
+    <trans-unit id="agentHost.config.artifactIntegrations.description">
+      <source xml:lang="en">Enables live artifact state, actions, and opt-in automation instead of Agent Merge. Saved automation choices are preserved when switching.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.artifactIntegrations.title">
+      <source xml:lang="en">Artifact Integrations</source>
+    </trans-unit>
     <trans-unit id="agentHost.config.artifactTools.description">
       <source xml:lang="en">Whether agents can record artifacts — pull requests, issues, commits, websites, files and other resources — with the artifact tools.</source>
     </trans-unit>
@@ -692,6 +704,15 @@ Close this dialog to apply the change with your next message after the current t
     </trans-unit>
     <trans-unit id="agentHost.config.editTelemetryEnabled.title">
       <source xml:lang="en">Edit Telemetry</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.githubArtifactIgnoredChecks.description">
+      <source xml:lang="en">Check-name patterns that do not need to pass before a pull request artifact is automatically marked ready.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.githubArtifactIgnoredChecks.item">
+      <source xml:lang="en">Check Name Pattern</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.githubArtifactIgnoredChecks.title">
+      <source xml:lang="en">Checks Excluded from Automatic Mark Ready</source>
     </trans-unit>
     <trans-unit id="agentHost.config.githubMcpServerEnabled.description">
       <source xml:lang="en">Whether agent sessions include a GitHub MCP server by default.</source>
@@ -1065,7 +1086,7 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">When enabled, agents receive guidance for using rich links to issues, pull requests, commits, sessions, and chats, plus running task markers, when creating or editing Markdown plan documents.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.experimental.mcpToolRouting">
-      <source xml:lang="en">When enabled, agent-host sessions use cached MCP tool metadata to route requests and only prompt for MCP authentication when a server is relevant. Newly created sessions pick up changes to this setting.</source>
+      <source xml:lang="en">When enabled and tool search is available, agent-host sessions use cached MCP tool metadata to route requests and only prompt for MCP authentication when a server is relevant. Routing tools wait for the selected server's tools to become available. Servers without routing tools retain proactive sign-in hints. Newly created sessions pick up changes to this setting.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.experimental.overlapProviderPreparation">
       <source xml:lang="en">When enabled, agents prepare their session for a new turn, such as starting the runtime session, while the turn-start checkpoint is captured instead of after it. This can shorten the time to the first response, especially on the first turn of a session.</source>
@@ -1075,9 +1096,6 @@ Close this dialog to apply the change with your next message after the current t
     </trans-unit>
     <trans-unit id="chat.agentHost.githubMcpServer.enabled">
       <source xml:lang="en">When enabled, agent-host sessions include the GitHub MCP server.</source>
-    </trans-unit>
-    <trans-unit id="chat.agentHost.moveChats.confirmDragAndDrop">
-      <source xml:lang="en">Controls whether the Agents window asks for confirmation before moving a chat or session to another session or into a new session via drag and drop. Reordering chats within a session is never confirmed.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.moveChats.enabled">
       <source xml:lang="en">Enables moving chats between Agent Host sessions and into new sessions.</source>
@@ -1161,7 +1179,7 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">Controls whether enabled Agent Merge sessions address unresolved review threads, changes-requested reviews, and new pull request comments from repository maintainers or the Copilot pull request reviewer.</source>
     </trans-unit>
     <trans-unit id="chat.agentMerge.enabled">
-      <source xml:lang="en">Enables the experimental Agent Merge controller and its commands. Agent Merge can monitor an agent session's pull request, ask the agent to address selected blockers, and optionally merge the pull request when it is ready.</source>
+      <source xml:lang="en">Enables the experimental Agent Merge controller and its commands. Agent Merge can monitor an agent session's pull request, ask the agent to address selected blockers, and optionally merge the pull request when it is ready. It is paused while `#chat.artifactIntegrations.enabled#` is enabled; its saved choices are preserved.</source>
     </trans-unit>
     <trans-unit id="chat.agentMerge.fixCI">
       <source xml:lang="en">Controls whether enabled Agent Merge sessions ask the agent to fix failed required CI checks.</source>
@@ -1411,9 +1429,65 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">Context Size</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/common/artifactIntegrationChat" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactCancelDisconnected">
+      <source xml:lang="en">Reconnect before cancelling this artifact prompt.</source>
+    </trans-unit>
+    <trans-unit id="artifactCancelUnavailable">
+      <source xml:lang="en">The artifact's chat is unavailable; cancellation could not be confirmed.</source>
+    </trans-unit>
+    <trans-unit id="artifactCancelUncertain">
+      <source xml:lang="en">The artifact prompt could not be located. Cancellation is not confirmed.</source>
+    </trans-unit>
+    <trans-unit id="artifactChatLoading">
+      <source xml:lang="en">Loading the artifact's chat.</source>
+    </trans-unit>
+    <trans-unit id="artifactChatNotWritable">
+      <source xml:lang="en">The artifact action is no longer authorized or its chat is not writable.</source>
+    </trans-unit>
+    <trans-unit id="artifactChatReadOnly">
+      <source xml:lang="en">The artifact's chat is not writable.</source>
+    </trans-unit>
+    <trans-unit id="artifactChatUnavailable">
+      <source xml:lang="en">The artifact's chat is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="artifactPromptCancelled">
+      <source xml:lang="en">The artifact prompt was cancelled.</source>
+    </trans-unit>
+    <trans-unit id="artifactPromptChatLoading">
+      <source xml:lang="en">Waiting for the artifact's chat state.</source>
+    </trans-unit>
+    <trans-unit id="artifactPromptCompleted">
+      <source xml:lang="en">The artifact prompt's turn completed.</source>
+    </trans-unit>
+    <trans-unit id="artifactPromptFailed">
+      <source xml:lang="en">The artifact prompt's turn failed.</source>
+    </trans-unit>
+    <trans-unit id="artifactPromptMissing">
+      <source xml:lang="en">This artifact prompt is no longer pending, but its turn could not be found.</source>
+    </trans-unit>
+    <trans-unit id="artifactPromptReconnecting">
+      <source xml:lang="en">Waiting to reconnect to the artifact's agent host.</source>
+    </trans-unit>
+    <trans-unit id="artifactPromptUncertain">
+      <source xml:lang="en">The backend cannot determine whether this artifact prompt was delivered. It will not be resent automatically.</source>
+    </trans-unit>
+    <trans-unit id="artifactQueuedPromptCancelled">
+      <source xml:lang="en">The queued artifact prompt was cancelled.</source>
+    </trans-unit>
+    <trans-unit id="artifactRecoveryDisconnected">
+      <source xml:lang="en">Reconnect to determine whether this artifact prompt was delivered.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/common/artifactToolsConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.artifactIntegrations.enabled">
+      <source xml:lang="en">Enables live state, actions, and opt-in Autopilot for recorded artifacts, including extension integrations. While enabled, Agent Merge is unavailable regardless of `#chat.agentMerge.enabled#`. Switching stops the previous system's automation without clearing saved choices or history. Previously enabled rules can resume when switching back. This does not enable new Autopilot rules or change ordinary artifact recording (`#chat.artifactTools.enabled#`).</source>
+    </trans-unit>
     <trans-unit id="chat.artifactTools.enabled">
       <source xml:lang="en">When enabled, agents can record artifacts — pull requests, issues, commits, websites, files and other resources — which are surfaced above the chat input.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.ignoredChecks.setting">
+      <source xml:lang="en">Check names that do not need to pass before **Automatically Mark Ready** runs for a pull request artifact. Matching is case-sensitive; `*` matches any text, and other characters are literal. These checks remain visible, are still repaired by **Fix CI**, and must still pass for automatic merging. This setting does not enable automation.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/autoModeTiers" source-language="en" datatype="plaintext"><body>
@@ -1591,18 +1665,6 @@ Close this dialog to apply the change with your next message after the current t
     </trans-unit>
     <trans-unit id="agentHost.config.exploreAgent.title">
       <source xml:lang="en">Explore Agent</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.fusion.description">
-      <source xml:lang="en">When enabled, Auto is presented as Fusion, optimizing for Standard, High, or Max.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.fusion.title">
-      <source xml:lang="en">Fusion</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.fusionHighUsesHydraFusion.description">
-      <source xml:lang="en">When enabled together with Fusion and HydraFusion, Fusion's High tier uses HydraFusion.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.fusionHighUsesHydraFusion.title">
-      <source xml:lang="en">Fusion High Uses HydraFusion</source>
     </trans-unit>
     <trans-unit id="agentHost.config.hydraFusion.description">
       <source xml:lang="en">When enabled, Copilot SDK sessions can use the experimental HydraFusion model.</source>
@@ -1817,12 +1879,50 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">Set permissions to bypass approvals</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/platform/agentHost/common/fusionConfiguration" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/platform/agentHost/common/dynamicAutoTiersConfiguration" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.copilot.dynamicAutoTiers.enabled">
-      <source xml:lang="en">When enabled, Auto's "Optimize for" tiers in Copilot Agent Host sessions come from the Copilot service, which can include HydraFusion, instead of the built-in list. Changing this setting restarts the Copilot runtime after active turns finish.</source>
+      <source xml:lang="en">When enabled, Copilot Agent Host sessions take Auto's tiers from the Copilot service and, when it provides them, present Auto as Copilot Fusion, which can offer HydraFusion and HydraFusion Max as its tiers. When disabled, or when the service provides no tiers, Auto and HydraFusion are offered as separate models, with HydraFusion controlled by `#{0}#`. Changing this setting restarts the Copilot runtime after active turns finish.</source>
     </trans-unit>
-    <trans-unit id="chat.copilot.ensemble.enabled">
-      <source xml:lang="en">When enabled, Copilot Agent Host sessions present Auto as Fusion, which optimizes for Standard, High, or Max. Max uses HydraFusion Max, so Fusion uses HydraFusion v2 unless `#{0}#` is off. Changing this setting can restart the Copilot runtime.</source>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/githubPullRequestArtifact" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="prArtifact.autoCI">
+      <source xml:lang="en">Automatically Fix CI</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.autoCI.description">
+      <source xml:lang="en">Repair any failing check, including optional checks, then commit and push the repairs.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.autoConflicts">
+      <source xml:lang="en">Automatically Update Branch</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.autoConflicts.description">
+      <source xml:lang="en">Resolve merge conflicts or update a behind branch, then commit and push the changes.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.autoMerge">
+      <source xml:lang="en">Merge Automatically When Ready</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.autoMerge.description">
+      <source xml:lang="en">Merge when every check passes, qualifying review threads are resolved, and GitHub permits it.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.autoReady">
+      <source xml:lang="en">Automatically Mark Ready</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.autoReady.description">
+      <source xml:lang="en">Mark the draft ready when checks pass and no qualifying unresolved review threads remain. The check-exclusion setting applies only to this action.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.autoReviews">
+      <source xml:lang="en">Automatically Address Reviews</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.autoReviews.description">
+      <source xml:lang="en">Address unresolved review threads from repository collaborators and Copilot, then commit and push the repairs.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.mergeAlways">
+      <source xml:lang="en">Always</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.mergeOff">
+      <source xml:lang="en">Off</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.mergeUnchanged">
+      <source xml:lang="en">When No Changes Were Made</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/imageGenerationConfiguration" source-language="en" datatype="plaintext"><body>
@@ -2988,9 +3088,6 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.changeset.acceptChanges.renamed">
       <source xml:lang="en">Changes to a renamed file can't be accepted.</source>
     </trans-unit>
-    <trans-unit id="agentHost.changeset.acceptChanges.turnInProgress">
-      <source xml:lang="en">Changes can't be accepted while a turn is running.</source>
-    </trans-unit>
     <trans-unit id="agentHost.changeset.acceptChanges.wholeFileOnly">
       <source xml:lang="en">Changes to '{0}' can only be accepted for the whole file.</source>
     </trans-unit>
@@ -3182,6 +3279,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="agentHost.changeset.discardWorkingSetChanges.discardedRange">
       <source xml:lang="en">Discarded the changes to `{0}` in the given range.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.changeset.discardWorkingSetChanges.editInProgress">
+      <source xml:lang="en">The agent is still editing '{0}'. Try again once it has finished.</source>
     </trans-unit>
     <trans-unit id="agentHost.changeset.discardWorkingSetChanges.multiRoot">
       <source xml:lang="en">Changes that have not been accepted can't be discarded in a session with more than one folder.</source>
@@ -3463,6 +3563,12 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.cannotCancelWorkspaceChange">
       <source xml:lang="en">Cannot cancel while the workspace is changing.</source>
     </trans-unit>
+    <trans-unit id="agentHost.cannotQueueChatWorkspaceChange">
+      <source xml:lang="en">Cannot send a message while the chat's workspace is changing.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.cannotStartTurnChatWorkspaceChange">
+      <source xml:lang="en">Cannot send a message while the chat's workspace is changing.</source>
+    </trans-unit>
     <trans-unit id="agentHost.cannotStartTurnWorkspaceChange">
       <source xml:lang="en">Cannot send a message while the workspace is changing.</source>
     </trans-unit>
@@ -3490,6 +3596,9 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="agentHost.sessionArchivedWhilePreparingChat">
       <source xml:lang="en">The session was archived while preparing the new chat. Unarchive it before trying again.</source>
     </trans-unit>
+    <trans-unit id="agentHost.worktreeBaseBranchMissing">
+      <source xml:lang="en">Branch '{0}' does not exist in {1}.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentServiceComposition" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.chatIsolationClientRequired">
@@ -3505,6 +3614,194 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="agentHost.toolResultDeniedMessage">
       <source xml:lang="en">The user denied the tool result.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/artifactIntegrations/agentHostArtifactRuntime" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactHostChatMissing">
+      <source xml:lang="en">The artifact's chat is unavailable; its prompt outcome cannot be confirmed.</source>
+    </trans-unit>
+    <trans-unit id="artifactHostChatMoved">
+      <source xml:lang="en">The artifact's chat no longer belongs to this session.</source>
+    </trans-unit>
+    <trans-unit id="artifactHostSessionMissing">
+      <source xml:lang="en">The artifact's session is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegrationsDisabled">
+      <source xml:lang="en">Artifact integrations are disabled on this host.</source>
+    </trans-unit>
+    <trans-unit id="artifactNoticeChatMissing">
+      <source xml:lang="en">The chat for this artifact automation notice is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="artifactWorkspaceExecutionUnavailable">
+      <source xml:lang="en">This runtime does not yet provide a workspace execution lease for artifact actions.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/artifactIntegrations/githubPullRequestArtifactIntegration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="prArtifact.accountChanged">
+      <source xml:lang="en">The GitHub account or host changed while loading this pull request.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.accountHost">
+      <source xml:lang="en">The GitHub account does not belong to this pull request's host.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.addressReviews">
+      <source xml:lang="en">Address Comments</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.authenticationRequired">
+      <source xml:lang="en">Sign in to GitHub to see the state of this pull request.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.authorizationChanged">
+      <source xml:lang="en">The action's authorization changed before it could run.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.automationUnavailable">
+      <source xml:lang="en">This automation requires an available, open pull request.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.cannotMerge">
+      <source xml:lang="en">GitHub has not confirmed that this pull request can be merged, or it is already queued for merging.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.chatMismatch">
+      <source xml:lang="en">The repair chat no longer belongs to this artifact's session.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.checkingCheckout">
+      <source xml:lang="en">Checking the pull request's checkout.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.checkoutChanged">
+      <source xml:lang="en">The checkout changed while the pull request repair was being prepared.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.checks">
+      <source xml:lang="en">Checks</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.checksDescription">
+      <source xml:lang="en">Shows required and optional CI checks for the current pull request revision, ordered by running, failing, skipped, then passed.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.checksSummary">
+      <source xml:lang="en">{0} of {1} checks passed; {2} failed.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.checksSummaryWithSkipped">
+      <source xml:lang="en">{0} of {1} checks passed; {2} failed; {3} skipped.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.checksTitle">
+      <source xml:lang="en">Checks ({0}/{1})</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.closed">
+      <source xml:lang="en">Closed</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.comments">
+      <source xml:lang="en">Comments</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.commentsDescription">
+      <source xml:lang="en">Shows unresolved review comments from repository contributors with owner, member, or collaborator access, and from Copilot.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.commentsSummary">
+      <source xml:lang="en">{0} unresolved review threads.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.commentsTitle">
+      <source xml:lang="en">Comments ({0})</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.detailsDescriptionPage">
+      <source xml:lang="en">{0}
+Showing {1}-{2} of {3}.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.detailsStale">
+      <source xml:lang="en">Showing the last known state while refreshing.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.dirtyCheckout">
+      <source xml:lang="en">Automatic merging requires a clean, unchanged checkout.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.draft">
+      <source xml:lang="en">Draft pull request</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.enqueued">
+      <source xml:lang="en">Pull request added to the merge queue.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.fixCI">
+      <source xml:lang="en">Fix Checks</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.hostChanged">
+      <source xml:lang="en">The GitHub host changed while loading this pull request.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.integration">
+      <source xml:lang="en">GitHub Pull Request</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.loading">
+      <source xml:lang="en">Loading pull request.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.markReady">
+      <source xml:lang="en">Mark Ready</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.markedReady">
+      <source xml:lang="en">Pull request marked ready for review.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.merge">
+      <source xml:lang="en">Merge</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.mergeChanged">
+      <source xml:lang="en">GitHub's merge requirements changed.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.mergeCompleted">
+      <source xml:lang="en">Pull request merged.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.mergeDisabled">
+      <source xml:lang="en">Automatic merging was turned off because the repair checkout changed or could no longer be verified. Review it before enabling automatic merging again.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.merged">
+      <source xml:lang="en">Merged</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.missingId">
+      <source xml:lang="en">GitHub did not provide the pull request's identity.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.noCheckout">
+      <source xml:lang="en">A verifiable Git checkout is required for this pull request repair.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.noMergeMethod">
+      <source xml:lang="en">The repository does not allow a supported merge method.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.notApplicable">
+      <source xml:lang="en">This action is not currently applicable, or its state is still loading.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.open">
+      <source xml:lang="en">Open pull request</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.originMissing">
+      <source xml:lang="en">The chat that originally recorded this artifact is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.reconciled">
+      <source xml:lang="en">GitHub confirmed the pull request action's result.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.repairsChanged">
+      <source xml:lang="en">The checkout changed or could not be verified. Review it before enabling automatic merging again.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.reviewThread">
+      <source xml:lang="en">Review thread</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.settingsChanged">
+      <source xml:lang="en">The pull request's workspace settings need to be refreshed before automatically marking it ready.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.settingsPending">
+      <source xml:lang="en">Waiting for this artifact's workspace settings.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.ssoRequired">
+      <source xml:lang="en">Authorize your GitHub account for {0}'s single sign-on to see the state of this pull request.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.stale">
+      <source xml:lang="en">Pull request state is being refreshed. Actions are paused.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.stateChanged">
+      <source xml:lang="en">The pull request changed before the action could run.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.terminal">
+      <source xml:lang="en">This pull request is closed or merged.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.uncertain">
+      <source xml:lang="en">GitHub has not confirmed this action's outcome. It will not be repeated automatically.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.updateBranch">
+      <source xml:lang="en">Resolve Conflicts / Update Branch</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.waiting">
+      <source xml:lang="en">Waiting for current pull request state.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.wrongCheckout">
+      <source xml:lang="en">The chat must already have {0} checked out on branch {1}. Branches will not be switched automatically.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/chatContributions/pullRequest/pullRequestChatContribution" source-language="en" datatype="plaintext"><body>
@@ -4260,6 +4557,9 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="copilot.modelThinkingLevel.title">
       <source xml:lang="en">Effort Level</source>
     </trans-unit>
+    <trans-unit id="copilot.retryManagedPlugins.chatNotActive">
+      <source xml:lang="en">This chat is not active. Send a message in it, then try again.</source>
+    </trans-unit>
     <trans-unit id="copilot.runtimeModelConfiguration">
       <source xml:lang="en">Runtime Model Configuration</source>
     </trans-unit>
@@ -4276,7 +4576,7 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">Copilot SDK agent running in the local agent host process</source>
     </trans-unit>
     <trans-unit id="copilotAgent.fusionModelName">
-      <source xml:lang="en">Fusion</source>
+      <source xml:lang="en">Copilot Fusion</source>
     </trans-unit>
     <trans-unit id="copilotAgent.fusionTier.title">
       <source xml:lang="en">Effort Level</source>
@@ -4415,6 +4715,29 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilot.builtinAsk.name">
       <source xml:lang="en">Ask</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotComputerUsePermissionSetup" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="computerUse.error.notWaiting">
+      <source xml:lang="en">Copilot is no longer waiting for this setup. Ask Copilot to try again when you're ready.</source>
+    </trans-unit>
+    <trans-unit id="computerUse.error.stillNotGranted.both">
+      <source xml:lang="en">macOS still reports {0} and {1} as off.</source>
+    </trans-unit>
+    <trans-unit id="computerUse.error.stillNotGranted.one">
+      <source xml:lang="en">macOS still reports {0} as off.</source>
+    </trans-unit>
+    <trans-unit id="computerUse.error.unconfirmed">
+      <source xml:lang="en">Copilot Computer Use stopped before confirming the permissions. If Copilot still can't use apps, ask it to try again.</source>
+    </trans-unit>
+    <trans-unit id="computerUse.error.unsupportedPrompt">
+      <source xml:lang="en">Copilot Computer Use asked for permissions in a way this setup doesn't support. Answer its request in the chat instead.</source>
+    </trans-unit>
+    <trans-unit id="computerUse.permission.accessibility">
+      <source xml:lang="en">Accessibility</source>
+    </trans-unit>
+    <trans-unit id="computerUse.permission.screenRecording">
+      <source xml:lang="en">Screen Recording</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotCustomizationCommandDisplay" source-language="en" datatype="plaintext"><body>
@@ -5278,6 +5601,9 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/customizations/copilotCustomizationInstallations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.customizationFeed.installUnavailable">
+      <source xml:lang="en">The SDK cannot install this customization in the selected session.</source>
+    </trans-unit>
     <trans-unit id="copilot.customizationInstallation.catalogChanged">
       <source xml:lang="en">The SDK catalog no longer contains this exact customization. Refresh Browse and try again.</source>
     </trans-unit>
@@ -5322,6 +5648,15 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="copilot.customizationInstallation.notFound">
       <source xml:lang="en">The SDK no longer owns this customization installation.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.pluginIdentityUnavailable">
+      <source xml:lang="en">The SDK installed the plugin without returning its verified installation identity.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.pluginPlanFailed">
+      <source xml:lang="en">The SDK could not prepare this plugin installation.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.pluginUnsupported">
+      <source xml:lang="en">The SDK does not support installing catalog plugins.</source>
     </trans-unit>
     <trans-unit id="copilot.customizationInstallation.resultErrorDetail">
       <source xml:lang="en">{0} ({1})</source>
@@ -5828,6 +6163,89 @@ stderr: {2}</source>
       <source xml:lang="en">Failed to update Agent Merge</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/shared/artifactIntegrationServerTools" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactIntegration.tool.disable">
+      <source xml:lang="en">Disable Artifact Automation</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.disable.complete">
+      <source xml:lang="en">Turned off artifact automation</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.disable.failed">
+      <source xml:lang="en">Failed to turn off artifact automation</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.disable.running">
+      <source xml:lang="en">Turning off artifact automation</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.run">
+      <source xml:lang="en">Run Artifact Action</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.run.complete">
+      <source xml:lang="en">Ran {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.run.confirmationMessage">
+      <source xml:lang="en">Run "{0}" on {1}? This changes the external resource.</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.run.confirmationMessageNoArtifact">
+      <source xml:lang="en">Run "{0}"? This changes the external resource.</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.run.confirmationTitle">
+      <source xml:lang="en">Run Artifact Action?</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.run.failed">
+      <source xml:lang="en">Failed to run {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.run.running">
+      <source xml:lang="en">Running {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.run.unknownAction">
+      <source xml:lang="en">an action</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set">
+      <source xml:lang="en">Set Artifact Automation</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.change">
+      <source xml:lang="en">Change</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.complete">
+      <source xml:lang="en">Updated artifact automation</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.confirmChangeTitle">
+      <source xml:lang="en">Change automation for {0}?</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.confirmDetail">
+      <source xml:lang="en">The agent asked for this. Automation can act on this artifact after this turn without asking again. You can turn it off from the artifact at any time.</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.confirmTitle">
+      <source xml:lang="en">Turn on automation for {0}?</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.failed">
+      <source xml:lang="en">Failed to update artifact automation</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.rule">
+      <source xml:lang="en">{0} ({1}):</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.running">
+      <source xml:lang="en">Updating artifact automation</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.turnOn">
+      <source xml:lang="en">Turn On</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.status">
+      <source xml:lang="en">Get Artifact Status</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.status.complete">
+      <source xml:lang="en">Read artifact status</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.status.failed">
+      <source xml:lang="en">Failed to read artifact status</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.status.running">
+      <source xml:lang="en">Reading artifact status</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/shared/pullRequestResolver" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.pullRequest.fork">
       <source xml:lang="en">Pull request #{0} comes from a fork, which is not supported yet.</source>
@@ -6268,6 +6686,11 @@ stderr: {2}</source>
       <source xml:lang="en">Waiting for the new agent host to register... ({0} seconds elapsed)</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/workingSetNonce" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.changeset.workingSet.changedSinceShown">
+      <source xml:lang="en">The changes to '{0}' were updated after they were shown. Try again.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/wslRemoteAgentHostService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="wslProgressConnecting">
       <source xml:lang="en">Connecting to agent host in {0}...</source>
@@ -6283,6 +6706,244 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="wslUnsupportedPlatform">
       <source xml:lang="en">Unsupported WSL distro platform: {0}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/artifactIntegrations/browser/artifactDetailsList" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactItemDescription">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/artifactIntegrations/browser/localArtifactIntegrationHost" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactLocalCoordinationUnavailable">
+      <source xml:lang="en">Local artifact automation requires a browser that supports cross-window execution locks.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/artifactIntegrations/common/artifactAutomationConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactAutomationCannotEnable">
+      <source xml:lang="en">{0} is unavailable and cannot be turned on.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationCannotEnableReason">
+      <source xml:lang="en">{0} cannot be turned on: {1}</source>
+    </trans-unit>
+    <trans-unit id="artifactBooleanAutomationOption">
+      <source xml:lang="en">"{0}" takes true or false.</source>
+    </trans-unit>
+    <trans-unit id="artifactEnumAutomationOption">
+      <source xml:lang="en">"{0}" takes one of: {1}.</source>
+    </trans-unit>
+    <trans-unit id="artifactUnknownAutomationOption">
+      <source xml:lang="en">Unknown automation option "{0}".</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/artifactIntegrations/common/artifactAutomationConsent" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactAttemptBudget">
+      <source xml:lang="en">At most {0} dispatched attempts per occurrence.</source>
+    </trans-unit>
+    <trans-unit id="artifactAttemptBudgetOne">
+      <source xml:lang="en">At most 1 dispatched attempt per occurrence.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationConsentMode">
+      <source xml:lang="en">Mode: {0}.</source>
+    </trans-unit>
+    <trans-unit id="artifactHostScope">
+      <source xml:lang="en">Runs on the agent host for this session. Automatic prompts go to the artifact's original chat.</source>
+    </trans-unit>
+    <trans-unit id="artifactLocalScope">
+      <source xml:lang="en">Runs on this computer while connected. Automatic prompts go to the artifact's original chat.</source>
+    </trans-unit>
+    <trans-unit id="artifactPermittedActions">
+      <source xml:lang="en">Allowed actions: {0}.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/artifactIntegrations/common/artifactExecutionService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactActionCancelled">
+      <source xml:lang="en">Artifact action cancelled.</source>
+    </trans-unit>
+    <trans-unit id="artifactActionDefinitionChanged">
+      <source xml:lang="en">This action's definition changed after it was requested. Cancel it and review the new action before requesting it again.</source>
+    </trans-unit>
+    <trans-unit id="artifactActionUnavailable">
+      <source xml:lang="en">This artifact action is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="artifactAttemptExhausted">
+      <source xml:lang="en">Turned off after one unsuccessful attempt. Review the last run before enabling this automation again.</source>
+    </trans-unit>
+    <trans-unit id="artifactAttemptsExhausted">
+      <source xml:lang="en">Turned off after {0} unsuccessful attempts. Review the last run before enabling this automation again.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationNotEnabled">
+      <source xml:lang="en">This artifact automation is not enabled with the current permissions.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationPaused">
+      <source xml:lang="en">This artifact automation is paused or its authorization has changed.</source>
+    </trans-unit>
+    <trans-unit id="artifactCancelUnknown">
+      <source xml:lang="en">This action has an unknown outcome. Reconcile it before attempting cancellation.</source>
+    </trans-unit>
+    <trans-unit id="artifactCancellationUnknown">
+      <source xml:lang="en">This action's outcome is unknown and must be reconciled before it can be cancelled.</source>
+    </trans-unit>
+    <trans-unit id="artifactCancelled">
+      <source xml:lang="en">Artifact action cancelled.</source>
+    </trans-unit>
+    <trans-unit id="artifactChatBusy">
+      <source xml:lang="en">Waiting for the artifact's chat to become available.</source>
+    </trans-unit>
+    <trans-unit id="artifactCodeInterrupted">
+      <source xml:lang="en">The artifact action was interrupted. Its external outcome must be reconciled.</source>
+    </trans-unit>
+    <trans-unit id="artifactCodeNotExecuted">
+      <source xml:lang="en">The artifact action did not execute.</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegrationUnavailable">
+      <source xml:lang="en">This artifact integration is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegrationsDisabled">
+      <source xml:lang="en">Artifact integrations are disabled.</source>
+    </trans-unit>
+    <trans-unit id="artifactOriginMissing">
+      <source xml:lang="en">The chat that originally recorded this artifact is unknown.</source>
+    </trans-unit>
+    <trans-unit id="artifactPromptNotSent">
+      <source xml:lang="en">The prompt was not submitted.</source>
+    </trans-unit>
+    <trans-unit id="artifactReconciliationRequired">
+      <source xml:lang="en">A previous attempt has an unknown outcome. Reconcile it before requesting more work.</source>
+    </trans-unit>
+    <trans-unit id="artifactRemoved">
+      <source xml:lang="en">This artifact is no longer recorded in the session.</source>
+    </trans-unit>
+    <trans-unit id="artifactResourcePending">
+      <source xml:lang="en">Another action on this resource is still running or has an unknown outcome. Wait for it or reconcile its outcome before continuing.</source>
+    </trans-unit>
+    <trans-unit id="artifactRetryNotSettled">
+      <source xml:lang="en">Only the latest reconciled, finished attempt can be retried.</source>
+    </trans-unit>
+    <trans-unit id="artifactRevokedBeforeExecution">
+      <source xml:lang="en">The artifact action was revoked before execution.</source>
+    </trans-unit>
+    <trans-unit id="artifactRuntimeUnavailable">
+      <source xml:lang="en">The artifact integration runtime is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="artifactSessionLoading">
+      <source xml:lang="en">The artifact's session is loading.</source>
+    </trans-unit>
+    <trans-unit id="artifactStateLoading">
+      <source xml:lang="en">Waiting for current artifact state.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/artifactIntegrations/common/artifactIntegration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactInvokingChatUnavailable">
+      <source xml:lang="en">This action is not available in the invoking chat.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/artifactIntegrations/common/artifactIntegrationNotices" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactAutomationAgentGrant">
+      <source xml:lang="en">Requested by the agent and confirmed by you.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationChangedNotice">
+      <source xml:lang="en">{0} updated for {1}</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationDisabledNotice">
+      <source xml:lang="en">{0} disabled for {1}</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationEnabledNotice">
+      <source xml:lang="en">{0} enabled for {1}</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationNoneRemainingNotice">
+      <source xml:lang="en">No automation rules remain enabled for this artifact integration.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationRemainingNotice">
+      <source xml:lang="en">Still enabled: {0}.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationSelectedMode">
+      <source xml:lang="en">Mode: {0}</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationStoppedNotice">
+      <source xml:lang="en">No new automatic runs will start for this rule. Pending runs will be cancelled; work already sent may still finish. Completed changes are not undone.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/artifactIntegrations/common/artifactIntegrationProtocol" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactAuthenticationUnavailable">
+      <source xml:lang="en">Sign-in is not available for this artifact.</source>
+    </trans-unit>
+    <trans-unit id="artifactSignInPending">
+      <source xml:lang="en">Sign-in is already in progress.</source>
+    </trans-unit>
+    <trans-unit id="artifactSignInUnsupported">
+      <source xml:lang="en">This client does not support signing in for artifacts.</source>
+    </trans-unit>
+    <trans-unit id="artifactTransportUnavailable">
+      <source xml:lang="en">The artifact coordinator is unavailable or restoring its subscriptions.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/artifactIntegrations/common/artifactIntegrationService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactArchived">
+      <source xml:lang="en">Artifact automation is paused while the session is archived.</source>
+    </trans-unit>
+    <trans-unit id="artifactAuthenticationUnavailable">
+      <source xml:lang="en">Sign-in is not available for this artifact.</source>
+    </trans-unit>
+    <trans-unit id="artifactCannotEnable">
+      <source xml:lang="en">This artifact automation is unavailable and cannot be enabled.</source>
+    </trans-unit>
+    <trans-unit id="artifactConsentChanged">
+      <source xml:lang="en">This automation was turned off because its definition or permitted actions changed. Review it before enabling it again.</source>
+    </trans-unit>
+    <trans-unit id="artifactCoordinatorPaused">
+      <source xml:lang="en">The artifact coordinator is unavailable. Automation is paused.</source>
+    </trans-unit>
+    <trans-unit id="artifactDetailsUnavailable">
+      <source xml:lang="en">The artifact details are unavailable.</source>
+    </trans-unit>
+    <trans-unit id="artifactIdentityChanged">
+      <source xml:lang="en">The integration runtime, account, or resource identity changed. The previous binding remains paused.</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegrationNotAvailable">
+      <source xml:lang="en">This artifact integration is not currently available.</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegrationsDisabled">
+      <source xml:lang="en">Artifact integrations are disabled.</source>
+    </trans-unit>
+    <trans-unit id="artifactInvalidDetails">
+      <source xml:lang="en">The integration supplied invalid or stale artifact details.</source>
+    </trans-unit>
+    <trans-unit id="artifactLoading">
+      <source xml:lang="en">Loading artifact integration.</source>
+    </trans-unit>
+    <trans-unit id="artifactNotFound">
+      <source xml:lang="en">The recorded artifact could not be found.</source>
+    </trans-unit>
+    <trans-unit id="artifactNoticeUnavailable">
+      <source xml:lang="en">The artifact automation notice cannot be posted because its session or runtime is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="artifactProviderActivityOnly">
+      <source xml:lang="en">This artifact integration is not currently available. Its activity is still available.</source>
+    </trans-unit>
+    <trans-unit id="artifactProviderUnavailable">
+      <source xml:lang="en">This artifact integration is not currently available. You can still turn off its automations.</source>
+    </trans-unit>
+    <trans-unit id="artifactRecordRemoved">
+      <source xml:lang="en">The artifact is no longer recorded in this session.</source>
+    </trans-unit>
+    <trans-unit id="artifactSessionUnavailable">
+      <source xml:lang="en">The artifact's session is unavailable.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/artifactIntegrations/common/artifactIntegrationStore" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactConfigurationConflict">
+      <source xml:lang="en">The artifact configuration changed. Refresh it and try again.</source>
+    </trans-unit>
+    <trans-unit id="artifactOwnershipLost">
+      <source xml:lang="en">This artifact integration runtime no longer owns execution.</source>
+    </trans-unit>
+    <trans-unit id="artifactRetryLimit">
+      <source xml:lang="en">This automation was turned off because its attempt limit was reached. Review its runs before enabling it again.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/artifactIntegrations/common/artifactRuntime" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactStorageCommitUncertain">
+      <source xml:lang="en">The artifact changes were saved, but their durability could not be confirmed. Further changes are blocked until the artifact runtime restarts.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/browserView/common/browserPermissions" source-language="en" datatype="plaintext"><body>
@@ -6572,26 +7233,6 @@ Received: '{1}'.</source>
     </trans-unit>
     <trans-unit id="contextkey.scanner.hint.didYouMean3">
       <source xml:lang="en">Did you mean {0}, {1} or {2}?</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/platform/copilotConnectors/common/copilotConnectorsRequestService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="copilotConnectors.httpError">
-      <source xml:lang="en">Copilot connectors could not complete the request (HTTP {0}).</source>
-    </trans-unit>
-    <trans-unit id="copilotConnectors.invalidJson">
-      <source xml:lang="en">Copilot connectors returned an invalid response.</source>
-    </trans-unit>
-    <trans-unit id="copilotConnectors.requestFailed">
-      <source xml:lang="en">Copilot connectors could not be reached. Check your connection and try again.</source>
-    </trans-unit>
-    <trans-unit id="copilotConnectors.responseTooLarge">
-      <source xml:lang="en">The Copilot connectors response is too large.</source>
-    </trans-unit>
-    <trans-unit id="copilotConnectors.timeout">
-      <source xml:lang="en">The Copilot connectors request timed out. Try again.</source>
-    </trans-unit>
-    <trans-unit id="copilotConnectors.unavailable">
-      <source xml:lang="en">Copilot connectors are not available in this product.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/customizationMarketplace/common/customizationMarketplaceService" source-language="en" datatype="plaintext"><body>

@@ -90,8 +90,14 @@
     <trans-unit id="inputBanner.revealChecks">
       <source xml:lang="en">Reveal</source>
     </trans-unit>
+    <trans-unit id="inputBanner.revealChecksDropdown">
+      <source xml:lang="en">Reveal Checks</source>
+    </trans-unit>
     <trans-unit id="inputBanner.revealPRComments">
       <source xml:lang="en">Reveal</source>
+    </trans-unit>
+    <trans-unit id="inputBanner.revealPRCommentsDropdown">
+      <source xml:lang="en">Reveal Comments</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessionInputBanners/browser/sessionWorktreeCleanupAccessibilityHelp" source-language="en" datatype="plaintext"><body>
@@ -102,7 +108,7 @@
       <source xml:lang="en">Activate Clean Up Worktrees to delete the selected sessions' worktrees and mark those sessions as done after confirmation. It is disabled until at least one session is selected, and its label reports how many worktrees will be cleaned up.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.filter">
-      <source xml:lang="en">Use the Untouched For selector to choose how long a session must be inactive to be eligible. Changing it re-measures storage and updates the table and summary.</source>
+      <source xml:lang="en">Use the Untouched For selector to choose how long a session must be inactive to be eligible. Choose Any time to include sessions used today, or select an inactivity period starting at one day. Active, running, needs-input, and pinned sessions remain protected. Changing the selector re-measures storage and updates the table and summary.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.overview">
       <source xml:lang="en">You are in the Worktree Cleanup editor. It lists agent session worktrees that are inactive and eligible for cleanup so you can reclaim the disk space they use. Any uncommitted changes are committed before a worktree is removed. Cleaning up a session marks it as done; you can restore the session later to recreate its worktree.</source>
@@ -120,6 +126,9 @@
   <file original="src/vs/sessions/contrib/sessionInputBanners/browser/sessionWorktreeCleanupEditor" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionWorktreeCleanup.ageLabel">
       <source xml:lang="en">Untouched for</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.anyTime">
+      <source xml:lang="en">Any time</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.autoDelete">
       <source xml:lang="en">Permanently delete automatically completed sessions after</source>
@@ -154,6 +163,9 @@
     <trans-unit id="sessionWorktreeCleanup.eligibilityDescription">
       <source xml:lang="en">Includes sessions untouched for at least {0} days that are not active, running, waiting for input, pinned, already done, untitled, or in an error state.</source>
     </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.eligibilityDescriptionAnyTime">
+      <source xml:lang="en">Includes sessions of any age that are not active, running, waiting for input, pinned, already done, untitled, or in an error state.</source>
+    </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.eligibilityInfo">
       <source xml:lang="en">Show cleanup eligibility details</source>
     </trans-unit>
@@ -174,6 +186,9 @@
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.loading">
       <source xml:lang="en">Measuring worktree storage...</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.oneDay">
+      <source xml:lang="en">1 day</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.openSession">
       <source xml:lang="en">Open {0}</source>
@@ -200,7 +215,7 @@
       <source xml:lang="en">Suggest cleaning up session storage when it grows large</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.suggestionDescription">
-      <source xml:lang="en">Checked when the Agents window opens and after sessions change, measuring disk usage at most once an hour. A suggestion appears below the Sessions list when at least {0} inactive worktrees are eligible for cleanup or eligible worktrees use at least {1}. Dismissing it hides it until the window reloads.</source>
+      <source xml:lang="en">Checked when the Agents window opens and after sessions change, measuring disk usage at most once an hour. A suggestion appears below the Sessions list when at least {0} inactive worktrees are eligible for cleanup or eligible worktrees use at least {1}. Available disk space is also checked every five minutes. If a local worktree's disk has less than 5 GB available, the same suggestion offers cleanup regardless of worktree age or count. Dismissing it hides it until the window reloads.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.suggestionInfo">
       <source xml:lang="en">Show storage cleanup suggestion details</source>
@@ -219,6 +234,9 @@
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.worktreeSummary">
       <source xml:lang="en">{0} of {1} worktrees inactive for at least {2} days can be cleaned up, reclaiming about {3}.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.worktreeSummaryAnyTime">
+      <source xml:lang="en">{0} of {1} worktrees can be cleaned up, reclaiming about {2}.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessionInputBanners/browser/sessionWorktreeCleanupEditorInput" source-language="en" datatype="plaintext"><body>
@@ -265,6 +283,9 @@
     </trans-unit>
     <trans-unit id="worktreeCleanup.nudge.descriptionOne">
       <source xml:lang="en">1 agent session worktree has been inactive for at least 15 days and can be cleaned up, reclaiming about {0}.</source>
+    </trans-unit>
+    <trans-unit id="worktreeCleanup.nudge.lowDiskSpace">
+      <source xml:lang="en">Your disk is almost full ({0} available). Clean up agent session worktrees to free up space.</source>
     </trans-unit>
 </body></file>
 </xliff>

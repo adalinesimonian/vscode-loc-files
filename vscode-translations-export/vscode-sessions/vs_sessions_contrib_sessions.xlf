@@ -55,6 +55,9 @@
     <trans-unit id="agents">
       <source xml:lang="en">Agents</source>
     </trans-unit>
+    <trans-unit id="extensions">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
     <trans-unit id="harnessSettings">
       <source xml:lang="en">Codex</source>
     </trans-unit>
@@ -662,6 +665,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsAccessibleView.title">
       <source xml:lang="en">Automations</source>
     </trans-unit>
+    <trans-unit id="automationsAccessibleView.triggers">
+      <source xml:lang="en">Triggers: {0}</source>
+    </trans-unit>
     <trans-unit id="automationsAccessibleView.unavailable">
       <source xml:lang="en">Some automations are unavailable. One or more providers are disconnected, disabled, or do not support automations.</source>
     </trans-unit>
@@ -687,16 +693,19 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">The Built-in Templates section is expanded by default while there are no saved automations. Tab to a template and press Enter or Space to open a New automation dialog with an editable name, prompt, and schedule.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.cards">
-      <source xml:lang="en">For saved automations, Tab to a card's Edit control and action buttons. Use Left Arrow and Right Arrow to move between Run now and More Actions. Press Enter or Space to activate a control. Edit, or clicking anywhere else on the card, opens the automation dialog. More Actions opens the automation menu. Duplicate opens a prefilled New automation dialog, Disable prevents scheduled runs, and Delete asks for confirmation. Run now requests execution from the selected provider.</source>
+      <source xml:lang="en">For saved automations, Tab to a card's Edit control and action buttons. Use Left Arrow and Right Arrow to move between Run now and More Actions. Press Enter or Space to activate a control. Edit, or clicking anywhere else on the card, opens the automation dialog. More Actions opens the automation menu. Duplicate opens a prefilled New automation dialog for portable schedules; event-triggered cloud automations must be duplicated on GitHub. Disable prevents future runs, and Delete asks for confirmation. Run now requests execution from the selected provider when available.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.cloudDialog">
-      <source xml:lang="en">When cloud automations are enabled, a Run in the cloud switch follows the Name field; press Space to turn it on or off. If cloud automations cannot be reached when you turn it on, the switch turns back off and a message asks you to try again in a few moments. When it is on, Cloud is the agent and the workspace picker lists Git-backed workspaces. Only private GitHub repositories can be selected; unavailable repositories are announced with the reason. Choose Add repository to search for a private repository or paste its URL. A matching local folder is retained. If cloud automations become unavailable while the switch is on, Cloud stays selected and Create is unavailable until they return or, for a new automation, you turn the switch off. Turning the switch off restores the previous local workspace and agent, or otherwise selects Copilot when it is available. Cloud models are configured in the prompt section. In the Tools section, the button shows All tools allowed or the number of tools allowed. Activate it to open a searchable checklist of the tools GitHub offers, grouped by category. Categories start collapsed; use Right Arrow to expand one. Press Space to toggle a tool or category. Each change applies immediately to the dialog; Enter or Escape closes the checklist without discarding changes. Save or Create saves the automation. New automations start with every listed tool selected. While the list loads the button is unavailable, and if it cannot be loaded a Retry button appears. These are followed by the schedule in your local time zone. GitHub stores a fixed UTC schedule, so the local run time may shift when daylight saving time changes. When editing a cloud automation, the switch and workspace picker are disabled because changing the repository or provider requires duplication. Editing preserves enabled state; enable or disable an automation from its card.</source>
+      <source xml:lang="en">When cloud automations are enabled, a Run in the cloud switch follows the Name field; press Space to turn it on or off. If cloud automations cannot be reached when you turn it on, the switch turns back off and a message asks you to try again in a few moments. When it is on, Cloud is the agent and the workspace picker lists Git-backed workspaces. Only GitHub repositories that support cloud automation management can be selected; unavailable repositories are announced with the reason. Choose Add repository to search for a repository or paste its URL. A matching local folder is retained. If cloud automations become unavailable while the switch is on, Cloud stays selected and Create is unavailable until they return or, for a new automation, you turn the switch off. Turning the switch off restores the previous local workspace and agent, or otherwise selects Copilot when it is available. Cloud models are configured in the prompt section. In the Tools section, the button shows All tools allowed or the number of tools allowed. Activate it to open a searchable checklist of the tools GitHub offers, grouped by category. Categories start collapsed; use Right Arrow to expand one. Press Space to toggle a tool or category. Each change applies immediately to the dialog; Enter or Escape closes the checklist without discarding changes. Save or Create saves the automation. New automations start with every listed tool selected. While the list loads the button is unavailable, and if it cannot be loaded a Retry button appears. Trigger follows the tools controls. Scheduled triggers display local time; GitHub stores a fixed UTC schedule, so the local run time may shift when daylight saving time changes. When editing a cloud automation, the switch and workspace picker are disabled because changing the repository or provider requires duplication. Editing preserves enabled state; enable or disable an automation from its card.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.cloudHistory">
       <source xml:lang="en">Cloud history shows the repository, status, and last updated time even when no local session is available. When a cloud run has a session on GitHub that is not yet loaded in VS Code, click its row, or Tab to its title and press Enter or Space, to open that exact session. Tab to a row's toolbar and use Left Arrow and Right Arrow to reach Open on GitHub and Stop when supported. Archive or Mark as Done is unavailable until the cloud run and its conversation have finished. It changes local session state, not the task on GitHub. Stop requests remote cancellation; the status changes when GitHub reports it. Follow-up requests show conversation progress and restart bounded history discovery. Use Refresh in the view header to reload definitions and history. Active cloud runs refresh every 15 seconds without moving the history rows; idle definitions do not poll.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.dialog">
       <source xml:lang="en">In the automation dialog, Target controls are above the prompt. Agent and model pickers are inside the prompt input, and execution mode and permission controls are below it. Use Tab and Shift+Tab to move between fields and pickers. When creating an automation, you only need to enter a prompt. An empty name is derived from the prompt, and the target defaults to No workspace unless one is already supplied. An available Agent Host that supports the target is still required.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.events">
+      <source xml:lang="en">For Cloud automations, the Trigger picker combines Weekly, Daily, Hourly, Issue, Pull Request, and Manual in one control. Issue and Pull Request are offered when their events are available to your account. Scheduled triggers show time and day controls as applicable. Event appears to the right of Trigger, in the same position as Time for a schedule. Issue uses one Event. For Pull Request, activate the Event button to open a searchable checklist. Use Up Arrow and Down Arrow to navigate and Space to select events; at least one stays selected. Enter or Escape closes the checklist. Required event fields appear directly below the Trigger and Event row. Create remains unavailable until they are completed, and its hover explains what is missing. Expand Advanced below them to configure optional filters and Require write access to trigger. When selected events support the same filter, such as Query or Paths, it appears once and applies to each of those events. Labels, assignees and changed paths accept comma-separated values; paths use gitignore patterns. Query filters the target and Comment text filters a comment's body. Review states are checkboxes. Require write access to trigger starts off. Unsupported or mixed triggers are read-only with Open on GitHub; editing other fields keeps the saved triggers. Event automations run from GitHub events rather than Run now.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.externalDefinition">
       <source xml:lang="en">For cloud automation cards, More Actions also offers Open on GitHub to open the automation's details in your browser.</source>
@@ -724,6 +733,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/automationsView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automation.duplicateEvents">
+      <source xml:lang="en">Duplicate event-triggered automations on GitHub to preserve their complete configuration.</source>
+    </trans-unit>
     <trans-unit id="automationAcceptedStatus">
       <source xml:lang="en">Run requested for {0}. Its history will update when available.</source>
     </trans-unit>
@@ -974,7 +986,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">The automations view was closed before the automation could be saved.</source>
     </trans-unit>
     <trans-unit id="automationsDescription">
-      <source xml:lang="en">Schedule agent sessions to run automatically on a cadence you choose.</source>
+      <source xml:lang="en">Configure agent sessions to run automatically from events or on a schedule.</source>
     </trans-unit>
     <trans-unit id="automationsDisabledBeforeDelete">
       <source xml:lang="en">Automations were disabled before the automation could be deleted.</source>
@@ -1064,7 +1076,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Export Automation</source>
     </trans-unit>
     <trans-unit id="historyEmpty">
-      <source xml:lang="en">No runs yet. Run an automation now or wait for its next scheduled run.</source>
+      <source xml:lang="en">No runs yet. Wait for the automation's next trigger, or run it now when available.</source>
     </trans-unit>
     <trans-unit id="historyHeader">
       <source xml:lang="en">History</source>
@@ -1472,12 +1484,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionsList.archiveOnboardingUnavailable">
       <source xml:lang="en">The session could not be revealed in the sessions list. Try again.</source>
     </trans-unit>
-    <trans-unit id="sessionsList.chatMovedDown">
-      <source xml:lang="en">Moved {0} down</source>
-    </trans-unit>
-    <trans-unit id="sessionsList.chatMovedUp">
-      <source xml:lang="en">Moved {0} up</source>
-    </trans-unit>
     <trans-unit id="sessionsNavigation">
       <source xml:lang="en">Sessions Navigation</source>
     </trans-unit>
@@ -1529,6 +1535,15 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="showMoreWorkspacesCompact">
       <source xml:lang="en">+{0} more workspaces</source>
     </trans-unit>
+    <trans-unit id="stickyShowLessAria">
+      <source xml:lang="en">Show fewer sessions in {0}</source>
+    </trans-unit>
+    <trans-unit id="stickyShowMoreSessionAria">
+      <source xml:lang="en">Show {0} more session in {1}</source>
+    </trans-unit>
+    <trans-unit id="stickyShowMoreSessionsAria">
+      <source xml:lang="en">Show {0} more sessions in {1}</source>
+    </trans-unit>
     <trans-unit id="unknown">
       <source xml:lang="en">Unknown</source>
     </trans-unit>
@@ -1543,30 +1558,47 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionsMove.chatFailedUnexpectedly">
       <source xml:lang="en">Could not move '{0}'.</source>
     </trans-unit>
-    <trans-unit id="sessionsMove.confirmChat">
-      <source xml:lang="en">Are you sure you want to move '{0}' into '{1}'?</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.confirmPromote">
-      <source xml:lang="en">Are you sure you want to move '{0}' to a new session?</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.confirmSession">
-      <source xml:lang="en">Are you sure you want to move session '{0}' into '{1}'?</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.doNotAskAgain">
-      <source xml:lang="en">Do not ask me again</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.moveButtonLabel">
-      <source xml:lang="en">&amp;&amp;Move</source>
-      <note>&amp;&amp; denotes a mnemonic</note>
+    <trans-unit id="sessionsMove.failedHelp">
+      <source xml:lang="en">This notice says why a chat or session could not be moved in the sessions list.</source>
     </trans-unit>
     <trans-unit id="sessionsMove.moved">
       <source xml:lang="en">Moved '{0}' into '{1}'</source>
     </trans-unit>
+    <trans-unit id="sessionsMove.movedBack">
+      <source xml:lang="en">Moved '{0}' back</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.movedBackInto">
+      <source xml:lang="en">Moved '{0}' back into '{1}'</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.movedBackToOwnSession">
+      <source xml:lang="en">Moved '{0}' back to its own session</source>
+    </trans-unit>
     <trans-unit id="sessionsMove.movedSession">
       <source xml:lang="en">Moved session '{0}' into '{1}'</source>
     </trans-unit>
+    <trans-unit id="sessionsMove.moving">
+      <source xml:lang="en">Moving '{0}' into '{1}'...</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.movingBack">
+      <source xml:lang="en">Moving '{0}' back...</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.movingBackInto">
+      <source xml:lang="en">Moving '{0}' back into '{1}'...</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.movingBackToOwnSession">
+      <source xml:lang="en">Moving '{0}' back to its own session...</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.movingSession">
+      <source xml:lang="en">Moving session '{0}' into '{1}'...</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.progressHelp">
+      <source xml:lang="en">This notice shows a chat or session being moved in the sessions list.</source>
+    </trans-unit>
     <trans-unit id="sessionsMove.promoted">
-      <source xml:lang="en">Moved '{0}' to a new session</source>
+      <source xml:lang="en">Promoted '{0}' to a new session</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.promoting">
+      <source xml:lang="en">Promoting '{0}' to a new session...</source>
     </trans-unit>
     <trans-unit id="sessionsMove.reorderedAfter">
       <source xml:lang="en">Moved '{0}' after '{1}'</source>
@@ -1574,11 +1606,26 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionsMove.reorderedFirst">
       <source xml:lang="en">Moved '{0}' to the start</source>
     </trans-unit>
+    <trans-unit id="sessionsMove.reordering">
+      <source xml:lang="en">Moving '{0}'...</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.resultHelp">
+      <source xml:lang="en">This notice reports a chat or session moved in the sessions list.</source>
+    </trans-unit>
     <trans-unit id="sessionsMove.sessionFailed">
       <source xml:lang="en">Could not move session '{0}'. {1}</source>
     </trans-unit>
     <trans-unit id="sessionsMove.sessionFailedUnexpectedly">
       <source xml:lang="en">Could not move session '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.undoFailed">
+      <source xml:lang="en">Could not undo moving '{0}'. {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.undoFailedUnexpectedly">
+      <source xml:lang="en">Could not undo moving '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="sessionsMove.undoHelp">
+      <source xml:lang="en">This notice appears after moving a chat or session in the sessions list. Undo moves it back where it was.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsListFilters" source-language="en" datatype="plaintext"><body>
@@ -1617,6 +1664,17 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">{0}
 {1}
 Use Tab and Shift+Tab to reach Undo and Dismiss. Press Enter or Space to activate them, or Escape to dismiss the notice.
+The notice disappears after 10 seconds. The countdown pauses while the notice is hovered, focused, or this help is open. The bar along the bottom shows the remaining time.</source>
+    </trans-unit>
+    <trans-unit id="sessionsListProgressNoticeHelp">
+      <source xml:lang="en">{0}
+{1}
+The result replaces this notice when the operation finishes. Use Tab and Shift+Tab to reach Dismiss. Press Enter or Space to activate it, or Escape to dismiss the notice.</source>
+    </trans-unit>
+    <trans-unit id="sessionsListResultNoticeHelp">
+      <source xml:lang="en">{0}
+{1}
+Use Tab and Shift+Tab to reach Dismiss. Press Enter or Space to activate it, or Escape to dismiss the notice.
 The notice disappears after 10 seconds. The countdown pauses while the notice is hovered, focused, or this help is open. The bar along the bottom shows the remaining time.</source>
     </trans-unit>
     <trans-unit id="undo">
@@ -1898,6 +1956,9 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     </trans-unit>
     <trans-unit id="sessionsRestored">
       <source xml:lang="en">Sessions restored.</source>
+    </trans-unit>
+    <trans-unit id="showApplicationFilters">
+      <source xml:lang="en">Filter Sessions by Application</source>
     </trans-unit>
     <trans-unit id="showInExternalSection">
       <source xml:lang="en">Show in External Section</source>

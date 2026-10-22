@@ -97,6 +97,17 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <source xml:lang="en">Cannot install the '{0}' extension because it is declared to not run in this setup.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/api/browser/mainThreadChatArtifactIntegrations" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="extensionArtifactActionCompleted">
+      <source xml:lang="en">{0} completed.</source>
+    </trans-unit>
+    <trans-unit id="extensionArtifactDetailsLoading">
+      <source xml:lang="en">Artifact details are still loading.</source>
+    </trans-unit>
+    <trans-unit id="extensionArtifactDetailsUnavailable">
+      <source xml:lang="en">The artifact details are no longer available.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/api/browser/mainThreadChatSessions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="interruptActiveResponse">
       <source xml:lang="en">Are you sure you want to interrupt the active session?</source>
@@ -3474,8 +3485,23 @@ Browser: {3}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/browser/parts/editor/editorGroupWatermark" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="watermark.chatIcon">
+      <source xml:lang="en">Icon for opening chat in the editor watermark.</source>
+    </trans-unit>
+    <trans-unit id="watermark.commandsIcon">
+      <source xml:lang="en">Icon for showing all commands in the editor watermark.</source>
+    </trans-unit>
+    <trans-unit id="watermark.debugIcon">
+      <source xml:lang="en">Icon for starting debugging in the editor watermark.</source>
+    </trans-unit>
     <trans-unit id="watermark.findInFiles">
       <source xml:lang="en">Find in Files</source>
+    </trans-unit>
+    <trans-unit id="watermark.findInFilesIcon">
+      <source xml:lang="en">Icon for finding in files in the editor watermark.</source>
+    </trans-unit>
+    <trans-unit id="watermark.newFileIcon">
+      <source xml:lang="en">Icon for creating a file in the editor watermark.</source>
     </trans-unit>
     <trans-unit id="watermark.newUntitledFile">
       <source xml:lang="en">New Untitled Text File</source>
@@ -3489,11 +3515,23 @@ Browser: {3}</source>
     <trans-unit id="watermark.openFileFolder">
       <source xml:lang="en">Open File or Folder</source>
     </trans-unit>
+    <trans-unit id="watermark.openFileFolderIcon">
+      <source xml:lang="en">Icon for opening a file or folder in the editor watermark.</source>
+    </trans-unit>
+    <trans-unit id="watermark.openFileIcon">
+      <source xml:lang="en">Icon for opening a file in the editor watermark.</source>
+    </trans-unit>
     <trans-unit id="watermark.openFolder">
       <source xml:lang="en">Open Folder</source>
     </trans-unit>
+    <trans-unit id="watermark.openFolderIcon">
+      <source xml:lang="en">Icon for opening a folder in the editor watermark.</source>
+    </trans-unit>
     <trans-unit id="watermark.openRecent">
       <source xml:lang="en">Open Recent</source>
+    </trans-unit>
+    <trans-unit id="watermark.openRecentIcon">
+      <source xml:lang="en">Icon for opening a recent workspace in the editor watermark.</source>
     </trans-unit>
     <trans-unit id="watermark.openSettings">
       <source xml:lang="en">Open Settings</source>
@@ -3501,11 +3539,26 @@ Browser: {3}</source>
     <trans-unit id="watermark.quickAccess">
       <source xml:lang="en">Go to File</source>
     </trans-unit>
+    <trans-unit id="watermark.quickOpenIcon">
+      <source xml:lang="en">Icon for going to a file in the editor watermark.</source>
+    </trans-unit>
+    <trans-unit id="watermark.settingsIcon">
+      <source xml:lang="en">Icon for opening settings in the editor watermark.</source>
+    </trans-unit>
+    <trans-unit id="watermark.shortcutAriaLabel">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="watermark.shortcuts">
+      <source xml:lang="en">Editor Shortcuts</source>
+    </trans-unit>
     <trans-unit id="watermark.showCommands">
       <source xml:lang="en">Show All Commands</source>
     </trans-unit>
     <trans-unit id="watermark.startDebugging">
       <source xml:lang="en">Start Debugging</source>
+    </trans-unit>
+    <trans-unit id="watermark.terminalIcon">
+      <source xml:lang="en">Icon for toggling the terminal in the editor watermark.</source>
     </trans-unit>
     <trans-unit id="watermark.toggleTerminal">
       <source xml:lang="en">Toggle Terminal</source>
@@ -5593,6 +5646,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
     </trans-unit>
     <trans-unit id="agentsUpdateButton.downloadingBackground">
       <source xml:lang="en">Background color of the update button to show download progress in the agent sessions window.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowGraphic.orange">
+      <source xml:lang="en">Orange used for a project and for code in the graphic that explains the Agents window on the Welcome page.</source>
     </trans-unit>
     <trans-unit id="inactiveSessionView.background">
       <source xml:lang="en">Background color of an inactive session view in the agent sessions window.</source>

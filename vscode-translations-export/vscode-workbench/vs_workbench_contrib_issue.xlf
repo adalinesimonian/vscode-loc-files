@@ -126,6 +126,9 @@
     <trans-unit id="confirmCloseIssueReporter">
       <source xml:lang="en">Your input will not be saved. Are you sure you want to close this window?</source>
     </trans-unit>
+    <trans-unit id="invalidIssueDestination">
+      <source xml:lang="en">The selected issue destination is invalid. No issue data was sent.</source>
+    </trans-unit>
     <trans-unit id="issueData">
       <source xml:lang="en">Issue Data</source>
     </trans-unit>
@@ -178,6 +181,35 @@
       <source xml:lang="en">Icon for the issue reporter editor.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/issue/browser/issueReporterMedia" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="attachmentTooLarge">
+      <source xml:lang="en">Cannot attach {0}. The limit is {1} MB per {2}.</source>
+    </trans-unit>
+    <trans-unit id="emptyAttachment">
+      <source xml:lang="en">Cannot attach {0} because the file is empty.</source>
+    </trans-unit>
+    <trans-unit id="image">
+      <source xml:lang="en">image</source>
+    </trans-unit>
+    <trans-unit id="imageDecodeFailed">
+      <source xml:lang="en">The image could not be decoded. It may be damaged or use an unsupported format.</source>
+    </trans-unit>
+    <trans-unit id="invalidMediaHeader">
+      <source xml:lang="en">The file is not a supported image or video, or is damaged.</source>
+    </trans-unit>
+    <trans-unit id="unnamedAttachment">
+      <source xml:lang="en">Clipboard attachment</source>
+    </trans-unit>
+    <trans-unit id="unsupportedAttachment">
+      <source xml:lang="en">Cannot attach {0}. Use PNG, JPEG, GIF, WebP, AVIF, MP4, WebM, or MOV.</source>
+    </trans-unit>
+    <trans-unit id="video">
+      <source xml:lang="en">video</source>
+    </trans-unit>
+    <trans-unit id="videoDecodeFailed">
+      <source xml:lang="en">The video could not be decoded. It may be damaged or use an unsupported format or codec.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/issue/browser/issueReporterOverlay" source-language="en" datatype="plaintext"><body>
     <trans-unit id="abExperiments">
       <source xml:lang="en">A/B Experiments</source>
@@ -197,8 +229,38 @@
     <trans-unit id="agentsWindowPlaceholder">
       <source xml:lang="en">E.g. Sessions list does not refresh after creating a new session</source>
     </trans-unit>
+    <trans-unit id="attachmentArea">
+      <source xml:lang="en">Attachments. Paste or drop images and videos here.</source>
+    </trans-unit>
+    <trans-unit id="attachmentDropLocation">
+      <source xml:lang="en">Drop files in the Attachments step, or paste them into the description.</source>
+    </trans-unit>
+    <trans-unit id="attachmentImportActive">
+      <source xml:lang="en">Wait for attachments to finish importing</source>
+    </trans-unit>
+    <trans-unit id="attachmentImportHint">
+      <source xml:lang="en">Drop images or videos here, or focus the attachments area and paste. Images: PNG, JPEG, GIF, WebP, AVIF (up to 10 MB). Videos: MP4, WebM, MOV (up to 100 MB). Files stay local until you preview on GitHub.</source>
+    </trans-unit>
+    <trans-unit id="attachmentImportLimit">
+      <source xml:lang="en">You can attach up to {0} files, including captures and imports in progress. Remove an attachment before adding more.</source>
+    </trans-unit>
+    <trans-unit id="attachmentImportNoSpace">
+      <source xml:lang="en">The attachment could not be added because the limit of {0} files was reached.</source>
+    </trans-unit>
+    <trans-unit id="attachmentImported">
+      <source xml:lang="en">Attachment added.</source>
+    </trans-unit>
+    <trans-unit id="attachmentTextAdded">
+      <source xml:lang="en">Text added to the description.</source>
+    </trans-unit>
     <trans-unit id="attachments">
       <source xml:lang="en">Attachments ({0})</source>
+    </trans-unit>
+    <trans-unit id="attachmentsImporting">
+      <source xml:lang="en">Importing {0} file(s)...</source>
+    </trans-unit>
+    <trans-unit id="attachmentsUploading">
+      <source xml:lang="en">Wait for the current upload to finish before adding attachments.</source>
     </trans-unit>
     <trans-unit id="back">
       <source xml:lang="en">Back</source>
@@ -211,6 +273,9 @@
     </trans-unit>
     <trans-unit id="captureOptions">
       <source xml:lang="en">Capture options</source>
+    </trans-unit>
+    <trans-unit id="captureScreenshot">
+      <source xml:lang="en">Capture Screenshot</source>
     </trans-unit>
     <trans-unit id="category">
       <source xml:lang="en">Category</source>
@@ -239,6 +304,12 @@
     <trans-unit id="description">
       <source xml:lang="en">Description</source>
     </trans-unit>
+    <trans-unit id="descriptionAttachmentHint">
+      <source xml:lang="en">You can also paste images or videos here to attach them.</source>
+    </trans-unit>
+    <trans-unit id="descriptionPasteHint">
+      <source xml:lang="en">Paste an image or video to attach it without leaving the description.</source>
+    </trans-unit>
     <trans-unit id="descriptionPlaceholder">
       <source xml:lang="en">Describe the issue in detail...</source>
     </trans-unit>
@@ -247,6 +318,9 @@
     </trans-unit>
     <trans-unit id="editScreenshot">
       <source xml:lang="en">Click to edit screenshot</source>
+    </trans-unit>
+    <trans-unit id="editScreenshotLabel">
+      <source xml:lang="en">Edit screenshot {0}</source>
     </trans-unit>
     <trans-unit id="extension">
       <source xml:lang="en">Extension</source>
@@ -296,8 +370,8 @@
     <trans-unit id="hideToolbarInScreenshots">
       <source xml:lang="en">Hide Toolbar in Screenshots</source>
     </trans-unit>
-    <trans-unit id="issueTargetRepo">
-      <source xml:lang="en">Issue will be created in {0}/{1}.</source>
+    <trans-unit id="invalidIssueRepository">
+      <source xml:lang="en">Invalid issue destination</source>
     </trans-unit>
     <trans-unit id="issueTitle">
       <source xml:lang="en">Title</source>
@@ -350,6 +424,12 @@
     <trans-unit id="openExternalIssueReporter">
       <source xml:lang="en">Open External Issue Reporter</source>
     </trans-unit>
+    <trans-unit id="openRecording">
+      <source xml:lang="en">Open video {0}</source>
+    </trans-unit>
+    <trans-unit id="openScreenshot">
+      <source xml:lang="en">Open screenshot {0}</source>
+    </trans-unit>
     <trans-unit id="or">
       <source xml:lang="en">or</source>
     </trans-unit>
@@ -365,11 +445,17 @@
     <trans-unit id="previewOnGitHub">
       <source xml:lang="en">Preview on GitHub</source>
     </trans-unit>
+    <trans-unit id="privateIssueSearchDisabled">
+      <source xml:lang="en">Similar issues were not searched because this repository may be private.</source>
+    </trans-unit>
     <trans-unit id="recordVideo">
       <source xml:lang="en">Record video</source>
     </trans-unit>
     <trans-unit id="recordingActive">
       <source xml:lang="en">Recording active</source>
+    </trans-unit>
+    <trans-unit id="recordingPending">
+      <source xml:lang="en">Recording in progress</source>
     </trans-unit>
     <trans-unit id="recordingThumbnailAlt">
       <source xml:lang="en">Recording {0}</source>
@@ -382,6 +468,9 @@
     </trans-unit>
     <trans-unit id="reportIssue">
       <source xml:lang="en">Report Issue</source>
+    </trans-unit>
+    <trans-unit id="repository">
+      <source xml:lang="en">Repository</source>
     </trans-unit>
     <trans-unit id="reviewGuidanceLabelWizard">
       <source xml:lang="en">Before you report an issue here please [review the guidance we provide](https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions). Please complete the form in English.</source>
@@ -467,6 +556,9 @@
     </trans-unit>
     <trans-unit id="unknownSource">
       <source xml:lang="en">Don't know</source>
+    </trans-unit>
+    <trans-unit id="unknownVideoDuration">
+      <source xml:lang="en">Unknown duration</source>
     </trans-unit>
     <trans-unit id="updateAvailable">
       <source xml:lang="en">A new version of {0} is available.</source>
@@ -570,6 +662,17 @@
     </trans-unit>
     <trans-unit id="titleLengthValidation">
       <source xml:lang="en">The title is too long.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/issue/browser/issueReporterRepositoryPicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chooseIssueRepository">
+      <source xml:lang="en">Choose Issue Repository: {0}</source>
+    </trans-unit>
+    <trans-unit id="invalidIssueDestination">
+      <source xml:lang="en">The selected issue destination is invalid. No issue data will be sent.</source>
+    </trans-unit>
+    <trans-unit id="issueDestination">
+      <source xml:lang="en">Issue will be opened in {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/browser/issueReporterService" source-language="en" datatype="plaintext"><body>
@@ -752,6 +855,12 @@ Translate this to "Report Issue in English" in all languages please!</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/electron-browser/issue.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="issueReporter.additionalRepositories">
+      <source xml:lang="en">Additional GitHub repositories offered in the issue reporter wizard for VS Code and Agents Window reports, in owner/repo format. The default repository remains selected initially. GitHub manages repository access. Similar issue search is disabled for repositories whose public visibility is not known.</source>
+    </trans-unit>
+    <trans-unit id="issueReporter.repositoryFormat">
+      <source xml:lang="en">Use a GitHub repository in owner/repo format, not a URL.</source>
+    </trans-unit>
     <trans-unit id="issueReporter.wizard.enabled">
       <source xml:lang="en">Enable the new issue reporter wizard instead of the classic issue reporter.</source>
     </trans-unit>
@@ -776,6 +885,9 @@ Translate this to "Report Issue in English" in all languages please!</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/electron-browser/issueReporterEditorPane" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="attachmentImportFailed">
+      <source xml:lang="en">Could not attach {0}: {1}</source>
+    </trans-unit>
     <trans-unit id="noData">
       <source xml:lang="en">No issue reporter data available.</source>
     </trans-unit>
@@ -785,14 +897,32 @@ Translate this to "Report Issue in English" in all languages please!</note>
     <trans-unit id="openSystemSettings">
       <source xml:lang="en">Open System Settings</source>
     </trans-unit>
+    <trans-unit id="recordingAttachmentRejected">
+      <source xml:lang="en">The recording could not be attached because the attachment limit was reached. Remove an attachment and record again.</source>
+    </trans-unit>
     <trans-unit id="recordingTooLarge">
       <source xml:lang="en">Recording stopped automatically: the 100 MB upload limit was reached.</source>
     </trans-unit>
+    <trans-unit id="screenRecordingFailed">
+      <source xml:lang="en">Screen recording failed: {0} Try recording again.</source>
+    </trans-unit>
+    <trans-unit id="screenRecordingFailedMac">
+      <source xml:lang="en">Screen recording failed: {0} If you recently changed Screen Recording permission, quit and reopen {1}. If recording still fails, remove {1} from the Screen Recording list in System Settings, reopen it, and grant access again.</source>
+    </trans-unit>
     <trans-unit id="screenRecordingPermissionDenied">
-      <source xml:lang="en">{0} needs Screen Recording permission to record videos. Grant access in System Settings, then click Record again.</source>
+      <source xml:lang="en">{0} needs Screen Recording permission to record videos. Grant access in System Settings and restart {0} if requested. If {0} is missing after you removed it from the list, quit and reopen {0}, then click Record again.</source>
     </trans-unit>
     <trans-unit id="screenRecordingPermissionDeniedGeneric">
       <source xml:lang="en">Screen recording permission was denied. Allow {0} to record the screen and try again.</source>
+    </trans-unit>
+    <trans-unit id="screenRecordingPermissionRestricted">
+      <source xml:lang="en">Screen recording is restricted by macOS. Check Screen Recording permissions in System Settings or contact your administrator.</source>
+    </trans-unit>
+    <trans-unit id="screenRecordingSettingsFailed">
+      <source xml:lang="en">Unable to open Screen Recording settings: {0}</source>
+    </trans-unit>
+    <trans-unit id="unnamedAttachment">
+      <source xml:lang="en">Clipboard attachment</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/electron-browser/issueReporterService" source-language="en" datatype="plaintext"><body>
@@ -810,6 +940,43 @@ Translate this to "Report Issue in English" in all languages please!</note>
     </trans-unit>
     <trans-unit id="updateAvailable">
       <source xml:lang="en">A new version of {0} is available.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/issue/electron-browser/issueService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="invalidAdditionalRepositories">
+      <source xml:lang="en">The issueReporter.additionalRepositories setting must be an array of GitHub repositories in owner/repo format. Additional destinations were not loaded.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/issue/electron-browser/nativeRecordingService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="recordingEmpty">
+      <source xml:lang="en">No video was captured. Try recording again.</source>
+    </trans-unit>
+    <trans-unit id="recordingEndedBeforeStart">
+      <source xml:lang="en">Screen capture ended before recording could start. Try again.</source>
+    </trans-unit>
+    <trans-unit id="recordingEndedDuringStart">
+      <source xml:lang="en">Screen capture ended while starting the recording. Try again.</source>
+    </trans-unit>
+    <trans-unit id="recordingInProgress">
+      <source xml:lang="en">A recording is already in progress.</source>
+    </trans-unit>
+    <trans-unit id="recordingInterrupted">
+      <source xml:lang="en">Screen recording failed. Try recording again.</source>
+    </trans-unit>
+    <trans-unit id="recordingNoLiveTrack">
+      <source xml:lang="en">No live screen capture source is available. Try recording again.</source>
+    </trans-unit>
+    <trans-unit id="recordingStartFailed">
+      <source xml:lang="en">Unable to start screen recording. Try again.</source>
+    </trans-unit>
+    <trans-unit id="recordingStartTimeout">
+      <source xml:lang="en">Screen recording did not start. Try again.</source>
+    </trans-unit>
+    <trans-unit id="recordingStopTimeout">
+      <source xml:lang="en">Screen recording did not finish. Try recording again.</source>
+    </trans-unit>
+    <trans-unit id="recordingUnsupported">
+      <source xml:lang="en">Screen recording is not supported in this environment.</source>
     </trans-unit>
 </body></file>
 </xliff>

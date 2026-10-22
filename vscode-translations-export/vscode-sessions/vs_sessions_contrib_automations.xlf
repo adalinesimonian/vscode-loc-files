@@ -131,7 +131,7 @@
       <source xml:lang="en">Workspace folder is required.</source>
     </trans-unit>
     <trans-unit id="automation.form.githubRepositoryRequired">
-      <source xml:lang="en">Cloud automations require a private repository on GitHub.com.</source>
+      <source xml:lang="en">Cloud automations require a supported repository on GitHub.com.</source>
     </trans-unit>
     <trans-unit id="automation.form.harnessChip.action">
       <source xml:lang="en">Automations Harness Chip</source>
@@ -141,9 +141,6 @@
     </trans-unit>
     <trans-unit id="automation.form.hostUnavailable">
       <source xml:lang="en">Choose an available Agent Host that supports automations.</source>
-    </trans-unit>
-    <trans-unit id="automation.form.interval">
-      <source xml:lang="en">Schedule</source>
     </trans-unit>
     <trans-unit id="automation.form.isolation.checkboxAriaLabel">
       <source xml:lang="en">Worktree isolation</source>
@@ -172,17 +169,11 @@
     <trans-unit id="automation.form.noWorkspace.description">
       <source xml:lang="en">Run without a backing workspace</source>
     </trans-unit>
-    <trans-unit id="automation.form.privateRepositoryRequired">
-      <source xml:lang="en">The repository must be private.</source>
-    </trans-unit>
     <trans-unit id="automation.form.prompt.placeholder">
       <source xml:lang="en">Describe what you want to automate</source>
     </trans-unit>
     <trans-unit id="automation.form.promptRequired">
       <source xml:lang="en">Prompt is required.</source>
-    </trans-unit>
-    <trans-unit id="automation.form.publicRepository">
-      <source xml:lang="en">Cloud automations require a private GitHub repository. This repository is public.</source>
     </trans-unit>
     <trans-unit id="automation.form.quickChatUnavailable">
       <source xml:lang="en">The selected Agent Host and session type cannot run without a workspace. Choose a workspace or another session type.</source>
@@ -190,8 +181,17 @@
     <trans-unit id="automation.form.repositoryAriaLabel">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
-    <trans-unit id="automation.form.repositoryReasonDetails">
-      <source xml:lang="en">{0} — {1}</source>
+    <trans-unit id="automation.form.repositoryAvailabilityDescription">
+      <source xml:lang="en">{0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="automation.form.repositoryDescription">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+    <trans-unit id="automation.form.repositoryRequired">
+      <source xml:lang="en">Cloud automations cannot be managed for this repository.</source>
+    </trans-unit>
+    <trans-unit id="automation.form.repositoryUnsupported">
+      <source xml:lang="en">Cloud automations cannot be managed for this repository.</source>
     </trans-unit>
     <trans-unit id="automation.form.runInCloud">
       <source xml:lang="en">Run in the Cloud</source>
@@ -238,6 +238,9 @@
     <trans-unit id="automation.form.timeLocal">
       <source xml:lang="en">Time (Local)</source>
     </trans-unit>
+    <trans-unit id="automation.form.trigger">
+      <source xml:lang="en">Trigger</source>
+    </trans-unit>
     <trans-unit id="automation.form.trustFolderMessage">
       <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
     </trans-unit>
@@ -261,9 +264,6 @@
     </trans-unit>
     <trans-unit id="automation.form.workspaceUnavailable">
       <source xml:lang="en">The workspace provider is unavailable.</source>
-    </trans-unit>
-    <trans-unit id="automation.interval.choose">
-      <source xml:lang="en">Choose a schedule</source>
     </trans-unit>
     <trans-unit id="automation.interval.daily">
       <source xml:lang="en">Daily</source>
@@ -330,6 +330,15 @@
     </trans-unit>
     <trans-unit id="automation.toolsSelectedCount">
       <source xml:lang="en">{0} of {1} tools selected</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.choose">
+      <source xml:lang="en">Choose a trigger</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.issue">
+      <source xml:lang="en">Issue</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.pr">
+      <source xml:lang="en">Pull Request</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/automationDialogService" source-language="en" datatype="plaintext"><body>
@@ -533,9 +542,62 @@
       <source xml:lang="en">The request outcome is unknown. Refresh automations before submitting another request.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationTriggerEditor" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automation.trigger.actor">
+      <source xml:lang="en">Require write access to trigger</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.actorDescription">
+      <source xml:lang="en">Only people with write access to the repository can trigger this automation.</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.commaSeparated">
+      <source xml:lang="en">Comma-separated values</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.custom">
+      <source xml:lang="en">Custom trigger</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.event">
+      <source xml:lang="en">Event</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.eventCount">
+      <source xml:lang="en">{0} events selected</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.loading">
+      <source xml:lang="en">Loading available triggers…</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.open">
+      <source xml:lang="en">Open on GitHub</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.pathsPlaceholder">
+      <source xml:lang="en">Match changed files with gitignore-style patterns, separated by commas</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.queryExample">
+      <source xml:lang="en">e.g. label:bug is:open</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.readOnly">
+      <source xml:lang="en">These triggers cannot be edited here. Other changes keep them unchanged.</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.retry">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.selectEvents">
+      <source xml:lang="en">Pull Request Events</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.selectEventsPlaceholder">
+      <source xml:lang="en">Select at least one event</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.selectedEvents">
+      <source xml:lang="en">Select events. Current selection: {0}</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.selectedEventsCount">
+      <source xml:lang="en">Select events. {0}. Current selection: {1}</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.unavailable">
+      <source xml:lang="en">The selected triggers are unavailable. Retry loading the trigger catalog before saving.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/automations/browser/automations.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.automations.cloud.enabled">
-      <source xml:lang="en">Enables managing Only me and Repository cloud automations in known private GitHub repositories. Disabling this setting does not stop schedules already running on GitHub.</source>
+      <source xml:lang="en">Enables managing Only me and Repository cloud automations in known GitHub repositories that support automation management. Disabling this setting does not stop schedules already running on GitHub.</source>
     </trans-unit>
     <trans-unit id="chat.automations.enabled">
       <source xml:lang="en">Enables the Automations feature: scheduling agent sessions to run on a cadence. When disabled, the Automations entry in the Customizations sidebar, the Automations section in the Customizations editor, and the Automation option in the new-session composer are hidden, and scheduled automations are not dispatched.</source>
