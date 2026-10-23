@@ -38,6 +38,11 @@
       <source xml:lang="en">Waiting for My Review</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/github/browser/fetchers/githubPRFetcher" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="pullRequestChanges.changedDuringLoad">
+      <source xml:lang="en">Pull request #{0} changed while loading its files. Please try again.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/github/browser/githubApiClient" source-language="en" datatype="plaintext"><body>
     <trans-unit id="githubSignInRequired">
       <source xml:lang="en">Sign in to GitHub with repository access.</source>
@@ -57,6 +62,23 @@
     </trans-unit>
     <trans-unit id="agentSessions.openPullRequest">
       <source xml:lang="en">Open Pull Request</source>
+    </trans-unit>
+    <trans-unit id="agentSessions.openPullRequestChanges">
+      <source xml:lang="en">Open Pull Request Changes</source>
+    </trans-unit>
+    <trans-unit id="showSessionActivityBarGitHubActions">
+      <source xml:lang="en">Show Pull Request and Issue Actions</source>
+    </trans-unit>
+    <trans-unit id="toggleSessionActivityBarGitHubActions">
+      <source xml:lang="en">Toggle Pull Request and Issue Actions in Session Activity Bar</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/github/browser/pullRequestChangesMultiDiffSourceResolver" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="pullRequestChanges.incomplete">
+      <source xml:lang="en">Could not open pull request #{0} changes: GitHub returned {1} of {2} changed files.</source>
+    </trans-unit>
+    <trans-unit id="pullRequestChanges.loadFailed">
+      <source xml:lang="en">Could not load the changes of pull request #{0}: {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/github/browser/pullRequestPicker" source-language="en" datatype="plaintext"><body>

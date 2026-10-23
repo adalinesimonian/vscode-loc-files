@@ -849,12 +849,6 @@ Close this dialog to apply the change with your next message after the current t
     <trans-unit id="agentHost.config.prewarmSessions.title">
       <source xml:lang="en">Prewarm Sessions</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.sessionSyncEnabled.description">
-      <source xml:lang="en">Whether remote session sync is enabled for the copilot-sdk CLI.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.sessionSyncEnabled.title">
-      <source xml:lang="en">Session Sync</source>
-    </trans-unit>
     <trans-unit id="agentHost.config.showExternalSessions.description">
       <source xml:lang="en">Controls whether sessions created outside the Agent Host are included in the session catalog.</source>
     </trans-unit>
@@ -1041,7 +1035,7 @@ Close this dialog to apply the change with your next message after the current t
 </body></file>
   <file original="src/vs/platform/agentHost/common/agentHostStarter.config.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.agentHost.agentOrchestrationLimits">
-      <source xml:lang="en">Controls process-wide limits on sessions and chats created, messages sent, and recursive session spawning by Agent Host session tools. Confirmation requirements and input validation are unchanged.</source>
+      <source xml:lang="en">Controls per-session limits, over a sliding one-hour window, on sessions and chats created and messages sent, and the depth of recursive session spawning, by Agent Host session tools. Confirmation requirements and input validation are unchanged.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.agentOrchestrationLimits.off">
       <source xml:lang="en">Do not enforce the limits.</source>
@@ -1077,7 +1071,7 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">Experimental, for local SDK development only. Absolute path to a directory containing `node_modules/@openai/codex`. When set, the agent host spawns the Codex binary from this tree instead of downloading the SDK. Empty (the default) falls through to the SDK distribution shipped with this build. The agent host process must be restarted for changes to take effect.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.computerUse.enabled">
-      <source xml:lang="en">When enabled, local Copilot agent sessions on macOS and Windows offer GitHub's Computer Use plugin, which can operate desktop applications. The plugin is downloaded on first use. Turn it on with `/computer on` in a Copilot chat; each application still requires your approval.</source>
+      <source xml:lang="en">When enabled, local Copilot agent sessions on macOS and Windows offer GitHub's Computer Use plugin, which can operate desktop applications. The plugin is downloaded on first use. Turn it on with `/computer on` in a Copilot chat, or when the agent asks. Each application still requires your approval. Changes take effect after a restart.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.experimental.autoAttachPullRequests">
       <source xml:lang="en">Controls whether the Agent Host automatically discovers and associates a pull request for the currently checked-out branch. When disabled, only pull requests recorded by the agent as artifacts or explicitly selected or created through session actions are considered.</source>
@@ -1401,6 +1395,9 @@ Close this dialog to apply the change with your next message after the current t
     </trans-unit>
     <trans-unit id="agentMerge.notice.mergeMethod.squash">
       <source xml:lang="en">It will squash-merge the pull request.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.notice.moveConflict">
+      <source xml:lang="en">Agent Merge was turned off for this chat: another chat in this session already runs it for this pull request.</source>
     </trans-unit>
     <trans-unit id="agentMerge.pullRequestMerged">
       <source xml:lang="en">Agent Merge merged pull request [#{0}]({1}).</source>
@@ -2686,6 +2683,16 @@ These charges are in addition to the conversation model. Rates may change; these
     </trans-unit>
     <trans-unit id="agentHost.pr.titleRequired">
       <source xml:lang="en">A pull request title is required.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/meta/vscode/computerUse" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="computerUseActivation.message">
+      <source xml:lang="en">Computer Use lets Copilot see and control apps on this computer. It stays on for Copilot, including the Copilot CLI, until you run `/computer off`.</source>
+    </trans-unit>
+    <trans-unit id="computerUseActivation.messageWithReason">
+      <source xml:lang="en">{0}
+
+Computer Use lets Copilot see and control apps on this computer. It stays on for Copilot, including the Copilot CLI, until you run `/computer off`.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/openSessionLink" source-language="en" datatype="plaintext"><body>
@@ -4530,6 +4537,12 @@ Showing {1}-{2} of {3}.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotAgent" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.extensionReconcileFailed">
+      <source xml:lang="en">The extension preference was saved, but the selected chat could not be updated: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilot.extensionReconcileTargetUnavailable">
+      <source xml:lang="en">The selected chat stopped or was replaced before its extension state could be updated.</source>
+    </trans-unit>
     <trans-unit id="copilot.localModelThinking.description">
       <source xml:lang="en">Controls whether the model thinks before it answers.</source>
     </trans-unit>
@@ -4717,21 +4730,26 @@ Showing {1}-{2} of {3}.</source>
       <source xml:lang="en">Ask</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/platform/agentHost/node/copilot/copilotComputerUsePermissionSetup" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="computerUse.error.notWaiting">
-      <source xml:lang="en">Copilot is no longer waiting for this setup. Ask Copilot to try again when you're ready.</source>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotComputerUseActivationTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="computerUseActivation.notNow">
+      <source xml:lang="en">Not Now</source>
     </trans-unit>
+    <trans-unit id="computerUseActivation.question">
+      <source xml:lang="en">Turn on Computer Use?</source>
+    </trans-unit>
+    <trans-unit id="computerUseActivation.title">
+      <source xml:lang="en">Computer Use</source>
+    </trans-unit>
+    <trans-unit id="computerUseActivation.turnOn">
+      <source xml:lang="en">Turn On</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotComputerUsePermissionSetup" source-language="en" datatype="plaintext"><body>
     <trans-unit id="computerUse.error.stillNotGranted.both">
       <source xml:lang="en">macOS still reports {0} and {1} as off.</source>
     </trans-unit>
     <trans-unit id="computerUse.error.stillNotGranted.one">
       <source xml:lang="en">macOS still reports {0} as off.</source>
-    </trans-unit>
-    <trans-unit id="computerUse.error.unconfirmed">
-      <source xml:lang="en">Copilot Computer Use stopped before confirming the permissions. If Copilot still can't use apps, ask it to try again.</source>
-    </trans-unit>
-    <trans-unit id="computerUse.error.unsupportedPrompt">
-      <source xml:lang="en">Copilot Computer Use asked for permissions in a way this setup doesn't support. Answer its request in the chat instead.</source>
     </trans-unit>
     <trans-unit id="computerUse.permission.accessibility">
       <source xml:lang="en">Accessibility</source>
@@ -6573,6 +6591,9 @@ stderr: {2}</source>
     <trans-unit id="agentHost.sessionConfig.worktreeSymlinkFoldersItem">
       <source xml:lang="en">Pattern</source>
     </trans-unit>
+    <trans-unit id="agentHost.worktree.unbornSnapshotFailed">
+      <source xml:lang="en">Couldn't capture the workspace files for the isolated worktree.</source>
+    </trans-unit>
     <trans-unit id="agentHost.worktreeCheckingOut">
       <source xml:lang="en">Creating isolated worktree (checking out files)</source>
     </trans-unit>
@@ -8266,8 +8287,20 @@ A keybinding label</note>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/mcp/common/allowedMcpServersService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mcp gallery configuration invalid">
+      <source xml:lang="en">This Model Context Protocol server cannot be installed because its gallery configuration is invalid: {0}</source>
+    </trans-unit>
+    <trans-unit id="mcp policy environment unresolved">
+      <source xml:lang="en">This Model Context Protocol server cannot run because its policy environment variables have not been resolved on the server host. Restart the server to try again.</source>
+    </trans-unit>
     <trans-unit id="mcp server is denied">
       <source xml:lang="en">This Model Context Protocol server is blocked by your organization's policy. Please contact your administrator for more information.</source>
+    </trans-unit>
+    <trans-unit id="mcp server name overridden by command">
+      <source xml:lang="en">This Model Context Protocol server is not in the list of servers allowed by your organization. A name entry matches, but this allowlist contains command entries, so the server must match an allowed command and arguments. Please contact your administrator for more information.</source>
+    </trans-unit>
+    <trans-unit id="mcp server name overridden by url">
+      <source xml:lang="en">This Model Context Protocol server is not in the list of servers allowed by your organization. A name entry matches, but this allowlist contains URL entries, so the server must match an allowed URL. Please contact your administrator for more information.</source>
     </trans-unit>
     <trans-unit id="mcp server not in allowlist">
       <source xml:lang="en">This Model Context Protocol server is not in the list of servers allowed by your organization. Please contact your administrator for more information.</source>

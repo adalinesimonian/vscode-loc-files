@@ -64,11 +64,8 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/editor/browser/emptyFileEditor" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="emptyFileEditor.actionAria">
-      <source xml:lang="en">{0} ({1})</source>
-    </trans-unit>
-    <trans-unit id="emptyFileEditor.actionTooltip">
-      <source xml:lang="en">{0} ({1})</source>
+    <trans-unit id="emptyFileEditor.actions">
+      <source xml:lang="en">Files</source>
     </trans-unit>
     <trans-unit id="emptyFileEditor.ariaLabel">
       <source xml:lang="en">Files editor</source>
@@ -79,6 +76,9 @@
     <trans-unit id="emptyFileEditor.title">
       <source xml:lang="en">Files</source>
     </trans-unit>
+    <trans-unit id="emptyFileEditorFocused">
+      <source xml:lang="en">Whether focus is in the empty Files editor.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/editor/browser/emptyFileEditor.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="emptyFileEditor.label">
@@ -87,19 +87,28 @@
     <trans-unit id="emptyFileEditor.newFile">
       <source xml:lang="en">New File</source>
     </trans-unit>
+    <trans-unit id="emptyFileEditor.openFile">
+      <source xml:lang="en">Open File...</source>
+    </trans-unit>
+    <trans-unit id="emptyFileEditor.openFileIcon">
+      <source xml:lang="en">Icon for opening a file from the Files editor.</source>
+    </trans-unit>
     <trans-unit id="sessions.experimental.emptyFileEditorActions">
-      <source xml:lang="en">Enables file search and a New File action in the empty Files editor.</source>
+      <source xml:lang="en">Enables search, Open File, and New File actions in the empty Files editor.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/editor/browser/emptyFileEditorAccessibility" source-language="en" datatype="plaintext"><body>
     <trans-unit id="emptyFileEditor.searchHelp.dismiss">
-      <source xml:lang="en">Press Escape to clear the search text and close the search results.</source>
+      <source xml:lang="en">Press Escape to close the search results and return to the Files editor.</source>
     </trans-unit>
-    <trans-unit id="emptyFileEditor.searchHelp.navigation">
-      <source xml:lang="en">Use Up Arrow and Down Arrow to move the highlighted result while focus remains in the search input. Press Enter to open the highlighted file.</source>
+    <trans-unit id="emptyFileEditor.searchHelp.inlineSearch">
+      <source xml:lang="en">Type part of a file name in the search field to search the active session workspace. Use Up Arrow and Down Arrow to choose a result, and Enter to open it. Press Escape to clear the search and return to the search field.</source>
+    </trans-unit>
+    <trans-unit id="emptyFileEditor.searchHelp.open">
+      <source xml:lang="en">Open File searches the active session workspace. Type part of a file name, use Up Arrow and Down Arrow to choose a result, and press Enter to open it.</source>
     </trans-unit>
     <trans-unit id="emptyFileEditor.searchHelp.overview">
-      <source xml:lang="en">You are in the Files editor search. Type part of a file name to search the active session workspace.</source>
+      <source xml:lang="en">The Files editor offers a search field, followed by Open File and New File actions. Use Tab to reach the search field and actions. Use Up Arrow or Down Arrow to move between actions and Enter or Space to run one.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/editor/browser/emptyFileEditorInput" source-language="en" datatype="plaintext"><body>
@@ -114,9 +123,6 @@
     <trans-unit id="emptyFileEditor.searchPlaceholder">
       <source xml:lang="en">Search files by name</source>
     </trans-unit>
-    <trans-unit id="emptyFileEditorSearchFocused">
-      <source xml:lang="en">Whether focus is in the empty Files editor search.</source>
-    </trans-unit>
     <trans-unit id="emptyFileEditorSearchPickerFocused">
       <source xml:lang="en">Whether the empty Files editor search picker is active.</source>
     </trans-unit>
@@ -124,6 +130,23 @@
   <file original="src/vs/sessions/contrib/editor/common/diffEditorOptionsService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionsDiffViewMode">
       <source xml:lang="en">The preferred layout mode for diffs in the Agents window</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/editor/electron-browser/browserEmptyState.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="browser.emptyActions">
+      <source xml:lang="en">Browser actions</source>
+    </trans-unit>
+    <trans-unit id="browser.history">
+      <source xml:lang="en">History</source>
+    </trans-unit>
+    <trans-unit id="browser.historyIcon">
+      <source xml:lang="en">Icon for browser history.</source>
+    </trans-unit>
+    <trans-unit id="browser.openAddress">
+      <source xml:lang="en">Open Address...</source>
+    </trans-unit>
+    <trans-unit id="browser.openAddressIcon">
+      <source xml:lang="en">Icon for entering a browser address.</source>
     </trans-unit>
 </body></file>
 </xliff>

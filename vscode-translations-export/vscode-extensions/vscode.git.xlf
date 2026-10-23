@@ -2432,7 +2432,7 @@ Please make sure there is no space between the right bracket and left parenthesi
       <source xml:lang="en">The character to replace whitespace in new branch names, and to separate segments of a randomly generated branch name.</source>
     </trans-unit>
     <trans-unit id="config.defaultCloneDirectory">
-      <source xml:lang="en">The default location to clone a Git repository.</source>
+      <source xml:lang="en">The default location to clone a Git repository. Also used as the root folder for repositories cloned by remote clients when this machine is shared as a GitHub environment, unless chat.agentHost.defaultCloneDirectory is set. Remote clones are placed in &lt;root&gt;/&lt;owner&gt;/&lt;repository&gt;.</source>
     </trans-unit>
     <trans-unit id="view.workbench.scm.unsafeRepositories">
       <source xml:lang="en">The detected Git repositories are potentially unsafe as the folders are owned by someone other than the current user.&#10;[Manage Unsafe Repositories](command:git.manageUnsafeRepositories)&#10;To learn more about unsafe repositories [read our docs](https://aka.ms/vscode-git-unsafe-repository).</source>

@@ -424,6 +424,9 @@
     <trans-unit id="sessionActivityBar.dragHandle">
       <source xml:lang="en">Drag to move. Double-click to reset the position.</source>
     </trans-unit>
+    <trans-unit id="sessionActivityBar.titleWithActivity">
+      <source xml:lang="en">{0} - {1}</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/browser/parts/sessionHeaderBar" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatHeaderLabel">
@@ -888,6 +891,9 @@
     <trans-unit id="application.teams">
       <source xml:lang="en">Teams</source>
     </trans-unit>
+    <trans-unit id="application.unknown">
+      <source xml:lang="en">Unknown</source>
+    </trans-unit>
     <trans-unit id="application.vscode">
       <source xml:lang="en">VS Code</source>
     </trans-unit>
@@ -1091,11 +1097,8 @@
     <trans-unit id="sessionComparison.attemptLabel">
       <source xml:lang="en">Attempt {0} ({1})</source>
     </trans-unit>
-    <trans-unit id="sessionComparison.gitRemoteRequired">
-      <source xml:lang="en">Comparisons require a Git remote.</source>
-    </trans-unit>
-    <trans-unit id="sessionComparison.gitRepositoryRequired">
-      <source xml:lang="en">Comparisons require a Git repository with at least one commit.</source>
+    <trans-unit id="sessionComparison.gitBranchRequired">
+      <source xml:lang="en">Comparisons require a Git repository with branch information.</source>
     </trans-unit>
     <trans-unit id="sessionComparison.harnessAndModel">
       <source xml:lang="en">{0} · {1}</source>

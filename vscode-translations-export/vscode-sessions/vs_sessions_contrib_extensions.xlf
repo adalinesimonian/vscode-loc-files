@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/extensions/browser/agentsWindowExtensionSuggestions" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindowExtensionSuggestions.badge">
+      <source xml:lang="en">Some installed extensions can be enabled in the Agents window.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/extensions/browser/agentsWindowExtensionsAccessibilityHelp" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentsWindowExtensions.help.groups">
       <source xml:lang="en">Extensions that support the Agents window are listed under Supported and are enabled by default. Other extensions are listed under Other Extensions and are disabled by default because they might not work as expected.</source>
@@ -12,6 +17,9 @@
     </trans-unit>
     <trans-unit id="agentsWindowExtensions.help.restart">
       <source xml:lang="en">When a change requires restarting extensions or reloading the window, the extension is marked as requiring a restart and a Restart Extensions or Reload Window button appears next to the section title.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.help.suggested">
+      <source xml:lang="en">Extensions listed under Suggested haven't declared support for the Agents window but could be useful there, for example because they add tools, MCP servers, or syntax highlighting. Like other extensions, they are disabled by default.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/extensions/browser/agentsWindowExtensionsWidget" source-language="en" datatype="plaintext"><body>
@@ -78,6 +86,12 @@
     <trans-unit id="agentsWindowExtensions.searchPlaceholder">
       <source xml:lang="en">Type to search...</source>
     </trans-unit>
+    <trans-unit id="agentsWindowExtensions.suggestedGroup">
+      <source xml:lang="en">Suggested</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.suggestedGroupDescription">
+      <source xml:lang="en">Extensions that could be useful in the Agents window, for example because they add tools, MCP servers, or syntax highlighting. They haven't declared support for the Agents window, so they are disabled by default and might not work as expected.</source>
+    </trans-unit>
     <trans-unit id="agentsWindowExtensions.supportedGroup">
       <source xml:lang="en">Supported</source>
     </trans-unit>
@@ -106,6 +120,9 @@
     </trans-unit>
     <trans-unit id="extensions.experimental.agentsWindowManagement">
       <source xml:lang="en">When enabled, you can choose which installed extensions run in the Agents window from the Extensions section of Agent Customizations. When disabled, extensions that don't support the Agents window stay disabled there, and your previous choices are kept but ignored.</source>
+    </trans-unit>
+    <trans-unit id="extensions.experimental.agentsWindowSuggestions">
+      <source xml:lang="en">When enabled, the Agents window suggests installed extensions that could be useful there, such as extensions that add tools, MCP servers, or syntax highlighting. The Extensions section of Agent Customizations lists them in a Suggested group, and its entry point shows a badge while they are disabled, until you open the section. Requires `#{0}#`.</source>
     </trans-unit>
     <trans-unit id="extensions.experimental.enableAgentsWindowCapability">
       <source xml:lang="en">When enabled, non-built-in extensions can declare whether they support running in the Agents window. Built-in extensions can declare support without enabling this setting.</source>

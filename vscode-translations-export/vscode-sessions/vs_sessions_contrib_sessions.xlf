@@ -118,8 +118,11 @@
       <source xml:lang="en">&amp;&amp;Sessions</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
+    <trans-unit id="sessions.list.agentTools.enabled">
+      <source xml:lang="en">Controls whether agents can read and organize the Sessions list: create, nest, and reorder custom groups, move, pin, and archive sessions, and change the list's grouping, sorting, and filters. This only applies to the Sessions list of the Agents window.</source>
+    </trans-unit>
     <trans-unit id="sessions.list.externalApplicationBadge">
-      <source xml:lang="en">Controls where external sessions created in another application show the creating application.</source>
+      <source xml:lang="en">Controls where sessions created in an application other than VS Code show the creating application.</source>
     </trans-unit>
     <trans-unit id="sessions.list.externalApplicationBadge.details">
       <source xml:lang="en">Show the creating application first in the session details.</source>
@@ -128,7 +131,7 @@
       <source xml:lang="en">Do not show the creating application.</source>
     </trans-unit>
     <trans-unit id="sessions.list.externalApplicationBadge.showFrom">
-      <source xml:lang="en">Controls whether external session application badges include the word 'From'.</source>
+      <source xml:lang="en">Controls whether session application badges include the word 'From'.</source>
     </trans-unit>
     <trans-unit id="sessions.list.externalApplicationBadge.title">
       <source xml:lang="en">Show the creating application next to the session title.</source>
@@ -409,6 +412,50 @@
     </trans-unit>
     <trans-unit id="widenSession">
       <source xml:lang="en">Increase Session Width</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/sessionsListTools" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionsList.tool.organize.displayName">
+      <source xml:lang="en">Organize Sessions List</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.organize.invocationMessage">
+      <source xml:lang="en">Organizing the Sessions list ({0} changes)</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.organize.invocationMessage.single">
+      <source xml:lang="en">Organizing the Sessions list</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.organize.pastTenseMessage">
+      <source xml:lang="en">Organized the Sessions list</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.organize.result">
+      <source xml:lang="en">Applied {0} Sessions list changes</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.organize.result.failed">
+      <source xml:lang="en">Applied {0} of {1} Sessions list changes</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.organize.result.single">
+      <source xml:lang="en">Applied 1 Sessions list change</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.organize.userDescription">
+      <source xml:lang="en">Group, order, filter, and sort the Sessions list</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.read.displayName">
+      <source xml:lang="en">Read Sessions List</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.read.invocationMessage">
+      <source xml:lang="en">Reading the Sessions list</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.read.pastTenseMessage">
+      <source xml:lang="en">Read the Sessions list</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.read.result">
+      <source xml:lang="en">Read the Sessions list</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.read.result.header">
+      <source xml:lang="en">Read the {0} section of the Sessions list</source>
+    </trans-unit>
+    <trans-unit id="sessionsList.tool.read.userDescription">
+      <source xml:lang="en">Read how the Sessions list is grouped, sorted, filtered, and organized</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/sessionsTitleBarWidget" source-language="en" datatype="plaintext"><body>
@@ -1184,6 +1231,41 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Yesterday</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/sessionGroupAppearancePicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="black">
+      <source xml:lang="en">Black</source>
+    </trans-unit>
+    <trans-unit id="blue">
+      <source xml:lang="en">Blue</source>
+    </trans-unit>
+    <trans-unit id="cyan">
+      <source xml:lang="en">Cyan</source>
+    </trans-unit>
+    <trans-unit id="green">
+      <source xml:lang="en">Green</source>
+    </trans-unit>
+    <trans-unit id="groupIcon">
+      <source xml:lang="en">Change group icon</source>
+    </trans-unit>
+    <trans-unit id="magenta">
+      <source xml:lang="en">Magenta</source>
+    </trans-unit>
+    <trans-unit id="red">
+      <source xml:lang="en">Red</source>
+    </trans-unit>
+    <trans-unit id="resetColor">
+      <source xml:lang="en">Reset to default</source>
+    </trans-unit>
+    <trans-unit id="selectGroupColor">
+      <source xml:lang="en">Select a color for the group</source>
+    </trans-unit>
+    <trans-unit id="white">
+      <source xml:lang="en">White</source>
+    </trans-unit>
+    <trans-unit id="yellow">
+      <source xml:lang="en">Yellow</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionStorageCleanupNotice" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionStorageCleanupNotice.announcement">
       <source xml:lang="en">{0} Run Open Worktree Cleanup to review it. To stop these suggestions, run Disable Session Storage Cleanup Suggestions.</source>
@@ -1225,6 +1307,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationsUnreadRunAria">
       <source xml:lang="en">{0}, unread run</source>
+    </trans-unit>
+    <trans-unit id="changeGroupColor">
+      <source xml:lang="en">Change Color...</source>
+    </trans-unit>
+    <trans-unit id="changeGroupIcon">
+      <source xml:lang="en">Change Icon...</source>
     </trans-unit>
     <trans-unit id="chatsSection">
       <source xml:lang="en">Chats</source>
@@ -1307,6 +1395,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="customizationsCountAria">
       <source xml:lang="en">{0} customizations</source>
     </trans-unit>
+    <trans-unit id="customizationsExtensionSuggestionsAria">
+      <source xml:lang="en">{0}, {1}, {2}</source>
+    </trans-unit>
     <trans-unit id="customizationsMigrationAvailableAria">
       <source xml:lang="en">{0}, {1}, customization migrations available</source>
     </trans-unit>
@@ -1324,6 +1415,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="markAllInSectionRead">
       <source xml:lang="en">Mark All as Read</source>
+    </trans-unit>
+    <trans-unit id="moveSectionToGroup">
+      <source xml:lang="en">Move to Group</source>
     </trans-unit>
     <trans-unit id="moveToGroupAction">
       <source xml:lang="en">Move to Group</source>
@@ -1376,6 +1470,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="removeFromGroupAction">
       <source xml:lang="en">Remove from Group</source>
     </trans-unit>
+    <trans-unit id="removeSectionFromGroup">
+      <source xml:lang="en">Remove from Group</source>
+    </trans-unit>
     <trans-unit id="renameChat.inputAriaLabel">
       <source xml:lang="en">Rename chat. Press Enter to confirm or Escape to cancel.</source>
     </trans-unit>
@@ -1390,6 +1487,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="secondsDuration">
       <source xml:lang="en">now</source>
+    </trans-unit>
+    <trans-unit id="sectionMovedToGroup">
+      <source xml:lang="en">Moved {0} to {1}</source>
+    </trans-unit>
+    <trans-unit id="sectionRemovedFromGroup">
+      <source xml:lang="en">Removed {0} from its group</source>
     </trans-unit>
     <trans-unit id="sessionChatItemArchivedAria">
       <source xml:lang="en">{0}, archived</source>
@@ -1493,6 +1596,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="showLessCompact">
       <source xml:lang="en">Show less</source>
     </trans-unit>
+    <trans-unit id="showLessEnvironmentsAria">
+      <source xml:lang="en">Show fewer environments</source>
+    </trans-unit>
+    <trans-unit id="showLessEnvironmentsCompact">
+      <source xml:lang="en">Show fewer environments</source>
+    </trans-unit>
     <trans-unit id="showLessRepositoriesAria">
       <source xml:lang="en">Show fewer repositories</source>
     </trans-unit>
@@ -1510,6 +1619,18 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="showMoreCompact">
       <source xml:lang="en">+{0} more</source>
+    </trans-unit>
+    <trans-unit id="showMoreEnvironmentAria">
+      <source xml:lang="en">Show {0} more environment</source>
+    </trans-unit>
+    <trans-unit id="showMoreEnvironmentCompact">
+      <source xml:lang="en">+{0} more environment</source>
+    </trans-unit>
+    <trans-unit id="showMoreEnvironmentsAria">
+      <source xml:lang="en">Show {0} more environments</source>
+    </trans-unit>
+    <trans-unit id="showMoreEnvironmentsCompact">
+      <source xml:lang="en">+{0} more environments</source>
     </trans-unit>
     <trans-unit id="showMoreRepositoriesAria">
       <source xml:lang="en">Show {0} more repositories</source>
@@ -1700,6 +1821,9 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     <trans-unit id="filtersRestored">
       <source xml:lang="en">Filters restored.</source>
     </trans-unit>
+    <trans-unit id="groupByEnvironment">
+      <source xml:lang="en">Group by Environment</source>
+    </trans-unit>
     <trans-unit id="groupByRepository">
       <source xml:lang="en">Group by Repository</source>
     </trans-unit>
@@ -1796,7 +1920,7 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
       <source xml:lang="en">Delete Group</source>
     </trans-unit>
     <trans-unit id="deleteGroupsNoticeHelp">
-      <source xml:lang="en">This notice appears after deleting a group that contains subgroups. Undo restores the groups, their order, and their sessions, except sessions that were marked done or moved to another group since.</source>
+      <source xml:lang="en">This notice appears after deleting a group that contains subgroups or nested sections. Undo restores the groups, their order, and their sessions and sections, except sessions that were marked done or items moved to another group since.</source>
     </trans-unit>
     <trans-unit id="deleteSession">
       <source xml:lang="en">Delete...</source>
@@ -1827,6 +1951,9 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     </trans-unit>
     <trans-unit id="find">
       <source xml:lang="en">Find Session</source>
+    </trans-unit>
+    <trans-unit id="groupByEnvironment">
+      <source xml:lang="en">Environment</source>
     </trans-unit>
     <trans-unit id="grouping">
       <source xml:lang="en">Grouping</source>
@@ -1935,6 +2062,9 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     </trans-unit>
     <trans-unit id="repository">
       <source xml:lang="en">Repository</source>
+    </trans-unit>
+    <trans-unit id="sessionGroupDeleted">
+      <source xml:lang="en">Group deleted</source>
     </trans-unit>
     <trans-unit id="sessionGroupsDeleted">
       <source xml:lang="en">{0} groups deleted</source>

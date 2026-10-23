@@ -212,7 +212,7 @@
       <source xml:lang="en">The editor window uses the same compact Artifacts pill as the Agents Window, rather than an expanded list above the input. Generated images appear automatically. In a subagent chat, the Artifacts pill shows that chat's transcript artifacts without the parent session's metadata. A single file pill opens directly; multiple artifacts open a dropdown with a Generated Images section. Use the pill's hover or context menu, or a dropdown row's actions, to save an artifact or copy its path.</source>
     </trans-unit>
     <trans-unit id="chat.editorCanvasesPill">
-      <source xml:lang="en">In local Copilot agent-host sessions with chat.canvases.enabled turned on, a Canvas submenu appears in the final section of the New Chat menu, and the chat's open canvases appear in their own pill in the main window. Open the Canvas submenu to choose a registered or closed canvas by name. Use Up and Down Arrow, Right Arrow, and Enter to navigate the menus and open or refocus a canvas. A single canvas in the pill shows its title and opens directly; multiple canvases show a count and open a picker. Activating a canvas focuses its tab beside the chat, or reopens it if it was closed. To close a canvas rather than only its tab, use Close Canvas: the X on the pill of a single canvas or on a picker row, or the pill's context menu. Closing ends the canvas and notifies the extension that provides it.</source>
+      <source xml:lang="en">In local Copilot agent-host sessions with chat.canvases.enabled turned on, a Canvas submenu appears in the final section of the New Chat menu, and the chat's open canvases appear in their own pill in the main window. Open the Canvas submenu to choose a registered or closed canvas by name. Use Up and Down Arrow, Right Arrow, and Enter to navigate the menus and open or refocus a canvas. A single canvas in the pill shows its title and opens directly; multiple canvases show a count and open a picker. Activating a canvas focuses its tab beside the chat, or reopens it if it was closed. To close a canvas rather than only its tab, use Close Canvas: the X on a canvas pill or picker row, or the pill's context menu. Closing ends the canvas and notifies the extension that provides it.</source>
     </trans-unit>
     <trans-unit id="chat.editorCopySessionLink">
       <source xml:lang="en">For an Agent Host chat editor, open the editor tab context menu and choose Copy Link to copy a session URL that renders as a session link in Markdown. Selecting multiple chat tabs copies one link per line.</source>
@@ -404,7 +404,13 @@
       <source xml:lang="en">If you have bring your own key (BYOK) models configured and select Copilot on a connected remote host, the first eligible chat input in this editor window shows a warning that these models are not supported. The warning does not repeat in other chats in the same window. Use Tab to reach Dismiss notification or Don't Show Again, then Enter or Space to activate it. Dismiss notification hides the warning until the window reloads. Don't Show Again permanently hides this warning for your profile, including when new models are added.</source>
     </trans-unit>
     <trans-unit id="chat.remoteConnections.help">
-      <source xml:lang="en">On desktop, Allow Remote Connections is available in the local Agent Host chat toolbar or the Agents window title bar. Use Tab to reach the toggle in chat, or arrow keys in the title bar, and Enter or Space to enable or disable sharing. The preview setting chat.agentHost.remoteConnections selects the connection method. In VS Code Insiders and Code - OSS, the adjacent Select Remote Connection Method dropdown chooses Dev Tunnels or GitHub Environments and updates that setting. Use Tab to reach the dropdown in chat or the right arrow key from the title bar toggle, Enter or Space to open it, Up and Down Arrow to choose a method, Enter to select, and Escape to close. Selecting a method does not enable sharing; changing it turns sharing off. With GitHub environment selected, enabling the toggle registers your local environment for remote owner access. Local sessions continue using local IPC.</source>
+      <source xml:lang="en">On desktop, Remote Connections is available in the local Agent Host chat toolbar or the Agents window title bar. The preview setting chat.agentHost.remoteConnections selects the connection method. The Remote Connections button opens a menu that offers Off, Dev Tunnels, and GitHub Environments when available. Use Tab to reach the button in chat or arrow keys in the title bar, Enter or Space to open it, Up and Down Arrow to choose an option, Enter to select, and Escape to close and return focus to the button. Selecting a method updates the setting and enables sharing. Selecting Off disables sharing without changing the preferred method. The footer shows the name used to identify this machine on other clients and whether it is shared or connecting. Changing the setting directly turns sharing off. The setting chat.agentHost.githubEnvironments.enabled controls GitHub Environments availability. If your organization disables it, the menu explains that you must contact your administrator. With GitHub environment selected, enabling sharing registers your local environment for remote owner access. Remote work uses the host's OAuth token by default, controlled by chat.agentHost.experimentalMissionControl.useLocalCredentials. Local sessions continue using local IPC.</source>
+    </trans-unit>
+    <trans-unit id="chat.remoteConnections.policyHelp">
+      <source xml:lang="en">If GitHub Environments is disabled by your organization, the footer explains the restriction. Press Tab to reach View Setting and Enter to open the managed setting. Shift+Tab returns to the connection options.</source>
+    </trans-unit>
+    <trans-unit id="chat.remoteConnections.renameHelp">
+      <source xml:lang="en">In the Remote Connections menu, press Tab to reach the name link in the footer, then Enter or Space to rename the shared environment. The input starts with the current name. Enter saves the name shown on other clients, and Escape cancels. Shift+Tab returns to the connection options. Renaming while Off does not enable sharing.</source>
     </trans-unit>
     <trans-unit id="chat.renameSession">
       <source xml:lang="en">To rename the current chat session when supported, invoke the Rename command{0}. Agent Host sessions can be renamed after sending the first request.</source>
@@ -419,7 +425,7 @@
       <source xml:lang="en">Open the Command Palette{0} and run Sandbox: Manage Trusted CA for the last-focused chat. Use Up and Down Arrow to choose Install, Rotate, or Remove, then Enter to continue or Escape to cancel. If there is no agent-host target for the last-focused chat, a dialog says No agent host detected.</source>
     </trans-unit>
     <trans-unit id="chat.sandboxCertificateInstall">
-      <source xml:lang="en">When the host supports certificate installation, use Tab to reach the Install link and Enter to activate it. You can also choose Install in Manage Trusted CA after dismissing the notice. A confirmation names the host. Install creates and trusts the certificate, replacing it if needed. Running tools may need to restart. Progress appears in the notice; failures are shown in a dialog.</source>
+      <source xml:lang="en">Use Tab to reach Learn more for certificate guidance. When the host supports certificate installation, use Tab to reach the Install button and Enter or Space to activate it. You can also choose Install in Manage Trusted CA after dismissing the notice. A confirmation names the host. Install creates and trusts the certificate, replacing it if needed. Running tools may need to restart. Progress appears in the notice; failures are shown in a dialog.</source>
     </trans-unit>
     <trans-unit id="chat.sandboxCertificateMissing">
       <source xml:lang="en">If the agent host reports a missing sandbox certificate that it can install, an informational notice appears above the focused chat input. Installation is optional and chatting is not blocked. Dependency warnings take priority over this notice. Use Tab to reach Dismiss notification and Enter or Space to hide certificate notices for that host runtime in this window.</source>
@@ -451,11 +457,14 @@
     <trans-unit id="chat.sessionPreparation">
       <source xml:lang="en">While a session is being prepared, a progress message appears in the transcript. Use Tab or Shift+Tab to reach Show Log, when available, and press Enter or Space to open the output log. Use Stop to cancel preparation. The chat input and attachment controls are disabled until preparation finishes.</source>
     </trans-unit>
+    <trans-unit id="chat.sessionPullRequestChanges">
+      <source xml:lang="en">In the Pull Requests pill, open the dropdown and use a pull request's Open Pull Request Changes row action to view its changed files in a multi-file diff editor.</source>
+    </trans-unit>
     <trans-unit id="chat.sessionStatusPillCopy">
       <source xml:lang="en">When a pill represents a single item, its context menu offers the item's copy actions, such as copying its URL or file path. For a collection, open the dropdown and use the individual row actions instead.</source>
     </trans-unit>
     <trans-unit id="chat.sessionStatusPills">
-      <source xml:lang="en">When session status pills appear above the input, use Tab to focus the toolbar, then use the left and right arrow keys to move between pills. Press Enter or Space to activate a pill. Open the context menu{0} to choose which optional pills are visible. Pull Requests Options lets you show all pull requests or only open and draft ones, remembered across sessions. If every pull request is filtered out, these options are also available in any other pill's context menu or the toolbar context menu.</source>
+      <source xml:lang="en">When session status pills appear above the input, use Tab to focus the toolbar, then use the left and right arrow keys to move between pills. Press Enter or Space to activate a pill. An aggregated pill opens a picker. Use Pin on a picker row to keep that entry as its own pill; it is removed from the picker, and a sole remaining entry is shown directly unless it requires a details picker. A pinned pill shows a trailing Unpin button that pointer users can activate to unpin it. Keyboard and screen reader users can open the pinned pill's context menu{0} and choose Unpin. Pin choices are remembered for each chat. The context menu also lets you choose which optional pills are visible. Pull Requests Options lets you show all pull requests or only open and draft ones, remembered across sessions. If every pull request is filtered out, these options are also available in any other pill's context menu or the toolbar context menu.</source>
     </trans-unit>
     <trans-unit id="chat.sessionStatusPillsCompact">
       <source xml:lang="en">When space is limited, session status pills collapse to icons one at a time from right to left. Their full labels remain available to screen readers and in tooltips. Labels return as space becomes available. If the icons still do not fit, the row scrolls horizontally; use the arrow keys to reach every pill.</source>
@@ -528,6 +537,15 @@
     </trans-unit>
     <trans-unit id="chat.voiceMode.introduction">
       <source xml:lang="en">The first time Voice Mode starts, an introduction appears above the input box. Tab to reach it, then use the arrow keys to move between the available voices; Enter or Space plays a voice and keeps it for future conversations. Its description also contains two links: Settings, which opens the Voice Mode settings, and How It Responds, which opens a file for customizing what the agent says back. Voice Mode stays connected but does not listen while the introduction is open. Press Escape, or activate the Close button, to dismiss it and return to the input box.</source>
+    </trans-unit>
+    <trans-unit id="chat.voiceMode.questionSequence">
+      <source xml:lang="en">For forms with multiple questions, Voice Mode identifies the current question by number. Answer only that question, then wait for the next one. Each spoken reply fills one field, not several fields.</source>
+    </trans-unit>
+    <trans-unit id="chat.voiceMode.sessionAwareness">
+      <source xml:lang="en">When agents.voice.sessionAwareness is enabled, OpenAI BYOK Voice Mode receives a bounded session briefing and the active chat's recent conversation. You can ask where you left off, what just happened, or which tracked session needs input without starting a coding request. The briefing may not include every session. Coding work and replies to approvals still use the bound chat input. Disable the setting and reconnect Voice Mode to restore input-only context.</source>
+    </trans-unit>
+    <trans-unit id="chat.voiceMode.steering">
+      <source xml:lang="en">When Voice Mode sends a new request while the coding agent is working, it is sent as steering rather than queued for after the current task. Voice-only exchanges during ongoing work are not retained as context for later requests. Answers to pending questions and approvals continue to respond to those prompts.</source>
     </trans-unit>
     <trans-unit id="chat.vscodePet">
       <source xml:lang="en">Type /vscode-pet to show or hide Blobby, the VS Code pet, above the input. One pet appears in whichever editor or Agents window is active. Drag it around the chat with the mouse and release it to drop it, or flick it in any direction to throw it along the gesture before gravity pulls it down. Pointer collisions are ignored for half a second after a drag release. After that, while the pet is falling, move the pointer into it to bounce it upward; pointer movement and where it catches the pet affect the bounce. Sideways and upward travel do not start the bounce counter. A counter beside the pet tracks consecutive bounces and remains for up to five seconds after landing, or until the pet next reacts or interacts. Landing with at least twenty bounces triggers confetti unless reduced motion is enabled. If it falls past the input, a despawn effect appears at the bottom and a respawn effect appears at the top before it automatically returns to the input. Moving the pointer rapidly between the pet’s left and right sides makes it dizzy. With the keyboard, use Tab to focus the pet, then the left and right arrows to make it hop along the input until it reaches an edge. Hold Shift with the left or right arrow to throw it toward a wall; while it is airborne, press Enter or Space to bounce it upward. Rapidly alternate the unmodified arrows to make it dizzy. Press Enter or Space while it is resting to interact with it. When an achievement unlocks, the pet shows a gold star for ten seconds; activate the pet during that time to open Achievements. Open its context menu{0} (for example Shift+F10), use the up and down arrow keys to choose Achievements, Go on the Run, Come Back, Grow, Shrink, Reset Size, or Change Color, and press Enter to activate the choice. Grow and Shrink change its size in twenty-percent steps, while Reset Size restores its default size. The pet position, size, and color are shared across chats and windows and remembered after you restart.</source>
@@ -1490,6 +1508,12 @@ User: {2}</source>
       <source xml:lang="en">Failed to install plugin: {0}</source>
     </trans-unit>
     <trans-unit id="installPluginFromSource">
+      <source xml:lang="en">Install Plugin from Source</source>
+    </trans-unit>
+    <trans-unit id="installPluginFromSourceForHarness">
+      <source xml:lang="en">Install Plugin from Source ({0})</source>
+    </trans-unit>
+    <trans-unit id="installPluginFromSourceTitle">
       <source xml:lang="en">Install Plugin from Source</source>
     </trans-unit>
     <trans-unit id="invalidMarketplaceSource">
@@ -2542,6 +2566,9 @@ Size: {3} bytes</source>
     <trans-unit id="agentHost.mcpConfiguration.addUnavailable">
       <source xml:lang="en">The selected agent does not support global MCP configuration.</source>
     </trans-unit>
+    <trans-unit id="agentHost.pluginInstall.unavailable">
+      <source xml:lang="en">The selected agent does not support installing plugins from source.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostCustomizationService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.mcpConnectorAuthorizationFailed">
@@ -3101,10 +3128,11 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Installing sandbox certificate</source>
     </trans-unit>
     <trans-unit id="agentHost.sandboxCertificateMissing">
-      <source xml:lang="en">Sandbox trusted CA is not installed</source>
+      <source xml:lang="en">Sandbox trusted CA is not installed (optional)</source>
     </trans-unit>
     <trans-unit id="agentHost.sandboxCertificateMissingDetail">
-      <source xml:lang="en">Some tools in this session's sandbox might require the sandbox certificate authority (CA) to be trusted by the agent host's operating system. Install it in the OS trust store to enable those tools to connect securely.</source>
+      <source xml:lang="en">Install the sandbox certificate authority (CA) so developer tools can connect securely through a proxy that adds credentials to outgoing requests without exposing them to agent tools. {0}.</source>
+      <note>{0} is a Markdown link labeled "Learn more" that opens certificate trust documentation.</note>
     </trans-unit>
     <trans-unit id="agentHost.sandboxCertificateRemoving">
       <source xml:lang="en">Removing sandbox certificate trust</source>
@@ -3117,6 +3145,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHost.sandboxCertificateRotatingDetail">
       <source xml:lang="en">Replacing the certificate authority and establishing operating system trust. Running sandboxed tools may need to restart.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sandboxCertificateWhyTrust">
+      <source xml:lang="en">Learn more</source>
     </trans-unit>
     <trans-unit id="agentHost.sandboxDisableUnavailable">
       <source xml:lang="en">Sandboxing cannot be disabled in settings for this session. It may be required by your organization.</source>
@@ -3223,6 +3254,12 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="agentHost.codexThreadInUse">
       <source xml:lang="en">{0} Then send your message again in VS Code. Your message has not been sent.</source>
     </trans-unit>
+    <trans-unit id="agentHost.computerUseActivation.notNow">
+      <source xml:lang="en">Not Now</source>
+    </trans-unit>
+    <trans-unit id="agentHost.computerUseActivation.turnOn">
+      <source xml:lang="en">Turn On</source>
+    </trans-unit>
     <trans-unit id="agentHost.computerUseSetup.cancel">
       <source xml:lang="en">Cancel</source>
     </trans-unit>
@@ -3301,6 +3338,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHost.turnError">
       <source xml:lang="en">Error: ({0}) {1}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.turnRejected">
+      <source xml:lang="en">Your message could not be sent: {0}</source>
     </trans-unit>
     <trans-unit id="agentHost.workspaceTrust">
       <source xml:lang="en">AI features are currently only supported in trusted workspaces.</source>
@@ -3548,16 +3588,14 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/computerUseSetup" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="computerUseActivation.card.title">
+      <source xml:lang="en">Turn on Computer Use?</source>
+    </trans-unit>
     <trans-unit id="computerUseSetup.card.message">
       <source xml:lang="en">Copilot continues your task once macOS confirms both permissions.</source>
     </trans-unit>
     <trans-unit id="computerUseSetup.card.title">
       <source xml:lang="en">Computer Use needs permission to control apps and capture their windows.</source>
-    </trans-unit>
-</body></file>
-  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/computerUseSetup.contribution" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chat.computerUse.setUp">
-      <source xml:lang="en">Set Up Computer Use</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/computerUseSetupDialog" source-language="en" datatype="plaintext"><body>
@@ -3567,65 +3605,35 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="computerUseSetup.accessibility.description">
       <source xml:lang="en">Click and type in apps</source>
     </trans-unit>
-    <trans-unit id="computerUseSetup.action.openSettings">
-      <source xml:lang="en">Open Settings</source>
+    <trans-unit id="computerUseSetup.allow">
+      <source xml:lang="en">Allow in Settings</source>
     </trans-unit>
-    <trans-unit id="computerUseSetup.action.openSettings.aria">
-      <source xml:lang="en">Open {0} in System Settings</source>
+    <trans-unit id="computerUseSetup.allow.aria">
+      <source xml:lang="en">Allow {0} in System Settings</source>
     </trans-unit>
-    <trans-unit id="computerUseSetup.action.recheck">
-      <source xml:lang="en">Check Again</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.action.recheck.aria">
-      <source xml:lang="en">Check Permissions Again</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.action.request">
-      <source xml:lang="en">Allow</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.action.request.aria">
-      <source xml:lang="en">Allow {0}</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.canContinue">
-      <source xml:lang="en">macOS turned on both permissions.</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.close">
-      <source xml:lang="en">Close</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.continue">
-      <source xml:lang="en">Continue</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.continueTask">
-      <source xml:lang="en">Continue</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.continueTask.aria">
-      <source xml:lang="en">Continue Your Task</source>
+    <trans-unit id="computerUseSetup.checking">
+      <source xml:lang="en">Checking permissions…</source>
     </trans-unit>
     <trans-unit id="computerUseSetup.description">
       <source xml:lang="en">Copilot Computer Use needs these permissions to use apps on your Mac.</source>
     </trans-unit>
-    <trans-unit id="computerUseSetup.ended">
-      <source xml:lang="en">Setup was canceled. Ask Copilot to try again when you're ready.</source>
+    <trans-unit id="computerUseSetup.helperApp.hover">
+      <source xml:lang="en">Drag into the list in System Settings</source>
     </trans-unit>
     <trans-unit id="computerUseSetup.helperApp.name">
       <source xml:lang="en">Copilot Computer Use</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.helperApp.reveal">
-      <source xml:lang="en">Show in Finder</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.helperApp.reveal.aria">
-      <source xml:lang="en">Show Copilot Computer Use in Finder</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.idle">
-      <source xml:lang="en">Copilot checks these permissions the next time it needs Computer Use.</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.notNow">
-      <source xml:lang="en">Not Now</source>
     </trans-unit>
     <trans-unit id="computerUseSetup.permissions">
       <source xml:lang="en">Required permissions</source>
     </trans-unit>
     <trans-unit id="computerUseSetup.ready">
       <source xml:lang="en">Computer Use is ready.</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.recheck">
+      <source xml:lang="en">Check Again</source>
+    </trans-unit>
+    <trans-unit id="computerUseSetup.recheck.aria">
+      <source xml:lang="en">Check {0} Again</source>
     </trans-unit>
     <trans-unit id="computerUseSetup.row">
       <source xml:lang="en">{0}, {1}. {2}</source>
@@ -3639,12 +3647,6 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="computerUseSetup.screenRecording.description">
       <source xml:lang="en">See app windows</source>
     </trans-unit>
-    <trans-unit id="computerUseSetup.settingsStep">
-      <source xml:lang="en">Turn on Copilot Computer Use under {0} in System Settings.</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.settingsStep.drag">
-      <source xml:lang="en">Turn on Copilot Computer Use under {0} in System Settings, or drag it into the list.</source>
-    </trans-unit>
     <trans-unit id="computerUseSetup.state.granted">
       <source xml:lang="en">Granted</source>
     </trans-unit>
@@ -3656,18 +3658,6 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="computerUseSetup.title">
       <source xml:lang="en">Set Up Computer Use</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.unavailable">
-      <source xml:lang="en">Computer Use setup is available when Computer Use is turned on for local Copilot sessions on this Mac.</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.working.openSettings">
-      <source xml:lang="en">Opening {0} in System Settings…</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.working.recheck">
-      <source xml:lang="en">Checking permissions…</source>
-    </trans-unit>
-    <trans-unit id="computerUseSetup.working.request">
-      <source xml:lang="en">Waiting for macOS to ask about {0}…</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/importLocalConversationToAgentSession" source-language="en" datatype="plaintext"><body>
@@ -4656,6 +4646,17 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">New</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentsWindowHoverCard" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindowHoverCard.description">
+      <source xml:lang="en">Run several agents at the same time, each on its own task, and review their changes when they're done.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowHoverCard.open">
+      <source xml:lang="en">Open Agents Window</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowHoverCard.title">
+      <source xml:lang="en">All your agents, across all your projects, in one window</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/copilotHarnessIntroduction" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copilotHarnessAgentDescription">
       <source xml:lang="en">Continue your sessions across windows and apps, without changing how you work. [Let us know]({0}) how it goes.</source>
@@ -5096,7 +5097,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Available</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.availableAriaLabel">
-      <source xml:lang="en">{0}, {1}, source {2}. {3}. {4}</source>
+      <source xml:lang="en">{0}, {1}, source {2}{3}. {4}. {5}</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.cancelConnectorOperationLabel">
       <source xml:lang="en">Cancel connecting {0}</source>
@@ -5265,7 +5266,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Installed</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.installedAriaLabel">
-      <source xml:lang="en">{0}, {1}, {2}{3}{4}. {5}</source>
+      <source xml:lang="en">{0}, {1}, {2}{3}{4}{5}. {6}</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.installedPluginDescription">
       <source xml:lang="en">Installed agent plugin</source>
@@ -5470,6 +5471,12 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.verificationFailed">
       <source xml:lang="en">Could not verify installation</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.verifiedAriaLabel">
+      <source xml:lang="en">, verified by GitHub</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.verifiedByGitHub">
+      <source xml:lang="en">Verified by GitHub</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.viewSetup">
       <source xml:lang="en">View Setup</source>
@@ -6429,10 +6436,10 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Overview</source>
     </trans-unit>
     <trans-unit id="pluginMarketplaceMigrationLoadError">
-      <source xml:lang="en">Plugin marketplaces could not be checked</source>
+      <source xml:lang="en">Couldn't load Copilot's plugin marketplaces</source>
     </trans-unit>
     <trans-unit id="pluginMarketplaceMigrationLoadErrorDescription">
-      <source xml:lang="en">Check the active agent connection, then try again.</source>
+      <source xml:lang="en">Check the Copilot connection, then try again.</source>
     </trans-unit>
     <trans-unit id="pluginMarketplaceMigrationSource">
       <source xml:lang="en">Configured in VS Code settings</source>
@@ -6523,6 +6530,9 @@ Destination files created or changed by the agent are not removed.</source>
     </trans-unit>
     <trans-unit id="saved">
       <source xml:lang="en">Saved</source>
+    </trans-unit>
+    <trans-unit id="sectionAriaLabelWithBadge">
+      <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
     <trans-unit id="sectionAriaLabelWithCount">
       <source xml:lang="en">{0}, {1} items</source>
@@ -7084,10 +7094,13 @@ Destination files created or changed by the agent are not removed.</source>
       <source xml:lang="en">Migrate applies to the selected items in one group and asks for confirmation before modifying files or settings. Ignore permanently hides a group. Show Ignored Migrations restores hidden groups. Agent Migration Recovery can restore original sources or delete a backup; restoring does not remove destination files created or changed by the agent.</source>
     </trans-unit>
     <trans-unit id="migrationHelpAgent">
-      <source xml:lang="en">Use Migrate to have VS Code update the selected customizations. Migrate with Agent backs up every original source before closing Agent Customizations and focusing a guided migration in chat for the selected harness. Agent migration uses credits.</source>
+      <source xml:lang="en">Use Migrate to have VS Code update the selected customizations. Migrate with Agent backs up every original source before closing Agent Customizations and focusing a guided migration in chat for the selected harness. Agent migration uses Copilot credits.</source>
     </trans-unit>
     <trans-unit id="migrationHelpDiscoveryErrors">
       <source xml:lang="en">If a migration type cannot be checked, its error appears without hiding other migrations. Use Retry to check that migration type again.</source>
+    </trans-unit>
+    <trans-unit id="migrationHelpLearnMore">
+      <source xml:lang="en">Use Learn About Migrations to read why Copilot's new agent runtime needs different customization formats and locations, and how to migrate them.</source>
     </trans-unit>
     <trans-unit id="migrationHelpLocations">
       <source xml:lang="en">Activate a destination path to change the destination. Workspace MCP servers migrate to the root .mcp.json. User MCP servers migrate to mcp-config.json in Copilot home. Disabled user servers may become enabled after migration.</source>
@@ -7530,6 +7543,9 @@ Disabled servers may become enabled.</source>
     <trans-unit id="ignoreMigrationGroup">
       <source xml:lang="en">Ignore</source>
     </trans-unit>
+    <trans-unit id="learnAboutMigrations">
+      <source xml:lang="en">Learn About Migrations</source>
+    </trans-unit>
     <trans-unit id="manualReviewItemHover">
       <source xml:lang="en">{0}
 
@@ -7543,6 +7559,9 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="migrateWithAgentAriaLabel">
       <source xml:lang="en">Start a guided migration of all customization files that need migration</source>
+    </trans-unit>
+    <trans-unit id="migrateWithAgentDescription">
+      <source xml:lang="en">Open a new chat with an agent to review and migrate your customizations. This uses Copilot credits.</source>
     </trans-unit>
     <trans-unit id="migrationAccessibleActionWithLabel">
       <source xml:lang="en">{0}: {1}</source>
@@ -7578,7 +7597,7 @@ Disabled servers may become enabled.</source>
       <source xml:lang="en">Needs manual review</source>
     </trans-unit>
     <trans-unit id="migrationManualReviewGroupDescription">
-      <source xml:lang="en">These customizations cannot be migrated automatically. Open their details or use the item menu to resolve them.</source>
+      <source xml:lang="en">These customizations cannot be migrated automatically. Select Review to see what needs to change.</source>
     </trans-unit>
     <trans-unit id="migrationTreeAriaLabel">
       <source xml:lang="en">Customization migrations</source>
@@ -7590,16 +7609,16 @@ Disabled servers may become enabled.</source>
       <source xml:lang="en">Workspace</source>
     </trans-unit>
     <trans-unit id="migrationsCompletedDescription">
-      <source xml:lang="en">Your customizations use supported formats and locations.</source>
+      <source xml:lang="en">Your customizations are ready.</source>
     </trans-unit>
     <trans-unit id="migrationsDescription">
-      <source xml:lang="en">Some of your agent customizations need an update to keep working. Review and migrate them to the new formats and locations.</source>
-    </trans-unit>
-    <trans-unit id="migrationsDescriptionWithAgent">
-      <source xml:lang="en">Some of your agent customizations need an update to keep working. Use Migrate to have VS Code update selected customizations, or Migrate with Agent for a guided migration in chat. Agent migration uses credits.</source>
+      <source xml:lang="en">Copilot's new agent runtime uses different formats and locations for some customizations. Review and migrate the affected items below.</source>
     </trans-unit>
     <trans-unit id="migrationsTitle">
       <source xml:lang="en">Migrations</source>
+    </trans-unit>
+    <trans-unit id="migrationsWelcomeTitle">
+      <source xml:lang="en">Keep your customizations working</source>
     </trans-unit>
     <trans-unit id="moreActions">
       <source xml:lang="en">More Actions</source>
@@ -9909,19 +9928,19 @@ Locations configured here are only observed by the Local agent harness. Other ha
       <source xml:lang="en">Use only the enterprise-managed MCP allowlist when deciding which servers may run.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.allowedServers">
-      <source xml:lang="en">Enterprise-managed allowlist that controls which Model Context Protocol servers may be installed and run. When set, only servers matching an entry are permitted; any other server is blocked. Servers can be matched by name, remote URL pattern (with `*` wildcards), or local command invocation. Omit entirely to allow all servers (subject to the deny list). Delivered via enterprise policy for governance; this setting is not surfaced to end users.</source>
+      <source xml:lang="en">Enterprise-managed allowlist that controls which Model Context Protocol servers may be installed and run. Local servers must match a command entry when any command entries exist; remote servers must match a URL entry when any URL entries exist. Otherwise, servers may match a literal name entry. An empty list allows no servers; omit entirely to allow all servers, subject to the deny list. Gallery checks evaluate available installation candidates; the selected command or URL is checked again after resolution. Delivered via enterprise policy for governance; this setting is not surfaced to end users.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.allowedServers.policy">
       <source xml:lang="en">Allowlist of Model Context Protocol servers. When set, only servers matching an entry may be installed or run; omit entirely to allow all servers (subject to the deny list).</source>
     </trans-unit>
     <trans-unit id="chat.mcp.allowedServers.serverCommand">
-      <source xml:lang="en">Match a local server by its exact command invocation, given as the command followed by its arguments.</source>
+      <source xml:lang="en">Match a local server by its exact command followed by its arguments, in order. Environment variable references expand on the host that runs the server.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.allowedServers.serverName">
-      <source xml:lang="en">Match a server by its configured name.</source>
+      <source xml:lang="en">Match a server by its literal configured name. For local servers, names apply only when this allowlist has no command entries; for remote servers, only when it has no URL entries.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.allowedServers.serverUrl">
-      <source xml:lang="en">Match a remote server by its URL. Supports `*` wildcards, for example `https://*.example.com/*`.</source>
+      <source xml:lang="en">Match a remote server by its URL, with case-insensitive scheme and host and a case-sensitive path. Supports `*` wildcards; a pattern with no path matches any path. Environment variable references expand on the host that connects to the server.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.assisted.nuget.enabled.description">
       <source xml:lang="en">Enables NuGet packages for AI-assisted MCP server installation. Used to install MCP servers by name from the central registry for .NET packages (NuGet.org).</source>
@@ -9954,13 +9973,13 @@ Locations configured here are only observed by the Local agent harness. Other ha
       <source xml:lang="en">Denylist of Model Context Protocol servers. Servers matching any entry are blocked from being installed or run, even if they also match the allow list; deny rules always take precedence.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.deniedServers.serverCommand">
-      <source xml:lang="en">Match a local server by its exact command invocation, given as the command followed by its arguments.</source>
+      <source xml:lang="en">Match a local server by its exact command followed by its arguments, in order. Environment variable references expand on the host that runs the server.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.deniedServers.serverName">
       <source xml:lang="en">Match a server by its configured name.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.deniedServers.serverUrl">
-      <source xml:lang="en">Match a remote server by its URL. Supports `*` wildcards, for example `https://*.example.com/*`.</source>
+      <source xml:lang="en">Match a remote server by its URL, with case-insensitive scheme and host and a case-sensitive path. Supports `*` wildcards; a pattern with no path matches any path. Environment variable references expand on the host that connects to the server.</source>
     </trans-unit>
     <trans-unit id="chat.mcp.gallery.enabled">
       <source xml:lang="en">Enables the default Marketplace for Model Context Protocol (MCP) servers.</source>
@@ -10146,6 +10165,18 @@ This setting is only used by the Local agent harness.</source>
     </trans-unit>
     <trans-unit id="chat.titleBar.openInAgentsWindow.enabled">
       <source xml:lang="en">Controls whether the Open in Agents Window button is shown in the title bar.</source>
+    </trans-unit>
+    <trans-unit id="chat.titleBar.openInAgentsWindow.richHover">
+      <source xml:lang="en">Controls whether hovering or focusing the Open in Agents Window button in the title bar shows a hover card that explains the Agents window, and which graphic the card shows. Applies to users who have created fewer than two sessions in the Agents window; other users always see a simple tooltip.</source>
+    </trans-unit>
+    <trans-unit id="chat.titleBar.openInAgentsWindow.richHover.manyWindowsToOne">
+      <source xml:lang="en">Show a hover card with a graphic of editor windows for several projects becoming one Agents window, and keep the button an icon.</source>
+    </trans-unit>
+    <trans-unit id="chat.titleBar.openInAgentsWindow.richHover.none">
+      <source xml:lang="en">Show a simple tooltip, and grow the button to show its label.</source>
+    </trans-unit>
+    <trans-unit id="chat.titleBar.openInAgentsWindow.richHover.windowComparison">
+      <source xml:lang="en">Show a hover card with a graphic of the editor window and the Agents window side by side, and keep the button an icon.</source>
     </trans-unit>
     <trans-unit id="chat.titleBar.signIn.enabled">
       <source xml:lang="en">Controls whether the Copilot Sign In button is shown in the title bar when signed out. When disabled, the Sign In affordance falls back to the status bar.</source>
@@ -12391,8 +12422,26 @@ Examples:
     <trans-unit id="chatInputPills.options">
       <source xml:lang="en">{0} Options</source>
     </trans-unit>
+    <trans-unit id="chatInputPills.pinEntry">
+      <source xml:lang="en">Pin {0}</source>
+    </trans-unit>
+    <trans-unit id="chatInputPills.pinHoverLabel">
+      <source xml:lang="en">Pin</source>
+    </trans-unit>
+    <trans-unit id="chatInputPills.pinnedEntry">
+      <source xml:lang="en">Pinned {0}.</source>
+    </trans-unit>
     <trans-unit id="chatInputPills.subagentOptions">
       <source xml:lang="en">Subagent Options</source>
+    </trans-unit>
+    <trans-unit id="chatInputPills.unpinEntry">
+      <source xml:lang="en">Unpin {0}</source>
+    </trans-unit>
+    <trans-unit id="chatInputPills.unpinHoverLabel">
+      <source xml:lang="en">Unpin</source>
+    </trans-unit>
+    <trans-unit id="chatInputPills.unpinnedEntry">
+      <source xml:lang="en">Unpinned {0}.</source>
     </trans-unit>
     <trans-unit id="chatInputPills.viewChanges">
       <source xml:lang="en">View {0}</source>
@@ -15398,6 +15447,9 @@ Source: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxApiService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.identityClientFailed">
+      <source xml:lang="en">The sandbox identity-token request failed or returned an invalid response.</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.identityNetworkError">
       <source xml:lang="en">The sandbox identity-token request failed before a response was received.</source>
     </trans-unit>
@@ -15448,6 +15500,11 @@ Source: {0}</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.sealingResponseFailed">
       <source xml:lang="en">Could not read the sandbox token-sealing response.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxConnectionCustomization" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.inputPlaceholder">
+      <source xml:lang="en">Chat with Copilot</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxDraftPreparationService" source-language="en" datatype="plaintext"><body>
@@ -15604,7 +15661,10 @@ Source: {0}</source>
       <source xml:lang="en">Couldn't refresh this conversation. Recent messages may be missing.</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.liveHistoryFailed">
-      <source xml:lang="en">Couldn't load the live conversation. Try again to continue.</source>
+      <source xml:lang="en">Couldn't reopen this conversation.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.liveHistoryLoading">
+      <source xml:lang="en">Reopening conversation...</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.refreshHistory">
       <source xml:lang="en">Refresh</source>
@@ -15747,7 +15807,7 @@ Source: {0}</source>
       <source xml:lang="en">Connecting</source>
     </trans-unit>
     <trans-unit id="missionControl.connectionsDisabled">
-      <source xml:lang="en">Environment connections require remote agent hosts and AI features to be enabled.</source>
+      <source xml:lang="en">Environment connections require GitHub Environments, remote agent hosts, and AI features to be enabled.</source>
     </trans-unit>
     <trans-unit id="missionControl.empty">
       <source xml:lang="en">No online environments found.</source>
@@ -15798,11 +15858,17 @@ Source: {0}</source>
     <trans-unit id="missionControlSharing.githubAccountRequired">
       <source xml:lang="en">GitHub environment sharing requires a GitHub.com Copilot account.</source>
     </trans-unit>
+    <trans-unit id="missionControlSharing.invalidName">
+      <source xml:lang="en">Enter an environment name without control characters.</source>
+    </trans-unit>
     <trans-unit id="missionControlSharing.unavailable">
       <source xml:lang="en">GitHub environment sharing is unavailable.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/remoteAgentHost.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.defaultCloneDirectory">
+      <source xml:lang="en">Root folder for repositories cloned by remote clients when this machine is shared as a GitHub environment. Repositories are cloned into `&lt;root&gt;/&lt;owner&gt;/&lt;repository&gt;`. Use an absolute path or a path starting with `~` for the local user's home folder. The folder is created if needed. When empty, falls back to `#git.defaultCloneDirectory#`, then the home folder. Changes apply to future clones and do not move existing repositories.</source>
+    </trans-unit>
     <trans-unit id="chat.agentHost.cloudSandbox.autoConnectOnOpen">
       <source xml:lang="en">Automatically connect to or wake a cloud sandbox environment in the background when opening or restoring its chat in the Agents Window. When disabled, connecting waits until you start composing or explicitly connect.</source>
     </trans-unit>
@@ -15818,11 +15884,17 @@ Source: {0}</source>
     <trans-unit id="chat.remoteAgentHosts.enabled">
       <source xml:lang="en">Enable connecting to remote agent hosts.</source>
     </trans-unit>
+    <trans-unit id="githubEnvironments.enabled">
+      <source xml:lang="en">Enable sharing this machine as a GitHub environment and discovering and connecting to your other shared machines through Mission Control.</source>
+    </trans-unit>
+    <trans-unit id="githubEnvironments.enabled.policy">
+      <source xml:lang="en">Controls whether this machine can be shared as a GitHub environment and connect to other shared machines through Mission Control.</source>
+    </trans-unit>
     <trans-unit id="missionControl.useLocalCredentials">
-      <source xml:lang="en">Use this machine's signed-in Copilot credential instead of the remote client's credential for Mission Control agent requests. Remote clients must still authenticate as the same GitHub account. Requests use the local account's permissions and usage allowance. Changing this setting disconnects existing Mission Control clients.</source>
+      <source xml:lang="en">Use the OAuth token already available on this host for work started by a remote client through Mission Control, instead of the remote client's token. Remote clients must still authenticate as the same GitHub account. Requests use the host account's permissions and usage allowance. Changing this setting disconnects existing Mission Control clients.</source>
     </trans-unit>
     <trans-unit id="remoteConnections">
-      <source xml:lang="en">Choose the connection method used by Allow Remote Connections. In VS Code Insiders and Code - OSS, the dropdown next to the button updates this setting. Selecting a method does not enable sharing. Changing the method turns sharing off.</source>
+      <source xml:lang="en">Choose the connection method used by Allow Remote Connections. Selecting a method in the Remote Connections menu updates this setting and enables sharing. Selecting Off disables sharing without changing the preferred method. Changing this setting directly turns sharing off.</source>
     </trans-unit>
     <trans-unit id="remoteConnections.devTunnel">
       <source xml:lang="en">Allow remote connections through a secure Dev Tunnel from VS Code or a browser.</source>
@@ -16368,6 +16440,12 @@ Started: {1}</source>
     <trans-unit id="clientToolSet.remoteSessions.detail">
       <source xml:lang="en">Find remote agent hosts, delegate and inspect work, and send messages between hosts.</source>
     </trans-unit>
+    <trans-unit id="clientToolSet.sessionsList.description">
+      <source xml:lang="en">Sessions List</source>
+    </trans-unit>
+    <trans-unit id="clientToolSet.sessionsList.detail">
+      <source xml:lang="en">Group, order, filter, and sort the sessions in the Sessions list.</source>
+    </trans-unit>
     <trans-unit id="clientToolSet.tasks.description">
       <source xml:lang="en">Tasks and Problems</source>
     </trans-unit>
@@ -16777,6 +16855,16 @@ Note: This setting only controls tool approval and does not prevent the agent fr
     </trans-unit>
     <trans-unit id="voice.live.ambiguousTurn">
       <source xml:lang="en">I could not identify the voice turn for this request. Please repeat it in the intended chat input.</source>
+    </trans-unit>
+    <trans-unit id="voice.live.conversationContext">
+      <source xml:lang="en">Voice conversation context:
+{0}
+
+User: {1}</source>
+    </trans-unit>
+    <trans-unit id="voice.live.conversationTurn">
+      <source xml:lang="en">User: {0}
+Voice assistant: {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/voiceClient/voiceInputDecorations" source-language="en" datatype="plaintext"><body>
@@ -19980,6 +20068,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.comparisonSummaryHover">
       <source xml:lang="en">{0} • {1}</source>
     </trans-unit>
+    <trans-unit id="chat.modelPicker.fusionHover">
+      <source xml:lang="en">{0}
+
+{1}</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.modelsLabel">
       <source xml:lang="en">Models</source>
     </trans-unit>
@@ -21944,6 +22037,11 @@ To make this the starting permission level for new sessions, change the [{0}](co
       <source xml:lang="en">New Chat</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/common/chatSessionsService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.addModels.remoteCopilotUnsupported">
+      <source xml:lang="en">BYOK models aren't supported in remote Copilot sessions</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/common/constants" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.managedPolicy.requireAgentHost">
       <source xml:lang="en">Your organization requires the new Copilot experience. Move to Copilot to keep your conversation. If Copilot cannot start, try again or contact your administrator. Your original conversation is still available.</source>
@@ -22001,7 +22099,7 @@ To make this the starting permission level for new sessions, change the [{0}](co
       <source xml:lang="en">Models routed via auto receive a {0}% discount.</source>
     </trans-unit>
     <trans-unit id="autoModel.fusionDescription">
-      <source xml:lang="en">Copilot Fusion chooses models and workflows based on your task.</source>
+      <source xml:lang="en">Copilot Fusion selects a single model or orchestrates multiple models to complete your task.</source>
     </trans-unit>
     <trans-unit id="autoModel.fusionLearnMore">
       <source xml:lang="en">[Learn more]({0})</source>
@@ -22659,11 +22757,23 @@ Example: `['src/**/*.ts', 'test/**']`</source>
     <trans-unit id="githubCopilot.execute">
       <source xml:lang="en">Execute commands</source>
     </trans-unit>
+    <trans-unit id="githubCopilot.githubTools">
+      <source xml:lang="en">Use GitHub tools</source>
+    </trans-unit>
+    <trans-unit id="githubCopilot.playwrightTools">
+      <source xml:lang="en">Use browser automation tools</source>
+    </trans-unit>
     <trans-unit id="githubCopilot.read">
       <source xml:lang="en">Read files</source>
     </trans-unit>
     <trans-unit id="githubCopilot.search">
       <source xml:lang="en">Search files</source>
+    </trans-unit>
+    <trans-unit id="githubCopilot.todo">
+      <source xml:lang="en">Manage task lists</source>
+    </trans-unit>
+    <trans-unit id="githubCopilot.web">
+      <source xml:lang="en">Fetch URLs and search the web</source>
     </trans-unit>
     <trans-unit id="promptBody.githubCopilot.configDir">
       <source xml:lang="en">Copilot configuration directory.</source>
@@ -22911,6 +23021,12 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptHeaderAutocompletion.newPromptHook.description">
       <source xml:lang="en">Add a startup prompt action to this hook.</source>
     </trans-unit>
+    <trans-unit id="promptHeaderAutocompletion.toolDisabled">
+      <source xml:lang="en">Disabled</source>
+    </trans-unit>
+    <trans-unit id="promptHeaderAutocompletion.toolUnavailable">
+      <source xml:lang="en">Unavailable</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptHovers" source-language="en" datatype="plaintext"><body>
     <trans-unit id="claudeModelEquivalent">
@@ -22959,6 +23075,15 @@ Allowed values: {1}.</source>
     </trans-unit>
     <trans-unit id="promptHeader.attribute.notUsedByCopilot">
       <source xml:lang="en">Note: This attribute is not used by the GitHub Copilot harness.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilot.toolDisabled">
+      <source xml:lang="en">This tool is recognized but disabled for the matching GitHub Copilot harness.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilot.toolSetUnsupported">
+      <source xml:lang="en">Tool sets are not supported by the GitHub Copilot harness. List individual tools in the `tools` frontmatter attribute.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilot.toolUnavailable">
+      <source xml:lang="en">This tool is recognized but currently unavailable for the matching GitHub Copilot harness.</source>
     </trans-unit>
     <trans-unit id="promptHeader.prompt.agent.builtInDesc">
       <source xml:lang="en">Built-in agent</source>
@@ -23096,21 +23221,6 @@ Example: `['src/**/*.ts', 'test/**']`</source>
     </trans-unit>
     <trans-unit id="claude.write">
       <source xml:lang="en">Create/overwrite files</source>
-    </trans-unit>
-    <trans-unit id="githubCopilot.agent">
-      <source xml:lang="en">Use subagents</source>
-    </trans-unit>
-    <trans-unit id="githubCopilot.edit">
-      <source xml:lang="en">Edit files</source>
-    </trans-unit>
-    <trans-unit id="githubCopilot.execute">
-      <source xml:lang="en">Execute commands</source>
-    </trans-unit>
-    <trans-unit id="githubCopilot.read">
-      <source xml:lang="en">Read files</source>
-    </trans-unit>
-    <trans-unit id="githubCopilot.search">
-      <source xml:lang="en">Search files</source>
     </trans-unit>
     <trans-unit id="githubPermission.actions">
       <source xml:lang="en">Access to GitHub Actions workflows and runs</source>
@@ -23290,11 +23400,23 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptValidator.copilotReasoningEffortUnavailable">
       <source xml:lang="en">Reasoning effort '{0}' is not supported by the selected model.</source>
     </trans-unit>
+    <trans-unit id="promptValidator.copilotToolDisabled">
+      <source xml:lang="en">Tool '{0}' is recognized but disabled for the matching GitHub Copilot harness.</source>
+    </trans-unit>
     <trans-unit id="promptValidator.copilotToolReferenceUnsupported">
       <source xml:lang="en">Local '#tool:' reference '{0}' is not expanded by the GitHub Copilot harness.</source>
     </trans-unit>
     <trans-unit id="promptValidator.copilotToolSetReferenceUnsupported">
       <source xml:lang="en">Tool set '{0}' is not supported by the GitHub Copilot harness. List individual tools in the 'tools' frontmatter attribute.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.copilotToolSetUnsupported">
+      <source xml:lang="en">Tool set '{0}' is not supported by the GitHub Copilot harness. List individual tools instead.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.copilotToolUnavailable">
+      <source xml:lang="en">Tool '{0}' is recognized but currently unavailable for the matching GitHub Copilot harness.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.copilotToolUnknown">
+      <source xml:lang="en">Tool '{0}' is not recognized by the matching GitHub Copilot harness.</source>
     </trans-unit>
     <trans-unit id="promptValidator.deprecatedVariableReference">
       <source xml:lang="en">Tool or toolset '{0}' has been renamed, use '{1}' instead.</source>
@@ -24088,6 +24210,17 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
       <source xml:lang="en">This prompt cannot be answered by voice. Please respond in the chat input.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/common/voiceClient/voicePendingNarration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="voice.oneQuestionAtATime">
+      <source xml:lang="en">Please answer one question at a time. {0}</source>
+    </trans-unit>
+    <trans-unit id="voice.questionNumber">
+      <source xml:lang="en">Question {0} of {1}: {2}</source>
+    </trans-unit>
+    <trans-unit id="voice.questionWithContext">
+      <source xml:lang="en">{0} {1}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/common/widget/chatColors" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentStatusIndicator.background">
       <source xml:lang="en">Background color of the agent status indicator in the titlebar.</source>
@@ -24557,6 +24690,9 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
 
 {1}</source>
     </trans-unit>
+    <trans-unit id="remoteConnections.connectingName">
+      <source xml:lang="en">Connecting as: {0}</source>
+    </trans-unit>
     <trans-unit id="remoteConnections.devTunnel">
       <source xml:lang="en">Dev Tunnels</source>
     </trans-unit>
@@ -24569,18 +24705,59 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="remoteConnections.githubEnvironment.detail">
       <source xml:lang="en">Access agents on this machine from VS Code, vscode.dev/agents, GitHub apps, or github.com/copilot.</source>
     </trans-unit>
+    <trans-unit id="remoteConnections.githubEnvironment.disabled">
+      <source xml:lang="en">GitHub Environments are disabled by your settings or organization policy.</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.githubEnvironment.policyDisabled">
+      <source xml:lang="en">Disabled by your organization. Contact your administrator to enable GitHub Environments.</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.githubEnvironment.unavailable">
+      <source xml:lang="en">GitHub Environments are currently unavailable.</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.invalidName">
+      <source xml:lang="en">Enter an environment name without control characters.</source>
+    </trans-unit>
     <trans-unit id="remoteConnections.label">
       <source xml:lang="en">Remote Connections</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.loadingName">
+      <source xml:lang="en">Loading remote name...</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.name">
+      <source xml:lang="en">Will be shared as: {0}</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.nameUnavailable">
+      <source xml:lang="en">Remote name unavailable.</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.off">
+      <source xml:lang="en">Off</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.offLabel">
+      <source xml:lang="en">Remote Connections: Off</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.policyFooter">
+      <source xml:lang="en">GitHub Environments is disabled by your organization. Contact your administrator. {0}</source>
     </trans-unit>
     <trans-unit id="remoteConnections.preview">
       <source xml:lang="en">Preview</source>
     </trans-unit>
-    <trans-unit id="remoteConnections.selectMethod">
-      <source xml:lang="en">Select Remote Connection Method</source>
+    <trans-unit id="remoteConnections.registeredEnvironment">
+      <source xml:lang="en">Registered as GitHub environment: {0}</source>
     </trans-unit>
-    <trans-unit id="remoteConnections.selectMethod.tooltip">
-      <source xml:lang="en">Select Remote Connection Method
-Changing the method turns remote connections off.</source>
+    <trans-unit id="remoteConnections.rename">
+      <source xml:lang="en">Rename Remote Environment</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.renamePrompt">
+      <source xml:lang="en">Enter the name shown for this environment on other clients.</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.sharedTunnel">
+      <source xml:lang="en">Shared as Dev Tunnel: {0}</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.viewManagedSetting">
+      <source xml:lang="en">View the Organization-Managed GitHub Environments Setting</source>
+    </trans-unit>
+    <trans-unit id="remoteConnections.viewSetting">
+      <source xml:lang="en">View Setting</source>
     </trans-unit>
     <trans-unit id="tunnelHost.ariaLabel.remoteTunnelAccess">
       <source xml:lang="en">Remote Tunnel Access is enabled via tunnel '{0}'</source>
