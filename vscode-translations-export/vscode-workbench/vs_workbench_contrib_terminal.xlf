@@ -1340,6 +1340,9 @@ This setting applies only when terminals are created, so you will need to restar
     <trans-unit id="terminal.integrated.unicodeVersion.six">
       <source xml:lang="en">Version 6 of Unicode. This is an older version which should work better on older systems.</source>
     </trans-unit>
+    <trans-unit id="terminal.integrated.windowsReparentConsoleWindow">
+      <source xml:lang="en">Whether to make the window that shows a terminal the owner of its console window, so dialogs that console applications open, like sign-in prompts, appear in front of VS Code instead of behind it. Requires {0}.</source>
+    </trans-unit>
     <trans-unit id="terminal.integrated.windowsUseConptyDll">
       <source xml:lang="en">Whether to use the conpty.dll (v1.25.260303002) shipped with VS Code, instead of the one bundled with Windows.</source>
     </trans-unit>

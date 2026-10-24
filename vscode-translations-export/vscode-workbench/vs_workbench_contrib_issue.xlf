@@ -129,14 +129,26 @@
     <trans-unit id="invalidIssueDestination">
       <source xml:lang="en">The selected issue destination is invalid. No issue data was sent.</source>
     </trans-unit>
+    <trans-unit id="invalidScreenshotAttachment">
+      <source xml:lang="en">The screenshot could not be read.</source>
+    </trans-unit>
     <trans-unit id="issueData">
       <source xml:lang="en">Issue Data</source>
+    </trans-unit>
+    <trans-unit id="issueReporter.attachmentUploadFailed">
+      <source xml:lang="en">Could not upload {0}. Try again, or remove this file and attach it on GitHub.</source>
     </trans-unit>
     <trans-unit id="issueReporter.attachmentsHeading">
       <source xml:lang="en">Attachments</source>
     </trans-unit>
+    <trans-unit id="issueReporter.attachmentsNeedAuthentication">
+      <source xml:lang="en">Attachments could not be uploaded. Sign in to GitHub, or remove the attachments and add them on GitHub.</source>
+    </trans-unit>
     <trans-unit id="issueReporter.attachmentsUploadFailed">
-      <source xml:lang="en">Upload failed. Please drag and drop attachments manually.</source>
+      <source xml:lang="en">Could not upload attachments. Try again, or remove them and attach them on GitHub.</source>
+    </trans-unit>
+    <trans-unit id="issueReporter.authenticationFailed">
+      <source xml:lang="en">Could not access your GitHub session. Try signing in again, or remove the attachments and add them on GitHub.</source>
     </trans-unit>
     <trans-unit id="issueReporterWriteToClipboard">
       <source xml:lang="en">There is too much data to send to GitHub directly. The data will be copied to the clipboard, please paste it into the GitHub issue page that is opened.</source>
@@ -147,6 +159,9 @@
     </trans-unit>
     <trans-unit id="pasteData">
       <source xml:lang="en">We have written the needed data into your clipboard because it was too large to send. Please paste.</source>
+    </trans-unit>
+    <trans-unit id="screenshotAttachment">
+      <source xml:lang="en">Screenshot {0}</source>
     </trans-unit>
     <trans-unit id="yes">
       <source xml:lang="en">&amp;&amp;Yes</source>
@@ -180,31 +195,19 @@
     <trans-unit id="issueReporterIcon">
       <source xml:lang="en">Icon for the issue reporter editor.</source>
     </trans-unit>
+    <trans-unit id="waitBeforeMovingReporter">
+      <source xml:lang="en">Wait for attachments and captures to finish before moving the issue reporter.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/browser/issueReporterMedia" source-language="en" datatype="plaintext"><body>
     <trans-unit id="attachmentTooLarge">
-      <source xml:lang="en">Cannot attach {0}. The limit is {1} MB per {2}.</source>
-    </trans-unit>
-    <trans-unit id="emptyAttachment">
-      <source xml:lang="en">Cannot attach {0} because the file is empty.</source>
-    </trans-unit>
-    <trans-unit id="image">
-      <source xml:lang="en">image</source>
+      <source xml:lang="en">Cannot attach {0}. The limit for this file is {1} MB.</source>
     </trans-unit>
     <trans-unit id="imageDecodeFailed">
       <source xml:lang="en">The image could not be decoded. It may be damaged or use an unsupported format.</source>
     </trans-unit>
-    <trans-unit id="invalidMediaHeader">
-      <source xml:lang="en">The file is not a supported image or video, or is damaged.</source>
-    </trans-unit>
     <trans-unit id="unnamedAttachment">
       <source xml:lang="en">Clipboard attachment</source>
-    </trans-unit>
-    <trans-unit id="unsupportedAttachment">
-      <source xml:lang="en">Cannot attach {0}. Use PNG, JPEG, GIF, WebP, AVIF, MP4, WebM, or MOV.</source>
-    </trans-unit>
-    <trans-unit id="video">
-      <source xml:lang="en">video</source>
     </trans-unit>
     <trans-unit id="videoDecodeFailed">
       <source xml:lang="en">The video could not be decoded. It may be damaged or use an unsupported format or codec.</source>
@@ -214,8 +217,8 @@
     <trans-unit id="abExperiments">
       <source xml:lang="en">A/B Experiments</source>
     </trans-unit>
-    <trans-unit id="additionalInformation">
-      <source xml:lang="en">Additional Information</source>
+    <trans-unit id="addFiles">
+      <source xml:lang="en">Add Files...</source>
     </trans-unit>
     <trans-unit id="additionalPerformanceData">
       <source xml:lang="en">Additional Performance Data</source>
@@ -230,40 +233,46 @@
       <source xml:lang="en">E.g. Sessions list does not refresh after creating a new session</source>
     </trans-unit>
     <trans-unit id="attachmentArea">
-      <source xml:lang="en">Attachments. Paste or drop images and videos here.</source>
+      <source xml:lang="en">Attachments. Paste or drop files here.</source>
     </trans-unit>
-    <trans-unit id="attachmentDropLocation">
-      <source xml:lang="en">Drop files in the Attachments step, or paste them into the description.</source>
+    <trans-unit id="attachmentErrorDetails">
+      <source xml:lang="en">Technical details</source>
     </trans-unit>
-    <trans-unit id="attachmentImportActive">
-      <source xml:lang="en">Wait for attachments to finish importing</source>
+    <trans-unit id="attachmentErrorDetailsCopied">
+      <source xml:lang="en">Technical details copied.</source>
     </trans-unit>
     <trans-unit id="attachmentImportHint">
-      <source xml:lang="en">Drop images or videos here, or focus the attachments area and paste. Images: PNG, JPEG, GIF, WebP, AVIF (up to 10 MB). Videos: MP4, WebM, MOV (up to 100 MB). Files stay local until you preview on GitHub.</source>
+      <source xml:lang="en">Drop or paste up to {0} files. Images: 10 MB. Videos: 100 MB. Other files: 25 MB. Files stay local until you preview on GitHub.</source>
     </trans-unit>
     <trans-unit id="attachmentImportLimit">
-      <source xml:lang="en">You can attach up to {0} files, including captures and imports in progress. Remove an attachment before adding more.</source>
-    </trans-unit>
-    <trans-unit id="attachmentImportNoSpace">
-      <source xml:lang="en">The attachment could not be added because the limit of {0} files was reached.</source>
+      <source xml:lang="en">Attachment limit reached. Remove a file to add another.</source>
     </trans-unit>
     <trans-unit id="attachmentImported">
       <source xml:lang="en">Attachment added.</source>
     </trans-unit>
+    <trans-unit id="attachmentPending">
+      <source xml:lang="en">Waiting to upload</source>
+    </trans-unit>
+    <trans-unit id="attachmentPreviewUnavailable">
+      <source xml:lang="en">Preview unavailable</source>
+    </trans-unit>
     <trans-unit id="attachmentTextAdded">
       <source xml:lang="en">Text added to the description.</source>
     </trans-unit>
-    <trans-unit id="attachments">
-      <source xml:lang="en">Attachments ({0})</source>
+    <trans-unit id="attachmentUploaded">
+      <source xml:lang="en">Uploaded</source>
+    </trans-unit>
+    <trans-unit id="attachmentUploading">
+      <source xml:lang="en">Uploading</source>
+    </trans-unit>
+    <trans-unit id="attachmentsHeading">
+      <source xml:lang="en">Attachments</source>
     </trans-unit>
     <trans-unit id="attachmentsImporting">
       <source xml:lang="en">Importing {0} file(s)...</source>
     </trans-unit>
     <trans-unit id="attachmentsUploading">
-      <source xml:lang="en">Wait for the current upload to finish before adding attachments.</source>
-    </trans-unit>
-    <trans-unit id="back">
-      <source xml:lang="en">Back</source>
+      <source xml:lang="en">Uploading attachments...</source>
     </trans-unit>
     <trans-unit id="bug">
       <source xml:lang="en">Bug</source>
@@ -277,26 +286,23 @@
     <trans-unit id="captureScreenshot">
       <source xml:lang="en">Capture Screenshot</source>
     </trans-unit>
-    <trans-unit id="category">
-      <source xml:lang="en">Category</source>
-    </trans-unit>
     <trans-unit id="categoryRequired">
       <source xml:lang="en">Select a category to continue.</source>
     </trans-unit>
     <trans-unit id="closeTab">
       <source xml:lang="en">Close</source>
     </trans-unit>
-    <trans-unit id="composeMessage">
-      <source xml:lang="en">Describe</source>
+    <trans-unit id="copy">
+      <source xml:lang="en">Copy</source>
+    </trans-unit>
+    <trans-unit id="copyAttachmentErrorDetails">
+      <source xml:lang="en">Copy technical details</source>
+    </trans-unit>
+    <trans-unit id="copyAttachmentErrorDetailsFailed">
+      <source xml:lang="en">Could not copy technical details: {0}</source>
     </trans-unit>
     <trans-unit id="defaultGuidance">
       <source xml:lang="en">Select a category above, then describe your feedback in detail.</source>
-    </trans-unit>
-    <trans-unit id="deleteRecording">
-      <source xml:lang="en">Remove recording</source>
-    </trans-unit>
-    <trans-unit id="deleteScreenshot">
-      <source xml:lang="en">Delete screenshot</source>
     </trans-unit>
     <trans-unit id="describeHeading">
       <source xml:lang="en">Describe your feedback</source>
@@ -304,29 +310,35 @@
     <trans-unit id="description">
       <source xml:lang="en">Description</source>
     </trans-unit>
-    <trans-unit id="descriptionAttachmentHint">
-      <source xml:lang="en">You can also paste images or videos here to attach them.</source>
+    <trans-unit id="descriptionInputLabel">
+      <source xml:lang="en">Description, Markdown. Paste or drop files to attach them.</source>
     </trans-unit>
-    <trans-unit id="descriptionPasteHint">
-      <source xml:lang="en">Paste an image or video to attach it without leaving the description.</source>
-    </trans-unit>
-    <trans-unit id="descriptionPlaceholder">
-      <source xml:lang="en">Describe the issue in detail...</source>
+    <trans-unit id="descriptionMode">
+      <source xml:lang="en">Description mode</source>
     </trans-unit>
     <trans-unit id="descriptionRequired">
       <source xml:lang="en">Enter a description to continue.</source>
     </trans-unit>
-    <trans-unit id="editScreenshot">
-      <source xml:lang="en">Click to edit screenshot</source>
+    <trans-unit id="diagnosticChoices">
+      <source xml:lang="en">Choose which diagnostic information to include. Expand a section to review its details.</source>
     </trans-unit>
     <trans-unit id="editScreenshotLabel">
-      <source xml:lang="en">Edit screenshot {0}</source>
+      <source xml:lang="en">Edit {0}</source>
+    </trans-unit>
+    <trans-unit id="emptyDescriptionPreview">
+      <source xml:lang="en">Nothing to preview.</source>
+    </trans-unit>
+    <trans-unit id="experimentDataUnavailable">
+      <source xml:lang="en">No experiment data is available yet.</source>
     </trans-unit>
     <trans-unit id="extension">
       <source xml:lang="en">Extension</source>
     </trans-unit>
     <trans-unit id="extensionData">
       <source xml:lang="en">Extension Data</source>
+    </trans-unit>
+    <trans-unit id="extensionDataUnavailable">
+      <source xml:lang="en">No extension data is available yet.</source>
     </trans-unit>
     <trans-unit id="extensionExternalIssueUrl">
       <source xml:lang="en">This extension uses an external issue reporter. Preview will open that issue reporter.</source>
@@ -345,6 +357,9 @@
     </trans-unit>
     <trans-unit id="extensions">
       <source xml:lang="en">Extensions ({0})</source>
+    </trans-unit>
+    <trans-unit id="externalReporterConsent">
+      <source xml:lang="en">Opens the extension's issue reporter without sending this report or its attachments.</source>
     </trans-unit>
     <trans-unit id="featureGuidance">
       <source xml:lang="en">Describe the feature you'd like to see, what problem it would solve, and any alternatives you've considered.</source>
@@ -369,6 +384,9 @@
     </trans-unit>
     <trans-unit id="hideToolbarInScreenshots">
       <source xml:lang="en">Hide Toolbar in Screenshots</source>
+    </trans-unit>
+    <trans-unit id="includeDiagnostic">
+      <source xml:lang="en">Include {0}</source>
     </trans-unit>
     <trans-unit id="invalidIssueRepository">
       <source xml:lang="en">Invalid issue destination</source>
@@ -406,29 +424,20 @@
     <trans-unit id="maxAttachmentsReached">
       <source xml:lang="en">Max attachments reached</source>
     </trans-unit>
-    <trans-unit id="next">
-      <source xml:lang="en">Next</source>
-    </trans-unit>
     <trans-unit id="noDelay">
       <source xml:lang="en">No delay</source>
     </trans-unit>
-    <trans-unit id="noDescription">
-      <source xml:lang="en">(no description)</source>
+    <trans-unit id="noDiagnosticExtensions">
+      <source xml:lang="en">No extensions are currently listed.</source>
     </trans-unit>
-    <trans-unit id="noSimilarIssues">
-      <source xml:lang="en">No similar issues found.</source>
-    </trans-unit>
-    <trans-unit id="noTitle">
-      <source xml:lang="en">(no title)</source>
+    <trans-unit id="openAttachment">
+      <source xml:lang="en">Open {0}</source>
     </trans-unit>
     <trans-unit id="openExternalIssueReporter">
       <source xml:lang="en">Open External Issue Reporter</source>
     </trans-unit>
-    <trans-unit id="openRecording">
-      <source xml:lang="en">Open video {0}</source>
-    </trans-unit>
-    <trans-unit id="openScreenshot">
-      <source xml:lang="en">Open screenshot {0}</source>
+    <trans-unit id="optionalDiagnostics">
+      <source xml:lang="en">Diagnostics (optional)</source>
     </trans-unit>
     <trans-unit id="or">
       <source xml:lang="en">or</source>
@@ -442,23 +451,23 @@
     <trans-unit id="performanceIssue">
       <source xml:lang="en">Performance Issue</source>
     </trans-unit>
+    <trans-unit id="previewConsent">
+      <source xml:lang="en">Preview uploads attachments and opens your report on GitHub. You can review it there before submitting.</source>
+    </trans-unit>
+    <trans-unit id="previewDescription">
+      <source xml:lang="en">Preview</source>
+    </trans-unit>
     <trans-unit id="previewOnGitHub">
       <source xml:lang="en">Preview on GitHub</source>
     </trans-unit>
-    <trans-unit id="privateIssueSearchDisabled">
-      <source xml:lang="en">Similar issues were not searched because this repository may be private.</source>
+    <trans-unit id="processDataUnavailable">
+      <source xml:lang="en">No process information is available.</source>
     </trans-unit>
     <trans-unit id="recordVideo">
       <source xml:lang="en">Record video</source>
     </trans-unit>
-    <trans-unit id="recordingActive">
-      <source xml:lang="en">Recording active</source>
-    </trans-unit>
     <trans-unit id="recordingPending">
       <source xml:lang="en">Recording in progress</source>
-    </trans-unit>
-    <trans-unit id="recordingThumbnailAlt">
-      <source xml:lang="en">Recording {0}</source>
     </trans-unit>
     <trans-unit id="refresh">
       <source xml:lang="en">Refresh</source>
@@ -466,18 +475,15 @@
     <trans-unit id="refreshPerformanceData">
       <source xml:lang="en">Reload running processes and workspace metadata</source>
     </trans-unit>
+    <trans-unit id="removeAttachment">
+      <source xml:lang="en">Remove {0}</source>
+    </trans-unit>
     <trans-unit id="reportIssue">
       <source xml:lang="en">Report Issue</source>
-    </trans-unit>
-    <trans-unit id="repository">
-      <source xml:lang="en">Repository</source>
     </trans-unit>
     <trans-unit id="reviewGuidanceLabelWizard">
       <source xml:lang="en">Before you report an issue here please [review the guidance we provide](https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions). Please complete the form in English.</source>
       <note>{Locked="https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions"}</note>
-    </trans-unit>
-    <trans-unit id="reviewSubmit">
-      <source xml:lang="en">Review and submit</source>
     </trans-unit>
     <trans-unit id="runningProcesses">
       <source xml:lang="en">Running Processes</source>
@@ -485,47 +491,14 @@
     <trans-unit id="screenshot">
       <source xml:lang="en">Screenshot</source>
     </trans-unit>
-    <trans-unit id="screenshotAlt">
-      <source xml:lang="en">Screenshot {0}</source>
-    </trans-unit>
-    <trans-unit id="screenshots">
-      <source xml:lang="en">Attachments</source>
-    </trans-unit>
-    <trans-unit id="screenshotsHeading">
-      <source xml:lang="en">Add attachments for better context</source>
-    </trans-unit>
-    <trans-unit id="screenshotsSubtitle">
-      <source xml:lang="en">You can add up to {0} screenshots or videos. Navigate VS Code and choose when to capture.</source>
-    </trans-unit>
-    <trans-unit id="searchingSimilarIssues">
-      <source xml:lang="en">Searching similar issues...</source>
-    </trans-unit>
     <trans-unit id="selectExtension">
       <source xml:lang="en">Select extension</source>
     </trans-unit>
     <trans-unit id="shortcutHintIntro">
       <source xml:lang="en">Use the floating capture bar, or press</source>
     </trans-unit>
-    <trans-unit id="similarIssues">
-      <source xml:lang="en">Similar Issues</source>
-    </trans-unit>
-    <trans-unit id="similarIssuesNeedsTitle">
-      <source xml:lang="en">Enter a title to search for similar issues.</source>
-    </trans-unit>
-    <trans-unit id="similarIssuesSearchFailed">
-      <source xml:lang="en">Unable to search for similar issues.</source>
-    </trans-unit>
-    <trans-unit id="skip">
-      <source xml:lang="en">Skip</source>
-    </trans-unit>
-    <trans-unit id="stepOf">
-      <source xml:lang="en">Step {0} of {1}</source>
-    </trans-unit>
     <trans-unit id="stopRecording">
       <source xml:lang="en">Stop recording</source>
-    </trans-unit>
-    <trans-unit id="submit">
-      <source xml:lang="en">Review</source>
     </trans-unit>
     <trans-unit id="systemInformation">
       <source xml:lang="en">System Information</source>
@@ -557,9 +530,6 @@
     <trans-unit id="unknownSource">
       <source xml:lang="en">Don't know</source>
     </trans-unit>
-    <trans-unit id="unknownVideoDuration">
-      <source xml:lang="en">Unknown duration</source>
-    </trans-unit>
     <trans-unit id="updateAvailable">
       <source xml:lang="en">A new version of {0} is available.</source>
     </trans-unit>
@@ -572,11 +542,20 @@
     <trans-unit id="vscodePlaceholder">
       <source xml:lang="en">E.g. Workbench is missing problems panel</source>
     </trans-unit>
+    <trans-unit id="waitingForAttachments">
+      <source xml:lang="en">Wait for attachments and captures to finish.</source>
+    </trans-unit>
     <trans-unit id="waitingForDiagnostics">
       <source xml:lang="en">Waiting for performance diagnostics to finish loading</source>
     </trans-unit>
+    <trans-unit id="workspaceDataUnavailable">
+      <source xml:lang="en">No workspace metadata is available.</source>
+    </trans-unit>
     <trans-unit id="workspaceMetadata">
       <source xml:lang="en">Workspace Metadata</source>
+    </trans-unit>
+    <trans-unit id="writeDescription">
+      <source xml:lang="en">Write</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/browser/issueReporterPage" source-language="en" datatype="plaintext"><body>
@@ -856,16 +835,25 @@ Translate this to "Report Issue in English" in all languages please!</note>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/electron-browser/issue.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="issueReporter.additionalRepositories">
-      <source xml:lang="en">Additional GitHub repositories offered in the issue reporter wizard for VS Code and Agents Window reports, in owner/repo format. The default repository remains selected initially. GitHub manages repository access. Similar issue search is disabled for repositories whose public visibility is not known.</source>
+      <source xml:lang="en">Additional GitHub repositories offered in the issue reporter for VS Code and Agents Window reports, in owner/repo format. The default repository remains selected initially. GitHub manages repository access.</source>
     </trans-unit>
     <trans-unit id="issueReporter.repositoryFormat">
       <source xml:lang="en">Use a GitHub repository in owner/repo format, not a URL.</source>
     </trans-unit>
     <trans-unit id="issueReporter.wizard.enabled">
-      <source xml:lang="en">Enable the new issue reporter wizard instead of the classic issue reporter.</source>
+      <source xml:lang="en">Enable the new single-page issue reporter instead of the classic issue reporter.</source>
     </trans-unit>
     <trans-unit id="issueReporter.wizard.fullWorkspaceScan">
-      <source xml:lang="en">When auto-collecting performance diagnostics for the issue reporter wizard, walk the full workspace instead of stopping at the default 20,000-file cap. Set to false on very large workspaces if the scan slows the initial wizard render.</source>
+      <source xml:lang="en">When auto-collecting performance diagnostics for the issue reporter, walk the full workspace instead of stopping at the default 20,000-file cap. Set to false on very large workspaces if the scan slows the initial report render.</source>
+    </trans-unit>
+    <trans-unit id="issueReporter.wizard.openLocation">
+      <source xml:lang="en">Where to open fresh reports when the new issue reporter is enabled. Existing reports keep their current location.</source>
+    </trans-unit>
+    <trans-unit id="issueReporter.wizard.openLocation.editor">
+      <source xml:lang="en">Open new issue reports in an editor tab.</source>
+    </trans-unit>
+    <trans-unit id="issueReporter.wizard.openLocation.window">
+      <source xml:lang="en">Open new issue reports in a separate window attached to the current workbench.</source>
     </trans-unit>
     <trans-unit id="issueReporterConfigurationTitle">
       <source xml:lang="en">Issue Reporter</source>
@@ -884,9 +872,15 @@ Translate this to "Report Issue in English" in all languages please!</note>
       <source xml:lang="en">Type the name of an extension to report on.</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/workbench/contrib/issue/electron-browser/issueReporterEditorPane" source-language="en" datatype="plaintext"><body>
+  <file original="src/vs/workbench/contrib/issue/electron-browser/issueReporterController" source-language="en" datatype="plaintext"><body>
     <trans-unit id="attachmentImportFailed">
       <source xml:lang="en">Could not attach {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="attachmentPreviewFailed">
+      <source xml:lang="en">Could not open the attachment: {0}</source>
+    </trans-unit>
+    <trans-unit id="attachmentReadonly">
+      <source xml:lang="en">Issue reporter attachments are read-only. Edit the original file and attach it again.</source>
     </trans-unit>
     <trans-unit id="noData">
       <source xml:lang="en">No issue reporter data available.</source>
@@ -945,6 +939,17 @@ Translate this to "Report Issue in English" in all languages please!</note>
   <file original="src/vs/workbench/contrib/issue/electron-browser/issueService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="invalidAdditionalRepositories">
       <source xml:lang="en">The issueReporter.additionalRepositories setting must be an array of GitHub repositories in owner/repo format. Additional destinations were not loaded.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/issue/electron-browser/nativeIssueFormService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="issueReporterCloseFailed">
+      <source xml:lang="en">The issue reporter could not be closed. Please try again.</source>
+    </trans-unit>
+    <trans-unit id="issueReporterUnsavedChanges">
+      <source xml:lang="en">The issue report has unsaved changes. Confirm whether to discard them to close the window.</source>
+    </trans-unit>
+    <trans-unit id="issueReporterWindowTitle">
+      <source xml:lang="en">Issue Reporter</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/issue/electron-browser/nativeRecordingService" source-language="en" datatype="plaintext"><body>

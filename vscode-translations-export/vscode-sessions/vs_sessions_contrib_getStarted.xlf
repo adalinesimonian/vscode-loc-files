@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/getStarted/browser/getStarted.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.getStarted.checklist">
+      <source xml:lang="en">Controls whether and where new users of the Agents window see a Get Started checklist in the Sessions view. The checklist shows what the window can do and ticks off each item as the user tries it.</source>
+    </trans-unit>
+    <trans-unit id="sessions.getStarted.checklist.aboveSessions">
+      <source xml:lang="en">Show the Get Started checklist above the sessions list.</source>
+    </trans-unit>
+    <trans-unit id="sessions.getStarted.checklist.belowSessions">
+      <source xml:lang="en">Show the Get Started checklist below the sessions list.</source>
+    </trans-unit>
+    <trans-unit id="sessions.getStarted.checklist.none">
+      <source xml:lang="en">Don't show the Get Started checklist.</source>
+    </trans-unit>
+    <trans-unit id="sessions.getStarted.reset">
+      <source xml:lang="en">Reset Getting Started Checklist</source>
+    </trans-unit>
+    <trans-unit id="sessions.getStarted.show">
+      <source xml:lang="en">Show Getting Started Checklist</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/getStarted/browser/getStartedChecklistWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="getStarted.announceDone">
+      <source xml:lang="en">{0} done. {1} of {2} completed.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.announceFinished">
+      <source xml:lang="en">Get started checklist complete.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.dontShowAgain">
+      <source xml:lang="en">Don't Show Again</source>
+    </trans-unit>
+    <trans-unit id="getStarted.finished">
+      <source xml:lang="en">You're all set. You've tried everything the Agents window can do.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.help.escape">
+      <source xml:lang="en">Press Escape to return to the sessions list.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.help.hide">
+      <source xml:lang="en">Hide removes the checklist until the Agents window starts again. Don't Show Again removes it for good. Run the Show Getting Started Checklist command to bring it back.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.help.itemDone">
+      <source xml:lang="en">- {0}, done: {1}</source>
+    </trans-unit>
+    <trans-unit id="getStarted.help.itemTodo">
+      <source xml:lang="en">- {0}, not done: {1}</source>
+    </trans-unit>
+    <trans-unit id="getStarted.help.items">
+      <source xml:lang="en">In the list, use Up Arrow and Down Arrow to move between items, and Enter or Space to show or hide an item's explanation. Then press Tab to reach Show Me, which walks you through the item step by step.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.help.overview">
+      <source xml:lang="en">You are in the Get Started checklist in the Sessions view. It shows what the Agents window can do and ticks off each item when you do it. {0} of {1} items are done.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.help.toggle">
+      <source xml:lang="en">Press Enter or Space on the Get started heading to collapse or expand the checklist.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.helpHint">
+      <source xml:lang="en">Press {0} for accessibility help.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.hide">
+      <source xml:lang="en">Hide</source>
+    </trans-unit>
+    <trans-unit id="getStarted.item.automation">
+      <source xml:lang="en">Set up an automation</source>
+    </trans-unit>
+    <trans-unit id="getStarted.item.automation.description">
+      <source xml:lang="en">Run an agent on a schedule, like a daily look at new issues.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.item.keepChanges">
+      <source xml:lang="en">Review and keep changes</source>
+    </trans-unit>
+    <trans-unit id="getStarted.item.keepChanges.description">
+      <source xml:lang="en">See what an agent changed, then merge, commit or open a pull request.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.item.runInParallel">
+      <source xml:lang="en">Run two agents at once</source>
+    </trans-unit>
+    <trans-unit id="getStarted.item.runInParallel.description">
+      <source xml:lang="en">Agents keep working while you start the next task.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.item.secondProject">
+      <source xml:lang="en">Work in a second project</source>
+    </trans-unit>
+    <trans-unit id="getStarted.item.secondProject.description">
+      <source xml:lang="en">One window holds the sessions of all your projects, instead of one window per folder.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.item.startSession">
+      <source xml:lang="en">Start a session</source>
+    </trans-unit>
+    <trans-unit id="getStarted.item.startSession.description">
+      <source xml:lang="en">Like Chat in the editor, but the agent works on its own while you do something else.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.itemDoneLabel">
+      <source xml:lang="en">{0}, done</source>
+    </trans-unit>
+    <trans-unit id="getStarted.itemTodoLabel">
+      <source xml:lang="en">{0}, not done</source>
+    </trans-unit>
+    <trans-unit id="getStarted.listLabel">
+      <source xml:lang="en">Get started steps</source>
+    </trans-unit>
+    <trans-unit id="getStarted.progress">
+      <source xml:lang="en">{0} of {1}</source>
+    </trans-unit>
+    <trans-unit id="getStarted.regionLabel">
+      <source xml:lang="en">Get started, {0} of {1} done</source>
+    </trans-unit>
+    <trans-unit id="getStarted.showMe">
+      <source xml:lang="en">Show Me</source>
+    </trans-unit>
+    <trans-unit id="getStarted.showMeLabel">
+      <source xml:lang="en">Show Me: {0}</source>
+    </trans-unit>
+    <trans-unit id="getStarted.title">
+      <source xml:lang="en">Get started</source>
+    </trans-unit>
+    <trans-unit id="getStarted.toggleLabel">
+      <source xml:lang="en">Get started, {0} of {1} done</source>
+    </trans-unit>
+    <trans-unit id="sessionsGetStartedFocused">
+      <source xml:lang="en">Whether the Get Started checklist in the Sessions view has keyboard focus.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/getStarted/browser/getStartedTours" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="getStarted.tour.automation.create.description">
+      <source xml:lang="en">Describe what the agent should do and choose when it runs.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.automation.create.title">
+      <source xml:lang="en">Or create your own</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.automation.entry.description">
+      <source xml:lang="en">Automations run an agent on a schedule, like a daily look at new issues. Open Automations to set one up.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.automation.entry.title">
+      <source xml:lang="en">Automate recurring work</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.automation.templates.description">
+      <source xml:lang="en">These example automations are ready to use. Pick one, then review and adjust it before you create it.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.automation.templates.title">
+      <source xml:lang="en">Start from an example</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.keepChanges.actions.description">
+      <source xml:lang="en">When the changes look good, merge, commit or create a pull request to keep them.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.keepChanges.actions.title">
+      <source xml:lang="en">Keep the changes</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.keepChanges.editor.description">
+      <source xml:lang="en">Review each change in the diff editor you know from VS Code. You can edit the files, or comment on a line to give the agent feedback.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.keepChanges.editor.title">
+      <source xml:lang="en">Review the changes</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.keepChanges.new.description">
+      <source xml:lang="en">Select New to start a session that changes some code.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.keepChanges.new.title">
+      <source xml:lang="en">Start a session</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.keepChanges.pill.files">
+      <source xml:lang="en">This session changed {0} files. Select the changes to review them.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.keepChanges.pill.oneFile">
+      <source xml:lang="en">This session changed 1 file. Select the changes to review them.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.keepChanges.pill.title">
+      <source xml:lang="en">See what the agent changed</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.keepChanges.prompt.description">
+      <source xml:lang="en">Ask an agent to change some code. When it's done, you can review its changes in the editor and keep the ones you want.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.keepChanges.prompt.title">
+      <source xml:lang="en">Ask for a change</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.runInParallel.isolation.description">
+      <source xml:lang="en">Pick New Worktree to give this agent its own copy of the files, so your agents don't interfere with each other. Pick Branch when it should work on the same files as your other agents.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.runInParallel.isolation.title">
+      <source xml:lang="en">Keep agents out of each other's way</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.runInParallel.new.description">
+      <source xml:lang="en">Your agents keep working while you start the next task. Select New to start another session.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.runInParallel.new.title">
+      <source xml:lang="en">Start another session</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.runInParallel.prompt.description">
+      <source xml:lang="en">Describe the next task and send it. Both agents work at the same time, and you can check on each one in the sessions list.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.runInParallel.prompt.title">
+      <source xml:lang="en">Send the next task</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.secondProject.current.description">
+      <source xml:lang="en">You've worked in {0} from this window. The sessions of every project you work on show up in this list.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.secondProject.current.title">
+      <source xml:lang="en">One window for all your projects</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.secondProject.picker.anyProject">
+      <source xml:lang="en">Pick any folder or repository for your next session, without opening another window.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.secondProject.picker.oneProject">
+      <source xml:lang="en">You can work on {0} from here too, without opening another window.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.secondProject.picker.title">
+      <source xml:lang="en">Pick another project</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.secondProject.picker.twoProjects">
+      <source xml:lang="en">You can work on {0} or {1} from here too, without opening another window.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.startSession.picker.description">
+      <source xml:lang="en">Pick the folder or repository the task runs in, so the agent reads and edits the right files.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.startSession.picker.title">
+      <source xml:lang="en">Choose the project</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.startSession.prompt.description">
+      <source xml:lang="en">Describe a task here, like you would in Chat. When you send it, the agent works on it in its own session while you do something else.</source>
+    </trans-unit>
+    <trans-unit id="getStarted.tour.startSession.prompt.title">
+      <source xml:lang="en">Describe your task</source>
+    </trans-unit>
+</body></file>
+</xliff>

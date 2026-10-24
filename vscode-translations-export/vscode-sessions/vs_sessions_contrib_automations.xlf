@@ -169,6 +169,9 @@
     <trans-unit id="automation.form.noWorkspace.description">
       <source xml:lang="en">Run without a backing workspace</source>
     </trans-unit>
+    <trans-unit id="automation.form.privateRepositoriesOnly">
+      <source xml:lang="en">Cloud automations are only supported for private repositories.</source>
+    </trans-unit>
     <trans-unit id="automation.form.prompt.placeholder">
       <source xml:lang="en">Describe what you want to automate</source>
     </trans-unit>
@@ -183,9 +186,6 @@
     </trans-unit>
     <trans-unit id="automation.form.repositoryAvailabilityDescription">
       <source xml:lang="en">{0}. {1}</source>
-    </trans-unit>
-    <trans-unit id="automation.form.repositoryDescription">
-      <source xml:lang="en">{0} {1}</source>
     </trans-unit>
     <trans-unit id="automation.form.repositoryRequired">
       <source xml:lang="en">Cloud automations cannot be managed for this repository.</source>

@@ -1475,8 +1475,17 @@ User: {2}</source>
     <trans-unit id="addMarketplaceDetail">
       <source xml:lang="en">Add a GitHub repository, Git repository URL, or local repository URI</source>
     </trans-unit>
+    <trans-unit id="addMarketplaceFailed">
+      <source xml:lang="en">Failed to add marketplace: {0}</source>
+    </trans-unit>
     <trans-unit id="addPluginMarketplace">
       <source xml:lang="en">Add Plugin Marketplace</source>
+    </trans-unit>
+    <trans-unit id="browseAllPluginMarketplaces">
+      <source xml:lang="en">Browse All Marketplaces</source>
+    </trans-unit>
+    <trans-unit id="browseMarketplace">
+      <source xml:lang="en">Browse</source>
     </trans-unit>
     <trans-unit id="configuredMarketplaces">
       <source xml:lang="en">Configured Marketplaces</source>
@@ -1517,7 +1526,7 @@ User: {2}</source>
       <source xml:lang="en">Install Plugin from Source</source>
     </trans-unit>
     <trans-unit id="invalidMarketplaceSource">
-      <source xml:lang="en">Enter a GitHub repository, Git repository URL, or local repository URI.</source>
+      <source xml:lang="en">Enter a valid GitHub repository, Git repository URL, or local repository URI.</source>
     </trans-unit>
     <trans-unit id="localMarketplaceDetail">
       <source xml:lang="en">Local repository: {0}</source>
@@ -1581,9 +1590,6 @@ User: {2}</source>
     </trans-unit>
     <trans-unit id="selectPluginFolder">
       <source xml:lang="en">Select Folder</source>
-    </trans-unit>
-    <trans-unit id="showPlugins">
-      <source xml:lang="en">Show Plugins</source>
     </trans-unit>
     <trans-unit id="unavailableMarketplace">
       <source xml:lang="en">Unavailable</source>
@@ -2335,11 +2341,17 @@ User: {2}</source>
     <trans-unit id="agentHostChatInputPicker.defaultApprovalsHover">
       <source xml:lang="en">Copilot asks before running tools unless your configured settings allow the tool.</source>
     </trans-unit>
+    <trans-unit id="agentHostChatInputPicker.draftUnavailable">
+      <source xml:lang="en">The cloud session is no longer available. Your selection was not saved.</source>
+    </trans-unit>
     <trans-unit id="agentHostChatInputPicker.effectivePermissions">
       <source xml:lang="en">Effective permissions: {0}. Requested permissions: {1}.</source>
     </trans-unit>
     <trans-unit id="agentHostChatInputPicker.filter">
       <source xml:lang="en">Filter...</source>
+    </trans-unit>
+    <trans-unit id="agentHostChatInputPicker.invalidDraftValue">
+      <source xml:lang="en">The selected cloud session option is invalid.</source>
     </trans-unit>
     <trans-unit id="agentHostChatInputPicker.learnMorePermissions">
       <source xml:lang="en">Learn more about permissions</source>
@@ -2479,9 +2491,6 @@ Files: {2}
 Size: {3} bytes
 
 {4}{5}</source>
-    </trans-unit>
-    <trans-unit id="agentHost.customizationInstall.pluginInventoryTimeout">
-      <source xml:lang="en">The SDK completed the plugin operation, but its installation inventory did not update.</source>
     </trans-unit>
     <trans-unit id="agentHost.customizationInstall.pluginMcpServers">
       <source xml:lang="en">
@@ -2874,7 +2883,7 @@ To migrate this server, remove the cwd property.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostModePickerPresentation" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostModePicker.accessibilityHelp">
-      <source xml:lang="en">When the experimental combined picker is enabled for a Copilot Agent Host session, Tab reaches separate Mode and Permissions buttons. Press Enter or Space on Mode to open the picker with Agent Mode expanded, or on Permissions to open it with Permissions expanded. Each section header shows its current selection, and the opened section initially focuses that selection. Press Enter or Space on a section header to expand or collapse it, or use Right Arrow to expand and Left Arrow to collapse. Hover or keyboard navigation moves the single row highlight without changing the selection until you activate a choice. Focus the Permissions header and press Tab to reach Configure Permissions, which opens the related settings. Use Up and Down Arrow to navigate and Enter to select a mode, permission level, or terminal sandboxing. Assisted permissions is experimental and evaluates risk before running tools. When Assisted permissions or Allow all is unavailable for a session, the option remains visible but cannot be selected, with a reason such as Disabled by policy. Its hover also explains the restriction. When the session's host requires terminal sandboxing, its sandbox toggle is checked and disabled. If your organization permits bypassing, a supported outside-sandbox permission prompt can offer Allow in this Session. After that action succeeds, you can use the toggle to enable sandboxing again. This restriction applies only to that session. Escape closes the picker and returns focus to the button that opened it.</source>
+      <source xml:lang="en">When the experimental combined picker is enabled for a Copilot Agent Host session or a new Cloud session, Tab reaches separate Mode and Permissions buttons. Press Enter or Space on Mode to open the picker with Agent Mode expanded, or on Permissions to open it with Permissions expanded. Each section header shows its current selection, and the opened section initially focuses that selection. Press Enter or Space on a section header to expand or collapse it, or use Right Arrow to expand and Left Arrow to collapse. Hover or keyboard navigation moves the single row highlight without changing the selection until you activate a choice. Focus the Permissions header and press Tab to reach Configure Permissions, which opens the related settings. Use Up and Down Arrow to navigate and Enter to select a mode, permission level, or terminal sandboxing. Assisted permissions is experimental and evaluates risk before running tools. When Assisted permissions or Allow all is unavailable for a session, the option remains visible but cannot be selected, with a reason such as Disabled by policy. Its hover also explains the restriction. When the session's host requires terminal sandboxing, its sandbox toggle is checked and disabled. If your organization permits bypassing, a supported outside-sandbox permission prompt can offer Allow in this Session. After that action succeeds, you can use the toggle to enable sandboxing again. This restriction applies only to that session. Cloud draft choices are locked while the first request starts the session. Escape closes the picker and returns focus to the button that opened it.</source>
     </trans-unit>
     <trans-unit id="agentHostModePicker.agentMode">
       <source xml:lang="en">Agent mode</source>
@@ -2899,6 +2908,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="agentHostModePicker.new">
       <source xml:lang="en">New</source>
+    </trans-unit>
+    <trans-unit id="agentHostModePicker.organizationDefaultDescription">
+      <source xml:lang="en">Your organization sets this as the default for new sessions. You can choose other permissions for this session.</source>
     </trans-unit>
     <trans-unit id="agentHostModePicker.permissions">
       <source xml:lang="en">Permissions</source>
@@ -3284,6 +3296,12 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="agentHost.fusionTierResponseModel">
       <source xml:lang="en">{0} {1}</source>
       <note>{0} is the routing model, e.g. Copilot Fusion, and {1} its tier, e.g. Max</note>
+    </trans-unit>
+    <trans-unit id="agentHost.mcpAuthenticate">
+      <source xml:lang="en">Authenticate</source>
+    </trans-unit>
+    <trans-unit id="agentHost.mcpAuthenticationRequired">
+      <source xml:lang="en">The MCP server {0} requires authentication.</source>
     </trans-unit>
     <trans-unit id="agentHost.mcpToolAuthentication.cancelled">
       <source xml:lang="en">Cancelled tool call</source>
@@ -5415,9 +5433,6 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.searchWithHelp">
       <source xml:lang="en">Search customizations. Use {0} for accessibility help.</source>
     </trans-unit>
-    <trans-unit id="customizationDiscovery.showAll">
-      <source xml:lang="en">Show All</source>
-    </trans-unit>
     <trans-unit id="customizationDiscovery.showAlternativeAriaLabel">
       <source xml:lang="en">Show 1 alternative customization</source>
     </trans-unit>
@@ -5477,6 +5492,15 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.verifiedByGitHub">
       <source xml:lang="en">Verified by GitHub</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.viewAll">
+      <source xml:lang="en">View All</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.viewAllSource">
+      <source xml:lang="en">View all customizations from {0}</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.viewAllSourceAccessible">
+      <source xml:lang="en">View all customizations from {0}.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.viewSetup">
       <source xml:lang="en">View Setup</source>
@@ -6051,6 +6075,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="chooseCustomMigrationDestination">
       <source xml:lang="en">Choose a Custom Migration Destination</source>
     </trans-unit>
+    <trans-unit id="chooseCustomizationCreationAction">
+      <source xml:lang="en">Choose how to add a customization</source>
+    </trans-unit>
     <trans-unit id="chooseMigrationDestination">
       <source xml:lang="en">Choose a destination for {0}</source>
     </trans-unit>
@@ -6244,7 +6271,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Connect external tool servers that extend AI capabilities with custom tools and data sources.</source>
     </trans-unit>
     <trans-unit id="migrate">
-      <source xml:lang="en">Migrate</source>
+      <source xml:lang="en">Migrate...</source>
     </trans-unit>
     <trans-unit id="migrateCustomization">
       <source xml:lang="en">Migrate customization</source>
@@ -6256,10 +6283,10 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Migrate {0}</source>
     </trans-unit>
     <trans-unit id="migratePluginMarketplaces">
-      <source xml:lang="en">Migrate</source>
+      <source xml:lang="en">Migrate...</source>
     </trans-unit>
     <trans-unit id="migrateThisCustomization">
-      <source xml:lang="en">Migrate This Item</source>
+      <source xml:lang="en">Migrate This Item...</source>
     </trans-unit>
     <trans-unit id="migrationAccessibleCategory">
       <source xml:lang="en">{0} ({1}): {2}. {3}{4}</source>
@@ -6270,11 +6297,20 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="migrationAccessibleDestination">
       <source xml:lang="en">Destination: {0}</source>
     </trans-unit>
+    <trans-unit id="migrationAccessibleExtensions">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="migrationAccessibleGuidanceItem">
+      <source xml:lang="en">{0}, source {1}. Documentation-only migration guidance.</source>
+    </trans-unit>
     <trans-unit id="migrationAccessibleHighRisk">
       <source xml:lang="en">High risk. </source>
     </trans-unit>
     <trans-unit id="migrationAccessibleItemWithStatus">
       <source xml:lang="en">{0}, needs manual review: {1}, source {2}</source>
+    </trans-unit>
+    <trans-unit id="migrationAccessibleLearnMore">
+      <source xml:lang="en">Learn More: {0}</source>
     </trans-unit>
     <trans-unit id="migrationAccessibleManualReview">
       <source xml:lang="en">Needs manual review</source>
@@ -6311,6 +6347,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="migrationChecklistConfiguredLocationsDescription">
       <source xml:lang="en">Move customizations out of locations configured in settings that the active agent no longer uses.</source>
+    </trans-unit>
+    <trans-unit id="migrationChecklistExtensions">
+      <source xml:lang="en">Extensions</source>
     </trans-unit>
     <trans-unit id="migrationChecklistInstructionsCount">
       <source xml:lang="en">{0} instructions</source>
@@ -6372,6 +6411,24 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="migrationChecklistWorkspace">
       <source xml:lang="en">Workspace</source>
     </trans-unit>
+    <trans-unit id="migrationExtensionScope">
+      <source xml:lang="en">Extension</source>
+    </trans-unit>
+    <trans-unit id="migrationExtensionsScope">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="migrationGuidanceItems">
+      <source xml:lang="en">{0} customizations</source>
+    </trans-unit>
+    <trans-unit id="migrationGuidanceOneItem">
+      <source xml:lang="en">1 customization</source>
+    </trans-unit>
+    <trans-unit id="migrationInProgressAction">
+      <source xml:lang="en">Migrating...</source>
+    </trans-unit>
+    <trans-unit id="migrationLearnMore">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
     <trans-unit id="migrationNeedsManualReviewReason">
       <source xml:lang="en">This server cannot be migrated automatically. Update it by hand in its configuration file.</source>
     </trans-unit>
@@ -6410,6 +6467,9 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="migrationPickSkillFolder">
       <source xml:lang="en">Select a destination folder for migrated skills</source>
+    </trans-unit>
+    <trans-unit id="migrationReviewGuidance">
+      <source xml:lang="en">Review migration guidance for {0}</source>
     </trans-unit>
     <trans-unit id="migrationSelected">
       <source xml:lang="en">selected</source>
@@ -6606,6 +6666,12 @@ Destination files created or changed by the agent are not removed.</source>
     <trans-unit id="configureCategoryAriaLabel">
       <source xml:lang="en">Configure {0}</source>
     </trans-unit>
+    <trans-unit id="copilotCanvases">
+      <source xml:lang="en">Canvases</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvasesDesc">
+      <source xml:lang="en">Review interactive canvases declared for Copilot chats visible in this window.</source>
+    </trans-unit>
     <trans-unit id="customizationMarketplace">
       <source xml:lang="en">Marketplace</source>
     </trans-unit>
@@ -6791,6 +6857,26 @@ Destination files created or changed by the agent are not removed.</source>
       <source xml:lang="en">Connection status not checked</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/copilotCanvases.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotCanvases.help.actions">
+      <source xml:lang="en">Single-click a Canvas child to select it. To open an enabled Canvas, use Open Canvas in More Actions, double-click, or press Enter. Use More Actions on a canvas extension to open its source or plugin and change enablement. Show Plugin opens the owning plugin's details; use Back to return to Canvases.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.help.enablement">
+      <source xml:lang="en">For User and Plugin canvas extensions, Tab to the switch and press Space to enable or disable it. Workspace canvas extension enablement cannot be changed here. When disabling stops a canvas extension from reporting definitions, its children are labeled as last known and remain listed so the canvas extension can be enabled again.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.help.navigation">
+      <source xml:lang="en">The tree groups canvas extension parents under User, Workspace, Plugin, or Other sections, with each canvas extension's Canvases as children. Use Tab and Shift+Tab to move between the documentation link, search, the tree, and actions in the focused row. Use the Up Arrow, Down Arrow, Home, and End keys to navigate. Use the Left Arrow and Right Arrow keys to collapse or expand sections and canvas extensions.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.help.overview">
+      <source xml:lang="en">Canvases are interactive visual surfaces shared by you and the agent. The Learn more about canvases link below the heading opens the documentation.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.sectionDescription">
+      <source xml:lang="en">Review canvases registered for visible Copilot chats.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.sectionLabel">
+      <source xml:lang="en">Canvases</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/copilotConnectorsService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="copilotConnectors.catalogScopeRollout">
       <source xml:lang="en">The connector catalog is unavailable for this account (HTTP 403).</source>
@@ -6874,6 +6960,215 @@ Destination files created or changed by the agent are not removed.</source>
       <source xml:lang="en">Authorize connectors with the same GitHub account that you use for GitHub Copilot.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/copilotCustomizationsWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotCanvases.accessibleExtension">
+      <source xml:lang="en">{0}. {1}. {2} Canvases. {3}</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.accessibleGroup">
+      <source xml:lang="en">{0}. {1} canvas extensions.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.accessibleItem">
+      <source xml:lang="en">{0}. {1}. {2}.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.availableDescription">
+      <source xml:lang="en">Canvas availability follows the chats currently visible in this window.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.canvasMoreActions">
+      <source xml:lang="en">More Actions for Canvas {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.description">
+      <source xml:lang="en">Canvases are interactive visual surfaces shared by you and the agent.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.disableExtension">
+      <source xml:lang="en">Disable Canvas Extension</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.disableExtensionLabel">
+      <source xml:lang="en">Disable canvas extension '{0}'</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.disabledActionUnavailable">
+      <source xml:lang="en">Canvas extension management is disabled by the runtime.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.disabledStatus">
+      <source xml:lang="en">Disabled</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.empty">
+      <source xml:lang="en">No Canvases Available</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.emptyDescription">
+      <source xml:lang="en">None of the current Copilot chats provide any Canvases.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.enableExtension">
+      <source xml:lang="en">Enable Canvas Extension</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.enableExtensionLabel">
+      <source xml:lang="en">Enable canvas extension '{0}'</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.enabledStatus">
+      <source xml:lang="en">Enabled</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.extensionDisableFailed">
+      <source xml:lang="en">Could not disable canvas extension '{0}'. {1}</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.extensionDisabledAnnouncement">
+      <source xml:lang="en">Disabled canvas extension '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.extensionEnableFailed">
+      <source xml:lang="en">Could not enable canvas extension '{0}'. {1}</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.extensionEnabledAnnouncement">
+      <source xml:lang="en">Enabled canvas extension '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.extensionMoreActions">
+      <source xml:lang="en">More Actions for Canvas Extension '{0}'</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.extensionRowAriaLabel">
+      <source xml:lang="en">{0}. {1}. {2}. {3} Canvases. {4}</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.extensionStateUnavailable">
+      <source xml:lang="en">Canvas extension state is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.failedStatus">
+      <source xml:lang="en">Failed</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.lastKnown">
+      <source xml:lang="en">Last known Canvas</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.lastKnownDescription">
+      <source xml:lang="en">Last known: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.learnMore">
+      <source xml:lang="en">Learn more about canvases</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.listLabel">
+      <source xml:lang="en">Available Canvases</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.loadOnlyActionUnavailable">
+      <source xml:lang="en">This runtime loads canvas extensions but does not allow changing their enablement.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.loading">
+      <source xml:lang="en">Loading Canvases...</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.managementUnavailable">
+      <source xml:lang="en">Canvas extension enablement is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.noCanvasesReported">
+      <source xml:lang="en">No Canvases Reported</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.noCompatibleChat">
+      <source xml:lang="en">Canvases are only available inside a session</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.noCompatibleChatDescription">
+      <source xml:lang="en">Select an active Copilot session and then open this Customizations menu again</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.noMatches">
+      <source xml:lang="en">No Matching Canvases</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.noMatchesDescription">
+      <source xml:lang="en">Try a different search.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.notActiveStatus">
+      <source xml:lang="en">Not Active</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.openExtensionFolder">
+      <source xml:lang="en">Open Canvas Extension Folder</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.openFailed">
+      <source xml:lang="en">Unable to open canvas {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.openPluginDetails">
+      <source xml:lang="en">Open plugin details for {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.otherExtension">
+      <source xml:lang="en">Canvas Provider</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.otherGroup">
+      <source xml:lang="en">Other</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.otherGroupDescription">
+      <source xml:lang="en">Canvas extensions provided by another runtime source.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.pluginGroup">
+      <source xml:lang="en">Plugins</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.pluginGroupDescription">
+      <source xml:lang="en">Canvas extensions provided by installed plugins.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.pluginSource">
+      <source xml:lang="en">Plugin: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.pluginUnavailable">
+      <source xml:lang="en">Plugin details for {0} are not available in this window.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.readyToOpen">
+      <source xml:lang="en">Ready to Open</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.refreshFailed">
+      <source xml:lang="en">Unable to refresh Canvases. {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.refreshed">
+      <source xml:lang="en">Canvases refreshed.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.refreshing">
+      <source xml:lang="en">Refreshing Canvases.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.requiresInput">
+      <source xml:lang="en">Requires Input</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.rowAriaLabel">
+      <source xml:lang="en">{0}. {1}.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.search">
+      <source xml:lang="en">Type to search...</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.searchAriaLabel">
+      <source xml:lang="en">Search Canvases</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.showCanvas">
+      <source xml:lang="en">Open Canvas</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.showPlugin">
+      <source xml:lang="en">Show Plugin</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.showPluginFailed">
+      <source xml:lang="en">Unable to show plugin {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.startingActionUnavailable">
+      <source xml:lang="en">This canvas extension is still starting.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.startingStatus">
+      <source xml:lang="en">Starting</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.targetUnavailable">
+      <source xml:lang="en">The chat that owns canvas extension '{0}' is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.title">
+      <source xml:lang="en">Canvases</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.unavailable">
+      <source xml:lang="en">Canvases Unavailable</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.userExtension">
+      <source xml:lang="en">User Canvas Extension</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.userGroup">
+      <source xml:lang="en">User</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.userGroupDescription">
+      <source xml:lang="en">Canvas extensions available in every workspace.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.workspaceActionUnavailable">
+      <source xml:lang="en">Workspace canvas extension enablement is not available.</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.workspaceExtension">
+      <source xml:lang="en">Workspace Canvas Extension</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.workspaceGroup">
+      <source xml:lang="en">Workspace</source>
+    </trans-unit>
+    <trans-unit id="copilotCanvases.workspaceGroupDescription">
+      <source xml:lang="en">Canvas extensions provided by this workspace.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationCardList" source-language="en" datatype="plaintext"><body>
     <trans-unit id="collapseCustomizationSection">
       <source xml:lang="en">Collapse {0}</source>
@@ -6899,6 +7194,9 @@ Destination files created or changed by the agent are not removed.</source>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplace.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="customizationDiscovery.help.browse">
       <source xml:lang="en">Clear the search to browse Editor's picks, Plan, build, and ship, and Connect your work when curated GitHub Feed sections are available. Otherwise, Browse groups catalog items by type. Show All on a type section applies its filter and moves to search results.</source>
+    </trans-unit>
+    <trans-unit id="customizationDiscovery.help.create">
+      <source xml:lang="en">Add Customization starts the same creation flows as each management section. For agents, skills, instructions, and prompts, choose a workspace or user location, Generate with AI when available, or an action provided by the selected agent. Add MCP Server opens the server configuration wizard. Add Plugin offers the selected agent's plugin actions and Install from Source. Escape cancels without creating an item.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.help.descriptionLinks">
       <source xml:lang="en">The customization type links below the heading open their respective management sections.</source>
@@ -7091,13 +7389,16 @@ Destination files created or changed by the agent are not removed.</source>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMigrationAccessibility" source-language="en" datatype="plaintext"><body>
     <trans-unit id="migrationHelpActions">
-      <source xml:lang="en">Migrate applies to the selected items in one group and asks for confirmation before modifying files or settings. Ignore permanently hides a group. Show Ignored Migrations restores hidden groups. Agent Migration Recovery can restore original sources or delete a backup; restoring does not remove destination files created or changed by the agent.</source>
+      <source xml:lang="en">Migrate applies to the selected items in one group and asks for confirmation before modifying files or settings. While a migration runs, its group shows Migrating and progress is available in Notifications. Ignore permanently hides a group. Show Ignored Migrations restores hidden groups. Agent Migration Recovery can restore original sources or delete a backup; restoring does not remove destination files created or changed by the agent.</source>
     </trans-unit>
     <trans-unit id="migrationHelpAgent">
       <source xml:lang="en">Use Migrate to have VS Code update the selected customizations. Migrate with Agent backs up every original source before closing Agent Customizations and focusing a guided migration in chat for the selected harness. Agent migration uses Copilot credits.</source>
     </trans-unit>
     <trans-unit id="migrationHelpDiscoveryErrors">
       <source xml:lang="en">If a migration type cannot be checked, its error appears without hiding other migrations. Use Retry to check that migration type again.</source>
+    </trans-unit>
+    <trans-unit id="migrationHelpGuidance">
+      <source xml:lang="en">Chat Participants and Tool Sets list read-only items without checkboxes or migration actions. Use Learn More to open migration documentation, or Ignore to hide the group. These items are not included in Migrate with Agent.</source>
     </trans-unit>
     <trans-unit id="migrationHelpLearnMore">
       <source xml:lang="en">Use Learn About Migrations to read why Copilot's new agent runtime needs different customization formats and locations, and how to migrate them.</source>
@@ -7176,6 +7477,12 @@ Destination files created or changed by the agent are not removed.</source>
     <trans-unit id="configuredLocationsMigrationNoFilesMigrated">
       <source xml:lang="en">No customizations from configured locations were migrated.</source>
     </trans-unit>
+    <trans-unit id="configuredLocationsMigrationProgress">
+      <source xml:lang="en">Migrating {0} customizations from configured locations...</source>
+    </trans-unit>
+    <trans-unit id="configuredLocationsMigrationProgressSingle">
+      <source xml:lang="en">Migrating 1 customization from a configured location...</source>
+    </trans-unit>
     <trans-unit id="configuredLocationsMigrationShortcutAriaLabelSingle">
       <source xml:lang="en">Locations, 1 customization needs migration</source>
     </trans-unit>
@@ -7253,6 +7560,12 @@ Disabled user servers may become enabled.</source>
     <trans-unit id="mcpMigrationOAuthSignIn">
       <source xml:lang="en">You may need to sign in again after migration.</source>
     </trans-unit>
+    <trans-unit id="mcpMigrationProgress">
+      <source xml:lang="en">Migrating {0} MCP servers...</source>
+    </trans-unit>
+    <trans-unit id="mcpMigrationProgressSingle">
+      <source xml:lang="en">Migrating 1 MCP server...</source>
+    </trans-unit>
     <trans-unit id="mcpMigrationRemoveDev">
       <source xml:lang="en">Removes 'dev'. Development mode will stop.</source>
     </trans-unit>
@@ -7311,6 +7624,18 @@ Disabled servers may become enabled.</source>
     <trans-unit id="mcpMigrationUserConfirmMessageSingle">
       <source xml:lang="en">Migrate 1 MCP server?</source>
     </trans-unit>
+    <trans-unit id="migrationChatParticipants">
+      <source xml:lang="en">Chat Participants</source>
+    </trans-unit>
+    <trans-unit id="migrationChatParticipantsDescription">
+      <source xml:lang="en">Extension chat participants cannot be migrated automatically. Learn how to replace them with supported customizations.</source>
+    </trans-unit>
+    <trans-unit id="migrationToolSets">
+      <source xml:lang="en">Tool Sets</source>
+    </trans-unit>
+    <trans-unit id="migrationToolSetsDescription">
+      <source xml:lang="en">User-defined and extension-contributed tool sets cannot be migrated automatically. Learn how to replace them with supported customizations.</source>
+    </trans-unit>
     <trans-unit id="pluginMarketplacesMigrationCardAction">
       <source xml:lang="en">Migrate...</source>
     </trans-unit>
@@ -7355,6 +7680,12 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="pluginMarketplacesMigrationNoneMigrated">
       <source xml:lang="en">No plugin marketplaces were migrated.</source>
+    </trans-unit>
+    <trans-unit id="pluginMarketplacesMigrationProgress">
+      <source xml:lang="en">Migrating {0} plugin marketplaces...</source>
+    </trans-unit>
+    <trans-unit id="pluginMarketplacesMigrationProgressSingle">
+      <source xml:lang="en">Migrating 1 plugin marketplace...</source>
     </trans-unit>
     <trans-unit id="pluginMarketplacesMigrationShortcutAriaLabel">
       <source xml:lang="en">Plugin marketplaces, {0} marketplaces need migration</source>
@@ -7426,6 +7757,12 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="promptMigrationNoFilesConverted">
       <source xml:lang="en">No prompt files were converted.</source>
+    </trans-unit>
+    <trans-unit id="promptMigrationProgress">
+      <source xml:lang="en">Converting {0} prompt files to skills...</source>
+    </trans-unit>
+    <trans-unit id="promptMigrationProgressSingle">
+      <source xml:lang="en">Converting 1 prompt file to a skill...</source>
     </trans-unit>
     <trans-unit id="promptMigrationShortcutAriaLabelWithCount">
       <source xml:lang="en">Prompts, {0} deprecated prompt files need migration</source>
@@ -7505,6 +7842,12 @@ Disabled servers may become enabled.</source>
     <trans-unit id="userDataMigrationNoFilesMigrated">
       <source xml:lang="en">No user data customizations were migrated.</source>
     </trans-unit>
+    <trans-unit id="userDataMigrationProgress">
+      <source xml:lang="en">Migrating {0} user data customizations...</source>
+    </trans-unit>
+    <trans-unit id="userDataMigrationProgressSingle">
+      <source xml:lang="en">Migrating 1 user data customization...</source>
+    </trans-unit>
     <trans-unit id="userDataMigrationShortcutAriaLabelSingle">
       <source xml:lang="en">User data, 1 customization needs migration</source>
     </trans-unit>
@@ -7525,14 +7868,26 @@ Disabled servers may become enabled.</source>
     <trans-unit id="agentMigrationRecoveriesDescription">
       <source xml:lang="en">Restore original customization sources from before an agent migration. Destination files created or changed by the agent are not removed.</source>
     </trans-unit>
+    <trans-unit id="backToMigrations">
+      <source xml:lang="en">Back to migrations</source>
+    </trans-unit>
     <trans-unit id="changeMigrationDestinations">
       <source xml:lang="en">Change destinations for {0}</source>
+    </trans-unit>
+    <trans-unit id="chatParticipantMigrationManualReviewGuidance">
+      <source xml:lang="en">Ask the extension publisher whether it provides an agent plugin, MCP server, or extension tools. Use a custom agent when the integration needs an ongoing specialist role.</source>
+    </trans-unit>
+    <trans-unit id="chatParticipantMigrationManualReviewReason">
+      <source xml:lang="en">Chat participants are deprecated and are not supported by the Copilot harness.</source>
     </trans-unit>
     <trans-unit id="deleteAgentMigrationRecovery">
       <source xml:lang="en">Delete Backup</source>
     </trans-unit>
     <trans-unit id="deleteAgentMigrationRecoveryAriaLabel">
       <source xml:lang="en">Delete backup for {0}</source>
+    </trans-unit>
+    <trans-unit id="extensionToolSetMigrationManualReviewGuidance">
+      <source xml:lang="en">Ask the extension publisher to replace this tool set with supported tools, a custom agent, or an agent plugin.</source>
     </trans-unit>
     <trans-unit id="highRiskMigrationDescription">
       <source xml:lang="en">High risk</source>
@@ -7546,13 +7901,19 @@ Disabled servers may become enabled.</source>
     <trans-unit id="learnAboutMigrations">
       <source xml:lang="en">Learn About Migrations</source>
     </trans-unit>
+    <trans-unit id="learnHowToReplaceChatParticipants">
+      <source xml:lang="en">Learn how to replace chat participants</source>
+    </trans-unit>
+    <trans-unit id="learnHowToReplaceToolSets">
+      <source xml:lang="en">Learn how to replace tool sets</source>
+    </trans-unit>
     <trans-unit id="manualReviewItemHover">
       <source xml:lang="en">{0}
 
 {1}</source>
     </trans-unit>
     <trans-unit id="migrate">
-      <source xml:lang="en">Migrate</source>
+      <source xml:lang="en">Migrate...</source>
     </trans-unit>
     <trans-unit id="migrateWithAgent">
       <source xml:lang="en">Migrate with Agent</source>
@@ -7566,8 +7927,11 @@ Disabled servers may become enabled.</source>
     <trans-unit id="migrationAccessibleActionWithLabel">
       <source xml:lang="en">{0}: {1}</source>
     </trans-unit>
+    <trans-unit id="migrationAccessibleGuidanceLink">
+      <source xml:lang="en">{0}: {1}</source>
+    </trans-unit>
     <trans-unit id="migrationActionSelectedCount">
-      <source xml:lang="en">{0} {1}</source>
+      <source xml:lang="en">Migrate {0}...</source>
     </trans-unit>
     <trans-unit id="migrationActionWithScope">
       <source xml:lang="en">{0} ({1})</source>
@@ -7575,11 +7939,17 @@ Disabled servers may become enabled.</source>
     <trans-unit id="migrationDestinationPath">
       <source xml:lang="en">Destination: {0}</source>
     </trans-unit>
+    <trans-unit id="migrationExtensionsScope">
+      <source xml:lang="en">Extensions</source>
+    </trans-unit>
     <trans-unit id="migrationGroupAriaLabel">
       <source xml:lang="en">{0}, {1} migrations</source>
     </trans-unit>
     <trans-unit id="migrationGroupWithScope">
       <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="migrationGuidanceSourceWithValue">
+      <source xml:lang="en">Source: {0}</source>
     </trans-unit>
     <trans-unit id="migrationItemActions">
       <source xml:lang="en">More actions for {0}</source>
@@ -7592,6 +7962,12 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="migrationItemWithStatusAriaLabel">
       <source xml:lang="en">{0}, needs manual review, {1}, {2}, source {3}</source>
+    </trans-unit>
+    <trans-unit id="migrationLearnMore">
+      <source xml:lang="en">Learn More</source>
+    </trans-unit>
+    <trans-unit id="migrationLearnMoreAriaLabel">
+      <source xml:lang="en">Learn how to migrate {0}</source>
     </trans-unit>
     <trans-unit id="migrationManualReviewGroup">
       <source xml:lang="en">Needs manual review</source>
@@ -7614,6 +7990,9 @@ Disabled servers may become enabled.</source>
     <trans-unit id="migrationsDescription">
       <source xml:lang="en">Copilot's new agent runtime uses different formats and locations for some customizations. Review and migrate the affected items below.</source>
     </trans-unit>
+    <trans-unit id="migrationsGuidanceDescription">
+      <source xml:lang="en">These customizations cannot be migrated automatically. Use Learn More for guidance on updating them.</source>
+    </trans-unit>
     <trans-unit id="migrationsTitle">
       <source xml:lang="en">Migrations</source>
     </trans-unit>
@@ -7629,8 +8008,17 @@ Disabled servers may become enabled.</source>
     <trans-unit id="noMigrations">
       <source xml:lang="en">No migrations are needed.</source>
     </trans-unit>
+    <trans-unit id="openGuidanceSourceFile">
+      <source xml:lang="en">Open {0}</source>
+    </trans-unit>
     <trans-unit id="promptMigrationWarningSummary">
       <source xml:lang="en">Prompt-to-skill conversion changes</source>
+    </trans-unit>
+    <trans-unit id="replaceChatParticipant">
+      <source xml:lang="en">Replace Chat Participant</source>
+    </trans-unit>
+    <trans-unit id="replaceToolSet">
+      <source xml:lang="en">Replace Tool Set</source>
     </trans-unit>
     <trans-unit id="restoreAgentMigrationSources">
       <source xml:lang="en">Restore Sources</source>
@@ -7662,6 +8050,15 @@ Disabled servers may become enabled.</source>
     <trans-unit id="showIgnoredMigrationsAriaLabel">
       <source xml:lang="en">Show and restore ignored migrations</source>
     </trans-unit>
+    <trans-unit id="toolSetMigrationManualReviewGuidance">
+      <source xml:lang="en">Move the tool selection, not the file. Configure supported tools directly in a custom agent or the Tools tab, or use an agent plugin for a shared workflow.</source>
+    </trans-unit>
+    <trans-unit id="toolSetMigrationManualReviewReason">
+      <source xml:lang="en">Tool sets are deprecated and are not supported by the Copilot harness.</source>
+    </trans-unit>
+    <trans-unit id="viewContributingExtensionAriaLabel">
+      <source xml:lang="en">View the extension that contributes {0}</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMigrationResultTool" source-language="en" datatype="plaintext"><body>
     <trans-unit id="customizationMigrationResultTool.complete">
@@ -7675,6 +8072,12 @@ Disabled servers may become enabled.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMigrationServiceImpl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationMigrationHintCountPlural">
+      <source xml:lang="en">{0} customizations need an update to keep working.</source>
+    </trans-unit>
+    <trans-unit id="customizationMigrationHintCountSingular">
+      <source xml:lang="en">{0} customization needs an update to keep working.</source>
+    </trans-unit>
     <trans-unit id="customizationMigrationHintCounts">
       <source xml:lang="en">{0} workspace and {1} user customizations need an update to keep working.</source>
     </trans-unit>
@@ -8681,7 +9084,7 @@ Disabled servers may become enabled.</source>
     <trans-unit id="pluginInstalledItemAriaLabelEnabled">
       <source xml:lang="en">{0}. Enabled</source>
     </trans-unit>
-    <trans-unit id="pluginInstalledItemAriaLabelWithMetadata">
+    <trans-unit id="pluginInstalledItemAriaLabelWithDetail">
       <source xml:lang="en">{0}. {1}</source>
     </trans-unit>
     <trans-unit id="pluginItemAriaLabel">
@@ -9676,6 +10079,9 @@ Locations configured here are only observed by the Local agent harness. Other ha
     </trans-unit>
     <trans-unit id="chat.defaultConfiguration.mode.plan">
       <source xml:lang="en">Plan — plan first, execute when ready.</source>
+    </trans-unit>
+    <trans-unit id="chat.defaultConfiguration.policy">
+      <source xml:lang="en">Sets the default configuration for new agent sessions, as a JSON object with an optional "mode" ("interactive", "plan", or "autopilot") and "approvals" ("manual", "assisted", or "allowAll"). Users can still change them for each session.</source>
     </trans-unit>
     <trans-unit id="chat.defaultConfiguration.settingDescription">
       <source xml:lang="en">Controls the default configuration for new agent sessions (such as Copilot). You can still change the mode and approval behavior per session, and each session remembers what was used.</source>
@@ -15587,8 +15993,20 @@ Source: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/remoteAgentHost/cloudSandboxSessionConfig" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloudSandbox.allowAll">
+      <source xml:lang="en">Allow all</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.allowAllDescription">
+      <source xml:lang="en">Runs tool calls without asking</source>
+    </trans-unit>
     <trans-unit id="cloudSandbox.approvals">
       <source xml:lang="en">Approvals</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.assistedPermissions">
+      <source xml:lang="en">Assisted permissions</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.assistedPermissionsDescription">
+      <source xml:lang="en">Evaluates risk before running tools</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.autopilot">
       <source xml:lang="en">Autopilot</source>
@@ -15604,6 +16022,12 @@ Source: {0}</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.interactiveDescription">
       <source xml:lang="en">Works with you and asks for input when needed.</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.manualPermissions">
+      <source xml:lang="en">Manual permissions</source>
+    </trans-unit>
+    <trans-unit id="cloudSandbox.manualPermissionsDescription">
+      <source xml:lang="en">Asks when approval settings don't apply</source>
     </trans-unit>
     <trans-unit id="cloudSandbox.mode">
       <source xml:lang="en">Agent Mode</source>
@@ -20169,13 +20593,13 @@ You can stop the agent at any time by clicking the stop button. This applies to 
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerColors" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chat.fusionBadgeForeground">
-      <source xml:lang="en">Foreground color of the Copilot Fusion discount badge in the model picker.</source>
+      <source xml:lang="en">Foreground color of the Copilot Fusion badge (discount or Recommended) in the model picker.</source>
     </trans-unit>
     <trans-unit id="chat.fusionBadgeGradientEnd">
-      <source xml:lang="en">End color of the gradient behind the Copilot Fusion discount badge in the model picker.</source>
+      <source xml:lang="en">End color of the gradient behind the Copilot Fusion badge (discount or Recommended) in the model picker.</source>
     </trans-unit>
     <trans-unit id="chat.fusionBadgeGradientStart">
-      <source xml:lang="en">Start color of the gradient behind the Copilot Fusion discount badge in the model picker.</source>
+      <source xml:lang="en">Start color of the gradient behind the Copilot Fusion badge (discount or Recommended) in the model picker.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelPicker/modelPickerConfiguration" source-language="en" datatype="plaintext"><body>
@@ -20738,11 +21162,17 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.modelPicker.dismissConfigurationHint">
       <source xml:lang="en">Dismiss Hint</source>
     </trans-unit>
+    <trans-unit id="chat.modelPicker.fusionDetail">
+      <source xml:lang="en">Picks or combines the best models for your task</source>
+    </trans-unit>
     <trans-unit id="chat.modelPicker.fusionHighDescription">
       <source xml:lang="en">Prioritizes capable models for challenging tasks and deeper reasoning.</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.fusionMaxDescription">
       <source xml:lang="en">Prioritizes the most capable models for the most demanding tasks and complex reasoning.</source>
+    </trans-unit>
+    <trans-unit id="chat.modelPicker.fusionRecommendedBadge">
+      <source xml:lang="en">Recommended</source>
     </trans-unit>
     <trans-unit id="chat.modelPicker.hydraFusionTierValue">
       <source xml:lang="en">Tier: {0}</source>
@@ -21496,6 +21926,26 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="withinEditSessionDiff">
       <source xml:lang="en">True when the chat widget dispatches to the edit session chat.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/agentHostConfigPolicy" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.defaultConfiguration.policy.allowAll">
+      <source xml:lang="en">Allow All</source>
+    </trans-unit>
+    <trans-unit id="chat.defaultConfiguration.policy.assisted">
+      <source xml:lang="en">Assisted permissions</source>
+    </trans-unit>
+    <trans-unit id="chat.defaultConfiguration.policy.description">
+      <source xml:lang="en">Your organization sets {0} as the default for new agent sessions. You can choose other permissions for each session.</source>
+    </trans-unit>
+    <trans-unit id="chat.defaultConfiguration.policy.generic">
+      <source xml:lang="en">Your organization sets the default configuration for new agent sessions. You can change it for each session.</source>
+    </trans-unit>
+    <trans-unit id="chat.defaultConfiguration.policy.manual">
+      <source xml:lang="en">Manual permissions</source>
+    </trans-unit>
+    <trans-unit id="chat.defaultConfiguration.policy.overrideDescription">
+      <source xml:lang="en">Your organization sets {0} as the default for new agent sessions. Your saved preference {1} is preserved but does not apply while this policy is in effect. You can choose other permissions for each session.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/agentsWindowInvitation" source-language="en" datatype="plaintext"><body>
@@ -23021,6 +23471,12 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     <trans-unit id="promptHeaderAutocompletion.newPromptHook.description">
       <source xml:lang="en">Add a startup prompt action to this hook.</source>
     </trans-unit>
+    <trans-unit id="promptHeaderAutocompletion.skillDisabled">
+      <source xml:lang="en">Disabled</source>
+    </trans-unit>
+    <trans-unit id="promptHeaderAutocompletion.skillUnavailable">
+      <source xml:lang="en">Unavailable</source>
+    </trans-unit>
     <trans-unit id="promptHeaderAutocompletion.toolDisabled">
       <source xml:lang="en">Disabled</source>
     </trans-unit>
@@ -23076,6 +23532,12 @@ Allowed values: {1}.</source>
     <trans-unit id="promptHeader.attribute.notUsedByCopilot">
       <source xml:lang="en">Note: This attribute is not used by the GitHub Copilot harness.</source>
     </trans-unit>
+    <trans-unit id="promptHeader.githubCopilot.skillDisabled">
+      <source xml:lang="en">This skill is recognized but disabled for the matching GitHub Copilot harness.</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilot.skillUnavailable">
+      <source xml:lang="en">This skill is recognized but currently unavailable for the matching GitHub Copilot harness.</source>
+    </trans-unit>
     <trans-unit id="promptHeader.githubCopilot.toolDisabled">
       <source xml:lang="en">This tool is recognized but disabled for the matching GitHub Copilot harness.</source>
     </trans-unit>
@@ -23101,6 +23563,29 @@ Allowed values: {1}.</source>
       <source xml:lang="en">ToolSet: {0}
 
 </source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptSkillResolver" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="promptHeader.githubCopilot.skillSource.builtin">
+      <source xml:lang="en">Built-in</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilot.skillSource.extension">
+      <source xml:lang="en">Extension</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilot.skillSource.plugin">
+      <source xml:lang="en">Plugin</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilot.skillSource.unknown">
+      <source xml:lang="en">Unknown</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilot.skillSource.user">
+      <source xml:lang="en">User</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilot.skillSource.workspace">
+      <source xml:lang="en">Workspace</source>
+    </trans-unit>
+    <trans-unit id="promptHeader.githubCopilot.skillSources">
+      <source xml:lang="en">Source: {0}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptValidator" source-language="en" datatype="plaintext"><body>
@@ -23399,6 +23884,15 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
     <trans-unit id="promptValidator.copilotReasoningEffortUnavailable">
       <source xml:lang="en">Reasoning effort '{0}' is not supported by the selected model.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.copilotSkillDisabled">
+      <source xml:lang="en">Skill '{0}' is recognized but disabled for the matching GitHub Copilot harness.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.copilotSkillUnavailable">
+      <source xml:lang="en">Skill '{0}' is recognized but currently unavailable for the matching GitHub Copilot harness.</source>
+    </trans-unit>
+    <trans-unit id="promptValidator.copilotSkillUnknown">
+      <source xml:lang="en">Skill '{0}' is not recognized by the matching GitHub Copilot harness.</source>
     </trans-unit>
     <trans-unit id="promptValidator.copilotToolDisabled">
       <source xml:lang="en">Tool '{0}' is recognized but disabled for the matching GitHub Copilot harness.</source>

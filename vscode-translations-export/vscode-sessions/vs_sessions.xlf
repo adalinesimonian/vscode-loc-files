@@ -598,6 +598,17 @@
       <source xml:lang="en">Secondary Side Bar shown</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/common/agentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHost.connected">
+      <source xml:lang="en">Connected</source>
+    </trans-unit>
+    <trans-unit id="agentHost.connecting">
+      <source xml:lang="en">Connecting</source>
+    </trans-unit>
+    <trans-unit id="agentHost.disconnected">
+      <source xml:lang="en">Disconnected</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/common/categories" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agents">
       <source xml:lang="en">Agents</source>
@@ -861,6 +872,12 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/common/sessionApplication" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="application.automations">
+      <source xml:lang="en">Automations</source>
+    </trans-unit>
+    <trans-unit id="application.azureBoards">
+      <source xml:lang="en">Azure Boards</source>
+    </trans-unit>
     <trans-unit id="application.claude">
       <source xml:lang="en">Claude</source>
     </trans-unit>
@@ -876,23 +893,35 @@
     <trans-unit id="application.github">
       <source xml:lang="en">GitHub</source>
     </trans-unit>
-    <trans-unit id="application.githubMobileAndroid">
-      <source xml:lang="en">GitHub Mobile (Android)</source>
+    <trans-unit id="application.githubMcp">
+      <source xml:lang="en">GitHub MCP</source>
     </trans-unit>
-    <trans-unit id="application.githubMobileIOS">
-      <source xml:lang="en">GitHub Mobile (iOS)</source>
+    <trans-unit id="application.githubMobile">
+      <source xml:lang="en">GitHub Mobile</source>
     </trans-unit>
-    <trans-unit id="application.issuesAssignment">
-      <source xml:lang="en">Issues Assignment</source>
+    <trans-unit id="application.jetbrains">
+      <source xml:lang="en">JetBrains</source>
+    </trans-unit>
+    <trans-unit id="application.jira">
+      <source xml:lang="en">Jira</source>
+    </trans-unit>
+    <trans-unit id="application.linear">
+      <source xml:lang="en">Linear</source>
+    </trans-unit>
+    <trans-unit id="application.raycast">
+      <source xml:lang="en">Raycast</source>
     </trans-unit>
     <trans-unit id="application.slack">
       <source xml:lang="en">Slack</source>
     </trans-unit>
     <trans-unit id="application.teams">
-      <source xml:lang="en">Teams</source>
+      <source xml:lang="en">Microsoft Teams</source>
     </trans-unit>
     <trans-unit id="application.unknown">
       <source xml:lang="en">Unknown</source>
+    </trans-unit>
+    <trans-unit id="application.visualStudio">
+      <source xml:lang="en">Visual Studio</source>
     </trans-unit>
     <trans-unit id="application.vscode">
       <source xml:lang="en">VS Code</source>
@@ -1060,6 +1089,9 @@
     </trans-unit>
     <trans-unit id="sessions.removeSessionArtifact.unsupported">
       <source xml:lang="en">Removing artifacts is not supported for this session.</source>
+    </trans-unit>
+    <trans-unit id="sessions.worktreeCleanupUnavailable">
+      <source xml:lang="en">Retrying worktree cleanup is unavailable for this session.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/services/sessions/browser/sessionsService" source-language="en" datatype="plaintext"><body>

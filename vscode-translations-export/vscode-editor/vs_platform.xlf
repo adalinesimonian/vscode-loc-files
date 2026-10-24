@@ -1091,9 +1091,6 @@ Close this dialog to apply the change with your next message after the current t
     <trans-unit id="chat.agentHost.githubMcpServer.enabled">
       <source xml:lang="en">When enabled, agent-host sessions include the GitHub MCP server.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.moveChats.enabled">
-      <source xml:lang="en">Enables moving chats between Agent Host sessions and into new sessions.</source>
-    </trans-unit>
     <trans-unit id="chat.agentHost.otel.captureContent">
       <source xml:lang="en">When enabled, includes prompt and response content in OTel span attributes. Configurable in user settings only. Sets `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Privacy-sensitive: do not enable in environments that ship spans to shared sinks.</source>
     </trans-unit>
@@ -1563,6 +1560,11 @@ Close this dialog to apply the change with your next message after the current t
     </trans-unit>
     <trans-unit id="workingSetChangeset.label">
       <source xml:lang="en">Working Set</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/chatMoveConfiguration" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.agentHost.moveChats.enabled">
+      <source xml:lang="en">Enables moving chats between Agent Host sessions and into new sessions.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/claudeModelConfig" source-language="en" datatype="plaintext"><body>
@@ -5709,15 +5711,6 @@ Showing {1}-{2} of {3}.</source>
     <trans-unit id="copilot.customizationMarketplace.invalidPagination">
       <source xml:lang="en">The Copilot customization catalog returned invalid pagination.</source>
     </trans-unit>
-    <trans-unit id="copilot.featuredPlugin.azure.description">
-      <source xml:lang="en">Plan, deploy, troubleshoot, and manage Azure resources with skills and MCP tools.</source>
-    </trans-unit>
-    <trans-unit id="copilot.featuredPlugin.securityBestPractices.description">
-      <source xml:lang="en">Build secure, accessible, reliable software.</source>
-    </trans-unit>
-    <trans-unit id="copilot.featuredPlugin.workiq.description">
-      <source xml:lang="en">Find answers across Microsoft 365 emails, meetings, documents, and Teams messages.</source>
-    </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/localModelBridge/shim/copilotRequestHandler" source-language="en" datatype="plaintext"><body>
     <trans-unit id="localModel.invalidRequest">
@@ -5903,6 +5896,9 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="devContainerAgentHost.containerSuspended">
       <source xml:lang="en">Dev Container for '{0}' is stopped.</source>
+    </trans-unit>
+    <trans-unit id="devContainerAgentHost.discoveryFailed">
+      <source xml:lang="en">Could not list Dev Containers (exit {0}): {1}</source>
     </trans-unit>
     <trans-unit id="devContainerAgentHost.dockerInspectFailed">
       <source xml:lang="en">Docker inspect failed (exit {0}): {1}</source>
@@ -6221,35 +6217,38 @@ stderr: {2}</source>
     <trans-unit id="artifactIntegration.tool.set">
       <source xml:lang="en">Set Artifact Automation</source>
     </trans-unit>
-    <trans-unit id="artifactIntegration.tool.set.cancel">
-      <source xml:lang="en">Cancel</source>
-    </trans-unit>
-    <trans-unit id="artifactIntegration.tool.set.change">
-      <source xml:lang="en">Change</source>
-    </trans-unit>
     <trans-unit id="artifactIntegration.tool.set.complete">
       <source xml:lang="en">Updated artifact automation</source>
     </trans-unit>
-    <trans-unit id="artifactIntegration.tool.set.confirmChangeTitle">
-      <source xml:lang="en">Change automation for {0}?</source>
+    <trans-unit id="artifactIntegration.tool.set.confirmationDetail">
+      <source xml:lang="en">Automation can act on this artifact after this turn without asking again.</source>
     </trans-unit>
-    <trans-unit id="artifactIntegration.tool.set.confirmDetail">
-      <source xml:lang="en">The agent asked for this. Automation can act on this artifact after this turn without asking again. You can turn it off from the artifact at any time.</source>
+    <trans-unit id="artifactIntegration.tool.set.confirmationMessage">
+      <source xml:lang="en">Set automation on {0}: {1}. {2}</source>
     </trans-unit>
-    <trans-unit id="artifactIntegration.tool.set.confirmTitle">
-      <source xml:lang="en">Turn on automation for {0}?</source>
+    <trans-unit id="artifactIntegration.tool.set.confirmationMessageNoArtifact">
+      <source xml:lang="en">Set automation: {0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.confirmationTitle">
+      <source xml:lang="en">Set Artifact Automation?</source>
     </trans-unit>
     <trans-unit id="artifactIntegration.tool.set.failed">
       <source xml:lang="en">Failed to update artifact automation</source>
     </trans-unit>
-    <trans-unit id="artifactIntegration.tool.set.rule">
-      <source xml:lang="en">{0} ({1}):</source>
+    <trans-unit id="artifactIntegration.tool.set.off">
+      <source xml:lang="en">off</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.on">
+      <source xml:lang="en">on</source>
     </trans-unit>
     <trans-unit id="artifactIntegration.tool.set.running">
       <source xml:lang="en">Updating artifact automation</source>
     </trans-unit>
-    <trans-unit id="artifactIntegration.tool.set.turnOn">
-      <source xml:lang="en">Turn On</source>
+    <trans-unit id="artifactIntegration.tool.set.unknownValues">
+      <source xml:lang="en">the requested options</source>
+    </trans-unit>
+    <trans-unit id="artifactIntegration.tool.set.value">
+      <source xml:lang="en">{0} → {1}</source>
     </trans-unit>
     <trans-unit id="artifactIntegration.tool.status">
       <source xml:lang="en">Get Artifact Status</source>
@@ -7291,8 +7290,17 @@ Received: '{1}'.</source>
     <trans-unit id="mcpGalleryEmptyPages">
       <source xml:lang="en">The MCP gallery returned too many empty pages. Try the search again.</source>
     </trans-unit>
+    <trans-unit id="mcpGalleryInvalidPage">
+      <source xml:lang="en">The MCP gallery page is invalid. Start a new search.</source>
+    </trans-unit>
+    <trans-unit id="mcpGalleryRecoveryPages">
+      <source xml:lang="en">The MCP gallery could not recover its pagination cursor. Try the search again.</source>
+    </trans-unit>
     <trans-unit id="mcpGalleryRegistryChanging">
       <source xml:lang="en">The configured MCP gallery is changing. Try again.</source>
+    </trans-unit>
+    <trans-unit id="mcpGalleryRepeatedCursor">
+      <source xml:lang="en">The MCP gallery returned the same pagination cursor. Try the search again.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/dialogs/common/dialogs" source-language="en" datatype="plaintext"><body>
@@ -8339,6 +8347,9 @@ A keybinding label</note>
     <trans-unit id="mcpGalleryEmptyResponse">
       <source xml:lang="en">The MCP gallery returned an empty response.</source>
     </trans-unit>
+    <trans-unit id="mcpGalleryInvalidCursor">
+      <source xml:lang="en">The MCP gallery could not continue loading because the registry rejected its pagination cursor. Retry to refresh the results.</source>
+    </trans-unit>
     <trans-unit id="mcpGalleryNoQueryUrl">
       <source xml:lang="en">The MCP gallery has no query endpoint.</source>
     </trans-unit>
@@ -8347,6 +8358,12 @@ A keybinding label</note>
     </trans-unit>
     <trans-unit id="mcpGalleryQueryFailed">
       <source xml:lang="en">The MCP gallery returned HTTP {0}.</source>
+    </trans-unit>
+    <trans-unit id="mcpGalleryRateLimited">
+      <source xml:lang="en">The MCP gallery is temporarily rate limited. Try again later.</source>
+    </trans-unit>
+    <trans-unit id="mcpGalleryRateLimitedWithRetry">
+      <source xml:lang="en">The MCP gallery is temporarily rate limited. Try again in {0} seconds.</source>
     </trans-unit>
     <trans-unit id="noReadme">
       <source xml:lang="en">No README available</source>

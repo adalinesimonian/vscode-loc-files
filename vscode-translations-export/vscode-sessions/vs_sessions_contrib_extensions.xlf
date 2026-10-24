@@ -6,6 +6,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/extensions/browser/agentsWindowExtensionsAccessibilityHelp" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentsWindowExtensions.help.autoEnabled">
+      <source xml:lang="en">Extensions that could be useful in the Agents window and don't rely on views, debugging, or other features that it doesn't have are enabled automatically instead. You can disable them like any other extension.</source>
+    </trans-unit>
     <trans-unit id="agentsWindowExtensions.help.groups">
       <source xml:lang="en">Extensions that support the Agents window are listed under Supported and are enabled by default. Other extensions are listed under Other Extensions and are disabled by default because they might not work as expected.</source>
     </trans-unit>
@@ -25,6 +28,9 @@
   <file original="src/vs/sessions/contrib/extensions/browser/agentsWindowExtensionsWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentsWindowExtensions.description">
       <source xml:lang="en">Choose which installed extensions run in the Agents window. Extensions that haven't declared support for the Agents window are disabled by default and might not work as expected. Changes only apply to the Agents window.</source>
+    </trans-unit>
+    <trans-unit id="agentsWindowExtensions.descriptionAutoEnabled">
+      <source xml:lang="en">Choose which installed extensions run in the Agents window. Extensions that haven't declared support for the Agents window might not work as expected. They are disabled by default, unless they could be useful there and don't rely on features that the Agents window doesn't have. Changes only apply to the Agents window.</source>
     </trans-unit>
     <trans-unit id="agentsWindowExtensions.disabled">
       <source xml:lang="en">Disabled</source>
@@ -59,6 +65,9 @@
     <trans-unit id="agentsWindowExtensions.otherGroupDescription">
       <source xml:lang="en">Extensions that haven't declared support for the Agents window. They are disabled by default and might not work as expected.</source>
     </trans-unit>
+    <trans-unit id="agentsWindowExtensions.otherGroupDescriptionAutoEnabled">
+      <source xml:lang="en">Extensions that haven't declared support for the Agents window. They might not work as expected. Those that could be useful in the Agents window and don't rely on views, debugging, or other features that it doesn't have are enabled automatically. The others are disabled by default.</source>
+    </trans-unit>
     <trans-unit id="agentsWindowExtensions.reloadRequired">
       <source xml:lang="en">Reload Required</source>
     </trans-unit>
@@ -92,6 +101,9 @@
     <trans-unit id="agentsWindowExtensions.suggestedGroupDescription">
       <source xml:lang="en">Extensions that could be useful in the Agents window, for example because they add tools, MCP servers, or syntax highlighting. They haven't declared support for the Agents window, so they are disabled by default and might not work as expected.</source>
     </trans-unit>
+    <trans-unit id="agentsWindowExtensions.suggestedGroupDescriptionAutoEnabled">
+      <source xml:lang="en">Extensions that could be useful in the Agents window, for example because they add tools, MCP servers, or syntax highlighting. They haven't declared support for the Agents window, so they might not work as expected. Those that don't rely on views, debugging, or other features that the Agents window doesn't have are enabled automatically.</source>
+    </trans-unit>
     <trans-unit id="agentsWindowExtensions.supportedGroup">
       <source xml:lang="en">Supported</source>
     </trans-unit>
@@ -117,6 +129,9 @@
     </trans-unit>
     <trans-unit id="agentsWindowExtensions.navigationLabel">
       <source xml:lang="en">Extensions</source>
+    </trans-unit>
+    <trans-unit id="extensions.experimental.agentsWindowAutoEnable">
+      <source xml:lang="en">When enabled, installed extensions that haven't declared support for the Agents window are enabled there automatically when they could be useful, such as extensions that add tools, MCP servers, or syntax highlighting, and don't rely on views, debugging, or other features that the Agents window doesn't have. You can still disable them from the Extensions section of Agent Customizations. Requires `#{0}#`.</source>
     </trans-unit>
     <trans-unit id="extensions.experimental.agentsWindowManagement">
       <source xml:lang="en">When enabled, you can choose which installed extensions run in the Agents window from the Extensions section of Agent Customizations. When disabled, extensions that don't support the Agents window stay disabled there, and your previous choices are kept but ignored.</source>

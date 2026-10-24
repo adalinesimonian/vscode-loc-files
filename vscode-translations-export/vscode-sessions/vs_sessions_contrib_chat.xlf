@@ -174,24 +174,11 @@ Select to reveal in chat.</source>
     <trans-unit id="artifactAutopilot.allRules">
       <source xml:lang="en">All Available Autopilot Rules</source>
     </trans-unit>
-    <trans-unit id="artifactAutopilot.confirm">
-      <source xml:lang="en">Enable these Autopilot rules?</source>
-    </trans-unit>
-    <trans-unit id="artifactAutopilot.confirmDetail">
-      <source xml:lang="en">{0}
-
-{1}
-
-Autopilot rules may run as soon as their conditions are met.</source>
-    </trans-unit>
-    <trans-unit id="artifactAutopilot.enable">
-      <source xml:lang="en">Enable Autopilot</source>
-    </trans-unit>
     <trans-unit id="artifactAutopilot.enabled">
       <source xml:lang="en">{0} of {1} on</source>
     </trans-unit>
     <trans-unit id="artifactAutopilot.masterHelp">
-      <source xml:lang="en">Enable all available rules for this provider using the policies shown in their dropdowns, or turn off all enabled rules. Unavailable rules are not enabled. Enabling is confirmed before saving.</source>
+      <source xml:lang="en">Enable all available rules for this provider using the policies shown in their dropdowns, or turn off all enabled rules. Unavailable rules are not enabled.</source>
     </trans-unit>
     <trans-unit id="artifactAutopilot.providerRules">
       <source xml:lang="en">All Available Autopilot Rules: {0}</source>
@@ -201,12 +188,6 @@ Autopilot rules may run as soon as their conditions are met.</source>
     </trans-unit>
     <trans-unit id="artifactAutopilot.providerUnavailable">
       <source xml:lang="en">This Autopilot provider is no longer available.</source>
-    </trans-unit>
-    <trans-unit id="artifactAutopilot.ruleChoice">
-      <source xml:lang="en">{0}: {1}</source>
-    </trans-unit>
-    <trans-unit id="artifactAutopilot.ruleConsent">
-      <source xml:lang="en">{0}: {1}</source>
     </trans-unit>
     <trans-unit id="artifactAutopilot.ruleUnavailable">
       <source xml:lang="en">This Autopilot rule is no longer available.</source>
@@ -252,7 +233,7 @@ Autopilot rules may run as soon as their conditions are met.</source>
       <source xml:lang="en">Artifacts with enabled Autopilot rules have a trailing pill section with an Autopilot icon and the number of enabled rules. Select it to open and focus Autopilot. This count includes saved enabled rules even when new enablement is temporarily unavailable.</source>
     </trans-unit>
     <trans-unit id="artifactDetailsHelp.autopilot">
-      <source xml:lang="en">All Available Autopilot Rules applies only to its provider's currently available rules. The enabled count describes partial enablement. Enabling a group requests confirmation and uses the policies shown in the dropdowns. Disabling a group revokes enabled rules without enabling unavailable ones.</source>
+      <source xml:lang="en">All Available Autopilot Rules applies only to its provider's currently available rules. The enabled count describes partial enablement. Enabling a group saves immediately and uses the policies shown in the dropdowns. Disabling a group revokes enabled rules without enabling unavailable ones.</source>
     </trans-unit>
     <trans-unit id="artifactDetailsHelp.controls">
       <source xml:lang="en">Use Tab and Shift+Tab to move between controls. Buttons below the state lists run actions once. Enabled actions come first in provider order, and the first action is primary. List rows show a single line; their full text and state remain available to screen readers and in hovers. Use Space to change an Autopilot switch. Enabling a rule grants permission for future automatic runs; it can run immediately if its condition already holds. Turning it off prevents new runs, but does not cancel work already started.</source>
@@ -270,7 +251,7 @@ Autopilot rules may run as soon as their conditions are met.</source>
       <source xml:lang="en">Artifact details show the full resource title and state icon, its description, tabbed state lists, actions, Autopilot, and Activities. Activate the linked title to open the resource. Copy Link and Remove Artifact are available in the footer.</source>
     </trans-unit>
     <trans-unit id="artifactDetailsHelp.tabs">
-      <source xml:lang="en">Left and Right Arrow, Home, and End select a state-list tab and keep keyboard focus on the full tab. Clicking a tab moves focus to the first item in its list. Tab moves through the information buttons beside each tab label and into the selected list. Enter or Space on an information button shows that list's details without selecting its tab. The list area keeps its height when you change tabs. Use arrow keys in a list and Enter to open its selected item. A pill's status section selects and focuses its list. Autopilot is collapsed by default; its heading expands or collapses its rules, and its separate switch enables all available rules or turns them off. Policy dropdowns remain visible while rules are off. Selecting a policy while off does not enable the rule; turning the switch on uses the displayed policy without asking again. Policy selections, selected tabs, and Autopilot expansion choices are remembered when reopening the artifact.</source>
+      <source xml:lang="en">State lists start collapsed. Clicking a state-list tab, or pressing Enter or Space on it, expands its list; activating the expanded tab again collapses all lists. While a list is expanded, Left and Right Arrow, Home, and End select another state-list tab and keep keyboard focus on the full tab; while all lists are collapsed, they only move focus between tabs. Clicking a tab moves focus to the first item in its list. Tab moves through the information buttons beside each tab label and into the expanded list. Enter or Space on an information button shows that list's details without selecting its tab. The list area keeps its height when you change tabs. Use arrow keys in a list and Enter to open its selected item. A pill's status section expands and focuses its list. Autopilot is collapsed by default; its heading expands or collapses its rules, and its separate switch enables all available rules or turns them off. Policy dropdowns remain visible while rules are off. Selecting a policy while off does not enable the rule; turning the switch on uses the displayed policy without asking again. Policy selections, expanded tabs, and Autopilot expansion choices are remembered when reopening the artifact.</source>
     </trans-unit>
     <trans-unit id="artifactDetailsHelp.view">
       <source xml:lang="en">Open the Accessible View{0} to read the full description and current lists as text. The chat accessibility verbosity setting controls the help hint.</source>
@@ -655,14 +636,8 @@ Autopilot rules may run as soon as their conditions are met.</source>
     <trans-unit id="sessions.chat.experimental.environmentPicker">
       <source xml:lang="en">Controls whether a separate Environment picker chooses where new sessions run in the desktop Agents Window. Requires the unified workspace picker and experimental new-session composer layout. When disabled, environment choices remain in the workspace and harness pickers.</source>
     </trans-unit>
-    <trans-unit id="sessions.chat.experimental.environmentPickerBeforeWorkspace">
-      <source xml:lang="en">Controls whether Environment appears before Workspace in the new-session composer and stays visible when session options are collapsed. Requires the Environment picker to be enabled.</source>
-    </trans-unit>
-    <trans-unit id="sessions.chat.experimental.environmentPickerIconOnly">
-      <source xml:lang="en">Controls whether the Environment picker in the new-session composer is collapsed to its icon. Toggling Collapse to Icon from the picker's context menu takes precedence. Requires the Environment picker to be enabled.</source>
-    </trans-unit>
-    <trans-unit id="sessions.chat.experimental.environmentPickerLocalIsolation">
-      <source xml:lang="en">Controls whether the Environment picker offers Local Folder and New Worktree instead of This Computer, replacing the separate Branch or New Worktree isolation picker for new local sessions. Requires the unified workspace picker, experimental new-session composer layout, and Environment picker. Branch selection remains available.</source>
+    <trans-unit id="sessions.chat.experimental.environmentPickerManageRemotes">
+      <source xml:lang="en">Controls whether the Environment picker shows a Manage entry to open the Remotes editor. Requires the Environment picker and remote agent hosts to be enabled.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.newSessionComposerLayout">
       <source xml:lang="en">Controls whether the new-session composer groups workspace, repository, and harness controls above the chat input. This setting only applies when the unified workspace picker is enabled.</source>
@@ -1483,9 +1458,6 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionChatPills.activityBar.openEntries">
       <source xml:lang="en">{0} ({1})</source>
     </trans-unit>
-    <trans-unit id="sessionChatPills.activityBar.openIssue">
-      <source xml:lang="en">Open Issue</source>
-    </trans-unit>
     <trans-unit id="sessionChatPills.activityBar.openPullRequest">
       <source xml:lang="en">Open Pull Request</source>
     </trans-unit>
@@ -1938,26 +1910,14 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="environmentPicker.cloud">
       <source xml:lang="en">Cloud</source>
     </trans-unit>
-    <trans-unit id="environmentPicker.connected">
-      <source xml:lang="en">Connected</source>
-    </trans-unit>
-    <trans-unit id="environmentPicker.connecting">
-      <source xml:lang="en">Connecting</source>
-    </trans-unit>
-    <trans-unit id="environmentPicker.disconnected">
-      <source xml:lang="en">Disconnected</source>
-    </trans-unit>
     <trans-unit id="environmentPicker.item">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
     <trans-unit id="environmentPicker.local">
       <source xml:lang="en">This Computer</source>
     </trans-unit>
-    <trans-unit id="environmentPicker.localFolder">
-      <source xml:lang="en">Local Folder</source>
-    </trans-unit>
-    <trans-unit id="environmentPicker.localWorktree">
-      <source xml:lang="en">New Worktree</source>
+    <trans-unit id="environmentPicker.manage">
+      <source xml:lang="en">Manage...</source>
     </trans-unit>
     <trans-unit id="environmentPicker.title">
       <source xml:lang="en">Environment</source>
@@ -2355,16 +2315,13 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Choose Environments in the workspace picker to connect to a GitHub environment, then select a folder on that host. The picker starts in the host's home directory. Enter a folder path to browse another location or drive. Use the arrow keys to navigate, Enter to select, and Escape to cancel either picker.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.environmentPicker">
-      <source xml:lang="en">Choose This Computer, Cloud, a remote host, or an available Dev Container. When Environment is first, the workspace choices follow the selected environment. Session Type choices always follow the environment. Local folders default to This Computer unless you explicitly choose or restore another environment. Choose Workspace is shown when no workspace is selected. Cloud uses Copilot. Dev Container lists only supported folders and requires a workspace; it does not fall back to Chat. Compare Agents is unavailable when Dev Container is selected. An incompatible workspace is cleared without sending or discarding your prompt. Use Tab or the Left and Right arrow keys to reach Environment, Enter or Space to open it, arrow keys and Enter to select, and Escape to dismiss. Screen-reader optimized mode keeps session options expanded.</source>
-    </trans-unit>
-    <trans-unit id="sessionsChat.environmentPicker.afterWorkspace">
-      <source xml:lang="en">Above the new-session input, Environment is after Workspace. Choose from all recent workspaces, then choose an environment where that workspace or a known checkout of its repository is available. Collapsing session options hides Environment unless the collapsed icon rail is enabled.</source>
+      <source xml:lang="en">Choose This Computer, Cloud, a remote host, or an available Dev Container. Workspace and Session Type choices follow the selected environment. Local folders default to This Computer unless you explicitly choose or restore another environment. Choose Workspace is shown when no workspace is selected. Cloud uses Copilot. Dev Container lists only supported folders and requires a workspace; it does not fall back to Chat. Compare Agents is unavailable when Dev Container is selected. An incompatible workspace is cleared without sending or discarding your prompt. Use Tab or the Left and Right arrow keys to reach Environment, Enter or Space to open it, arrow keys and Enter to select, and Escape to dismiss. Screen-reader optimized mode keeps session options expanded.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.environmentPicker.beforeWorkspace">
       <source xml:lang="en">Above the new-session input, Environment is before Workspace and remains visible when session options are collapsed.</source>
     </trans-unit>
-    <trans-unit id="sessionsChat.environmentPicker.localIsolation">
-      <source xml:lang="en">Environment offers Local Folder to work in the existing folder, or New Worktree to create an isolated copy for the session. These choices replace This Computer and the separate Branch or New Worktree isolation control for new local sessions. Branch selection remains available. New Worktree requires a workspace and a harness that supports worktrees. Use Enter or Space to open Environment, arrow keys and Enter to select, and Escape to dismiss.</source>
+    <trans-unit id="sessionsChat.environmentPicker.manage">
+      <source xml:lang="en">Choose Manage at the bottom of the Environment picker to open the Remotes dialog and manage remote environments. This does not change your selected environment. Hosts not listed in Remotes, including configured WebSocket hosts, keep their per-entry Manage submenu.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.extensionArtifactAutomation">
       <source xml:lang="en">Extension-provided artifact actions and automation use the same controls and request cards. Their automatic prompts go to the chat that recorded the artifact. Extension automation runs on this computer while the extension and session connection are available. Hosts without support for automation notices pause automatic actions and explain why; manual actions remain available. A rule can prevent a new schedule while allowing an existing schedule to continue. You can still use Space on its switch to turn it off.</source>
@@ -2398,6 +2355,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.feedbackComments">
       <source xml:lang="en">When pull requests have failing checks or unreviewed comments, one banner appears above the input. If several pull requests need attention, use the Previous Banner and Next Banner buttons to move between them. A pull request with both failing checks and comments uses a split button. Activate the main action to address both. Open its More Actions menu to choose Fix Checks or Address Comments separately. Choose Reveal Checks in the More Actions menu to open the pull request. Choose Reveal Comments in the same menu to view the first comment. In-product agent review comments appear as their own carousel item.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.feedbackComments.artifactIntegrations">
+      <source xml:lang="en">While the {0} setting is enabled, pull request failing-check and review-comment banners do not appear above the input. Open a recorded pull request artifact's details to review its checks and comments. In-product agent review comments still appear in a banner above the input.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.filesView">
       <source xml:lang="en">Focus the Files Explorer view{0}.</source>
@@ -2574,7 +2534,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">In a repository section where New Session is a split button, focus New Session and press Right Arrow to reach its dropdown, then activate New Session from Pull Request to open a searchable pull request picker. Pull requests are grouped by review and assignment status. Use the arrow keys to navigate, Enter to create the session, and Escape to close the picker.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.quickChat">
-      <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. When consolidated remote workspaces are enabled, this opens the new-session composer, where you can choose No workspace. Otherwise, it starts a workspace-less chat directly. When GitHub sandboxes are enabled, choose Cloud in the harness picker to chat without a repository or pull request. The Toggle Side Panel command is disabled for quick chats.</source>
+      <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. When consolidated remote workspaces are enabled, this opens the new-session composer, where you can choose Chat. Otherwise, it starts a workspace-less chat directly. When GitHub sandboxes are enabled, choose Cloud in the Environment picker, then Chat in the workspace picker, to chat without a repository or pull request. If the Environment picker is disabled, choose Cloud in the harness picker instead. The Toggle Side Panel command is disabled for quick chats.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.quickChatNestedChats">
       <source xml:lang="en">Quick chats can have nested chats: use New Nested Session{0} on a quick chat, and each nested chat works in its own scratch folder. Chats move between quick chats and workspace sessions and keep their folder. A quick chat stays in the Chats section, and those of its chats that have a folder of their own announce it. A chat that shares its folder with another chat in its session can't be moved on its own.</source>
@@ -2625,7 +2585,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">When you select assistant response text, an action menu appears. Press Tab to focus the menu, use the Up Arrow and Down Arrow keys to move between actions, and press Enter to activate one. Press Escape to dismiss the menu. Ask in a Side Chat opens a question input anchored to the selected text. Quote appends the selection as a blockquote in the chat input when the conversation is interactive. Copy copies the selected text.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionActivityBar">
-      <source xml:lang="en">The Session Activity Bar beside the active chat opens the Changes, Files, Browser, and Canvas tabs. Pull request and issue actions are off by default. Enable Show Pull Request and Issue Actions in the activity bar's context menu to show them in the side-pane group. Open Pull Request and Open Issue are available for the active chat's references when a contributed opener is available for their links. Each action reveals an already-open matching editor, preferring the active editor, or opens the first supported reference if none is open. A checked button means the editor is visible; activating it keeps the editor open and focuses it. These actions open directly, without a dropdown or picker, even with multiple references. Its layout actions, Toggle Side Panel above the tabs and Toggle Panel below them, replace the title bar buttons; turn them off with Show Layout Actions in its context menu. Press Tab past the chat input's controls to reach it, use the Up and Down Arrow keys to move between its entries, and press Enter or Space to open one. The Changes entry's label includes the active chat's number of changed files and lines added and removed, and New changes when it has changes you have not yet seen in the Changes tab. Only canvases belonging to the active chat are shown. A single canvas opens directly and is labeled with its title. With multiple canvases, Canvas opens a submenu: press Enter, Space, or Left Arrow to open it, and Right Arrow or Escape to close it. Open the context menu{1} on an entry to hide that entry or the whole activity bar. Toggle the activity bar from the chat background's context menu, View &gt; Appearance &gt; Session Activity Bar, or the {0} setting.</source>
+      <source xml:lang="en">The Session Activity Bar beside the active chat opens the Changes, Files, Browser, and Canvas tabs. The pull request action appears automatically in the side-pane group. Open Pull Request is available for the active chat's pull requests when a contributed opener is available for their links. The action reveals an already-open matching editor or opens the first supported pull request if none is open. A checked button means the pull request editor is visible; activating it collapses the side pane. Activate it again to reveal the editor. The action opens directly, without a dropdown or picker, even with multiple pull requests. Issue actions are not shown in the activity bar; issue pills remain available above the chat input. Its layout actions, Toggle Side Panel above the tabs and Toggle Panel below them, replace the title bar buttons; turn them off with Show Layout Actions in its context menu. Press Tab past the chat input's controls to reach it, use the Up and Down Arrow keys to move between its entries, and press Enter or Space to open one. The Changes entry's label includes the active chat's number of changed files and lines added and removed, and New changes when it has changes you have not yet seen in the Changes tab. Only canvases belonging to the active chat are shown. A single canvas opens directly and is labeled with its title. With multiple canvases, Canvas opens a submenu: press Enter, Space, or Left Arrow to open it, and Right Arrow or Escape to close it. When the active chat has no canvases, Canvas instead opens a submenu, even with a single entry, listing the canvases you can open or reopen, the same entries as the Canvas submenu of the empty editor's Add Tab list. Open the context menu{1} on an entry to hide that entry or the whole activity bar. Toggle the activity bar from the chat background's context menu, View &gt; Appearance &gt; Session Activity Bar, or the {0} setting.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionApplicationHover">
       <source xml:lang="en">A session created outside VS Code names its application in the session hover. Focus the hover, then use Tab to reach Created in and Enter or Space to open Filter Sessions with Created In focused. Use Right Arrow to open that submenu. The application remains visible after the session becomes a regular session.</source>
@@ -2664,10 +2624,10 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">The session row toolbar offers Pin or Unpin before Mark as Done. For sessions that support multiple chats, open the session's context menu to start a new chat.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionsListPromotedNewChatArchiveActions">
-      <source xml:lang="en">For sessions that support multiple chats, the session row toolbar offers New Nested Session before Archive. Open the session's context menu to pin or unpin it.</source>
+      <source xml:lang="en">For non-cloud sessions that support multiple chats, the session row toolbar offers New Nested Session before Archive. Open the session's context menu to pin or unpin it.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionsListPromotedNewChatDoneActions">
-      <source xml:lang="en">For sessions that support multiple chats, the session row toolbar offers New Nested Session before Mark as Done. Open the session's context menu to pin or unpin it.</source>
+      <source xml:lang="en">For non-cloud sessions that support multiple chats, the session row toolbar offers New Nested Session before Mark as Done. Open the session's context menu to pin or unpin it.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.sessionsView">
       <source xml:lang="en">Focus the Chat Sessions view{0}.</source>

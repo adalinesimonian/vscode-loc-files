@@ -242,6 +242,32 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/api/browser/mainThreadGitHub" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="github.clientDisposed">
+      <source xml:lang="en">The GitHub client has been disposed.</source>
+    </trans-unit>
+    <trans-unit id="github.createRequiresSession">
+      <source xml:lang="en">Creating a gist requires a client bound to a GitHub session.</source>
+    </trans-unit>
+    <trans-unit id="github.invalidGist">
+      <source xml:lang="en">Invalid gist request: {0}</source>
+    </trans-unit>
+    <trans-unit id="github.invalidGistFiles">
+      <source xml:lang="en">A gist must contain at least one file with non-empty names and no path separators.</source>
+    </trans-unit>
+    <trans-unit id="github.invalidGistId">
+      <source xml:lang="en">A gist identifier is required.</source>
+    </trans-unit>
+    <trans-unit id="github.invalidHandle">
+      <source xml:lang="en">The GitHub client could not be created.</source>
+    </trans-unit>
+    <trans-unit id="github.sessionUnavailable">
+      <source xml:lang="en">The selected GitHub session is not available to this extension.</source>
+    </trans-unit>
+    <trans-unit id="github.unknownError">
+      <source xml:lang="en">The GitHub request failed.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/api/browser/mainThreadLanguageModels" source-language="en" datatype="plaintext"><body>
     <trans-unit id="confirmLanguageModelAccess">
       <source xml:lang="en">The extension '{0}' wants to access the language models provided by {1}.</source>
