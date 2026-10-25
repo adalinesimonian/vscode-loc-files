@@ -988,7 +988,7 @@
       <source xml:lang="en">Unable to verify cloud automation access. Refresh automations to try again.</source>
     </trans-unit>
     <trans-unit id="cloudAutomations.repositoryOwnershipUnavailable">
-      <source xml:lang="en">Repository owned automations are not supported for this repository.</source>
+      <source xml:lang="en">Repository owned automations are only supported for private repositories.</source>
     </trans-unit>
     <trans-unit id="cloudAutomations.repositoryRecheckRequired">
       <source xml:lang="en">Repository access must be verified again.</source>
@@ -2210,7 +2210,7 @@ Address: {0}</source>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remotesEditorInput" source-language="en" datatype="plaintext"><body>
     <trans-unit id="remotes.editorName">
-      <source xml:lang="en">Remotes</source>
+      <source xml:lang="en">Remote Environments</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remotesModel" source-language="en" datatype="plaintext"><body>
@@ -2235,6 +2235,21 @@ Address: {0}</source>
     <trans-unit id="remotes.environments">
       <source xml:lang="en">Environments</source>
     </trans-unit>
+    <trans-unit id="remotes.pickerConnectFirst">
+      <source xml:lang="en">Connect once to add this remote to the picker.</source>
+    </trans-unit>
+    <trans-unit id="remotes.pickerNotReady">
+      <source xml:lang="en">This remote is not ready for the picker. Try refreshing.</source>
+    </trans-unit>
+    <trans-unit id="remotes.pickerOffline">
+      <source xml:lang="en">Available in the picker when the owning application is online.</source>
+    </trans-unit>
+    <trans-unit id="remotes.pickerUnavailable">
+      <source xml:lang="en">This remote is currently unavailable in the picker.</source>
+    </trans-unit>
+    <trans-unit id="remotes.pickerUnsupported">
+      <source xml:lang="en">This remote does not support a separate entry in the Environment picker.</source>
+    </trans-unit>
     <trans-unit id="remotes.providerNotReady">
       <source xml:lang="en">The remote provider is not ready. Try again.</source>
     </trans-unit>
@@ -2243,6 +2258,9 @@ Address: {0}</source>
     </trans-unit>
     <trans-unit id="remotes.ssh">
       <source xml:lang="en">SSH</source>
+    </trans-unit>
+    <trans-unit id="remotes.tunnelSignInUnsupported">
+      <source xml:lang="en">Tunnel sign-in is not supported by this application.</source>
     </trans-unit>
     <trans-unit id="remotes.tunnels">
       <source xml:lang="en">Tunnels</source>
@@ -2273,6 +2291,12 @@ Address: {0}</source>
     <trans-unit id="remotes.expandGroup">
       <source xml:lang="en">Expand {0}</source>
     </trans-unit>
+    <trans-unit id="remotes.hideFromPicker">
+      <source xml:lang="en">Hide {0} from Environment Picker</source>
+    </trans-unit>
+    <trans-unit id="remotes.notInPicker">
+      <source xml:lang="en">{0} is not shown in the Environment picker. {1}</source>
+    </trans-unit>
     <trans-unit id="remotes.offline">
       <source xml:lang="en">Offline</source>
     </trans-unit>
@@ -2291,6 +2315,9 @@ Address: {0}</source>
     <trans-unit id="remotes.rowActions">
       <source xml:lang="en">Remote actions</source>
     </trans-unit>
+    <trans-unit id="remotes.showInPicker">
+      <source xml:lang="en">Show {0} in Environment Picker</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remotesWidget" source-language="en" datatype="plaintext"><body>
     <trans-unit id="remotes.accessibleRow">
@@ -2302,6 +2329,12 @@ Address: {0}</source>
     <trans-unit id="remotes.actions">
       <source xml:lang="en">Remotes actions</source>
     </trans-unit>
+    <trans-unit id="remotes.clearSearch">
+      <source xml:lang="en">Clear Search</source>
+    </trans-unit>
+    <trans-unit id="remotes.collapseAll">
+      <source xml:lang="en">Collapse All</source>
+    </trans-unit>
     <trans-unit id="remotes.connectionColumn">
       <source xml:lang="en">Connection</source>
     </trans-unit>
@@ -2310,6 +2343,9 @@ Address: {0}</source>
     </trans-unit>
     <trans-unit id="remotes.docs.devContainers">
       <source xml:lang="en">Dev Containers Guide</source>
+    </trans-unit>
+    <trans-unit id="remotes.docs.environments">
+      <source xml:lang="en">Environments Setup Guide</source>
     </trans-unit>
     <trans-unit id="remotes.docs.ssh">
       <source xml:lang="en">SSH Setup Guide</source>
@@ -2365,8 +2401,14 @@ Address: {0}</source>
     <trans-unit id="remotes.groupLabel">
       <source xml:lang="en">{0}, {1} remotes</source>
     </trans-unit>
+    <trans-unit id="remotes.groupRefreshingLabel">
+      <source xml:lang="en">{0}, {1} remotes. Refreshing.</source>
+    </trans-unit>
     <trans-unit id="remotes.groupWarningLabel">
       <source xml:lang="en">{0}, {1} remotes. Warning: {2}</source>
+    </trans-unit>
+    <trans-unit id="remotes.hiddenName">
+      <source xml:lang="en">{0} (hidden from Environment picker)</source>
     </trans-unit>
     <trans-unit id="remotes.nameColumn">
       <source xml:lang="en">Name</source>
@@ -2376,6 +2418,9 @@ Address: {0}</source>
     </trans-unit>
     <trans-unit id="remotes.refreshWarnings">
       <source xml:lang="en">Some remote locations could not be refreshed. Check the warnings on the remote groups for details.</source>
+    </trans-unit>
+    <trans-unit id="remotes.refreshingGroup">
+      <source xml:lang="en">Refreshing.</source>
     </trans-unit>
     <trans-unit id="remotes.searchLabel">
       <source xml:lang="en">Search remotes</source>
@@ -2394,6 +2439,15 @@ Address: {0}</source>
     </trans-unit>
     <trans-unit id="remotes.tunnelRefreshWarning">
       <source xml:lang="en">Could not refresh tunnels. Check your sign-in and network connection. See the Window log for more details.</source>
+    </trans-unit>
+    <trans-unit id="remotes.tunnels.signIn">
+      <source xml:lang="en">Sign In</source>
+    </trans-unit>
+    <trans-unit id="remotes.tunnels.signInRequired">
+      <source xml:lang="en">Sign in to allow access to your tunnels.</source>
+    </trans-unit>
+    <trans-unit id="remotes.unavailablePickerName">
+      <source xml:lang="en">{0} (not shown in Environment picker: {1})</source>
     </trans-unit>
     <trans-unit id="remotes.wslRefreshWarning">
       <source xml:lang="en">Could not refresh WSL distributions. Check that WSL is available. See the Window log for more details.</source>
@@ -2479,13 +2533,13 @@ Address: {0}</source>
       <source xml:lang="en">Remote agent hosts are disabled.</source>
     </trans-unit>
     <trans-unit id="remotes.editorLabel">
-      <source xml:lang="en">Remotes</source>
+      <source xml:lang="en">Remote Environments</source>
     </trans-unit>
     <trans-unit id="remotes.help.connection">
       <source xml:lang="en">Connection labels include Connected, Connecting, and Disconnected. Environments whose owning application is not online show Offline. Use Connect or Disconnect to manage the connection. Connection actions are unavailable while connecting or reconnecting. Disconnect follows the existing remote behavior and may remove it from the picker.</source>
     </trans-unit>
     <trans-unit id="remotes.help.discovery">
-      <source xml:lang="en">Refresh looks for remotes without connecting. Its icon spins while discovery is running. A warning icon on a group means its locations could not be refreshed. The tooltip and group label explain the problem; the Window log contains diagnostic details. Known locations remain available, and Refresh retries discovery.</source>
+      <source xml:lang="en">Refresh looks for remotes without connecting. Its icon spins while discovery is running. Each group also shows a spinner after its count while that group's discovery is running. A failed group immediately shows a warning instead of its spinner, even if other groups are still loading. The tooltip and group label explain the problem; the Window log contains diagnostic details. If tunnel sign-in permissions are missing, a Sign In action appears instead of an error. Focus that row and press Tab, then Enter or Space to sign in and grant access to your tunnels. Sign In is disabled with a spinner while sign-in is in progress. This refreshes the list without connecting to a remote. Known locations remain available, and Refresh retries discovery.</source>
     </trans-unit>
     <trans-unit id="remotes.help.environments">
       <source xml:lang="en">For environments, Connect is disabled when the owning application is offline. Disconnect retains the environment and follows its existing reconnection preferences. Rename applies only to the current account and profile. Removing environments is not supported here. Manage sharing in the application running on that machine. The Environments gear opens its settings.</source>
@@ -2494,24 +2548,39 @@ Address: {0}</source>
       <source xml:lang="en">Rename changes the remote's display name in this client. Leave the name empty to restore its default. This table does not delete remote locations. Manage their SSH configuration, WSL distribution, tunnel, or environment sharing at the source.</source>
     </trans-unit>
     <trans-unit id="remotes.help.navigation">
-      <source xml:lang="en">Type in Search to filter remotes by name, address, or connection type. Groups without matches are hidden while searching. Use Down Arrow from Search to enter the table. Use Up and Down Arrow to navigate rows. On a group, use Left and Right Arrow to collapse or expand it, or press Enter to toggle it. Row actions appear on hover or keyboard focus. On a remote, press Tab to reach its actions and use Left and Right Arrow to move between Connect or Disconnect and Rename. Use Enter or Space to activate an action. Resize columns by dragging their boundaries. Narrow windows scroll horizontally.</source>
+      <source xml:lang="en">Type in Search to filter remotes by name, address, or connection type. Clear Search and Collapse All are at the right of the search field; use Tab to reach these actions and Left and Right Arrow to move between them. Clear Search returns focus to the input. Collapse All preserves the search text. Groups without matches are hidden while searching. Use Down Arrow from Search to enter the table. Use Up and Down Arrow to navigate rows. On a group, use Left and Right Arrow to collapse or expand it, or press Enter to toggle it. Visibility icons are always shown; other row actions appear on hover or keyboard focus. On a remote, press Tab to reach its actions and use Left and Right Arrow to move between Connect or Disconnect and Rename. Use Enter or Space to activate an action. Resize columns by dragging their boundaries. Narrow windows scroll horizontally.</source>
     </trans-unit>
     <trans-unit id="remotes.help.overview">
-      <source xml:lang="en">Remotes lists known SSH hosts and tunnels in a table grouped by connection type. WSL distributions are also available on Windows. When GitHub Environments is enabled and available, Environments lists known user-shared machines, including offline machines. The columns are Name, Connection, and Actions.</source>
+      <source xml:lang="en">Remote Environments lists known SSH hosts and tunnels in a table grouped by connection type. Open it with Manage Remote Environments in the Command Palette, from the Sessions section's More Actions menu, or with Manage in the Environment picker. WSL distributions are also available on Windows. When GitHub Environments is enabled and available, Environments lists known user-shared machines, including offline machines. The columns are Name, Connection, and Actions.</source>
     </trans-unit>
     <trans-unit id="remotes.help.setup">
       <source xml:lang="en">Empty groups show setup guidance and a documentation link. Focus the placeholder row and press Tab to reach its link. Groups with documentation also have an info action that opens the same guide, even when they contain remotes or are collapsed. Focus the group and use Tab and the arrow keys to reach its actions. The SSH settings action opens your user SSH config in a modal editor and creates it if necessary. The Tunnels group has an Open Tunnel Settings action. After configuring a host, return to Remotes and choose Refresh.</source>
     </trans-unit>
+    <trans-unit id="remotes.help.visibility">
+      <source xml:lang="en">Use the eye action at the start of an eligible remote row to show or hide it in the Environment and workspace pickers. Focus the row and press Tab, then Enter or Space to toggle it. Hidden remotes remain in this editor with a dimmed name and a Show action. Remotes that cannot currently appear have a disabled unavailable indicator instead of an eye; hover it or open the Accessible View for the reason. Newly discovered remotes must first be connected, and offline shared environments must come online. Your hidden preference is retained while a remote is unavailable. Choosing a folder through a remote subpicker shows that remote again. Hiding a remote does not prevent sending an existing draft when the remote is available and connected. This preference is local to your profile on this machine and does not connect, disconnect, or remove sessions.</source>
+    </trans-unit>
+    <trans-unit id="remotes.managementDisabled">
+      <source xml:lang="en">Remote Environments management is disabled.</source>
+    </trans-unit>
     <trans-unit id="remotes.openEditor">
-      <source xml:lang="en">Manage Remotes</source>
+      <source xml:lang="en">Manage Remote Environments</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/electron-browser/remotesEditor" source-language="en" datatype="plaintext"><body>
     <trans-unit id="remotes.editorDisabled">
       <source xml:lang="en">Remote agent hosts are disabled.</source>
     </trans-unit>
+    <trans-unit id="remotes.managementDisabled">
+      <source xml:lang="en">Remote Environments management is disabled.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/electron-browser/tunnelAgentHostServiceImpl" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="tunnelAgentHost.authenticationUnsupported">
+      <source xml:lang="en">Tunnel sign-in is not supported by this application.</source>
+    </trans-unit>
+    <trans-unit id="tunnelAgentHost.disabled">
+      <source xml:lang="en">Remote agent hosts are disabled.</source>
+    </trans-unit>
     <trans-unit id="tunnelAgentHost.noAuthentication">
       <source xml:lang="en">No authentication is available to enumerate tunnels.</source>
     </trans-unit>

@@ -3020,6 +3020,11 @@ Computer Use lets Copilot see and control apps on this computer. It stays on for
       <source xml:lang="en">A utility model generates titles immediately.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/common/tunnelAgentHost" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="tunnelAgentHost.authenticationRequired">
+      <source xml:lang="en">Sign in to allow access to your tunnels.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/electron-browser/localAgentHostService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHost.startFailed">
       <source xml:lang="en">The Agent Host failed to start. Restart the application to try again. See the logs for details.</source>
@@ -3670,6 +3675,9 @@ Verify this fingerprint matches the host before continuing.</source>
     <trans-unit id="prArtifact.chatMismatch">
       <source xml:lang="en">The repair chat no longer belongs to this artifact's session.</source>
     </trans-unit>
+    <trans-unit id="prArtifact.checkNotRerunnable">
+      <source xml:lang="en">This check is no longer failing on the pull request's current revision, or GitHub Actions cannot rerun it.</source>
+    </trans-unit>
     <trans-unit id="prArtifact.checkingCheckout">
       <source xml:lang="en">Checking the pull request's checkout.</source>
     </trans-unit>
@@ -3779,6 +3787,12 @@ Showing {1}-{2} of {3}.</source>
     <trans-unit id="prArtifact.repairsChanged">
       <source xml:lang="en">The checkout changed or could not be verified. Review it before enabling automatic merging again.</source>
     </trans-unit>
+    <trans-unit id="prArtifact.rerunCheck">
+      <source xml:lang="en">Rerun Check</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.resolveThread">
+      <source xml:lang="en">Resolve Comment</source>
+    </trans-unit>
     <trans-unit id="prArtifact.reviewThread">
       <source xml:lang="en">Review thread</source>
     </trans-unit>
@@ -3800,6 +3814,9 @@ Showing {1}-{2} of {3}.</source>
     <trans-unit id="prArtifact.terminal">
       <source xml:lang="en">This pull request is closed or merged.</source>
     </trans-unit>
+    <trans-unit id="prArtifact.threadNotResolvable">
+      <source xml:lang="en">This review thread is already resolved or no longer available.</source>
+    </trans-unit>
     <trans-unit id="prArtifact.uncertain">
       <source xml:lang="en">GitHub has not confirmed this action's outcome. It will not be repeated automatically.</source>
     </trans-unit>
@@ -3808,6 +3825,9 @@ Showing {1}-{2} of {3}.</source>
     </trans-unit>
     <trans-unit id="prArtifact.waiting">
       <source xml:lang="en">Waiting for current pull request state.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.workflowRunning">
+      <source xml:lang="en">The workflow of {0} is still running. Rerun the check after it finishes.</source>
     </trans-unit>
     <trans-unit id="prArtifact.wrongCheckout">
       <source xml:lang="en">The chat must already have {0} checked out on branch {1}. Branches will not be switched automatically.</source>
@@ -4572,6 +4592,12 @@ Showing {1}-{2} of {3}.</source>
     <trans-unit id="copilot.modelThinkingLevel.title">
       <source xml:lang="en">Effort Level</source>
     </trans-unit>
+    <trans-unit id="copilot.pluginEnablementNotApplied">
+      <source xml:lang="en">The runtime did not change enablement for plugin '{0}'.</source>
+    </trans-unit>
+    <trans-unit id="copilot.pluginEnablementNotInstalled">
+      <source xml:lang="en">Plugin '{0}' is not installed.</source>
+    </trans-unit>
     <trans-unit id="copilot.retryManagedPlugins.chatNotActive">
       <source xml:lang="en">This chat is not active. Send a message in it, then try again.</source>
     </trans-unit>
@@ -4642,6 +4668,12 @@ Showing {1}-{2} of {3}.</source>
     </trans-unit>
     <trans-unit id="copilot.mcpRouting.connect">
       <source xml:lang="en">Connect to {0}</source>
+    </trans-unit>
+    <trans-unit id="copilot.pluginReloadFailed">
+      <source xml:lang="en">Plugin reload failed: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilot.pluginReloadInvalid">
+      <source xml:lang="en">The runtime returned an invalid plugin reload result.</source>
     </trans-unit>
     <trans-unit id="copilotAgent.compactionCompleted">
       <source xml:lang="en">Compaction completed</source>
@@ -4780,13 +4812,10 @@ Showing {1}-{2} of {3}.</source>
       <source xml:lang="en">Plugin {0} is already enabled.</source>
     </trans-unit>
     <trans-unit id="copilotPlugin.ambiguous">
-      <source xml:lang="en">Multiple plugins are named {0}. Use the full plugin@marketplace name.</source>
+      <source xml:lang="en">Multiple plugins are named {0}. Use the full plugin@marketplace name or direct source ID.</source>
     </trans-unit>
     <trans-unit id="copilotPlugin.commandFailed">
       <source xml:lang="en">Plugin command failed</source>
-    </trans-unit>
-    <trans-unit id="copilotPlugin.directEnablementUnsupported">
-      <source xml:lang="en">Plugin {0} is installed directly and cannot be enabled or disabled. Uninstall it instead.</source>
     </trans-unit>
     <trans-unit id="copilotPlugin.disabled">
       <source xml:lang="en">Disabled plugin {0}.</source>
@@ -6729,6 +6758,9 @@ stderr: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/artifactIntegrations/browser/artifactDetailsList" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactItemActions">
+      <source xml:lang="en">Actions for {0}</source>
+    </trans-unit>
     <trans-unit id="artifactItemDescription">
       <source xml:lang="en">{0}: {1}</source>
     </trans-unit>

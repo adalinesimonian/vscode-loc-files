@@ -247,6 +247,9 @@ Select to reveal in chat.</source>
     <trans-unit id="artifactDetailsHelp.focus">
       <source xml:lang="en">A temporarily unavailable switch moves focus to its explanation, then back when available, unless you move focus elsewhere. Enabled automation remains available to turn off.</source>
     </trans-unit>
+    <trans-unit id="artifactDetailsHelp.itemActions">
+      <source xml:lang="en">Some list rows offer actions for that item, such as rerunning a failed check or resolving a review comment. They appear at the end of a row when it is hovered or focused. From the list, press Tab to reach the focused row's actions, Left and Right Arrow to move between them, and Enter or Space to run one. Shift+Tab returns to the list. Item actions run immediately and keep the details open; their row shows progress until they finish, and failures are reported. The Accessible View names each item's actions.</source>
+    </trans-unit>
     <trans-unit id="artifactDetailsHelp.overview">
       <source xml:lang="en">Artifact details show the full resource title and state icon, its description, tabbed state lists, actions, Autopilot, and Activities. Activate the linked title to open the resource. Copy Link and Remove Artifact are available in the footer.</source>
     </trans-unit>
@@ -267,6 +270,9 @@ Select to reveal in chat.</source>
     <trans-unit id="artifactAccessibleDisabled">
       <source xml:lang="en">{0}: unavailable. {1}</source>
     </trans-unit>
+    <trans-unit id="artifactAccessibleItemActions">
+      <source xml:lang="en">{0} (actions: {1})</source>
+    </trans-unit>
     <trans-unit id="artifactActionUnavailable">
       <source xml:lang="en">This action is not available in the current resource state.</source>
     </trans-unit>
@@ -284,6 +290,15 @@ Select to reveal in chat.</source>
     </trans-unit>
     <trans-unit id="artifactDetailsLoading">
       <source xml:lang="en">Loading details...</source>
+    </trans-unit>
+    <trans-unit id="artifactItemActionCompleted">
+      <source xml:lang="en">{0} completed for {1}</source>
+    </trans-unit>
+    <trans-unit id="artifactItemActionRunning">
+      <source xml:lang="en">Running</source>
+    </trans-unit>
+    <trans-unit id="artifactItemActionUnavailable">
+      <source xml:lang="en">This action is no longer available for this item.</source>
     </trans-unit>
     <trans-unit id="artifactListEmpty">
       <source xml:lang="en">No items.</source>
@@ -363,6 +378,9 @@ Select to reveal in chat.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/artifactStateLists" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="artifactItemActionDescription">
+      <source xml:lang="en">{0}. {1}</source>
+    </trans-unit>
     <trans-unit id="artifactListInformation">
       <source xml:lang="en">About {0}</source>
     </trans-unit>
@@ -637,7 +655,7 @@ Select to reveal in chat.</source>
       <source xml:lang="en">Controls whether a separate Environment picker chooses where new sessions run in the desktop Agents Window. Requires the unified workspace picker and experimental new-session composer layout. When disabled, environment choices remain in the workspace and harness pickers.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.environmentPickerManageRemotes">
-      <source xml:lang="en">Controls whether the Environment picker shows a Manage entry to open the Remotes editor. Requires the Environment picker and remote agent hosts to be enabled.</source>
+      <source xml:lang="en">Controls whether Remote Environments management and its picker visibility preferences are enabled. Adds a command and a Sessions menu entry, plus a Manage entry when the Environment picker is enabled. Requires remote agent hosts to be enabled. When disabled, saved visibility preferences are ignored but retained.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.newSessionComposerLayout">
       <source xml:lang="en">Controls whether the new-session composer groups workspace, repository, and harness controls above the chat input. This setting only applies when the unified workspace picker is enabled.</source>
@@ -1910,6 +1928,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="environmentPicker.cloud">
       <source xml:lang="en">Cloud</source>
     </trans-unit>
+    <trans-unit id="environmentPicker.container">
+      <source xml:lang="en">Dev Container</source>
+    </trans-unit>
     <trans-unit id="environmentPicker.item">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
@@ -2162,7 +2183,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">The {0} setting enables live artifact details, actions, and Autopilot instead of Agent Merge. It is off by default. Switching pauses saved automation choices and stops automation-owned work without cancelling human-started work. Switching back can resume previously enabled rules; it does not grant new permission. Ordinary artifact links and recorded history remain available.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.artifactIntegrations">
-      <source xml:lang="en">Artifacts and references with an integration appear as individual pills above the input. Enter or Space on a main pill opens an input-width details panel above the pills without moving the conversation or draft. The selected pill has a highlighted border. Details show the linked title, state icon and up to three lines of the actual description. Copy Link and Remove Artifact appear in the footer. Left and Right Arrow, Home and End select a list tab. Clicking a tab focuses its first item; arrow keys navigate list rows and Enter opens an item. A pill's status section selects and focuses the corresponding list or action, including when already open. Lists show single-line rows, with full text available in hovers and the Accessible View. Actions below the lists run once; enabled actions come first in provider order, with the first action primary. Inapplicable actions are hidden and blocked actions explain why. Autopilot groups automatic rules below the lists, with an Activities card below it when history exists. Both cards start collapsed and remember expansion. Autopilot switches grant standing permission and may run immediately when conditions hold. Saved rules remain revocable while unavailable. Turning a rule off prevents new runs but does not cancel work already started. Some activity rows reveal their related chat message; others are informational. Clicking another artifact switches the panel. Clicking the active pill, Escape or Close dismisses it. Escape and Close restore pill focus; outside clicks dismiss without moving focus back. Use Tab and Shift+Tab between controls, Space to change a switch, and accessibility help or the Accessible View{0} to read the full content. Background prompts do not replace your draft, attachments or visible chat.</source>
+      <source xml:lang="en">Artifacts and references with an integration appear as individual pills above the input. Enter or Space on a main pill opens an input-width details panel above the pills without moving the conversation or draft. The selected pill has a highlighted border. Details show the linked title, state icon and up to three lines of the actual description. Copy Link and Remove Artifact appear in the footer. Left and Right Arrow, Home and End select a list tab. Clicking a tab focuses its first item; arrow keys navigate list rows and Enter opens an item. Some rows offer item actions, such as rerunning a check, which Tab reaches from the list. A pill's status section selects and focuses the corresponding list or action, including when already open. Lists show single-line rows, with full text available in hovers and the Accessible View. Actions below the lists run once; enabled actions come first in provider order, with the first action primary. Inapplicable actions are hidden and blocked actions explain why. Autopilot groups automatic rules below the lists, with an Activities card below it when history exists. Both cards start collapsed and remember expansion. Autopilot switches grant standing permission and may run immediately when conditions hold. Saved rules remain revocable while unavailable. Turning a rule off prevents new runs but does not cancel work already started. Some activity rows reveal their related chat message; others are informational. Clicking another artifact switches the panel. Clicking the active pill, Escape or Close dismisses it. Escape and Close restore pill focus; outside clicks dismiss without moving focus back. Use Tab and Shift+Tab between controls, Space to change a switch, and accessibility help or the Accessible View{0} to read the full content. Background prompts do not replace your draft, attachments or visible chat.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.artifactListInformation">
       <source xml:lang="en">Artifact details remember the selected list tab when closed and reopened. A tab can offer an information icon; hover it or focus it and press Enter or Space to read the provider's explanation without changing tabs. The Comments tab describes which review comments it includes.</source>
@@ -2321,7 +2342,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Above the new-session input, Environment is before Workspace and remains visible when session options are collapsed.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.environmentPicker.manage">
-      <source xml:lang="en">Choose Manage at the bottom of the Environment picker to open the Remotes dialog and manage remote environments. This does not change your selected environment. Hosts not listed in Remotes, including configured WebSocket hosts, keep their per-entry Manage submenu.</source>
+      <source xml:lang="en">Choose Manage at the bottom of the Environment picker to open the Remote Environments dialog. This does not change your selected environment. Hosts not listed in Remote Environments, including configured WebSocket hosts, keep their per-entry Manage submenu.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.extensionArtifactAutomation">
       <source xml:lang="en">Extension-provided artifact actions and automation use the same controls and request cards. Their automatic prompts go to the chat that recorded the artifact. Extension automation runs on this computer while the extension and session connection are available. Hosts without support for automation notices pause automatic actions and explain why; manual actions remain available. A rule can prevent a new schedule while allowing an existing schedule to continue. You can still use Space on its switch to turn it off.</source>

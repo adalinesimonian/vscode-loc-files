@@ -2135,6 +2135,9 @@ User: {2}</source>
     <trans-unit id="openReadme">
       <source xml:lang="en">Open README</source>
     </trans-unit>
+    <trans-unit id="pluginNotAvailable">
+      <source xml:lang="en">Plugin '{0}' is no longer available.</source>
+    </trans-unit>
     <trans-unit id="pluginPolicyBlocked">
       <source xml:lang="en">The plugin "{0}" has been disabled by your organization and cannot be enabled.</source>
     </trans-unit>
@@ -2427,6 +2430,21 @@ User: {2}</source>
     <trans-unit id="agentHost.customizationFeed.unavailable">
       <source xml:lang="en">The selected agent cannot retrieve curated customizations.</source>
     </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.activationAmbiguous">
+      <source xml:lang="en">Multiple installations match the verified plugin source.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.activationDiscoveryTimedOut">
+      <source xml:lang="en">The installed plugin was not discovered in time.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.activationFailed">
+      <source xml:lang="en">Plugin '{0}' was installed, but activation failed: {1}. Enable it from Plugins to retry.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.activationIdentityMissing">
+      <source xml:lang="en">The runtime did not return the installed plugin identity.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.activationUnavailable">
+      <source xml:lang="en">Runtime plugin enablement is unavailable.</source>
+    </trans-unit>
     <trans-unit id="agentHost.customizationInstall.applyUnavailable">
       <source xml:lang="en">The selected agent cannot apply this SDK installation.</source>
     </trans-unit>
@@ -2436,11 +2454,17 @@ User: {2}</source>
     <trans-unit id="agentHost.customizationInstall.confirmInstall">
       <source xml:lang="en">Install '{0}'?</source>
     </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.confirmInstallAndEnable">
+      <source xml:lang="en">Install and enable '{0}'?</source>
+    </trans-unit>
     <trans-unit id="agentHost.customizationInstall.confirmUninstall">
       <source xml:lang="en">Uninstall '{0}'?</source>
     </trans-unit>
     <trans-unit id="agentHost.customizationInstall.directPluginUnavailable">
       <source xml:lang="en">The SDK cannot yet install a catalog plugin at its exact pinned revision.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.installAndEnableButton">
+      <source xml:lang="en">Install and Enable</source>
     </trans-unit>
     <trans-unit id="agentHost.customizationInstall.installButton">
       <source xml:lang="en">Install</source>
@@ -2473,11 +2497,8 @@ Shared authentication is preserved: {2}</source>
     <trans-unit id="agentHost.customizationInstall.notApplicable">
       <source xml:lang="en">Not applicable</source>
     </trans-unit>
-    <trans-unit id="agentHost.customizationInstall.pluginDisabled">
-      <source xml:lang="en">The plugin will be installed disabled.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.customizationInstall.pluginEnabled">
-      <source xml:lang="en">The plugin will be installed enabled.</source>
+    <trans-unit id="agentHost.customizationInstall.pluginActivated">
+      <source xml:lang="en">The plugin will be enabled for your profile after installation, and running chats will reload its contributions.</source>
     </trans-unit>
     <trans-unit id="agentHost.customizationInstall.pluginIdentityUnavailable">
       <source xml:lang="en">The SDK plugin installation identity is unavailable.</source>
@@ -2495,6 +2516,9 @@ Size: {3} bytes
     <trans-unit id="agentHost.customizationInstall.pluginMcpServers">
       <source xml:lang="en">
 Declared MCP servers: {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.pluginRemovalIdentityUnavailable">
+      <source xml:lang="en">Uninstall is unavailable because the runtime has not reported a unique plugin installation identity. Refresh the plugin inventory and try again.</source>
     </trans-unit>
     <trans-unit id="agentHost.customizationInstall.pluginRemovalUnavailable">
       <source xml:lang="en">The SDK plugin installation identity is unavailable.</source>
@@ -5475,6 +5499,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.uninstallStarted">
       <source xml:lang="en">Uninstalling {0}.</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.uninstallUnavailableLabel">
+      <source xml:lang="en">Uninstall {0}. {1}</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.uninstalling">
       <source xml:lang="en">Uninstalling...</source>
     </trans-unit>
@@ -7259,6 +7286,9 @@ Destination files created or changed by the agent are not removed.</source>
     <trans-unit id="customizationMarketplace.aiDisabled">
       <source xml:lang="en">Enable AI features to install customizations.</source>
     </trans-unit>
+    <trans-unit id="customizationMarketplace.ambiguousInstallation">
+      <source xml:lang="en">Multiple installations match this catalog item. Manage each installed plugin separately.</source>
+    </trans-unit>
     <trans-unit id="customizationMarketplace.connectorAccountUnavailable">
       <source xml:lang="en">The GitHub account used to connect this resource is no longer available.</source>
     </trans-unit>
@@ -7342,6 +7372,9 @@ Destination files created or changed by the agent are not removed.</source>
     </trans-unit>
     <trans-unit id="customizationMarketplace.sourceUnavailableForRepair">
       <source xml:lang="en">This resource's marketplace source is no longer available, so it cannot be repaired.</source>
+    </trans-unit>
+    <trans-unit id="customizationMarketplace.uninstallIdentityUnavailable">
+      <source xml:lang="en">The installed customization could not be identified uniquely. Refresh the plugin inventory and try again.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplaceSourceWarnings" source-language="en" datatype="plaintext"><body>
@@ -8189,6 +8222,9 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="pluginDetailVersion">
       <source xml:lang="en">Version</source>
+    </trans-unit>
+    <trans-unit id="pluginEnablementFailed">
+      <source xml:lang="en">Unable to change plugin enablement: {0}</source>
     </trans-unit>
     <trans-unit id="pluginInclusionChanged">
       <source xml:lang="en">{0}. {1}.</source>
@@ -9068,6 +9104,9 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="oneSkillContribution">
       <source xml:lang="en">1 skill</source>
+    </trans-unit>
+    <trans-unit id="pluginEnablementFailed">
+      <source xml:lang="en">Unable to change plugin enablement: {0}</source>
     </trans-unit>
     <trans-unit id="pluginGroupAriaLabel">
       <source xml:lang="en">{0}, {1} items</source>
@@ -22715,6 +22754,17 @@ To make this the starting permission level for new sessions, change the [{0}](co
       <source xml:lang="en">Your organization sets "{0}" as the default for new conversations. You can choose another model for each conversation.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/common/plugins/agentPluginService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="pluginEnablementManaged">
+      <source xml:lang="en">Plugin '{0}' is managed by your organization.</source>
+    </trans-unit>
+    <trans-unit id="pluginEnablementRejected">
+      <source xml:lang="en">Plugin '{0}' enablement was rejected by the local enablement model.</source>
+    </trans-unit>
+    <trans-unit id="pluginEnablementRollbackFailed">
+      <source xml:lang="en">Plugin '{0}' enablement was rejected and its runtime state could not be restored.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/common/plugins/agentPluginServiceImpl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatPlugins">
       <source xml:lang="en">Chat Plugins</source>
@@ -22742,6 +22792,9 @@ To make this the starting permission level for new sessions, change the [{0}](co
     </trans-unit>
     <trans-unit id="extension.plugin.missing.path">
       <source xml:lang="en">Extension '{0}' cannot register a chatPlugins entry without a path.</source>
+    </trans-unit>
+    <trans-unit id="pluginRuntimeEnablementUnavailable">
+      <source xml:lang="en">Runtime plugin enablement is unavailable.</source>
     </trans-unit>
     <trans-unit id="uninstallExtensionForPlugin">
       <source xml:lang="en">This plugin is provided by the extension '{0}'. Do you want to uninstall the extension?</source>
