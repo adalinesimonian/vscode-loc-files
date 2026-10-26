@@ -8365,6 +8365,15 @@ Disabled servers may become enabled.</source>
     <trans-unit id="marketplaceDetail.availableState">
       <source xml:lang="en">Available to install</source>
     </trans-unit>
+    <trans-unit id="marketplaceDetail.cancel">
+      <source xml:lang="en">Cancel</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.cancelConnectingAria">
+      <source xml:lang="en">Cancel connecting {0}</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.cancelReconnectingAria">
+      <source xml:lang="en">Cancel reconnecting {0}</source>
+    </trans-unit>
     <trans-unit id="marketplaceDetail.checkingConnection">
       <source xml:lang="en">Checking...</source>
     </trans-unit>
@@ -8373,6 +8382,9 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.connect">
       <source xml:lang="en">Connect</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.connectCancelledStatus">
+      <source xml:lang="en">Connection cancelled for {0}.</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.connectError">
       <source xml:lang="en">Could not connect {0}. {1}</source>
@@ -8485,6 +8497,9 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.reconnect">
       <source xml:lang="en">Reconnect</source>
+    </trans-unit>
+    <trans-unit id="marketplaceDetail.reconnectCancelledStatus">
+      <source xml:lang="en">Reconnection cancelled for {0}.</source>
     </trans-unit>
     <trans-unit id="marketplaceDetail.reconnectError">
       <source xml:lang="en">Could not reconnect {0}. {1}</source>
@@ -16304,6 +16319,9 @@ Source: {0}</source>
     <trans-unit id="missionControl.connectTimedOut">
       <source xml:lang="en">Connecting to the environment timed out. Ensure its owning application is running, then reconnect.</source>
     </trans-unit>
+    <trans-unit id="missionControl.deleteUnsupported">
+      <source xml:lang="en">Only user-shared environments can be deleted here.</source>
+    </trans-unit>
     <trans-unit id="missionControl.hostOffline">
       <source xml:lang="en">{0} is not online. Start its owning application before connecting. Connecting will not start or replace this machine.</source>
     </trans-unit>
@@ -16879,6 +16897,12 @@ Started: {1}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/tools/clientToolSetsContribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="clientToolSet.appearance.description">
+      <source xml:lang="en">Appearance</source>
+    </trans-unit>
+    <trans-unit id="clientToolSet.appearance.detail">
+      <source xml:lang="en">Read theme colors and change the chat background of the Agents window.</source>
+    </trans-unit>
     <trans-unit id="clientToolSet.automations.description">
       <source xml:lang="en">Automations</source>
     </trans-unit>
