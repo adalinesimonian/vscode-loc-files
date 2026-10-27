@@ -205,7 +205,7 @@
       <source xml:lang="en">Side Chats</source>
     </trans-unit>
     <trans-unit id="chatCompositeBar.unmaximize">
-      <source xml:lang="en">Restore</source>
+      <source xml:lang="en">Restore Size</source>
     </trans-unit>
     <trans-unit id="chatCompositeBar.unpin">
       <source xml:lang="en">Unpin</source>
@@ -281,14 +281,29 @@
       <source xml:lang="en">&amp;&amp;Forward</source>
       <note>&amp;&amp; denotes a mnemonic</note>
     </trans-unit>
+    <trans-unit id="moveChatToNewSession">
+      <source xml:lang="en">Move to New Session</source>
+    </trans-unit>
     <trans-unit id="moveChatToNextGroup">
       <source xml:lang="en">Move Chat to Next Group</source>
     </trans-unit>
     <trans-unit id="moveChatToPreviousGroup">
       <source xml:lang="en">Move Chat to Previous Group</source>
     </trans-unit>
+    <trans-unit id="moveChatToSession.placeholder">
+      <source xml:lang="en">Select the session to move '{0}' into; it becomes the session's last chat</source>
+    </trans-unit>
+    <trans-unit id="moveChatToSession.title">
+      <source xml:lang="en">Move '{0}' to Session</source>
+    </trans-unit>
     <trans-unit id="moveSessionDown">
       <source xml:lang="en">Move Session Below</source>
+    </trans-unit>
+    <trans-unit id="moveSessionIntoSession.placeholder">
+      <source xml:lang="en">Select the session to nest '{0}' under; it becomes the session's last chat</source>
+    </trans-unit>
+    <trans-unit id="moveSessionIntoSession.title">
+      <source xml:lang="en">Move '{0}' into Session</source>
     </trans-unit>
     <trans-unit id="moveSessionLeft">
       <source xml:lang="en">Move Session Left</source>
@@ -298,6 +313,15 @@
     </trans-unit>
     <trans-unit id="moveSessionUp">
       <source xml:lang="en">Move Session Above</source>
+    </trans-unit>
+    <trans-unit id="moveToSession">
+      <source xml:lang="en">Move to Session...</source>
+    </trans-unit>
+    <trans-unit id="moveToSession.chats">
+      <source xml:lang="en">{0} chats</source>
+    </trans-unit>
+    <trans-unit id="moveToSession.oneChat">
+      <source xml:lang="en">1 chat</source>
     </trans-unit>
     <trans-unit id="narrowSession">
       <source xml:lang="en">Decrease Session Width</source>
@@ -334,9 +358,6 @@
     </trans-unit>
     <trans-unit id="otherSessions">
       <source xml:lang="en">other sessions</source>
-    </trans-unit>
-    <trans-unit id="promoteChatToSession">
-      <source xml:lang="en">Promote to Session</source>
     </trans-unit>
     <trans-unit id="quickSwitchNextChat">
       <source xml:lang="en">Quick Switch to Next Chat</source>
@@ -746,7 +767,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">For saved automations, Tab to a card's Edit control and action buttons. Use Left Arrow and Right Arrow to move between Run now and More Actions. Press Enter or Space to activate a control. Edit, or clicking anywhere else on the card, opens the automation dialog. More Actions opens the automation menu. Duplicate opens a prefilled New automation dialog for portable schedules and is unavailable for event-triggered automations. Disable prevents future runs, and Delete asks for confirmation. Run now requests execution from the selected provider when available.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.cloudDialog">
-      <source xml:lang="en">When cloud automations are enabled, a Run in the cloud switch follows the Name field; press Space to turn it on or off. If cloud automations cannot be reached when you turn it on, the switch turns back off and a message asks you to try again in a few moments. When it is on, Cloud is the agent and the workspace picker lists Git-backed workspaces. Only GitHub repositories that support cloud automation management can be selected; unavailable repositories are announced with the reason. Choose Add repository to search for a repository or paste its URL. A matching local folder is retained. If cloud automations become unavailable while the switch is on, Cloud stays selected and Create is unavailable until they return or, for a new automation, you turn the switch off. Turning the switch off restores the previous local workspace and agent, or otherwise selects Copilot when it is available. Cloud models are configured in the prompt section. In the Tools section, the button shows All tools allowed or the number of tools allowed. Activate it to open a searchable checklist of the tools GitHub offers, grouped by category. Categories start collapsed; use Right Arrow to expand one. Press Space to toggle a tool or category. Each change applies immediately to the dialog; Enter or Escape closes the checklist without discarding changes. Save or Create saves the automation. New automations start with every listed tool selected. While the list loads the button is unavailable, and if it cannot be loaded a Retry button appears. Trigger follows the tools controls. Scheduled triggers display local time; GitHub stores a fixed UTC schedule, so the local run time may shift when daylight saving time changes. When editing a cloud automation, the switch and workspace picker are disabled because changing the repository or provider requires duplication. Editing preserves enabled state; enable or disable an automation from its card.</source>
+      <source xml:lang="en">When creating an automation and cloud automations are enabled, a Run in the cloud switch, described as Preview, follows the Name field; press Space to turn it on or off. If cloud automations cannot be reached when you turn it on, the switch turns back off and a message asks you to try again in a few moments. When it is on, Cloud is the agent and the workspace picker lists Git-backed workspaces. Only GitHub repositories that support cloud automation management can be selected; unavailable repositories are announced with the reason. Choose Add repository to search for a repository or paste its URL. A matching local folder is retained. If cloud automations become unavailable while the switch is on, Cloud stays selected and Create is unavailable until they return or, for a new automation, you turn the switch off. Turning the switch off restores the previous local workspace and agent, or otherwise selects Copilot when it is available. Cloud models are configured in the prompt section. In the Tools section, the button shows All tools allowed or the number of tools allowed. Activate it to open a searchable checklist of the tools GitHub offers, grouped by category. Categories start collapsed; use Right Arrow to expand one. Press Space to toggle a tool or category. Each change applies immediately to the dialog; Enter or Escape closes the checklist without discarding changes. Save or Create saves the automation. New automations start with every listed tool selected. While the list loads the button is unavailable, and if it cannot be loaded a Retry button appears. Trigger follows the tools controls. Scheduled triggers display local time; GitHub stores a fixed UTC schedule, so the local run time may shift when daylight saving time changes. When editing a cloud automation, the switch and workspace picker are disabled because changing the repository or provider requires duplication. Editing preserves enabled state; enable or disable an automation from its card.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.cloudHistory">
       <source xml:lang="en">Cloud history shows the repository, status, and last updated time even when no local session is available. When a cloud run has a session on GitHub that is not yet loaded in VS Code, click its row, or Tab to its title and press Enter or Space, to open that exact session. Tab to a row's toolbar and use Left Arrow and Right Arrow to reach Open on GitHub and Stop when supported. Archive or Mark as Done is unavailable until the cloud run and its conversation have finished. It changes local session state, not the task on GitHub. Stop requests remote cancellation; the status changes when GitHub reports it. Follow-up requests show conversation progress and restart bounded history discovery. Use Refresh in the view header to reload definitions and history. Active cloud runs refresh every 15 seconds without moving the history rows; idle definitions do not poll.</source>
@@ -1099,7 +1120,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Delete</source>
     </trans-unit>
     <trans-unit id="deleteAutomationContextMenu">
-      <source xml:lang="en">Delete</source>
+      <source xml:lang="en">Delete...</source>
     </trans-unit>
     <trans-unit id="disableAutomationContextMenu">
       <source xml:lang="en">Disable</source>
@@ -1108,7 +1129,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Disabled</source>
     </trans-unit>
     <trans-unit id="duplicateAutomation">
-      <source xml:lang="en">Duplicate</source>
+      <source xml:lang="en">Duplicate...</source>
     </trans-unit>
     <trans-unit id="editAutomationNamed">
       <source xml:lang="en">Edit automation {0}</source>
@@ -1117,7 +1138,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Enable</source>
     </trans-unit>
     <trans-unit id="exportAutomation">
-      <source xml:lang="en">Export</source>
+      <source xml:lang="en">Export...</source>
     </trans-unit>
     <trans-unit id="exportAutomationDialogSave">
       <source xml:lang="en">Export</source>
@@ -1700,6 +1721,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionsMove.movedSession">
       <source xml:lang="en">Moved session '{0}' into '{1}'</source>
     </trans-unit>
+    <trans-unit id="sessionsMove.movedToNewSession">
+      <source xml:lang="en">Moved '{0}' to a new session</source>
+    </trans-unit>
     <trans-unit id="sessionsMove.moving">
       <source xml:lang="en">Moving '{0}' into '{1}'...</source>
     </trans-unit>
@@ -1715,14 +1739,11 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionsMove.movingSession">
       <source xml:lang="en">Moving session '{0}' into '{1}'...</source>
     </trans-unit>
+    <trans-unit id="sessionsMove.movingToNewSession">
+      <source xml:lang="en">Moving '{0}' to a new session...</source>
+    </trans-unit>
     <trans-unit id="sessionsMove.progressHelp">
       <source xml:lang="en">This notice shows a chat or session being moved in the sessions list.</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.promoted">
-      <source xml:lang="en">Promoted '{0}' to a new session</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.promoting">
-      <source xml:lang="en">Promoting '{0}' to a new session...</source>
     </trans-unit>
     <trans-unit id="sessionsMove.reorderedAfter">
       <source xml:lang="en">Moved '{0}' after '{1}'</source>
@@ -1799,7 +1820,7 @@ The result replaces this notice when the operation finishes. Use Tab and Shift+T
       <source xml:lang="en">{0}
 {1}
 Use Tab and Shift+Tab to reach Dismiss. Press Enter or Space to activate it, or Escape to dismiss the notice.
-The notice disappears after 10 seconds. The countdown pauses while the notice is hovered, focused, or this help is open. The bar along the bottom shows the remaining time.</source>
+The notice disappears after 10 seconds. The countdown pauses while the notice is hovered, focused, or this help is open.</source>
     </trans-unit>
     <trans-unit id="undo">
       <source xml:lang="en">Undo</source>
@@ -1974,10 +1995,7 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
       <source xml:lang="en">Mark All as Read</source>
     </trans-unit>
     <trans-unit id="markAllNestedRead">
-      <source xml:lang="en">Mark All as Read</source>
-    </trans-unit>
-    <trans-unit id="markAllRead">
-      <source xml:lang="en">Mark All as Read</source>
+      <source xml:lang="en">Mark Nested Sessions as Read</source>
     </trans-unit>
     <trans-unit id="markGroupSessionDone.confirmSingle">
       <source xml:lang="en">Are you sure you want to mark 1 session from '{0}' as done?</source>

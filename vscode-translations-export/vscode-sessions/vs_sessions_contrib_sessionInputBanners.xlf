@@ -107,11 +107,17 @@
     <trans-unit id="sessionWorktreeCleanupHelp.automatic">
       <source xml:lang="en">Changes in the Cleanup Settings section are saved immediately. Background cleanup evaluates existing and future sessions after confirming their eligibility. Use the checkboxes to enable automatic completion or deletion of merged pull request sessions, then adjust the number of days in the adjacent input. Another checkbox turns the storage cleanup suggestion on or off.</source>
     </trans-unit>
+    <trans-unit id="sessionWorktreeCleanupHelp.cachedSizes">
+      <source xml:lang="en">Supported hosts save worktree sizes in the session database. Opening or refreshing cleanup reuses unchanged idle sizes and measures new, changed, or active worktrees. Automatic storage hint checks use the same saved sizes and are limited to once an hour through existing triggers, without a recurring timer. Removed or recreated worktrees are checked when cleanup refreshes.</source>
+    </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.cleanup">
       <source xml:lang="en">Activate Clean Up Worktrees to delete the selected sessions' worktrees and mark those sessions as done after confirmation. It is disabled until at least one session is selected, and its label reports how many worktrees will be cleaned up.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.matchingWorktreesSummary">
       <source xml:lang="en">A summary line above the table reports how many matching worktrees can be cleaned up and, when nonzero, about how much storage they use. A nearby info button explains eligibility. When no worktrees match the filters, an informational message replaces the summary, action, and table.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanupHelp.measurementProgress">
+      <source xml:lang="en">A status line above the results reports the overall number of worktrees processed out of the scan total, independently of the filters. Failed measurements count as processed. The final count remains visible when the scan completes.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.reopen">
       <source xml:lang="en">Return to this editor any time by running Open Worktree Cleanup from the Command Palette or the Sessions More Actions menu.</source>
@@ -219,6 +225,12 @@
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.matchingWorktreeSummaryNoStorage">
       <source xml:lang="en">{0} of {1} matching worktrees can be cleaned up.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.measurementComplete">
+      <source xml:lang="en">Worktree storage scan complete: {0} of {1} worktrees processed.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.measurementProgress">
+      <source xml:lang="en">Measuring worktree storage: {0} of {1} worktrees processed.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.needsInput">
       <source xml:lang="en">Waiting for input</source>

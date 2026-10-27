@@ -366,6 +366,9 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
     <trans-unit id="diffAlgorithm.legacy">
       <source xml:lang="en">Uses the legacy diffing algorithm.</source>
     </trans-unit>
+    <trans-unit id="diffEditor.experimental.verifyDiffSampleRate">
+      <source xml:lang="en">The probability (from 0 to 1) that a computed diff is checked for correctness and the result is reported in telemetry.</source>
+    </trans-unit>
     <trans-unit id="editor.experimental.asyncTokenization">
       <source xml:lang="en">Controls whether the tokenization should happen asynchronously on a web worker.</source>
     </trans-unit>

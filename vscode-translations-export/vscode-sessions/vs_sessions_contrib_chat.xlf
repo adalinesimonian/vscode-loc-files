@@ -76,9 +76,6 @@
     <trans-unit id="artifactActivitiesLoadedCount">
       <source xml:lang="en">{0} loaded</source>
     </trans-unit>
-    <trans-unit id="artifactActivitiesLoading">
-      <source xml:lang="en">Loading activities...</source>
-    </trans-unit>
     <trans-unit id="artifactActivitiesRetry">
       <source xml:lang="en">Retry Loading Activities</source>
     </trans-unit>
@@ -288,9 +285,6 @@ Select to reveal in chat.</source>
     <trans-unit id="artifactAutomationOn">
       <source xml:lang="en">On</source>
     </trans-unit>
-    <trans-unit id="artifactDetailsLoading">
-      <source xml:lang="en">Loading details...</source>
-    </trans-unit>
     <trans-unit id="artifactItemActionCompleted">
       <source xml:lang="en">{0} completed for {1}</source>
     </trans-unit>
@@ -471,7 +465,7 @@ Select to reveal in chat.</source>
       <source xml:lang="en">Whether to automatically run tasks tagged with `"runOptions": { "runOn": "worktreeCreated" }` when a new agent host session worktree is created. Manual `Run Task` invocations are unaffected.</source>
     </trans-unit>
     <trans-unit id="chat.agentSessions.appearanceTools.enabled">
-      <source xml:lang="en">Enable the Get Theme Colors and Set Chat Background tools and the built-in `generate-chat-background` skill in the Agents window. Disabling this does not remove existing backgrounds or affect the manual background controls.</source>
+      <source xml:lang="en">Enable the Get Theme Colors, Set Chat Background, and Screenshot Window tools and the built-in `generate-chat-background` skill in the Agents window. Disabling this does not remove existing backgrounds or affect the manual background controls.</source>
     </trans-unit>
     <trans-unit id="chat.agentSessions.archiveNudge.enabled">
       <source xml:lang="en">Suggests archiving an inactive session when all GitHub pull requests associated with the session have merged. Dismissing the suggestion hides it for that session until it is archived or deleted.</source>
@@ -551,6 +545,12 @@ Select to reveal in chat.</source>
     <trans-unit id="chat.agentSessions.backgroundType.codicons.label">
       <source xml:lang="en">Codicons</source>
     </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundType.generate.detail">
+      <source xml:lang="en">Describe an image for an agent to generate and set in a new session.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.backgroundType.generate.label">
+      <source xml:lang="en">Generate Background...</source>
+    </trans-unit>
     <trans-unit id="chat.agentSessions.backgroundType.image.detail">
       <source xml:lang="en">Choose an image file from this machine.</source>
     </trans-unit>
@@ -586,6 +586,9 @@ Select to reveal in chat.</source>
     </trans-unit>
     <trans-unit id="chat.agentSessions.consolidatedRemoteWorkspaces.deprecated">
       <source xml:lang="en">Deprecated. Use the unified workspace picker setting instead.</source>
+    </trans-unit>
+    <trans-unit id="chat.agentSessions.generateBackground.prompt">
+      <source xml:lang="en">Generate a chat background of</source>
     </trans-unit>
     <trans-unit id="chat.agentSessions.preferredDarkBackgroundImage">
       <source xml:lang="en">Specifies `codicons`, an absolute file path, or a `file` URI for the background displayed behind chat content in the Agents Window when using a dark color theme. The background is hidden in high contrast themes.</source>
@@ -690,7 +693,7 @@ Select to reveal in chat.</source>
       <source xml:lang="en">Controls whether a separate Environment picker chooses where new sessions run in the desktop Agents Window. Requires the unified workspace picker and experimental new-session composer layout. When disabled, environment choices remain in the workspace and harness pickers.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.environmentPickerManageRemotes">
-      <source xml:lang="en">Controls whether Remote Environments management and its picker visibility preferences are enabled. Adds a command, a Sessions menu entry, and a Manage entry when the Environment picker and remote agent hosts are enabled. When disabled, saved visibility preferences are ignored but retained.</source>
+      <source xml:lang="en">Controls whether Remote Environments management and its picker visibility preferences are enabled. Adds a command, a Sessions menu entry, and a Manage Remote Environments entry when the Environment picker and remote agent hosts are enabled. When disabled, saved visibility preferences are ignored but retained.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.newSessionComposerLayout">
       <source xml:lang="en">Controls whether the new-session composer groups workspace, repository, and harness controls above the chat input. This setting only applies when the unified workspace picker is enabled.</source>
@@ -1039,8 +1042,20 @@ Select to reveal in chat.</source>
     <trans-unit id="nestedChat.folder.ariaLabel">
       <source xml:lang="en">Pick Folder for the Nested Session, {0}</source>
     </trans-unit>
+    <trans-unit id="nestedChat.folder.labelWithWorktree">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.folder.pickerAction">
+      <source xml:lang="en">Pick Folder for the Nested Session</source>
+    </trans-unit>
     <trans-unit id="nestedChat.folder.sessionFolderMissing">
       <source xml:lang="en">The session's folder {0} no longer exists.</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.folder.sessionWorktree">
+      <source xml:lang="en">Session worktree</source>
+    </trans-unit>
+    <trans-unit id="nestedChat.folder.sessionWorktreeBranch">
+      <source xml:lang="en">Session worktree · {0}</source>
     </trans-unit>
     <trans-unit id="nestedChat.folder.staticAriaLabel">
       <source xml:lang="en">Folder for the Nested Session, {0}</source>
@@ -1050,12 +1065,6 @@ Select to reveal in chat.</source>
     </trans-unit>
     <trans-unit id="nestedChat.folderPicker.ariaLabel">
       <source xml:lang="en">Nested Session Folder Picker</source>
-    </trans-unit>
-    <trans-unit id="nestedChat.noWorkspace">
-      <source xml:lang="en">No Workspace</source>
-    </trans-unit>
-    <trans-unit id="nestedChat.noWorkspace.description">
-      <source xml:lang="en">Start without a backing workspace</source>
     </trans-unit>
     <trans-unit id="nestedChat.openFolder">
       <source xml:lang="en">Open Folder...</source>
@@ -1162,15 +1171,6 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="newSessionHarnessPicker.tooltip">
       <source xml:lang="en">Choose the harness for the new session</source>
     </trans-unit>
-    <trans-unit id="newSessionWorkspacePicker.localQuickChat">
-      <source xml:lang="en">This Computer</source>
-    </trans-unit>
-    <trans-unit id="newSessionWorkspacePicker.noWorkspaceDescription">
-      <source xml:lang="en">Start without a backing workspace</source>
-    </trans-unit>
-    <trans-unit id="newSessionWorkspacePicker.remoteQuickChat">
-      <source xml:lang="en">Chat [{0}]</source>
-    </trans-unit>
     <trans-unit id="newSessionWorkspacePicker.repository">
       <source xml:lang="en">Select Repository</source>
     </trans-unit>
@@ -1255,6 +1255,23 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="noAgentHost.title">
       <source xml:lang="en">Connect a host to get started</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/noWorkspaceChoice" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="newSessionWorkspacePicker.localQuickChat">
+      <source xml:lang="en">This Computer</source>
+    </trans-unit>
+    <trans-unit id="newSessionWorkspacePicker.noWorkspaceDescription">
+      <source xml:lang="en">Start without a backing workspace</source>
+    </trans-unit>
+    <trans-unit id="newSessionWorkspacePicker.remoteQuickChat">
+      <source xml:lang="en">Chat [{0}]</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.chat">
+      <source xml:lang="en">Chat</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.noWorkspace">
+      <source xml:lang="en">No workspace</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/openSessionLinkOpener.contribution" source-language="en" datatype="plaintext"><body>
@@ -1479,6 +1496,26 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="workspaceStorageTooltip">
       <source xml:lang="en">Save this task in the current workspace</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/chat/browser/screenshotWindowTool" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="screenshotWindow.disabled">
+      <source xml:lang="en">Appearance tools are disabled by {0}.</source>
+    </trans-unit>
+    <trans-unit id="screenshotWindow.displayName">
+      <source xml:lang="en">Screenshot Window</source>
+    </trans-unit>
+    <trans-unit id="screenshotWindow.invocation">
+      <source xml:lang="en">Capturing a screenshot of the window</source>
+    </trans-unit>
+    <trans-unit id="screenshotWindow.past">
+      <source xml:lang="en">Captured a screenshot of the window</source>
+    </trans-unit>
+    <trans-unit id="screenshotWindow.result">
+      <source xml:lang="en">Captured a screenshot of the window</source>
+    </trans-unit>
+    <trans-unit id="screenshotWindow.userDescription">
+      <source xml:lang="en">Capture a screenshot of the Agents window</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionArchiveNudge" source-language="en" datatype="plaintext"><body>
@@ -2046,7 +2083,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">This Computer</source>
     </trans-unit>
     <trans-unit id="environmentPicker.manage">
-      <source xml:lang="en">Manage...</source>
+      <source xml:lang="en">Manage Remote Environments...</source>
     </trans-unit>
     <trans-unit id="environmentPicker.title">
       <source xml:lang="en">Environment</source>
@@ -2147,9 +2184,6 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="workspacePicker.categorySelectionAriaLabel">
       <source xml:lang="en">{0}: {1}</source>
     </trans-unit>
-    <trans-unit id="workspacePicker.chat">
-      <source xml:lang="en">Chat</source>
-    </trans-unit>
     <trans-unit id="workspacePicker.checkingContainers">
       <source xml:lang="en">Checking Dev Container Folders...</source>
     </trans-unit>
@@ -2215,9 +2249,6 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="workspacePicker.noFolderDescription">
       <source xml:lang="en">Start the session in a temporary directory.</source>
-    </trans-unit>
-    <trans-unit id="workspacePicker.noWorkspace">
-      <source xml:lang="en">No workspace</source>
     </trans-unit>
     <trans-unit id="workspacePicker.noWorkspaceSelectedAriaLabel">
       <source xml:lang="en">New session with no workspace</source>
@@ -2307,6 +2338,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.backgroundActivities">
       <source xml:lang="en">Press Shift+Tab from the chat input to reach metadata and status pills above it, use the left and right arrows to move between pills, and press Enter or Space to activate one. Live browsers appear in their own pill, and the chat's subagents appear in another. An aggregated pill opens a picker. Use Pin on a picker row to keep that entry as its own pill; it is removed from the picker, and a sole remaining entry is shown directly unless it requires a details picker. A pinned pill shows a trailing Unpin button that pointer users can activate to unpin it. Keyboard and screen reader users can open the pinned pill's context menu and choose Unpin. Pin choices are remembered for each chat. Subagents are grouped under Subagents: In Progress and Subagents: Completed. In Progress includes subagents waiting for input; Completed includes failed subagents. Use the up and down arrows to move between entries. When an entry has details, Tab moves through its row actions and detail links; Shift+Tab returns to the row action, and the up and down arrows continue moving between entries. Press Enter to open an entry, or Escape to dismiss the picker and return focus to the pill.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.backgroundActivityProgressDropdown">
+      <source xml:lang="en">Running-subagent and background-command statuses at the bottom of a response open dropdowns showing only in-progress work, including subagents waiting for input. Finished subagents and background work disappear from these dropdowns as they complete, regardless of the input pills' Show All setting. When both kinds are running, one combined status opens a Background Activity dropdown containing both groups. The separate pills above the input keep their existing filters. Use Tab to focus the status and Enter or Space to open it, then the Up and Down arrow keys to choose an entry and Enter to open a subagent or the shell's live command details. Escape closes the dropdown and returns focus to the status. If the focused status disappears when work finishes, focus returns to the chat input. The label retains the progress shimmer; reduced motion shows static text.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.backgroundTint">
       <source xml:lang="en">When a background image is set, use Tint Window to Match Background in the Command Palette or the background context menu to turn matching window colors on or off. A check mark means tinting is enabled. Turning it off keeps the background image and restores the original window colors.</source>
@@ -2411,7 +2445,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Messages sent by another session or chat show a source annotation above the message. Press Tab to focus the annotation, then press Enter or Space to open the source chat.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.deleteChat">
-      <source xml:lang="en">Before a new nested session is committed, its session header and Sessions list row offer Delete without confirmation. After it is committed, those controls offer Archive or Mark as Done instead. To permanently delete a committed nested session, open the chat tab's context menu and choose Delete Chat. This is destructive and cannot be undone.</source>
+      <source xml:lang="en">Before a new nested session is committed, its session header and Sessions list row offer Delete without confirmation. After it is committed, those controls offer Archive or Mark as Done instead. To permanently delete a committed nested session, open the chat tab's context menu and choose Delete. This is destructive and cannot be undone.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.deleteSandboxSession">
       <source xml:lang="en">For a Cloud sandbox session, Delete removes its task and stored conversation even when the environment is offline. A failed deletion leaves the session in the list.</source>
@@ -2444,7 +2478,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">When the side panel's editor has no open tabs, it shows Add Tab at the top and lists the Add Tab actions, such as Changes, Files, Browser, and Search, with their keybindings. Press Tab to reach the list, use the Up and Down arrow keys to move between actions, and press Enter or Space to open one. For an action with a submenu, such as Canvas, press Enter, Space, or the Right arrow key to open the submenu, the Up and Down arrow keys to choose an item, and the Left arrow key or Escape to return to the list.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.environmentFolders">
-      <source xml:lang="en">Choose Environments in the workspace picker to connect to a GitHub environment, then select a folder on that host. The picker starts in the host's home directory. Enter a folder path to browse another location or drive. Use the arrow keys to navigate, Enter to select, and Escape to cancel either picker.</source>
+      <source xml:lang="en">Choose GitHub Environments in the workspace picker to connect to a GitHub environment, then select a folder on that host. The picker starts in the host's home directory. Enter a folder path to browse another location or drive. Use the arrow keys to navigate, Enter to select, and Escape to cancel either picker.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.environmentPicker">
       <source xml:lang="en">Choose This Computer, Cloud, a remote host, or an available Dev Container. Workspace and Session Type choices follow the selected environment. Local folders default to This Computer unless you explicitly choose or restore another environment. Choose Workspace is shown when no workspace is selected. Cloud uses Copilot. Dev Container lists only supported folders and requires a workspace; it does not fall back to Chat. Compare Agents is unavailable when Dev Container is selected. An incompatible workspace is cleared without sending or discarding your prompt. Use Tab or the Left and Right arrow keys to reach Environment, Enter or Space to open it, arrow keys and Enter to select, and Escape to dismiss. Screen-reader optimized mode keeps session options expanded.</source>
@@ -2453,7 +2487,10 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Above the new-session input, Environment is before Workspace and remains visible when session options are collapsed.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.environmentPicker.manage">
-      <source xml:lang="en">Choose Manage at the bottom of the Environment picker to open the Remote Environments dialog. This does not change your selected environment. Hosts not listed in Remote Environments, including configured WebSocket hosts, keep their per-entry Manage submenu.</source>
+      <source xml:lang="en">Choose Manage Remote Environments at the bottom of the Environment picker to open the Remote Environments dialog. This does not change your selected environment. Hosts not listed in Remote Environments, including configured WebSocket hosts, keep their per-entry Manage submenu.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.environmentPicker.repository">
+      <source xml:lang="en">With This Computer selected, Work in Repository reuses a known local checkout or opens the Git clone flow to select a local destination. Canceling the clone keeps your current workspace selection.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.extensionArtifactAutomation">
       <source xml:lang="en">Extension-provided artifact actions and automation use the same controls and request cards. Their automatic prompts go to the chat that recorded the artifact. Extension automation runs on this computer while the extension and session connection are available. Hosts without support for automation notices pause automatic actions and explain why; manual actions remain available. A rule can prevent a new schedule while allowing an existing schedule to continue. You can still use Space on its switch to turn it off.</source>
@@ -2503,8 +2540,11 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.forkToSide">
       <source xml:lang="en">Alt-click, or Option-click on macOS, the Fork Conversation button at a checkpoint to open the fork beside its source. Ordinary activation keeps its existing behavior. With the keyboard, activate Fork Conversation, reopen the source from the Sessions list, then choose Open to the Side from the fork's context menu.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.generateBackgroundEntry">
+      <source xml:lang="en">When workspace-less sessions are available, Set Background also offers Generate Background after a separator, between the background types and the recently used images. It opens a new workspace-less session whose input starts with Generate a chat background of, with the caret at the end so you can describe the image and send it.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.generateBackgroundSkill">
-      <source xml:lang="en">To generate a chat background, ask the agent or type /generate-chat-background to use the built-in skill. It provides optional design guidance and applies the generated image when the required tools are available.</source>
+      <source xml:lang="en">To generate a chat background, ask the agent or type /generate-chat-background to use the built-in skill. It provides optional design guidance, applies the generated image, and checks it in a screenshot of the window when the required tools are available.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.generatedImageArtifacts">
       <source xml:lang="en">Generated images from this chat automatically appear in the Generated Images section of the Artifacts pill, separate from other images and files. When Images Preview is enabled for chat, open an image and use the Left and Right Arrow keys to browse generated images and user attachments from the conversation. Images shown from the transcript do not offer Remove from Session unless they were also recorded as artifacts.</source>
@@ -2567,7 +2607,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">The same read and unread shortcuts work on nested sessions and change only the targeted nested sessions, not their parent.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.markNestedSessionsRead">
-      <source xml:lang="en">When a parent session has unread nested sessions, open its context menu and choose Mark All as Read.</source>
+      <source xml:lang="en">When a parent session has unread nested sessions, open its context menu and choose Mark Nested Sessions as Read.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.markSessionsRead">
       <source xml:lang="en">When the Sessions list has focus, mark the focused session or selected sessions as read{0} or unread{1} without opening them. These shortcuts do not apply while typing in an input.</source>
@@ -2579,13 +2619,16 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">When agent customizations need an update, a notice below the new-session input shows how many need attention. Use Tab to reach Review Migrations and open the Migrations page. Dismiss Migration Notice for This Workspace hides the notice for that workspace, including after restarting, and returns focus to the input.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.missionControlHosts">
-      <source xml:lang="en">In Manage Remote Agent Hosts or the workspace picker, choose Environments to discover your environments without starting compute or sessions. Use the arrow keys to choose an environment and Enter to connect. Tab reaches Refresh Environments. Escape returns to the previous control. Environment options offer Reconnect, Disconnect, and Rename. Rename changes only this profile's label, not the remote machine's name. The picker shows whether each environment is online or offline and whether you are connected to it.</source>
+      <source xml:lang="en">In Manage Remote Agent Hosts or the workspace picker, choose GitHub Environments to discover your environments without starting compute or sessions. Use the arrow keys to choose an environment and Enter to connect. Tab reaches Refresh Environments. Escape returns to the previous control. Environment options offer Reconnect, Disconnect, and Rename. Rename changes only this profile's label, not the remote machine's name. The picker shows whether each environment is online or offline and whether you are connected to it.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.mobileConfig">
       <source xml:lang="en">On mobile, the mode and model pickers appear as tappable chips below the input. Tap a chip to open a bottom sheet where you can change the selection.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.moveNestedChat">
-      <source xml:lang="en">To reorder a session's nested chats in the Sessions list, focus a nested chat and invoke Move Up{0} or Move Down{1}, or choose them from its context menu. They are available only for nested chats that their provider can move. Focus stays on the moved chat.</source>
+      <source xml:lang="en">To reorder a session's nested chats in the Sessions list, focus a nested chat and invoke Move Up{0} or Move Down{1}, or choose them from its context menu. They are available only when the Sessions list is ordered by Created, and only for nested chats that their provider can move. Focus stays on the moved chat.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.moveToSession">
+      <source xml:lang="en">To move a nested chat into another session, or to nest a session that has one chat under another session, open its context menu and choose Move to Session..., then pick the destination session from the list. The moved chat becomes the destination's last chat and the result is announced, with an Undo. The command is shown only when another started, unarchived session of the same provider and agent can take it, and when moving chats is enabled.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.navigateChatTabs">
       <source xml:lang="en">When a chat tab is focused, use the left and right arrow keys to move to and activate an adjacent chat tab, or Home and End to activate the first and last tabs. Tabs that do not fit are scrolled into view when activated. You can also scroll the tab row with the mouse wheel or drag the horizontal scrollbar that appears when hovering over overflowing tabs.</source>
@@ -2663,7 +2706,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">When the prompt timeline is enabled, a handle on the left edge of the transcript lists your prompts. Activate it to expand the list, use the up and down arrows (or Home and End) to move between prompts, Enter or Space to jump to a prompt, and Escape to dismiss the list and return focus to the handle. When a prompt title is pinned above the transcript, activate its title to jump to that prompt.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.pullRequestArtifact">
-      <source xml:lang="en">Recorded GitHub pull request artifacts can show checks and unresolved review threads as additional pill sections. Their details offer repair actions and separate, opt-in automation controls. Repair prompts require a matching checkout and instruct the agent to commit and push the repair. Automatically Mark Ready can exclude check-name patterns configured in Settings; automatic merging still requires every check to pass. The main details offer Mark Ready, Merge, and branch-update controls. Branch-discovered pull requests and reference links do not gain these automations.</source>
+      <source xml:lang="en">Recorded GitHub pull request artifacts can show checks, merge conflicts, and unresolved review threads as additional pill sections. The checks section is hidden when there are no checks. Merge conflicts remain visible even without checks; activate Conflicts to open the branch-repair controls in the main details. Their details offer repair actions and separate, opt-in automation controls. Repair prompts require a matching checkout and instruct the agent to commit and push the repair. Automatically Mark Ready can exclude check-name patterns configured in Settings; automatic merging still requires every check to pass. The main details offer Mark Ready, Merge, and branch-update controls. Branch-discovered pull requests and reference links do not gain these automations.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.pullRequestSession">
       <source xml:lang="en">In a repository section where New Session is a split button, focus New Session and press Right Arrow to reach its dropdown, then activate New Session from Pull Request to open a searchable pull request picker. Pull requests are grouped by review and assignment status. Use the arrow keys to navigate, Enter to create the session, and Escape to close the picker.</source>

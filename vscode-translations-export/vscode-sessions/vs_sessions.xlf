@@ -150,6 +150,15 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/browser/parts/chatCompositeBar" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatTab.close">
+      <source xml:lang="en">Close</source>
+    </trans-unit>
+    <trans-unit id="chatTab.markRead">
+      <source xml:lang="en">Mark as Read</source>
+    </trans-unit>
+    <trans-unit id="chatTab.markUnread">
+      <source xml:lang="en">Mark as Unread</source>
+    </trans-unit>
     <trans-unit id="chatTabAriaLabel">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
@@ -163,7 +172,7 @@
       <source xml:lang="en">Copy Link</source>
     </trans-unit>
     <trans-unit id="deleteChat">
-      <source xml:lang="en">Delete Chat</source>
+      <source xml:lang="en">Delete...</source>
     </trans-unit>
     <trans-unit id="renameChat">
       <source xml:lang="en">Rename...</source>
@@ -976,6 +985,11 @@
       <source xml:lang="en">Celebrate</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/services/sessions/browser/cloneRepository" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cloneRepository.workspaceFile">
+      <source xml:lang="en">The selected clone is a workspace file. Choose the repository again to select a repository folder.</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/services/sessions/browser/sessionComparisonService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionComparison.additionalSynthesisInstructionsPrompt">
       <source xml:lang="en">
@@ -1136,6 +1150,9 @@
       <source xml:lang="en">{0} · {1}</source>
     </trans-unit>
     <trans-unit id="sessionComparison.harnessModelAndConfiguration">
+      <source xml:lang="en">{0} · {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionComparison.modelAndConfiguration">
       <source xml:lang="en">{0} · {1}</source>
     </trans-unit>
 </body></file>

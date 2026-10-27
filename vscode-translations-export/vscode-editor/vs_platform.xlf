@@ -1211,6 +1211,9 @@ Close this dialog to apply the change with your next message after the current t
     <trans-unit id="chat.canvases.enabled">
       <source xml:lang="en">Controls whether local Agent Host Copilot sessions can open Canvases with interactive content in the Agents Window and the Editor Window. Newly created sessions pick up changes to this setting.</source>
     </trans-unit>
+    <trans-unit id="chat.canvases.enabled.policy">
+      <source xml:lang="en">Controls whether Copilot sessions can use Canvases to present interactive content.</source>
+    </trans-unit>
     <trans-unit id="chat.experimental.workspaceSnapshot">
       <source xml:lang="en">When enabled, the first turn of a new Copilot agent host chat includes a bounded file-name snapshot of its working directories, so the agent can orient itself without listing the workspace first. File contents are never included.</source>
     </trans-unit>
@@ -1832,12 +1835,6 @@ Close this dialog to apply the change with your next message after the current t
     </trans-unit>
     <trans-unit id="agentHost.config.stabilityOrderedPrompt.title">
       <source xml:lang="en">Stability-Ordered System Prompt</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.tgrep.description">
-      <source xml:lang="en">When enabled, Copilot SDK sessions use tgrep indexed search for eligible large repositories. Requires a local Git repository on a non-virtual filesystem.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.tgrep.title">
-      <source xml:lang="en">Indexed Search (tgrep)</source>
     </trans-unit>
     <trans-unit id="agentHost.config.toolSearchDeferThreshold.description">
       <source xml:lang="en">Minimum number of tools before MCP and external tools are deferred behind tool search. Set to 0 to always defer external tools. Only effective when tool search is enabled.</source>
@@ -3697,7 +3694,7 @@ Verify this fingerprint matches the host before continuing.</source>
       <source xml:lang="en">{0} of {1} checks passed; {2} failed.</source>
     </trans-unit>
     <trans-unit id="prArtifact.checksSummaryWithSkipped">
-      <source xml:lang="en">{0} of {1} checks passed; {2} failed; {3} skipped.</source>
+      <source xml:lang="en">{0} of {1} checks completed without failure; {2} failed; {3} skipped.</source>
     </trans-unit>
     <trans-unit id="prArtifact.checksTitle">
       <source xml:lang="en">Checks ({0}/{1})</source>
@@ -3716,6 +3713,12 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
     <trans-unit id="prArtifact.commentsTitle">
       <source xml:lang="en">Comments ({0})</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.conflicts">
+      <source xml:lang="en">Conflicts</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.conflictsSummary">
+      <source xml:lang="en">This pull request has merge conflicts.</source>
     </trans-unit>
     <trans-unit id="prArtifact.detailsDescriptionPage">
       <source xml:lang="en">{0}
@@ -6908,17 +6911,35 @@ stderr: {2}</source>
     <trans-unit id="artifactAutomationEnabledNotice">
       <source xml:lang="en">{0} enabled for {1}</source>
     </trans-unit>
+    <trans-unit id="artifactAutomationNoneRemainingForIntegrationsNotice">
+      <source xml:lang="en">No automation rules remain enabled for these artifact integrations.</source>
+    </trans-unit>
     <trans-unit id="artifactAutomationNoneRemainingNotice">
       <source xml:lang="en">No automation rules remain enabled for this artifact integration.</source>
     </trans-unit>
     <trans-unit id="artifactAutomationRemainingNotice">
       <source xml:lang="en">Still enabled: {0}.</source>
     </trans-unit>
+    <trans-unit id="artifactAutomationRuleChanged">
+      <source xml:lang="en">{0} updated</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationRuleDisabled">
+      <source xml:lang="en">{0} disabled</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationRuleEnabled">
+      <source xml:lang="en">{0} enabled</source>
+    </trans-unit>
     <trans-unit id="artifactAutomationSelectedMode">
       <source xml:lang="en">Mode: {0}</source>
     </trans-unit>
     <trans-unit id="artifactAutomationStoppedNotice">
       <source xml:lang="en">No new automatic runs will start for this rule. Pending runs will be cancelled; work already sent may still finish. Completed changes are not undone.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationStoppedRulesNotice">
+      <source xml:lang="en">No new automatic runs will start for the disabled rules. Pending runs will be cancelled; work already sent may still finish. Completed changes are not undone.</source>
+    </trans-unit>
+    <trans-unit id="artifactAutomationUpdatedNotice">
+      <source xml:lang="en">Autopilot updated for {0} ({1} rules)</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/artifactIntegrations/common/artifactIntegrationProtocol" source-language="en" datatype="plaintext"><body>
@@ -10352,6 +10373,14 @@ To override an existing profile use its profile name as the key, for example:
     </trans-unit>
     <trans-unit id="webPageLoader.unsupportedUriScheme">
       <source xml:lang="en">Navigation to the '{0}' URI scheme is not allowed.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/webContentExtractor/node/sharedWebContentExtractorService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="imageRequestFailed">
+      <source xml:lang="en">Image request failed ({0}).</source>
+    </trans-unit>
+    <trans-unit id="imageTypeUnsupported">
+      <source xml:lang="en">The response is not a supported image.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/windows/electron-main/windowImpl" source-language="en" datatype="plaintext"><body>
