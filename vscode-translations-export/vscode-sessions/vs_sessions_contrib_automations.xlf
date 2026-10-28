@@ -546,11 +546,8 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/automationTriggerEditor" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="automation.trigger.actor">
-      <source xml:lang="en">Require write access to trigger</source>
-    </trans-unit>
-    <trans-unit id="automation.trigger.actorDescription">
-      <source xml:lang="en">Only people with write access to the repository can trigger this automation.</source>
+    <trans-unit id="automation.trigger.activity">
+      <source xml:lang="en">Trigger activity</source>
     </trans-unit>
     <trans-unit id="automation.trigger.commaSeparated">
       <source xml:lang="en">Comma-separated values</source>
@@ -564,6 +561,9 @@
     <trans-unit id="automation.trigger.eventCount">
       <source xml:lang="en">{0} events selected</source>
     </trans-unit>
+    <trans-unit id="automation.trigger.includeReadAccessActivity">
+      <source xml:lang="en">Include activity from users without write access to this repository</source>
+    </trans-unit>
     <trans-unit id="automation.trigger.loading">
       <source xml:lang="en">Loading available triggers…</source>
     </trans-unit>
@@ -575,6 +575,9 @@
     </trans-unit>
     <trans-unit id="automation.trigger.queryExample">
       <source xml:lang="en">e.g. label:bug is:open</source>
+    </trans-unit>
+    <trans-unit id="automation.trigger.readAccessDisabled">
+      <source xml:lang="en">Disabled by your repository settings</source>
     </trans-unit>
     <trans-unit id="automation.trigger.readOnly">
       <source xml:lang="en">These triggers cannot be edited here. Other changes keep them unchanged.</source>
@@ -599,11 +602,41 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/automations.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationAlreadyRunning">
+      <source xml:lang="en">Automation '{0}' is already running.</source>
+    </trans-unit>
+    <trans-unit id="automationRunOpenFailed">
+      <source xml:lang="en">Failed to open automation run: {0}</source>
+    </trans-unit>
+    <trans-unit id="automationRunRequested">
+      <source xml:lang="en">Run requested for automation '{0}'.</source>
+    </trans-unit>
     <trans-unit id="chat.automations.cloud.enabled">
       <source xml:lang="en">Enables managing Only me and Repository cloud automations in known GitHub repositories that support automation management. Disabling this setting does not stop schedules already running on GitHub.</source>
     </trans-unit>
     <trans-unit id="chat.automations.enabled">
       <source xml:lang="en">Enables the Automations feature: scheduling agent sessions to run on a cadence. When disabled, the Automations entry in the Customizations sidebar, the Automations section in the Customizations editor, and the Automation option in the new-session composer are hidden, and scheduled automations are not dispatched.</source>
+    </trans-unit>
+    <trans-unit id="loadingAutomations">
+      <source xml:lang="en">Loading automations...</source>
+    </trans-unit>
+    <trans-unit id="noRunnableAutomations">
+      <source xml:lang="en">No automations are currently available to run.</source>
+    </trans-unit>
+    <trans-unit id="openAutomationRun">
+      <source xml:lang="en">Open Run</source>
+    </trans-unit>
+    <trans-unit id="runAutomation">
+      <source xml:lang="en">Run Automation...</source>
+    </trans-unit>
+    <trans-unit id="runAutomationTitle">
+      <source xml:lang="en">Run Automation</source>
+    </trans-unit>
+    <trans-unit id="selectAutomationToRun">
+      <source xml:lang="en">Select an automation to run</source>
+    </trans-unit>
+    <trans-unit id="showAutomations">
+      <source xml:lang="en">Show Automations</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/automations/browser/providerAutomationService" source-language="en" datatype="plaintext"><body>

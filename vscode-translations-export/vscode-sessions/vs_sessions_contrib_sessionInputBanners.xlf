@@ -101,35 +101,41 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessionInputBanners/browser/sessionWorktreeCleanupAccessibilityHelp" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessionWorktreeCleanupHelp.activeMeasurementProgress">
+      <source xml:lang="en">A status line above the results reports the number of worktrees processed out of the scan total, independently of the filters. Sessions marked as done are not measured and are excluded from the scan total. Failed measurements count as processed. The final count remains visible when the scan completes.</source>
+    </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.allWorktreesOverview">
       <source xml:lang="en">You are in the Worktree Cleanup editor. It lists all agent session worktrees, including recent and protected sessions. Any uncommitted changes are committed before a worktree is removed. Cleaning up a session marks it as done; you can restore the session later to recreate its worktree.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.automatic">
       <source xml:lang="en">Changes in the Cleanup Settings section are saved immediately. Background cleanup evaluates existing and future sessions after confirming their eligibility. Use the checkboxes to enable automatic completion or deletion of merged pull request sessions, then adjust the number of days in the adjacent input. Another checkbox turns the storage cleanup suggestion on or off.</source>
     </trans-unit>
-    <trans-unit id="sessionWorktreeCleanupHelp.cachedSizes">
-      <source xml:lang="en">Supported hosts save worktree sizes in the session database. Opening or refreshing cleanup reuses unchanged idle sizes and measures new, changed, or active worktrees. Automatic storage hint checks use the same saved sizes and are limited to once an hour through existing triggers, without a recurring timer. Removed or recreated worktrees are checked when cleanup refreshes.</source>
+    <trans-unit id="sessionWorktreeCleanupHelp.cachedActiveSizes">
+      <source xml:lang="en">Supported hosts save worktree sizes in the session database. Opening or refreshing cleanup reuses unchanged idle sizes and measures new, changed, or active worktrees. Done sessions are excluded from disk scans; their cleanup status can still be refreshed. Automatic storage hint checks use the same saved sizes and are limited to once an hour through existing triggers, without a recurring timer.</source>
     </trans-unit>
-    <trans-unit id="sessionWorktreeCleanupHelp.cleanup">
-      <source xml:lang="en">Activate Clean Up Worktrees to delete the selected sessions' worktrees and mark those sessions as done after confirmation. It is disabled until at least one session is selected, and its label reports how many worktrees will be cleaned up.</source>
+    <trans-unit id="sessionWorktreeCleanupHelp.checkedRetry">
+      <source xml:lang="en">Sessions already marked as done can still have worktrees. Their host checks whether the worktree paths exist without scanning their contents. Remaining worktrees show a dash for unmeasured disk usage, and are selected by default when their host supports retrying cleanup, including previous failures. Activate Clean Up Worktrees to retry without deleting session history. Scheduled and running cleanup is not selectable. Cleanup you request stays visible in the main table while it progresses, without a checkbox. An explanation below each session title reports blocked, deferred, or failed cleanup, including the error when available. An unavailable or failed existence check never means zero disk usage or confirmed removal.</source>
     </trans-unit>
-    <trans-unit id="sessionWorktreeCleanupHelp.matchingWorktreesSummary">
-      <source xml:lang="en">A summary line above the table reports how many matching worktrees can be cleaned up and, when nonzero, about how much storage they use. A nearby info button explains eligibility. When no worktrees match the filters, an informational message replaces the summary, action, and table.</source>
+    <trans-unit id="sessionWorktreeCleanupHelp.cleanupDiskUsage">
+      <source xml:lang="en">Activate Clean Up Worktrees to schedule removal of the selected sessions' worktrees and mark those sessions as done after confirmation. It is disabled until at least one session is selected. Its label reports the selected worktree count and, when every selected session has a size estimate, their estimated disk usage.</source>
     </trans-unit>
-    <trans-unit id="sessionWorktreeCleanupHelp.measurementProgress">
-      <source xml:lang="en">A status line above the results reports the overall number of worktrees processed out of the scan total, independently of the filters. Failed measurements count as processed. The final count remains visible when the scan completes.</source>
+    <trans-unit id="sessionWorktreeCleanupHelp.diskUsageSummary">
+      <source xml:lang="en">A summary line above the table reports how many matching worktrees can be cleaned up. Disk usage estimates describe allocated file storage, not guaranteed freed space. Shared filesystem data and snapshots can reduce the space actually freed. Sessions marked as done show a dash instead of a size. Totals are omitted when they include a done session. A nearby info button explains eligibility. When no worktrees match the filters, an informational message replaces the summary, action, and table.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.reopen">
       <source xml:lang="en">Return to this editor any time by running Open Worktree Cleanup from the Command Palette or the Sessions More Actions menu.</source>
     </trans-unit>
-    <trans-unit id="sessionWorktreeCleanupHelp.retry">
-      <source xml:lang="en">Sessions already marked as done can still have worktrees. When their host supports retrying cleanup, these rows are selected by default unless a previous removal failed. Failed cleanup requires manual selection. Activate Clean Up Worktrees to retry without deleting session history. Scheduled and running cleanup is not selectable. Cleanup you request stays visible in the main table while it progresses, without a checkbox, and disappears when removal is confirmed. An explanation below each session title reports blocked, deferred, or failed cleanup, including the error when available. Worktree still present means the previous outcome is unknown, not that cleanup failed.</source>
+    <trans-unit id="sessionWorktreeCleanupHelp.verifiedBatchResults">
+      <source xml:lang="en">After confirmation, selected rows immediately show Queued for cleanup. A spinner replaces their checkboxes while cleanup is queued, pending, or running. Waiting for cleanup means the host has not confirmed progress yet, not that removal succeeded. Cleanup cannot be submitted again while requests are being scheduled. Other selections are preserved. A persistent status line reports removed, pending, failed, and unresolved worktrees, independently of the filters. When the host confirms all of a session's worktrees are absent, its row stays in place with Worktree removed and zero disk usage. Removed rows cannot be selected again, but their session links remain available. Reopening this editor omits confirmed removals. A scheduling failure does not stop the remaining requests. Retry Failed Worktrees retries failed rows in the current filter without selecting unrelated rows; it is disabled when none can be retried.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanupHelp.virtualizedTables">
+      <source xml:lang="en">Each table scrolls independently below its column headers. Columns can be resized, and narrow windows allow horizontal scrolling of the headers and rows together. Only rows near the visible area are rendered. Use {0} and {1} to navigate rows, {2} and {3} to navigate pages, and {4} and {5} to reach the first and last rows. Use {6} to open the focused session and Space to toggle its cleanup checkbox when available. Tab moves into the focused row's checkbox or session link. Row announcements include position, session title, workspace, last used time, storage, and cleanup status. Select All and the selected count and estimated size include matching off-screen worktrees.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.workspaceAndAgeFilters">
       <source xml:lang="en">Use the Untouched For selector to filter by inactivity starting at one day, or choose Any time to include sessions used today. When worktrees belong to multiple workspaces, use the Workspace selector to show one workspace or All workspaces. Filters limit both the table and cleanup selection. Changing workspace clears the selection.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanupHelp.workspaceAndProtectedRows">
-      <source xml:lang="en">The main table lists worktrees that can be cleaned up, with each session's title, workspace, last used time, and worktree size. Active sessions and sessions waiting for input have an unchecked checkbox for manual selection. Other worktrees are in the collapsed Unavailable for cleanup section, with an explanation below each title and no checkbox. Use Tab to focus the section heading and Enter or Space to expand or collapse it. Each session title is a link that opens the session and includes its cleanup explanation. The Select All checkbox in the main table header toggles every row in the current filter that can be cleaned up.</source>
+      <source xml:lang="en">The main table lists worktrees that can be cleaned up, with each session's title, workspace, last used time, and worktree size. Active sessions and sessions waiting for input have an unchecked checkbox for manual selection. Other worktrees are in the collapsed Unavailable for cleanup section, with an explanation below each title and no checkbox. Use Tab to focus the section heading and Enter or Space to expand or collapse it. Each session title is a link that opens the session and includes its cleanup explanation. The Select All checkbox above the main table toggles every row in the current filter that can be cleaned up.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessionInputBanners/browser/sessionWorktreeCleanupEditor" source-language="en" datatype="plaintext"><body>
@@ -144,9 +150,6 @@
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.anyTime">
       <source xml:lang="en">Any time</source>
-    </trans-unit>
-    <trans-unit id="sessionWorktreeCleanup.archivedUnsupported">
-      <source xml:lang="en">Worktree still present. Cleanup retry is unavailable on this host.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.autoDelete">
       <source xml:lang="en">Permanently delete automatically completed sessions after</source>
@@ -166,6 +169,18 @@
     <trans-unit id="sessionWorktreeCleanup.automaticHeading">
       <source xml:lang="en">Cleanup Settings</source>
     </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.batchComplete">
+      <source xml:lang="en">Cleanup complete: {0} worktrees removed.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.batchCompleteOne">
+      <source xml:lang="en">Cleanup complete: 1 worktree removed.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.batchProgress">
+      <source xml:lang="en">Cleanup: {0} of {1} worktrees removed, {2} pending, {3} failed, {4} need attention.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.batchResults">
+      <source xml:lang="en">Cleanup results: {0} of {1} worktrees removed, {2} failed, {3} need attention.</source>
+    </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.calculating">
       <source xml:lang="en">Calculating storage…</source>
     </trans-unit>
@@ -181,11 +196,41 @@
     <trans-unit id="sessionWorktreeCleanup.cleanupSelection">
       <source xml:lang="en">Clean Up {0} Worktrees</source>
     </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.cleanupSelectionDiskUsageAccessible">
+      <source xml:lang="en">Clean Up {0} Worktrees, estimated disk usage {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.cleanupSelectionDiskUsageOneAccessible">
+      <source xml:lang="en">Clean Up 1 Worktree, estimated disk usage {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.cleanupSelectionOne">
+      <source xml:lang="en">Clean Up 1 Worktree</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.cleanupSelectionWithSize">
+      <source xml:lang="en">Clean Up {0} Worktrees (~{1})</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.cleanupSelectionWithSizeOne">
+      <source xml:lang="en">Clean Up 1 Worktree (~{0})</source>
+    </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.days">
       <source xml:lang="en">{0} days</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.daysSuffix">
       <source xml:lang="en">days</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.diskUsageColumn">
+      <source xml:lang="en">Disk Usage</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.done">
+      <source xml:lang="en">Done</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.doneFailed">
+      <source xml:lang="en">Cleanup failed.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.doneSkipped">
+      <source xml:lang="en">Cleanup deferred: the worktree could not be safely removed.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.doneStorage">
+      <source xml:lang="en">not measured for done sessions</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.eligibilityInfo">
       <source xml:lang="en">Show cleanup eligibility details</source>
@@ -193,17 +238,20 @@
     <trans-unit id="sessionWorktreeCleanup.error">
       <source xml:lang="en">Session error</source>
     </trans-unit>
-    <trans-unit id="sessionWorktreeCleanup.failed">
-      <source xml:lang="en">Cleanup failed. Select to retry cleanup.</source>
+    <trans-unit id="sessionWorktreeCleanup.existenceError">
+      <source xml:lang="en">Couldn't check whether the worktree still exists: {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.existenceUnavailable">
+      <source xml:lang="en">Couldn't verify whether the worktree still exists.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.existsRetry">
+      <source xml:lang="en">Worktree still exists. Select to retry cleanup.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.failedReason">
       <source xml:lang="en">Cleanup failed: {0}</source>
     </trans-unit>
-    <trans-unit id="sessionWorktreeCleanup.filteredEligibilityDescription">
-      <source xml:lang="en">Active sessions and sessions waiting for input can be selected manually but are not selected by default. Remaining worktrees for sessions already marked as done are selected by default when their host supports retrying cleanup, unless a previous removal failed. Failed cleanup requires manual selection. Scheduled or running cleanup cannot be selected again. Running, pinned, untitled, and error sessions cannot be selected. Storage must have been measured successfully. The filters limit the table and cleanup selection.</source>
-    </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.filteredIntro">
-      <source xml:lang="en">Review all agent session worktrees, or filter by workspace and inactivity period. Inactive, unpinned sessions can be cleaned up to reclaim disk space, including recently used sessions. Active sessions and sessions waiting for input can be selected manually but are not selected by default. Remaining worktrees for sessions already marked as done are selected by default when their host supports retrying cleanup, unless a previous removal failed. Failed cleanup can be retried by selecting the worktree manually. Scheduled or running cleanup cannot be selected again. Any uncommitted changes are committed before the worktree is removed. Cleaning up a session marks it as done; you can restore the session later to recreate its worktree. Expand Unavailable for cleanup to see other worktrees and why they cannot be selected.</source>
+      <source xml:lang="en">Clean up worktrees to free disk space. Uncommitted changes are committed and sessions marked as done; restore a session to recreate its worktree.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.inUse">
       <source xml:lang="en">Cleanup blocked: another session or chat uses this worktree.</source>
@@ -220,8 +268,8 @@
     <trans-unit id="sessionWorktreeCleanup.loading">
       <source xml:lang="en">Measuring worktree storage...</source>
     </trans-unit>
-    <trans-unit id="sessionWorktreeCleanup.matchingWorktreeSummary">
-      <source xml:lang="en">{0} of {1} matching worktrees can be cleaned up, reclaiming about {2}.</source>
+    <trans-unit id="sessionWorktreeCleanup.matchingWorktreeDiskUsageSummary">
+      <source xml:lang="en">{0} of {1} matching worktrees can be cleaned up. Estimated disk usage: {2}.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.matchingWorktreeSummaryNoStorage">
       <source xml:lang="en">{0} of {1} matching worktrees can be cleaned up.</source>
@@ -244,6 +292,9 @@
     <trans-unit id="sessionWorktreeCleanup.noWorktrees">
       <source xml:lang="en">No worktrees to clean up.</source>
     </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.notSelected">
+      <source xml:lang="en">Not selected for cleanup.</source>
+    </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.oneDay">
       <source xml:lang="en">1 day</source>
     </trans-unit>
@@ -253,17 +304,29 @@
     <trans-unit id="sessionWorktreeCleanup.pinned">
       <source xml:lang="en">Pinned</source>
     </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.queued">
+      <source xml:lang="en">Queued for cleanup…</source>
+    </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.recent">
       <source xml:lang="en">Recently used</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.removed">
+      <source xml:lang="en">Worktree removed</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.reopen">
       <source xml:lang="en">You can return to this editor at any time by running Open Worktree Cleanup from the Command Palette.</source>
     </trans-unit>
-    <trans-unit id="sessionWorktreeCleanup.retry">
-      <source xml:lang="en">Worktree still present. Select to retry cleanup.</source>
+    <trans-unit id="sessionWorktreeCleanup.retryFailed">
+      <source xml:lang="en">Retry Failed Worktrees</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.rowDiskUsageLabel">
+      <source xml:lang="en">{0}, workspace {1}, last used {2}, disk usage {3}. {4} {5}</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.running">
       <source xml:lang="en">Running</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.scheduleFailed">
+      <source xml:lang="en">Couldn't schedule cleanup: {0}</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.scheduled">
       <source xml:lang="en">Cleanup scheduled…</source>
@@ -271,8 +334,14 @@
     <trans-unit id="sessionWorktreeCleanup.selectAll">
       <source xml:lang="en">Select all sessions that can be cleaned up</source>
     </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.selectAllLabel">
+      <source xml:lang="en">Select All</source>
+    </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.selectSession">
       <source xml:lang="en">Select {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.selected">
+      <source xml:lang="en">Selected for cleanup.</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.sessionColumn">
       <source xml:lang="en">Session</source>
@@ -280,14 +349,8 @@
     <trans-unit id="sessionWorktreeCleanup.settingDays">
       <source xml:lang="en">{0} days</source>
     </trans-unit>
-    <trans-unit id="sessionWorktreeCleanup.skipped">
-      <source xml:lang="en">Cleanup deferred: the worktree could not be safely removed. Select to retry cleanup.</source>
-    </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.statusError">
       <source xml:lang="en">Couldn't read cleanup status: {0}</source>
-    </trans-unit>
-    <trans-unit id="sessionWorktreeCleanup.storageColumn">
-      <source xml:lang="en">Storage</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.suggestion">
       <source xml:lang="en">Suggest cleaning up session storage when it grows large</source>
@@ -316,11 +379,26 @@
     <trans-unit id="sessionWorktreeCleanup.unknownWorkspace">
       <source xml:lang="en">Unknown workspace</source>
     </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.unmeasuredEligibilityDescription">
+      <source xml:lang="en">Active sessions and sessions waiting for input can be selected manually but are not selected by default. Sessions already marked as done are selected by default when their host supports retrying cleanup, including previous failures. Their disk usage is not measured and is shown as a dash. Scheduled or running cleanup cannot be selected again. Running, pinned, untitled, and error sessions cannot be selected. Other sessions require a successful disk usage measurement. The filters limit the table and cleanup selection. Estimated disk usage is not guaranteed freed space.</source>
+    </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.untitled">
       <source xml:lang="en">Untitled session</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.untitledState">
       <source xml:lang="en">Untitled</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.unverifiedCleanup">
+      <source xml:lang="en">Cleanup has not been confirmed.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.unverifiedRetry">
+      <source xml:lang="en">Worktree removal has not been confirmed. Select to retry cleanup.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.unverifiedStorage">
+      <source xml:lang="en">Couldn't measure storage. Cleanup has not been confirmed.</source>
+    </trans-unit>
+    <trans-unit id="sessionWorktreeCleanup.waitingForCleanup">
+      <source xml:lang="en">Waiting for cleanup…</source>
     </trans-unit>
     <trans-unit id="sessionWorktreeCleanup.workspaceColumn">
       <source xml:lang="en">Workspace</source>
@@ -353,8 +431,8 @@
     <trans-unit id="worktreeCleanup.cleaningProgress">
       <source xml:lang="en">Scheduled {0} of {1} worktrees</source>
     </trans-unit>
-    <trans-unit id="worktreeCleanup.confirm.detail">
-      <source xml:lang="en">This reclaims about {0} and marks the selected sessions as done. You can restore a session later to recreate its worktree.</source>
+    <trans-unit id="worktreeCleanup.confirm.diskUsageDetail">
+      <source xml:lang="en">Estimated disk usage: {0}. Actual freed space may be lower. The selected sessions will be marked as done. You can restore a session later to recreate its worktree.</source>
     </trans-unit>
     <trans-unit id="worktreeCleanup.confirm.many">
       <source xml:lang="en">Clean up {0} worktrees?</source>
@@ -365,23 +443,33 @@
     <trans-unit id="worktreeCleanup.confirm.primary">
       <source xml:lang="en">Clean Up</source>
     </trans-unit>
+    <trans-unit id="worktreeCleanup.confirm.unmeasuredDetail">
+      <source xml:lang="en">This schedules worktree cleanup and marks the selected sessions as done. Disk usage is not measured for sessions already marked as done. You can restore a session later to recreate its worktree.</source>
+    </trans-unit>
     <trans-unit id="worktreeCleanup.measuringProgress">
       <source xml:lang="en">Measuring agent session worktrees...</source>
     </trans-unit>
     <trans-unit id="worktreeCleanup.measuringProgressCount">
       <source xml:lang="en">Scanned {0} of {1} worktrees</source>
     </trans-unit>
-    <trans-unit id="worktreeCleanup.nudge.descriptionMany">
-      <source xml:lang="en">{0} agent session worktrees have been inactive for at least 15 days and can be cleaned up, reclaiming about {1}.</source>
+    <trans-unit id="worktreeCleanup.nudge.diskUsageMany">
+      <source xml:lang="en">{0} agent session worktrees have been inactive for at least 15 days and can be cleaned up. Estimated disk usage: {1}.</source>
     </trans-unit>
-    <trans-unit id="worktreeCleanup.nudge.descriptionOne">
-      <source xml:lang="en">1 agent session worktree has been inactive for at least 15 days and can be cleaned up, reclaiming about {0}.</source>
+    <trans-unit id="worktreeCleanup.nudge.diskUsageOne">
+      <source xml:lang="en">1 agent session worktree has been inactive for at least 15 days and can be cleaned up. Estimated disk usage: {0}.</source>
     </trans-unit>
     <trans-unit id="worktreeCleanup.nudge.lowDiskSpace">
       <source xml:lang="en">Your disk is almost full ({0} available). Clean up agent session worktrees to free up space.</source>
     </trans-unit>
     <trans-unit id="worktreeCleanup.retryUnavailable">
       <source xml:lang="en">Retrying worktree cleanup is unavailable for this session.</source>
+    </trans-unit>
+    <trans-unit id="worktreeCleanup.schedulingFailed">
+      <source xml:lang="en">Couldn't schedule cleanup for {0} worktrees.
+{1}</source>
+    </trans-unit>
+    <trans-unit id="worktreeCleanup.sessionFailure">
+      <source xml:lang="en">{0}: {1}</source>
     </trans-unit>
 </body></file>
 </xliff>

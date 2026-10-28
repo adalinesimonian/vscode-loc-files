@@ -306,9 +306,6 @@ Select to reveal in chat.</source>
     <trans-unit id="artifactLoadMore">
       <source xml:lang="en">Load More</source>
     </trans-unit>
-    <trans-unit id="artifactNoDescription">
-      <source xml:lang="en">No description provided.</source>
-    </trans-unit>
     <trans-unit id="artifactPartialList">
       <source xml:lang="en">This list is incomplete. Open the resource to see all items.</source>
     </trans-unit>
@@ -679,9 +676,6 @@ Select to reveal in chat.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.customizeWelcomeMessage.placeholder">
       <source xml:lang="en">Choose what to customize</source>
-    </trans-unit>
-    <trans-unit id="sessions.chat.experimental.agentsPickerInAttachContextMenu">
-      <source xml:lang="en">Controls whether the Agent picker starts in Add Context for Agents Window chat inputs. After an agent is selected, the picker returns to its usual position.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.collapsedSessionOptionsShowIcons">
       <source xml:lang="en">Controls whether the collapsed session options above the new-session input keep the repository and harness pickers as icons, so they stay accessible without their labels. When disabled, collapsing hides these controls entirely. This setting only applies when the new-session composer layout is enabled.</source>
@@ -2292,7 +2286,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">To show or hide the aquarium action on the new-session view, use the checked Aquarium item in the context menu outside the composer, or run the Toggle Aquarium Action Visibility command.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.archiveChat">
-      <source xml:lang="en">To archive an individual nested chat without archiving its session, open the chat's context menu in the Sessions list or chat tab and choose Archive. The chat is hidden from the Sessions list and closed, but is not deleted. Open the Sessions list Filter menu and enable Archived to show it again, then open the chat's context menu and choose Unarchive.</source>
+      <source xml:lang="en">To archive an individual nested chat, including a /btw side chat, without archiving its session, open the chat's context menu in the Sessions list or chat tab and choose Archive. The chat is hidden from the Sessions list and closed, but is not deleted. Open the Sessions list Filter menu and enable Archived to show it again, then open the chat's context menu and choose Unarchive.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.archiveNudge">
       <source xml:lang="en">When all GitHub pull requests associated with the session have merged and no chat is working or waiting for input, an archive suggestion may appear above the chat input. Use Tab or Shift+Tab to reach Archive, Configure Automatic Cleanup, or Dismiss Archive Suggestion, then Enter or Space to activate it. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Archive" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismiss Archive Suggestion, or Escape while the suggestion is focused, hides the suggestion for this session, including after a reload, until it is archived or deleted, and returns focus to the chat input. Archiving the session hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Archived" section of the sessions list. You can unarchive it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by unarchiving the session.</source>
@@ -2332,6 +2326,9 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.artifactSignIn">
       <source xml:lang="en">When an artifact needs authentication, open its details and use Tab to reach Sign In. Enter or Space starts authentication in this window. The resource remains available from the linked title. Signing in does not enable automation.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.automationSessions">
+      <source xml:lang="en">Automation sessions are listed in Automations rather than in the Sessions list. To also list one in the Sessions list, open its context menu{0} in Automations and choose Show in Sessions List. The {1} setting controls when automation sessions automatically also appear in the Sessions list: always, after you send a message in one, or never. To list it only in Automations again, open its context menu in the Sessions list and choose Hide from Sessions List; neither later messages nor the setting list it again.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.background">
       <source xml:lang="en">Outside high contrast themes, use Set Background to choose no background, the built-in theme-aware Codicons pattern, a new image, or one of the five most recently selected images. One randomly selected icon in the Codicons pattern is a Celebrate button; press Tab to find it, then press Enter or Space to activate it. Each activation selects another random icon as the next Celebrate button. Use Change Background Layout to choose whether an image repeats, stretches, or appears at an edge or corner for the current color theme. Moving through the layout picker previews each option; select one to save it, or press Escape to restore the previous layout. Both commands are available from the Command Palette and by right-clicking empty chat space. Change Background Layout is shown only for images. Background customization is unavailable while a high contrast theme is active.</source>
@@ -2405,6 +2402,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.compareAgentsOpenInGrid">
       <source xml:lang="en">Attempts open in a grid when they start by default. Turn off sessions.chat.compareAgents.openInGrid to start them without automatic navigation. You can still select the comparison group to open its grid.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.compareAgentsOrganization">
+      <source xml:lang="en">Comparisons follow the Sessions list's Created or Updated ordering as a single entry. Focus a comparison header and open its context menu to Move to Group or Remove from Group. Moving a comparison keeps its attempts, Judge, and synthesis together.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.compareAgentsRationaleOrder">
       <source xml:lang="en">Judge results identify candidates as Attempt N with agent, model, and effort, then present Why it won in this order: Solution, Comparison, Validation, Code quality.</source>
     </trans-unit>
@@ -2469,7 +2469,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">The Left and Right arrow keys also reach disabled session controls, such as Copilot when Cloud is selected, so you can inspect their current value. Disabled controls cannot be activated and are skipped by Tab.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.doneChat">
-      <source xml:lang="en">To mark an individual nested chat as done without marking its session as done, open the chat's context menu in the Sessions list or chat tab and choose Mark as Done. The chat is hidden from the Sessions list and closed, but is not deleted. Open the Sessions list Filter menu and enable Done to show it again, then open the chat's context menu and choose Restore.</source>
+      <source xml:lang="en">To mark an individual nested chat, including a /btw side chat, as done without marking its session as done, open the chat's context menu in the Sessions list or chat tab and choose Mark as Done. The chat is hidden from the Sessions list and closed, but is not deleted. Open the Sessions list Filter menu and enable Done to show it again, then open the chat's context menu and choose Restore.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.doneNudge">
       <source xml:lang="en">When all GitHub pull requests associated with the session have merged and no chat is working or waiting for input, a mark as done suggestion may appear above the chat input. Use Tab or Shift+Tab to reach Mark as Done, Configure Automatic Cleanup, or Dismiss Mark as Done Suggestion, then Enter or Space to activate it. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Mark as Done" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismiss Mark as Done Suggestion, or Escape while the suggestion is focused, hides the suggestion for this session, including after a reload, until it is marked as done or deleted, and returns focus to the chat input. Marking the session as done hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Done" section of the sessions list. You can restore it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by restoring the session.</source>
@@ -2612,6 +2612,12 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.markSessionsRead">
       <source xml:lang="en">When the Sessions list has focus, mark the focused session or selected sessions as read{0} or unread{1} without opening them. These shortcuts do not apply while typing in an input.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.mcpAuthentication">
+      <source xml:lang="en">To focus pending chat confirmations or MCP authentication prompts, invoke Chat: Focus Chat Confirmation{0}. Use Tab to reach Authenticate and Enter or Space to activate it. Invoke the command again to return to the chat input.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.mcpAuthenticationProgress">
+      <source xml:lang="en">After you activate Authenticate, authentication progress and its outcome are announced. Errors are announced through notifications. An incomplete or cancelled attempt is not reported as a success.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.micContextMenu">
       <source xml:lang="en">To choose a microphone or turn off dictation or Voice Mode, focus the microphone button in the input toolbar and open its context menu (for example Shift+F10).</source>
     </trans-unit>
@@ -2655,7 +2661,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">To move a new-session pane before sending a prompt, drag its blank top area beside another pane. The session grid movement commands also work on new-session panes.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.newSessionInputControls.agentInAttachContext">
-      <source xml:lang="en">When an Agent picker is available in a new or running session, it initially appears in Add Context. Open Add Context and choose Agent to select an agent. After you select an agent, the Agent picker returns to its usual position. Other new-session controls remain in their layout-specific positions. Use Tab to reach toolbar controls, arrow keys to navigate toolbar items, and Enter or Space to open a picker.</source>
+      <source xml:lang="en">When an Agent picker is available in a new or running session, it appears in Add Context when the default agent is selected. Open Add Context and choose Agent to select an agent. While a custom agent is selected, the Agent picker appears in its usual position. Selecting the default agent moves it back into Add Context. Other new-session controls remain in their layout-specific positions. Use Tab to reach toolbar controls, arrow keys to navigate toolbar items, and Enter or Space to open a picker.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.newSessionInputControls.experimental">
       <source xml:lang="en">Inside the new-session prompt, the controls appear in this order: Add Context, Agent, Mode and Permissions, and Model. Which controls are available depends on the selected harness. Use Tab to reach the controls, arrow keys to navigate toolbar items, and Enter or Space to open a picker.</source>

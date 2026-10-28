@@ -142,8 +142,23 @@
     <trans-unit id="sessions.list.groupExternalSessions">
       <source xml:lang="en">Controls whether external sessions are shown in a separate External section instead of workspace or time groups. Pinned sessions and custom groups keep their placement.</source>
     </trans-unit>
+    <trans-unit id="sessions.list.indentItems">
+      <source xml:lang="en">Controls whether sessions and other rows in the sessions list are indented below their section header to show the list's hierarchy.</source>
+    </trans-unit>
     <trans-unit id="sessions.list.showArchivedByDefault">
       <source xml:lang="en">Controls whether the Done or Archived section is shown by default in the sessions list. This default is ignored after the corresponding filter is changed.</source>
+    </trans-unit>
+    <trans-unit id="sessions.list.showAutomationSessions">
+      <source xml:lang="en">Controls when automation sessions automatically also appear in the sessions list. They always remain in Automations. Use Show in Sessions List or Hide from Sessions List in a session's context menu to override this for that session.</source>
+    </trans-unit>
+    <trans-unit id="sessions.list.showAutomationSessions.afterReply">
+      <source xml:lang="en">Show an automation session in the sessions list once you send a message in it.</source>
+    </trans-unit>
+    <trans-unit id="sessions.list.showAutomationSessions.always">
+      <source xml:lang="en">Show every automation session in the sessions list.</source>
+    </trans-unit>
+    <trans-unit id="sessions.list.showAutomationSessions.never">
+      <source xml:lang="en">Show automation sessions only in Automations.</source>
     </trans-unit>
     <trans-unit id="sessions.list.showEmptyDefaultGroups">
       <source xml:lang="en">Controls whether the Chats group is shown in the sessions list even when it is empty.</source>
@@ -776,7 +791,10 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">In the automation dialog, Target controls are above the prompt. Agent and model pickers are inside the prompt input, and execution mode and permission controls are below it. Use Tab and Shift+Tab to move between fields and pickers. When creating an automation, you only need to enter a prompt. An empty name is derived from the prompt, and the target defaults to No workspace unless one is already supplied. An available Agent Host that supports the target is still required.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.events">
-      <source xml:lang="en">For Cloud automations, the Trigger picker combines Weekly, Daily, Hourly, Issue, Pull Request, and Manual in one control. Issue and Pull Request are offered when their events are available to your account. Scheduled triggers show time and day controls as applicable. Event appears to the right of Trigger, in the same position as Time for a schedule. Issue uses one Event. For Pull Request, activate the Event button to open a searchable checklist. Use Up Arrow and Down Arrow to navigate and Space to select events; at least one stays selected. Enter or Escape closes the checklist. Required event fields appear directly below the Trigger and Event row. Create remains unavailable until they are completed, and its hover explains what is missing. Expand Advanced below them to configure optional filters and Require write access to trigger. When selected events support the same filter, such as Query or Paths, it appears once and applies to each of those events. Labels, assignees and changed paths accept comma-separated values; paths use gitignore patterns. Query filters the target and Comment text filters a comment's body. Review states are checkboxes. Require write access to trigger starts off. Unsupported or mixed triggers are read-only with Open on GitHub; editing other fields keeps the saved triggers. Event automations run from GitHub events rather than Run now.</source>
+      <source xml:lang="en">For Cloud automations, the Trigger picker combines Weekly, Daily, Hourly, Issue, Pull Request, and Manual in one control. Issue and Pull Request are offered when their events are available to your account. Scheduled triggers show time and day controls as applicable. Event appears to the right of Trigger, in the same position as Time for a schedule. Issue uses one Event. For Pull Request, activate the Event button to open a searchable checklist. Use Up Arrow and Down Arrow to navigate and Space to select events; at least one stays selected. Enter or Escape closes the checklist. Required event fields appear directly below the Trigger and Event row. Create remains unavailable until they are completed, and its hover explains what is missing. Expand Advanced below them to configure optional filters and Include activity from users without write access to this repository. When selected events support the same filter, such as Query or Paths, it appears once and applies to each of those events. Labels, assignees and changed paths accept comma-separated values; paths use gitignore patterns. Query filters the target and Comment text filters a comment's body. Review states are checkboxes. Include activity from users without write access to this repository starts on; turn it off to require write access to trigger the automation. Unsupported or mixed triggers are read-only with Open on GitHub; editing other fields keeps the saved triggers. Event automations run from GitHub events rather than Run now.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.eventsRepositorySettings">
+      <source xml:lang="en">When repository settings disallow activity from users without write access, that option is turned off and unavailable, with the explanation Disabled by your repository settings.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.externalDefinition">
       <source xml:lang="en">For cloud automation cards, More Actions also offers Open on GitHub to open the automation's details in your browser.</source>
@@ -795,6 +813,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationsCustomView.help.read">
       <source xml:lang="en">Completed and failed runs that have not been opened are announced as unread. Use Mark all as read in the history header, or focus the Automations sidebar shortcut and press Shift+F10 to choose Mark All as Read from its context menu. This marks available completed and failed runs as read, except cloud runs with an active follow-up.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.sessionsList">
+      <source xml:lang="en">Run sessions are listed here rather than in the Sessions list. Open a run's context menu and choose Show in Sessions List to also list its session there, or Hide from Sessions List to list it only here again, even after later messages. The {0} setting controls when run sessions automatically also appear in the Sessions list: always, after you send a message in one, or never.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.sharing">
       <source xml:lang="en">Use Import Automation in the view header, or drop one .automation.md file anywhere in the view, to review a shared Automation blueprint. Imported Automations start disabled. For Agent Host automations, open the context menu and choose Export to save a portable blueprint. Cloud automations do not currently offer Export.</source>
@@ -1401,6 +1422,12 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="comparisonGroupAria">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
+    <trans-unit id="comparisonMovedToGroup">
+      <source xml:lang="en">Moved {0} to {1}</source>
+    </trans-unit>
+    <trans-unit id="comparisonRemovedFromGroup">
+      <source xml:lang="en">Removed {0} from its group</source>
+    </trans-unit>
     <trans-unit id="createGroupAction">
       <source xml:lang="en">Create Group</source>
     </trans-unit>
@@ -1922,6 +1949,18 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     <trans-unit id="archiveSectionSessions.detail">
       <source xml:lang="en">You can unarchive sessions later if needed from the sessions view.</source>
     </trans-unit>
+    <trans-unit id="automationSessionHiddenFromList">
+      <source xml:lang="en">{0} is now shown only in Automations.</source>
+    </trans-unit>
+    <trans-unit id="automationSessionShownInList">
+      <source xml:lang="en">{0} is now shown in the Sessions list.</source>
+    </trans-unit>
+    <trans-unit id="automationSessionsHiddenFromList">
+      <source xml:lang="en">{0} sessions are now shown only in Automations.</source>
+    </trans-unit>
+    <trans-unit id="automationSessionsShownInList">
+      <source xml:lang="en">{0} sessions are now shown in the Sessions list.</source>
+    </trans-unit>
     <trans-unit id="closeSession">
       <source xml:lang="en">Close Session</source>
     </trans-unit>
@@ -1984,6 +2023,9 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     </trans-unit>
     <trans-unit id="harness">
       <source xml:lang="en">Harness</source>
+    </trans-unit>
+    <trans-unit id="hideAutomationSessionFromList">
+      <source xml:lang="en">Hide from Sessions List</source>
     </trans-unit>
     <trans-unit id="importSession">
       <source xml:lang="en">Import</source>
@@ -2110,6 +2152,9 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     </trans-unit>
     <trans-unit id="showApplicationFilters">
       <source xml:lang="en">Filter Sessions by Application</source>
+    </trans-unit>
+    <trans-unit id="showAutomationSessionInList">
+      <source xml:lang="en">Show in Sessions List</source>
     </trans-unit>
     <trans-unit id="showInExternalSection">
       <source xml:lang="en">Show in External Section</source>

@@ -85,6 +85,9 @@ Open the page in a new tab to share it with agents.</source>
     <trans-unit id="browser.networkProxyUnavailable">
       <source xml:lang="en">The browser network proxy did not start. Reload the window and try again.</source>
     </trans-unit>
+    <trans-unit id="browser.unknownNetwork">
+      <source xml:lang="en">This page was opened for another remote ({0}). Open it again from a window connected to that remote.</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserAutoReloadFeatures" source-language="en" datatype="plaintext"><body>
     <trans-unit id="browser.autoReloadOnFileChange">
@@ -627,14 +630,20 @@ Ensure the URL is correct and the server is accessible from the remote machine.<
     <trans-unit id="browser.connectedLocally.generic">
       <source xml:lang="en">Connected locally</source>
     </trans-unit>
-    <trans-unit id="browser.connectedRemotely">
-      <source xml:lang="en">Connected via remote</source>
+    <trans-unit id="browser.connectedViaHost">
+      <source xml:lang="en">Connected via {0}</source>
     </trans-unit>
     <trans-unit id="browser.enableRemoteProxy">
-      <source xml:lang="en">When enabled, browser requests in remote workspaces are proxied through the remote connection. This allows web pages to access resources available on the remote host. Browsers using global storage always use the local network.</source>
+      <source xml:lang="en">When enabled, browser requests in remote workspaces, and for agent sessions on remote agent hosts, are proxied through the remote connection. This allows web pages to access resources available on the remote host. Browsers using global storage always use the local network.</source>
+    </trans-unit>
+    <trans-unit id="browser.hostDisconnected">
+      <source xml:lang="en">{0} is disconnected. Reload the page after it reconnects.</source>
     </trans-unit>
     <trans-unit id="browser.localFallback.global">
-      <source xml:lang="en">Connected locally. Browsers using global storage load pages from your local network.</source>
+      <source xml:lang="en">Connected locally. Browsers using global storage load pages from your local network, not from {0}.</source>
+    </trans-unit>
+    <trans-unit id="browser.localFallback.unsupported">
+      <source xml:lang="en">{0} does not support browser proxying. Pages load from your local network. Update the agent host to reach its network.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserSearchFeatures" source-language="en" datatype="plaintext"><body>
@@ -666,6 +675,9 @@ Ensure the URL is correct and the server is accessible from the remote machine.<
     </trans-unit>
     <trans-unit id="browser.editorOpen">
       <source xml:lang="en">Whether any browser editor is currently open</source>
+    </trans-unit>
+    <trans-unit id="browser.externalUriOpener">
+      <source xml:lang="en">Open in Integrated Browser</source>
     </trans-unit>
     <trans-unit id="browser.linkOpenedHint.ariaLabel">
       <source xml:lang="en">This link opened in the integrated browser</source>

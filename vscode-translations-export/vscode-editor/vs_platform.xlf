@@ -1080,7 +1080,7 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">When enabled, agents receive guidance for using rich links to issues, pull requests, commits, sessions, and chats, plus running task markers, when creating or editing Markdown plan documents.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.experimental.mcpToolRouting">
-      <source xml:lang="en">When enabled and tool search is available, agent-host sessions use cached MCP tool metadata to route requests and only prompt for MCP authentication when a server is relevant. Routing tools wait for the selected server's tools to become available. Servers without routing tools retain proactive sign-in hints. Newly created sessions pick up changes to this setting.</source>
+      <source xml:lang="en">When enabled and tool search is available, agent-host sessions offer routing tools for configured MCP servers and Connectors, using server names and cached MCP tool metadata to discover relevant servers. Selecting a routing tool can request authentication and waits for the server's current tools. Connector-owned servers do not show proactive sign-in hints when this setting is enabled. Other servers without routing tools retain proactive sign-in hints. Newly created sessions pick up changes to this setting.</source>
     </trans-unit>
     <trans-unit id="chat.agentHost.experimental.overlapProviderPreparation">
       <source xml:lang="en">When enabled, agents prepare their session for a new turn, such as starting the runtime session, while the turn-start checkpoint is captured instead of after it. This can shorten the time to the first response, especially on the first turn of a session.</source>
@@ -1396,8 +1396,20 @@ Close this dialog to apply the change with your next message after the current t
     <trans-unit id="agentMerge.notice.mergeMethod.squash">
       <source xml:lang="en">It will squash-merge the pull request.</source>
     </trans-unit>
+    <trans-unit id="agentMerge.notice.missingPullRequest">
+      <source xml:lang="en">Agent Merge hasn't found a pull request for {0}, so it isn't monitoring one yet. It starts as soon as GitHub reports a pull request for this branch. If this branch is a local copy of a pull request, make it track the pull request's branch.</source>
+    </trans-unit>
     <trans-unit id="agentMerge.notice.moveConflict">
       <source xml:lang="en">Agent Merge was turned off for this chat: another chat in this session already runs it for this pull request.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.notice.singleSignOn">
+      <source xml:lang="en">Agent Merge can't read pull requests in {0} because your GitHub sign-in isn't authorized for the organization's single sign-on. {1} to authorize it, and Agent Merge continues on its own.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.notice.singleSignOn.link">
+      <source xml:lang="en">Sign in to {0}</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.notice.singleSignOnWithoutLink">
+      <source xml:lang="en">Agent Merge can't read pull requests in {0} because your GitHub sign-in isn't authorized for the organization's single sign-on. Authorize it for {0} on GitHub, and Agent Merge continues on its own.</source>
     </trans-unit>
     <trans-unit id="agentMerge.pullRequestMerged">
       <source xml:lang="en">Agent Merge merged pull request [#{0}]({1}).</source>
@@ -1484,7 +1496,7 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">When enabled, agents can record artifacts — pull requests, issues, commits, websites, files and other resources — which are surfaced above the chat input.</source>
     </trans-unit>
     <trans-unit id="prArtifact.ignoredChecks.setting">
-      <source xml:lang="en">Check names that do not need to pass before **Automatically Mark Ready** runs for a pull request artifact. Matching is case-sensitive; `*` matches any text, and other characters are literal. These checks remain visible, are still repaired by **Fix CI**, and must still pass for automatic merging. This setting does not enable automation.</source>
+      <source xml:lang="en">Check names that do not need to pass before a draft pull request counts as ready for review: before **Automatically Mark Ready** runs for a pull request artifact, and before Agent Merge offers **Mark Ready**. Matching is case-sensitive; `*` matches any text, and other characters are literal. These checks remain visible, are still repaired when required, and must still pass for automatic merging. This setting does not enable automation.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/autoModeTiers" source-language="en" datatype="plaintext"><body>
@@ -1885,7 +1897,7 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">Automatically Fix CI</source>
     </trans-unit>
     <trans-unit id="prArtifact.autoCI.description">
-      <source xml:lang="en">Repair any failing check, including optional checks, then commit and push the repairs.</source>
+      <source xml:lang="en">Repair failing required checks, including the jobs a required check waits for, then commit and push the repairs. When the base branch requires no checks, every check counts.</source>
     </trans-unit>
     <trans-unit id="prArtifact.autoConflicts">
       <source xml:lang="en">Automatically Update Branch</source>
@@ -1897,13 +1909,13 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">Merge Automatically When Ready</source>
     </trans-unit>
     <trans-unit id="prArtifact.autoMerge.description">
-      <source xml:lang="en">Merge when every check passes, qualifying review threads are resolved, and GitHub permits it.</source>
+      <source xml:lang="en">Merge when every required check passes, qualifying review threads are resolved, and GitHub permits it.</source>
     </trans-unit>
     <trans-unit id="prArtifact.autoReady">
       <source xml:lang="en">Automatically Mark Ready</source>
     </trans-unit>
     <trans-unit id="prArtifact.autoReady.description">
-      <source xml:lang="en">Mark the draft ready when checks pass and no qualifying unresolved review threads remain. The check-exclusion setting applies only to this action.</source>
+      <source xml:lang="en">Mark the draft ready when required checks pass and no qualifying unresolved review threads remain. The check-exclusion setting applies only to this action.</source>
     </trans-unit>
     <trans-unit id="prArtifact.autoReviews">
       <source xml:lang="en">Automatically Address Reviews</source>
@@ -4678,6 +4690,9 @@ Showing {1}-{2} of {3}.</source>
     <trans-unit id="copilot.mcpRouting.connect">
       <source xml:lang="en">Connect to {0}</source>
     </trans-unit>
+    <trans-unit id="copilot.mcpRouting.connector">
+      <source xml:lang="en">{0} (Connector)</source>
+    </trans-unit>
     <trans-unit id="copilot.pluginReloadFailed">
       <source xml:lang="en">Plugin reload failed: {0}</source>
     </trans-unit>
@@ -4802,17 +4817,65 @@ Showing {1}-{2} of {3}.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotCustomizationCommandDisplay" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilotMcp.configuration">
+      <source xml:lang="en">Launch configuration</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.configurationFailed">
+      <source xml:lang="en">Could not read the launch configuration.</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.configurationNote">
+      <source xml:lang="en">Configuration known to the agent host. Environment variable and header names are shown without their values.</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.configurationUnavailable">
+      <source xml:lang="en">The runtime does not expose this server's launch configuration to the agent host.</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.enabled">
+      <source xml:lang="en">Enabled: {0}</source>
+    </trans-unit>
     <trans-unit id="copilotMcp.error">
       <source xml:lang="en">Error</source>
     </trans-unit>
     <trans-unit id="copilotMcp.lastStderr">
       <source xml:lang="en">Last stderr</source>
     </trans-unit>
+    <trans-unit id="copilotMcp.no">
+      <source xml:lang="en">No</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.noTools">
+      <source xml:lang="en">No tools reported by this server.</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.notFound">
+      <source xml:lang="en">MCP server "{0}" is not configured in this session.</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.serverDetails">
+      <source xml:lang="en">MCP server: {0}</source>
+    </trans-unit>
     <trans-unit id="copilotMcp.serverNameUsage">
       <source xml:lang="en">Usage: {0}</source>
     </trans-unit>
     <trans-unit id="copilotMcp.servers">
       <source xml:lang="en">MCP servers</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.source">
+      <source xml:lang="en">Source: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.sourceFile">
+      <source xml:lang="en">Configuration file: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.sourcePlugin">
+      <source xml:lang="en">Plugin: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.status">
+      <source xml:lang="en">Status: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.tools">
+      <source xml:lang="en">Available tools</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.toolsUnavailable">
+      <source xml:lang="en">Tools are not loaded for this server.</source>
+    </trans-unit>
+    <trans-unit id="copilotMcp.yes">
+      <source xml:lang="en">Yes</source>
     </trans-unit>
     <trans-unit id="copilotPlugin.alreadyDisabled">
       <source xml:lang="en">Plugin {0} is already disabled.</source>
