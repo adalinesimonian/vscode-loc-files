@@ -472,6 +472,9 @@
     <trans-unit id="automation.tool.delete.invocationMessage">
       <source xml:lang="en">Deleting automation {0}</source>
     </trans-unit>
+    <trans-unit id="automation.tool.delete.keepHistoryConfirmation">
+      <source xml:lang="en">Delete **{0}** (`{1}`)? Its saved configuration will be permanently removed. Run history will be kept.</source>
+    </trans-unit>
     <trans-unit id="automation.tool.delete.pastTenseMessage">
       <source xml:lang="en">Deleted automation {0}</source>
     </trans-unit>
@@ -648,6 +651,12 @@
     </trans-unit>
     <trans-unit id="automationUnavailable">
       <source xml:lang="en">Automation '{0}' is unavailable. Its Agent Host may be disconnected or the automation may have been deleted.</source>
+    </trans-unit>
+    <trans-unit id="automations.deleteHistoryUnsupported">
+      <source xml:lang="en">This automation's provider does not support choosing whether to delete run history.</source>
+    </trans-unit>
+    <trans-unit id="automations.deleteRetainedHistoryUnavailable">
+      <source xml:lang="en">This automation's retained run history cannot currently be deleted.</source>
     </trans-unit>
 </body></file>
 </xliff>

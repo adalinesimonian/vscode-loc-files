@@ -90,47 +90,6 @@
       <source xml:lang="en">Understood</source>
     </trans-unit>
 </body></file>
-  <file original="src/vs/sessions/contrib/onboardingTours/browser/tours/firstTaskTour" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="sessions.onboarding.firstTask.gotIt">
-      <source xml:lang="en">Got It</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.firstTask.later">
-      <source xml:lang="en">Later</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.firstTask.parallel.description">
-      <source xml:lang="en">Sessions run side by side, so you don't have to wait for this one to finish.</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.firstTask.parallel.title">
-      <source xml:lang="en">Start another task while this runs</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.firstTask.parallelUpgrade.description">
-      <source xml:lang="en">Copilot Pro gives you more requests and the most capable models, so more of your work can run at once.</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.firstTask.parallelUpgrade.title">
-      <source xml:lang="en">Running agents side by side</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.firstTask.review.changes.description">
-      <source xml:lang="en">See every edit the agent made, then keep the changes or open a pull request.</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.firstTask.review.changes.title">
-      <source xml:lang="en">Review what changed</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.firstTask.review.otherAgents.description">
-      <source xml:lang="en">Start a new session and pick a different agent. Each one works in its own way.</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.firstTask.review.otherAgents.title">
-      <source xml:lang="en">Try Claude or Codex agents too</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.firstTask.review.upgrade.description">
-      <source xml:lang="en">Copilot Pro unlocks the most capable models and more requests for bigger jobs.</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.firstTask.review.upgrade.title">
-      <source xml:lang="en">Nice, that's your first agent task</source>
-    </trans-unit>
-    <trans-unit id="sessions.onboarding.firstTask.seePlans">
-      <source xml:lang="en">See Plans</source>
-    </trans-unit>
-</body></file>
   <file original="src/vs/sessions/contrib/onboardingTours/browser/tours/newSessionTour" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessions.onboarding.isolation.description">
       <source xml:lang="en">Use a worktree to work on multiple tasks in the same project without conflicts. Each task stays isolated, so you can experiment freely and safely.</source>
@@ -167,10 +126,10 @@
 </body></file>
   <file original="src/vs/sessions/contrib/onboardingTours/browser/tours/newSessionViewTourShared" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessions.onboarding.newSessionViewV2.mentalModelAndModels.workspace.description">
-      <source xml:lang="en">Unlike a normal VS Code window, you aren't locked to one folder. Point this session at any repo or folder—or switch projects anytime without opening a new window.</source>
+      <source xml:lang="en">Unlike a normal VS Code window, you aren't locked to one folder. Point this session to any folder. Each session can work on a different folder without opening a new window.</source>
     </trans-unit>
     <trans-unit id="sessions.onboarding.newSessionViewV2.mentalModelAndModels.workspace.selected.description">
-      <source xml:lang="en">We've selected your current project to get you started. You can point each new session at any repo or folder—all from this window.</source>
+      <source xml:lang="en">We've selected your current project to get you started. You can point each new session to any folder without opening a new window.</source>
     </trans-unit>
     <trans-unit id="sessions.onboarding.newSessionViewV2.mentalModelAndModels.workspace.selected.title">
       <source xml:lang="en">Pick a project for this session</source>
@@ -196,7 +155,7 @@
       <source xml:lang="en">Choose a harness</source>
     </trans-unit>
     <trans-unit id="sessions.onboarding.newSessionViewV2.mentalModelAndModels.model.description">
-      <source xml:lang="en">Claude, GPT, Gemini, and more—the best models from across the industry are ready to go. Pick your favorite or switch anytime.</source>
+      <source xml:lang="en">Claude, GPT, Gemini, and more. The best models from across the industry are ready to go. Pick your favorite or switch anytime.</source>
     </trans-unit>
     <trans-unit id="sessions.onboarding.newSessionViewV2.mentalModelAndModels.model.title">
       <source xml:lang="en">All your favorite models, one place</source>
@@ -206,6 +165,17 @@
     </trans-unit>
     <trans-unit id="sessions.onboarding.newSessionViewV2.model.title">
       <source xml:lang="en">Choose a model</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/onboardingTours/browser/tours/parallelTasksTour" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="sessions.onboarding.parallelTasks.description">
+      <source xml:lang="en">Sessions run side by side, so you don't have to wait for this one to finish.</source>
+    </trans-unit>
+    <trans-unit id="sessions.onboarding.parallelTasks.gotIt">
+      <source xml:lang="en">Got It</source>
+    </trans-unit>
+    <trans-unit id="sessions.onboarding.parallelTasks.title">
+      <source xml:lang="en">Start another task while this runs</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/onboardingTours/browser/tours/sessionArchiveTour" source-language="en" datatype="plaintext"><body>
@@ -223,6 +193,14 @@
     </trans-unit>
     <trans-unit id="archiveOnboarding.understood">
       <source xml:lang="en">Understood</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/onboardingTours/browser/tours/worktreeSuggestionTour" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="worktreeSuggestion.spotlight.copyDescription">
+      <source xml:lang="en">{0} Send this request in a new worktree, so the agent works on a separate copy of the files and leaves your changes untouched.</source>
+    </trans-unit>
+    <trans-unit id="worktreeSuggestion.spotlight.title">
+      <source xml:lang="en">Keep Your Changes Separate</source>
     </trans-unit>
 </body></file>
 </xliff>

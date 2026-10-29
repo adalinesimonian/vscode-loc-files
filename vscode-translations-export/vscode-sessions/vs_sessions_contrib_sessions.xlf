@@ -192,6 +192,9 @@
     <trans-unit id="arrangeSessions">
       <source xml:lang="en">Arrange Sessions in a Balanced Grid</source>
     </trans-unit>
+    <trans-unit id="chat.viewMode">
+      <source xml:lang="en">View Mode</source>
+    </trans-unit>
     <trans-unit id="chatCompositeBar.addChat">
       <source xml:lang="en">New Nested Session</source>
     </trans-unit>
@@ -688,11 +691,23 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsAccessibleView.history">
       <source xml:lang="en">Run history</source>
     </trans-unit>
+    <trans-unit id="automationsAccessibleView.historyDeleteRetry">
+      <source xml:lang="en">Run history deletion for {0} was interrupted. Use the run context menu to retry.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.historyDeleteRetryUnavailable">
+      <source xml:lang="en">Run history deletion for {0} was interrupted. Retry is currently unavailable.</source>
+    </trans-unit>
     <trans-unit id="automationsAccessibleView.historyError">
       <source xml:lang="en">Run history could not be refreshed. Use Refresh to try again.</source>
     </trans-unit>
     <trans-unit id="automationsAccessibleView.historyLoading">
       <source xml:lang="en">Refreshing run history.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.historyRetained">
+      <source xml:lang="en">Run history for {0} is retained. Use the run context menu to delete it.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.historyRetainedUnavailable">
+      <source xml:lang="en">Run history for {0} is retained. Deletion is currently unavailable.</source>
     </trans-unit>
     <trans-unit id="automationsAccessibleView.hourly">
       <source xml:lang="en">Hourly</source>
@@ -778,8 +793,8 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsCustomView.help.builtInTemplatesExpanded">
       <source xml:lang="en">The Built-in Templates section is expanded by default while there are no saved automations. Tab to a template and press Enter or Space to open a New automation dialog with an editable name, prompt, and schedule.</source>
     </trans-unit>
-    <trans-unit id="automationsCustomView.help.cards">
-      <source xml:lang="en">For saved automations, Tab to a card's Edit control and action buttons. Use Left Arrow and Right Arrow to move between Run now and More Actions. Press Enter or Space to activate a control. Edit, or clicking anywhere else on the card, opens the automation dialog. More Actions opens the automation menu. Duplicate opens a prefilled New automation dialog for portable schedules and is unavailable for event-triggered automations. Disable prevents future runs, and Delete asks for confirmation. Run now requests execution from the selected provider when available.</source>
+    <trans-unit id="automationsCustomView.help.cards2">
+      <source xml:lang="en">For saved automations, Tab to a card's Edit control and action buttons. Use Left Arrow and Right Arrow to move between Run now and More Actions. Press Enter or Space to activate a control. Edit, or clicking anywhere else on the card, opens the automation dialog. More Actions opens the automation menu. Duplicate opens a prefilled New automation dialog for portable schedules and is unavailable for event-triggered automations. Disable prevents future runs, and Delete asks for confirmation. When the provider supports it, clear Delete Run History in that confirmation to keep previous runs. Run now requests execution from the selected provider when available.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.cloudDialog">
       <source xml:lang="en">When creating an automation and cloud automations are enabled, a Run in the cloud switch, described as Preview, follows the Name field; press Space to turn it on or off. If cloud automations cannot be reached when you turn it on, the switch turns back off and a message asks you to try again in a few moments. When it is on, Cloud is the agent and the workspace picker lists Git-backed workspaces. Only GitHub repositories that support cloud automation management can be selected; unavailable repositories are announced with the reason. Choose Add repository to search for a repository or paste its URL. A matching local folder is retained. If cloud automations become unavailable while the switch is on, Cloud stays selected and Create is unavailable until they return or, for a new automation, you turn the switch off. Turning the switch off restores the previous local workspace and agent, or otherwise selects Copilot when it is available. Cloud models are configured in the prompt section. In the Tools section, the button shows All tools allowed or the number of tools allowed. Activate it to open a searchable checklist of the tools GitHub offers, grouped by category. Categories start collapsed; use Right Arrow to expand one. Press Space to toggle a tool or category. Each change applies immediately to the dialog; Enter or Escape closes the checklist without discarding changes. Save or Create saves the automation. New automations start with every listed tool selected. While the list loads the button is unavailable, and if it cannot be loaded a Retry button appears. Trigger follows the tools controls. Scheduled triggers display local time; GitHub stores a fixed UTC schedule, so the local run time may shift when daylight saving time changes. When editing a cloud automation, the switch and workspace picker are disabled because changing the repository or provider requires duplication. Editing preserves enabled state; enable or disable an automation from its card.</source>
@@ -789,6 +804,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationsCustomView.help.dialog">
       <source xml:lang="en">In the automation dialog, Target controls are above the prompt. Agent and model pickers are inside the prompt input, and execution mode and permission controls are below it. Use Tab and Shift+Tab to move between fields and pickers. When creating an automation, you only need to enter a prompt. An empty name is derived from the prompt, and the target defaults to No workspace unless one is already supplied. An available Agent Host that supports the target is still required.</source>
+    </trans-unit>
+    <trans-unit id="automationsCustomView.help.disabled">
+      <source xml:lang="en">Disabled automations are grouped above templates in the Disabled automations section, which starts collapsed. Press Enter or Space on its heading to expand or collapse it. The expansion state is remembered on this machine. Run history and the Accessible View still include disabled automations.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.events">
       <source xml:lang="en">For Cloud automations, the Trigger picker combines Weekly, Daily, Hourly, Issue, Pull Request, and Manual in one control. Issue and Pull Request are offered when their events are available to your account. Scheduled triggers show time and day controls as applicable. Event appears to the right of Trigger, in the same position as Time for a schedule. Issue uses one Event. For Pull Request, activate the Event button to open a searchable checklist. Use Up Arrow and Down Arrow to navigate and Space to select events; at least one stays selected. Enter or Escape closes the checklist. Required event fields appear directly below the Trigger and Event row. Create remains unavailable until they are completed, and its hover explains what is missing. Expand Advanced below them to configure optional filters and Include activity from users without write access to this repository. When selected events support the same filter, such as Query or Paths, it appears once and applies to each of those events. Labels, assignees and changed paths accept comma-separated values; paths use gitignore patterns. Query filters the target and Comment text filters a comment's body. Review states are checkboxes. Include activity from users without write access to this repository starts on; turn it off to require write access to trigger the automation. Unsupported or mixed triggers are read-only with Open on GitHub; editing other fields keeps the saved triggers. Event automations run from GitHub events rather than Run now.</source>
@@ -800,7 +818,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">For cloud automation cards, More Actions also offers Open on GitHub to open the automation's details in your browser.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.history">
-      <source xml:lang="en">Run history is grouped by date. While a run is waiting for its session, a lightweight row shows the automation name with a Working... description. Once the session is available, use Up Arrow and Down Arrow to navigate the Sessions list, Enter to open, and Tab to reach Stop, the configured Archive or Mark as Done action, or Delete when available. Open a row's context menu, for example with Shift+F10, to rename it, change its active or read state, or delete it. Delete permanently deletes the session and removes it from run history after confirmation.</source>
+      <source xml:lang="en">Run history is grouped by date. While a run is waiting for its session, a lightweight row shows the automation name with a Working... description. Once the session is available, use Up Arrow and Down Arrow to navigate the Sessions list, Enter to open, and Tab to reach Stop, the configured Archive or Mark as Done action, or Delete when available. Open a row's context menu, for example with Shift+F10, to rename it, change its active or read state, or delete it. Delete permanently deletes the session and removes it from run history after confirmation. When a removed automation retains history, the context menu also offers Delete Run History. If that deletion was interrupted, it offers Retry Delete Run History.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.overview">
       <source xml:lang="en">You are in the Automations view. It contains available automation cards followed by run history. Loading, unavailable, and error messages indicate that the catalogue may be incomplete.</source>
@@ -959,6 +977,24 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationExternalUnavailable">
       <source xml:lang="en">This automation is no longer available on GitHub.</source>
+    </trans-unit>
+    <trans-unit id="automationHistoryDeleteFailed">
+      <source xml:lang="en">Failed to delete run history.</source>
+    </trans-unit>
+    <trans-unit id="automationHistoryDeleteUnsupported">
+      <source xml:lang="en">This Automation provider does not support deleting retained run history.</source>
+    </trans-unit>
+    <trans-unit id="automationHistoryDeletedStatus">
+      <source xml:lang="en">Deleted run history for {0}</source>
+    </trans-unit>
+    <trans-unit id="automationHistoryDeletionInterrupted">
+      <source xml:lang="en">Run history deletion was interrupted.</source>
+    </trans-unit>
+    <trans-unit id="automationHistoryOwnerState">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="automationHistoryRetained">
+      <source xml:lang="en">Run history is retained.</source>
     </trans-unit>
     <trans-unit id="automationImportReadFailed">
       <source xml:lang="en">Failed to import automation.</source>
@@ -1134,6 +1170,18 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="confirmDeleteDetail">
       <source xml:lang="en">This will permanently delete the automation and its run history.</source>
     </trans-unit>
+    <trans-unit id="confirmDeleteHistoryChoice">
+      <source xml:lang="en">This will permanently delete the automation. Clear the checkbox to keep its run history.</source>
+    </trans-unit>
+    <trans-unit id="confirmDeleteRetainedAutomationHistory">
+      <source xml:lang="en">Delete run history for "{0}"?</source>
+    </trans-unit>
+    <trans-unit id="confirmDeleteRetainedAutomationHistoryDetail">
+      <source xml:lang="en">This permanently deletes every retained run for this automation.</source>
+    </trans-unit>
+    <trans-unit id="confirmRetryDeleteAutomationHistory">
+      <source xml:lang="en">Retry deleting run history for "{0}"?</source>
+    </trans-unit>
     <trans-unit id="createAutomation">
       <source xml:lang="en">Create Automation</source>
     </trans-unit>
@@ -1143,11 +1191,23 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="deleteAutomationContextMenu">
       <source xml:lang="en">Delete...</source>
     </trans-unit>
+    <trans-unit id="deleteAutomationHistory">
+      <source xml:lang="en">Delete Run History</source>
+    </trans-unit>
+    <trans-unit id="deleteHistory">
+      <source xml:lang="en">Delete Run History</source>
+    </trans-unit>
+    <trans-unit id="deleteRetainedAutomationHistoryAction">
+      <source xml:lang="en">Delete Run History...</source>
+    </trans-unit>
     <trans-unit id="disableAutomationContextMenu">
       <source xml:lang="en">Disable</source>
     </trans-unit>
     <trans-unit id="disabled">
       <source xml:lang="en">Disabled</source>
+    </trans-unit>
+    <trans-unit id="disabledAutomations">
+      <source xml:lang="en">Disabled automations</source>
     </trans-unit>
     <trans-unit id="duplicateAutomation">
       <source xml:lang="en">Duplicate...</source>
@@ -1232,6 +1292,15 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="renameAutomationRunSessionAction">
       <source xml:lang="en">Rename...</source>
+    </trans-unit>
+    <trans-unit id="retryDelete">
+      <source xml:lang="en">Retry Delete</source>
+    </trans-unit>
+    <trans-unit id="retryDeleteHistory">
+      <source xml:lang="en">Retry Delete Run History</source>
+    </trans-unit>
+    <trans-unit id="retryDeleteRetainedAutomationHistoryAction">
+      <source xml:lang="en">Retry Delete Run History...</source>
     </trans-unit>
     <trans-unit id="runNow">
       <source xml:lang="en">Run now</source>
@@ -1560,6 +1629,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionChatItemFolderWithoutTimeAria">
       <source xml:lang="en">{0}, chat in folder {1}, {2}</source>
     </trans-unit>
+    <trans-unit id="sessionChatItemHarnessAria">
+      <source xml:lang="en">{0}, uses harness {1}</source>
+    </trans-unit>
     <trans-unit id="sessionChatItemStandaloneAria">
       <source xml:lang="en">{0}, in session {1}</source>
     </trans-unit>
@@ -1592,6 +1664,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="sessionItemInputNeededMessageAria">
       <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="sessionItemMixedHarnessesAria">
+      <source xml:lang="en">{0}, chats use different harnesses</source>
     </trans-unit>
     <trans-unit id="sessionItemQuickChatAria">
       <source xml:lang="en">{0}, chat, updated {1}</source>
@@ -2191,7 +2266,7 @@ The notice disappears after 10 seconds. The countdown pauses while the notice is
     <trans-unit id="sessions.applicationBadge.unread">
       <source xml:lang="en">Count unread sessions that are no longer in progress.</source>
     </trans-unit>
-    <trans-unit id="sessions.showApplicationBadge">
+    <trans-unit id="sessions.showApplicationBadge2">
       <source xml:lang="en">Controls whether the application icon shows a badge with the number of unarchived sessions matching {0}. The badge appears on the dock icon on macOS, on the launcher icon on Linux and over the taskbar icon on Windows.</source>
     </trans-unit>
 </body></file>

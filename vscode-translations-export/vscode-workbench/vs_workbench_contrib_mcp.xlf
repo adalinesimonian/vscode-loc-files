@@ -204,6 +204,27 @@
     <trans-unit id="mcp.options">
       <source xml:lang="en">Server Options</source>
     </trans-unit>
+    <trans-unit id="mcp.remoteUserConfig.copilot">
+      <source xml:lang="en">Copilot Remote Configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.remoteUserConfig.placeholder">
+      <source xml:lang="en">Select the remote configuration to open</source>
+    </trans-unit>
+    <trans-unit id="mcp.remoteUserConfig.recommended">
+      <source xml:lang="en">Recommended</source>
+    </trans-unit>
+    <trans-unit id="mcp.remoteUserConfig.recommendedNotExisting">
+      <source xml:lang="en">Recommended, not existing</source>
+    </trans-unit>
+    <trans-unit id="mcp.remoteUserConfig.title">
+      <source xml:lang="en">Open Remote User MCP Configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.remoteUserConfig.vscode">
+      <source xml:lang="en">VS Code Remote User Configuration</source>
+    </trans-unit>
+    <trans-unit id="mcp.remoteUserConfig.vscodeProfile">
+      <source xml:lang="en">VS Code profile</source>
+    </trans-unit>
     <trans-unit id="mcp.resetCachedTools">
       <source xml:lang="en">Reset Cached Tools</source>
     </trans-unit>
@@ -1280,8 +1301,29 @@
     <trans-unit id="mcp.configuration.userLocalValue">
       <source xml:lang="en">Global in {0}</source>
     </trans-unit>
+    <trans-unit id="mcpLegacyGalleryUnavailable">
+      <source xml:lang="en">The MCP registry could not be reached. Looking for this server in Customizations.</source>
+    </trans-unit>
+    <trans-unit id="mcpLinkGalleryNotConfigured">
+      <source xml:lang="en">The MCP gallery is not configured. Configure 'chat.mcp.gallery.serviceUrl' to open MCP server details.</source>
+    </trans-unit>
+    <trans-unit id="mcpLinkLookupRetry">
+      <source xml:lang="en">The MCP registry could not be reached. Check your connection or sign-in, then try this link again.</source>
+    </trans-unit>
+    <trans-unit id="mcpLinkMissingName">
+      <source xml:lang="en">This MCP link does not specify a server. Browse MCP servers to find an available server.</source>
+    </trans-unit>
+    <trans-unit id="mcpLinkOutsideGallery">
+      <source xml:lang="en">This MCP link is not part of the configured registry. Browse MCP servers to find an available server.</source>
+    </trans-unit>
+    <trans-unit id="mcpLinkUnavailable">
+      <source xml:lang="en">This MCP link is no longer available in the configured registry. Browse MCP servers to find an available server.</source>
+    </trans-unit>
     <trans-unit id="mcpRegistryChangedDuringLookup">
       <source xml:lang="en">The MCP registry changed. Try installing the server again.</source>
+    </trans-unit>
+    <trans-unit id="mcpServerNotFound">
+      <source xml:lang="en">MCP server '{0}' was not found in the configured registry.</source>
     </trans-unit>
     <trans-unit id="not an extension">
       <source xml:lang="en">The provided object is not an mcp server.</source>

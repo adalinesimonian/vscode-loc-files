@@ -581,9 +581,6 @@ Select to reveal in chat.</source>
     <trans-unit id="chat.agentSessions.clearBackground.cleared">
       <source xml:lang="en">Chat background cleared.</source>
     </trans-unit>
-    <trans-unit id="chat.agentSessions.consolidatedRemoteWorkspaces.deprecated">
-      <source xml:lang="en">Deprecated. Use the unified workspace picker setting instead.</source>
-    </trans-unit>
     <trans-unit id="chat.agentSessions.generateBackground.prompt">
       <source xml:lang="en">Generate a chat background of</source>
     </trans-unit>
@@ -678,22 +675,19 @@ Select to reveal in chat.</source>
       <source xml:lang="en">Choose what to customize</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.collapsedSessionOptionsShowIcons">
-      <source xml:lang="en">Controls whether the collapsed session options above the new-session input keep the repository and harness pickers as icons, so they stay accessible without their labels. When disabled, collapsing hides these controls entirely. This setting only applies when the new-session composer layout is enabled.</source>
+      <source xml:lang="en">Controls whether the collapsed session options above the new-session input keep the repository and harness pickers as icons, so they stay accessible without their labels. When disabled, collapsing hides these controls entirely.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.connectorRecommendations">
       <source xml:lang="en">Controls whether the new-session composer recommends connectors that can add work context to chats.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.environmentPicker">
-      <source xml:lang="en">Controls whether a separate Environment picker chooses where new sessions run in the desktop Agents Window. Requires the unified workspace picker and experimental new-session composer layout. When disabled, environment choices remain in the workspace and harness pickers.</source>
+      <source xml:lang="en">Controls whether a separate Environment picker chooses where new sessions run in the desktop Agents Window. When disabled, environment choices remain in the workspace and harness pickers.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.environmentPickerManageRemotes">
       <source xml:lang="en">Controls whether Remote Environments management and its picker visibility preferences are enabled. Adds a command, a Sessions menu entry, and a Manage Remote Environments entry when the Environment picker and remote agent hosts are enabled. When disabled, saved visibility preferences are ignored but retained.</source>
     </trans-unit>
-    <trans-unit id="sessions.chat.experimental.newSessionComposerLayout">
-      <source xml:lang="en">Controls whether the new-session composer groups workspace, repository, and harness controls above the chat input. This setting only applies when the unified workspace picker is enabled.</source>
-    </trans-unit>
     <trans-unit id="sessions.chat.experimental.newSessionComposerOptionsExpanded">
-      <source xml:lang="en">Controls whether session options are expanded before you first expand or collapse them. Your last choice takes precedence afterward. This setting only applies when the new-session composer layout is enabled.</source>
+      <source xml:lang="en">Controls whether session options are expanded before you first expand or collapse them. Your last choice takes precedence afterward.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.welcomeMessages">
       <source xml:lang="en">Customize the welcome phrases shown above the new-session composer. Use `"mode": "replace"` to use only your phrases, or `"mode": "append"` to add them to the defaults. Use `${name}` inside a phrase to position the welcome name.</source>
@@ -711,7 +705,7 @@ Select to reveal in chat.</source>
       <source xml:lang="en">Controls whether rotating welcome phrases are shown above the new-session composer.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.experimental.workspaceOptOut">
-      <source xml:lang="en">Controls whether hovering over or focusing the workspace picker shows a button to chat without a workspace. Requires the unified workspace picker, experimental new-session composer layout, and a compatible harness and environment. Chat remains available in the workspace list when this setting is disabled.</source>
+      <source xml:lang="en">Controls whether hovering over or focusing the workspace picker shows a button to chat without a workspace. Requires a compatible harness and environment. Chat remains available in the workspace list when this setting is disabled.</source>
     </trans-unit>
     <trans-unit id="sessions.chat.hideWelcomeMessage">
       <source xml:lang="en">Hide Welcome Message</source>
@@ -976,6 +970,9 @@ Select to reveal in chat.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/mobile/mobileSessionTypePicker" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="mobileSessionTypePicker.peerChatTitle">
+      <source xml:lang="en">Harness for New Chat</source>
+    </trans-unit>
     <trans-unit id="mobileSessionTypePicker.title">
       <source xml:lang="en">Session Type</source>
     </trans-unit>
@@ -1263,9 +1260,6 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="workspacePicker.chat">
       <source xml:lang="en">Chat</source>
-    </trans-unit>
-    <trans-unit id="workspacePicker.noWorkspace">
-      <source xml:lang="en">No workspace</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/openSessionLinkOpener.contribution" source-language="en" datatype="plaintext"><body>
@@ -2137,6 +2131,12 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionTypePicker.itemAriaLabel">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
+    <trans-unit id="sessionTypePicker.peerChatAriaLabel">
+      <source xml:lang="en">Harness for New Chat</source>
+    </trans-unit>
+    <trans-unit id="sessionTypePicker.peerChatTriggerAriaLabel">
+      <source xml:lang="en">Pick Harness for New Chat, {0}</source>
+    </trans-unit>
     <trans-unit id="sessionTypePicker.triggerAriaLabel">
       <source xml:lang="en">Pick Session Type, {0}</source>
     </trans-unit>
@@ -2157,14 +2157,8 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="workspacePicker.attachFolder">
       <source xml:lang="en">Attach Folder</source>
     </trans-unit>
-    <trans-unit id="workspacePicker.attachFolderWithEllipsis">
-      <source xml:lang="en">Attach Folder...</source>
-    </trans-unit>
     <trans-unit id="workspacePicker.attachRepository">
       <source xml:lang="en">Attach Repository</source>
-    </trans-unit>
-    <trans-unit id="workspacePicker.attachRepositoryWithEllipsis">
-      <source xml:lang="en">Attach Repository...</source>
     </trans-unit>
     <trans-unit id="workspacePicker.attachedContextCountAriaLabel">
       <source xml:lang="en">{0}, {1} attached</source>
@@ -2594,7 +2588,7 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.inputBackground">
       <source xml:lang="en">Press Alt+Enter to start the session in the background without navigating into it. The started session appears in the Chat Sessions view.</source>
     </trans-unit>
-    <trans-unit id="sessionsChat.inputPills">
+    <trans-unit id="sessionsChat.inputPills2">
       <source xml:lang="en">When session metadata or active-turn status pills appear above the input, press Shift+Tab to reach them, use the Left and Right arrow keys to move between them, and press Enter or Space to activate one. Open the context menu{0} to choose which pills are shown. Pull Requests Options lets you show all pull requests or only open and draft ones. Subagent Options offers Show All and Show In Progress. These choices are remembered across sessions. If every entry of a pill is filtered out, its options are also available in any other pill's context menu or the toolbar context menu.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.layoutDensity">
@@ -2652,10 +2646,13 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Workspace, repository, and environment sections can also be placed inside custom groups. Focus a section heading and open the context menu{0}, then choose Move to Group and a destination. Remove from Group returns it to the top level. You can also drag the section heading into a custom group or beside another header. The section includes future matching sessions, while pinned sessions and explicit custom-group memberships keep their placement. Section nesting is remembered separately for each grouping mode and is hidden when another mode is selected. Group actions include the sessions of their currently nested sections. Deleting a custom group returns its nested sections to the top level and offers an Undo notice that restores their placement.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.nestedSessionWorkspace">
-      <source xml:lang="en">New Nested Session{0} opens a composer that uses the session's agent and host, so it has no agent or environment picker. Above the input, the folder picker preselects the session's folder, or No Workspace in a session without one. When the session's folder no longer exists, No Workspace is preselected and the picker says why. Pick a recent folder, browse or open a folder, or pick No Workspace to give the nested chat its own scratch folder. For a Git folder, check New Worktree to give the nested chat its own worktree and pick the branch it starts from. An agent that supports only one folder offers only the session's folder. The choice applies when you send the first request.</source>
+      <source xml:lang="en">New Nested Session{0} opens a composer that uses the session's host, so it has no environment picker. It uses the session's agent unless the session offers its chats more than one harness, which you then pick in its session options. Above the input, the folder picker preselects the session's folder, or No Workspace in a session without one. When the session's folder no longer exists, No Workspace is preselected and the picker says why. Pick a recent folder, browse or open a folder, or pick No Workspace to give the nested chat its own scratch folder. For a Git folder, check New Worktree to give the nested chat its own worktree and pick the branch it starts from. An agent that supports only one folder offers only the session's folder. The choice applies when you send the first request.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.nestedSubagentActivity">
       <source xml:lang="en">When a subagent starts another subagent, its activity row identifies the nested subagent by name. Focus that link with Tab and press Enter or Space to open the nested subagent's chat beside the current chat. The enclosing pill still opens the parent subagent.</source>
+    </trans-unit>
+    <trans-unit id="sessionsChat.newChatAgentPicker">
+      <source xml:lang="en">When a session offers more than one harness for its chats, the New Nested Session composer shows the Harness for New Chat picker in its session options, where New Session shows its harness picker, listing those harnesses. When the session options are collapsed, use the session options toggle to show them. Use Tab to reach the picker and Enter or Space to open it, then the arrow keys and Enter to choose the harness for the new chat; a harness that is not available is disabled and describes why. Choosing another harness replaces the unsent new chat. A chat keeps its harness; forks and side chats use the harness of the chat they come from. A chat tab whose harness differs from the session's names that harness, and a Sessions list row whose chats use different harnesses says so.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.newSessionDrag">
       <source xml:lang="en">To move a new-session pane before sending a prompt, drag its blank top area beside another pane. The session grid movement commands also work on new-session panes.</source>
@@ -2665,9 +2662,6 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.newSessionInputControls.experimental">
       <source xml:lang="en">Inside the new-session prompt, the controls appear in this order: Add Context, Agent, Mode and Permissions, and Model. Which controls are available depends on the selected harness. Use Tab to reach the controls, arrow keys to navigate toolbar items, and Enter or Space to open a picker.</source>
-    </trans-unit>
-    <trans-unit id="sessionsChat.newSessionInputControls.legacy">
-      <source xml:lang="en">Inside the new-session prompt, Add Context and Model appear in the input toolbar. Agent, Mode, and Permissions appear below the input when available for the selected harness. Use Tab to reach the controls, arrow keys to navigate toolbar items, and Enter or Space to open a picker.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.newSessionPickers">
       <source xml:lang="en">In a new-session composer, open and focus the workspace picker{0} or the harness picker{1}. Focus either picker control and open its context menu{2} to configure its keybinding.</source>
@@ -2718,7 +2712,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">In a repository section where New Session is a split button, focus New Session and press Right Arrow to reach its dropdown, then activate New Session from Pull Request to open a searchable pull request picker. Pull requests are grouped by review and assignment status. Use the arrow keys to navigate, Enter to create the session, and Escape to close the picker.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.quickChat">
-      <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. When consolidated remote workspaces are enabled, this opens the new-session composer, where you can choose Chat. Otherwise, it starts a workspace-less chat directly. When GitHub sandboxes are enabled, choose Cloud in the Environment picker, then Chat in the workspace picker, to chat without a repository or pull request. If the Environment picker is disabled, choose Cloud in the harness picker instead. The Toggle Side Panel command is disabled for quick chats.</source>
+      <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. This opens the new-session composer, where you can choose Chat. When GitHub sandboxes are enabled, choose Cloud in the Environment picker, then Chat in the workspace picker, to chat without a repository or pull request. If the Environment picker is disabled, choose Cloud in the harness picker instead. The Toggle Side Panel command is disabled for quick chats.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.quickChatNestedChats">
       <source xml:lang="en">Quick chats can have nested chats: use New Nested Session{0} on a quick chat, and each nested chat works in its own scratch folder. Chats move between quick chats and workspace sessions and keep their folder. A quick chat stays in the Chats section, and those of its chats that have a folder of their own announce it. A chat that shares its folder with another chat in its session can't be moved on its own.</source>
@@ -2831,8 +2825,8 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.syncChanges.experimental">
       <source xml:lang="en">When available for a folder session with incoming or outgoing commits, Sync Changes appears with the commit counts in the same repository toolbar as the worktree and branch controls above the input. It is hidden when New Worktree is selected. Use Tab and the arrow keys to reach it, then Enter or Space to synchronize the session's repository. The action is disabled while synchronization is running.</source>
     </trans-unit>
-    <trans-unit id="sessionsChat.syncChanges.legacy">
-      <source xml:lang="en">When available for a folder session with incoming or outgoing commits, Sync Changes appears with the commit counts in the same repository toolbar as the worktree and branch controls below the input. It is hidden when New Worktree is selected. Use Tab and the arrow keys to reach it, then Enter or Space to synchronize the session's repository. The action is disabled while synchronization is running.</source>
+    <trans-unit id="sessionsChat.terminalConfirmationExplain">
+      <source xml:lang="en">When a terminal command needs approval and the agent describes what it is for, the confirmation title includes that description, such as Run in terminal: followed by the description. In a conversation that supports side chats, use Tab to reach Explain and press Enter or Space to open a side chat that explains what the command will do. The confirmation stays pending until you allow or skip it.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.themeColorsTool">
       <source xml:lang="en">You can ask the agent to read the current theme colors using Get Theme Colors in the Appearance tool group. This reports the palette without changing your theme or background.</source>
@@ -2862,7 +2856,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">In a new session, the welcome heading is announced when shown. To disable this announcement, set accessibility.verbosity.newSessionWelcome to false. Press Tab to reach Customize Welcome Message beside the welcome heading, or open its context menu{0}. Choose Name to enter a custom name, or clear it to use your GitHub first name when available. Choose Phrases to open the setting where you add or replace welcome phrases, using {1} to position the name.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.workspace">
-      <source xml:lang="en">Use Tab or Shift+Tab to navigate to the workspace picker and choose a workspace for your session. When consolidated remote workspaces are enabled, opening the picker focuses its search input so you can immediately type to filter workspaces. If quick chats are available, you can also choose No workspace to start a workspace-less chat.</source>
+      <source xml:lang="en">Use Tab or Shift+Tab to navigate to the workspace picker and choose a workspace for your session. Opening the picker focuses its search input so you can immediately type to filter workspaces. If quick chats are available, you can also choose Chat to start a workspace-less chat.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.workspaceHandoff">
       <source xml:lang="en">Opening Agents from an editor can suggest that editor's folder for a fresh session. An already-open window keeps its active and visible sessions unless a session or New Session is explicitly requested. Revealing New Session preserves any unsent draft. Choosing a workspace yourself or starting another session cancels a pending suggestion. If an explicitly requested workspace cannot be selected, a notification offers Retry and Choose Workspace actions.</source>
@@ -2874,9 +2868,6 @@ To disable this announcement, set {1} to false.</source>
   <file original="src/vs/sessions/contrib/chat/browser/sharedChatInputComposer" source-language="en" datatype="plaintext"><body>
     <trans-unit id="sessionsSharedChatInput.repositoryControls">
       <source xml:lang="en">Repository Controls</source>
-    </trans-unit>
-    <trans-unit id="sessionsSharedChatInput.sessionControlsRow">
-      <source xml:lang="en">Session controls</source>
     </trans-unit>
     <trans-unit id="sessionsSharedChatInputComposerBusy">
       <source xml:lang="en">What the new-session composer is waiting on, if anything.</source>

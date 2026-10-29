@@ -395,7 +395,7 @@ A keybinding</note>
       <source xml:lang="en">Sandboxing is required by your organization</source>
     </trans-unit>
     <trans-unit id="agentHostSandboxToggle.title">
-      <source xml:lang="en">Run this session's terminal commands inside a sandbox that restricts file system and network access. The applied setting is saved for this session and checked against current organization policy when restored.</source>
+      <source xml:lang="en">Run this session's terminal commands inside a sandbox that restricts file system and network access. The applied setting is saved for this session and checked against your organization's current requirements when restored.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/browser/codexApprovalsPicker" source-language="en" datatype="plaintext"><body>
@@ -430,6 +430,11 @@ Close this dialog to apply the change with your next message after the current t
   <file original="src/vs/platform/agentHost/common/agentHostChatMove" source-language="en" datatype="plaintext"><body>
     <trans-unit id="chatMoves.config.enabled">
       <source xml:lang="en">Move Chats</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/agentHostChatProviders" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="multipleChatProviders.config.enabled">
+      <source xml:lang="en">Multiple Chat Providers</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/agentHostCustomizationConfig" source-language="en" datatype="plaintext"><body>
@@ -1091,6 +1096,9 @@ Close this dialog to apply the change with your next message after the current t
     <trans-unit id="chat.agentHost.githubMcpServer.enabled">
       <source xml:lang="en">When enabled, agent-host sessions include the GitHub MCP server.</source>
     </trans-unit>
+    <trans-unit id="chat.agentHost.multipleChatProviders.enabled">
+      <source xml:lang="en">Enables chats in one Agent Host session to use different agents.</source>
+    </trans-unit>
     <trans-unit id="chat.agentHost.otel.captureContent">
       <source xml:lang="en">When enabled, includes prompt and response content in OTel span attributes. Configurable in user settings only. Sets `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Privacy-sensitive: do not enable in environments that ship spans to shared sinks.</source>
     </trans-unit>
@@ -1339,9 +1347,6 @@ Close this dialog to apply the change with your next message after the current t
     <trans-unit id="agentMerge.notice.disabled">
       <source xml:lang="en">Agent Merge was disabled for this session.</source>
     </trans-unit>
-    <trans-unit id="agentMerge.notice.enabled">
-      <source xml:lang="en">It will wait for a pull request on this branch, then monitor it.</source>
-    </trans-unit>
     <trans-unit id="agentMerge.notice.enabled.addressReviews">
       <source xml:lang="en">It will ask the agent to address new pull request review comments.</source>
     </trans-unit>
@@ -1368,6 +1373,9 @@ Close this dialog to apply the change with your next message after the current t
     </trans-unit>
     <trans-unit id="agentMerge.notice.enabled.waitingForCI">
       <source xml:lang="en">After each update, it will wait for new CI results.</source>
+    </trans-unit>
+    <trans-unit id="agentMerge.notice.enabled.waitingForPullRequest">
+      <source xml:lang="en">It will wait for a pull request on this branch, then monitor it.</source>
     </trans-unit>
     <trans-unit id="agentMerge.notice.enabled.withPullRequest">
       <source xml:lang="en">It is monitoring the pull request for this branch.</source>
@@ -1709,6 +1717,12 @@ Close this dialog to apply the change with your next message after the current t
     </trans-unit>
     <trans-unit id="agentHost.config.imageGenerationWatermark.title">
       <source xml:lang="en">Image Watermark</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.includeCoAuthoredBy.description">
+      <source xml:lang="en">When enabled, Copilot SDK sessions add a `Co-authored-by` trailer to the commits they create. Applied when a session starts or resumes.</source>
+    </trans-unit>
+    <trans-unit id="agentHost.config.includeCoAuthoredBy.title">
+      <source xml:lang="en">Include Co-authored-by Trailer</source>
     </trans-unit>
     <trans-unit id="agentHost.config.localIndexEnabled.description">
       <source xml:lang="en">Whether Copilot SDK sessions use the local cross-session store for Chronicle indexing and retrieval.</source>
@@ -3126,6 +3140,11 @@ Verify this fingerprint matches the host before continuing.</source>
   <file original="src/vs/platform/agentHost/node/agentHostAutomationCustomizations" source-language="en" datatype="plaintext"><body>
     <trans-unit id="automationActiveClient">
       <source xml:lang="en">Automation</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/node/agentHostAutomationService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="deletedAutomation">
+      <source xml:lang="en">Deleted automation</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentHostChangesetService" source-language="en" datatype="plaintext"><body>
@@ -4687,6 +4706,12 @@ Showing {1}-{2} of {3}.</source>
     <trans-unit id="agentHost.unsandboxedCommandConfirmation.title.generic">
       <source xml:lang="en">Run Command Outside the Sandbox?</source>
     </trans-unit>
+    <trans-unit id="copilot.clientToolReplacementEnded">
+      <source xml:lang="en">Tool call ended before client tool configuration replacement completed.</source>
+    </trans-unit>
+    <trans-unit id="copilot.clientToolReplacementFailed">
+      <source xml:lang="en">Client tool configuration replacement failed.</source>
+    </trans-unit>
     <trans-unit id="copilot.mcpRouting.connect">
       <source xml:lang="en">Connect to {0}</source>
     </trans-unit>
@@ -5385,6 +5410,9 @@ Showing {1}-{2} of {3}.</source>
     <trans-unit id="copilot.permission.grant.write">
       <source xml:lang="en">Allow read/write access to {0} and retry inside the sandbox.</source>
     </trans-unit>
+    <trans-unit id="copilot.permission.hook.title">
+      <source xml:lang="en">Allow tool call: {0}?</source>
+    </trans-unit>
     <trans-unit id="copilot.permission.mcp.defaultTool">
       <source xml:lang="en">MCP Tool</source>
     </trans-unit>
@@ -5403,8 +5431,17 @@ Showing {1}-{2} of {3}.</source>
     <trans-unit id="copilot.permission.read.title">
       <source xml:lang="en">Allow reading file outside of workspace?</source>
     </trans-unit>
+    <trans-unit id="copilot.permission.shell.bypass.intentionTitle">
+      <source xml:lang="en">Run in terminal outside the sandbox: {0}</source>
+    </trans-unit>
     <trans-unit id="copilot.permission.shell.bypass.title">
       <source xml:lang="en">Run in terminal outside the sandbox?</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.shell.intentionTitle">
+      <source xml:lang="en">Run in terminal: {0}</source>
+    </trans-unit>
+    <trans-unit id="copilot.permission.shell.permissive.intentionTitle">
+      <source xml:lang="en">Retry by allowing filesystem access inside the sandbox: {0}</source>
     </trans-unit>
     <trans-unit id="copilot.permission.shell.permissive.title">
       <source xml:lang="en">Retry by allowing filesystem access inside the sandbox?</source>
@@ -6500,6 +6537,9 @@ stderr: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/shared/sessionServerTools" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="toolComplete.archiveChat">
+      <source xml:lang="en">Archived chat</source>
+    </trans-unit>
     <trans-unit id="toolComplete.cancelMessage">
       <source xml:lang="en">Processed message cancellation</source>
     </trans-unit>
@@ -6542,6 +6582,9 @@ stderr: {2}</source>
     <trans-unit id="toolConfirm.setWorkspace.title">
       <source xml:lang="en">Change Workspace to {0}?</source>
     </trans-unit>
+    <trans-unit id="toolInvoke.archiveChat">
+      <source xml:lang="en">Archiving chat</source>
+    </trans-unit>
     <trans-unit id="toolInvoke.cancelMessage">
       <source xml:lang="en">Cancelling message</source>
     </trans-unit>
@@ -6580,6 +6623,9 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="toolInvoke.setWorkspace">
       <source xml:lang="en">Requesting a workspace change</source>
+    </trans-unit>
+    <trans-unit id="toolName.archiveChat">
+      <source xml:lang="en">Archive Chat</source>
     </trans-unit>
     <trans-unit id="toolName.cancelMessage">
       <source xml:lang="en">Cancel Message</source>
@@ -7910,7 +7956,7 @@ OS: {10}</source>
       <source xml:lang="en">This extension has been blocked by the Extension Marketplace and must not be used.</source>
     </trans-unit>
     <trans-unit id="blocked by organization policy">
-      <source xml:lang="en">This extension is not permitted by your organization's policy.</source>
+      <source xml:lang="en">This extension is not allowed by your organization.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/extensionManagement/common/extensionNls" source-language="en" datatype="plaintext"><body>
@@ -8423,8 +8469,11 @@ A keybinding label</note>
     <trans-unit id="mcp policy environment unresolved">
       <source xml:lang="en">This Model Context Protocol server cannot run because its policy environment variables have not been resolved on the server host. Restart the server to try again.</source>
     </trans-unit>
+    <trans-unit id="mcp server configuration invalid">
+      <source xml:lang="en">This Model Context Protocol server cannot be installed or run because its configuration is invalid.</source>
+    </trans-unit>
     <trans-unit id="mcp server is denied">
-      <source xml:lang="en">This Model Context Protocol server is blocked by your organization's policy. Please contact your administrator for more information.</source>
+      <source xml:lang="en">This Model Context Protocol server is blocked by your organization. Contact your administrator for more information.</source>
     </trans-unit>
     <trans-unit id="mcp server name overridden by command">
       <source xml:lang="en">This Model Context Protocol server is not in the list of servers allowed by your organization. A name entry matches, but this allowlist contains command entries, so the server must match an allowed command and arguments. Please contact your administrator for more information.</source>

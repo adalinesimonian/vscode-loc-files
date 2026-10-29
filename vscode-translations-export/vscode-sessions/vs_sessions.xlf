@@ -162,6 +162,12 @@
     <trans-unit id="chatTabAriaLabel">
       <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
+    <trans-unit id="chatTabHarnessAriaLabel">
+      <source xml:lang="en">{0}, uses harness {1}</source>
+    </trans-unit>
+    <trans-unit id="chatTabHarnessHover">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
     <trans-unit id="chatTabUnreadAriaLabel">
       <source xml:lang="en">{0}, unread</source>
     </trans-unit>
@@ -985,6 +991,14 @@
       <source xml:lang="en">Celebrate</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/services/configuration/browser/configurationService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="errorInvalidConfiguration">
+      <source xml:lang="en">Unable to write into the settings file. Please open the file to correct errors/warnings in the file and try again.</source>
+    </trans-unit>
+    <trans-unit id="openSettings">
+      <source xml:lang="en">Open Settings</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/services/sessions/browser/cloneRepository" source-language="en" datatype="plaintext"><body>
     <trans-unit id="cloneRepository.workspaceFile">
       <source xml:lang="en">The selected clone is a workspace file. Choose the repository again to select a repository folder.</source>
@@ -1092,6 +1106,9 @@
     <trans-unit id="sessions.importSession.unsupported">
       <source xml:lang="en">Importing is not supported for this session.</source>
     </trans-unit>
+    <trans-unit id="sessions.managedWorktreeCleanupUnavailable">
+      <source xml:lang="en">Connect to this worktree's host to clean it up.</source>
+    </trans-unit>
     <trans-unit id="sessions.moveChat.unsupported">
       <source xml:lang="en">This chat can't be moved there.</source>
     </trans-unit>
@@ -1165,6 +1182,9 @@
     </trans-unit>
     <trans-unit id="nestedChatWorkspace.refused">
       <source xml:lang="en">The nested session could not be created in {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="otherHarness">
+      <source xml:lang="en">Other Harness</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/services/workspace/browser/workspaceContextService" source-language="en" datatype="plaintext"><body>

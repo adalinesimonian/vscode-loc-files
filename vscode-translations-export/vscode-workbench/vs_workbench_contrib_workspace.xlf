@@ -275,6 +275,9 @@ Some [features are disabled]({0}) because this [workspace is not trusted]({1}).<
     <trans-unit id="removeIcon">
       <source xml:lang="en">Icon for the remove folder icon in the workspace trust editor.</source>
     </trans-unit>
+    <trans-unit id="retryTrustSource">
+      <source xml:lang="en">Retry Source Check</source>
+    </trans-unit>
     <trans-unit id="root element label">
       <source xml:lang="en">Manage Workspace Trust</source>
     </trans-unit>
@@ -358,6 +361,9 @@ The {1} will be a host name where repositories are hosted.</note>
     </trans-unit>
     <trans-unit id="trustedWorkspaceSubtitle">
       <source xml:lang="en">You trust the authors of the files in the current workspace. All features are enabled:</source>
+    </trans-unit>
+    <trans-unit id="unresolvedTrustSource">
+      <source xml:lang="en">The source repository for this workspace could not be verified. You can keep reviewing files in Restricted Mode. Make sure the repository extension is enabled and you are signed in, then retry.</source>
     </trans-unit>
     <trans-unit id="untrustedDebugging">
       <source xml:lang="en">Debugging is disabled</source>

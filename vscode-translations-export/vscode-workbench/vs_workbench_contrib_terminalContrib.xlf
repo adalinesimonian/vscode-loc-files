@@ -713,7 +713,7 @@ Reason for leaving the sandbox: {2}</source>
     <trans-unit id="createAndRunTask.userDescription">
       <source xml:lang="en">Create and run a task in the workspace</source>
     </trans-unit>
-    <trans-unit id="createTask">
+    <trans-unit id="createTaskInWorkspace">
       <source xml:lang="en">Task '{0}' will be created in '{1}' and run with this command:</source>
     </trans-unit>
     <trans-unit id="createdTask">
@@ -802,13 +802,13 @@ Reason for leaving the sandbox: {2}</source>
     <trans-unit id="agentSandbox.allowLocalNetwork">
       <source xml:lang="en">Allow the sandboxed process to reach hosts on the local network. Windows needs this on when a proxy, host rules, or credential masking is used: it reaches the local listener over host loopback, and a sandboxed command will not launch without it. The local proxy checks destination addresses for direct connections. An upstream proxy resolves its own destinations.</source>
     </trans-unit>
-    <trans-unit id="agentSandbox.allowNetwork">
+    <trans-unit id="agentSandbox.allowNetwork2">
       <source xml:lang="en">Allow outbound network access in the sandbox (`allowOutbound` in the SDK). Configured allowed and denied network domains still restrict destinations. When disabled, outbound network access is blocked, including for the integrated browser.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.allowNetworkPolicy">
       <source xml:lang="en">Deprecated. Controls whether the Local agent sandbox allows outbound connections to all network domains while preserving file system restrictions. Use the sandbox.userPolicy.network.allowOutbound managed setting to enforce outbound network restrictions in Copilot Agent Host.</source>
     </trans-unit>
-    <trans-unit id="agentSandbox.allowUnsandboxedCommands">
+    <trans-unit id="agentSandbox.allowUnsandboxedCommands2">
       <source xml:lang="en">Controls whether agent mode terminal commands can run outside the sandbox after user confirmation when a sandboxed command fails or when sandbox restrictions would block the command.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.allowUnsandboxedCommandsPolicy">
@@ -823,14 +823,14 @@ Reason for leaving the sandbox: {2}</source>
     <trans-unit id="agentSandbox.enabledPolicy">
       <source xml:lang="en">Deprecated. Controls whether the Local agent uses sandboxing to restrict what tools can do. In Copilot Agent Host, this legacy policy supplies an overridable sandbox default, not a mandatory requirement. Use the runtime-native sandbox.enabled managed setting to require sandboxing in Copilot Agent Host.</source>
     </trans-unit>
-    <trans-unit id="agentSandbox.enabledSetting">
-      <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system. The Local harness supports sandboxing on Linux and macOS only. The Copilot Agent Host harness uses the SDK runtime's sandbox, including on supported Windows hosts.</source>
-    </trans-unit>
     <trans-unit id="agentSandbox.enabledSetting.offDescription">
       <source xml:lang="en">Disable sandboxing for agent mode tools.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.enabledSetting.onDescription">
       <source xml:lang="en">Enable sandboxing for agent mode tools.</source>
+    </trans-unit>
+    <trans-unit id="agentSandbox.enabledSetting2">
+      <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system. The Local harness supports sandboxing on Linux and macOS only. The Copilot Agent Host harness uses the SDK runtime's sandbox, including on supported Windows hosts.</source>
     </trans-unit>
     <trans-unit id="agentSandbox.fileSystem.deprecated">
       <source xml:lang="en">This setting will be deprecated soon. For the Copilot Agent Host sandbox, use {0} instead.</source>

@@ -41,6 +41,9 @@
     <trans-unit id="agentHostAutomation.cancelled">
       <source xml:lang="en">Cancelled</source>
     </trans-unit>
+    <trans-unit id="agentHostAutomation.cleanupUnreadable">
+      <source xml:lang="en">The pending run history cleanup could not be read.</source>
+    </trans-unit>
     <trans-unit id="agentHostAutomation.createUnavailable">
       <source xml:lang="en">The Agent Host is not ready to create automations.</source>
     </trans-unit>
@@ -49,6 +52,18 @@
     </trans-unit>
     <trans-unit id="agentHostAutomation.customizationVersion">
       <source xml:lang="en">Version {0}</source>
+    </trans-unit>
+    <trans-unit id="agentHostAutomation.deleted">
+      <source xml:lang="en">Deleted automation</source>
+    </trans-unit>
+    <trans-unit id="agentHostAutomation.deletionRequestUnreadable">
+      <source xml:lang="en">The pending run history deletion could not be read.</source>
+    </trans-unit>
+    <trans-unit id="agentHostAutomation.historyDeleteUnavailable">
+      <source xml:lang="en">This Automation's retained run history cannot currently be deleted.</source>
+    </trans-unit>
+    <trans-unit id="agentHostAutomation.historyUnsupported">
+      <source xml:lang="en">This Agent Host does not support choosing whether to delete Automation run history.</source>
     </trans-unit>
     <trans-unit id="agentHostAutomation.interruptedLegacyRun">
       <source xml:lang="en">Legacy run tracking was interrupted.</source>
@@ -73,8 +88,17 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostChatMoveErrors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chatMoveRefusal.agentConfigUnavailable">
+      <source xml:lang="en">This chat's agent couldn't load its settings for the move. Try again.</source>
+    </trans-unit>
     <trans-unit id="chatMoveRefusal.agentMergeOwner">
       <source xml:lang="en">This chat runs Agent Merge for the session and can't be moved.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.agentUnavailable">
+      <source xml:lang="en">This chat's agent is unavailable or disabled. Enable it to move the chat.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.agentWithoutChats">
+      <source xml:lang="en">The destination session's agent can't host chats of other agents, or this chat's agent can't join one. Pick a session whose agent supports multiple chats, or one of this chat's agent.</source>
     </trans-unit>
     <trans-unit id="chatMoveRefusal.conflict">
       <source xml:lang="en">The chats changed while moving. Try again.</source>
@@ -92,7 +116,7 @@
       <source xml:lang="en">This chat uses a different account's credentials than the destination session.</source>
     </trans-unit>
     <trans-unit id="chatMoveRefusal.differentProvider">
-      <source xml:lang="en">Chats can only move between sessions of the same agent.</source>
+      <source xml:lang="en">Chats can only move between sessions of the same agent. Pick a session that uses this chat's agent.</source>
     </trans-unit>
     <trans-unit id="chatMoveRefusal.disabled">
       <source xml:lang="en">Moving chats is turned off.</source>
@@ -102,6 +126,9 @@
     </trans-unit>
     <trans-unit id="chatMoveRefusal.legacyCatalog">
       <source xml:lang="en">This session can't reorder or move its chats yet.</source>
+    </trans-unit>
+    <trans-unit id="chatMoveRefusal.noConversation">
+      <source xml:lang="en">This chat has no conversation of its own yet, so it can't be moved into a new session.</source>
     </trans-unit>
     <trans-unit id="chatMoveRefusal.noFolder">
       <source xml:lang="en">This chat's folder is missing, so it can't be moved.</source>
@@ -295,8 +322,20 @@
     <trans-unit id="agentHostSessionConfig.isolation.branchDescription">
       <source xml:lang="en">Works in the repository already on this computer</source>
     </trans-unit>
+    <trans-unit id="agentHostSessionConfig.isolation.branchWithChangesPlural">
+      <source xml:lang="en">Works alongside your {0} uncommitted files</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.isolation.branchWithChangesSingular">
+      <source xml:lang="en">Works alongside your uncommitted file</source>
+    </trans-unit>
     <trans-unit id="agentHostSessionConfig.isolation.devContainerDisabled">
       <source xml:lang="en">New Worktree cannot be combined with Dev Container execution.</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.isolation.recommended">
+      <source xml:lang="en">Recommended</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.isolation.uncommittedCountAria">
+      <source xml:lang="en">{0}: {1}. {2}</source>
     </trans-unit>
     <trans-unit id="agentHostSessionConfig.isolation.worktreeDescription">
       <source xml:lang="en">Creates a separate copy for this session</source>
@@ -623,6 +662,9 @@
     <trans-unit id="importSessionUnavailable">
       <source xml:lang="en">Importing is unavailable for this session.</source>
     </trans-unit>
+    <trans-unit id="managedWorktreeCleanupUnavailable">
+      <source xml:lang="en">Connect to this worktree's host to clean it up.</source>
+    </trans-unit>
     <trans-unit id="moveChatAnchorNotFound">
       <source xml:lang="en">The chat to place the moved chat after could not be found.</source>
     </trans-unit>
@@ -743,6 +785,9 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/reconnectableAgentHostAutomationStore" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentHostAutomation.historyDeleteUnavailable">
+      <source xml:lang="en">This Automation's retained run history cannot currently be deleted.</source>
+    </trans-unit>
     <trans-unit id="automationFeatureDisabled">
       <source xml:lang="en">Automations are disabled. Enable the {0} setting and try again.</source>
     </trans-unit>
@@ -912,9 +957,6 @@
     </trans-unit>
     <trans-unit id="pullRequest">
       <source xml:lang="en">Pull Request...</source>
-    </trans-unit>
-    <trans-unit id="repository">
-      <source xml:lang="en">Repository...</source>
     </trans-unit>
     <trans-unit id="repositoryPicker.unsupportedHost">
       <source xml:lang="en">This picker supports github.com repositories only. Switch to a github.com account, then try again.</source>
