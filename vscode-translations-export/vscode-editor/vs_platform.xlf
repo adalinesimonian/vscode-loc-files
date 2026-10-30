@@ -438,12 +438,6 @@ Close this dialog to apply the change with your next message after the current t
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/agentHostCustomizationConfig" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="agentHost.config.allowSignedOutWhenUsable.description">
-      <source xml:lang="en">Experimental. When enabled, Agent Host sessions remain available while signed out as long as the selected agent has a usable model and authentication (for example Codex with ChatGPT authentication or Claude in native mode with your own Anthropic credentials). When disabled (the default), GitHub sign-in is required.</source>
-    </trans-unit>
-    <trans-unit id="agentHost.config.allowSignedOutWhenUsable.title">
-      <source xml:lang="en">Allow Signed-Out Agent Host</source>
-    </trans-unit>
     <trans-unit id="agentHost.config.customizations.description">
       <source xml:lang="en">Plugins configured on this agent host and available to remote sessions.</source>
     </trans-unit>
@@ -1542,6 +1536,119 @@ Close this dialog to apply the change with your next message after the current t
     </trans-unit>
     <trans-unit id="agentHost.automationsEnabled.description">
       <source xml:lang="en">Whether this Agent Host may run automations.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/agentHost/common/automationCron" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="automationCron.ascending">
+      <source xml:lang="en">{0} ranges must be ascending.</source>
+    </trans-unit>
+    <trans-unit id="automationCron.calendar">
+      <source xml:lang="en">Automation schedule cannot match a real calendar date.</source>
+    </trans-unit>
+    <trans-unit id="automationCron.dayOfMonth">
+      <source xml:lang="en">Day of month</source>
+    </trans-unit>
+    <trans-unit id="automationCron.dayOfWeek">
+      <source xml:lang="en">Day of week</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description">
+      <source xml:lang="en">Runs {0} {1}.</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.additionalDays">
+      <source xml:lang="en">{0} and also {1}</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.everyDay">
+      <source xml:lang="en">every day</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.everyMinute">
+      <source xml:lang="en">every minute</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.hourCadence">
+      <source xml:lang="en">every {0} hours</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.hours">
+      <source xml:lang="en">the hours {0}</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.inMonths">
+      <source xml:lang="en">In {0}, runs {1} {2}.</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.list">
+      <source xml:lang="en">{0} and {1}</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.minuteCadence">
+      <source xml:lang="en">every {0} minutes</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.minuteCadenceDuring">
+      <source xml:lang="en">every {0} minutes during {1}</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.minuteDuring">
+      <source xml:lang="en">at minute {0} past {1}</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.minuteHourly">
+      <source xml:lang="en">at minute {0} of every hour</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.minutesDuring">
+      <source xml:lang="en">every minute during {0}</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.minutesDuringHours">
+      <source xml:lang="en">at minutes {0} past {1}</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.minutesHourly">
+      <source xml:lang="en">at minutes {0} of every hour</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.monthDay">
+      <source xml:lang="en">on day {0} of the month</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.monthDays">
+      <source xml:lang="en">on days {0} of the month</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.range">
+      <source xml:lang="en">{0} through {1}</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.separator">
+      <source xml:lang="en">, </source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.singleHour">
+      <source xml:lang="en">the {0} hour</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.times">
+      <source xml:lang="en">at {0}</source>
+    </trans-unit>
+    <trans-unit id="automationCron.description.weekdays">
+      <source xml:lang="en">on {0}</source>
+    </trans-unit>
+    <trans-unit id="automationCron.emptySegment">
+      <source xml:lang="en">{0} contains an empty list item.</source>
+    </trans-unit>
+    <trans-unit id="automationCron.fields">
+      <source xml:lang="en">Automation schedule must contain exactly five fields: minute, hour, day of month, month, day of week.</source>
+    </trans-unit>
+    <trans-unit id="automationCron.hour">
+      <source xml:lang="en">Hour</source>
+    </trans-unit>
+    <trans-unit id="automationCron.invalidRange">
+      <source xml:lang="en">{0} contains an invalid range.</source>
+    </trans-unit>
+    <trans-unit id="automationCron.invalidStep">
+      <source xml:lang="en">{0} contains an invalid step.</source>
+    </trans-unit>
+    <trans-unit id="automationCron.minute">
+      <source xml:lang="en">Minute</source>
+    </trans-unit>
+    <trans-unit id="automationCron.month">
+      <source xml:lang="en">Month</source>
+    </trans-unit>
+    <trans-unit id="automationCron.positiveStep">
+      <source xml:lang="en">{0} step must be a positive integer.</source>
+    </trans-unit>
+    <trans-unit id="automationCron.range">
+      <source xml:lang="en">{0} value is outside {1}-{2}.</source>
+    </trans-unit>
+    <trans-unit id="automationCron.stepBase">
+      <source xml:lang="en">{0} steps require '*' or a range such as {1}-{2}.</source>
+    </trans-unit>
+    <trans-unit id="automationCron.timeZone">
+      <source xml:lang="en">Automation schedule uses an invalid time zone.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/common/changesetUri" source-language="en" datatype="plaintext"><body>
@@ -3143,8 +3250,8 @@ Verify this fingerprint matches the host before continuing.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentHostAutomationService" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="deletedAutomation">
-      <source xml:lang="en">Deleted automation</source>
+    <trans-unit id="deletedAutomationNameUnavailable">
+      <source xml:lang="en">Deleted automation (name unavailable)</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/agentHostChangesetService" source-language="en" datatype="plaintext"><body>
@@ -3767,6 +3874,12 @@ Showing {1}-{2} of {3}.</source>
     <trans-unit id="prArtifact.enqueued">
       <source xml:lang="en">Pull request added to the merge queue.</source>
     </trans-unit>
+    <trans-unit id="prArtifact.failingChecksDescription">
+      <source xml:lang="en">Shows the failing required checks, and the jobs they wait for, that this action asked to fix.</source>
+    </trans-unit>
+    <trans-unit id="prArtifact.failingChecksTitle">
+      <source xml:lang="en">Failing Checks ({0})</source>
+    </trans-unit>
     <trans-unit id="prArtifact.fixCI">
       <source xml:lang="en">Fix Checks</source>
     </trans-unit>
@@ -3794,6 +3907,9 @@ Showing {1}-{2} of {3}.</source>
     <trans-unit id="prArtifact.mergeChanged">
       <source xml:lang="en">GitHub's merge requirements changed.</source>
     </trans-unit>
+    <trans-unit id="prArtifact.mergeCheckoutMissing">
+      <source xml:lang="en">Merging only unchanged pull requests requires the chat that recorded this pull request to have {0} checked out on branch {1}.</source>
+    </trans-unit>
     <trans-unit id="prArtifact.mergeCompleted">
       <source xml:lang="en">Pull request merged.</source>
     </trans-unit>
@@ -3805,9 +3921,6 @@ Showing {1}-{2} of {3}.</source>
     </trans-unit>
     <trans-unit id="prArtifact.missingId">
       <source xml:lang="en">GitHub did not provide the pull request's identity.</source>
-    </trans-unit>
-    <trans-unit id="prArtifact.noCheckout">
-      <source xml:lang="en">A verifiable Git checkout is required for this pull request repair.</source>
     </trans-unit>
     <trans-unit id="prArtifact.noMergeMethod">
       <source xml:lang="en">The repository does not allow a supported merge method.</source>
@@ -3868,9 +3981,6 @@ Showing {1}-{2} of {3}.</source>
     </trans-unit>
     <trans-unit id="prArtifact.workflowRunning">
       <source xml:lang="en">The workflow of {0} is still running. Rerun the check after it finishes.</source>
-    </trans-unit>
-    <trans-unit id="prArtifact.wrongCheckout">
-      <source xml:lang="en">The chat must already have {0} checked out on branch {1}. Branches will not be switched automatically.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/chatContributions/pullRequest/pullRequestChatContribution" source-language="en" datatype="plaintext"><body>
@@ -4599,8 +4709,17 @@ Showing {1}-{2} of {3}.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotAgent" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="copilot.extensionReconcileFailed">
-      <source xml:lang="en">The extension preference was saved, but the selected chat could not be updated: {0}</source>
+    <trans-unit id="copilot.extensionDisableFailed">
+      <source xml:lang="en">Couldn't disable canvas extension '{0}'. {1}</source>
+    </trans-unit>
+    <trans-unit id="copilot.extensionDisableReconcileFailed">
+      <source xml:lang="en">Canvas extension '{0}' was disabled in settings, but couldn't be stopped in this chat. {1}</source>
+    </trans-unit>
+    <trans-unit id="copilot.extensionEnableFailed">
+      <source xml:lang="en">Couldn't enable canvas extension '{0}'. {1}</source>
+    </trans-unit>
+    <trans-unit id="copilot.extensionEnableReconcileFailed">
+      <source xml:lang="en">Canvas extension '{0}' was enabled in settings, but couldn't be started in this chat. {1}</source>
     </trans-unit>
     <trans-unit id="copilot.extensionReconcileTargetUnavailable">
       <source xml:lang="en">The selected chat stopped or was replaced before its extension state could be updated.</source>
@@ -6021,6 +6140,17 @@ Showing {1}-{2} of {3}.</source>
       <source xml:lang="en">{0} couldn't start. Select Retry to try again.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/copilot/sessionCustomizationDiscovery" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="copilot.discoveredHooks">
+      <source xml:lang="en">Copilot hooks</source>
+    </trans-unit>
+    <trans-unit id="copilot.discoveredMcpServers">
+      <source xml:lang="en">Copilot MCP servers</source>
+    </trans-unit>
+    <trans-unit id="copilot.workspaceHooksFallbackFailed">
+      <source xml:lang="en">Workspace hook discovery failed: {0}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/devContainerAgentHostService" source-language="en" datatype="plaintext"><body>
     <trans-unit id="devContainerAgentHost.commandFailed">
       <source xml:lang="en">Dev Container command failed (exit {0}): {1}
@@ -6970,6 +7100,9 @@ stderr: {2}</source>
     </trans-unit>
     <trans-unit id="artifactIntegrationsDisabled">
       <source xml:lang="en">Artifact integrations are disabled.</source>
+    </trans-unit>
+    <trans-unit id="artifactInvalidPromptDetails">
+      <source xml:lang="en">The integration supplied invalid details for this action.</source>
     </trans-unit>
     <trans-unit id="artifactOriginMissing">
       <source xml:lang="en">The chat that originally recorded this artifact is unknown.</source>

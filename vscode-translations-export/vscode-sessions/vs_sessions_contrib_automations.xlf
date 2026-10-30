@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/automations/browser/automationCronInput" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="cron.day">
+      <source xml:lang="en">Day of month</source>
+    </trans-unit>
+    <trans-unit id="cron.dayCaption">
+      <source xml:lang="en">day</source>
+    </trans-unit>
+    <trans-unit id="cron.dayHint">
+      <source xml:lang="en">Every day * or from 1 to 31</source>
+    </trans-unit>
+    <trans-unit id="cron.expression">
+      <source xml:lang="en">CRON expression</source>
+    </trans-unit>
+    <trans-unit id="cron.hour">
+      <source xml:lang="en">Hour</source>
+    </trans-unit>
+    <trans-unit id="cron.hourCaption">
+      <source xml:lang="en">hour</source>
+    </trans-unit>
+    <trans-unit id="cron.hourHint">
+      <source xml:lang="en">Every hour * or from 0 to 23</source>
+    </trans-unit>
+    <trans-unit id="cron.localTime">
+      <source xml:lang="en">Evaluated in local time.</source>
+    </trans-unit>
+    <trans-unit id="cron.min">
+      <source xml:lang="en">min</source>
+    </trans-unit>
+    <trans-unit id="cron.minute">
+      <source xml:lang="en">Minute</source>
+    </trans-unit>
+    <trans-unit id="cron.minuteHint">
+      <source xml:lang="en">Every minute * or from 0 to 59</source>
+    </trans-unit>
+    <trans-unit id="cron.month">
+      <source xml:lang="en">Month</source>
+    </trans-unit>
+    <trans-unit id="cron.monthCaption">
+      <source xml:lang="en">month</source>
+    </trans-unit>
+    <trans-unit id="cron.monthHint">
+      <source xml:lang="en">Every month * or from January (1) to December (12)</source>
+    </trans-unit>
+    <trans-unit id="cron.timeZone">
+      <source xml:lang="en">Evaluated in {0}.</source>
+    </trans-unit>
+    <trans-unit id="cron.weekday">
+      <source xml:lang="en">Day of week</source>
+    </trans-unit>
+    <trans-unit id="cron.weekdayCaption">
+      <source xml:lang="en">weekday</source>
+    </trans-unit>
+    <trans-unit id="cron.weekdayHint">
+      <source xml:lang="en">Every day of week * or from Monday (1) to Sunday (7 and 0)</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/sessions/contrib/automations/browser/automationDialog" source-language="en" datatype="plaintext"><body>
     <trans-unit id="automation.advanced">
       <source xml:lang="en">Advanced</source>
@@ -99,6 +155,9 @@
     </trans-unit>
     <trans-unit id="automation.form.checkingTarget">
       <source xml:lang="en">Checking target availability...</source>
+    </trans-unit>
+    <trans-unit id="automation.form.cloudCron">
+      <source xml:lang="en">CRON is only available for local automations. Choose a supported schedule for Cloud.</source>
     </trans-unit>
     <trans-unit id="automation.form.cloudDisabled">
       <source xml:lang="en">Cloud automations are disabled. To create this automation, enable the {0} setting or turn off Run in the cloud.</source>
@@ -267,6 +326,9 @@
     </trans-unit>
     <trans-unit id="automation.form.workspaceUnavailable">
       <source xml:lang="en">The workspace provider is unavailable.</source>
+    </trans-unit>
+    <trans-unit id="automation.interval.cron">
+      <source xml:lang="en">CRON</source>
     </trans-unit>
     <trans-unit id="automation.interval.daily">
       <source xml:lang="en">Daily</source>

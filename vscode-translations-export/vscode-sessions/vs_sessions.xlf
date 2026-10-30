@@ -13,12 +13,6 @@
     <trans-unit id="agentsSignInOptionalAria">
       <source xml:lang="en">Sign in to GitHub to use more agents</source>
     </trans-unit>
-    <trans-unit id="agentsSignedOut">
-      <source xml:lang="en">Agents Signed Out</source>
-    </trans-unit>
-    <trans-unit id="agentsSignedOutAria">
-      <source xml:lang="en">Agents is signed out</source>
-    </trans-unit>
     <trans-unit id="copilotAllQuotaReachedAria">
       <source xml:lang="en">GitHub Copilot chat and inline suggestion quota reached</source>
     </trans-unit>
@@ -672,11 +666,17 @@
     <trans-unit id="editorMaximized">
       <source xml:lang="en">Whether the editor area is maximized</source>
     </trans-unit>
+    <trans-unit id="inboxCanvasFocus">
+      <source xml:lang="en">Whether the Inbox canvas has keyboard focus</source>
+    </trans-unit>
     <trans-unit id="isQuickChatSession">
       <source xml:lang="en">Whether the session in scope is a workspace-less quick chat</source>
     </trans-unit>
     <trans-unit id="multipleSessionsVisible">
       <source xml:lang="en">Whether more than one session is visible in the sessions part's grid</source>
+    </trans-unit>
+    <trans-unit id="newSessionComposerFocus">
+      <source xml:lang="en">Whether focus is within the new-session composer or its pickers</source>
     </trans-unit>
     <trans-unit id="newSessionCreationProviderId">
       <source xml:lang="en">The provider selected for new session creation before a draft exists</source>
@@ -984,6 +984,17 @@
     </trans-unit>
     <trans-unit id="artifactRemoteWorkspaceUnavailable">
       <source xml:lang="en">This client cannot reserve the agent host's workspace for an artifact action.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/services/canvas/browser/windowCanvasService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="windowCanvas.mainWindowOnly">
+      <source xml:lang="en">This canvas can only be shown in the main window.</source>
+    </trans-unit>
+    <trans-unit id="windowCanvas.openFailed">
+      <source xml:lang="en">The canvas '{0}' could not be opened.</source>
+    </trans-unit>
+    <trans-unit id="windowCanvas.unavailable">
+      <source xml:lang="en">The canvas '{0}' is unavailable.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/services/chatBackground/browser/chatBackgroundRenderer" source-language="en" datatype="plaintext"><body>

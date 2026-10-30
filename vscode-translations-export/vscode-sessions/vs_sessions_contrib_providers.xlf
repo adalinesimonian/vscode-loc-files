@@ -53,8 +53,8 @@
     <trans-unit id="agentHostAutomation.customizationVersion">
       <source xml:lang="en">Version {0}</source>
     </trans-unit>
-    <trans-unit id="agentHostAutomation.deleted">
-      <source xml:lang="en">Deleted automation</source>
+    <trans-unit id="agentHostAutomation.deletedNameUnavailable">
+      <source xml:lang="en">Deleted automation (name unavailable)</source>
     </trans-unit>
     <trans-unit id="agentHostAutomation.deletionRequestUnreadable">
       <source xml:lang="en">The pending run history deletion could not be read.</source>
@@ -82,6 +82,9 @@
     </trans-unit>
     <trans-unit id="agentHostAutomation.wrongHost">
       <source xml:lang="en">The automation target must belong to this Agent Host.</source>
+    </trans-unit>
+    <trans-unit id="automationCronRequired">
+      <source xml:lang="en">A CRON expression is required.</source>
     </trans-unit>
     <trans-unit id="automationUnsupportedSchedule">
       <source xml:lang="en">Choose a local-time schedule for this Agent Host automation.</source>
@@ -339,6 +342,9 @@
     </trans-unit>
     <trans-unit id="agentHostSessionConfig.isolation.worktreeDescription">
       <source xml:lang="en">Creates a separate copy for this session</source>
+    </trans-unit>
+    <trans-unit id="agentHostSessionConfig.isolationTooltip">
+      <source xml:lang="en">Working copy for the session</source>
     </trans-unit>
     <trans-unit id="agentHostSessionConfig.itemAriaLabelWithBadge">
       <source xml:lang="en">{0}, {1}</source>
@@ -1062,6 +1068,9 @@
     </trans-unit>
     <trans-unit id="modePicker.ariaLabel">
       <source xml:lang="en">Mode Picker</source>
+    </trans-unit>
+    <trans-unit id="modePicker.sourceAriaLabel">
+      <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
     <trans-unit id="modePicker.triggerAriaLabel">
       <source xml:lang="en">Pick Mode, {0}</source>

@@ -167,7 +167,7 @@
       <source xml:lang="en">Controls whether collapsed sections in the sessions list show needs-attention, CI-failure, or unread indicators for the unarchived sessions they contain.</source>
     </trans-unit>
     <trans-unit id="sessions.markAsDoneConfetti">
-      <source xml:lang="en">Controls whether a confetti animation is shown when marking a session as done.</source>
+      <source xml:lang="en">Controls whether a confetti animation is shown when marking a session or Inbox notification as done.</source>
     </trans-unit>
     <trans-unit id="sessions.newSessionButton.style">
       <source xml:lang="en">Controls the visual style of the New Session button.</source>
@@ -670,6 +670,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsAccessibleView.completed">
       <source xml:lang="en">Completed</source>
     </trans-unit>
+    <trans-unit id="automationsAccessibleView.cron">
+      <source xml:lang="en">CRON: {0}</source>
+    </trans-unit>
     <trans-unit id="automationsAccessibleView.custom">
       <source xml:lang="en">Custom schedule</source>
     </trans-unit>
@@ -696,6 +699,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationsAccessibleView.historyDeleteRetryUnavailable">
       <source xml:lang="en">Run history deletion for {0} was interrupted. Retry is currently unavailable.</source>
+    </trans-unit>
+    <trans-unit id="automationsAccessibleView.historyDeleting">
+      <source xml:lang="en">Deleting run history for {0}.</source>
     </trans-unit>
     <trans-unit id="automationsAccessibleView.historyError">
       <source xml:lang="en">Run history could not be refreshed. Use Refresh to try again.</source>
@@ -802,6 +808,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="automationsCustomView.help.cloudHistory">
       <source xml:lang="en">Cloud history shows the repository, status, and last updated time even when no local session is available. When a cloud run has a session on GitHub that is not yet loaded in VS Code, click its row, or Tab to its title and press Enter or Space, to open that exact session. Tab to a row's toolbar and use Left Arrow and Right Arrow to reach Open on GitHub and Stop when supported. Archive or Mark as Done is unavailable until the cloud run and its conversation have finished. It changes local session state, not the task on GitHub. Stop requests remote cancellation; the status changes when GitHub reports it. Follow-up requests show conversation progress and restart bounded history discovery. Use Refresh in the view header to reload definitions and history. Active cloud runs refresh every 15 seconds without moving the history rows; idle definitions do not poll.</source>
     </trans-unit>
+    <trans-unit id="automationsCustomView.help.cron">
+      <source xml:lang="en">For Agent Host automations, choose CRON to enter minute, hour, day of month, month, and day of week. CRON accepts wildcards, lists, ranges, and steps on wildcards or ranges only. For example, 20-59/15 selects minutes 20, 35, and 50 of each hour; shorthand such as 20/15 is not supported. A line below the schedule explains the current valid expression and updates while editing. Day of month and day of week are alternatives when both are restricted. Tab moves between the five parts. Focusing a part shows and describes its allowed values. Escape dismisses that guidance without leaving the field. Up and Down step simple numeric values. Select All then Copy copies the entire expression; pasting a full expression fills the parts. Blank parts mean every value. Entirely empty input has no error, but cannot be saved. CRON is not available for Cloud automations.</source>
+    </trans-unit>
     <trans-unit id="automationsCustomView.help.dialog">
       <source xml:lang="en">In the automation dialog, Target controls are above the prompt. Agent and model pickers are inside the prompt input, and execution mode and permission controls are below it. Use Tab and Shift+Tab to move between fields and pickers. When creating an automation, you only need to enter a prompt. An empty name is derived from the prompt, and the target defaults to No workspace unless one is already supplied. An available Agent Host that supports the target is still required.</source>
     </trans-unit>
@@ -818,7 +827,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">For cloud automation cards, More Actions also offers Open on GitHub to open the automation's details in your browser.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.history">
-      <source xml:lang="en">Run history is grouped by date. While a run is waiting for its session, a lightweight row shows the automation name with a Working... description. Once the session is available, use Up Arrow and Down Arrow to navigate the Sessions list, Enter to open, and Tab to reach Stop, the configured Archive or Mark as Done action, or Delete when available. Open a row's context menu, for example with Shift+F10, to rename it, change its active or read state, or delete it. Delete permanently deletes the session and removes it from run history after confirmation. When a removed automation retains history, the context menu also offers Delete Run History. If that deletion was interrupted, it offers Retry Delete Run History.</source>
+      <source xml:lang="en">Run history is grouped by date. While a run is waiting for its session, a lightweight row shows the automation name with a Working... description. Once the session is available, use Up Arrow and Down Arrow to navigate the Sessions list, Enter to open, and Tab to reach Stop, the configured Archive or Mark as Done action, or Delete when available. Open a row's context menu, for example with Shift+F10, to rename it, change its active or read state, or delete it. Delete permanently deletes the session and removes it from run history after confirmation. When a removed automation retains history, the context menu also offers Delete Run History. The row says Deleting... while deletion is in progress. If deletion is interrupted, it offers Retry Delete Run History.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.overview">
       <source xml:lang="en">You are in the Automations view. It contains available automation cards followed by run history. Loading, unavailable, and error messages indicate that the catalogue may be incomplete.</source>
@@ -871,7 +880,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">The property '{0}' is not supported.</source>
     </trans-unit>
     <trans-unit id="automationBlueprint.unsupportedSchedule">
-      <source xml:lang="en">The cron expression '{0}' cannot be represented by the current Automation editor.</source>
+      <source xml:lang="en">The CRON expression '{0}' cannot be represented by the current Automation editor.</source>
     </trans-unit>
     <trans-unit id="automationBlueprint.unsupportedTimeZone">
       <source xml:lang="en">The time zone '{0}' is not supported. Use 'local' so the schedule follows the importing user's time zone.</source>
@@ -986,6 +995,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="automationHistoryDeletedStatus">
       <source xml:lang="en">Deleted run history for {0}</source>
+    </trans-unit>
+    <trans-unit id="automationHistoryDeleting">
+      <source xml:lang="en">Deleting run history...</source>
     </trans-unit>
     <trans-unit id="automationHistoryDeletionInterrupted">
       <source xml:lang="en">Run history deletion was interrupted.</source>
@@ -1200,6 +1212,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="deleteRetainedAutomationHistoryAction">
       <source xml:lang="en">Delete Run History...</source>
     </trans-unit>
+    <trans-unit id="deletingHistory">
+      <source xml:lang="en">Deleting...</source>
+    </trans-unit>
     <trans-unit id="disableAutomationContextMenu">
       <source xml:lang="en">Disable</source>
     </trans-unit>
@@ -1307,6 +1322,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="running">
       <source xml:lang="en">Running</source>
+    </trans-unit>
+    <trans-unit id="scheduleCron">
+      <source xml:lang="en">CRON: {0}</source>
     </trans-unit>
     <trans-unit id="scheduleCustom">
       <source xml:lang="en">Custom schedule</source>
@@ -1529,6 +1547,33 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     </trans-unit>
     <trans-unit id="externalSessionsSection">
       <source xml:lang="en">External</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications">
+      <source xml:lang="en">Inbox</source>
+    </trans-unit>
+    <trans-unit id="inboxNotificationsAriaLabel">
+      <source xml:lang="en">{0}, open inbox notifications</source>
+    </trans-unit>
+    <trans-unit id="inboxNotificationsAriaLabelManyNotifications">
+      <source xml:lang="en">{0}, {1} notifications, open inbox notifications</source>
+    </trans-unit>
+    <trans-unit id="inboxNotificationsAriaLabelManyNotificationsWithKeybinding">
+      <source xml:lang="en">{0}, {1} notifications, open inbox notifications, keyboard shortcut {2}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotificationsAriaLabelOneNotification">
+      <source xml:lang="en">{0}, {1} notification, open inbox notifications</source>
+    </trans-unit>
+    <trans-unit id="inboxNotificationsAriaLabelOneNotificationWithKeybinding">
+      <source xml:lang="en">{0}, {1} notification, open inbox notifications, keyboard shortcut {2}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotificationsAriaLabelWithKeybinding">
+      <source xml:lang="en">{0}, open inbox notifications, keyboard shortcut {1}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotificationsSectionHover">
+      <source xml:lang="en">Open Inbox</source>
+    </trans-unit>
+    <trans-unit id="inboxNotificationsSectionHoverWithKeybinding">
+      <source xml:lang="en">Open Inbox ({0})</source>
     </trans-unit>
     <trans-unit id="inlineRename.empty">
       <source xml:lang="en">Title cannot be empty</source>
@@ -1805,20 +1850,8 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionsMove.chatFailedUnexpectedly">
       <source xml:lang="en">Could not move '{0}'.</source>
     </trans-unit>
-    <trans-unit id="sessionsMove.failedHelp">
-      <source xml:lang="en">This notice says why a chat or session could not be moved in the sessions list.</source>
-    </trans-unit>
     <trans-unit id="sessionsMove.moved">
       <source xml:lang="en">Moved '{0}' into '{1}'</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.movedBack">
-      <source xml:lang="en">Moved '{0}' back</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.movedBackInto">
-      <source xml:lang="en">Moved '{0}' back into '{1}'</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.movedBackToOwnSession">
-      <source xml:lang="en">Moved '{0}' back to its own session</source>
     </trans-unit>
     <trans-unit id="sessionsMove.movedSession">
       <source xml:lang="en">Moved session '{0}' into '{1}'</source>
@@ -1826,53 +1859,17 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
     <trans-unit id="sessionsMove.movedToNewSession">
       <source xml:lang="en">Moved '{0}' to a new session</source>
     </trans-unit>
-    <trans-unit id="sessionsMove.moving">
-      <source xml:lang="en">Moving '{0}' into '{1}'...</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.movingBack">
-      <source xml:lang="en">Moving '{0}' back...</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.movingBackInto">
-      <source xml:lang="en">Moving '{0}' back into '{1}'...</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.movingBackToOwnSession">
-      <source xml:lang="en">Moving '{0}' back to its own session...</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.movingSession">
-      <source xml:lang="en">Moving session '{0}' into '{1}'...</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.movingToNewSession">
-      <source xml:lang="en">Moving '{0}' to a new session...</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.progressHelp">
-      <source xml:lang="en">This notice shows a chat or session being moved in the sessions list.</source>
-    </trans-unit>
     <trans-unit id="sessionsMove.reorderedAfter">
       <source xml:lang="en">Moved '{0}' after '{1}'</source>
     </trans-unit>
     <trans-unit id="sessionsMove.reorderedFirst">
       <source xml:lang="en">Moved '{0}' to the start</source>
     </trans-unit>
-    <trans-unit id="sessionsMove.reordering">
-      <source xml:lang="en">Moving '{0}'...</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.resultHelp">
-      <source xml:lang="en">This notice reports a chat or session moved in the sessions list.</source>
-    </trans-unit>
     <trans-unit id="sessionsMove.sessionFailed">
       <source xml:lang="en">Could not move session '{0}'. {1}</source>
     </trans-unit>
     <trans-unit id="sessionsMove.sessionFailedUnexpectedly">
       <source xml:lang="en">Could not move session '{0}'.</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.undoFailed">
-      <source xml:lang="en">Could not undo moving '{0}'. {1}</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.undoFailedUnexpectedly">
-      <source xml:lang="en">Could not undo moving '{0}'.</source>
-    </trans-unit>
-    <trans-unit id="sessionsMove.undoHelp">
-      <source xml:lang="en">This notice appears after moving a chat or session in the sessions list. Undo moves it back where it was.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsListFilters" source-language="en" datatype="plaintext"><body>
@@ -1912,11 +1909,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
 {1}
 Use Tab and Shift+Tab to reach Undo and Dismiss. Press Enter or Space to activate them, or Escape to dismiss the notice.
 The notice disappears after 10 seconds. The countdown pauses while the notice is hovered, focused, or this help is open. The bar along the bottom shows the remaining time.</source>
-    </trans-unit>
-    <trans-unit id="sessionsListProgressNoticeHelp">
-      <source xml:lang="en">{0}
-{1}
-The result replaces this notice when the operation finishes. Use Tab and Shift+Tab to reach Dismiss. Press Enter or Space to activate it, or Escape to dismiss the notice.</source>
     </trans-unit>
     <trans-unit id="sessionsListResultNoticeHelp">
       <source xml:lang="en">{0}

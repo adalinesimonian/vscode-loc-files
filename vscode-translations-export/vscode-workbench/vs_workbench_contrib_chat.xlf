@@ -163,6 +163,9 @@
     <trans-unit id="chat.agentPickerInAttachContext">
       <source xml:lang="en">When {0} is enabled, the default Agent picker is in Add Context. Open Add Context and choose Agent to change agents. Non-default selections remain visible in the toolbar; selecting the default Agent moves the picker back into Add Context and returns focus to the input. The Open Agent Picker shortcut{1} still opens the picker.</source>
     </trans-unit>
+    <trans-unit id="chat.agentPickerSources">
+      <source xml:lang="en">When an Agent Host picker lists agents with the same name, each entry includes its source, using the extension name when available. If sources also match, a file name or location helps distinguish the agents.</source>
+    </trans-unit>
     <trans-unit id="chat.agentsWindowInvitation">
       <source xml:lang="en">A running Agent Host chat may show an invitation to continue or view your sessions in the Agents Window. Only one invitation is shown across editor windows at a time. Use Tab or Shift+Tab to reach its action, Don't Show Again, or Dismiss notification. The action opens the Agents Window and highlights this session's row in the sessions list when onboarding is enabled. By default, it also opens this chat. Choose Next to highlight the New Session button, which you can activate to start another task. Disable chat.agentsWindowBanner.revealCurrentSession to open the New Session view instead and only highlight the invited session's row. Use Tab or Shift+Tab to move between the tour actions and any interactive highlighted control. Choose Understood to finish the tour, or press Escape to dismiss it. Sending another message or completing a task does not dismiss the invitation. It is temporarily hidden while the session needs attention. Dismiss notification snoozes invitations until you have created five more Agent Host sessions in editor windows and at least 24 hours have passed since the invitation appeared. Don't Show Again turns off all future Agents Window invitations.</source>
     </trans-unit>
@@ -177,6 +180,9 @@
     </trans-unit>
     <trans-unit id="chat.attachments.filesPicker">
       <source xml:lang="en">To attach files without searching a workspace, open Add Context{0} and choose Files. Select one or more files in the file dialog and choose Attach. In the simplified file dialog, use the checkboxes or Space to select items and Enter to attach them. Images can also be attached when the chat and selected model support them. Closing the dialog returns focus to the chat input.</source>
+    </trans-unit>
+    <trans-unit id="chat.attachments.inline">
+      <source xml:lang="en">Attached context, such as files, folders, images, symbols, tools, and pull requests, appears as pills inline with your prompt, where it was added. Each pill counts as one character: use the arrow keys to move across it, hold Shift to select it, and press Backspace or Delete to remove it along with its attachment. Undo restores it. The attachment's name is announced as the cursor moves across it. When the cursor is right after a pill for a file, folder, or other resource, the pill is highlighted, and Enter opens it{0} instead of sending the request, while opening the context menu{1} shows the pill's context menu. Dropped files are inserted where they are dropped, and other attachments at the cursor. References you type with # or @, and tool references, also become pills. To inspect a pill, place the cursor next to it and invoke Show or Focus Hover{2}. Sent requests show the same pills inline. The prompt sent to the agent mentions each pill where it appears by its attachment's name and location, and attaches each attachment once, however often it is mentioned. To show attachments above the input instead, turn off {3}.</source>
     </trans-unit>
     <trans-unit id="chat.attachments.inlineReferenceHover">
       <source xml:lang="en">To inspect an inline attachment reference, place the cursor on it and invoke Show or Focus Hover{0}. Image references include a preview, while file and folder references include their path.</source>
@@ -2366,6 +2372,30 @@ User: {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentCustomizationItemProvider" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="agentSource.builtin">
+      <source xml:lang="en">Built-In</source>
+    </trans-unit>
+    <trans-unit id="agentSource.extension">
+      <source xml:lang="en">Extension: {0}</source>
+    </trans-unit>
+    <trans-unit id="agentSource.folder">
+      <source xml:lang="en">Folder: {0}</source>
+    </trans-unit>
+    <trans-unit id="agentSource.host">
+      <source xml:lang="en">Agent Host</source>
+    </trans-unit>
+    <trans-unit id="agentSource.location">
+      <source xml:lang="en">{0} ({1})</source>
+    </trans-unit>
+    <trans-unit id="agentSource.plugin">
+      <source xml:lang="en">Plugin: {0}</source>
+    </trans-unit>
+    <trans-unit id="agentSource.vscode">
+      <source xml:lang="en">VS Code</source>
+    </trans-unit>
+    <trans-unit id="agentSource.workspace">
+      <source xml:lang="en">Workspace</source>
+    </trans-unit>
     <trans-unit id="alwaysAdded">
       <source xml:lang="en">always added</source>
     </trans-unit>
@@ -2374,6 +2404,12 @@ User: {2}</source>
     </trans-unit>
     <trans-unit id="contextInstructions">
       <source xml:lang="en">This instruction is automatically included when files matching '{0}' are in context.</source>
+    </trans-unit>
+    <trans-unit id="discoveredHookSource">
+      <source xml:lang="en">{0} — Source file unavailable</source>
+    </trans-unit>
+    <trans-unit id="discoveredHookSourceUnavailable">
+      <source xml:lang="en">Source file unavailable</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostAuth" source-language="en" datatype="plaintext"><body>
@@ -6609,6 +6645,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="migrationAccessibleWorkspace">
       <source xml:lang="en">Workspace</source>
     </trans-unit>
+    <trans-unit id="migrationAgentFolderType">
+      <source xml:lang="en">agents</source>
+    </trans-unit>
     <trans-unit id="migrationChecklistAgentsCount">
       <source xml:lang="en">{0} agents</source>
     </trans-unit>
@@ -6699,6 +6738,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="migrationInProgressAction">
       <source xml:lang="en">Migrating...</source>
     </trans-unit>
+    <trans-unit id="migrationInstructionsFolderType">
+      <source xml:lang="en">instructions</source>
+    </trans-unit>
     <trans-unit id="migrationLearnMore">
       <source xml:lang="en">Learn More</source>
     </trans-unit>
@@ -6707,24 +6749,6 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="migrationNoEditableDestinations">
       <source xml:lang="en">There are no file migration destinations to configure. Workspace MCP servers migrate to the root .mcp.json; user MCP servers migrate to mcp-config.json in Copilot home.</source>
-    </trans-unit>
-    <trans-unit id="migrationNoGlobalAgentFolder">
-      <source xml:lang="en">No global agents folder is configured for the active harness.</source>
-    </trans-unit>
-    <trans-unit id="migrationNoGlobalInstructionsFolder">
-      <source xml:lang="en">No global instructions folder is configured for the active harness.</source>
-    </trans-unit>
-    <trans-unit id="migrationNoGlobalSkillFolder">
-      <source xml:lang="en">No global skills folder is configured for the active harness.</source>
-    </trans-unit>
-    <trans-unit id="migrationNoWorkspaceAgentFolder">
-      <source xml:lang="en">No workspace agents folder is configured for the active harness.</source>
-    </trans-unit>
-    <trans-unit id="migrationNoWorkspaceInstructionsFolder">
-      <source xml:lang="en">No workspace instructions folder is configured for the active harness.</source>
-    </trans-unit>
-    <trans-unit id="migrationNoWorkspaceSkillFolder">
-      <source xml:lang="en">No workspace skills folder is configured for the active harness.</source>
     </trans-unit>
     <trans-unit id="migrationNotSelected">
       <source xml:lang="en">not selected</source>
@@ -6747,11 +6771,38 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="migrationSelected">
       <source xml:lang="en">selected</source>
     </trans-unit>
+    <trans-unit id="migrationSkillFolderType">
+      <source xml:lang="en">skills</source>
+    </trans-unit>
     <trans-unit id="migrationUserScope">
       <source xml:lang="en">User</source>
     </trans-unit>
+    <trans-unit id="migrationUserTargetLoading">
+      <source xml:lang="en">{0} is still loading writable {1} folders for your user profile. Wait for the session to finish starting, then try again.</source>
+    </trans-unit>
+    <trans-unit id="migrationUserTargetNeedsSession">
+      <source xml:lang="en">{0} needs an active session before it can report a writable {1} folder for your user profile. Start a new session, send a message, then try the migration again.</source>
+    </trans-unit>
+    <trans-unit id="migrationUserTargetUnavailable">
+      <source xml:lang="en">Could not load writable {0} folders from {1} for your user profile. Check the active agent connection, then try again.</source>
+    </trans-unit>
+    <trans-unit id="migrationUserTargetUnsupported">
+      <source xml:lang="en">{0} does not provide a writable {1} folder for your user profile. Select a different agent target or configure a supported destination before migrating.</source>
+    </trans-unit>
     <trans-unit id="migrationWorkspaceScope">
       <source xml:lang="en">Workspace</source>
+    </trans-unit>
+    <trans-unit id="migrationWorkspaceTargetLoading">
+      <source xml:lang="en">{0} is still loading writable {1} folders for this workspace. Wait for the session to finish starting, then try again.</source>
+    </trans-unit>
+    <trans-unit id="migrationWorkspaceTargetNeedsSession">
+      <source xml:lang="en">{0} needs an active session before it can report a writable {1} folder for this workspace. Start a new session, send a message, then try the migration again.</source>
+    </trans-unit>
+    <trans-unit id="migrationWorkspaceTargetUnavailable">
+      <source xml:lang="en">Could not load writable {0} folders from {1} for this workspace. Check the active agent connection, then try again.</source>
+    </trans-unit>
+    <trans-unit id="migrationWorkspaceTargetUnsupported">
+      <source xml:lang="en">{0} does not provide a writable {1} folder for this workspace. Select a different agent target or configure a supported destination before migrating.</source>
     </trans-unit>
     <trans-unit id="models">
       <source xml:lang="en">Models</source>
@@ -6840,6 +6891,9 @@ Destination files created or changed by the agent are not removed.</source>
     <trans-unit id="restoreSources">
       <source xml:lang="en">Restore Sources</source>
     </trans-unit>
+    <trans-unit id="retryMigrationDestinations">
+      <source xml:lang="en">Retry</source>
+    </trans-unit>
     <trans-unit id="saveBuiltinCopyAndChooseLocation">
       <source xml:lang="en">Save override</source>
     </trans-unit>
@@ -6884,6 +6938,9 @@ Destination files created or changed by the agent are not removed.</source>
     </trans-unit>
     <trans-unit id="startAgentMigrationFailed">
       <source xml:lang="en">Could not start the agent-guided customization migration.</source>
+    </trans-unit>
+    <trans-unit id="startNewHarnessSession">
+      <source xml:lang="en">Start new session</source>
     </trans-unit>
     <trans-unit id="tools">
       <source xml:lang="en">Tools</source>
@@ -7279,14 +7336,8 @@ Destination files created or changed by the agent are not removed.</source>
     <trans-unit id="copilotCanvases.enabledStatus">
       <source xml:lang="en">Enabled</source>
     </trans-unit>
-    <trans-unit id="copilotCanvases.extensionDisableFailed">
-      <source xml:lang="en">Could not disable canvas extension '{0}'. {1}</source>
-    </trans-unit>
     <trans-unit id="copilotCanvases.extensionDisabledAnnouncement">
       <source xml:lang="en">Disabled canvas extension '{0}'.</source>
-    </trans-unit>
-    <trans-unit id="copilotCanvases.extensionEnableFailed">
-      <source xml:lang="en">Could not enable canvas extension '{0}'. {1}</source>
     </trans-unit>
     <trans-unit id="copilotCanvases.extensionEnabledAnnouncement">
       <source xml:lang="en">Enabled canvas extension '{0}'.</source>
@@ -8466,6 +8517,9 @@ Disabled servers may become enabled.</source>
     <trans-unit id="pluginDetailMcpServers">
       <source xml:lang="en">MCP Servers</source>
     </trans-unit>
+    <trans-unit id="pluginDetailRepository">
+      <source xml:lang="en">Repository</source>
+    </trans-unit>
     <trans-unit id="pluginDetailSkills">
       <source xml:lang="en">Skills</source>
     </trans-unit>
@@ -9057,6 +9111,9 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="mcpDisabledGlobally">
       <source xml:lang="en">Disabled (Globally)</source>
+    </trans-unit>
+    <trans-unit id="mcpDiscoveryFailed">
+      <source xml:lang="en">MCP server discovery needs attention: {0}</source>
     </trans-unit>
     <trans-unit id="mcpGroupAriaLabel">
       <source xml:lang="en">{0}, {1} items</source>
@@ -9932,9 +9989,6 @@ Changes may not take full effect until VS Code is restarted.</source>
     <trans-unit id="chat.agentHost.agentDebugLog.maxEventsInMemory">
       <source xml:lang="en">Maximum number of debug events kept in memory per agent host session for the agent debug panel. Older events beyond this limit are dropped from the in-memory buffer, which also lowers the totals (such as token usage) shown in the panel overview.</source>
     </trans-unit>
-    <trans-unit id="chat.agentHost.allowSignedOutWhenUsable">
-      <source xml:lang="en">When enabled, Agent Host sessions remain available while signed out. The Agents window opens without forcing GitHub sign-in, and editor chat lets you select the Copilot harness. Agents usable without GitHub (for example Codex with ChatGPT authentication or Claude in native mode with your own Anthropic credentials) work while signed out; agents that require GitHub prompt you to add a model or sign in. When disabled (the default), GitHub sign-in is required before the Agents window opens.</source>
-    </trans-unit>
     <trans-unit id="chat.agentHost.copilot.executionSubagent.enabled">
       <source xml:lang="en">When enabled, local Copilot Agent Host sessions opt into the Copilot runtime's execution subagent. The runtime's experiment assignments may override this default. When the runtime implementation is available, the extension-native execution tool is excluded from that session. This is independent of `#github.copilot.chat.executionSubagent.enabled#`, which controls the extension-native implementation. Changing this setting restarts the Copilot runtime after active turns finish.</source>
     </trans-unit>
@@ -10487,6 +10541,9 @@ Note: this setting currently only applies to Agent Host sessions (such as Copilo
     </trans-unit>
     <trans-unit id="chat.includeReferencedInstructions.title">
       <source xml:lang="en">Include Referenced Instructions</source>
+    </trans-unit>
+    <trans-unit id="chat.inlineAttachments.enabled">
+      <source xml:lang="en">Controls whether context attached to the chat input, such as files, folders, images, symbols, tools, and pull requests, is shown as pills inline with the prompt text at the position where it was added, instead of above the input. Each inline attachment behaves like a single character: move the cursor across it, select it, or delete it like text. Sent requests show the same pills inline. The prompt sent to the model mentions each pill by its attachment's name and location, and attaches each attachment once, however often it is mentioned.</source>
     </trans-unit>
     <trans-unit id="chat.inlineChat.agentHost.enabled">
       <source xml:lang="en">Controls whether editor inline chat is backed by the Agent Host instead of the extension host. Applied on startup.</source>
@@ -11074,8 +11131,8 @@ Examples:
     <trans-unit id="chat.artifactPill.copy">
       <source xml:lang="en">Copy Path</source>
     </trans-unit>
-    <trans-unit id="chat.artifactPill.downloadImage">
-      <source xml:lang="en">Download Image</source>
+    <trans-unit id="chat.artifactPill.download">
+      <source xml:lang="en">Download...</source>
     </trans-unit>
     <trans-unit id="chat.artifactPill.files">
       <source xml:lang="en">Files</source>
@@ -20234,8 +20291,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatPetJumpGame" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="chatPet.jump.controls">
-      <source xml:lang="en">Hold Space to charge, release to jump. Left / Right to hop or aim. Esc to exit.</source>
+    <trans-unit id="chatPet.jump.controlsWithKeybindings">
+      <source xml:lang="en">Hold {0} to charge, release to jump. {1} / {2} to hop or aim. {3} to exit.</source>
+      <note>{0}, {1}, {2}, and {3} are keybinding labels for Space, Left Arrow, Right Arrow, and Escape.</note>
     </trans-unit>
     <trans-unit id="chatPet.jump.focused">
       <source xml:lang="en">Whether Blobby's jump game is focused</source>
@@ -20841,6 +20899,32 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <source xml:lang="en">Chat</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/input/editor/chatInlineAttachments" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.inlineAttachment.added">
+      <source xml:lang="en">Added {0} to the prompt</source>
+    </trans-unit>
+    <trans-unit id="chat.inlineAttachment.addedMultiple">
+      <source xml:lang="en">Added {0} attachments to the prompt</source>
+    </trans-unit>
+    <trans-unit id="chat.inlineAttachment.cursor">
+      <source xml:lang="en">{0}, attachment</source>
+    </trans-unit>
+    <trans-unit id="chat.inlineAttachment.open">
+      <source xml:lang="en">{0}, attachment, press Enter to open</source>
+    </trans-unit>
+    <trans-unit id="chat.inlineAttachment.removed">
+      <source xml:lang="en">Removed {0}</source>
+    </trans-unit>
+    <trans-unit id="chat.inlineAttachment.selected">
+      <source xml:lang="en">{0}, attachment, selected</source>
+    </trans-unit>
+    <trans-unit id="chat.inlineAttachment.unavailable">
+      <source xml:lang="en">{0}, attachment, unavailable</source>
+    </trans-unit>
+    <trans-unit id="chat.openInlineAttachment">
+      <source xml:lang="en">Open Inline Attachment</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/editor/chatInputCompletions" source-language="en" datatype="plaintext"><body>
     <trans-unit id="activeFile">
       <source xml:lang="en">Active file</source>
@@ -20959,6 +21043,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="managedByOrganization">
       <source xml:lang="en">Managed by your organization</source>
+    </trans-unit>
+    <trans-unit id="modeSourceDescription">
+      <source xml:lang="en">{0}, {1}</source>
     </trans-unit>
     <trans-unit id="viewModeConfiguration">
       <source xml:lang="en">View {0} agent</source>
@@ -22201,6 +22288,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="chatInputBlocked">
       <source xml:lang="en">True when sending to the current chat is temporarily blocked.</source>
+    </trans-unit>
+    <trans-unit id="chatInputInlineAttachmentActive">
+      <source xml:lang="en">True when the cursor in the chat input is right after an attachment shown inline with the prompt, which Enter opens.</source>
     </trans-unit>
     <trans-unit id="chatIsAgentHostSession">
       <source xml:lang="en">True when the chat widget is locked to an Agent Host session.</source>
@@ -25187,8 +25277,8 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/common/voiceClient/voiceLiveInputRouter" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="voice.live.approvalReply">
-      <source xml:lang="en">Please approve or reject by voice, or use the controls in chat.</source>
+    <trans-unit id="voice.live.approvalReplyWithPhrases">
+      <source xml:lang="en">Please say "{0}" to approve or "{1}" to reject, or use the controls in chat.</source>
     </trans-unit>
     <trans-unit id="voice.live.chooseAnswer">
       <source xml:lang="en">Please say an exact choice or its number. {0}</source>

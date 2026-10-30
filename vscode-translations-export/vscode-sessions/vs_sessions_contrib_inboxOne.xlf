@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/inboxOne/browser/inboxCanvasHost" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inbox.canvas.desktopOnly">
+      <source xml:lang="en">Interactive extension canvases require the desktop application.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/inboxOne/browser/inboxCanvases" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inbox.canvas.description">
+      <source xml:lang="en">Choose a canvas supplied by this conversation's extensions. Its content is extension-provided, not independent verification.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.desktop">
+      <source xml:lang="en">Interactive extension canvases are available in the desktop application.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.disconnected">
+      <source xml:lang="en">{0}: provider unavailable.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.heading">
+      <source xml:lang="en">Extension canvases</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.hide">
+      <source xml:lang="en">Hide canvas</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.openFailed">
+      <source xml:lang="en">Could not open this extension canvas. Check that its extension and session are available.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.read">
+      <source xml:lang="en">Read canvas</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.requiresInput">
+      <source xml:lang="en">{0} requires input. Ask the agent to open it using the reply below.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/inboxOne/browser/inboxEvidenceWidget" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inbox.evidence.canceled">
+      <source xml:lang="en">This turn was canceled. Recorded evidence may be incomplete.</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.imageInvalid">
+      <source xml:lang="en">This image could not be displayed. Open the source to inspect it.</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.imageLoading">
+      <source xml:lang="en">Loading image…</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.imageUnavailable">
+      <source xml:lang="en">Preview unavailable (missing, unsupported, or larger than 10 MB). Open the source to inspect it.</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.images">
+      <source xml:lang="en">Images</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.imagesLoading">
+      <source xml:lang="en">Loading images…</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.imagesNote">
+      <source xml:lang="en">Recorded images. Open an image to inspect or compare sources.</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.incomplete">
+      <source xml:lang="en">Incomplete turn</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.inspectImage">
+      <source xml:lang="en">Inspect image</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.moreImages">
+      <source xml:lang="en">Showing 2 of {0} images. Open an image to browse the full collection.</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.openFailed">
+      <source xml:lang="en">Could not open this evidence source. It may no longer be available.</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.reference">
+      <source xml:lang="en">Reference: {0}</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.sources">
+      <source xml:lang="en">Artifacts and references</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/inboxOne/browser/inboxNotificationsAccessibility" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inboxNotifications.accessibleView.empty">
+      <source xml:lang="en">No active notifications.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.accessibleView.header">
+      <source xml:lang="en">Inbox notifications</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.accessibleView.itemDescription">
+      <source xml:lang="en">   {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.accessibleView.itemMeta">
+      <source xml:lang="en">   Priority: {0}. Type: {1}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.accessibleView.itemPullRequestStates">
+      <source xml:lang="en">   Pull request states: {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.accessibleView.itemRepository">
+      <source xml:lang="en">   Repository: {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.accessibleView.itemTitle">
+      <source xml:lang="en">{0}. {1}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.accessibleView.reviewInSession">
+      <source xml:lang="en">Open the session to review the full request and respond.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.accessibleView">
+      <source xml:lang="en">Use Open Accessible View to read the notification list and the selected notification's evidence as plain text. When focus is inside an extension canvas, Accessible View reads that canvas instead.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.actions">
+      <source xml:lang="en">The notification date appears beside its session title. Open Session and Done are at the top right of the card. When input is needed, the card shows an inline question carousel or confirmation controls; answer or confirm directly in the card. Select the card to see a summary of the decision and context in the detail pane, or open the session for full context. CI and review notifications may include actions such as Fix CI Failures, Address Reviews, and Merge Pull Request when supported. Eligible session cleanup actions include a More Actions menu for configuring automatic cleanup. Use Done to clear a notification.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.canvases">
+      <source xml:lang="en">Extension canvases lists canvases supplied by the selected conversation's extensions. Choose one to interact with it in the detail pane. Hide canvas releases its Inbox presentation without closing the provider's canvas. Read canvas opens a plain-text accessible snapshot. Within a canvas, Tab moves through page controls; use &lt;keybinding:workbench.action.focusNextPart&gt; to leave the page. A canvas requiring input can be opened by asking the agent in the existing reply input.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.chat">
+      <source xml:lang="en">For session notifications, the detail pane contains a chat input below its evidence. The Show chat response section is collapsed by default; focus its heading and press Enter or Space to show the last request and response, including updates while the response runs. It opens scrolled to the end without moving focus. It does not show the full conversation history, questions, or confirmation controls. Tab into the chat input to send a follow-up without leaving Inbox. A successfully submitted request marks the notification as done without archiving the session. The input remains open if its notification disappears. Use Open Session on the notification card to read the full conversation. Within the embedded chat input, standard Chat keyboard shortcuts and accessibility help apply; Escape retains its normal Chat behavior.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.done">
+      <source xml:lang="en">Mark Notification as Done clears only the notification and marks its session as read when available. It does not archive the session. Completed notifications do not offer inline input controls on their cards; use the conversation in the detail pane or open the session to respond to a question that is still pending.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.evidence">
+      <source xml:lang="en">The detail pane shows evidence when it is available: recorded images, artifacts, and references. Identical image content is consolidated, and image artifacts are not repeated in the artifact list. Inspect image opens the image carousel for this evidence collection. AI-written previews and Agent interpretation appear at the top of this pane, not on notification cards. Interpretation is shown directly, without a disclosure control, and may summarize relevant execution results with links to their sources. Raw terminal output remains in the terminal or chat response; exit codes do not establish correctness or coverage. Empty evidence and interpretation sections are not shown.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.feedback">
+      <source xml:lang="en">Use the Inbox Was Useful button in the toolbar to send quick positive feedback.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.filter">
+      <source xml:lang="en">Use the Filter button to open a checklist of categories — Now, Next, Later, and Completed — and toggle which are shown. Completed is hidden by default. Sorting by Priority or Recent still applies to whichever categories are visible.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.liveUpdates">
+      <source xml:lang="en">New notifications appear automatically. While your focus is inside inline input controls, list updates pause and a banner lets you show new notifications when you are ready.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.loading">
+      <source xml:lang="en">When Inbox data is refreshing, a spinner appears in the Inbox header so you know the list is updating.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.navigation">
+      <source xml:lang="en">Use Up Arrow and Down Arrow to move focus between notification cards. Press Enter or Space on a card to move focus into its detail pane; additional evidence and the conversation appear there. Press Escape in the detail pane outside Chat to return focus to the selected notification card. Tab moves through section headers, actions, and inline controls throughout the notification list.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.newSession">
+      <source xml:lang="en">Activate New Session in the Inbox toolbar to compose a new session above the notification list. The notification list remains visible. Activating New Session again hides the input; activating it once more restores the same draft. Standard new-session workspace, agent, model, and send controls apply.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.overview">
+      <source xml:lang="en">You are in the Inbox canvas tab. It lists prioritized notifications across sessions. Switching sessions keeps the canvas available. Close the tab to hide it; use Show Inbox or Add Tab, Canvas, Inbox to reopen it.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.pullRequestStates">
+      <source xml:lang="en">Pull request notifications show state chips with pull request icons so you can quickly scan checks, comments, and merge readiness. Activate a pull request chip to open that pull request.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.repository">
+      <source xml:lang="en">Cards include repository badges when a notification is associated with a repository.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.sorting">
+      <source xml:lang="en">Use the Priority and Recent toggle buttons to switch sorting order. Priority is the default; the pressed button is the active sort.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.tiers">
+      <source xml:lang="en">In Priority sort, notifications are grouped into collapsible tiers: Now, Next, and Later. Activate a tier header to collapse or expand that group. Resolved notifications are grouped under Completed.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.help.toolApprovals">
+      <source xml:lang="en">Inline terminal approvals show the command and any disclaimer. Tool results and requests requiring richer confirmation controls must be reviewed using Open Session.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/inboxOne/browser/inboxNotificationsLabels" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inboxNotifications.kind.completed">
+      <source xml:lang="en">Completed</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.kind.confirmationRequested">
+      <source xml:lang="en">Confirmation</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.kind.external">
+      <source xml:lang="en">Event</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.kind.failingCi">
+      <source xml:lang="en">CI</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.kind.needsInput">
+      <source xml:lang="en">Needs Input</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.kind.passingCi">
+      <source xml:lang="en">Merge Ready</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.kind.pullRequestMerged">
+      <source xml:lang="en">Merged</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.kind.reviewComments">
+      <source xml:lang="en">Comments</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.priority.later">
+      <source xml:lang="en">Later</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.priority.next">
+      <source xml:lang="en">Next</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.priority.now">
+      <source xml:lang="en">Now</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/inboxOne/browser/inboxNotificationsService" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inboxNotifications.action.agentMergeAddressReviews">
+      <source xml:lang="en">Address Reviews</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.action.agentMergeFixCI">
+      <source xml:lang="en">Fix CI Failures</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.action.agentMergeMergePullRequest">
+      <source xml:lang="en">Merge Pull Request</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.action.archiveSession">
+      <source xml:lang="en">Archive Session</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.action.deleteSession">
+      <source xml:lang="en">Delete Session</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.action.markDone">
+      <source xml:lang="en">Mark Notification as Done</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.action.open">
+      <source xml:lang="en">Open Session</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.commandSource">
+      <source xml:lang="en">Terminal output: {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.commandSourceInChat">
+      <source xml:lang="en">Command in chat response: {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.completed.description">
+      <source xml:lang="en">Review this completed session or mark it done.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.failingCi.description.multiple">
+      <source xml:lang="en">Required checks are failing for {0} pull requests. Open {1} to investigate and fix the failures.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.failingCi.description.single">
+      <source xml:lang="en">Required checks are failing. Open {0} to investigate and fix the failures.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.failingCi.title.multiple">
+      <source xml:lang="en">CI Failing on {0} Pull Requests</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.failingCi.title.single">
+      <source xml:lang="en">CI Failing on {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.needsInput.description.confirmation">
+      <source xml:lang="en">Review the confirmation request below.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.needsInput.description.questionCarousel">
+      <source xml:lang="en">Answer the pending questions below.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.needsInput.description.reviewInSession">
+      <source xml:lang="en">Open the session to review this request and respond.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.needsInput.description.toolConfirmation">
+      <source xml:lang="en">Review and approve the pending tool request below.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.needsInput.descriptionFallback">
+      <source xml:lang="en">Input needed.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.passingCi.description.multiple">
+      <source xml:lang="en">All required checks are passing for {0} pull requests. Open {1} to review merge readiness.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.passingCi.description.single">
+      <source xml:lang="en">All required checks are passing. Open {0} to review merge readiness.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.passingCi.title.multiple">
+      <source xml:lang="en">CI Passing on {0} Pull Requests</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.passingCi.title.single">
+      <source xml:lang="en">CI Passing on {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequestLabel.default">
+      <source xml:lang="en">pull request</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequestMerged.description.multiple">
+      <source xml:lang="en">{0} pull requests have merged. Archive or delete {1} when you're done with it.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequestMerged.description.single">
+      <source xml:lang="en">This pull request has merged. Archive or delete {0} when you're done with it.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequestMerged.title.multiple">
+      <source xml:lang="en">{0} Pull Requests Merged</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequestMerged.title.single">
+      <source xml:lang="en">Pull Request Merged: {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequestStatus.checksFailed">
+      <source xml:lang="en">Checks failed</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequestStatus.closed">
+      <source xml:lang="en">Closed</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequestStatus.draft">
+      <source xml:lang="en">Draft</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequestStatus.merged">
+      <source xml:lang="en">Merged</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequestStatus.open">
+      <source xml:lang="en">Open</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequestStatus.unresolvedComments">
+      <source xml:lang="en">Unresolved comments</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.repository.multiple">
+      <source xml:lang="en">{0} +{1}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.reviewComments.description.multiple">
+      <source xml:lang="en">{0} pull requests have unresolved Copilot review comments. Open the session to address feedback.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.reviewComments.description.single">
+      <source xml:lang="en">There are unresolved Copilot review comments. Open the session to address feedback.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.reviewComments.title.multiple">
+      <source xml:lang="en">Copilot Comments on {0} Pull Requests</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.reviewComments.title.single">
+      <source xml:lang="en">Copilot Comments on {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.toolConfirmation.allow">
+      <source xml:lang="en">Allow Once</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.toolConfirmation.allowReview">
+      <source xml:lang="en">Allow and Review Once</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.toolConfirmation.message.default">
+      <source xml:lang="en">Review this tool request before continuing.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.toolConfirmation.message.postApproval">
+      <source xml:lang="en">Review the tool output and decide whether to continue.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.toolConfirmation.skip">
+      <source xml:lang="en">Skip</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.toolConfirmation.title.default">
+      <source xml:lang="en">Approve Tool Run</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.toolConfirmation.title.postApproval">
+      <source xml:lang="en">Review Tool Results</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/inboxOne/browser/inboxNotificationsView" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inbox.evidence.accessible">
+      <source xml:lang="en">Evidence for {0}
+
+{1}</source>
+    </trans-unit>
+    <trans-unit id="inbox.evidence.teaser">
+      <source xml:lang="en">{0} recorded artifacts · Select to inspect</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.action.always">
+      <source xml:lang="en">Always {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.action.markDoneTooltip">
+      <source xml:lang="en">Mark notification as done without archiving the session</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.action.moreActions">
+      <source xml:lang="en">More Actions for {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.action.submitFailed">
+      <source xml:lang="en">Unable to run "{0}". Open the session and try again.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.actionAriaLabel">
+      <source xml:lang="en">{0} for {1}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.actionError">
+      <source xml:lang="en">Unable to run inbox action.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.alwaysArchive.confirm">
+      <source xml:lang="en">Archive this session and enable automatic cleanup of merged sessions?</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.alwaysArchive.detail">
+      <source xml:lang="en">Merged Agent Host sessions are marked as done after 15 days of inactivity.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.alwaysDelete.confirm">
+      <source xml:lang="en">Permanently delete this session and enable automatic deletion of merged sessions?</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.alwaysDelete.detail">
+      <source xml:lang="en">Merged Agent Host sessions are marked as done after 15 days of inactivity, then permanently deleted after another 15 days. Deletion cannot be undone.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.alwaysDelete.enabled">
+      <source xml:lang="en">Merged Agent Host sessions will be marked as done after 15 days of inactivity and permanently deleted after another 15 days.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.alwaysMarkAsDone.enabled">
+      <source xml:lang="en">Merged Agent Host sessions will be marked as done after 15 days of inactivity.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.archive.button">
+      <source xml:lang="en">Archive Session</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.confirmation.accept">
+      <source xml:lang="en">Accept</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.confirmation.chatMissing">
+      <source xml:lang="en">Unable to find the session for this confirmation. Open the session and try again.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.confirmation.dismiss">
+      <source xml:lang="en">Dismiss</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.confirmation.missing">
+      <source xml:lang="en">This confirmation is no longer available. Open the session for the latest state.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.confirmation.sendFailed">
+      <source xml:lang="en">Unable to submit this confirmation. Open the session and try again.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.deferred.multiple">
+      <source xml:lang="en">{0} new notifications arrived while you were answering inline input.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.deferred.single">
+      <source xml:lang="en">1 new notification arrived while you were answering inline input.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.delete.button">
+      <source xml:lang="en">Delete</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.delete.confirm">
+      <source xml:lang="en">Are you sure you want to delete this session?</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.delete.detail">
+      <source xml:lang="en">This action cannot be undone.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.description.empty">
+      <source xml:lang="en">No active notifications.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.description.plural">
+      <source xml:lang="en">{0} notifications</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.description.single">
+      <source xml:lang="en">1 notification</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.ariaLabel.empty">
+      <source xml:lang="en">Notification details. Select a notification to see its details.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.ariaLabel.item">
+      <source xml:lang="en">Notification details for {0}.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.chat">
+      <source xml:lang="en">Reply to the selected session</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.chatLoading">
+      <source xml:lang="en">Loading conversation...</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.chatUnavailable">
+      <source xml:lang="en">The conversation is unavailable. Open the full session to reconnect or try again.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.claims">
+      <source xml:lang="en">Claims and cited sources</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.decisions">
+      <source xml:lang="en">Decisions</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.exchangeEmpty">
+      <source xml:lang="en">No messages yet.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.exchangeUnavailable">
+      <source xml:lang="en">The chat response is not available yet.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.interpretation">
+      <source xml:lang="en">Agent interpretation</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.latestResponse">
+      <source xml:lang="en">Latest response</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.markDoneFailed">
+      <source xml:lang="en">Your request was sent, but the notification could not be marked as done.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.openSession">
+      <source xml:lang="en">Open full session</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.placeholder">
+      <source xml:lang="en">Select a notification to see its details.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.detail.showChatResponse">
+      <source xml:lang="en">Show chat response</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.empty">
+      <source xml:lang="en">You're all caught up.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.empty.filtered">
+      <source xml:lang="en">No notifications match the current filter.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.feedback.thanks">
+      <source xml:lang="en">Thanks for your feedback.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.feedback.useful">
+      <source xml:lang="en">Inbox Was Useful</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.feedback.usefulAria">
+      <source xml:lang="en">Inbox Was Useful, send positive feedback</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.filter.buttonAria">
+      <source xml:lang="en">Filter notifications by tier and completed</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.filter.buttonAriaActive">
+      <source xml:lang="en">Filter notifications by tier and completed (filter active)</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.filter.completed">
+      <source xml:lang="en">Completed</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.filter.later">
+      <source xml:lang="en">Later</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.filter.next">
+      <source xml:lang="en">Next</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.filter.now">
+      <source xml:lang="en">Now</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.itemAriaLabel.inlineInput">
+      <source xml:lang="en">Contains inline input controls.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.itemAriaLabel.priority">
+      <source xml:lang="en">Priority {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.itemAriaLabel.pullRequestState.multiple">
+      <source xml:lang="en">Pull requests: {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.itemAriaLabel.pullRequestState.single">
+      <source xml:lang="en">Pull request {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.itemAriaLabel.repository">
+      <source xml:lang="en">Repository {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.listAriaLabel">
+      <source xml:lang="en">Prioritized notifications</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.loading.ariaLabel">
+      <source xml:lang="en">Inbox is updating</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.newSession">
+      <source xml:lang="en">New session</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.newSession.button">
+      <source xml:lang="en">New Session</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequest.noWork">
+      <source xml:lang="en">No actionable CI failures or review feedback were ready to send.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.pullRequestStateLink.ariaLabel">
+      <source xml:lang="en">Open pull request {0}</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.questionCarousel.chatMissing">
+      <source xml:lang="en">Unable to find the session for these questions. Open the session and try again.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.questionCarousel.missing">
+      <source xml:lang="en">These questions are no longer available. Open the session for the latest state.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.questionCarousel.resolveIdMissing">
+      <source xml:lang="en">Unable to submit this question yet. Open the session to continue.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.reviews.unavailable">
+      <source xml:lang="en">No review feedback was ready to send. Open the session to review the comments and try again.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.reviews.unsupported">
+      <source xml:lang="en">Review feedback cannot be submitted from the Inbox for this session. Open the session to address the comments.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.section.ariaLabel">
+      <source xml:lang="en">{0}, {1} notifications</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.section.ariaLabel.single">
+      <source xml:lang="en">{0}, 1 notification</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.section.completed">
+      <source xml:lang="en">Completed</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.showNewNotifications">
+      <source xml:lang="en">Show New Notifications</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.showNewNotificationsAria">
+      <source xml:lang="en">Show New Notifications</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.sort.priority">
+      <source xml:lang="en">Priority</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.sort.priorityAria">
+      <source xml:lang="en">Sort notifications by priority</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.sort.recency">
+      <source xml:lang="en">Recent</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.sort.recencyAria">
+      <source xml:lang="en">Recent, sort notifications by recency</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.title">
+      <source xml:lang="en">Inbox</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.toolConfirmation.buttonMissing">
+      <source xml:lang="en">Unable to resolve the selected confirmation option.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.toolConfirmation.chatMissing">
+      <source xml:lang="en">Unable to find the session for this confirmation. Open the session and try again.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.toolConfirmation.invocationMissing">
+      <source xml:lang="en">This confirmation is no longer available. Open the session for the latest state.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.toolConfirmation.openSession">
+      <source xml:lang="en">Open the session to review the full request and respond.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.toolConfirmation.staleState">
+      <source xml:lang="en">This confirmation changed before your action was applied. Open the session and try again.</source>
+    </trans-unit>
+    <trans-unit id="inboxNotifications.viewSetting">
+      <source xml:lang="en">View Setting</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/inboxOne/browser/inboxOne.contribution" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="chat.agentSessions.inbox.enabled">
+      <source xml:lang="en">Enables the Sessions Inbox: a prioritized, actionable notifications canvas. When disabled, the Inbox entry in the Sessions list, the Inbox canvas, and its Show Inbox command are hidden.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.title">
+      <source xml:lang="en">Inbox</source>
+    </trans-unit>
+    <trans-unit id="sessions.showInboxNotifications">
+      <source xml:lang="en">Show Inbox</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/sessions/contrib/inboxOne/electron-browser/inboxCanvasHost" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="inbox.canvas.content">
+      <source xml:lang="en">Extension canvas: {0}. Use Accessibility Help for navigation.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.incomplete">
+      <source xml:lang="en">The accessible snapshot is incomplete.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.layoutError">
+      <source xml:lang="en">The canvas could not be displayed. Hide it and try again.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.linkError">
+      <source xml:lang="en">The external link could not be opened.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.loadError">
+      <source xml:lang="en">The extension canvas could not load.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.loading">
+      <source xml:lang="en">Loading extension canvas…</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.noContent">
+      <source xml:lang="en">No canvas page is attached.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.noSemantics">
+      <source xml:lang="en">This extension canvas exposes no named accessible content.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.readError">
+      <source xml:lang="en">Could not read the extension canvas's accessible content.</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.reading">
+      <source xml:lang="en">Reading extension canvas content…</source>
+    </trans-unit>
+    <trans-unit id="inbox.canvas.unavailable">
+      <source xml:lang="en">This extension canvas is no longer available.</source>
+    </trans-unit>
+</body></file>
+</xliff>

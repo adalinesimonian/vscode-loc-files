@@ -5,4 +5,24 @@
       <source xml:lang="en">Some system-wide keybindings could not be registered ({0}); the key combination may already be taken by the operating system or another application.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/sessions/contrib/openAgentsWindow/electron-browser/openAgentsWindowKeybindingTip" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="openAgentsWindowSystemWideKeybinding.conflict">
+      <source xml:lang="en">Unable to enable {0} because another system-wide keybinding already uses it.</source>
+    </trans-unit>
+    <trans-unit id="openAgentsWindowSystemWideKeybinding.enable">
+      <source xml:lang="en">Enable</source>
+    </trans-unit>
+    <trans-unit id="openAgentsWindowSystemWideKeybinding.error">
+      <source xml:lang="en">Unable to enable the system-wide Agents window keybinding: {0}</source>
+    </trans-unit>
+    <trans-unit id="openAgentsWindowSystemWideKeybinding.label">
+      <source xml:lang="en">Ctrl+Cmd+A</source>
+    </trans-unit>
+    <trans-unit id="openAgentsWindowSystemWideKeybinding.tip">
+      <source xml:lang="en">**Tip:** Open the Agents window while VS Code is running with `{0}`, even when another app is active. </source>
+    </trans-unit>
+    <trans-unit id="openAgentsWindowSystemWideKeybinding.unresolved">
+      <source xml:lang="en">Unable to enable the system-wide Agents window keybinding because the key combination could not be resolved.</source>
+    </trans-unit>
+</body></file>
 </xliff>
