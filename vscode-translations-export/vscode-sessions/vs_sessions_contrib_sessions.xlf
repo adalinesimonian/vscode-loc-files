@@ -671,7 +671,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Completed</source>
     </trans-unit>
     <trans-unit id="automationsAccessibleView.cron">
-      <source xml:lang="en">CRON: {0}</source>
+      <source xml:lang="en">Cron: {0}</source>
     </trans-unit>
     <trans-unit id="automationsAccessibleView.custom">
       <source xml:lang="en">Custom schedule</source>
@@ -809,7 +809,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Cloud history shows the repository, status, and last updated time even when no local session is available. When a cloud run has a session on GitHub that is not yet loaded in VS Code, click its row, or Tab to its title and press Enter or Space, to open that exact session. Tab to a row's toolbar and use Left Arrow and Right Arrow to reach Open on GitHub and Stop when supported. Archive or Mark as Done is unavailable until the cloud run and its conversation have finished. It changes local session state, not the task on GitHub. Stop requests remote cancellation; the status changes when GitHub reports it. Follow-up requests show conversation progress and restart bounded history discovery. Use Refresh in the view header to reload definitions and history. Active cloud runs refresh every 15 seconds without moving the history rows; idle definitions do not poll.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.cron">
-      <source xml:lang="en">For Agent Host automations, choose CRON to enter minute, hour, day of month, month, and day of week. CRON accepts wildcards, lists, ranges, and steps on wildcards or ranges only. For example, 20-59/15 selects minutes 20, 35, and 50 of each hour; shorthand such as 20/15 is not supported. A line below the schedule explains the current valid expression and updates while editing. Day of month and day of week are alternatives when both are restricted. Tab moves between the five parts. Focusing a part shows and describes its allowed values. Escape dismisses that guidance without leaving the field. Up and Down step simple numeric values. Select All then Copy copies the entire expression; pasting a full expression fills the parts. Blank parts mean every value. Entirely empty input has no error, but cannot be saved. CRON is not available for Cloud automations.</source>
+      <source xml:lang="en">For Agent Host automations, choose cron to enter minute, hour, day of month, month, and day of week. Cron accepts wildcards, lists, ranges, and steps on wildcards or ranges only. For example, 20-59/15 selects minutes 20, 35, and 50 of each hour; shorthand such as 20/15 is not supported. A line below the schedule explains the current valid expression and updates while editing. Day of month and day of week are alternatives when both are restricted. Tab moves between the five parts. Focusing a part shows and describes its allowed values. Escape dismisses that guidance without leaving the field. Up and Down step simple numeric values. Select All then Copy copies the entire expression; pasting a full expression fills the parts. Blank parts mean every value. Entirely empty input has no error, but cannot be saved. Cron is not available for Cloud automations.</source>
     </trans-unit>
     <trans-unit id="automationsCustomView.help.dialog">
       <source xml:lang="en">In the automation dialog, Target controls are above the prompt. Agent and model pickers are inside the prompt input, and execution mode and permission controls are below it. Use Tab and Shift+Tab to move between fields and pickers. When creating an automation, you only need to enter a prompt. An empty name is derived from the prompt, and the target defaults to No workspace unless one is already supplied. An available Agent Host that supports the target is still required.</source>
@@ -880,7 +880,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">The property '{0}' is not supported.</source>
     </trans-unit>
     <trans-unit id="automationBlueprint.unsupportedSchedule">
-      <source xml:lang="en">The CRON expression '{0}' cannot be represented by the current Automation editor.</source>
+      <source xml:lang="en">The cron expression '{0}' cannot be represented by the current Automation editor.</source>
     </trans-unit>
     <trans-unit id="automationBlueprint.unsupportedTimeZone">
       <source xml:lang="en">The time zone '{0}' is not supported. Use 'local' so the schedule follows the importing user's time zone.</source>
@@ -1324,7 +1324,7 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <source xml:lang="en">Running</source>
     </trans-unit>
     <trans-unit id="scheduleCron">
-      <source xml:lang="en">CRON: {0}</source>
+      <source xml:lang="en">Cron: {0}</source>
     </trans-unit>
     <trans-unit id="scheduleCustom">
       <source xml:lang="en">Custom schedule</source>

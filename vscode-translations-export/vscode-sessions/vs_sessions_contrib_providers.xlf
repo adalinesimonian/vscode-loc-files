@@ -84,7 +84,7 @@
       <source xml:lang="en">The automation target must belong to this Agent Host.</source>
     </trans-unit>
     <trans-unit id="automationCronRequired">
-      <source xml:lang="en">A CRON expression is required.</source>
+      <source xml:lang="en">A cron expression is required.</source>
     </trans-unit>
     <trans-unit id="automationUnsupportedSchedule">
       <source xml:lang="en">Choose a local-time schedule for this Agent Host automation.</source>
@@ -635,6 +635,9 @@
     <trans-unit id="agentHost.pullRequestSessionsUnsupported">
       <source xml:lang="en">This agent host does not support creating sessions from pull requests.</source>
     </trans-unit>
+    <trans-unit id="agentHost.selectedAgentUnavailable">
+      <source xml:lang="en">The selected agent could not be loaded. Fix its customization or select another agent before sending.</source>
+    </trans-unit>
     <trans-unit id="agentHost.sessionConfigUnavailable">
       <source xml:lang="en">Could not resolve the Agent Host session configuration. Please try again.</source>
     </trans-unit>
@@ -1079,6 +1082,9 @@
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/permissionPicker" source-language="en" datatype="plaintext"><body>
     <trans-unit id="permissionPicker.ariaLabel">
       <source xml:lang="en">Permission Picker</source>
+    </trans-unit>
+    <trans-unit id="permissionPicker.devContainerSandboxLearnMore">
+      <source xml:lang="en">Learn More</source>
     </trans-unit>
     <trans-unit id="permissionPicker.sandboxedHover">
       <source xml:lang="en">{0} Terminal commands are sandboxed.</source>
@@ -2047,6 +2053,12 @@
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHostSessionsProvider" source-language="en" datatype="plaintext"><body>
     <trans-unit id="browseRemoteFolderFailed">
       <source xml:lang="en">Failed to browse folders on '{0}': {1}</source>
+    </trans-unit>
+    <trans-unit id="cloneRepository.disconnected">
+      <source xml:lang="en">Connect to {0} before cloning a repository.</source>
+    </trans-unit>
+    <trans-unit id="cloneRepository.unsupported">
+      <source xml:lang="en">Repository cloning is not supported by {0}.</source>
     </trans-unit>
     <trans-unit id="connectFailed">
       <source xml:lang="en">Failed to connect to remote agent host '{0}': {1}</source>

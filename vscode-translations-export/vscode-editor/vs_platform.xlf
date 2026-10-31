@@ -377,7 +377,7 @@ A keybinding</note>
       <source xml:lang="en">Sandboxing in Dev Container</source>
     </trans-unit>
     <trans-unit id="agentHostSandboxToggle.devContainerTitle">
-      <source xml:lang="en">Start the Dev Container with the Docker options needed for terminal sandboxing: unconfined seccomp, AppArmor and system paths, and access to /dev/net/tun. This relaxes the outer container's isolation; terminal commands still run inside their own sandbox.</source>
+      <source xml:lang="en">Start the Dev Container with the additional Docker options that terminal sandboxing requires. This relaxes the outer container's isolation; terminal commands still run inside their own sandbox.</source>
     </trans-unit>
     <trans-unit id="agentHostSandboxToggle.devContainerUnavailableEnabledTitle">
       <source xml:lang="en">Sandboxing is requested for this session, but this Dev Container was started without the required Docker options. Recreate it with sandboxing enabled, or turn sandboxing off for this session if your organization permits it.</source>
@@ -887,11 +887,11 @@ Close this dialog to apply the change with your next message after the current t
     <trans-unit id="agentHost.config.terminalAutoApproveEnabled.title">
       <source xml:lang="en">Terminal Auto Approve</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.terminalAutoApproveRules.description">
-      <source xml:lang="en">Terminal auto-approve rules forwarded by the connected client for agent-host shell permission checks.</source>
+    <trans-unit id="agentHost.config.terminalIgnoreDefaultAutoApproveRules.description">
+      <source xml:lang="en">Ignore implicit terminal auto-approve rules and use only explicit permission rules.</source>
     </trans-unit>
-    <trans-unit id="agentHost.config.terminalAutoApproveRules.title">
-      <source xml:lang="en">Terminal Auto Approve Rules</source>
+    <trans-unit id="agentHost.config.terminalIgnoreDefaultAutoApproveRules.title">
+      <source xml:lang="en">Ignore Default Terminal Auto Approve Rules</source>
     </trans-unit>
     <trans-unit id="agentHost.config.titleGeneration.activeAgent">
       <source xml:lang="en">The active agent names sessions and chats with rename tools.</source>
@@ -984,16 +984,19 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">Permissions</source>
     </trans-unit>
     <trans-unit id="agentHost.sessionConfig.permissions.allow">
-      <source xml:lang="en">Allowed tools</source>
+      <source xml:lang="en">Allowed permission rules</source>
+    </trans-unit>
+    <trans-unit id="agentHost.sessionConfig.permissions.ask">
+      <source xml:lang="en">Permission Rules Requiring Confirmation</source>
     </trans-unit>
     <trans-unit id="agentHost.sessionConfig.permissions.deny">
-      <source xml:lang="en">Denied tools</source>
+      <source xml:lang="en">Denied permission rules</source>
     </trans-unit>
-    <trans-unit id="agentHost.sessionConfig.permissions.toolName">
-      <source xml:lang="en">Tool name</source>
+    <trans-unit id="agentHost.sessionConfig.permissions.rule">
+      <source xml:lang="en">Permission rule</source>
     </trans-unit>
     <trans-unit id="agentHost.sessionConfig.permissionsDescription">
-      <source xml:lang="en">Per-tool session permissions. Updated automatically when approving a tool "in this Session".</source>
+      <source xml:lang="en">Permission rules: a tool name or Tool(specifier), e.g. Shell(npm run *), WebFetch(example.com), WebFetch(example.com/docs/*), Read(./src/**), or Edit(./docs/**). Shell specifiers support wildcards, /regex/flags, and commandLine:&lt;specifier&gt; for the full command line. Deny rules reject matching calls; ask rules require confirmation before allow rules or implicit defaults. Updated automatically when approving "in this Session" or "Always Allow".</source>
     </trans-unit>
     <trans-unit id="agentHost.sessionConfig.sandboxEnabled">
       <source xml:lang="en">Sandbox</source>
@@ -1211,7 +1214,7 @@ Close this dialog to apply the change with your next message after the current t
       <source xml:lang="en">Controls whether enabled Agent Merge sessions ask the agent to update branches that are behind or resolve merge conflicts.</source>
     </trans-unit>
     <trans-unit id="chat.canvases.enabled">
-      <source xml:lang="en">Controls whether local Agent Host Copilot sessions can open Canvases with interactive content in the Agents Window and the Editor Window. Newly created sessions pick up changes to this setting.</source>
+      <source xml:lang="en">Controls whether Agent Host Copilot sessions can open Canvases with interactive content in the Agents Window and the Editor Window. Sessions on remote agent hosts also require `#{0}#`, so canvas pages load through the agent host's network. Newly created sessions pick up changes to this setting.</source>
     </trans-unit>
     <trans-unit id="chat.canvases.enabled.policy">
       <source xml:lang="en">Controls whether Copilot sessions can use Canvases to present interactive content.</source>
@@ -4715,14 +4718,35 @@ Showing {1}-{2} of {3}.</source>
     <trans-unit id="copilot.extensionDisableReconcileFailed">
       <source xml:lang="en">Canvas extension '{0}' was disabled in settings, but couldn't be stopped in this chat. {1}</source>
     </trans-unit>
+    <trans-unit id="copilot.extensionDisableRefreshFailed">
+      <source xml:lang="en">After disabling '{0}', this chat couldn't finish updating canvas extensions because '{1}' failed to start. This chat may not match your canvas extension settings.</source>
+    </trans-unit>
+    <trans-unit id="copilot.extensionDisableRefreshMultipleFailed">
+      <source xml:lang="en">After disabling '{0}', this chat couldn't finish updating canvas extensions because other canvas extensions failed to start. This chat may not match your canvas extension settings.</source>
+    </trans-unit>
+    <trans-unit id="copilot.extensionDisableTargetFailed">
+      <source xml:lang="en">After disabling '{0}', this chat couldn't finish updating canvas extensions because '{0}' couldn't be stopped. This chat may not match your canvas extension settings.</source>
+    </trans-unit>
+    <trans-unit id="copilot.extensionDisableTargetUnavailable">
+      <source xml:lang="en">After disabling '{0}', the canvas extension change couldn't be confirmed because the selected chat stopped or was replaced. '{0}' is disabled in settings.</source>
+    </trans-unit>
     <trans-unit id="copilot.extensionEnableFailed">
       <source xml:lang="en">Couldn't enable canvas extension '{0}'. {1}</source>
     </trans-unit>
     <trans-unit id="copilot.extensionEnableReconcileFailed">
       <source xml:lang="en">Canvas extension '{0}' was enabled in settings, but couldn't be started in this chat. {1}</source>
     </trans-unit>
-    <trans-unit id="copilot.extensionReconcileTargetUnavailable">
-      <source xml:lang="en">The selected chat stopped or was replaced before its extension state could be updated.</source>
+    <trans-unit id="copilot.extensionEnableRefreshFailed">
+      <source xml:lang="en">After enabling '{0}', this chat couldn't finish updating canvas extensions because '{1}' failed to start. This chat may not match your canvas extension settings.</source>
+    </trans-unit>
+    <trans-unit id="copilot.extensionEnableRefreshMultipleFailed">
+      <source xml:lang="en">After enabling '{0}', this chat couldn't finish updating canvas extensions because other canvas extensions failed to start. This chat may not match your canvas extension settings.</source>
+    </trans-unit>
+    <trans-unit id="copilot.extensionEnableTargetFailed">
+      <source xml:lang="en">After enabling '{0}', this chat couldn't finish updating canvas extensions because '{0}' failed to start. This chat may not match your canvas extension settings.</source>
+    </trans-unit>
+    <trans-unit id="copilot.extensionEnableTargetUnavailable">
+      <source xml:lang="en">After enabling '{0}', the canvas extension change couldn't be confirmed because the selected chat stopped or was replaced. '{0}' is enabled in settings.</source>
     </trans-unit>
     <trans-unit id="copilot.localModelThinking.description">
       <source xml:lang="en">Controls whether the model thinks before it answers.</source>
@@ -5899,11 +5923,38 @@ Showing {1}-{2} of {3}.</source>
     <trans-unit id="copilot.customizationInstallation.invalidOperation">
       <source xml:lang="en">The SDK returned an invalid customization installation operation.</source>
     </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpCardChanged">
+      <source xml:lang="en">The MCP server card changed after SDK planning. Refresh Browse and try again.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpCardFetchFailed">
+      <source xml:lang="en">Could not read the MCP server card (HTTP {0}).</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpCardInvalid">
+      <source xml:lang="en">The MCP server card contains invalid JSON.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpCardTooLarge">
+      <source xml:lang="en">The MCP server card is too large to install.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpCardUnavailable">
+      <source xml:lang="en">The MCP server card is unavailable for local configuration.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpConfigurationChanged">
+      <source xml:lang="en">The MCP server configuration does not match the SDK installation plan. Refresh Browse and try again.</source>
+    </trans-unit>
     <trans-unit id="copilot.customizationInstallation.mcpInputsRequired">
       <source xml:lang="en">This MCP server requires an installation choice or additional values that Browse cannot collect yet.</source>
     </trans-unit>
     <trans-unit id="copilot.customizationInstallation.mcpInventoryFailed">
       <source xml:lang="en">The SDK could not list installed MCP servers.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpPackageChanged">
+      <source xml:lang="en">The MCP package does not match the SDK installation plan. Refresh Browse and try again.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpPackageInputsRequired">
+      <source xml:lang="en">This MCP package requires additional configuration that Browse cannot collect yet.</source>
+    </trans-unit>
+    <trans-unit id="copilot.customizationInstallation.mcpPackageUnsupported">
+      <source xml:lang="en">The SDK cannot prepare confirmed local MCP server installations.</source>
     </trans-unit>
     <trans-unit id="copilot.customizationInstallation.mcpPlanFailed">
       <source xml:lang="en">The SDK could not prepare this MCP server installation.</source>
@@ -5970,6 +6021,9 @@ Showing {1}-{2} of {3}.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/agentHost/node/copilot/localModelBridge/shim/copilotRequestHandler" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="localModel.fallbackFailed">
+      <source xml:lang="en">The cloud model could not finish its response. Try again.</source>
+    </trans-unit>
     <trans-unit id="localModel.invalidRequest">
       <source xml:lang="en">The on-device model received a request it could not read.</source>
     </trans-unit>
@@ -6226,6 +6280,11 @@ stderr: {2}</source>
       <source xml:lang="en">The Docker volume '{0}' does not belong to this sample.</source>
     </trans-unit>
 </body></file>
+  <file original="src/vs/platform/agentHost/node/devContainerShell" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="devContainerShell.exited">
+      <source xml:lang="en">Dev Container shell exited ({0}): {1}</source>
+    </trans-unit>
+</body></file>
   <file original="src/vs/platform/agentHost/node/localCommands/bangLocalCommand" source-language="en" datatype="plaintext"><body>
     <trans-unit id="agentHostBang.background">
       <source xml:lang="en">Command is running in the background</source>
@@ -6266,11 +6325,44 @@ stderr: {2}</source>
     <trans-unit id="sessionPermissions.allow">
       <source xml:lang="en">Allow</source>
     </trans-unit>
+    <trans-unit id="sessionPermissions.allowCommand">
+      <source xml:lang="en">Allow {0} in this Session</source>
+    </trans-unit>
+    <trans-unit id="sessionPermissions.allowDomain">
+      <source xml:lang="en">Allow Fetching {0} in this Session</source>
+    </trans-unit>
+    <trans-unit id="sessionPermissions.allowExactCommand">
+      <source xml:lang="en">Allow Exact Command in this Session</source>
+    </trans-unit>
+    <trans-unit id="sessionPermissions.allowFileEdits">
+      <source xml:lang="en">Allow Edits to {0} in this Session</source>
+    </trans-unit>
+    <trans-unit id="sessionPermissions.allowFileReads">
+      <source xml:lang="en">Allow Reading {0} in this Session</source>
+    </trans-unit>
+    <trans-unit id="sessionPermissions.allowFolderEdits">
+      <source xml:lang="en">Allow Edits in {0} in this Session</source>
+    </trans-unit>
+    <trans-unit id="sessionPermissions.allowFolderReads">
+      <source xml:lang="en">Allow Reading Files in {0} in this Session</source>
+    </trans-unit>
     <trans-unit id="sessionPermissions.allowOnce">
       <source xml:lang="en">Allow Once</source>
     </trans-unit>
     <trans-unit id="sessionPermissions.allowSession">
       <source xml:lang="en">Allow in this Session</source>
+    </trans-unit>
+    <trans-unit id="sessionPermissions.alwaysAllowCommand">
+      <source xml:lang="en">Always Allow {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionPermissions.alwaysAllowDomain">
+      <source xml:lang="en">Always Allow Fetching {0}</source>
+    </trans-unit>
+    <trans-unit id="sessionPermissions.alwaysAllowExactCommand">
+      <source xml:lang="en">Always Allow Exact Command</source>
+    </trans-unit>
+    <trans-unit id="sessionPermissions.commands">
+      <source xml:lang="en">Commands {0}</source>
     </trans-unit>
     <trans-unit id="sessionPermissions.skip">
       <source xml:lang="en">Skip</source>
@@ -9215,7 +9307,7 @@ A keybinding label</note>
       <source xml:lang="en">The following table outlines the data sent with each setting:</source>
     </trans-unit>
     <trans-unit id="telemetry.telemetryLevelMd">
-      <source xml:lang="en">Controls {0} telemetry, first-party extension telemetry, and participating third-party extension telemetry. Some third party extensions might not respect this setting. Consult the specific extension's documentation to be sure. Telemetry helps us better understand how {0} is performing, where improvements need to be made, and how features are being used.</source>
+      <source xml:lang="en">Controls {0} telemetry, Microsoft extension telemetry, and participating third-party extension telemetry. Some third party extensions might not respect this setting. Consult the specific extension's documentation to be sure. Telemetry helps us better understand how {0} is performing, where improvements need to be made, and how features are being used.</source>
     </trans-unit>
     <trans-unit id="telemetry.usage">
       <source xml:lang="en">Usage Data</source>
@@ -9465,6 +9557,26 @@ To override an existing profile use its profile name as the key, for example:
     </trans-unit>
     <trans-unit id="chartsYellow">
       <source xml:lang="en">The yellow color used in chart visualizations.</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/platform/theme/common/colors/confettiColors" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="confettiColor1">
+      <source xml:lang="en">The first color used in confetti animations.</source>
+    </trans-unit>
+    <trans-unit id="confettiColor2">
+      <source xml:lang="en">The second color used in confetti animations.</source>
+    </trans-unit>
+    <trans-unit id="confettiColor3">
+      <source xml:lang="en">The third color used in confetti animations.</source>
+    </trans-unit>
+    <trans-unit id="confettiColor4">
+      <source xml:lang="en">The fourth color used in confetti animations.</source>
+    </trans-unit>
+    <trans-unit id="confettiColor5">
+      <source xml:lang="en">The fifth color used in confetti animations.</source>
+    </trans-unit>
+    <trans-unit id="confettiColor6">
+      <source xml:lang="en">The sixth color used in confetti animations.</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/platform/theme/common/colors/editorColors" source-language="en" datatype="plaintext"><body>
@@ -10038,7 +10150,7 @@ To override an existing profile use its profile name as the key, for example:
       <source xml:lang="en">Minimap marker color for errors.</source>
     </trans-unit>
     <trans-unit id="minimapFindMatchHighlight">
-      <source xml:lang="en">Minimap marker color for find matches.</source>
+      <source xml:lang="en">Minimap marker color for find matches. In light and dark themes, the default uses the overview ruler search match color at 80% opacity.</source>
     </trans-unit>
     <trans-unit id="minimapForegroundOpacity">
       <source xml:lang="en">Opacity of foreground elements rendered in the minimap. For example, "#000000c0" will render the elements with 75% opacity.</source>
@@ -10514,6 +10626,9 @@ To override an existing profile use its profile name as the key, for example:
     </trans-unit>
     <trans-unit id="none">
       <source xml:lang="en">Disable updates.</source>
+    </trans-unit>
+    <trans-unit id="showOutdatedBuildReminder">
+      <source xml:lang="en">Show a reminder to update once this version of VS Code is two months old. The reminder is shown at most once a month.</source>
     </trans-unit>
     <trans-unit id="showPostInstallInfo">
       <source xml:lang="en">Show a post-install update tooltip in the title bar instead of opening the release notes editor.</source>

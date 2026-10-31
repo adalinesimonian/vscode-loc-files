@@ -107,10 +107,13 @@
 </body></file>
   <file original="src/vs/workbench/contrib/search/browser/search.common.contribution" source-language="en" datatype="plaintext"><body>
     <trans-unit id="exclude">
-      <source xml:lang="en">Configure [glob patterns](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) for excluding files and folders in fulltext searches and file search in quick open. To exclude files from the recently opened list in quick open, patterns must be absolute (for example `**/node_modules/**`). Inherits all glob patterns from the `#files.exclude#` setting.</source>
+      <source xml:lang="en">Configure [glob patterns](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) for excluding files and folders in fulltext searches and file search in quick open. To exclude files from the recently opened list in quick open, patterns must be absolute (for example `**/node_modules/**`). Inherits all glob patterns from the `#files.exclude#` setting. Prefix a pattern with `!` to search matching files and folders even if another pattern, including one from `#files.exclude#`, excludes them.</source>
     </trans-unit>
     <trans-unit id="exclude.boolean">
       <source xml:lang="en">The glob pattern to match file paths against. Set to true or false to enable or disable the pattern.</source>
+    </trans-unit>
+    <trans-unit id="exclude.exception">
+      <source xml:lang="en">An exception: files and folders that match the glob pattern after the `!`, and everything inside them, are searched even if another pattern excludes them. Version control folders such as `.git` stay excluded unless the pattern names them. Set to true or false to enable or disable the exception.</source>
     </trans-unit>
     <trans-unit id="exclude.when">
       <source xml:lang="en">Additional check on the siblings of a matching file. Use \$(basename) as variable for the matching file name.</source>

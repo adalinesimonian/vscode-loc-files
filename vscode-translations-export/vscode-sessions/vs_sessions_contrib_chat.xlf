@@ -352,9 +352,6 @@ Select to reveal in chat.</source>
     <trans-unit id="artifactGroup.label">
       <source xml:lang="en">{0} {1}</source>
     </trans-unit>
-    <trans-unit id="artifactGroup.open">
-      <source xml:lang="en">Open {0}</source>
-    </trans-unit>
     <trans-unit id="artifactGroup.row">
       <source xml:lang="en">{0}, {1} of {2}</source>
     </trans-unit>
@@ -383,6 +380,9 @@ Select to reveal in chat.</source>
     </trans-unit>
     <trans-unit id="artifactInvokingChatUnavailable">
       <source xml:lang="en">The chat that invoked this artifact action is no longer available.</source>
+    </trans-unit>
+    <trans-unit id="artifactOpen">
+      <source xml:lang="en">Open {0}</source>
     </trans-unit>
     <trans-unit id="artifactOperationFailed">
       <source xml:lang="en">The artifact operation failed: {0}</source>
@@ -1140,6 +1140,12 @@ Select to reveal in chat.</source>
     <trans-unit id="environmentPicker.selected">
       <source xml:lang="en">Environment: {0}</source>
     </trans-unit>
+    <trans-unit id="newSession.comparisonStarted">
+      <source xml:lang="en">Comparison started</source>
+    </trans-unit>
+    <trans-unit id="newSession.messageSent">
+      <source xml:lang="en">Message sent</source>
+    </trans-unit>
     <trans-unit id="newSession.sendFailed">
       <source xml:lang="en">Failed to start session: {0}</source>
     </trans-unit>
@@ -1611,6 +1617,12 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionArtifacts.websites">
       <source xml:lang="en">Websites</source>
     </trans-unit>
+    <trans-unit id="sessionChatPills.openChanges">
+      <source xml:lang="en">Open Changes</source>
+    </trans-unit>
+    <trans-unit id="sessionChatPills.openPullRequestChanges">
+      <source xml:lang="en">Open Pull Request Changes</source>
+    </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionBrowsersControl" source-language="en" datatype="plaintext"><body>
     <trans-unit id="browsers.browser">
@@ -1653,12 +1665,6 @@ To disable this announcement, set {1} to false.</source>
     </trans-unit>
     <trans-unit id="sessionChatPills.issues">
       <source xml:lang="en">Issues</source>
-    </trans-unit>
-    <trans-unit id="sessionChatPills.openChanges">
-      <source xml:lang="en">Open Changes</source>
-    </trans-unit>
-    <trans-unit id="sessionChatPills.openPullRequestChanges">
-      <source xml:lang="en">Open Pull Request Changes</source>
     </trans-unit>
     <trans-unit id="sessionChatPills.pullRequestAttention">
       <source xml:lang="en">failing checks or merge conflicts</source>
@@ -2199,6 +2205,15 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="workspacePicker.clearWorkspace">
       <source xml:lang="en">Chat without a workspace</source>
     </trans-unit>
+    <trans-unit id="workspacePicker.cloneFailed">
+      <source xml:lang="en">Could not clone the repository in {0}: {1}</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.cloneUnsupported">
+      <source xml:lang="en">Repository cloning is not supported by {0}.</source>
+    </trans-unit>
+    <trans-unit id="workspacePicker.cloningRepository">
+      <source xml:lang="en">Cloning {0} in {1}...</source>
+    </trans-unit>
     <trans-unit id="workspacePicker.connectRemoteAgentHostFailed">
       <source xml:lang="en">Failed to connect to {0}.</source>
     </trans-unit>
@@ -2325,13 +2340,13 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Autopilot groups the opt-in rules for automatic actions. It starts collapsed. Activate its heading to expand the rules, or use its separate switch to enable all available rules or turn them off. The trailing artifact pill section shows the number of enabled Autopilot rules and opens this section.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.artifactIntegrationGroups">
-      <source xml:lang="en">When two or more artifacts of the same kind share an integration, such as several pull requests, they appear as one pill named by the integration, such as 4 Pull Requests. Its icon shows the state that needs attention most, and a trailing section counts their enabled Autopilot rules. Enter or Space opens a list above the pill with one toolbar per artifact, showing its state icon, label, status sections and title. Up and Down Arrow, Home and End move between artifacts; Left and Right Arrow move between an artifact's controls. Tab and Shift+Tab move through every control and stay in the list. Enter or Space on the label opens the artifact's details, and on a status section opens the matching list. The artifact's actions, such as Open, Open Pull Request Changes, Copy Link, Pin and Remove, follow its status sections. Pin moves the artifact into a pill of its own; that pill's context menu{0} and trailing button offer Unpin. Escape closes the list and returns focus to the pill.</source>
+      <source xml:lang="en">When two or more artifacts of the same kind share an integration group, such as several pull requests, they appear as one pill named by the integration, such as 4 Pull Requests. Its icon shows the state that needs attention most, and a trailing section counts their enabled Autopilot rules. Enter or Space opens a list above the pill with one toolbar per artifact, showing its state icon, label, status sections and title. Up and Down Arrow, Home and End move between artifacts; Left and Right Arrow move between an artifact's controls. Tab and Shift+Tab move through every control and stay in the list. Enter or Space on the label opens the artifact's details, and on a status section opens the matching list. The artifact's actions, such as Open, Open Pull Request Changes, Copy Link, Pin and Remove, follow its status sections. Pin moves the artifact into a pill of its own; that pill's context menu{0} and trailing button offer Unpin. Escape closes the list and returns focus to the pill.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.artifactIntegrationSetting">
       <source xml:lang="en">The {0} setting enables live artifact details, actions, and Autopilot instead of Agent Merge. It is off by default. Switching pauses saved automation choices and stops automation-owned work without cancelling human-started work. Switching back can resume previously enabled rules; it does not grant new permission. Ordinary artifact links and recorded history remain available.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.artifactIntegrations">
-      <source xml:lang="en">Artifacts and references with an integration that are not grouped appear as individual pills above the input. Enter or Space on a main pill opens an input-width details panel above the pills without moving the conversation or draft. The selected pill has a highlighted border. Details show the linked title, state icon and up to three lines of the actual description. Copy Link and Remove Artifact appear in the footer. Left and Right Arrow, Home and End select a list tab. Clicking a tab focuses its first item; arrow keys navigate list rows and Enter opens an item. Some rows offer item actions, such as rerunning a check, which Tab reaches from the list. A pill's status section selects and focuses the corresponding list or action, including when already open. Lists show single-line rows, with full text available in hovers and the Accessible View. Actions below the lists run once; enabled actions come first in provider order, with the first action primary. Inapplicable actions are hidden and blocked actions explain why. Autopilot groups automatic rules below the lists, with an Activities card below it when history exists. Both cards start collapsed and remember expansion. Autopilot switches grant standing permission and may run immediately when conditions hold. Saved rules remain revocable while unavailable. Turning a rule off prevents new runs but does not cancel work already started. Some activity rows reveal their related chat message; others are informational. Clicking another artifact switches the panel. Clicking the active pill, Escape or Close dismisses it. Escape and Close restore pill focus; outside clicks dismiss without moving focus back. Use Tab and Shift+Tab between controls, Space to change a switch, and accessibility help or the Accessible View{0} to read the full content. Background prompts do not replace your draft, attachments or visible chat.</source>
+      <source xml:lang="en">Integrations decide which artifacts and references get pills of their own; those that are not grouped appear as individual pills above the input. Other integrated artifacts and references are listed in the Artifacts, References, Pull Requests or Issues pill with their integration's icon and label, where Enter or Space opens the artifact's details and the row's Open action opens the resource. Enter or Space on a main pill opens an input-width details panel above the pills without moving the conversation or draft. The selected pill has a highlighted border. Details show the linked title, state icon and up to three lines of the actual description. Copy Link and Remove Artifact appear in the footer. Left and Right Arrow, Home and End select a list tab. Clicking a tab focuses its first item; arrow keys navigate list rows and Enter opens an item. Some rows offer item actions, such as rerunning a check, which Tab reaches from the list. A pill's status section selects and focuses the corresponding list or action, including when already open. Lists show single-line rows, with full text available in hovers and the Accessible View. Actions below the lists run once; enabled actions come first in provider order, with the first action primary. Inapplicable actions are hidden and blocked actions explain why. Autopilot groups automatic rules below the lists, with an Activities card below it when history exists. Both cards start collapsed and remember expansion. Autopilot switches grant standing permission and may run immediately when conditions hold. Saved rules remain revocable while unavailable. Turning a rule off prevents new runs but does not cancel work already started. Some activity rows reveal their related chat message; others are informational. Clicking another artifact switches the panel. Clicking the active pill, Escape or Close dismisses it. Escape and Close restore pill focus; outside clicks dismiss without moving focus back. Use Tab and Shift+Tab between controls, Space to change a switch, and accessibility help or the Accessible View{0} to read the full content. Background prompts do not replace your draft, attachments or visible chat.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.artifactListInformation">
       <source xml:lang="en">Artifact details remember the selected list tab when closed and reopened. A tab can offer an information icon; hover it or focus it and press Enter or Space to read the provider's explanation without changing tabs. The Comments tab describes which review comments it includes.</source>
@@ -2486,6 +2501,9 @@ To disable this announcement, set {1} to false.</source>
     <trans-unit id="sessionsChat.doneNudge">
       <source xml:lang="en">When all GitHub pull requests associated with the current chat have merged and no chat in the session is working or waiting for input, a mark as done suggestion may appear above that chat's input. Use Tab or Shift+Tab to reach Mark as Done, Configure Automatic Cleanup, or Dismiss Mark as Done Suggestion, then Enter or Space to activate it. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Mark as Done" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismiss Mark as Done Suggestion, or Escape while the suggestion is focused, hides the suggestion for this session, including after a reload, until it is marked as done or deleted, and returns focus to the chat input. Marking the session as done hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Done" section of the sessions list. You can restore it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by restoring the session.</source>
     </trans-unit>
+    <trans-unit id="sessionsChat.editorCommentCards">
+      <source xml:lang="en">Editor comment cards show the author and line. Use Tab to reach the comment actions and See more or See less, and Enter or Space to activate them. When content is taller than the editor, Tab to the scrollable comments region and use the arrow keys to scroll. The More Actions menu includes Edit and Add to Comment. Share Comment with Agent accepts a review comment. Accepted means it is ready to submit; Investigating means it has been submitted to the agent.</source>
+    </trans-unit>
     <trans-unit id="sessionsChat.emptyEditorAddTab">
       <source xml:lang="en">When the side panel's editor has no open tabs, it shows Add Tab at the top and lists the Add Tab actions, such as Changes, Files, Browser, and Search, with their keybindings. Press Tab to reach the list, use the Up and Down arrow keys to move between actions, and press Enter or Space to open one. For an action with a submenu, such as Canvas, press Enter, Space, or the Right arrow key to open the submenu, the Up and Down arrow keys to choose an item, and the Left arrow key or Escape to return to the list.</source>
     </trans-unit>
@@ -2502,7 +2520,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Choose Manage Remote Environments at the bottom of the Environment picker to open the Remote Environments dialog. This does not change your selected environment. Hosts not listed in Remote Environments, including configured WebSocket hosts, keep their per-entry Manage submenu.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.environmentPicker.repository">
-      <source xml:lang="en">With This Computer selected, Work in Repository reuses a known local checkout or opens the Git clone flow to select a local destination. Canceling the clone keeps your current workspace selection.</source>
+      <source xml:lang="en">With This Computer selected, Work in Repository reuses a known local checkout or opens the Git clone flow to select a local destination. With a remote environment selected, it reuses a known checkout or clones into that environment when the host supports repository cloning. Canceling keeps your current workspace selection; a remote clone may continue on the host.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.extensionArtifactAutomation">
       <source xml:lang="en">Extension-provided artifact actions and automation use the same controls and request cards. Their automatic prompts go to the chat that recorded the artifact. Extension automation runs on this computer while the extension and session connection are available. Hosts without support for automation notices pause automatic actions and explain why; manual actions remain available. A rule can prevent a new schedule while allowing an existing schedule to continue. You can still use Space on its switch to turn it off.</source>
@@ -2586,7 +2604,7 @@ To disable this announcement, set {1} to false.</source>
       <source xml:lang="en">Go forward through visited sessions and views{0}. Reopening New Session or a custom view moves its single history entry to the most recent position.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.groupAppearance">
-      <source xml:lang="en">Custom groups, workspace groups, repository groups, and environment groups, including remote hosts, offer Change Icon and Change Color in their context menus. In the icon picker, enter a name to search, then press Down Arrow to enter the grid. Arrow keys navigate icons, Home and End move to the first and last icon, and Up Arrow from the top row returns to search. Tab and Shift+Tab move between search, the grid, and Reset to default. Press Enter to select an icon or reset. The color picker uses the terminal's theme-aware ANSI colors. Both pickers offer Reset to default, which resets only that part of the group's appearance. Escape cancels either picker without changing the group. Icon and color choices are saved independently for each group, including subgroups. Collapsed groups still show unread and attention indicators when needed.</source>
+      <source xml:lang="en">Custom groups, workspace groups, repository groups, and environment groups, including remote hosts, offer Change Icon and Change Color in their context menus. In the icon picker, enter a name to search, then press Down Arrow to enter the grid. Arrow keys navigate icons, Home and End move to the first and last icon, and Up Arrow from the top row returns to search. Tab and Shift+Tab move between search, the grid, and the Reset to default button below the grid. Press Enter to select an icon or reset. The color picker uses the terminal's theme-aware ANSI colors. Both pickers offer Reset to default, which resets only that part of the group's appearance. Escape cancels either picker without changing the group. Icon and color choices are saved independently for each group, including subgroups. Collapsed groups still show unread and attention indicators when needed.</source>
     </trans-unit>
     <trans-unit id="sessionsChat.harnessSwitchFeedbackSurvey">
       <source xml:lang="en">After you switch from Copilot to Local, a feedback survey may appear above the chat input. Use Shift+Tab to reach it. Use Up and Down Arrow to choose why you switched, then press Enter or Space to submit. Dismiss Survey or Escape closes the survey. After submission, a message confirms that your feedback was recorded. Use Tab to reach Share it on GitHub to provide specific feedback in a GitHub issue. Use Dismiss Feedback Acknowledgement or Escape to close the message.</source>

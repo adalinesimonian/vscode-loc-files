@@ -842,7 +842,7 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
       <note>This is the description of an option</note>
     </trans-unit>
     <trans-unit id="exclude">
-      <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) for excluding files and folders. For example, the File Explorer decides which files and folders to show or hide based on this setting. Refer to the `#search.exclude#` setting to define search-specific excludes. Refer to the `#explorer.excludeGitIgnore#` setting for ignoring files based on your `.gitignore`.</source>
+      <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) for excluding files and folders. For example, the File Explorer decides which files and folders to show or hide based on this setting. Prefix a pattern with `!` to show matching files and folders even if another pattern excludes them, for example `"!node_modules/@types": true`. Refer to the `#search.exclude#` setting to define search-specific excludes. Refer to the `#explorer.excludeGitIgnore#` setting for ignoring files based on your `.gitignore`.</source>
     </trans-unit>
     <trans-unit id="excludeGitignore">
       <source xml:lang="en">Controls whether entries in .gitignore should be parsed and excluded from the Explorer. Similar to {0}.</source>
@@ -909,6 +909,9 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
     </trans-unit>
     <trans-unit id="files.exclude.boolean">
       <source xml:lang="en">The glob pattern to match file paths against. Set to true or false to enable or disable the pattern.</source>
+    </trans-unit>
+    <trans-unit id="files.exclude.exception">
+      <source xml:lang="en">An exception: files and folders that match the glob pattern after the `!`, and everything inside them, are not excluded even if another pattern excludes them. Version control folders such as `.git` stay excluded unless the pattern names them. Set to true or false to enable or disable the exception.</source>
     </trans-unit>
     <trans-unit id="files.exclude.when">
       <source xml:lang="en">Additional check on the siblings of a matching file. Use \$(basename) as variable for the matching file name.</source>

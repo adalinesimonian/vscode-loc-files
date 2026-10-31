@@ -206,7 +206,7 @@
       <source xml:lang="en">In a conversation that supports side chats, type /btw followed by a question to open a side chat with the prior conversation as context. You can ask while a response is in progress without stopping it.</source>
     </trans-unit>
     <trans-unit id="chat.canvasesAddContext">
-      <source xml:lang="en">In local Copilot agent-host sessions with chat.canvases.enabled turned on, Add Context includes Canvas immediately after Sessions. Open Canvas to choose a registered or closed canvas by name. Activating one opens or refocuses its tab; it does not attach anything to the prompt.</source>
+      <source xml:lang="en">In Copilot agent-host sessions with chat.canvases.enabled turned on, Add Context includes Canvas immediately after Sessions. Sessions on remote agent hosts also require workbench.browser.enableRemoteProxy. Open Canvas to choose a registered or closed canvas by name. Activating one opens or refocuses its tab; it does not attach anything to the prompt.</source>
     </trans-unit>
     <trans-unit id="chat.cloudSandboxEarlyPreparation">
       <source xml:lang="en">When {0} is enabled, typing in a new Cloud chat, with or without a repository, can prepare cloud resources in the background. Your message is not sent and no conversation is added to the session list until you press Send. Send waits for pending preparation and reuses it when possible, otherwise it can continue without early preparation. While the window is running, VS Code attempts to release unused preparation after five minutes, when you change repositories, or when you turn the setting off.</source>
@@ -239,7 +239,7 @@
       <source xml:lang="en">The editor window uses the same compact Artifacts pill as the Agents Window, rather than an expanded list above the input. Generated images appear automatically. In a subagent chat, the Artifacts pill shows that chat's transcript artifacts without the parent session's metadata. A single file pill opens directly; multiple artifacts open a dropdown with a Generated Images section. Use the pill's hover or context menu, or a dropdown row's actions, to save an artifact or copy its path.</source>
     </trans-unit>
     <trans-unit id="chat.editorCanvasesPill">
-      <source xml:lang="en">In local Copilot agent-host sessions with chat.canvases.enabled turned on, a Canvas submenu appears in the final section of the New Chat menu, and the chat's open canvases appear in their own pill in the main window. Open the Canvas submenu to choose a registered or closed canvas by name. Use Up and Down Arrow, Right Arrow, and Enter to navigate the menus and open or refocus a canvas. A single canvas in the pill shows its title and opens directly; multiple canvases show a count and open a picker. Activating a canvas focuses its tab beside the chat, or reopens it if it was closed. To close a canvas rather than only its tab, use Close Canvas: the X on a canvas pill or picker row, or the pill's context menu. Closing ends the canvas and notifies the extension that provides it.</source>
+      <source xml:lang="en">In Copilot agent-host sessions with chat.canvases.enabled turned on, a Canvas submenu appears in the final section of the New Chat menu, and the chat's open canvases appear in their own pill in the main window. Open the Canvas submenu to choose a registered or closed canvas by name. Use Up and Down Arrow, Right Arrow, and Enter to navigate the menus and open or refocus a canvas. A single canvas in the pill shows its title and opens directly; multiple canvases show a count and open a picker. Activating a canvas focuses its tab beside the chat, or reopens it if it was closed. To close a canvas rather than only its tab, use Close Canvas: the X on a canvas pill or picker row, or the pill's context menu. Closing ends the canvas and notifies the extension that provides it.</source>
     </trans-unit>
     <trans-unit id="chat.editorCopySessionLink">
       <source xml:lang="en">For an Agent Host chat editor, open the editor tab context menu and choose Copy Link to copy a session URL that renders as a session link in Markdown. Selecting multiple chat tabs copies one link per line.</source>
@@ -503,7 +503,7 @@
       <source xml:lang="en">While a session is being prepared, a progress message appears in the transcript. Use Tab or Shift+Tab to reach Show Log, when available, and press Enter or Space to open the output log. Use Stop to cancel preparation. The chat input and attachment controls are disabled until preparation finishes.</source>
     </trans-unit>
     <trans-unit id="chat.sessionPullRequestChanges">
-      <source xml:lang="en">In the Pull Requests pill, open the dropdown and use a pull request's Open Pull Request Changes row action to view its changed files in a multi-file diff editor.</source>
+      <source xml:lang="en">In the Pull Requests pill, or for a pull request in the References pill, open the dropdown and use the pull request's Open Pull Request Changes row action to view its changed files in a multi-file diff editor.</source>
     </trans-unit>
     <trans-unit id="chat.sessionStatusPillCopy">
       <source xml:lang="en">When a pill represents a single item, its context menu offers the item's copy actions, such as copying its URL or file path. For a collection, open the dropdown and use the individual row actions instead.</source>
@@ -2237,6 +2237,9 @@ User: {2}</source>
     <trans-unit id="openReadme">
       <source xml:lang="en">Open README</source>
     </trans-unit>
+    <trans-unit id="pluginManagedByOrganizationMessage">
+      <source xml:lang="en">This plugin is managed by your organization.</source>
+    </trans-unit>
     <trans-unit id="pluginNotAvailable">
       <source xml:lang="en">Plugin '{0}' is no longer available.</source>
     </trans-unit>
@@ -2245,6 +2248,9 @@ User: {2}</source>
     </trans-unit>
     <trans-unit id="pluginPolicyForceEnabled">
       <source xml:lang="en">The plugin "{0}" has been enabled by your organization and cannot be disabled.</source>
+    </trans-unit>
+    <trans-unit id="pluginUninstallUnavailableAria">
+      <source xml:lang="en">{0}. {1}</source>
     </trans-unit>
     <trans-unit id="uninstall">
       <source xml:lang="en">Uninstall</source>
@@ -2614,6 +2620,16 @@ Server: {0}
 Destination: {1}
 Endpoint: {2}
 Configuration fields: {3}</source>
+    </trans-unit>
+    <trans-unit id="agentHost.customizationInstall.mcpLocalInstallDetail">
+      <source xml:lang="en">MCP servers can run tools and access local files. Only install resources from sources you trust.
+
+Server: {0}
+Destination: {1}
+Command: {2}
+Arguments: {3}
+Environment: {4}
+Configuration fields: {5}</source>
     </trans-unit>
     <trans-unit id="agentHost.customizationInstall.mcpUninstallDetail">
       <source xml:lang="en">Server: {0}
@@ -5363,6 +5379,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.accessibleBrowse">
       <source xml:lang="en">Browse mode.</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.accessibleLoading">
+      <source xml:lang="en">Loading customizations.</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.accessibleSearch">
       <source xml:lang="en">Search: {0}</source>
     </trans-unit>
@@ -5580,6 +5599,9 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.installedAriaLabel">
       <source xml:lang="en">{0}, {1}, {2}{3}{4}{5}. {6}</source>
     </trans-unit>
+    <trans-unit id="customizationDiscovery.installedManagedAriaLabel">
+      <source xml:lang="en">{0}. {1}</source>
+    </trans-unit>
     <trans-unit id="customizationDiscovery.installedPluginDescription">
       <source xml:lang="en">Installed agent plugin</source>
     </trans-unit>
@@ -5595,14 +5617,8 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="customizationDiscovery.learnMore">
       <source xml:lang="en">Learn more about agent customizations</source>
     </trans-unit>
-    <trans-unit id="customizationDiscovery.loading">
-      <source xml:lang="en">Loading customizations...</source>
-    </trans-unit>
-    <trans-unit id="customizationDiscovery.loadingMore">
-      <source xml:lang="en">Loading more customizations...</source>
-    </trans-unit>
-    <trans-unit id="customizationDiscovery.loadingProgress">
-      <source xml:lang="en">Loading customizations... {0} of {1} sources loaded.</source>
+    <trans-unit id="customizationDiscovery.loadingMoreAriaLabel">
+      <source xml:lang="en">Loading more customizations</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.manualSetupAccessible">
       <source xml:lang="en">Manual setup required. View Setup opens the publisher's instructions.</source>
@@ -5666,12 +5682,6 @@ To migrate this server, remove the cwd property.</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.providerPluginsError">
       <source xml:lang="en">Could not load installed plugins. {0}</source>
-    </trans-unit>
-    <trans-unit id="customizationDiscovery.refreshingProgress">
-      <source xml:lang="en">Refreshing customizations... {0} of {1} sources refreshed.</source>
-    </trans-unit>
-    <trans-unit id="customizationDiscovery.reloading">
-      <source xml:lang="en">Reloading customizations...</source>
     </trans-unit>
     <trans-unit id="customizationDiscovery.repair">
       <source xml:lang="en">Repair</source>
@@ -6030,9 +6040,6 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="generateWithAI">
       <source xml:lang="en">Generate with AI</source>
     </trans-unit>
-    <trans-unit id="groupAriaLabel2">
-      <source xml:lang="en">{0}, {1} items</source>
-    </trans-unit>
     <trans-unit id="hook">
       <source xml:lang="en">Hook</source>
     </trans-unit>
@@ -6141,8 +6148,20 @@ To migrate this server, remove the cwd property.</source>
     <trans-unit id="remoteSkillsGroupDescription">
       <source xml:lang="en">Skills available from {0}, the active remote agent environment.</source>
     </trans-unit>
-    <trans-unit id="searchPlaceholder">
-      <source xml:lang="en">Type to search...</source>
+    <trans-unit id="searchAgentsAriaLabel">
+      <source xml:lang="en">Search agents...</source>
+    </trans-unit>
+    <trans-unit id="searchHooksAriaLabel">
+      <source xml:lang="en">Search hooks...</source>
+    </trans-unit>
+    <trans-unit id="searchInstructionsAriaLabel">
+      <source xml:lang="en">Search instructions...</source>
+    </trans-unit>
+    <trans-unit id="searchPromptsAriaLabel">
+      <source xml:lang="en">Search prompts...</source>
+    </trans-unit>
+    <trans-unit id="searchSkillsAriaLabel">
+      <source xml:lang="en">Search skills...</source>
     </trans-unit>
     <trans-unit id="skill">
       <source xml:lang="en">Skill</source>
@@ -6493,7 +6512,7 @@ To migrate this server, remove the cwd property.</source>
       <source xml:lang="en">Delete {0}</source>
     </trans-unit>
     <trans-unit id="discoverButtonTooltip">
-      <source xml:lang="en">Back to Customizations</source>
+      <source xml:lang="en">Browse available customizations</source>
     </trans-unit>
     <trans-unit id="editorActionButtonFailed">
       <source xml:lang="en">Failed to finish the prompt action.</source>
@@ -7513,6 +7532,11 @@ Destination files created or changed by the agent are not removed.</source>
     </trans-unit>
     <trans-unit id="selectTargetDirectory">
       <source xml:lang="en">Select a directory for the new customization file</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationGroupHeaderRenderer" source-language="en" datatype="plaintext"><body>
+    <trans-unit id="customizationGroupAriaLabel">
+      <source xml:lang="en">{0}, {1} items. {2}</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/customizationMarketplace.contribution" source-language="en" datatype="plaintext"><body>
@@ -9115,9 +9139,6 @@ Disabled servers may become enabled.</source>
     <trans-unit id="mcpDiscoveryFailed">
       <source xml:lang="en">MCP server discovery needs attention: {0}</source>
     </trans-unit>
-    <trans-unit id="mcpGroupAriaLabel">
-      <source xml:lang="en">{0}, {1} items</source>
-    </trans-unit>
     <trans-unit id="mcpInstallFailed">
       <source xml:lang="en">Unable to install MCP server: {0}</source>
     </trans-unit>
@@ -9230,8 +9251,11 @@ Disabled servers may become enabled.</source>
     <trans-unit id="running">
       <source xml:lang="en">Running</source>
     </trans-unit>
+    <trans-unit id="searchMcpAriaLabel">
+      <source xml:lang="en">Search MCP servers...</source>
+    </trans-unit>
     <trans-unit id="searchMcpPlaceholder">
-      <source xml:lang="en">Type to search...</source>
+      <source xml:lang="en">Search MCP servers...</source>
     </trans-unit>
     <trans-unit id="searchingMcpMarketplace">
       <source xml:lang="en">Searching the MCP marketplace...</source>
@@ -9429,9 +9453,6 @@ Disabled servers may become enabled.</source>
     <trans-unit id="pluginEnablementFailed">
       <source xml:lang="en">Unable to change plugin enablement: {0}</source>
     </trans-unit>
-    <trans-unit id="pluginGroupAriaLabel2">
-      <source xml:lang="en">{0}, {1} items</source>
-    </trans-unit>
     <trans-unit id="pluginInclusionChanged">
       <source xml:lang="en">{0}. {1}.</source>
     </trans-unit>
@@ -9470,9 +9491,6 @@ Disabled servers may become enabled.</source>
     </trans-unit>
     <trans-unit id="pluginNoDescription">
       <source xml:lang="en">No description provided.</source>
-    </trans-unit>
-    <trans-unit id="pluginPolicyBlockedSwitch">
-      <source xml:lang="en">This plugin is managed by your organization.</source>
     </trans-unit>
     <trans-unit id="pluginSearchMarketplaceUnavailable">
       <source xml:lang="en">Marketplace results are unavailable. Showing installed plugins only.</source>
@@ -9525,8 +9543,11 @@ Disabled servers may become enabled.</source>
     <trans-unit id="searchMarketplacePlaceholder">
       <source xml:lang="en">Search plugin marketplace...</source>
     </trans-unit>
+    <trans-unit id="searchPluginsAriaLabel">
+      <source xml:lang="en">Search plugins...</source>
+    </trans-unit>
     <trans-unit id="searchPluginsPlaceholder">
-      <source xml:lang="en">Type to search...</source>
+      <source xml:lang="en">Search plugins...</source>
     </trans-unit>
     <trans-unit id="sessionPluginConfigurationSource">
       <source xml:lang="en">Configured on the active agent host</source>
@@ -19112,6 +19133,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="chat.thinking.thinking.6">
       <source xml:lang="en">Working</source>
     </trans-unit>
+    <trans-unit id="chat.thinking.thoughtFor">
+      <source xml:lang="en">Thought for {0}</source>
+    </trans-unit>
     <trans-unit id="chat.thinking.titleWithDiff">
       <source xml:lang="en">{0}, {1}, {2}</source>
     </trans-unit>
@@ -19716,6 +19740,11 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     <trans-unit id="tool.allow">
       <source xml:lang="en">Allow</source>
     </trans-unit>
+    <trans-unit id="tool.skip">
+      <source xml:lang="en">Skip</source>
+    </trans-unit>
+</body></file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatTerminalToolExplanation" source-language="en" datatype="plaintext"><body>
     <trans-unit id="tool.explain">
       <source xml:lang="en">Explain</source>
     </trans-unit>
@@ -19727,9 +19756,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
     </trans-unit>
     <trans-unit id="tool.explain.query">
       <source xml:lang="en">Explain what this terminal command will do.</source>
-    </trans-unit>
-    <trans-unit id="tool.skip">
-      <source xml:lang="en">Skip</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatTerminalToolProgressPart" source-language="en" datatype="plaintext"><body>

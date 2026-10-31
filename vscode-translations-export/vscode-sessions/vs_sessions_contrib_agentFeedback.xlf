@@ -121,14 +121,11 @@
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/agentFeedback/browser/agentFeedbackEditorWidget" source-language="en" datatype="plaintext"><body>
-    <trans-unit id="acceptAgentFeedbackTooltip">
-      <source xml:lang="en">Share comment with agent</source>
+    <trans-unit id="acceptComment">
+      <source xml:lang="en">Share Comment with Agent</source>
     </trans-unit>
-    <trans-unit id="acceptFeedbackButton">
-      <source xml:lang="en">Accept</source>
-    </trans-unit>
-    <trans-unit id="acceptPRFeedbackTooltip">
-      <source xml:lang="en">Share PR comment with agent</source>
+    <trans-unit id="acceptedComment">
+      <source xml:lang="en">Accepted</source>
     </trans-unit>
     <trans-unit id="addReplyPlaceholder">
       <source xml:lang="en">Add a comment…</source>
@@ -136,32 +133,62 @@
     <trans-unit id="addToComment">
       <source xml:lang="en">Add to Comment</source>
     </trans-unit>
+    <trans-unit id="agentCommentAuthor">
+      <source xml:lang="en">Agent (AI)</source>
+    </trans-unit>
+    <trans-unit id="agentFeedback.acceptIcon">
+      <source xml:lang="en">Icon for sharing a comment with the agent.</source>
+    </trans-unit>
+    <trans-unit id="agentFeedback.deleteIcon">
+      <source xml:lang="en">Icon for deleting a comment.</source>
+    </trans-unit>
+    <trans-unit id="agentFeedback.editIcon">
+      <source xml:lang="en">Icon for editing a comment.</source>
+    </trans-unit>
+    <trans-unit id="agentFeedback.hideIcon">
+      <source xml:lang="en">Icon for hiding a resolved comment.</source>
+    </trans-unit>
+    <trans-unit id="agentFeedback.moreIcon">
+      <source xml:lang="en">Icon for additional comment actions.</source>
+    </trans-unit>
     <trans-unit id="agentFeedback.replyFromAgent">
       <source xml:lang="en">Agent</source>
     </trans-unit>
-    <trans-unit id="agentReviewComment">
-      <source xml:lang="en">Agent Review</source>
+    <trans-unit id="agentFeedback.replyIcon">
+      <source xml:lang="en">Icon for replying to a comment.</source>
     </trans-unit>
-    <trans-unit id="collapse">
-      <source xml:lang="en">Collapse</source>
+    <trans-unit id="agentFeedback.reviewIcon">
+      <source xml:lang="en">Icon for a pull request review comment.</source>
     </trans-unit>
-    <trans-unit id="deleteAgentFeedbackTooltip">
-      <source xml:lang="en">Remove agent comment</source>
+    <trans-unit id="commentActions">
+      <source xml:lang="en">Comment Actions</source>
     </trans-unit>
-    <trans-unit id="deleteFeedbackButton">
+    <trans-unit id="commentAuthor">
+      <source xml:lang="en">@{0}</source>
+    </trans-unit>
+    <trans-unit id="commentLocation">
+      <source xml:lang="en">{0}, {1}</source>
+    </trans-unit>
+    <trans-unit id="copilotCommentAuthor">
+      <source xml:lang="en">Copilot (AI)</source>
+    </trans-unit>
+    <trans-unit id="deleteComment">
       <source xml:lang="en">Delete</source>
-    </trans-unit>
-    <trans-unit id="deletePRFeedbackTooltip">
-      <source xml:lang="en">Remove and mark as resolved on GitHub</source>
     </trans-unit>
     <trans-unit id="editComment">
       <source xml:lang="en">Edit</source>
     </trans-unit>
-    <trans-unit id="expand">
-      <source xml:lang="en">Expand</source>
+    <trans-unit id="editCommentInput">
+      <source xml:lang="en">Edit Comment</source>
+    </trans-unit>
+    <trans-unit id="feedbackComments">
+      <source xml:lang="en">Comments</source>
     </trans-unit>
     <trans-unit id="hideComment">
       <source xml:lang="en">Hide</source>
+    </trans-unit>
+    <trans-unit id="investigatingComment">
+      <source xml:lang="en">Investigating</source>
     </trans-unit>
     <trans-unit id="lineNumber">
       <source xml:lang="en">Line {0}</source>
@@ -169,20 +196,32 @@
     <trans-unit id="lineRange">
       <source xml:lang="en">Lines {0}-{1}</source>
     </trans-unit>
-    <trans-unit id="nComments">
-      <source xml:lang="en">{0} comments</source>
+    <trans-unit id="prCommentAuthor">
+      <source xml:lang="en">PR reviewer</source>
     </trans-unit>
-    <trans-unit id="prReviewComment">
-      <source xml:lang="en">PR Review</source>
+    <trans-unit id="replyCommentInput">
+      <source xml:lang="en">Add to Comment</source>
     </trans-unit>
-    <trans-unit id="removeComment">
-      <source xml:lang="en">Remove</source>
+    <trans-unit id="resolvePRComment">
+      <source xml:lang="en">Resolve PR Comment</source>
+    </trans-unit>
+    <trans-unit id="scrollableComments">
+      <source xml:lang="en">Scrollable comments</source>
+    </trans-unit>
+    <trans-unit id="seeLessComment">
+      <source xml:lang="en">See less</source>
+    </trans-unit>
+    <trans-unit id="seeMoreComment">
+      <source xml:lang="en">See more</source>
     </trans-unit>
     <trans-unit id="suggestedChangeLine">
       <source xml:lang="en">Suggested Change • Line {0}</source>
     </trans-unit>
     <trans-unit id="suggestedChangeLines">
       <source xml:lang="en">Suggested Change • Lines {0}-{1}</source>
+    </trans-unit>
+    <trans-unit id="userCommentAuthor">
+      <source xml:lang="en">You</source>
     </trans-unit>
 </body></file>
   <file original="src/vs/sessions/contrib/agentFeedback/browser/agentFeedbackOverviewRulerContribution" source-language="en" datatype="plaintext"><body>
